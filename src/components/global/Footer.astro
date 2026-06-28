@@ -1,102 +1,77 @@
 ---
-// Assets
 import Logo from "@/components/assets/Logo.astro";
-
-import Signature from "@/components/global/Signature.astro";
-// Fundations
 import Text from "../fundations/elements/Text.astro";
 import Wrapper from "../fundations/containers/Wrapper.astro";
+
 const footerLinks = [
-  {
-    id: "listen-on",
-    title: "Listen on",
-    platforms: [
-      { name: "Spotify", link: "#_" },
-      { name: "Apple Podcasts", link: "#_" },
-      { name: "YouTube", link: "#_" },
-      { name: "Overcast", link: "#_" },
-      { name: "Pocket Casts", link: "#_" },
-      { name: "Castbox", link: "#_" },
-      { name: "Stitcher", link: "#_" },
-      { name: "iHeartRadio", link: "#_" },
-      { name: "Google Podcasts", link: "#_" },
-      { name: "Amazon Music", link: "#_" },
-    ],
-  },
+  { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact" },
+  { href: "/legal/privacy", label: "Privacy" },
+  { href: "/legal/terms", label: "Terms" },
+];
+
+const socialLinks = [
+  { href: "#_", label: "Facebook" },
+  { href: "#_", label: "X" },
+  { href: "#_", label: "Instagram" },
+  { href: "#_", label: "LinkedIn" },
 ];
 ---
 
-<footer class="z-0 w-full pb-2 bg-black">
-  <Wrapper variant="standard" class="pt-12 lg:pt-12">
-    <Logo class="max-w-4xl text-white" />
-
-    <div
-      class="items-start mt-12 grid grid-cols-1 md:grid-cols-2 gap-y-12 gap-x-12"
-    >
-      <div>
-        <Text
-          tag="p"
-          variant="textSM"
-          class="max-w-xs mt-2 font-serif text-base-400"
+<footer class="bg-base-100 border-t border-base-200">
+  <Wrapper variant="standard" class="py-12">
+    <div class="max-w-md mx-auto text-center">
+      <Logo class="text-3xl" />
+      <Text tag="p" variant="textXS" class="mt-2 uppercase tracking-widest text-base-500">
+        Artometrics Media Industry
+      </Text>
+      <form class="flex items-center gap-2 mt-6">
+        <input
+          type="email"
+          name="email"
+          placeholder="you@example.com"
+          class="flex-1 px-3 py-2 text-sm border border-base-300 bg-white focus:outline-none focus:border-accent-700"
+          aria-label="Email address"
+        />
+        <button
+          type="submit"
+          class="px-4 py-2 text-sm text-white bg-accent-700 hover:bg-accent-800 font-medium"
         >
-          Hemingway conducts in-depth interviews with some of the top design
-          engineers in the industry, giving you the option to either read the
-          full transcripts or listen to the conversations on a variety of
-          platforms, ensuring accessibility and convenience for all audiences.
-
-          <br />
-          <br />
-          These interviews delve into the creative processes, innovative solutions,
-          and real-world challenges faced by design engineers, offering valuable
-          insights and inspiration for professionals and enthusiasts alike. Whether
-          you prefer to engage with the content on your morning commute or during
-          a quiet moment at home, Hemingway makes it easy to stay connected to cutting-edge
-          ideas in design engineering.
-        </Text>
-        <Signature class="h-10 mt-12 text-base-400" />
-      </div>
-      <div class="lg:ml-auto">
-        {
-          footerLinks.map((section) => (
-            <div class="flex flex-col ">
-              <Text
-                tag="h3"
-                variant="textXS"
-                id={section.id}
-                class="font-medium text-white uppercase"
-              >
-                {section.title}
-              </Text>
-              <nav
-                role="navigation"
-                class="flex flex-col mt-8 gap-2"
-                aria-labelledby={section.id}
-              >
-                {section.platforms.map((platform, index) => (
-                  <Text
-                    tag="a"
-                    variant="textXS"
-                    href={platform.link}
-                    aria-label={`Go to ${platform.name}`}
-                    class="font-medium uppercase text-base-300 hover:underline"
-                  >
-                    {platform.name}
-                  </Text>
-                ))}
-              </nav>
-            </div>
-          ))
-        }
-      </div>
-      <div class="flex items-center h-full gap-2 lg:pt-12">
-        <!-- This link will stick to the bottom -->
-        <a href="/" class="mt-auto">
-          <Logo class="h-4 text-white" />
-        </a>
-        <Text tag="span" class="text-xs font-semibold text-base-600">
-          © {new Date().getFullYear()} Lexington Themes.
-        </Text>
-      </div>
+          Subscribe
+        </button>
+      </form>
     </div>
+
+    <div class="flex flex-wrap items-center justify-center gap-4 mt-8">
+      {
+        socialLinks.map((item) => (
+          <a
+            href={item.href}
+            aria-label={item.label}
+            class="flex items-center justify-center size-8 rounded-full border border-base-900 text-base-900 hover:bg-base-200"
+          >
+            <span class="text-[10px] font-bold">{item.label.charAt(0)}</span>
+          </a>
+        ))
+      }
+    </div>
+
+    <nav class="flex flex-wrap items-center justify-center gap-4 mt-8 text-xs uppercase">
+      {
+        footerLinks.map((link) => (
+          <a href={link.href} class="text-base-600 hover:text-accent-700">
+            {link.label}
+          </a>
+        ))
+      }
+    </nav>
+
+    <Text
+      tag="p"
+      variant="textXS"
+      class="mt-8 text-center text-base-500"
+    >
+      © {new Date().getFullYear()} Artometrics
+    </Text>
   </Wrapper>
 </footer>

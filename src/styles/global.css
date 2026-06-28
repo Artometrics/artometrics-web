@@ -2,6 +2,14 @@
 @plugin "@tailwindcss/typography";
 @plugin "@tailwindcss/forms";
 @plugin "tailwind-scrollbar-hide";
+
+@font-face {
+  font-family: "Chomsky";
+  src: url("../fonts/Chomsky.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 @layer utilities {
   .audio-player input[type="range"] {
     -webkit-appearance: none;
@@ -66,23 +74,22 @@
   }
 }
 @theme {
-  /* Typography*/
-  --font-sans: "Inter", sans-serif;
-  --font-serif: "STIX Two Text", serif;
-  /* Colors */
-
-
-  --color-accent-50: oklch(98.17% 0.018 92.68);
-  --color-accent-100: oklch(96.39% 0.034 92.27);
-  --color-accent-200: oklch(92.87% 0.067 92.43);
-  --color-accent-300: oklch(89.55% 0.098 91.71);
-  --color-accent-400: oklch(86.27% 0.125 91.38);
-  --color-accent-500: oklch(82.72% 0.146 89.45);
-  --color-accent-600: oklch(76.92% 0.153 86.84);
-  --color-accent-700: oklch(62.29% 0.123 86.94);
-  --color-accent-800: oklch(46.62% 0.091 87.92);
-  --color-accent-900: oklch(29.61% 0.055 88.55);
-  --color-accent-950: oklch(20.22% 0.035 93.13);
+  /* Typography */
+  --font-sans: Georgia, "Times New Roman", Times, serif;
+  --font-serif: Georgia, "Times New Roman", Times, serif;
+  --font-wordmark: "Chomsky", Georgia, serif;
+  /* Colors — Artometrics red accent */
+  --color-accent-50: oklch(97% 0.02 25);
+  --color-accent-100: oklch(93% 0.05 25);
+  --color-accent-200: oklch(86% 0.1 25);
+  --color-accent-300: oklch(76% 0.15 25);
+  --color-accent-400: oklch(65% 0.2 25);
+  --color-accent-500: oklch(55% 0.22 25);
+  --color-accent-600: oklch(48% 0.22 25);
+  --color-accent-700: oklch(42% 0.2 25);
+  --color-accent-800: oklch(36% 0.17 25);
+  --color-accent-900: oklch(30% 0.14 25);
+  --color-accent-950: oklch(22% 0.1 25);
   --color-base-50: oklch(0.985 0 0);
   --color-base-100: oklch(0.97 0 0);
   --color-base-200: oklch(0.922 0 0);
@@ -97,15 +104,7 @@
 
 }
 :root {
-  /* Typography */
-  font-feature-settings: "liga" 1, "calt" 1,
-    /* Contextual Alternates */ "dlig" 1, /* Discretionary Ligatures */ "ss07" 1,
-    /* fSquare punctuation */ "ss08" 1, /* Square quotes */ "zero" 1,
-    /* Slashed zero */ "tnum" 1, /* Tabular numbers */ "cv03" 1,
-    /* Open six */ "cv04" 1, /* Open nine */ "cv01" 1,
-    /* Alternate one */ "cv09", /* Flat-top three */ "cv02" 1; /* Open 4 */
-  font-family: Inter, sans-serif;
-  font-variant-numeric: tabular-nums;
+  font-family: var(--font-serif);
   /* Shiki code style - Light Mode */
   --astro-code-foreground: theme(colors.base.600); /* Dark base for text */
   --astro-code-background: theme(

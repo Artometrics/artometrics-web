@@ -1,65 +1,98 @@
 ---
-// Assets
 import Logo from "@/components/assets/Logo.astro";
-// Fundations
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
-// Icons
-import Burger from "@/components/fundations/icons/Burger.astro";
 import Search from "@/components/global/Search.astro";
-import MegaMenu from "./MegaMenu.astro";
+
 const primaryNavLinks = [
-  { href: "/system/overview", link: "Overview" },
-  { href: "/blog", link: "Magazine" },
-  { href: "/podcast", link: "Podcast" },
-  { href: "/about", link: "About" },
-  { href: "/pricing", link: "Membership" },
+  { href: "/culture/", link: "Culture" },
+  { href: "/atlas/", link: "Atlas" },
+  { href: "/history/", link: "History" },
+  { href: "/persona/", link: "Persona" },
+  { href: "/power/", link: "Power" },
+];
+
+const socialLinks = [
+  { href: "#_", label: "Facebook" },
+  { href: "#_", label: "X" },
+  { href: "#_", label: "Instagram" },
+  { href: "#_", label: "LinkedIn" },
+  { href: "#_", label: "Pinterest" },
+];
+
+const announcements = [
+  "READMITTED: How America's Hospitals Are Failing the 30-Day Standard",
+  "POKEMON: The Artometrics of the World's Biggest Franchise",
+  "ANIME: The Artometrics of Japanese Animation",
 ];
 ---
 
-<section id="navigation" class="z-10">
+<section id="navigation" class="z-10 bg-white border-b border-base-200">
   <Wrapper variant="standard">
-    <div class="pt-2">
-      <div class="w-full grid grid-cols-3 gap-4 lg:gap-12 lg:h-5 items-center">
-        <a href="/">
-          <span class="sr-only">link to home</span>
-          <Logo class="h-6" />
-        </a>
-
-        <div
-          class="flex items-center w-full col-span-2 gap-2 lg:col-span-auto lg:col-start-3"
-        >
-          <Search />
-          <nav class="hidden lg:flex items-center gap-2">
-            {
-              primaryNavLinks.map((link) => (
-                <a
-                  href={link.href}
-                  class="uppercase text-base-900 hover:text-base-500 font-medium text-xs"
-                >
-                  {link.link}
-                </a>
-              ))
-            }
-          </nav>
-          <a
-            href="https://buy.polar.sh/polar_cl_U8Mtq7VFohIH4lm7cuCgtyfuB5I0aIhkb6WP0SZGSCA"
-            class="uppercase text-base-900 hover:text-base-500 font-medium text-xs"
-          >
-            Buy
-          </a>
-          <button
-            id="menubutton"
-            type="button"
-            aria-controls="menu"
-            aria-expanded="false"
-            aria-link="Toggle menu"
-            class="text-base-900"
-          >
-            <Burger slot="icon" size="base" />
-          </button>
-        </div>
+    <!-- Utility bar -->
+    <div
+      class="flex items-center justify-between py-2 text-xs border-b border-base-200"
+    >
+      <div class="flex items-center gap-3">
+        {
+          socialLinks.map((item) => (
+            <a
+              href={item.href}
+              aria-label={item.label}
+              class="flex items-center justify-center size-5 rounded-full border border-base-900 text-base-900 hover:bg-base-100"
+            >
+              <span class="sr-only">{item.label}</span>
+              <span class="text-[8px] font-bold">{item.label.charAt(0)}</span>
+            </a>
+          ))
+        }
       </div>
-      <MegaMenu />
+      <div class="flex items-center gap-4">
+        <Search />
+        <a href="/login" class="text-base-900 hover:text-base-500 font-medium">
+          Sign in
+        </a>
+        <a
+          href="/pricing"
+          class="px-3 py-1 text-white bg-accent-700 hover:bg-accent-800 font-medium"
+        >
+          Subscribe
+        </a>
+      </div>
     </div>
+
+    <!-- Wordmark -->
+    <div class="py-6 text-center">
+      <a href="/" class="inline-block">
+        <span class="sr-only">Artometrics home</span>
+        <Logo class="text-4xl md:text-5xl" />
+      </a>
+    </div>
+
+    <!-- Primary nav -->
+    <nav
+      class="flex flex-wrap items-center justify-center gap-6 pb-4 text-xs font-medium tracking-widest uppercase"
+    >
+      {
+        primaryNavLinks.map((link) => (
+          <a href={link.href} class="text-base-900 hover:text-accent-700">
+            {link.link}
+          </a>
+        ))
+      }
+    </nav>
   </Wrapper>
+
+  <!-- Announcement ticker -->
+  <div class="bg-base-800 text-white text-xs overflow-hidden">
+    <Wrapper variant="standard" class="py-2 flex items-center gap-4">
+      <span class="text-accent-500 font-semibold uppercase shrink-0"
+        >Announcement</span
+      >
+      <div class="overflow-hidden whitespace-nowrap">
+        <span class="inline-block animate-none">
+          {announcements.join(" · ")}
+        </span>
+      </div>
+    </Wrapper>
+  </div>
 </section>
