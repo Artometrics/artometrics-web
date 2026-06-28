@@ -7,8 +7,7 @@ import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 // // Get all posts
 import { getCollection } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
-const allPosts = await getCollection("posts");
-// Get all tags
+const allPosts = await getCollection("blog", ({ data }) => !data.draft);
 const tags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
 ---
 
@@ -29,7 +28,7 @@ const tags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
               <Text
                 tag="a"
                 variant="displaySM"
-                href={`/blog/tags/${tag}`}
+                href={`/${tag}/`}
                 class="mx-auto font-serif font-light tracking-tight text-center text-base-900  hover:underline text-balance capitalize"
               >
                 {tag}

@@ -6,7 +6,7 @@ import BlogCard1 from "@/components/blog/BlogCard1.astro";
 import PodcastCardText from "@/components/podcast/PodcastCardText.astro";
 // Content
 import { getCollection } from "astro:content";
-const allPosts = await getCollection("posts");
+const allPosts = await getCollection("blog", ({ data }) => !data.draft);
 allPosts.sort((a, b) => {
   const dateA = new Date(a.data.pubDate).getTime();
   const dateB = new Date(b.data.pubDate).getTime();

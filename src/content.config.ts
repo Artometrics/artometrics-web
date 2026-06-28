@@ -2,6 +2,8 @@ import { defineCollection } from "astro:content";
 import { z } from "astro/zod";
 import { glob } from "astro/loaders";
 
+const sectionTags = ["culture", "atlas", "history", "persona", "power"] as const;
+
 const authors = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/content/authors" }),
   schema: ({ image }) =>
@@ -22,6 +24,23 @@ const authors = defineCollection({
         })
         .optional(),
     }),
+});
+
+const blog = defineCollection({
+  loader: glob({
+    pattern: "**/*.{md,mdx}",
+    base: "./src/content/blog",
+    retainBody: true,
+  }),
+  schema: z.object({
+    title: z.string(),
+    slug: z.string(),
+    pubDate: z.coerce.date(),
+    description: z.string(),
+    heroImage: z.string(),
+    tags: z.array(z.enum(sectionTags)),
+    draft: z.boolean().default(false),
+  }),
 });
 
 const legal = defineCollection({
@@ -58,31 +77,8 @@ const podcast = defineCollection({
     }),
 });
 
-const posts = defineCollection({
-  loader: glob({
-    pattern: "**/*.{md,mdx}",
-    base: "./src/content/posts",
-    retainBody: true,
-  }),
-  schema: ({ image }) =>
-    z.object({
-      title: z.string(),
-      pubDate: z.coerce.date(),
-      description: z.string(),
-      author: z.string(),
-      image: z.object({
-        url: image(),
-        alt: z.string(),
-      }),
-      tags: z.array(z.string()),
-      isRecent: z.boolean().optional(),
-      isPopular: z.boolean().optional(),
-      isLocked: z.boolean().optional(),
-    }),
-});
-
 export const collections = {
-  posts,
+  blog,
   authors,
   podcast,
   legal,

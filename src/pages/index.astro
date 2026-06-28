@@ -8,7 +8,7 @@ import BlogCard2 from "@/components/blog/BlogCard2.astro";
 import Subscribe from "@/components/ctas/Subscribe.astro";
 import { getCollection } from "astro:content";
 
-const allPosts = await getCollection("posts");
+const allPosts = await getCollection("blog", ({ data }) => !data.draft);
 const sortedPosts = allPosts
   .filter((post) => post.data?.pubDate)
   .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
@@ -16,9 +16,7 @@ const sortedPosts = allPosts
 const heroPost = sortedPosts[0];
 const sidebarPosts = sortedPosts.slice(1, 4);
 const centerSubPosts = sortedPosts.slice(4, 6);
-const featuredArticles = sortedPosts
-  .filter((post) => post.data.isPopular)
-  .slice(0, 4);
+const featuredArticles = sortedPosts.slice(0, 4);
 const latestPosts = sortedPosts.slice(0, 8);
 ---
 

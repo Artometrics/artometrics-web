@@ -1,0 +1,50 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Text from "@/components/fundations/elements/Text.astro";
+import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+import BlogCard2 from "@/components/blog/BlogCard2.astro";
+import Subscribe from "@/components/ctas/Subscribe.astro";
+import { getCollection } from "astro:content";
+import { SECTION_META } from "@/data/sections";
+
+export function getStaticPaths() {
+  return Object.entries(SECTION_META).map(([slug, meta]) => ({
+    params: { section: slug },
+    props: { section: { slug, ...meta } },
+  }));
+}
+
+const { section } = Astro.props;
+const allPosts = await getCollection("blog", ({ data }) => !data.draft);
+const sectionPosts = allPosts
+  .filter((post) => post.data.tags.includes(section.slug))
+  .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+---
+
+<BaseLayout pageTitle={`${section.title} — Artometrics`}>
+  <section>
+    <Wrapper variant="standard" class="pt-24 pb-12">
+      <Text tag="h1" variant="displayLG" class="font-serif font-light uppercase">
+        {section.title}
+      </Text>
+      <Text tag="p" variant="textSM" class="mt-4 max-w-2xl text-base-600">
+        {section.description}
+      </Text>
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 pt-8 border-t border-black"
+      >
+        {sectionPosts.map((post) => (
+          <BlogCard2 post={post} />
+        ))}
+      </div>
+      {
+        sectionPosts.length === 0 && (
+          <Text tag="p" variant="textSM" class="mt-8 text-base-500">
+            No articles in this section yet.
+          </Text>
+        )
+      }
+    </Wrapper>
+  </section>
+  <Subscribe />
+</BaseLayout>

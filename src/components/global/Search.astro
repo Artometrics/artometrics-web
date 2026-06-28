@@ -1,14 +1,14 @@
 ---
 import { getCollection } from "astro:content";
 const posts = await Promise.all(
-  (await getCollection("posts")).map(async (post) => ({
+  (await getCollection("blog", ({ data }) => !data.draft)).map(async (post) => ({
     title: post.data.title,
     pubDate: post.data.pubDate,
     description: post.data.description,
-    slug: post.id,
+    slug: post.data.slug,
     type: "blog",
-    typeLabel: "Blog",
-    href: `/blog/posts/${post.id}`,
+    typeLabel: "Article",
+    href: `/${post.data.slug}/`,
   }))
 );
 const podcasts = await Promise.all(
@@ -29,7 +29,7 @@ const items = [...posts, ...podcasts];
   <button
     type="button"
     id="searchButton"
-    aria-label="Search posts and podcasts"
+    aria-label="Search articles"
     class="uppercase text-base-900 hover:text-base-500 font-medium text-xs flex"
   >
     search
@@ -73,7 +73,7 @@ const items = [...posts, ...podcasts];
         <input
           type="text"
           id="searchInput"
-          placeholder="Search posts and podcasts..."
+          placeholder="Search articles..."
           class="w-full h-8 px-4 py-2 text-xs bg-white border-t-0 border-b border-x-0 border-base-300 focus:outline-none focus:border focus:ring-base-500 focus:border-base-500 placeholder-base-500"
         />
         <div
@@ -86,52 +86,43 @@ const items = [...posts, ...podcasts];
   </div>
 </div>
 <script is:inline define:vars={{ items }}>
-  // Wait for the entire page to load before running the script
   window.addEventListener("load", () => {
-    // Get references to various elements in the search UI
-    const searchButton = document.getElementById("searchButton"); // Button that opens search modal
-    const searchModal = document.getElementById("searchModal"); // Search modal container
-    const modalOverlay = document.getElementById("modalOverlay"); // Overlay that closes modal on click
-    const searchInput = document.getElementById("searchInput"); // Input field for searching
-    const searchResults = document.getElementById("searchResults"); // Container for search results
-    const closeSearch = document.getElementById("closeSearch"); // Button to close search modal
-    // Initialize Fuse.js for fuzzy searching with posts and podcasts
+    const searchButton = document.getElementById("searchButton");
+    const searchModal = document.getElementById("searchModal");
+    const modalOverlay = document.getElementById("modalOverlay");
+    const searchInput = document.getElementById("searchInput");
+    const searchResults = document.getElementById("searchResults");
+    const closeSearch = document.getElementById("closeSearch");
     const fuse = new Fuse(items, {
-      keys: ["title", "description", "pubDate"], // Fields to search within
-      threshold: 0.3, // Controls search sensitivity (lower = more strict)
-      includeMatches: true, // Includes matching results for highlighting
+      keys: ["title", "description", "pubDate"],
+      threshold: 0.3,
+      includeMatches: true,
     });
-    // Hide search results by default
     searchResults.classList.add("hidden");
-    // Function to open the search modal
     function openSearch(e) {
-      e.preventDefault(); // Prevent default action (e.g., form submission)
-      e.stopPropagation(); // Stop event from bubbling up the DOM
-      searchModal.classList.remove("hidden"); // Show modal
-      document.body.style.overflow = "hidden"; // Prevent scrolling when modal is open
-      setTimeout(() => searchInput.focus(), 100); // Focus input field after a short delay
+      e.preventDefault();
+      e.stopPropagation();
+      searchModal.classList.remove("hidden");
+      document.body.style.overflow = "hidden";
+      setTimeout(() => searchInput.focus(), 100);
     }
-    // Function to close the search modal
     function closeSearchModal(e) {
       if (e) {
         e.preventDefault();
         e.stopPropagation();
       }
-      searchModal.classList.add("hidden"); // Hide modal
-      document.body.style.overflow = ""; // Restore scrolling
-      searchInput.value = ""; // Clear search input
-      searchResults.innerHTML = ""; // Clear search results
-      searchResults.classList.add("hidden"); // Ensure results remain hidden
+      searchModal.classList.add("hidden");
+      document.body.style.overflow = "";
+      searchInput.value = "";
+      searchResults.innerHTML = "";
+      searchResults.classList.add("hidden");
     }
-    // Function to display search results
     function renderResults(results) {
-      // If input is empty, hide results
       if (!searchInput.value.trim()) {
         searchResults.innerHTML = "";
         searchResults.classList.add("hidden");
         return;
       }
-      // If no results are found, display a message
       if (results.length === 0) {
         searchResults.innerHTML = `
           <div>
@@ -143,12 +134,10 @@ const items = [...posts, ...podcasts];
         searchResults.classList.remove("hidden");
         return;
       }
-      // Generate HTML for each search result
       searchResults.innerHTML = results
         .map(
           (result) => `
               <a href="${result.item.href}" class="block p-4  duration-300 hover:bg-black/5">
-             
                 <p class="block text-xs text-sm text-base-600 mt-4">
                   ${result.item.typeLabel || result.item.type} —
     ${new Date(result.item.pubDate).toLocaleDateString("en-US", {
@@ -157,7 +146,6 @@ const items = [...posts, ...podcasts];
       day: "2-digit",
     })}
               </p>
-
                 <h3  class="block mt-2 text-sm font-medium text-base-900">
                   ${result.item.title}
                 </h3>
@@ -167,26 +155,20 @@ const items = [...posts, ...podcasts];
               </a>
             `
         )
-        .join(""); // Join all results into a single string of HTML
-      // Make the search results visible
+        .join("");
       searchResults.classList.remove("hidden");
     }
-    // Add event listeners to open the search modal
     searchButton.addEventListener("click", openSearch);
-    searchButton.addEventListener("touchend", openSearch); // For mobile devices
-    // Add event listeners to close the search modal
+    searchButton.addEventListener("touchend", openSearch);
     closeSearch.addEventListener("click", closeSearchModal);
     closeSearch.addEventListener("touchend", closeSearchModal);
-    // Close modal when clicking on the overlay (outside the modal)
     modalOverlay.addEventListener("click", closeSearchModal);
     modalOverlay.addEventListener("touchend", closeSearchModal);
-    // Listen for user input and perform a search
     searchInput.addEventListener("input", (e) => {
-      const value = e.target.value.trim(); // Get search input value
-      const results = value ? fuse.search(value) : []; // Perform search only if input isn't empty
-      renderResults(results); // Display search results
+      const value = e.target.value.trim();
+      const results = value ? fuse.search(value) : [];
+      renderResults(results);
     });
-    // Close search modal when the Escape key is pressed
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape" && !searchModal.classList.contains("hidden")) {
         closeSearchModal();

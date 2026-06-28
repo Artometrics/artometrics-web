@@ -2,17 +2,17 @@ import rss from "@astrojs/rss";
 import { getCollection } from "astro:content";
 
 export async function GET(context) {
-  const posts = await getCollection("posts");
+  const posts = await getCollection("blog", ({ data }) => !data.draft);
   return rss({
-    title: "Lexington Themes",
+    title: "Artometrics",
     description:
-      "Free and premium multipage themes and UI Kits For freelancers, developers, businesses, and personal use. Beautifully crafted with Astro.js, and Tailwind CSS — Simple & easy to customise.",
+      "Data-driven analysis on media, culture, and power — Artometrics reports on the creative economy.",
     site: context.site,
     items: posts.map((post) => ({
       title: post.data.title,
       description: post.data.description,
       pubDate: post.data.pubDate,
-      link: `/blog/posts/${post.id}/`,
+      link: `/${post.data.slug}/`,
     })),
   });
 }

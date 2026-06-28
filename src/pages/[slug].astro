@@ -1,0 +1,38 @@
+---
+import BlogLayout from "@/layouts/BlogLayout.astro";
+import { getCollection, render } from "astro:content";
+import { SECTION_SLUGS } from "@/data/sections";
+
+export async function getStaticPaths() {
+  const entries = await getCollection("blog", ({ data }) => !data.draft);
+  return entries
+    .filter((entry) => !SECTION_SLUGS.includes(entry.data.slug))
+    .map((entry) => ({
+      params: { slug: entry.data.slug },
+      props: { entry },
+    }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const allPosts = await getCollection("blog", ({ data }) => !data.draft);
+const sorted = allPosts.sort(
+  (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime()
+);
+const index = sorted.findIndex((post) => post.data.slug === entry.data.slug);
+const previous = sorted[index + 1] || null;
+const next = sorted[index - 1] || null;
+
+import readingTime from "reading-time";
+const stats = readingTime(entry.body ?? "");
+---
+
+<BlogLayout
+  frontmatter={entry.data}
+  readingTime={stats.text}
+  slug={entry.data.slug}
+  previous={previous}
+  next={next}
+>
+  <Content />
+</BlogLayout>
