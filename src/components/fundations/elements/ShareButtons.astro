@@ -1,73 +1,136 @@
 ---
-// ShareButtons.astro
 interface Props {
   url?: string;
   title?: string;
   description?: string;
   contentType?: "blog" | "podcast" | "generic";
+  class?: string;
 }
 
-const { url, title, description, contentType = "generic" } = Astro.props;
+const { url, title, description, contentType = "generic", class: className } =
+  Astro.props;
 ---
 
-<div class="flex items-center mt-4 gap-4">
-  <button id="twitter-share" aria-label="Share on Twitter"> Twitter </button>
-  <button id="facebook-share" aria-label="Share on Facebook"> Facebook </button>
-  <button id="linkedin-share" aria-label="Share on LinkedIn"> Linkedin </button>
-  <button id="copy-link" aria-label="Copy link"> Link </button>
+<div
+  class:list={[
+    "art-share flex flex-wrap items-center justify-center gap-2 sm:gap-3",
+    className,
+  ]}
+  data-share-root
+  data-share-url={url}
+  data-share-title={title}
+  data-share-description={description}
+  data-share-type={contentType}
+>
+  <span class="sr-only">Share this article</span>
+  <button
+    type="button"
+    data-share="twitter"
+    class="art-share__btn"
+    aria-label="Share on X"
+  >
+    X
+  </button>
+  <button
+    type="button"
+    data-share="facebook"
+    class="art-share__btn"
+    aria-label="Share on Facebook"
+  >
+    Facebook
+  </button>
+  <button
+    type="button"
+    data-share="linkedin"
+    class="art-share__btn"
+    aria-label="Share on LinkedIn"
+  >
+    LinkedIn
+  </button>
+  <button
+    type="button"
+    data-share="copy"
+    class="art-share__btn"
+    aria-label="Copy link"
+  >
+    Copy link
+  </button>
 </div>
 
-<script define:vars={{ url, title, description, contentType }}>
-  // Get the current page URL and title, using custom values if provided
-  const pageUrl = url || window.location.href;
-  const pageTitle = title || document.title;
-  const pageDesc = description || "";
-
-  // Customize share text based on content type
-  let shareText = pageTitle;
-  if (contentType === "podcast") {
-    shareText = `Listen to this podcast: ${pageTitle}`;
-  } else if (contentType === "blog") {
-    shareText = `Check out this article: ${pageTitle}`;
+<style>
+  .art-share__btn {
+    font-family: var(--font-sans, "DM Sans", sans-serif);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    line-height: 1;
+    padding: 0.55rem 0.8rem;
+    border: 1px solid var(--color-base-200, #d5d5d5);
+    border-radius: 4px;
+    color: var(--color-base-700, #3a3a3a);
+    background: #fff;
+    cursor: pointer;
+    transition:
+      color 0.15s ease,
+      border-color 0.15s ease,
+      background 0.15s ease;
   }
 
-  // Add description if available
-  if (pageDesc) {
-    shareText += ` - ${pageDesc}`;
+  .art-share__btn:hover {
+    color: var(--color-accent-700, #c0392b);
+    border-color: var(--color-accent-700, #c0392b);
   }
 
-  // Twitter share
-  document.getElementById("twitter-share")?.addEventListener("click", () => {
-    const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(pageUrl)}`;
-    window.open(twitterUrl, "_blank");
-  });
+  .art-share__btn.art-share__btn--copied {
+    color: #fff;
+    background: var(--color-accent-secondary, #2c3e6b);
+    border-color: var(--color-accent-secondary, #2c3e6b);
+  }
+</style>
 
-  // Facebook share
-  document.getElementById("facebook-share")?.addEventListener("click", () => {
-    const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pageUrl)}`;
-    window.open(facebookUrl, "_blank");
-  });
+<script>
+  document.querySelectorAll<HTMLElement>("[data-share-root]").forEach((root) => {
+    const pageUrl = root.dataset.shareUrl || window.location.href;
+    const pageTitle = root.dataset.shareTitle || document.title;
+    const pageDesc = root.dataset.shareDescription || "";
+    const contentType = root.dataset.shareType || "generic";
 
-  // LinkedIn share
-  document.getElementById("linkedin-share")?.addEventListener("click", () => {
-    const linkedinUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(pageUrl)}`;
-    window.open(linkedinUrl, "_blank");
-  });
+    let shareText = pageTitle;
+    if (contentType === "podcast") {
+      shareText = `Listen to this podcast: ${pageTitle}`;
+    } else if (contentType === "blog") {
+      shareText = `Check out this article: ${pageTitle}`;
+    }
+    if (pageDesc) shareText += ` — ${pageDesc}`;
 
-  // Copy link
-  document.getElementById("copy-link")?.addEventListener("click", () => {
-    navigator.clipboard.writeText(pageUrl).then(
-      () => {
-        const button = document.getElementById("copy-link");
-        const originalText = button.textContent;
-        button.textContent = "Link Copied!";
+    root.querySelector('[data-share="twitter"]')?.addEventListener("click", () => {
+      const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(pageUrl)}`;
+      window.open(twitterUrl, "_blank", "noopener,noreferrer");
+    });
+
+    root.querySelector('[data-share="facebook"]')?.addEventListener("click", () => {
+      const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pageUrl)}`;
+      window.open(facebookUrl, "_blank", "noopener,noreferrer");
+    });
+
+    root.querySelector('[data-share="linkedin"]')?.addEventListener("click", () => {
+      const linkedinUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(pageUrl)}`;
+      window.open(linkedinUrl, "_blank", "noopener,noreferrer");
+    });
+
+    root.querySelector('[data-share="copy"]')?.addEventListener("click", () => {
+      const button = root.querySelector<HTMLButtonElement>('[data-share="copy"]');
+      if (!button) return;
+      void navigator.clipboard.writeText(pageUrl).then(() => {
+        const original = button.textContent;
+        button.textContent = "Copied";
+        button.classList.add("art-share__btn--copied");
         setTimeout(() => {
-          button.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg> Copy Link`;
-        }, 2000);
-      },
-      (err) => {
-        console.error("Could not copy text: ", err);
-      }
-    );
+          button.textContent = original;
+          button.classList.remove("art-share__btn--copied");
+        }, 1800);
+      });
+    });
   });
 </script>

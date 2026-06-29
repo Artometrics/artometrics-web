@@ -3,7 +3,6 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import Text from "@/components/fundations/elements/Text.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 import BlogCard2 from "@/components/blog/BlogCard2.astro";
-import Subscribe from "@/components/ctas/Subscribe.astro";
 import { getCollection } from "astro:content";
 import { SECTION_META } from "@/data/sections";
 
@@ -31,7 +30,7 @@ const sectionPosts = allPosts
         {section.description}
       </Text>
       <div
-        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 pt-8 border-t border-black"
+        class="mt-12 grid grid-cols-1 gap-6 border-t border-base-200 pt-8 sm:grid-cols-2 lg:grid-cols-3"
       >
         {sectionPosts.map((post) => (
           <BlogCard2 post={post} />
@@ -46,5 +45,4 @@ const sectionPosts = allPosts
       }
     </Wrapper>
   </section>
-  <Subscribe />
 </BaseLayout>

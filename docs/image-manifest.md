@@ -197,7 +197,8 @@ These remain as remote embeds in article HTML:
 
 ## Download instructions
 
-1. Create directories as needed under `public/images/content/`
-2. Download each Ghost URL (prepend `https://artometrics.com` if path-only)
-3. Save to the local path listed (relative to `public/`)
-4. Run `npm run dev` — broken images should resolve once files are in place
+1. Run `node scripts/download-images.mjs` (reads this manifest and saves to `public/`), **or** manually:
+2. Create directories as needed under `public/images/content/`
+3. Download each Ghost URL (prepend `https://artometrics.com` if path-only)
+4. Save to the local path listed (relative to `public/`)
+5. Run `npm run dev` — broken images should resolve once files are in place

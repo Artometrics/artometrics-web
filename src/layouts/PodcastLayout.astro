@@ -17,7 +17,6 @@ import RewindForward10S from "@/components/fundations/icons/RewindForward10s.ast
 // Components
 import PodcastCardSimple from "@/components/podcast/PodcastCardSimple.astro";
 // Sections
-import Subscribe from "@/components/ctas/Subscribe.astro";
 // Props
 const { frontmatter, previous, next, slug } = Astro.props;
 import { getEntry } from "astro:content";
@@ -261,5 +260,4 @@ const relatedPosts = allPosts.filter(
       </section>
     )
   }
-  <Subscribe />
 </BaseLayout>

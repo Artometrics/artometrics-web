@@ -130,7 +130,7 @@ const relatedPodcasts = allPodcasts.filter(
             >
               More articles from {authorName}
             </Text>
-            <div class="items-start pt-2 mt-2 border-t border-black grid grid-cols-1 md:grid-cols-2  gap-2 gap-y-8">
+            <div class="mt-2 grid grid-cols-1 gap-6 border-t border-base-200 pt-2 md:grid-cols-2">
               {relatedPosts.map((post) => (
                 <BlogCard2 post={post} />
               ))}
@@ -152,7 +152,7 @@ const relatedPodcasts = allPodcasts.filter(
             >
               Interviews with {authorName}
             </Text>
-            <div class="items-start pt-2 mt-2 border-t border-black grid grid-cols-1 md:grid-cols-2  gap-2 gap-y-8">
+            <div class="mt-2 grid grid-cols-1 gap-6 border-t border-base-200 pt-2 md:grid-cols-2">
               {relatedPodcasts.map((episode) => (
                 <BlogCard2 post={episode} />
               ))}

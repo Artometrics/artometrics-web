@@ -17,43 +17,69 @@ const { url, title, description, pubDate, image } = {
 
 import readingTime from "reading-time";
 const timeToRead = readingTime(post.body ?? "");
+
+function deckLine(description: string) {
+  const trimmed = description.trim();
+  const match = trimmed.match(/^(.+?[.!?])(?:\s|$)/);
+  const line = match ? match[1] : trimmed.split(/\s+/).slice(0, 16).join(" ");
+  return /[.!?]$/.test(line) ? line : `${line.replace(/[.!?]+$/, "")}.`;
+}
 ---
 
-<article class="relative">
+<article
+  class:list={[
+    "group relative flex h-full flex-col overflow-hidden border border-base-200 bg-white transition-colors hover:border-base-400",
+    compact && "shadow-sm",
+  ]}
+>
   <a
     href={url}
-    title={title}
     aria-label={`Read more about ${title}`}
     class="absolute inset-0 z-10"></a>
 
   {
     image && (
-      <img
-        src={image}
-        width="800"
-        height="800"
-        loading="eager"
-        decoding="async"
-        class={`object-cover w-full ${compact ? "aspect-video" : "aspect-square"}`}
-        alt={title}
-      />
+      <div
+        class:list={[
+          "overflow-hidden border-b border-base-200 bg-base-100",
+          compact ? "aspect-video" : "aspect-square",
+        ]}
+      >
+        <img
+          src={image}
+          width="800"
+          height="800"
+          loading="eager"
+          decoding="async"
+          class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+          alt={title}
+        />
+      </div>
     )
   }
-  <div class={compact ? "mt-2" : "mt-4"}>
-    <Text tag="p" variant="textXS" class="uppercase text-base-400">
+
+  <div
+    class:list={[
+      "flex flex-1 flex-col",
+      compact ? "gap-2 p-3" : "gap-2 p-4",
+    ]}
+  >
+    <Text tag="p" variant="textXS" class="shrink-0 uppercase tracking-wide text-base-400">
       <time datetime={pubDate}>{pubDate}</time>
-      <span>·</span>
+      <span> · </span>
       <span>{timeToRead.text}</span>
     </Text>
-    <Text tag="h2" variant="textSM" class="mt-2 font-medium uppercase">
+
+    <Text
+      tag="h2"
+      variant="textSM"
+      class="font-bold leading-snug text-base-900"
+    >
       {title}
     </Text>
-    {
-      !compact && (
-        <Text tag="p" variant="textSM" class="mt-1 text-base-600">
-          {description}
-        </Text>
-      )
-    }
+
+    <Text tag="p" variant="textSM" class="leading-snug text-base-600">
+      {deckLine(description)}
+    </Text>
   </div>
 </article>

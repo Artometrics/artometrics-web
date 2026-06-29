@@ -1,149 +1,113 @@
 ---
-import ShareButtons from "@/components/fundations/elements/ShareButtons.astro";
 import BaseLayout from "./BaseLayout.astro";
-import Text from "@/components/fundations/elements/Text.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
-import Subscribe from "@/components/ctas/Subscribe.astro";
-import BlogCard2 from "@/components/blog/BlogCard2.astro";
+import ShareButtons from "@/components/fundations/elements/ShareButtons.astro";
 import { getCollection } from "astro:content";
+import { SECTION_SLUGS } from "@/data/sections";
 
-const { frontmatter, previous, next, slug } = Astro.props;
+interface Props {
+  frontmatter: {
+    title: string;
+    pubDate: Date | string;
+    description: string;
+    heroImage?: string;
+  };
+  slug: string;
+}
+
+const { frontmatter, slug } = Astro.props;
+
+const pubDateFormatted = new Date(frontmatter.pubDate).toLocaleDateString(
+  "en-US",
+  {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  }
+);
+
+function deckLine(description: string) {
+  const trimmed = description.trim();
+  const match = trimmed.match(/^(.+?[.!?])(?:\s|$)/);
+  const line = match ? match[1] : trimmed.split(/\s+/).slice(0, 18).join(" ");
+  return /[.!?]$/.test(line) ? line : `${line.replace(/[.!?]+$/, "")}.`;
+}
 
 const allPosts = await getCollection("blog", ({ data }) => !data.draft);
-const currentSlug =
-  slug ||
-  frontmatter.slug ||
-  (Astro.url?.pathname
-    ? Astro.url.pathname.split("/").filter(Boolean).pop()
-    : "");
-const relatedPosts = allPosts.filter(
-  (post) =>
-    post.data.slug !== currentSlug &&
-    Array.isArray(post.data.tags) &&
-    Array.isArray(frontmatter.tags) &&
-    post.data.tags.some((tag) => frontmatter.tags.includes(tag))
-);
+const relatedPosts = allPosts
+  .filter(
+    (post) =>
+      post.data.slug !== slug && !SECTION_SLUGS.includes(post.data.slug)
+  )
+  .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
+  .slice(0, 5)
+  .map((post) => ({
+    title: post.data.title,
+    href: `/${post.data.slug}/`,
+    deck: deckLine(post.data.description),
+    image: post.data.heroImage,
+  }));
+
+const relatedJson = JSON.stringify(relatedPosts);
+const articleUrl = new URL(`/${slug}/`, Astro.site).href;
 ---
 
 <BaseLayout>
-  <section>
-    <Wrapper variant="standard">
-      <div class="relative">
-        <div class="sticky top-0 z-10 pt-32">
-          <Text
-            tag="h1"
-            variant="display3XL"
-            class="max-w-4xl mx-auto font-serif font-light tracking-tight text-center text-base-900 mix-blend-difference text-balance"
-          >
-            {frontmatter.title}
-          </Text>
-        </div>
-        <div class="relative z-10">
-          {
-            frontmatter.heroImage && (
-              <img
-                src={frontmatter.heroImage}
-                alt={frontmatter.title}
-                width={1000}
-                height={1000}
-                class="object-cover w-full h-auto max-w-xl mx-auto mt-24"
-              />
-            )
-          }
-        </div>
-      </div>
-    </Wrapper>
-  </section>
-  <section>
-    <Wrapper variant="narrow" class="pt-24">
-      <div>
-        <div>
-          <Text tag="p" variant="textXS" class="text-center text-base-600">
-            <time datetime={new Date(frontmatter.pubDate).toISOString()}>
-              {
-                new Date(frontmatter.pubDate).toLocaleDateString("en-US", {
-                  year: "numeric",
-                  month: "long",
-                  day: "2-digit",
-                })
-              }
-            </time>
-          </Text>
-          <Text
-            tag="p"
-            variant="displayMD"
-            class="mt-8 font-serif font-light text-center leading-6 md:leading-8 text-base-600 text-balance"
-          >
-            {frontmatter.description}
-          </Text>
-          <div class="flex justify-center mt-4 gap-2">
-            {
-              frontmatter.tags.map((tag) => (
-                <a
-                  href={`/${tag}/`}
-                  class="text-xs font-medium uppercase text-base-600 hover:underline"
-                >
-                  {tag}
-                </a>
-              ))
-            }
-          </div>
-        </div>
-        <Wrapper variant="prose" class="max-w-xl mx-auto mt-24">
-          <slot />
-        </Wrapper>
-        <div class="pt-6 mt-6 border-t border-black">
-          <ShareButtons
-            contentType="blog"
-            description={frontmatter.description}
+  <link slot="head" rel="preconnect" href="https://fonts.googleapis.com" />
+  <link slot="head" rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    slot="head"
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=DM+Mono&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap"
+  />
+  <link slot="head" rel="stylesheet" href="/css/artometrics-article.css" />
+  <article class="artometrics-article">
+    <Wrapper variant="standard" class="pt-10 pb-6">
+      <header class="max-w-3xl mx-auto border-b border-base-200 pb-6 text-center">
+        <h1
+          class="font-sans text-2xl md:text-3xl lg:text-[2rem] font-bold leading-tight text-base-900 text-pretty"
+        >
+          {frontmatter.title}
+        </h1>
+        <p class="mt-3 font-sans text-base md:text-lg text-base-600 leading-relaxed text-pretty">
+          {deckLine(frontmatter.description)}
+        </p>
+        <ShareButtons
+          class="mt-5"
+          contentType="blog"
+          title={frontmatter.title}
+          description={deckLine(frontmatter.description)}
+          url={articleUrl}
+        />
+        <p class="mt-4 text-xs uppercase tracking-wide text-base-500">
+          <time datetime={new Date(frontmatter.pubDate).toISOString()}>
+            {pubDateFormatted}
+          </time>
+        </p>
+      </header>
+      {
+        frontmatter.heroImage && (
+          <img
+            src={frontmatter.heroImage}
+            alt={frontmatter.title}
+            width={1200}
+            height={800}
+            class="w-full max-w-4xl mx-auto mt-10 block"
+            loading="eager"
+            decoding="async"
           />
-        </div>
-      </div>
+        )
+      }
     </Wrapper>
-    <Wrapper variant="standard" class="pb-24 pt-8">
-      <nav
-        class="flex flex-col md:flex-row lg:justify-between gap-4 lg:items-center relative text-xs"
-      >
-        {
-          previous && (
-            <a href={`/${previous.data.slug}/`} class="hover:opacity-80">
-              <span class="block text-base-900 font-medium uppercase">
-                Previous:
-              </span>
-              <span class="block text-base-600">{previous.data.title}</span>
-            </a>
-          )
-        }
-        {
-          next && (
-            <a href={`/${next.data.slug}/`} class="hover:opacity-80 text-right">
-              <span class="block text-base-900 font-medium uppercase">Next:</span>
-              <span class="block text-base-600">{next.data.title}</span>
-            </a>
-          )
-        }
-      </nav>
-    </Wrapper>
-  </section>
-  {
-    relatedPosts.length > 0 && (
-      <section>
-        <Wrapper variant="standard" class="py-8">
-          <Text
-            tag="h2"
-            variant="displayMD"
-            class="font-serif font-light text-base-600"
-          >
-            Related posts
-          </Text>
-          <div class="items-start pt-2 mt-2 border-t border-black grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-2">
-            {relatedPosts.slice(0, 3).map((post) => (
-              <BlogCard2 post={post} />
-            ))}
-          </div>
-        </Wrapper>
-      </section>
-    )
-  }
-  <Subscribe />
+
+    <div class="artometrics-article-body" data-related={relatedJson}>
+      <slot />
+    </div>
+  </article>
+  <script>
+    import { initArtCharts } from "@/scripts/art-charts";
+    import { initArticleChrome } from "@/scripts/art-article-chrome";
+    initArtCharts();
+    initArticleChrome();
+  </script>
 </BaseLayout>

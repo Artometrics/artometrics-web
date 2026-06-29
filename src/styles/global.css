@@ -8,7 +8,7 @@
   src: url("../fonts/Chomsky.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 @layer utilities {
   .audio-player input[type="range"] {
@@ -208,4 +208,141 @@
   --astro-code-token-bold: inherit;
   --astro-code-token-italic: italic;
   --astro-code-token-underline: underline;
+}
+
+body.art-sidebar-collapsed .artometrics-article-body #quarto-content {
+  grid-template-columns: minmax(0, 1fr) minmax(8rem, 10rem) !important;
+}
+
+body.art-sidebar-collapsed .artometrics-article-body nav#TOC {
+  display: none !important;
+}
+
+body.art-sidebar-collapsed .artometrics-article-body main.art-article-main {
+  grid-column: 1 !important;
+  max-width: none;
+  width: 100%;
+  margin: 0 !important;
+}
+
+body.art-sidebar-collapsed #art-sidebar-btn {
+  left: 0 !important;
+}
+
+.artometrics-article-body nav#TOC,
+.artometrics-article-body nav#TOC ul,
+.artometrics-article-body nav#TOC li,
+.artometrics-article-body nav#TOC a {
+  min-width: 0 !important;
+  max-width: 100% !important;
+}
+
+.artometrics-article-body nav#TOC ul {
+  display: block !important;
+  grid-template-columns: none !important;
+  gap: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.artometrics-article-body nav#TOC li {
+  display: block !important;
+  list-style: none !important;
+  width: 100% !important;
+  margin-inline: 0 !important;
+  padding-inline: 0 !important;
+}
+
+.artometrics-article-body {
+  max-width: min(100%, 1656px);
+  margin: 0 auto;
+  padding: 1.5rem clamp(1rem, 2vw, 1.75rem) 4rem;
+  overflow-x: visible;
+  box-sizing: border-box;
+}
+
+.artometrics-article-body #quarto-content {
+  text-align: center;
+}
+
+.artometrics-article-body nav#TOC {
+  text-align: left;
+}
+
+.artometrics-article-body .kg-header-card {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+  padding: 0.875rem 1.5rem;
+  box-sizing: border-box;
+}
+
+.artometrics-article-body .kg-header-card-content {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.artometrics-article-body .kg-header-card-heading {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  line-height: 1.4;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.artometrics-article-body figure.kg-image-card {
+  margin: 2rem auto !important;
+  text-align: center;
+}
+
+.artometrics-article-body figure.kg-image-card img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* Wide Tableau / chart embeds from Ghost */
+.artometrics-article-body .tableauPlaceholder {
+  width: 100%;
+  max-width: min(100vw - 2rem, 1100px);
+  margin: 1.5rem auto;
+}
+
+.artometrics-article-body > div[style*="margin-left: -150px"] {
+  width: 100vw;
+  max-width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw !important;
+  margin-right: -50vw !important;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.artometrics-article-body .art-code-block {
+  margin: 1.75rem auto;
+}
+
+.artometrics-article-body .art-code-pre {
+  background: #f2f0eb !important;
+  color: #1c1c1e !important;
+}
+
+.artometrics-article-body pre:not(.art-code-pre) {
+  background: #f2f0eb;
+  color: #1c1c1e;
+  padding: 1rem;
+  overflow-x: auto;
+  font-size: 0.78rem;
+  line-height: 1.6;
 }

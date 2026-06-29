@@ -64,8 +64,28 @@ function stripGhostCards(html) {
     .trim();
 }
 
+function normalizeHtmlForMarkdown(html) {
+  const preserved = [];
+  let index = 0;
+  const withPlaceholders = html.replace(
+    /<(style|script|pre)[\s>][\s\S]*?<\/\1>/gi,
+    (match) => {
+      const key = `__PRESERVE_${index++}__`;
+      preserved.push({ key, match });
+      return key;
+    }
+  );
+  const collapsed = withPlaceholders
+    .replace(/^[ \t]+$/gm, "")
+    .replace(/\n{3,}/g, "\n\n");
+  return preserved.reduce(
+    (out, { key, match }) => out.replace(key, match),
+    collapsed
+  );
+}
+
 function htmlToBody(html) {
-  return rewriteImagePaths(stripGhostCards(html));
+  return normalizeHtmlForMarkdown(rewriteImagePaths(stripGhostCards(html)));
 }
 
 function stripHtml(html) {

@@ -17,10 +17,10 @@ From `package.json` and `astro.config.mjs`:
 - **Tailwind CSS** `^4.1.18` with **Vite plugin** `@tailwindcss/vite` `^4.1.18`
 - **Plugins (in `src/styles/global.css`):** `@tailwindcss/typography`, `@tailwindcss/forms`, `tailwind-scrollbar-hide`
 - **SEO component:** `@lexingtonthemes/seo` `^0.1.0` (see `src/components/fundations/head/Seo.astro`)
-- **Other:** `reading-time` `^1.5.0` (blog post reading time in `src/pages/blog/posts/[...slug].astro`)
+- **Other:** `reading-time` `^1.5.0` (blog post reading time in `src/pages/[slug].astro`)
 - **Content:** `astro:content` loaders + `z` from `astro/zod` in `src/content.config.ts`
 
-Markdown: drafts enabled; Shiki theme `css-variables` (see `astro.config.mjs`). **Site URL placeholder:** `site: "https://yourdomain.com"` in `astro.config.mjs` (must match production domain for canonical URLs, RSS, sitemap).
+Markdown: drafts enabled; Shiki theme `css-variables` (see `astro.config.mjs`). **Site URL:** `site: "https://artometrics.com"` in `astro.config.mjs` (canonical URLs, RSS, sitemap).
 
 ## Folder map
 
@@ -32,7 +32,7 @@ Markdown: drafts enabled; Shiki theme `css-variables` (see `astro.config.mjs`). 
 | Content | `src/content/` | Markdown/MDX per collection |
 | Styles | `src/styles/global.css` | Tailwind v4 `@import`, `@plugin`, `@theme` tokens (`--font-*`, `--color-accent-*`, `--color-base-*`), Shiki CSS variables |
 | Images (referenced by content) | `src/images/` | e.g. `thumbnails/`, `authors/`, `about/` |
-| Public assets | `public/` | **This repo:** `public/audios/` (e.g. `placeholder.mp3`) — podcast `audioSrc` paths like `/audios/placeholder.mp3` resolve here |
+| Public assets | `public/` | `public/audios/` (podcast), `public/images/content/` (Ghost-imported article images), `public/_redirects` (legacy URL redirects) |
 
 Path alias: `@/*` → `src/*` (`tsconfig.json`).
 
@@ -40,13 +40,14 @@ Path alias: `@/*` → `src/*` (`tsconfig.json`).
 
 All collections use the `glob` loader from `astro/loaders`. **`image.url` fields use Astro’s `image()` helper** — use valid image paths (existing entries reference files under `src/images/`).
 
-### `posts`
+### `blog`
 
-- **Folder:** `src/content/posts/`
+- **Folder:** `src/content/blog/`
 - **Files:** `**/*.{md,mdx}` with `retainBody: true` (body used for reading time)
-- **Required frontmatter:** `title`, `pubDate`, `description`, `author`, `image: { url, alt }`, `tags` (string array)
-- **Optional:** `isRecent`, `isPopular`, `isLocked` (booleans)
-- **Template:** copy structure from `src/content/posts/1.md`
+- **Required frontmatter:** `title`, `slug`, `pubDate`, `description`, `heroImage` (string path under `/images/content/`), `tags` (enum: `culture|atlas|history|persona|power`)
+- **Optional:** `draft` (boolean, default `false`)
+- **Import:** `node scripts/import-ghost.mjs` from Ghost export JSON
+- **Template:** copy structure from `src/content/blog/anime.md`
 
 ### `authors`
 
@@ -75,14 +76,16 @@ All collections use the `glob` loader from `astro/loaders`. **`image.url` fields
 
 - **Home:** `src/pages/index.astro` → `/`
 - **Blog listing:** `src/pages/blog/index.astro` → `/blog`
-- **Blog post:** `src/pages/blog/posts/[...slug].astro` → `/blog/posts/<entry id>/` (slug is `entry.id` from collection, e.g. `1` for `1.md`; RSS uses `/blog/posts/${post.id}/`)
+- **Blog post (root slug):** `src/pages/[slug].astro` → `/<slug>/` (uses frontmatter `slug`; RSS uses same pattern)
+- **Section hubs:** `src/pages/[section]/index.astro` → `/culture/`, `/atlas/`, `/history/`, `/persona/`, `/power/`
+- **Legacy redirect:** `public/_redirects` — `/blog/posts/:slug` → `/:slug` (301)
 - **Blog tags:** `src/pages/blog/tags/index.astro` → `/blog/tags`; `src/pages/blog/tags/[tag].astro` → `/blog/tags/<tag>`
 - **Podcast listing:** `src/pages/podcast/index.astro` → `/podcast`
 - **Podcast episode:** `src/pages/podcast/interviews/[...slug].astro` → `/podcast/interviews/<entry id>`
 - **Podcast tags:** `src/pages/podcast/tags/index.astro` → `/podcast/tags`; `[tag].astro` → `/podcast/tags/<tag>`
 - **Authors listing / detail:** `src/pages/authors/index.astro` → `/authors`; `src/pages/authors/[...slug].astro` → `/authors/<entry id>` (`trailingSlash: false` on static paths)
 - **Legal:** `src/pages/legal/[...slug].astro` → `/legal/<entry id>` (`trailingSlash: false` on static paths)
-- **RSS:** `src/pages/rss.xml.js` → `/rss.xml` (posts collection only)
+- **RSS:** `src/pages/rss.xml.js` → `/rss.xml` (`blog` collection)
 - **Marketing / system:** e.g. `about.astro`, `pricing.astro`, `contact.astro`, `login.astro`, `signup.astro`, `404.astro`, `src/pages/system/*` → `/about`, `/pricing`, `/contact`, `/login`, `/signup`, `/404`, `/system/...`
 
 Nested layouts: `BlogLayout`, `PodcastLayout`, `AuthorsLayout`, and `LegalLayout` wrap `BaseLayout` and pass frontmatter into section-specific chrome.

@@ -1,114 +1,23 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import Text from "@/components/fundations/elements/Text.astro";
-import Button from "@/components/fundations/elements/Button.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
-import BlogCard1 from "@/components/blog/BlogCard1.astro";
 import BlogCard2 from "@/components/blog/BlogCard2.astro";
-import Subscribe from "@/components/ctas/Subscribe.astro";
 import { getCollection } from "astro:content";
 
 const allPosts = await getCollection("blog", ({ data }) => !data.draft);
 const sortedPosts = allPosts
   .filter((post) => post.data?.pubDate)
   .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
-
-const heroPost = sortedPosts[0];
-const sidebarPosts = sortedPosts.slice(1, 4);
-const centerSubPosts = sortedPosts.slice(4, 6);
-const featuredArticles = sortedPosts.slice(0, 4);
-const latestPosts = sortedPosts.slice(0, 8);
 ---
 
 <BaseLayout>
   <section>
-    <Wrapper variant="standard" class="pt-8 pb-12">
+    <Wrapper variant="standard" class="pt-8 pb-24">
       <div
-        class="grid grid-cols-1 lg:grid-cols-12 gap-8 border-t border-black pt-8"
+        class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4"
       >
-        <!-- Left sidebar -->
-        <aside class="lg:col-span-3 space-y-6">
-          <Text tag="p" variant="textXS" class="font-medium uppercase">
-            In the news
-          </Text>
-          {
-            sidebarPosts.map((post) => <BlogCard2 post={post} />)
-          }
-        </aside>
-
-        <!-- Center column -->
-        <div class="lg:col-span-6 space-y-8">
-          {
-            heroPost && (
-              <article>
-                <BlogCard1 post={heroPost} />
-              </article>
-            )
-          }
-          <div class="border border-base-200 p-6">
-            <Text tag="p" variant="textXS" class="font-medium uppercase mb-4">
-              Newsletter
-            </Text>
-            <Text
-              tag="p"
-              variant="textSM"
-              class="font-serif text-base-600 mb-4"
-            >
-              Data-driven analysis on media, culture, and power. Subscribe for
-              new Artometrics reports.
-            </Text>
-            <form class="flex items-center gap-2">
-              <input
-                type="email"
-                name="email"
-                placeholder="you@example.com"
-                class="flex-1 px-0 py-2 text-xs bg-transparent border-t-0 border-b border-black border-x-0 focus:outline-none focus:ring-2 focus:ring-accent-700"
-                aria-label="Email address"
-              />
-              <Button size="xs" variant="default" type="submit">
-                Subscribe
-              </Button>
-            </form>
-          </div>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {centerSubPosts.map((post) => <BlogCard2 post={post} />)}
-          </div>
-        </div>
-
-        <!-- Right featured -->
-        <aside class="lg:col-span-3 space-y-6">
-          <Text tag="p" variant="textXS" class="font-medium uppercase">
-            Featured Articles
-          </Text>
-          {
-            featuredArticles.length > 0 ? (
-              featuredArticles.map((post) => <BlogCard2 post={post} />)
-            ) : (
-              sidebarPosts.map((post) => <BlogCard2 post={post} />)
-            )
-          }
-        </aside>
+        {sortedPosts.map((post) => <BlogCard2 post={post} />)}
       </div>
     </Wrapper>
   </section>
-
-  <section>
-    <Wrapper variant="standard" class="pb-24">
-      <div class="flex flex-wrap items-center justify-between gap-4 border-t border-black pt-8">
-        <Text tag="h2" variant="displaySM" class="font-serif font-light">
-          Latest Articles
-        </Text>
-        <Button isLink size="xs" variant="default" href="/blog/">
-          Load more
-        </Button>
-      </div>
-      <div
-        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-8 pt-4 border-t border-black"
-      >
-        {latestPosts.map((post) => <BlogCard2 post={post} />)}
-      </div>
-    </Wrapper>
-  </section>
-
-  <Subscribe />
 </BaseLayout>

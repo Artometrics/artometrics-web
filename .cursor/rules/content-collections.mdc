@@ -6,13 +6,14 @@ globs:
 
 # Content (`src/content/**`)
 
-- **Schemas live in** `src/content.config.ts` only. Collections: `posts`, `authors`, `podcast`, `legal` — each backed by a **glob** loader with paths under `src/content/<name>/`.
+- **Schemas live in** `src/content.config.ts` only. Collections: `blog`, `authors`, `podcast`, `legal` — each backed by a **glob** loader with paths under `src/content/<name>/`.
 - **Do not change Zod fields** without updating every consumer (`src/pages/**`, layouts, components, `src/pages/rss.xml.js`). Optional vs required must stay consistent with how pages read `entry.data`.
-- **`image()`:** `posts`, `authors`, and `podcast` use `image: { url: image(), alt: z.string() }` (podcast also `guestAvatar`). Keep `url`/`alt` shape; invalid paths break builds. Existing entries reference `src/images/` (e.g. `/src/images/thumbnails/...`).
+- **`blog` collection:** `src/content/blog/**/*.{md,mdx}` with `retainBody: true`. Required frontmatter: `title`, `slug`, `pubDate`, `description`, `heroImage` (string path under `/images/content/`), `tags` (enum: `culture|atlas|history|persona|power`), `draft` (default `false`). Import via `scripts/import-ghost.mjs`.
+- **`image()`:** `authors` and `podcast` use `image: { url: image(), alt: z.string() }` (podcast also `guestAvatar`). Blog hero images are plain strings pointing at `public/images/content/`.
 - **Copy-paste templates:**
-  - Blog: `src/content/posts/1.md`
+  - Blog: any file in `src/content/blog/` (e.g. `anime.md`)
   - Authors: `src/content/authors/juliet-ramos.md`
   - Podcast: `src/content/podcast/1.md` (`audioSrc` under `/audios/...` → `public/audios/`)
   - Legal: `src/content/legal/privacy.md`
-- **`posts`** use `retainBody: true`; the blog slug route uses `entry.body` with `reading-time` — be mindful when changing loader options.
-- **Author slugs in posts/podcast** are strings (e.g. `author: "david-lee"`) that align with `src/content/authors/` entry ids/slugs.
+- **`blog`** uses `retainBody: true`; `src/pages/[slug].astro` uses `entry.body` with `reading-time` — be mindful when changing loader options.
+- **Author slugs in podcast** are strings (e.g. `author: "david-lee"`) that align with `src/content/authors/` entry ids/slugs.

@@ -1,0 +1,153 @@
+{
+  "data": [
+    {
+      "x": ["For-Profit", "Government", "Non-Profit", "For-Profit", "Government", "Non-Profit", "For-Profit", "Government", "Non-Profit", "For-Profit", "Government", "Non-Profit", "For-Profit", "Government", "Non-Profit", "For-Profit", "Government", "Non-Profit"],
+      "y": [44.34, 44.81, 52.71, 38.73, 45.45, 53.24, 50.24, 51.18, 53.73, 42.16, 43.7, 55.05, 53.04, 53.55, 51.58, 44.21, 57.18, 54.9],
+      "hovertemplate": ["<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>"],
+      "type": "bar",
+      "name": "No Penalty",
+      "marker": {
+        "color": "rgba(44,62,107,1)",
+        "line": {
+          "color": "rgba(44,62,107,1)"
+        }
+      },
+      "textfont": {
+        "color": "rgba(44,62,107,1)"
+      },
+      "error_y": {
+        "color": "rgba(44,62,107,1)"
+      },
+      "error_x": {
+        "color": "rgba(44,62,107,1)"
+      },
+      "xaxis": "x",
+      "yaxis": "y",
+      "frame": null
+    },
+    {
+      "x": ["For-Profit", "Government", "Non-Profit", "For-Profit", "Government", "Non-Profit", "For-Profit", "Government", "Non-Profit", "For-Profit", "Government", "Non-Profit", "For-Profit", "Government", "Non-Profit", "For-Profit", "Government", "Non-Profit"],
+      "y": [4.4, 8.74, 6.48, 1.41, 4.55, 4.78, 8.65, 10.77, 8.2, 8.35, 6.72, 6.03, 2.56, 2.58, 2.66, 4.83, 7.44, 6.42],
+      "hovertemplate": ["<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>"],
+      "type": "bar",
+      "name": "Low",
+      "marker": {
+        "color": "rgba(127,143,166,1)",
+        "line": {
+          "color": "rgba(127,143,166,1)"
+        }
+      },
+      "textfont": {
+        "color": "rgba(127,143,166,1)"
+      },
+      "error_y": {
+        "color": "rgba(127,143,166,1)"
+      },
+      "error_x": {
+        "color": "rgba(127,143,166,1)"
+      },
+      "xaxis": "x",
+      "yaxis": "y",
+      "frame": null
+    },
+    {
+      "x": ["For-Profit", "Government", "Non-Profit", "For-Profit", "Government", "Non-Profit", "For-Profit", "Government", "Non-Profit", "For-Profit", "Government", "Non-Profit", "For-Profit", "Government", "Non-Profit", "For-Profit", "Government", "Non-Profit"],
+      "y": [10.06, 14.21, 8.34, 4.93, 2.27, 6.02, 12.98, 12.12, 11.12, 8.76, 13.45, 8.01, 2.88, 3.87, 4.7, 9.85, 9.49, 7.36],
+      "hovertemplate": ["<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>"],
+      "type": "bar",
+      "name": "Medium",
+      "marker": {
+        "color": "rgba(224,123,84,1)",
+        "line": {
+          "color": "rgba(224,123,84,1)"
+        }
+      },
+      "textfont": {
+        "color": "rgba(224,123,84,1)"
+      },
+      "error_y": {
+        "color": "rgba(224,123,84,1)"
+      },
+      "error_x": {
+        "color": "rgba(224,123,84,1)"
+      },
+      "xaxis": "x",
+      "yaxis": "y",
+      "frame": null
+    },
+    {
+      "x": ["For-Profit", "Government", "Non-Profit", "For-Profit", "Government", "Non-Profit", "For-Profit", "Government", "Non-Profit", "For-Profit", "Government", "Non-Profit", "For-Profit", "Government", "Non-Profit", "For-Profit", "Government", "Non-Profit"],
+      "y": [41.19, 32.24, 32.47, 54.93, 47.73, 35.96, 28.12, 25.93, 26.96, 40.73, 36.13, 30.91, 41.53, 40, 41.06, 41.12, 25.9, 31.32],
+      "hovertemplate": ["<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>", "<b>%{x}<\/b><br>Tier: %{fullData.name}<br>Share: %{y:.1%}<extra><\/extra>"],
+      "type": "bar",
+      "name": "High",
+      "marker": {
+        "color": "rgba(192,57,43,1)",
+        "line": {
+          "color": "rgba(192,57,43,1)"
+        }
+      },
+      "textfont": {
+        "color": "rgba(192,57,43,1)"
+      },
+      "error_y": {
+        "color": "rgba(192,57,43,1)"
+      },
+      "error_x": {
+        "color": "rgba(192,57,43,1)"
+      },
+      "xaxis": "x",
+      "yaxis": "y",
+      "frame": null
+    }
+  ],
+  "layout": {
+    "margin": {
+      "b": 40,
+      "l": 60,
+      "t": 25,
+      "r": 10
+    },
+    "barmode": "stack",
+    "title": {
+      "text": "<b><span style='color:#C0392B;'>For-Profit<\/span> Hospitals Carry More Penalty Weight<\/b>",
+      "x": 0
+    },
+    "paper_bgcolor": "#F2F0EB",
+    "plot_bgcolor": "#F2F0EB",
+    "font": {
+      "color": "#1C1C1E",
+      "family": "Helvetica"
+    },
+    "xaxis": {
+      "domain": [0, 1],
+      "automargin": true,
+      "title": "",
+      "type": "category",
+      "categoryorder": "array",
+      "categoryarray": ["Non-Profit", "Government", "For-Profit"]
+    },
+    "yaxis": {
+      "domain": [0, 1],
+      "automargin": true,
+      "title": "Share of Hospital-Condition Pairs",
+      "tickformat": ".0%"
+    },
+    "showlegend": true,
+    "legend": {
+      "title": {
+        "text": "Penalty Tier"
+      }
+    },
+    "transition": {
+      "duration": 500,
+      "easing": "cubic-in-out"
+    },
+    "hovermode": "closest"
+  },
+  "config": {
+    "displayModeBar": true,
+    "displaylogo": false,
+    "responsive": true
+  }
+}

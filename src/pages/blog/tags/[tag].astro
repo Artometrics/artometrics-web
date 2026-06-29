@@ -42,7 +42,7 @@ const { posts } = Astro.props;
       </div>
 
       <div
-        class="items-start grid grid-cols-1 md:grid-cols-2 gap-2 gap-y-12 mt-32 pt-2 border-t border-black"
+        class="mt-32 grid grid-cols-1 gap-6 border-t border-base-200 pt-2 md:grid-cols-2"
       >
         {posts.map((post) => <BlogCard2 post={post} />)}
       </div>

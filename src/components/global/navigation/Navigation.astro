@@ -1,7 +1,6 @@
 ---
 import Logo from "@/components/assets/Logo.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
-import Search from "@/components/global/Search.astro";
 
 const primaryNavLinks = [
   { href: "/culture/", link: "Culture" },
@@ -10,57 +9,10 @@ const primaryNavLinks = [
   { href: "/persona/", link: "Persona" },
   { href: "/power/", link: "Power" },
 ];
-
-const socialLinks = [
-  { href: "#_", label: "Facebook" },
-  { href: "#_", label: "X" },
-  { href: "#_", label: "Instagram" },
-  { href: "#_", label: "LinkedIn" },
-  { href: "#_", label: "Pinterest" },
-];
-
-const announcements = [
-  "READMITTED: How America's Hospitals Are Failing the 30-Day Standard",
-  "POKEMON: The Artometrics of the World's Biggest Franchise",
-  "ANIME: The Artometrics of Japanese Animation",
-];
 ---
 
 <section id="navigation" class="z-10 bg-white border-b border-base-200">
   <Wrapper variant="standard">
-    <!-- Utility bar -->
-    <div
-      class="flex items-center justify-between py-2 text-xs border-b border-base-200"
-    >
-      <div class="flex items-center gap-3">
-        {
-          socialLinks.map((item) => (
-            <a
-              href={item.href}
-              aria-label={item.label}
-              class="flex items-center justify-center size-5 rounded-full border border-base-900 text-base-900 hover:bg-base-100"
-            >
-              <span class="sr-only">{item.label}</span>
-              <span class="text-[8px] font-bold">{item.label.charAt(0)}</span>
-            </a>
-          ))
-        }
-      </div>
-      <div class="flex items-center gap-4">
-        <Search />
-        <a href="/login" class="text-base-900 hover:text-base-500 font-medium">
-          Sign in
-        </a>
-        <a
-          href="/pricing"
-          class="px-3 py-1 text-white bg-accent-700 hover:bg-accent-800 font-medium"
-        >
-          Subscribe
-        </a>
-      </div>
-    </div>
-
-    <!-- Wordmark -->
     <div class="py-6 text-center">
       <a href="/" class="inline-block">
         <span class="sr-only">Artometrics home</span>
@@ -68,9 +20,8 @@ const announcements = [
       </a>
     </div>
 
-    <!-- Primary nav -->
     <nav
-      class="flex flex-wrap items-center justify-center gap-6 pb-4 text-xs font-medium tracking-widest uppercase"
+      class="flex flex-wrap items-center justify-center gap-6 pb-4 border-t border-base-200 pt-4 text-xs font-medium tracking-widest uppercase"
     >
       {
         primaryNavLinks.map((link) => (
@@ -81,18 +32,4 @@ const announcements = [
       }
     </nav>
   </Wrapper>
-
-  <!-- Announcement ticker -->
-  <div class="bg-base-800 text-white text-xs overflow-hidden">
-    <Wrapper variant="standard" class="py-2 flex items-center gap-4">
-      <span class="text-accent-500 font-semibold uppercase shrink-0"
-        >Announcement</span
-      >
-      <div class="overflow-hidden whitespace-nowrap">
-        <span class="inline-block animate-none">
-          {announcements.join(" · ")}
-        </span>
-      </div>
-    </Wrapper>
-  </div>
 </section>

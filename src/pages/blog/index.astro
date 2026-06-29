@@ -3,7 +3,6 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import Text from "@/components/fundations/elements/Text.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 import BlogCard2 from "@/components/blog/BlogCard2.astro";
-import Subscribe from "@/components/ctas/Subscribe.astro";
 import { getCollection } from "astro:content";
 
 const allPosts = await getCollection("blog", ({ data }) => !data.draft);
@@ -19,11 +18,10 @@ const sortedPosts = allPosts.sort(
         All Articles
       </Text>
       <div
-        class="items-start pt-8 mt-8 border-t border-black grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-4"
+        class="mt-8 grid grid-cols-1 gap-6 border-t border-base-200 pt-8 md:grid-cols-2 lg:grid-cols-3"
       >
         {sortedPosts.map((post) => <BlogCard2 post={post} />)}
       </div>
     </Wrapper>
   </section>
-  <Subscribe />
 </BaseLayout>

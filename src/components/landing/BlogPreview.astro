@@ -35,7 +35,7 @@ allPosts.sort((a, b) => {
       </Button>
     </div>
     <div
-      class="items-start pt-4 mt-4 border-t border-black grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4"
+      class="mt-4 grid grid-cols-1 gap-6 border-t border-base-200 pt-4 sm:grid-cols-2 md:grid-cols-4"
     >
       {
         allPosts.slice(0, 4).map((post) => <BlogCard2 key={post.id} post={post} />)
