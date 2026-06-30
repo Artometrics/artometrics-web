@@ -163,9 +163,9 @@ PROFILES: dict[str, dict[str, Any]] = {
     },
     "world-heritage-sites": {
         "metric": "_art_value",
-        "label": "state",
-        "category": "region",
-        "question": "How did UNESCO site counts grow across regions and decades?",
+        "label": "country",
+        "category": None,
+        "question": "How did UNESCO site counts grow across Scandinavia between 2004 and 2022?",
     },
     "cia-world-factbook": {
         "metric": "population",

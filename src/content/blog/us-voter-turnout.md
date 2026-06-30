@@ -72,7 +72,7 @@ draft: false
   <figcaption class="art-chart-caption">Votes vs Eligible voters</figcaption>
 </figure>
 <p class="art-p">Joint plot of <strong>votes</strong> and <strong>eligible voters</strong> surfaces clusters the averages erase.</p>
-<p class="art-p">Outlying points are candidates for follow-up — they are the archetypes, not the noise.</p>
+<p class="art-p">Bubble size tracks repeat presence — outliers are archetypes, not noise.</p>
 <h2 id="limitations" class="anchored">LIMITATIONS</h2>
 <p>Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p><p>Findings describe the file on hand — treat them as structural signals about <strong>US Voter Turnout</strong>, not exhaustive truth about the full domain.</p>
 <h2 id="conclusion" class="anchored">CONCLUSION</h2>

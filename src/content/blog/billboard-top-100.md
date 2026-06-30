@@ -13,11 +13,11 @@ draft: false
   <ul>
   <li><a href="#fast-facts" id="toc-fast-facts">FAST FACTS</a></li>
   <li><a href="#dataset-context" id="toc-dataset-context">DATASET CONTEXT</a></li>
+  <li><a href="#chart-1-breakdown" id="toc-chart-1-breakdown">CHART 1 — BREAKDOWN</a></li>
   <li><a href="#chart-2-leaders" id="toc-chart-2-leaders">CHART 2 — LEADERS</a></li>
   <li><a href="#chart-3-distribution" id="toc-chart-3-distribution">CHART 3 — DISTRIBUTION</a></li>
+  <li><a href="#chart-4-concentration" id="toc-chart-4-concentration">CHART 4 — CONCENTRATION</a></li>
   <li><a href="#chart-5-relationship" id="toc-chart-5-relationship">CHART 5 — RELATIONSHIP</a></li>
-  <li><a href="#chart-spread" id="toc-chart-spread">CHART 4 — SPREAD</a></li>
-  <li><a href="#chart-top-names" id="toc-chart-top-names">CHART 5 — NAMES</a></li>
   <li><a href="#limitations" id="toc-limitations">LIMITATIONS</a></li>
   <li><a href="#conclusion" id="toc-conclusion">CONCLUSION</a></li>
   <li><a href="#references" id="toc-references">REFERENCES</a></li>
@@ -37,6 +37,13 @@ draft: false
 <h2 id="dataset-context" class="anchored">DATASET CONTEXT</h2>
 <p>The source is the TidyTuesday release from <strong>2021-09-14</strong> (R for Data Science community). This working file contains <strong>100,000</strong> rows and <strong>10</strong> columns after merging all available CSV/XLSX tables in the week folder.</p>
 <p>Charts are exported as Plotly JSON with PNG fallbacks. Medians are used for robustness where distributions skew. Index-style fields (row numbers, sequential IDs) are excluded from metric selection.</p>
+<h2 id="chart-1-breakdown" class="anchored">CHART 1 — BREAKDOWN</h2>
+<figure class="art-chart">
+  <div class="art-chart-live" data-chart="/data/articles/billboard-top-100/charts/chart1_breakdown.plotly.json" data-fallback="/images/content/articles/billboard-top-100/charts/chart1_breakdown.png" role="img" aria-label="Week position by Song"></div>
+  <figcaption class="art-chart-caption">Week position by Song</figcaption>
+</figure>
+<p class="art-p"><strong>(Quarter To Four) Stomp</strong> leads at <strong>100</strong>; <strong>Girl (You Captivate Me)</strong> anchors the low end at <strong>100</strong>.</p>
+<p class="art-p">Grouping by song exposes how the metric varies across the catalog's major entities.</p>
 <h2 id="chart-2-leaders" class="anchored">CHART 2 — LEADERS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/billboard-top-100/charts/chart2_leaders.plotly.json" data-fallback="/images/content/articles/billboard-top-100/charts/chart2_leaders.png" role="img" aria-label="Top Song"></div>
@@ -51,27 +58,20 @@ draft: false
 </figure>
 <p class="art-p">Median <strong>50.0</strong> vs mean <strong>50.4</strong> — the shape is relatively symmetric.</p>
 <p class="art-p">The top decile begins at <strong>91.0</strong>; that tail is where defining cases live.</p>
+<h2 id="chart-4-concentration" class="anchored">CHART 4 — CONCENTRATION</h2>
+<figure class="art-chart">
+  <div class="art-chart-live" data-chart="/data/articles/billboard-top-100/charts/chart4_pareto.plotly.json" data-fallback="/images/content/articles/billboard-top-100/charts/chart4_pareto.png" role="img" aria-label="Cumulative Week position"></div>
+  <figcaption class="art-chart-caption">Cumulative Week position</figcaption>
+</figure>
+<p class="art-p">The top <strong>5</strong> song entries account for <strong>33%</strong> of the aggregate week position.</p>
+<p class="art-p">Steep Pareto curves mean a small head drives most of the signal — the long tail is noise until it isn't.</p>
 <h2 id="chart-5-relationship" class="anchored">CHART 5 — RELATIONSHIP</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/billboard-top-100/charts/chart5_scatter.plotly.json" data-fallback="/images/content/articles/billboard-top-100/charts/chart5_scatter.png" role="img" aria-label="Week position vs Instance"></div>
   <figcaption class="art-chart-caption">Week position vs Instance</figcaption>
 </figure>
 <p class="art-p">Joint plot of <strong>week position</strong> and <strong>instance</strong> surfaces clusters the averages erase.</p>
-<p class="art-p">Outlying points are candidates for follow-up — they are the archetypes, not the noise.</p>
-<h2 id="chart-spread" class="anchored">CHART 4 — SPREAD</h2>
-<figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/billboard-top-100/charts/chart_spread.plotly.json" data-fallback="/images/content/articles/billboard-top-100/charts/chart_spread.png" role="img" aria-label="Week position Spread"></div>
-  <figcaption class="art-chart-caption">Week position Spread</figcaption>
-</figure>
-<p class="art-p">The middle half runs <strong>25.0</strong> to <strong>75.0</strong>.</p>
-<p class="art-p">Tight boxes mean consensus; long whiskers mean extremes own the narrative.</p>
-<h2 id="chart-top-names" class="anchored">CHART 5 — NAMES</h2>
-<figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/billboard-top-100/charts/chart_top_names.plotly.json" data-fallback="/images/content/articles/billboard-top-100/charts/chart_top_names.png" role="img" aria-label="Top Song"></div>
-  <figcaption class="art-chart-caption">Top Song</figcaption>
-</figure>
-<p class="art-p"><strong>Stay</strong> appears <strong>63</strong> times — the most repeated entry.</p>
-<p class="art-p">Frequency leaders reveal franchise depth when numeric scores are sparse.</p>
+<p class="art-p">Bubble size tracks repeat presence — outliers are archetypes, not noise.</p>
 <h2 id="limitations" class="anchored">LIMITATIONS</h2>
 <p>Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p><p>Findings describe the file on hand — treat them as structural signals about <strong>Billboard Top 100</strong>, not exhaustive truth about the full domain.</p>
 <h2 id="conclusion" class="anchored">CONCLUSION</h2>

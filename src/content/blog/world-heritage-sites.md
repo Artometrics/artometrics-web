@@ -2,7 +2,7 @@
 title: "WORLD HERITAGE SITES: The Artometrics of World Heritage Sites"
 slug: world-heritage-sites
 pubDate: 2026-06-15
-description: "This report analyzes the TidyTuesday 2024-02-06 release on World Heritage Sites — 6 rows after cleaning and merge. How did UNESCO site counts grow across regions and decades?"
+description: "This report analyzes the TidyTuesday 2024-02-06 release on World Heritage Sites — 6 rows after cleaning and merge. How did UNESCO site counts grow across Scandinavia between 2004 and 2022?"
 heroImage: /images/content/articles/world-heritage-sites/hero.png
 tags: [atlas, history]
 draft: false
@@ -16,8 +16,8 @@ draft: false
   <li><a href="#chart-1-trend" id="toc-chart-1-trend">CHART 1 — TREND</a></li>
   <li><a href="#chart-2-leaders" id="toc-chart-2-leaders">CHART 2 — LEADERS</a></li>
   <li><a href="#chart-4-leader-trends" id="toc-chart-4-leader-trends">CHART 4 — LEADER TRENDS</a></li>
-  <li><a href="#chart-year-volume" id="toc-chart-year-volume">CHART 4 — VOLUME</a></li>
-  <li><a href="#chart-top-names" id="toc-chart-top-names">CHART 5 — NAMES</a></li>
+  <li><a href="#chart-3-grouped-year" id="toc-chart-3-grouped-year">CHART 3 — YEAR COMPARE</a></li>
+  <li><a href="#chart-4-growth" id="toc-chart-4-growth">CHART 4 — GROWTH</a></li>
   <li><a href="#limitations" id="toc-limitations">LIMITATIONS</a></li>
   <li><a href="#conclusion" id="toc-conclusion">CONCLUSION</a></li>
   <li><a href="#references" id="toc-references">REFERENCES</a></li>
@@ -25,7 +25,7 @@ draft: false
   </ul>
 </nav>
 <main class="art-article-main">
-<p class="art-p">This report analyzes the TidyTuesday <strong>2024-02-06</strong> release on <strong>World Heritage Sites</strong> — <strong>6</strong> rows after cleaning and merge. How did UNESCO site counts grow across regions and decades?</p>
+<p class="art-p">This report analyzes the TidyTuesday <strong>2024-02-06</strong> release on <strong>World Heritage Sites</strong> — <strong>6</strong> rows after cleaning and merge. How did UNESCO site counts grow across Scandinavia between 2004 and 2022?</p>
 <p class="art-p">Five charts track <strong>Value</strong> across time, category, and named entities — trend, leaders, distribution, tiers, and relationships. Where companion files exist in the repo, they are joined before analysis so reception, geography, or metadata columns are not left on the table.</p>
 <h2 id="fast-facts" class="anchored">FAST FACTS</h2>
 <div class="facts-grid">
@@ -59,20 +59,20 @@ draft: false
 </figure>
 <p class="art-p">The leading names do not move in lockstep — some fade as others surge.</p>
 <p class="art-p">Tracking medians over time separates sustained dominance from one-off spikes.</p>
-<h2 id="chart-year-volume" class="anchored">CHART 4 — VOLUME</h2>
+<h2 id="chart-3-grouped-year" class="anchored">CHART 3 — YEAR COMPARE</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/world-heritage-sites/charts/chart_year_volume.plotly.json" data-fallback="/images/content/articles/world-heritage-sites/charts/chart_year_volume.png" role="img" aria-label="Records By Year"></div>
-  <figcaption class="art-chart-caption">Records By Year</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/world-heritage-sites/charts/chart3_grouped_year.plotly.json" data-fallback="/images/content/articles/world-heritage-sites/charts/chart3_grouped_year.png" role="img" aria-label="Value by year and Country"></div>
+  <figcaption class="art-chart-caption">Value by year and Country</figcaption>
 </figure>
-<p class="art-p">Activity peaks in <strong>2004</strong> with <strong>3</strong> records.</p>
-<p class="art-p">Volume curves show when the underlying phenomenon intensified — not just how scores moved.</p>
-<h2 id="chart-top-names" class="anchored">CHART 5 — NAMES</h2>
+<p class="art-p">Grouped bars expose who gained between <strong>2004</strong> and <strong>2022</strong> — not just the latest leaderboard.</p>
+<p class="art-p">Small panels reward side-by-side reading; totals hide per-entity momentum.</p>
+<h2 id="chart-4-growth" class="anchored">CHART 4 — GROWTH</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/world-heritage-sites/charts/chart_top_names.plotly.json" data-fallback="/images/content/articles/world-heritage-sites/charts/chart_top_names.png" role="img" aria-label="Top Country"></div>
-  <figcaption class="art-chart-caption">Top Country</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/world-heritage-sites/charts/chart4_growth.plotly.json" data-fallback="/images/content/articles/world-heritage-sites/charts/chart4_growth.png" role="img" aria-label="Value growth by Country"></div>
+  <figcaption class="art-chart-caption">Value growth by Country</figcaption>
 </figure>
-<p class="art-p"><strong>Sweden</strong> appears <strong>2</strong> times — the most repeated entry.</p>
-<p class="art-p">Frequency leaders reveal franchise depth when numeric scores are sparse.</p>
+<p class="art-p"><strong>Denmark</strong> posted the largest gain (<strong>150%</strong>) from <strong>2004</strong> to <strong>2022</strong>.</p>
+<p class="art-p">Percent-change bars normalize different starting points — essential when baselines differ.</p>
 <h2 id="limitations" class="anchored">LIMITATIONS</h2>
 <p>Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p><p>Findings describe the file on hand — treat them as structural signals about <strong>World Heritage Sites</strong>, not exhaustive truth about the full domain.</p>
 <h2 id="conclusion" class="anchored">CONCLUSION</h2>

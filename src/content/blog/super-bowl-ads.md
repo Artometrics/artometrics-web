@@ -16,7 +16,7 @@ draft: false
   <li><a href="#chart-1-trend" id="toc-chart-1-trend">CHART 1 — TREND</a></li>
   <li><a href="#chart-2-leaders" id="toc-chart-2-leaders">CHART 2 — LEADERS</a></li>
   <li><a href="#chart-3-distribution" id="toc-chart-3-distribution">CHART 3 — DISTRIBUTION</a></li>
-  <li><a href="#chart-4-category-compare" id="toc-chart-4-category-compare">CHART 4 — TIERS</a></li>
+  <li><a href="#chart-4-concentration" id="toc-chart-4-concentration">CHART 4 — CONCENTRATION</a></li>
   <li><a href="#chart-5-relationship" id="toc-chart-5-relationship">CHART 5 — RELATIONSHIP</a></li>
   <li><a href="#limitations" id="toc-limitations">LIMITATIONS</a></li>
   <li><a href="#conclusion" id="toc-conclusion">CONCLUSION</a></li>
@@ -60,20 +60,20 @@ draft: false
 </figure>
 <p class="art-p">Category boxes reveal whether view count consensus is shared or contested across tiers.</p>
 <p class="art-p">Wide whiskers flag segments where outliers — not averages — drive reputation.</p>
-<h2 id="chart-4-category-compare" class="anchored">CHART 4 — TIERS</h2>
+<h2 id="chart-4-concentration" class="anchored">CHART 4 — CONCENTRATION</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/super-bowl-ads/charts/chart4_category_compare.plotly.json" data-fallback="/images/content/articles/super-bowl-ads/charts/chart4_category_compare.png" role="img" aria-label="View count by Kind"></div>
-  <figcaption class="art-chart-caption">View count by Kind</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/super-bowl-ads/charts/chart4_pareto.plotly.json" data-fallback="/images/content/articles/super-bowl-ads/charts/chart4_pareto.png" role="img" aria-label="Cumulative View count"></div>
+  <figcaption class="art-chart-caption">Cumulative View count</figcaption>
 </figure>
-<p class="art-p"><strong>youtube#video</strong> leads the median table at <strong>41,379</strong>; the gap to <strong>youtube#video</strong> is <strong>0.00</strong> points.</p>
-<p class="art-p">Tier separation matters more than means when distributions skew hard.</p>
+<p class="art-p">The top <strong>5</strong> brand entries account for <strong>87%</strong> of the aggregate view count.</p>
+<p class="art-p">Steep Pareto curves mean a small head drives most of the signal — the long tail is noise until it isn't.</p>
 <h2 id="chart-5-relationship" class="anchored">CHART 5 — RELATIONSHIP</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/super-bowl-ads/charts/chart5_scatter.plotly.json" data-fallback="/images/content/articles/super-bowl-ads/charts/chart5_scatter.png" role="img" aria-label="View count vs Like count"></div>
   <figcaption class="art-chart-caption">View count vs Like count</figcaption>
 </figure>
 <p class="art-p">Joint plot of <strong>view count</strong> and <strong>like count</strong> surfaces clusters the averages erase.</p>
-<p class="art-p">Outlying points are candidates for follow-up — they are the archetypes, not the noise.</p>
+<p class="art-p">Bubble size tracks repeat presence — outliers are archetypes, not noise.</p>
 <h2 id="limitations" class="anchored">LIMITATIONS</h2>
 <p>Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p><p>Findings describe the file on hand — treat them as structural signals about <strong>Super Bowl Ads</strong>, not exhaustive truth about the full domain.</p>
 <h2 id="conclusion" class="anchored">CONCLUSION</h2>

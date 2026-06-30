@@ -802,6 +802,9 @@ def apply_profile(spec: DatasetSpec, meta: dict[str, Any], df: pd.DataFrame) -> 
     if not meta.get("category"):
         meta["category"] = pick_category_column(df, meta.get("label"))
 
+    if meta.get("year") and meta["year"] not in df.columns:
+        meta["year"] = None
+
     return meta
 
 
@@ -815,6 +818,426 @@ def safe_merge(left: pd.DataFrame, right: pd.DataFrame, key: str) -> pd.DataFram
     if len(merged) < len(left) * 0.5 or len(merged) > len(left) * 4:
         return left
     return merged
+
+
+def save_chart(fig: go.Figure, json_path: Path, png_path: Path) -> None:
+    json_path.parent.mkdir(parents=True, exist_ok=True)
+    png_path.parent.mkdir(parents=True, exist_ok=True)
+    json_path.write_text(pio.to_json(fig), encoding="utf-8")
+    png_fig = go.Figure(fig)
+    png_fig.update_layout(
+        title=dict(text=""),
+        margin=dict(l=72, r=32, t=24, b=60),
+    )
+    png_fig.write_image(str(png_path), width=CHART_W, height=CHART_H, scale=2)
+
+
+def build_gap_chart(
+    df: pd.DataFrame,
+    metric: str,
+    category: str,
+    ml: str,
+) -> dict[str, Any] | None:
+    """Diverging bars: category medians vs overall median — more insight than duplicate bar charts."""
+    if df[[category, metric]].dropna().shape[0] < 12:
+        return None
+    overall = df[metric].median()
+    top_cats = df[category].astype(str).value_counts().head(8).index
+    sub = df[df[category].astype(str).isin(top_cats)]
+    gaps = sub.groupby(category, observed=True)[metric].median() - overall
+    gaps = gaps.sort_values()
+    if len(gaps) < 3:
+        return None
+    colors = [ART_HIGHLIGHT if v >= 0 else ART_SECONDARY for v in gaps.values]
+    leader = str(gaps.index[-1])[:20]
+    fig = go.Figure(
+        go.Bar(
+            x=gaps.values,
+            y=gaps.index.astype(str),
+            orientation="h",
+            marker=dict(color=colors, line=dict(color=ART_DARK, width=0.4)),
+            hovertemplate="<b>%{y}</b><br>Gap: %{x}<extra></extra>",
+        )
+    )
+    finalize(
+        fig,
+        chart_title(
+            f"ABOVE OR BELOW MEDIAN {ml.upper()}",
+            f"<span style='color:#C0392B'>{leader.upper()}</span> LEADS",
+        ),
+        x_title=f"Gap from median ({fmt_num(overall)})",
+    )
+    return chart_entry(
+        "chart4_gap",
+        "chart-4-gap",
+        "CHART 4 — GAP ANALYSIS",
+        f"{ml} vs median by {human_label(category)}",
+        fig,
+        [
+            f"**{gaps.index[-1]}** sits **{fmt_num(gaps.iloc[-1])}** above the median; **{gaps.index[0]}** trails by **{fmt_num(abs(gaps.iloc[0]))}**.",
+            "Diverging from the median exposes which tiers over- or under-perform — not just who ranks first.",
+        ],
+    )
+
+
+def build_pareto_chart(
+    df: pd.DataFrame,
+    metric: str,
+    label: str,
+    ml: str,
+    *,
+    min_entities: int = 4,
+) -> dict[str, Any] | None:
+    """Cumulative share curve for top entities — shows concentration."""
+    if not label or df[[label, metric]].dropna().shape[0] < 8:
+        return None
+    ranked = (
+        df[[label, metric]]
+        .dropna()
+        .groupby(label, observed=True)[metric]
+        .median()
+        .sort_values(ascending=False)
+        .head(15)
+    )
+    if len(ranked) < min_entities:
+        return None
+    total = ranked.sum()
+    if total <= 0:
+        return None
+    cumulative = (ranked.cumsum() / total * 100).reset_index()
+    cumulative.columns = [label, "share"]
+    fig = go.Figure()
+    fig.add_trace(
+        go.Scatter(
+            x=list(range(1, len(cumulative) + 1)),
+            y=cumulative["share"],
+            mode="lines+markers",
+            line=dict(color=ART_HIGHLIGHT, width=2.8),
+            marker=dict(size=8, color=ART_SECONDARY),
+            hovertemplate="Rank %{x}<br>Cumulative: %{y:.0f}%<extra></extra>",
+        )
+    )
+    fig.add_hline(y=80, line_dash="dot", line_color=ART_MID, opacity=0.6)
+    finalize(
+        fig,
+        chart_title(f"CONCENTRATION OF {ml.upper()}", "PARETO CURVE"),
+        x_title=f"Rank by {human_label(label)}",
+        y_title="Cumulative share (%)",
+    )
+    top_share = cumulative["share"].iloc[min(4, len(cumulative) - 1)]
+    return chart_entry(
+        "chart_pareto",
+        "chart-pareto",
+        "CHART 5 — CONCENTRATION",
+        f"Cumulative {ml}",
+        fig,
+        [
+            f"The top **{min(5, len(ranked))}** {human_label(label).lower()} entries account for **{top_share:.0f}%** of the aggregate {ml.lower()}.",
+            "Steep Pareto curves mean a small head drives most of the signal — the long tail is noise until it isn't.",
+        ],
+    )
+
+
+def build_heatmap_chart(
+    df: pd.DataFrame,
+    metric: str,
+    year: str,
+    category: str,
+    ml: str,
+) -> dict[str, Any] | None:
+    if df[[year, category, metric]].dropna().shape[0] < 12:
+        return None
+    top_cats = df[category].astype(str).value_counts().head(6).index
+    sub = df[df[category].astype(str).isin(top_cats)]
+    pivot = sub.pivot_table(index=category, columns=year, values=metric, aggfunc="median")
+    if pivot.shape[0] < 2 or pivot.shape[1] < 3:
+        return None
+    pivot = pivot.sort_index()
+    fig = go.Figure(
+        go.Heatmap(
+            z=pivot.values,
+            x=[str(c) for c in pivot.columns],
+            y=pivot.index.astype(str),
+            colorscale=[[0, ART_CREAM], [0.5, ART_SECONDARY], [1, ART_HIGHLIGHT]],
+            hovertemplate="Year %{x}<br>%{y}<br>Median: %{z}<extra></extra>",
+        )
+    )
+    finalize(
+        fig,
+        chart_title(f"{ml.upper()} HEATMAP", f"BY {human_label(category).upper()}"),
+        x_title="Year",
+        y_title=human_label(category),
+    )
+    return chart_entry(
+        "chart_heatmap",
+        "chart-heatmap",
+        "CHART 4 — HEATMAP",
+        f"{ml} by {human_label(category)} × year",
+        fig,
+        [
+            f"Heatmaps expose which {human_label(category).lower()} tiers heated up or cooled down across the timeline.",
+            "Single-year bars hide drift; the grid shows structural migration between categories.",
+        ],
+    )
+
+
+def build_date_timeline_chart(
+    df: pd.DataFrame,
+    metric: str,
+    label: str,
+    date_col: str,
+    ml: str,
+) -> dict[str, Any] | None:
+    """Multi-line daily timeline — ideal for hurricane wind, event series."""
+    if date_col not in df.columns or not label or metric not in df.columns:
+        return None
+    plot = df[[date_col, label, metric]].dropna()
+    if len(plot) < 6 or plot[label].nunique(dropna=True) < 2:
+        return None
+    top_labels = plot[label].astype(str).value_counts().head(4).index
+    fig = go.Figure()
+    for i, name in enumerate(top_labels):
+        sub = plot[plot[label].astype(str) == name].sort_values(date_col)
+        if len(sub) < 2:
+            continue
+        fig.add_trace(
+            go.Scatter(
+                x=sub[date_col],
+                y=sub[metric],
+                mode="lines",
+                name=str(name)[:18],
+                line=dict(color=palette(4)[i], width=2.4),
+                hovertemplate="<b>%{fullData.name}</b><br>%{x}<br>%{y}<extra></extra>",
+            )
+        )
+    if not fig.data:
+        return None
+    peak_row = plot.loc[plot[metric].idxmax()]
+    peak_label = str(peak_row[label])[:16]
+    finalize(
+        fig,
+        chart_title(f"{ml.upper()} OVER TIME", f"PEAK AT <span style='color:#C0392B'>{peak_label.upper()}</span>"),
+        x_title="Date",
+        y_title=ml,
+        legend=True,
+    )
+    return chart_entry(
+        "chart1_timeline",
+        "chart-1-timeline",
+        "CHART 1 — TIMELINE",
+        f"{ml} by {human_label(label)}",
+        fig,
+        [
+            f"Daily {ml.lower()} lines separate which {human_label(label).lower()} bore the brunt — peaks rarely align.",
+            f"The maximum reading (**{fmt_num(plot[metric].max())}**) defines the intensity ceiling for the window.",
+        ],
+    )
+
+
+def build_grouped_year_chart(
+    df: pd.DataFrame,
+    metric: str,
+    label: str,
+    year: str,
+    ml: str,
+) -> dict[str, Any] | None:
+    """Side-by-side year comparison for small panels (e.g. UNESCO counts 2004 vs 2022)."""
+    if not label or not valid_year_col(df, year):
+        return None
+    cross = df.groupby([year, label], observed=True)[metric].median().reset_index()
+    years = sorted(cross[year].unique())
+    labels = cross[label].astype(str).unique()
+    if len(years) < 2 or len(labels) < 2:
+        return None
+    fig = go.Figure()
+    for i, lbl in enumerate(labels):
+        sub = cross[cross[label].astype(str) == lbl].sort_values(year)
+        fig.add_trace(
+            go.Bar(
+                x=sub[year].astype(str),
+                y=sub[metric],
+                name=str(lbl)[:18],
+                marker=dict(color=palette(len(labels))[i], line=dict(color=ART_DARK, width=0.4)),
+            )
+        )
+    finalize(
+        fig,
+        chart_title(f"{ml.upper()} BY YEAR", f"ACROSS {human_label(label).upper()}"),
+        x_title="Year",
+        y_title=ml,
+        legend=True,
+    )
+    return chart_entry(
+        "chart3_grouped_year",
+        "chart-3-grouped-year",
+        "CHART 3 — YEAR COMPARE",
+        f"{ml} by year and {human_label(label)}",
+        fig,
+        [
+            f"Grouped bars expose who gained between **{int(years[0])}** and **{int(years[-1])}** — not just the latest leaderboard.",
+            "Small panels reward side-by-side reading; totals hide per-entity momentum.",
+        ],
+    )
+
+
+def build_growth_chart(
+    df: pd.DataFrame,
+    metric: str,
+    label: str,
+    year: str,
+    ml: str,
+) -> dict[str, Any] | None:
+    """Percent change from earliest to latest year per entity."""
+    if not label or not valid_year_col(df, year):
+        return None
+    yrs = sorted(df[year].dropna().unique())
+    if len(yrs) < 2:
+        return None
+    first_y, last_y = yrs[0], yrs[-1]
+    growth_rows: list[tuple[str, float]] = []
+    for lbl in df[label].astype(str).unique():
+        sub = df[df[label].astype(str) == lbl]
+        start = sub.loc[sub[year] == first_y, metric].median()
+        end = sub.loc[sub[year] == last_y, metric].median()
+        if pd.isna(start) or pd.isna(end) or start == 0:
+            continue
+        growth_rows.append((lbl, (end - start) / abs(start) * 100))
+    if len(growth_rows) < 2:
+        return None
+    growth_rows.sort(key=lambda x: x[1])
+    names = [r[0] for r in growth_rows]
+    values = [r[1] for r in growth_rows]
+    colors = [ART_HIGHLIGHT if v >= 0 else ART_SECONDARY for v in values]
+    leader = names[-1][:20]
+    fig = go.Figure(
+        go.Bar(
+            x=values,
+            y=names,
+            orientation="h",
+            marker=dict(color=colors, line=dict(color=ART_DARK, width=0.4)),
+            hovertemplate="<b>%{y}</b><br>Change: %{x:.0f}%<extra></extra>",
+        )
+    )
+    finalize(
+        fig,
+        chart_title(
+            f"GROWTH IN {ml.upper()}",
+            f"<span style='color:#C0392B'>{leader.upper()}</span> LEADS",
+        ),
+        x_title=f"% change {int(first_y)}→{int(last_y)}",
+    )
+    return chart_entry(
+        "chart4_growth",
+        "chart-4-growth",
+        "CHART 4 — GROWTH",
+        f"{ml} growth by {human_label(label)}",
+        fig,
+        [
+            f"**{names[-1]}** posted the largest gain (**{values[-1]:.0f}%**) from **{int(first_y)}** to **{int(last_y)}**.",
+            "Percent-change bars normalize different starting points — essential when baselines differ.",
+        ],
+    )
+
+
+def build_peak_chart(
+    df: pd.DataFrame,
+    metric: str,
+    label: str,
+    ml: str,
+) -> dict[str, Any] | None:
+    """Peak (max) values by entity — complements median leaderboards."""
+    if not label or df[[label, metric]].dropna().shape[0] < 4:
+        return None
+    peaks = df.groupby(label, observed=True)[metric].max().sort_values(ascending=True)
+    if len(peaks) < 2:
+        return None
+    leader = str(peaks.index[-1])[:20]
+    fig = go.Figure(
+        go.Bar(
+            x=peaks.values,
+            y=peaks.index.astype(str),
+            orientation="h",
+            marker=dict(color=bar_gradient(len(peaks)), line=dict(color=ART_DARK, width=0.4)),
+            hovertemplate="<b>%{y}</b><br>Peak: %{x}<extra></extra>",
+        )
+    )
+    finalize(
+        fig,
+        chart_title(f"PEAK {ml.upper()}", f"<span style='color:#C0392B'>{leader.upper()}</span> HITS HARDEST"),
+        x_title=f"Max {ml}",
+    )
+    return chart_entry(
+        "chart4_peak",
+        "chart-4-peak",
+        "CHART 4 — PEAKS",
+        f"Peak {ml} by {human_label(label)}",
+        fig,
+        [
+            f"**{peaks.index[-1]}** registered the ceiling at **{fmt_num(peaks.iloc[-1])}** — medians understate extremes.",
+            "Peak charts matter when tails define the story: storms, records, and breakout hits.",
+        ],
+    )
+
+
+def build_aggregate_year_trend(
+    df: pd.DataFrame,
+    metric: str,
+    year: str,
+    ml: str,
+    *,
+    agg: str = "sum",
+) -> dict[str, Any] | None:
+    """Total or mean metric by year for compact catalogs."""
+    if not valid_year_col(df, year):
+        return None
+    grouped = df.groupby(year)[metric]
+    series = (grouped.sum() if agg == "sum" else grouped.median()).reset_index().sort_values(year)
+    if len(series) < 2:
+        return None
+    direction = "rising" if series[metric].iloc[-1] > series[metric].iloc[0] else "falling"
+    fig = go.Figure(
+        go.Scatter(
+            x=series[year],
+            y=series[metric],
+            mode="lines+markers",
+            fill="tozeroy",
+            fillcolor="rgba(192, 57, 43, 0.12)",
+            line=dict(color=ART_HIGHLIGHT, width=3),
+            marker=dict(size=9, color=ART_SECONDARY),
+        )
+    )
+    agg_label = "Total" if agg == "sum" else "Median"
+    finalize(
+        fig,
+        chart_title(f"{direction.upper()} {agg_label.upper()} {ml.upper()}", "AGGREGATE TREND"),
+        x_title="Year",
+        y_title=f"{agg_label} {ml}",
+    )
+    return chart_entry(
+        "chart5_aggregate",
+        "chart-5-aggregate",
+        "CHART 5 — AGGREGATE",
+        f"{agg_label} {ml} over time",
+        fig,
+        [
+            f"Aggregate {ml.lower()} is **{direction}** from **{fmt_num(series[metric].iloc[0])}** to **{fmt_num(series[metric].iloc[-1])}**.",
+            f"The {agg_label.lower()}-by-year view summarizes the whole sample when entity counts are sparse.",
+        ],
+    )
+
+
+def pareto_min_entities(df: pd.DataFrame, label: str | None) -> int:
+    """Allow Pareto on small catalogs (3–4 named entities)."""
+    if not label or label not in df.columns:
+        return 4
+    n = int(df[label].nunique(dropna=True))
+    if n <= 4:
+        return max(2, n)
+    return 4
+
+
+def valid_year_col(df: pd.DataFrame, year: str | None) -> bool:
+    return bool(year and year in df.columns and df[year].notna().sum() >= 3)
 
 
 def finalize_chart_set(
@@ -845,110 +1268,123 @@ def finalize_chart_set(
             charts.append(chart)
             seen.add(chart["id"])
 
-    if len(charts) < 5 and metric and len(vals) >= 8 and not any(c["id"] == "chart_spread" for c in charts):
-        fig = go.Figure(
-            go.Box(
-                y=vals,
-                marker_color=ART_SECONDARY,
-                line_color=ART_HIGHLIGHT,
-                boxmean="sd",
-                fillcolor="rgba(44, 62, 107, 0.15)",
-            )
-        )
-        finalize(fig, chart_title(f"SPREAD OF {ml.upper()}", "INTERQUARTILE VIEW"), y_title=ml)
-        add(
-            chart_entry(
-                "chart_spread",
-                "chart-spread",
-                f"CHART {len(charts)+1} — SPREAD",
-                f"{ml} Spread",
-                fig,
-                [
-                    f"The middle half runs **{fmt_num(vals.quantile(0.25))}** to **{fmt_num(vals.quantile(0.75))}**.",
-                    "Tight boxes mean consensus; long whiskers mean extremes own the narrative.",
-                ],
-            )
-        )
+    has_trend = any(c["id"] == "chart1_trend" for c in charts)
+    has_category_boxes = any(c["id"] == "chart3_distribution" for c in charts)
+    has_scatter = any(c["id"] == "chart5_scatter" for c in charts)
 
-    if len(charts) < 5 and category and category != label:
-        cat_counts = df[category].astype(str).value_counts().head(10).sort_values()
-        if len(cat_counts) >= 3:
+    if len(charts) < 5 and metric and category and category != label and has_category_boxes:
+        add(build_gap_chart(df, metric, category, ml))
+
+    if len(charts) < 5 and metric and valid_year_col(df, year) and category and category != label:
+        add(build_heatmap_chart(df, metric, year, category, ml))
+
+    if len(charts) < 5 and metric and label and valid_year_col(df, year):
+        add(build_grouped_year_chart(df, metric, label, year, ml))
+
+    if len(charts) < 5 and metric and label and valid_year_col(df, year):
+        add(build_growth_chart(df, metric, label, year, ml))
+
+    if len(charts) < 5 and metric and label:
+        add(build_peak_chart(df, metric, label, ml))
+
+    if len(charts) < 5 and metric and valid_year_col(df, year) and df[year].nunique(dropna=True) >= 2 and len(df) <= 40:
+        add(build_aggregate_year_trend(df, metric, year, ml, agg="sum"))
+
+    if len(charts) < 5 and metric and label and "Date" in df.columns and not any(
+        c["id"] in {"chart1_timeline", "chart5_timeline"} for c in charts
+    ):
+        timeline = build_date_timeline_chart(df, metric, label, "Date", ml)
+        if timeline:
+            timeline["id"] = "chart5_timeline"
+            timeline["section_id"] = "chart-5-timeline"
+            timeline["section_title"] = "CHART 5 — TIMELINE"
+            add(timeline)
+
+    if len(charts) < 5 and metric and label and not has_scatter:
+        pareto = build_pareto_chart(df, metric, label, ml, min_entities=pareto_min_entities(df, label))
+        if pareto:
+            pareto["id"] = "chart5_pareto"
+            pareto["section_id"] = "chart-5-concentration"
+            pareto["section_title"] = "CHART 5 — CONCENTRATION"
+            add(pareto)
+
+    if len(charts) < 5 and metric and year and valid_year_col(df, year):
+        yearly = df.groupby(year)[metric].median().reset_index().sort_values(year)
+        if len(yearly) >= 4:
             fig = go.Figure(
-                go.Bar(
-                    x=cat_counts.values,
-                    y=cat_counts.index.astype(str),
-                    orientation="h",
-                    marker=dict(color=bar_gradient(len(cat_counts)), line=dict(color=ART_DARK, width=0.4)),
+                go.Scatter(
+                    x=yearly[year],
+                    y=yearly[metric],
+                    mode="lines+markers",
+                    line=dict(color=ART_HIGHLIGHT, width=2.5),
+                    marker=dict(size=8, color=ART_SECONDARY),
                 )
             )
-            finalize(
-                fig,
-                chart_title(f"VOLUME BY {human_label(category).upper()}", spec.title.split()[0]),
-                x_title="Records",
-            )
+            finalize(fig, chart_title(f"MEDIAN {ml.upper()} OVER TIME", "SECONDARY TREND"), x_title="Year", y_title=f"Median {ml}")
             add(
                 chart_entry(
-                    "chart_volume_mix",
-                    "chart-volume-mix",
-                    f"CHART {len(charts)+1} — VOLUME MIX",
-                    human_label(category),
+                    "chart_alt_trend",
+                    "chart-alt-trend",
+                    f"CHART {len(charts)+1} — TREND",
+                    f"Median {ml} Over Time",
                     fig,
                     [
-                        f"**{cat_counts.index[-1]}** accounts for **{int(cat_counts.iloc[-1]):,}** rows — the catalog's center of gravity.",
-                        f"Long-tail {human_label(category).lower()} buckets still shape aggregate averages.",
+                        f"Median {ml.lower()} moves from **{fmt_num(yearly[metric].iloc[0])}** to **{fmt_num(yearly[metric].iloc[-1])}** across the span.",
+                        "A secondary trend cut confirms whether the headline metric drifts or holds steady.",
                     ],
                 )
             )
 
-    if len(charts) < 5 and year and df[year].notna().sum() >= 3:
-        yearly = df.groupby(year).size().reset_index(name="count").sort_values(year)
+    if len(charts) < 5 and metric and len(vals) >= 8 and not any(c["id"] == "chart3_distribution" for c in charts):
+        hist, edges = np.histogram(vals, bins=min(16, max(8, int(vals.nunique() / 2))))
+        centers = (edges[:-1] + edges[1:]) / 2
         fig = go.Figure(
             go.Bar(
-                x=yearly[year].astype(str),
-                y=yearly["count"],
-                marker_color=ART_SECONDARY,
+                x=centers,
+                y=hist,
+                marker=dict(color=bar_gradient(len(centers)), line=dict(color=ART_DARK, width=0.3)),
             )
         )
-        finalize(fig, chart_title("CATALOG GROWTH", "RECORDS BY YEAR"), x_title="Year", y_title="Records")
-        peak = yearly.loc[yearly["count"].idxmax(), year]
+        finalize(fig, chart_title(f"DISTRIBUTION OF {ml.upper()}", "FULL SAMPLE"), x_title=ml, y_title="Frequency")
         add(
             chart_entry(
-                "chart_year_volume",
-                "chart-year-volume",
-                f"CHART {len(charts)+1} — VOLUME",
-                "Records By Year",
+                "chart_alt_distribution",
+                "chart-alt-distribution",
+                f"CHART {len(charts)+1} — DISTRIBUTION",
+                f"{ml} Distribution",
                 fig,
                 [
-                    f"Activity peaks in **{peak}** with **{int(yearly['count'].max()):,}** records.",
-                    "Volume curves show when the underlying phenomenon intensified — not just how scores moved.",
+                    f"Median **{fmt_num(vals.median())}** vs mean **{fmt_num(vals.mean())}** — the tail tells its own story.",
+                    f"The top decile begins at **{fmt_num(vals.quantile(0.9))}**.",
                 ],
             )
         )
 
     if len(charts) < 5 and label:
         top = df[label].astype(str).value_counts().head(10).sort_values()
-        fig = go.Figure(
-            go.Bar(
-                x=top.values,
-                y=top.index.astype(str),
-                orientation="h",
-                marker=dict(color=bar_gradient(len(top)), line=dict(color=ART_DARK, width=0.4)),
+        if len(top) >= 3:
+            fig = go.Figure(
+                go.Bar(
+                    x=top.values,
+                    y=top.index.astype(str),
+                    orientation="h",
+                    marker=dict(color=bar_gradient(len(top)), line=dict(color=ART_DARK, width=0.4)),
+                )
             )
-        )
-        finalize(fig, chart_title(f"TOP {human_label(label).upper()}", "BY FREQUENCY"), x_title="Records")
-        add(
-            chart_entry(
-                "chart_top_names",
-                "chart-top-names",
-                f"CHART {len(charts)+1} — NAMES",
-                f"Top {human_label(label)}",
-                fig,
-                [
-                    f"**{top.index[-1]}** appears **{int(top.iloc[-1]):,}** times — the most repeated entry.",
-                    "Frequency leaders reveal franchise depth when numeric scores are sparse.",
-                ],
+            finalize(fig, chart_title(f"TOP {human_label(label).upper()}", "BY FREQUENCY"), x_title="Records")
+            add(
+                chart_entry(
+                    "chart_top_names",
+                    "chart-top-names",
+                    f"CHART {len(charts)+1} — NAMES",
+                    f"Top {human_label(label)}",
+                    fig,
+                    [
+                        f"**{top.index[-1]}** appears **{int(top.iloc[-1]):,}** times — the most repeated entry.",
+                        "Frequency leaders reveal franchise depth when numeric scores are sparse.",
+                    ],
+                )
             )
-        )
 
     return charts[:5]
 
@@ -964,13 +1400,6 @@ def load_folder_table(url: str, fname: str, csv_sep: str | None) -> pd.DataFrame
             with zf.open(sorted(csv_names, key=len)[0]) as handle:
                 return clean_df(pd.read_csv(handle, on_bad_lines="skip", engine="python", sep=csv_sep or ","))
     return clean_df(load_table(url, csv_sep))
-
-
-def save_chart(fig: go.Figure, json_path: Path, png_path: Path) -> None:
-    json_path.parent.mkdir(parents=True, exist_ok=True)
-    png_path.parent.mkdir(parents=True, exist_ok=True)
-    json_path.write_text(pio.to_json(fig), encoding="utf-8")
-    fig.write_image(str(png_path), width=CHART_W, height=CHART_H, scale=2)
 
 
 def download_dataset(spec: DatasetSpec) -> tuple[pd.DataFrame, str]:
@@ -1178,8 +1607,16 @@ def build_charts(df: pd.DataFrame, spec: DatasetSpec, meta: dict[str, Any]) -> l
     vals = df[metric].dropna()
     charts: list[dict[str, Any]] = []
 
+    # Chart 1 — daily timeline when Date column exists (hurricanes, event series)
+    if "Date" in df.columns and label and df["Date"].notna().sum() >= 6:
+        timeline = build_date_timeline_chart(df, metric, label, "Date", ml)
+        if timeline:
+            charts.append(timeline)
+
     # Chart 1 — trend over time (always lead when temporal axis exists)
-    if year and df[[year, metric]].dropna().shape[0] >= 4:
+    if valid_year_col(df, year) and df[[year, metric]].dropna().shape[0] >= 4 and not any(
+        c["id"] == "chart1_timeline" for c in charts
+    ):
         plot_df = df[[year, metric]].dropna()
         if any(w in str(metric).lower() for w in ("average", "rating", "score", "stars", "points")):
             plot_df = plot_df[plot_df[metric] > 0]
@@ -1221,7 +1658,7 @@ def build_charts(df: pd.DataFrame, spec: DatasetSpec, meta: dict[str, Any]) -> l
                 ],
             )
         )
-    elif label and metric and df[[label, metric]].dropna().shape[0] >= 3:
+    elif label and metric and not any(c["id"].startswith("chart1") for c in charts) and df[[label, metric]].dropna().shape[0] >= 3:
         grouped = (
             df[[label, metric]]
             .dropna()
@@ -1258,7 +1695,7 @@ def build_charts(df: pd.DataFrame, spec: DatasetSpec, meta: dict[str, Any]) -> l
                     ],
                 )
             )
-    elif category and df[[category, metric]].dropna().shape[0] >= 8:
+    elif category and not any(c["id"].startswith("chart1") for c in charts) and df[[category, metric]].dropna().shape[0] >= 8:
         top_cats = df[category].astype(str).value_counts().head(8).index
         sub = df[df[category].astype(str).isin(top_cats)]
         med = sub.groupby(category, observed=True)[metric].median().sort_values(ascending=False)
@@ -1395,8 +1832,17 @@ def build_charts(df: pd.DataFrame, spec: DatasetSpec, meta: dict[str, Any]) -> l
                 )
             )
 
-    # Chart 4 — category comparison or secondary timeline
-    if category and category != label and df[[category, metric]].dropna().shape[0] >= 8:
+    # Chart 4 — gap analysis, heatmap, leader trends, or tier compare
+    has_category_boxes = any(c["id"] == "chart3_distribution" for c in charts)
+    if category and category != label and has_category_boxes and df[[category, metric]].dropna().shape[0] >= 12:
+        gap = build_gap_chart(df, metric, category, ml)
+        if gap:
+            charts.append(gap)
+    elif valid_year_col(df, year) and category and category != label and df[[year, category, metric]].dropna().shape[0] >= 12:
+        heat = build_heatmap_chart(df, metric, year, category, ml)
+        if heat:
+            charts.append(heat)
+    elif category and category != label and df[[category, metric]].dropna().shape[0] >= 8:
         if not any(c["id"] in {"chart1_breakdown", "chart4_category_compare"} for c in charts):
             top_cats = df[category].astype(str).value_counts().head(8).index
             sub = df[df[category].astype(str).isin(top_cats)]
@@ -1427,7 +1873,7 @@ def build_charts(df: pd.DataFrame, spec: DatasetSpec, meta: dict[str, Any]) -> l
                     ],
                 )
             )
-    elif year and label and df[[year, label]].dropna().shape[0] >= 4:
+    elif valid_year_col(df, year) and label and df[[year, label]].dropna().shape[0] >= 4:
         cross = df.groupby([year, label], observed=True)[metric].median().reset_index()
         top_labels = df[label].astype(str).value_counts().head(4).index
         cross = cross[cross[label].astype(str).isin(top_labels)]
@@ -1468,6 +1914,14 @@ def build_charts(df: pd.DataFrame, spec: DatasetSpec, meta: dict[str, Any]) -> l
                     )
                 )
 
+    if not any(c["id"].startswith("chart4") for c in charts) and label and metric:
+        pareto = build_pareto_chart(df, metric, label, ml, min_entities=pareto_min_entities(df, label))
+        if pareto:
+            pareto["section_id"] = "chart-4-concentration"
+            pareto["section_title"] = "CHART 4 — CONCENTRATION"
+            pareto["id"] = "chart4_pareto"
+            charts.append(pareto)
+
     # Chart 5 — relationship scatter
     if metric2 and metric2 in df.columns and df[[metric, metric2]].dropna().shape[0] >= 8:
         extra_cols: list[str] = []
@@ -1502,13 +1956,23 @@ def build_charts(df: pd.DataFrame, spec: DatasetSpec, meta: dict[str, Any]) -> l
                 )
             finalize(fig, chart_title(f"{ml.upper()} VS {m2l.upper()}", "COLORED BY CATEGORY"), x_title=ml, y_title=m2l, legend=True)
         else:
+            sizes = None
+            if label and label in plot.columns:
+                freq = plot[label].astype(str).map(plot[label].astype(str).value_counts())
+                sizes = np.clip(freq * 3 + 6, 6, 22)
             fig.add_trace(
                 go.Scatter(
                     x=plot[metric],
                     y=plot[metric2],
                     mode="markers",
                     text=plot[label].astype(str) if label and label in plot.columns else None,
-                    marker=dict(color=ART_SECONDARY, size=8, opacity=0.55, line=dict(width=0.5, color=ART_DARK)),
+                    marker=dict(
+                        color=ART_SECONDARY,
+                        size=sizes if sizes is not None else 8,
+                        sizemode="diameter",
+                        opacity=0.62,
+                        line=dict(width=0.6, color=ART_HIGHLIGHT),
+                    ),
                 )
             )
             finalize(fig, chart_title(f"{ml.upper()} VS {m2l.upper()}", "JOINT DISTRIBUTION"), x_title=ml, y_title=m2l)
@@ -1521,11 +1985,17 @@ def build_charts(df: pd.DataFrame, spec: DatasetSpec, meta: dict[str, Any]) -> l
                 fig,
                 [
                     f"Joint plot of **{ml.lower()}** and **{m2l.lower()}** surfaces clusters the averages erase.",
-                    "Outlying points are candidates for follow-up — they are the archetypes, not the noise.",
+                    "Bubble size tracks repeat presence — outliers are archetypes, not noise.",
                 ],
             )
         )
-    elif len(vals) >= 8 and year and df[[year, metric]].dropna().shape[0] >= 6:
+    elif label and metric and not any(c["id"] == "chart5_scatter" for c in charts):
+        pareto = build_pareto_chart(df, metric, label, ml, min_entities=pareto_min_entities(df, label))
+        if pareto:
+            charts.append(pareto)
+    elif len(vals) >= 8 and valid_year_col(df, year) and df[[year, metric]].dropna().shape[0] >= 6 and not any(
+        c["id"] == "chart1_trend" for c in charts
+    ):
         yearly_mean = df[[year, metric]].dropna().groupby(year)[metric].mean().reset_index().sort_values(year)
         yearly_med = df[[year, metric]].dropna().groupby(year)[metric].median().reset_index().sort_values(year)
         fig = go.Figure()

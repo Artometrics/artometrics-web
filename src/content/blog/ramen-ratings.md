@@ -16,8 +16,8 @@ draft: false
   <li><a href="#chart-1-breakdown" id="toc-chart-1-breakdown">CHART 1 — BREAKDOWN</a></li>
   <li><a href="#chart-2-leaders" id="toc-chart-2-leaders">CHART 2 — LEADERS</a></li>
   <li><a href="#chart-3-distribution" id="toc-chart-3-distribution">CHART 3 — DISTRIBUTION</a></li>
+  <li><a href="#chart-4-gap" id="toc-chart-4-gap">CHART 4 — GAP ANALYSIS</a></li>
   <li><a href="#chart-5-relationship" id="toc-chart-5-relationship">CHART 5 — RELATIONSHIP</a></li>
-  <li><a href="#chart-spread" id="toc-chart-spread">CHART 5 — SPREAD</a></li>
   <li><a href="#limitations" id="toc-limitations">LIMITATIONS</a></li>
   <li><a href="#conclusion" id="toc-conclusion">CONCLUSION</a></li>
   <li><a href="#references" id="toc-references">REFERENCES</a></li>
@@ -40,11 +40,11 @@ draft: false
 <p>Charts are exported as Plotly JSON with PNG fallbacks. Medians are used for robustness where distributions skew. Index-style fields (row numbers, sequential IDs) are excluded from metric selection.</p>
 <h2 id="chart-1-breakdown" class="anchored">CHART 1 — BREAKDOWN</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/ramen-ratings/charts/chart1_breakdown.plotly.json" data-fallback="/images/content/articles/ramen-ratings/charts/chart1_breakdown.png" role="img" aria-label="Stars by Country"></div>
-  <figcaption class="art-chart-caption">Stars by Country</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/ramen-ratings/charts/chart1_breakdown.plotly.json" data-fallback="/images/content/articles/ramen-ratings/charts/chart1_breakdown.png" role="img" aria-label="Stars by Brand"></div>
+  <figcaption class="art-chart-caption">Stars by Brand</figcaption>
 </figure>
-<p class="art-p"><strong>Malaysia</strong> posts the highest median stars (<strong>4.25</strong>); <strong>Thailand</strong> trails at <strong>3.50</strong>.</p>
-<p class="art-p">Category medians separate structural tiers faster than row-level anecdotes.</p>
+<p class="art-p"><strong>TTL</strong> leads at <strong>5.00</strong>; <strong>Tseng Noodles</strong> anchors the low end at <strong>5.00</strong>.</p>
+<p class="art-p">Grouping by brand exposes how the metric varies across the catalog's major entities.</p>
 <h2 id="chart-2-leaders" class="anchored">CHART 2 — LEADERS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/ramen-ratings/charts/chart2_leaders.plotly.json" data-fallback="/images/content/articles/ramen-ratings/charts/chart2_leaders.png" role="img" aria-label="Top Brand"></div>
@@ -59,20 +59,20 @@ draft: false
 </figure>
 <p class="art-p">Category boxes reveal whether stars consensus is shared or contested across tiers.</p>
 <p class="art-p">Wide whiskers flag segments where outliers — not averages — drive reputation.</p>
+<h2 id="chart-4-gap" class="anchored">CHART 4 — GAP ANALYSIS</h2>
+<figure class="art-chart">
+  <div class="art-chart-live" data-chart="/data/articles/ramen-ratings/charts/chart4_gap.plotly.json" data-fallback="/images/content/articles/ramen-ratings/charts/chart4_gap.png" role="img" aria-label="Stars vs median by Country"></div>
+  <figcaption class="art-chart-caption">Stars vs median by Country</figcaption>
+</figure>
+<p class="art-p"><strong>Malaysia</strong> sits <strong>0.50</strong> above the median; <strong>Thailand</strong> trails by <strong>0.25</strong>.</p>
+<p class="art-p">Diverging from the median exposes which tiers over- or under-perform — not just who ranks first.</p>
 <h2 id="chart-5-relationship" class="anchored">CHART 5 — RELATIONSHIP</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/ramen-ratings/charts/chart5_scatter.plotly.json" data-fallback="/images/content/articles/ramen-ratings/charts/chart5_scatter.png" role="img" aria-label="Stars vs Review number"></div>
   <figcaption class="art-chart-caption">Stars vs Review number</figcaption>
 </figure>
 <p class="art-p">Joint plot of <strong>stars</strong> and <strong>review number</strong> surfaces clusters the averages erase.</p>
-<p class="art-p">Outlying points are candidates for follow-up — they are the archetypes, not the noise.</p>
-<h2 id="chart-spread" class="anchored">CHART 5 — SPREAD</h2>
-<figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/ramen-ratings/charts/chart_spread.plotly.json" data-fallback="/images/content/articles/ramen-ratings/charts/chart_spread.png" role="img" aria-label="Stars Spread"></div>
-  <figcaption class="art-chart-caption">Stars Spread</figcaption>
-</figure>
-<p class="art-p">The middle half runs <strong>3.25</strong> to <strong>4.50</strong>.</p>
-<p class="art-p">Tight boxes mean consensus; long whiskers mean extremes own the narrative.</p>
+<p class="art-p">Bubble size tracks repeat presence — outliers are archetypes, not noise.</p>
 <h2 id="limitations" class="anchored">LIMITATIONS</h2>
 <p>Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p><p>Findings describe the file on hand — treat them as structural signals about <strong>Ramen Ratings</strong>, not exhaustive truth about the full domain.</p>
 <h2 id="conclusion" class="anchored">CONCLUSION</h2>

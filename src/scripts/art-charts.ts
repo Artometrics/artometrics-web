@@ -33,31 +33,58 @@ function cleanTraces(data: PlotlyTrace[]) {
   });
 }
 
+function stripBoldTags(html: string): string {
+  return html.replace(/<\/?b>/gi, "");
+}
+
 function stackChartTitle(text: string): string {
   if (!text) return text;
 
-  let stacked = text.trim();
+  let stacked = stripBoldTags(text).trim();
 
   // Normalize em/en dashes to line breaks for mobile readability
-  if (/\s+[—–-]\s+/.test(stacked)) {
+  if (/\s+[—–-]\s+/.test(stacked.replace(/<[^>]+>/g, ""))) {
     stacked = stacked.replace(/\s+[—–]\s+/g, "<br>");
     stacked = stacked.replace(/\s+-\s+/g, "<br>");
     return stacked;
   }
 
   const plainLength = stacked.replace(/<[^>]+>/g, "").trim().length;
-  if (plainLength > 32) {
-    stacked = stacked.replace(/\s+(BY|VS|OVER|WITH|FROM|INTO|ACROSS)\s+/gi, "<br>$1 ");
+  if (plainLength > 28) {
+    stacked = stacked.replace(/\s+(BY|VS|OVER|WITH|FROM|INTO|ACROSS|ON)\s+/gi, "<br>$1 ");
     if (stacked.includes("<br>")) return stacked;
     const words = stacked.replace(/<[^>]+>/g, "").trim().split(/\s+/);
-    if (words.length > 5) {
+    if (words.length > 4) {
       const mid = Math.ceil(words.length / 2);
-      const plain = words.slice(0, mid).join(" ") + "<br>" + words.slice(mid).join(" ");
-      return plain;
+      return words.slice(0, mid).join(" ") + "<br>" + words.slice(mid).join(" ");
     }
   }
 
   return stacked;
+}
+
+/** Render chart title as stacked, centered, color-coded lines (no Plotly indent quirks). */
+function formatHeadingHtml(raw: string): string {
+  const stacked = stackChartTitle(raw);
+  const lines = stacked
+    .split(/<br\s*\/?>/i)
+    .map((line) => line.trim())
+    .filter(Boolean);
+
+  if (lines.length === 0) return "";
+
+  return lines
+    .map((line, index) => {
+      const isAccent =
+        index > 0 ||
+        /C0392B|#c0392b|color:\s*#C0392B/i.test(line) ||
+        /style=['"][^'"]*color/i.test(line);
+      const cls = isAccent
+        ? "art-chart-heading__line art-chart-heading__line--accent"
+        : "art-chart-heading__line art-chart-heading__line--primary";
+      return `<span class="${cls}">${line}</span>`;
+    })
+    .join("");
 }
 
 function centerAxisTitle(title: unknown) {
@@ -122,28 +149,25 @@ function extractTitleHtml(raw: PlotlyExport): string {
   return stackChartTitle(text);
 }
 
-function headingCropForLines(lineCount: number): string {
-  if (lineCount >= 3) return "8.5rem";
-  if (lineCount >= 2) return "7.25rem";
-  return "5.75rem";
-}
-
 function renderStaticHeading(el: HTMLElement, titleHtml: string) {
-  if (!titleHtml || el.querySelector(".art-chart-heading")) return;
+  if (!titleHtml) return;
 
-  const lineCount = (titleHtml.match(/<br\s*\/?>/gi) ?? []).length + 1;
-  const heading = document.createElement("div");
-  heading.className = "art-chart-heading";
-  heading.innerHTML = titleHtml;
-  el.prepend(heading);
-  el.classList.add("art-chart-has-heading");
-  el.style.setProperty("--art-chart-title-crop", headingCropForLines(lineCount));
+  const formatted = formatHeadingHtml(titleHtml);
+  if (!formatted) return;
+
+  let heading = el.querySelector<HTMLElement>(".art-chart-heading");
+  if (!heading) {
+    heading = document.createElement("div");
+    heading.className = "art-chart-heading";
+    el.prepend(heading);
+    el.classList.add("art-chart-has-heading");
+  }
+  heading.innerHTML = formatted;
 }
 
 function clearStaticHeading(el: HTMLElement) {
   el.querySelector(".art-chart-heading")?.remove();
   el.classList.remove("art-chart-has-heading");
-  el.style.removeProperty("--art-chart-title-crop");
 }
 
 async function enrichStaticChart(el: HTMLElement, chartUrl: string) {
@@ -188,16 +212,16 @@ function sanitizePlotlySpec(raw: PlotlyExport) {
     font: {
       color: ART_COLORS.dark,
       family: "DM Sans, Helvetica, sans-serif",
-      size: mobile ? 11 : 12,
+      size: mobile ? 11.5 : 12,
       ...(raw.layout?.font ?? {}),
     },
     paper_bgcolor: raw.layout?.paper_bgcolor ?? ART_COLORS.cream,
     plot_bgcolor: raw.layout?.plot_bgcolor ?? ART_COLORS.cream,
     margin: {
-      t: mobile ? 12 : 16,
-      r: mobile ? 16 : Math.max(40, Number(baseMargin.r) || 0),
-      b: mobile ? 44 : Math.max(52, Number(baseMargin.b) || 0),
-      l: mobile ? 52 : Math.max(72, Number(baseMargin.l) || 0),
+      t: mobile ? 8 : 16,
+      r: mobile ? 12 : Math.max(40, Number(baseMargin.r) || 0),
+      b: mobile ? 48 : Math.max(52, Number(baseMargin.b) || 0),
+      l: mobile ? 44 : Math.max(72, Number(baseMargin.l) || 0),
     },
     title: { text: "" },
     hoverlabel: {
@@ -240,14 +264,27 @@ function sanitizePlotlySpec(raw: PlotlyExport) {
       ...layout.yaxis,
       title: centerAxisTitle(layout.yaxis.title),
       automargin: true,
-      ...(yTickCount > 12 || mobile
-        ? {
-            tickfont: {
-              ...(typeof layout.yaxis.tickfont === "object" ? layout.yaxis.tickfont : {}),
-              size: mobile ? 9.5 : 10.5,
-            },
-          }
-        : {}),
+      tickfont: {
+        ...(typeof layout.yaxis.tickfont === "object" ? layout.yaxis.tickfont : {}),
+        size: mobile ? (yTickCount > 8 ? 9 : 10) : yTickCount > 12 ? 10.5 : 11,
+        color: ART_COLORS.mid,
+      },
+    };
+  }
+
+  if (layout.legend && typeof layout.legend === "object") {
+    layout.legend = {
+      ...layout.legend,
+      orientation: "h",
+      yanchor: "bottom",
+      y: mobile ? -0.22 : 1.02,
+      x: 0.5,
+      xanchor: "center",
+      font: {
+        ...(typeof layout.legend.font === "object" ? layout.legend.font : {}),
+        size: mobile ? 9.5 : 10,
+        color: ART_COLORS.dark,
+      },
     };
   }
 

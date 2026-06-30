@@ -15,9 +15,9 @@ draft: false
   <li><a href="#dataset-context" id="toc-dataset-context">DATASET CONTEXT</a></li>
   <li><a href="#chart-1-trend" id="toc-chart-1-trend">CHART 1 — TREND</a></li>
   <li><a href="#chart-3-distribution" id="toc-chart-3-distribution">CHART 3 — DISTRIBUTION</a></li>
-  <li><a href="#chart-4-category-compare" id="toc-chart-4-category-compare">CHART 4 — TIERS</a></li>
   <li><a href="#chart-5-relationship" id="toc-chart-5-relationship">CHART 5 — RELATIONSHIP</a></li>
-  <li><a href="#chart-spread" id="toc-chart-spread">CHART 5 — SPREAD</a></li>
+  <li><a href="#chart-heatmap" id="toc-chart-heatmap">CHART 4 — HEATMAP</a></li>
+  <li><a href="#chart-alt-trend" id="toc-chart-alt-trend">CHART 5 — TREND</a></li>
   <li><a href="#limitations" id="toc-limitations">LIMITATIONS</a></li>
   <li><a href="#conclusion" id="toc-conclusion">CONCLUSION</a></li>
   <li><a href="#references" id="toc-references">REFERENCES</a></li>
@@ -53,27 +53,27 @@ draft: false
 </figure>
 <p class="art-p">Category boxes reveal whether p50 consensus is shared or contested across tiers.</p>
 <p class="art-p">Wide whiskers flag segments where outliers — not averages — drive reputation.</p>
-<h2 id="chart-4-category-compare" class="anchored">CHART 4 — TIERS</h2>
-<figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/web-page-metrics/charts/chart4_category_compare.plotly.json" data-fallback="/images/content/articles/web-page-metrics/charts/chart4_category_compare.png" role="img" aria-label="P50 by Client"></div>
-  <figcaption class="art-chart-caption">P50 by Client</figcaption>
-</figure>
-<p class="art-p"><strong>mobile</strong> leads the median table at <strong>8.01</strong>; the gap to <strong>desktop</strong> is <strong>4.29</strong> points.</p>
-<p class="art-p">Tier separation matters more than means when distributions skew hard.</p>
 <h2 id="chart-5-relationship" class="anchored">CHART 5 — RELATIONSHIP</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/web-page-metrics/charts/chart5_scatter.plotly.json" data-fallback="/images/content/articles/web-page-metrics/charts/chart5_scatter.png" role="img" aria-label="P50 vs P90"></div>
   <figcaption class="art-chart-caption">P50 vs P90</figcaption>
 </figure>
 <p class="art-p">Joint plot of <strong>p50</strong> and <strong>p90</strong> surfaces clusters the averages erase.</p>
-<p class="art-p">Outlying points are candidates for follow-up — they are the archetypes, not the noise.</p>
-<h2 id="chart-spread" class="anchored">CHART 5 — SPREAD</h2>
+<p class="art-p">Bubble size tracks repeat presence — outliers are archetypes, not noise.</p>
+<h2 id="chart-heatmap" class="anchored">CHART 4 — HEATMAP</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/web-page-metrics/charts/chart_spread.plotly.json" data-fallback="/images/content/articles/web-page-metrics/charts/chart_spread.png" role="img" aria-label="P50 Spread"></div>
-  <figcaption class="art-chart-caption">P50 Spread</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/web-page-metrics/charts/chart_heatmap.plotly.json" data-fallback="/images/content/articles/web-page-metrics/charts/chart_heatmap.png" role="img" aria-label="P50 by Client × year"></div>
+  <figcaption class="art-chart-caption">P50 by Client × year</figcaption>
 </figure>
-<p class="art-p">The middle half runs <strong>3.72</strong> to <strong>8.01</strong>.</p>
-<p class="art-p">Tight boxes mean consensus; long whiskers mean extremes own the narrative.</p>
+<p class="art-p">Heatmaps expose which client tiers heated up or cooled down across the timeline.</p>
+<p class="art-p">Single-year bars hide drift; the grid shows structural migration between categories.</p>
+<h2 id="chart-alt-trend" class="anchored">CHART 5 — TREND</h2>
+<figure class="art-chart">
+  <div class="art-chart-live" data-chart="/data/articles/web-page-metrics/charts/chart_alt_trend.plotly.json" data-fallback="/images/content/articles/web-page-metrics/charts/chart_alt_trend.png" role="img" aria-label="Median P50 Over Time"></div>
+  <figcaption class="art-chart-caption">Median P50 Over Time</figcaption>
+</figure>
+<p class="art-p">Median p50 moves from <strong>7.00</strong> to <strong>4.80</strong> across the span.</p>
+<p class="art-p">A secondary trend cut confirms whether the headline metric drifts or holds steady.</p>
 <h2 id="limitations" class="anchored">LIMITATIONS</h2>
 <p>Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p><p>Findings describe the file on hand — treat them as structural signals about <strong>Web Page Metrics</strong>, not exhaustive truth about the full domain.</p>
 <h2 id="conclusion" class="anchored">CONCLUSION</h2>

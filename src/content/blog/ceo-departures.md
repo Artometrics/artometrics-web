@@ -16,8 +16,8 @@ draft: false
   <li><a href="#chart-1-breakdown" id="toc-chart-1-breakdown">CHART 1 — BREAKDOWN</a></li>
   <li><a href="#chart-2-leaders" id="toc-chart-2-leaders">CHART 2 — LEADERS</a></li>
   <li><a href="#chart-3-distribution" id="toc-chart-3-distribution">CHART 3 — DISTRIBUTION</a></li>
+  <li><a href="#chart-4-gap" id="toc-chart-4-gap">CHART 4 — GAP ANALYSIS</a></li>
   <li><a href="#chart-5-relationship" id="toc-chart-5-relationship">CHART 5 — RELATIONSHIP</a></li>
-  <li><a href="#chart-spread" id="toc-chart-spread">CHART 5 — SPREAD</a></li>
   <li><a href="#limitations" id="toc-limitations">LIMITATIONS</a></li>
   <li><a href="#conclusion" id="toc-conclusion">CONCLUSION</a></li>
   <li><a href="#references" id="toc-references">REFERENCES</a></li>
@@ -40,11 +40,11 @@ draft: false
 <p>Charts are exported as Plotly JSON with PNG fallbacks. Medians are used for robustness where distributions skew. Index-style fields (row numbers, sequential IDs) are excluded from metric selection.</p>
 <h2 id="chart-1-breakdown" class="anchored">CHART 1 — BREAKDOWN</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/ceo-departures/charts/chart1_breakdown.plotly.json" data-fallback="/images/content/articles/ceo-departures/charts/chart1_breakdown.png" role="img" aria-label="Max tenure ceodb by Interim coceo"></div>
-  <figcaption class="art-chart-caption">Max tenure ceodb by Interim coceo</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/ceo-departures/charts/chart1_breakdown.plotly.json" data-fallback="/images/content/articles/ceo-departures/charts/chart1_breakdown.png" role="img" aria-label="Max tenure ceodb by Coname"></div>
+  <figcaption class="art-chart-caption">Max tenure ceodb by Coname</figcaption>
 </figure>
-<p class="art-p"><strong>CO-ceo</strong> posts the highest median max tenure ceodb (<strong>2.00</strong>); <strong>interim</strong> trails at <strong>1.00</strong>.</p>
-<p class="art-p">Category medians separate structural tiers faster than row-level anecdotes.</p>
+<p class="art-p"><strong>CONVERSANT INC</strong> leads at <strong>2.50</strong>; <strong>AVATEX CORP</strong> anchors the low end at <strong>2.00</strong>.</p>
+<p class="art-p">Grouping by coname exposes how the metric varies across the catalog's major entities.</p>
 <h2 id="chart-2-leaders" class="anchored">CHART 2 — LEADERS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/ceo-departures/charts/chart2_leaders.plotly.json" data-fallback="/images/content/articles/ceo-departures/charts/chart2_leaders.png" role="img" aria-label="Top Coname"></div>
@@ -59,20 +59,20 @@ draft: false
 </figure>
 <p class="art-p">Category boxes reveal whether max tenure ceodb consensus is shared or contested across tiers.</p>
 <p class="art-p">Wide whiskers flag segments where outliers — not averages — drive reputation.</p>
+<h2 id="chart-4-gap" class="anchored">CHART 4 — GAP ANALYSIS</h2>
+<figure class="art-chart">
+  <div class="art-chart-live" data-chart="/data/articles/ceo-departures/charts/chart4_gap.plotly.json" data-fallback="/images/content/articles/ceo-departures/charts/chart4_gap.png" role="img" aria-label="Max tenure ceodb vs median by Interim coceo"></div>
+  <figcaption class="art-chart-caption">Max tenure ceodb vs median by Interim coceo</figcaption>
+</figure>
+<p class="art-p"><strong>CO-ceo</strong> sits <strong>1.00</strong> above the median; <strong>CO-CEO</strong> trails by <strong>0.00</strong>.</p>
+<p class="art-p">Diverging from the median exposes which tiers over- or under-perform — not just who ranks first.</p>
 <h2 id="chart-5-relationship" class="anchored">CHART 5 — RELATIONSHIP</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/ceo-departures/charts/chart5_scatter.plotly.json" data-fallback="/images/content/articles/ceo-departures/charts/chart5_scatter.png" role="img" aria-label="Max tenure ceodb vs Tenure no ceodb"></div>
   <figcaption class="art-chart-caption">Max tenure ceodb vs Tenure no ceodb</figcaption>
 </figure>
 <p class="art-p">Joint plot of <strong>max tenure ceodb</strong> and <strong>tenure no ceodb</strong> surfaces clusters the averages erase.</p>
-<p class="art-p">Outlying points are candidates for follow-up — they are the archetypes, not the noise.</p>
-<h2 id="chart-spread" class="anchored">CHART 5 — SPREAD</h2>
-<figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/ceo-departures/charts/chart_spread.plotly.json" data-fallback="/images/content/articles/ceo-departures/charts/chart_spread.png" role="img" aria-label="Max tenure ceodb Spread"></div>
-  <figcaption class="art-chart-caption">Max tenure ceodb Spread</figcaption>
-</figure>
-<p class="art-p">The middle half runs <strong>1.00</strong> to <strong>1.00</strong>.</p>
-<p class="art-p">Tight boxes mean consensus; long whiskers mean extremes own the narrative.</p>
+<p class="art-p">Bubble size tracks repeat presence — outliers are archetypes, not noise.</p>
 <h2 id="limitations" class="anchored">LIMITATIONS</h2>
 <p>Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p><p>Findings describe the file on hand — treat them as structural signals about <strong>CEO Departures</strong>, not exhaustive truth about the full domain.</p>
 <h2 id="conclusion" class="anchored">CONCLUSION</h2>

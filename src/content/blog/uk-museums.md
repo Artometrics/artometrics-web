@@ -16,8 +16,8 @@ draft: false
   <li><a href="#chart-1-breakdown" id="toc-chart-1-breakdown">CHART 1 — BREAKDOWN</a></li>
   <li><a href="#chart-2-leaders" id="toc-chart-2-leaders">CHART 2 — LEADERS</a></li>
   <li><a href="#chart-3-distribution" id="toc-chart-3-distribution">CHART 3 — DISTRIBUTION</a></li>
+  <li><a href="#chart-4-gap" id="toc-chart-4-gap">CHART 4 — GAP ANALYSIS</a></li>
   <li><a href="#chart-5-relationship" id="toc-chart-5-relationship">CHART 5 — RELATIONSHIP</a></li>
-  <li><a href="#chart-spread" id="toc-chart-spread">CHART 5 — SPREAD</a></li>
   <li><a href="#limitations" id="toc-limitations">LIMITATIONS</a></li>
   <li><a href="#conclusion" id="toc-conclusion">CONCLUSION</a></li>
   <li><a href="#references" id="toc-references">REFERENCES</a></li>
@@ -40,11 +40,11 @@ draft: false
 <p>Charts are exported as Plotly JSON with PNG fallbacks. Medians are used for robustness where distributions skew. Index-style fields (row numbers, sequential IDs) are excluded from metric selection.</p>
 <h2 id="chart-1-breakdown" class="anchored">CHART 1 — BREAKDOWN</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/uk-museums/charts/chart1_breakdown.plotly.json" data-fallback="/images/content/articles/uk-museums/charts/chart1_breakdown.png" role="img" aria-label="Area Deprivation index by Admin area"></div>
-  <figcaption class="art-chart-caption">Area Deprivation index by Admin area</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/uk-museums/charts/chart1_breakdown.plotly.json" data-fallback="/images/content/articles/uk-museums/charts/chart1_breakdown.png" role="img" aria-label="Area Deprivation index by Name of museum"></div>
+  <figcaption class="art-chart-caption">Area Deprivation index by Name of museum</figcaption>
 </figure>
-<p class="art-p"><strong>/England/South West (English Region)/Wiltshire (English UA)</strong> posts the highest median area deprivation index (<strong>7.00</strong>); <strong>/England/South East (English Region)/Isle of Wight (English UA)</strong> trails at <strong>4.00</strong>.</p>
-<p class="art-p">Category medians separate structural tiers faster than row-level anecdotes.</p>
+<p class="art-p"><strong>The Archaeology Centre</strong> leads at <strong>10.0</strong>; <strong>Smithy Heritage Centre</strong> anchors the low end at <strong>10.0</strong>.</p>
+<p class="art-p">Grouping by name of museum exposes how the metric varies across the catalog's major entities.</p>
 <h2 id="chart-2-leaders" class="anchored">CHART 2 — LEADERS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/uk-museums/charts/chart2_leaders.plotly.json" data-fallback="/images/content/articles/uk-museums/charts/chart2_leaders.png" role="img" aria-label="Top Name of museum"></div>
@@ -59,20 +59,20 @@ draft: false
 </figure>
 <p class="art-p">Category boxes reveal whether area deprivation index consensus is shared or contested across tiers.</p>
 <p class="art-p">Wide whiskers flag segments where outliers — not averages — drive reputation.</p>
+<h2 id="chart-4-gap" class="anchored">CHART 4 — GAP ANALYSIS</h2>
+<figure class="art-chart">
+  <div class="art-chart-live" data-chart="/data/articles/uk-museums/charts/chart4_gap.plotly.json" data-fallback="/images/content/articles/uk-museums/charts/chart4_gap.png" role="img" aria-label="Area Deprivation index vs median by Admin area"></div>
+  <figcaption class="art-chart-caption">Area Deprivation index vs median by Admin area</figcaption>
+</figure>
+<p class="art-p"><strong>/England/South West (English Region)/Wiltshire (English UA)</strong> sits <strong>2.00</strong> above the median; <strong>/England/South West (English Region)/Cornwall (English UA)</strong> trails by <strong>1.00</strong>.</p>
+<p class="art-p">Diverging from the median exposes which tiers over- or under-perform — not just who ranks first.</p>
 <h2 id="chart-5-relationship" class="anchored">CHART 5 — RELATIONSHIP</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/uk-museums/charts/chart5_scatter.plotly.json" data-fallback="/images/content/articles/uk-museums/charts/chart5_scatter.png" role="img" aria-label="Area Deprivation index vs DOMUS identifier"></div>
   <figcaption class="art-chart-caption">Area Deprivation index vs DOMUS identifier</figcaption>
 </figure>
 <p class="art-p">Joint plot of <strong>area deprivation index</strong> and <strong>domus identifier</strong> surfaces clusters the averages erase.</p>
-<p class="art-p">Outlying points are candidates for follow-up — they are the archetypes, not the noise.</p>
-<h2 id="chart-spread" class="anchored">CHART 5 — SPREAD</h2>
-<figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/uk-museums/charts/chart_spread.plotly.json" data-fallback="/images/content/articles/uk-museums/charts/chart_spread.png" role="img" aria-label="Area Deprivation index Spread"></div>
-  <figcaption class="art-chart-caption">Area Deprivation index Spread</figcaption>
-</figure>
-<p class="art-p">The middle half runs <strong>4.00</strong> to <strong>7.00</strong>.</p>
-<p class="art-p">Tight boxes mean consensus; long whiskers mean extremes own the narrative.</p>
+<p class="art-p">Bubble size tracks repeat presence — outliers are archetypes, not noise.</p>
 <h2 id="limitations" class="anchored">LIMITATIONS</h2>
 <p>Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p><p>Findings describe the file on hand — treat them as structural signals about <strong>UK Museums</strong>, not exhaustive truth about the full domain.</p>
 <h2 id="conclusion" class="anchored">CONCLUSION</h2>

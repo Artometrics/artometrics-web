@@ -17,7 +17,7 @@ draft: false
   <li><a href="#chart-2-leaders" id="toc-chart-2-leaders">CHART 2 — LEADERS</a></li>
   <li><a href="#chart-3-distribution" id="toc-chart-3-distribution">CHART 3 — DISTRIBUTION</a></li>
   <li><a href="#chart-4-leader-trends" id="toc-chart-4-leader-trends">CHART 4 — LEADER TRENDS</a></li>
-  <li><a href="#chart-5-mean-median" id="toc-chart-5-mean-median">CHART 5 — ROBUSTNESS</a></li>
+  <li><a href="#chart-pareto" id="toc-chart-pareto">CHART 5 — CONCENTRATION</a></li>
   <li><a href="#limitations" id="toc-limitations">LIMITATIONS</a></li>
   <li><a href="#conclusion" id="toc-conclusion">CONCLUSION</a></li>
   <li><a href="#references" id="toc-references">REFERENCES</a></li>
@@ -66,13 +66,13 @@ draft: false
 </figure>
 <p class="art-p">The leading names do not move in lockstep — some fade as others surge.</p>
 <p class="art-p">Tracking medians over time separates sustained dominance from one-off spikes.</p>
-<h2 id="chart-5-mean-median" class="anchored">CHART 5 — ROBUSTNESS</h2>
+<h2 id="chart-pareto" class="anchored">CHART 5 — CONCENTRATION</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/us-tuition/charts/chart5_mean_median.plotly.json" data-fallback="/images/content/articles/us-tuition/charts/chart5_mean_median.png" role="img" aria-label="Mean vs Median Value"></div>
-  <figcaption class="art-chart-caption">Mean vs Median Value</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/us-tuition/charts/chart_pareto.plotly.json" data-fallback="/images/content/articles/us-tuition/charts/chart_pareto.png" role="img" aria-label="Cumulative Value"></div>
+  <figcaption class="art-chart-caption">Cumulative Value</figcaption>
 </figure>
-<p class="art-p">When mean and median diverge, outliers are steering the narrative — medians tell the typical story.</p>
-<p class="art-p">Tracking both lines exposes whether the field is tightening or fracturing over time.</p>
+<p class="art-p">The top <strong>5</strong> state entries account for <strong>38%</strong> of the aggregate value.</p>
+<p class="art-p">Steep Pareto curves mean a small head drives most of the signal — the long tail is noise until it isn't.</p>
 <h2 id="limitations" class="anchored">LIMITATIONS</h2>
 <p>Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p><p>Findings describe the file on hand — treat them as structural signals about <strong>US Tuition Costs</strong>, not exhaustive truth about the full domain.</p>
 <h2 id="conclusion" class="anchored">CONCLUSION</h2>

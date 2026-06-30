@@ -16,8 +16,8 @@ draft: false
   <li><a href="#chart-1-breakdown" id="toc-chart-1-breakdown">CHART 1 — BREAKDOWN</a></li>
   <li><a href="#chart-2-leaders" id="toc-chart-2-leaders">CHART 2 — LEADERS</a></li>
   <li><a href="#chart-3-distribution" id="toc-chart-3-distribution">CHART 3 — DISTRIBUTION</a></li>
+  <li><a href="#chart-4-gap" id="toc-chart-4-gap">CHART 4 — GAP ANALYSIS</a></li>
   <li><a href="#chart-5-relationship" id="toc-chart-5-relationship">CHART 5 — RELATIONSHIP</a></li>
-  <li><a href="#chart-spread" id="toc-chart-spread">CHART 5 — SPREAD</a></li>
   <li><a href="#limitations" id="toc-limitations">LIMITATIONS</a></li>
   <li><a href="#conclusion" id="toc-conclusion">CONCLUSION</a></li>
   <li><a href="#references" id="toc-references">REFERENCES</a></li>
@@ -40,11 +40,11 @@ draft: false
 <p>Charts are exported as Plotly JSON with PNG fallbacks. Medians are used for robustness where distributions skew. Index-style fields (row numbers, sequential IDs) are excluded from metric selection.</p>
 <h2 id="chart-1-breakdown" class="anchored">CHART 1 — BREAKDOWN</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/fast-food-calories/charts/chart1_breakdown.plotly.json" data-fallback="/images/content/articles/fast-food-calories/charts/chart1_breakdown.png" role="img" aria-label="Calories by Restaurant"></div>
-  <figcaption class="art-chart-caption">Calories by Restaurant</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/fast-food-calories/charts/chart1_breakdown.plotly.json" data-fallback="/images/content/articles/fast-food-calories/charts/chart1_breakdown.png" role="img" aria-label="Calories by Item"></div>
+  <figcaption class="art-chart-caption">Calories by Item</figcaption>
 </figure>
-<p class="art-p"><strong>Sonic</strong> posts the highest median calories (<strong>570</strong>); <strong>Chick Fil-A</strong> trails at <strong>390</strong>.</p>
-<p class="art-p">Category medians separate structural tiers faster than row-level anecdotes.</p>
+<p class="art-p"><strong>20 piece Buttermilk Crispy Chicken Tenders</strong> leads at <strong>2,430</strong>; <strong>10 piece Buttermilk Crispy Chicken Tenders</strong> anchors the low end at <strong>1,210</strong>.</p>
+<p class="art-p">Grouping by item exposes how the metric varies across the catalog's major entities.</p>
 <h2 id="chart-2-leaders" class="anchored">CHART 2 — LEADERS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/fast-food-calories/charts/chart2_leaders.plotly.json" data-fallback="/images/content/articles/fast-food-calories/charts/chart2_leaders.png" role="img" aria-label="Top Item"></div>
@@ -59,20 +59,20 @@ draft: false
 </figure>
 <p class="art-p">Category boxes reveal whether calories consensus is shared or contested across tiers.</p>
 <p class="art-p">Wide whiskers flag segments where outliers — not averages — drive reputation.</p>
+<h2 id="chart-4-gap" class="anchored">CHART 4 — GAP ANALYSIS</h2>
+<figure class="art-chart">
+  <div class="art-chart-live" data-chart="/data/articles/fast-food-calories/charts/chart4_gap.plotly.json" data-fallback="/images/content/articles/fast-food-calories/charts/chart4_gap.png" role="img" aria-label="Calories vs median by Restaurant"></div>
+  <figcaption class="art-chart-caption">Calories vs median by Restaurant</figcaption>
+</figure>
+<p class="art-p"><strong>Sonic</strong> sits <strong>80.0</strong> above the median; <strong>Chick Fil-A</strong> trails by <strong>100</strong>.</p>
+<p class="art-p">Diverging from the median exposes which tiers over- or under-perform — not just who ranks first.</p>
 <h2 id="chart-5-relationship" class="anchored">CHART 5 — RELATIONSHIP</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/fast-food-calories/charts/chart5_scatter.plotly.json" data-fallback="/images/content/articles/fast-food-calories/charts/chart5_scatter.png" role="img" aria-label="Calories vs Total fat"></div>
   <figcaption class="art-chart-caption">Calories vs Total fat</figcaption>
 </figure>
 <p class="art-p">Joint plot of <strong>calories</strong> and <strong>total fat</strong> surfaces clusters the averages erase.</p>
-<p class="art-p">Outlying points are candidates for follow-up — they are the archetypes, not the noise.</p>
-<h2 id="chart-spread" class="anchored">CHART 5 — SPREAD</h2>
-<figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/fast-food-calories/charts/chart_spread.plotly.json" data-fallback="/images/content/articles/fast-food-calories/charts/chart_spread.png" role="img" aria-label="Calories Spread"></div>
-  <figcaption class="art-chart-caption">Calories Spread</figcaption>
-</figure>
-<p class="art-p">The middle half runs <strong>330</strong> to <strong>690</strong>.</p>
-<p class="art-p">Tight boxes mean consensus; long whiskers mean extremes own the narrative.</p>
+<p class="art-p">Bubble size tracks repeat presence — outliers are archetypes, not noise.</p>
 <h2 id="limitations" class="anchored">LIMITATIONS</h2>
 <p>Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p><p>Findings describe the file on hand — treat them as structural signals about <strong>Fast Food Calories</strong>, not exhaustive truth about the full domain.</p>
 <h2 id="conclusion" class="anchored">CONCLUSION</h2>

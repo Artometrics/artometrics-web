@@ -1030,34 +1030,55 @@ pre:has(> code.sourceCode.sql),
   text-anchor: middle !important;
 }
 .artometrics-article-body .art-chart-heading{
-  padding: 1rem 1.1rem 0.75rem !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.35rem !important;
+  padding: 0.85rem 0.9rem 0.7rem !important;
   text-align: center !important;
   font-family: 'DM Sans', sans-serif !important;
-  font-size: 0.72rem !important;
-  font-weight: 700 !important;
-  line-height: 1.45 !important;
-  letter-spacing: 0.06em !important;
-  color: #1C1C1E !important;
   background: var(--art-cream, #F2F0EB) !important;
   border-bottom: 1px solid #E0DDD6 !important;
+  flex: 0 0 auto !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+.artometrics-article-body .art-chart-heading__line{
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  text-align: center !important;
+  line-height: 1.4 !important;
+  letter-spacing: 0.07em !important;
+  text-transform: uppercase !important;
   word-break: break-word !important;
   overflow-wrap: anywhere !important;
   hyphens: auto !important;
+  padding: 0 0.15rem !important;
+  margin: 0 !important;
+  text-indent: 0 !important;
 }
+.artometrics-article-body .art-chart-heading__line--primary{
+  font-size: 0.7rem !important;
+  font-weight: 700 !important;
+  color: #1C1C1E !important;
+}
+.artometrics-article-body .art-chart-heading__line--accent,
 .artometrics-article-body .art-chart-heading span[style*="C0392B"],
 .artometrics-article-body .art-chart-heading span[style*="#C0392B"]{
+  font-size: 0.66rem !important;
+  font-weight: 700 !important;
   color: #C0392B !important;
-  display: block !important;
-  margin-top: 0.35rem !important;
-  letter-spacing: 0.08em !important;
+  letter-spacing: 0.09em !important;
 }
 .artometrics-article-body .art-chart-heading b{
   font-weight: 700 !important;
 }
 .artometrics-article-body .art-chart-live.art-chart-has-heading .art-chart-fallback{
   display: block !important;
-  margin-top: calc(-1 * var(--art-chart-title-crop, 7.25rem)) !important;
-  clip-path: inset(var(--art-chart-title-crop, 7.25rem) 0 0 0) !important;
+  margin-top: 0 !important;
+  clip-path: none !important;
 }
 .artometrics-article-body .art-chart-live .main-svg{
   margin: 0 auto !important;
@@ -1154,12 +1175,15 @@ pre:has(> code.sourceCode.sql),
     display: none !important;
   }
   .artometrics-article-body .art-chart-heading{
-    font-size: 0.66rem !important;
-    padding: 0.85rem 0.75rem 0.65rem !important;
-    letter-spacing: 0.05em !important;
+    padding: 0.75rem 0.65rem 0.6rem !important;
   }
-  .artometrics-article-body .art-chart-live{
-    aspect-ratio: 16 / 9;
+  .artometrics-article-body .art-chart-heading__line--primary{
+    font-size: 0.64rem !important;
+    letter-spacing: 0.06em !important;
+  }
+  .artometrics-article-body .art-chart-heading__line--accent{
+    font-size: 0.6rem !important;
+    letter-spacing: 0.08em !important;
   }
   .artometrics-article-body .art-chart-live .modebar{
     opacity: 0.35 !important;
@@ -1170,7 +1194,6 @@ pre:has(> code.sourceCode.sql),
 }
 .artometrics-article-body .art-chart-live{
   width: 100%;
-  aspect-ratio: 16 / 9;
   min-height: 0 !important;
   opacity: 1;
   transition: opacity 0.35s ease;
@@ -1182,10 +1205,20 @@ pre:has(> code.sourceCode.sql),
   display: flex;
   flex-direction: column;
 }
+.artometrics-article-body .art-chart-live:not(.art-chart-has-heading){
+  aspect-ratio: 16 / 9;
+}
+.artometrics-article-body .art-chart-live.art-chart-has-heading .js-plotly-plot,
+.artometrics-article-body .art-chart-live.art-chart-has-heading .plotly,
+.artometrics-article-body .art-chart-live.art-chart-has-heading .art-chart-fallback{
+  aspect-ratio: 16 / 9;
+  width: 100% !important;
+  flex: 0 0 auto;
+}
 .artometrics-article-body .art-chart-fallback{
   display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
   aspect-ratio: 16 / 9;
   object-fit: contain;
   object-position: center center;
@@ -1203,15 +1236,9 @@ pre:has(> code.sourceCode.sql),
 }
 .artometrics-article-body .art-chart-live--static{
   min-height: 0 !important;
-  aspect-ratio: auto;
 }
-.artometrics-article-body .art-chart-live--static.art-chart-has-heading{
-  aspect-ratio: auto;
-}
-.artometrics-article-body .art-chart-live--static.art-chart-has-heading .art-chart-fallback{
+.artometrics-article-body .art-chart-live--static:not(.art-chart-has-heading){
   aspect-ratio: 16 / 9;
-  margin-top: 0 !important;
-  clip-path: none !important;
 }
 .artometrics-article-body .art-chart-live .js-plotly-plot,
 .artometrics-article-body .art-chart-live .plotly{

@@ -16,8 +16,8 @@ draft: false
   <li><a href="#chart-1-trend" id="toc-chart-1-trend">CHART 1 — TREND</a></li>
   <li><a href="#chart-2-leaders" id="toc-chart-2-leaders">CHART 2 — LEADERS</a></li>
   <li><a href="#chart-3-distribution" id="toc-chart-3-distribution">CHART 3 — DISTRIBUTION</a></li>
-  <li><a href="#chart-4-category-compare" id="toc-chart-4-category-compare">CHART 4 — TIERS</a></li>
-  <li><a href="#chart-5-mean-median" id="toc-chart-5-mean-median">CHART 5 — ROBUSTNESS</a></li>
+  <li><a href="#chart-4-concentration" id="toc-chart-4-concentration">CHART 4 — CONCENTRATION</a></li>
+  <li><a href="#chart-pareto" id="toc-chart-pareto">CHART 5 — CONCENTRATION</a></li>
   <li><a href="#limitations" id="toc-limitations">LIMITATIONS</a></li>
   <li><a href="#conclusion" id="toc-conclusion">CONCLUSION</a></li>
   <li><a href="#references" id="toc-references">REFERENCES</a></li>
@@ -60,20 +60,20 @@ draft: false
 </figure>
 <p class="art-p">Category boxes reveal whether appearances consensus is shared or contested across tiers.</p>
 <p class="art-p">Wide whiskers flag segments where outliers — not averages — drive reputation.</p>
-<h2 id="chart-4-category-compare" class="anchored">CHART 4 — TIERS</h2>
+<h2 id="chart-4-concentration" class="anchored">CHART 4 — CONCENTRATION</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/comic-characters/charts/chart4_category_compare.plotly.json" data-fallback="/images/content/articles/comic-characters/charts/chart4_category_compare.png" role="img" aria-label="Appearances by Publisher"></div>
-  <figcaption class="art-chart-caption">Appearances by Publisher</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/comic-characters/charts/chart4_pareto.plotly.json" data-fallback="/images/content/articles/comic-characters/charts/chart4_pareto.png" role="img" aria-label="Cumulative Appearances"></div>
+  <figcaption class="art-chart-caption">Cumulative Appearances</figcaption>
 </figure>
-<p class="art-p"><strong>DC</strong> leads the median table at <strong>6.00</strong>; the gap to <strong>Marvel</strong> is <strong>3.00</strong> points.</p>
-<p class="art-p">Tier separation matters more than means when distributions skew hard.</p>
-<h2 id="chart-5-mean-median" class="anchored">CHART 5 — ROBUSTNESS</h2>
+<p class="art-p">The top <strong>5</strong> name entries account for <strong>45%</strong> of the aggregate appearances.</p>
+<p class="art-p">Steep Pareto curves mean a small head drives most of the signal — the long tail is noise until it isn't.</p>
+<h2 id="chart-pareto" class="anchored">CHART 5 — CONCENTRATION</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/comic-characters/charts/chart5_mean_median.plotly.json" data-fallback="/images/content/articles/comic-characters/charts/chart5_mean_median.png" role="img" aria-label="Mean vs Median Appearances"></div>
-  <figcaption class="art-chart-caption">Mean vs Median Appearances</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/comic-characters/charts/chart_pareto.plotly.json" data-fallback="/images/content/articles/comic-characters/charts/chart_pareto.png" role="img" aria-label="Cumulative Appearances"></div>
+  <figcaption class="art-chart-caption">Cumulative Appearances</figcaption>
 </figure>
-<p class="art-p">When mean and median diverge, outliers are steering the narrative — medians tell the typical story.</p>
-<p class="art-p">Tracking both lines exposes whether the field is tightening or fracturing over time.</p>
+<p class="art-p">The top <strong>5</strong> name entries account for <strong>45%</strong> of the aggregate appearances.</p>
+<p class="art-p">Steep Pareto curves mean a small head drives most of the signal — the long tail is noise until it isn't.</p>
 <h2 id="limitations" class="anchored">LIMITATIONS</h2>
 <p>Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p><p>Findings describe the file on hand — treat them as structural signals about <strong>Comic Book Characters</strong>, not exhaustive truth about the full domain.</p>
 <h2 id="conclusion" class="anchored">CONCLUSION</h2>

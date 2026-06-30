@@ -16,7 +16,7 @@ draft: false
   <li><a href="#chart-1-trend" id="toc-chart-1-trend">CHART 1 — TREND</a></li>
   <li><a href="#chart-2-leaders" id="toc-chart-2-leaders">CHART 2 — LEADERS</a></li>
   <li><a href="#chart-3-distribution" id="toc-chart-3-distribution">CHART 3 — DISTRIBUTION</a></li>
-  <li><a href="#chart-4-category-compare" id="toc-chart-4-category-compare">CHART 4 — TIERS</a></li>
+  <li><a href="#chart-4-gap" id="toc-chart-4-gap">CHART 4 — GAP ANALYSIS</a></li>
   <li><a href="#chart-5-relationship" id="toc-chart-5-relationship">CHART 5 — RELATIONSHIP</a></li>
   <li><a href="#limitations" id="toc-limitations">LIMITATIONS</a></li>
   <li><a href="#conclusion" id="toc-conclusion">CONCLUSION</a></li>
@@ -60,20 +60,20 @@ draft: false
 </figure>
 <p class="art-p">Category boxes reveal whether magnitude body consensus is shared or contested across tiers.</p>
 <p class="art-p">Wide whiskers flag segments where outliers — not averages — drive reputation.</p>
-<h2 id="chart-4-category-compare" class="anchored">CHART 4 — TIERS</h2>
+<h2 id="chart-4-gap" class="anchored">CHART 4 — GAP ANALYSIS</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/nuclear-explosions/charts/chart4_category_compare.plotly.json" data-fallback="/images/content/articles/nuclear-explosions/charts/chart4_category_compare.png" role="img" aria-label="Magnitude body by Purpose"></div>
-  <figcaption class="art-chart-caption">Magnitude body by Purpose</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/nuclear-explosions/charts/chart4_gap.plotly.json" data-fallback="/images/content/articles/nuclear-explosions/charts/chart4_gap.png" role="img" aria-label="Magnitude body vs median by Purpose"></div>
+  <figcaption class="art-chart-caption">Magnitude body vs median by Purpose</figcaption>
 </figure>
-<p class="art-p"><strong>PNE</strong> leads the median table at <strong>5.10</strong>; the gap to <strong>WR/SE</strong> is <strong>5.10</strong> points.</p>
-<p class="art-p">Tier separation matters more than means when distributions skew hard.</p>
+<p class="art-p"><strong>PNE</strong> sits <strong>5.10</strong> above the median; <strong>FMS</strong> trails by <strong>0.00</strong>.</p>
+<p class="art-p">Diverging from the median exposes which tiers over- or under-perform — not just who ranks first.</p>
 <h2 id="chart-5-relationship" class="anchored">CHART 5 — RELATIONSHIP</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/nuclear-explosions/charts/chart5_scatter.plotly.json" data-fallback="/images/content/articles/nuclear-explosions/charts/chart5_scatter.png" role="img" aria-label="Magnitude body vs Depth"></div>
   <figcaption class="art-chart-caption">Magnitude body vs Depth</figcaption>
 </figure>
 <p class="art-p">Joint plot of <strong>magnitude body</strong> and <strong>depth</strong> surfaces clusters the averages erase.</p>
-<p class="art-p">Outlying points are candidates for follow-up — they are the archetypes, not the noise.</p>
+<p class="art-p">Bubble size tracks repeat presence — outliers are archetypes, not noise.</p>
 <h2 id="limitations" class="anchored">LIMITATIONS</h2>
 <p>Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p><p>Findings describe the file on hand — treat them as structural signals about <strong>Nuclear Explosions</strong>, not exhaustive truth about the full domain.</p>
 <h2 id="conclusion" class="anchored">CONCLUSION</h2>

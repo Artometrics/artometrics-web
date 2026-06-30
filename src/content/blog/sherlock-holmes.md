@@ -16,8 +16,8 @@ draft: false
   <li><a href="#chart-1-breakdown" id="toc-chart-1-breakdown">CHART 1 — BREAKDOWN</a></li>
   <li><a href="#chart-2-leaders" id="toc-chart-2-leaders">CHART 2 — LEADERS</a></li>
   <li><a href="#chart-3-distribution" id="toc-chart-3-distribution">CHART 3 — DISTRIBUTION</a></li>
-  <li><a href="#chart-spread" id="toc-chart-spread">CHART 4 — SPREAD</a></li>
-  <li><a href="#chart-top-names" id="toc-chart-top-names">CHART 5 — NAMES</a></li>
+  <li><a href="#chart-4-concentration" id="toc-chart-4-concentration">CHART 4 — CONCENTRATION</a></li>
+  <li><a href="#chart-pareto" id="toc-chart-pareto">CHART 5 — CONCENTRATION</a></li>
   <li><a href="#limitations" id="toc-limitations">LIMITATIONS</a></li>
   <li><a href="#conclusion" id="toc-conclusion">CONCLUSION</a></li>
   <li><a href="#references" id="toc-references">REFERENCES</a></li>
@@ -58,20 +58,20 @@ draft: false
 </figure>
 <p class="art-p">Median <strong>12.0</strong> vs mean <strong>10.9</strong> — the shape is relatively symmetric.</p>
 <p class="art-p">The top decile begins at <strong>14.0</strong>; that tail is where defining cases live.</p>
-<h2 id="chart-spread" class="anchored">CHART 4 — SPREAD</h2>
+<h2 id="chart-4-concentration" class="anchored">CHART 4 — CONCENTRATION</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/sherlock-holmes/charts/chart_spread.plotly.json" data-fallback="/images/content/articles/sherlock-holmes/charts/chart_spread.png" role="img" aria-label="Word count Spread"></div>
-  <figcaption class="art-chart-caption">Word count Spread</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/sherlock-holmes/charts/chart4_pareto.plotly.json" data-fallback="/images/content/articles/sherlock-holmes/charts/chart4_pareto.png" role="img" aria-label="Cumulative Word count"></div>
+  <figcaption class="art-chart-caption">Cumulative Word count</figcaption>
 </figure>
-<p class="art-p">The middle half runs <strong>10.0</strong> to <strong>13.0</strong>.</p>
-<p class="art-p">Tight boxes mean consensus; long whiskers mean extremes own the narrative.</p>
-<h2 id="chart-top-names" class="anchored">CHART 5 — NAMES</h2>
+<p class="art-p">The top <strong>5</strong> book entries account for <strong>34%</strong> of the aggregate word count.</p>
+<p class="art-p">Steep Pareto curves mean a small head drives most of the signal — the long tail is noise until it isn't.</p>
+<h2 id="chart-pareto" class="anchored">CHART 5 — CONCENTRATION</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/sherlock-holmes/charts/chart_top_names.plotly.json" data-fallback="/images/content/articles/sherlock-holmes/charts/chart_top_names.png" role="img" aria-label="Top Book"></div>
-  <figcaption class="art-chart-caption">Top Book</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/sherlock-holmes/charts/chart_pareto.plotly.json" data-fallback="/images/content/articles/sherlock-holmes/charts/chart_pareto.png" role="img" aria-label="Cumulative Word count"></div>
+  <figcaption class="art-chart-caption">Cumulative Word count</figcaption>
 </figure>
-<p class="art-p"><strong>The Hound of the Baskervilles</strong> appears <strong>6,970</strong> times — the most repeated entry.</p>
-<p class="art-p">Frequency leaders reveal franchise depth when numeric scores are sparse.</p>
+<p class="art-p">The top <strong>5</strong> book entries account for <strong>34%</strong> of the aggregate word count.</p>
+<p class="art-p">Steep Pareto curves mean a small head drives most of the signal — the long tail is noise until it isn't.</p>
 <h2 id="limitations" class="anchored">LIMITATIONS</h2>
 <p>Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p><p>Findings describe the file on hand — treat them as structural signals about <strong>Sherlock Holmes</strong>, not exhaustive truth about the full domain.</p>
 <h2 id="conclusion" class="anchored">CONCLUSION</h2>
