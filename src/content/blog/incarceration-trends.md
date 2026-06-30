@@ -34,7 +34,7 @@ draft: false
   <div class="fact-box"><span class="fact-number">Autauga County</span><span class="fact-label">Most common County name</span></div>
 </div>
 <h2 id="dataset-context" class="anchored">DATASET CONTEXT</h2>
-<p>The source is the TidyTuesday release from <strong>2019-01-22</strong> (R for Data Science community). This working file contains <strong>4</strong> rows and <strong>102</strong> columns after merging all available CSV/XLSX tables in the week folder.</p>
+<p>The source is the TidyTuesday release from <strong>2019-01-22</strong> (R for Data Science community). This working file contains <strong>4</strong> rows and <strong>91</strong> columns after merging all available CSV/XLSX tables in the week folder.</p>
 <p>Charts are exported as Plotly JSON with PNG fallbacks. Medians are used for robustness where distributions skew. Index-style fields (row numbers, sequential IDs) are excluded from metric selection.</p>
 <h2 id="chart-1-volume" class="anchored">CHART 1 — VOLUME</h2>
 <figure class="art-chart">
@@ -76,7 +76,7 @@ draft: false
 <h2 id="conclusion" class="anchored">CONCLUSION</h2>
 <p>Measured end to end, <strong>Incarceration Trends</strong> rewards counting: the head, the tail, and the time trend rarely agree.</p><p>That tension is the Artometrics mandate — data does not replace judgment, it disciplines it.</p>
 <h2 id="references" class="anchored">REFERENCES</h2>
-<p>Data Science Learning Community. (2019). <em>TidyTuesday: Incarceration Trends</em>. <a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2019/2019-01-22/incarceration_trends.csv" target="_blank" rel="noopener noreferrer">https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2019/2019-01-22/incarceration_trends.csv</a></p>
+<p>Data Science Learning Community. (2019). <em>TidyTuesday: Incarceration Trends</em>. <a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2019/2019-01-22/pretrial_population.csv" target="_blank" rel="noopener noreferrer">https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2019/2019-01-22/pretrial_population.csv</a></p>
 <h2 id="editors-note" class="anchored">EDITOR'S NOTE</h2>
 <div class="art-editorial-note"><p><em>Artometrics data report from the TidyTuesday research pipeline. Charts and aggregates are reproducible from the embedded exhibits and public source files.</em></p></div>
 <p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2019/2019-01-22" target="_blank" rel="noopener noreferrer">View TidyTuesday source on GitHub</a></p>

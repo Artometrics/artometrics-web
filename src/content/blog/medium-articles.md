@@ -26,13 +26,13 @@ draft: false
 </nav>
 <main class="art-article-main">
 <p class="art-p">This report analyzes the TidyTuesday <strong>2018-12-04</strong> release on <strong>Medium Article Metadata</strong> — <strong>78,388</strong> rows after cleaning and merge. The question is not whether the topic matters, but what the distribution looks like when you stop quoting anecdotes and start counting.</p>
-<p class="art-p">Five charts track <strong>X1</strong> across time, category, and named entities. Where a companion file exists in the repo, it is joined before analysis so reception, geography, or metadata columns are not left on the table.</p>
+<p class="art-p">Five charts track <strong>Month</strong> across time, category, and named entities. Where a companion file exists in the repo, it is joined before analysis so reception, geography, or metadata columns are not left on the table.</p>
 <h2 id="fast-facts" class="anchored">FAST FACTS</h2>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">78,388</span><span class="fact-label">Records in the working dataset</span></div>
-  <div class="fact-box"><span class="fact-number">30,598</span><span class="fact-label">Median X1</span></div>
-  <div class="fact-box"><span class="fact-number">437,504</span><span class="fact-label">Highest observed X1</span></div>
-  <div class="fact-box"><span class="fact-number">(Shallow Neural Network)</span><span class="fact-label">Top Title by X1</span></div>
+  <div class="fact-box"><span class="fact-number">6.00</span><span class="fact-label">Median Month</span></div>
+  <div class="fact-box"><span class="fact-number">12.0</span><span class="fact-label">Highest observed Month</span></div>
+  <div class="fact-box"><span class="fact-number">New approaches to Deep Netwo</span><span class="fact-label">Top Title by Month</span></div>
   <div class="fact-box"><span class="fact-number">2017–2018</span><span class="fact-label">Year span covered in the file</span></div>
 </div>
 <h2 id="dataset-context" class="anchored">DATASET CONTEXT</h2>
@@ -40,38 +40,38 @@ draft: false
 <p>Charts are exported as Plotly JSON with PNG fallbacks. Medians are used for robustness where distributions skew. Index-style fields (row numbers, sequential IDs) are excluded from metric selection.</p>
 <h2 id="chart-1-trend" class="anchored">CHART 1 — TREND</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/medium-articles/charts/chart1_trend.plotly.json" data-fallback="/images/content/articles/medium-articles/charts/chart1_trend.png" role="img" aria-label="Median X1 Over Time"></div>
-  <figcaption class="art-chart-caption">Median X1 Over Time</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/medium-articles/charts/chart1_trend.plotly.json" data-fallback="/images/content/articles/medium-articles/charts/chart1_trend.png" role="img" aria-label="Median Month Over Time"></div>
+  <figcaption class="art-chart-caption">Median Month Over Time</figcaption>
 </figure>
-<p class="art-p">The median x1 opens at **32,072** and closes at **30,365** across the series.</p>
+<p class="art-p">The median month opens at **10.0** and closes at **4.00** across the series.</p>
 <p class="art-p">Filled trend lines expose direction without letting single outliers steer the narrative.</p>
 <h2 id="chart-3-distribution" class="anchored">CHART 3 — DISTRIBUTION</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/medium-articles/charts/chart3_distribution.plotly.json" data-fallback="/images/content/articles/medium-articles/charts/chart3_distribution.png" role="img" aria-label="X1 Distribution"></div>
-  <figcaption class="art-chart-caption">X1 Distribution</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/medium-articles/charts/chart3_distribution.plotly.json" data-fallback="/images/content/articles/medium-articles/charts/chart3_distribution.png" role="img" aria-label="Month Distribution"></div>
+  <figcaption class="art-chart-caption">Month Distribution</figcaption>
 </figure>
-<p class="art-p">Median **30,598** vs mean **130,633** — the shape is right-skewed.</p>
-<p class="art-p">The top decile begins at **365,742**; that tail is where franchise-defining cases live.</p>
+<p class="art-p">Median **6.00** vs mean **6.21** — the shape is relatively symmetric.</p>
+<p class="art-p">The top decile begins at **11.0**; that tail is where franchise-defining cases live.</p>
 <h2 id="chart-4-leaders" class="anchored">CHART 4 — LEADERS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/medium-articles/charts/chart4_leaders.plotly.json" data-fallback="/images/content/articles/medium-articles/charts/chart4_leaders.png" role="img" aria-label="Top Title"></div>
   <figcaption class="art-chart-caption">Top Title</figcaption>
 </figure>
-<p class="art-p">**(Shallow Neural Network)** leads at **437,504** — **437,262** marks the median among the top dozen.</p>
+<p class="art-p">**#63: FRDI Fun Facts!** leads at **12.0** — **12.0** marks the median among the top dozen.</p>
 <p class="art-p">Head-of-field concentration is where brand, quality, or scale visibly separates from the pack.</p>
 <h2 id="chart-5-relationship" class="anchored">CHART 5 — RELATIONSHIP</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/medium-articles/charts/chart5_scatter.plotly.json" data-fallback="/images/content/articles/medium-articles/charts/chart5_scatter.png" role="img" aria-label="X1 vs Month"></div>
-  <figcaption class="art-chart-caption">X1 vs Month</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/medium-articles/charts/chart5_scatter.plotly.json" data-fallback="/images/content/articles/medium-articles/charts/chart5_scatter.png" role="img" aria-label="Month vs Day"></div>
+  <figcaption class="art-chart-caption">Month vs Day</figcaption>
 </figure>
-<p class="art-p">Joint plot of **x1** and **month** surfaces clusters the averages erase.</p>
+<p class="art-p">Joint plot of **month** and **day** surfaces clusters the averages erase.</p>
 <p class="art-p">Outlying points are candidates for follow-up — they are the archetypes, not the noise.</p>
 <h2 id="chart-pad-1" class="anchored">CHART 5 — SPREAD</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/medium-articles/charts/chart_pad_1.plotly.json" data-fallback="/images/content/articles/medium-articles/charts/chart_pad_1.png" role="img" aria-label="X1 Spread"></div>
-  <figcaption class="art-chart-caption">X1 Spread</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/medium-articles/charts/chart_pad_1.plotly.json" data-fallback="/images/content/articles/medium-articles/charts/chart_pad_1.png" role="img" aria-label="Month Spread"></div>
+  <figcaption class="art-chart-caption">Month Spread</figcaption>
 </figure>
-<p class="art-p">The middle half runs **8,181** to **266,207**.</p>
+<p class="art-p">The middle half runs **3.00** to **9.00**.</p>
 <p class="art-p">Tight boxes mean consensus; long whiskers mean extremes own the narrative.</p>
 <h2 id="limitations" class="anchored">LIMITATIONS</h2>
 <p>Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p><p>Findings describe the file on hand — treat them as structural signals for editorial follow-up, not exhaustive truth about the full domain.</p>

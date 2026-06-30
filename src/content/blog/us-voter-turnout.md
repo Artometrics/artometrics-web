@@ -32,7 +32,7 @@ draft: false
   <div class="fact-box"><span class="fact-number">936</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">1,170,867</span><span class="fact-label">Median Votes</span></div>
   <div class="fact-box"><span class="fact-number">132,609,063</span><span class="fact-label">Highest observed Votes</span></div>
-  <div class="fact-box"><span class="fact-number">0.0</span><span class="fact-label">Top Icpsr state code by Votes</span></div>
+  <div class="fact-box"><span class="fact-number">United States</span><span class="fact-label">Top State by Votes</span></div>
   <div class="fact-box"><span class="fact-number">1980–2014</span><span class="fact-label">Year span covered in the file</span></div>
 </div>
 <h2 id="dataset-context" class="anchored">DATASET CONTEXT</h2>
@@ -54,10 +54,10 @@ draft: false
 <p class="art-p">The top decile begins at **4,659,000**; that tail is where franchise-defining cases live.</p>
 <h2 id="chart-4-leaders" class="anchored">CHART 4 — LEADERS</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/us-voter-turnout/charts/chart4_leaders.plotly.json" data-fallback="/images/content/articles/us-voter-turnout/charts/chart4_leaders.png" role="img" aria-label="Top Icpsr state code"></div>
-  <figcaption class="art-chart-caption">Top Icpsr state code</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/us-voter-turnout/charts/chart4_leaders.plotly.json" data-fallback="/images/content/articles/us-voter-turnout/charts/chart4_leaders.png" role="img" aria-label="Top State"></div>
+  <figcaption class="art-chart-caption">Top State</figcaption>
 </figure>
-<p class="art-p">**0** leads at **90,912,015** — **4,209,538** marks the median among the top dozen.</p>
+<p class="art-p">**United States** leads at **90,912,015** — **4,209,538** marks the median among the top dozen.</p>
 <p class="art-p">Head-of-field concentration is where brand, quality, or scale visibly separates from the pack.</p>
 <h2 id="chart-5-relationship" class="anchored">CHART 5 — RELATIONSHIP</h2>
 <figure class="art-chart">

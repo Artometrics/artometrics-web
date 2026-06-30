@@ -32,7 +32,7 @@ draft: false
   <div class="fact-box"><span class="fact-number">58,502</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">1,079</span><span class="fact-label">Median WASTE DIS</span></div>
   <div class="fact-box"><span class="fact-number">3,073,754</span><span class="fact-label">Highest observed WASTE DIS</span></div>
-  <div class="fact-box"><span class="fact-number">Stickney Treatment Plant MWR</span><span class="fact-label">Top WWTP NAME by WASTE DIS</span></div>
+  <div class="fact-box"><span class="fact-number">United States</span><span class="fact-label">Top COUNTRY by WASTE DIS</span></div>
   <div class="fact-box"><span class="fact-number">Not Reported</span><span class="fact-label">Most common STATUS</span></div>
 </div>
 <h2 id="dataset-context" class="anchored">DATASET CONTEXT</h2>
@@ -54,10 +54,10 @@ draft: false
 <p class="art-p">Wide whiskers flag categories where outliers — not averages — drive reputation.</p>
 <h2 id="chart-4-leaders" class="anchored">CHART 4 — LEADERS</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/hydro-wastewater/charts/chart4_leaders.plotly.json" data-fallback="/images/content/articles/hydro-wastewater/charts/chart4_leaders.png" role="img" aria-label="Top WWTP NAME"></div>
-  <figcaption class="art-chart-caption">Top WWTP NAME</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/hydro-wastewater/charts/chart4_leaders.plotly.json" data-fallback="/images/content/articles/hydro-wastewater/charts/chart4_leaders.png" role="img" aria-label="Top COUNTRY"></div>
+  <figcaption class="art-chart-caption">Top COUNTRY</figcaption>
 </figure>
-<p class="art-p">**Stickney Treatment Plant MWRDGC** leads at **3,073,754** — **1,471,508** marks the median among the top dozen.</p>
+<p class="art-p">**Singapore** leads at **223,683** — **56,849** marks the median among the top dozen.</p>
 <p class="art-p">Head-of-field concentration is where brand, quality, or scale visibly separates from the pack.</p>
 <h2 id="chart-5-relationship" class="anchored">CHART 5 — RELATIONSHIP</h2>
 <figure class="art-chart">

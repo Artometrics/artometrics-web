@@ -2,7 +2,7 @@
 title: "RADIO STATIONS: The Artometrics of Radio Stations"
 slug: radio-stations
 pubDate: 2026-06-15
-description: "This report treats the TidyTuesday **2022-11-08** release as a measurable slice of radio stations — 2,065 records, 6 variables, one question: what does the distribution actually look like..."
+description: "This report analyzes the TidyTuesday 2022-11-08 release on Radio Stations — 17,186 rows after cleaning and merge. The question is not whether the topic matters, but what the distribution..."
 heroImage: /images/content/articles/radio-stations/hero.png
 tags: [culture]
 draft: false
@@ -13,11 +13,11 @@ draft: false
   <ul>
   <li><a href="#fast-facts" id="toc-fast-facts">FAST FACTS</a></li>
   <li><a href="#dataset-context" id="toc-dataset-context">DATASET CONTEXT</a></li>
-  <li><a href="#chart-3-distribution" id="toc-chart-3-distribution">CHART 3 — DISTRIBUTION</a></li>
-  <li><a href="#chart-extra-1" id="toc-chart-extra-1">CHART 2 — SPREAD</a></li>
-  <li><a href="#chart-extra-2" id="toc-chart-extra-2">CHART 3 — SPREAD</a></li>
-  <li><a href="#chart-extra-3" id="toc-chart-extra-3">CHART 4 — SPREAD</a></li>
-  <li><a href="#chart-extra-4" id="toc-chart-extra-4">CHART 5 — SPREAD</a></li>
+  <li><a href="#chart-2-leaders" id="toc-chart-2-leaders">CHART 2 — LEADERS</a></li>
+  <li><a href="#chart-3-category" id="toc-chart-3-category">CHART 3 — CATEGORY</a></li>
+  <li><a href="#chart-5-frequency" id="toc-chart-5-frequency">CHART 5 — FREQUENCY</a></li>
+  <li><a href="#chart-extra-mix" id="toc-chart-extra-mix">CHART 4 — MIX</a></li>
+  <li><a href="#chart-pad-hist-1" id="toc-chart-pad-hist-1">CHART 5 — FREQUENCY</a></li>
   <li><a href="#limitations" id="toc-limitations">LIMITATIONS</a></li>
   <li><a href="#conclusion" id="toc-conclusion">CONCLUSION</a></li>
   <li><a href="#references" id="toc-references">REFERENCES</a></li>
@@ -25,72 +25,59 @@ draft: false
   </ul>
 </nav>
 <main class="art-article-main">
-<p class="art-p">This report treats the TidyTuesday **2022-11-08** release as a measurable slice of radio stations — 2,065 records, 6 variables, one question: what does the distribution actually look like when you stop reading anecdotes and start counting?</p>
+<p class="art-p">This report analyzes the TidyTuesday <strong>2022-11-08</strong> release on <strong>Radio Stations</strong> — <strong>17,186</strong> rows after cleaning and merge. The question is not whether the topic matters, but what the distribution looks like when you stop quoting anecdotes and start counting.</p>
+<p class="art-p">Five charts track <strong>the core signal</strong> across time, category, and named entities. Where a companion file exists in the repo, it is joined before analysis so reception, geography, or metadata columns are not left on the table.</p>
 <h2 id="fast-facts" class="anchored">FAST FACTS</h2>
 <div class="facts-grid">
-  <div class="fact-box">
-    <span class="fact-number">2,065</span>
-    <span class="fact-label">Rows in the working dataset after initial load</span>
-  </div>
-  <div class="fact-box">
-    <span class="fact-number">6</span>
-    <span class="fact-label">Variables available for analysis</span>
-  </div>
-  <div class="fact-box">
-    <span class="fact-number">48,778.00</span>
-    <span class="fact-label">Median facility_id</span>
-  </div>
-  <div class="fact-box">
-    <span class="fact-number">190,448.00</span>
-    <span class="fact-label">Maximum observed facility_id</span>
-  </div>
+  <div class="fact-box"><span class="fact-number">17,186</span><span class="fact-label">Records in the working dataset</span></div>
+  <div class="fact-box"><span class="fact-number">LICENSED</span><span class="fact-label">Most common Status</span></div>
 </div>
 <h2 id="dataset-context" class="anchored">DATASET CONTEXT</h2>
-<p>The source data is the TidyTuesday release from <strong>2022-11-08</strong>, maintained by the R for Data Science community. The working dataset contains <strong>2,065</strong> rows and <strong>6</strong> columns. Files were pulled directly from the public repository without manual transcription.</p>
-<p>Analysis code is embedded below each chart. All aggregates were computed in Python with pandas; charts were exported as Plotly JSON for interactive rendering on Artometrics.</p>
-<h2 id="chart-3-distribution" class="anchored">CHART 3 — DISTRIBUTION</h2>
+<p>The source is the TidyTuesday release from <strong>2022-11-08</strong> (R for Data Science community). This working file contains <strong>17,186</strong> rows and <strong>11</strong> columns after merging all available CSV/XLSX tables in the week folder.</p>
+<p>Charts are exported as Plotly JSON with PNG fallbacks. Medians are used for robustness where distributions skew. Index-style fields (row numbers, sequential IDs) are excluded from metric selection.</p>
+<h2 id="chart-2-leaders" class="anchored">CHART 2 — LEADERS</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/radio-stations/charts/chart3_distribution.plotly.json" data-fallback="/images/content/articles/radio-stations/charts/chart3_distribution.png" role="img" aria-label="Facility Id Distribution"></div>
-  <figcaption class="art-chart-caption">Facility Id Distribution</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/radio-stations/charts/chart2_leaders.plotly.json" data-fallback="/images/content/articles/radio-stations/charts/chart2_leaders.png" role="img" aria-label="Top City"></div>
+  <figcaption class="art-chart-caption">Top City</figcaption>
 </figure>
-<p class="art-p">`facility_id` centers around a median of **48,778.00** with a mean of **48,140.17**. The gap between those two numbers suggests a relatively symmetric spread.</p>
-<p class="art-p">Roughly **10.0%** of records sit above the 90th percentile threshold — the tail is where exceptional cases live.</p>
-<h2 id="chart-extra-1" class="anchored">CHART 2 — SPREAD</h2>
+<p class="art-p">**Columbus** appears **59** times — the most recurring name in the file.</p>
+<p class="art-p">The top dozen account for a visible share of all **17,186** rows.</p>
+<h2 id="chart-3-category" class="anchored">CHART 3 — CATEGORY</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/radio-stations/charts/chart_extra_1.plotly.json" data-fallback="/images/content/articles/radio-stations/charts/chart_extra_1.png" role="img" aria-label="Facility Id Spread"></div>
-  <figcaption class="art-chart-caption">Facility Id Spread</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/radio-stations/charts/chart3_category.plotly.json" data-fallback="/images/content/articles/radio-stations/charts/chart3_category.png" role="img" aria-label="Status"></div>
+  <figcaption class="art-chart-caption">Status</figcaption>
 </figure>
-<p class="art-p">The interquartile range of `facility_id` runs from **23,352.00** to **66,193.00**.</p>
-<p class="art-p">Box-level compression means most records cluster tightly; long whiskers mean the extremes drive the narrative.</p>
-<h2 id="chart-extra-2" class="anchored">CHART 3 — SPREAD</h2>
+<p class="art-p">**LICENSED** is the largest bucket with **2,033** records.</p>
+<p class="art-p">Category concentration shows where editorial attention should focus first.</p>
+<h2 id="chart-5-frequency" class="anchored">CHART 5 — FREQUENCY</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/radio-stations/charts/chart_extra_2.plotly.json" data-fallback="/images/content/articles/radio-stations/charts/chart_extra_2.png" role="img" aria-label="Facility Id Spread"></div>
-  <figcaption class="art-chart-caption">Facility Id Spread</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/radio-stations/charts/chart5_frequency.plotly.json" data-fallback="/images/content/articles/radio-stations/charts/chart5_frequency.png" role="img" aria-label="Appearance Spread"></div>
+  <figcaption class="art-chart-caption">Appearance Spread</figcaption>
 </figure>
-<p class="art-p">The interquartile range of `facility_id` runs from **23,352.00** to **66,193.00**.</p>
-<p class="art-p">Box-level compression means most records cluster tightly; long whiskers mean the extremes drive the narrative.</p>
-<h2 id="chart-extra-3" class="anchored">CHART 4 — SPREAD</h2>
+<p class="art-p">Most city entities appear only once; a small head revisits repeatedly.</p>
+<p class="art-p">This power-law shape is typical of guest lists, credits, and catalog-style tables.</p>
+<h2 id="chart-extra-mix" class="anchored">CHART 4 — MIX</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/radio-stations/charts/chart_extra_3.plotly.json" data-fallback="/images/content/articles/radio-stations/charts/chart_extra_3.png" role="img" aria-label="Facility Id Spread"></div>
-  <figcaption class="art-chart-caption">Facility Id Spread</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/radio-stations/charts/chart_extra_mix.plotly.json" data-fallback="/images/content/articles/radio-stations/charts/chart_extra_mix.png" role="img" aria-label="Call sign"></div>
+  <figcaption class="art-chart-caption">Call sign</figcaption>
 </figure>
-<p class="art-p">The interquartile range of `facility_id` runs from **23,352.00** to **66,193.00**.</p>
-<p class="art-p">Box-level compression means most records cluster tightly; long whiskers mean the extremes drive the narrative.</p>
-<h2 id="chart-extra-4" class="anchored">CHART 5 — SPREAD</h2>
+<p class="art-p">**KGDH-LP** is the most repeated call sign in the extract.</p>
+<p class="art-p">Secondary dimensions add context when the primary table has no numeric score column.</p>
+<h2 id="chart-pad-hist-1" class="anchored">CHART 5 — FREQUENCY</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/radio-stations/charts/chart_extra_4.plotly.json" data-fallback="/images/content/articles/radio-stations/charts/chart_extra_4.png" role="img" aria-label="Facility Id Spread"></div>
-  <figcaption class="art-chart-caption">Facility Id Spread</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/radio-stations/charts/chart_pad_hist_1.plotly.json" data-fallback="/images/content/articles/radio-stations/charts/chart_pad_hist_1.png" role="img" aria-label="Frequency"></div>
+  <figcaption class="art-chart-caption">Frequency</figcaption>
 </figure>
-<p class="art-p">The interquartile range of `facility_id` runs from **23,352.00** to **66,193.00**.</p>
-<p class="art-p">Box-level compression means most records cluster tightly; long whiskers mean the extremes drive the narrative.</p>
+<p class="art-p">Most city entities appear once; repeat entries signal franchise depth.</p>
+<p class="art-p">Power-law tails are common in credits, catalogs, and guest lists.</p>
 <h2 id="limitations" class="anchored">LIMITATIONS</h2>
-<p>This dataset is a community-cleaned snapshot, not a live API. Categories, spelling, and coverage reflect the week it was published. Any time-based field may contain parsing gaps; suppressed or missing values were dropped only when necessary for the chart at hand.</p><p>Medians and counts describe the file — not the full universe of real-world activity. Treat findings as structural signals worthy of follow-up, not final verdicts.</p>
+<p>Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p><p>Findings describe the file on hand — treat them as structural signals for editorial follow-up, not exhaustive truth about the full domain.</p>
 <h2 id="conclusion" class="anchored">CONCLUSION</h2>
-<p>Five charts, one through-line: <strong>Radio Stations</strong> looks different when you measure it. The headline categories, time trends, and tail behavior all matter — but they rarely tell the same story.</p><p>That tension is the point of Artometrics. The data does not replace judgment. It disciplines it.</p>
+<p>Measured end to end, <strong>Radio Stations</strong> rewards counting: the head, the tail, and the time trend rarely agree.</p><p>That tension is the Artometrics mandate — data does not replace judgment, it disciplines it.</p>
 <h2 id="references" class="anchored">REFERENCES</h2>
-<p>Data Science Learning Community. (2022). <em>TidyTuesday: Radio Stations</em>. <a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2022/2022-11-08/station_info.csv" target="_blank" rel="noopener noreferrer">https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2022/2022-11-08/station_info.csv</a></p>
+<p>Data Science Learning Community. (2022). <em>TidyTuesday: Radio Stations</em>. <a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2022/2022-11-08/state_stations.csv" target="_blank" rel="noopener noreferrer">https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2022/2022-11-08/state_stations.csv</a></p>
 <h2 id="editors-note" class="anchored">EDITOR'S NOTE</h2>
-<div class="art-editorial-note"><p><em>Editor's note: This article was generated as part of the Artometrics TidyTuesday research batch. Methodology and code are reproducible from the embedded chart exhibits.</em></p></div>
-<p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday" target="_blank" rel="noopener noreferrer">View TidyTuesday source on GitHub</a></p>
+<div class="art-editorial-note"><p><em>Artometrics data report from the TidyTuesday research pipeline. Charts and aggregates are reproducible from the embedded exhibits and public source files.</em></p></div>
+<p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2022/2022-11-08" target="_blank" rel="noopener noreferrer">View TidyTuesday source on GitHub</a></p>
 </main>
 </div>

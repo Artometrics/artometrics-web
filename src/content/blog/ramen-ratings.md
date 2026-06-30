@@ -32,7 +32,7 @@ draft: false
   <div class="fact-box"><span class="fact-number">3,180</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">3.75</span><span class="fact-label">Median Stars</span></div>
   <div class="fact-box"><span class="fact-number">5.00</span><span class="fact-label">Highest observed Stars</span></div>
-  <div class="fact-box"><span class="fact-number">Nongshim</span><span class="fact-label">Top Brand by Stars</span></div>
+  <div class="fact-box"><span class="fact-number">South Korea</span><span class="fact-label">Top Country by Stars</span></div>
   <div class="fact-box"><span class="fact-number">Pack</span><span class="fact-label">Most common Style</span></div>
 </div>
 <h2 id="dataset-context" class="anchored">DATASET CONTEXT</h2>
@@ -54,10 +54,10 @@ draft: false
 <p class="art-p">Wide whiskers flag categories where outliers — not averages — drive reputation.</p>
 <h2 id="chart-4-leaders" class="anchored">CHART 4 — LEADERS</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/ramen-ratings/charts/chart4_leaders.plotly.json" data-fallback="/images/content/articles/ramen-ratings/charts/chart4_leaders.png" role="img" aria-label="Top Brand"></div>
-  <figcaption class="art-chart-caption">Top Brand</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/ramen-ratings/charts/chart4_leaders.plotly.json" data-fallback="/images/content/articles/ramen-ratings/charts/chart4_leaders.png" role="img" aria-label="Top Country"></div>
+  <figcaption class="art-chart-caption">Top Country</figcaption>
 </figure>
-<p class="art-p">**TTL** leads at **5.00** — **5.00** marks the median among the top dozen.</p>
+<p class="art-p">**Malaysia** leads at **4.25** — **4.00** marks the median among the top dozen.</p>
 <p class="art-p">Head-of-field concentration is where brand, quality, or scale visibly separates from the pack.</p>
 <h2 id="chart-5-relationship" class="anchored">CHART 5 — RELATIONSHIP</h2>
 <figure class="art-chart">

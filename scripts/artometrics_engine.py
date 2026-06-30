@@ -7,6 +7,8 @@ import json
 import re
 import textwrap
 import gc
+import io
+import zipfile
 from dataclasses import dataclass
 from datetime import date
 from pathlib import Path
@@ -130,7 +132,9 @@ LABEL_WORDS = (
     "language",
     "family",
     "site",
-    "heritage",
+    "subject",
+    "book",
+    "author",
 )
 
 BANNED_METRIC_NAMES = {
@@ -152,7 +156,12 @@ BANNED_METRIC_NAMES = {
     "year",
     "week",
     "episode",
+    "leaid",
+    "x1",
+    "co_per_rol",
 }
+
+LABEL_BANNED = {"id", "index", "text", "line", "answer", "question"}
 
 CHART_W = 960
 CHART_H = 540
@@ -176,6 +185,10 @@ class DatasetSpec:
 
 
 def human_label(col: str) -> str:
+    if col == "_art_value":
+        return "Value"
+    if col == "_art_year":
+        return "Year"
     c = re.sub(r"_+", " ", str(col)).strip()
     c = re.sub(r"\s+", " ", c)
     return c[:1].upper() + c[1:]
@@ -233,7 +246,12 @@ def list_folder_files(tt_date: str) -> list[str]:
         x["name"]
         for x in resp.json()
         if x["type"] == "file"
-        and (x["name"].endswith(".csv") or x["name"].endswith(".csv.gz") or x["name"].endswith(".xlsx"))
+        and (
+            x["name"].endswith(".csv")
+            or x["name"].endswith(".csv.gz")
+            or x["name"].endswith(".xlsx")
+            or x["name"].endswith(".zip")
+        )
     ]
 
 
@@ -293,18 +311,39 @@ def pick_columns(df: pd.DataFrame) -> dict[str, Any]:
     metric = numeric[0] if numeric else None
     metric2 = numeric[1] if len(numeric) > 1 else None
 
-    priority_labels = ("guest_star", "guest", "name", "artist", "song", "film", "title", "character", "emperor")
+    priority_labels = (
+        "guest_star",
+        "song_name",
+        "artist_name",
+        "title",
+        "name",
+        "book",
+        "subject",
+        "country",
+        "artist",
+        "song",
+        "film",
+        "character",
+        "emperor",
+        "guest",
+    )
     label = next((c for c in cols if lower[c] in priority_labels), None)
     if not label:
-        label = next((c for c in cols if any(w in lower[c] for w in LABEL_WORDS)), None)
+        label = next((c for c in cols if any(w in lower[c] for w in LABEL_WORDS) and is_label_column(c, df[c])), None)
     if not label:
         label = next(
-            (c for c in cols if is_stringish(df[c]) and 2 < df[c].nunique() <= max(30, len(df) // 3)),
+            (c for c in cols if is_label_column(c, df[c]) and 2 < df[c].nunique() <= max(30, len(df) // 3)),
             None,
         )
 
     date_col = next((c for c in cols if any(w in lower[c] for w in ("date", "released", "aired", "published"))), None)
     year_col = next((c for c in cols if lower[c] in ("year", "release_year", "pub_year") or lower[c].endswith("_year")), None)
+    if "_art_year" in cols:
+        year_col = "_art_year"
+    if not year_col:
+        wide_years = [c for c in cols if re.match(r"^\d{4}$", str(c).strip())]
+        if len(wide_years) >= 2:
+            year_col = None
     if not year_col and "season" in lower.values():
         season_col = next(c for c in cols if lower[c] == "season")
         coerced = pd.to_numeric(df[season_col], errors="coerce")
@@ -359,6 +398,13 @@ def pick_columns(df: pd.DataFrame) -> dict[str, Any]:
         numeric = sorted(numeric, key=metric_score, reverse=True)
         metric = numeric[0] if numeric else None
         metric2 = numeric[1] if len(numeric) > 1 else None
+
+    if not metric and "_art_value" in cols:
+        metric = "_art_value"
+        metric2 = None
+
+    if metric == "_art_value" and not label:
+        label = next((c for c in cols if is_stringish(df[c]) and c not in {"_art_year", "_art_value"}), None)
 
     return {
         "df": df,
@@ -438,6 +484,205 @@ def finalize(fig: go.Figure, title_html: str, *, x_title: str = "", y_title: str
     return fig
 
 
+def parse_year_from_text(value: Any) -> float | None:
+    if pd.isna(value):
+        return None
+    match = re.search(r"(\d{4})", str(value))
+    return float(match.group(1)) if match else None
+
+
+def is_label_column(col: str, series: pd.Series) -> bool:
+    low = str(col).lower()
+    if low in LABEL_BANNED:
+        return False
+    if low.endswith("_id") or low == "id":
+        return False
+    return is_stringish(series) and series.nunique(dropna=True) > 1
+
+
+def melt_wide_year_columns(df: pd.DataFrame) -> pd.DataFrame | None:
+    year_cols = [c for c in df.columns if re.match(r"^\d{4}$", str(c).strip())]
+    if len(year_cols) < 2:
+        return None
+    id_cols = [c for c in df.columns if c not in year_cols and is_stringish(df[c])]
+    if not id_cols:
+        return None
+    melted = df.melt(id_vars=[id_cols[0]], value_vars=year_cols, var_name="_art_year", value_name="_art_value")
+    melted["_art_year"] = pd.to_numeric(melted["_art_year"], errors="coerce")
+    melted["_art_value"] = pd.to_numeric(melted["_art_value"], errors="coerce")
+    return melted.dropna(subset=["_art_year", "_art_value"])
+
+
+def preprocess_dataset(spec: DatasetSpec, df: pd.DataFrame) -> pd.DataFrame:
+    df = df.copy()
+    slug = spec.slug
+
+    if slug == "roman-emperors":
+        df["reign_start_y"] = df["reign_start"].map(parse_year_from_text) if "reign_start" in df.columns else np.nan
+        df["reign_end_y"] = df["reign_end"].map(parse_year_from_text) if "reign_end" in df.columns else np.nan
+        df["reign_years"] = df["reign_end_y"] - df["reign_start_y"]
+        df.loc[df["reign_years"] <= 0, "reign_years"] = np.nan
+
+    if slug == "world-heritage-sites":
+        melted = melt_wide_year_columns(df)
+        if melted is not None:
+            return melted
+
+    if slug == "christmas-novels" and "title" in df.columns:
+        df["title"] = df["title"].astype(str)
+
+    if slug == "beyonce-taylor-lyrics" and "song_name" in df.columns:
+        df["song_name"] = df["song_name"].astype(str)
+        if "artist_name" in df.columns:
+            df["artist_name"] = df["artist_name"].astype(str)
+
+    if slug == "sherlock-holmes" and "book" in df.columns:
+        df["book"] = df["book"].astype(str)
+
+    if slug == "project-gutenberg" and "subject" in df.columns:
+        df["subject"] = df["subject"].astype(str)
+
+    melted = melt_wide_year_columns(df)
+    if melted is not None and len(melted) > len(df):
+        return melted
+
+    return df
+
+
+def safe_merge(left: pd.DataFrame, right: pd.DataFrame, key: str) -> pd.DataFrame:
+    left_d = left.drop_duplicates(subset=[key], keep="first")
+    right_d = right.drop_duplicates(subset=[key], keep="first")
+    overlap = right_d[key].isin(left_d[key]).sum() / max(len(right_d), 1)
+    if overlap < 0.25:
+        return left
+    merged = left_d.merge(right_d, on=key, how="left", suffixes=("", f"_{key}_r"))
+    if len(merged) < len(left_d) * 0.5 or len(merged) > len(left_d) * 4:
+        return left
+    return merged
+
+
+def ensure_five_charts(
+    charts: list[dict[str, Any]],
+    df: pd.DataFrame,
+    spec: DatasetSpec,
+    meta: dict[str, Any],
+) -> list[dict[str, Any]]:
+    seen = {c["id"] for c in charts}
+    idx = 1
+    label = meta.get("label")
+    category = meta.get("category")
+    extras: list[tuple[str, str]] = []
+
+    for col in df.columns:
+        if str(col).startswith("_art_"):
+            continue
+        if col in {label, category, meta.get("year"), meta.get("metric"), meta.get("metric2")}:
+            continue
+        if is_stringish(df[col]) and 1 < df[col].nunique(dropna=True) <= 25:
+            extras.append((col, human_label(col)))
+
+    while len(charts) < 5 and extras:
+        col, hl = extras.pop(0)
+        cid = f"chart_pad_{idx}"
+        if cid in seen:
+            idx += 1
+            continue
+        top = df[col].astype(str).value_counts().head(10).sort_values()
+        fig = go.Figure(
+            go.Bar(
+                x=top.values,
+                y=top.index,
+                orientation="h",
+                marker=dict(color=bar_gradient(len(top)), line=dict(color=ART_DARK, width=0.4)),
+            )
+        )
+        finalize(fig, chart_title(f"TOP {hl.upper()}", spec.title.split()[0]), x_title="Count")
+        charts.append(
+            chart_entry(
+                cid,
+                f"chart-pad-{idx}",
+                f"CHART {len(charts)+1} — {hl.upper()}",
+                hl,
+                fig,
+                [
+                    f"**{top.index[-1]}** leads with **{int(top.iloc[-1]):,}** records in {hl.lower()}.",
+                    "Secondary breakdowns expose structure when the primary score column is absent.",
+                ],
+            )
+        )
+        seen.add(cid)
+        idx += 1
+
+    if len(charts) < 5 and label:
+        freq = df[label].astype(str).value_counts()
+        cid = f"chart_pad_hist_{idx}"
+        if cid not in seen and len(freq) >= 3:
+            fig = go.Figure(
+                go.Histogram(
+                    x=freq.values,
+                    nbinsx=min(16, max(4, int(freq.nunique() / 2))),
+                    marker_color=ART_SECONDARY,
+                )
+            )
+            finalize(fig, chart_title("APPEARANCE FREQUENCY", human_label(label)), x_title="Records per entity")
+            charts.append(
+                chart_entry(
+                    cid,
+                    f"chart-pad-hist-{idx}",
+                    f"CHART {len(charts)+1} — FREQUENCY",
+                    "Frequency",
+                    fig,
+                    [
+                        f"Most {human_label(label).lower()} entities appear once; repeat entries signal franchise depth.",
+                        "Power-law tails are common in credits, catalogs, and guest lists.",
+                    ],
+                )
+            )
+            seen.add(cid)
+
+    if len(charts) < 5 and label:
+        top = df[label].astype(str).value_counts().head(8).sort_values()
+        cid = f"chart_overview_{idx}"
+        if cid not in seen:
+            fig = go.Figure(
+                go.Bar(
+                    x=top.values,
+                    y=top.index,
+                    orientation="h",
+                    marker=dict(color=bar_gradient(len(top)), line=dict(color=ART_DARK, width=0.4)),
+                )
+            )
+            finalize(fig, chart_title(f"OVERVIEW — {human_label(label).upper()}", spec.title), x_title="Count")
+            charts.append(
+                chart_entry(
+                    cid,
+                    "chart-overview",
+                    f"CHART {len(charts)+1} — OVERVIEW",
+                    f"Top {human_label(label)}",
+                    fig,
+                    [
+                        f"**{top.index[-1]}** anchors the distribution with **{int(top.iloc[-1]):,}** records.",
+                        "Overview bars summarize concentration before drilling into finer cuts.",
+                    ],
+                )
+            )
+
+    return charts[:5]
+
+
+def load_folder_table(url: str, fname: str, csv_sep: str | None) -> pd.DataFrame:
+    if fname.endswith(".zip"):
+        resp = requests.get(url, timeout=90, headers={"User-Agent": "artometrics-v2"})
+        resp.raise_for_status()
+        with zipfile.ZipFile(io.BytesIO(resp.content)) as zf:
+            csv_names = [n for n in zf.namelist() if n.lower().endswith(".csv")]
+            if not csv_names:
+                raise FileNotFoundError(f"No CSV inside {fname}")
+            with zf.open(sorted(csv_names, key=len)[0]) as handle:
+                return clean_df(pd.read_csv(handle, on_bad_lines="skip", engine="python", sep=csv_sep or ","))
+    return clean_df(load_table(url, csv_sep))
+
+
 def save_chart(fig: go.Figure, json_path: Path, png_path: Path) -> None:
     json_path.parent.mkdir(parents=True, exist_ok=True)
     png_path.parent.mkdir(parents=True, exist_ok=True)
@@ -452,19 +697,19 @@ def download_dataset(spec: DatasetSpec) -> tuple[pd.DataFrame, str]:
     if not files:
         raise FileNotFoundError(spec.tt_date)
 
-    load_order = []
+    load_order: list[str] = []
     if spec.csv_name and spec.csv_name in files:
         load_order.append(spec.csv_name)
-    for f in sorted(files, key=lambda x: (0 if x.endswith(".csv") and not x.endswith(".gz") else 1, -len(x))):
+    for f in sorted(files, key=lambda x: (0 if x.endswith((".csv", ".zip")) and not x.endswith(".gz") else 1, -len(x))):
         if f not in load_order:
             load_order.append(f)
 
-    tables: list[tuple[str, pd.DataFrame]] = []
+    tables: dict[str, pd.DataFrame] = {}
     primary_url = ""
     for fname in load_order:
         url = f"{folder}/{fname}"
         try:
-            tables.append((fname, clean_df(load_table(url, spec.csv_sep if fname == spec.csv_name else None))))
+            tables[fname] = load_folder_table(url, fname, spec.csv_sep if fname == spec.csv_name else None)
             if not primary_url:
                 primary_url = url
         except Exception:
@@ -473,19 +718,39 @@ def download_dataset(spec: DatasetSpec) -> tuple[pd.DataFrame, str]:
     if not tables:
         raise FileNotFoundError(spec.tt_date)
 
-    tables.sort(key=lambda t: len(t[1]), reverse=True)
-    df = tables[0][1]
-    for fname, other in tables[1:]:
+    if spec.csv_name and spec.csv_name in tables:
+        df = tables.pop(spec.csv_name)
+        primary_url = f"{folder}/{spec.csv_name}"
+    else:
+        primary_name = max(tables, key=lambda k: len(tables[k]))
+        df = tables.pop(primary_name)
+        primary_url = f"{folder}/{primary_name}"
+
+    if spec.slug == "christmas-novels":
+        authors = tables.get("christmas_novel_authors.csv")
+        if authors is not None and "gutenberg_author_id" in df.columns and "gutenberg_author_id" in authors.columns:
+            df = safe_merge(df, authors, "gutenberg_author_id")
+
+    merge_keys = {
+        "netflix-engagement": "title",
+        "all-the-pizza": "name",
+    }
+    preferred_key = spec.merge_on or merge_keys.get(spec.slug)
+    for fname, other in list(tables.items()):
+        if spec.slug == "christmas-novels" and fname == "christmas_novel_authors.csv":
+            continue
+        if spec.slug in {"netflix-engagement", "all-the-pizza", "web-page-metrics", "wealth-income"}:
+            continue
         shared = [c for c in df.columns if c in other.columns and c.lower() not in BANNED_METRIC_NAMES]
         if not shared:
             continue
-        key = spec.merge_on if spec.merge_on in shared else max(shared, key=lambda c: other[c].isin(df[c]).sum())
+        key = preferred_key if preferred_key in shared else max(shared, key=lambda c: other[c].isin(df[c]).sum())
         try:
-            left = df.drop_duplicates(subset=[key], keep="first")
-            right = other.drop_duplicates(subset=[key], keep="first")
-            df = left.merge(right, on=key, how="left", suffixes=("", f"_{fname.split('.')[0]}"))
+            df = safe_merge(df, other, key)
         except Exception:
             pass
+
+    df = preprocess_dataset(spec, df)
 
     if len(df) > 100_000:
         df = df.sample(100_000, random_state=7).reset_index(drop=True)
@@ -584,7 +849,7 @@ def build_count_charts(df: pd.DataFrame, spec: DatasetSpec, meta: dict[str, Any]
                 "Secondary dimensions add context when the primary table has no numeric score column.",
             ]))
 
-    return charts[:5]
+    return ensure_five_charts(charts, df, spec, meta)
 
 
 def build_charts(df: pd.DataFrame, spec: DatasetSpec, meta: dict[str, Any]) -> list[dict[str, Any]]:
@@ -909,7 +1174,7 @@ def build_charts(df: pd.DataFrame, spec: DatasetSpec, meta: dict[str, Any]) -> l
         seen_ids.add(cid)
         idx += 1
 
-    return charts[:5]
+    return ensure_five_charts(charts, df, spec, meta)
 
 
 def chart_entry(cid, sid, title, caption, fig, prose) -> dict[str, Any]:

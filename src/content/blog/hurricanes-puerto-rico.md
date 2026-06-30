@@ -35,7 +35,7 @@ draft: false
   <div class="fact-box"><span class="fact-number">2017–2017</span><span class="fact-label">Year span covered in the file</span></div>
 </div>
 <h2 id="dataset-context" class="anchored">DATASET CONTEXT</h2>
-<p>The source is the TidyTuesday release from <strong>2018-06-19</strong> (R for Data Science community). This working file contains <strong>51</strong> rows and <strong>19</strong> columns after merging all available CSV/XLSX tables in the week folder.</p>
+<p>The source is the TidyTuesday release from <strong>2018-06-19</strong> (R for Data Science community). This working file contains <strong>51</strong> rows and <strong>13</strong> columns after merging all available CSV/XLSX tables in the week folder.</p>
 <p>Charts are exported as Plotly JSON with PNG fallbacks. Medians are used for robustness where distributions skew. Index-style fields (row numbers, sequential IDs) are excluded from metric selection.</p>
 <h2 id="chart-1-trend" class="anchored">CHART 1 — TREND</h2>
 <figure class="art-chart">
@@ -77,7 +77,7 @@ draft: false
 <h2 id="conclusion" class="anchored">CONCLUSION</h2>
 <p>Measured end to end, <strong>Hurricanes & Puerto Rico</strong> rewards counting: the head, the tail, and the time trend rarely agree.</p><p>That tension is the Artometrics mandate — data does not replace judgment, it disciplines it.</p>
 <h2 id="references" class="anchored">REFERENCES</h2>
-<p>Data Science Learning Community. (2018). <em>TidyTuesday: Hurricanes & Puerto Rico</em>. <a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2018/2018-06-19/week12_mediacloud_top_online_news.csv" target="_blank" rel="noopener noreferrer">https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2018/2018-06-19/week12_mediacloud_top_online_news.csv</a></p>
+<p>Data Science Learning Community. (2018). <em>TidyTuesday: Hurricanes & Puerto Rico</em>. <a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2018/2018-06-19/week12_mediacloud_states.csv" target="_blank" rel="noopener noreferrer">https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2018/2018-06-19/week12_mediacloud_states.csv</a></p>
 <h2 id="editors-note" class="anchored">EDITOR'S NOTE</h2>
 <div class="art-editorial-note"><p><em>Artometrics data report from the TidyTuesday research pipeline. Charts and aggregates are reproducible from the embedded exhibits and public source files.</em></p></div>
 <p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2018/2018-06-19" target="_blank" rel="noopener noreferrer">View TidyTuesday source on GitHub</a></p>

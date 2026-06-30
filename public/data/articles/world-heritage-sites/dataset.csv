@@ -1,4 +1,7 @@
-country,2004,2022
-Norway,5,8
-Denmark,4,10
-Sweden,13,15
+country,_art_year,_art_value
+Norway,2004,5
+Denmark,2004,4
+Sweden,2004,13
+Norway,2022,8
+Denmark,2022,10
+Sweden,2022,15

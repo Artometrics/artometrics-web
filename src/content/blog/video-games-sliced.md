@@ -16,8 +16,8 @@ draft: false
   <li><a href="#chart-1-landscape" id="toc-chart-1-landscape">CHART 1 — LANDSCAPE</a></li>
   <li><a href="#chart-2-timeline" id="toc-chart-2-timeline">CHART 2 — TIMELINE</a></li>
   <li><a href="#chart-3-distribution" id="toc-chart-3-distribution">CHART 3 — DISTRIBUTION</a></li>
+  <li><a href="#chart-4-leaders" id="toc-chart-4-leaders">CHART 4 — LEADERS</a></li>
   <li><a href="#chart-5-relationship" id="toc-chart-5-relationship">CHART 5 — RELATIONSHIP</a></li>
-  <li><a href="#chart-pad-1" id="toc-chart-pad-1">CHART 5 — SPREAD</a></li>
   <li><a href="#limitations" id="toc-limitations">LIMITATIONS</a></li>
   <li><a href="#conclusion" id="toc-conclusion">CONCLUSION</a></li>
   <li><a href="#references" id="toc-references">REFERENCES</a></li>
@@ -32,20 +32,20 @@ draft: false
   <div class="fact-box"><span class="fact-number">12</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">671,340</span><span class="fact-label">Median Avg</span></div>
   <div class="fact-box"><span class="fact-number">857,604</span><span class="fact-label">Highest observed Avg</span></div>
-  <div class="fact-box"><span class="fact-number">Counter-Strike: Global Offen</span><span class="fact-label">Top Gamename by Avg</span></div>
+  <div class="fact-box"><span class="fact-number">April</span><span class="fact-label">Top Month by Avg</span></div>
   <div class="fact-box"><span class="fact-number">2020–2021</span><span class="fact-label">Year span covered in the file</span></div>
-  <div class="fact-box"><span class="fact-number">February</span><span class="fact-label">Most common Month</span></div>
+  <div class="fact-box"><span class="fact-number">65.9567%</span><span class="fact-label">Most common Avg peak perc</span></div>
 </div>
 <h2 id="dataset-context" class="anchored">DATASET CONTEXT</h2>
 <p>The source is the TidyTuesday release from <strong>2021-03-16</strong> (R for Data Science community). This working file contains <strong>12</strong> rows and <strong>14</strong> columns after merging all available CSV/XLSX tables in the week folder.</p>
 <p>Charts are exported as Plotly JSON with PNG fallbacks. Medians are used for robustness where distributions skew. Index-style fields (row numbers, sequential IDs) are excluded from metric selection.</p>
 <h2 id="chart-1-landscape" class="anchored">CHART 1 — LANDSCAPE</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/video-games-sliced/charts/chart1_landscape.plotly.json" data-fallback="/images/content/articles/video-games-sliced/charts/chart1_landscape.png" role="img" aria-label="Month Mix"></div>
-  <figcaption class="art-chart-caption">Month Mix</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/video-games-sliced/charts/chart1_landscape.plotly.json" data-fallback="/images/content/articles/video-games-sliced/charts/chart1_landscape.png" role="img" aria-label="Avg peak perc Mix"></div>
+  <figcaption class="art-chart-caption">Avg peak perc Mix</figcaption>
 </figure>
-<p class="art-p">**May** dominates with **1** records — the structural center of gravity.</p>
-<p class="art-p">Beyond the top ten sit **2** additional month buckets in the long tail.</p>
+<p class="art-p">**64.4228%** dominates with **1** records — the structural center of gravity.</p>
+<p class="art-p">Beyond the top ten sit **2** additional avg peak perc buckets in the long tail.</p>
 <h2 id="chart-2-timeline" class="anchored">CHART 2 — TIMELINE</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/video-games-sliced/charts/chart2_timeline.plotly.json" data-fallback="/images/content/articles/video-games-sliced/charts/chart2_timeline.png" role="img" aria-label="Median Avg Over Time"></div>
@@ -60,6 +60,13 @@ draft: false
 </figure>
 <p class="art-p">Median **671,340** vs mean **693,853** — the shape is relatively symmetric.</p>
 <p class="art-p">The top decile begins at **766,237**; that tail is where franchise-defining cases live.</p>
+<h2 id="chart-4-leaders" class="anchored">CHART 4 — LEADERS</h2>
+<figure class="art-chart">
+  <div class="art-chart-live" data-chart="/data/articles/video-games-sliced/charts/chart4_leaders.plotly.json" data-fallback="/images/content/articles/video-games-sliced/charts/chart4_leaders.png" role="img" aria-label="Top Month"></div>
+  <figcaption class="art-chart-caption">Top Month</figcaption>
+</figure>
+<p class="art-p">**April** leads at **857,604** — **671,340** marks the median among the top dozen.</p>
+<p class="art-p">Head-of-field concentration is where brand, quality, or scale visibly separates from the pack.</p>
 <h2 id="chart-5-relationship" class="anchored">CHART 5 — RELATIONSHIP</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/video-games-sliced/charts/chart5_scatter.plotly.json" data-fallback="/images/content/articles/video-games-sliced/charts/chart5_scatter.png" role="img" aria-label="Avg vs Gain"></div>
@@ -67,13 +74,6 @@ draft: false
 </figure>
 <p class="art-p">Joint plot of **avg** and **gain** surfaces clusters the averages erase.</p>
 <p class="art-p">Outlying points are candidates for follow-up — they are the archetypes, not the noise.</p>
-<h2 id="chart-pad-1" class="anchored">CHART 5 — SPREAD</h2>
-<figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/video-games-sliced/charts/chart_pad_1.plotly.json" data-fallback="/images/content/articles/video-games-sliced/charts/chart_pad_1.png" role="img" aria-label="Avg Spread"></div>
-  <figcaption class="art-chart-caption">Avg Spread</figcaption>
-</figure>
-<p class="art-p">The middle half runs **636,443** to **741,562**.</p>
-<p class="art-p">Tight boxes mean consensus; long whiskers mean extremes own the narrative.</p>
 <h2 id="limitations" class="anchored">LIMITATIONS</h2>
 <p>Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p><p>Findings describe the file on hand — treat them as structural signals for editorial follow-up, not exhaustive truth about the full domain.</p>
 <h2 id="conclusion" class="anchored">CONCLUSION</h2>

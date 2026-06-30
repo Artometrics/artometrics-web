@@ -26,13 +26,13 @@ draft: false
 </nav>
 <main class="art-article-main">
 <p class="art-p">This report analyzes the TidyTuesday <strong>2021-04-27</strong> release on <strong>CEO Departures</strong> — <strong>9,423</strong> rows after cleaning and merge. The question is not whether the topic matters, but what the distribution looks like when you stop quoting anecdotes and start counting.</p>
-<p class="art-p">Five charts track <strong>Co per rol</strong> across time, category, and named entities. Where a companion file exists in the repo, it is joined before analysis so reception, geography, or metadata columns are not left on the table.</p>
+<p class="art-p">Five charts track <strong>Departure code</strong> across time, category, and named entities. Where a companion file exists in the repo, it is joined before analysis so reception, geography, or metadata columns are not left on the table.</p>
 <h2 id="fast-facts" class="anchored">FAST FACTS</h2>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">9,423</span><span class="fact-label">Records in the working dataset</span></div>
-  <div class="fact-box"><span class="fact-number">22,980</span><span class="fact-label">Median Co per rol</span></div>
-  <div class="fact-box"><span class="fact-number">64,602</span><span class="fact-label">Highest observed Co per rol</span></div>
-  <div class="fact-box"><span class="fact-number">GROCERY OUTLET HLDNG CORP</span><span class="fact-label">Top Coname by Co per rol</span></div>
+  <div class="fact-box"><span class="fact-number">5.00</span><span class="fact-label">Median Departure code</span></div>
+  <div class="fact-box"><span class="fact-number">9.00</span><span class="fact-label">Highest observed Departure code</span></div>
+  <div class="fact-box"><span class="fact-number">PERFORMANCE FOOD GROUP CO</span><span class="fact-label">Top Coname by Departure code</span></div>
   <div class="fact-box"><span class="fact-number">Interim</span><span class="fact-label">Most common Interim coceo</span></div>
 </div>
 <h2 id="dataset-context" class="anchored">DATASET CONTEXT</h2>
@@ -47,31 +47,31 @@ draft: false
 <p class="art-p">Beyond the top ten sit **0** additional interim coceo buckets in the long tail.</p>
 <h2 id="chart-3-distribution" class="anchored">CHART 3 — DISTRIBUTION</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/ceo-departures/charts/chart3_distribution.plotly.json" data-fallback="/images/content/articles/ceo-departures/charts/chart3_distribution.png" role="img" aria-label="Co per rol by Interim coceo"></div>
-  <figcaption class="art-chart-caption">Co per rol by Interim coceo</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/ceo-departures/charts/chart3_distribution.plotly.json" data-fallback="/images/content/articles/ceo-departures/charts/chart3_distribution.png" role="img" aria-label="Departure code by Interim coceo"></div>
+  <figcaption class="art-chart-caption">Departure code by Interim coceo</figcaption>
 </figure>
-<p class="art-p">Category boxes reveal whether co per rol consensus is shared or contested across tiers.</p>
+<p class="art-p">Category boxes reveal whether departure code consensus is shared or contested across tiers.</p>
 <p class="art-p">Wide whiskers flag categories where outliers — not averages — drive reputation.</p>
 <h2 id="chart-4-leaders" class="anchored">CHART 4 — LEADERS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/ceo-departures/charts/chart4_leaders.plotly.json" data-fallback="/images/content/articles/ceo-departures/charts/chart4_leaders.png" role="img" aria-label="Top Coname"></div>
   <figcaption class="art-chart-caption">Top Coname</figcaption>
 </figure>
-<p class="art-p">**GROCERY OUTLET HLDNG CORP** leads at **64,602** — **64,532** marks the median among the top dozen.</p>
+<p class="art-p">**QWEST COMMUNICATION INTL-OLD** leads at **9.00** — **9.00** marks the median among the top dozen.</p>
 <p class="art-p">Head-of-field concentration is where brand, quality, or scale visibly separates from the pack.</p>
 <h2 id="chart-5-relationship" class="anchored">CHART 5 — RELATIONSHIP</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/ceo-departures/charts/chart5_scatter.plotly.json" data-fallback="/images/content/articles/ceo-departures/charts/chart5_scatter.png" role="img" aria-label="Co per rol vs Departure code"></div>
-  <figcaption class="art-chart-caption">Co per rol vs Departure code</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/ceo-departures/charts/chart5_scatter.plotly.json" data-fallback="/images/content/articles/ceo-departures/charts/chart5_scatter.png" role="img" aria-label="Departure code vs Ceo dismissal"></div>
+  <figcaption class="art-chart-caption">Departure code vs Ceo dismissal</figcaption>
 </figure>
-<p class="art-p">Joint plot of **co per rol** and **departure code** surfaces clusters the averages erase.</p>
+<p class="art-p">Joint plot of **departure code** and **ceo dismissal** surfaces clusters the averages erase.</p>
 <p class="art-p">Outlying points are candidates for follow-up — they are the archetypes, not the noise.</p>
 <h2 id="chart-pad-1" class="anchored">CHART 5 — SPREAD</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/ceo-departures/charts/chart_pad_1.plotly.json" data-fallback="/images/content/articles/ceo-departures/charts/chart_pad_1.png" role="img" aria-label="Co per rol Spread"></div>
-  <figcaption class="art-chart-caption">Co per rol Spread</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/ceo-departures/charts/chart_pad_1.plotly.json" data-fallback="/images/content/articles/ceo-departures/charts/chart_pad_1.png" role="img" aria-label="Departure code Spread"></div>
+  <figcaption class="art-chart-caption">Departure code Spread</figcaption>
 </figure>
-<p class="art-p">The middle half runs **8,556** to **39,276**.</p>
+<p class="art-p">The middle half runs **5.00** to **7.00**.</p>
 <p class="art-p">Tight boxes mean consensus; long whiskers mean extremes own the narrative.</p>
 <h2 id="limitations" class="anchored">LIMITATIONS</h2>
 <p>Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p><p>Findings describe the file on hand — treat them as structural signals for editorial follow-up, not exhaustive truth about the full domain.</p>

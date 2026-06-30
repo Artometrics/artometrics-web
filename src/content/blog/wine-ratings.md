@@ -32,7 +32,7 @@ draft: false
   <div class="fact-box"><span class="fact-number">100,000</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">25.0</span><span class="fact-label">Median Price</span></div>
   <div class="fact-box"><span class="fact-number">3,300</span><span class="fact-label">Highest observed Price</span></div>
-  <div class="fact-box"><span class="fact-number">Château les Ormes Sorbet 201</span><span class="fact-label">Top Title by Price</span></div>
+  <div class="fact-box"><span class="fact-number">France</span><span class="fact-label">Top Country by Price</span></div>
   <div class="fact-box"><span class="fact-number">Central Coast</span><span class="fact-label">Most common Region 2</span></div>
 </div>
 <h2 id="dataset-context" class="anchored">DATASET CONTEXT</h2>
@@ -54,10 +54,10 @@ draft: false
 <p class="art-p">Wide whiskers flag categories where outliers — not averages — drive reputation.</p>
 <h2 id="chart-4-leaders" class="anchored">CHART 4 — LEADERS</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/wine-ratings/charts/chart4_leaders.plotly.json" data-fallback="/images/content/articles/wine-ratings/charts/chart4_leaders.png" role="img" aria-label="Top Title"></div>
-  <figcaption class="art-chart-caption">Top Title</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/wine-ratings/charts/chart4_leaders.plotly.json" data-fallback="/images/content/articles/wine-ratings/charts/chart4_leaders.png" role="img" aria-label="Top Country"></div>
+  <figcaption class="art-chart-caption">Top Country</figcaption>
 </figure>
-<p class="art-p">**Château les Ormes Sorbet 2013  Médoc** leads at **3,300** — **1,750** marks the median among the top dozen.</p>
+<p class="art-p">**Switzerland** leads at **99.0** — **25.5** marks the median among the top dozen.</p>
 <p class="art-p">Head-of-field concentration is where brand, quality, or scale visibly separates from the pack.</p>
 <h2 id="chart-5-relationship" class="anchored">CHART 5 — RELATIONSHIP</h2>
 <figure class="art-chart">

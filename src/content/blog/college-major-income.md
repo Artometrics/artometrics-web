@@ -32,7 +32,7 @@ draft: false
   <div class="fact-box"><span class="fact-number">173</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">1,231</span><span class="fact-label">Median Low wage jobs</span></div>
   <div class="fact-box"><span class="fact-number">48,207</span><span class="fact-label">Highest observed Low wage jobs</span></div>
-  <div class="fact-box"><span class="fact-number">5200</span><span class="fact-label">Top Major code by Low wage jobs</span></div>
+  <div class="fact-box"><span class="fact-number">PSYCHOLOGY</span><span class="fact-label">Top Major by Low wage jobs</span></div>
   <div class="fact-box"><span class="fact-number">Engineering</span><span class="fact-label">Most common Major category</span></div>
 </div>
 <h2 id="dataset-context" class="anchored">DATASET CONTEXT</h2>
@@ -54,10 +54,10 @@ draft: false
 <p class="art-p">Wide whiskers flag categories where outliers — not averages — drive reputation.</p>
 <h2 id="chart-4-leaders" class="anchored">CHART 4 — LEADERS</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/college-major-income/charts/chart4_leaders.plotly.json" data-fallback="/images/content/articles/college-major-income/charts/chart4_leaders.png" role="img" aria-label="Top Major code"></div>
-  <figcaption class="art-chart-caption">Top Major code</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/college-major-income/charts/chart4_leaders.plotly.json" data-fallback="/images/content/articles/college-major-income/charts/chart4_leaders.png" role="img" aria-label="Top Major"></div>
+  <figcaption class="art-chart-caption">Top Major</figcaption>
 </figure>
-<p class="art-p">**5200** leads at **48,207** — **26,912** marks the median among the top dozen.</p>
+<p class="art-p">**PSYCHOLOGY** leads at **48,207** — **26,912** marks the median among the top dozen.</p>
 <p class="art-p">Head-of-field concentration is where brand, quality, or scale visibly separates from the pack.</p>
 <h2 id="chart-5-relationship" class="anchored">CHART 5 — RELATIONSHIP</h2>
 <figure class="art-chart">

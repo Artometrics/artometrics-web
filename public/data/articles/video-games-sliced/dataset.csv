@@ -1,4 +1,4 @@
-gamename,year,month,avg,gain,peak,avg_peak_perc,gamename_games,year_games,avg_games,gain_games,peak_games,avg_peak_perc_games,_art_year
+gamename,year,month,avg,gain,peak,avg_peak_perc,gamename_month_r,year_month_r,avg_month_r,gain_month_r,peak_month_r,avg_peak_perc_month_r,_art_year
 Counter-Strike: Global Offensive,2021,February,741013.24,-2196.42,1123485,65.9567%,Counter-Strike: Global Offensive,2021,741013.24,-2196.42,1123485,65.9567%,2021
 Counter-Strike: Global Offensive,2021,January,743209.66,25405.91,1124553,66.0893%,Counter-Strike: Global Offensive,2021,743209.66,25405.91,1124553,66.0893%,2021
 Counter-Strike: Global Offensive,2020,December,717803.75,49049.17,1164396,61.646%,Counter-Strike: Global Offensive,2020,717803.75,49049.17,1164396,61.646%,2020

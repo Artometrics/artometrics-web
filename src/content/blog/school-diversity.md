@@ -26,13 +26,13 @@ draft: false
 </nav>
 <main class="art-article-main">
 <p class="art-p">This report analyzes the TidyTuesday <strong>2019-09-24</strong> release on <strong>School Diversity</strong> — <strong>27,944</strong> rows after cleaning and merge. The question is not whether the topic matters, but what the distribution looks like when you stop quoting anecdotes and start counting.</p>
-<p class="art-p">Five charts track <strong>LEAID</strong> across time, category, and named entities. Where a companion file exists in the repo, it is joined before analysis so reception, geography, or metadata columns are not left on the table.</p>
+<p class="art-p">Five charts track <strong>AIAN</strong> across time, category, and named entities. Where a companion file exists in the repo, it is joined before analysis so reception, geography, or metadata columns are not left on the table.</p>
 <h2 id="fast-facts" class="anchored">FAST FACTS</h2>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">27,944</span><span class="fact-label">Records in the working dataset</span></div>
-  <div class="fact-box"><span class="fact-number">3,025,020</span><span class="fact-label">Median LEAID</span></div>
-  <div class="fact-box"><span class="fact-number">5,680,100</span><span class="fact-label">Highest observed LEAID</span></div>
-  <div class="fact-box"><span class="fact-number">northwest wyoming boces</span><span class="fact-label">Top LEA NAME by LEAID</span></div>
+  <div class="fact-box"><span class="fact-number">0.16</span><span class="fact-label">Median AIAN</span></div>
+  <div class="fact-box"><span class="fact-number">100</span><span class="fact-label">Highest observed AIAN</span></div>
+  <div class="fact-box"><span class="fact-number">fremont county school distri</span><span class="fact-label">Top LEA NAME by AIAN</span></div>
   <div class="fact-box"><span class="fact-number">rural-distant</span><span class="fact-label">Most common D Locale Txt</span></div>
 </div>
 <h2 id="dataset-context" class="anchored">DATASET CONTEXT</h2>
@@ -47,31 +47,31 @@ draft: false
 <p class="art-p">Beyond the top ten sit **2** additional d locale txt buckets in the long tail.</p>
 <h2 id="chart-2-timeline" class="anchored">CHART 2 — TIMELINE</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/school-diversity/charts/chart2_timeline.plotly.json" data-fallback="/images/content/articles/school-diversity/charts/chart2_timeline.png" role="img" aria-label="Median LEAID Over Time"></div>
-  <figcaption class="art-chart-caption">Median LEAID Over Time</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/school-diversity/charts/chart2_timeline.plotly.json" data-fallback="/images/content/articles/school-diversity/charts/chart2_timeline.png" role="img" aria-label="Median AIAN Over Time"></div>
+  <figcaption class="art-chart-caption">Median AIAN Over Time</figcaption>
 </figure>
-<p class="art-p">Median leaid is **falling** from **3,100,018** to **3,018,475**.</p>
+<p class="art-p">Median aian is **rising** from **0.08** to **0.22**.</p>
 <p class="art-p">Annual medians filter noise and show the slope the raw rows hide.</p>
 <h2 id="chart-3-distribution" class="anchored">CHART 3 — DISTRIBUTION</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/school-diversity/charts/chart3_distribution.plotly.json" data-fallback="/images/content/articles/school-diversity/charts/chart3_distribution.png" role="img" aria-label="LEAID by D Locale Txt"></div>
-  <figcaption class="art-chart-caption">LEAID by D Locale Txt</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/school-diversity/charts/chart3_distribution.plotly.json" data-fallback="/images/content/articles/school-diversity/charts/chart3_distribution.png" role="img" aria-label="AIAN by D Locale Txt"></div>
+  <figcaption class="art-chart-caption">AIAN by D Locale Txt</figcaption>
 </figure>
-<p class="art-p">Category boxes reveal whether leaid consensus is shared or contested across tiers.</p>
+<p class="art-p">Category boxes reveal whether aian consensus is shared or contested across tiers.</p>
 <p class="art-p">Wide whiskers flag categories where outliers — not averages — drive reputation.</p>
 <h2 id="chart-4-leaders" class="anchored">CHART 4 — LEADERS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/school-diversity/charts/chart4_leaders.plotly.json" data-fallback="/images/content/articles/school-diversity/charts/chart4_leaders.png" role="img" aria-label="Top LEA NAME"></div>
   <figcaption class="art-chart-caption">Top LEA NAME</figcaption>
 </figure>
-<p class="art-p">**northwest wyoming boces** leads at **5,680,100** — **5,605,731** marks the median among the top dozen.</p>
+<p class="art-p">**gila county regional school district** leads at **100** — **100** marks the median among the top dozen.</p>
 <p class="art-p">Head-of-field concentration is where brand, quality, or scale visibly separates from the pack.</p>
 <h2 id="chart-5-relationship" class="anchored">CHART 5 — RELATIONSHIP</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/school-diversity/charts/chart5_scatter.plotly.json" data-fallback="/images/content/articles/school-diversity/charts/chart5_scatter.png" role="img" aria-label="LEAID vs AIAN"></div>
-  <figcaption class="art-chart-caption">LEAID vs AIAN</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/school-diversity/charts/chart5_scatter.plotly.json" data-fallback="/images/content/articles/school-diversity/charts/chart5_scatter.png" role="img" aria-label="AIAN vs Asian"></div>
+  <figcaption class="art-chart-caption">AIAN vs Asian</figcaption>
 </figure>
-<p class="art-p">Joint plot of **leaid** and **aian** surfaces clusters the averages erase.</p>
+<p class="art-p">Joint plot of **aian** and **asian** surfaces clusters the averages erase.</p>
 <p class="art-p">Outlying points are candidates for follow-up — they are the archetypes, not the noise.</p>
 <h2 id="limitations" class="anchored">LIMITATIONS</h2>
 <p>Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p><p>Findings describe the file on hand — treat them as structural signals for editorial follow-up, not exhaustive truth about the full domain.</p>

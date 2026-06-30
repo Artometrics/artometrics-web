@@ -32,7 +32,7 @@ draft: false
   <div class="fact-box"><span class="fact-number">4,191</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">6.00</span><span class="fact-label">Median Area Deprivation index income</span></div>
   <div class="fact-box"><span class="fact-number">10.0</span><span class="fact-label">Highest observed Area Deprivation index income</span></div>
-  <div class="fact-box"><span class="fact-number">mm.domus.NE020</span><span class="fact-label">Top Museum id by Area Deprivation index income</span></div>
+  <div class="fact-box"><span class="fact-number">Durham Museum And Heritage C</span><span class="fact-label">Top Name of museum by Area Deprivation index income</span></div>
   <div class="fact-box"><span class="fact-number">Unaccredited</span><span class="fact-label">Most common Accreditation</span></div>
 </div>
 <h2 id="dataset-context" class="anchored">DATASET CONTEXT</h2>
@@ -54,10 +54,10 @@ draft: false
 <p class="art-p">Wide whiskers flag categories where outliers — not averages — drive reputation.</p>
 <h2 id="chart-4-leaders" class="anchored">CHART 4 — LEADERS</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/uk-museums/charts/chart4_leaders.plotly.json" data-fallback="/images/content/articles/uk-museums/charts/chart4_leaders.png" role="img" aria-label="Top Museum id"></div>
-  <figcaption class="art-chart-caption">Top Museum id</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/uk-museums/charts/chart4_leaders.plotly.json" data-fallback="/images/content/articles/uk-museums/charts/chart4_leaders.png" role="img" aria-label="Top Name of museum"></div>
+  <figcaption class="art-chart-caption">Top Name of museum</figcaption>
 </figure>
-<p class="art-p">**mm.mgs.285** leads at **10.0** — **10.0** marks the median among the top dozen.</p>
+<p class="art-p">**Kennel Club Dog Art Gallery** leads at **10.0** — **10.0** marks the median among the top dozen.</p>
 <p class="art-p">Head-of-field concentration is where brand, quality, or scale visibly separates from the pack.</p>
 <h2 id="chart-5-relationship" class="anchored">CHART 5 — RELATIONSHIP</h2>
 <figure class="art-chart">

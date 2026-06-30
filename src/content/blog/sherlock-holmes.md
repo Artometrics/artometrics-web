@@ -13,11 +13,11 @@ draft: false
   <ul>
   <li><a href="#fast-facts" id="toc-fast-facts">FAST FACTS</a></li>
   <li><a href="#dataset-context" id="toc-dataset-context">DATASET CONTEXT</a></li>
-  <li><a href="#chart-3-distribution" id="toc-chart-3-distribution">CHART 3 — DISTRIBUTION</a></li>
-  <li><a href="#chart-4-leaders" id="toc-chart-4-leaders">CHART 4 — LEADERS</a></li>
-  <li><a href="#chart-pad-1" id="toc-chart-pad-1">CHART 3 — SPREAD</a></li>
-  <li><a href="#chart-pad-2" id="toc-chart-pad-2">CHART 4 — SPREAD</a></li>
-  <li><a href="#chart-pad-3" id="toc-chart-pad-3">CHART 5 — SPREAD</a></li>
+  <li><a href="#chart-2-leaders" id="toc-chart-2-leaders">CHART 2 — LEADERS</a></li>
+  <li><a href="#chart-5-frequency" id="toc-chart-5-frequency">CHART 5 — FREQUENCY</a></li>
+  <li><a href="#chart-extra-mix" id="toc-chart-extra-mix">CHART 3 — MIX</a></li>
+  <li><a href="#chart-pad-hist-1" id="toc-chart-pad-hist-1">CHART 4 — FREQUENCY</a></li>
+  <li><a href="#chart-overview" id="toc-chart-overview">CHART 5 — OVERVIEW</a></li>
   <li><a href="#limitations" id="toc-limitations">LIMITATIONS</a></li>
   <li><a href="#conclusion" id="toc-conclusion">CONCLUSION</a></li>
   <li><a href="#references" id="toc-references">REFERENCES</a></li>
@@ -26,52 +26,49 @@ draft: false
 </nav>
 <main class="art-article-main">
 <p class="art-p">This report analyzes the TidyTuesday <strong>2025-11-18</strong> release on <strong>Sherlock Holmes</strong> — <strong>65,958</strong> rows after cleaning and merge. The question is not whether the topic matters, but what the distribution looks like when you stop quoting anecdotes and start counting.</p>
-<p class="art-p">Five charts track <strong>Line num</strong> across time, category, and named entities. Where a companion file exists in the repo, it is joined before analysis so reception, geography, or metadata columns are not left on the table.</p>
+<p class="art-p">Five charts track <strong>the core signal</strong> across time, category, and named entities. Where a companion file exists in the repo, it is joined before analysis so reception, geography, or metadata columns are not left on the table.</p>
 <h2 id="fast-facts" class="anchored">FAST FACTS</h2>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">65,958</span><span class="fact-label">Records in the working dataset</span></div>
-  <div class="fact-box"><span class="fact-number">688</span><span class="fact-label">Median Line num</span></div>
-  <div class="fact-box"><span class="fact-number">6,970</span><span class="fact-label">Highest observed Line num</span></div>
-  <div class="fact-box"><span class="fact-number">The Hound of the Baskerville</span><span class="fact-label">Top Book by Line num</span></div>
 </div>
 <h2 id="dataset-context" class="anchored">DATASET CONTEXT</h2>
 <p>The source is the TidyTuesday release from <strong>2025-11-18</strong> (R for Data Science community). This working file contains <strong>65,958</strong> rows and <strong>3</strong> columns after merging all available CSV/XLSX tables in the week folder.</p>
 <p>Charts are exported as Plotly JSON with PNG fallbacks. Medians are used for robustness where distributions skew. Index-style fields (row numbers, sequential IDs) are excluded from metric selection.</p>
-<h2 id="chart-3-distribution" class="anchored">CHART 3 — DISTRIBUTION</h2>
+<h2 id="chart-2-leaders" class="anchored">CHART 2 — LEADERS</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/sherlock-holmes/charts/chart3_distribution.plotly.json" data-fallback="/images/content/articles/sherlock-holmes/charts/chart3_distribution.png" role="img" aria-label="Line num Distribution"></div>
-  <figcaption class="art-chart-caption">Line num Distribution</figcaption>
-</figure>
-<p class="art-p">Line num centers on a median of **688** with mean **1,389** — the distribution is right-skewed.</p>
-<p class="art-p">The top decile starts at **4,162**; the tail is where outliers and franchise-defining cases live.</p>
-<h2 id="chart-4-leaders" class="anchored">CHART 4 — LEADERS</h2>
-<figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/sherlock-holmes/charts/chart4_leaders.plotly.json" data-fallback="/images/content/articles/sherlock-holmes/charts/chart4_leaders.png" role="img" aria-label="Top Book"></div>
+  <div class="art-chart-live" data-chart="/data/articles/sherlock-holmes/charts/chart2_leaders.plotly.json" data-fallback="/images/content/articles/sherlock-holmes/charts/chart2_leaders.png" role="img" aria-label="Top Book"></div>
   <figcaption class="art-chart-caption">Top Book</figcaption>
 </figure>
-<p class="art-p">**The Hound of the Baskervilles** leads at **3,486** — separated from the median leader (**695**) by a measurable gap.</p>
-<p class="art-p">The head of the distribution is where brand, quality, or scale concentrates; the middle is everyone else.</p>
-<h2 id="chart-pad-1" class="anchored">CHART 3 — SPREAD</h2>
+<p class="art-p">**The Hound of the Baskervilles** appears **6,970** times — the most recurring name in the file.</p>
+<p class="art-p">The top dozen account for a visible share of all **65,958** rows.</p>
+<h2 id="chart-5-frequency" class="anchored">CHART 5 — FREQUENCY</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/sherlock-holmes/charts/chart_pad_1.plotly.json" data-fallback="/images/content/articles/sherlock-holmes/charts/chart_pad_1.png" role="img" aria-label="Line num Spread"></div>
-  <figcaption class="art-chart-caption">Line num Spread</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/sherlock-holmes/charts/chart5_frequency.plotly.json" data-fallback="/images/content/articles/sherlock-holmes/charts/chart5_frequency.png" role="img" aria-label="Appearance Spread"></div>
+  <figcaption class="art-chart-caption">Appearance Spread</figcaption>
 </figure>
-<p class="art-p">The middle half of line num values runs from **344** to **1,689**.</p>
-<p class="art-p">Tight boxes mean consensus; long whiskers mean the extremes own the narrative.</p>
-<h2 id="chart-pad-2" class="anchored">CHART 4 — SPREAD</h2>
+<p class="art-p">Most book entities appear only once; a small head revisits repeatedly.</p>
+<p class="art-p">This power-law shape is typical of guest lists, credits, and catalog-style tables.</p>
+<h2 id="chart-extra-mix" class="anchored">CHART 3 — MIX</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/sherlock-holmes/charts/chart_pad_2.plotly.json" data-fallback="/images/content/articles/sherlock-holmes/charts/chart_pad_2.png" role="img" aria-label="Line num Spread"></div>
-  <figcaption class="art-chart-caption">Line num Spread</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/sherlock-holmes/charts/chart_extra_mix.plotly.json" data-fallback="/images/content/articles/sherlock-holmes/charts/chart_extra_mix.png" role="img" aria-label="Text"></div>
+  <figcaption class="art-chart-caption">Text</figcaption>
 </figure>
-<p class="art-p">The middle half of line num values runs from **344** to **1,689**.</p>
-<p class="art-p">Tight boxes mean consensus; long whiskers mean the extremes own the narrative.</p>
-<h2 id="chart-pad-3" class="anchored">CHART 5 — SPREAD</h2>
+<p class="art-p">**"No."** is the most repeated text in the extract.</p>
+<p class="art-p">Secondary dimensions add context when the primary table has no numeric score column.</p>
+<h2 id="chart-pad-hist-1" class="anchored">CHART 4 — FREQUENCY</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/sherlock-holmes/charts/chart_pad_3.plotly.json" data-fallback="/images/content/articles/sherlock-holmes/charts/chart_pad_3.png" role="img" aria-label="Line num Spread"></div>
-  <figcaption class="art-chart-caption">Line num Spread</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/sherlock-holmes/charts/chart_pad_hist_1.plotly.json" data-fallback="/images/content/articles/sherlock-holmes/charts/chart_pad_hist_1.png" role="img" aria-label="Frequency"></div>
+  <figcaption class="art-chart-caption">Frequency</figcaption>
 </figure>
-<p class="art-p">The middle half of line num values runs from **344** to **1,689**.</p>
-<p class="art-p">Tight boxes mean consensus; long whiskers mean the extremes own the narrative.</p>
+<p class="art-p">Most book entities appear once; repeat entries signal franchise depth.</p>
+<p class="art-p">Power-law tails are common in credits, catalogs, and guest lists.</p>
+<h2 id="chart-overview" class="anchored">CHART 5 — OVERVIEW</h2>
+<figure class="art-chart">
+  <div class="art-chart-live" data-chart="/data/articles/sherlock-holmes/charts/chart_overview_1.plotly.json" data-fallback="/images/content/articles/sherlock-holmes/charts/chart_overview_1.png" role="img" aria-label="Top Book"></div>
+  <figcaption class="art-chart-caption">Top Book</figcaption>
+</figure>
+<p class="art-p">**The Hound of the Baskervilles** anchors the distribution with **6,970** records.</p>
+<p class="art-p">Overview bars summarize concentration before drilling into finer cuts.</p>
 <h2 id="limitations" class="anchored">LIMITATIONS</h2>
 <p>Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p><p>Findings describe the file on hand — treat them as structural signals for editorial follow-up, not exhaustive truth about the full domain.</p>
 <h2 id="conclusion" class="anchored">CONCLUSION</h2>
