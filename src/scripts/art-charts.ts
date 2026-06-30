@@ -18,9 +18,40 @@ const ART_COLORS = {
   dark: "#1C1C1E",
 };
 
+/** Rank-gradient palette: darkest navy = leader, fading to muted blue */
+const ART_BAR_GRADIENT = [
+  "#1A2A4F",
+  "#243760",
+  "#2C3E6B",
+  "#3D5282",
+  "#506898",
+  "#647DAD",
+  "#7D94BE",
+  "#98ABCE",
+  "#B4C2DD",
+  "#CED7EB",
+];
+
+/** Category colors for multi-trace / box charts */
+const ART_CATEGORY_PALETTE = [
+  "#2C3E6B",
+  "#C0392B",
+  "#1A7A5E",
+  "#7B4FA6",
+  "#C47A00",
+  "#1A6FA8",
+  "#8B3F00",
+  "#3D7A4F",
+];
+
 const MIN_PLOT_HEIGHT = 80;
 const MAX_LIVE_TRACES = 150;
 const MAX_LIVE_POINTS = 60_000;
+
+/** Minimum height per horizontal bar row */
+const H_BAR_ROW_PX = 38;
+/** Minimum height for a horizontal bar chart */
+const H_BAR_MIN_HEIGHT = 300;
 
 const chartPromises = new Map<string, Promise<PlotlyExport>>();
 
@@ -42,7 +73,6 @@ function stackChartTitle(text: string): string {
 
   let stacked = stripBoldTags(text).trim();
 
-  // Normalize em/en dashes to line breaks for mobile readability
   if (/\s+[—–-]\s+/.test(stacked.replace(/<[^>]+>/g, ""))) {
     stacked = stacked.replace(/\s+[—–]\s+/g, "<br>");
     stacked = stacked.replace(/\s+-\s+/g, "<br>");
@@ -63,7 +93,6 @@ function stackChartTitle(text: string): string {
   return stacked;
 }
 
-/** Render chart title as stacked, centered, color-coded lines (no Plotly indent quirks). */
 function formatHeadingHtml(raw: string): string {
   const stacked = stackChartTitle(raw);
   const lines = stacked
@@ -180,12 +209,22 @@ async function enrichStaticChart(el: HTMLElement, chartUrl: string) {
   }
 }
 
-function inferChartHeight(data: PlotlyTrace[], titleLines: number): number | undefined {
+/** Infer chart height for types that need more vertical space */
+function inferChartHeight(data: PlotlyTrace[], titleLines: number, mobile: boolean): number | undefined {
   for (const trace of data) {
     const record = trace as Record<string, unknown>;
+    // Heatmap: row count × row height
     if (record.type === "heatmap" && Array.isArray(record.y)) {
       const rows = record.y.length;
       return Math.max(380, rows * 34 + titleLines * 24 + 96);
+    }
+    // Horizontal bar: each bar needs breathing room
+    if (record.type === "bar" && record.orientation === "h" && Array.isArray(record.y)) {
+      const rows = (record.y as unknown[]).length;
+      if (rows > 6) {
+        const px = Math.max(H_BAR_MIN_HEIGHT, rows * H_BAR_ROW_PX + (mobile ? 64 : 80));
+        return mobile ? Math.min(px, 480) : px;
+      }
     }
   }
   return undefined;
@@ -195,7 +234,140 @@ function isMobileViewport() {
   return window.matchMedia("(max-width: 900px)").matches;
 }
 
-function sanitizePlotlySpec(raw: PlotlyExport) {
+/** Check if a color array is uniform (one or two distinct values) */
+function isUniformColorArray(colors: unknown): boolean {
+  if (!Array.isArray(colors)) return true;
+  const uniq = new Set(colors as string[]);
+  return uniq.size <= 2;
+}
+
+/** Interpolate between two hex colors at position t ∈ [0,1] */
+function lerpHex(a: string, b: string, t: number): string {
+  const ar = parseInt(a.slice(1, 3), 16);
+  const ag = parseInt(a.slice(3, 5), 16);
+  const ab = parseInt(a.slice(5, 7), 16);
+  const br = parseInt(b.slice(1, 3), 16);
+  const bg = parseInt(b.slice(3, 5), 16);
+  const bb = parseInt(b.slice(5, 7), 16);
+  const r = Math.round(ar + (br - ar) * t);
+  const g = Math.round(ag + (bg - ag) * t);
+  const bv = Math.round(ab + (bb - ab) * t);
+  return `#${r.toString(16).padStart(2, "0")}${g.toString(16).padStart(2, "0")}${bv.toString(16).padStart(2, "0")}`;
+}
+
+/** Sample a multi-stop gradient at position t ∈ [0,1] */
+function sampleGradient(stops: string[], t: number): string {
+  if (stops.length === 0) return ART_COLORS.secondary;
+  if (stops.length === 1) return stops[0];
+  const scaled = t * (stops.length - 1);
+  const lo = Math.floor(scaled);
+  const hi = Math.min(lo + 1, stops.length - 1);
+  return lerpHex(stops[lo], stops[hi], scaled - lo);
+}
+
+/**
+ * Enrich bar chart traces: apply rank-gradient palette when all bars use
+ * a single flat color. Keeps an existing red highlight on the leader bar.
+ */
+function enhanceBarColors(traces: Array<Record<string, unknown>>) {
+  for (const trace of traces) {
+    if (trace.type !== "bar") continue;
+    const marker = trace.marker as Record<string, unknown> | undefined;
+    if (!marker) continue;
+
+    const rawColors = marker.color;
+    if (!isUniformColorArray(rawColors)) continue; // already varied — leave alone
+
+    const isHorizontal = trace.orientation === "h";
+    const valArr = isHorizontal ? trace.x : trace.y;
+    if (!Array.isArray(valArr)) continue;
+    const n = valArr.length;
+    if (n < 3) continue;
+
+    // Detect if the chart has the leader marked in red (first or last bar)
+    const existingColors = Array.isArray(rawColors) ? (rawColors as string[]) : [];
+    const hasRedHighlight = existingColors.some(
+      (c) => typeof c === "string" && c.toLowerCase() === ART_COLORS.highlight.toLowerCase()
+    );
+    const leaderIndex = existingColors.findIndex(
+      (c) => typeof c === "string" && c.toLowerCase() === ART_COLORS.highlight.toLowerCase()
+    );
+
+    // Apply gradient from dark (rank #1 position) to light (lowest rank)
+    const newColors: string[] = Array.from({ length: n }, (_, i) => {
+      const t = i / Math.max(n - 1, 1);
+      return sampleGradient(ART_BAR_GRADIENT, t);
+    });
+
+    // Restore the leader highlight
+    if (hasRedHighlight && leaderIndex >= 0) {
+      newColors[leaderIndex] = ART_COLORS.highlight;
+    }
+
+    marker.color = newColors;
+  }
+}
+
+/**
+ * Assign distinct colors to multi-trace charts (box, scatter) that have
+ * uniform single colors across all traces.
+ */
+function enhanceMultiTraceColors(traces: Array<Record<string, unknown>>) {
+  if (traces.length < 2) return;
+
+  const allSameColor = traces.every((t) => {
+    const marker = t.marker as Record<string, unknown> | undefined;
+    const c = marker?.color;
+    return typeof c === "string" && c === traces[0]?.marker?.color;
+  });
+
+  if (!allSameColor) return;
+
+  traces.forEach((trace, i) => {
+    const marker = trace.marker as Record<string, unknown> | undefined;
+    if (!marker) return;
+    marker.color = ART_CATEGORY_PALETTE[i % ART_CATEGORY_PALETTE.length];
+    // Keep line color as dark for box whiskers
+    if (typeof marker.line === "object" && marker.line !== null) {
+      (marker.line as Record<string, unknown>).color = ART_COLORS.dark;
+    }
+  });
+}
+
+/**
+ * For scatter plots with a uniform flat marker color, apply a sequential
+ * colorscale based on y-values so density/magnitude is visible.
+ */
+function enhanceScatterColors(traces: Array<Record<string, unknown>>) {
+  for (const trace of traces) {
+    if (trace.type !== "scatter" && trace.mode !== "markers") continue;
+    const marker = trace.marker as Record<string, unknown> | undefined;
+    if (!marker) continue;
+    // Skip if colorscale already set
+    if (marker.colorscale) continue;
+    const c = marker.color;
+    if (typeof c !== "string" && !isUniformColorArray(c)) continue;
+    const y = trace.y;
+    if (!Array.isArray(y) || y.length < 5) continue;
+
+    // Assign color based on y-value rank
+    const yCopy = [...y] as number[];
+    const sorted = [...yCopy].sort((a, b) => a - b);
+    const newColors = yCopy.map((val) => {
+      const rank = sorted.indexOf(val);
+      const t = rank / Math.max(sorted.length - 1, 1);
+      return sampleGradient(ART_BAR_GRADIENT, t);
+    });
+
+    marker.color = newColors;
+    // Slightly increase opacity for scatter
+    if (marker.opacity == null || Number(marker.opacity) > 0.8) {
+      marker.opacity = 0.75;
+    }
+  }
+}
+
+function sanitizePlotlySpec(raw: PlotlyExport, mobile: boolean) {
   const baseMargin = raw.layout?.margin ?? {};
   const fixedTitle = fixTitle(raw.layout ?? {});
   const titleText =
@@ -203,9 +375,17 @@ function sanitizePlotlySpec(raw: PlotlyExport) {
       ? String(fixedTitle.text ?? "")
       : "";
   const titleLines = (titleText.match(/<br\s*\/?>/gi) ?? []).length + 1;
-  const data = cleanTraces((raw.data ?? []) as PlotlyTrace[]);
-  const chartHeight = inferChartHeight(data, titleLines);
-  const mobile = isMobileViewport();
+  const data = cleanTraces((raw.data ?? []) as PlotlyTrace[]) as Array<Record<string, unknown>>;
+
+  // Enhance colors before layout calculation
+  enhanceBarColors(data);
+  enhanceMultiTraceColors(data);
+  enhanceScatterColors(data);
+
+  const chartHeight = inferChartHeight(data as PlotlyTrace[], titleLines, mobile);
+
+  // Detect horizontal bar chart for better left margin
+  const hasHBar = data.some((t) => t.type === "bar" && t.orientation === "h");
 
   const layout: PlotlyLayout = {
     ...(raw.layout ?? {}),
@@ -219,9 +399,11 @@ function sanitizePlotlySpec(raw: PlotlyExport) {
     plot_bgcolor: raw.layout?.plot_bgcolor ?? ART_COLORS.cream,
     margin: {
       t: mobile ? 8 : 16,
-      r: mobile ? 12 : Math.max(40, Number(baseMargin.r) || 0),
-      b: mobile ? 48 : Math.max(52, Number(baseMargin.b) || 0),
-      l: mobile ? 44 : Math.max(72, Number(baseMargin.l) || 0),
+      r: mobile ? 14 : Math.max(40, Number(baseMargin.r) || 0),
+      b: mobile ? 52 : Math.max(52, Number(baseMargin.b) || 0),
+      l: mobile
+        ? hasHBar ? 60 : 46
+        : Math.max(72, Number(baseMargin.l) || 0),
     },
     title: { text: "" },
     hoverlabel: {
@@ -236,7 +418,7 @@ function sanitizePlotlySpec(raw: PlotlyExport) {
     autosize: true,
   };
 
-  if (chartHeight && !mobile) {
+  if (chartHeight) {
     layout.height = chartHeight;
   } else {
     delete layout.height;
@@ -277,12 +459,12 @@ function sanitizePlotlySpec(raw: PlotlyExport) {
       ...layout.legend,
       orientation: "h",
       yanchor: "bottom",
-      y: mobile ? -0.22 : 1.02,
+      y: mobile ? -0.28 : 1.02,
       x: 0.5,
       xanchor: "center",
       font: {
         ...(typeof layout.legend.font === "object" ? layout.legend.font : {}),
-        size: mobile ? 9.5 : 10,
+        size: mobile ? 9.5 : 10.5,
         color: ART_COLORS.dark,
       },
     };
@@ -293,14 +475,19 @@ function sanitizePlotlySpec(raw: PlotlyExport) {
   const config: PlotlyConfig = {
     responsive: true,
     displaylogo: false,
-    displayModeBar: true,
+    displayModeBar: mobile ? false : true,
     scrollZoom: false,
     modeBarButtonsToRemove: ["sendDataToCloud", "lasso2d", "select2d"],
     ...(raw.config ?? {}),
   };
 
+  // Force disable modebar on mobile regardless of raw config
+  if (mobile) {
+    config.displayModeBar = false;
+  }
+
   return {
-    data,
+    data: data as PlotlyTrace[],
     layout,
     config,
     titleHtml: titleText,
@@ -384,6 +571,8 @@ async function renderLiveChart(el: HTMLElement) {
   el.dataset.rendered = "true";
   el.classList.add("art-chart-live--loading");
 
+  const mobile = isMobileViewport();
+
   try {
     const raw = await loadChartSpec(chartUrl);
 
@@ -392,7 +581,7 @@ async function renderLiveChart(el: HTMLElement) {
       return;
     }
 
-    const spec = sanitizePlotlySpec(raw);
+    const spec = sanitizePlotlySpec(raw, mobile);
     const titleHtml = spec.titleHtml || extractTitleHtml(raw);
     if (titleHtml) renderStaticHeading(el, titleHtml);
     await Plotly.newPlot(el, spec.data, spec.layout, spec.config);
@@ -402,7 +591,11 @@ async function renderLiveChart(el: HTMLElement) {
       hideFallback(el);
       markChartReady(el, false);
       const resize = () => {
+        const mob = isMobileViewport();
         if (titleHtml) renderStaticHeading(el, titleHtml);
+        // Re-apply mobile layout on resize crossing breakpoint
+        const resizeLayout = sanitizePlotlySpec(raw, mob).layout;
+        Plotly.relayout(el, { margin: resizeLayout.margin });
         Plotly.Plots.resize(el);
       };
       window.addEventListener("resize", resize, { passive: true });
