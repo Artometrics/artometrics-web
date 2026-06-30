@@ -52,7 +52,16 @@ const relatedJson = JSON.stringify(relatedPosts);
 const articleUrl = new URL(`/${slug}/`, Astro.site).href;
 ---
 
-<BaseLayout>
+<BaseLayout
+  pageTitle={`${frontmatter.title} — Artometrics`}
+  pageDescription={frontmatter.description}
+  canonicalPath={`/${slug}/`}
+  ogImage={
+    frontmatter.heroImage
+      ? new URL(frontmatter.heroImage, Astro.site ?? "https://artometrics.com").href
+      : undefined
+  }
+>
   <link slot="head" rel="preconnect" href="https://fonts.googleapis.com" />
   <link slot="head" rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link

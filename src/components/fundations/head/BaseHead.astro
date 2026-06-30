@@ -4,9 +4,28 @@ import Meta from "@/components/fundations/head/Meta.astro";
 import Fonts from "@/components/fundations/head/Fonts.astro";
 import Favicons from "@/components/fundations/head/Favicons.astro";
 import FuseJS from "@/components/fundations/scripts/FuseJS.astro";
+
+interface Props {
+  pageTitle?: string;
+  pageDescription?: string;
+  canonicalPath?: string;
+  ogImage?: string;
+}
+
+const { pageTitle, pageDescription, canonicalPath, ogImage } = Astro.props;
+
+const site = Astro.site ?? new URL("https://artometrics.com");
+const canonical = canonicalPath
+  ? new URL(canonicalPath, site).href
+  : new URL(Astro.url.pathname, site).href;
 ---
 
-<Seo />
+<Seo
+  title={pageTitle}
+  description={pageDescription}
+  canonical={canonical}
+  ogImage={ogImage}
+/>
 <Meta />
 <Fonts />
 <Favicons />

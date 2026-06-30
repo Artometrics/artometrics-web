@@ -1,0 +1,14 @@
+---
+/** Shared client behaviors: nav scroll shadow, reduced-motion safe. */
+---
+
+<script>
+  const nav = document.getElementById("navigation");
+  if (nav) {
+    const onScroll = () => {
+      nav.classList.toggle("site-nav--scrolled", window.scrollY > 8);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+  }
+</script>

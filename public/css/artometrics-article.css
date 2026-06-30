@@ -1,11 +1,10 @@
-<style>
-/* ── Progress bar ──────────────────────────────────────────────────── */
-.artometrics-article-body #art-progress-bar{
+/* ── Progress bar (bar is appended to document.body) ─────────────── */
+#art-progress-bar{
   position: fixed;
   top: 0; left: 0;
   height: 3px; width: 0%;
   background: #C0392B;
-  z-index: 9999;
+  z-index: 50;
   transition: width 0.08s linear;
   pointer-events: none;
 }
@@ -160,7 +159,6 @@
 .artometrics-article-body .art-ref-item:last-child{ border-bottom: none; }
 .artometrics-article-body .art-ref-item a{ color: #C0392B; text-decoration: none; }
 .artometrics-article-body .art-ref-item a:hover{ text-decoration: underline; }
-</style>
 
 /* ============================================================
    ARTOMETRICS — Magazine HTML Theme (Centered Edition)

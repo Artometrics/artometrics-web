@@ -11,6 +11,11 @@ const primaryNavLinks = [
   { href: "/power/", link: "Power" },
 ];
 
+const secondaryNavLinks = [
+  { href: "/blog/", link: "Articles" },
+  { href: "/podcast/", link: "Podcast" },
+];
+
 const pathname = Astro.url.pathname.replace(/\/$/, "") || "/";
 
 function isActive(href: string) {
@@ -22,7 +27,7 @@ function isActive(href: string) {
 
 <section
   id="navigation"
-  class="site-nav sticky top-0 z-40 border-b border-base-200 bg-white/90 backdrop-blur-md supports-[backdrop-filter]:bg-white/80"
+  class="site-nav sticky top-0 z-40 border-b border-base-200 bg-white/90 backdrop-blur-md transition-shadow duration-300 supports-[backdrop-filter]:bg-white/80"
 >
   <Wrapper variant="standard">
     <div class="flex items-center justify-between gap-4 py-4 md:py-5">
@@ -44,19 +49,13 @@ function isActive(href: string) {
         <Logo class="text-3xl md:text-4xl lg:text-5xl" />
       </a>
 
-      <div class="flex items-center gap-3 md:absolute md:right-8 lg:right-8">
-        <a
-          href="/blog/"
-          class="hidden text-xs font-medium uppercase tracking-widest text-base-600 transition-colors hover:text-accent-700 sm:inline"
-        >
-          All articles
-        </a>
+      <div class="flex items-center gap-2 sm:gap-3 md:absolute md:right-8 lg:right-8">
         <Search />
       </div>
     </div>
 
     <nav
-      class="hidden items-center justify-center gap-8 border-t border-base-200 pb-4 pt-4 text-xs font-medium uppercase tracking-widest md:flex"
+      class="hidden items-center justify-center gap-6 border-t border-base-200 pb-4 pt-4 text-xs font-medium uppercase tracking-widest md:flex lg:gap-8"
       aria-label="Primary"
     >
       {
@@ -64,10 +63,26 @@ function isActive(href: string) {
           <a
             href={link.href}
             class:list={[
-              "relative transition-colors hover:text-accent-700",
+              "nav-link relative transition-colors hover:text-accent-700",
               isActive(link.href)
                 ? "text-accent-700 after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-full after:bg-accent-600"
                 : "text-base-900",
+            ]}
+          >
+            {link.link}
+          </a>
+        ))
+      }
+      <span class="h-4 w-px bg-base-200" aria-hidden="true"></span>
+      {
+        secondaryNavLinks.map((link) => (
+          <a
+            href={link.href}
+            class:list={[
+              "nav-link relative transition-colors hover:text-accent-700",
+              isActive(link.href)
+                ? "text-accent-700 after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-full after:bg-accent-600"
+                : "text-base-600",
             ]}
           >
             {link.link}
@@ -97,12 +112,22 @@ function isActive(href: string) {
             </a>
           ))
         }
-        <a
-          href="/blog/"
-          class="rounded-md px-3 py-2.5 text-sm font-medium uppercase tracking-wide text-base-700 transition-colors hover:bg-base-100"
-        >
-          All articles
-        </a>
+        <div class="my-2 border-t border-base-100"></div>
+        {
+          secondaryNavLinks.map((link) => (
+            <a
+              href={link.href}
+              class:list={[
+                "rounded-md px-3 py-2.5 text-sm font-medium uppercase tracking-wide transition-colors",
+                isActive(link.href)
+                  ? "bg-accent-50 text-accent-800"
+                  : "text-base-700 hover:bg-base-100",
+              ]}
+            >
+              {link.link}
+            </a>
+          ))
+        }
         <a
           href="/rss.xml"
           class="rounded-md px-3 py-2.5 text-sm font-medium uppercase tracking-wide text-base-700 transition-colors hover:bg-base-100"
@@ -119,11 +144,9 @@ function isActive(href: string) {
   const panel = document.getElementById("mobileNavPanel");
 
   toggle?.addEventListener("click", () => {
-    if (!panel || !toggle) return;
-    const open = panel.hasAttribute("hidden");
-    panel.toggleAttribute("hidden", !open);
-    panel.classList.toggle("hidden", !open);
+    const open = panel?.classList.toggle("hidden") === false;
     toggle.setAttribute("aria-expanded", String(open));
     toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    if (panel) panel.hidden = !open;
   });
 </script>
