@@ -2,7 +2,7 @@
 title: "NUCLEAR EXPLOSIONS: The Artometrics of Nuclear Explosions"
 slug: nuclear-explosions
 pubDate: 2026-06-15
-description: "This report treats the TidyTuesday **2019-08-20** release as a measurable slice of nuclear explosions — 2,051 records, 16 variables, one question: what does the distribution actually look..."
+description: "This report analyzes the TidyTuesday 2019-08-20 release on Nuclear Explosions — 2,051 rows after cleaning and merge. The question is not whether the topic matters, but what the..."
 heroImage: /images/content/articles/nuclear-explosions/hero.png
 tags: [history, power]
 draft: false
@@ -13,11 +13,11 @@ draft: false
   <ul>
   <li><a href="#fast-facts" id="toc-fast-facts">FAST FACTS</a></li>
   <li><a href="#dataset-context" id="toc-dataset-context">DATASET CONTEXT</a></li>
-  <li><a href="#chart-2-temporal-pattern" id="toc-chart-2-temporal-pattern">CHART 2 — TEMPORAL PATTERN</a></li>
+  <li><a href="#chart-1-landscape" id="toc-chart-1-landscape">CHART 1 — LANDSCAPE</a></li>
+  <li><a href="#chart-2-timeline" id="toc-chart-2-timeline">CHART 2 — TIMELINE</a></li>
   <li><a href="#chart-3-distribution" id="toc-chart-3-distribution">CHART 3 — DISTRIBUTION</a></li>
   <li><a href="#chart-4-leaders" id="toc-chart-4-leaders">CHART 4 — LEADERS</a></li>
-  <li><a href="#chart-extra-1" id="toc-chart-extra-1">CHART 4 — SPREAD</a></li>
-  <li><a href="#chart-extra-2" id="toc-chart-extra-2">CHART 5 — SPREAD</a></li>
+  <li><a href="#chart-5-relationship" id="toc-chart-5-relationship">CHART 5 — RELATIONSHIP</a></li>
   <li><a href="#limitations" id="toc-limitations">LIMITATIONS</a></li>
   <li><a href="#conclusion" id="toc-conclusion">CONCLUSION</a></li>
   <li><a href="#references" id="toc-references">REFERENCES</a></li>
@@ -25,76 +25,63 @@ draft: false
   </ul>
 </nav>
 <main class="art-article-main">
-<p class="art-p">This report treats the TidyTuesday **2019-08-20** release as a measurable slice of nuclear explosions — 2,051 records, 16 variables, one question: what does the distribution actually look like when you stop reading anecdotes and start counting?</p>
+<p class="art-p">This report analyzes the TidyTuesday <strong>2019-08-20</strong> release on <strong>Nuclear Explosions</strong> — <strong>2,051</strong> rows after cleaning and merge. The question is not whether the topic matters, but what the distribution looks like when you stop quoting anecdotes and start counting.</p>
+<p class="art-p">Five charts track <strong>Magnitude body</strong> across time, category, and named entities. Where a companion file exists in the repo, it is joined before analysis so reception, geography, or metadata columns are not left on the table.</p>
 <h2 id="fast-facts" class="anchored">FAST FACTS</h2>
 <div class="facts-grid">
-  <div class="fact-box">
-    <span class="fact-number">2,051</span>
-    <span class="fact-label">Rows in the working dataset after initial load</span>
-  </div>
-  <div class="fact-box">
-    <span class="fact-number">16</span>
-    <span class="fact-label">Variables available for analysis</span>
-  </div>
-  <div class="fact-box">
-    <span class="fact-number">98,005.0</span>
-    <span class="fact-label">Latest-period median id_no</span>
-  </div>
-  <div class="fact-box">
-    <span class="fact-number">70,021.00</span>
-    <span class="fact-label">Median id_no</span>
-  </div>
-  <div class="fact-box">
-    <span class="fact-number">98,005.00</span>
-    <span class="fact-label">Maximum observed id_no</span>
-  </div>
+  <div class="fact-box"><span class="fact-number">2,051</span><span class="fact-label">Records in the working dataset</span></div>
+  <div class="fact-box"><span class="fact-number">0.00</span><span class="fact-label">Median Magnitude body</span></div>
+  <div class="fact-box"><span class="fact-number">7.40</span><span class="fact-label">Highest observed Magnitude body</span></div>
+  <div class="fact-box"><span class="fact-number">CANNIKIN</span><span class="fact-label">Top Name by Magnitude body</span></div>
+  <div class="fact-box"><span class="fact-number">1970–1970</span><span class="fact-label">Year span covered in the file</span></div>
+  <div class="fact-box"><span class="fact-number">USA</span><span class="fact-label">Most common Country</span></div>
 </div>
 <h2 id="dataset-context" class="anchored">DATASET CONTEXT</h2>
-<p>The source data is the TidyTuesday release from <strong>2019-08-20</strong>, maintained by the R for Data Science community. The working dataset contains <strong>2,051</strong> rows and <strong>16</strong> columns. Files were pulled directly from the public repository without manual transcription.</p>
-<p>Analysis code is embedded below each chart. All aggregates were computed in Python with pandas; charts were exported as Plotly JSON for interactive rendering on Artometrics.</p>
-<h2 id="chart-2-temporal-pattern" class="anchored">CHART 2 — TEMPORAL PATTERN</h2>
+<p>The source is the TidyTuesday release from <strong>2019-08-20</strong> (R for Data Science community). This working file contains <strong>2,051</strong> rows and <strong>17</strong> columns after merging all available CSV/XLSX tables in the week folder.</p>
+<p>Charts are exported as Plotly JSON with PNG fallbacks. Medians are used for robustness where distributions skew. Index-style fields (row numbers, sequential IDs) are excluded from metric selection.</p>
+<h2 id="chart-1-landscape" class="anchored">CHART 1 — LANDSCAPE</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/nuclear-explosions/charts/chart2_time_trend.plotly.json" data-fallback="/images/content/articles/nuclear-explosions/charts/chart2_time_trend.png" role="img" aria-label="Median Trend Over Time"></div>
-  <figcaption class="art-chart-caption">Median Trend Over Time</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/nuclear-explosions/charts/chart1_landscape.plotly.json" data-fallback="/images/content/articles/nuclear-explosions/charts/chart1_landscape.png" role="img" aria-label="Country Mix"></div>
+  <figcaption class="art-chart-caption">Country Mix</figcaption>
 </figure>
-<p class="art-p">When `id_no` is tracked across time, the median moves from **92,006.00** in the earliest period to **98,005.00** in the latest — an upward drift visible in the aggregate.</p>
-<p class="art-p">Year-level medians smooth out one-off outliers and reveal the structural slope the raw table hides.</p>
+<p class="art-p">**USA** dominates with **1,032** records — the structural center of gravity.</p>
+<p class="art-p">Beyond the top ten sit **0** additional country buckets in the long tail.</p>
+<h2 id="chart-2-timeline" class="anchored">CHART 2 — TIMELINE</h2>
+<figure class="art-chart">
+  <div class="art-chart-live" data-chart="/data/articles/nuclear-explosions/charts/chart2_timeline.plotly.json" data-fallback="/images/content/articles/nuclear-explosions/charts/chart2_timeline.png" role="img" aria-label="Median Magnitude body Over Time"></div>
+  <figcaption class="art-chart-caption">Median Magnitude body Over Time</figcaption>
+</figure>
+<p class="art-p">Median magnitude body is **falling** from **0.00** to **0.00**.</p>
+<p class="art-p">Annual medians filter noise and show the slope the raw rows hide.</p>
 <h2 id="chart-3-distribution" class="anchored">CHART 3 — DISTRIBUTION</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/nuclear-explosions/charts/chart3_distribution.plotly.json" data-fallback="/images/content/articles/nuclear-explosions/charts/chart3_distribution.png" role="img" aria-label="Id No Distribution"></div>
-  <figcaption class="art-chart-caption">Id No Distribution</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/nuclear-explosions/charts/chart3_distribution.plotly.json" data-fallback="/images/content/articles/nuclear-explosions/charts/chart3_distribution.png" role="img" aria-label="Magnitude body by Country"></div>
+  <figcaption class="art-chart-caption">Magnitude body by Country</figcaption>
 </figure>
-<p class="art-p">`id_no` centers around a median of **70,021.00** with a mean of **70,933.80**. The gap between those two numbers suggests a relatively symmetric spread.</p>
-<p class="art-p">Roughly **10.0%** of records sit above the 90th percentile threshold — the tail is where exceptional cases live.</p>
+<p class="art-p">Category boxes reveal whether magnitude body consensus is shared or contested across tiers.</p>
+<p class="art-p">Wide whiskers flag categories where outliers — not averages — drive reputation.</p>
 <h2 id="chart-4-leaders" class="anchored">CHART 4 — LEADERS</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/nuclear-explosions/charts/chart4_top_ranked.plotly.json" data-fallback="/images/content/articles/nuclear-explosions/charts/chart4_top_ranked.png" role="img" aria-label="Top Country"></div>
-  <figcaption class="art-chart-caption">Top Country</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/nuclear-explosions/charts/chart4_leaders.plotly.json" data-fallback="/images/content/articles/nuclear-explosions/charts/chart4_leaders.png" role="img" aria-label="Top Name"></div>
+  <figcaption class="art-chart-caption">Top Name</figcaption>
 </figure>
-<p class="art-p">At the top of the ranking, **PAKIST** posts a median `id_no` of **98,004.50** — separating itself from the median-of-medians baseline of **78,035.00**.</p>
-<p class="art-p">The distance between #1 and #12 is wide, which tells you whether this field has a single dominant outlier or a competitive top tier.</p>
-<h2 id="chart-extra-1" class="anchored">CHART 4 — SPREAD</h2>
+<p class="art-p">**CANNIKIN** leads at **6.80** — **6.30** marks the median among the top dozen.</p>
+<p class="art-p">Head-of-field concentration is where brand, quality, or scale visibly separates from the pack.</p>
+<h2 id="chart-5-relationship" class="anchored">CHART 5 — RELATIONSHIP</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/nuclear-explosions/charts/chart_extra_1.plotly.json" data-fallback="/images/content/articles/nuclear-explosions/charts/chart_extra_1.png" role="img" aria-label="Id No Spread"></div>
-  <figcaption class="art-chart-caption">Id No Spread</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/nuclear-explosions/charts/chart5_scatter.plotly.json" data-fallback="/images/content/articles/nuclear-explosions/charts/chart5_scatter.png" role="img" aria-label="Magnitude body vs Magnitude surface"></div>
+  <figcaption class="art-chart-caption">Magnitude body vs Magnitude surface</figcaption>
 </figure>
-<p class="art-p">The interquartile range of `id_no` runs from **62,139.50** to **79,044.50**.</p>
-<p class="art-p">Box-level compression means most records cluster tightly; long whiskers mean the extremes drive the narrative.</p>
-<h2 id="chart-extra-2" class="anchored">CHART 5 — SPREAD</h2>
-<figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/nuclear-explosions/charts/chart_extra_2.plotly.json" data-fallback="/images/content/articles/nuclear-explosions/charts/chart_extra_2.png" role="img" aria-label="Id No Spread"></div>
-  <figcaption class="art-chart-caption">Id No Spread</figcaption>
-</figure>
-<p class="art-p">The interquartile range of `id_no` runs from **62,139.50** to **79,044.50**.</p>
-<p class="art-p">Box-level compression means most records cluster tightly; long whiskers mean the extremes drive the narrative.</p>
+<p class="art-p">Joint plot of **magnitude body** and **magnitude surface** surfaces clusters the averages erase.</p>
+<p class="art-p">Outlying points are candidates for follow-up — they are the archetypes, not the noise.</p>
 <h2 id="limitations" class="anchored">LIMITATIONS</h2>
-<p>This dataset is a community-cleaned snapshot, not a live API. Categories, spelling, and coverage reflect the week it was published. Any time-based field may contain parsing gaps; suppressed or missing values were dropped only when necessary for the chart at hand.</p><p>Medians and counts describe the file — not the full universe of real-world activity. Treat findings as structural signals worthy of follow-up, not final verdicts.</p>
+<p>Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p><p>Findings describe the file on hand — treat them as structural signals for editorial follow-up, not exhaustive truth about the full domain.</p>
 <h2 id="conclusion" class="anchored">CONCLUSION</h2>
-<p>Five charts, one through-line: <strong>Nuclear Explosions</strong> looks different when you measure it. The headline categories, time trends, and tail behavior all matter — but they rarely tell the same story.</p><p>That tension is the point of Artometrics. The data does not replace judgment. It disciplines it.</p>
+<p>Measured end to end, <strong>Nuclear Explosions</strong> rewards counting: the head, the tail, and the time trend rarely agree.</p><p>That tension is the Artometrics mandate — data does not replace judgment, it disciplines it.</p>
 <h2 id="references" class="anchored">REFERENCES</h2>
 <p>Data Science Learning Community. (2019). <em>TidyTuesday: Nuclear Explosions</em>. <a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2019/2019-08-20/nuclear_explosions.csv" target="_blank" rel="noopener noreferrer">https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2019/2019-08-20/nuclear_explosions.csv</a></p>
 <h2 id="editors-note" class="anchored">EDITOR'S NOTE</h2>
-<div class="art-editorial-note"><p><em>Editor's note: This article was generated as part of the Artometrics TidyTuesday research batch. Methodology and code are reproducible from the embedded chart exhibits.</em></p></div>
-<p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday" target="_blank" rel="noopener noreferrer">View TidyTuesday source on GitHub</a></p>
+<div class="art-editorial-note"><p><em>Artometrics data report from the TidyTuesday research pipeline. Charts and aggregates are reproducible from the embedded exhibits and public source files.</em></p></div>
+<p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2019/2019-08-20" target="_blank" rel="noopener noreferrer">View TidyTuesday source on GitHub</a></p>
 </main>
 </div>

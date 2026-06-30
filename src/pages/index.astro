@@ -1,22 +1,136 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 import BlogCard2 from "@/components/blog/BlogCard2.astro";
+import Text from "@/components/fundations/elements/Text.astro";
+import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 import { getCollection } from "astro:content";
+import { SECTION_META } from "@/data/sections";
 
 const allPosts = await getCollection("blog", ({ data }) => !data.draft);
 const sortedPosts = allPosts
   .filter((post) => post.data?.pubDate)
   .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+
+const featured = sortedPosts[0];
+const rest = sortedPosts.slice(1);
+
+function deckLine(description: string) {
+  const trimmed = description.trim();
+  const match = trimmed.match(/^(.+?[.!?])(?:\s|$)/);
+  const line = match ? match[1] : trimmed.split(/\s+/).slice(0, 22).join(" ");
+  return /[.!?]$/.test(line) ? line : `${line.replace(/[.!?]+$/, "")}.`;
+}
+
+const sectionCounts = Object.fromEntries(
+  Object.keys(SECTION_META).map((slug) => [
+    slug,
+    sortedPosts.filter((p) => p.data.tags?.includes(slug as keyof typeof SECTION_META)).length,
+  ])
+);
 ---
 
-<BaseLayout>
+<BaseLayout pageTitle="Artometrics — Data reports on culture, power, and the creative economy">
+  {
+    featured && (
+      <section class="border-b border-base-200 bg-base-100">
+        <Wrapper variant="standard" class="py-10 md:py-14">
+          <div class="grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
+            <div class="order-2 lg:order-1">
+              <Text tag="p" variant="textXS" class="uppercase tracking-[0.2em] text-accent-700">
+                Latest report
+              </Text>
+              <Text
+                tag="h1"
+                variant="displaySM"
+                class="mt-3 font-serif font-light leading-tight text-base-900 text-pretty"
+              >
+                <a href={`/${featured.data.slug}/`} class="hover:text-accent-800 transition-colors">
+                  {featured.data.title}
+                </a>
+              </Text>
+              <Text tag="p" variant="textMD" class="mt-4 max-w-xl leading-relaxed text-base-600 text-pretty">
+                {deckLine(featured.data.description)}
+              </Text>
+              <div class="mt-6 flex flex-wrap items-center gap-3">
+                <a
+                  href={`/${featured.data.slug}/`}
+                  class="inline-flex items-center rounded-sm bg-base-900 px-5 py-2.5 text-xs font-semibold uppercase tracking-widest text-white transition-colors hover:bg-accent-800"
+                >
+                  Read report
+                </a>
+                <Text tag="p" variant="textXS" class="text-base-500">
+                  {new Date(featured.data.pubDate).toLocaleDateString("en-US", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  })}
+                </Text>
+              </div>
+            </div>
+            {
+              featured.data.heroImage && (
+                <a
+                  href={`/${featured.data.slug}/`}
+                  class="order-1 block overflow-hidden border border-base-200 bg-white lg:order-2"
+                >
+                  <img
+                    src={featured.data.heroImage}
+                    alt={featured.data.title}
+                    width={1200}
+                    height={675}
+                    class="aspect-video w-full object-cover transition-transform duration-500 hover:scale-[1.02]"
+                    loading="eager"
+                    decoding="async"
+                  />
+                </a>
+              )
+            }
+          </div>
+        </Wrapper>
+      </section>
+    )
+  }
+
+  <section class="border-b border-base-200">
+    <Wrapper variant="standard" class="py-8">
+      <Text tag="p" variant="textXS" class="text-center uppercase tracking-[0.18em] text-base-500">
+        Browse by desk
+      </Text>
+      <div class="mt-4 flex flex-wrap justify-center gap-2 md:gap-3">
+        {
+          Object.entries(SECTION_META).map(([slug, meta]) => (
+            <a
+              href={`/${slug}/`}
+              class="group inline-flex items-center gap-2 rounded-full border border-base-200 bg-white px-4 py-2 text-xs font-medium uppercase tracking-wide text-base-800 transition-all hover:border-accent-400 hover:bg-accent-50 hover:text-accent-800"
+            >
+              {meta.title}
+              <span class="rounded-full bg-base-100 px-1.5 py-0.5 text-[10px] tabular-nums text-base-500 group-hover:bg-accent-100 group-hover:text-accent-700">
+                {sectionCounts[slug] ?? 0}
+              </span>
+            </a>
+          ))
+        }
+      </div>
+    </Wrapper>
+  </section>
+
   <section>
-    <Wrapper variant="standard" class="pt-8 pb-24">
-      <div
-        class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4"
-      >
-        {sortedPosts.map((post) => <BlogCard2 post={post} />)}
+    <Wrapper variant="standard" class="pt-12 pb-24">
+      <div class="mb-8 flex flex-wrap items-end justify-between gap-4 border-b border-base-200 pb-4">
+        <Text tag="h2" variant="displayXS" class="font-serif font-light uppercase tracking-wide">
+          All reports
+        </Text>
+        <a
+          href="/blog/"
+          class="text-xs font-medium uppercase tracking-widest text-base-600 transition-colors hover:text-accent-700"
+        >
+          View archive →
+        </a>
+      </div>
+      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
+        {rest.map((post, i) => (
+          <BlogCard2 post={post} eagerImage={i < 4} />
+        ))}
       </div>
     </Wrapper>
   </section>

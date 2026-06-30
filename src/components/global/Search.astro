@@ -25,62 +25,61 @@ const podcasts = await Promise.all(
 const items = [...posts, ...podcasts];
 ---
 
-<div class="relative ml-auto">
+<div class="relative">
   <button
     type="button"
     id="searchButton"
-    aria-label="Search articles"
-    class="uppercase text-base-900 hover:text-base-500 font-medium text-xs flex"
+    aria-label="Search (Ctrl+K)"
+    class="inline-flex items-center gap-2 rounded-md border border-base-200 px-3 py-2 text-xs font-medium uppercase tracking-widest text-base-900 transition-colors hover:border-accent-400 hover:text-accent-700"
   >
-    search
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.75"/>
+      <path d="M20 20l-3.5-3.5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+    </svg>
+    <span class="hidden sm:inline">Search</span>
+    <kbd class="hidden rounded border border-base-200 bg-base-50 px-1.5 py-0.5 text-[10px] font-normal text-base-500 lg:inline">⌘K</kbd>
   </button>
   <div
     id="searchModal"
-    class="fixed inset-0 z-50 hidden overflow-y-auto bg"
+    class="fixed inset-0 z-[100] hidden overflow-y-auto"
     role="dialog"
     aria-modal="true"
+    aria-labelledby="searchDialogTitle"
   >
-    <div class="min-h-screen px-4 text-center">
+    <div class="flex min-h-screen items-start justify-center px-4 py-16 sm:py-24">
       <div
-        class="fixed inset-0 bg-base-950/50 backdrop-blur transition-opacity"
+        class="fixed inset-0 bg-base-950/55 backdrop-blur-sm transition-opacity"
         id="modalOverlay"
-      >
-      </div>
+      ></div>
       <div
-        class="inline-block w-full bg-white max-w-2xl p-2 mt-12 mb-8 text-left align-middle bg-white lg:mt-48 outline-2 outline-black transition-all transform relative"
+        class="relative w-full max-w-2xl overflow-hidden rounded-lg border border-base-200 bg-white shadow-2xl"
       >
-        <div class="hidden">
+        <div class="flex items-center gap-3 border-b border-base-200 px-4 py-3">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" class="shrink-0 text-base-400" aria-hidden="true">
+            <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.75"/>
+            <path d="M20 20l-3.5-3.5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+          </svg>
+          <span id="searchDialogTitle" class="sr-only">Search Artometrics</span>
+          <input
+            type="search"
+            id="searchInput"
+            placeholder="Search articles and podcast episodes…"
+            autocomplete="off"
+            class="h-10 w-full border-0 bg-transparent text-sm text-base-900 placeholder-base-400 focus:outline-none focus:ring-0"
+          />
           <button
             type="button"
             id="closeSearch"
-            class="ml-auto cursor-pointer text-base-400 hover:text-base-600"
+            class="shrink-0 rounded-md border border-base-200 px-2 py-1 text-[10px] font-medium uppercase tracking-wide text-base-500 transition-colors hover:border-base-400 hover:text-base-900"
             aria-label="Close search"
           >
-            <svg
-              width="15"
-              height="15"
-              viewBox="0 0 15 15"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              ><path
-                d="M0.877075 7.49988C0.877075 3.84219 3.84222 0.877045 7.49991 0.877045C11.1576 0.877045 14.1227 3.84219 14.1227 7.49988C14.1227 11.1575 11.1576 14.1227 7.49991 14.1227C3.84222 14.1227 0.877075 11.1575 0.877075 7.49988ZM7.49991 1.82704C4.36689 1.82704 1.82708 4.36686 1.82708 7.49988C1.82708 10.6329 4.36689 13.1727 7.49991 13.1727C10.6329 13.1727 13.1727 10.6329 13.1727 7.49988C13.1727 4.36686 10.6329 1.82704 7.49991 1.82704ZM9.85358 5.14644C10.0488 5.3417 10.0488 5.65829 9.85358 5.85355L8.20713 7.49999L9.85358 9.14644C10.0488 9.3417 10.0488 9.65829 9.85358 9.85355C9.65832 10.0488 9.34173 10.0488 9.14647 9.85355L7.50002 8.2071L5.85358 9.85355C5.65832 10.0488 5.34173 10.0488 5.14647 9.85355C4.95121 9.65829 4.95121 9.3417 5.14647 9.14644L6.79292 7.49999L5.14647 5.85355C4.95121 5.65829 4.95121 5.3417 5.14647 5.14644C5.34173 4.95118 5.65832 4.95118 5.85358 5.14644L7.50002 6.79289L9.14647 5.14644C9.34173 4.95118 9.65832 4.95118 9.85358 5.14644Z"
-                fill="currentColor"
-                fill-rule="evenodd"
-                clip-rule="evenodd"></path></svg
-            >
+            Esc
           </button>
         </div>
-        <input
-          type="text"
-          id="searchInput"
-          placeholder="Search articles..."
-          class="w-full h-8 px-4 py-2 text-xs bg-white border-t-0 border-b border-x-0 border-base-300 focus:outline-none focus:border focus:ring-base-500 focus:border-base-500 placeholder-base-500"
-        />
         <div
           id="searchResults"
-          class="w-full mt-2 overflow-hidden overflow-y-auto bg-white max-h-100 divide-y divide-base-200 scrollbar-hide"
-        >
-        </div>
+          class="hidden max-h-[min(60vh,28rem)] overflow-y-auto divide-y divide-base-100"
+        ></div>
       </div>
     </div>
   </div>
@@ -94,18 +93,21 @@ const items = [...posts, ...podcasts];
     const searchResults = document.getElementById("searchResults");
     const closeSearch = document.getElementById("closeSearch");
     const fuse = new Fuse(items, {
-      keys: ["title", "description", "pubDate"],
-      threshold: 0.3,
+      keys: ["title", "description", "typeLabel"],
+      threshold: 0.32,
       includeMatches: true,
     });
-    searchResults.classList.add("hidden");
+
     function openSearch(e) {
-      e.preventDefault();
-      e.stopPropagation();
+      if (e) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
       searchModal.classList.remove("hidden");
       document.body.style.overflow = "hidden";
-      setTimeout(() => searchInput.focus(), 100);
+      setTimeout(() => searchInput.focus(), 50);
     }
+
     function closeSearchModal(e) {
       if (e) {
         e.preventDefault();
@@ -117,6 +119,7 @@ const items = [...posts, ...podcasts];
       searchResults.innerHTML = "";
       searchResults.classList.add("hidden");
     }
+
     function renderResults(results) {
       if (!searchInput.value.trim()) {
         searchResults.innerHTML = "";
@@ -124,52 +127,43 @@ const items = [...posts, ...podcasts];
         return;
       }
       if (results.length === 0) {
-        searchResults.innerHTML = `
-          <div>
-              <h3 class="p-4 text-base font-medium text-base-600">
-                There's nothing here,...
-              </h3>
-          </div>
-          `;
+        searchResults.innerHTML =
+          '<p class="p-6 text-center text-sm text-base-500">No matches — try a different keyword.</p>';
         searchResults.classList.remove("hidden");
         return;
       }
       searchResults.innerHTML = results
+        .slice(0, 12)
         .map(
           (result) => `
-              <a href="${result.item.href}" class="block p-4  duration-300 hover:bg-black/5">
-                <p class="block text-xs text-sm text-base-600 mt-4">
-                  ${result.item.typeLabel || result.item.type} —
-    ${new Date(result.item.pubDate).toLocaleDateString("en-US", {
-      year: "numeric",
-      month: "long",
-      day: "2-digit",
-    })}
+            <a href="${result.item.href}" class="block px-4 py-4 transition-colors hover:bg-base-50">
+              <p class="text-[10px] font-semibold uppercase tracking-widest text-accent-700">
+                ${result.item.typeLabel || result.item.type}
               </p>
-                <h3  class="block mt-2 text-sm font-medium text-base-900">
-                  ${result.item.title}
-                </h3>
-                <p  class="block text-xs text-base-600">
-                  ${result.item.description}
-                </p>
-              </a>
-            `
+              <h3 class="mt-1 text-sm font-semibold leading-snug text-base-900">${result.item.title}</h3>
+              <p class="mt-1 line-clamp-2 text-xs leading-relaxed text-base-500">${result.item.description}</p>
+            </a>
+          `
         )
         .join("");
       searchResults.classList.remove("hidden");
     }
-    searchButton.addEventListener("click", openSearch);
-    searchButton.addEventListener("touchend", openSearch);
-    closeSearch.addEventListener("click", closeSearchModal);
-    closeSearch.addEventListener("touchend", closeSearchModal);
-    modalOverlay.addEventListener("click", closeSearchModal);
-    modalOverlay.addEventListener("touchend", closeSearchModal);
-    searchInput.addEventListener("input", (e) => {
+
+    searchButton?.addEventListener("click", openSearch);
+    closeSearch?.addEventListener("click", closeSearchModal);
+    modalOverlay?.addEventListener("click", closeSearchModal);
+    searchInput?.addEventListener("input", (e) => {
       const value = e.target.value.trim();
-      const results = value ? fuse.search(value) : [];
-      renderResults(results);
+      renderResults(value ? fuse.search(value) : []);
     });
+
     document.addEventListener("keydown", (e) => {
+      const mod = e.metaKey || e.ctrlKey;
+      if (mod && e.key.toLowerCase() === "k") {
+        e.preventDefault();
+        if (searchModal.classList.contains("hidden")) openSearch();
+        else closeSearchModal();
+      }
       if (e.key === "Escape" && !searchModal.classList.contains("hidden")) {
         closeSearchModal();
       }

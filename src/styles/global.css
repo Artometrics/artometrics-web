@@ -105,6 +105,7 @@
 }
 :root {
   font-family: var(--font-serif);
+  scroll-behavior: smooth;
   /* Shiki code style - Light Mode */
   --astro-code-foreground: theme(colors.base.600); /* Dark base for text */
   --astro-code-background: theme(
@@ -208,6 +209,21 @@
   --astro-code-token-bold: inherit;
   --astro-code-token-italic: italic;
   --astro-code-token-underline: underline;
+}
+
+::selection {
+  background-color: color-mix(in oklab, var(--color-accent-500) 25%, white);
+  color: var(--color-base-900);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent-600);
+  outline-offset: 2px;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
 body.art-sidebar-collapsed .artometrics-article-body #quarto-content {

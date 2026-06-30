@@ -2,7 +2,7 @@
 title: "HYDRO WASTEWATER PLANTS: The Artometrics of Hydro Wastewater Plants"
 slug: hydro-wastewater
 pubDate: 2026-06-15
-description: "This report treats the TidyTuesday **2022-09-20** release as a measurable slice of hydro wastewater plants — 58,502 records, 25 variables, one question: what does the distribution..."
+description: "This report analyzes the TidyTuesday 2022-09-20 release on Hydro Wastewater Plants — 58,502 rows after cleaning and merge. The question is not whether the topic matters, but what the..."
 heroImage: /images/content/articles/hydro-wastewater/hero.png
 tags: [atlas]
 draft: false
@@ -13,11 +13,11 @@ draft: false
   <ul>
   <li><a href="#fast-facts" id="toc-fast-facts">FAST FACTS</a></li>
   <li><a href="#dataset-context" id="toc-dataset-context">DATASET CONTEXT</a></li>
+  <li><a href="#chart-1-landscape" id="toc-chart-1-landscape">CHART 1 — LANDSCAPE</a></li>
   <li><a href="#chart-3-distribution" id="toc-chart-3-distribution">CHART 3 — DISTRIBUTION</a></li>
   <li><a href="#chart-4-leaders" id="toc-chart-4-leaders">CHART 4 — LEADERS</a></li>
-  <li><a href="#chart-extra-1" id="toc-chart-extra-1">CHART 3 — SPREAD</a></li>
-  <li><a href="#chart-extra-2" id="toc-chart-extra-2">CHART 4 — SPREAD</a></li>
-  <li><a href="#chart-extra-3" id="toc-chart-extra-3">CHART 5 — SPREAD</a></li>
+  <li><a href="#chart-5-relationship" id="toc-chart-5-relationship">CHART 5 — RELATIONSHIP</a></li>
+  <li><a href="#chart-pad-1" id="toc-chart-pad-1">CHART 5 — SPREAD</a></li>
   <li><a href="#limitations" id="toc-limitations">LIMITATIONS</a></li>
   <li><a href="#conclusion" id="toc-conclusion">CONCLUSION</a></li>
   <li><a href="#references" id="toc-references">REFERENCES</a></li>
@@ -25,72 +25,62 @@ draft: false
   </ul>
 </nav>
 <main class="art-article-main">
-<p class="art-p">This report treats the TidyTuesday **2022-09-20** release as a measurable slice of hydro wastewater plants — 58,502 records, 25 variables, one question: what does the distribution actually look like when you stop reading anecdotes and start counting?</p>
+<p class="art-p">This report analyzes the TidyTuesday <strong>2022-09-20</strong> release on <strong>Hydro Wastewater Plants</strong> — <strong>58,502</strong> rows after cleaning and merge. The question is not whether the topic matters, but what the distribution looks like when you stop quoting anecdotes and start counting.</p>
+<p class="art-p">Five charts track <strong>WASTE DIS</strong> across time, category, and named entities. Where a companion file exists in the repo, it is joined before analysis so reception, geography, or metadata columns are not left on the table.</p>
 <h2 id="fast-facts" class="anchored">FAST FACTS</h2>
 <div class="facts-grid">
-  <div class="fact-box">
-    <span class="fact-number">58,502</span>
-    <span class="fact-label">Rows in the working dataset after initial load</span>
-  </div>
-  <div class="fact-box">
-    <span class="fact-number">25</span>
-    <span class="fact-label">Variables available for analysis</span>
-  </div>
-  <div class="fact-box">
-    <span class="fact-number">29,251.50</span>
-    <span class="fact-label">Median WASTE_ID</span>
-  </div>
-  <div class="fact-box">
-    <span class="fact-number">58,502.00</span>
-    <span class="fact-label">Maximum observed WASTE_ID</span>
-  </div>
+  <div class="fact-box"><span class="fact-number">58,502</span><span class="fact-label">Records in the working dataset</span></div>
+  <div class="fact-box"><span class="fact-number">1,079</span><span class="fact-label">Median WASTE DIS</span></div>
+  <div class="fact-box"><span class="fact-number">3,073,754</span><span class="fact-label">Highest observed WASTE DIS</span></div>
+  <div class="fact-box"><span class="fact-number">Stickney Treatment Plant MWR</span><span class="fact-label">Top WWTP NAME by WASTE DIS</span></div>
+  <div class="fact-box"><span class="fact-number">Not Reported</span><span class="fact-label">Most common STATUS</span></div>
 </div>
 <h2 id="dataset-context" class="anchored">DATASET CONTEXT</h2>
-<p>The source data is the TidyTuesday release from <strong>2022-09-20</strong>, maintained by the R for Data Science community. The working dataset contains <strong>58,502</strong> rows and <strong>25</strong> columns. Files were pulled directly from the public repository without manual transcription.</p>
-<p>Analysis code is embedded below each chart. All aggregates were computed in Python with pandas; charts were exported as Plotly JSON for interactive rendering on Artometrics.</p>
+<p>The source is the TidyTuesday release from <strong>2022-09-20</strong> (R for Data Science community). This working file contains <strong>58,502</strong> rows and <strong>25</strong> columns after merging all available CSV/XLSX tables in the week folder.</p>
+<p>Charts are exported as Plotly JSON with PNG fallbacks. Medians are used for robustness where distributions skew. Index-style fields (row numbers, sequential IDs) are excluded from metric selection.</p>
+<h2 id="chart-1-landscape" class="anchored">CHART 1 — LANDSCAPE</h2>
+<figure class="art-chart">
+  <div class="art-chart-live" data-chart="/data/articles/hydro-wastewater/charts/chart1_landscape.plotly.json" data-fallback="/images/content/articles/hydro-wastewater/charts/chart1_landscape.png" role="img" aria-label="STATUS Mix"></div>
+  <figcaption class="art-chart-caption">STATUS Mix</figcaption>
+</figure>
+<p class="art-p">**Not Reported** dominates with **53,033** records — the structural center of gravity.</p>
+<p class="art-p">Beyond the top ten sit **0** additional status buckets in the long tail.</p>
 <h2 id="chart-3-distribution" class="anchored">CHART 3 — DISTRIBUTION</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/hydro-wastewater/charts/chart3_distribution.plotly.json" data-fallback="/images/content/articles/hydro-wastewater/charts/chart3_distribution.png" role="img" aria-label="Waste Id Distribution"></div>
-  <figcaption class="art-chart-caption">Waste Id Distribution</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/hydro-wastewater/charts/chart3_distribution.plotly.json" data-fallback="/images/content/articles/hydro-wastewater/charts/chart3_distribution.png" role="img" aria-label="WASTE DIS by STATUS"></div>
+  <figcaption class="art-chart-caption">WASTE DIS by STATUS</figcaption>
 </figure>
-<p class="art-p">`WASTE_ID` centers around a median of **29,251.50** with a mean of **29,251.50**. The gap between those two numbers suggests a relatively symmetric spread.</p>
-<p class="art-p">Roughly **10.0%** of records sit above the 90th percentile threshold — the tail is where exceptional cases live.</p>
+<p class="art-p">Category boxes reveal whether waste dis consensus is shared or contested across tiers.</p>
+<p class="art-p">Wide whiskers flag categories where outliers — not averages — drive reputation.</p>
 <h2 id="chart-4-leaders" class="anchored">CHART 4 — LEADERS</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/hydro-wastewater/charts/chart4_top_ranked.plotly.json" data-fallback="/images/content/articles/hydro-wastewater/charts/chart4_top_ranked.png" role="img" aria-label="Top Wwtp Name"></div>
-  <figcaption class="art-chart-caption">Top Wwtp Name</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/hydro-wastewater/charts/chart4_leaders.plotly.json" data-fallback="/images/content/articles/hydro-wastewater/charts/chart4_leaders.png" role="img" aria-label="Top WWTP NAME"></div>
+  <figcaption class="art-chart-caption">Top WWTP NAME</figcaption>
 </figure>
-<p class="art-p">At the top of the ranking, **Punta de Bombon** posts a median `WASTE_ID` of **53,210.00** — separating itself from the median-of-medians baseline of **53,203.50**.</p>
-<p class="art-p">The distance between #1 and #12 is modest, which tells you whether this field has a single dominant outlier or a competitive top tier.</p>
-<h2 id="chart-extra-1" class="anchored">CHART 3 — SPREAD</h2>
+<p class="art-p">**Stickney Treatment Plant MWRDGC** leads at **3,073,754** — **1,471,508** marks the median among the top dozen.</p>
+<p class="art-p">Head-of-field concentration is where brand, quality, or scale visibly separates from the pack.</p>
+<h2 id="chart-5-relationship" class="anchored">CHART 5 — RELATIONSHIP</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/hydro-wastewater/charts/chart_extra_1.plotly.json" data-fallback="/images/content/articles/hydro-wastewater/charts/chart_extra_1.png" role="img" aria-label="Waste Id Spread"></div>
-  <figcaption class="art-chart-caption">Waste Id Spread</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/hydro-wastewater/charts/chart5_scatter.plotly.json" data-fallback="/images/content/articles/hydro-wastewater/charts/chart5_scatter.png" role="img" aria-label="WASTE DIS vs QUAL WASTE"></div>
+  <figcaption class="art-chart-caption">WASTE DIS vs QUAL WASTE</figcaption>
 </figure>
-<p class="art-p">The interquartile range of `WASTE_ID` runs from **14,626.25** to **43,876.75**.</p>
-<p class="art-p">Box-level compression means most records cluster tightly; long whiskers mean the extremes drive the narrative.</p>
-<h2 id="chart-extra-2" class="anchored">CHART 4 — SPREAD</h2>
+<p class="art-p">Joint plot of **waste dis** and **qual waste** surfaces clusters the averages erase.</p>
+<p class="art-p">Outlying points are candidates for follow-up — they are the archetypes, not the noise.</p>
+<h2 id="chart-pad-1" class="anchored">CHART 5 — SPREAD</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/hydro-wastewater/charts/chart_extra_2.plotly.json" data-fallback="/images/content/articles/hydro-wastewater/charts/chart_extra_2.png" role="img" aria-label="Waste Id Spread"></div>
-  <figcaption class="art-chart-caption">Waste Id Spread</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/hydro-wastewater/charts/chart_pad_1.plotly.json" data-fallback="/images/content/articles/hydro-wastewater/charts/chart_pad_1.png" role="img" aria-label="WASTE DIS Spread"></div>
+  <figcaption class="art-chart-caption">WASTE DIS Spread</figcaption>
 </figure>
-<p class="art-p">The interquartile range of `WASTE_ID` runs from **14,626.25** to **43,876.75**.</p>
-<p class="art-p">Box-level compression means most records cluster tightly; long whiskers mean the extremes drive the narrative.</p>
-<h2 id="chart-extra-3" class="anchored">CHART 5 — SPREAD</h2>
-<figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/hydro-wastewater/charts/chart_extra_3.plotly.json" data-fallback="/images/content/articles/hydro-wastewater/charts/chart_extra_3.png" role="img" aria-label="Waste Id Spread"></div>
-  <figcaption class="art-chart-caption">Waste Id Spread</figcaption>
-</figure>
-<p class="art-p">The interquartile range of `WASTE_ID` runs from **14,626.25** to **43,876.75**.</p>
-<p class="art-p">Box-level compression means most records cluster tightly; long whiskers mean the extremes drive the narrative.</p>
+<p class="art-p">The middle half runs **341** to **4,429**.</p>
+<p class="art-p">Tight boxes mean consensus; long whiskers mean extremes own the narrative.</p>
 <h2 id="limitations" class="anchored">LIMITATIONS</h2>
-<p>This dataset is a community-cleaned snapshot, not a live API. Categories, spelling, and coverage reflect the week it was published. Any time-based field may contain parsing gaps; suppressed or missing values were dropped only when necessary for the chart at hand.</p><p>Medians and counts describe the file — not the full universe of real-world activity. Treat findings as structural signals worthy of follow-up, not final verdicts.</p>
+<p>Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p><p>Findings describe the file on hand — treat them as structural signals for editorial follow-up, not exhaustive truth about the full domain.</p>
 <h2 id="conclusion" class="anchored">CONCLUSION</h2>
-<p>Five charts, one through-line: <strong>Hydro Wastewater Plants</strong> looks different when you measure it. The headline categories, time trends, and tail behavior all matter — but they rarely tell the same story.</p><p>That tension is the point of Artometrics. The data does not replace judgment. It disciplines it.</p>
+<p>Measured end to end, <strong>Hydro Wastewater Plants</strong> rewards counting: the head, the tail, and the time trend rarely agree.</p><p>That tension is the Artometrics mandate — data does not replace judgment, it disciplines it.</p>
 <h2 id="references" class="anchored">REFERENCES</h2>
 <p>Data Science Learning Community. (2022). <em>TidyTuesday: Hydro Wastewater Plants</em>. <a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2022/2022-09-20/HydroWASTE_v10.csv" target="_blank" rel="noopener noreferrer">https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2022/2022-09-20/HydroWASTE_v10.csv</a></p>
 <h2 id="editors-note" class="anchored">EDITOR'S NOTE</h2>
-<div class="art-editorial-note"><p><em>Editor's note: This article was generated as part of the Artometrics TidyTuesday research batch. Methodology and code are reproducible from the embedded chart exhibits.</em></p></div>
-<p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday" target="_blank" rel="noopener noreferrer">View TidyTuesday source on GitHub</a></p>
+<div class="art-editorial-note"><p><em>Artometrics data report from the TidyTuesday research pipeline. Charts and aggregates are reproducible from the embedded exhibits and public source files.</em></p></div>
+<p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2022/2022-09-20" target="_blank" rel="noopener noreferrer">View TidyTuesday source on GitHub</a></p>
 </main>
 </div>

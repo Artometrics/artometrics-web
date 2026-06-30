@@ -38,15 +38,23 @@ function stackChartTitle(text: string): string {
 
   let stacked = text.trim();
 
-  if (/\s+[—–]\s+/.test(stacked)) {
+  // Normalize em/en dashes to line breaks for mobile readability
+  if (/\s+[—–-]\s+/.test(stacked)) {
     stacked = stacked.replace(/\s+[—–]\s+/g, "<br>");
+    stacked = stacked.replace(/\s+-\s+/g, "<br>");
     return stacked;
   }
 
   const plainLength = stacked.replace(/<[^>]+>/g, "").trim().length;
-  if (plainLength > 36) {
-    stacked = stacked.replace(/\s+(WITH\s+)/i, "<br>$1");
+  if (plainLength > 32) {
+    stacked = stacked.replace(/\s+(BY|VS|OVER|WITH|FROM|INTO|ACROSS)\s+/gi, "<br>$1 ");
     if (stacked.includes("<br>")) return stacked;
+    const words = stacked.replace(/<[^>]+>/g, "").trim().split(/\s+/);
+    if (words.length > 5) {
+      const mid = Math.ceil(words.length / 2);
+      const plain = words.slice(0, mid).join(" ") + "<br>" + words.slice(mid).join(" ");
+      return plain;
+    }
   }
 
   return stacked;
@@ -159,6 +167,10 @@ function inferChartHeight(data: PlotlyTrace[], titleLines: number): number | und
   return undefined;
 }
 
+function isMobileViewport() {
+  return window.matchMedia("(max-width: 900px)").matches;
+}
+
 function sanitizePlotlySpec(raw: PlotlyExport) {
   const baseMargin = raw.layout?.margin ?? {};
   const fixedTitle = fixTitle(raw.layout ?? {});
@@ -169,33 +181,41 @@ function sanitizePlotlySpec(raw: PlotlyExport) {
   const titleLines = (titleText.match(/<br\s*\/?>/gi) ?? []).length + 1;
   const data = cleanTraces((raw.data ?? []) as PlotlyTrace[]);
   const chartHeight = inferChartHeight(data, titleLines);
+  const mobile = isMobileViewport();
 
   const layout: PlotlyLayout = {
     ...(raw.layout ?? {}),
     font: {
       color: ART_COLORS.dark,
       family: "DM Sans, Helvetica, sans-serif",
+      size: mobile ? 11 : 12,
       ...(raw.layout?.font ?? {}),
     },
     paper_bgcolor: raw.layout?.paper_bgcolor ?? ART_COLORS.cream,
     plot_bgcolor: raw.layout?.plot_bgcolor ?? ART_COLORS.cream,
     margin: {
-      t: 64 + titleLines * 22,
-      r: Math.max(56, Number(baseMargin.r) || 0),
-      b: Math.max(56, Number(baseMargin.b) || 0),
-      l: Math.max(92, Number(baseMargin.l) || 0),
+      t: mobile ? 12 : 16,
+      r: mobile ? 16 : Math.max(40, Number(baseMargin.r) || 0),
+      b: mobile ? 44 : Math.max(52, Number(baseMargin.b) || 0),
+      l: mobile ? 52 : Math.max(72, Number(baseMargin.l) || 0),
     },
-    title: fixedTitle,
+    title: { text: "" },
     hoverlabel: {
       bgcolor: ART_COLORS.dark,
       bordercolor: ART_COLORS.dark,
-      font: { color: "#FAFAF8", family: "DM Sans, Helvetica, sans-serif" },
+      font: {
+        color: "#FAFAF8",
+        family: "DM Sans, Helvetica, sans-serif",
+        size: mobile ? 11 : 12,
+      },
     },
     autosize: true,
   };
 
-  if (chartHeight) {
+  if (chartHeight && !mobile) {
     layout.height = chartHeight;
+  } else {
+    delete layout.height;
   }
 
   if (Array.isArray(layout.annotations)) {
@@ -220,11 +240,11 @@ function sanitizePlotlySpec(raw: PlotlyExport) {
       ...layout.yaxis,
       title: centerAxisTitle(layout.yaxis.title),
       automargin: true,
-      ...(yTickCount > 12
+      ...(yTickCount > 12 || mobile
         ? {
             tickfont: {
               ...(typeof layout.yaxis.tickfont === "object" ? layout.yaxis.tickfont : {}),
-              size: 10.5,
+              size: mobile ? 9.5 : 10.5,
             },
           }
         : {}),
@@ -246,6 +266,7 @@ function sanitizePlotlySpec(raw: PlotlyExport) {
     data,
     layout,
     config,
+    titleHtml: titleText,
   };
 }
 
@@ -335,15 +356,18 @@ async function renderLiveChart(el: HTMLElement) {
     }
 
     const spec = sanitizePlotlySpec(raw);
-    clearStaticHeading(el);
+    const titleHtml = spec.titleHtml || extractTitleHtml(raw);
+    if (titleHtml) renderStaticHeading(el, titleHtml);
     await Plotly.newPlot(el, spec.data, spec.layout, spec.config);
     await Plotly.Plots.resize(el);
 
     if (chartHasVisiblePlot(el)) {
-      clearStaticHeading(el);
       hideFallback(el);
       markChartReady(el, false);
-      const resize = () => Plotly.Plots.resize(el);
+      const resize = () => {
+        if (titleHtml) renderStaticHeading(el, titleHtml);
+        Plotly.Plots.resize(el);
+      };
       window.addEventListener("resize", resize, { passive: true });
       return;
     }
@@ -368,6 +392,7 @@ export function initArtCharts() {
     if (fallback) {
       showFallback(node, fallback, node.getAttribute("aria-label"));
       markChartReady(node, true);
+      if (url) void enrichStaticChart(node, url);
     }
   });
 
