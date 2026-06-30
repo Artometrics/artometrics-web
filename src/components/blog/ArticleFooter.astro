@@ -11,13 +11,14 @@ interface Props {
   title: string;
   description: string;
   url: string;
+  slug: string;
   tags: string[];
   previous?: NavLink | null;
   next?: NavLink | null;
   primaryDesk?: keyof typeof SECTION_META | null;
 }
 
-const { title, description, url, tags, previous, next, primaryDesk } = Astro.props;
+const { title, description, url, slug, tags, previous, next, primaryDesk } = Astro.props;
 const desks = tags.filter((t): t is keyof typeof SECTION_META => t in SECTION_META);
 ---
 
@@ -102,13 +103,22 @@ const desks = tags.filter((t): t is keyof typeof SECTION_META => t in SECTION_ME
       >
         {primaryDesk ? `More from ${SECTION_META[primaryDesk].title} →` : "All reports →"}
       </a>
-      <button
-        type="button"
-        class="text-xs font-medium uppercase tracking-widest text-base-600 transition-colors hover:text-accent-700"
-        onclick="window.print()"
-      >
-        Print report
-      </button>
+      <div class="flex flex-wrap items-center gap-4">
+        <button
+          type="button"
+          data-save-article={slug}
+          class="text-xs font-medium uppercase tracking-widest text-base-600 transition-colors hover:text-accent-700"
+        >
+          Save report
+        </button>
+        <button
+          type="button"
+          class="text-xs font-medium uppercase tracking-widest text-base-600 transition-colors hover:text-accent-700"
+          onclick="window.print()"
+        >
+          Print report
+        </button>
+      </div>
     </div>
 
     <p class="art-article-endmark" aria-hidden="true">Artometrics</p>

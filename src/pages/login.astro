@@ -35,7 +35,8 @@ import Button from "@/components/fundations/elements/Button.astro";
             Welcome back! Please enter your email and password to sign in.
           </Text>
         </div>
-        <form action="#" method="POST" class="flex flex-col mt-8 gap-4">
+        <p id="authError" class="mt-4 text-sm text-red-600" role="alert"></p>
+        <form id="loginForm" class="flex flex-col mt-8 gap-4">
           <div>
             <label for="email" class="text-base-600 text-xs">Email</label>
             <div>

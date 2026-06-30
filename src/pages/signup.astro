@@ -25,7 +25,7 @@ import Button from "@/components/fundations/elements/Button.astro";
             variant="displayMD"
             class="font-serif font-light tracking-tight text-base-900 text-balance mt-12"
           >
-            Sign up to Hemmingway
+            Join Artometrics
           </Text>
           <Text
             tag="p"
@@ -35,7 +35,8 @@ import Button from "@/components/fundations/elements/Button.astro";
             fill in the form below to create your account.
           </Text>
         </div>
-        <form action="#" method="POST" class="flex flex-col mt-8 gap-4">
+        <p id="authError" class="mt-4 text-sm text-red-600" role="alert"></p>
+        <form id="signupForm" class="flex flex-col mt-8 gap-4">
           <div>
             <label for="name" class="text-base-600 text-xs">Name</label>
             <input

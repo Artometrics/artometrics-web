@@ -166,24 +166,92 @@ const relatedPosts = allPosts.filter(
 
         {
           frontmatter.isLocked ? (
-            <div class=" mt-12 border-t border-black py-20 text-center">
-              <Text
-                tag="h4"
-                variant="displaySM"
-                class="max-w-4xl mx-auto font-serif font-light tracking-tight text-base-900 text-balance"
+            <>
+              <div
+                id="memberEpisodeGate"
+                data-episode-slug={currentSlug}
+                class="mt-12 border-t border-black py-20 text-center"
               >
-                This episode is for subscribers only. Unlock premium insights by
-                becoming a member.
-              </Text>
-              <div class="flex flex-wrap justify-center mt-8 gap-2">
-                <Button isLink size="sm" variant="muted" href="/login">
-                  Log in
-                </Button>
-                <Button isLink size="sm" variant="default" href="/pricing">
-                  Subscribe Now
-                </Button>
+                <Text
+                  tag="h4"
+                  variant="displaySM"
+                  class="max-w-4xl mx-auto font-serif font-light tracking-tight text-base-900 text-balance"
+                >
+                  This episode is for subscribers only. Unlock premium insights by
+                  becoming a member.
+                </Text>
+                <div class="flex flex-wrap justify-center mt-8 gap-2">
+                  <Button isLink size="sm" variant="muted" href="/login/">
+                    Log in
+                  </Button>
+                  <Button isLink size="sm" variant="default" href="/pricing/">
+                    Subscribe now
+                  </Button>
+                </div>
               </div>
-            </div>
+              {
+                frontmatter.audioSrc && (
+                  <div id="memberEpisodeAudio" class="hidden p-8 mt-8 border border-black audio-player">
+                    <div class="flex items-center justify-between w-full gap-2">
+                      <button
+                        id="memberBackwardBtn"
+                        class="rounded-lg bg-white p-1.5 text-base-600 hover:bg-base-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus:outline-base-400 cursor-pointer focus:outline-2 focus:outline-inset"
+                        aria-label="Go back 10 seconds"
+                      >
+                        <RewindBackwards10s class="size-5" />
+                      </button>
+                      <button
+                        id="memberPlayPauseBtn"
+                        class="rounded-lg bg-white p-1.5 text-base-600 hover:bg-base-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus:outline-base-400 cursor-pointer focus:outline-2 focus:outline-inset"
+                      >
+                        <Play id="memberPlayIcon" class="size-5" />
+                        <Pause id="memberPauseIcon" class="hidden size-5" />
+                      </button>
+                      <button
+                        id="memberForwardBtn"
+                        class="order-second rounded-lg bg-white p-1.5 text-base-600 hover:bg-base-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus:outline-base-400 cursor-pointer focus:outline-2 focus:outline-inset"
+                        aria-label="Go forward 10 seconds"
+                      >
+                        <RewindForward10S class="size-4" />
+                      </button>
+                      <audio id="memberAudioElement" src={frontmatter.audioSrc} />
+                      <span class="hidden text-xs text-base-600 sm:flex" id="memberCurrentTime">
+                        00:00
+                      </span>
+                      <input
+                        type="range"
+                        id="memberSeekBar"
+                        value="0"
+                        step="1"
+                        min="0"
+                        class="hidden w-full sm:flex"
+                      />
+                      <span class="hidden text-xs text-base-600 sm:flex" id="memberDuration">
+                        00:00
+                      </span>
+                      <button
+                        id="memberMuteBtn"
+                        class="rounded-lg bg-white p-1.5 text-base-600 hover:bg-base-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus:outline-base-400 cursor-pointer focus:outline-2 focus:outline-inset"
+                        aria-label="Mute/Unmute"
+                      >
+                        <Speaker id="memberSpeakerIcon" class="size-5" />
+                        <Mute id="memberMuteIcon" class="hidden size-5" />
+                      </button>
+                    </div>
+                  </div>
+                )
+              }
+              <div id="memberEpisodeContent" class="hidden max-w-xl mx-auto">
+                <Text
+                  tag="h2"
+                  variant="textXS"
+                  class="mt-24 text-base-900 uppercase lg:mt-40"
+                >
+                  transcript
+                </Text>
+                <div id="memberEpisodeBody" class="mt-2"></div>
+              </div>
+            </>
           ) : (
             <div class="max-w-xl mx-auto">
               <Text

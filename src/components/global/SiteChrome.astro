@@ -1,5 +1,5 @@
 ---
-/** Shared client behaviors: nav scroll shadow, reduced-motion safe. */
+/** Shared client behaviors: nav scroll shadow, auth, member gating. */
 ---
 
 <script>
@@ -11,4 +11,12 @@
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
   }
+</script>
+
+<script>
+  import { initProductAuth } from "@/scripts/product-auth";
+  import { initMemberGate } from "@/scripts/member-gate";
+
+  initProductAuth();
+  initMemberGate();
 </script>

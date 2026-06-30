@@ -1,0 +1,29 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Text from "@/components/fundations/elements/Text.astro";
+import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+---
+
+<BaseLayout
+  pageTitle="Your account — Artometrics"
+  pageDescription="Manage your Artometrics membership, billing, and saved reports."
+  canonicalPath="/account/"
+>
+  <section>
+    <Wrapper variant="standard" class="py-16 md:py-24">
+      <Text
+        tag="h1"
+        variant="displayMD"
+        class="font-serif font-light text-base-900"
+      >
+        Your account
+      </Text>
+      <Text tag="p" variant="textXS" class="mt-2 uppercase text-base-600">
+        Membership, billing, and saved reports
+      </Text>
+      <div id="accountApp" class="mt-10 min-h-[12rem]">
+        <p class="text-sm text-base-500">Loading account…</p>
+      </div>
+    </Wrapper>
+  </section>
+</BaseLayout>
