@@ -3,8 +3,10 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import Text from "@/components/fundations/elements/Text.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 import BlogCard2 from "@/components/blog/BlogCard2.astro";
+import Breadcrumbs from "@/components/blog/Breadcrumbs.astro";
 import { getCollection } from "astro:content";
 import { SECTION_META } from "@/data/sections";
+import { publishedPosts } from "@/lib/blog";
 
 export function getStaticPaths() {
   return Object.entries(SECTION_META).map(([slug, meta]) => ({
@@ -15,14 +17,25 @@ export function getStaticPaths() {
 
 const { section } = Astro.props;
 const allPosts = await getCollection("blog", ({ data }) => !data.draft);
-const sectionPosts = allPosts
-  .filter((post) => post.data.tags.includes(section.slug))
-  .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+const sectionPosts = publishedPosts(allPosts).filter((post) =>
+  post.data.tags.includes(section.slug as keyof typeof SECTION_META)
+);
 ---
 
-<BaseLayout pageTitle={`${section.title} — Artometrics`}>
+<BaseLayout
+  pageTitle={`${section.title} Desk — Artometrics`}
+  pageDescription={section.description}
+  canonicalPath={`/${section.slug}/`}
+>
   <section>
-    <Wrapper variant="standard" class="pt-16 pb-12 md:pt-24">
+    <Wrapper variant="standard" class="pt-16 pb-16 md:pt-24">
+      <Breadcrumbs
+        items={[
+          { label: "Home", href: "/" },
+          { label: section.title },
+        ]}
+        class="mb-6"
+      />
       <Text tag="p" variant="textXS" class="uppercase tracking-[0.18em] text-accent-700">
         Desk
       </Text>

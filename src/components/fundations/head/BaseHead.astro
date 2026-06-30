@@ -10,9 +10,12 @@ interface Props {
   pageDescription?: string;
   canonicalPath?: string;
   ogImage?: string;
+  ogType?: "website" | "article";
+  publishedTime?: string;
 }
 
-const { pageTitle, pageDescription, canonicalPath, ogImage } = Astro.props;
+const { pageTitle, pageDescription, canonicalPath, ogImage, ogType, publishedTime } =
+  Astro.props;
 
 const site = Astro.site ?? new URL("https://artometrics.com");
 const canonical = canonicalPath
@@ -25,6 +28,8 @@ const canonical = canonicalPath
   description={pageDescription}
   canonical={canonical}
   ogImage={ogImage}
+  ogType={ogType}
+  publishedTime={publishedTime}
 />
 <Meta />
 <Fonts />

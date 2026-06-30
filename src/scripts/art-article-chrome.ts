@@ -273,7 +273,7 @@ function initMobileRelated(related: RelatedPost[]) {
     if (item.image) {
       const img = document.createElement("img");
       img.src = item.image;
-      img.alt = "";
+      img.alt = item.title;
       img.loading = "lazy";
       card.appendChild(img);
     }
@@ -323,7 +323,7 @@ function initRelatedRail() {
     if (item.image) {
       const img = document.createElement("img");
       img.src = item.image;
-      img.alt = "";
+      img.alt = item.title;
       img.className = "art-related-rail__thumb";
       img.loading = "lazy";
       img.decoding = "async";

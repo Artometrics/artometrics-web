@@ -6,6 +6,8 @@ interface Props {
   description?: string;
   canonical?: string;
   ogImage?: string;
+  ogType?: "website" | "article";
+  publishedTime?: string;
 }
 
 const {
@@ -13,6 +15,8 @@ const {
   description = "Artometrics — editorial analysis of culture, place, history, persona, and power.",
   canonical = "https://artometrics.com/",
   ogImage = "https://artometrics.com/images/content/2025/10/Artometrics-Icon.png",
+  ogType = "website",
+  publishedTime,
 } = Astro.props;
 
 const siteName = "Artometrics";
@@ -36,8 +40,11 @@ const siteName = "Artometrics";
       },
     ],
     site_name: siteName,
-    type: "website",
+    type: ogType,
     locale: "en_US",
+    ...(publishedTime && ogType === "article"
+      ? { article: { publishedTime } }
+      : {}),
   }}
   twitter={{
     handle: "@artometrics",

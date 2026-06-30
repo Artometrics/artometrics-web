@@ -24,7 +24,9 @@ const authorName = authorSlug
 const allPosts = await getCollection("blog", ({ data }) => !data.draft);
 const allPodcasts = await getCollection("podcast");
 
-const relatedPosts = [];
+const relatedPosts = allPosts.filter(
+  (post) => post.data.author === authorSlug
+);
 
 const relatedPodcasts = allPodcasts.filter(
   (episode) => episode.data.author === authorSlug

@@ -505,17 +505,21 @@ img,
   margin: 2px 0;
 }
 
-/* ── Artometrics wordmark in footer ──────────────────────── */
-.artometrics-article-body body::after{
-  content: 'ARTOMETRICS';
+/* ── Site article footer end mark ─────────────────────────── */
+.art-article-endmark{
   display: block;
+  margin-top: 2.5rem;
   text-align: center;
   font-family: 'DM Sans', sans-serif;
   font-weight: 600;
   font-size: 0.75rem;
-  letter-spacing: 4px;
-  color: var(--art-muted);
-  padding: 3rem 0 2rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--art-muted, #6B6B6B);
+}
+
+.art-article-site-footer .art-share{
+  justify-content: flex-start !important;
 }
 
 /* ── Collapsible Code Blocks ──────────────────────────────── */
@@ -702,21 +706,24 @@ pre:has(> code.sourceCode.sql),
   font-size: 1.05rem !important;
   line-height: 1.85 !important;
   color: #1C1C1E !important;
-  text-align: center !important;
+  text-align: left !important;
   max-width: 42rem !important;
   margin: 0 auto 1.35rem !important;
 }
 .artometrics-article-body main.art-article-main > ul,
-.artometrics-article-body main.art-article-main > ol,
-.artometrics-article-body main.art-article-main li{
-  text-align: center !important;
-  list-style-position: inside !important;
-}
-.artometrics-article-body main.art-article-main > ul,
 .artometrics-article-body main.art-article-main > ol{
+  text-align: left !important;
+  list-style-position: outside !important;
   margin: 0 auto 1.35rem !important;
-  padding-left: 0 !important;
-  max-width: 38rem !important;
+  padding-left: 1.35rem !important;
+  max-width: 42rem !important;
+}
+.artometrics-article-body main.art-article-main > ul li,
+.artometrics-article-body main.art-article-main > ol li,
+.artometrics-article-body main.art-article-main li{
+  text-align: left !important;
+  list-style-position: outside !important;
+  margin-bottom: 0.35rem !important;
 }
 .artometrics-article-body .facts-grid{
   text-align: center !important;
@@ -1443,5 +1450,59 @@ pre:has(> code.sourceCode.sql),
   }
   .artometrics-article-body .art-back-top {
     bottom: 4.5rem;
+  }
+}
+
+/* ── Print stylesheet ─────────────────────────────────────── */
+@media print {
+  #navigation,
+  #art-progress-bar,
+  #art-sidebar-btn,
+  #art-mobile-toc,
+  .art-mobile-toc-btn,
+  .art-mobile-related,
+  .art-related-rail,
+  .art-back-top,
+  .art-article-site-footer .art-share,
+  footer,
+  .site-nav {
+    display: none !important;
+  }
+
+  body {
+    background: #fff !important;
+    color: #000 !important;
+  }
+
+  .artometrics-article-body main.art-article-main p,
+  .artometrics-article-body .art-p {
+    max-width: none !important;
+    font-size: 11pt !important;
+    line-height: 1.55 !important;
+  }
+
+  .artometrics-article-body nav#TOC {
+    display: none !important;
+  }
+
+  .artometrics-article-body #quarto-content {
+    display: block !important;
+  }
+
+  .art-chart-live,
+  .art-chart {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 9pt;
+    color: #555;
+  }
+
+  a[href^="/"]::after,
+  a[href^="#"]::after {
+    content: "";
   }
 }

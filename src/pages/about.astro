@@ -2,50 +2,73 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Text from "@/components/fundations/elements/Text.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+import Breadcrumbs from "@/components/blog/Breadcrumbs.astro";
 ---
 
-<BaseLayout pageTitle="About — Artometrics">
+<BaseLayout
+  pageTitle="About — Artometrics"
+  pageDescription="Artometrics publishes data-driven reports on culture, place, history, persona, and power."
+  canonicalPath="/about"
+>
   <section>
-    <Wrapper variant="standard" class="py-24">
-      <Text
-        tag="h1"
-        variant="displayMD"
-        class="font-serif font-light text-base-900 mb-12"
-      >
-        About this site
-      </Text>
-      <Wrapper variant="prose" class="max-w-2xl">
-        <p>
-          ARTOMETRICS is an independent publication launched in October 2025 by
-          KSM. If you subscribe today, you'll get full access to the website as
-          well as email newsletters about new content when it's available. Your
-          subscription makes this site possible, and allows ARTOMETRICS to
-          continue to exist. Thank you!
-        </p>
-        <h3>Access all areas</h3>
-        <p>
-          By signing up, you'll get access to the full archive of everything
-          that's been published before and everything that's still to come. Your
-          very own private library.
-        </p>
-        <h3>Fresh content, delivered</h3>
-        <p>
-          Stay up to date with new content sent straight to your inbox! No more
-          worrying about whether you missed something because of a pesky
-          algorithm or news feed.
-        </p>
-        <h3>Meet people like you</h3>
-        <p>
-          Join a community of other subscribers who share the same interests.
-        </p>
-        <hr />
-        <h3>Start your own thing</h3>
-        <p>
-          Enjoying the experience? Get started for free and set up your very own
-          subscription business using <a href="https://ghost.org">Ghost</a>, the
-          same platform that powers this website.
-        </p>
-      </Wrapper>
+    <Wrapper variant="standard" class="py-16 md:py-24">
+      <Breadcrumbs
+        items={[
+          { label: "Home", href: "/" },
+          { label: "About" },
+        ]}
+        class="mb-8"
+      />
+      <div class="mx-auto max-w-2xl">
+        <Text tag="p" variant="textXS" class="uppercase tracking-[0.2em] text-accent-700">
+          About
+        </Text>
+        <Text
+          tag="h1"
+          variant="displayMD"
+          class="mt-3 font-serif font-light leading-tight text-base-900"
+        >
+          The Artometrics editorial desk
+        </Text>
+        <div class="mt-8 space-y-5 text-base-600 leading-relaxed">
+          <p>
+            Artometrics is an independent publication that treats culture like data — anime catalogs,
+            franchise economics, civilizational cycles, and the institutions that shape creative markets.
+            Every report pairs editorial judgment with reproducible charts and public datasets.
+          </p>
+          <p>
+            The site is organized into five desks — <strong>Culture</strong>, <strong>Atlas</strong>,
+            <strong>History</strong>, <strong>Persona</strong>, and <strong>Power</strong> — each with its
+            own archive of long-form investigations. The podcast extends those themes through interviews
+            with analysts, founders, and historians.
+          </p>
+          <p>
+            Reports are built on community datasets (including TidyTuesday releases), open APIs, and
+            primary sources cited in every article. We publish limitations alongside findings because
+            measured uncertainty is part of the story.
+          </p>
+        </div>
+        <div class="mt-10 flex flex-wrap gap-3 border-t border-base-200 pt-8">
+          <a
+            href="/blog/"
+            class="inline-flex items-center rounded-sm bg-base-900 px-5 py-2.5 text-xs font-semibold uppercase tracking-widest text-white transition-colors hover:bg-accent-800"
+          >
+            Browse reports
+          </a>
+          <a
+            href="/podcast/"
+            class="inline-flex items-center rounded-sm border border-base-300 px-5 py-2.5 text-xs font-semibold uppercase tracking-widest text-base-800 transition-colors hover:border-accent-400"
+          >
+            Listen to podcast
+          </a>
+          <a
+            href="/rss.xml"
+            class="inline-flex items-center rounded-sm border border-base-300 px-5 py-2.5 text-xs font-semibold uppercase tracking-widest text-base-800 transition-colors hover:border-accent-400"
+          >
+            RSS feed
+          </a>
+        </div>
+      </div>
     </Wrapper>
   </section>
 </BaseLayout>

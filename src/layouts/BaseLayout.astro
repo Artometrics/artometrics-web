@@ -13,6 +13,8 @@ interface Props {
   pageDescription?: string;
   canonicalPath?: string;
   ogImage?: string;
+  ogType?: "website" | "article";
+  publishedTime?: string;
 }
 
 const {
@@ -22,6 +24,8 @@ const {
   pageDescription,
   canonicalPath,
   ogImage,
+  ogType,
+  publishedTime,
 } = Astro.props;
 
 const resolvedTitle = pageTitle ?? "Artometrics";
@@ -34,6 +38,8 @@ const resolvedTitle = pageTitle ?? "Artometrics";
       pageDescription={pageDescription}
       canonicalPath={canonicalPath}
       ogImage={ogImage}
+      ogType={ogType}
+      publishedTime={publishedTime}
     />
     <slot name="head" />
   </head>
