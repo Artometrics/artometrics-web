@@ -2,7 +2,7 @@
 title: "AIRLINE SAFETY: The Artometrics of Airline Safety"
 slug: airline-safety
 pubDate: 2026-06-15
-description: "This report analyzes the TidyTuesday 2018-08-07 release on Airline Safety — 336 rows after cleaning and merge. The question is not whether the topic matters, but what the distribution..."
+description: "This report analyzes the TidyTuesday 2018-08-07 release on Airline Safety — 336 rows after cleaning and merge. Which carriers show the worst safety records in this extract?"
 heroImage: /images/content/articles/airline-safety/hero.png
 tags: [atlas, history]
 draft: false
@@ -13,11 +13,11 @@ draft: false
   <ul>
   <li><a href="#fast-facts" id="toc-fast-facts">FAST FACTS</a></li>
   <li><a href="#dataset-context" id="toc-dataset-context">DATASET CONTEXT</a></li>
-  <li><a href="#chart-1-landscape" id="toc-chart-1-landscape">CHART 1 — LANDSCAPE</a></li>
+  <li><a href="#chart-1-breakdown" id="toc-chart-1-breakdown">CHART 1 — BREAKDOWN</a></li>
+  <li><a href="#chart-2-leaders" id="toc-chart-2-leaders">CHART 2 — LEADERS</a></li>
   <li><a href="#chart-3-distribution" id="toc-chart-3-distribution">CHART 3 — DISTRIBUTION</a></li>
-  <li><a href="#chart-4-leaders" id="toc-chart-4-leaders">CHART 4 — LEADERS</a></li>
   <li><a href="#chart-5-relationship" id="toc-chart-5-relationship">CHART 5 — RELATIONSHIP</a></li>
-  <li><a href="#chart-pad-1" id="toc-chart-pad-1">CHART 5 — SPREAD</a></li>
+  <li><a href="#chart-spread" id="toc-chart-spread">CHART 5 — SPREAD</a></li>
   <li><a href="#limitations" id="toc-limitations">LIMITATIONS</a></li>
   <li><a href="#conclusion" id="toc-conclusion">CONCLUSION</a></li>
   <li><a href="#references" id="toc-references">REFERENCES</a></li>
@@ -25,58 +25,58 @@ draft: false
   </ul>
 </nav>
 <main class="art-article-main">
-<p class="art-p">This report analyzes the TidyTuesday <strong>2018-08-07</strong> release on <strong>Airline Safety</strong> — <strong>336</strong> rows after cleaning and merge. The question is not whether the topic matters, but what the distribution looks like when you stop quoting anecdotes and start counting.</p>
-<p class="art-p">Five charts track <strong>Avail seat km per week</strong> across time, category, and named entities. Where a companion file exists in the repo, it is joined before analysis so reception, geography, or metadata columns are not left on the table.</p>
+<p class="art-p">This report analyzes the TidyTuesday <strong>2018-08-07</strong> release on <strong>Airline Safety</strong> — <strong>336</strong> rows after cleaning and merge. Which carriers show the worst safety records in this extract?</p>
+<p class="art-p">Five charts track <strong>Avail seat km per week</strong> across time, category, and named entities — trend, leaders, distribution, tiers, and relationships. Where companion files exist in the repo, they are joined before analysis so reception, geography, or metadata columns are not left on the table.</p>
 <h2 id="fast-facts" class="anchored">FAST FACTS</h2>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">336</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">802,908,893</span><span class="fact-label">Median Avail seat km per week</span></div>
   <div class="fact-box"><span class="fact-number">7,139,291,291</span><span class="fact-label">Highest observed Avail seat km per week</span></div>
   <div class="fact-box"><span class="fact-number">United / Continental*</span><span class="fact-label">Top Airline by Avail seat km per week</span></div>
-  <div class="fact-box"><span class="fact-number">85_99</span><span class="fact-label">Most common Year range</span></div>
+  <div class="fact-box"><span class="fact-number">incidents</span><span class="fact-label">Most common Type of event</span></div>
 </div>
 <h2 id="dataset-context" class="anchored">DATASET CONTEXT</h2>
 <p>The source is the TidyTuesday release from <strong>2018-08-07</strong> (R for Data Science community). This working file contains <strong>336</strong> rows and <strong>5</strong> columns after merging all available CSV/XLSX tables in the week folder.</p>
 <p>Charts are exported as Plotly JSON with PNG fallbacks. Medians are used for robustness where distributions skew. Index-style fields (row numbers, sequential IDs) are excluded from metric selection.</p>
-<h2 id="chart-1-landscape" class="anchored">CHART 1 — LANDSCAPE</h2>
+<h2 id="chart-1-breakdown" class="anchored">CHART 1 — BREAKDOWN</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/airline-safety/charts/chart1_landscape.plotly.json" data-fallback="/images/content/articles/airline-safety/charts/chart1_landscape.png" role="img" aria-label="Year range Mix"></div>
-  <figcaption class="art-chart-caption">Year range Mix</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/airline-safety/charts/chart1_breakdown.plotly.json" data-fallback="/images/content/articles/airline-safety/charts/chart1_breakdown.png" role="img" aria-label="Avail seat km per week by Type of event"></div>
+  <figcaption class="art-chart-caption">Avail seat km per week by Type of event</figcaption>
 </figure>
-<p class="art-p">**00_14** dominates with **168** records — the structural center of gravity.</p>
-<p class="art-p">Beyond the top ten sit **0** additional year range buckets in the long tail.</p>
-<h2 id="chart-3-distribution" class="anchored">CHART 3 — DISTRIBUTION</h2>
+<p class="art-p"><strong>fatal_accidents</strong> posts the highest median avail seat km per week (<strong>802,908,893</strong>); <strong>incidents</strong> trails at <strong>802,908,893</strong>.</p>
+<p class="art-p">Category medians separate structural tiers faster than row-level anecdotes.</p>
+<h2 id="chart-2-leaders" class="anchored">CHART 2 — LEADERS</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/airline-safety/charts/chart3_distribution.plotly.json" data-fallback="/images/content/articles/airline-safety/charts/chart3_distribution.png" role="img" aria-label="Avail seat km per week by Year range"></div>
-  <figcaption class="art-chart-caption">Avail seat km per week by Year range</figcaption>
-</figure>
-<p class="art-p">Category boxes reveal whether avail seat km per week consensus is shared or contested across tiers.</p>
-<p class="art-p">Wide whiskers flag categories where outliers — not averages — drive reputation.</p>
-<h2 id="chart-4-leaders" class="anchored">CHART 4 — LEADERS</h2>
-<figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/airline-safety/charts/chart4_leaders.plotly.json" data-fallback="/images/content/articles/airline-safety/charts/chart4_leaders.png" role="img" aria-label="Top Airline"></div>
+  <div class="art-chart-live" data-chart="/data/articles/airline-safety/charts/chart2_leaders.plotly.json" data-fallback="/images/content/articles/airline-safety/charts/chart2_leaders.png" role="img" aria-label="Top Airline"></div>
   <figcaption class="art-chart-caption">Top Airline</figcaption>
 </figure>
-<p class="art-p">**United / Continental*** leads at **7,139,291,291** — **3,091,881,806** marks the median among the top dozen.</p>
-<p class="art-p">Head-of-field concentration is where brand, quality, or scale visibly separates from the pack.</p>
+<p class="art-p"><strong>United / Continental</strong>* leads at <strong>7,139,291,291</strong> — <strong>3,091,881,806</strong> marks the median among the top dozen.</p>
+<p class="art-p">Head-of-field concentration is where quality, scale, or brand visibly separates from the pack.</p>
+<h2 id="chart-3-distribution" class="anchored">CHART 3 — DISTRIBUTION</h2>
+<figure class="art-chart">
+  <div class="art-chart-live" data-chart="/data/articles/airline-safety/charts/chart3_distribution.plotly.json" data-fallback="/images/content/articles/airline-safety/charts/chart3_distribution.png" role="img" aria-label="Avail seat km per week by Type of event"></div>
+  <figcaption class="art-chart-caption">Avail seat km per week by Type of event</figcaption>
+</figure>
+<p class="art-p">Category boxes reveal whether avail seat km per week consensus is shared or contested across tiers.</p>
+<p class="art-p">Wide whiskers flag segments where outliers — not averages — drive reputation.</p>
 <h2 id="chart-5-relationship" class="anchored">CHART 5 — RELATIONSHIP</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/airline-safety/charts/chart5_scatter.plotly.json" data-fallback="/images/content/articles/airline-safety/charts/chart5_scatter.png" role="img" aria-label="Avail seat km per week vs N events"></div>
   <figcaption class="art-chart-caption">Avail seat km per week vs N events</figcaption>
 </figure>
-<p class="art-p">Joint plot of **avail seat km per week** and **n events** surfaces clusters the averages erase.</p>
+<p class="art-p">Joint plot of <strong>avail seat km per week</strong> and <strong>n events</strong> surfaces clusters the averages erase.</p>
 <p class="art-p">Outlying points are candidates for follow-up — they are the archetypes, not the noise.</p>
-<h2 id="chart-pad-1" class="anchored">CHART 5 — SPREAD</h2>
+<h2 id="chart-spread" class="anchored">CHART 5 — SPREAD</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/airline-safety/charts/chart_pad_1.plotly.json" data-fallback="/images/content/articles/airline-safety/charts/chart_pad_1.png" role="img" aria-label="Avail seat km per week Spread"></div>
+  <div class="art-chart-live" data-chart="/data/articles/airline-safety/charts/chart_spread.plotly.json" data-fallback="/images/content/articles/airline-safety/charts/chart_spread.png" role="img" aria-label="Avail seat km per week Spread"></div>
   <figcaption class="art-chart-caption">Avail seat km per week Spread</figcaption>
 </figure>
-<p class="art-p">The middle half runs **474,036,223** to **1,847,239,083**.</p>
+<p class="art-p">The middle half runs <strong>474,036,223</strong> to <strong>1,847,239,083</strong>.</p>
 <p class="art-p">Tight boxes mean consensus; long whiskers mean extremes own the narrative.</p>
 <h2 id="limitations" class="anchored">LIMITATIONS</h2>
-<p>Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p><p>Findings describe the file on hand — treat them as structural signals for editorial follow-up, not exhaustive truth about the full domain.</p>
+<p>Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p><p>Findings describe the file on hand — treat them as structural signals about <strong>Airline Safety</strong>, not exhaustive truth about the full domain.</p>
 <h2 id="conclusion" class="anchored">CONCLUSION</h2>
-<p>Measured end to end, <strong>Airline Safety</strong> rewards counting: the head, the tail, and the time trend rarely agree.</p><p>That tension is the Artometrics mandate — data does not replace judgment, it disciplines it.</p>
+<p>Measured end to end, <strong>Airline Safety</strong> rewards counting: the leaders, the long tail, and the time trend rarely tell the same story about avail seat km per week.</p><p>That tension is the Artometrics mandate — data does not replace judgment, it disciplines it.</p>
 <h2 id="references" class="anchored">REFERENCES</h2>
 <p>Data Science Learning Community. (2018). <em>TidyTuesday: Airline Safety</em>. <a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2018/2018-08-07/week19_airline_safety.csv" target="_blank" rel="noopener noreferrer">https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2018/2018-08-07/week19_airline_safety.csv</a></p>
 <h2 id="editors-note" class="anchored">EDITOR'S NOTE</h2>

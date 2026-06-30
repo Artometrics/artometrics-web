@@ -2,7 +2,7 @@
 title: "VIDEO GAMES: The Artometrics of Video Games"
 slug: video-games-sliced
 pubDate: 2026-06-15
-description: "This report analyzes the TidyTuesday 2021-03-16 release on Video Games — 12 rows after cleaning and merge. The question is not whether the topic matters, but what the distribution looks..."
+description: "This report analyzes the TidyTuesday 2021-03-16 release on Video Games — 83,631 rows after cleaning and merge. Did critical acclaim correlate with commercial success in this slice of..."
 heroImage: /images/content/articles/video-games-sliced/hero.png
 tags: [culture]
 draft: false
@@ -13,10 +13,10 @@ draft: false
   <ul>
   <li><a href="#fast-facts" id="toc-fast-facts">FAST FACTS</a></li>
   <li><a href="#dataset-context" id="toc-dataset-context">DATASET CONTEXT</a></li>
-  <li><a href="#chart-1-landscape" id="toc-chart-1-landscape">CHART 1 — LANDSCAPE</a></li>
-  <li><a href="#chart-2-timeline" id="toc-chart-2-timeline">CHART 2 — TIMELINE</a></li>
+  <li><a href="#chart-1-trend" id="toc-chart-1-trend">CHART 1 — TREND</a></li>
+  <li><a href="#chart-2-leaders" id="toc-chart-2-leaders">CHART 2 — LEADERS</a></li>
   <li><a href="#chart-3-distribution" id="toc-chart-3-distribution">CHART 3 — DISTRIBUTION</a></li>
-  <li><a href="#chart-4-leaders" id="toc-chart-4-leaders">CHART 4 — LEADERS</a></li>
+  <li><a href="#chart-4-category-compare" id="toc-chart-4-category-compare">CHART 4 — TIERS</a></li>
   <li><a href="#chart-5-relationship" id="toc-chart-5-relationship">CHART 5 — RELATIONSHIP</a></li>
   <li><a href="#limitations" id="toc-limitations">LIMITATIONS</a></li>
   <li><a href="#conclusion" id="toc-conclusion">CONCLUSION</a></li>
@@ -25,59 +25,59 @@ draft: false
   </ul>
 </nav>
 <main class="art-article-main">
-<p class="art-p">This report analyzes the TidyTuesday <strong>2021-03-16</strong> release on <strong>Video Games</strong> — <strong>12</strong> rows after cleaning and merge. The question is not whether the topic matters, but what the distribution looks like when you stop quoting anecdotes and start counting.</p>
-<p class="art-p">Five charts track <strong>Avg</strong> across time, category, and named entities. Where a companion file exists in the repo, it is joined before analysis so reception, geography, or metadata columns are not left on the table.</p>
+<p class="art-p">This report analyzes the TidyTuesday <strong>2021-03-16</strong> release on <strong>Video Games</strong> — <strong>83,631</strong> rows after cleaning and merge. Did critical acclaim correlate with commercial success in this slice of gaming history?</p>
+<p class="art-p">Five charts track <strong>Avg</strong> across time, category, and named entities — trend, leaders, distribution, tiers, and relationships. Where companion files exist in the repo, they are joined before analysis so reception, geography, or metadata columns are not left on the table.</p>
 <h2 id="fast-facts" class="anchored">FAST FACTS</h2>
 <div class="facts-grid">
-  <div class="fact-box"><span class="fact-number">12</span><span class="fact-label">Records in the working dataset</span></div>
-  <div class="fact-box"><span class="fact-number">671,340</span><span class="fact-label">Median Avg</span></div>
-  <div class="fact-box"><span class="fact-number">857,604</span><span class="fact-label">Highest observed Avg</span></div>
-  <div class="fact-box"><span class="fact-number">April</span><span class="fact-label">Top Month by Avg</span></div>
-  <div class="fact-box"><span class="fact-number">2020–2021</span><span class="fact-label">Year span covered in the file</span></div>
-  <div class="fact-box"><span class="fact-number">65.9567%</span><span class="fact-label">Most common Avg peak perc</span></div>
+  <div class="fact-box"><span class="fact-number">83,631</span><span class="fact-label">Records in the working dataset</span></div>
+  <div class="fact-box"><span class="fact-number">203</span><span class="fact-label">Median Avg</span></div>
+  <div class="fact-box"><span class="fact-number">1,584,887</span><span class="fact-label">Highest observed Avg</span></div>
+  <div class="fact-box"><span class="fact-number">PLAYERUNKNOWN'S BATTLEGROUND</span><span class="fact-label">Top Gamename by Avg</span></div>
+  <div class="fact-box"><span class="fact-number">2012–2021</span><span class="fact-label">Year span covered in the file</span></div>
+  <div class="fact-box"><span class="fact-number">February</span><span class="fact-label">Most common Month</span></div>
 </div>
 <h2 id="dataset-context" class="anchored">DATASET CONTEXT</h2>
-<p>The source is the TidyTuesday release from <strong>2021-03-16</strong> (R for Data Science community). This working file contains <strong>12</strong> rows and <strong>14</strong> columns after merging all available CSV/XLSX tables in the week folder.</p>
+<p>The source is the TidyTuesday release from <strong>2021-03-16</strong> (R for Data Science community). This working file contains <strong>83,631</strong> rows and <strong>8</strong> columns after merging all available CSV/XLSX tables in the week folder.</p>
 <p>Charts are exported as Plotly JSON with PNG fallbacks. Medians are used for robustness where distributions skew. Index-style fields (row numbers, sequential IDs) are excluded from metric selection.</p>
-<h2 id="chart-1-landscape" class="anchored">CHART 1 — LANDSCAPE</h2>
+<h2 id="chart-1-trend" class="anchored">CHART 1 — TREND</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/video-games-sliced/charts/chart1_landscape.plotly.json" data-fallback="/images/content/articles/video-games-sliced/charts/chart1_landscape.png" role="img" aria-label="Avg peak perc Mix"></div>
-  <figcaption class="art-chart-caption">Avg peak perc Mix</figcaption>
-</figure>
-<p class="art-p">**64.4228%** dominates with **1** records — the structural center of gravity.</p>
-<p class="art-p">Beyond the top ten sit **2** additional avg peak perc buckets in the long tail.</p>
-<h2 id="chart-2-timeline" class="anchored">CHART 2 — TIMELINE</h2>
-<figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/video-games-sliced/charts/chart2_timeline.plotly.json" data-fallback="/images/content/articles/video-games-sliced/charts/chart2_timeline.png" role="img" aria-label="Median Avg Over Time"></div>
+  <div class="art-chart-live" data-chart="/data/articles/video-games-sliced/charts/chart1_trend.plotly.json" data-fallback="/images/content/articles/video-games-sliced/charts/chart1_trend.png" role="img" aria-label="Median Avg Over Time"></div>
   <figcaption class="art-chart-caption">Median Avg Over Time</figcaption>
 </figure>
-<p class="art-p">Median avg is **rising** from **669,894** to **742,111**.</p>
-<p class="art-p">Annual medians filter noise and show the slope the raw rows hide.</p>
+<p class="art-p">Median avg is <strong>rising</strong> from <strong>212</strong> in the opening period to <strong>309</strong> at the close.</p>
+<p class="art-p">Annual medians filter one-off spikes so the structural slope — not viral outliers — drives the story.</p>
+<h2 id="chart-2-leaders" class="anchored">CHART 2 — LEADERS</h2>
+<figure class="art-chart">
+  <div class="art-chart-live" data-chart="/data/articles/video-games-sliced/charts/chart2_leaders.plotly.json" data-fallback="/images/content/articles/video-games-sliced/charts/chart2_leaders.png" role="img" aria-label="Top Gamename"></div>
+  <figcaption class="art-chart-caption">Top Gamename</figcaption>
+</figure>
+<p class="art-p"><strong>Dota 2</strong> leads at <strong>475,924</strong> — <strong>64,656</strong> marks the median among the top dozen.</p>
+<p class="art-p">Head-of-field concentration is where quality, scale, or brand visibly separates from the pack.</p>
 <h2 id="chart-3-distribution" class="anchored">CHART 3 — DISTRIBUTION</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/video-games-sliced/charts/chart3_distribution.plotly.json" data-fallback="/images/content/articles/video-games-sliced/charts/chart3_distribution.png" role="img" aria-label="Avg Distribution"></div>
-  <figcaption class="art-chart-caption">Avg Distribution</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/video-games-sliced/charts/chart3_distribution.plotly.json" data-fallback="/images/content/articles/video-games-sliced/charts/chart3_distribution.png" role="img" aria-label="Avg by Month"></div>
+  <figcaption class="art-chart-caption">Avg by Month</figcaption>
 </figure>
-<p class="art-p">Median **671,340** vs mean **693,853** — the shape is relatively symmetric.</p>
-<p class="art-p">The top decile begins at **766,237**; that tail is where franchise-defining cases live.</p>
-<h2 id="chart-4-leaders" class="anchored">CHART 4 — LEADERS</h2>
+<p class="art-p">Category boxes reveal whether avg consensus is shared or contested across tiers.</p>
+<p class="art-p">Wide whiskers flag segments where outliers — not averages — drive reputation.</p>
+<h2 id="chart-4-category-compare" class="anchored">CHART 4 — TIERS</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/video-games-sliced/charts/chart4_leaders.plotly.json" data-fallback="/images/content/articles/video-games-sliced/charts/chart4_leaders.png" role="img" aria-label="Top Month"></div>
-  <figcaption class="art-chart-caption">Top Month</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/video-games-sliced/charts/chart4_category_compare.plotly.json" data-fallback="/images/content/articles/video-games-sliced/charts/chart4_category_compare.png" role="img" aria-label="Avg by Month"></div>
+  <figcaption class="art-chart-caption">Avg by Month</figcaption>
 </figure>
-<p class="art-p">**April** leads at **857,604** — **671,340** marks the median among the top dozen.</p>
-<p class="art-p">Head-of-field concentration is where brand, quality, or scale visibly separates from the pack.</p>
+<p class="art-p"><strong>January</strong> leads the median table at <strong>240</strong>; the gap to <strong>October</strong> is <strong>60.2</strong> points.</p>
+<p class="art-p">Tier separation matters more than means when distributions skew hard.</p>
 <h2 id="chart-5-relationship" class="anchored">CHART 5 — RELATIONSHIP</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/video-games-sliced/charts/chart5_scatter.plotly.json" data-fallback="/images/content/articles/video-games-sliced/charts/chart5_scatter.png" role="img" aria-label="Avg vs Gain"></div>
   <figcaption class="art-chart-caption">Avg vs Gain</figcaption>
 </figure>
-<p class="art-p">Joint plot of **avg** and **gain** surfaces clusters the averages erase.</p>
+<p class="art-p">Joint plot of <strong>avg</strong> and <strong>gain</strong> surfaces clusters the averages erase.</p>
 <p class="art-p">Outlying points are candidates for follow-up — they are the archetypes, not the noise.</p>
 <h2 id="limitations" class="anchored">LIMITATIONS</h2>
-<p>Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p><p>Findings describe the file on hand — treat them as structural signals for editorial follow-up, not exhaustive truth about the full domain.</p>
+<p>Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p><p>Findings describe the file on hand — treat them as structural signals about <strong>Video Games</strong>, not exhaustive truth about the full domain.</p>
 <h2 id="conclusion" class="anchored">CONCLUSION</h2>
-<p>Measured end to end, <strong>Video Games</strong> rewards counting: the head, the tail, and the time trend rarely agree.</p><p>That tension is the Artometrics mandate — data does not replace judgment, it disciplines it.</p>
+<p>Measured end to end, <strong>Video Games</strong> rewards counting: the leaders, the long tail, and the time trend rarely tell the same story about avg.</p><p>That tension is the Artometrics mandate — data does not replace judgment, it disciplines it.</p>
 <h2 id="references" class="anchored">REFERENCES</h2>
 <p>Data Science Learning Community. (2021). <em>TidyTuesday: Video Games</em>. <a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2021/2021-03-16/sliced-tidytuesday.csv" target="_blank" rel="noopener noreferrer">https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2021/2021-03-16/sliced-tidytuesday.csv</a></p>
 <h2 id="editors-note" class="anchored">EDITOR'S NOTE</h2>

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Artometrics article engine v2 — smarter metrics, merges, charts, and prose."""
+"""Artometrics article engine v4 — dataset profiles, five-chart blueprint, editorial prose."""
 
 from __future__ import annotations
 
@@ -19,6 +19,8 @@ import pandas as pd
 import plotly.graph_objects as go
 import plotly.io as pio
 import requests
+
+from dataset_profiles import get_profile
 
 ROOT = Path(__file__).resolve().parents[1]
 BLOG_DIR = ROOT / "src/content/blog"
@@ -159,7 +161,71 @@ BANNED_METRIC_NAMES = {
     "leaid",
     "x1",
     "co_per_rol",
+    "reign_start_y",
+    "reign_end_y",
+    "routeid",
+    "route_id",
+    "leaid",
+    "fips",
+    "zip",
+    "postal",
+    "latitude",
+    "longitude",
+    "lat",
+    "lon",
+    "status",
+    "adult",
+    "available_globally",
+    "rcid",
+    "departure_code",
+    "aian",
+    "nhpi",
+    "black",
+    "white",
+    "asian",
+    "hispanic",
+    "two_or_more",
 }
+
+CATEGORY_BANNED = {
+    "status",
+    "adult",
+    "id",
+    "index",
+    "available_globally",
+    "poster_path",
+    "backdrop_path",
+    "original_language",
+    "overview",
+    "tagline",
+}
+
+CATEGORY_PRIORITY = (
+    "genre",
+    "genre_names",
+    "primary_genre",
+    "type",
+    "country",
+    "dynasty",
+    "era",
+    "family",
+    "publisher",
+    "network",
+    "theme",
+    "format",
+    "cuisine",
+    "region",
+    "state",
+    "industry",
+    "major_category",
+    "broad_field",
+    "purpose",
+    "device",
+    "departure_type",
+    "category",
+    "artist",
+    "artist_name",
+)
 
 LABEL_BANNED = {"id", "index", "text", "line", "answer", "question"}
 
@@ -182,6 +248,13 @@ class DatasetSpec:
     def __post_init__(self) -> None:
         if self.tags is None:
             self.tags = ["culture"]
+
+
+def format_prose(text: str) -> str:
+    """Convert markdown emphasis in generated prose to HTML."""
+    text = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", text)
+    text = re.sub(r"(?<!\*)\*(?!\*)(.+?)(?<!\*)\*(?!\*)", r"<em>\1</em>", text)
+    return text
 
 
 def human_label(col: str) -> str:
@@ -207,12 +280,30 @@ def fmt_num(value: Any) -> str:
     return str(value)
 
 
+def coerce_metric_column(df: pd.DataFrame, col: str | None) -> str | None:
+    if not col or col not in df.columns:
+        return None
+    if pd.api.types.is_numeric_dtype(df[col]):
+        return col
+    coerced = pd.to_numeric(df[col], errors="coerce")
+    if coerced.notna().sum() >= max(5, int(len(df) * 0.05)):
+        df[col] = coerced
+        return col
+    stripped = df[col].astype(str).str.replace(r"[^\d.\-]", "", regex=True)
+    coerced = pd.to_numeric(stripped, errors="coerce")
+    if coerced.notna().sum() >= max(5, int(len(df) * 0.05)):
+        df[col] = coerced
+        return col
+    return None
+
+
 def is_stringish(series: pd.Series) -> bool:
     return not pd.api.types.is_numeric_dtype(series) and not pd.api.types.is_datetime64_any_dtype(series)
 
 
 def clean_df(df: pd.DataFrame) -> pd.DataFrame:
     df = df.copy()
+    df.columns = [str(c).strip() for c in df.columns]
     df = df.loc[:, [c for c in df.columns if not str(c).lower().startswith("unnamed")]]
     df = df.loc[:, ~df.columns.duplicated()]
     return df.dropna(how="all")
@@ -267,19 +358,67 @@ def is_sequential_index(series: pd.Series) -> bool:
     return bool(np.allclose(uniq, np.arange(1, len(uniq) + 1)) or np.allclose(uniq, np.arange(0, len(uniq))))
 
 
+US_STATE_NAMES = {
+    "alabama", "alaska", "arizona", "arkansas", "california", "colorado", "connecticut",
+    "delaware", "florida", "georgia", "hawaii", "idaho", "illinois", "indiana", "iowa",
+    "kansas", "kentucky", "louisiana", "maine", "maryland", "massachusetts", "michigan",
+    "minnesota", "mississippi", "missouri", "montana", "nebraska", "nevada", "new hampshire",
+    "new jersey", "new mexico", "new york", "north carolina", "north dakota", "ohio",
+    "oklahoma", "oregon", "pennsylvania", "puerto rico", "rhode island", "south carolina",
+    "south dakota", "tennessee", "texas", "utah", "vermont", "virginia", "washington",
+    "west virginia", "wisconsin", "wyoming",
+}
+
+
 def is_bad_metric(col: str, series: pd.Series) -> bool:
-    low = str(col).lower()
+    low = str(col).lower().strip().strip('"')
+    if low in US_STATE_NAMES:
+        return True
     if low in BANNED_METRIC_NAMES:
         return True
-    if re.match(r"^\d{4}(-\d{2})?$", low):
+    if re.match(r"^\d{4}(-\d{2})?$", low.strip()):
         return True
     if low.endswith("_id") or low == "id":
+        return True
+    if low.endswith("_y") and ("start" in low or "end" in low or "reign" in low):
+        return True
+    if "route" in low and "id" in low:
         return True
     if is_sequential_index(series):
         return True
     if pd.api.types.is_numeric_dtype(series) and series.nunique(dropna=True) <= 1:
         return True
+    if pd.api.types.is_numeric_dtype(series):
+        uniq = series.dropna().nunique()
+        if uniq <= 3 and low not in {"rank", "rating", "stars", "points", "score"}:
+            return True
     return False
+
+
+def pick_category_column(df: pd.DataFrame, label: str | None) -> str | None:
+    candidates: list[tuple[int, str]] = []
+    for col in df.columns:
+        if col == label or str(col).startswith("_art_"):
+            continue
+        low = str(col).lower()
+        if low in CATEGORY_BANNED:
+            continue
+        if not is_stringish(df[col]):
+            continue
+        n = df[col].nunique(dropna=True)
+        if n < 2 or n > 25:
+            continue
+        score = 0
+        for i, word in enumerate(CATEGORY_PRIORITY):
+            if word in low:
+                score += 200 - i
+        if n <= 12:
+            score += 10
+        candidates.append((score, col))
+    if not candidates:
+        return None
+    candidates.sort(reverse=True)
+    return candidates[0][1]
 
 
 def pick_columns(df: pd.DataFrame) -> dict[str, Any]:
@@ -376,19 +515,16 @@ def pick_columns(df: pd.DataFrame) -> dict[str, Any]:
                 df["_art_year"] = coerced
                 year_col = "_art_year"
 
-    category = next(
-        (
-            c
-            for c in cols
-            if is_stringish(df[c]) and 1 < df[c].nunique(dropna=True) <= 20 and c != label
-        ),
-        None,
-    )
+    category = pick_category_column(df, label)
     category2 = next(
         (
             c
             for c in cols
-            if is_stringish(df[c]) and 1 < df[c].nunique(dropna=True) <= 12 and c not in {label, category}
+            if c != category
+            and is_stringish(df[c])
+            and 1 < df[c].nunique(dropna=True) <= 12
+            and c != label
+            and str(c).lower() not in CATEGORY_BANNED
         ),
         None,
     )
@@ -500,6 +636,19 @@ def is_label_column(col: str, series: pd.Series) -> bool:
     return is_stringish(series) and series.nunique(dropna=True) > 1
 
 
+def melt_year_range_columns(df: pd.DataFrame, id_col: str | None = None) -> pd.DataFrame | None:
+    year_cols = [c for c in df.columns if re.match(r"^\d{4}-\d{2}$", str(c).strip())]
+    if len(year_cols) < 2:
+        return None
+    id_cols = [id_col] if id_col and id_col in df.columns else [c for c in df.columns if is_stringish(df[c])][:1]
+    if not id_cols:
+        return None
+    melted = df.melt(id_vars=id_cols, value_vars=year_cols, var_name="_art_year", value_name="_art_value")
+    melted["_art_year"] = melted["_art_year"].astype(str).str[:4].astype(float)
+    melted["_art_value"] = pd.to_numeric(melted["_art_value"], errors="coerce")
+    return melted.dropna(subset=["_art_year", "_art_value"])
+
+
 def melt_wide_year_columns(df: pd.DataFrame) -> pd.DataFrame | None:
     year_cols = [c for c in df.columns if re.match(r"^\d{4}$", str(c).strip())]
     if len(year_cols) < 2:
@@ -516,6 +665,14 @@ def melt_wide_year_columns(df: pd.DataFrame) -> pd.DataFrame | None:
 def preprocess_dataset(spec: DatasetSpec, df: pd.DataFrame) -> pd.DataFrame:
     df = df.copy()
     slug = spec.slug
+
+    if slug == "us-tuition":
+        melted = melt_year_range_columns(df, id_col="State")
+        if melted is not None:
+            return melted
+
+    if slug == "horror-movies" and "genre_names" in df.columns:
+        df["primary_genre"] = df["genre_names"].astype(str).str.split(",").str[0].str.strip()
 
     if slug == "roman-emperors":
         df["reign_start_y"] = df["reign_start"].map(parse_year_from_text) if "reign_start" in df.columns else np.nan
@@ -539,6 +696,33 @@ def preprocess_dataset(spec: DatasetSpec, df: pd.DataFrame) -> pd.DataFrame:
     if slug == "sherlock-holmes" and "book" in df.columns:
         df["book"] = df["book"].astype(str)
 
+    if slug == "sherlock-holmes" and "text" in df.columns:
+        df["book"] = df["book"].astype(str)
+        df["word_count"] = df["text"].astype(str).str.split().str.len()
+
+    if slug == "biketown-bikeshare" and "Duration" in df.columns:
+        parts = df["Duration"].astype(str).str.split(":")
+        df["duration_min"] = (
+            pd.to_numeric(parts.str[0], errors="coerce") * 60
+            + pd.to_numeric(parts.str[1], errors="coerce")
+            + pd.to_numeric(parts.str[2], errors="coerce") / 60
+        )
+
+    if slug == "hurricanes-puerto-rico":
+        df.columns = [str(c).strip().strip('"') for c in df.columns]
+        state_cols = [c for c in df.columns if c in ("Texas", "Puerto Rico", "Florida")]
+        if state_cols and "Date" in df.columns:
+            df["Date"] = pd.to_datetime(df["Date"], errors="coerce")
+            melted = df.melt(id_vars=["Date"], value_vars=state_cols, var_name="state", value_name="_art_value")
+            melted["_art_year"] = melted["Date"].dt.year
+            return melted.dropna(subset=["_art_value"])
+
+    if slug == "web-page-metrics" and "date" in df.columns:
+        df["_art_year"] = df["date"].astype(str).str[:4].astype(float)
+
+    if slug == "super-bowl-ads":
+        df = df.loc[:, ~df.columns.duplicated()]
+
     if slug == "project-gutenberg" and "subject" in df.columns:
         df["subject"] = df["subject"].astype(str)
 
@@ -549,6 +733,78 @@ def preprocess_dataset(spec: DatasetSpec, df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
+def apply_profile(spec: DatasetSpec, meta: dict[str, Any], df: pd.DataFrame) -> dict[str, Any]:
+    profile = get_profile(spec.slug)
+    meta = {**meta, "profile": profile}
+    for key in ("metric", "metric2", "label", "category", "year"):
+        col = profile.get(key)
+        if not col:
+            continue
+        if col in df.columns:
+            meta[key] = col
+        elif col == "_art_year" and "_art_year" in df.columns:
+            meta["year"] = "_art_year"
+
+    if meta.get("metric") and meta["metric"] in df.columns and is_bad_metric(str(meta["metric"]), df[meta["metric"]]):
+        meta["metric"] = None
+
+    if meta.get("metric"):
+        coerced = coerce_metric_column(df, meta["metric"])
+        meta["metric"] = coerced if coerced else None
+
+    if meta.get("metric2"):
+        coerced2 = coerce_metric_column(df, meta["metric2"])
+        meta["metric2"] = coerced2 if coerced2 and coerced2 != meta.get("metric") else None
+
+    if not meta.get("metric"):
+        numeric = [
+            c
+            for c in df.columns
+            if pd.api.types.is_numeric_dtype(df[c])
+            and df[c].notna().sum() >= 5
+            and not is_bad_metric(c, df[c])
+            and not str(c).startswith("_art_")
+        ]
+        preferred = profile.get("metric")
+        if preferred and preferred in numeric:
+            meta["metric"] = preferred
+        elif numeric:
+            meta["metric"] = numeric[0]
+
+    if meta.get("metric2"):
+        if meta["metric2"] not in df.columns or meta["metric2"] == meta.get("metric"):
+            meta["metric2"] = None
+        elif is_bad_metric(str(meta["metric2"]), df[meta["metric2"]]):
+            meta["metric2"] = None
+
+    if not meta.get("metric2") and meta.get("metric"):
+        numeric2 = [
+            c
+            for c in df.columns
+            if pd.api.types.is_numeric_dtype(df[c])
+            and c != meta["metric"]
+            and df[c].notna().sum() >= 5
+            and not is_bad_metric(c, df[c])
+            and not str(c).startswith("_art_")
+        ]
+        preferred2 = profile.get("metric2")
+        if preferred2 and preferred2 in numeric2:
+            meta["metric2"] = preferred2
+        elif numeric2:
+            meta["metric2"] = numeric2[0]
+
+    if not meta.get("label"):
+        for col in ("title", "name", "song_name", "book", "subject", "film"):
+            if col in df.columns:
+                meta["label"] = col
+                break
+
+    if not meta.get("category"):
+        meta["category"] = pick_category_column(df, meta.get("label"))
+
+    return meta
+
+
 def safe_merge(left: pd.DataFrame, right: pd.DataFrame, key: str) -> pd.DataFrame:
     left_d = left.drop_duplicates(subset=[key], keep="first")
     right_d = right.drop_duplicates(subset=[key], keep="first")
@@ -556,116 +812,143 @@ def safe_merge(left: pd.DataFrame, right: pd.DataFrame, key: str) -> pd.DataFram
     if overlap < 0.25:
         return left
     merged = left_d.merge(right_d, on=key, how="left", suffixes=("", f"_{key}_r"))
-    if len(merged) < len(left_d) * 0.5 or len(merged) > len(left_d) * 4:
+    if len(merged) < len(left) * 0.5 or len(merged) > len(left) * 4:
         return left
     return merged
 
 
-def ensure_five_charts(
+def finalize_chart_set(
     charts: list[dict[str, Any]],
     df: pd.DataFrame,
     spec: DatasetSpec,
     meta: dict[str, Any],
 ) -> list[dict[str, Any]]:
-    seen = {c["id"] for c in charts}
-    idx = 1
+    """Ensure exactly five distinct charts using meaningful alternates — no filler pads."""
+    seen: set[str] = set()
+    unique: list[dict[str, Any]] = []
+    for ch in charts:
+        if ch["id"] in seen:
+            continue
+        seen.add(ch["id"])
+        unique.append(ch)
+    charts = unique
+
+    metric = meta.get("metric")
     label = meta.get("label")
+    year = meta.get("year")
     category = meta.get("category")
-    extras: list[tuple[str, str]] = []
+    ml = human_label(metric) if metric else "Value"
+    vals = df[metric].dropna() if metric else pd.Series(dtype=float)
 
-    for col in df.columns:
-        if str(col).startswith("_art_"):
-            continue
-        if col in {label, category, meta.get("year"), meta.get("metric"), meta.get("metric2")}:
-            continue
-        if is_stringish(df[col]) and 1 < df[col].nunique(dropna=True) <= 25:
-            extras.append((col, human_label(col)))
+    def add(chart: dict[str, Any] | None) -> None:
+        if chart and chart["id"] not in seen and len(charts) < 5:
+            charts.append(chart)
+            seen.add(chart["id"])
 
-    while len(charts) < 5 and extras:
-        col, hl = extras.pop(0)
-        cid = f"chart_pad_{idx}"
-        if cid in seen:
-            idx += 1
-            continue
-        top = df[col].astype(str).value_counts().head(10).sort_values()
+    if len(charts) < 5 and metric and len(vals) >= 8 and not any(c["id"] == "chart_spread" for c in charts):
+        fig = go.Figure(
+            go.Box(
+                y=vals,
+                marker_color=ART_SECONDARY,
+                line_color=ART_HIGHLIGHT,
+                boxmean="sd",
+                fillcolor="rgba(44, 62, 107, 0.15)",
+            )
+        )
+        finalize(fig, chart_title(f"SPREAD OF {ml.upper()}", "INTERQUARTILE VIEW"), y_title=ml)
+        add(
+            chart_entry(
+                "chart_spread",
+                "chart-spread",
+                f"CHART {len(charts)+1} — SPREAD",
+                f"{ml} Spread",
+                fig,
+                [
+                    f"The middle half runs **{fmt_num(vals.quantile(0.25))}** to **{fmt_num(vals.quantile(0.75))}**.",
+                    "Tight boxes mean consensus; long whiskers mean extremes own the narrative.",
+                ],
+            )
+        )
+
+    if len(charts) < 5 and category and category != label:
+        cat_counts = df[category].astype(str).value_counts().head(10).sort_values()
+        if len(cat_counts) >= 3:
+            fig = go.Figure(
+                go.Bar(
+                    x=cat_counts.values,
+                    y=cat_counts.index.astype(str),
+                    orientation="h",
+                    marker=dict(color=bar_gradient(len(cat_counts)), line=dict(color=ART_DARK, width=0.4)),
+                )
+            )
+            finalize(
+                fig,
+                chart_title(f"VOLUME BY {human_label(category).upper()}", spec.title.split()[0]),
+                x_title="Records",
+            )
+            add(
+                chart_entry(
+                    "chart_volume_mix",
+                    "chart-volume-mix",
+                    f"CHART {len(charts)+1} — VOLUME MIX",
+                    human_label(category),
+                    fig,
+                    [
+                        f"**{cat_counts.index[-1]}** accounts for **{int(cat_counts.iloc[-1]):,}** rows — the catalog's center of gravity.",
+                        f"Long-tail {human_label(category).lower()} buckets still shape aggregate averages.",
+                    ],
+                )
+            )
+
+    if len(charts) < 5 and year and df[year].notna().sum() >= 3:
+        yearly = df.groupby(year).size().reset_index(name="count").sort_values(year)
+        fig = go.Figure(
+            go.Bar(
+                x=yearly[year].astype(str),
+                y=yearly["count"],
+                marker_color=ART_SECONDARY,
+            )
+        )
+        finalize(fig, chart_title("CATALOG GROWTH", "RECORDS BY YEAR"), x_title="Year", y_title="Records")
+        peak = yearly.loc[yearly["count"].idxmax(), year]
+        add(
+            chart_entry(
+                "chart_year_volume",
+                "chart-year-volume",
+                f"CHART {len(charts)+1} — VOLUME",
+                "Records By Year",
+                fig,
+                [
+                    f"Activity peaks in **{peak}** with **{int(yearly['count'].max()):,}** records.",
+                    "Volume curves show when the underlying phenomenon intensified — not just how scores moved.",
+                ],
+            )
+        )
+
+    if len(charts) < 5 and label:
+        top = df[label].astype(str).value_counts().head(10).sort_values()
         fig = go.Figure(
             go.Bar(
                 x=top.values,
-                y=top.index,
+                y=top.index.astype(str),
                 orientation="h",
                 marker=dict(color=bar_gradient(len(top)), line=dict(color=ART_DARK, width=0.4)),
             )
         )
-        finalize(fig, chart_title(f"TOP {hl.upper()}", spec.title.split()[0]), x_title="Count")
-        charts.append(
+        finalize(fig, chart_title(f"TOP {human_label(label).upper()}", "BY FREQUENCY"), x_title="Records")
+        add(
             chart_entry(
-                cid,
-                f"chart-pad-{idx}",
-                f"CHART {len(charts)+1} — {hl.upper()}",
-                hl,
+                "chart_top_names",
+                "chart-top-names",
+                f"CHART {len(charts)+1} — NAMES",
+                f"Top {human_label(label)}",
                 fig,
                 [
-                    f"**{top.index[-1]}** leads with **{int(top.iloc[-1]):,}** records in {hl.lower()}.",
-                    "Secondary breakdowns expose structure when the primary score column is absent.",
+                    f"**{top.index[-1]}** appears **{int(top.iloc[-1]):,}** times — the most repeated entry.",
+                    "Frequency leaders reveal franchise depth when numeric scores are sparse.",
                 ],
             )
         )
-        seen.add(cid)
-        idx += 1
-
-    if len(charts) < 5 and label:
-        freq = df[label].astype(str).value_counts()
-        cid = f"chart_pad_hist_{idx}"
-        if cid not in seen and len(freq) >= 3:
-            fig = go.Figure(
-                go.Histogram(
-                    x=freq.values,
-                    nbinsx=min(16, max(4, int(freq.nunique() / 2))),
-                    marker_color=ART_SECONDARY,
-                )
-            )
-            finalize(fig, chart_title("APPEARANCE FREQUENCY", human_label(label)), x_title="Records per entity")
-            charts.append(
-                chart_entry(
-                    cid,
-                    f"chart-pad-hist-{idx}",
-                    f"CHART {len(charts)+1} — FREQUENCY",
-                    "Frequency",
-                    fig,
-                    [
-                        f"Most {human_label(label).lower()} entities appear once; repeat entries signal franchise depth.",
-                        "Power-law tails are common in credits, catalogs, and guest lists.",
-                    ],
-                )
-            )
-            seen.add(cid)
-
-    if len(charts) < 5 and label:
-        top = df[label].astype(str).value_counts().head(8).sort_values()
-        cid = f"chart_overview_{idx}"
-        if cid not in seen:
-            fig = go.Figure(
-                go.Bar(
-                    x=top.values,
-                    y=top.index,
-                    orientation="h",
-                    marker=dict(color=bar_gradient(len(top)), line=dict(color=ART_DARK, width=0.4)),
-                )
-            )
-            finalize(fig, chart_title(f"OVERVIEW — {human_label(label).upper()}", spec.title), x_title="Count")
-            charts.append(
-                chart_entry(
-                    cid,
-                    "chart-overview",
-                    f"CHART {len(charts)+1} — OVERVIEW",
-                    f"Top {human_label(label)}",
-                    fig,
-                    [
-                        f"**{top.index[-1]}** anchors the distribution with **{int(top.iloc[-1]):,}** records.",
-                        "Overview bars summarize concentration before drilling into finer cuts.",
-                    ],
-                )
-            )
 
     return charts[:5]
 
@@ -739,7 +1022,7 @@ def download_dataset(spec: DatasetSpec) -> tuple[pd.DataFrame, str]:
     for fname, other in list(tables.items()):
         if spec.slug == "christmas-novels" and fname == "christmas_novel_authors.csv":
             continue
-        if spec.slug in {"netflix-engagement", "all-the-pizza", "web-page-metrics", "wealth-income"}:
+        if spec.slug in {"netflix-engagement", "all-the-pizza", "web-page-metrics", "wealth-income", "biketown-bikeshare", "super-bowl-ads"}:
             continue
         shared = [c for c in df.columns if c in other.columns and c.lower() not in BANNED_METRIC_NAMES]
         if not shared:
@@ -764,6 +1047,35 @@ def build_count_charts(df: pd.DataFrame, spec: DatasetSpec, meta: dict[str, Any]
     year = meta["year"]
     category = meta["category"]
     charts: list[dict[str, Any]] = []
+
+    if category and category != label:
+        cat_counts = df[category].astype(str).value_counts().head(10).sort_values()
+        fig = go.Figure(
+            go.Bar(
+                x=cat_counts.values,
+                y=cat_counts.index.astype(str),
+                orientation="h",
+                marker=dict(color=bar_gradient(len(cat_counts)), line=dict(color=ART_DARK, width=0.4)),
+            )
+        )
+        finalize(
+            fig,
+            chart_title(f"WHERE {spec.title.upper()} CONCENTRATES", human_label(category)),
+            x_title="Records",
+        )
+        charts.append(
+            chart_entry(
+                "chart1_category",
+                "chart-1-category",
+                "CHART 1 — LANDSCAPE",
+                human_label(category),
+                fig,
+                [
+                    f"**{cat_counts.index[-1]}** dominates with **{int(cat_counts.iloc[-1]):,}** records.",
+                    f"The long tail still holds **{max(df[category].nunique() - 10, 0)}** additional {human_label(category).lower()} buckets.",
+                ],
+            )
+        )
 
     if year and df[year].notna().sum() >= 3:
         yearly = df.groupby(year).size().reset_index(name="count").sort_values(year)
@@ -849,7 +1161,7 @@ def build_count_charts(df: pd.DataFrame, spec: DatasetSpec, meta: dict[str, Any]
                 "Secondary dimensions add context when the primary table has no numeric score column.",
             ]))
 
-    return ensure_five_charts(charts, df, spec, meta)
+    return finalize_chart_set(charts, df, spec, meta)
 
 
 def build_charts(df: pd.DataFrame, spec: DatasetSpec, meta: dict[str, Any]) -> list[dict[str, Any]]:
@@ -866,40 +1178,17 @@ def build_charts(df: pd.DataFrame, spec: DatasetSpec, meta: dict[str, Any]) -> l
     vals = df[metric].dropna()
     charts: list[dict[str, Any]] = []
 
-    # Chart 1 — category landscape (more insightful than raw row counts)
-    if category and df[category].nunique(dropna=True) >= 2:
-        counts = df[category].astype(str).value_counts().head(10).sort_values()
-        colors = palette(len(counts))
-        fig = go.Figure(
-            go.Bar(
-                x=counts.values,
-                y=counts.index.astype(str),
-                orientation="h",
-                marker=dict(color=colors, line=dict(color=ART_DARK, width=0.4)),
-                hovertemplate="<b>%{y}</b><br>%{x:,} records<extra></extra>",
-            )
-        )
-        finalize(
-            fig,
-            chart_title(f"WHERE {spec.title.upper()} CONCENTRATES", human_label(category)),
-            x_title="Records",
-            y_title="",
-        )
-        charts.append(
-            chart_entry(
-                "chart1_landscape",
-                "chart-1-landscape",
-                "CHART 1 — LANDSCAPE",
-                f"{human_label(category)} Mix",
-                fig,
-                [
-                    f"**{counts.index[-1]}** dominates with **{int(counts.iloc[-1]):,}** records — the structural center of gravity.",
-                    f"Beyond the top ten sit **{max(df[category].nunique() - 10, 0)}** additional {human_label(category).lower()} buckets in the long tail.",
-                ],
-            )
-        )
-    elif year and df[[year, metric]].dropna().shape[0] >= 4:
-        series = df[[year, metric]].dropna().groupby(year)[metric].median().reset_index().sort_values(year)
+    # Chart 1 — trend over time (always lead when temporal axis exists)
+    if year and df[[year, metric]].dropna().shape[0] >= 4:
+        plot_df = df[[year, metric]].dropna()
+        if any(w in str(metric).lower() for w in ("average", "rating", "score", "stars", "points")):
+            plot_df = plot_df[plot_df[metric] > 0]
+        if plot_df.shape[0] >= 4:
+            series = plot_df.groupby(year)[metric].median().reset_index().sort_values(year)
+        else:
+            series = df[[year, metric]].dropna().groupby(year)[metric].median().reset_index().sort_values(year)
+        direction = "rising" if series[metric].iloc[-1] > series[metric].iloc[0] else "falling"
+        accent = "STRUCTURAL SLOPE" if abs(series[metric].iloc[-1] - series[metric].iloc[0]) > 0.01 else "FLAT LINE"
         fig = go.Figure()
         fig.add_trace(
             go.Scatter(
@@ -913,7 +1202,12 @@ def build_charts(df: pd.DataFrame, spec: DatasetSpec, meta: dict[str, Any]) -> l
                 hovertemplate="Year %{x}<br>Median: %{y}<extra></extra>",
             )
         )
-        finalize(fig, chart_title(f"MEDIAN {ml.upper()} OVER TIME", spec.title), x_title="Year", y_title=f"Median {ml}")
+        finalize(
+            fig,
+            chart_title(f"{direction.upper()} MEDIAN {ml.upper()}", accent),
+            x_title="Year",
+            y_title=f"Median {ml}",
+        )
         charts.append(
             chart_entry(
                 "chart1_trend",
@@ -922,42 +1216,121 @@ def build_charts(df: pd.DataFrame, spec: DatasetSpec, meta: dict[str, Any]) -> l
                 f"Median {ml} Over Time",
                 fig,
                 [
-                    f"The median {ml.lower()} opens at **{fmt_num(series[metric].iloc[0])}** and closes at **{fmt_num(series[metric].iloc[-1])}** across the series.",
-                    "Filled trend lines expose direction without letting single outliers steer the narrative.",
+                    f"Median {ml.lower()} is **{direction}** from **{fmt_num(series[metric].iloc[0])}** in the opening period to **{fmt_num(series[metric].iloc[-1])}** at the close.",
+                    "Annual medians filter one-off spikes so the structural slope — not viral outliers — drives the story.",
                 ],
             )
         )
-
-    # Chart 2 — momentum timeline
-    if year and df[[year, metric]].dropna().shape[0] >= 4 and charts and charts[-1]["id"] != "chart1_trend":
-        series = df[[year, metric]].dropna().groupby(year)[metric].median().reset_index().sort_values(year)
+    elif label and metric and df[[label, metric]].dropna().shape[0] >= 3:
+        grouped = (
+            df[[label, metric]]
+            .dropna()
+            .groupby(label, observed=True)[metric]
+            .median()
+            .sort_values(ascending=False)
+            .head(12)
+            .sort_values()
+        )
+        if len(grouped) >= 3:
+            fig = go.Figure(
+                go.Bar(
+                    x=grouped.values,
+                    y=grouped.index.astype(str),
+                    orientation="h",
+                    marker=dict(color=bar_gradient(len(grouped)), line=dict(color=ART_DARK, width=0.4)),
+                )
+            )
+            finalize(
+                fig,
+                chart_title(f"MEDIAN {ml.upper()}", f"BY {human_label(label).upper()}"),
+                x_title=f"Median {ml}",
+            )
+            charts.append(
+                chart_entry(
+                    "chart1_breakdown",
+                    "chart-1-breakdown",
+                    "CHART 1 — BREAKDOWN",
+                    f"{ml} by {human_label(label)}",
+                    fig,
+                    [
+                        f"**{grouped.index[-1]}** leads at **{fmt_num(grouped.iloc[-1])}**; **{grouped.index[0]}** anchors the low end at **{fmt_num(grouped.iloc[0])}**.",
+                        f"Grouping by {human_label(label).lower()} exposes how the metric varies across the catalog's major entities.",
+                    ],
+                )
+            )
+    elif category and df[[category, metric]].dropna().shape[0] >= 8:
+        top_cats = df[category].astype(str).value_counts().head(8).index
+        sub = df[df[category].astype(str).isin(top_cats)]
+        med = sub.groupby(category, observed=True)[metric].median().sort_values(ascending=False)
         fig = go.Figure(
-            go.Scatter(
-                x=series[year],
-                y=series[metric],
-                mode="lines+markers",
-                line=dict(color=ART_HIGHLIGHT, width=2.8),
-                marker=dict(size=8, color=ART_SECONDARY),
-                hovertemplate="Year %{x}<br>Median: %{y}<extra></extra>",
+            go.Bar(
+                x=med.index.astype(str),
+                y=med.values,
+                marker=dict(color=palette(len(med)), line=dict(color=ART_DARK, width=0.4)),
             )
         )
-        direction = "rising" if series[metric].iloc[-1] > series[metric].iloc[0] else "falling"
-        finalize(fig, chart_title(f"{direction.upper()} MEDIAN {ml.upper()}", "STRUCTURAL SLOPE"), x_title="Year", y_title=f"Median {ml}")
+        finalize(
+            fig,
+            chart_title(f"MEDIAN {ml.upper()}", f"BY {human_label(category).upper()}"),
+            x_title=human_label(category),
+            y_title=f"Median {ml}",
+        )
         charts.append(
             chart_entry(
-                "chart2_timeline",
-                "chart-2-timeline",
-                "CHART 2 — TIMELINE",
-                f"Median {ml} Over Time",
+                "chart1_breakdown",
+                "chart-1-breakdown",
+                "CHART 1 — BREAKDOWN",
+                f"{ml} by {human_label(category)}",
                 fig,
                 [
-                    f"Median {ml.lower()} is **{direction}** from **{fmt_num(series[metric].iloc[0])}** to **{fmt_num(series[metric].iloc[-1])}**.",
-                    "Annual medians filter noise and show the slope the raw rows hide.",
+                    f"**{med.index[0]}** posts the highest median {ml.lower()} (**{fmt_num(med.iloc[0])}**); **{med.index[-1]}** trails at **{fmt_num(med.iloc[-1])}**.",
+                    "Category medians separate structural tiers faster than row-level anecdotes.",
                 ],
             )
         )
 
-    # Chart 3 — distribution with color
+    # Chart 2 — ranked leaders
+    if label and df[[label, metric]].dropna().shape[0] >= 3:
+        ranked = (
+            df[[label, metric]]
+            .dropna()
+            .groupby(label, observed=True)[metric]
+            .median()
+            .sort_values(ascending=False)
+            .head(12)
+            .sort_values()
+        )
+        if len(ranked) >= 3:
+            leader = str(ranked.index[-1])[:40]
+            fig = go.Figure(
+                go.Bar(
+                    x=ranked.values,
+                    y=ranked.index.astype(str),
+                    orientation="h",
+                    marker=dict(color=bar_gradient(len(ranked)), line=dict(color=ART_DARK, width=0.4)),
+                    hovertemplate="<b>%{y}</b><br>%{x}<extra></extra>",
+                )
+            )
+            finalize(
+                fig,
+                chart_title(f"LEADERS BY {ml.upper()}", f"<span style='color:#C0392B'>{leader.upper()[:24]}</span> ON TOP"),
+                x_title=f"Median {ml}",
+            )
+            charts.append(
+                chart_entry(
+                    "chart2_leaders",
+                    "chart-2-leaders",
+                    "CHART 2 — LEADERS",
+                    f"Top {human_label(label)}",
+                    fig,
+                    [
+                        f"**{ranked.index[-1]}** leads at **{fmt_num(ranked.iloc[-1])}** — **{fmt_num(ranked.median())}** marks the median among the top dozen.",
+                        "Head-of-field concentration is where quality, scale, or brand visibly separates from the pack.",
+                    ],
+                )
+            )
+
+    # Chart 3 — distribution
     if len(vals) >= 8:
         if category and df[[category, metric]].dropna().shape[0] >= 12:
             top_cats = df[category].astype(str).value_counts().head(5).index
@@ -992,7 +1365,7 @@ def build_charts(df: pd.DataFrame, spec: DatasetSpec, meta: dict[str, Any]) -> l
                         fig,
                         [
                             f"Category boxes reveal whether {ml.lower()} consensus is shared or contested across tiers.",
-                            "Wide whiskers flag categories where outliers — not averages — drive reputation.",
+                            "Wide whiskers flag segments where outliers — not averages — drive reputation.",
                         ],
                     )
                 )
@@ -1004,7 +1377,6 @@ def build_charts(df: pd.DataFrame, spec: DatasetSpec, meta: dict[str, Any]) -> l
                     x=centers,
                     y=hist,
                     marker=dict(color=bar_gradient(len(centers)), line=dict(color=ART_DARK, width=0.3)),
-                    hovertemplate=f"{ml}: %{{x}}<br>Count: %{{y}}<extra></extra>",
                 )
             )
             skew = "right-skewed" if vals.mean() > vals.median() * 1.05 else "relatively symmetric"
@@ -1018,57 +1390,105 @@ def build_charts(df: pd.DataFrame, spec: DatasetSpec, meta: dict[str, Any]) -> l
                     fig,
                     [
                         f"Median **{fmt_num(vals.median())}** vs mean **{fmt_num(vals.mean())}** — the shape is {skew}.",
-                        f"The top decile begins at **{fmt_num(vals.quantile(0.9))}**; that tail is where franchise-defining cases live.",
+                        f"The top decile begins at **{fmt_num(vals.quantile(0.9))}**; that tail is where defining cases live.",
                     ],
                 )
             )
 
-    # Chart 4 — ranked leaders
-    if label and df[[label, metric]].dropna().shape[0] >= 3:
-        ranked = (
-            df[[label, metric]]
-            .dropna()
-            .groupby(label, observed=True)[metric]
-            .median()
-            .sort_values(ascending=False)
-            .head(12)
-            .sort_values()
-        )
-        if len(ranked) >= 3:
+    # Chart 4 — category comparison or secondary timeline
+    if category and category != label and df[[category, metric]].dropna().shape[0] >= 8:
+        if not any(c["id"] in {"chart1_breakdown", "chart4_category_compare"} for c in charts):
+            top_cats = df[category].astype(str).value_counts().head(8).index
+            sub = df[df[category].astype(str).isin(top_cats)]
+            med = sub.groupby(category, observed=True)[metric].median().sort_values(ascending=False)
             fig = go.Figure(
                 go.Bar(
-                    x=ranked.values,
-                    y=ranked.index.astype(str),
-                    orientation="h",
-                    marker=dict(color=bar_gradient(len(ranked)), line=dict(color=ART_DARK, width=0.4)),
-                    hovertemplate="<b>%{y}</b><br>%{x}<extra></extra>",
+                    x=med.index.astype(str),
+                    y=med.values,
+                    marker=dict(color=palette(len(med)), line=dict(color=ART_DARK, width=0.4)),
                 )
             )
-            finalize(fig, chart_title(f"LEADERS BY {ml.upper()}", human_label(label)), x_title=f"Median {ml}")
+            finalize(
+                fig,
+                chart_title(f"WHO WINS ON {ml.upper()}", human_label(category)),
+                x_title=human_label(category),
+                y_title=f"Median {ml}",
+            )
             charts.append(
                 chart_entry(
-                    "chart4_leaders",
-                    "chart-4-leaders",
-                    "CHART 4 — LEADERS",
-                    f"Top {human_label(label)}",
+                    "chart4_category_compare",
+                    "chart-4-category-compare",
+                    "CHART 4 — TIERS",
+                    f"{ml} by {human_label(category)}",
                     fig,
                     [
-                        f"**{ranked.index[-1]}** leads at **{fmt_num(ranked.iloc[-1])}** — **{fmt_num(ranked.median())}** marks the median among the top dozen.",
-                        "Head-of-field concentration is where brand, quality, or scale visibly separates from the pack.",
+                        f"**{med.index[0]}** leads the median table at **{fmt_num(med.iloc[0])}**; the gap to **{med.index[-1]}** is **{fmt_num(med.iloc[0] - med.iloc[-1])}** points.",
+                        "Tier separation matters more than means when distributions skew hard.",
                     ],
                 )
             )
+    elif year and label and df[[year, label]].dropna().shape[0] >= 4:
+        cross = df.groupby([year, label], observed=True)[metric].median().reset_index()
+        top_labels = df[label].astype(str).value_counts().head(4).index
+        cross = cross[cross[label].astype(str).isin(top_labels)]
+        if len(cross) >= 4:
+            fig = go.Figure()
+            for i, name in enumerate(top_labels):
+                sub = cross[cross[label].astype(str) == name].sort_values(year)
+                if len(sub) < 2:
+                    continue
+                fig.add_trace(
+                    go.Scatter(
+                        x=sub[year],
+                        y=sub[metric],
+                        mode="lines+markers",
+                        name=str(name)[:22],
+                        line=dict(color=palette(4)[i], width=2.2),
+                    )
+                )
+            if fig.data:
+                finalize(
+                    fig,
+                    chart_title(f"LEADERS TRACKING {ml.upper()}", "OVER TIME"),
+                    x_title="Year",
+                    y_title=f"Median {ml}",
+                    legend=True,
+                )
+                charts.append(
+                    chart_entry(
+                        "chart4_leader_trends",
+                        "chart-4-leader-trends",
+                        "CHART 4 — LEADER TRENDS",
+                        f"Top {human_label(label)} Over Time",
+                        fig,
+                        [
+                            "The leading names do not move in lockstep — some fade as others surge.",
+                            "Tracking medians over time separates sustained dominance from one-off spikes.",
+                        ],
+                    )
+                )
 
-    # Chart 5 — relationship or category compare
-    if metric2 and df[[metric, metric2]].dropna().shape[0] >= 8:
-        plot = df[[metric, metric2] + ([label] if label else []) + ([category] if category else [])].dropna()
+    # Chart 5 — relationship scatter
+    if metric2 and metric2 in df.columns and df[[metric, metric2]].dropna().shape[0] >= 8:
+        extra_cols: list[str] = []
+        if label:
+            extra_cols.append(label)
+        if category and category != label:
+            extra_cols.append(category)
+        plot = df[[metric, metric2] + extra_cols].dropna()
         if len(plot) > 2500:
             plot = plot.sample(2500, random_state=7)
+        fig = go.Figure()
         color_col = category if category and category in plot.columns else None
+        use_color = False
         if color_col:
+            try:
+                use_color = int(plot[color_col].nunique()) <= 8
+            except (TypeError, ValueError):
+                use_color = False
+        if use_color and color_col:
             cats = plot[color_col].astype(str).value_counts().head(6).index
             plot = plot[plot[color_col].astype(str).isin(cats)]
-            fig = go.Figure()
             for i, cat in enumerate(cats):
                 sub = plot[plot[color_col].astype(str) == cat]
                 fig.add_trace(
@@ -1078,19 +1498,17 @@ def build_charts(df: pd.DataFrame, spec: DatasetSpec, meta: dict[str, Any]) -> l
                         mode="markers",
                         name=str(cat)[:16],
                         marker=dict(color=palette(len(cats))[i], size=8, opacity=0.72, line=dict(width=0.4, color=ART_DARK)),
-                        hovertemplate=f"{ml}: %{{x}}<br>{m2l}: %{{y}}<extra></extra>",
                     )
                 )
             finalize(fig, chart_title(f"{ml.upper()} VS {m2l.upper()}", "COLORED BY CATEGORY"), x_title=ml, y_title=m2l, legend=True)
         else:
-            fig = go.Figure(
+            fig.add_trace(
                 go.Scatter(
                     x=plot[metric],
                     y=plot[metric2],
                     mode="markers",
                     text=plot[label].astype(str) if label and label in plot.columns else None,
                     marker=dict(color=ART_SECONDARY, size=8, opacity=0.55, line=dict(width=0.5, color=ART_DARK)),
-                    hovertemplate=f"{ml}: %{{x}}<br>{m2l}: %{{y}}<extra></extra>",
                 )
             )
             finalize(fig, chart_title(f"{ml.upper()} VS {m2l.upper()}", "JOINT DISTRIBUTION"), x_title=ml, y_title=m2l)
@@ -1107,29 +1525,23 @@ def build_charts(df: pd.DataFrame, spec: DatasetSpec, meta: dict[str, Any]) -> l
                 ],
             )
         )
-    elif category and category != label and df[[category, metric]].dropna().shape[0] >= 8:
-        top_cats = df[category].astype(str).value_counts().head(8).index
-        sub = df[df[category].astype(str).isin(top_cats)]
-        med = sub.groupby(category, observed=True)[metric].median().sort_values(ascending=False)
-        fig = go.Figure(
-            go.Bar(
-                x=med.index.astype(str),
-                y=med.values,
-                marker=dict(color=palette(len(med)), line=dict(color=ART_DARK, width=0.4)),
-                hovertemplate="<b>%{x}</b><br>Median: %{y}<extra></extra>",
-            )
-        )
-        finalize(fig, chart_title(f"MEDIAN {ml.upper()}", f"BY {human_label(category).upper()}"), x_title=human_label(category), y_title=f"Median {ml}")
+    elif len(vals) >= 8 and year and df[[year, metric]].dropna().shape[0] >= 6:
+        yearly_mean = df[[year, metric]].dropna().groupby(year)[metric].mean().reset_index().sort_values(year)
+        yearly_med = df[[year, metric]].dropna().groupby(year)[metric].median().reset_index().sort_values(year)
+        fig = go.Figure()
+        fig.add_trace(go.Scatter(x=yearly_med[year], y=yearly_med[metric], mode="lines+markers", name="Median", line=dict(color=ART_HIGHLIGHT, width=2.5)))
+        fig.add_trace(go.Scatter(x=yearly_mean[year], y=yearly_mean[metric], mode="lines+markers", name="Mean", line=dict(color=ART_SECONDARY, width=2, dash="dot")))
+        finalize(fig, chart_title(f"MEAN VS MEDIAN {ml.upper()}", "ROBUSTNESS CHECK"), x_title="Year", y_title=ml, legend=True)
         charts.append(
             chart_entry(
-                "chart5_category_compare",
-                "chart-5-category-compare",
-                "CHART 5 — CATEGORY COMPARE",
-                f"{ml} by {human_label(category)}",
+                "chart5_mean_median",
+                "chart-5-mean-median",
+                "CHART 5 — ROBUSTNESS",
+                f"Mean vs Median {ml}",
                 fig,
                 [
-                    f"**{med.index[0]}** posts the highest median {ml.lower()} (**{fmt_num(med.iloc[0])}**); **{med.index[-1]}** trails at **{fmt_num(med.iloc[-1])}**.",
-                    "Category medians separate structural tiers faster than row-level anecdotes.",
+                    "When mean and median diverge, outliers are steering the narrative — medians tell the typical story.",
+                    "Tracking both lines exposes whether the field is tightening or fracturing over time.",
                 ],
             )
         )
@@ -1140,41 +1552,8 @@ def build_charts(df: pd.DataFrame, spec: DatasetSpec, meta: dict[str, Any]) -> l
         if ch["id"] not in seen_ids:
             seen_ids.add(ch["id"])
             unique.append(ch)
-    charts = unique
 
-    idx = 1
-    while len(charts) < 5 and metric:
-        cid = f"chart_pad_{idx}"
-        if cid in seen_ids:
-            idx += 1
-            continue
-        fig = go.Figure(
-            go.Box(
-                y=vals,
-                marker_color=ART_SECONDARY,
-                line_color=ART_HIGHLIGHT,
-                boxmean="sd",
-                fillcolor="rgba(44, 62, 107, 0.15)",
-            )
-        )
-        finalize(fig, chart_title(f"SPREAD OF {ml.upper()}", "INTERQUARTILE VIEW"), y_title=ml)
-        charts.append(
-            chart_entry(
-                cid,
-                f"chart-pad-{idx}",
-                f"CHART {len(charts)+1} — SPREAD",
-                f"{ml} Spread",
-                fig,
-                [
-                    f"The middle half runs **{fmt_num(vals.quantile(0.25))}** to **{fmt_num(vals.quantile(0.75))}**.",
-                    "Tight boxes mean consensus; long whiskers mean extremes own the narrative.",
-                ],
-            )
-        )
-        seen_ids.add(cid)
-        idx += 1
-
-    return ensure_five_charts(charts, df, spec, meta)
+    return finalize_chart_set(unique, df, spec, meta)
 
 
 def chart_entry(cid, sid, title, caption, fig, prose) -> dict[str, Any]:
@@ -1205,14 +1584,17 @@ def build_facts(df: pd.DataFrame, meta: dict[str, Any], spec: DatasetSpec) -> li
 
 
 def build_intro(spec: DatasetSpec, df: pd.DataFrame, meta: dict[str, Any]) -> list[str]:
+    profile = meta.get("profile") or get_profile(spec.slug)
     metric = meta.get("metric")
-    ml = human_label(metric) if metric else "the core signal"
+    ml = human_label(metric) if metric else "record counts"
+    question = profile.get("question") or (
+        f"What does the distribution of <strong>{ml}</strong> look like when you stop quoting anecdotes and start counting?"
+    )
     return [
         f"This report analyzes the TidyTuesday <strong>{spec.tt_date}</strong> release on <strong>{spec.title}</strong> — "
-        f"<strong>{len(df):,}</strong> rows after cleaning and merge. The question is not whether the topic matters, but what the distribution "
-        f"looks like when you stop quoting anecdotes and start counting.",
-        f"Five charts track <strong>{ml}</strong> across time, category, and named entities. Where a companion file exists in the repo, "
-        f"it is joined before analysis so reception, geography, or metadata columns are not left on the table.",
+        f"<strong>{len(df):,}</strong> rows after cleaning and merge. {question}",
+        f"Five charts track <strong>{ml}</strong> across time, category, and named entities — trend, leaders, distribution, tiers, and relationships. "
+        "Where companion files exist in the repo, they are joined before analysis so reception, geography, or metadata columns are not left on the table.",
     ]
 
 
@@ -1241,12 +1623,18 @@ def render_article(spec: DatasetSpec, df: pd.DataFrame, meta: dict[str, Any], ch
         for n, l in facts
     )
     body = [f"<p class=\"art-p\">{intro[0]}</p>", f"<p class=\"art-p\">{intro[1]}</p>"]
+    profile = meta.get("profile") or get_profile(spec.slug)
+    context = profile.get(
+        "context",
+        f"The source is the TidyTuesday release from <strong>{spec.tt_date}</strong> (R for Data Science community). "
+        f"This working file contains <strong>{len(df):,}</strong> rows and <strong>{len(df.columns)}</strong> columns after merging "
+        "all available CSV/XLSX tables in the week folder.",
+    )
     body += [
         '<h2 id="fast-facts" class="anchored">FAST FACTS</h2>',
         f'<div class="facts-grid">\n{facts_html}\n</div>',
         '<h2 id="dataset-context" class="anchored">DATASET CONTEXT</h2>',
-        f"<p>The source is the TidyTuesday release from <strong>{spec.tt_date}</strong> (R for Data Science community). "
-        f"This working file contains <strong>{len(df):,}</strong> rows and <strong>{len(df.columns)}</strong> columns after merging all available CSV/XLSX tables in the week folder.</p>",
+        f"<p>{context}</p>",
         "<p>Charts are exported as Plotly JSON with PNG fallbacks. Medians are used for robustness where distributions skew. "
         "Index-style fields (row numbers, sequential IDs) are excluded from metric selection.</p>",
     ]
@@ -1254,14 +1642,16 @@ def render_article(spec: DatasetSpec, df: pd.DataFrame, meta: dict[str, Any], ch
         body.append(f'<h2 id="{ch["section_id"]}" class="anchored">{ch["section_title"]}</h2>')
         body.append(chart_html(spec.slug, ch))
         for p in ch["prose"]:
-            body.append(f'<p class="art-p">{p}</p>')
+            body.append(f'<p class="art-p">{format_prose(p)}</p>')
+    metric = meta.get("metric")
+    ml = human_label(metric) if metric else "the field"
     body += [
         '<h2 id="limitations" class="anchored">LIMITATIONS</h2>',
         "<p>Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. "
         "Merged tables may fan out or duplicate rows when join keys are imperfect.</p>"
-        "<p>Findings describe the file on hand — treat them as structural signals for editorial follow-up, not exhaustive truth about the full domain.</p>",
+        f"<p>Findings describe the file on hand — treat them as structural signals about <strong>{spec.title}</strong>, not exhaustive truth about the full domain.</p>",
         '<h2 id="conclusion" class="anchored">CONCLUSION</h2>',
-        f"<p>Measured end to end, <strong>{spec.title}</strong> rewards counting: the head, the tail, and the time trend rarely agree.</p>"
+        f"<p>Measured end to end, <strong>{spec.title}</strong> rewards counting: the leaders, the long tail, and the time trend rarely tell the same story about {ml.lower()}.</p>"
         "<p>That tension is the Artometrics mandate — data does not replace judgment, it disciplines it.</p>",
         '<h2 id="references" class="anchored">REFERENCES</h2>',
         f'<p>Data Science Learning Community. ({spec.tt_date[:4]}). <em>TidyTuesday: {spec.title}</em>. '
@@ -1302,6 +1692,7 @@ def write_article(spec: DatasetSpec, force: bool = True) -> bool:
 
     meta = pick_columns(df)
     df = meta["df"]
+    meta = apply_profile(spec, meta, df)
     if not meta["metric"] and not meta["category"] and not meta["label"]:
         print(f"FAIL no signal {spec.slug}")
         return False

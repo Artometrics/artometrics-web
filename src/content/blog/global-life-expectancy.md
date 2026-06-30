@@ -2,7 +2,7 @@
 title: "GLOBAL LIFE EXPECTANCY: The Artometrics of Global Life Expectancy"
 slug: global-life-expectancy
 pubDate: 2026-06-15
-description: "This report analyzes the TidyTuesday 2018-07-03 release on Global Life Expectancy — 17,894 rows after cleaning and merge. The question is not whether the topic matters, but what the..."
+description: "This report analyzes the TidyTuesday 2018-07-03 release on Global Life Expectancy — 17,894 rows after cleaning and merge. Does longer life track prosperity — or break from it?"
 heroImage: /images/content/articles/global-life-expectancy/hero.png
 tags: [atlas, history]
 draft: false
@@ -14,10 +14,10 @@ draft: false
   <li><a href="#fast-facts" id="toc-fast-facts">FAST FACTS</a></li>
   <li><a href="#dataset-context" id="toc-dataset-context">DATASET CONTEXT</a></li>
   <li><a href="#chart-1-trend" id="toc-chart-1-trend">CHART 1 — TREND</a></li>
+  <li><a href="#chart-2-leaders" id="toc-chart-2-leaders">CHART 2 — LEADERS</a></li>
   <li><a href="#chart-3-distribution" id="toc-chart-3-distribution">CHART 3 — DISTRIBUTION</a></li>
-  <li><a href="#chart-4-leaders" id="toc-chart-4-leaders">CHART 4 — LEADERS</a></li>
-  <li><a href="#chart-pad-1" id="toc-chart-pad-1">CHART 4 — SPREAD</a></li>
-  <li><a href="#chart-pad-2" id="toc-chart-pad-2">CHART 5 — SPREAD</a></li>
+  <li><a href="#chart-4-leader-trends" id="toc-chart-4-leader-trends">CHART 4 — LEADER TRENDS</a></li>
+  <li><a href="#chart-5-mean-median" id="toc-chart-5-mean-median">CHART 5 — ROBUSTNESS</a></li>
   <li><a href="#limitations" id="toc-limitations">LIMITATIONS</a></li>
   <li><a href="#conclusion" id="toc-conclusion">CONCLUSION</a></li>
   <li><a href="#references" id="toc-references">REFERENCES</a></li>
@@ -25,8 +25,8 @@ draft: false
   </ul>
 </nav>
 <main class="art-article-main">
-<p class="art-p">This report analyzes the TidyTuesday <strong>2018-07-03</strong> release on <strong>Global Life Expectancy</strong> — <strong>17,894</strong> rows after cleaning and merge. The question is not whether the topic matters, but what the distribution looks like when you stop quoting anecdotes and start counting.</p>
-<p class="art-p">Five charts track <strong>Life expectancy</strong> across time, category, and named entities. Where a companion file exists in the repo, it is joined before analysis so reception, geography, or metadata columns are not left on the table.</p>
+<p class="art-p">This report analyzes the TidyTuesday <strong>2018-07-03</strong> release on <strong>Global Life Expectancy</strong> — <strong>17,894</strong> rows after cleaning and merge. Does longer life track prosperity — or break from it?</p>
+<p class="art-p">Five charts track <strong>Life expectancy</strong> across time, category, and named entities — trend, leaders, distribution, tiers, and relationships. Where companion files exist in the repo, they are joined before analysis so reception, geography, or metadata columns are not left on the table.</p>
 <h2 id="fast-facts" class="anchored">FAST FACTS</h2>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">17,894</span><span class="fact-label">Records in the working dataset</span></div>
@@ -43,40 +43,40 @@ draft: false
   <div class="art-chart-live" data-chart="/data/articles/global-life-expectancy/charts/chart1_trend.plotly.json" data-fallback="/images/content/articles/global-life-expectancy/charts/chart1_trend.png" role="img" aria-label="Median Life expectancy Over Time"></div>
   <figcaption class="art-chart-caption">Median Life expectancy Over Time</figcaption>
 </figure>
-<p class="art-p">The median life expectancy opens at **33.9** and closes at **73.3** across the series.</p>
-<p class="art-p">Filled trend lines expose direction without letting single outliers steer the narrative.</p>
+<p class="art-p">Median life expectancy is <strong>rising</strong> from <strong>33.9</strong> in the opening period to <strong>73.3</strong> at the close.</p>
+<p class="art-p">Annual medians filter one-off spikes so the structural slope — not viral outliers — drives the story.</p>
+<h2 id="chart-2-leaders" class="anchored">CHART 2 — LEADERS</h2>
+<figure class="art-chart">
+  <div class="art-chart-live" data-chart="/data/articles/global-life-expectancy/charts/chart2_leaders.plotly.json" data-fallback="/images/content/articles/global-life-expectancy/charts/chart2_leaders.png" role="img" aria-label="Top Country"></div>
+  <figcaption class="art-chart-caption">Top Country</figcaption>
+</figure>
+<p class="art-p"><strong>Hong Kong</strong> leads at <strong>75.6</strong> — <strong>74.4</strong> marks the median among the top dozen.</p>
+<p class="art-p">Head-of-field concentration is where quality, scale, or brand visibly separates from the pack.</p>
 <h2 id="chart-3-distribution" class="anchored">CHART 3 — DISTRIBUTION</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/global-life-expectancy/charts/chart3_distribution.plotly.json" data-fallback="/images/content/articles/global-life-expectancy/charts/chart3_distribution.png" role="img" aria-label="Life expectancy Distribution"></div>
   <figcaption class="art-chart-caption">Life expectancy Distribution</figcaption>
 </figure>
-<p class="art-p">Median **62.4** vs mean **60.0** — the shape is relatively symmetric.</p>
-<p class="art-p">The top decile begins at **75.1**; that tail is where franchise-defining cases live.</p>
-<h2 id="chart-4-leaders" class="anchored">CHART 4 — LEADERS</h2>
+<p class="art-p">Median <strong>62.4</strong> vs mean <strong>60.0</strong> — the shape is relatively symmetric.</p>
+<p class="art-p">The top decile begins at <strong>75.1</strong>; that tail is where defining cases live.</p>
+<h2 id="chart-4-leader-trends" class="anchored">CHART 4 — LEADER TRENDS</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/global-life-expectancy/charts/chart4_leaders.plotly.json" data-fallback="/images/content/articles/global-life-expectancy/charts/chart4_leaders.png" role="img" aria-label="Top Country"></div>
-  <figcaption class="art-chart-caption">Top Country</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/global-life-expectancy/charts/chart4_leader_trends.plotly.json" data-fallback="/images/content/articles/global-life-expectancy/charts/chart4_leader_trends.png" role="img" aria-label="Top Country Over Time"></div>
+  <figcaption class="art-chart-caption">Top Country Over Time</figcaption>
 </figure>
-<p class="art-p">**Hong Kong** leads at **75.6** — **74.4** marks the median among the top dozen.</p>
-<p class="art-p">Head-of-field concentration is where brand, quality, or scale visibly separates from the pack.</p>
-<h2 id="chart-pad-1" class="anchored">CHART 4 — SPREAD</h2>
+<p class="art-p">The leading names do not move in lockstep — some fade as others surge.</p>
+<p class="art-p">Tracking medians over time separates sustained dominance from one-off spikes.</p>
+<h2 id="chart-5-mean-median" class="anchored">CHART 5 — ROBUSTNESS</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/global-life-expectancy/charts/chart_pad_1.plotly.json" data-fallback="/images/content/articles/global-life-expectancy/charts/chart_pad_1.png" role="img" aria-label="Life expectancy Spread"></div>
-  <figcaption class="art-chart-caption">Life expectancy Spread</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/global-life-expectancy/charts/chart5_mean_median.plotly.json" data-fallback="/images/content/articles/global-life-expectancy/charts/chart5_mean_median.png" role="img" aria-label="Mean vs Median Life expectancy"></div>
+  <figcaption class="art-chart-caption">Mean vs Median Life expectancy</figcaption>
 </figure>
-<p class="art-p">The middle half runs **49.9** to **70.6**.</p>
-<p class="art-p">Tight boxes mean consensus; long whiskers mean extremes own the narrative.</p>
-<h2 id="chart-pad-2" class="anchored">CHART 5 — SPREAD</h2>
-<figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/global-life-expectancy/charts/chart_pad_2.plotly.json" data-fallback="/images/content/articles/global-life-expectancy/charts/chart_pad_2.png" role="img" aria-label="Life expectancy Spread"></div>
-  <figcaption class="art-chart-caption">Life expectancy Spread</figcaption>
-</figure>
-<p class="art-p">The middle half runs **49.9** to **70.6**.</p>
-<p class="art-p">Tight boxes mean consensus; long whiskers mean extremes own the narrative.</p>
+<p class="art-p">When mean and median diverge, outliers are steering the narrative — medians tell the typical story.</p>
+<p class="art-p">Tracking both lines exposes whether the field is tightening or fracturing over time.</p>
 <h2 id="limitations" class="anchored">LIMITATIONS</h2>
-<p>Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p><p>Findings describe the file on hand — treat them as structural signals for editorial follow-up, not exhaustive truth about the full domain.</p>
+<p>Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p><p>Findings describe the file on hand — treat them as structural signals about <strong>Global Life Expectancy</strong>, not exhaustive truth about the full domain.</p>
 <h2 id="conclusion" class="anchored">CONCLUSION</h2>
-<p>Measured end to end, <strong>Global Life Expectancy</strong> rewards counting: the head, the tail, and the time trend rarely agree.</p><p>That tension is the Artometrics mandate — data does not replace judgment, it disciplines it.</p>
+<p>Measured end to end, <strong>Global Life Expectancy</strong> rewards counting: the leaders, the long tail, and the time trend rarely tell the same story about life expectancy.</p><p>That tension is the Artometrics mandate — data does not replace judgment, it disciplines it.</p>
 <h2 id="references" class="anchored">REFERENCES</h2>
 <p>Data Science Learning Community. (2018). <em>TidyTuesday: Global Life Expectancy</em>. <a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2018/2018-07-03/week14_global_life_expectancy.csv" target="_blank" rel="noopener noreferrer">https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2018/2018-07-03/week14_global_life_expectancy.csv</a></p>
 <h2 id="editors-note" class="anchored">EDITOR'S NOTE</h2>

@@ -2,7 +2,7 @@
 title: "US VOTER TURNOUT: The Artometrics of US Voter Turnout"
 slug: us-voter-turnout
 pubDate: 2026-06-15
-description: "This report analyzes the TidyTuesday 2018-10-09 release on US Voter Turnout — 936 rows after cleaning and merge. The question is not whether the topic matters, but what the distribution..."
+description: "This report analyzes the TidyTuesday 2018-10-09 release on US Voter Turnout — 936 rows after cleaning and merge. Which states show up — and how did turnout move across elections?"
 heroImage: /images/content/articles/us-voter-turnout/hero.png
 tags: [power]
 draft: false
@@ -14,10 +14,10 @@ draft: false
   <li><a href="#fast-facts" id="toc-fast-facts">FAST FACTS</a></li>
   <li><a href="#dataset-context" id="toc-dataset-context">DATASET CONTEXT</a></li>
   <li><a href="#chart-1-trend" id="toc-chart-1-trend">CHART 1 — TREND</a></li>
+  <li><a href="#chart-2-leaders" id="toc-chart-2-leaders">CHART 2 — LEADERS</a></li>
   <li><a href="#chart-3-distribution" id="toc-chart-3-distribution">CHART 3 — DISTRIBUTION</a></li>
-  <li><a href="#chart-4-leaders" id="toc-chart-4-leaders">CHART 4 — LEADERS</a></li>
+  <li><a href="#chart-4-leader-trends" id="toc-chart-4-leader-trends">CHART 4 — LEADER TRENDS</a></li>
   <li><a href="#chart-5-relationship" id="toc-chart-5-relationship">CHART 5 — RELATIONSHIP</a></li>
-  <li><a href="#chart-pad-1" id="toc-chart-pad-1">CHART 5 — SPREAD</a></li>
   <li><a href="#limitations" id="toc-limitations">LIMITATIONS</a></li>
   <li><a href="#conclusion" id="toc-conclusion">CONCLUSION</a></li>
   <li><a href="#references" id="toc-references">REFERENCES</a></li>
@@ -25,8 +25,8 @@ draft: false
   </ul>
 </nav>
 <main class="art-article-main">
-<p class="art-p">This report analyzes the TidyTuesday <strong>2018-10-09</strong> release on <strong>US Voter Turnout</strong> — <strong>936</strong> rows after cleaning and merge. The question is not whether the topic matters, but what the distribution looks like when you stop quoting anecdotes and start counting.</p>
-<p class="art-p">Five charts track <strong>Votes</strong> across time, category, and named entities. Where a companion file exists in the repo, it is joined before analysis so reception, geography, or metadata columns are not left on the table.</p>
+<p class="art-p">This report analyzes the TidyTuesday <strong>2018-10-09</strong> release on <strong>US Voter Turnout</strong> — <strong>936</strong> rows after cleaning and merge. Which states show up — and how did turnout move across elections?</p>
+<p class="art-p">Five charts track <strong>Votes</strong> across time, category, and named entities — trend, leaders, distribution, tiers, and relationships. Where companion files exist in the repo, they are joined before analysis so reception, geography, or metadata columns are not left on the table.</p>
 <h2 id="fast-facts" class="anchored">FAST FACTS</h2>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">936</span><span class="fact-label">Records in the working dataset</span></div>
@@ -43,40 +43,40 @@ draft: false
   <div class="art-chart-live" data-chart="/data/articles/us-voter-turnout/charts/chart1_trend.plotly.json" data-fallback="/images/content/articles/us-voter-turnout/charts/chart1_trend.png" role="img" aria-label="Median Votes Over Time"></div>
   <figcaption class="art-chart-caption">Median Votes Over Time</figcaption>
 </figure>
-<p class="art-p">The median votes opens at **910,290** and closes at **1,387,622** across the series.</p>
-<p class="art-p">Filled trend lines expose direction without letting single outliers steer the narrative.</p>
+<p class="art-p">Median votes is <strong>rising</strong> from <strong>910,290</strong> in the opening period to <strong>1,387,622</strong> at the close.</p>
+<p class="art-p">Annual medians filter one-off spikes so the structural slope — not viral outliers — drives the story.</p>
+<h2 id="chart-2-leaders" class="anchored">CHART 2 — LEADERS</h2>
+<figure class="art-chart">
+  <div class="art-chart-live" data-chart="/data/articles/us-voter-turnout/charts/chart2_leaders.plotly.json" data-fallback="/images/content/articles/us-voter-turnout/charts/chart2_leaders.png" role="img" aria-label="Top State"></div>
+  <figcaption class="art-chart-caption">Top State</figcaption>
+</figure>
+<p class="art-p"><strong>United States</strong> leads at <strong>90,912,015</strong> — <strong>4,209,538</strong> marks the median among the top dozen.</p>
+<p class="art-p">Head-of-field concentration is where quality, scale, or brand visibly separates from the pack.</p>
 <h2 id="chart-3-distribution" class="anchored">CHART 3 — DISTRIBUTION</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/us-voter-turnout/charts/chart3_distribution.plotly.json" data-fallback="/images/content/articles/us-voter-turnout/charts/chart3_distribution.png" role="img" aria-label="Votes Distribution"></div>
   <figcaption class="art-chart-caption">Votes Distribution</figcaption>
 </figure>
-<p class="art-p">Median **1,170,867** vs mean **3,074,280** — the shape is right-skewed.</p>
-<p class="art-p">The top decile begins at **4,659,000**; that tail is where franchise-defining cases live.</p>
-<h2 id="chart-4-leaders" class="anchored">CHART 4 — LEADERS</h2>
+<p class="art-p">Median <strong>1,170,867</strong> vs mean <strong>3,074,280</strong> — the shape is right-skewed.</p>
+<p class="art-p">The top decile begins at <strong>4,659,000</strong>; that tail is where defining cases live.</p>
+<h2 id="chart-4-leader-trends" class="anchored">CHART 4 — LEADER TRENDS</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/us-voter-turnout/charts/chart4_leaders.plotly.json" data-fallback="/images/content/articles/us-voter-turnout/charts/chart4_leaders.png" role="img" aria-label="Top State"></div>
-  <figcaption class="art-chart-caption">Top State</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/us-voter-turnout/charts/chart4_leader_trends.plotly.json" data-fallback="/images/content/articles/us-voter-turnout/charts/chart4_leader_trends.png" role="img" aria-label="Top State Over Time"></div>
+  <figcaption class="art-chart-caption">Top State Over Time</figcaption>
 </figure>
-<p class="art-p">**United States** leads at **90,912,015** — **4,209,538** marks the median among the top dozen.</p>
-<p class="art-p">Head-of-field concentration is where brand, quality, or scale visibly separates from the pack.</p>
+<p class="art-p">The leading names do not move in lockstep — some fade as others surge.</p>
+<p class="art-p">Tracking medians over time separates sustained dominance from one-off spikes.</p>
 <h2 id="chart-5-relationship" class="anchored">CHART 5 — RELATIONSHIP</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/us-voter-turnout/charts/chart5_scatter.plotly.json" data-fallback="/images/content/articles/us-voter-turnout/charts/chart5_scatter.png" role="img" aria-label="Votes vs Eligible voters"></div>
   <figcaption class="art-chart-caption">Votes vs Eligible voters</figcaption>
 </figure>
-<p class="art-p">Joint plot of **votes** and **eligible voters** surfaces clusters the averages erase.</p>
+<p class="art-p">Joint plot of <strong>votes</strong> and <strong>eligible voters</strong> surfaces clusters the averages erase.</p>
 <p class="art-p">Outlying points are candidates for follow-up — they are the archetypes, not the noise.</p>
-<h2 id="chart-pad-1" class="anchored">CHART 5 — SPREAD</h2>
-<figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/us-voter-turnout/charts/chart_pad_1.plotly.json" data-fallback="/images/content/articles/us-voter-turnout/charts/chart_pad_1.png" role="img" aria-label="Votes Spread"></div>
-  <figcaption class="art-chart-caption">Votes Spread</figcaption>
-</figure>
-<p class="art-p">The middle half runs **422,851** to **2,395,791**.</p>
-<p class="art-p">Tight boxes mean consensus; long whiskers mean extremes own the narrative.</p>
 <h2 id="limitations" class="anchored">LIMITATIONS</h2>
-<p>Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p><p>Findings describe the file on hand — treat them as structural signals for editorial follow-up, not exhaustive truth about the full domain.</p>
+<p>Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p><p>Findings describe the file on hand — treat them as structural signals about <strong>US Voter Turnout</strong>, not exhaustive truth about the full domain.</p>
 <h2 id="conclusion" class="anchored">CONCLUSION</h2>
-<p>Measured end to end, <strong>US Voter Turnout</strong> rewards counting: the head, the tail, and the time trend rarely agree.</p><p>That tension is the Artometrics mandate — data does not replace judgment, it disciplines it.</p>
+<p>Measured end to end, <strong>US Voter Turnout</strong> rewards counting: the leaders, the long tail, and the time trend rarely tell the same story about votes.</p><p>That tension is the Artometrics mandate — data does not replace judgment, it disciplines it.</p>
 <h2 id="references" class="anchored">REFERENCES</h2>
 <p>Data Science Learning Community. (2018). <em>TidyTuesday: US Voter Turnout</em>. <a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2018/2018-10-09/voter_turnout.csv" target="_blank" rel="noopener noreferrer">https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2018/2018-10-09/voter_turnout.csv</a></p>
 <h2 id="editors-note" class="anchored">EDITOR'S NOTE</h2>

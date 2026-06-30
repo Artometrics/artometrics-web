@@ -2,7 +2,7 @@
 title: "CHRISTMAS SONGS: The Artometrics of Christmas Songs"
 slug: christmas-songs
 pubDate: 2026-06-15
-description: "This report analyzes the TidyTuesday 2019-12-24 release on Christmas Songs — 387 rows after cleaning and merge. The question is not whether the topic matters, but what the distribution..."
+description: "This report analyzes the TidyTuesday 2019-12-24 release on Christmas Songs — 387 rows after cleaning and merge. Which holiday standards refuse to leave the chart?"
 heroImage: /images/content/articles/christmas-songs/hero.png
 tags: [culture]
 draft: false
@@ -14,10 +14,10 @@ draft: false
   <li><a href="#fast-facts" id="toc-fast-facts">FAST FACTS</a></li>
   <li><a href="#dataset-context" id="toc-dataset-context">DATASET CONTEXT</a></li>
   <li><a href="#chart-1-trend" id="toc-chart-1-trend">CHART 1 — TREND</a></li>
+  <li><a href="#chart-2-leaders" id="toc-chart-2-leaders">CHART 2 — LEADERS</a></li>
   <li><a href="#chart-3-distribution" id="toc-chart-3-distribution">CHART 3 — DISTRIBUTION</a></li>
-  <li><a href="#chart-4-leaders" id="toc-chart-4-leaders">CHART 4 — LEADERS</a></li>
+  <li><a href="#chart-4-leader-trends" id="toc-chart-4-leader-trends">CHART 4 — LEADER TRENDS</a></li>
   <li><a href="#chart-5-relationship" id="toc-chart-5-relationship">CHART 5 — RELATIONSHIP</a></li>
-  <li><a href="#chart-pad-1" id="toc-chart-pad-1">CHART 5 — SPREAD</a></li>
   <li><a href="#limitations" id="toc-limitations">LIMITATIONS</a></li>
   <li><a href="#conclusion" id="toc-conclusion">CONCLUSION</a></li>
   <li><a href="#references" id="toc-references">REFERENCES</a></li>
@@ -25,14 +25,14 @@ draft: false
   </ul>
 </nav>
 <main class="art-article-main">
-<p class="art-p">This report analyzes the TidyTuesday <strong>2019-12-24</strong> release on <strong>Christmas Songs</strong> — <strong>387</strong> rows after cleaning and merge. The question is not whether the topic matters, but what the distribution looks like when you stop quoting anecdotes and start counting.</p>
-<p class="art-p">Five charts track <strong>Week position</strong> across time, category, and named entities. Where a companion file exists in the repo, it is joined before analysis so reception, geography, or metadata columns are not left on the table.</p>
+<p class="art-p">This report analyzes the TidyTuesday <strong>2019-12-24</strong> release on <strong>Christmas Songs</strong> — <strong>387</strong> rows after cleaning and merge. Which holiday standards refuse to leave the chart?</p>
+<p class="art-p">Five charts track <strong>Weeks on chart</strong> across time, category, and named entities — trend, leaders, distribution, tiers, and relationships. Where companion files exist in the repo, they are joined before analysis so reception, geography, or metadata columns are not left on the table.</p>
 <h2 id="fast-facts" class="anchored">FAST FACTS</h2>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">387</span><span class="fact-label">Records in the working dataset</span></div>
-  <div class="fact-box"><span class="fact-number">58.0</span><span class="fact-label">Median Week position</span></div>
-  <div class="fact-box"><span class="fact-number">100</span><span class="fact-label">Highest observed Week position</span></div>
-  <div class="fact-box"><span class="fact-number">OH SANTA!</span><span class="fact-label">Top Song by Week position</span></div>
+  <div class="fact-box"><span class="fact-number">8.00</span><span class="fact-label">Median Weeks on chart</span></div>
+  <div class="fact-box"><span class="fact-number">20.0</span><span class="fact-label">Highest observed Weeks on chart</span></div>
+  <div class="fact-box"><span class="fact-number">BETTER DAYS</span><span class="fact-label">Top Song by Weeks on chart</span></div>
   <div class="fact-box"><span class="fact-number">1958–2017</span><span class="fact-label">Year span covered in the file</span></div>
 </div>
 <h2 id="dataset-context" class="anchored">DATASET CONTEXT</h2>
@@ -40,43 +40,43 @@ draft: false
 <p>Charts are exported as Plotly JSON with PNG fallbacks. Medians are used for robustness where distributions skew. Index-style fields (row numbers, sequential IDs) are excluded from metric selection.</p>
 <h2 id="chart-1-trend" class="anchored">CHART 1 — TREND</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/christmas-songs/charts/chart1_trend.plotly.json" data-fallback="/images/content/articles/christmas-songs/charts/chart1_trend.png" role="img" aria-label="Median Week position Over Time"></div>
-  <figcaption class="art-chart-caption">Median Week position Over Time</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/christmas-songs/charts/chart1_trend.plotly.json" data-fallback="/images/content/articles/christmas-songs/charts/chart1_trend.png" role="img" aria-label="Median Weeks on chart Over Time"></div>
+  <figcaption class="art-chart-caption">Median Weeks on chart Over Time</figcaption>
 </figure>
-<p class="art-p">The median week position opens at **67.5** and closes at **42.5** across the series.</p>
-<p class="art-p">Filled trend lines expose direction without letting single outliers steer the narrative.</p>
-<h2 id="chart-3-distribution" class="anchored">CHART 3 — DISTRIBUTION</h2>
+<p class="art-p">Median weeks on chart is <strong>falling</strong> from <strong>8.00</strong> in the opening period to <strong>5.00</strong> at the close.</p>
+<p class="art-p">Annual medians filter one-off spikes so the structural slope — not viral outliers — drives the story.</p>
+<h2 id="chart-2-leaders" class="anchored">CHART 2 — LEADERS</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/christmas-songs/charts/chart3_distribution.plotly.json" data-fallback="/images/content/articles/christmas-songs/charts/chart3_distribution.png" role="img" aria-label="Week position Distribution"></div>
-  <figcaption class="art-chart-caption">Week position Distribution</figcaption>
-</figure>
-<p class="art-p">Median **58.0** vs mean **57.2** — the shape is relatively symmetric.</p>
-<p class="art-p">The top decile begins at **92.0**; that tail is where franchise-defining cases live.</p>
-<h2 id="chart-4-leaders" class="anchored">CHART 4 — LEADERS</h2>
-<figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/christmas-songs/charts/chart4_leaders.plotly.json" data-fallback="/images/content/articles/christmas-songs/charts/chart4_leaders.png" role="img" aria-label="Top Song"></div>
+  <div class="art-chart-live" data-chart="/data/articles/christmas-songs/charts/chart2_leaders.plotly.json" data-fallback="/images/content/articles/christmas-songs/charts/chart2_leaders.png" role="img" aria-label="Top Song"></div>
   <figcaption class="art-chart-caption">Top Song</figcaption>
 </figure>
-<p class="art-p">**OH SANTA!** leads at **100** — **96.0** marks the median among the top dozen.</p>
-<p class="art-p">Head-of-field concentration is where brand, quality, or scale visibly separates from the pack.</p>
+<p class="art-p"><strong>BETTER DAYS</strong> leads at <strong>20.0</strong> — <strong>17.0</strong> marks the median among the top dozen.</p>
+<p class="art-p">Head-of-field concentration is where quality, scale, or brand visibly separates from the pack.</p>
+<h2 id="chart-3-distribution" class="anchored">CHART 3 — DISTRIBUTION</h2>
+<figure class="art-chart">
+  <div class="art-chart-live" data-chart="/data/articles/christmas-songs/charts/chart3_distribution.plotly.json" data-fallback="/images/content/articles/christmas-songs/charts/chart3_distribution.png" role="img" aria-label="Weeks on chart Distribution"></div>
+  <figcaption class="art-chart-caption">Weeks on chart Distribution</figcaption>
+</figure>
+<p class="art-p">Median <strong>8.00</strong> vs mean <strong>9.65</strong> — the shape is right-skewed.</p>
+<p class="art-p">The top decile begins at <strong>19.0</strong>; that tail is where defining cases live.</p>
+<h2 id="chart-4-leader-trends" class="anchored">CHART 4 — LEADER TRENDS</h2>
+<figure class="art-chart">
+  <div class="art-chart-live" data-chart="/data/articles/christmas-songs/charts/chart4_leader_trends.plotly.json" data-fallback="/images/content/articles/christmas-songs/charts/chart4_leader_trends.png" role="img" aria-label="Top Song Over Time"></div>
+  <figcaption class="art-chart-caption">Top Song Over Time</figcaption>
+</figure>
+<p class="art-p">The leading names do not move in lockstep — some fade as others surge.</p>
+<p class="art-p">Tracking medians over time separates sustained dominance from one-off spikes.</p>
 <h2 id="chart-5-relationship" class="anchored">CHART 5 — RELATIONSHIP</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/christmas-songs/charts/chart5_scatter.plotly.json" data-fallback="/images/content/articles/christmas-songs/charts/chart5_scatter.png" role="img" aria-label="Week position vs Instance"></div>
-  <figcaption class="art-chart-caption">Week position vs Instance</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/christmas-songs/charts/chart5_scatter.plotly.json" data-fallback="/images/content/articles/christmas-songs/charts/chart5_scatter.png" role="img" aria-label="Weeks on chart vs Instance"></div>
+  <figcaption class="art-chart-caption">Weeks on chart vs Instance</figcaption>
 </figure>
-<p class="art-p">Joint plot of **week position** and **instance** surfaces clusters the averages erase.</p>
+<p class="art-p">Joint plot of <strong>weeks on chart</strong> and <strong>instance</strong> surfaces clusters the averages erase.</p>
 <p class="art-p">Outlying points are candidates for follow-up — they are the archetypes, not the noise.</p>
-<h2 id="chart-pad-1" class="anchored">CHART 5 — SPREAD</h2>
-<figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/christmas-songs/charts/chart_pad_1.plotly.json" data-fallback="/images/content/articles/christmas-songs/charts/chart_pad_1.png" role="img" aria-label="Week position Spread"></div>
-  <figcaption class="art-chart-caption">Week position Spread</figcaption>
-</figure>
-<p class="art-p">The middle half runs **38.5** to **78.0**.</p>
-<p class="art-p">Tight boxes mean consensus; long whiskers mean extremes own the narrative.</p>
 <h2 id="limitations" class="anchored">LIMITATIONS</h2>
-<p>Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p><p>Findings describe the file on hand — treat them as structural signals for editorial follow-up, not exhaustive truth about the full domain.</p>
+<p>Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p><p>Findings describe the file on hand — treat them as structural signals about <strong>Christmas Songs</strong>, not exhaustive truth about the full domain.</p>
 <h2 id="conclusion" class="anchored">CONCLUSION</h2>
-<p>Measured end to end, <strong>Christmas Songs</strong> rewards counting: the head, the tail, and the time trend rarely agree.</p><p>That tension is the Artometrics mandate — data does not replace judgment, it disciplines it.</p>
+<p>Measured end to end, <strong>Christmas Songs</strong> rewards counting: the leaders, the long tail, and the time trend rarely tell the same story about weeks on chart.</p><p>That tension is the Artometrics mandate — data does not replace judgment, it disciplines it.</p>
 <h2 id="references" class="anchored">REFERENCES</h2>
 <p>Data Science Learning Community. (2019). <em>TidyTuesday: Christmas Songs</em>. <a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2019/2019-12-24/christmas_songs.csv" target="_blank" rel="noopener noreferrer">https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2019/2019-12-24/christmas_songs.csv</a></p>
 <h2 id="editors-note" class="anchored">EDITOR'S NOTE</h2>

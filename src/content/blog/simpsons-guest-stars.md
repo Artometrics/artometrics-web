@@ -2,7 +2,7 @@
 title: "SIMPSONS GUEST STARS: The Artometrics of Simpsons Guest Stars"
 slug: simpsons-guest-stars
 pubDate: 2026-06-15
-description: "This report analyzes the TidyTuesday 2019-08-27 release on Simpsons Guest Stars — 1,381 rows after cleaning and merge. The question is not whether the topic matters, but what the..."
+description: "This report analyzes the TidyTuesday 2019-08-27 release on Simpsons Guest Stars — 1,381 rows after cleaning and merge. Who guest-starred most often — and did celebrity density cluster in..."
 heroImage: /images/content/articles/simpsons-guest-stars/hero.png
 tags: [culture]
 draft: false
@@ -25,8 +25,8 @@ draft: false
   </ul>
 </nav>
 <main class="art-article-main">
-<p class="art-p">This report analyzes the TidyTuesday <strong>2019-08-27</strong> release on <strong>Simpsons Guest Stars</strong> — <strong>1,381</strong> rows after cleaning and merge. The question is not whether the topic matters, but what the distribution looks like when you stop quoting anecdotes and start counting.</p>
-<p class="art-p">Five charts track <strong>the core signal</strong> across time, category, and named entities. Where a companion file exists in the repo, it is joined before analysis so reception, geography, or metadata columns are not left on the table.</p>
+<p class="art-p">This report analyzes the TidyTuesday <strong>2019-08-27</strong> release on <strong>Simpsons Guest Stars</strong> — <strong>1,381</strong> rows after cleaning and merge. Who guest-starred most often — and did celebrity density cluster in golden seasons?</p>
+<p class="art-p">Five charts track <strong>record counts</strong> across time, category, and named entities — trend, leaders, distribution, tiers, and relationships. Where companion files exist in the repo, they are joined before analysis so reception, geography, or metadata columns are not left on the table.</p>
 <h2 id="fast-facts" class="anchored">FAST FACTS</h2>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">1,381</span><span class="fact-label">Records in the working dataset</span></div>
@@ -40,15 +40,15 @@ draft: false
   <div class="art-chart-live" data-chart="/data/articles/simpsons-guest-stars/charts/chart1_volume.plotly.json" data-fallback="/images/content/articles/simpsons-guest-stars/charts/chart1_volume.png" role="img" aria-label="Records By Period"></div>
   <figcaption class="art-chart-caption">Records By Period</figcaption>
 </figure>
-<p class="art-p">Activity peaks in **24.0** with **65** records.</p>
+<p class="art-p">Activity peaks in <strong>24.0</strong> with <strong>65</strong> records.</p>
 <p class="art-p">Period-level counts reveal when the dataset's subject matter intensified.</p>
 <h2 id="chart-2-leaders" class="anchored">CHART 2 — LEADERS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/simpsons-guest-stars/charts/chart2_leaders.plotly.json" data-fallback="/images/content/articles/simpsons-guest-stars/charts/chart2_leaders.png" role="img" aria-label="Top Guest star"></div>
   <figcaption class="art-chart-caption">Top Guest star</figcaption>
 </figure>
-<p class="art-p">**Marcia Wallace** appears **175** times — the most recurring name in the file.</p>
-<p class="art-p">The top dozen account for a visible share of all **1,381** rows.</p>
+<p class="art-p"><strong>Marcia Wallace</strong> appears <strong>175</strong> times — the most recurring name in the file.</p>
+<p class="art-p">The top dozen account for a visible share of all <strong>1,381</strong> rows.</p>
 <h2 id="chart-4-timeline" class="anchored">CHART 4 — TIMELINE</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/simpsons-guest-stars/charts/chart4_timeline.plotly.json" data-fallback="/images/content/articles/simpsons-guest-stars/charts/chart4_timeline.png" role="img" aria-label="Leaders Over Time"></div>
@@ -68,12 +68,12 @@ draft: false
   <div class="art-chart-live" data-chart="/data/articles/simpsons-guest-stars/charts/chart_extra_mix.plotly.json" data-fallback="/images/content/articles/simpsons-guest-stars/charts/chart_extra_mix.png" role="img" aria-label="Season"></div>
   <figcaption class="art-chart-caption">Season</figcaption>
 </figure>
-<p class="art-p">**24** is the most repeated season in the extract.</p>
+<p class="art-p"><strong>24</strong> is the most repeated season in the extract.</p>
 <p class="art-p">Secondary dimensions add context when the primary table has no numeric score column.</p>
 <h2 id="limitations" class="anchored">LIMITATIONS</h2>
-<p>Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p><p>Findings describe the file on hand — treat them as structural signals for editorial follow-up, not exhaustive truth about the full domain.</p>
+<p>Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p><p>Findings describe the file on hand — treat them as structural signals about <strong>Simpsons Guest Stars</strong>, not exhaustive truth about the full domain.</p>
 <h2 id="conclusion" class="anchored">CONCLUSION</h2>
-<p>Measured end to end, <strong>Simpsons Guest Stars</strong> rewards counting: the head, the tail, and the time trend rarely agree.</p><p>That tension is the Artometrics mandate — data does not replace judgment, it disciplines it.</p>
+<p>Measured end to end, <strong>Simpsons Guest Stars</strong> rewards counting: the leaders, the long tail, and the time trend rarely tell the same story about the field.</p><p>That tension is the Artometrics mandate — data does not replace judgment, it disciplines it.</p>
 <h2 id="references" class="anchored">REFERENCES</h2>
 <p>Data Science Learning Community. (2019). <em>TidyTuesday: Simpsons Guest Stars</em>. <a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2019/2019-08-27/simpsons-guests.csv" target="_blank" rel="noopener noreferrer">https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2019/2019-08-27/simpsons-guests.csv</a></p>
 <h2 id="editors-note" class="anchored">EDITOR'S NOTE</h2>

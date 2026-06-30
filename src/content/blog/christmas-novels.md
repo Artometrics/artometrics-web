@@ -2,7 +2,7 @@
 title: "CHRISTMAS NOVELS: The Artometrics of Christmas Novels"
 slug: christmas-novels
 pubDate: 2026-06-15
-description: "This report analyzes the TidyTuesday 2025-12-30 release on Christmas Novels — 35 rows after cleaning and merge. The question is not whether the topic matters, but what the distribution..."
+description: "This report analyzes the TidyTuesday 2025-12-30 release on Christmas Novels — 35 rows after cleaning and merge. Which Christmas novels and authors anchor the Gutenberg holiday shelf?"
 heroImage: /images/content/articles/christmas-novels/hero.png
 tags: [culture]
 draft: false
@@ -14,10 +14,10 @@ draft: false
   <li><a href="#fast-facts" id="toc-fast-facts">FAST FACTS</a></li>
   <li><a href="#dataset-context" id="toc-dataset-context">DATASET CONTEXT</a></li>
   <li><a href="#chart-1-trend" id="toc-chart-1-trend">CHART 1 — TREND</a></li>
+  <li><a href="#chart-2-leaders" id="toc-chart-2-leaders">CHART 2 — LEADERS</a></li>
   <li><a href="#chart-3-distribution" id="toc-chart-3-distribution">CHART 3 — DISTRIBUTION</a></li>
-  <li><a href="#chart-4-leaders" id="toc-chart-4-leaders">CHART 4 — LEADERS</a></li>
+  <li><a href="#chart-4-category-compare" id="toc-chart-4-category-compare">CHART 4 — TIERS</a></li>
   <li><a href="#chart-5-relationship" id="toc-chart-5-relationship">CHART 5 — RELATIONSHIP</a></li>
-  <li><a href="#chart-pad-1" id="toc-chart-pad-1">CHART 5 — SPREAD</a></li>
   <li><a href="#limitations" id="toc-limitations">LIMITATIONS</a></li>
   <li><a href="#conclusion" id="toc-conclusion">CONCLUSION</a></li>
   <li><a href="#references" id="toc-references">REFERENCES</a></li>
@@ -25,8 +25,8 @@ draft: false
   </ul>
 </nav>
 <main class="art-article-main">
-<p class="art-p">This report analyzes the TidyTuesday <strong>2025-12-30</strong> release on <strong>Christmas Novels</strong> — <strong>35</strong> rows after cleaning and merge. The question is not whether the topic matters, but what the distribution looks like when you stop quoting anecdotes and start counting.</p>
-<p class="art-p">Five charts track <strong>Birthdate</strong> across time, category, and named entities. Where a companion file exists in the repo, it is joined before analysis so reception, geography, or metadata columns are not left on the table.</p>
+<p class="art-p">This report analyzes the TidyTuesday <strong>2025-12-30</strong> release on <strong>Christmas Novels</strong> — <strong>35</strong> rows after cleaning and merge. Which Christmas novels and authors anchor the Gutenberg holiday shelf?</p>
+<p class="art-p">Five charts track <strong>Birthdate</strong> across time, category, and named entities — trend, leaders, distribution, tiers, and relationships. Where companion files exist in the repo, they are joined before analysis so reception, geography, or metadata columns are not left on the table.</p>
 <h2 id="fast-facts" class="anchored">FAST FACTS</h2>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">35</span><span class="fact-label">Records in the working dataset</span></div>
@@ -34,6 +34,7 @@ draft: false
   <div class="fact-box"><span class="fact-number">1,891</span><span class="fact-label">Highest observed Birthdate</span></div>
   <div class="fact-box"><span class="fact-number">The Camp Fire Girls Solve a </span><span class="fact-label">Top Title by Birthdate</span></div>
   <div class="fact-box"><span class="fact-number">1970–1970</span><span class="fact-label">Year span covered in the file</span></div>
+  <div class="fact-box"><span class="fact-number">Dickens, Charles</span><span class="fact-label">Most common Author</span></div>
 </div>
 <h2 id="dataset-context" class="anchored">DATASET CONTEXT</h2>
 <p>The source is the TidyTuesday release from <strong>2025-12-30</strong> (R for Data Science community). This working file contains <strong>35</strong> rows and <strong>9</strong> columns after merging all available CSV/XLSX tables in the week folder.</p>
@@ -43,40 +44,40 @@ draft: false
   <div class="art-chart-live" data-chart="/data/articles/christmas-novels/charts/chart1_trend.plotly.json" data-fallback="/images/content/articles/christmas-novels/charts/chart1_trend.png" role="img" aria-label="Median Birthdate Over Time"></div>
   <figcaption class="art-chart-caption">Median Birthdate Over Time</figcaption>
 </figure>
-<p class="art-p">The median birthdate opens at **1,859** and closes at **1,859** across the series.</p>
-<p class="art-p">Filled trend lines expose direction without letting single outliers steer the narrative.</p>
+<p class="art-p">Median birthdate is <strong>falling</strong> from <strong>1,859</strong> in the opening period to <strong>1,859</strong> at the close.</p>
+<p class="art-p">Annual medians filter one-off spikes so the structural slope — not viral outliers — drives the story.</p>
+<h2 id="chart-2-leaders" class="anchored">CHART 2 — LEADERS</h2>
+<figure class="art-chart">
+  <div class="art-chart-live" data-chart="/data/articles/christmas-novels/charts/chart2_leaders.plotly.json" data-fallback="/images/content/articles/christmas-novels/charts/chart2_leaders.png" role="img" aria-label="Top Title"></div>
+  <figcaption class="art-chart-caption">Top Title</figcaption>
+</figure>
+<p class="art-p"><strong>The Camp Fire Girls Solve a Mystery; Or, The Christmas Adventure at Carver House</strong> leads at <strong>1,891</strong> — <strong>1,872</strong> marks the median among the top dozen.</p>
+<p class="art-p">Head-of-field concentration is where quality, scale, or brand visibly separates from the pack.</p>
 <h2 id="chart-3-distribution" class="anchored">CHART 3 — DISTRIBUTION</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/christmas-novels/charts/chart3_distribution.plotly.json" data-fallback="/images/content/articles/christmas-novels/charts/chart3_distribution.png" role="img" aria-label="Birthdate Distribution"></div>
   <figcaption class="art-chart-caption">Birthdate Distribution</figcaption>
 </figure>
-<p class="art-p">Median **1,859** vs mean **1,849** — the shape is relatively symmetric.</p>
-<p class="art-p">The top decile begins at **1,874**; that tail is where franchise-defining cases live.</p>
-<h2 id="chart-4-leaders" class="anchored">CHART 4 — LEADERS</h2>
+<p class="art-p">Median <strong>1,859</strong> vs mean <strong>1,849</strong> — the shape is relatively symmetric.</p>
+<p class="art-p">The top decile begins at <strong>1,874</strong>; that tail is where defining cases live.</p>
+<h2 id="chart-4-category-compare" class="anchored">CHART 4 — TIERS</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/christmas-novels/charts/chart4_leaders.plotly.json" data-fallback="/images/content/articles/christmas-novels/charts/chart4_leaders.png" role="img" aria-label="Top Title"></div>
-  <figcaption class="art-chart-caption">Top Title</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/christmas-novels/charts/chart4_category_compare.plotly.json" data-fallback="/images/content/articles/christmas-novels/charts/chart4_category_compare.png" role="img" aria-label="Birthdate by Author"></div>
+  <figcaption class="art-chart-caption">Birthdate by Author</figcaption>
 </figure>
-<p class="art-p">**The Camp Fire Girls Solve a Mystery; Or, The Christmas Adventure at Carver House** leads at **1,891** — **1,872** marks the median among the top dozen.</p>
-<p class="art-p">Head-of-field concentration is where brand, quality, or scale visibly separates from the pack.</p>
+<p class="art-p"><strong>Hughes, Rupert</strong> leads the median table at <strong>1,872</strong>; the gap to <strong>Thackeray, William Makepeace</strong> is <strong>61.0</strong> points.</p>
+<p class="art-p">Tier separation matters more than means when distributions skew hard.</p>
 <h2 id="chart-5-relationship" class="anchored">CHART 5 — RELATIONSHIP</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/christmas-novels/charts/chart5_scatter.plotly.json" data-fallback="/images/content/articles/christmas-novels/charts/chart5_scatter.png" role="img" aria-label="Birthdate vs Deathdate"></div>
   <figcaption class="art-chart-caption">Birthdate vs Deathdate</figcaption>
 </figure>
-<p class="art-p">Joint plot of **birthdate** and **deathdate** surfaces clusters the averages erase.</p>
+<p class="art-p">Joint plot of <strong>birthdate</strong> and <strong>deathdate</strong> surfaces clusters the averages erase.</p>
 <p class="art-p">Outlying points are candidates for follow-up — they are the archetypes, not the noise.</p>
-<h2 id="chart-pad-1" class="anchored">CHART 5 — SPREAD</h2>
-<figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/christmas-novels/charts/chart_pad_1.plotly.json" data-fallback="/images/content/articles/christmas-novels/charts/chart_pad_1.png" role="img" aria-label="Birthdate Spread"></div>
-  <figcaption class="art-chart-caption">Birthdate Spread</figcaption>
-</figure>
-<p class="art-p">The middle half runs **1,829** to **1,869**.</p>
-<p class="art-p">Tight boxes mean consensus; long whiskers mean extremes own the narrative.</p>
 <h2 id="limitations" class="anchored">LIMITATIONS</h2>
-<p>Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p><p>Findings describe the file on hand — treat them as structural signals for editorial follow-up, not exhaustive truth about the full domain.</p>
+<p>Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p><p>Findings describe the file on hand — treat them as structural signals about <strong>Christmas Novels</strong>, not exhaustive truth about the full domain.</p>
 <h2 id="conclusion" class="anchored">CONCLUSION</h2>
-<p>Measured end to end, <strong>Christmas Novels</strong> rewards counting: the head, the tail, and the time trend rarely agree.</p><p>That tension is the Artometrics mandate — data does not replace judgment, it disciplines it.</p>
+<p>Measured end to end, <strong>Christmas Novels</strong> rewards counting: the leaders, the long tail, and the time trend rarely tell the same story about birthdate.</p><p>That tension is the Artometrics mandate — data does not replace judgment, it disciplines it.</p>
 <h2 id="references" class="anchored">REFERENCES</h2>
 <p>Data Science Learning Community. (2025). <em>TidyTuesday: Christmas Novels</em>. <a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-12-30/christmas_novels.csv" target="_blank" rel="noopener noreferrer">https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-12-30/christmas_novels.csv</a></p>
 <h2 id="editors-note" class="anchored">EDITOR'S NOTE</h2>

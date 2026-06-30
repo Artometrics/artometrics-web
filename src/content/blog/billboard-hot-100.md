@@ -2,7 +2,7 @@
 title: "BILLBOARD HOT 100 NUMBER ONES: The Artometrics of Billboard Hot 100 Number Ones"
 slug: billboard-hot-100
 pubDate: 2026-06-15
-description: "This report analyzes the TidyTuesday 2025-08-26 release on Billboard Hot 100 Number Ones — 1,177 rows after cleaning and merge. The question is not whether the topic matters, but what the..."
+description: "This report analyzes the TidyTuesday 2025-08-26 release on Billboard Hot 100 Number Ones — 1,177 rows after cleaning and merge. Which number-one runs lasted — and who owned the top slot..."
 heroImage: /images/content/articles/billboard-hot-100/hero.png
 tags: [culture]
 draft: false
@@ -13,10 +13,10 @@ draft: false
   <ul>
   <li><a href="#fast-facts" id="toc-fast-facts">FAST FACTS</a></li>
   <li><a href="#dataset-context" id="toc-dataset-context">DATASET CONTEXT</a></li>
-  <li><a href="#chart-1-landscape" id="toc-chart-1-landscape">CHART 1 — LANDSCAPE</a></li>
-  <li><a href="#chart-2-timeline" id="toc-chart-2-timeline">CHART 2 — TIMELINE</a></li>
+  <li><a href="#chart-1-trend" id="toc-chart-1-trend">CHART 1 — TREND</a></li>
+  <li><a href="#chart-2-leaders" id="toc-chart-2-leaders">CHART 2 — LEADERS</a></li>
   <li><a href="#chart-3-distribution" id="toc-chart-3-distribution">CHART 3 — DISTRIBUTION</a></li>
-  <li><a href="#chart-4-leaders" id="toc-chart-4-leaders">CHART 4 — LEADERS</a></li>
+  <li><a href="#chart-4-category-compare" id="toc-chart-4-category-compare">CHART 4 — TIERS</a></li>
   <li><a href="#chart-5-relationship" id="toc-chart-5-relationship">CHART 5 — RELATIONSHIP</a></li>
   <li><a href="#limitations" id="toc-limitations">LIMITATIONS</a></li>
   <li><a href="#conclusion" id="toc-conclusion">CONCLUSION</a></li>
@@ -25,59 +25,59 @@ draft: false
   </ul>
 </nav>
 <main class="art-article-main">
-<p class="art-p">This report analyzes the TidyTuesday <strong>2025-08-26</strong> release on <strong>Billboard Hot 100 Number Ones</strong> — <strong>1,177</strong> rows after cleaning and merge. The question is not whether the topic matters, but what the distribution looks like when you stop quoting anecdotes and start counting.</p>
-<p class="art-p">Five charts track <strong>Rating 1</strong> across time, category, and named entities. Where a companion file exists in the repo, it is joined before analysis so reception, geography, or metadata columns are not left on the table.</p>
+<p class="art-p">This report analyzes the TidyTuesday <strong>2025-08-26</strong> release on <strong>Billboard Hot 100 Number Ones</strong> — <strong>1,177</strong> rows after cleaning and merge. Which number-one runs lasted — and who owned the top slot longest?</p>
+<p class="art-p">Five charts track <strong>Weeks at number one</strong> across time, category, and named entities — trend, leaders, distribution, tiers, and relationships. Where companion files exist in the repo, they are joined before analysis so reception, geography, or metadata columns are not left on the table.</p>
 <h2 id="fast-facts" class="anchored">FAST FACTS</h2>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">1,177</span><span class="fact-label">Records in the working dataset</span></div>
-  <div class="fact-box"><span class="fact-number">6.00</span><span class="fact-label">Median Rating 1</span></div>
-  <div class="fact-box"><span class="fact-number">10.0</span><span class="fact-label">Highest observed Rating 1</span></div>
-  <div class="fact-box"><span class="fact-number">Sweet Child O' Mine</span><span class="fact-label">Top Song by Rating 1</span></div>
+  <div class="fact-box"><span class="fact-number">2.00</span><span class="fact-label">Median Weeks at number one</span></div>
+  <div class="fact-box"><span class="fact-number">19.0</span><span class="fact-label">Highest observed Weeks at number one</span></div>
+  <div class="fact-box"><span class="fact-number">A Bar Song (Tipsy)</span><span class="fact-label">Top Song by Weeks at number one</span></div>
   <div class="fact-box"><span class="fact-number">1958–2025</span><span class="fact-label">Year span covered in the file</span></div>
-  <div class="fact-box"><span class="fact-number">American Idol</span><span class="fact-label">Most common Talent contestant</span></div>
+  <div class="fact-box"><span class="fact-number">The Beatles</span><span class="fact-label">Most common Artist</span></div>
 </div>
 <h2 id="dataset-context" class="anchored">DATASET CONTEXT</h2>
 <p>The source is the TidyTuesday release from <strong>2025-08-26</strong> (R for Data Science community). This working file contains <strong>1,177</strong> rows and <strong>106</strong> columns after merging all available CSV/XLSX tables in the week folder.</p>
 <p>Charts are exported as Plotly JSON with PNG fallbacks. Medians are used for robustness where distributions skew. Index-style fields (row numbers, sequential IDs) are excluded from metric selection.</p>
-<h2 id="chart-1-landscape" class="anchored">CHART 1 — LANDSCAPE</h2>
+<h2 id="chart-1-trend" class="anchored">CHART 1 — TREND</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/billboard-hot-100/charts/chart1_landscape.plotly.json" data-fallback="/images/content/articles/billboard-hot-100/charts/chart1_landscape.png" role="img" aria-label="Talent contestant Mix"></div>
-  <figcaption class="art-chart-caption">Talent contestant Mix</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/billboard-hot-100/charts/chart1_trend.plotly.json" data-fallback="/images/content/articles/billboard-hot-100/charts/chart1_trend.png" role="img" aria-label="Median Weeks at number one Over Time"></div>
+  <figcaption class="art-chart-caption">Median Weeks at number one Over Time</figcaption>
 </figure>
-<p class="art-p">**American Idol** dominates with **5** records — the structural center of gravity.</p>
-<p class="art-p">Beyond the top ten sit **0** additional talent contestant buckets in the long tail.</p>
-<h2 id="chart-2-timeline" class="anchored">CHART 2 — TIMELINE</h2>
+<p class="art-p">Median weeks at number one is <strong>falling</strong> from <strong>2.50</strong> in the opening period to <strong>2.00</strong> at the close.</p>
+<p class="art-p">Annual medians filter one-off spikes so the structural slope — not viral outliers — drives the story.</p>
+<h2 id="chart-2-leaders" class="anchored">CHART 2 — LEADERS</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/billboard-hot-100/charts/chart2_timeline.plotly.json" data-fallback="/images/content/articles/billboard-hot-100/charts/chart2_timeline.png" role="img" aria-label="Median Rating 1 Over Time"></div>
-  <figcaption class="art-chart-caption">Median Rating 1 Over Time</figcaption>
-</figure>
-<p class="art-p">Median rating 1 is **rising** from **5.00** to **8.00**.</p>
-<p class="art-p">Annual medians filter noise and show the slope the raw rows hide.</p>
-<h2 id="chart-3-distribution" class="anchored">CHART 3 — DISTRIBUTION</h2>
-<figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/billboard-hot-100/charts/chart3_distribution.plotly.json" data-fallback="/images/content/articles/billboard-hot-100/charts/chart3_distribution.png" role="img" aria-label="Rating 1 Distribution"></div>
-  <figcaption class="art-chart-caption">Rating 1 Distribution</figcaption>
-</figure>
-<p class="art-p">Median **6.00** vs mean **5.98** — the shape is relatively symmetric.</p>
-<p class="art-p">The top decile begins at **9.00**; that tail is where franchise-defining cases live.</p>
-<h2 id="chart-4-leaders" class="anchored">CHART 4 — LEADERS</h2>
-<figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/billboard-hot-100/charts/chart4_leaders.plotly.json" data-fallback="/images/content/articles/billboard-hot-100/charts/chart4_leaders.png" role="img" aria-label="Top Song"></div>
+  <div class="art-chart-live" data-chart="/data/articles/billboard-hot-100/charts/chart2_leaders.plotly.json" data-fallback="/images/content/articles/billboard-hot-100/charts/chart2_leaders.png" role="img" aria-label="Top Song"></div>
   <figcaption class="art-chart-caption">Top Song</figcaption>
 </figure>
-<p class="art-p">**Ticket to Ride** leads at **10.0** — **10.0** marks the median among the top dozen.</p>
-<p class="art-p">Head-of-field concentration is where brand, quality, or scale visibly separates from the pack.</p>
+<p class="art-p"><strong>A Bar Song (Tipsy)</strong> leads at <strong>19.0</strong> — <strong>14.5</strong> marks the median among the top dozen.</p>
+<p class="art-p">Head-of-field concentration is where quality, scale, or brand visibly separates from the pack.</p>
+<h2 id="chart-3-distribution" class="anchored">CHART 3 — DISTRIBUTION</h2>
+<figure class="art-chart">
+  <div class="art-chart-live" data-chart="/data/articles/billboard-hot-100/charts/chart3_distribution.plotly.json" data-fallback="/images/content/articles/billboard-hot-100/charts/chart3_distribution.png" role="img" aria-label="Weeks at number one by Artist"></div>
+  <figcaption class="art-chart-caption">Weeks at number one by Artist</figcaption>
+</figure>
+<p class="art-p">Category boxes reveal whether weeks at number one consensus is shared or contested across tiers.</p>
+<p class="art-p">Wide whiskers flag segments where outliers — not averages — drive reputation.</p>
+<h2 id="chart-4-category-compare" class="anchored">CHART 4 — TIERS</h2>
+<figure class="art-chart">
+  <div class="art-chart-live" data-chart="/data/articles/billboard-hot-100/charts/chart4_category_compare.plotly.json" data-fallback="/images/content/articles/billboard-hot-100/charts/chart4_category_compare.png" role="img" aria-label="Weeks at number one by Artist"></div>
+  <figcaption class="art-chart-caption">Weeks at number one by Artist</figcaption>
+</figure>
+<p class="art-p"><strong>Mariah Carey</strong> leads the median table at <strong>3.00</strong>; the gap to <strong>Whitney Houston</strong> is <strong>1.00</strong> points.</p>
+<p class="art-p">Tier separation matters more than means when distributions skew hard.</p>
 <h2 id="chart-5-relationship" class="anchored">CHART 5 — RELATIONSHIP</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/billboard-hot-100/charts/chart5_scatter.plotly.json" data-fallback="/images/content/articles/billboard-hot-100/charts/chart5_scatter.png" role="img" aria-label="Rating 1 vs Rating 2"></div>
-  <figcaption class="art-chart-caption">Rating 1 vs Rating 2</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/billboard-hot-100/charts/chart5_scatter.plotly.json" data-fallback="/images/content/articles/billboard-hot-100/charts/chart5_scatter.png" role="img" aria-label="Weeks at number one vs Rating 2"></div>
+  <figcaption class="art-chart-caption">Weeks at number one vs Rating 2</figcaption>
 </figure>
-<p class="art-p">Joint plot of **rating 1** and **rating 2** surfaces clusters the averages erase.</p>
+<p class="art-p">Joint plot of <strong>weeks at number one</strong> and <strong>rating 2</strong> surfaces clusters the averages erase.</p>
 <p class="art-p">Outlying points are candidates for follow-up — they are the archetypes, not the noise.</p>
 <h2 id="limitations" class="anchored">LIMITATIONS</h2>
-<p>Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p><p>Findings describe the file on hand — treat them as structural signals for editorial follow-up, not exhaustive truth about the full domain.</p>
+<p>Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p><p>Findings describe the file on hand — treat them as structural signals about <strong>Billboard Hot 100 Number Ones</strong>, not exhaustive truth about the full domain.</p>
 <h2 id="conclusion" class="anchored">CONCLUSION</h2>
-<p>Measured end to end, <strong>Billboard Hot 100 Number Ones</strong> rewards counting: the head, the tail, and the time trend rarely agree.</p><p>That tension is the Artometrics mandate — data does not replace judgment, it disciplines it.</p>
+<p>Measured end to end, <strong>Billboard Hot 100 Number Ones</strong> rewards counting: the leaders, the long tail, and the time trend rarely tell the same story about weeks at number one.</p><p>That tension is the Artometrics mandate — data does not replace judgment, it disciplines it.</p>
 <h2 id="references" class="anchored">REFERENCES</h2>
 <p>Data Science Learning Community. (2025). <em>TidyTuesday: Billboard Hot 100 Number Ones</em>. <a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-08-26/billboard.csv" target="_blank" rel="noopener noreferrer">https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-08-26/billboard.csv</a></p>
 <h2 id="editors-note" class="anchored">EDITOR'S NOTE</h2>

@@ -2,7 +2,7 @@
 title: "NETFLIX TITLES: The Artometrics of Netflix Titles"
 slug: netflix-titles
 pubDate: 2026-06-15
-description: "This report analyzes the TidyTuesday 2021-04-20 release on Netflix Titles — 7,787 rows after cleaning and merge. The question is not whether the topic matters, but what the distribution..."
+description: "This report analyzes the TidyTuesday 2021-04-20 release on Netflix Titles — 7,787 rows after cleaning and merge. How did Netflix's catalog mix shift between films and series?"
 heroImage: /images/content/articles/netflix-titles/hero.png
 tags: [culture]
 draft: false
@@ -13,11 +13,11 @@ draft: false
   <ul>
   <li><a href="#fast-facts" id="toc-fast-facts">FAST FACTS</a></li>
   <li><a href="#dataset-context" id="toc-dataset-context">DATASET CONTEXT</a></li>
-  <li><a href="#chart-1-volume" id="toc-chart-1-volume">CHART 1 — VOLUME</a></li>
+  <li><a href="#chart-1-trend" id="toc-chart-1-trend">CHART 1 — TREND</a></li>
   <li><a href="#chart-2-leaders" id="toc-chart-2-leaders">CHART 2 — LEADERS</a></li>
-  <li><a href="#chart-3-category" id="toc-chart-3-category">CHART 3 — CATEGORY</a></li>
-  <li><a href="#chart-4-timeline" id="toc-chart-4-timeline">CHART 4 — TIMELINE</a></li>
-  <li><a href="#chart-5-frequency" id="toc-chart-5-frequency">CHART 5 — FREQUENCY</a></li>
+  <li><a href="#chart-3-distribution" id="toc-chart-3-distribution">CHART 3 — DISTRIBUTION</a></li>
+  <li><a href="#chart-4-category-compare" id="toc-chart-4-category-compare">CHART 4 — TIERS</a></li>
+  <li><a href="#chart-5-mean-median" id="toc-chart-5-mean-median">CHART 5 — ROBUSTNESS</a></li>
   <li><a href="#limitations" id="toc-limitations">LIMITATIONS</a></li>
   <li><a href="#conclusion" id="toc-conclusion">CONCLUSION</a></li>
   <li><a href="#references" id="toc-references">REFERENCES</a></li>
@@ -25,56 +25,59 @@ draft: false
   </ul>
 </nav>
 <main class="art-article-main">
-<p class="art-p">This report analyzes the TidyTuesday <strong>2021-04-20</strong> release on <strong>Netflix Titles</strong> — <strong>7,787</strong> rows after cleaning and merge. The question is not whether the topic matters, but what the distribution looks like when you stop quoting anecdotes and start counting.</p>
-<p class="art-p">Five charts track <strong>the core signal</strong> across time, category, and named entities. Where a companion file exists in the repo, it is joined before analysis so reception, geography, or metadata columns are not left on the table.</p>
+<p class="art-p">This report analyzes the TidyTuesday <strong>2021-04-20</strong> release on <strong>Netflix Titles</strong> — <strong>7,787</strong> rows after cleaning and merge. How did Netflix's catalog mix shift between films and series?</p>
+<p class="art-p">Five charts track <strong>Duration</strong> across time, category, and named entities — trend, leaders, distribution, tiers, and relationships. Where companion files exist in the repo, they are joined before analysis so reception, geography, or metadata columns are not left on the table.</p>
 <h2 id="fast-facts" class="anchored">FAST FACTS</h2>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">7,787</span><span class="fact-label">Records in the working dataset</span></div>
+  <div class="fact-box"><span class="fact-number">88.0</span><span class="fact-label">Median Duration</span></div>
+  <div class="fact-box"><span class="fact-number">312</span><span class="fact-label">Highest observed Duration</span></div>
+  <div class="fact-box"><span class="fact-number">Black Mirror: Bandersnatch</span><span class="fact-label">Top Title by Duration</span></div>
   <div class="fact-box"><span class="fact-number">2008–2021</span><span class="fact-label">Year span covered in the file</span></div>
   <div class="fact-box"><span class="fact-number">Movie</span><span class="fact-label">Most common Type</span></div>
 </div>
 <h2 id="dataset-context" class="anchored">DATASET CONTEXT</h2>
 <p>The source is the TidyTuesday release from <strong>2021-04-20</strong> (R for Data Science community). This working file contains <strong>7,787</strong> rows and <strong>13</strong> columns after merging all available CSV/XLSX tables in the week folder.</p>
 <p>Charts are exported as Plotly JSON with PNG fallbacks. Medians are used for robustness where distributions skew. Index-style fields (row numbers, sequential IDs) are excluded from metric selection.</p>
-<h2 id="chart-1-volume" class="anchored">CHART 1 — VOLUME</h2>
+<h2 id="chart-1-trend" class="anchored">CHART 1 — TREND</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/netflix-titles/charts/chart1_volume.plotly.json" data-fallback="/images/content/articles/netflix-titles/charts/chart1_volume.png" role="img" aria-label="Records By Period"></div>
-  <figcaption class="art-chart-caption">Records By Period</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/netflix-titles/charts/chart1_trend.plotly.json" data-fallback="/images/content/articles/netflix-titles/charts/chart1_trend.png" role="img" aria-label="Median Duration Over Time"></div>
+  <figcaption class="art-chart-caption">Median Duration Over Time</figcaption>
 </figure>
-<p class="art-p">Activity peaks in **2019.0** with **2,136** records.</p>
-<p class="art-p">Period-level counts reveal when the dataset's subject matter intensified.</p>
+<p class="art-p">Median duration is <strong>rising</strong> from <strong>41.0</strong> in the opening period to <strong>98.0</strong> at the close.</p>
+<p class="art-p">Annual medians filter one-off spikes so the structural slope — not viral outliers — drives the story.</p>
 <h2 id="chart-2-leaders" class="anchored">CHART 2 — LEADERS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/netflix-titles/charts/chart2_leaders.plotly.json" data-fallback="/images/content/articles/netflix-titles/charts/chart2_leaders.png" role="img" aria-label="Top Title"></div>
   <figcaption class="art-chart-caption">Top Title</figcaption>
 </figure>
-<p class="art-p">**3%** appears **1** times — the most recurring name in the file.</p>
-<p class="art-p">The top dozen account for a visible share of all **7,787** rows.</p>
-<h2 id="chart-3-category" class="anchored">CHART 3 — CATEGORY</h2>
+<p class="art-p"><strong>Black Mirror: Bandersnatch</strong> leads at <strong>312</strong> — <strong>226</strong> marks the median among the top dozen.</p>
+<p class="art-p">Head-of-field concentration is where quality, scale, or brand visibly separates from the pack.</p>
+<h2 id="chart-3-distribution" class="anchored">CHART 3 — DISTRIBUTION</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/netflix-titles/charts/chart3_category.plotly.json" data-fallback="/images/content/articles/netflix-titles/charts/chart3_category.png" role="img" aria-label="Type"></div>
-  <figcaption class="art-chart-caption">Type</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/netflix-titles/charts/chart3_distribution.plotly.json" data-fallback="/images/content/articles/netflix-titles/charts/chart3_distribution.png" role="img" aria-label="Duration by Type"></div>
+  <figcaption class="art-chart-caption">Duration by Type</figcaption>
 </figure>
-<p class="art-p">**Movie** is the largest bucket with **5,377** records.</p>
-<p class="art-p">Category concentration shows where editorial attention should focus first.</p>
-<h2 id="chart-4-timeline" class="anchored">CHART 4 — TIMELINE</h2>
+<p class="art-p">Category boxes reveal whether duration consensus is shared or contested across tiers.</p>
+<p class="art-p">Wide whiskers flag segments where outliers — not averages — drive reputation.</p>
+<h2 id="chart-4-category-compare" class="anchored">CHART 4 — TIERS</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/netflix-titles/charts/chart4_timeline.plotly.json" data-fallback="/images/content/articles/netflix-titles/charts/chart4_timeline.png" role="img" aria-label="Leaders Over Time"></div>
-  <figcaption class="art-chart-caption">Leaders Over Time</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/netflix-titles/charts/chart4_category_compare.plotly.json" data-fallback="/images/content/articles/netflix-titles/charts/chart4_category_compare.png" role="img" aria-label="Duration by Type"></div>
+  <figcaption class="art-chart-caption">Duration by Type</figcaption>
 </figure>
-<p class="art-p">The leading names do not move in lockstep — some fade as others surge.</p>
-<p class="art-p">Tracking counts over time separates sustained presence from one-off spikes.</p>
-<h2 id="chart-5-frequency" class="anchored">CHART 5 — FREQUENCY</h2>
+<p class="art-p"><strong>Movie</strong> leads the median table at <strong>98.0</strong>; the gap to <strong>TV Show</strong> is <strong>97.0</strong> points.</p>
+<p class="art-p">Tier separation matters more than means when distributions skew hard.</p>
+<h2 id="chart-5-mean-median" class="anchored">CHART 5 — ROBUSTNESS</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/netflix-titles/charts/chart5_frequency.plotly.json" data-fallback="/images/content/articles/netflix-titles/charts/chart5_frequency.png" role="img" aria-label="Appearance Spread"></div>
-  <figcaption class="art-chart-caption">Appearance Spread</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/netflix-titles/charts/chart5_mean_median.plotly.json" data-fallback="/images/content/articles/netflix-titles/charts/chart5_mean_median.png" role="img" aria-label="Mean vs Median Duration"></div>
+  <figcaption class="art-chart-caption">Mean vs Median Duration</figcaption>
 </figure>
-<p class="art-p">Most title entities appear only once; a small head revisits repeatedly.</p>
-<p class="art-p">This power-law shape is typical of guest lists, credits, and catalog-style tables.</p>
+<p class="art-p">When mean and median diverge, outliers are steering the narrative — medians tell the typical story.</p>
+<p class="art-p">Tracking both lines exposes whether the field is tightening or fracturing over time.</p>
 <h2 id="limitations" class="anchored">LIMITATIONS</h2>
-<p>Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p><p>Findings describe the file on hand — treat them as structural signals for editorial follow-up, not exhaustive truth about the full domain.</p>
+<p>Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p><p>Findings describe the file on hand — treat them as structural signals about <strong>Netflix Titles</strong>, not exhaustive truth about the full domain.</p>
 <h2 id="conclusion" class="anchored">CONCLUSION</h2>
-<p>Measured end to end, <strong>Netflix Titles</strong> rewards counting: the head, the tail, and the time trend rarely agree.</p><p>That tension is the Artometrics mandate — data does not replace judgment, it disciplines it.</p>
+<p>Measured end to end, <strong>Netflix Titles</strong> rewards counting: the leaders, the long tail, and the time trend rarely tell the same story about duration.</p><p>That tension is the Artometrics mandate — data does not replace judgment, it disciplines it.</p>
 <h2 id="references" class="anchored">REFERENCES</h2>
 <p>Data Science Learning Community. (2021). <em>TidyTuesday: Netflix Titles</em>. <a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2021/2021-04-20/netflix_titles.csv" target="_blank" rel="noopener noreferrer">https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2021/2021-04-20/netflix_titles.csv</a></p>
 <h2 id="editors-note" class="anchored">EDITOR'S NOTE</h2>
