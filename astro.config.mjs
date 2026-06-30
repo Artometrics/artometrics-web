@@ -5,7 +5,10 @@ import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
-
+  server: {
+    host: true,
+    allowedHosts: true,
+  },
   vite: {
     plugins: [tailwindcss()],
   },
