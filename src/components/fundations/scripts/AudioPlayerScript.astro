@@ -1,4 +1,50 @@
 <script type="module">
+  function wireMediaSession(audioElement, meta = {}) {
+    if (!("mediaSession" in navigator) || !audioElement) return;
+
+    const updatePosition = () => {
+      if (!audioElement.duration) return;
+      navigator.mediaSession.setPositionState({
+        duration: audioElement.duration,
+        playbackRate: audioElement.playbackRate,
+        position: audioElement.currentTime,
+      });
+    };
+
+    audioElement.addEventListener("timeupdate", updatePosition);
+    audioElement.addEventListener("loadedmetadata", updatePosition);
+
+    navigator.mediaSession.setActionHandler("play", () => {
+      void audioElement.play();
+    });
+    navigator.mediaSession.setActionHandler("pause", () => {
+      audioElement.pause();
+    });
+    navigator.mediaSession.setActionHandler("seekbackward", () => {
+      audioElement.currentTime = Math.max(0, audioElement.currentTime - 10);
+    });
+    navigator.mediaSession.setActionHandler("seekforward", () => {
+      audioElement.currentTime = Math.min(
+        audioElement.duration || audioElement.currentTime,
+        audioElement.currentTime + 10
+      );
+    });
+
+    const setMetadata = () => {
+      navigator.mediaSession.metadata = new MediaMetadata({
+        title: meta.title || document.title,
+        artist: meta.artist || "Artometrics",
+        album: meta.album || "Podcast",
+        artwork: meta.artwork || [
+          { src: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+        ],
+      });
+    };
+
+    setMetadata();
+    return setMetadata;
+  }
+
   function wireAudioPlayer(prefix = "") {
     const id = (name) => document.getElementById(`${prefix}${name}`);
     const playPauseBtn = id("playPauseBtn");
@@ -16,15 +62,32 @@
     const speakerIcon = id("speakerIcon");
     const muteIcon = id("muteIcon");
 
+    const episodeTitle =
+      document.querySelector("h1")?.textContent?.trim() || "Artometrics Podcast";
+    const guestName =
+      document.querySelector("[data-podcast-guest]")?.textContent?.trim() || "Artometrics";
+
+    const refreshMetadata = wireMediaSession(audioElement, {
+      title: episodeTitle,
+      artist: guestName,
+      album: "Artometrics Interviews",
+    });
+
+    const syncPlayState = (playing) => {
+      playIcon?.classList.toggle("hidden", playing);
+      pauseIcon?.classList.toggle("hidden", !playing);
+      if ("mediaSession" in navigator) {
+        navigator.mediaSession.playbackState = playing ? "playing" : "paused";
+      }
+    };
+
     playPauseBtn.addEventListener("click", () => {
       if (audioElement.paused) {
-        audioElement.play();
-        playIcon?.classList.add("hidden");
-        pauseIcon?.classList.remove("hidden");
+        void audioElement.play();
+        syncPlayState(true);
       } else {
         audioElement.pause();
-        pauseIcon?.classList.add("hidden");
-        playIcon?.classList.remove("hidden");
+        syncPlayState(false);
       }
     });
 
@@ -56,11 +119,15 @@
     });
 
     audioElement.addEventListener("loadedmetadata", () => {
+      refreshMetadata?.();
       if (!durationDisplay) return;
       const minutes = Math.floor(audioElement.duration / 60);
       const seconds = Math.floor(audioElement.duration % 60);
       durationDisplay.textContent = `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
     });
+
+    audioElement.addEventListener("play", () => syncPlayState(true));
+    audioElement.addEventListener("pause", () => syncPlayState(false));
 
     seekBar?.addEventListener("input", () => {
       const seekTo = (Number(seekBar.value) / 100) * audioElement.duration;

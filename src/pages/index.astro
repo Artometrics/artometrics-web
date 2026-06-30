@@ -20,6 +20,13 @@ const featured = sortedPosts[0];
 const rest = sortedPosts.slice(1);
 const latestPodcasts = sortedPodcasts.slice(0, 2);
 
+const weekAgo = Date.now() - 7 * 24 * 60 * 60 * 1000;
+const weekPosts = sortedPosts
+  .filter((post) => post.data.pubDate.getTime() >= weekAgo && post.id !== featured?.id)
+  .slice(0, 4);
+const editorialPicks =
+  weekPosts.length > 0 ? weekPosts : sortedPosts.slice(1, 5);
+
 function deckLine(description: string) {
   const trimmed = description.trim();
   const match = trimmed.match(/^(.+?[.!?])(?:\s|$)/);
@@ -48,6 +55,12 @@ const sectionCounts = Object.fromEntries(
   pageDescription="Editorial data reports and podcast interviews on culture, atlas, history, persona, and power."
   canonicalPath="/"
 >
+  <section id="homeContinueReading" class="border-b border-base-200 bg-accent-50/30" hidden>
+    <Wrapper variant="standard" class="py-8">
+      <div id="homeContinueReadingCard"></div>
+    </Wrapper>
+  </section>
+
   {
     featured && (
       <section class="border-b border-base-200 bg-base-100">
@@ -102,6 +115,59 @@ const sectionCounts = Object.fromEntries(
                   />
                 </a>
               )
+            }
+          </div>
+        </Wrapper>
+      </section>
+    )
+  }
+
+  {
+    editorialPicks.length > 0 && (
+      <section class="border-b border-base-200 bg-white">
+        <Wrapper variant="standard" class="py-12 md:py-14">
+          <div class="mb-8 flex flex-wrap items-end justify-between gap-4 border-b border-base-200 pb-4">
+            <div>
+              <Text tag="p" variant="textXS" class="uppercase tracking-[0.18em] text-accent-700">
+                {weekPosts.length > 0 ? "This week" : "Editor's picks"}
+              </Text>
+              <Text tag="h2" variant="displayXS" class="mt-1 font-serif font-light uppercase tracking-wide">
+                {weekPosts.length > 0 ? "This week in Artometrics" : "Worth your time"}
+              </Text>
+            </div>
+            <a
+              href="/blog/"
+              class="text-xs font-medium uppercase tracking-widest text-base-600 transition-colors hover:text-accent-700"
+            >
+              All reports →
+            </a>
+          </div>
+          <div class="grid gap-6 md:grid-cols-2">
+            {
+              editorialPicks.map((post) => (
+                <article class="group border border-base-200 bg-base-50 p-5 transition-all hover:border-base-400 hover:shadow-sm">
+                  <Text tag="p" variant="textXS" class="uppercase tracking-wide text-base-400">
+                    {new Date(post.data.pubDate).toLocaleDateString("en-US", {
+                      month: "short",
+                      day: "numeric",
+                    })}
+                    {post.data.tags?.[0] && (
+                      <>
+                        {" · "}
+                        <span class="text-accent-700">{post.data.tags[0]}</span>
+                      </>
+                    )}
+                  </Text>
+                  <Text tag="h3" variant="textMD" class="mt-2 font-serif font-light leading-snug text-base-900">
+                    <a href={`/${post.data.slug}/`} class="hover:text-accent-800">
+                      {post.data.title}
+                    </a>
+                  </Text>
+                  <Text tag="p" variant="textSM" class="mt-2 line-clamp-2 text-base-600">
+                    {deckLine(post.data.description)}
+                  </Text>
+                </article>
+              ))
             }
           </div>
         </Wrapper>

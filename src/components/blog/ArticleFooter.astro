@@ -107,6 +107,7 @@ const desks = tags.filter((t): t is keyof typeof SECTION_META => t in SECTION_ME
         <button
           type="button"
           data-save-article={slug}
+          data-save-title={title}
           class="text-xs font-medium uppercase tracking-widest text-base-600 transition-colors hover:text-accent-700"
         >
           Save report

@@ -1,4 +1,12 @@
 import { getSupabaseBrowser, apiFetch } from "@/lib/supabase/browser";
+import {
+  bindSaveButtons,
+  renderContinueReadingCard,
+  renderSavedReportsList,
+  initHomeContinueReading,
+  initReadingProgressTracking,
+} from "@/scripts/reading-list";
+import { initPwa, bindInstallButtons } from "@/scripts/pwa";
 
 function setText(id: string, text: string) {
   const el = document.getElementById(id);
@@ -23,27 +31,79 @@ async function refreshAuthNav() {
   }
 }
 
+function renderInstallPrompt(root: HTMLElement) {
+  const block = document.createElement("section");
+  block.className = "mt-8 rounded-lg border border-base-200 bg-white p-6";
+  block.dataset.pwaInstall = "";
+  block.hidden = true;
+  block.innerHTML = `
+    <h2 class="text-xs font-semibold uppercase tracking-widest text-base-500">Install app</h2>
+    <p class="mt-3 text-sm text-base-600">Add Artometrics to your home screen for faster access to reports and your reading list.</p>
+    <button type="button" data-pwa-install-btn class="mt-4 inline-flex rounded-sm bg-base-900 px-4 py-2 text-xs font-semibold uppercase tracking-widest text-white hover:bg-accent-800">Add to home screen</button>
+  `;
+  root.appendChild(block);
+  bindInstallButtons();
+}
+
 async function loadAccountPage() {
   const root = document.getElementById("accountApp");
   if (!root) return;
 
   const supabase = getSupabaseBrowser();
+  const continueSlot = document.createElement("div");
+  continueSlot.id = "accountContinueReading";
+  continueSlot.className = "mb-8";
+
   if (!supabase) {
-    root.innerHTML =
-      '<p class="text-sm text-base-600">Configure PUBLIC_SUPABASE_URL and PUBLIC_SUPABASE_ANON_KEY to enable accounts.</p>';
+    root.innerHTML = "";
+    root.append(continueSlot);
+    renderContinueReadingCard(continueSlot);
+
+    const localSection = document.createElement("section");
+    localSection.className = "rounded-lg border border-base-200 bg-white p-6";
+    localSection.innerHTML = `
+      <h2 class="text-xs font-semibold uppercase tracking-widest text-base-500">Saved reports</h2>
+      <p class="mt-2 text-sm text-base-600">Stored on this device. Sign in later to sync across devices when membership is enabled.</p>
+      <div id="localSavedList"></div>
+      <a href="/login/" class="mt-6 inline-flex text-xs font-semibold uppercase tracking-widest text-accent-700 hover:text-accent-900">Sign in to sync →</a>
+    `;
+    root.appendChild(localSection);
+    const list = localSection.querySelector("#localSavedList");
+    if (list instanceof HTMLElement) renderSavedReportsList(list, { showEmpty: true });
+
+    renderInstallPrompt(root);
+    bindInstallButtons();
     return;
   }
 
   const { data: sessionData } = await supabase.auth.getSession();
   if (!sessionData.session) {
-    window.location.href = `/login?redirect=${encodeURIComponent("/account/")}`;
+    root.innerHTML = `
+      <div class="rounded-lg border border-base-200 bg-white p-6">
+        <p class="text-sm text-base-700">Sign in to manage membership and sync your saved reports.</p>
+        <a href="/login/?redirect=${encodeURIComponent("/account/")}" class="mt-4 inline-flex rounded-sm bg-base-900 px-4 py-2 text-xs font-semibold uppercase tracking-widest text-white">Sign in</a>
+      </div>
+    `;
+    root.append(continueSlot);
+    renderContinueReadingCard(continueSlot);
+
+    const localSection = document.createElement("section");
+    localSection.className = "mt-8 rounded-lg border border-base-200 bg-white p-6";
+    localSection.innerHTML = `
+      <h2 class="text-xs font-semibold uppercase tracking-widest text-base-500">On this device</h2>
+      <div id="localSavedList"></div>
+    `;
+    root.appendChild(localSection);
+    const list = localSection.querySelector("#localSavedList");
+    if (list instanceof HTMLElement) renderSavedReportsList(list, { showEmpty: true });
+
+    renderInstallPrompt(root);
+    bindInstallButtons();
     return;
   }
 
   const statusRes = await apiFetch("subscription-status");
   const status = statusRes.ok ? await statusRes.json() : null;
-  const savesRes = await apiFetch("saved-articles");
-  const saves = savesRes.ok ? await savesRes.json() : { items: [] };
 
   const planLabel = status?.planTier
     ? status.planTier.charAt(0).toUpperCase() + status.planTier.slice(1)
@@ -51,6 +111,7 @@ async function loadAccountPage() {
   const active = Boolean(status?.active);
 
   root.innerHTML = `
+    <div id="accountContinueReading" class="mb-8"></div>
     <div class="grid gap-8 md:grid-cols-2">
       <section class="rounded-lg border border-base-200 bg-white p-6">
         <h2 class="text-xs font-semibold uppercase tracking-widest text-base-500">Account</h2>
@@ -68,18 +129,18 @@ async function loadAccountPage() {
     </div>
     <section class="mt-8 rounded-lg border border-base-200 bg-white p-6">
       <h2 class="text-xs font-semibold uppercase tracking-widest text-base-500">Saved reports</h2>
-      ${
-        saves.items?.length
-          ? `<ul class="mt-4 space-y-2">${saves.items
-              .map(
-                (item: { article_slug: string }) =>
-                  `<li><a class="text-sm text-accent-700 hover:underline" href="/${item.article_slug}/">${item.article_slug}</a></li>`
-              )
-              .join("")}</ul>`
-          : `<p class="mt-3 text-sm text-base-600">Save reports from article pages to build your reading list.</p>`
-      }
+      <div id="accountSavedList"></div>
     </section>
   `;
+
+  const continueEl = document.getElementById("accountContinueReading");
+  if (continueEl) renderContinueReadingCard(continueEl);
+
+  const savedList = document.getElementById("accountSavedList");
+  if (savedList) renderSavedReportsList(savedList, { showEmpty: true });
+
+  renderInstallPrompt(root);
+  bindInstallButtons();
 
   document.getElementById("signOutBtn")?.addEventListener("click", async () => {
     await supabase.auth.signOut();
@@ -169,34 +230,16 @@ async function bindPricingButtons() {
   });
 }
 
-async function bindSaveButtons() {
-  document.querySelectorAll<HTMLButtonElement>("[data-save-article]").forEach((btn) => {
-    btn.addEventListener("click", async () => {
-      const slug = btn.dataset.saveArticle;
-      if (!slug) return;
-      const res = await apiFetch("saved-articles", {
-        method: "POST",
-        body: JSON.stringify({ slug }),
-      });
-      if (res.status === 401) {
-        window.location.href = `/login?redirect=${encodeURIComponent(window.location.pathname)}`;
-        return;
-      }
-      if (res.ok) {
-        btn.textContent = "Saved";
-        btn.disabled = true;
-      }
-    });
-  });
-}
-
 export function initProductAuth() {
   void refreshAuthNav();
   void loadAccountPage();
   void bindLoginForm();
   void bindSignupForm();
   void bindPricingButtons();
-  void bindSaveButtons();
+  bindSaveButtons();
+  initReadingProgressTracking();
+  initHomeContinueReading();
+  initPwa();
 
   const supabase = getSupabaseBrowser();
   supabase?.auth.onAuthStateChange(() => {

@@ -136,6 +136,17 @@ const breadcrumbs = [
           description={deck}
           url={articleUrl}
         />
+
+        <div class="mt-4 flex flex-wrap items-center justify-center gap-4 md:justify-start">
+          <button
+            type="button"
+            data-save-article={slug}
+            data-save-title={frontmatter.title}
+            class="text-xs font-medium uppercase tracking-widest text-base-600 transition-colors hover:text-accent-700"
+          >
+            Save report
+          </button>
+        </div>
       </header>
 
       {

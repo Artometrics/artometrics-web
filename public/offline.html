@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#1C1C1E" />
+    <title>Offline — Artometrics</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        min-height: 100svh;
+        display: grid;
+        place-items: center;
+        padding: 2rem;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        background: #f2f0eb;
+        color: #1c1c1e;
+      }
+      main {
+        max-width: 28rem;
+        text-align: center;
+      }
+      h1 {
+        margin: 0 0 0.75rem;
+        font-size: 1.75rem;
+        font-weight: 400;
+      }
+      p {
+        margin: 0 0 1.5rem;
+        line-height: 1.6;
+        color: #6b6b6b;
+      }
+      a,
+      button {
+        display: inline-block;
+        border: 0;
+        border-radius: 2px;
+        padding: 0.65rem 1.25rem;
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        text-decoration: none;
+        cursor: pointer;
+        background: #1c1c1e;
+        color: #fff;
+      }
+      button {
+        margin-left: 0.5rem;
+        background: transparent;
+        color: #1c1c1e;
+        border: 1px solid #1c1c1e;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>You’re offline</h1>
+      <p>
+        Saved reports you opened recently may still be available. Reconnect to
+        browse the full library.
+      </p>
+      <a href="/">Go home</a>
+      <button type="button" onclick="location.reload()">Try again</button>
+    </main>
+  </body>
+</html>
