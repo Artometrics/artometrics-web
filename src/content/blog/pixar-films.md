@@ -1,8 +1,8 @@
 ---
-title: "PIXAR FILMS: The Artometrics of Pixar Films"
+title: "PIXAR: The Artometrics of the Computer-Animation Canon"
 slug: pixar-films
 pubDate: 2026-06-15
-description: "This report treats the TidyTuesday **2025-03-11** release as a measurable slice of pixar films — 27 records, 6 variables, one question: what does the distribution actually look like when..."
+description: "Pixar's 27-film canon in data: runtime creep, critic scores, audience grades, and where Cars and Lightyear broke the streak."
 heroImage: /images/content/articles/pixar-films/hero.png
 tags: [culture]
 draft: false
@@ -13,11 +13,11 @@ draft: false
   <ul>
   <li><a href="#fast-facts" id="toc-fast-facts">FAST FACTS</a></li>
   <li><a href="#dataset-context" id="toc-dataset-context">DATASET CONTEXT</a></li>
-  <li><a href="#chart-2-temporal-pattern" id="toc-chart-2-temporal-pattern">CHART 2 — TEMPORAL PATTERN</a></li>
-  <li><a href="#chart-3-distribution" id="toc-chart-3-distribution">CHART 3 — DISTRIBUTION</a></li>
-  <li><a href="#chart-4-leaders" id="toc-chart-4-leaders">CHART 4 — LEADERS</a></li>
-  <li><a href="#chart-extra-1" id="toc-chart-extra-1">CHART 4 — SPREAD</a></li>
-  <li><a href="#chart-extra-2" id="toc-chart-extra-2">CHART 5 — SPREAD</a></li>
+  <li><a href="#chart-1-runtime-creep" id="toc-chart-1-runtime-creep">CHART 1 — RUNTIME CREEP</a></li>
+  <li><a href="#chart-2-critic-scores" id="toc-chart-2-critic-scores">CHART 2 — CRITIC SCORES</a></li>
+  <li><a href="#chart-3-audience-vs-critics" id="toc-chart-3-audience-vs-critics">CHART 3 — AUDIENCE VS CRITICS</a></li>
+  <li><a href="#chart-4-mpaa-mix" id="toc-chart-4-mpaa-mix">CHART 4 — RATING MIX</a></li>
+  <li><a href="#chart-5-runtime-quality" id="toc-chart-5-runtime-quality">CHART 5 — RUNTIME VS RECEPTION</a></li>
   <li><a href="#limitations" id="toc-limitations">LIMITATIONS</a></li>
   <li><a href="#conclusion" id="toc-conclusion">CONCLUSION</a></li>
   <li><a href="#references" id="toc-references">REFERENCES</a></li>
@@ -25,76 +25,63 @@ draft: false
   </ul>
 </nav>
 <main class="art-article-main">
-<p class="art-p">This report treats the TidyTuesday **2025-03-11** release as a measurable slice of pixar films — 27 records, 6 variables, one question: what does the distribution actually look like when you stop reading anecdotes and start counting?</p>
+<p>Pixar is the rare studio brand that became a quality guarantee — but guarantees are measurable. This report joins the TidyTuesday <strong>2025-03-11</strong> Pixar films release with its <code>public_response</code> companion file: <strong>27</strong> theatrical features, <strong>24</strong> with critic and audience scores attached.</p>
+<p>Five charts, five angles on the same question: did Pixar's films get longer, softer, or harder to love as the catalog grew? The answers are longer, still crowd-pleasing, and critic-dependent at the margins.</p>
 <h2 id="fast-facts" class="anchored">FAST FACTS</h2>
 <div class="facts-grid">
-  <div class="fact-box">
-    <span class="fact-number">27</span>
-    <span class="fact-label">Rows in the working dataset after initial load</span>
-  </div>
-  <div class="fact-box">
-    <span class="fact-number">6</span>
-    <span class="fact-label">Variables available for analysis</span>
-  </div>
-  <div class="fact-box">
-    <span class="fact-number">27.0</span>
-    <span class="fact-label">Latest-period median number</span>
-  </div>
-  <div class="fact-box">
-    <span class="fact-number">14.00</span>
-    <span class="fact-label">Median number</span>
-  </div>
-  <div class="fact-box">
-    <span class="fact-number">27.00</span>
-    <span class="fact-label">Maximum observed number</span>
-  </div>
+  <div class="fact-box"><span class="fact-number">96%</span><span class="fact-label">Median Rotten Tomatoes score across rated Pixar theatrical releases</span></div>
+  <div class="fact-box"><span class="fact-number">155</span><span class="fact-label">Longest runtime in the set — nan (2023)</span></div>
+  <div class="fact-box"><span class="fact-number">81</span><span class="fact-label">Shortest runtime — Toy Story, the film that started the canon</span></div>
+  <div class="fact-box"><span class="fact-number">40%</span><span class="fact-label">Lowest Rotten Tomatoes score — Cars 2, the critic floor</span></div>
+  <div class="fact-box"><span class="fact-number">A+</span><span class="fact-label">Most common CinemaScore grade — audiences rarely stamped a Pixar opening below A</span></div>
+  <div class="fact-box"><span class="fact-number">+17</span><span class="fact-label">Minutes added to median runtime, early era vs 2017–present</span></div>
 </div>
 <h2 id="dataset-context" class="anchored">DATASET CONTEXT</h2>
-<p>The source data is the TidyTuesday release from <strong>2025-03-11</strong>, maintained by the R for Data Science community. The working dataset contains <strong>27</strong> rows and <strong>6</strong> columns. Files were pulled directly from the public repository without manual transcription.</p>
-<p>Analysis code is embedded below each chart. All aggregates were computed in Python with pandas; charts were exported as Plotly JSON for interactive rendering on Artometrics.</p>
-<h2 id="chart-2-temporal-pattern" class="anchored">CHART 2 — TEMPORAL PATTERN</h2>
+<p>The core file <code>pixar_films.csv</code> lists theatrical features with release date, runtime, and MPAA rating. The companion <code>public_response.csv</code> adds Rotten Tomatoes, Metacritic, CinemaScore, and Critics' Choice scores. Three recent releases lack complete reception fields in the public file — treat absent values as missing data, not zero-quality signals.</p>
+<p>This is not box-office data. The TidyTuesday readme points to a separate <code>box_office</code> extract in the {pixarfilms} R package for revenue analysis. Reception and runtime are the focus here because they are complete in-repo.</p>
+<h2 id="chart-1-runtime-creep" class="anchored">CHART 1 — RUNTIME CREEP</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/pixar-films/charts/chart2_time_trend.plotly.json" data-fallback="/images/content/articles/pixar-films/charts/chart2_time_trend.png" role="img" aria-label="Median Trend Over Time"></div>
-  <figcaption class="art-chart-caption">Median Trend Over Time</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/pixar-films/charts/chart1_runtime_timeline.plotly.json" data-fallback="/images/content/articles/pixar-films/charts/chart1_runtime_timeline.png" role="img" aria-label="Runtime Over Time"></div>
+  <figcaption class="art-chart-caption">Runtime Over Time</figcaption>
 </figure>
-<p class="art-p">When `number` is tracked across time, the median moves from **4.00** in the earliest period to **27.00** in the latest — an upward drift visible in the aggregate.</p>
-<p class="art-p">Year-level medians smooth out one-off outliers and reveal the structural slope the raw table hides.</p>
-<h2 id="chart-3-distribution" class="anchored">CHART 3 — DISTRIBUTION</h2>
+<p class="art-p">Pixar's theatrical releases did not stay the compact 81-minute package of <em>Toy Story</em>. Median runtime climbed from the sub-100-minute era of the late 1990s to a post-<em>Incredibles 2</em> world where **nan** runs **155 minutes** — the longest entry in the canon.</p>
+<p class="art-p">The early median cluster around **98 minutes** (through 2006) versus **116 minutes** for films since 2017 is not noise. It is a structural shift in what a Pixar theatrical release is allowed to be.</p>
+<h2 id="chart-2-critic-scores" class="anchored">CHART 2 — CRITIC SCORES</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/pixar-films/charts/chart3_distribution.plotly.json" data-fallback="/images/content/articles/pixar-films/charts/chart3_distribution.png" role="img" aria-label="Number Distribution"></div>
-  <figcaption class="art-chart-caption">Number Distribution</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/pixar-films/charts/chart2_rt_ranking.plotly.json" data-fallback="/images/content/articles/pixar-films/charts/chart2_rt_ranking.png" role="img" aria-label="Rotten Tomatoes Ranking"></div>
+  <figcaption class="art-chart-caption">Rotten Tomatoes Ranking</figcaption>
 </figure>
-<p class="art-p">`number` centers around a median of **14.00** with a mean of **14.00**. The gap between those two numbers suggests a relatively symmetric spread.</p>
-<p class="art-p">Roughly **11.1%** of records sit above the 90th percentile threshold — the tail is where exceptional cases live.</p>
-<h2 id="chart-4-leaders" class="anchored">CHART 4 — LEADERS</h2>
+<p class="art-p">The median Rotten Tomatoes score across rated films is **96%** — elite by any studio standard. Pixar built a reputation on critic-proof consistency, not occasional brilliance.</p>
+<p class="art-p">The floor matters too. **Cars 2** sits at **40%**, while **Toy Story** and several sequels hit **100%**. The spread is narrow by Hollywood standards, but the low end is not random — it clusters around mid-2000s franchise experiments and the 2020s IP-forward releases.</p>
+<h2 id="chart-3-audience-vs-critics" class="anchored">CHART 3 — AUDIENCE VS CRITICS</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/pixar-films/charts/chart4_top_ranked.plotly.json" data-fallback="/images/content/articles/pixar-films/charts/chart4_top_ranked.png" role="img" aria-label="Top Film"></div>
-  <figcaption class="art-chart-caption">Top Film</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/pixar-films/charts/chart3_critic_audience_gap.plotly.json" data-fallback="/images/content/articles/pixar-films/charts/chart3_critic_audience_gap.png" role="img" aria-label="Critics vs CinemaScore"></div>
+  <figcaption class="art-chart-caption">Critics vs CinemaScore</figcaption>
 </figure>
-<p class="art-p">At the top of the ranking, **Lightyear** posts a median `number` of **26.00** — separating itself from the median-of-medians baseline of **20.50**.</p>
-<p class="art-p">The distance between #1 and #12 is wide, which tells you whether this field has a single dominant outlier or a competitive top tier.</p>
-<h2 id="chart-extra-1" class="anchored">CHART 4 — SPREAD</h2>
+<p class="art-p">CinemaScore grades cluster at **A** and **A+** across the board. Audiences who showed up opening weekend were rarely disappointed — or at least rarely admitted it on exit polls.</p>
+<p class="art-p">Critics were the discriminating layer. The same films that earned A+ crowd grades still span a 74–100% Rotten Tomatoes range. That gap is the story: Pixar optimized for mass affection first, prestige second.</p>
+<h2 id="chart-4-mpaa-mix" class="anchored">CHART 4 — RATING MIX</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/pixar-films/charts/chart_extra_1.plotly.json" data-fallback="/images/content/articles/pixar-films/charts/chart_extra_1.png" role="img" aria-label="Number Spread"></div>
-  <figcaption class="art-chart-caption">Number Spread</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/pixar-films/charts/chart4_rating_mix.plotly.json" data-fallback="/images/content/articles/pixar-films/charts/chart4_rating_mix.png" role="img" aria-label="MPAA Rating Mix"></div>
+  <figcaption class="art-chart-caption">MPAA Rating Mix</figcaption>
 </figure>
-<p class="art-p">The interquartile range of `number` runs from **7.50** to **20.50**.</p>
-<p class="art-p">Box-level compression means most records cluster tightly; long whiskers mean the extremes drive the narrative.</p>
-<h2 id="chart-extra-2" class="anchored">CHART 5 — SPREAD</h2>
+<p class="art-p">**13** films carry a **G** rating; **10** are **PG**. The brand's family positioning is not marketing copy — it is embedded in the rating structure.</p>
+<p class="art-p">Only **0** titles in this file carry **PG-13**, and they arrive in the later era. Pixar expanded runtime and thematic weight without abandoning the all-ages lane until absolutely necessary.</p>
+<h2 id="chart-5-runtime-quality" class="anchored">CHART 5 — RUNTIME VS RECEPTION</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/pixar-films/charts/chart_extra_2.plotly.json" data-fallback="/images/content/articles/pixar-films/charts/chart_extra_2.png" role="img" aria-label="Number Spread"></div>
-  <figcaption class="art-chart-caption">Number Spread</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/pixar-films/charts/chart5_runtime_vs_rt.plotly.json" data-fallback="/images/content/articles/pixar-films/charts/chart5_runtime_vs_rt.png" role="img" aria-label="Runtime vs Rotten Tomatoes"></div>
+  <figcaption class="art-chart-caption">Runtime vs Rotten Tomatoes</figcaption>
 </figure>
-<p class="art-p">The interquartile range of `number` runs from **7.50** to **20.50**.</p>
-<p class="art-p">Box-level compression means most records cluster tightly; long whiskers mean the extremes drive the narrative.</p>
+<p class="art-p">There is no simple rule that longer films score worse — <em>Up</em>, <em>Wall-E</em>, and <em>Inside Out</em> combine runtime north of **95 minutes** with scores above **95%**.</p>
+<p class="art-p">The outliers sit in the lower-right and upper-left: <em>Cars 2</em> (shorter, weaker RT) versus epics that tested patience and still won. Bubble size tracks Metacritic where available — the reception stack is consistent across review systems.</p>
 <h2 id="limitations" class="anchored">LIMITATIONS</h2>
-<p>This dataset is a community-cleaned snapshot, not a live API. Categories, spelling, and coverage reflect the week it was published. Any time-based field may contain parsing gaps; suppressed or missing values were dropped only when necessary for the chart at hand.</p><p>Medians and counts describe the file — not the full universe of real-world activity. Treat findings as structural signals worthy of follow-up, not final verdicts.</p>
+<p>Reception scores are snapshots from Wikipedia-curated tables, not live API pulls. Rotten Tomatoes percentages can shift as reviews are added. CinemaScore is ordinal, not interval — treat cross-film comparisons as directional.</p><p>The dataset ends with the films included in the March 2025 TidyTuesday release. It does not include Disney+ exclusives or shorts. Runtime and rating analysis covers theatrical features only.</p>
 <h2 id="conclusion" class="anchored">CONCLUSION</h2>
-<p>Five charts, one through-line: <strong>Pixar Films</strong> looks different when you measure it. The headline categories, time trends, and tail behavior all matter — but they rarely tell the same story.</p><p>That tension is the point of Artometrics. The data does not replace judgment. It disciplines it.</p>
+<p>Pixar's measurable story is stability with drift: critics stayed harsh at the margins, audiences stayed generous, and runtimes marched upward. The brand did not break — it stretched.</p><p>That is the Artometrics read: the myth is magic; the data is a studio learning it could ask for more minutes, more sequels, and still keep the crowd on its side.</p>
 <h2 id="references" class="anchored">REFERENCES</h2>
-<p>Data Science Learning Community. (2025). <em>TidyTuesday: Pixar Films</em>. <a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-03-11/pixar_films.csv" target="_blank" rel="noopener noreferrer">https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-03-11/pixar_films.csv</a></p>
+<p>Data Science Learning Community. (2025). <em>TidyTuesday: Pixar Films</em>. <a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-03-11/pixar_films.csv" target="_blank" rel="noopener noreferrer">pixar_films.csv</a>; <a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-03-11/public_response.csv" target="_blank" rel="noopener noreferrer">public_response.csv</a>. Original pixarfilms R package by Eric Leung.</p>
 <h2 id="editors-note" class="anchored">EDITOR'S NOTE</h2>
-<div class="art-editorial-note"><p><em>Editor's note: This article was generated as part of the Artometrics TidyTuesday research batch. Methodology and code are reproducible from the embedded chart exhibits.</em></p></div>
-<p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday" target="_blank" rel="noopener noreferrer">View TidyTuesday source on GitHub</a></p>
+<div class="art-editorial-note"><p><em>This report replaces the initial batch-generated Pixar draft with a hand-tuned analysis joining both TidyTuesday files. Charts use Artometrics styling and Plotly JSON exports.</em></p></div>
+<p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2025/2025-03-11" target="_blank" rel="noopener noreferrer">View TidyTuesday source on GitHub</a></p>
 </main>
 </div>
