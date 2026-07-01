@@ -15,6 +15,7 @@ from textwrap import dedent
 ROOT = Path(__file__).resolve().parents[1]
 BLOG_DIR = ROOT / "src" / "content" / "blog"
 DATA_DIR = ROOT / "public" / "data" / "articles"
+PUBLIC = ROOT / "public"
 DOCS_DIR = ROOT / "docs"
 
 ART_RED = "#C0392B"
@@ -155,6 +156,12 @@ def facts_html(facts):
     )
 
 
+def write_hero(slug: str, title: str, description: str, tags: str) -> None:
+    from backfill_report_heroes import render_hero
+
+    render_hero(title, description, tags, PUBLIC / "images/content/articles" / slug / "hero.png")
+
+
 def article(slug: str, title: str, description: str, tags: str, toc, intro, facts, context, sections, conclusion, references, note, source_credit: str):
     toc_items = "\n".join(f'  <li><a href="#{sid}" id="toc-{sid}">{label}</a></li>' for sid, label in toc)
     body = [
@@ -199,6 +206,7 @@ def article(slug: str, title: str, description: str, tags: str, toc, intro, fact
         "",
     ]
     (BLOG_DIR / f"{slug}.md").write_text("\n".join(body))
+    write_hero(slug, title, description, tags)
 
 
 def yankees():
