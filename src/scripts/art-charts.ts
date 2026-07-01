@@ -636,7 +636,7 @@ function prepareChartFigure(figure: HTMLElement) {
   if (caption && live) {
     const text = caption.textContent?.trim();
     if (text) live.dataset.caption = text;
-    caption.setAttribute("aria-hidden", "true");
+    caption.classList.add("art-chart-caption--visible");
   }
   figure.classList.add("art-chart--pending");
 }
@@ -658,6 +658,7 @@ function formatFactNumbers() {
     if (!Number.isFinite(value) || value < 1_000_000) return;
     if (!el.dataset.fullValue) el.dataset.fullValue = raw;
     el.textContent = formatCompactNum(value);
+    el.title = `Full value: ${raw}`;
     el.classList.add("fact-number--compact");
   });
 }

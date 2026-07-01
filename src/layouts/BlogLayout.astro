@@ -4,6 +4,7 @@ import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 import ShareButtons from "@/components/fundations/elements/ShareButtons.astro";
 import Breadcrumbs from "@/components/blog/Breadcrumbs.astro";
 import ArticleFooter from "@/components/blog/ArticleFooter.astro";
+import ArticleProvenance from "@/components/blog/ArticleProvenance.astro";
 import ArticleJsonLd from "@/components/fundations/head/ArticleJsonLd.astro";
 import { getCollection, getEntry } from "astro:content";
 import { SECTION_META } from "@/data/sections";
@@ -156,6 +157,7 @@ const breadcrumbs = [
           </figure>
         )
       }
+      <ArticleProvenance primaryDesk={desk} />
     </Wrapper>
 
     <div class="artometrics-article-body" data-related={relatedJson}>
@@ -171,6 +173,8 @@ const breadcrumbs = [
       previous={previous}
       next={next}
       primaryDesk={desk}
+      authorName={authorName}
+      pubDate={pubDateFormatted}
     />
   </article>
 
