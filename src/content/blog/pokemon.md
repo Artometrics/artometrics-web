@@ -197,8 +197,8 @@ print(pokemon[&quot;type_1&quot;].value_counts().head(5))</pre>
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/pokemon/charts/chart1_stat_heatmap.plotly.json" data-fallback="/images/content/articles/pokemon/charts/chart1_stat_heatmap.png" role="img" aria-label="Stat Heatmap"></div>
-  <figcaption class="art-chart-caption">Stat Heatmap</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/pokemon/charts/chart1_stat_heatmap.plotly.json" data-fallback="/images/content/articles/pokemon/charts/chart1_stat_heatmap.png" data-source="Data: TidyTuesday 2025-04-01 / PokéAPI - ARTOMETRICS" role="img" aria-label="Type identity is visible in the stat profile"></div>
+  <figcaption class="art-chart-caption">Type identity is visible in the stat profile</figcaption>
 </figure>
 </div>
 </div>
@@ -278,8 +278,8 @@ chart1_data |&gt;
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/pokemon/charts/chart2_generation_ridgeline.plotly.json" data-fallback="/images/content/articles/pokemon/charts/chart2_generation_ridgeline.png" role="img" aria-label="Generation Ridgeline"></div>
-  <figcaption class="art-chart-caption">Generation Ridgeline</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/pokemon/charts/chart2_generation_ridgeline.plotly.json" data-fallback="/images/content/articles/pokemon/charts/chart2_generation_ridgeline.png" data-source="Data: TidyTuesday 2025-04-01 / PokéAPI - ARTOMETRICS" role="img" aria-label="Later generations widen the power distribution"></div>
+  <figcaption class="art-chart-caption">Later generations widen the power distribution</figcaption>
 </figure>
 </div>
 </div>
@@ -352,8 +352,8 @@ chart2_data |&gt;
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/pokemon/charts/chart3_size_scatter.plotly.json" data-fallback="/images/content/articles/pokemon/charts/chart3_size_scatter.png" role="img" aria-label="Size Scatter"></div>
-  <figcaption class="art-chart-caption">Size Scatter</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/pokemon/charts/chart3_size_scatter.plotly.json" data-fallback="/images/content/articles/pokemon/charts/chart3_size_scatter.png" data-source="Data: TidyTuesday 2025-04-01 / PokéAPI - ARTOMETRICS" role="img" aria-label="Pokémon size is design language, not just biology"></div>
+  <figcaption class="art-chart-caption">Pokémon size is design language, not just biology</figcaption>
 </figure>
 </div>
 </div>

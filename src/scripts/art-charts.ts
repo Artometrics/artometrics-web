@@ -202,7 +202,8 @@ function extractTitleHtml(raw: PlotlyExport): string {
 function renderStaticHeading(el: HTMLElement, titleHtml: string, subtitle?: string) {
   if (!titleHtml && !subtitle) return;
 
-  const formatted = titleHtml ? formatHeadingHtml(titleHtml) : "";
+  const useSubtitleAsTitle = !titleHtml && Boolean(subtitle);
+  const formatted = titleHtml || useSubtitleAsTitle ? formatHeadingHtml(titleHtml || subtitle || "") : "";
   let heading = el.querySelector<HTMLElement>(".art-chart-heading");
   if (!heading) {
     heading = document.createElement("div");
@@ -212,6 +213,7 @@ function renderStaticHeading(el: HTMLElement, titleHtml: string, subtitle?: stri
   }
 
   const subtitleHtml = subtitle
+    && !useSubtitleAsTitle
     ? `<span class="art-chart-heading__subtitle">${subtitle}</span>`
     : "";
   heading.innerHTML = `${formatted}${subtitleHtml}`;
@@ -390,6 +392,59 @@ function enhanceScatterColors(traces: Array<Record<string, unknown>>) {
       marker.opacity = 0.75;
     }
   }
+}
+
+function hasMode(trace: Record<string, unknown>, mode: string) {
+  return typeof trace.mode === "string" && trace.mode.includes(mode);
+}
+
+function reduceLabelClutter(traces: Array<Record<string, unknown>>) {
+  for (const trace of traces) {
+    if (trace.type !== "scatter" && trace.type != null) continue;
+    if (!hasMode(trace, "text")) continue;
+    if (!Array.isArray(trace.text) || trace.text.length <= 14) continue;
+
+    // Dense scatter labels blur on mobile. Keep points interactive, move labels into hover.
+    trace.mode = String(trace.mode).replace(/\+?text|text\+?/g, "").replace(/^\+|\+$/g, "") || "markers";
+    trace.hovertemplate =
+      typeof trace.hovertemplate === "string"
+        ? trace.hovertemplate
+        : "<b>%{text}</b><br>x: %{x}<br>y: %{y}<extra></extra>";
+  }
+}
+
+function ensureHoverTemplates(traces: Array<Record<string, unknown>>) {
+  traces.forEach((trace, index) => {
+    if (typeof trace.hovertemplate === "string" && trace.hovertemplate.trim()) return;
+
+    if (trace.type === "bar") {
+      trace.hovertemplate =
+        trace.orientation === "h"
+          ? "<b>%{y}</b><br>Value: %{x}<extra></extra>"
+          : "<b>%{x}</b><br>Value: %{y}<extra></extra>";
+      return;
+    }
+
+    if (trace.type === "heatmap") {
+      trace.hovertemplate = "<b>%{y}</b><br>%{x}: %{z}<extra></extra>";
+      return;
+    }
+
+    if (Array.isArray(trace.text)) {
+      trace.hovertemplate = "<b>%{text}</b><br>x: %{x}<br>y: %{y}<extra></extra>";
+      return;
+    }
+
+    trace.hovertemplate = `<b>Series ${index + 1}</b><br>x: %{x}<br>y: %{y}<extra></extra>`;
+  });
+}
+
+function ensureLegendNames(traces: Array<Record<string, unknown>>, layout: PlotlyLayout) {
+  if (!layout.showlegend && !(layout.legend && typeof layout.legend === "object")) return;
+  traces.forEach((trace, index) => {
+    if (typeof trace.name === "string" && trace.name.trim()) return;
+    trace.name = `Series ${index + 1}`;
+  });
 }
 
 function isHorizontalBarChart(data: Array<Record<string, unknown>>) {
@@ -626,6 +681,8 @@ function sanitizePlotlySpec(raw: PlotlyExport, mobile: boolean) {
   enhanceBarColors(data);
   enhanceMultiTraceColors(data);
   enhanceScatterColors(data);
+  reduceLabelClutter(data);
+  ensureHoverTemplates(data);
   addBarValueLabels(data);
 
   const chartHeight = inferChartHeight(data as PlotlyTrace[], titleLines, mobile);
@@ -711,6 +768,7 @@ function sanitizePlotlySpec(raw: PlotlyExport, mobile: boolean) {
       },
     };
   }
+  ensureLegendNames(data, layout);
 
   delete layout.transition;
 

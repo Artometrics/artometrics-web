@@ -19,10 +19,11 @@ ROOT = Path(__file__).resolve().parents[1]
 BLOG_DIR = ROOT / "src" / "content" / "blog"
 DATA_DIR = ROOT / "public" / "data" / "articles"
 OUT_PATH = ROOT / "docs" / "chart-corpus-audit.md"
+UI_OUT_PATH = ROOT / "docs" / "chart-ui-design-audit.md"
 
 
 CHART_RE = re.compile(
-    r'data-chart="(?P<chart>[^"]+)"[^>]*aria-label="(?P<label>[^"]*)".*?'
+    r'<div class="art-chart-live"(?P<attrs>[^>]*)data-chart="(?P<chart>[^"]+)"(?P<attrs_after>[^>]*)>.*?'
     r'<figcaption class="art-chart-caption">(?P<caption>.*?)</figcaption>',
     re.S,
 )
@@ -51,6 +52,10 @@ class ChartFinding:
     score: int
     verdict: str
     reasons: list[str]
+    ui_score: int
+    ui_verdict: str
+    ui_reasons: list[str]
+    source: str
 
 
 def clean_html(text: str) -> str:
@@ -68,6 +73,11 @@ def read_json(path: Path) -> dict[str, Any]:
         return json.loads(path.read_text())
     except Exception:
         return {}
+
+
+def attr_value(attrs: str, name: str) -> str:
+    match = re.search(rf'{re.escape(name)}="([^"]*)"', attrs)
+    return clean_html(match.group(1)) if match else ""
 
 
 def chart_kind(spec: dict[str, Any]) -> str:
@@ -179,6 +189,121 @@ def verdict(score: int) -> str:
     return "drop candidate"
 
 
+def ui_verdict(score: int) -> str:
+    if score >= 82:
+        return "publication-ready"
+    if score >= 65:
+        return "needs polish"
+    return "rework before publishing"
+
+
+def trace_point_count(trace: dict[str, Any]) -> int:
+    for key in ("x", "y", "z"):
+        value = trace.get(key)
+        if isinstance(value, list):
+            return len(value)
+        if isinstance(value, dict) and isinstance(value.get("bdata"), str):
+            # Plotly typed-array payloads usually include one vector per trace; exact
+            # count is not cheap to decode here, but this flags compact exports.
+            return 1
+    return 0
+
+
+def has_title_and_subtitle(layout: dict[str, Any]) -> bool:
+    title = layout.get("title") or {}
+    text = title.get("text", "") if isinstance(title, dict) else str(title)
+    return bool(text.strip()) and bool(re.search(r"<br\s*/?>", text, re.I))
+
+
+def has_rendered_headline(layout: dict[str, Any], caption: str) -> bool:
+    title = layout.get("title") or {}
+    text = title.get("text", "") if isinstance(title, dict) else str(title)
+    if text.strip():
+        return True
+    return len(caption.split()) >= 3
+
+
+def has_named_legend(data: list[dict[str, Any]], layout: dict[str, Any]) -> bool:
+    if not layout.get("showlegend") and not layout.get("legend"):
+        return True
+    return all(bool(str(trace.get("name", "")).strip()) for trace in data)
+
+
+def ui_score_chart(
+    *,
+    caption: str,
+    source: str,
+    spec: dict[str, Any],
+    editorial_score: int,
+    has_references: bool,
+) -> tuple[int, list[str]]:
+    score = 100
+    reasons: list[str] = []
+    data = [trace for trace in (spec.get("data") or []) if isinstance(trace, dict)]
+    layout = spec.get("layout") if isinstance(spec.get("layout"), dict) else {}
+    kind = chart_kind(spec)
+    trace_count = len(data)
+    total_points = sum(trace_point_count(trace) for trace in data)
+
+    if not has_rendered_headline(layout, caption):
+        score -= 14
+        reasons.append("missing rendered headline")
+    elif not has_title_and_subtitle(layout):
+        score -= 3
+        reasons.append("uses caption as rendered headline; custom subtitle recommended")
+    if not source and not has_references:
+        score -= 12
+        reasons.append("missing chart source credit and report references")
+    elif not source:
+        reasons.append("uses runtime source fallback to report references")
+    if not caption or len(caption.split()) <= 2:
+        score -= 10
+        reasons.append("caption too generic for casual viewers")
+    if editorial_score < 58:
+        score -= 14
+        reasons.append("weak editorial premise")
+    elif editorial_score < 76:
+        score -= 6
+        reasons.append("editorial premise needs sharper framing")
+
+    hover_missing = [
+        trace for trace in data if not str(trace.get("hovertemplate", "")).strip()
+    ]
+    if hover_missing:
+        score -= min(6, 2 * len(hover_missing))
+        reasons.append("runtime supplies fallback hover/tap context; custom hover recommended")
+
+    if not has_named_legend(data, layout):
+        score -= 3
+        reasons.append("runtime names missing legend series; custom legend labels recommended")
+
+    text_traces = [
+        trace
+        for trace in data
+        if "text" in str(trace.get("mode", "")) and isinstance(trace.get("text"), list)
+    ]
+    if any(len(trace.get("text") or []) > 14 for trace in text_traces):
+        score -= 3
+        reasons.append("runtime hides dense always-visible labels; manual callouts recommended")
+
+    if trace_count > 8:
+        score -= min(8, max(2, trace_count - 8))
+        reasons.append("many traces can overwhelm casual viewers")
+    if total_points > 60:
+        score -= 4
+        reasons.append("dense plot needs simplification or stronger annotations")
+    if kind == "scatter" and total_points > 20:
+        score -= 3
+        reasons.append("scatterplot may need clearer callouts")
+    if kind == "bar-vertical" and total_points > 12:
+        score -= 4
+        reasons.append("many vertical categories risk cramped mobile labels")
+
+    if not reasons:
+        reasons.append("clear headline, source, hover context, and manageable density")
+    return max(0, min(100, score)), reasons
+
+
 def audit() -> list[ChartFinding]:
     findings: list[ChartFinding] = []
     for md_path in sorted(BLOG_DIR.glob("*.md")):
@@ -186,15 +311,26 @@ def audit() -> list[ChartFinding]:
         slug = frontmatter_value(md, "slug") or md_path.stem
         title = frontmatter_value(md, "title") or slug
         seen_kinds: Counter[str] = Counter()
+        has_references = bool(re.search(r'id="references"|#references|REFERENCES', md))
 
         for match in CHART_RE.finditer(md):
             chart_url = match.group("chart")
             chart_id = Path(chart_url).stem.replace(".plotly", "")
-            caption = clean_html(match.group("caption") or match.group("label") or chart_id)
+            attrs = f'{match.group("attrs")} {match.group("attrs_after")}'
+            label = attr_value(attrs, "aria-label")
+            source = attr_value(attrs, "data-source")
+            caption = clean_html(match.group("caption") or label or chart_id)
             json_path = ROOT / "public" / chart_url.lstrip("/")
             spec = read_json(json_path)
             kind = chart_kind(spec)
             score, reasons = score_chart(slug, chart_id, caption, spec, seen_kinds)
+            ui_score, ui_reasons = ui_score_chart(
+                caption=caption,
+                source=source,
+                spec=spec,
+                editorial_score=score,
+                has_references=has_references,
+            )
             seen_kinds[kind] += 1
             findings.append(
                 ChartFinding(
@@ -206,6 +342,10 @@ def audit() -> list[ChartFinding]:
                     score=score,
                     verdict=verdict(score),
                     reasons=reasons,
+                    ui_score=ui_score,
+                    ui_verdict=ui_verdict(ui_score),
+                    ui_reasons=ui_reasons,
+                    source=source,
                 )
             )
     return findings
@@ -294,10 +434,95 @@ def write_report(findings: list[ChartFinding]) -> None:
     OUT_PATH.write_text("\n".join(lines) + "\n")
 
 
+def write_ui_report(findings: list[ChartFinding]) -> None:
+    ui_counts = Counter(item.ui_verdict for item in findings)
+    by_article: dict[str, list[ChartFinding]] = defaultdict(list)
+    for item in findings:
+        by_article[item.slug].append(item)
+
+    article_scores = []
+    for slug, charts in by_article.items():
+        avg = sum(c.ui_score for c in charts) / max(len(charts), 1)
+        blockers = sum(1 for c in charts if c.ui_verdict == "rework before publishing")
+        polish = sum(1 for c in charts if c.ui_verdict == "needs polish")
+        article_scores.append((avg, blockers, polish, slug, charts[0].title, charts))
+    article_scores.sort(key=lambda row: (row[0], -row[1], -row[2]))
+
+    issue_counts: Counter[str] = Counter()
+    for item in findings:
+        issue_counts.update(item.ui_reasons)
+
+    lines = [
+        "# Artometrics chart UI/design audit",
+        "",
+        "This audit focuses on graphic design and casual-viewer usability rather than statistical truth.",
+        "It checks whether each chart has a clear headline/subtitle, useful hover/tap context, source credit, manageable label density, named legends, and enough editorial premise to feel publication-ready.",
+        "",
+        "## UI summary",
+        "",
+        f"- Charts audited: {len(findings)}",
+        f"- Publication-ready: {ui_counts['publication-ready']}",
+        f"- Needs polish: {ui_counts['needs polish']}",
+        f"- Rework before publishing: {ui_counts['rework before publishing']}",
+        "",
+        "## Most common UI/design issues",
+        "",
+    ]
+
+    for issue, count in issue_counts.most_common(12):
+        lines.append(f"- {issue}: {count}")
+
+    lines += [
+        "",
+        "## Articles with the most UI risk",
+        "",
+        "| Rank | Article | Avg UI score | Rework | Polish | Weakest charts |",
+        "|---:|---|---:|---:|---:|---|",
+    ]
+    for rank, (avg, blockers, polish, slug, title, charts) in enumerate(article_scores[:24], 1):
+        weakest = sorted(charts, key=lambda c: c.ui_score)[:3]
+        why = "; ".join(f"{c.chart_id} ({c.ui_score})" for c in weakest)
+        lines.append(f"| {rank} | `{slug}` | {avg:.1f} | {blockers} | {polish} | {why} |")
+
+    lines += [
+        "",
+        "## Lowest-scoring chart UI findings",
+        "",
+        "| UI | Verdict | Article | Chart | Kind | Caption | Issues |",
+        "|---:|---|---|---|---|---|---|",
+    ]
+    for item in sorted(findings, key=lambda c: c.ui_score)[:75]:
+        issues = "; ".join(item.ui_reasons)
+        lines.append(
+            f"| {item.ui_score} | {item.ui_verdict} | `{item.slug}` | `{item.chart_id}` | "
+            f"{item.kind} | {item.caption} | {issues} |"
+        )
+
+    lines += [
+        "",
+        "## Automated rework already applied",
+        "",
+        "- Runtime now hides dense always-visible scatter labels and moves them into hover/tap.",
+        "- Runtime now supplies default hover templates when Plotly JSON lacks useful hover context.",
+        "- Runtime now names missing legend series as `Series N` so legends are never blank.",
+        "- Runtime already locks zoom/pan, hides the modebar, preserves top headline/subtitle, and shows chart source credits from `data-source` or report references.",
+        "",
+        "## Manual rework standard",
+        "",
+        "- Replace generic captions like `Top Country` or `Relationship` with a claim.",
+        "- Prefer one annotated insight over many unlabeled points.",
+        "- Remove filler charts (`chart_extra`, `chart_pad`, `chart_fallback`) unless rewritten around a real thesis.",
+        "- Keep five-chart packages only when all five charts answer different reader questions.",
+        "",
+    ]
+    UI_OUT_PATH.write_text("\n".join(lines) + "\n")
+
+
 def main() -> None:
     findings = audit()
     write_report(findings)
-    print(f"Wrote {OUT_PATH.relative_to(ROOT)} with {len(findings)} chart findings")
+    write_ui_report(findings)
+    print(f"Wrote {OUT_PATH.relative_to(ROOT)} and {UI_OUT_PATH.relative_to(ROOT)} with {len(findings)} chart findings")
 
 
 if __name__ == "__main__":
