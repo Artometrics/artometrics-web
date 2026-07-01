@@ -40,35 +40,35 @@ draft: false
 <p class="art-p">An expert fan would ask whether Boston's identity is still earned. An Artometrician asks how historical surplus changes the interpretation of modern results.</p>
 <h2 id="banner-density" class="anchored">CHART 1 - BANNER DENSITY</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/celtics-the-artometrics-of-institutional-winning/charts/chart1_banner_density.plotly.json" role="img" aria-label="Celtics NBA titles by decade"></div>
+  <div class="art-chart-live" data-chart="/data/articles/celtics-the-artometrics-of-institutional-winning/charts/chart1_banner_density.plotly.json" data-source="Data: Basketball Reference, NBA.com, Sports Reference - ARTOMETRICS" role="img" aria-label="Celtics NBA titles by decade"></div>
   <figcaption class="art-chart-caption">Celtics NBA titles by decade</figcaption>
 </figure>
 <p class="art-p">The Celtics' historical lead is not evenly distributed. The 1960s are the gravitational anomaly: a decade so dominant it still defines the franchise's moral economy.</p>
 <p class="art-p">The hypothesis is that Boston is less a normal contender than an institution built around inherited expectation. The data supports it.</p>
 <h2 id="title-ceiling" class="anchored">CHART 2 - TITLE CEILING</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/celtics-the-artometrics-of-institutional-winning/charts/chart2_title_ceiling.plotly.json" role="img" aria-label="NBA championships by major franchise"></div>
+  <div class="art-chart-live" data-chart="/data/articles/celtics-the-artometrics-of-institutional-winning/charts/chart2_title_ceiling.plotly.json" data-source="Data: Basketball Reference, NBA.com, Sports Reference - ARTOMETRICS" role="img" aria-label="NBA championships by major franchise"></div>
   <figcaption class="art-chart-caption">NBA championships by major franchise</figcaption>
 </figure>
 <p class="art-p">Boston and Los Angeles form the NBA's summit. Everyone else is explaining distance.</p>
 <p class="art-p">For a Celtics fan, this is not trivia. It is the operating standard by which every rebuild is judged.</p>
 <h2 id="era-conversion" class="anchored">CHART 3 - ERA CONVERSION</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/celtics-the-artometrics-of-institutional-winning/charts/chart3_era_conversion.plotly.json" role="img" aria-label="Finals appearances and titles by Celtics era"></div>
+  <div class="art-chart-live" data-chart="/data/articles/celtics-the-artometrics-of-institutional-winning/charts/chart3_era_conversion.plotly.json" data-source="Data: Basketball Reference, NBA.com, Sports Reference - ARTOMETRICS" role="img" aria-label="Finals appearances and titles by Celtics era"></div>
   <figcaption class="art-chart-caption">Finals appearances and titles by Celtics era</figcaption>
 </figure>
 <p class="art-p">The Russell era was not merely successful; it converted nearly every opportunity into a ring. Later eras are great by normal standards and modest by Boston standards.</p>
 <p class="art-p">This is institutional burden in chart form: greatness becomes smaller when the archive is impossible.</p>
 <h2 id="drought-pressure" class="anchored">CHART 4 - DROUGHT PRESSURE</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/celtics-the-artometrics-of-institutional-winning/charts/chart4_drought_pressure.plotly.json" role="img" aria-label="Selected Celtics championship gaps"></div>
+  <div class="art-chart-live" data-chart="/data/articles/celtics-the-artometrics-of-institutional-winning/charts/chart4_drought_pressure.plotly.json" data-source="Data: Basketball Reference, NBA.com, Sports Reference - ARTOMETRICS" role="img" aria-label="Selected Celtics championship gaps"></div>
   <figcaption class="art-chart-caption">Selected Celtics championship gaps</figcaption>
 </figure>
 <p class="art-p">A 22-year gap from Bird to Pierce/KG shows how long even a privileged franchise can wander. The 2024 title ended another pressure cycle.</p>
 <p class="art-p">The Celtics do not avoid droughts; they narrate them as temporary violations of the natural order.</p>
 <h2 id="modern-access" class="anchored">CHART 5 - MODERN ACCESS</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/celtics-the-artometrics-of-institutional-winning/charts/chart5_modern_access.plotly.json" role="img" aria-label="Modern Finals access and title conversion"></div>
+  <div class="art-chart-live" data-chart="/data/articles/celtics-the-artometrics-of-institutional-winning/charts/chart5_modern_access.plotly.json" data-source="Data: Basketball Reference, NBA.com, Sports Reference - ARTOMETRICS" role="img" aria-label="Modern Finals access and title conversion"></div>
   <figcaption class="art-chart-caption">Modern Finals access and title conversion</figcaption>
 </figure>
 <p class="art-p">Boston has been present in the modern title economy, but not as frequently as its mythology implies. The 2020s core matters because it reopened the institutional pipeline.</p>

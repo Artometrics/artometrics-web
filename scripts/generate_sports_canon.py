@@ -67,8 +67,8 @@ def write_chart(slug: str, chart_id: str, spec: dict):
     path.write_text(json.dumps(spec, separators=(",", ":")))
 
 
-def bar_h(y, x, colors=None, *, hover="%{y}<br>%{x}<extra></extra>"):
-    return {
+def bar_h(y, x, colors=None, *, name="", hover="<b>%{y}</b><br>Value: %{x}<extra></extra>"):
+    trace = {
         "type": "bar",
         "orientation": "h",
         "y": y,
@@ -79,10 +79,13 @@ def bar_h(y, x, colors=None, *, hover="%{y}<br>%{x}<extra></extra>"):
         },
         "hovertemplate": hover,
     }
+    if name:
+        trace["name"] = name
+    return trace
 
 
-def bar_v(x, y, colors=None, *, hover="%{x}<br>%{y}<extra></extra>"):
-    return {
+def bar_v(x, y, colors=None, *, name="", hover="<b>%{x}</b><br>Value: %{y}<extra></extra>"):
+    trace = {
         "type": "bar",
         "x": x,
         "y": y,
@@ -92,23 +95,28 @@ def bar_v(x, y, colors=None, *, hover="%{x}<br>%{y}<extra></extra>"):
         },
         "hovertemplate": hover,
     }
+    if name:
+        trace["name"] = name
+    return trace
 
 
 def line(x, y, *, color=ART_RED, name="", hover="%{x}<br>%{y}<extra></extra>"):
-    return {
+    trace = {
         "type": "scatter",
         "mode": "lines+markers",
         "x": x,
         "y": y,
-        "name": name,
         "line": {"color": color, "width": 3},
         "marker": {"size": 8, "color": color},
         "hovertemplate": hover,
     }
+    if name:
+        trace["name"] = name
+    return trace
 
 
-def scatter(x, y, text, size, color, *, hover="%{text}<br>x=%{x}<br>y=%{y}<extra></extra>"):
-    return {
+def scatter(x, y, text, size, color, *, name="", customdata=None, hover="<b>%{text}</b><br>x: %{x}<br>y: %{y}<extra></extra>"):
+    trace = {
         "type": "scatter",
         "mode": "markers+text",
         "x": x,
@@ -123,13 +131,18 @@ def scatter(x, y, text, size, color, *, hover="%{text}<br>x=%{x}<br>y=%{y}<extra
         },
         "hovertemplate": hover,
     }
+    if customdata is not None:
+        trace["customdata"] = customdata
+    if name:
+        trace["name"] = name
+    return trace
 
 
-def chart_html(slug: str, chart_id: str, caption: str) -> str:
+def chart_html(slug: str, chart_id: str, caption: str, source: str) -> str:
     return (
         '<figure class="art-chart">\n'
         f'  <div class="art-chart-live" data-chart="/data/articles/{slug}/charts/{chart_id}.plotly.json" '
-        f'role="img" aria-label="{caption}"></div>\n'
+        f'data-source="{source}" role="img" aria-label="{caption}"></div>\n'
         f'  <figcaption class="art-chart-caption">{caption}</figcaption>\n'
         "</figure>"
     )
@@ -142,7 +155,7 @@ def facts_html(facts):
     )
 
 
-def article(slug: str, title: str, description: str, tags: str, toc, intro, facts, context, sections, conclusion, references, note):
+def article(slug: str, title: str, description: str, tags: str, toc, intro, facts, context, sections, conclusion, references, note, source_credit: str):
     toc_items = "\n".join(f'  <li><a href="#{sid}" id="toc-{sid}">{label}</a></li>' for sid, label in toc)
     body = [
         "---",
@@ -171,7 +184,7 @@ def article(slug: str, title: str, description: str, tags: str, toc, intro, fact
     for section in sections:
         body += [
             f'<h2 id="{section["id"]}" class="anchored">{section["title"]}</h2>',
-            chart_html(slug, section["chart"], section["caption"]),
+            chart_html(slug, section["chart"], section["caption"], section.get("source", source_credit)),
             *[f'<p class="art-p">{p}</p>' for p in section["prose"]],
         ]
     body += [
@@ -205,14 +218,15 @@ def yankees():
     years = [1996, 1998, 1999, 2000, 2003, 2009, 2012, 2017, 2019, 2022, 2024]
     payroll_rank = [1, 2, 1, 1, 1, 1, 1, 2, 3, 3, 2]
     result_score = [4, 4, 4, 4, 2, 4, 1, 2, 2, 1, 2]
-    write_chart(slug, "chart4_money_conversion", {"data": [scatter(years, payroll_rank, [str(y) for y in years], [12 + s * 5 for s in result_score], [ART_RED if s == 4 else ART_BLUE for s in result_score], hover="%{text}<br>Payroll rank: %{y}<extra></extra>")], "layout": {**layout("Money still buys contention", "BUT IT NO LONGER BUYS OCTOBER CERTAINTY", x_title="Season", y_title="Payroll rank (lower is richer)"), "yaxis": {**layout("", "")["yaxis"], "autorange": "reversed", "title": {"text": "Payroll rank (lower is richer)"}}}})
+    outcomes = ["World Series title", "World Series title", "World Series title", "World Series title", "Pennant, no title", "World Series title", "Early exit", "ALCS loss", "ALCS loss", "Early exit", "Pennant, no title"]
+    write_chart(slug, "chart4_money_conversion", {"data": [scatter(years, payroll_rank, [str(y) for y in years], [12 + s * 5 for s in result_score], [ART_RED if s == 4 else ART_BLUE for s in result_score], customdata=outcomes, hover="<b>%{text}</b><br>Payroll rank: %{y}<br>October: %{customdata}<extra></extra>")], "layout": {**layout("Money still buys contention", "BUT IT NO LONGER BUYS OCTOBER CERTAINTY", x_title="Season", y_title="Payroll rank (lower is richer)"), "yaxis": {**layout("", "")["yaxis"], "autorange": "reversed", "title": {"text": "Payroll rank (lower is richer)"}}}})
 
     eras = ["Ruth/Gehrig", "DiMaggio", "Mantle", "Steinbrenner I", "Core Four", "Post-2009"]
     pennants = [7, 10, 9, 4, 6, 1]
     rings = [4, 8, 5, 2, 5, 0]
     write_chart(slug, "chart5_pennant_conversion", {"data": [
-        bar_h(eras, pennants, [ART_GREY] * len(eras), hover="%{y}<br>Pennants: %{x}<extra></extra>"),
-        bar_h(eras, rings, [ART_RED] * len(eras), hover="%{y}<br>Titles: %{x}<extra></extra>"),
+        bar_h(eras, pennants, [ART_GREY] * len(eras), name="Pennants", hover="<b>%{y}</b><br>Pennants: %{x}<extra></extra>"),
+        bar_h(eras, rings, [ART_RED] * len(eras), name="World Series titles", hover="<b>%{y}</b><br>Titles: %{x}<extra></extra>"),
     ], "layout": {**layout("The machine was built for pennants", "RINGS ARE THE HARDER CONVERSION", x_title="Pennants and titles"), "barmode": "overlay", "showlegend": True, "legend": {"orientation": "h", "x": 0.5, "xanchor": "center", "y": 1.04}}})
 
     sections = [
@@ -241,6 +255,7 @@ def yankees():
         ["The Yankees are still rich, still relevant, and still structurally advantaged. The data does not say the empire is dead. It says the monopoly on conversion is gone.", "That is the modern Yankee paradox: the franchise remains baseball's reference point even when it is no longer baseball's final boss."],
         ["Baseball Reference. <em>New York Yankees Franchise History</em>.", "Lahman, S. <em>Lahman Baseball Database</em>.", "Forbes. <em>MLB Team Valuations</em>, historical rankings.", "Retrosheet and Baseball Almanac championship/pennant records."],
         "This report uses public historical records and rounded franchise-era summaries. Payroll-rank points are editorial markers, not a complete salary model.",
+        "Data: Baseball Reference, Lahman, Retrosheet, Forbes - ARTOMETRICS",
     )
 
 
@@ -286,6 +301,7 @@ def lakers():
         ["The Lakers' advantage is not that they avoid decline. It is that decline rarely destroys the recruitment story. The next star can always imagine becoming the next chapter.", "That is why Lakers data looks less like a franchise line and more like a sequence of Hollywood acts: fade-out, casting, title run, repeat."],
         ["Basketball Reference. <em>Los Angeles Lakers Franchise Index</em>.", "NBA.com historical championship records.", "Sports Reference and Basketball Reference Finals appearance summaries."],
         "Finals-appearance counts are rounded to the conventional franchise-history record; era labels are editorial groupings used to clarify the franchise's star-cycle pattern.",
+        "Data: Basketball Reference, NBA.com, Sports Reference - ARTOMETRICS",
     )
 
 
@@ -332,6 +348,7 @@ def cowboys():
         ["The Cowboys are not a failed sports business. They may be the most successful sports business in America. That is why the football gap is so stark.", "The numbers say America's Team has mastered demand. The unfinished work is turning demand back into postseason supply."],
         ["Pro Football Reference. <em>Dallas Cowboys Franchise Encyclopedia</em>.", "Forbes. <em>NFL Team Valuations</em>, recent estimates.", "Sports Reference playoff and quarterback starter records.", "NFL historical postseason records."],
         "Franchise values are rounded public estimates. Quarterback win percentages are conventional starter-record summaries and should be interpreted as era indicators, not individual value models.",
+        "Data: Pro Football Reference, NFL records, Forbes - ARTOMETRICS",
     )
 
 
@@ -349,8 +366,8 @@ def celtics():
     finals = [12, 3, 5, 2, 2]
     rings = [11, 2, 3, 1, 1]
     write_chart(slug, "chart3_era_conversion", {"data": [
-        bar_h(eras, finals, [ART_GREY] * len(eras), hover="%{y}<br>Finals: %{x}<extra></extra>"),
-        bar_h(eras, rings, [ART_RED] * len(eras), hover="%{y}<br>Titles: %{x}<extra></extra>"),
+        bar_h(eras, finals, [ART_GREY] * len(eras), name="Finals appearances", hover="<b>%{y}</b><br>Finals: %{x}<extra></extra>"),
+        bar_h(eras, rings, [ART_RED] * len(eras), name="NBA titles", hover="<b>%{y}</b><br>Titles: %{x}<extra></extra>"),
     ], "layout": {**layout("Boston's best eras converted appearances", "THE RUSSELL STANDARD IS UNREPEATABLE", x_title="Finals and titles"), "barmode": "overlay", "showlegend": True, "legend": {"orientation": "h", "x": 0.5, "xanchor": "center", "y": 1.04}}})
 
     gaps = ["1969-74", "1976-81", "1986-2008", "2008-24"]
@@ -382,6 +399,7 @@ def celtics():
         ["The Celtics are not just successful. They are historically overcapitalized: so rich in past winning that even good seasons can feel underleveraged.", "The 2024 title matters because it reconnects the present roster to the institution's oldest claim: Boston is supposed to convert windows into banners."],
         ["Basketball Reference. <em>Boston Celtics Franchise Index</em>.", "NBA.com historical championship records.", "Sports Reference Finals appearance summaries."],
         "Era groupings are editorial simplifications. Counts use conventional public championship and Finals records.",
+        "Data: Basketball Reference, NBA.com, Sports Reference - ARTOMETRICS",
     )
 
 
@@ -402,7 +420,8 @@ def dodgers():
     spend_years = [2013, 2015, 2017, 2019, 2021, 2023, 2024]
     payroll_rank = [2, 1, 1, 3, 1, 5, 2]
     october = [1, 1, 3, 1, 2, 0, 4]
-    write_chart(slug, "chart4_spending_conversion", {"data": [scatter(spend_years, payroll_rank, [str(y) for y in spend_years], [14 + o * 6 for o in october], [ART_RED if o >= 3 else ART_BLUE for o in october], hover="%{text}<br>Payroll rank: %{y}<extra></extra>")], "layout": {**layout("Money became infrastructure in Los Angeles", "THE QUESTION IS OCTOBER CONVERSION", x_title="Season", y_title="Payroll rank (lower is richer)"), "yaxis": {**layout("", "")["yaxis"], "autorange": "reversed", "title": {"text": "Payroll rank (lower is richer)"}}}})
+    outcomes = ["NLCS", "NLDS exit", "Pennant", "NLDS exit", "NLCS", "NLDS exit", "World Series title"]
+    write_chart(slug, "chart4_spending_conversion", {"data": [scatter(spend_years, payroll_rank, [str(y) for y in spend_years], [14 + o * 6 for o in october], [ART_RED if o >= 3 else ART_BLUE for o in october], customdata=outcomes, hover="<b>%{text}</b><br>Payroll rank: %{y}<br>October: %{customdata}<extra></extra>")], "layout": {**layout("Money became infrastructure in Los Angeles", "THE QUESTION IS OCTOBER CONVERSION", x_title="Season", y_title="Payroll rank (lower is richer)"), "yaxis": {**layout("", "")["yaxis"], "autorange": "reversed", "title": {"text": "Payroll rank (lower is richer)"}}}})
 
     gaps = ["1959-63", "1965-81", "1988-2020", "2020-24"]
     gap_years = [4, 16, 32, 4]
@@ -428,6 +447,7 @@ def dodgers():
         ["The Dodgers are not merely rich. They are system-rich: player development, payroll, scouting, and market power working together to keep the contention line high.", "The data says their defining trait is not one championship. It is repeated access to the conditions where championships become possible."],
         ["Baseball Reference. <em>Los Angeles Dodgers Franchise History</em>.", "Lahman, S. <em>Lahman Baseball Database</em>.", "Forbes and public payroll-rank summaries.", "Retrosheet and Baseball Almanac pennant/title records."],
         "Recent win totals and payroll ranks are rounded public-reference summaries. The 2020 shortened season is left unadjusted and interpreted separately in the prose.",
+        "Data: Baseball Reference, Lahman, Retrosheet, Forbes - ARTOMETRICS",
     )
 
 
@@ -476,6 +496,7 @@ def patriots():
         ["The Patriots dynasty was not normal greatness. It was a discontinuity: one era that swallowed the franchise before and after it.", "The data says New England's new challenge is not legacy. Legacy is secure. The challenge is proving the institution can produce again without the system that made it famous."],
         ["Pro Football Reference. <em>New England Patriots Franchise Encyclopedia</em>.", "NFL historical postseason records.", "Forbes. <em>NFL Team Valuations</em>, recent estimates.", "Sports Reference team season summaries."],
         "Period totals are rounded public-reference summaries. Brand/value and football-rank points are editorial markers for the shape of the post-dynasty transition, not a formal valuation model.",
+        "Data: Pro Football Reference, NFL records, Forbes - ARTOMETRICS",
     )
 
 

@@ -575,7 +575,7 @@ function renderChartCredit(el: HTMLElement) {
   if (el.querySelector(".art-chart-credit")) return;
   const credit = document.createElement("div");
   credit.className = "art-chart-credit";
-  credit.textContent = "Data: source cited in report references - ARTOMETRICS";
+  credit.textContent = el.dataset.source || "Data: source cited in report references - ARTOMETRICS";
   el.appendChild(credit);
 }
 
