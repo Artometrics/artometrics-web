@@ -1,1 +1,873 @@
-{"data":[{"x":[-223.15000000000001,418.14999999999998],"y":[400,400],"text":"yintercept: 400","type":"scatter","mode":"lines","line":{"width":1.5118110236220474,"color":"rgba(107,107,107,1)","dash":"dash"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[-205],"y":[390],"text":"Subsistence floor (~$400)","hovertext":"x: -205<br />y: 390","textfont":{"size":10.58267716535433,"color":"rgba(107,107,107,1)"},"type":"scatter","mode":"text","hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[-100,-100,-44,-44,-100],"y":[330,800,800,330,330],"text":"","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"transparent","dash":"solid"},"fill":"toself","fillcolor":"rgba(192,57,43,0.07)","hoveron":"fills","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[-27,-27,180,180,-27],"y":[330,800,800,330,330],"text":"","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"transparent","dash":"solid"},"fill":"toself","fillcolor":"rgba(184,134,11,0.06)","hoveron":"fills","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[-72],"y":[786],"text":"CAESAR'S LIFETIME","hovertext":"x: -72<br />y: 786","textfont":{"size":9.0708661417322833,"color":"rgba(192,57,43,0.8)"},"type":"scatter","mode":"text","hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[76],"y":[786],"text":"PAX ROMANA  27 BCE – 180 CE","hovertext":"x: 76<br />y: 786","textfont":{"size":9.0708661417322833,"color":"rgba(184,134,11,0.9)"},"type":"scatter","mode":"text","hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[-200,-133,-100,-82,-60,-44,-27,14,100,150,180,235,300,400,400,400,300,235,180,150,100,14,-27,-44,-60,-82,-100,-133,-200,-200],"y":[400,450,420,390,400,400,440,530,580,600,580,480,390,340,340,460,520,630,730,760,700,620,520,490,480,470,500,530,480,400],"text":["year: -200<br />gdp: 440<br />gdp_low: 400<br />gdp_high: 480","year: -133<br />gdp: 490<br />gdp_low: 450<br />gdp_high: 530","year: -100<br />gdp: 460<br />gdp_low: 420<br />gdp_high: 500","year:  -82<br />gdp: 430<br />gdp_low: 390<br />gdp_high: 470","year:  -60<br />gdp: 440<br />gdp_low: 400<br />gdp_high: 480","year:  -44<br />gdp: 445<br />gdp_low: 400<br />gdp_high: 490","year:  -27<br />gdp: 480<br />gdp_low: 440<br />gdp_high: 520","year:   14<br />gdp: 571<br />gdp_low: 530<br />gdp_high: 620","year:  100<br />gdp: 630<br />gdp_low: 580<br />gdp_high: 700","year:  150<br />gdp: 680<br />gdp_low: 600<br />gdp_high: 760","year:  180<br />gdp: 650<br />gdp_low: 580<br />gdp_high: 730","year:  235<br />gdp: 550<br />gdp_low: 480<br />gdp_high: 630","year:  300<br />gdp: 450<br />gdp_low: 390<br />gdp_high: 520","year:  400<br />gdp: 400<br />gdp_low: 340<br />gdp_high: 460","year:  400<br />gdp: 400<br />gdp_low: 340<br />gdp_high: 460","year:  400<br />gdp: 400<br />gdp_low: 340<br />gdp_high: 460","year:  300<br />gdp: 450<br />gdp_low: 390<br />gdp_high: 520","year:  235<br />gdp: 550<br />gdp_low: 480<br />gdp_high: 630","year:  180<br />gdp: 650<br />gdp_low: 580<br />gdp_high: 730","year:  150<br />gdp: 680<br />gdp_low: 600<br />gdp_high: 760","year:  100<br />gdp: 630<br />gdp_low: 580<br />gdp_high: 700","year:   14<br />gdp: 571<br />gdp_low: 530<br />gdp_high: 620","year:  -27<br />gdp: 480<br />gdp_low: 440<br />gdp_high: 520","year:  -44<br />gdp: 445<br />gdp_low: 400<br />gdp_high: 490","year:  -60<br />gdp: 440<br />gdp_low: 400<br />gdp_high: 480","year:  -82<br />gdp: 430<br />gdp_low: 390<br />gdp_high: 470","year: -100<br />gdp: 460<br />gdp_low: 420<br />gdp_high: 500","year: -133<br />gdp: 490<br />gdp_low: 450<br />gdp_high: 530","year: -200<br />gdp: 440<br />gdp_low: 400<br />gdp_high: 480","year: -200<br />gdp: 440<br />gdp_low: 400<br />gdp_high: 480"],"type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"transparent","dash":"solid"},"fill":"toself","fillcolor":"rgba(192,57,43,0.12)","hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[-200,-133,-100,-82,-60,-44,-27,14,100,150,180,235,300,400],"y":[440,490,460,430,440,445,480,571,630,680,650,550,450,400],"text":["year: -200<br />gdp: 440","year: -133<br />gdp: 490","year: -100<br />gdp: 460","year:  -82<br />gdp: 430","year:  -60<br />gdp: 440","year:  -44<br />gdp: 445","year:  -27<br />gdp: 480","year:   14<br />gdp: 571","year:  100<br />gdp: 630","year:  150<br />gdp: 680","year:  180<br />gdp: 650","year:  235<br />gdp: 550","year:  300<br />gdp: 450","year:  400<br />gdp: 400"],"type":"scatter","mode":"lines+markers","line":{"width":4.5354330708661417,"color":"rgba(192,57,43,1)","dash":"solid"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","marker":{"autocolorscale":false,"color":"rgba(192,57,43,1)","opacity":1,"size":11.338582677165356,"symbol":"circle","line":{"width":4.9133858267716546,"color":"rgba(242,240,235,1)"}},"frame":null},{"x":[-44,-44],"y":[306,834],"text":"xintercept: -44","type":"scatter","mode":"lines","line":{"width":2.2677165354330708,"color":"rgba(192,57,43,0.85)","dash":"dot"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[-27,-27],"y":[306,834],"text":"xintercept: -27","type":"scatter","mode":"lines","line":{"width":2.2677165354330708,"color":"rgba(184,134,11,0.75)","dash":"dot"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[-44],"y":[518],"text":"Caesar Assassinated<br />44 BCE","hovertext":"x: -44<br />y: 518","textfont":{"size":10.204724409448822,"color":"rgba(192,57,43,1)"},"type":"scatter","mode":"text","hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[-27],"y":[550],"text":"Augustus<br />27 BCE","hovertext":"x: -27<br />y: 550","textfont":{"size":10.204724409448822,"color":"rgba(184,134,11,1)"},"type":"scatter","mode":"text","hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[150],"y":[736],"text":"Peak: ~$680<br />(Scheidel-Friesen, 2009)","hovertext":"x: 150<br />y: 736","textfont":{"size":10.204724409448822,"color":"rgba(28,28,30,1)"},"type":"scatter","mode":"text","hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[250],"y":[516],"text":"Third Century<br />Crisis begins","hovertext":"x: 250<br />y: 516","textfont":{"size":9.4488188976377963,"color":"rgba(28,28,30,1)"},"type":"scatter","mode":"text","hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":55.8505603985056,"r":21.253632212536321,"b":50.145288501452889,"l":62.100456621004568},"plot_bgcolor":"#F2F0EB","paper_bgcolor":"#F2F0EB","font":{"color":"#1C1C1E","family":"DM Sans, Helvetica, sans-serif","size":14.611872146118724},"title":{"text":"<b> <span style='color:#C0392B'>Caesar's reforms<\/span> structured Rome's prosperity — he never lived in it <\/b>","font":{"color":"rgba(28,28,30,1)","family":"Helvetica","size":18.596928185969279},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-223.15000000000001,418.14999999999998],"tickmode":"array","ticktext":["200 BCE","133 BCE","100 BCE","44 BCE","27 BCE","0 CE","100 CE","150 CE","235 CE","300 CE","400 CE"],"tickvals":[-200,-133,-100,-44,-26.999999999999972,0,100.00000000000003,149.99999999999997,234.99999999999991,300,400],"categoryorder":"array","categoryarray":["200 BCE","133 BCE","100 BCE","44 BCE","27 BCE","0 CE","100 CE","150 CE","235 CE","300 CE","400 CE"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.6529680365296811,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(107,107,107,1)","family":"Helvetica","size":11.955168119551681},"tickangle":-35,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(213,213,213,1)","gridwidth":0.53134080531340799,"zeroline":false,"anchor":"y","title":{"text":"<b> Year (BCE negative / CE positive) <\/b>","font":{"color":"rgba(28,28,30,1)","family":"Helvetica","size":13.283520132835205}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[306,834],"tickmode":"array","ticktext":["$400","$450","$500","$550","$600","$650","$700","$750"],"tickvals":[400,450,500,550,600,650,700,750],"categoryorder":"array","categoryarray":["$400","$450","$500","$550","$600","$650","$700","$750"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.6529680365296811,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(107,107,107,1)","family":"Helvetica","size":11.955168119551681},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(213,213,213,1)","gridwidth":0.5313408053134081,"zeroline":false,"anchor":"x","title":{"text":"<b> Est. GDP per capita (1990 int'l dollars) <\/b>","font":{"color":"rgba(28,28,30,1)","family":"Helvetica","size":13.283520132835205}},"hoverformat":".2f"},"shapes":[],"showlegend":false,"legend":{"bgcolor":"rgba(242,240,235,1)","bordercolor":"transparent","borderwidth":1.8897637795275593,"font":{"color":"rgba(28,28,30,1)","family":"Helvetica","size":11.68949771689498}},"hovermode":"closest","barmode":"relative","transition":{"duration":500,"easing":"cubic-in-out"}},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"5f1233f8f5b9":{"yintercept":{},"type":"scatter"},"5f121dcc5f57":{"x":{},"y":{}},"5f1254875809":{"xmin":{},"xmax":{},"ymin":{},"ymax":{}},"5f121a4e23a":{"xmin":{},"xmax":{},"ymin":{},"ymax":{}},"5f1270004ead":{"x":{},"y":{}},"5f12242d794d":{"x":{},"y":{}},"5f122576c0c9":{"x":{},"y":{},"ymin":{},"ymax":{}},"5f12176adf56":{"x":{},"y":{}},"5f12696c931c":{"x":{},"y":{}},"5f12572e4956":{"xintercept":{}},"5f121fd0d9d1":{"xintercept":{}},"5f12488c38a8":{"x":{},"y":{}},"5f126ddbc2cd":{"x":{},"y":{}},"5f1276d25913":{"x":{},"y":{}},"5f126bd62b56":{"x":{},"y":{}}},"cur_data":"5f1233f8f5b9","visdat":{"5f1233f8f5b9":["function (y) ","x"],"5f121dcc5f57":["function (y) ","x"],"5f1254875809":["function (y) ","x"],"5f121a4e23a":["function (y) ","x"],"5f1270004ead":["function (y) ","x"],"5f12242d794d":["function (y) ","x"],"5f122576c0c9":["function (y) ","x"],"5f12176adf56":["function (y) ","x"],"5f12696c931c":["function (y) ","x"],"5f12572e4956":["function (y) ","x"],"5f121fd0d9d1":["function (y) ","x"],"5f12488c38a8":["function (y) ","x"],"5f126ddbc2cd":["function (y) ","x"],"5f1276d25913":["function (y) ","x"],"5f126bd62b56":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"}
+{
+  "data": [
+    {
+      "x": [
+        -223.15,
+        418.15
+      ],
+      "y": [
+        400,
+        400
+      ],
+      "text": "yintercept: 400",
+      "type": "scatter",
+      "mode": "lines",
+      "line": {
+        "width": 1.5118110236220474,
+        "color": "rgba(107,107,107,1)",
+        "dash": "dash"
+      },
+      "hoveron": "points",
+      "showlegend": false,
+      "xaxis": "x",
+      "yaxis": "y",
+      "hoverinfo": "text",
+      "frame": null,
+      "hovertemplate": "<b>Series 1</b><br>x: %{x}<br>y: %{y}<extra></extra>",
+      "name": "Series 1"
+    },
+    {
+      "x": [
+        -205
+      ],
+      "y": [
+        390
+      ],
+      "text": "Subsistence floor (~$400)",
+      "hovertext": "x: -205<br />y: 390",
+      "textfont": {
+        "size": 10.58267716535433,
+        "color": "rgba(107,107,107,1)"
+      },
+      "type": "scatter",
+      "mode": "text",
+      "hoveron": "points",
+      "showlegend": false,
+      "xaxis": "x",
+      "yaxis": "y",
+      "hoverinfo": "text",
+      "frame": null,
+      "hovertemplate": "<b>Series 2</b><br>x: %{x}<br>y: %{y}<extra></extra>",
+      "name": "Series 2"
+    },
+    {
+      "x": [
+        -100,
+        -100,
+        -44,
+        -44,
+        -100
+      ],
+      "y": [
+        330,
+        800,
+        800,
+        330,
+        330
+      ],
+      "text": "",
+      "type": "scatter",
+      "mode": "lines",
+      "line": {
+        "width": 1.8897637795275593,
+        "color": "transparent",
+        "dash": "solid"
+      },
+      "fill": "toself",
+      "fillcolor": "rgba(192,57,43,0.07)",
+      "hoveron": "fills",
+      "showlegend": false,
+      "xaxis": "x",
+      "yaxis": "y",
+      "hoverinfo": "text",
+      "frame": null,
+      "hovertemplate": "<b>Series 3</b><br>x: %{x}<br>y: %{y}<extra></extra>",
+      "name": "Series 3"
+    },
+    {
+      "x": [
+        -27,
+        -27,
+        180,
+        180,
+        -27
+      ],
+      "y": [
+        330,
+        800,
+        800,
+        330,
+        330
+      ],
+      "text": "",
+      "type": "scatter",
+      "mode": "lines",
+      "line": {
+        "width": 1.8897637795275593,
+        "color": "transparent",
+        "dash": "solid"
+      },
+      "fill": "toself",
+      "fillcolor": "rgba(184,134,11,0.06)",
+      "hoveron": "fills",
+      "showlegend": false,
+      "xaxis": "x",
+      "yaxis": "y",
+      "hoverinfo": "text",
+      "frame": null,
+      "hovertemplate": "<b>Series 4</b><br>x: %{x}<br>y: %{y}<extra></extra>",
+      "name": "Series 4"
+    },
+    {
+      "x": [
+        -72
+      ],
+      "y": [
+        786
+      ],
+      "text": "CAESAR'S LIFETIME",
+      "hovertext": "x: -72<br />y: 786",
+      "textfont": {
+        "size": 9.070866141732283,
+        "color": "rgba(192,57,43,0.8)"
+      },
+      "type": "scatter",
+      "mode": "text",
+      "hoveron": "points",
+      "showlegend": false,
+      "xaxis": "x",
+      "yaxis": "y",
+      "hoverinfo": "text",
+      "frame": null,
+      "hovertemplate": "<b>Series 5</b><br>x: %{x}<br>y: %{y}<extra></extra>",
+      "name": "Series 5"
+    },
+    {
+      "x": [
+        76
+      ],
+      "y": [
+        786
+      ],
+      "text": "PAX ROMANA  27 BCE – 180 CE",
+      "hovertext": "x: 76<br />y: 786",
+      "textfont": {
+        "size": 9.070866141732283,
+        "color": "rgba(184,134,11,0.9)"
+      },
+      "type": "scatter",
+      "mode": "text",
+      "hoveron": "points",
+      "showlegend": false,
+      "xaxis": "x",
+      "yaxis": "y",
+      "hoverinfo": "text",
+      "frame": null,
+      "hovertemplate": "<b>Series 6</b><br>x: %{x}<br>y: %{y}<extra></extra>",
+      "name": "Series 6"
+    },
+    {
+      "x": [
+        -200,
+        -133,
+        -100,
+        -82,
+        -60,
+        -44,
+        -27,
+        14,
+        100,
+        150,
+        180,
+        235,
+        300,
+        400,
+        400,
+        400,
+        300,
+        235,
+        180,
+        150,
+        100,
+        14,
+        -27,
+        -44,
+        -60,
+        -82,
+        -100,
+        -133,
+        -200,
+        -200
+      ],
+      "y": [
+        400,
+        450,
+        420,
+        390,
+        400,
+        400,
+        440,
+        530,
+        580,
+        600,
+        580,
+        480,
+        390,
+        340,
+        340,
+        460,
+        520,
+        630,
+        730,
+        760,
+        700,
+        620,
+        520,
+        490,
+        480,
+        470,
+        500,
+        530,
+        480,
+        400
+      ],
+      "text": [
+        "year: -200<br />gdp: 440<br />gdp_low: 400<br />gdp_high: 480",
+        "year: -133<br />gdp: 490<br />gdp_low: 450<br />gdp_high: 530",
+        "year: -100<br />gdp: 460<br />gdp_low: 420<br />gdp_high: 500",
+        "year:  -82<br />gdp: 430<br />gdp_low: 390<br />gdp_high: 470",
+        "year:  -60<br />gdp: 440<br />gdp_low: 400<br />gdp_high: 480",
+        "year:  -44<br />gdp: 445<br />gdp_low: 400<br />gdp_high: 490",
+        "year:  -27<br />gdp: 480<br />gdp_low: 440<br />gdp_high: 520",
+        "year:   14<br />gdp: 571<br />gdp_low: 530<br />gdp_high: 620",
+        "year:  100<br />gdp: 630<br />gdp_low: 580<br />gdp_high: 700",
+        "year:  150<br />gdp: 680<br />gdp_low: 600<br />gdp_high: 760",
+        "year:  180<br />gdp: 650<br />gdp_low: 580<br />gdp_high: 730",
+        "year:  235<br />gdp: 550<br />gdp_low: 480<br />gdp_high: 630",
+        "year:  300<br />gdp: 450<br />gdp_low: 390<br />gdp_high: 520",
+        "year:  400<br />gdp: 400<br />gdp_low: 340<br />gdp_high: 460",
+        "year:  400<br />gdp: 400<br />gdp_low: 340<br />gdp_high: 460",
+        "year:  400<br />gdp: 400<br />gdp_low: 340<br />gdp_high: 460",
+        "year:  300<br />gdp: 450<br />gdp_low: 390<br />gdp_high: 520",
+        "year:  235<br />gdp: 550<br />gdp_low: 480<br />gdp_high: 630",
+        "year:  180<br />gdp: 650<br />gdp_low: 580<br />gdp_high: 730",
+        "year:  150<br />gdp: 680<br />gdp_low: 600<br />gdp_high: 760",
+        "year:  100<br />gdp: 630<br />gdp_low: 580<br />gdp_high: 700",
+        "year:   14<br />gdp: 571<br />gdp_low: 530<br />gdp_high: 620",
+        "year:  -27<br />gdp: 480<br />gdp_low: 440<br />gdp_high: 520",
+        "year:  -44<br />gdp: 445<br />gdp_low: 400<br />gdp_high: 490",
+        "year:  -60<br />gdp: 440<br />gdp_low: 400<br />gdp_high: 480",
+        "year:  -82<br />gdp: 430<br />gdp_low: 390<br />gdp_high: 470",
+        "year: -100<br />gdp: 460<br />gdp_low: 420<br />gdp_high: 500",
+        "year: -133<br />gdp: 490<br />gdp_low: 450<br />gdp_high: 530",
+        "year: -200<br />gdp: 440<br />gdp_low: 400<br />gdp_high: 480",
+        "year: -200<br />gdp: 440<br />gdp_low: 400<br />gdp_high: 480"
+      ],
+      "type": "scatter",
+      "mode": "lines",
+      "line": {
+        "width": 1.8897637795275593,
+        "color": "transparent",
+        "dash": "solid"
+      },
+      "fill": "toself",
+      "fillcolor": "rgba(192,57,43,0.12)",
+      "hoveron": "points",
+      "showlegend": false,
+      "xaxis": "x",
+      "yaxis": "y",
+      "hoverinfo": "text",
+      "frame": null,
+      "hovertemplate": "<b>%{text}</b><br>x: %{x}<br>y: %{y}<extra></extra>",
+      "name": "Series 7"
+    },
+    {
+      "x": [
+        -200,
+        -133,
+        -100,
+        -82,
+        -60,
+        -44,
+        -27,
+        14,
+        100,
+        150,
+        180,
+        235,
+        300,
+        400
+      ],
+      "y": [
+        440,
+        490,
+        460,
+        430,
+        440,
+        445,
+        480,
+        571,
+        630,
+        680,
+        650,
+        550,
+        450,
+        400
+      ],
+      "text": [
+        "year: -200<br />gdp: 440",
+        "year: -133<br />gdp: 490",
+        "year: -100<br />gdp: 460",
+        "year:  -82<br />gdp: 430",
+        "year:  -60<br />gdp: 440",
+        "year:  -44<br />gdp: 445",
+        "year:  -27<br />gdp: 480",
+        "year:   14<br />gdp: 571",
+        "year:  100<br />gdp: 630",
+        "year:  150<br />gdp: 680",
+        "year:  180<br />gdp: 650",
+        "year:  235<br />gdp: 550",
+        "year:  300<br />gdp: 450",
+        "year:  400<br />gdp: 400"
+      ],
+      "type": "scatter",
+      "mode": "lines+markers",
+      "line": {
+        "width": 4.535433070866142,
+        "color": "rgba(192,57,43,1)",
+        "dash": "solid"
+      },
+      "hoveron": "points",
+      "showlegend": false,
+      "xaxis": "x",
+      "yaxis": "y",
+      "hoverinfo": "text",
+      "marker": {
+        "autocolorscale": false,
+        "color": "rgba(192,57,43,1)",
+        "opacity": 1,
+        "size": 11.338582677165356,
+        "symbol": "circle",
+        "line": {
+          "width": 4.913385826771655,
+          "color": "rgba(242,240,235,1)"
+        }
+      },
+      "frame": null,
+      "hovertemplate": "<b>%{text}</b><br>x: %{x}<br>y: %{y}<extra></extra>",
+      "name": "Series 8"
+    },
+    {
+      "x": [
+        -44,
+        -44
+      ],
+      "y": [
+        306,
+        834
+      ],
+      "text": "xintercept: -44",
+      "type": "scatter",
+      "mode": "lines",
+      "line": {
+        "width": 2.267716535433071,
+        "color": "rgba(192,57,43,0.85)",
+        "dash": "dot"
+      },
+      "hoveron": "points",
+      "showlegend": false,
+      "xaxis": "x",
+      "yaxis": "y",
+      "hoverinfo": "text",
+      "frame": null,
+      "hovertemplate": "<b>Series 9</b><br>x: %{x}<br>y: %{y}<extra></extra>",
+      "name": "Series 9"
+    },
+    {
+      "x": [
+        -27,
+        -27
+      ],
+      "y": [
+        306,
+        834
+      ],
+      "text": "xintercept: -27",
+      "type": "scatter",
+      "mode": "lines",
+      "line": {
+        "width": 2.267716535433071,
+        "color": "rgba(184,134,11,0.75)",
+        "dash": "dot"
+      },
+      "hoveron": "points",
+      "showlegend": false,
+      "xaxis": "x",
+      "yaxis": "y",
+      "hoverinfo": "text",
+      "frame": null,
+      "hovertemplate": "<b>Series 10</b><br>x: %{x}<br>y: %{y}<extra></extra>",
+      "name": "Series 10"
+    },
+    {
+      "x": [
+        -44
+      ],
+      "y": [
+        518
+      ],
+      "text": "Caesar Assassinated<br />44 BCE",
+      "hovertext": "x: -44<br />y: 518",
+      "textfont": {
+        "size": 10.204724409448822,
+        "color": "rgba(192,57,43,1)"
+      },
+      "type": "scatter",
+      "mode": "text",
+      "hoveron": "points",
+      "showlegend": false,
+      "xaxis": "x",
+      "yaxis": "y",
+      "hoverinfo": "text",
+      "frame": null,
+      "hovertemplate": "<b>Series 11</b><br>x: %{x}<br>y: %{y}<extra></extra>",
+      "name": "Series 11"
+    },
+    {
+      "x": [
+        -27
+      ],
+      "y": [
+        550
+      ],
+      "text": "Augustus<br />27 BCE",
+      "hovertext": "x: -27<br />y: 550",
+      "textfont": {
+        "size": 10.204724409448822,
+        "color": "rgba(184,134,11,1)"
+      },
+      "type": "scatter",
+      "mode": "text",
+      "hoveron": "points",
+      "showlegend": false,
+      "xaxis": "x",
+      "yaxis": "y",
+      "hoverinfo": "text",
+      "frame": null,
+      "hovertemplate": "<b>Series 12</b><br>x: %{x}<br>y: %{y}<extra></extra>",
+      "name": "Series 12"
+    },
+    {
+      "x": [
+        150
+      ],
+      "y": [
+        736
+      ],
+      "text": "Peak: ~$680<br />(Scheidel-Friesen, 2009)",
+      "hovertext": "x: 150<br />y: 736",
+      "textfont": {
+        "size": 10.204724409448822,
+        "color": "rgba(28,28,30,1)"
+      },
+      "type": "scatter",
+      "mode": "text",
+      "hoveron": "points",
+      "showlegend": false,
+      "xaxis": "x",
+      "yaxis": "y",
+      "hoverinfo": "text",
+      "frame": null,
+      "hovertemplate": "<b>Series 13</b><br>x: %{x}<br>y: %{y}<extra></extra>",
+      "name": "Series 13"
+    },
+    {
+      "x": [
+        250
+      ],
+      "y": [
+        516
+      ],
+      "text": "Third Century<br />Crisis begins",
+      "hovertext": "x: 250<br />y: 516",
+      "textfont": {
+        "size": 9.448818897637796,
+        "color": "rgba(28,28,30,1)"
+      },
+      "type": "scatter",
+      "mode": "text",
+      "hoveron": "points",
+      "showlegend": false,
+      "xaxis": "x",
+      "yaxis": "y",
+      "hoverinfo": "text",
+      "frame": null,
+      "hovertemplate": "<b>Series 14</b><br>x: %{x}<br>y: %{y}<extra></extra>",
+      "name": "Series 14"
+    }
+  ],
+  "layout": {
+    "margin": {
+      "t": 55.8505603985056,
+      "r": 21.25363221253632,
+      "b": 50.14528850145289,
+      "l": 62.10045662100457
+    },
+    "plot_bgcolor": "#F2F0EB",
+    "paper_bgcolor": "#F2F0EB",
+    "font": {
+      "color": "#1C1C1E",
+      "family": "DM Sans, Helvetica, sans-serif",
+      "size": 14.611872146118724
+    },
+    "title": {
+      "text": "The most important feature of this chart is not Caesar’s era — it is what comes after it<br><span style='font-size:12px;color:#6B6B6B'>Trend With Milestones - source cited in report references</span>",
+      "font": {
+        "color": "rgba(28,28,30,1)",
+        "family": "Helvetica",
+        "size": 18.59692818596928
+      },
+      "x": 0,
+      "xref": "paper",
+      "xanchor": "left"
+    },
+    "xaxis": {
+      "domain": [
+        0,
+        1
+      ],
+      "automargin": true,
+      "type": "linear",
+      "autorange": false,
+      "range": [
+        -223.15,
+        418.15
+      ],
+      "tickmode": "array",
+      "ticktext": [
+        "200 BCE",
+        "133 BCE",
+        "100 BCE",
+        "44 BCE",
+        "27 BCE",
+        "0 CE",
+        "100 CE",
+        "150 CE",
+        "235 CE",
+        "300 CE",
+        "400 CE"
+      ],
+      "tickvals": [
+        -200,
+        -133,
+        -100,
+        -44,
+        -26.99999999999997,
+        0,
+        100.00000000000003,
+        149.99999999999997,
+        234.99999999999991,
+        300,
+        400
+      ],
+      "categoryorder": "array",
+      "categoryarray": [
+        "200 BCE",
+        "133 BCE",
+        "100 BCE",
+        "44 BCE",
+        "27 BCE",
+        "0 CE",
+        "100 CE",
+        "150 CE",
+        "235 CE",
+        "300 CE",
+        "400 CE"
+      ],
+      "nticks": null,
+      "ticks": "",
+      "tickcolor": null,
+      "ticklen": 3.652968036529681,
+      "tickwidth": 0,
+      "showticklabels": true,
+      "tickfont": {
+        "color": "rgba(107,107,107,1)",
+        "family": "Helvetica",
+        "size": 11.955168119551681
+      },
+      "tickangle": -35,
+      "showline": false,
+      "linecolor": null,
+      "linewidth": 0,
+      "showgrid": true,
+      "gridcolor": "rgba(213,213,213,1)",
+      "gridwidth": 0.531340805313408,
+      "zeroline": false,
+      "anchor": "y",
+      "title": {
+        "text": "<b> Year (BCE negative / CE positive) </b>",
+        "font": {
+          "color": "rgba(28,28,30,1)",
+          "family": "Helvetica",
+          "size": 13.283520132835205
+        }
+      },
+      "hoverformat": ".2f"
+    },
+    "yaxis": {
+      "domain": [
+        0,
+        1
+      ],
+      "automargin": true,
+      "type": "linear",
+      "autorange": false,
+      "range": [
+        306,
+        834
+      ],
+      "tickmode": "array",
+      "ticktext": [
+        "$400",
+        "$450",
+        "$500",
+        "$550",
+        "$600",
+        "$650",
+        "$700",
+        "$750"
+      ],
+      "tickvals": [
+        400,
+        450,
+        500,
+        550,
+        600,
+        650,
+        700,
+        750
+      ],
+      "categoryorder": "array",
+      "categoryarray": [
+        "$400",
+        "$450",
+        "$500",
+        "$550",
+        "$600",
+        "$650",
+        "$700",
+        "$750"
+      ],
+      "nticks": null,
+      "ticks": "",
+      "tickcolor": null,
+      "ticklen": 3.652968036529681,
+      "tickwidth": 0,
+      "showticklabels": true,
+      "tickfont": {
+        "color": "rgba(107,107,107,1)",
+        "family": "Helvetica",
+        "size": 11.955168119551681
+      },
+      "tickangle": 0,
+      "showline": false,
+      "linecolor": null,
+      "linewidth": 0,
+      "showgrid": true,
+      "gridcolor": "rgba(213,213,213,1)",
+      "gridwidth": 0.5313408053134081,
+      "zeroline": false,
+      "anchor": "x",
+      "title": {
+        "text": "<b> Est. GDP per capita (1990 int'l dollars) </b>",
+        "font": {
+          "color": "rgba(28,28,30,1)",
+          "family": "Helvetica",
+          "size": 13.283520132835205
+        }
+      },
+      "hoverformat": ".2f"
+    },
+    "shapes": [],
+    "showlegend": false,
+    "legend": {
+      "bgcolor": "rgba(242,240,235,1)",
+      "bordercolor": "transparent",
+      "borderwidth": 1.8897637795275593,
+      "font": {
+        "color": "rgba(28,28,30,1)",
+        "family": "Helvetica",
+        "size": 11.68949771689498
+      }
+    },
+    "hovermode": "closest",
+    "barmode": "relative",
+    "transition": {
+      "duration": 500,
+      "easing": "cubic-in-out"
+    }
+  },
+  "config": {
+    "doubleClick": "reset",
+    "modeBarButtonsToAdd": [
+      "hoverclosest",
+      "hovercompare"
+    ],
+    "showSendToCloud": false
+  },
+  "source": "A",
+  "attrs": {
+    "5f1233f8f5b9": {
+      "yintercept": {},
+      "type": "scatter"
+    },
+    "5f121dcc5f57": {
+      "x": {},
+      "y": {}
+    },
+    "5f1254875809": {
+      "xmin": {},
+      "xmax": {},
+      "ymin": {},
+      "ymax": {}
+    },
+    "5f121a4e23a": {
+      "xmin": {},
+      "xmax": {},
+      "ymin": {},
+      "ymax": {}
+    },
+    "5f1270004ead": {
+      "x": {},
+      "y": {}
+    },
+    "5f12242d794d": {
+      "x": {},
+      "y": {}
+    },
+    "5f122576c0c9": {
+      "x": {},
+      "y": {},
+      "ymin": {},
+      "ymax": {}
+    },
+    "5f12176adf56": {
+      "x": {},
+      "y": {}
+    },
+    "5f12696c931c": {
+      "x": {},
+      "y": {}
+    },
+    "5f12572e4956": {
+      "xintercept": {}
+    },
+    "5f121fd0d9d1": {
+      "xintercept": {}
+    },
+    "5f12488c38a8": {
+      "x": {},
+      "y": {}
+    },
+    "5f126ddbc2cd": {
+      "x": {},
+      "y": {}
+    },
+    "5f1276d25913": {
+      "x": {},
+      "y": {}
+    },
+    "5f126bd62b56": {
+      "x": {},
+      "y": {}
+    }
+  },
+  "cur_data": "5f1233f8f5b9",
+  "visdat": {
+    "5f1233f8f5b9": [
+      "function (y) ",
+      "x"
+    ],
+    "5f121dcc5f57": [
+      "function (y) ",
+      "x"
+    ],
+    "5f1254875809": [
+      "function (y) ",
+      "x"
+    ],
+    "5f121a4e23a": [
+      "function (y) ",
+      "x"
+    ],
+    "5f1270004ead": [
+      "function (y) ",
+      "x"
+    ],
+    "5f12242d794d": [
+      "function (y) ",
+      "x"
+    ],
+    "5f122576c0c9": [
+      "function (y) ",
+      "x"
+    ],
+    "5f12176adf56": [
+      "function (y) ",
+      "x"
+    ],
+    "5f12696c931c": [
+      "function (y) ",
+      "x"
+    ],
+    "5f12572e4956": [
+      "function (y) ",
+      "x"
+    ],
+    "5f121fd0d9d1": [
+      "function (y) ",
+      "x"
+    ],
+    "5f12488c38a8": [
+      "function (y) ",
+      "x"
+    ],
+    "5f126ddbc2cd": [
+      "function (y) ",
+      "x"
+    ],
+    "5f1276d25913": [
+      "function (y) ",
+      "x"
+    ],
+    "5f126bd62b56": [
+      "function (y) ",
+      "x"
+    ]
+  },
+  "highlight": {
+    "on": "plotly_click",
+    "persistent": false,
+    "dynamic": false,
+    "selectize": false,
+    "opacityDim": 0.2,
+    "selected": {
+      "opacity": 1
+    },
+    "debounce": 0
+  },
+  "shinyEvents": [
+    "plotly_hover",
+    "plotly_click",
+    "plotly_selected",
+    "plotly_relayout",
+    "plotly_brushed",
+    "plotly_brushing",
+    "plotly_clickannotation",
+    "plotly_doubleclick",
+    "plotly_deselect",
+    "plotly_afterplot",
+    "plotly_sunburstclick"
+  ],
+  "base_url": "https://plot.ly"
+}

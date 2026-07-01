@@ -1,1 +1,548 @@
-{"data":[{"x":[82.420000000000002,83.25,82.829999999999998,82.5,81.670000000000002,82.664999999999992,84.579999999999998,80.835000000000008,82,82.170000000000002,82.670000000000002,83.875,82.75],"y":[102,11,11,7,0,268,0,0,394,0,289,0,13311],"text":["median_score: 82.420<br />sbux_stores:   102","median_score: 83.250<br />sbux_stores:    11","median_score: 82.830<br />sbux_stores:    11","median_score: 82.500<br />sbux_stores:     7","median_score: 81.670<br />sbux_stores:     0","median_score: 82.665<br />sbux_stores:   268","median_score: 84.580<br />sbux_stores:     0","median_score: 80.835<br />sbux_stores:     0","median_score: 82.000<br />sbux_stores:   394","median_score: 82.170<br />sbux_stores:     0","median_score: 82.670<br />sbux_stores:   289","median_score: 83.875<br />sbux_stores:     0","median_score: 82.750<br />sbux_stores: 13311"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(44,62,107,1)","opacity":0.69999999999999996,"size":13.228346456692915,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(44,62,107,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[83.25],"y":[11],"text":"median_score: 83.250<br />sbux_stores:  11<br />highlight: Colombia","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(28,28,30,1)","opacity":0.94999999999999996,"size":18.897637795275593,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(28,28,30,1)"}},"hoveron":"points","name":"Colombia","legendgroup":"Colombia","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[85.204999999999998],"y":[0],"text":"median_score: 85.205<br />sbux_stores:   0<br />highlight: Ethiopia","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(192,57,43,1)","opacity":0.94999999999999996,"size":18.897637795275593,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(192,57,43,1)"}},"hoveron":"points","name":"Ethiopia","legendgroup":"Ethiopia","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[81.625],"y":[579],"text":"median_score: 81.625<br />sbux_stores: 579<br />highlight: Mexico","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(44,62,107,1)","opacity":0.94999999999999996,"size":18.897637795275593,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(44,62,107,1)"}},"hoveron":"points","name":"Mexico","legendgroup":"Mexico","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[83.25],"y":[11],"text":"Colombia","hovertext":"median_score: 83.250<br />sbux_stores:  11<br />country_of_origin: Colombia<br />highlight: Colombia","textfont":{"size":12.09448818897638,"color":"rgba(28,28,30,1)"},"type":"scatter","mode":"text","hoveron":"points","name":"Colombia","legendgroup":"Colombia","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[85.204999999999998],"y":[0],"text":"Ethiopia","hovertext":"median_score: 85.205<br />sbux_stores:   0<br />country_of_origin: Ethiopia<br />highlight: Ethiopia","textfont":{"size":12.09448818897638,"color":"rgba(192,57,43,1)"},"type":"scatter","mode":"text","hoveron":"points","name":"Ethiopia","legendgroup":"Ethiopia","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[81.625],"y":[579],"text":"Mexico","hovertext":"median_score: 81.625<br />sbux_stores: 579<br />country_of_origin: Mexico<br />highlight: Mexico","textfont":{"size":12.09448818897638,"color":"rgba(44,62,107,1)"},"type":"scatter","mode":"text","hoveron":"points","name":"Mexico","legendgroup":"Mexico","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[82.420000000000002,82.664999999999992,84.579999999999998,82,82.670000000000002,83.875,82.75],"y":[102,268,0,394,289,0,13311],"text":["Brazil","Indonesia","Kenya","Taiwan","Thailand","Uganda","Hawaii (USA)"],"hovertext":["median_score: 82.420<br />sbux_stores:   102<br />country_of_origin: Brazil","median_score: 82.665<br />sbux_stores:   268<br />country_of_origin: Indonesia","median_score: 84.580<br />sbux_stores:     0<br />country_of_origin: Kenya","median_score: 82.000<br />sbux_stores:   394<br />country_of_origin: Taiwan","median_score: 82.670<br />sbux_stores:   289<br />country_of_origin: Thailand","median_score: 83.875<br />sbux_stores:     0<br />country_of_origin: Uganda","median_score: 82.750<br />sbux_stores: 13311<br />country_of_origin: Hawaii (USA)"],"textfont":{"size":9.8267716535433092,"color":"rgba(107,107,107,1)"},"type":"scatter","mode":"text","hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":54.522208385222086,"r":21.253632212536321,"b":50.145288501452889,"l":74.055624740556254},"plot_bgcolor":"#F2F0EB","paper_bgcolor":"#F2F0EB","font":{"color":"#1C1C1E","family":"DM Sans, Helvetica, sans-serif","size":14.611872146118724},"title":{"text":"<b> <span style='color:#C0392B'>Ethiopia<\/span> Scores Highest. Starbucks Has Zero Stores There. <\/b>","font":{"color":"rgba(28,28,30,1)","family":"Helvetica","size":17.268576172685762},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[80.616500000000002,85.423500000000004],"tickmode":"array","ticktext":["81.0","81.5","82.0","82.5","83.0","83.5","84.0","84.5","85.0"],"tickvals":[81,81.5,82,82.5,83,83.5,84,84.5,85],"categoryorder":"array","categoryarray":["81.0","81.5","82.0","82.5","83.0","83.5","84.0","84.5","85.0"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.6529680365296811,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(107,107,107,1)","family":"Helvetica","size":11.955168119551681},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(213,213,213,1)","gridwidth":0.53134080531340799,"zeroline":false,"anchor":"y","title":{"text":"<b> Median Total Cup Points <\/b>","font":{"color":"rgba(28,28,30,1)","family":"Helvetica","size":13.283520132835205}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-665.55000000000007,13976.549999999999],"tickmode":"array","ticktext":["0","5,000","10,000"],"tickvals":[0,5000,10000],"categoryorder":"array","categoryarray":["0","5,000","10,000"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.6529680365296811,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(107,107,107,1)","family":"Helvetica","size":11.955168119551681},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(213,213,213,1)","gridwidth":0.5313408053134081,"zeroline":false,"anchor":"x","title":{"text":"<b> Starbucks Store Count <\/b>","font":{"color":"rgba(28,28,30,1)","family":"Helvetica","size":13.283520132835205}},"hoverformat":".2f"},"shapes":[],"showlegend":false,"legend":{"bgcolor":"rgba(242,240,235,1)","bordercolor":"transparent","borderwidth":1.8897637795275593,"font":{"color":"rgba(107,107,107,1)","family":"Helvetica","size":10.62681610626816}},"hovermode":"closest","barmode":"relative","transition":{"duration":500,"easing":"cubic-in-out"}},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"5bba25883d92":{"x":{},"y":{},"type":"scatter"},"5bba13824f7e":{"x":{},"y":{},"colour":{}},"5bba5030e333":{"x":{},"y":{},"label":{},"colour":{}},"5bba39945266":{"x":{},"y":{},"label":{}}},"cur_data":"5bba25883d92","visdat":{"5bba25883d92":["function (y) ","x"],"5bba13824f7e":["function (y) ","x"],"5bba5030e333":["function (y) ","x"],"5bba39945266":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"}
+{
+  "data": [
+    {
+      "x": [
+        82.42,
+        83.25,
+        82.83,
+        82.5,
+        81.67,
+        82.66499999999999,
+        84.58,
+        80.83500000000001,
+        82,
+        82.17,
+        82.67,
+        83.875,
+        82.75
+      ],
+      "y": [
+        102,
+        11,
+        11,
+        7,
+        0,
+        268,
+        0,
+        0,
+        394,
+        0,
+        289,
+        0,
+        13311
+      ],
+      "text": [
+        "median_score: 82.420<br />sbux_stores:   102",
+        "median_score: 83.250<br />sbux_stores:    11",
+        "median_score: 82.830<br />sbux_stores:    11",
+        "median_score: 82.500<br />sbux_stores:     7",
+        "median_score: 81.670<br />sbux_stores:     0",
+        "median_score: 82.665<br />sbux_stores:   268",
+        "median_score: 84.580<br />sbux_stores:     0",
+        "median_score: 80.835<br />sbux_stores:     0",
+        "median_score: 82.000<br />sbux_stores:   394",
+        "median_score: 82.170<br />sbux_stores:     0",
+        "median_score: 82.670<br />sbux_stores:   289",
+        "median_score: 83.875<br />sbux_stores:     0",
+        "median_score: 82.750<br />sbux_stores: 13311"
+      ],
+      "type": "scatter",
+      "mode": "markers",
+      "marker": {
+        "autocolorscale": false,
+        "color": "rgba(44,62,107,1)",
+        "opacity": 0.7,
+        "size": 13.228346456692915,
+        "symbol": "circle",
+        "line": {
+          "width": 1.8897637795275593,
+          "color": "rgba(44,62,107,1)"
+        }
+      },
+      "hoveron": "points",
+      "showlegend": false,
+      "xaxis": "x",
+      "yaxis": "y",
+      "hoverinfo": "text",
+      "frame": null,
+      "hovertemplate": "<b>%{text}</b><br>x: %{x}<br>y: %{y}<extra></extra>",
+      "name": "Series 1"
+    },
+    {
+      "x": [
+        83.25
+      ],
+      "y": [
+        11
+      ],
+      "text": "median_score: 83.250<br />sbux_stores:  11<br />highlight: Colombia",
+      "type": "scatter",
+      "mode": "markers",
+      "marker": {
+        "autocolorscale": false,
+        "color": "rgba(28,28,30,1)",
+        "opacity": 0.95,
+        "size": 18.897637795275593,
+        "symbol": "circle",
+        "line": {
+          "width": 1.8897637795275593,
+          "color": "rgba(28,28,30,1)"
+        }
+      },
+      "hoveron": "points",
+      "name": "Colombia",
+      "legendgroup": "Colombia",
+      "showlegend": true,
+      "xaxis": "x",
+      "yaxis": "y",
+      "hoverinfo": "text",
+      "frame": null,
+      "hovertemplate": "<b>Series 2</b><br>x: %{x}<br>y: %{y}<extra></extra>"
+    },
+    {
+      "x": [
+        85.205
+      ],
+      "y": [
+        0
+      ],
+      "text": "median_score: 85.205<br />sbux_stores:   0<br />highlight: Ethiopia",
+      "type": "scatter",
+      "mode": "markers",
+      "marker": {
+        "autocolorscale": false,
+        "color": "rgba(192,57,43,1)",
+        "opacity": 0.95,
+        "size": 18.897637795275593,
+        "symbol": "circle",
+        "line": {
+          "width": 1.8897637795275593,
+          "color": "rgba(192,57,43,1)"
+        }
+      },
+      "hoveron": "points",
+      "name": "Ethiopia",
+      "legendgroup": "Ethiopia",
+      "showlegend": true,
+      "xaxis": "x",
+      "yaxis": "y",
+      "hoverinfo": "text",
+      "frame": null,
+      "hovertemplate": "<b>Series 3</b><br>x: %{x}<br>y: %{y}<extra></extra>"
+    },
+    {
+      "x": [
+        81.625
+      ],
+      "y": [
+        579
+      ],
+      "text": "median_score: 81.625<br />sbux_stores: 579<br />highlight: Mexico",
+      "type": "scatter",
+      "mode": "markers",
+      "marker": {
+        "autocolorscale": false,
+        "color": "rgba(44,62,107,1)",
+        "opacity": 0.95,
+        "size": 18.897637795275593,
+        "symbol": "circle",
+        "line": {
+          "width": 1.8897637795275593,
+          "color": "rgba(44,62,107,1)"
+        }
+      },
+      "hoveron": "points",
+      "name": "Mexico",
+      "legendgroup": "Mexico",
+      "showlegend": true,
+      "xaxis": "x",
+      "yaxis": "y",
+      "hoverinfo": "text",
+      "frame": null,
+      "hovertemplate": "<b>Series 4</b><br>x: %{x}<br>y: %{y}<extra></extra>"
+    },
+    {
+      "x": [
+        83.25
+      ],
+      "y": [
+        11
+      ],
+      "text": "Colombia",
+      "hovertext": "median_score: 83.250<br />sbux_stores:  11<br />country_of_origin: Colombia<br />highlight: Colombia",
+      "textfont": {
+        "size": 12.09448818897638,
+        "color": "rgba(28,28,30,1)"
+      },
+      "type": "scatter",
+      "mode": "text",
+      "hoveron": "points",
+      "name": "Colombia",
+      "legendgroup": "Colombia",
+      "showlegend": false,
+      "xaxis": "x",
+      "yaxis": "y",
+      "hoverinfo": "text",
+      "frame": null,
+      "hovertemplate": "<b>Series 5</b><br>x: %{x}<br>y: %{y}<extra></extra>"
+    },
+    {
+      "x": [
+        85.205
+      ],
+      "y": [
+        0
+      ],
+      "text": "Ethiopia",
+      "hovertext": "median_score: 85.205<br />sbux_stores:   0<br />country_of_origin: Ethiopia<br />highlight: Ethiopia",
+      "textfont": {
+        "size": 12.09448818897638,
+        "color": "rgba(192,57,43,1)"
+      },
+      "type": "scatter",
+      "mode": "text",
+      "hoveron": "points",
+      "name": "Ethiopia",
+      "legendgroup": "Ethiopia",
+      "showlegend": false,
+      "xaxis": "x",
+      "yaxis": "y",
+      "hoverinfo": "text",
+      "frame": null,
+      "hovertemplate": "<b>Series 6</b><br>x: %{x}<br>y: %{y}<extra></extra>"
+    },
+    {
+      "x": [
+        81.625
+      ],
+      "y": [
+        579
+      ],
+      "text": "Mexico",
+      "hovertext": "median_score: 81.625<br />sbux_stores: 579<br />country_of_origin: Mexico<br />highlight: Mexico",
+      "textfont": {
+        "size": 12.09448818897638,
+        "color": "rgba(44,62,107,1)"
+      },
+      "type": "scatter",
+      "mode": "text",
+      "hoveron": "points",
+      "name": "Mexico",
+      "legendgroup": "Mexico",
+      "showlegend": false,
+      "xaxis": "x",
+      "yaxis": "y",
+      "hoverinfo": "text",
+      "frame": null,
+      "hovertemplate": "<b>Series 7</b><br>x: %{x}<br>y: %{y}<extra></extra>"
+    },
+    {
+      "x": [
+        82.42,
+        82.66499999999999,
+        84.58,
+        82,
+        82.67,
+        83.875,
+        82.75
+      ],
+      "y": [
+        102,
+        268,
+        0,
+        394,
+        289,
+        0,
+        13311
+      ],
+      "text": [
+        "Brazil",
+        "Indonesia",
+        "Kenya",
+        "Taiwan",
+        "Thailand",
+        "Uganda",
+        "Hawaii (USA)"
+      ],
+      "hovertext": [
+        "median_score: 82.420<br />sbux_stores:   102<br />country_of_origin: Brazil",
+        "median_score: 82.665<br />sbux_stores:   268<br />country_of_origin: Indonesia",
+        "median_score: 84.580<br />sbux_stores:     0<br />country_of_origin: Kenya",
+        "median_score: 82.000<br />sbux_stores:   394<br />country_of_origin: Taiwan",
+        "median_score: 82.670<br />sbux_stores:   289<br />country_of_origin: Thailand",
+        "median_score: 83.875<br />sbux_stores:     0<br />country_of_origin: Uganda",
+        "median_score: 82.750<br />sbux_stores: 13311<br />country_of_origin: Hawaii (USA)"
+      ],
+      "textfont": {
+        "size": 9.82677165354331,
+        "color": "rgba(107,107,107,1)"
+      },
+      "type": "scatter",
+      "mode": "text",
+      "hoveron": "points",
+      "showlegend": false,
+      "xaxis": "x",
+      "yaxis": "y",
+      "hoverinfo": "text",
+      "frame": null,
+      "hovertemplate": "<b>%{text}</b><br>x: %{x}<br>y: %{y}<extra></extra>",
+      "name": "Series 8"
+    }
+  ],
+  "layout": {
+    "margin": {
+      "t": 54.522208385222086,
+      "r": 21.25363221253632,
+      "b": 50.14528850145289,
+      "l": 74.05562474055625
+    },
+    "plot_bgcolor": "#F2F0EB",
+    "paper_bgcolor": "#F2F0EB",
+    "font": {
+      "color": "#1C1C1E",
+      "family": "DM Sans, Helvetica, sans-serif",
+      "size": 14.611872146118724
+    },
+    "title": {
+      "text": "Quality Vs Retail<br><span style='font-size:12px;color:#6B6B6B'>Scatter Field - TidyTuesday / R for Data Science community</span>",
+      "font": {
+        "color": "rgba(28,28,30,1)",
+        "family": "Helvetica",
+        "size": 17.268576172685762
+      },
+      "x": 0,
+      "xref": "paper",
+      "xanchor": "left"
+    },
+    "xaxis": {
+      "domain": [
+        0,
+        1
+      ],
+      "automargin": true,
+      "type": "linear",
+      "autorange": false,
+      "range": [
+        80.6165,
+        85.4235
+      ],
+      "tickmode": "array",
+      "ticktext": [
+        "81.0",
+        "81.5",
+        "82.0",
+        "82.5",
+        "83.0",
+        "83.5",
+        "84.0",
+        "84.5",
+        "85.0"
+      ],
+      "tickvals": [
+        81,
+        81.5,
+        82,
+        82.5,
+        83,
+        83.5,
+        84,
+        84.5,
+        85
+      ],
+      "categoryorder": "array",
+      "categoryarray": [
+        "81.0",
+        "81.5",
+        "82.0",
+        "82.5",
+        "83.0",
+        "83.5",
+        "84.0",
+        "84.5",
+        "85.0"
+      ],
+      "nticks": null,
+      "ticks": "",
+      "tickcolor": null,
+      "ticklen": 3.652968036529681,
+      "tickwidth": 0,
+      "showticklabels": true,
+      "tickfont": {
+        "color": "rgba(107,107,107,1)",
+        "family": "Helvetica",
+        "size": 11.955168119551681
+      },
+      "tickangle": 0,
+      "showline": false,
+      "linecolor": null,
+      "linewidth": 0,
+      "showgrid": true,
+      "gridcolor": "rgba(213,213,213,1)",
+      "gridwidth": 0.531340805313408,
+      "zeroline": false,
+      "anchor": "y",
+      "title": {
+        "text": "<b> Median Total Cup Points </b>",
+        "font": {
+          "color": "rgba(28,28,30,1)",
+          "family": "Helvetica",
+          "size": 13.283520132835205
+        }
+      },
+      "hoverformat": ".2f"
+    },
+    "yaxis": {
+      "domain": [
+        0,
+        1
+      ],
+      "automargin": true,
+      "type": "linear",
+      "autorange": false,
+      "range": [
+        -665.5500000000001,
+        13976.55
+      ],
+      "tickmode": "array",
+      "ticktext": [
+        "0",
+        "5,000",
+        "10,000"
+      ],
+      "tickvals": [
+        0,
+        5000,
+        10000
+      ],
+      "categoryorder": "array",
+      "categoryarray": [
+        "0",
+        "5,000",
+        "10,000"
+      ],
+      "nticks": null,
+      "ticks": "",
+      "tickcolor": null,
+      "ticklen": 3.652968036529681,
+      "tickwidth": 0,
+      "showticklabels": true,
+      "tickfont": {
+        "color": "rgba(107,107,107,1)",
+        "family": "Helvetica",
+        "size": 11.955168119551681
+      },
+      "tickangle": 0,
+      "showline": false,
+      "linecolor": null,
+      "linewidth": 0,
+      "showgrid": true,
+      "gridcolor": "rgba(213,213,213,1)",
+      "gridwidth": 0.5313408053134081,
+      "zeroline": false,
+      "anchor": "x",
+      "title": {
+        "text": "<b> Starbucks Store Count </b>",
+        "font": {
+          "color": "rgba(28,28,30,1)",
+          "family": "Helvetica",
+          "size": 13.283520132835205
+        }
+      },
+      "hoverformat": ".2f"
+    },
+    "shapes": [],
+    "showlegend": false,
+    "legend": {
+      "bgcolor": "rgba(242,240,235,1)",
+      "bordercolor": "transparent",
+      "borderwidth": 1.8897637795275593,
+      "font": {
+        "color": "rgba(107,107,107,1)",
+        "family": "Helvetica",
+        "size": 10.62681610626816
+      }
+    },
+    "hovermode": "closest",
+    "barmode": "relative",
+    "transition": {
+      "duration": 500,
+      "easing": "cubic-in-out"
+    }
+  },
+  "config": {
+    "doubleClick": "reset",
+    "modeBarButtonsToAdd": [
+      "hoverclosest",
+      "hovercompare"
+    ],
+    "showSendToCloud": false
+  },
+  "source": "A",
+  "attrs": {
+    "5bba25883d92": {
+      "x": {},
+      "y": {},
+      "type": "scatter"
+    },
+    "5bba13824f7e": {
+      "x": {},
+      "y": {},
+      "colour": {}
+    },
+    "5bba5030e333": {
+      "x": {},
+      "y": {},
+      "label": {},
+      "colour": {}
+    },
+    "5bba39945266": {
+      "x": {},
+      "y": {},
+      "label": {}
+    }
+  },
+  "cur_data": "5bba25883d92",
+  "visdat": {
+    "5bba25883d92": [
+      "function (y) ",
+      "x"
+    ],
+    "5bba13824f7e": [
+      "function (y) ",
+      "x"
+    ],
+    "5bba5030e333": [
+      "function (y) ",
+      "x"
+    ],
+    "5bba39945266": [
+      "function (y) ",
+      "x"
+    ]
+  },
+  "highlight": {
+    "on": "plotly_click",
+    "persistent": false,
+    "dynamic": false,
+    "selectize": false,
+    "opacityDim": 0.2,
+    "selected": {
+      "opacity": 1
+    },
+    "debounce": 0
+  },
+  "shinyEvents": [
+    "plotly_hover",
+    "plotly_click",
+    "plotly_selected",
+    "plotly_relayout",
+    "plotly_brushed",
+    "plotly_brushing",
+    "plotly_clickannotation",
+    "plotly_doubleclick",
+    "plotly_deselect",
+    "plotly_afterplot",
+    "plotly_sunburstclick"
+  ],
+  "base_url": "https://plot.ly"
+}

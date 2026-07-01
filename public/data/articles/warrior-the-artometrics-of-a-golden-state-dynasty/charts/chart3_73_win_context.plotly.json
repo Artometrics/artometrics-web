@@ -1,1 +1,622 @@
-{"data":[{"x":[72,72],"y":[0.40000000000000002,7.5999999999999996],"text":"xintercept: 72","type":"scatter","mode":"lines","line":{"width":1.5118110236220474,"color":"rgba(107,107,107,1)","dash":"dash"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[67,69,null,67,72,null,67,69,null,67,70,null,67,73,null,67,68,null,67,68],"y":[3,3,null,6,6,null,4,4,null,5,5,null,7,7,null,1,1,null,2,2],"text":["x: 67<br />team: 1971–72 Los Angeles Lakers<br />color_flag: #D5D5D5<br />wins: 69<br />team: 3","x: 67<br />team: 1971–72 Los Angeles Lakers<br />color_flag: #D5D5D5<br />wins: 69<br />team: 3",null,"x: 67<br />team: 1995–96 Chicago Bulls<br />color_flag: #D5D5D5<br />wins: 72<br />team: 6","x: 67<br />team: 1995–96 Chicago Bulls<br />color_flag: #D5D5D5<br />wins: 72<br />team: 6",null,"x: 67<br />team: 1996–97 Chicago Bulls<br />color_flag: #D5D5D5<br />wins: 69<br />team: 4","x: 67<br />team: 1996–97 Chicago Bulls<br />color_flag: #D5D5D5<br />wins: 69<br />team: 4",null,"x: 67<br />team: 1971–72 Milwaukee Bucks<br />color_flag: #D5D5D5<br />wins: 70<br />team: 5","x: 67<br />team: 1971–72 Milwaukee Bucks<br />color_flag: #D5D5D5<br />wins: 70<br />team: 5",null,"x: 67<br />team: 2015–16 Golden State Warriors<br />color_flag: #D5D5D5<br />wins: 73<br />team: 7","x: 67<br />team: 2015–16 Golden State Warriors<br />color_flag: #D5D5D5<br />wins: 73<br />team: 7",null,"x: 67<br />team: 1966–67 Philadelphia 76ers<br />color_flag: #D5D5D5<br />wins: 68<br />team: 1","x: 67<br />team: 1966–67 Philadelphia 76ers<br />color_flag: #D5D5D5<br />wins: 68<br />team: 1",null,"x: 67<br />team: 1972–73 Boston Celtics<br />color_flag: #D5D5D5<br />wins: 68<br />team: 2","x: 67<br />team: 1972–73 Boston Celtics<br />color_flag: #D5D5D5<br />wins: 68<br />team: 2"],"type":"scatter","mode":"lines","line":{"width":2.6456692913385824,"color":"rgba(213,213,213,1)","dash":"solid"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[69,72,69,68],"y":[3,6,4,1],"text":["wins: 69<br />team: 1971–72 Los Angeles Lakers<br />color_flag: champion","wins: 72<br />team: 1995–96 Chicago Bulls<br />color_flag: champion","wins: 69<br />team: 1996–97 Chicago Bulls<br />color_flag: champion","wins: 68<br />team: 1966–67 Philadelphia 76ers<br />color_flag: champion"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(44,62,107,1)","opacity":1,"size":22.677165354330711,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(44,62,107,1)"}},"hoveron":"points","name":"champion","legendgroup":"champion","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[73],"y":[7],"text":"wins: 73<br />team: 2015–16 Golden State Warriors<br />color_flag: gsw","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(192,57,43,1)","opacity":1,"size":22.677165354330711,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(192,57,43,1)"}},"hoveron":"points","name":"gsw","legendgroup":"gsw","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[70,68],"y":[5,2],"text":["wins: 70<br />team: 1971–72 Milwaukee Bucks<br />color_flag: other","wins: 68<br />team: 1972–73 Boston Celtics<br />color_flag: other"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(213,213,213,1)","opacity":1,"size":22.677165354330711,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(213,213,213,1)"}},"hoveron":"points","name":"other","legendgroup":"other","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[69,72,69,70,73,68,68],"y":[3,6,4,5,7,1,2],"text":[69,72,69,70,73,68,68],"hovertext":["wins: 69<br />team: 1971–72 Los Angeles Lakers<br />color_flag: white<br />wins: 69","wins: 72<br />team: 1995–96 Chicago Bulls<br />color_flag: white<br />wins: 72","wins: 69<br />team: 1996–97 Chicago Bulls<br />color_flag: white<br />wins: 69","wins: 70<br />team: 1971–72 Milwaukee Bucks<br />color_flag: white<br />wins: 70","wins: 73<br />team: 2015–16 Golden State Warriors<br />color_flag: white<br />wins: 73","wins: 68<br />team: 1966–67 Philadelphia 76ers<br />color_flag: white<br />wins: 68","wins: 68<br />team: 1972–73 Boston Celtics<br />color_flag: white<br />wins: 68"],"textfont":{"size":10.58267716535433,"color":"rgba(255,255,255,1)"},"type":"scatter","mode":"text","hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[69.299999999999997,72.299999999999997,69.299999999999997,68.299999999999997],"y":[3,6,4,1],"text":["Champions","Champions","Champions","Champions"],"hovertext":["wins + 0.3: 69.3<br />team: 1971–72 Los Angeles Lakers<br />color_flag: #6B6B6B<br />label: Champions","wins + 0.3: 72.3<br />team: 1995–96 Chicago Bulls<br />color_flag: #6B6B6B<br />label: Champions","wins + 0.3: 69.3<br />team: 1996–97 Chicago Bulls<br />color_flag: #6B6B6B<br />label: Champions","wins + 0.3: 68.3<br />team: 1966–67 Philadelphia 76ers<br />color_flag: #6B6B6B<br />label: Champions"],"textfont":{"size":9.0708661417322833,"color":"rgba(107,107,107,1)"},"type":"scatter","mode":"text","hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[69.5],"y":[7],"text":"Previous record: 72 wins","hovertext":"x: 69.5<br />y: 2015–16 Golden State Warriors","textfont":{"size":9.0708661417322833,"color":"rgba(107,107,107,1)"},"type":"scatter","mode":"text","hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":54.522208385222086,"r":21.253632212536321,"b":50.145288501452889,"l":188.62598588625988},"plot_bgcolor":"#F2F0EB","paper_bgcolor":"#F2F0EB","font":{"color":"#1C1C1E","family":"DM Sans, Helvetica, sans-serif","size":14.611872146118724},"title":{"text":"<b> SIX TEAMS. 68+ WINS. ONE RECORD. THE <span style='color:#C0392B;'>2015–16 WARRIORS<\/span> BROKE IT. <\/b>","font":{"color":"rgba(28,28,30,1)","family":"Helvetica","size":17.268576172685762},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[66.450000000000003,78.549999999999997],"tickmode":"array","ticktext":["68","69","70","71","72","73","74","75"],"tickvals":[68,69,70,71,72,73,74,75],"categoryorder":"array","categoryarray":["68","69","70","71","72","73","74","75"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.6529680365296811,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(107,107,107,1)","family":"Helvetica","size":11.955168119551681},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(213,213,213,1)","gridwidth":0.53134080531340799,"zeroline":false,"anchor":"y","title":{"text":"<b> Regular Season Wins <\/b>","font":{"color":"rgba(28,28,30,1)","family":"Helvetica","size":13.283520132835205}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.40000000000000002,7.5999999999999996],"tickmode":"array","ticktext":["1966–67 Philadelphia 76ers","1972–73 Boston Celtics","1971–72 Los Angeles Lakers","1996–97 Chicago Bulls","1971–72 Milwaukee Bucks","1995–96 Chicago Bulls","2015–16 Golden State Warriors"],"tickvals":[1,2,3,4.0000000000000009,5,6,7],"categoryorder":"array","categoryarray":["1966–67 Philadelphia 76ers","1972–73 Boston Celtics","1971–72 Los Angeles Lakers","1996–97 Chicago Bulls","1971–72 Milwaukee Bucks","1995–96 Chicago Bulls","2015–16 Golden State Warriors"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.6529680365296811,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(28,28,30,1)","family":"Helvetica","size":11.290992112909922},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"<b>  <\/b>","font":{"color":"rgba(28,28,30,1)","family":"Helvetica","size":13.283520132835205}},"hoverformat":".2f"},"shapes":[],"showlegend":false,"legend":{"bgcolor":"rgba(242,240,235,1)","bordercolor":"transparent","borderwidth":1.8897637795275593,"font":{"color":"rgba(107,107,107,1)","family":"Helvetica","size":10.62681610626816}},"hovermode":"closest","barmode":"relative","transition":{"duration":500,"easing":"cubic-in-out"}},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"5e7c734e0e0e":{"xintercept":{},"type":"scatter"},"5e7c97cf446":{"x":{},"y":{},"colour":{},"xend":{},"yend":{}},"5e7c6a892487":{"x":{},"y":{},"colour":{}},"5e7c51bd51b5":{"x":{},"y":{},"colour":{},"label":{}},"5e7c643f6bff":{"x":{},"y":{},"colour":{},"label":{}},"5e7c7fcb65c3":{"x":{},"y":{}}},"cur_data":"5e7c734e0e0e","visdat":{"5e7c734e0e0e":["function (y) ","x"],"5e7c97cf446":["function (y) ","x"],"5e7c6a892487":["function (y) ","x"],"5e7c51bd51b5":["function (y) ","x"],"5e7c643f6bff":["function (y) ","x"],"5e7c7fcb65c3":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"}
+{
+  "data": [
+    {
+      "x": [
+        72,
+        72
+      ],
+      "y": [
+        0.4,
+        7.6
+      ],
+      "text": "xintercept: 72",
+      "type": "scatter",
+      "mode": "lines",
+      "line": {
+        "width": 1.5118110236220474,
+        "color": "rgba(107,107,107,1)",
+        "dash": "dash"
+      },
+      "hoveron": "points",
+      "showlegend": false,
+      "xaxis": "x",
+      "yaxis": "y",
+      "hoverinfo": "text",
+      "frame": null,
+      "hovertemplate": "<b>Series 1</b><br>x: %{x}<br>y: %{y}<extra></extra>",
+      "name": "Series 1"
+    },
+    {
+      "x": [
+        67,
+        69,
+        null,
+        67,
+        72,
+        null,
+        67,
+        69,
+        null,
+        67,
+        70,
+        null,
+        67,
+        73,
+        null,
+        67,
+        68,
+        null,
+        67,
+        68
+      ],
+      "y": [
+        3,
+        3,
+        null,
+        6,
+        6,
+        null,
+        4,
+        4,
+        null,
+        5,
+        5,
+        null,
+        7,
+        7,
+        null,
+        1,
+        1,
+        null,
+        2,
+        2
+      ],
+      "text": [
+        "x: 67<br />team: 1971–72 Los Angeles Lakers<br />color_flag: #D5D5D5<br />wins: 69<br />team: 3",
+        "x: 67<br />team: 1971–72 Los Angeles Lakers<br />color_flag: #D5D5D5<br />wins: 69<br />team: 3",
+        null,
+        "x: 67<br />team: 1995–96 Chicago Bulls<br />color_flag: #D5D5D5<br />wins: 72<br />team: 6",
+        "x: 67<br />team: 1995–96 Chicago Bulls<br />color_flag: #D5D5D5<br />wins: 72<br />team: 6",
+        null,
+        "x: 67<br />team: 1996–97 Chicago Bulls<br />color_flag: #D5D5D5<br />wins: 69<br />team: 4",
+        "x: 67<br />team: 1996–97 Chicago Bulls<br />color_flag: #D5D5D5<br />wins: 69<br />team: 4",
+        null,
+        "x: 67<br />team: 1971–72 Milwaukee Bucks<br />color_flag: #D5D5D5<br />wins: 70<br />team: 5",
+        "x: 67<br />team: 1971–72 Milwaukee Bucks<br />color_flag: #D5D5D5<br />wins: 70<br />team: 5",
+        null,
+        "x: 67<br />team: 2015–16 Golden State Warriors<br />color_flag: #D5D5D5<br />wins: 73<br />team: 7",
+        "x: 67<br />team: 2015–16 Golden State Warriors<br />color_flag: #D5D5D5<br />wins: 73<br />team: 7",
+        null,
+        "x: 67<br />team: 1966–67 Philadelphia 76ers<br />color_flag: #D5D5D5<br />wins: 68<br />team: 1",
+        "x: 67<br />team: 1966–67 Philadelphia 76ers<br />color_flag: #D5D5D5<br />wins: 68<br />team: 1",
+        null,
+        "x: 67<br />team: 1972–73 Boston Celtics<br />color_flag: #D5D5D5<br />wins: 68<br />team: 2",
+        "x: 67<br />team: 1972–73 Boston Celtics<br />color_flag: #D5D5D5<br />wins: 68<br />team: 2"
+      ],
+      "type": "scatter",
+      "mode": "lines",
+      "line": {
+        "width": 2.6456692913385824,
+        "color": "rgba(213,213,213,1)",
+        "dash": "solid"
+      },
+      "hoveron": "points",
+      "showlegend": false,
+      "xaxis": "x",
+      "yaxis": "y",
+      "hoverinfo": "text",
+      "frame": null,
+      "hovertemplate": "<b>%{text}</b><br>x: %{x}<br>y: %{y}<extra></extra>",
+      "name": "Series 2"
+    },
+    {
+      "x": [
+        69,
+        72,
+        69,
+        68
+      ],
+      "y": [
+        3,
+        6,
+        4,
+        1
+      ],
+      "text": [
+        "wins: 69<br />team: 1971–72 Los Angeles Lakers<br />color_flag: champion",
+        "wins: 72<br />team: 1995–96 Chicago Bulls<br />color_flag: champion",
+        "wins: 69<br />team: 1996–97 Chicago Bulls<br />color_flag: champion",
+        "wins: 68<br />team: 1966–67 Philadelphia 76ers<br />color_flag: champion"
+      ],
+      "type": "scatter",
+      "mode": "markers",
+      "marker": {
+        "autocolorscale": false,
+        "color": "rgba(44,62,107,1)",
+        "opacity": 1,
+        "size": 22.67716535433071,
+        "symbol": "circle",
+        "line": {
+          "width": 1.8897637795275593,
+          "color": "rgba(44,62,107,1)"
+        }
+      },
+      "hoveron": "points",
+      "name": "champion",
+      "legendgroup": "champion",
+      "showlegend": true,
+      "xaxis": "x",
+      "yaxis": "y",
+      "hoverinfo": "text",
+      "frame": null,
+      "hovertemplate": "<b>%{text}</b><br>x: %{x}<br>y: %{y}<extra></extra>"
+    },
+    {
+      "x": [
+        73
+      ],
+      "y": [
+        7
+      ],
+      "text": "wins: 73<br />team: 2015–16 Golden State Warriors<br />color_flag: gsw",
+      "type": "scatter",
+      "mode": "markers",
+      "marker": {
+        "autocolorscale": false,
+        "color": "rgba(192,57,43,1)",
+        "opacity": 1,
+        "size": 22.67716535433071,
+        "symbol": "circle",
+        "line": {
+          "width": 1.8897637795275593,
+          "color": "rgba(192,57,43,1)"
+        }
+      },
+      "hoveron": "points",
+      "name": "gsw",
+      "legendgroup": "gsw",
+      "showlegend": true,
+      "xaxis": "x",
+      "yaxis": "y",
+      "hoverinfo": "text",
+      "frame": null,
+      "hovertemplate": "<b>Series 4</b><br>x: %{x}<br>y: %{y}<extra></extra>"
+    },
+    {
+      "x": [
+        70,
+        68
+      ],
+      "y": [
+        5,
+        2
+      ],
+      "text": [
+        "wins: 70<br />team: 1971–72 Milwaukee Bucks<br />color_flag: other",
+        "wins: 68<br />team: 1972–73 Boston Celtics<br />color_flag: other"
+      ],
+      "type": "scatter",
+      "mode": "markers",
+      "marker": {
+        "autocolorscale": false,
+        "color": "rgba(213,213,213,1)",
+        "opacity": 1,
+        "size": 22.67716535433071,
+        "symbol": "circle",
+        "line": {
+          "width": 1.8897637795275593,
+          "color": "rgba(213,213,213,1)"
+        }
+      },
+      "hoveron": "points",
+      "name": "other",
+      "legendgroup": "other",
+      "showlegend": true,
+      "xaxis": "x",
+      "yaxis": "y",
+      "hoverinfo": "text",
+      "frame": null,
+      "hovertemplate": "<b>%{text}</b><br>x: %{x}<br>y: %{y}<extra></extra>"
+    },
+    {
+      "x": [
+        69,
+        72,
+        69,
+        70,
+        73,
+        68,
+        68
+      ],
+      "y": [
+        3,
+        6,
+        4,
+        5,
+        7,
+        1,
+        2
+      ],
+      "text": [
+        69,
+        72,
+        69,
+        70,
+        73,
+        68,
+        68
+      ],
+      "hovertext": [
+        "wins: 69<br />team: 1971–72 Los Angeles Lakers<br />color_flag: white<br />wins: 69",
+        "wins: 72<br />team: 1995–96 Chicago Bulls<br />color_flag: white<br />wins: 72",
+        "wins: 69<br />team: 1996–97 Chicago Bulls<br />color_flag: white<br />wins: 69",
+        "wins: 70<br />team: 1971–72 Milwaukee Bucks<br />color_flag: white<br />wins: 70",
+        "wins: 73<br />team: 2015–16 Golden State Warriors<br />color_flag: white<br />wins: 73",
+        "wins: 68<br />team: 1966–67 Philadelphia 76ers<br />color_flag: white<br />wins: 68",
+        "wins: 68<br />team: 1972–73 Boston Celtics<br />color_flag: white<br />wins: 68"
+      ],
+      "textfont": {
+        "size": 10.58267716535433,
+        "color": "rgba(255,255,255,1)"
+      },
+      "type": "scatter",
+      "mode": "text",
+      "hoveron": "points",
+      "showlegend": false,
+      "xaxis": "x",
+      "yaxis": "y",
+      "hoverinfo": "text",
+      "frame": null,
+      "hovertemplate": "<b>%{text}</b><br>x: %{x}<br>y: %{y}<extra></extra>",
+      "name": "Series 6"
+    },
+    {
+      "x": [
+        69.3,
+        72.3,
+        69.3,
+        68.3
+      ],
+      "y": [
+        3,
+        6,
+        4,
+        1
+      ],
+      "text": [
+        "Champions",
+        "Champions",
+        "Champions",
+        "Champions"
+      ],
+      "hovertext": [
+        "wins + 0.3: 69.3<br />team: 1971–72 Los Angeles Lakers<br />color_flag: #6B6B6B<br />label: Champions",
+        "wins + 0.3: 72.3<br />team: 1995–96 Chicago Bulls<br />color_flag: #6B6B6B<br />label: Champions",
+        "wins + 0.3: 69.3<br />team: 1996–97 Chicago Bulls<br />color_flag: #6B6B6B<br />label: Champions",
+        "wins + 0.3: 68.3<br />team: 1966–67 Philadelphia 76ers<br />color_flag: #6B6B6B<br />label: Champions"
+      ],
+      "textfont": {
+        "size": 9.070866141732283,
+        "color": "rgba(107,107,107,1)"
+      },
+      "type": "scatter",
+      "mode": "text",
+      "hoveron": "points",
+      "showlegend": false,
+      "xaxis": "x",
+      "yaxis": "y",
+      "hoverinfo": "text",
+      "frame": null,
+      "hovertemplate": "<b>%{text}</b><br>x: %{x}<br>y: %{y}<extra></extra>",
+      "name": "Series 7"
+    },
+    {
+      "x": [
+        69.5
+      ],
+      "y": [
+        7
+      ],
+      "text": "Previous record: 72 wins",
+      "hovertext": "x: 69.5<br />y: 2015–16 Golden State Warriors",
+      "textfont": {
+        "size": 9.070866141732283,
+        "color": "rgba(107,107,107,1)"
+      },
+      "type": "scatter",
+      "mode": "text",
+      "hoveron": "points",
+      "showlegend": false,
+      "xaxis": "x",
+      "yaxis": "y",
+      "hoverinfo": "text",
+      "frame": null,
+      "hovertemplate": "<b>Series 8</b><br>x: %{x}<br>y: %{y}<extra></extra>",
+      "name": "Series 8"
+    }
+  ],
+  "layout": {
+    "margin": {
+      "t": 54.522208385222086,
+      "r": 21.25363221253632,
+      "b": 50.14528850145289,
+      "l": 188.62598588625988
+    },
+    "plot_bgcolor": "#F2F0EB",
+    "paper_bgcolor": "#F2F0EB",
+    "font": {
+      "color": "#1C1C1E",
+      "family": "DM Sans, Helvetica, sans-serif",
+      "size": 14.611872146118724
+    },
+    "title": {
+      "text": "73 Win Context<br><span style='font-size:12px;color:#6B6B6B'>Trend With Milestones - source cited in report references</span>",
+      "font": {
+        "color": "rgba(28,28,30,1)",
+        "family": "Helvetica",
+        "size": 17.268576172685762
+      },
+      "x": 0,
+      "xref": "paper",
+      "xanchor": "left"
+    },
+    "xaxis": {
+      "domain": [
+        0,
+        1
+      ],
+      "automargin": true,
+      "type": "linear",
+      "autorange": false,
+      "range": [
+        66.45,
+        78.55
+      ],
+      "tickmode": "array",
+      "ticktext": [
+        "68",
+        "69",
+        "70",
+        "71",
+        "72",
+        "73",
+        "74",
+        "75"
+      ],
+      "tickvals": [
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75
+      ],
+      "categoryorder": "array",
+      "categoryarray": [
+        "68",
+        "69",
+        "70",
+        "71",
+        "72",
+        "73",
+        "74",
+        "75"
+      ],
+      "nticks": null,
+      "ticks": "",
+      "tickcolor": null,
+      "ticklen": 3.652968036529681,
+      "tickwidth": 0,
+      "showticklabels": true,
+      "tickfont": {
+        "color": "rgba(107,107,107,1)",
+        "family": "Helvetica",
+        "size": 11.955168119551681
+      },
+      "tickangle": 0,
+      "showline": false,
+      "linecolor": null,
+      "linewidth": 0,
+      "showgrid": true,
+      "gridcolor": "rgba(213,213,213,1)",
+      "gridwidth": 0.531340805313408,
+      "zeroline": false,
+      "anchor": "y",
+      "title": {
+        "text": "<b> Regular Season Wins </b>",
+        "font": {
+          "color": "rgba(28,28,30,1)",
+          "family": "Helvetica",
+          "size": 13.283520132835205
+        }
+      },
+      "hoverformat": ".2f"
+    },
+    "yaxis": {
+      "domain": [
+        0,
+        1
+      ],
+      "automargin": true,
+      "type": "linear",
+      "autorange": false,
+      "range": [
+        0.4,
+        7.6
+      ],
+      "tickmode": "array",
+      "ticktext": [
+        "1966–67 Philadelphia 76ers",
+        "1972–73 Boston Celtics",
+        "1971–72 Los Angeles Lakers",
+        "1996–97 Chicago Bulls",
+        "1971–72 Milwaukee Bucks",
+        "1995–96 Chicago Bulls",
+        "2015–16 Golden State Warriors"
+      ],
+      "tickvals": [
+        1,
+        2,
+        3,
+        4.000000000000001,
+        5,
+        6,
+        7
+      ],
+      "categoryorder": "array",
+      "categoryarray": [
+        "1966–67 Philadelphia 76ers",
+        "1972–73 Boston Celtics",
+        "1971–72 Los Angeles Lakers",
+        "1996–97 Chicago Bulls",
+        "1971–72 Milwaukee Bucks",
+        "1995–96 Chicago Bulls",
+        "2015–16 Golden State Warriors"
+      ],
+      "nticks": null,
+      "ticks": "",
+      "tickcolor": null,
+      "ticklen": 3.652968036529681,
+      "tickwidth": 0,
+      "showticklabels": true,
+      "tickfont": {
+        "color": "rgba(28,28,30,1)",
+        "family": "Helvetica",
+        "size": 11.290992112909922
+      },
+      "tickangle": 0,
+      "showline": false,
+      "linecolor": null,
+      "linewidth": 0,
+      "showgrid": false,
+      "gridcolor": null,
+      "gridwidth": 0,
+      "zeroline": false,
+      "anchor": "x",
+      "title": {
+        "text": "<b>  </b>",
+        "font": {
+          "color": "rgba(28,28,30,1)",
+          "family": "Helvetica",
+          "size": 13.283520132835205
+        }
+      },
+      "hoverformat": ".2f"
+    },
+    "shapes": [],
+    "showlegend": false,
+    "legend": {
+      "bgcolor": "rgba(242,240,235,1)",
+      "bordercolor": "transparent",
+      "borderwidth": 1.8897637795275593,
+      "font": {
+        "color": "rgba(107,107,107,1)",
+        "family": "Helvetica",
+        "size": 10.62681610626816
+      }
+    },
+    "hovermode": "closest",
+    "barmode": "relative",
+    "transition": {
+      "duration": 500,
+      "easing": "cubic-in-out"
+    }
+  },
+  "config": {
+    "doubleClick": "reset",
+    "modeBarButtonsToAdd": [
+      "hoverclosest",
+      "hovercompare"
+    ],
+    "showSendToCloud": false
+  },
+  "source": "A",
+  "attrs": {
+    "5e7c734e0e0e": {
+      "xintercept": {},
+      "type": "scatter"
+    },
+    "5e7c97cf446": {
+      "x": {},
+      "y": {},
+      "colour": {},
+      "xend": {},
+      "yend": {}
+    },
+    "5e7c6a892487": {
+      "x": {},
+      "y": {},
+      "colour": {}
+    },
+    "5e7c51bd51b5": {
+      "x": {},
+      "y": {},
+      "colour": {},
+      "label": {}
+    },
+    "5e7c643f6bff": {
+      "x": {},
+      "y": {},
+      "colour": {},
+      "label": {}
+    },
+    "5e7c7fcb65c3": {
+      "x": {},
+      "y": {}
+    }
+  },
+  "cur_data": "5e7c734e0e0e",
+  "visdat": {
+    "5e7c734e0e0e": [
+      "function (y) ",
+      "x"
+    ],
+    "5e7c97cf446": [
+      "function (y) ",
+      "x"
+    ],
+    "5e7c6a892487": [
+      "function (y) ",
+      "x"
+    ],
+    "5e7c51bd51b5": [
+      "function (y) ",
+      "x"
+    ],
+    "5e7c643f6bff": [
+      "function (y) ",
+      "x"
+    ],
+    "5e7c7fcb65c3": [
+      "function (y) ",
+      "x"
+    ]
+  },
+  "highlight": {
+    "on": "plotly_click",
+    "persistent": false,
+    "dynamic": false,
+    "selectize": false,
+    "opacityDim": 0.2,
+    "selected": {
+      "opacity": 1
+    },
+    "debounce": 0
+  },
+  "shinyEvents": [
+    "plotly_hover",
+    "plotly_click",
+    "plotly_selected",
+    "plotly_relayout",
+    "plotly_brushed",
+    "plotly_brushing",
+    "plotly_clickannotation",
+    "plotly_doubleclick",
+    "plotly_deselect",
+    "plotly_afterplot",
+    "plotly_sunburstclick"
+  ],
+  "base_url": "https://plot.ly"
+}

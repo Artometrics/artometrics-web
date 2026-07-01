@@ -48,7 +48,7 @@ It is intentionally heuristic; use it as an editorial checklist, not as a substi
 | 92 | publication-ready | `project-gutenberg` | 616 | 5 | thin prose for a five-chart report |
 | 92 | publication-ready | `radio-stations` | 647 | 5 | thin prose for a five-chart report |
 | 92 | publication-ready | `ramen-ratings` | 642 | 5 | thin prose for a five-chart report |
-| 92 | publication-ready | `readmitted` | 2938 | 3 | expected 5 charts, found 3 |
+| 92 | publication-ready | `readmitted` | 2951 | 3 | expected 5 charts, found 3 |
 | 92 | publication-ready | `roman-emperors` | 648 | 5 | thin prose for a five-chart report |
 | 92 | publication-ready | `school-diversity` | 643 | 5 | thin prose for a five-chart report |
 | 92 | publication-ready | `simpsons-guest-stars` | 633 | 5 | thin prose for a five-chart report |

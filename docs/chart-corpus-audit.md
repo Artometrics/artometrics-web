@@ -8,8 +8,8 @@ It is meant to prioritize design and chart-selection work, not to validate the m
 - Charts audited: 426
 - Articles with charts: 89
 - Keep: 184
-- Rework: 219
-- Drop candidates: 23
+- Rework: 220
+- Drop candidates: 22
 
 ## Chart families
 
@@ -40,12 +40,12 @@ It is meant to prioritize design and chart-selection work, not to validate the m
 | 12 | `ceo-departures` | 67.4 | 1 | 3 | chart2_leaders (drop candidate); chart3_distribution (rework) |
 | 13 | `wealth-income` | 67.4 | 0 | 4 | chart2_leaders (rework); chart3_distribution (rework) |
 | 14 | `fast-food-calories` | 67.6 | 1 | 3 | chart2_leaders (drop candidate); chart3_distribution (rework) |
-| 15 | `readmitted` | 67.7 | 1 | 1 | chart3_penalty_by_ownership (drop candidate); chart1_states_penalized (rework) |
-| 16 | `uk-museums` | 68.2 | 0 | 4 | chart3_distribution (rework); chart2_leaders (rework) |
-| 17 | `cia-world-factbook` | 68.8 | 1 | 2 | chart2_leaders (drop candidate); chart3_distribution (rework) |
-| 18 | `world-heritage-sites` | 69.0 | 0 | 3 | chart3_grouped_year (rework); chart2_leaders (rework) |
-| 19 | `cetaceans` | 70.2 | 0 | 4 | chart3_category (rework); chart1_volume (rework) |
-| 20 | `emmy-awards` | 70.2 | 0 | 4 | chart3_category (rework); chart1_volume (rework) |
+| 15 | `uk-museums` | 68.2 | 0 | 4 | chart3_distribution (rework); chart2_leaders (rework) |
+| 16 | `cia-world-factbook` | 68.8 | 1 | 2 | chart2_leaders (drop candidate); chart3_distribution (rework) |
+| 17 | `world-heritage-sites` | 69.0 | 0 | 3 | chart3_grouped_year (rework); chart2_leaders (rework) |
+| 18 | `cetaceans` | 70.2 | 0 | 4 | chart3_category (rework); chart1_volume (rework) |
+| 19 | `emmy-awards` | 70.2 | 0 | 4 | chart3_category (rework); chart1_volume (rework) |
+| 20 | `roman-emperors` | 70.8 | 1 | 3 | chart2_leaders (drop candidate); chart3_distribution (rework) |
 
 ## Weakest individual charts
 
@@ -55,7 +55,6 @@ It is meant to prioritize design and chart-selection work, not to validate the m
 | 44 | drop candidate | `languages-glottolog` | `chart_extra_mix` | bar-vertical | Identifier fields are metadata rather than a reader-facing thesis | bar-vertical chart; generated filler chart id; repeats chart family in article |
 | 44 | drop candidate | `simpsons-guest-stars` | `chart_extra_mix` | bar-vertical | 24 is the most repeated season in the extract | bar-vertical chart; generated filler chart id; repeats chart family in article |
 | 44 | drop candidate | `un-votes` | `chart_extra_mix` | bar-vertical | Country codes add metadata rather than a new thesis | bar-vertical chart; generated filler chart id; repeats chart family in article |
-| 48 | drop candidate | `readmitted` | `chart3_penalty_by_ownership` | bar-vertical | Penalty By Ownership | bar-vertical chart; multi-series context; generated filler chart id; repeats chart family in article |
 | 51 | drop candidate | `cia-world-factbook` | `chart2_leaders` | bar-horizontal | China leads at 1,355,692,576 — 199,415,584 marks the median among the top dozen | bar-horizontal chart; generic caption; repeats chart family in article; ranking chart needs a sharper editorial point; example article needs manual math/editorial review |
 | 51 | drop candidate | `college-major-income` | `chart2_leaders` | bar-horizontal | PSYCHOLOGY leads at 48,207 — 26,912 marks the median among the top dozen | bar-horizontal chart; generic caption; repeats chart family in article; ranking chart needs a sharper editorial point; example article needs manual math/editorial review |
 | 55 | drop candidate | `airline-safety` | `chart2_leaders` | bar-horizontal | United / Continental * leads at 7,139,291,291 — 3,091,881,806 marks the median among the top dozen | bar-horizontal chart; generic caption; repeats chart family in article; ranking chart needs a sharper editorial point |
@@ -101,6 +100,7 @@ It is meant to prioritize design and chart-selection work, not to validate the m
 | 61 | rework | `incarceration-trends` | `chart2_leaders` | bar-horizontal | DC leads at 190,209 — 24,944 marks the median among the top dozen | bar-horizontal chart; generic caption; ranking chart needs a sharper editorial point |
 | 61 | rework | `lego-database` | `chart2_leaders` | bar-horizontal | World Map leads at 11,695 — 5,792 marks the median among the top dozen | bar-horizontal chart; generic caption; ranking chart needs a sharper editorial point |
 | 61 | rework | `medium-articles` | `chart2_leaders` | bar-horizontal | My month-long quest to become a chess master from scratch leads at 100 — 68.0 marks the median among the top dozen | bar-horizontal chart; generic caption; ranking chart needs a sharper editorial point |
+| 61 | rework | `national-park-visits` | `chart2_leaders` | bar-horizontal | Golden Gate leads at 14,554,750 — 5,151,270 marks the median among the top dozen | bar-horizontal chart; generic caption; ranking chart needs a sharper editorial point |
 
 ## Editorial guidance
 

@@ -373,8 +373,8 @@ ggsave("chart2_err_by_condition.png",
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/readmitted/charts/chart3_penalty_by_ownership.plotly.json" data-source="Data: source cited in report references - ARTOMETRICS" data-fallback="/images/content/articles/readmitted/charts/chart3_penalty_by_ownership.png" role="img" aria-label="Penalty By Ownership"></div>
-  <figcaption class="art-chart-caption">Penalty By Ownership</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/readmitted/charts/chart3_penalty_by_ownership.plotly.json" data-source="Data: CMS Provider Data Catalog and Hospital General Information - ARTOMETRICS" data-fallback="/images/content/articles/readmitted/charts/chart3_penalty_by_ownership.png" role="img" aria-label="For-profit hospitals are penalized slightly more often, but every ownership type has a broad no-penalty base"></div>
+  <figcaption class="art-chart-caption">For-profit hospitals are penalized slightly more often, but every ownership type has a broad no-penalty base</figcaption>
 </figure>
 </div>
 </div>

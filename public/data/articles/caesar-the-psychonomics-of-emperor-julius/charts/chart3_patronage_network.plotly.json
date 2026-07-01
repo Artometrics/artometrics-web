@@ -1,1 +1,431 @@
-{"data":[{"name":"ally","legendgroup":"ally","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"name":"family","legendgroup":"family","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"name":"loyal","legendgroup":"loyal","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"name":"personal","legendgroup":"personal","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"name":"risk","legendgroup":"risk","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"name":"weak","legendgroup":"weak","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[0,1,0.84125353283118121,0.41541501300188644,-0.142314838273285,-0.65486073394528499,-0.95949297361449737,-0.95949297361449737,-0.65486073394528488,-0.14231483827328525,0.41541501300188605,0.84125353283118076],"y":[0,0,0.54064081745559756,0.90963199535451833,0.9898214418809328,0.75574957435425838,0.28173255684142962,-0.28173255684142984,-0.75574957435425838,-0.98982144188093268,-0.90963199535451855,-0.54064081745559822],"text":["category: Caesar<br />trust: 10<br />x:  0.0000000<br />y:  0.0000000","category: Military Loyal<br />trust:  8<br />x:  1.0000000<br />y:  0.0000000","category: Military Loyal<br />trust:  7<br />x:  0.8412535<br />y:  0.5406408","category: Military Loyal<br />trust:  6<br />x:  0.4154150<br />y:  0.9096320","category: Pardoned — Conspirator<br />trust:  9<br />x: -0.1423148<br />y:  0.9898214","category: Pardoned — Conspirator<br />trust:  9<br />x: -0.6548607<br />y:  0.7557496","category: Pardoned — Conspirator<br />trust:  8<br />x: -0.9594930<br />y:  0.2817326","category: Political Ally<br />trust:  7<br />x: -0.9594930<br />y: -0.2817326","category: Political Ally<br />trust:  6<br />x: -0.6548607<br />y: -0.7557496","category: Cordial — Unreliable<br />trust:  5<br />x: -0.1423148<br />y: -0.9898214","category: Personal Alliance<br />trust:  7<br />x:  0.4154150<br />y: -0.9096320","category: Family — Foundational<br />trust: 10<br />x:  0.8412535<br />y: -0.5406408"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":["rgba(192,57,43,1)","rgba(184,134,11,1)","rgba(184,134,11,1)","rgba(184,134,11,1)","rgba(74,42,42,1)","rgba(74,42,42,1)","rgba(74,42,42,1)","rgba(122,138,106,1)","rgba(122,138,106,1)","rgba(107,107,107,1)","rgba(122,106,144,1)","rgba(44,62,107,1)"],"opacity":1,"size":[52.913385826771659,44.39420482172536,39.021941368201929,32.020671325982661,48.923232415744856,48.923232415744856,44.39420482172536,39.021941368201929,32.020671325982661,15.118110236220474,39.021941368201929,52.913385826771659],"symbol":"circle","line":{"width":1.8897637795275593,"color":["rgba(192,57,43,1)","rgba(184,134,11,1)","rgba(184,134,11,1)","rgba(184,134,11,1)","rgba(74,42,42,1)","rgba(74,42,42,1)","rgba(74,42,42,1)","rgba(122,138,106,1)","rgba(122,138,106,1)","rgba(107,107,107,1)","rgba(122,106,144,1)","rgba(44,62,107,1)"]}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":54.522208385222086,"r":21.253632212536321,"b":21.253632212536321,"l":21.253632212536321},"plot_bgcolor":"#F2F0EB","paper_bgcolor":"#F2F0EB","font":{"color":"#1C1C1E","family":"DM Sans, Helvetica, sans-serif","size":14.611872146118724},"title":{"text":"<b> <span style='color:#C0392B'>The three nodes he trusted most<\/span> — were the three that killed him <\/b>","font":{"color":"rgba(28,28,30,1)","family":"Helvetica","size":17.268576172685762},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-1.0574676222952222,1.0979746486807249],"tickmode":"array","ticktext":["-1.0","-0.5","0.0","0.5","1.0"],"tickvals":[-1,-0.5,0,0.5,1.0000000000000002],"categoryorder":"array","categoryarray":["-1.0","-0.5","0.0","0.5","1.0"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":0,"tickwidth":0,"showticklabels":false,"tickfont":{"color":null,"family":null,"size":0},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":null,"family":null,"size":0}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-1.0888035860690259,1.0888035860690262],"tickmode":"array","ticktext":["-1.0","-0.5","0.0","0.5","1.0"],"tickvals":[-1,-0.5,0,0.5,0.99999999999999978],"categoryorder":"array","categoryarray":["-1.0","-0.5","0.0","0.5","1.0"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":0,"tickwidth":0,"showticklabels":false,"tickfont":{"color":null,"family":null,"size":0},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"","font":{"color":null,"family":null,"size":0}},"hoverformat":".2f"},"shapes":[],"showlegend":true,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(28,28,30,1)","family":"Helvetica","size":10.62681610626816},"title":{"text":"Relationship<br />Trust weight","font":{"color":"rgba(28,28,30,1)","family":"Helvetica","size":11.290992112909922}}},"hovermode":"closest","barmode":"relative","transition":{"duration":500,"easing":"cubic-in-out"}},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"5f122a7efd4d":{"edge_colour":{},"edge_linetype":{},"x":{},"y":{},"xend":{},"yend":{},"type":"scatter"},"5f127727e006":{"colour":{},"size":{},"x":{},"y":{}},"5f125ae4e707":{"label":{},"colour":{},"x":{},"y":{}}},"cur_data":"5f122a7efd4d","visdat":{"5f122a7efd4d":["function (y) ","x"],"5f127727e006":["function (y) ","x"],"5f125ae4e707":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"}
+{
+  "data": [
+    {
+      "name": "ally",
+      "legendgroup": "ally",
+      "showlegend": true,
+      "xaxis": "x",
+      "yaxis": "y",
+      "hoverinfo": "text",
+      "frame": null,
+      "hovertemplate": "<b>Series 1</b><br>x: %{x}<br>y: %{y}<extra></extra>"
+    },
+    {
+      "name": "family",
+      "legendgroup": "family",
+      "showlegend": true,
+      "xaxis": "x",
+      "yaxis": "y",
+      "hoverinfo": "text",
+      "frame": null,
+      "hovertemplate": "<b>Series 2</b><br>x: %{x}<br>y: %{y}<extra></extra>"
+    },
+    {
+      "name": "loyal",
+      "legendgroup": "loyal",
+      "showlegend": true,
+      "xaxis": "x",
+      "yaxis": "y",
+      "hoverinfo": "text",
+      "frame": null,
+      "hovertemplate": "<b>Series 3</b><br>x: %{x}<br>y: %{y}<extra></extra>"
+    },
+    {
+      "name": "personal",
+      "legendgroup": "personal",
+      "showlegend": true,
+      "xaxis": "x",
+      "yaxis": "y",
+      "hoverinfo": "text",
+      "frame": null,
+      "hovertemplate": "<b>Series 4</b><br>x: %{x}<br>y: %{y}<extra></extra>"
+    },
+    {
+      "name": "risk",
+      "legendgroup": "risk",
+      "showlegend": true,
+      "xaxis": "x",
+      "yaxis": "y",
+      "hoverinfo": "text",
+      "frame": null,
+      "hovertemplate": "<b>Series 5</b><br>x: %{x}<br>y: %{y}<extra></extra>"
+    },
+    {
+      "name": "weak",
+      "legendgroup": "weak",
+      "showlegend": true,
+      "xaxis": "x",
+      "yaxis": "y",
+      "hoverinfo": "text",
+      "frame": null,
+      "hovertemplate": "<b>Series 6</b><br>x: %{x}<br>y: %{y}<extra></extra>"
+    },
+    {
+      "x": [
+        0,
+        1,
+        0.8412535328311812,
+        0.41541501300188644,
+        -0.142314838273285,
+        -0.654860733945285,
+        -0.9594929736144974,
+        -0.9594929736144974,
+        -0.6548607339452849,
+        -0.14231483827328525,
+        0.41541501300188605,
+        0.8412535328311808
+      ],
+      "y": [
+        0,
+        0,
+        0.5406408174555976,
+        0.9096319953545183,
+        0.9898214418809328,
+        0.7557495743542584,
+        0.2817325568414296,
+        -0.28173255684142984,
+        -0.7557495743542584,
+        -0.9898214418809327,
+        -0.9096319953545186,
+        -0.5406408174555982
+      ],
+      "text": [
+        "category: Caesar<br />trust: 10<br />x:  0.0000000<br />y:  0.0000000",
+        "category: Military Loyal<br />trust:  8<br />x:  1.0000000<br />y:  0.0000000",
+        "category: Military Loyal<br />trust:  7<br />x:  0.8412535<br />y:  0.5406408",
+        "category: Military Loyal<br />trust:  6<br />x:  0.4154150<br />y:  0.9096320",
+        "category: Pardoned — Conspirator<br />trust:  9<br />x: -0.1423148<br />y:  0.9898214",
+        "category: Pardoned — Conspirator<br />trust:  9<br />x: -0.6548607<br />y:  0.7557496",
+        "category: Pardoned — Conspirator<br />trust:  8<br />x: -0.9594930<br />y:  0.2817326",
+        "category: Political Ally<br />trust:  7<br />x: -0.9594930<br />y: -0.2817326",
+        "category: Political Ally<br />trust:  6<br />x: -0.6548607<br />y: -0.7557496",
+        "category: Cordial — Unreliable<br />trust:  5<br />x: -0.1423148<br />y: -0.9898214",
+        "category: Personal Alliance<br />trust:  7<br />x:  0.4154150<br />y: -0.9096320",
+        "category: Family — Foundational<br />trust: 10<br />x:  0.8412535<br />y: -0.5406408"
+      ],
+      "type": "scatter",
+      "mode": "markers",
+      "marker": {
+        "autocolorscale": false,
+        "color": [
+          "rgba(192,57,43,1)",
+          "rgba(184,134,11,1)",
+          "rgba(184,134,11,1)",
+          "rgba(184,134,11,1)",
+          "rgba(74,42,42,1)",
+          "rgba(74,42,42,1)",
+          "rgba(74,42,42,1)",
+          "rgba(122,138,106,1)",
+          "rgba(122,138,106,1)",
+          "rgba(107,107,107,1)",
+          "rgba(122,106,144,1)",
+          "rgba(44,62,107,1)"
+        ],
+        "opacity": 1,
+        "size": [
+          52.91338582677166,
+          44.39420482172536,
+          39.02194136820193,
+          32.02067132598266,
+          48.923232415744856,
+          48.923232415744856,
+          44.39420482172536,
+          39.02194136820193,
+          32.02067132598266,
+          15.118110236220474,
+          39.02194136820193,
+          52.91338582677166
+        ],
+        "symbol": "circle",
+        "line": {
+          "width": 1.8897637795275593,
+          "color": [
+            "rgba(192,57,43,1)",
+            "rgba(184,134,11,1)",
+            "rgba(184,134,11,1)",
+            "rgba(184,134,11,1)",
+            "rgba(74,42,42,1)",
+            "rgba(74,42,42,1)",
+            "rgba(74,42,42,1)",
+            "rgba(122,138,106,1)",
+            "rgba(122,138,106,1)",
+            "rgba(107,107,107,1)",
+            "rgba(122,106,144,1)",
+            "rgba(44,62,107,1)"
+          ]
+        }
+      },
+      "hoveron": "points",
+      "showlegend": false,
+      "xaxis": "x",
+      "yaxis": "y",
+      "hoverinfo": "text",
+      "frame": null,
+      "hovertemplate": "<b>%{text}</b><br>x: %{x}<br>y: %{y}<extra></extra>",
+      "name": "Series 7"
+    },
+    {
+      "showlegend": false,
+      "xaxis": "x",
+      "yaxis": "y",
+      "hoverinfo": "text",
+      "frame": null,
+      "hovertemplate": "<b>Series 8</b><br>x: %{x}<br>y: %{y}<extra></extra>",
+      "name": "Series 8"
+    }
+  ],
+  "layout": {
+    "margin": {
+      "t": 54.522208385222086,
+      "r": 21.25363221253632,
+      "b": 21.25363221253632,
+      "l": 21.25363221253632
+    },
+    "plot_bgcolor": "#F2F0EB",
+    "paper_bgcolor": "#F2F0EB",
+    "font": {
+      "color": "#1C1C1E",
+      "family": "DM Sans, Helvetica, sans-serif",
+      "size": 14.611872146118724
+    },
+    "title": {
+      "text": "The network chart makes the psychonomic argument structural<br><span style='font-size:12px;color:#6B6B6B'>Scatter Field - source cited in report references</span>",
+      "font": {
+        "color": "rgba(28,28,30,1)",
+        "family": "Helvetica",
+        "size": 17.268576172685762
+      },
+      "x": 0,
+      "xref": "paper",
+      "xanchor": "left"
+    },
+    "xaxis": {
+      "domain": [
+        0,
+        1
+      ],
+      "automargin": true,
+      "type": "linear",
+      "autorange": false,
+      "range": [
+        -1.0574676222952222,
+        1.097974648680725
+      ],
+      "tickmode": "array",
+      "ticktext": [
+        "-1.0",
+        "-0.5",
+        "0.0",
+        "0.5",
+        "1.0"
+      ],
+      "tickvals": [
+        -1,
+        -0.5,
+        0,
+        0.5,
+        1.0000000000000002
+      ],
+      "categoryorder": "array",
+      "categoryarray": [
+        "-1.0",
+        "-0.5",
+        "0.0",
+        "0.5",
+        "1.0"
+      ],
+      "nticks": null,
+      "ticks": "",
+      "tickcolor": null,
+      "ticklen": 0,
+      "tickwidth": 0,
+      "showticklabels": false,
+      "tickfont": {
+        "color": null,
+        "family": null,
+        "size": 0
+      },
+      "tickangle": 0,
+      "showline": false,
+      "linecolor": null,
+      "linewidth": 0,
+      "showgrid": false,
+      "gridcolor": null,
+      "gridwidth": 0,
+      "zeroline": false,
+      "anchor": "y",
+      "title": {
+        "text": "",
+        "font": {
+          "color": null,
+          "family": null,
+          "size": 0
+        }
+      },
+      "hoverformat": ".2f"
+    },
+    "yaxis": {
+      "domain": [
+        0,
+        1
+      ],
+      "automargin": true,
+      "type": "linear",
+      "autorange": false,
+      "range": [
+        -1.088803586069026,
+        1.0888035860690262
+      ],
+      "tickmode": "array",
+      "ticktext": [
+        "-1.0",
+        "-0.5",
+        "0.0",
+        "0.5",
+        "1.0"
+      ],
+      "tickvals": [
+        -1,
+        -0.5,
+        0,
+        0.5,
+        0.9999999999999998
+      ],
+      "categoryorder": "array",
+      "categoryarray": [
+        "-1.0",
+        "-0.5",
+        "0.0",
+        "0.5",
+        "1.0"
+      ],
+      "nticks": null,
+      "ticks": "",
+      "tickcolor": null,
+      "ticklen": 0,
+      "tickwidth": 0,
+      "showticklabels": false,
+      "tickfont": {
+        "color": null,
+        "family": null,
+        "size": 0
+      },
+      "tickangle": 0,
+      "showline": false,
+      "linecolor": null,
+      "linewidth": 0,
+      "showgrid": false,
+      "gridcolor": null,
+      "gridwidth": 0,
+      "zeroline": false,
+      "anchor": "x",
+      "title": {
+        "text": "",
+        "font": {
+          "color": null,
+          "family": null,
+          "size": 0
+        }
+      },
+      "hoverformat": ".2f"
+    },
+    "shapes": [],
+    "showlegend": true,
+    "legend": {
+      "bgcolor": null,
+      "bordercolor": null,
+      "borderwidth": 0,
+      "font": {
+        "color": "rgba(28,28,30,1)",
+        "family": "Helvetica",
+        "size": 10.62681610626816
+      },
+      "title": {
+        "text": "Relationship<br />Trust weight",
+        "font": {
+          "color": "rgba(28,28,30,1)",
+          "family": "Helvetica",
+          "size": 11.290992112909922
+        }
+      }
+    },
+    "hovermode": "closest",
+    "barmode": "relative",
+    "transition": {
+      "duration": 500,
+      "easing": "cubic-in-out"
+    }
+  },
+  "config": {
+    "doubleClick": "reset",
+    "modeBarButtonsToAdd": [
+      "hoverclosest",
+      "hovercompare"
+    ],
+    "showSendToCloud": false
+  },
+  "source": "A",
+  "attrs": {
+    "5f122a7efd4d": {
+      "edge_colour": {},
+      "edge_linetype": {},
+      "x": {},
+      "y": {},
+      "xend": {},
+      "yend": {},
+      "type": "scatter"
+    },
+    "5f127727e006": {
+      "colour": {},
+      "size": {},
+      "x": {},
+      "y": {}
+    },
+    "5f125ae4e707": {
+      "label": {},
+      "colour": {},
+      "x": {},
+      "y": {}
+    }
+  },
+  "cur_data": "5f122a7efd4d",
+  "visdat": {
+    "5f122a7efd4d": [
+      "function (y) ",
+      "x"
+    ],
+    "5f127727e006": [
+      "function (y) ",
+      "x"
+    ],
+    "5f125ae4e707": [
+      "function (y) ",
+      "x"
+    ]
+  },
+  "highlight": {
+    "on": "plotly_click",
+    "persistent": false,
+    "dynamic": false,
+    "selectize": false,
+    "opacityDim": 0.2,
+    "selected": {
+      "opacity": 1
+    },
+    "debounce": 0
+  },
+  "shinyEvents": [
+    "plotly_hover",
+    "plotly_click",
+    "plotly_selected",
+    "plotly_relayout",
+    "plotly_brushed",
+    "plotly_brushing",
+    "plotly_clickannotation",
+    "plotly_doubleclick",
+    "plotly_deselect",
+    "plotly_afterplot",
+    "plotly_sunburstclick"
+  ],
+  "base_url": "https://plot.ly"
+}

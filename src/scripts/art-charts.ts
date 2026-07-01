@@ -89,6 +89,15 @@ function stripBoldTags(html: string): string {
   return html.replace(/<\/?b>/gi, "");
 }
 
+function plainHeadingText(html: string): string {
+  return stripBoldTags(html)
+    .replace(/<br\s*\/?>/gi, " ")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+    .toLowerCase();
+}
+
 function stackChartTitle(text: string): string {
   if (!text) return text;
 
@@ -212,8 +221,14 @@ function renderStaticHeading(el: HTMLElement, titleHtml: string, subtitle?: stri
     el.classList.add("art-chart-has-heading");
   }
 
+  const normalizedTitle = plainHeadingText(titleHtml);
+  const normalizedSubtitle = plainHeadingText(subtitle ?? "");
+  const duplicateSubtitle = Boolean(
+    normalizedSubtitle && normalizedTitle && normalizedTitle.includes(normalizedSubtitle)
+  );
   const subtitleHtml = subtitle
     && !useSubtitleAsTitle
+    && !duplicateSubtitle
     ? `<span class="art-chart-heading__subtitle">${subtitle}</span>`
     : "";
   heading.innerHTML = `${formatted}${subtitleHtml}`;

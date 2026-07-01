@@ -153,7 +153,7 @@ def score_chart(slug: str, chart_id: str, caption: str, spec: dict[str, Any], se
     if re.search(r"(pareto|concentration|gap|trend|growth|map|heatmap|timeline|drought|conversion|value|race|era|gaps|titles)", chart_id, re.I):
         score += 6
         reasons.append("strong analytical frame")
-    if re.search(r"(pad|fallback|extra|alt)", chart_id, re.I):
+    if re.search(r"(?:^|[_-])(pad|fallback|extra|alt)(?:[_-]|$)", chart_id, re.I):
         score -= 16
         reasons.append("generated filler chart id")
 

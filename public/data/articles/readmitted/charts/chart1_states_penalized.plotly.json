@@ -1,1 +1,532 @@
-{"data":[{"orientation":"v","width":[52.631578947368418,52.564102564102569,49.568965517241381,55.202312138728324,57.457846952010371,55.780346820809243,57.841140529531565,54.185022026431717,51.351351351351347,62.5,61.081081081081081,65.441176470588232,51.063829787234042,52.692307692307693,51.975051975051976,51.009174311926607,50.877192982456144,49.554565701559021,53.684210526315788],"base":[8.6750000000000007,7.6749999999999998,1.675,12.675000000000001,14.675000000000001,13.675000000000001,15.675000000000001,11.675000000000001,5.6749999999999998,17.675000000000001,16.675000000000001,18.675000000000001,4.6749999999999998,9.6750000000000007,6.6749999999999998,3.6749999999999998,2.6749999999999998,0.67500000000000004,10.675000000000001],"x":[26.315789473684209,26.282051282051285,24.78448275862069,27.601156069364162,28.728923476005185,27.890173410404621,28.920570264765782,27.092511013215859,25.675675675675674,31.25,30.54054054054054,32.720588235294116,25.531914893617021,26.346153846153847,25.987525987525988,25.504587155963304,25.438596491228072,24.77728285077951,26.842105263157894],"y":[0.64999999999999858,0.64999999999999947,0.65000000000000013,0.64999999999999858,0.64999999999999858,0.64999999999999858,0.64999999999999858,0.64999999999999858,0.65000000000000036,0.64999999999999858,0.64999999999999858,0.64999999999999858,0.65000000000000036,0.64999999999999858,0.65000000000000036,0.65000000000000036,0.65000000000000036,0.64999999999999991,0.64999999999999858],"text":["pct_penalized: 52.63158<br />state: AL","pct_penalized: 52.56410<br />state: AR","pct_penalized: 49.56897<br />state: AZ","pct_penalized: 55.20231<br />state: CA","pct_penalized: 57.45785<br />state: FL","pct_penalized: 55.78035<br />state: GA","pct_penalized: 57.84114<br />state: IL","pct_penalized: 54.18502<br />state: KY","pct_penalized: 51.35135<br />state: LA","pct_penalized: 62.50000<br />state: MA","pct_penalized: 61.08108<br />state: MS","pct_penalized: 65.44118<br />state: NJ","pct_penalized: 51.06383<br />state: NV","pct_penalized: 52.69231<br />state: NY","pct_penalized: 51.97505<br />state: OH","pct_penalized: 51.00917<br />state: PA","pct_penalized: 50.87719<br />state: TN","pct_penalized: 49.55457<br />state: TX","pct_penalized: 53.68421<br />state: WV"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(192,57,43,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[48.148464163822524,48.148464163822524],"y":[0.40000000000000002,19.600000000000001],"text":"xintercept: 48.14846","type":"scatter","mode":"lines","line":{"width":3.7795275590551185,"color":"rgba(44,62,107,1)","dash":"dash"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[52.631578947368418,52.564102564102569,49.568965517241381,55.202312138728324,57.457846952010371,55.780346820809243,57.841140529531565,54.185022026431717,51.351351351351347,62.5,61.081081081081081,65.441176470588232,51.063829787234042,52.692307692307693,51.975051975051976,51.009174311926607,50.877192982456144,49.554565701559021,53.684210526315788],"y":[9,8,2,13,15,14,16,12,6,18,17,19,5,10,7,4,3,1,11],"text":["52.6%","52.6%","49.6%","55.2%","57.5%","55.8%","57.8%","54.2%","51.4%","62.5%","61.1%","65.4%","51.1%","52.7%","52%","51%","50.9%","49.6%","53.7%"],"hovertext":["pct_penalized: 52.63158<br />state: AL<br />paste0(round(pct_penalized, 1), \"%\"): 52.6%","pct_penalized: 52.56410<br />state: AR<br />paste0(round(pct_penalized, 1), \"%\"): 52.6%","pct_penalized: 49.56897<br />state: AZ<br />paste0(round(pct_penalized, 1), \"%\"): 49.6%","pct_penalized: 55.20231<br />state: CA<br />paste0(round(pct_penalized, 1), \"%\"): 55.2%","pct_penalized: 57.45785<br />state: FL<br />paste0(round(pct_penalized, 1), \"%\"): 57.5%","pct_penalized: 55.78035<br />state: GA<br />paste0(round(pct_penalized, 1), \"%\"): 55.8%","pct_penalized: 57.84114<br />state: IL<br />paste0(round(pct_penalized, 1), \"%\"): 57.8%","pct_penalized: 54.18502<br />state: KY<br />paste0(round(pct_penalized, 1), \"%\"): 54.2%","pct_penalized: 51.35135<br />state: LA<br />paste0(round(pct_penalized, 1), \"%\"): 51.4%","pct_penalized: 62.50000<br />state: MA<br />paste0(round(pct_penalized, 1), \"%\"): 62.5%","pct_penalized: 61.08108<br />state: MS<br />paste0(round(pct_penalized, 1), \"%\"): 61.1%","pct_penalized: 65.44118<br />state: NJ<br />paste0(round(pct_penalized, 1), \"%\"): 65.4%","pct_penalized: 51.06383<br />state: NV<br />paste0(round(pct_penalized, 1), \"%\"): 51.1%","pct_penalized: 52.69231<br />state: NY<br />paste0(round(pct_penalized, 1), \"%\"): 52.7%","pct_penalized: 51.97505<br />state: OH<br />paste0(round(pct_penalized, 1), \"%\"): 52%","pct_penalized: 51.00917<br />state: PA<br />paste0(round(pct_penalized, 1), \"%\"): 51%","pct_penalized: 50.87719<br />state: TN<br />paste0(round(pct_penalized, 1), \"%\"): 50.9%","pct_penalized: 49.55457<br />state: TX<br />paste0(round(pct_penalized, 1), \"%\"): 49.6%","pct_penalized: 53.68421<br />state: WV<br />paste0(round(pct_penalized, 1), \"%\"): 53.7%"],"textfont":{"size":10.960629921259843,"color":"rgba(28,28,30,1)"},"type":"scatter","mode":"text","hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":54.522208385222086,"r":21.253632212536321,"b":50.145288501452889,"l":36.861768368617682},"plot_bgcolor":"#F2F0EB","paper_bgcolor":"#F2F0EB","font":{"color":"#1C1C1E","family":"DM Sans, Helvetica, sans-serif","size":14.611872146118724},"title":{"text":"<b> Which <span style='color:#C0392B;'>States<\/span> Have the Most Penalized Hospitals? <\/b>","font":{"color":"rgba(28,28,30,1)","family":"Helvetica","size":17.268576172685762},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0,74.60294117647058],"tickmode":"array","ticktext":["0%","20%","40%","60%"],"tickvals":[0,20,40,60],"categoryorder":"array","categoryarray":["0%","20%","40%","60%"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.6529680365296811,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(107,107,107,1)","family":"Helvetica","size":11.955168119551681},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(213,213,213,1)","gridwidth":0.39850560398505597,"zeroline":false,"anchor":"y","title":{"text":"<b> % of Hospital-Condition Pairs with ERR > 1.0 <\/b>","font":{"color":"rgba(28,28,30,1)","family":"Helvetica","size":13.283520132835205}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.40000000000000002,19.600000000000001],"tickmode":"array","ticktext":["TX","AZ","TN","PA","NV","LA","OH","AR","AL","NY","WV","KY","CA","GA","FL","IL","MS","MA","NJ"],"tickvals":[1,2,3,4,5,6.0000000000000009,7,8,9,10,11,12,13,14.000000000000002,15,16,17,18,19],"categoryorder":"array","categoryarray":["TX","AZ","TN","PA","NV","LA","OH","AR","AL","NY","WV","KY","CA","GA","FL","IL","MS","MA","NJ"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.6529680365296811,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(107,107,107,1)","family":"Helvetica","size":11.955168119551681},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"<b>  <\/b>","font":{"color":"rgba(28,28,30,1)","family":"Helvetica","size":13.283520132835205}},"hoverformat":".2f"},"shapes":[],"showlegend":false,"legend":{"bgcolor":"rgba(242,240,235,1)","bordercolor":"transparent","borderwidth":1.8897637795275593,"font":{"color":"rgba(107,107,107,1)","family":"Helvetica","size":10.62681610626816}},"hovermode":"closest","barmode":"relative","transition":{"duration":500,"easing":"cubic-in-out"}},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"5ad26c4b3d4c":{"x":{},"y":{},"type":"bar"},"5ad23fa5801f":{"xintercept":{}},"5ad2a7e93de":{"x":{},"y":{},"label":{}}},"cur_data":"5ad26c4b3d4c","visdat":{"5ad26c4b3d4c":["function (y) ","x"],"5ad23fa5801f":["function (y) ","x"],"5ad2a7e93de":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"}
+{
+  "data": [
+    {
+      "orientation": "v",
+      "width": [
+        52.63157894736842,
+        52.56410256410257,
+        49.56896551724138,
+        55.202312138728324,
+        57.45784695201037,
+        55.78034682080924,
+        57.841140529531565,
+        54.18502202643172,
+        51.35135135135135,
+        62.5,
+        61.08108108108108,
+        65.44117647058823,
+        51.06382978723404,
+        52.69230769230769,
+        51.975051975051976,
+        51.00917431192661,
+        50.877192982456144,
+        49.55456570155902,
+        53.68421052631579
+      ],
+      "base": [
+        8.675,
+        7.675,
+        1.675,
+        12.675,
+        14.675,
+        13.675,
+        15.675,
+        11.675,
+        5.675,
+        17.675,
+        16.675,
+        18.675,
+        4.675,
+        9.675,
+        6.675,
+        3.675,
+        2.675,
+        0.675,
+        10.675
+      ],
+      "x": [
+        26.31578947368421,
+        26.282051282051285,
+        24.78448275862069,
+        27.601156069364162,
+        28.728923476005185,
+        27.89017341040462,
+        28.920570264765782,
+        27.09251101321586,
+        25.675675675675674,
+        31.25,
+        30.54054054054054,
+        32.720588235294116,
+        25.53191489361702,
+        26.346153846153847,
+        25.987525987525988,
+        25.504587155963304,
+        25.438596491228072,
+        24.77728285077951,
+        26.842105263157894
+      ],
+      "y": [
+        0.6499999999999986,
+        0.6499999999999995,
+        0.6500000000000001,
+        0.6499999999999986,
+        0.6499999999999986,
+        0.6499999999999986,
+        0.6499999999999986,
+        0.6499999999999986,
+        0.6500000000000004,
+        0.6499999999999986,
+        0.6499999999999986,
+        0.6499999999999986,
+        0.6500000000000004,
+        0.6499999999999986,
+        0.6500000000000004,
+        0.6500000000000004,
+        0.6500000000000004,
+        0.6499999999999999,
+        0.6499999999999986
+      ],
+      "text": [
+        "pct_penalized: 52.63158<br />state: AL",
+        "pct_penalized: 52.56410<br />state: AR",
+        "pct_penalized: 49.56897<br />state: AZ",
+        "pct_penalized: 55.20231<br />state: CA",
+        "pct_penalized: 57.45785<br />state: FL",
+        "pct_penalized: 55.78035<br />state: GA",
+        "pct_penalized: 57.84114<br />state: IL",
+        "pct_penalized: 54.18502<br />state: KY",
+        "pct_penalized: 51.35135<br />state: LA",
+        "pct_penalized: 62.50000<br />state: MA",
+        "pct_penalized: 61.08108<br />state: MS",
+        "pct_penalized: 65.44118<br />state: NJ",
+        "pct_penalized: 51.06383<br />state: NV",
+        "pct_penalized: 52.69231<br />state: NY",
+        "pct_penalized: 51.97505<br />state: OH",
+        "pct_penalized: 51.00917<br />state: PA",
+        "pct_penalized: 50.87719<br />state: TN",
+        "pct_penalized: 49.55457<br />state: TX",
+        "pct_penalized: 53.68421<br />state: WV"
+      ],
+      "type": "bar",
+      "textposition": "none",
+      "marker": {
+        "autocolorscale": false,
+        "color": "rgba(192,57,43,1)",
+        "line": {
+          "width": 1.8897637795275593,
+          "color": "transparent"
+        }
+      },
+      "showlegend": false,
+      "xaxis": "x",
+      "yaxis": "y",
+      "hoverinfo": "text",
+      "frame": null,
+      "hovertemplate": "<b>%{x}</b><br>Value: %{y:,}<extra></extra>",
+      "name": "Series 1"
+    },
+    {
+      "x": [
+        48.148464163822524,
+        48.148464163822524
+      ],
+      "y": [
+        0.4,
+        19.6
+      ],
+      "text": "xintercept: 48.14846",
+      "type": "scatter",
+      "mode": "lines",
+      "line": {
+        "width": 3.7795275590551185,
+        "color": "rgba(44,62,107,1)",
+        "dash": "dash"
+      },
+      "hoveron": "points",
+      "showlegend": false,
+      "xaxis": "x",
+      "yaxis": "y",
+      "hoverinfo": "text",
+      "frame": null,
+      "hovertemplate": "<b>Series 2</b><br>x: %{x}<br>y: %{y}<extra></extra>",
+      "name": "Series 2"
+    },
+    {
+      "x": [
+        52.63157894736842,
+        52.56410256410257,
+        49.56896551724138,
+        55.202312138728324,
+        57.45784695201037,
+        55.78034682080924,
+        57.841140529531565,
+        54.18502202643172,
+        51.35135135135135,
+        62.5,
+        61.08108108108108,
+        65.44117647058823,
+        51.06382978723404,
+        52.69230769230769,
+        51.975051975051976,
+        51.00917431192661,
+        50.877192982456144,
+        49.55456570155902,
+        53.68421052631579
+      ],
+      "y": [
+        9,
+        8,
+        2,
+        13,
+        15,
+        14,
+        16,
+        12,
+        6,
+        18,
+        17,
+        19,
+        5,
+        10,
+        7,
+        4,
+        3,
+        1,
+        11
+      ],
+      "text": [
+        "52.6%",
+        "52.6%",
+        "49.6%",
+        "55.2%",
+        "57.5%",
+        "55.8%",
+        "57.8%",
+        "54.2%",
+        "51.4%",
+        "62.5%",
+        "61.1%",
+        "65.4%",
+        "51.1%",
+        "52.7%",
+        "52%",
+        "51%",
+        "50.9%",
+        "49.6%",
+        "53.7%"
+      ],
+      "hovertext": [
+        "pct_penalized: 52.63158<br />state: AL<br />paste0(round(pct_penalized, 1), \"%\"): 52.6%",
+        "pct_penalized: 52.56410<br />state: AR<br />paste0(round(pct_penalized, 1), \"%\"): 52.6%",
+        "pct_penalized: 49.56897<br />state: AZ<br />paste0(round(pct_penalized, 1), \"%\"): 49.6%",
+        "pct_penalized: 55.20231<br />state: CA<br />paste0(round(pct_penalized, 1), \"%\"): 55.2%",
+        "pct_penalized: 57.45785<br />state: FL<br />paste0(round(pct_penalized, 1), \"%\"): 57.5%",
+        "pct_penalized: 55.78035<br />state: GA<br />paste0(round(pct_penalized, 1), \"%\"): 55.8%",
+        "pct_penalized: 57.84114<br />state: IL<br />paste0(round(pct_penalized, 1), \"%\"): 57.8%",
+        "pct_penalized: 54.18502<br />state: KY<br />paste0(round(pct_penalized, 1), \"%\"): 54.2%",
+        "pct_penalized: 51.35135<br />state: LA<br />paste0(round(pct_penalized, 1), \"%\"): 51.4%",
+        "pct_penalized: 62.50000<br />state: MA<br />paste0(round(pct_penalized, 1), \"%\"): 62.5%",
+        "pct_penalized: 61.08108<br />state: MS<br />paste0(round(pct_penalized, 1), \"%\"): 61.1%",
+        "pct_penalized: 65.44118<br />state: NJ<br />paste0(round(pct_penalized, 1), \"%\"): 65.4%",
+        "pct_penalized: 51.06383<br />state: NV<br />paste0(round(pct_penalized, 1), \"%\"): 51.1%",
+        "pct_penalized: 52.69231<br />state: NY<br />paste0(round(pct_penalized, 1), \"%\"): 52.7%",
+        "pct_penalized: 51.97505<br />state: OH<br />paste0(round(pct_penalized, 1), \"%\"): 52%",
+        "pct_penalized: 51.00917<br />state: PA<br />paste0(round(pct_penalized, 1), \"%\"): 51%",
+        "pct_penalized: 50.87719<br />state: TN<br />paste0(round(pct_penalized, 1), \"%\"): 50.9%",
+        "pct_penalized: 49.55457<br />state: TX<br />paste0(round(pct_penalized, 1), \"%\"): 49.6%",
+        "pct_penalized: 53.68421<br />state: WV<br />paste0(round(pct_penalized, 1), \"%\"): 53.7%"
+      ],
+      "textfont": {
+        "size": 10.960629921259843,
+        "color": "rgba(28,28,30,1)"
+      },
+      "type": "scatter",
+      "mode": "markers",
+      "hoveron": "points",
+      "showlegend": false,
+      "xaxis": "x",
+      "yaxis": "y",
+      "hoverinfo": "text",
+      "frame": null,
+      "hovertemplate": "<b>%{text}</b><br>x: %{x}<br>y: %{y}<extra></extra>",
+      "name": "Series 3"
+    }
+  ],
+  "layout": {
+    "margin": {
+      "t": 54.522208385222086,
+      "r": 21.25363221253632,
+      "b": 50.14528850145289,
+      "l": 36.86176836861768
+    },
+    "plot_bgcolor": "#F2F0EB",
+    "paper_bgcolor": "#F2F0EB",
+    "font": {
+      "color": "#1C1C1E",
+      "family": "DM Sans, Helvetica, sans-serif",
+      "size": 14.611872146118724
+    },
+    "title": {
+      "text": "Nearly half of all hospital-condition pairs in this dataset carry an excess readmission ratio above 1.0<br><span style='font-size:12px;color:#6B6B6B'>Period Or Category Bar - source cited in report references</span>",
+      "font": {
+        "color": "rgba(28,28,30,1)",
+        "family": "Helvetica",
+        "size": 17.268576172685762
+      },
+      "x": 0,
+      "xref": "paper",
+      "xanchor": "left"
+    },
+    "xaxis": {
+      "domain": [
+        0,
+        1
+      ],
+      "automargin": true,
+      "type": "linear",
+      "autorange": false,
+      "range": [
+        0,
+        74.60294117647058
+      ],
+      "tickmode": "array",
+      "ticktext": [
+        "0%",
+        "20%",
+        "40%",
+        "60%"
+      ],
+      "tickvals": [
+        0,
+        20,
+        40,
+        60
+      ],
+      "categoryorder": "array",
+      "categoryarray": [
+        "0%",
+        "20%",
+        "40%",
+        "60%"
+      ],
+      "nticks": null,
+      "ticks": "",
+      "tickcolor": null,
+      "ticklen": 3.652968036529681,
+      "tickwidth": 0,
+      "showticklabels": true,
+      "tickfont": {
+        "color": "rgba(107,107,107,1)",
+        "family": "Helvetica",
+        "size": 11.955168119551681
+      },
+      "tickangle": 0,
+      "showline": false,
+      "linecolor": null,
+      "linewidth": 0,
+      "showgrid": true,
+      "gridcolor": "rgba(213,213,213,1)",
+      "gridwidth": 0.39850560398505597,
+      "zeroline": false,
+      "anchor": "y",
+      "title": {
+        "text": "<b> % of Hospital-Condition Pairs with ERR > 1.0 </b>",
+        "font": {
+          "color": "rgba(28,28,30,1)",
+          "family": "Helvetica",
+          "size": 13.283520132835205
+        }
+      },
+      "hoverformat": ".2f"
+    },
+    "yaxis": {
+      "domain": [
+        0,
+        1
+      ],
+      "automargin": true,
+      "type": "linear",
+      "autorange": false,
+      "range": [
+        0.4,
+        19.6
+      ],
+      "tickmode": "array",
+      "ticktext": [
+        "TX",
+        "AZ",
+        "TN",
+        "PA",
+        "NV",
+        "LA",
+        "OH",
+        "AR",
+        "AL",
+        "NY",
+        "WV",
+        "KY",
+        "CA",
+        "GA",
+        "FL",
+        "IL",
+        "MS",
+        "MA",
+        "NJ"
+      ],
+      "tickvals": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6.000000000000001,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14.000000000000002,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "categoryorder": "array",
+      "categoryarray": [
+        "TX",
+        "AZ",
+        "TN",
+        "PA",
+        "NV",
+        "LA",
+        "OH",
+        "AR",
+        "AL",
+        "NY",
+        "WV",
+        "KY",
+        "CA",
+        "GA",
+        "FL",
+        "IL",
+        "MS",
+        "MA",
+        "NJ"
+      ],
+      "nticks": null,
+      "ticks": "",
+      "tickcolor": null,
+      "ticklen": 3.652968036529681,
+      "tickwidth": 0,
+      "showticklabels": true,
+      "tickfont": {
+        "color": "rgba(107,107,107,1)",
+        "family": "Helvetica",
+        "size": 11.955168119551681
+      },
+      "tickangle": 0,
+      "showline": false,
+      "linecolor": null,
+      "linewidth": 0,
+      "showgrid": false,
+      "gridcolor": null,
+      "gridwidth": 0,
+      "zeroline": false,
+      "anchor": "x",
+      "title": {
+        "text": "<b>  </b>",
+        "font": {
+          "color": "rgba(28,28,30,1)",
+          "family": "Helvetica",
+          "size": 13.283520132835205
+        }
+      },
+      "hoverformat": ".2f"
+    },
+    "shapes": [],
+    "showlegend": false,
+    "legend": {
+      "bgcolor": "rgba(242,240,235,1)",
+      "bordercolor": "transparent",
+      "borderwidth": 1.8897637795275593,
+      "font": {
+        "color": "rgba(107,107,107,1)",
+        "family": "Helvetica",
+        "size": 10.62681610626816
+      }
+    },
+    "hovermode": "closest",
+    "barmode": "relative",
+    "transition": {
+      "duration": 500,
+      "easing": "cubic-in-out"
+    }
+  },
+  "config": {
+    "doubleClick": "reset",
+    "modeBarButtonsToAdd": [
+      "hoverclosest",
+      "hovercompare"
+    ],
+    "showSendToCloud": false
+  },
+  "source": "A",
+  "attrs": {
+    "5ad26c4b3d4c": {
+      "x": {},
+      "y": {},
+      "type": "bar"
+    },
+    "5ad23fa5801f": {
+      "xintercept": {}
+    },
+    "5ad2a7e93de": {
+      "x": {},
+      "y": {},
+      "label": {}
+    }
+  },
+  "cur_data": "5ad26c4b3d4c",
+  "visdat": {
+    "5ad26c4b3d4c": [
+      "function (y) ",
+      "x"
+    ],
+    "5ad23fa5801f": [
+      "function (y) ",
+      "x"
+    ],
+    "5ad2a7e93de": [
+      "function (y) ",
+      "x"
+    ]
+  },
+  "highlight": {
+    "on": "plotly_click",
+    "persistent": false,
+    "dynamic": false,
+    "selectize": false,
+    "opacityDim": 0.2,
+    "selected": {
+      "opacity": 1
+    },
+    "debounce": 0
+  },
+  "shinyEvents": [
+    "plotly_hover",
+    "plotly_click",
+    "plotly_selected",
+    "plotly_relayout",
+    "plotly_brushed",
+    "plotly_brushing",
+    "plotly_clickannotation",
+    "plotly_doubleclick",
+    "plotly_deselect",
+    "plotly_afterplot",
+    "plotly_sunburstclick"
+  ],
+  "base_url": "https://plot.ly"
+}
