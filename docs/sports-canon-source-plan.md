@@ -28,6 +28,18 @@ question: history, peer comparison, efficiency, pain/volatility, and identity.
    - Theme: system shock, Brady/Belichick discontinuity, brand after dynasty.
    - Sources: Pro Football Reference, NFL records, Forbes.
 
+## Cross-report analysis batch
+
+7. `sports-dynasty-index-best-and-worst-conversion`
+   - Theme: championship mass, conversion, brand/output gaps, fan pain.
+   - Sources: Baseball/Basketball/Football/Hockey Reference, Forbes.
+8. `league-money-skill-and-star-systems`
+   - Theme: league economics, salary rules, star leverage, event scarcity.
+   - Sources: Forbes, Spotrac, major reference databases.
+9. `regional-sports-identity-map`
+   - Theme: region-locked sports identity, market depth, drought and civic memory.
+   - Sources: franchise histories, valuation summaries, public regional framing.
+
 ## Chart contract
 
 Each report receives:
@@ -63,3 +75,9 @@ Each report receives:
 
 A chart is not included because it exists. A chart is included because it changes
 the conversation between an Artometrician and an expert fan.
+
+## Cross-reference rule
+
+Team profiles should now point to at least one cross-report benchmark:
+dynasty index, league economics, or regional identity. This makes the sports
+canon feel like one connected atlas rather than isolated one-off posts.

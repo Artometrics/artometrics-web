@@ -500,6 +500,186 @@ def patriots():
     )
 
 
+def cross_sport_dynasty_index():
+    slug = "sports-dynasty-index-best-and-worst-conversion"
+    source = "Data: Baseball Reference, Basketball Reference, Pro Football Reference, Hockey Reference, Forbes - ARTOMETRICS"
+
+    teams = ["Yankees", "Celtics", "Lakers", "Patriots", "Steelers", "Canadiens", "Dodgers", "Cowboys", "Warriors", "Maple Leafs"]
+    titles = [27, 18, 17, 6, 6, 24, 8, 5, 7, 13]
+    write_chart(slug, "chart1_title_mass", {"data": [bar_h(teams, titles, [ART_RED if t in {"Yankees", "Celtics", "Lakers", "Canadiens"} else ART_BLUE for t in teams], hover="<b>%{y}</b><br>Major titles: %{x}<extra></extra>")], "layout": layout("Dynasty mass is not evenly distributed", "A FEW BRANDS HOARD THE ARCHIVE", x_title="Major professional championships")})
+
+    modern_teams = ["Patriots", "Warriors", "Chiefs", "Dodgers", "Spurs", "Red Sox", "Cubs", "Cowboys"]
+    shots = [9, 6, 5, 4, 6, 4, 1, 0]
+    rings = [6, 4, 3, 2, 5, 4, 1, 0]
+    write_chart(slug, "chart2_finals_conversion", {"data": [
+        bar_h(modern_teams, shots, [ART_GREY] * len(modern_teams), name="Finals/Super Bowl/World Series appearances", hover="<b>%{y}</b><br>Appearances: %{x}<extra></extra>"),
+        bar_h(modern_teams, rings, [ART_RED] * len(modern_teams), name="Titles", hover="<b>%{y}</b><br>Titles: %{x}<extra></extra>"),
+    ], "layout": {**layout("Getting there is not the same as closing", "CONVERSION SEPARATES DYNASTIES FROM GOOD TEAMS", x_title="Appearances and titles since 1996"), "barmode": "overlay", "showlegend": True, "legend": {"orientation": "h", "x": 0.5, "xanchor": "center", "y": 1.04}}})
+
+    brands = ["Cowboys", "Yankees", "Lakers", "Warriors", "Patriots", "Dodgers", "Knicks", "Giants", "Celtics", "Chiefs"]
+    value = [10.1, 7.6, 7.1, 7.7, 7.4, 5.5, 6.6, 7.3, 5.1, 6.1]
+    title_10 = [0, 0, 1, 4, 3, 2, 0, 0, 1, 3]
+    write_chart(slug, "chart3_brand_vs_recent_titles", {"data": [scatter(value, title_10, brands, [18 + v * 4 for v in value], [ART_RED if t >= 3 else ART_BLUE for t in title_10], hover="<b>%{text}</b><br>Estimated value: $%{x}B<br>Titles since 2014: %{y}<extra></extra>")], "layout": layout("Brand value and winning now diverge", "THE COWBOYS ARE THE OUTLIER WARNING", x_title="Estimated franchise value, $B", y_title="Titles since 2014")})
+
+    leagues = ["MLB", "NBA", "NFL", "NHL"]
+    teams_count = [30, 30, 32, 32]
+    unique_champs = [15, 12, 14, 13]
+    write_chart(slug, "chart4_league_rotation", {"data": [bar_v(leagues, [round(c / t * 100, 1) for c, t in zip(unique_champs, teams_count)], [ART_RED, ART_BLUE, ART_BLUE, ART_GREY], hover="<b>%{x}</b><br>Share of league winning at least one title since 2000: %{y}%<extra></extra>")], "layout": layout("Some leagues rotate glory faster", "PARITY IS A CULTURAL PRODUCT", x_title="League", y_title="% of teams with a title since 2000")})
+
+    pain_teams = ["Maple Leafs", "Jets", "Browns", "Lions", "Knicks", "Mets", "Suns", "Mariners", "Cowboys", "Yankees"]
+    droughts = [57, 55, 59, 67, 51, 38, 56, 48, 29, 15]
+    attention = [92, 79, 82, 76, 88, 74, 67, 58, 96, 98]
+    write_chart(slug, "chart5_pain_vs_attention", {"data": [scatter(droughts, attention, pain_teams, [14 + d / 4 for d in droughts], [ART_RED if a >= 88 else ART_BLUE for a in attention], hover="<b>%{text}</b><br>Title drought: %{x} years<br>Cultural attention index: %{y}<extra></extra>")], "layout": layout("Pain is drought multiplied by attention", "THE LOUDEST LOSING IS NOT ALWAYS THE LONGEST", x_title="Years since most recent title", y_title="Cultural attention index")})
+
+    sections = [
+        {"id": "title-mass", "title": "CHART 1 - DYNASTY MASS", "chart": "chart1_title_mass", "caption": "A few franchises carry an outsized share of championship memory", "prose": ["Cross-sport comparison starts with mass. The Yankees and Canadiens look like institutions because their title archives are not normal franchise resumes; they are historical infrastructure.", "This chart gives future team reports a shared scale. A fan can ask whether a club is chasing its league or chasing one of the archive monopolies."]},
+        {"id": "conversion", "title": "CHART 2 - CONVERSION", "chart": "chart2_finals_conversion", "caption": "Modern dynasties are defined by converting appearances into titles", "prose": ["Appearances measure access. Titles measure finishing. The Patriots, Spurs, Warriors, and Red Sox produced different kinds of modern dominance, but each solved the conversion problem better than its peers.", "That is why a merely famous team can feel weaker than a smaller, colder machine."]},
+        {"id": "brand-gap", "title": "CHART 3 - BRAND VERSUS OUTPUT", "chart": "chart3_brand_vs_recent_titles", "caption": "The richest sports brands do not all convert attention into recent championships", "prose": ["Value is not a scoreboard. The Cowboys, Knicks, and Yankees show that brand equity can survive long title gaps, while the Chiefs and Warriors show what happens when current winning catches the market's imagination.", "From a metric standpoint, this is the first big split: market power and competitive power are related, but they are not the same variable."]},
+        {"id": "league-rotation", "title": "CHART 4 - LEAGUE ROTATION", "chart": "chart4_league_rotation", "caption": "Title rotation differs by league structure and postseason randomness", "prose": ["Leagues write different scripts. Baseball's long season and playoff volatility create a different kind of access than the NBA's star-driven tournament or the NFL's single-elimination machine.", "The cultural output is visible: every league teaches fans a different theory of fairness."]},
+        {"id": "pain-attention", "title": "CHART 5 - PAIN AND ATTENTION", "chart": "chart5_pain_vs_attention", "caption": "Fan pain grows when droughts happen under a bright spotlight", "prose": ["The longest drought is not always the loudest drought. A small-market wait can be existential; a New York, Toronto, or Dallas wait becomes national theater.", "This is why cross-report analysis matters. The number is only half the story; the attention system decides how the number feels."]},
+    ]
+    article(
+        slug,
+        "SPORTS DYNASTY INDEX: Best, Worst, and Most Misleading Teams",
+        "A cross-league Artometrics report comparing championship mass, conversion, market value, parity, and fan pain across major sports franchises.",
+        "atlas, power",
+        [("fast-facts", "FAST FACTS"), ("dataset-context", "DATASET CONTEXT")] + [(s["id"], s["title"]) for s in sections] + [("conclusion", "CONCLUSION"), ("references", "REFERENCES"), ("editors-note", "EDITOR'S NOTE")],
+        [
+            "Team reports answer one fan base at a time. This report changes the lens: it asks which sports brands look strongest when the measurement system crosses league borders.",
+            "The hypothesis is that greatness has at least three separable components: archive mass, conversion efficiency, and attention. A franchise can win one of those categories and still lose the broader identity test.",
+        ],
+        [("351", "Charts now audited across the Artometrics corpus"), ("4", "Major North American leagues compared"), ("27", "Yankees titles, the largest MLB archive"), ("0", "Cowboys titles since the 1990s dynasty"), ("57", "Maple Leafs active Stanley Cup drought entering 2025"), ("5", "Charts in this cross-report")],
+        [
+            "This is a curated comparative model built from public reference records rather than a proprietary win-probability system. The goal is to create a shared vocabulary that later team profiles can reference.",
+            "A front-office analyst might want causal variables: payroll, age curves, draft capital, injuries, ownership. An Artometrician starts one level higher: what does the institution look like when winning, money, attention, and pain are placed on the same page?",
+        ],
+        sections,
+        ["The cleanest finding is that sports greatness is not one ranking. The Yankees and Canadiens own archive mass; the Patriots and Warriors define recent conversion; the Cowboys own the contradiction between brand and output.", "Future reports can now point back to this index whenever a single-team story needs a cross-league benchmark."],
+        ["Baseball Reference. Franchise history pages.", "Basketball Reference. Team season and playoff records.", "Pro Football Reference. Team franchise records.", "Hockey Reference. Franchise records.", "Forbes. Professional sports franchise valuations, recent lists."],
+        "Figures use rounded public-reference values and editorial indices for attention. The report is intended as a comparative map, not a betting model.",
+        source,
+    )
+
+
+def league_money_and_skill_report():
+    slug = "league-money-skill-and-star-systems"
+    source = "Data: Forbes, Spotrac, Basketball Reference, Baseball Reference, Pro Football Reference, Hockey Reference - ARTOMETRICS"
+
+    leagues = ["NFL", "NBA", "MLB", "NHL", "Premier League", "MLS"]
+    avg_value = [6.5, 4.4, 2.4, 1.4, 2.1, 0.7]
+    write_chart(slug, "chart1_league_value_floor", {"data": [bar_h(leagues, avg_value, [ART_RED if l == "NFL" else ART_BLUE for l in leagues], hover="<b>%{y}</b><br>Approx. average club value: $%{x}B<extra></extra>")], "layout": layout("The NFL is the value machine", "MEDIA SCARCITY MAKES EVERY TEAM EXPENSIVE", x_title="Approximate average franchise value, $B")})
+
+    leagues2 = ["NBA", "NFL", "MLB", "NHL", "Premier League"]
+    star_leverage = [92, 58, 54, 48, 72]
+    roster_size = [15, 53, 26, 23, 25]
+    write_chart(slug, "chart2_star_leverage", {"data": [scatter(roster_size, star_leverage, leagues2, [28, 18, 20, 19, 23], [ART_RED, ART_BLUE, ART_BLUE, ART_GREY, ART_BLUE], hover="<b>%{text}</b><br>Active roster scale: %{x}<br>Star leverage index: %{y}<extra></extra>")], "layout": layout("Small rosters make stars louder", "THE NBA HAS THE CLEANEST SUPERSTAR SIGNAL", x_title="Typical active roster scale", y_title="Star leverage index")})
+
+    leagues3 = ["NFL", "NBA", "MLB", "NHL"]
+    hard_cap = [95, 76, 35, 90]
+    payroll_spread = [42, 58, 86, 45]
+    write_chart(slug, "chart3_cap_vs_payroll_spread", {"data": [scatter(hard_cap, payroll_spread, leagues3, [28, 25, 26, 22], [ART_RED if l == "MLB" else ART_BLUE for l in leagues3], hover="<b>%{text}</b><br>Salary-control index: %{x}<br>Payroll-spread index: %{y}<extra></extra>")], "layout": layout("Rules decide how money becomes talent", "BASEBALL LETS PAYROLL SPREAD WIDEN", x_title="Salary-control index", y_title="Payroll-spread index")})
+
+    products = ["NFL game", "NBA game", "MLB game", "NHL game", "Premier League match", "MLS match"]
+    event_count = [17, 82, 162, 82, 38, 34]
+    write_chart(slug, "chart4_event_scarcity", {"data": [bar_v(products, event_count, [ART_RED, ART_BLUE, ART_BLUE, ART_GREY, ART_BLUE, ART_GREY], hover="<b>%{x}</b><br>Regular-season events per team: %{y}<extra></extra>")], "layout": layout("Scarcity changes fan attention", "THE NFL MAKES EACH GAME FEEL LIKE A PUBLIC EVENT", x_title="Product", y_title="Regular-season games/matches")})
+
+    leagues4 = ["NFL", "NBA", "MLB", "NHL", "Premier League", "MLS"]
+    globality = [72, 86, 61, 55, 94, 58]
+    domesticity = [94, 78, 84, 69, 62, 73]
+    write_chart(slug, "chart5_global_vs_domestic", {"data": [scatter(globality, domesticity, leagues4, [24, 24, 22, 20, 26, 18], [ART_RED if l in {"Premier League", "NBA"} else ART_BLUE for l in leagues4], hover="<b>%{text}</b><br>Global cultural reach: %{x}<br>Domestic ritual index: %{y}<extra></extra>")], "layout": layout("Leagues sell different kinds of belonging", "GLOBAL REACH AND LOCAL RITUAL ARE NOT THE SAME", x_title="Global cultural reach index", y_title="Domestic ritual index")})
+
+    sections = [
+        {"id": "value-floor", "title": "CHART 1 - VALUE FLOOR", "chart": "chart1_league_value_floor", "caption": "The NFL turns scarcity and national television into the highest average club value", "prose": ["The NFL does not need every team to be glamorous. Its media structure makes the ordinary franchise expensive because the league product is scarce, synchronized, and nationally distributed.", "That is a metric difference and a cultural difference: football teams are local flags plugged into a national machine."]},
+        {"id": "star-leverage", "title": "CHART 2 - STAR LEVERAGE", "chart": "chart2_star_leverage", "caption": "The NBA gives individual stars the strongest control over team identity", "prose": ["A basketball star touches a huge share of possessions. A baseball star can disappear into lineup order and variance. A football star may be trapped inside scheme, injuries, and roster scale.", "This is why NBA identity travels through names, while NFL identity often travels through systems."]},
+        {"id": "rules-money", "title": "CHART 3 - RULES AND MONEY", "chart": "chart3_cap_vs_payroll_spread", "caption": "League rules shape whether money becomes separation or merely survival", "prose": ["Salary caps, luxury taxes, revenue sharing, and roster rules are not administrative details. They are identity engines.", "The MLB gap is partly the point: baseball lets market and development systems express themselves with less hard compression than the NFL or NHL."]},
+        {"id": "event-scarcity", "title": "CHART 4 - EVENT SCARCITY", "chart": "chart4_event_scarcity", "caption": "The number of games changes how fans process failure", "prose": ["A baseball team can lose four straight and still be fine. An NFL team can lose two games and trigger a referendum. The schedule is a psychology machine.", "This matters for future reports because pain, momentum, and panic are not measured on the same clock across leagues."]},
+        {"id": "belonging", "title": "CHART 5 - BELONGING", "chart": "chart5_global_vs_domestic", "caption": "Global reach and domestic ritual create different cultural signatures", "prose": ["The Premier League and NBA travel globally with exceptional ease. The NFL remains more domestically ritualized even as its value dominates.", "The Artometrics question is not simply which league is bigger. It is what kind of belonging each league manufactures."]},
+    ]
+    article(
+        slug,
+        "LEAGUE MONEY, SKILL, AND STAR SYSTEMS",
+        "A cross-sport report on how league rules, money, roster scale, event scarcity, and cultural reach shape the way teams become meaningful.",
+        "atlas, culture",
+        [("fast-facts", "FAST FACTS"), ("dataset-context", "DATASET CONTEXT")] + [(s["id"], s["title"]) for s in sections] + [("conclusion", "CONCLUSION"), ("references", "REFERENCES"), ("editors-note", "EDITOR'S NOTE")],
+        [
+            "A sports league is a measurement system before it is an entertainment product. It decides how much money can matter, how much one player can matter, how often fans get to reset emotionally, and how widely the story can travel.",
+            "This report builds a cross-league lens for future Artometrics profiles: money, skill, star leverage, schedule density, and culture are not interchangeable across sports.",
+        ],
+        [("$6.5B", "Approximate average NFL franchise value in recent Forbes-style estimates"), ("17", "NFL regular-season games per team"), ("162", "MLB regular-season games per team"), ("92", "NBA star leverage index in this editorial model"), ("6", "Leagues compared"), ("5", "Charts in this report")],
+        [
+            "The figures combine public valuation summaries, reference-record league structures, and editorial indices. The indices are deliberately transparent: they exist to compare systems, not to pretend every input is observed with laboratory precision.",
+            "A commissioner, analyst, or fan would ask different questions. The useful layer is the shared one: what does the league make easy, what does it make scarce, and what does it make emotionally expensive?",
+        ],
+        sections,
+        ["The cleanest conclusion is that league design creates fan reality. The same owner, player, or city would produce a different identity under a different schedule, cap structure, roster size, and media architecture.", "That is why future team profiles should not compare teams without comparing the sports that made them."],
+        ["Forbes. Professional sports franchise valuation lists.", "Spotrac. Salary-cap and payroll summaries.", "Basketball Reference, Baseball Reference, Pro Football Reference, Hockey Reference. League and team records.", "Premier League and MLS public competition records."],
+        "Index values are editorial approximations designed for cross-sport interpretation. They should be read as comparative signals, not official league statistics.",
+        source,
+    )
+
+
+def regional_sports_identity_map():
+    slug = "regional-sports-identity-map"
+    source = "Data: Reference franchise histories, Census regional framing, Forbes, public attendance and championship records - ARTOMETRICS"
+
+    regions = ["Northeast", "California", "Texas", "Great Lakes", "Florida", "Pacific NW", "Mid-South"]
+    titles = [86, 49, 20, 54, 15, 3, 18]
+    write_chart(slug, "chart1_regional_title_density", {"data": [bar_h(regions, titles, [ART_RED if r in {"Northeast", "Great Lakes"} else ART_BLUE for r in regions], hover="<b>%{y}</b><br>Approx. major pro titles: %{x}<extra></extra>")], "layout": layout("Sports memory is region-locked", "THE NORTHEAST AND GREAT LAKES CARRY OLD ARCHIVES", x_title="Approximate major pro championships")})
+
+    markets = ["New York", "Los Angeles", "Boston", "Bay Area", "Dallas", "Chicago", "Philadelphia", "Detroit", "Miami", "Seattle"]
+    team_count = [9, 8, 5, 6, 5, 5, 4, 4, 4, 4]
+    market_value = [43, 35, 23, 25, 24, 18, 15, 12, 14, 11]
+    write_chart(slug, "chart2_market_stack", {"data": [scatter(team_count, market_value, markets, [18 + v / 2 for v in team_count], [ART_RED if m in {"New York", "Los Angeles"} else ART_BLUE for m in markets], hover="<b>%{text}</b><br>Major teams: %{x}<br>Estimated combined value: $%{y}B<extra></extra>")], "layout": layout("Market depth compounds cultural volume", "NEW YORK AND LOS ANGELES ARE SPORTS MEDIA ECOSYSTEMS", x_title="Major pro teams in market", y_title="Estimated combined value, $B")})
+
+    region_order = ["Northeast", "California", "Texas", "Great Lakes", "Florida", "Pacific NW"]
+    baseball = [92, 72, 45, 81, 54, 48]
+    football = [73, 58, 95, 84, 78, 74]
+    basketball = [82, 88, 66, 71, 70, 69]
+    write_chart(slug, "chart3_sport_dna", {"data": [
+        line(region_order, baseball, color=ART_RED, name="Baseball memory", hover="<b>%{x}</b><br>Baseball identity: %{y}<extra></extra>"),
+        line(region_order, football, color=ART_BLUE, name="Football ritual", hover="<b>%{x}</b><br>Football identity: %{y}<extra></extra>"),
+        line(region_order, basketball, color="#16A085", name="Basketball/star culture", hover="<b>%{x}</b><br>Basketball identity: %{y}<extra></extra>"),
+    ], "layout": {**layout("Regions specialize emotionally", "EACH MARKET HAS A DIFFERENT SPORTS DNA", x_title="Region", y_title="Identity index"), "showlegend": True, "legend": {"orientation": "h", "x": 0.5, "xanchor": "center", "y": 1.08}}})
+
+    cities = ["Boston", "New York", "Los Angeles", "Dallas", "Cleveland", "Toronto", "Phoenix", "Seattle", "Detroit", "San Francisco"]
+    drought_pain = [18, 52, 22, 73, 90, 94, 86, 71, 67, 28]
+    recent_success = [82, 38, 79, 41, 30, 22, 35, 45, 48, 86]
+    write_chart(slug, "chart4_city_pain_success", {"data": [scatter(recent_success, drought_pain, cities, [20, 24, 22, 22, 20, 20, 19, 18, 19, 22], [ART_RED if p >= 80 else ART_BLUE for p in drought_pain], hover="<b>%{text}</b><br>Recent success index: %{x}<br>Drought/pain index: %{y}<extra></extra>")], "layout": layout("Cities carry different emotional balances", "SUCCESS DOES NOT ERASE THE PAIN OF THE WRONG TEAM", x_title="Recent multi-team success index", y_title="Drought/pain index")})
+
+    cultures = ["Legacy archive", "Star glamour", "Football ritual", "Underdog pain", "Expansion hunger", "Global gateway"]
+    scores = [94, 88, 84, 76, 58, 72]
+    write_chart(slug, "chart5_identity_types", {"data": [bar_v(cultures, scores, [ART_RED, ART_BLUE, ART_BLUE, ART_GREY, ART_GREY, ART_BLUE], hover="<b>%{x}</b><br>Regional identity strength: %{y}<extra></extra>")], "layout": layout("Regional identity has types", "A SPORTS CITY IS A PORTFOLIO OF MYTHS", x_title="Identity type", y_title="Strength index")})
+
+    sections = [
+        {"id": "regional-titles", "title": "CHART 1 - REGIONAL TITLE DENSITY", "chart": "chart1_regional_title_density", "caption": "Championship memory clusters by region", "prose": ["A region's sports identity is not only current fandom. It is the sediment of old championships, old rivalries, and inherited expectations.", "The Northeast and Great Lakes have unusually deep archives because their leagues, cities, and media systems matured early."]},
+        {"id": "market-stack", "title": "CHART 2 - MARKET STACK", "chart": "chart2_market_stack", "caption": "Deep markets create sports media ecosystems rather than single-team identities", "prose": ["New York and Los Angeles are not simply large markets. They are sports ecosystems where multiple teams compete for attention, mythology, and local legitimacy.", "That makes cross-report comparison useful: a Knicks drought and a Lakers title live in the same media bloodstream."]},
+        {"id": "sport-dna", "title": "CHART 3 - SPORT DNA", "chart": "chart3_sport_dna", "caption": "Regions specialize in different sports identities", "prose": ["Texas reads as football ritual. California leans toward basketball and glamour. The Northeast keeps baseball memory unusually alive.", "The point is not stereotype; it is signal. Regional sports culture gives the same win-loss record a different accent."]},
+        {"id": "pain-success", "title": "CHART 4 - CITY PAIN VERSUS SUCCESS", "chart": "chart4_city_pain_success", "caption": "A city can be successful overall and still carry a famous wound", "prose": ["Multi-team cities do not experience success cleanly. A Boston fan can live near constant banners while a specific rival city experiences one drought as civic identity.", "Pain is often team-specific, but markets distribute and amplify it."]},
+        {"id": "identity-types", "title": "CHART 5 - IDENTITY TYPES", "chart": "chart5_identity_types", "caption": "Sports cities are portfolios of myths", "prose": ["Some places sell archive. Some sell stars. Some sell football Sundays. Some sell hunger because they have not yet received the validating title.", "This is the bridge to future city bioeconomics reports: sports data is one part of a place's cultural fingerprint."]},
+    ]
+    article(
+        slug,
+        "REGIONAL SPORTS IDENTITY MAP",
+        "A cross-report map of how regions, markets, leagues, and droughts create different sports identities across American cities.",
+        "atlas, culture",
+        [("fast-facts", "FAST FACTS"), ("dataset-context", "DATASET CONTEXT")] + [(s["id"], s["title"]) for s in sections] + [("conclusion", "CONCLUSION"), ("references", "REFERENCES"), ("editors-note", "EDITOR'S NOTE")],
+        [
+            "A team is never just a team. It is attached to a region, a media market, a league structure, and a local memory system. That context changes what the same number means.",
+            "This report turns the sports canon toward geography. The goal is to show how regions become recognizable under the data microscope.",
+        ],
+        [("10", "Large markets/cities compared"), ("7", "Regions grouped for title-density analysis"), ("6", "Identity archetypes used in the map"), ("94", "Toronto drought/pain index in this editorial model"), ("43B", "Approximate combined New York major-team value"), ("5", "Charts in this report")],
+        [
+            "The charts use public franchise histories, rounded valuation summaries, and editorial identity indices. The indices are not official statistics; they are structured prompts for comparing markets.",
+            "A cultural economist would ask how facilities, media density, migration, ownership, and league rules shape local identity. This report is the first map layer for that conversation.",
+        ],
+        sections,
+        ["The main finding is that sports identity is regional before it is rational. Market size, title archives, sport specialization, and drought all shape the meaning of a fan base.", "This gives the next batch a new tool: every team profile can now ask not only how good the team is, but what kind of place produced that version of good, bad, rich, cursed, or glamorous."],
+        ["Reference franchise histories from Baseball Reference, Basketball Reference, Pro Football Reference, and Hockey Reference.", "Forbes. Professional sports franchise valuation lists.", "U.S. Census regional framing, used only as a broad geography reference.", "Public attendance, championship, and market summaries from league history pages."],
+        "Regional and identity indices are editorial approximations designed to organize cross-report thinking. They should be refined as more city/team reports are added.",
+        source,
+    )
+
+
 def write_plan():
     plan = dedent(
         """
@@ -532,6 +712,18 @@ def write_plan():
         6. `patriots-the-artometrics-of-the-system-dynasty`
            - Theme: system shock, Brady/Belichick discontinuity, brand after dynasty.
            - Sources: Pro Football Reference, NFL records, Forbes.
+
+        ## Cross-report analysis batch
+
+        7. `sports-dynasty-index-best-and-worst-conversion`
+           - Theme: championship mass, conversion, brand/output gaps, fan pain.
+           - Sources: Baseball/Basketball/Football/Hockey Reference, Forbes.
+        8. `league-money-skill-and-star-systems`
+           - Theme: league economics, salary rules, star leverage, event scarcity.
+           - Sources: Forbes, Spotrac, major reference databases.
+        9. `regional-sports-identity-map`
+           - Theme: region-locked sports identity, market depth, drought and civic memory.
+           - Sources: franchise histories, valuation summaries, public regional framing.
 
         ## Chart contract
 
@@ -568,6 +760,12 @@ def write_plan():
 
         A chart is not included because it exists. A chart is included because it changes
         the conversation between an Artometrician and an expert fan.
+
+        ## Cross-reference rule
+
+        Team profiles should now point to at least one cross-report benchmark:
+        dynasty index, league economics, or regional identity. This makes the sports
+        canon feel like one connected atlas rather than isolated one-off posts.
         """
     ).strip()
     DOCS_DIR.mkdir(exist_ok=True)
@@ -582,7 +780,10 @@ def main():
     celtics()
     dodgers()
     patriots()
-    print("Generated sports canon plan and 6 five-chart reports.")
+    cross_sport_dynasty_index()
+    league_money_and_skill_report()
+    regional_sports_identity_map()
+    print("Generated sports canon plan, 6 team reports, and 3 cross-sports reports.")
 
 
 if __name__ == "__main__":

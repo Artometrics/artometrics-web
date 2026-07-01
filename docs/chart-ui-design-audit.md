@@ -5,22 +5,22 @@ It checks whether each chart has a clear headline/subtitle, useful hover/tap con
 
 ## UI summary
 
-- Charts audited: 351
-- Publication-ready: 298
+- Charts audited: 366
+- Publication-ready: 313
 - Needs polish: 53
 - Rework before publishing: 0
 
 ## Most common UI/design issues
 
 - uses runtime source fallback to report references: 318
-- editorial premise needs sharper framing: 190
+- editorial premise needs sharper framing: 199
 - runtime supplies fallback hover/tap context; custom hover recommended: 181
 - caption too generic for casual viewers: 106
 - uses caption as rendered headline; custom subtitle recommended: 64
 - runtime names missing legend series; custom legend labels recommended: 27
 - dense plot needs simplification or stronger annotations: 25
+- clear headline, source, hover context, and manageable density: 20
 - weak editorial premise: 14
-- clear headline, source, hover context, and manageable density: 14
 - many traces can overwhelm casual viewers: 13
 - runtime hides dense always-visible labels; manual callouts recommended: 7
 - many vertical categories risk cramped mobile labels: 5
