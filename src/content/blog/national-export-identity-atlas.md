@@ -38,6 +38,7 @@ draft: false
 <h2 id="dataset-context" class="anchored">DATASET CONTEXT</h2>
 <p class="art-p">The source stack includes OEC API, UN Comtrade, World Bank WDI, OECD, IMF, and national statistics offices. OEC provides a particularly useful API layer for country/product trade flows and economic complexity.</p>
 <p class="art-p">These charts use editorial indices to define the future production structure. A full pass should pull product-level exports by country and compute revealed comparative advantage, concentration, and partner dependence.</p>
+<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
 <h2 id="scale-complexity" class="anchored">CHART 1 - SCALE AND COMPLEXITY</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/national-export-identity-atlas/charts/chart1_complexity_vs_scale.plotly.json" data-source="Data: OEC, UN Comtrade, World Bank WDI, OECD, IMF, World Bank TCdata360 - ARTOMETRICS" role="img" aria-label="Countries differ by export scale and product complexity"></div>

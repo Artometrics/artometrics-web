@@ -38,6 +38,7 @@ draft: false
 <h2 id="dataset-context" class="anchored">DATASET CONTEXT</h2>
 <p class="art-p">IMDb publishes non-commercial TSV datasets including title basics, ratings, crew, principals, episodes, and names. The fields make it possible to join titles, genres, years, runtimes, ratings, and vote counts.</p>
 <p class="art-p">Because IMDb licensing has specific terms, this report uses IMDb as a source architecture and includes a commercial-use caution. A production version should verify licensing or swap in fully open TMDb/Wikidata/Box Office Mojo-compatible sources.</p>
+<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
 <h2 id="genre-attention" class="anchored">CHART 1 - ATTENTION VERSUS QUALITY</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/imdb-blockbuster-grammar/charts/chart1_genre_attention_quality.plotly.json" data-source="Data: IMDb non-commercial datasets, Box Office Mojo-style public records, The Numbers, TMDb metadata references - ARTOMETRICS" role="img" aria-label="Genre attention and audience rating tell different stories"></div>

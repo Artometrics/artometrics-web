@@ -39,37 +39,38 @@ draft: false
 <p>The source is the TidyTuesday release from <strong>2022-11-22</strong> (R for Data Science community). This working file contains <strong>4,191</strong> rows and <strong>35</strong> columns after merging all available CSV/XLSX tables in the week folder.</p>
 <p>Charts are exported as Plotly JSON with PNG fallbacks. Medians are used for robustness where distributions skew. Index-style fields (row numbers, sequential IDs) are excluded from metric selection.</p>
 <p class="art-p"><strong>How to read this report:</strong> start with the chart caption, then ask what the metric actually means, what a non-expert should notice first, and what an expert would challenge in the source. The goal is not to memorize every number; it is to leave with a sharper question than the one you arrived with.</p>
+<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
 <h2 id="chart-1-breakdown" class="anchored">CHART 1 — BREAKDOWN</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/uk-museums/charts/chart1_breakdown.plotly.json" data-fallback="/images/content/articles/uk-museums/charts/chart1_breakdown.png" role="img" aria-label="Area Deprivation index by Name of museum"></div>
+  <div class="art-chart-live" data-chart="/data/articles/uk-museums/charts/chart1_breakdown.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/uk-museums/charts/chart1_breakdown.png" role="img" aria-label="Area Deprivation index by Name of museum"></div>
   <figcaption class="art-chart-caption">Area Deprivation index by Name of museum</figcaption>
 </figure>
 <p class="art-p"><strong>The Archaeology Centre</strong> leads at <strong>10.0</strong>; <strong>Smithy Heritage Centre</strong> anchors the low end at <strong>10.0</strong>.</p>
 <p class="art-p">Grouping by name of museum exposes how the metric varies across the catalog's major entities.</p>
 <h2 id="chart-2-leaders" class="anchored">CHART 2 — LEADERS</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/uk-museums/charts/chart2_leaders.plotly.json" data-fallback="/images/content/articles/uk-museums/charts/chart2_leaders.png" role="img" aria-label="Top Name of museum"></div>
+  <div class="art-chart-live" data-chart="/data/articles/uk-museums/charts/chart2_leaders.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/uk-museums/charts/chart2_leaders.png" role="img" aria-label="Top Name of museum"></div>
   <figcaption class="art-chart-caption">Top Name of museum</figcaption>
 </figure>
 <p class="art-p"><strong>The Archaeology Centre</strong> leads at <strong>10.0</strong> — <strong>10.0</strong> marks the median among the top dozen.</p>
 <p class="art-p">Head-of-field concentration is where quality, scale, or brand visibly separates from the pack.</p>
 <h2 id="chart-3-distribution" class="anchored">CHART 3 — DISTRIBUTION</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/uk-museums/charts/chart3_distribution.plotly.json" data-fallback="/images/content/articles/uk-museums/charts/chart3_distribution.png" role="img" aria-label="Area Deprivation index by Admin area"></div>
+  <div class="art-chart-live" data-chart="/data/articles/uk-museums/charts/chart3_distribution.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/uk-museums/charts/chart3_distribution.png" role="img" aria-label="Area Deprivation index by Admin area"></div>
   <figcaption class="art-chart-caption">Area Deprivation index by Admin area</figcaption>
 </figure>
 <p class="art-p">Category boxes reveal whether area deprivation index consensus is shared or contested across tiers.</p>
 <p class="art-p">Wide whiskers flag segments where outliers — not averages — drive reputation.</p>
 <h2 id="chart-4-gap" class="anchored">CHART 4 — GAP ANALYSIS</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/uk-museums/charts/chart4_gap.plotly.json" data-fallback="/images/content/articles/uk-museums/charts/chart4_gap.png" role="img" aria-label="Area Deprivation index vs median by Admin area"></div>
+  <div class="art-chart-live" data-chart="/data/articles/uk-museums/charts/chart4_gap.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/uk-museums/charts/chart4_gap.png" role="img" aria-label="Area Deprivation index vs median by Admin area"></div>
   <figcaption class="art-chart-caption">Area Deprivation index vs median by Admin area</figcaption>
 </figure>
 <p class="art-p"><strong>/England/South West (English Region)/Wiltshire (English UA)</strong> sits <strong>2.00</strong> above the median; <strong>/England/South West (English Region)/Cornwall (English UA)</strong> trails by <strong>1.00</strong>.</p>
 <p class="art-p">Diverging from the median exposes which tiers over- or under-perform — not just who ranks first.</p>
-<h2 id="chart-5-relationship" class="anchored">CHART 5 — RELATIONSHIP</h2>
+<h2 id="chart-5-relationship" class="anchored">SUPPLEMENT — RELATIONSHIP</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/uk-museums/charts/chart5_scatter.plotly.json" data-fallback="/images/content/articles/uk-museums/charts/chart5_scatter.png" role="img" aria-label="Area Deprivation index vs DOMUS identifier"></div>
+  <div class="art-chart-live" data-chart="/data/articles/uk-museums/charts/chart5_scatter.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/uk-museums/charts/chart5_scatter.png" role="img" aria-label="Area Deprivation index vs DOMUS identifier"></div>
   <figcaption class="art-chart-caption">Area Deprivation index vs DOMUS identifier</figcaption>
 </figure>
 <p class="art-p">Joint plot of <strong>area deprivation index</strong> and <strong>domus identifier</strong> surfaces clusters the averages erase.</p>

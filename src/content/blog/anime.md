@@ -234,12 +234,13 @@ print(format_summary.round(3).to_string())</pre>
 </div>
 </div>
 </div>
+<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
 <h2 id="an-industry-that-industrialized-then-diversified" class="anchored">AN INDUSTRY THAT INDUSTRIALIZED — THEN DIVERSIFIED</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/anime/charts/chart1_releases_by_year.plotly.json" data-fallback="/images/content/articles/anime/charts/chart1_releases_by_year.png" role="img" aria-label="Releases By Year"></div>
+  <div class="art-chart-live" data-chart="/data/articles/anime/charts/chart1_releases_by_year.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/anime/charts/chart1_releases_by_year.png" role="img" aria-label="Releases By Year"></div>
   <figcaption class="art-chart-caption">Releases By Year</figcaption>
 </figure>
 </div>
@@ -315,8 +316,8 @@ ggsave("chart1_releases_by_year.png", plot = p1, path = "charts",
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/anime/charts/chart2_studio_consistency.plotly.json" data-fallback="/images/content/articles/anime/charts/chart2_studio_consistency.png" role="img" aria-label="Studio Consistency"></div>
-  <figcaption class="art-chart-caption">Studio Consistency</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/anime/charts/chart2_studio_consistency.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/anime/charts/chart2_studio_consistency.png" role="img" aria-label="Every studio on this chart has produced at least one great show"></div>
+  <figcaption class="art-chart-caption">Every studio on this chart has produced at least one great show</figcaption>
 </figure>
 </div>
 </div>
@@ -388,8 +389,8 @@ ggsave("chart2_studio_consistency.png", plot = p2, path = "charts",
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/anime/charts/chart3_genre_map.plotly.json" data-fallback="/images/content/articles/anime/charts/chart3_genre_map.png" role="img" aria-label="Genre Map"></div>
-  <figcaption class="art-chart-caption">Genre Map</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/anime/charts/chart3_genre_map.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/anime/charts/chart3_genre_map.png" role="img" aria-label="The genre map plots every major genre against two axes: how popular its titles are (X, log-reversed so most popular is right), and..."></div>
+  <figcaption class="art-chart-caption">The genre map plots every major genre against two axes: how popular its titles are (X, log-reversed so most popular is right), and...</figcaption>
 </figure>
 </div>
 </div>

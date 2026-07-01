@@ -40,37 +40,38 @@ draft: false
 <p>The source is the TidyTuesday release from <strong>2019-02-19</strong> (R for Data Science community). This working file contains <strong>3,370</strong> rows and <strong>6</strong> columns after merging all available CSV/XLSX tables in the week folder.</p>
 <p>Charts are exported as Plotly JSON with PNG fallbacks. Medians are used for robustness where distributions skew. Index-style fields (row numbers, sequential IDs) are excluded from metric selection.</p>
 <p class="art-p"><strong>How to read this report:</strong> start with the chart caption, then ask what the metric actually means, what a non-expert should notice first, and what an expert would challenge in the source. The goal is not to memorize every number; it is to leave with a sharper question than the one you arrived with.</p>
+<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
 <h2 id="chart-1-trend" class="anchored">CHART 1 — TREND</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/us-phds/charts/chart1_trend.plotly.json" data-fallback="/images/content/articles/us-phds/charts/chart1_trend.png" role="img" aria-label="Median N phds Over Time"></div>
+  <div class="art-chart-live" data-chart="/data/articles/us-phds/charts/chart1_trend.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/us-phds/charts/chart1_trend.png" role="img" aria-label="Median N phds Over Time"></div>
   <figcaption class="art-chart-caption">Median N phds Over Time</figcaption>
 </figure>
 <p class="art-p">Median n phds is <strong>rising</strong> from <strong>80.0</strong> in the opening period to <strong>87.0</strong> at the close.</p>
 <p class="art-p">Annual medians filter one-off spikes so the structural slope — not viral outliers — drives the story.</p>
 <h2 id="chart-2-leaders" class="anchored">CHART 2 — LEADERS</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/us-phds/charts/chart2_leaders.plotly.json" data-fallback="/images/content/articles/us-phds/charts/chart2_leaders.png" role="img" aria-label="Top Field"></div>
-  <figcaption class="art-chart-caption">Top Field</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/us-phds/charts/chart2_leaders.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/us-phds/charts/chart2_leaders.png" role="img" aria-label="Social sciences leads at 4,944 — 915 marks the median among the top dozen"></div>
+  <figcaption class="art-chart-caption">Social sciences leads at 4,944 — 915 marks the median among the top dozen</figcaption>
 </figure>
 <p class="art-p"><strong>Social sciences</strong> leads at <strong>4,944</strong> — <strong>915</strong> marks the median among the top dozen.</p>
 <p class="art-p">Head-of-field concentration is where quality, scale, or brand visibly separates from the pack.</p>
 <h2 id="chart-3-distribution" class="anchored">CHART 3 — DISTRIBUTION</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/us-phds/charts/chart3_distribution.plotly.json" data-fallback="/images/content/articles/us-phds/charts/chart3_distribution.png" role="img" aria-label="N phds by Broad field"></div>
+  <div class="art-chart-live" data-chart="/data/articles/us-phds/charts/chart3_distribution.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/us-phds/charts/chart3_distribution.png" role="img" aria-label="N phds by Broad field"></div>
   <figcaption class="art-chart-caption">N phds by Broad field</figcaption>
 </figure>
 <p class="art-p">Category boxes reveal whether n phds consensus is shared or contested across tiers.</p>
 <p class="art-p">Wide whiskers flag segments where outliers — not averages — drive reputation.</p>
 <h2 id="chart-4-gap" class="anchored">CHART 4 — GAP ANALYSIS</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/us-phds/charts/chart4_gap.plotly.json" data-fallback="/images/content/articles/us-phds/charts/chart4_gap.png" role="img" aria-label="N phds vs median by Broad field"></div>
+  <div class="art-chart-live" data-chart="/data/articles/us-phds/charts/chart4_gap.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/us-phds/charts/chart4_gap.png" role="img" aria-label="N phds vs median by Broad field"></div>
   <figcaption class="art-chart-caption">N phds vs median by Broad field</figcaption>
 </figure>
 <p class="art-p"><strong>Psychology and social sciences</strong> sits <strong>30.5</strong> above the median; <strong>Engineering</strong> trails by <strong>21.5</strong>.</p>
 <p class="art-p">Diverging from the median exposes which tiers over- or under-perform — not just who ranks first.</p>
-<h2 id="chart-pareto" class="anchored">CHART 5 — CONCENTRATION</h2>
+<h2 id="chart-pareto" class="anchored">SUPPLEMENT — CONCENTRATION</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/us-phds/charts/chart_pareto.plotly.json" data-fallback="/images/content/articles/us-phds/charts/chart_pareto.png" role="img" aria-label="Cumulative N phds"></div>
+  <div class="art-chart-live" data-chart="/data/articles/us-phds/charts/chart_pareto.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/us-phds/charts/chart_pareto.png" role="img" aria-label="Cumulative N phds"></div>
   <figcaption class="art-chart-caption">Cumulative N phds</figcaption>
 </figure>
 <p class="art-p">The top <strong>5</strong> field entries account for <strong>63%</strong> of the aggregate n phds.</p>

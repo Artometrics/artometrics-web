@@ -96,7 +96,10 @@ def frontmatter_value(md: str, key: str) -> str:
 
 
 def h2_titles(md: str) -> list[str]:
-    return [clean_html(match) for match in re.findall(r"<h2[^>]*>(.*?)</h2>", md, re.S)]
+    return [
+        clean_html(match).replace("’", "'").replace("‘", "'")
+        for match in re.findall(r"<h2[^>]*>(.*?)</h2>", md, re.S)
+    ]
 
 
 def chart_captions(md: str) -> list[str]:

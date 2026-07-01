@@ -38,6 +38,7 @@ draft: false
 <h2 id="dataset-context" class="anchored">DATASET CONTEXT</h2>
 <p class="art-p">This is a curated comparative model built from public reference records rather than a proprietary win-probability system. The goal is to create a shared vocabulary that later team profiles can reference.</p>
 <p class="art-p">A front-office analyst might want causal variables: payroll, age curves, draft capital, injuries, ownership. An Artometrician starts one level higher: what does the institution look like when winning, money, attention, and pain are placed on the same page?</p>
+<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
 <h2 id="title-mass" class="anchored">CHART 1 - DYNASTY MASS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/sports-dynasty-index-best-and-worst-conversion/charts/chart1_title_mass.plotly.json" data-source="Data: Baseball Reference, Basketball Reference, Pro Football Reference, Hockey Reference, Forbes - ARTOMETRICS" role="img" aria-label="A few franchises carry an outsized share of championship memory"></div>

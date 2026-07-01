@@ -40,35 +40,35 @@ draft: false
 <p>The index is deliberately blunt. It is better at identifying structural divergence — Switzerland has been "overvalued" for twenty straight years — than at predicting short-run FX moves. What it reliably captures is the cost of living encoded in a single standardized product.</p>
 <h2 id="chart-1-trend" class="anchored">CHART 1 — GLOBAL PRICE TREND</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/big-mac-index/charts/chart1_trend.plotly.json" data-fallback="/images/content/articles/big-mac-index/charts/chart1_trend.png" role="img" aria-label="Global median Big Mac dollar price, 2000–2020"></div>
+  <div class="art-chart-live" data-chart="/data/articles/big-mac-index/charts/chart1_trend.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/big-mac-index/charts/chart1_trend.png" role="img" aria-label="Global median Big Mac dollar price, 2000–2020"></div>
   <figcaption class="art-chart-caption">Global median Big Mac dollar price — 2000 to 2020</figcaption>
 </figure>
 <p class="art-p">The median dollar price nearly doubles over two decades, climbing from <strong>$1.91</strong> in 2000 to <strong>$3.50</strong> by 2020. The trajectory is not linear: prices stall between 2012 and 2015 as a strong US dollar compresses the dollar-equivalent values recorded in emerging markets. The post-2015 recovery reflects both local price inflation and a weakening dollar.</p>
 <p class="art-p">Using the median — rather than the mean — keeps Switzerland, Norway, and the other extreme outliers from inflating the global story. The median tells you what a typical country pays; the mean tells you what the expensive outliers can afford.</p>
 <h2 id="chart-2-leaders" class="anchored">CHART 2 — MOST EXPENSIVE COUNTRIES</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/big-mac-index/charts/chart2_leaders.plotly.json" data-fallback="/images/content/articles/big-mac-index/charts/chart2_leaders.png" role="img" aria-label="Top 12 countries by average Big Mac dollar price"></div>
+  <div class="art-chart-live" data-chart="/data/articles/big-mac-index/charts/chart2_leaders.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/big-mac-index/charts/chart2_leaders.png" role="img" aria-label="Top 12 countries by average Big Mac dollar price"></div>
   <figcaption class="art-chart-caption">Top 12 countries by average Big Mac dollar price (all years combined)</figcaption>
 </figure>
 <p class="art-p"><strong>Switzerland</strong> leads at <strong>$6.54</strong> — nearly twice the global median. The cluster of Scandinavian and Gulf states immediately below reflects the high-wage, high-cost-of-living profile shared by those economies. The United States (<strong>$4.20</strong> average) sits mid-table in this elite group — expensive by global standards, but not extraordinary within the developed world.</p>
 <p class="art-p">The gap between Switzerland ($6.54) and the twelfth-ranked country (~$3.90) is larger than the gap between that twelfth country and the global median. The top of the distribution is genuinely thin air.</p>
 <h2 id="chart-3-distribution" class="anchored">CHART 3 — HOW PRICES SPREAD</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/big-mac-index/charts/chart3_distribution.plotly.json" data-fallback="/images/content/articles/big-mac-index/charts/chart3_distribution.png" role="img" aria-label="Distribution of Big Mac dollar prices across all country-year observations"></div>
+  <div class="art-chart-live" data-chart="/data/articles/big-mac-index/charts/chart3_distribution.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/big-mac-index/charts/chart3_distribution.png" role="img" aria-label="Distribution of Big Mac dollar prices across all country-year observations"></div>
   <figcaption class="art-chart-caption">Distribution of Big Mac dollar prices — all 1,386 country-year observations</figcaption>
 </figure>
 <p class="art-p">The distribution is right-skewed: most observations cluster between <strong>$2</strong> and <strong>$4</strong>, while a long right tail captures wealthy nations with consistently elevated prices. Median ($3.04) sits below the mean ($3.26) precisely because that tail pulls the average upward.</p>
 <p class="art-p">The top decile begins at approximately <strong>$4.91</strong>. What the histogram makes visible is that "expensive" is a select club — roughly 10% of all observations — not a gradual continuum. The bottom 50% of the world pays between $1.50 and $3.04 for the same burger.</p>
 <h2 id="chart-4-leader-trends" class="anchored">CHART 4 — TRACKING THE LEADERS</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/big-mac-index/charts/chart4_leader_trends.plotly.json" data-fallback="/images/content/articles/big-mac-index/charts/chart4_leader_trends.png" role="img" aria-label="Price trajectories for the top-ranked countries over time"></div>
+  <div class="art-chart-live" data-chart="/data/articles/big-mac-index/charts/chart4_leader_trends.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/big-mac-index/charts/chart4_leader_trends.png" role="img" aria-label="Price trajectories for the top-ranked countries over time"></div>
   <figcaption class="art-chart-caption">Price trajectories for top-ranked countries — 2000 to 2020</figcaption>
 </figure>
 <p class="art-p">The leading countries do not rise in unison. Switzerland and Norway track closely — both Nordic/Alpine high-wage economies — but diverge after 2014 as oil revenues shift Norway's purchasing profile. The Euro-area countries show a visible dip around 2015, a direct consequence of the dollar strengthening and the euro weakening following the European debt crisis.</p>
 <p class="art-p">This chart is the most powerful in the set: it shows that the "expensive burger" club has relatively stable membership but volatile rankings within it. Sustained dominance requires sustained structural advantage — not just a momentary currency surge.</p>
-<h2 id="chart-5-relationship" class="anchored">CHART 5 — LOCAL VS DOLLAR PRICE</h2>
+<h2 id="chart-5-relationship" class="anchored">SUPPLEMENT — LOCAL VS DOLLAR PRICE</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/big-mac-index/charts/chart5_scatter.plotly.json" data-fallback="/images/content/articles/big-mac-index/charts/chart5_scatter.png" role="img" aria-label="Local currency price vs US dollar price — scatter plot"></div>
+  <div class="art-chart-live" data-chart="/data/articles/big-mac-index/charts/chart5_scatter.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/big-mac-index/charts/chart5_scatter.png" role="img" aria-label="Local currency price vs US dollar price — scatter plot"></div>
   <figcaption class="art-chart-caption">Local currency price vs US dollar price — each point is one country-year</figcaption>
 </figure>
 <p class="art-p">The scatter plot reveals the exchange-rate distortion directly. Points far above the diagonal line are countries where the local currency is undervalued relative to the dollar — the burger feels cheap in dollar terms even if it is not cheap locally. Points near the diagonal are close to purchasing power parity.</p>

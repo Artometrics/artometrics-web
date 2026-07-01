@@ -255,13 +255,14 @@ print(dynasty[[&quot;yearID&quot;, &quot;total_payroll&quot;, &quot;payroll_rank
 </div>
 </div>
 </div>
+<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
 <h2 id="years-of-winning-and-the-gaps-in-between" class="anchored">141 YEARS OF WINNING — AND THE GAPS IN BETWEEN</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/giant-the-artometrics-of-a-san-francisco-dynasty/charts/chart1_win_pct.plotly.json" data-fallback="/images/content/articles/giant-the-artometrics-of-a-san-francisco-dynasty/charts/chart1_win_pct.png" role="img" aria-label="Win Pct"></div>
-  <figcaption class="art-chart-caption">Win Pct</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/giant-the-artometrics-of-a-san-francisco-dynasty/charts/chart1_win_pct.plotly.json" data-source="Data: source cited in report references - ARTOMETRICS" data-fallback="/images/content/articles/giant-the-artometrics-of-a-san-francisco-dynasty/charts/chart1_win_pct.png" role="img" aria-label="The New York Giants were one of the best franchises in baseball for the first half of the twentieth century"></div>
+  <figcaption class="art-chart-caption">The New York Giants were one of the best franchises in baseball for the first half of the twentieth century</figcaption>
 </figure>
 </div>
 </div>
@@ -333,8 +334,8 @@ ggsave("chart1_win_pct.png", plot = p1, path = "charts",
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/giant-the-artometrics-of-a-san-francisco-dynasty/charts/chart2_attendance.plotly.json" data-fallback="/images/content/articles/giant-the-artometrics-of-a-san-francisco-dynasty/charts/chart2_attendance.png" role="img" aria-label="Attendance"></div>
-  <figcaption class="art-chart-caption">Attendance</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/giant-the-artometrics-of-a-san-francisco-dynasty/charts/chart2_attendance.plotly.json" data-source="Data: source cited in report references - ARTOMETRICS" data-fallback="/images/content/articles/giant-the-artometrics-of-a-san-francisco-dynasty/charts/chart2_attendance.png" role="img" aria-label="Candlestick Park was bad in ways that are hard to fully communicate to anyone who didn’t sit through a night game there"></div>
+  <figcaption class="art-chart-caption">Candlestick Park was bad in ways that are hard to fully communicate to anyone who didn’t sit through a night game there</figcaption>
 </figure>
 </div>
 </div>
@@ -414,8 +415,8 @@ ggsave("chart2_attendance.png", plot = p2, path = "charts",
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/giant-the-artometrics-of-a-san-francisco-dynasty/charts/chart3_payroll_wins.plotly.json" data-fallback="/images/content/articles/giant-the-artometrics-of-a-san-francisco-dynasty/charts/chart3_payroll_wins.png" role="img" aria-label="Payroll Wins"></div>
-  <figcaption class="art-chart-caption">Payroll Wins</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/giant-the-artometrics-of-a-san-francisco-dynasty/charts/chart3_payroll_wins.plotly.json" data-source="Data: source cited in report references - ARTOMETRICS" data-fallback="/images/content/articles/giant-the-artometrics-of-a-san-francisco-dynasty/charts/chart3_payroll_wins.png" role="img" aria-label="The scatter plot covers 32 seasons of Giants payroll history, and the first thing it tells you is that money and wins have never..."></div>
+  <figcaption class="art-chart-caption">The scatter plot covers 32 seasons of Giants payroll history, and the first thing it tells you is that money and wins have never...</figcaption>
 </figure>
 </div>
 </div>

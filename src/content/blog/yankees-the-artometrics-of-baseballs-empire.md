@@ -38,6 +38,7 @@ draft: false
 <h2 id="dataset-context" class="anchored">DATASET CONTEXT</h2>
 <p class="art-p">The charts use curated public-reference records from Baseball Reference, Retrosheet-style season summaries, Lahman historical tables, and widely cited payroll/value rankings. The intent is not to replace a play-by-play model; it is to quantify franchise identity at the institutional scale.</p>
 <p class="art-p">A baseball professional would look for conversion: how money becomes wins, how wins become postseason chances, and how postseason chances become flags. A fan mostly feels the gap between mythology and the current roster. This report puts both conversations on the same page.</p>
+<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
 <h2 id="banner-clusters" class="anchored">CHART 1 - BANNER CLUSTERS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/yankees-the-artometrics-of-baseballs-empire/charts/chart1_banner_clusters.plotly.json" data-source="Data: Baseball Reference, Lahman, Retrosheet, Forbes - ARTOMETRICS" role="img" aria-label="World Series titles by decade"></div>

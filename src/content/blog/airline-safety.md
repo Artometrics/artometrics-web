@@ -39,37 +39,38 @@ draft: false
 <p>The source is the TidyTuesday release from <strong>2018-08-07</strong> (R for Data Science community). This working file contains <strong>336</strong> rows and <strong>5</strong> columns after merging all available CSV/XLSX tables in the week folder.</p>
 <p>Charts are exported as Plotly JSON with PNG fallbacks. Medians are used for robustness where distributions skew. Index-style fields (row numbers, sequential IDs) are excluded from metric selection.</p>
 <p class="art-p"><strong>How to read this report:</strong> start with the chart caption, then ask what the metric actually means, what a non-expert should notice first, and what an expert would challenge in the source. The goal is not to memorize every number; it is to leave with a sharper question than the one you arrived with.</p>
+<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
 <h2 id="chart-1-breakdown" class="anchored">CHART 1 — BREAKDOWN</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/airline-safety/charts/chart1_breakdown.plotly.json" data-fallback="/images/content/articles/airline-safety/charts/chart1_breakdown.png" role="img" aria-label="Avail seat km per week by Airline"></div>
+  <div class="art-chart-live" data-chart="/data/articles/airline-safety/charts/chart1_breakdown.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/airline-safety/charts/chart1_breakdown.png" role="img" aria-label="Avail seat km per week by Airline"></div>
   <figcaption class="art-chart-caption">Avail seat km per week by Airline</figcaption>
 </figure>
 <p class="art-p"><strong>United / Continental</strong><em> leads at <strong>7,139,291,291</strong>; <strong>Qantas</strong></em> anchors the low end at <strong>1,917,428,984</strong>.</p>
 <p class="art-p">Grouping by airline exposes how the metric varies across the catalog's major entities.</p>
 <h2 id="chart-2-leaders" class="anchored">CHART 2 — LEADERS</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/airline-safety/charts/chart2_leaders.plotly.json" data-fallback="/images/content/articles/airline-safety/charts/chart2_leaders.png" role="img" aria-label="Top Airline"></div>
-  <figcaption class="art-chart-caption">Top Airline</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/airline-safety/charts/chart2_leaders.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/airline-safety/charts/chart2_leaders.png" role="img" aria-label="United / Continental * leads at 7,139,291,291 — 3,091,881,806 marks the median among the top dozen"></div>
+  <figcaption class="art-chart-caption">United / Continental * leads at 7,139,291,291 — 3,091,881,806 marks the median among the top dozen</figcaption>
 </figure>
 <p class="art-p"><strong>United / Continental</strong>* leads at <strong>7,139,291,291</strong> — <strong>3,091,881,806</strong> marks the median among the top dozen.</p>
 <p class="art-p">Head-of-field concentration is where quality, scale, or brand visibly separates from the pack.</p>
 <h2 id="chart-3-distribution" class="anchored">CHART 3 — DISTRIBUTION</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/airline-safety/charts/chart3_distribution.plotly.json" data-fallback="/images/content/articles/airline-safety/charts/chart3_distribution.png" role="img" aria-label="Avail seat km per week by Type of event"></div>
+  <div class="art-chart-live" data-chart="/data/articles/airline-safety/charts/chart3_distribution.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/airline-safety/charts/chart3_distribution.png" role="img" aria-label="Avail seat km per week by Type of event"></div>
   <figcaption class="art-chart-caption">Avail seat km per week by Type of event</figcaption>
 </figure>
 <p class="art-p">Category boxes reveal whether avail seat km per week consensus is shared or contested across tiers.</p>
 <p class="art-p">Wide whiskers flag segments where outliers — not averages — drive reputation.</p>
 <h2 id="chart-4-gap" class="anchored">CHART 4 — GAP ANALYSIS</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/airline-safety/charts/chart4_gap.plotly.json" data-fallback="/images/content/articles/airline-safety/charts/chart4_gap.png" role="img" aria-label="Avail seat km per week vs median by Type of event"></div>
+  <div class="art-chart-live" data-chart="/data/articles/airline-safety/charts/chart4_gap.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/airline-safety/charts/chart4_gap.png" role="img" aria-label="Avail seat km per week vs median by Type of event"></div>
   <figcaption class="art-chart-caption">Avail seat km per week vs median by Type of event</figcaption>
 </figure>
 <p class="art-p"><strong>incidents</strong> and <strong>fatal_accidents</strong> both sit very close to the median; read this chart as a stability check rather than a dramatic gap.</p>
 <p class="art-p">Diverging from the median exposes which tiers over- or under-perform — not just who ranks first.</p>
-<h2 id="chart-5-relationship" class="anchored">CHART 5 — RELATIONSHIP</h2>
+<h2 id="chart-5-relationship" class="anchored">SUPPLEMENT — RELATIONSHIP</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/airline-safety/charts/chart5_scatter.plotly.json" data-fallback="/images/content/articles/airline-safety/charts/chart5_scatter.png" role="img" aria-label="Avail seat km per week vs N events"></div>
+  <div class="art-chart-live" data-chart="/data/articles/airline-safety/charts/chart5_scatter.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/airline-safety/charts/chart5_scatter.png" role="img" aria-label="Avail seat km per week vs N events"></div>
   <figcaption class="art-chart-caption">Avail seat km per week vs N events</figcaption>
 </figure>
 <p class="art-p">Joint plot of <strong>avail seat km per week</strong> and <strong>n events</strong> surfaces clusters the averages erase.</p>

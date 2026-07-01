@@ -216,13 +216,14 @@ print(f&quot;r/h3snark:         {len(snark):,} posts | {snark[&#39;date&#39;].mi
 </div>
 </div>
 </div>
+<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
 <h2 id="chart-1-the-era-timeline" class="anchored">CHART 1 — THE ERA TIMELINE</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/h3-the-artometrics-of-a-youtube-dynasty/charts/chart1_era_timeline.plotly.json" data-fallback="/images/content/articles/h3-the-artometrics-of-a-youtube-dynasty/charts/chart1_era_timeline.png" role="img" aria-label="Era Timeline"></div>
-  <figcaption class="art-chart-caption">Era Timeline</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/h3-the-artometrics-of-a-youtube-dynasty/charts/chart1_era_timeline.plotly.json" data-source="Data: source cited in report references - ARTOMETRICS" data-fallback="/images/content/articles/h3-the-artometrics-of-a-youtube-dynasty/charts/chart1_era_timeline.png" role="img" aria-label="The shape of this chart tells you almost everything you need to know about the H3 Podcast’s commercial arc"></div>
+  <figcaption class="art-chart-caption">The shape of this chart tells you almost everything you need to know about the H3 Podcast’s commercial arc</figcaption>
 </figure>
 </div>
 </div>
@@ -283,8 +284,8 @@ ggsave(&quot;chart1_era_timeline.png&quot;, plot = p1,
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/h3-the-artometrics-of-a-youtube-dynasty/charts/chart2_duration_drift.plotly.json" data-fallback="/images/content/articles/h3-the-artometrics-of-a-youtube-dynasty/charts/chart2_duration_drift.png" role="img" aria-label="Duration Drift"></div>
-  <figcaption class="art-chart-caption">Duration Drift</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/h3-the-artometrics-of-a-youtube-dynasty/charts/chart2_duration_drift.plotly.json" data-source="Data: source cited in report references - ARTOMETRICS" data-fallback="/images/content/articles/h3-the-artometrics-of-a-youtube-dynasty/charts/chart2_duration_drift.png" role="img" aria-label="When H3 launched the podcast in 2017, the median episode ran 42 minutes "></div>
+  <figcaption class="art-chart-caption">When H3 launched the podcast in 2017, the median episode ran 42 minutes </figcaption>
 </figure>
 </div>
 </div>
@@ -347,8 +348,8 @@ ggsave(&quot;chart2_duration_drift.png&quot;, plot = p2,
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/h3-the-artometrics-of-a-youtube-dynasty/charts/chart3_reddit_activity.plotly.json" data-fallback="/images/content/articles/h3-the-artometrics-of-a-youtube-dynasty/charts/chart3_reddit_activity.png" role="img" aria-label="Reddit Activity"></div>
-  <figcaption class="art-chart-caption">Reddit Activity</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/h3-the-artometrics-of-a-youtube-dynasty/charts/chart3_reddit_activity.plotly.json" data-source="Data: source cited in report references - ARTOMETRICS" data-fallback="/images/content/articles/h3-the-artometrics-of-a-youtube-dynasty/charts/chart3_reddit_activity.png" role="img" aria-label="The indexed chart removes the raw scale difference between subreddits and asks a cleaner question: when did each community spike..."></div>
+  <figcaption class="art-chart-caption">The indexed chart removes the raw scale difference between subreddits and asks a cleaner question: when did each community spike...</figcaption>
 </figure>
 </div>
 </div>

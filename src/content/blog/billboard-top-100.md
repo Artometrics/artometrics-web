@@ -38,37 +38,38 @@ draft: false
 <p>The source is the TidyTuesday release from <strong>2021-09-14</strong> (R for Data Science community). This working file contains <strong>100,000</strong> rows and <strong>10</strong> columns after merging all available CSV/XLSX tables in the week folder.</p>
 <p>Charts are exported as Plotly JSON with PNG fallbacks. Medians are used for robustness where distributions skew. Index-style fields (row numbers, sequential IDs) are excluded from metric selection.</p>
 <p class="art-p"><strong>How to read this report:</strong> start with the chart caption, then ask what the metric actually means, what a non-expert should notice first, and what an expert would challenge in the source. The goal is not to memorize every number; it is to leave with a sharper question than the one you arrived with.</p>
+<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
 <h2 id="chart-1-breakdown" class="anchored">CHART 1 — BREAKDOWN</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/billboard-top-100/charts/chart1_breakdown.plotly.json" data-fallback="/images/content/articles/billboard-top-100/charts/chart1_breakdown.png" role="img" aria-label="Week position by Song"></div>
+  <div class="art-chart-live" data-chart="/data/articles/billboard-top-100/charts/chart1_breakdown.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/billboard-top-100/charts/chart1_breakdown.png" role="img" aria-label="Week position by Song"></div>
   <figcaption class="art-chart-caption">Week position by Song</figcaption>
 </figure>
 <p class="art-p"><strong>(Quarter To Four) Stomp</strong> leads at <strong>100</strong>; <strong>Girl (You Captivate Me)</strong> anchors the low end at <strong>100</strong>.</p>
 <p class="art-p">Grouping by song exposes how the metric varies across the catalog's major entities.</p>
 <h2 id="chart-2-leaders" class="anchored">CHART 2 — LEADERS</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/billboard-top-100/charts/chart2_leaders.plotly.json" data-fallback="/images/content/articles/billboard-top-100/charts/chart2_leaders.png" role="img" aria-label="Top Song"></div>
-  <figcaption class="art-chart-caption">Top Song</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/billboard-top-100/charts/chart2_leaders.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/billboard-top-100/charts/chart2_leaders.png" role="img" aria-label="(Quarter To Four) Stomp leads at 100 — 100 marks the median among the top dozen"></div>
+  <figcaption class="art-chart-caption">(Quarter To Four) Stomp leads at 100 — 100 marks the median among the top dozen</figcaption>
 </figure>
 <p class="art-p"><strong>(Quarter To Four) Stomp</strong> leads at <strong>100</strong> — <strong>100</strong> marks the median among the top dozen.</p>
 <p class="art-p">Head-of-field concentration is where quality, scale, or brand visibly separates from the pack.</p>
 <h2 id="chart-3-distribution" class="anchored">CHART 3 — DISTRIBUTION</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/billboard-top-100/charts/chart3_distribution.plotly.json" data-fallback="/images/content/articles/billboard-top-100/charts/chart3_distribution.png" role="img" aria-label="Week position Distribution"></div>
+  <div class="art-chart-live" data-chart="/data/articles/billboard-top-100/charts/chart3_distribution.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/billboard-top-100/charts/chart3_distribution.png" role="img" aria-label="Week position Distribution"></div>
   <figcaption class="art-chart-caption">Week position Distribution</figcaption>
 </figure>
 <p class="art-p">Median <strong>50.0</strong> vs mean <strong>50.4</strong> — the shape is relatively symmetric.</p>
 <p class="art-p">The top decile begins at <strong>91.0</strong>; that tail is where defining cases live.</p>
 <h2 id="chart-4-concentration" class="anchored">CHART 4 — CONCENTRATION</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/billboard-top-100/charts/chart4_pareto.plotly.json" data-fallback="/images/content/articles/billboard-top-100/charts/chart4_pareto.png" role="img" aria-label="Cumulative Week position"></div>
+  <div class="art-chart-live" data-chart="/data/articles/billboard-top-100/charts/chart4_pareto.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/billboard-top-100/charts/chart4_pareto.png" role="img" aria-label="Cumulative Week position"></div>
   <figcaption class="art-chart-caption">Cumulative Week position</figcaption>
 </figure>
 <p class="art-p">The top <strong>5</strong> song entries account for <strong>33%</strong> of the aggregate week position.</p>
 <p class="art-p">Steep Pareto curves mean a small head drives most of the signal — the long tail is noise until it isn't.</p>
-<h2 id="chart-5-relationship" class="anchored">CHART 5 — RELATIONSHIP</h2>
+<h2 id="chart-5-relationship" class="anchored">SUPPLEMENT — RELATIONSHIP</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/billboard-top-100/charts/chart5_scatter.plotly.json" data-fallback="/images/content/articles/billboard-top-100/charts/chart5_scatter.png" role="img" aria-label="Week position vs Instance"></div>
+  <div class="art-chart-live" data-chart="/data/articles/billboard-top-100/charts/chart5_scatter.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/billboard-top-100/charts/chart5_scatter.png" role="img" aria-label="Week position vs Instance"></div>
   <figcaption class="art-chart-caption">Week position vs Instance</figcaption>
 </figure>
 <p class="art-p">Joint plot of <strong>week position</strong> and <strong>instance</strong> surfaces clusters the averages erase.</p>

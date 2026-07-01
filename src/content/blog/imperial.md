@@ -220,13 +220,14 @@ print(peaks)</pre>
 </div>
 </div>
 <hr>
+<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
 <h2 id="chart-1-gdp-per-capita-across-empire-cores" class="anchored">CHART 1 — GDP PER CAPITA ACROSS EMPIRE CORES</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/imperial/charts/chart1_gdppc_all_empires.plotly.json" data-fallback="/images/content/articles/imperial/charts/chart1_gdppc_all_empires.png" role="img" aria-label="Gdppc All Empires"></div>
-  <figcaption class="art-chart-caption">Gdppc All Empires</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/imperial/charts/chart1_gdppc_all_empires.plotly.json" data-source="Data: source cited in report references - ARTOMETRICS" data-fallback="/images/content/articles/imperial/charts/chart1_gdppc_all_empires.png" role="img" aria-label="For the first 1,800 years of this chart, five of the six empire cores are essentially stationary"></div>
+  <figcaption class="art-chart-caption">For the first 1,800 years of this chart, five of the six empire cores are essentially stationary</figcaption>
 </figure>
 </div>
 </div>
@@ -306,7 +307,7 @@ ggsave(&quot;chart1_gdppc_all_empires.png&quot;, plot = p1,
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/imperial/charts/chart2_empire_lifespan_indexed.plotly.json" data-fallback="/images/content/articles/imperial/charts/chart2_empire_lifespan_indexed.png" role="img" aria-label="Empire Lifespan Indexed"></div>
+  <div class="art-chart-live" data-chart="/data/articles/imperial/charts/chart2_empire_lifespan_indexed.plotly.json" data-source="Data: source cited in report references - ARTOMETRICS" data-fallback="/images/content/articles/imperial/charts/chart2_empire_lifespan_indexed.png" role="img" aria-label="Empire Lifespan Indexed"></div>
   <figcaption class="art-chart-caption">Empire Lifespan Indexed</figcaption>
 </figure>
 </div>
@@ -374,8 +375,8 @@ ggsave(&quot;chart2_empire_lifespan_indexed.png&quot;, plot = p2,
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/imperial/charts/chart3_extraction_gap.plotly.json" data-fallback="/images/content/articles/imperial/charts/chart3_extraction_gap.png" role="img" aria-label="Extraction Gap"></div>
-  <figcaption class="art-chart-caption">Extraction Gap</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/imperial/charts/chart3_extraction_gap.plotly.json" data-source="Data: source cited in report references - ARTOMETRICS" data-fallback="/images/content/articles/imperial/charts/chart3_extraction_gap.png" role="img" aria-label="Chart 3 is the payoff"></div>
+  <figcaption class="art-chart-caption">Chart 3 is the payoff</figcaption>
 </figure>
 </div>
 </div>

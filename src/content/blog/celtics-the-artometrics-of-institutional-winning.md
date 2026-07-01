@@ -38,6 +38,7 @@ draft: false
 <h2 id="dataset-context" class="anchored">DATASET CONTEXT</h2>
 <p class="art-p">The report uses public NBA championship records, Basketball Reference franchise summaries, and conventional era groupings around the players most responsible for each window.</p>
 <p class="art-p">An expert fan would ask whether Boston's identity is still earned. An Artometrician asks how historical surplus changes the interpretation of modern results.</p>
+<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
 <h2 id="banner-density" class="anchored">CHART 1 - BANNER DENSITY</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/celtics-the-artometrics-of-institutional-winning/charts/chart1_banner_density.plotly.json" data-source="Data: Basketball Reference, NBA.com, Sports Reference - ARTOMETRICS" role="img" aria-label="Celtics NBA titles by decade"></div>

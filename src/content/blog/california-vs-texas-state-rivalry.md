@@ -38,6 +38,7 @@ draft: false
 <h2 id="dataset-context" class="anchored">DATASET CONTEXT</h2>
 <p class="art-p">The source stack for a full production pass includes BEA state GDP by industry, Census ACS population and migration, IRS migration summaries, BLS employment, state tax/budget documents, OEC/ITA export tables, and climate/energy data.</p>
 <p class="art-p">The charts use editorial indices to frame the argument before direct ingestion. The point is to avoid reducing the rivalry to one tax variable.</p>
+<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
 <h2 id="why-compared" class="anchored">CHART 1 - WHY THEY ARE COMPARED</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/california-vs-texas-state-rivalry/charts/chart1_why_compared.plotly.json" data-source="Data: BEA, Census ACS, BLS, IRS migration summaries, OEC/ITA exports, state budget documents - ARTOMETRICS" role="img" aria-label="California and Texas are rival systems because both are big enough to feel like countries"></div>

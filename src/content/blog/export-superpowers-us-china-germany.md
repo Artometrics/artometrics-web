@@ -38,6 +38,7 @@ draft: false
 <h2 id="dataset-context" class="anchored">DATASET CONTEXT</h2>
 <p class="art-p">The production version should use OEC/UN Comtrade product exports, partner concentration, World Bank/OECD services and GDP data, IMF macro context, and national industry statistics.</p>
 <p class="art-p">This framework pass uses editorial indices to define the analytical comparison before direct product-level ingestion.</p>
+<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
 <h2 id="models" class="anchored">CHART 1 - THREE MODELS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/export-superpowers-us-china-germany/charts/chart1_three_export_models.plotly.json" data-source="Data: OEC, UN Comtrade, World Bank, OECD, IMF, BEA, Eurostat, national statistics offices - ARTOMETRICS" role="img" aria-label="The United States, China, and Germany represent platform, factory, and machine export systems"></div>

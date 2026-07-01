@@ -38,6 +38,7 @@ draft: false
 <h2 id="dataset-context" class="anchored">DATASET CONTEXT</h2>
 <p class="art-p">The source stack includes BEA metro GDP, Census ACS, BLS employment, DataSF, NYC Open Data, World Cities Culture Forum, public venture-capital references, transit agencies, and office-market summaries.</p>
 <p class="art-p">The report uses editorial indices to define the comparison frame before direct API ingestion. It also references the San Francisco Data Microscope as the local profile layer.</p>
+<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
 <h2 id="command-lab" class="anchored">CHART 1 - COMMAND VERSUS LAB</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/new-york-vs-san-francisco-city-systems/charts/chart1_command_vs_lab.plotly.json" data-source="Data: BEA, Census ACS, DataSF, NYC Open Data, BLS, World Cities Culture Forum, PitchBook-style public venture references - ARTOMETRICS" role="img" aria-label="New York commands capital and culture while San Francisco prototypes new systems"></div>

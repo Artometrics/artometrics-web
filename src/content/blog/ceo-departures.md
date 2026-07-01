@@ -39,37 +39,38 @@ draft: false
 <p>The source is the TidyTuesday release from <strong>2021-04-27</strong> (R for Data Science community). This working file contains <strong>9,423</strong> rows and <strong>19</strong> columns after merging all available CSV/XLSX tables in the week folder.</p>
 <p>Charts are exported as Plotly JSON with PNG fallbacks. Medians are used for robustness where distributions skew. Index-style fields (row numbers, sequential IDs) are excluded from metric selection.</p>
 <p class="art-p"><strong>How to read this report:</strong> start with the chart caption, then ask what the metric actually means, what a non-expert should notice first, and what an expert would challenge in the source. The goal is not to memorize every number; it is to leave with a sharper question than the one you arrived with.</p>
+<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
 <h2 id="chart-1-breakdown" class="anchored">CHART 1 — BREAKDOWN</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/ceo-departures/charts/chart1_breakdown.plotly.json" data-fallback="/images/content/articles/ceo-departures/charts/chart1_breakdown.png" role="img" aria-label="Max tenure ceodb by Coname"></div>
+  <div class="art-chart-live" data-chart="/data/articles/ceo-departures/charts/chart1_breakdown.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/ceo-departures/charts/chart1_breakdown.png" role="img" aria-label="Max tenure ceodb by Coname"></div>
   <figcaption class="art-chart-caption">Max tenure ceodb by Coname</figcaption>
 </figure>
 <p class="art-p"><strong>CONVERSANT INC</strong> leads at <strong>2.50</strong>; <strong>AVATEX CORP</strong> anchors the low end at <strong>2.00</strong>.</p>
 <p class="art-p">Grouping by coname exposes how the metric varies across the catalog's major entities.</p>
 <h2 id="chart-2-leaders" class="anchored">CHART 2 — LEADERS</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/ceo-departures/charts/chart2_leaders.plotly.json" data-fallback="/images/content/articles/ceo-departures/charts/chart2_leaders.png" role="img" aria-label="Top Coname"></div>
-  <figcaption class="art-chart-caption">Top Coname</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/ceo-departures/charts/chart2_leaders.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/ceo-departures/charts/chart2_leaders.png" role="img" aria-label="CONVERSANT INC leads at 2.50 — 2.00 marks the median among the top dozen"></div>
+  <figcaption class="art-chart-caption">CONVERSANT INC leads at 2.50 — 2.00 marks the median among the top dozen</figcaption>
 </figure>
 <p class="art-p"><strong>CONVERSANT INC</strong> leads at <strong>2.50</strong> — <strong>2.00</strong> marks the median among the top dozen.</p>
 <p class="art-p">Head-of-field concentration is where quality, scale, or brand visibly separates from the pack.</p>
 <h2 id="chart-3-distribution" class="anchored">CHART 3 — DISTRIBUTION</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/ceo-departures/charts/chart3_distribution.plotly.json" data-fallback="/images/content/articles/ceo-departures/charts/chart3_distribution.png" role="img" aria-label="Max tenure ceodb by Interim coceo"></div>
+  <div class="art-chart-live" data-chart="/data/articles/ceo-departures/charts/chart3_distribution.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/ceo-departures/charts/chart3_distribution.png" role="img" aria-label="Max tenure ceodb by Interim coceo"></div>
   <figcaption class="art-chart-caption">Max tenure ceodb by Interim coceo</figcaption>
 </figure>
 <p class="art-p">Category boxes reveal whether max tenure ceodb consensus is shared or contested across tiers.</p>
 <p class="art-p">Wide whiskers flag segments where outliers — not averages — drive reputation.</p>
 <h2 id="chart-4-gap" class="anchored">CHART 4 — GAP ANALYSIS</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/ceo-departures/charts/chart4_gap.plotly.json" data-fallback="/images/content/articles/ceo-departures/charts/chart4_gap.png" role="img" aria-label="Max tenure ceodb vs median by Interim coceo"></div>
+  <div class="art-chart-live" data-chart="/data/articles/ceo-departures/charts/chart4_gap.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/ceo-departures/charts/chart4_gap.png" role="img" aria-label="Max tenure ceodb vs median by Interim coceo"></div>
   <figcaption class="art-chart-caption">Max tenure ceodb vs median by Interim coceo</figcaption>
 </figure>
 <p class="art-p"><strong>CO-ceo</strong> sits <strong>1.00</strong> above the median; <strong>CO-CEO</strong> trails by <strong>0.00</strong>.</p>
 <p class="art-p">Diverging from the median exposes which tiers over- or under-perform — not just who ranks first.</p>
-<h2 id="chart-5-relationship" class="anchored">CHART 5 — RELATIONSHIP</h2>
+<h2 id="chart-5-relationship" class="anchored">SUPPLEMENT — RELATIONSHIP</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/ceo-departures/charts/chart5_scatter.plotly.json" data-fallback="/images/content/articles/ceo-departures/charts/chart5_scatter.png" role="img" aria-label="Max tenure ceodb vs Tenure no ceodb"></div>
+  <div class="art-chart-live" data-chart="/data/articles/ceo-departures/charts/chart5_scatter.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/ceo-departures/charts/chart5_scatter.png" role="img" aria-label="Max tenure ceodb vs Tenure no ceodb"></div>
   <figcaption class="art-chart-caption">Max tenure ceodb vs Tenure no ceodb</figcaption>
 </figure>
 <p class="art-p">Joint plot of <strong>max tenure ceodb</strong> and <strong>tenure no ceodb</strong> surfaces clusters the averages erase.</p>

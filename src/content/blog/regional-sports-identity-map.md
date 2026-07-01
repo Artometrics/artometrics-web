@@ -38,6 +38,7 @@ draft: false
 <h2 id="dataset-context" class="anchored">DATASET CONTEXT</h2>
 <p class="art-p">The charts use public franchise histories, rounded valuation summaries, and editorial identity indices. The indices are not official statistics; they are structured prompts for comparing markets.</p>
 <p class="art-p">A cultural economist would ask how facilities, media density, migration, ownership, and league rules shape local identity. This report is the first map layer for that conversation.</p>
+<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
 <h2 id="regional-titles" class="anchored">CHART 1 - REGIONAL TITLE DENSITY</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/regional-sports-identity-map/charts/chart1_regional_title_density.plotly.json" data-source="Data: Reference franchise histories, Census regional framing, Forbes, public attendance and championship records - ARTOMETRICS" role="img" aria-label="Championship memory clusters by region"></div>

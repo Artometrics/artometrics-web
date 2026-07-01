@@ -38,6 +38,7 @@ draft: false
 <h2 id="dataset-context" class="anchored">DATASET CONTEXT</h2>
 <p class="art-p">The report uses public NBA championship records, Basketball Reference franchise histories, and league-reference summaries. Era buckets are editorial groupings around the players and teams most responsible for each title window.</p>
 <p class="art-p">Professionals would ask how a franchise repeatedly reopens title windows. Fans ask why the jersey seems to summon stars. The charts show the same mechanism from two angles: market gravity plus historical proof.</p>
+<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
 <h2 id="titles-by-decade" class="anchored">CHART 1 - BANNER CYCLES</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/lakers-the-artometrics-of-basketball-glamour/charts/chart1_titles_by_decade.plotly.json" data-source="Data: Basketball Reference, NBA.com, Sports Reference - ARTOMETRICS" role="img" aria-label="Lakers championships by decade"></div>

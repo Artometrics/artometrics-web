@@ -38,6 +38,7 @@ draft: false
 <h2 id="dataset-context" class="anchored">DATASET CONTEXT</h2>
 <p class="art-p">Pantheon began at the MIT Collective Learning group and is now developed by Datawheel. Its public documentation describes biography records, birth/death locations, occupations, language editions, and attention measures.</p>
 <p class="art-p">The charts here use a curated editorial slice inspired by those fields. The point is to design the article architecture before scaling against the full downloadable dataset.</p>
+<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
 <h2 id="memory-domains" class="anchored">CHART 1 - MEMORY DOMAINS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/pantheon-the-artometrics-of-collective-memory/charts/chart1_memory_domains.plotly.json" data-source="Data: Pantheon 2.0 / Datawheel, MIT Collective Learning Group, Wikipedia API - ARTOMETRICS" role="img" aria-label="Power, art, and science travel farther across collective memory"></div>

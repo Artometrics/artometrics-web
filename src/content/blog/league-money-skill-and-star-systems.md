@@ -38,6 +38,7 @@ draft: false
 <h2 id="dataset-context" class="anchored">DATASET CONTEXT</h2>
 <p class="art-p">The figures combine public valuation summaries, reference-record league structures, and editorial indices. The indices are deliberately transparent: they exist to compare systems, not to pretend every input is observed with laboratory precision.</p>
 <p class="art-p">A commissioner, analyst, or fan would ask different questions. The useful layer is the shared one: what does the league make easy, what does it make scarce, and what does it make emotionally expensive?</p>
+<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
 <h2 id="value-floor" class="anchored">CHART 1 - VALUE FLOOR</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/league-money-skill-and-star-systems/charts/chart1_league_value_floor.plotly.json" data-source="Data: Forbes, Spotrac, Basketball Reference, Baseball Reference, Pro Football Reference, Hockey Reference - ARTOMETRICS" role="img" aria-label="The NFL turns scarcity and national television into the highest average club value"></div>

@@ -38,6 +38,7 @@ draft: false
 <h2 id="dataset-context" class="anchored">DATASET CONTEXT</h2>
 <p class="art-p">DataSF provides Socrata/SODA API access to city datasets, including registered businesses, building permits, 311 cases, public safety, transportation, housing, and civic operations. Regional identity requires adding BEA, Census ACS, BLS, Commerce export data, and Bay Area transportation sources.</p>
 <p class="art-p">These charts are a framework pass: they show what the SF report should test when direct APIs are pulled.</p>
+<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
 <h2 id="identity-stack" class="anchored">CHART 1 - IDENTITY STACK</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/san-francisco-data-microscope/charts/chart1_sf_identity_stack.plotly.json" data-source="Data: DataSF, BEA, Census ACS, BLS, Commerce Metro Export Series, World Cities Culture Forum - ARTOMETRICS" role="img" aria-label="San Francisco exports software, finance coordination, and cultural permission"></div>

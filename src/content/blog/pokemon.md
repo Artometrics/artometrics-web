@@ -192,6 +192,7 @@ print(pokemon[&quot;type_1&quot;].value_counts().head(5))</pre>
 </div>
 </div>
 </div>
+<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
 <h2 id="stat-identity-by-type" class="anchored">STAT IDENTITY BY TYPE</h2>
 <div class="cell">
 <div class="cell-output-display">

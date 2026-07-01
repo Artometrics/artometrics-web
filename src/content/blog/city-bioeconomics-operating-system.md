@@ -38,6 +38,7 @@ draft: false
 <h2 id="dataset-context" class="anchored">DATASET CONTEXT</h2>
 <p class="art-p">The source stack includes BEA regional GDP, Commerce metro exports, DOSE global subnational output, Census ACS, World Cities Culture Forum, and local Socrata portals such as DataSF or NYC Open Data.</p>
 <p class="art-p">The charts use transparent editorial indices to define the report structure. A production pass should replace each index with a direct API or CSV aggregate.</p>
+<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
 <h2 id="system-layers" class="anchored">CHART 1 - SYSTEM LAYERS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/city-bioeconomics-operating-system/charts/chart1_city_system_layers.plotly.json" data-source="Data: BEA, DOSE, World Cities Culture Forum, DataSF/NYC Open Data, Census ACS - ARTOMETRICS" role="img" aria-label="A city identity is a stack of economic and cultural systems"></div>

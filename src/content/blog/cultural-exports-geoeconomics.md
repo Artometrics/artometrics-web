@@ -38,6 +38,7 @@ draft: false
 <h2 id="dataset-context" class="anchored">DATASET CONTEXT</h2>
 <p class="art-p">The source stack includes UNESCO cultural statistics, WIPO creative-industry indicators, World Bank and OECD services data, MusicBrainz, IMDb/TMDb-style film metadata, Wikidata, and World Cities Culture Forum.</p>
 <p class="art-p">The charts use editorial indices to define the report structure. A direct production pass should join cultural trade, platform, awards, tourism, and city infrastructure data.</p>
+<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
 <h2 id="soft-power" class="anchored">CHART 1 - SOFT POWER AND TRADE</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/cultural-exports-geoeconomics/charts/chart1_soft_power_trade.plotly.json" data-source="Data: UNESCO, World Bank, WIPO, MusicBrainz, IMDb/TMDb references, World Cities Culture Forum - ARTOMETRICS" role="img" aria-label="Cultural exports travel alongside goods and services exports"></div>

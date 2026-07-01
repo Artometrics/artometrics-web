@@ -224,13 +224,14 @@ print(state_pct.round(1))</pre>
 </div>
 </div>
 </div>
+<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
 <h2 id="the-geography-of-failure" class="anchored">THE GEOGRAPHY OF FAILURE</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/readmitted/charts/chart1_states_penalized.plotly.json" data-fallback="/images/content/articles/readmitted/charts/chart1_states_penalized.png" role="img" aria-label="States Penalized"></div>
-  <figcaption class="art-chart-caption">States Penalized</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/readmitted/charts/chart1_states_penalized.plotly.json" data-source="Data: source cited in report references - ARTOMETRICS" data-fallback="/images/content/articles/readmitted/charts/chart1_states_penalized.png" role="img" aria-label="Nearly half of all hospital-condition pairs in this dataset carry an excess readmission ratio above 1.0"></div>
+  <figcaption class="art-chart-caption">Nearly half of all hospital-condition pairs in this dataset carry an excess readmission ratio above 1.0</figcaption>
 </figure>
 </div>
 </div>
@@ -293,7 +294,7 @@ ggsave("chart1_states_penalized.png",
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/readmitted/charts/chart2_err_by_condition.plotly.json" data-fallback="/images/content/articles/readmitted/charts/chart2_err_by_condition.png" role="img" aria-label="Err By Condition"></div>
+  <div class="art-chart-live" data-chart="/data/articles/readmitted/charts/chart2_err_by_condition.plotly.json" data-source="Data: source cited in report references - ARTOMETRICS" data-fallback="/images/content/articles/readmitted/charts/chart2_err_by_condition.png" role="img" aria-label="Err By Condition"></div>
   <figcaption class="art-chart-caption">Err By Condition</figcaption>
 </figure>
 </div>
@@ -372,7 +373,7 @@ ggsave("chart2_err_by_condition.png",
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/readmitted/charts/chart3_penalty_by_ownership.plotly.json" data-fallback="/images/content/articles/readmitted/charts/chart3_penalty_by_ownership.png" role="img" aria-label="Penalty By Ownership"></div>
+  <div class="art-chart-live" data-chart="/data/articles/readmitted/charts/chart3_penalty_by_ownership.plotly.json" data-source="Data: source cited in report references - ARTOMETRICS" data-fallback="/images/content/articles/readmitted/charts/chart3_penalty_by_ownership.png" role="img" aria-label="Penalty By Ownership"></div>
   <figcaption class="art-chart-caption">Penalty By Ownership</figcaption>
 </figure>
 </div>

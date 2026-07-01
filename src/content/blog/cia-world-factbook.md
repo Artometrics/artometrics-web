@@ -38,37 +38,38 @@ draft: false
 <p>The source is the TidyTuesday release from <strong>2024-10-22</strong> (R for Data Science community). This working file contains <strong>259</strong> rows and <strong>11</strong> columns after merging all available CSV/XLSX tables in the week folder.</p>
 <p>Charts are exported as Plotly JSON with PNG fallbacks. Medians are used for robustness where distributions skew. Index-style fields (row numbers, sequential IDs) are excluded from metric selection.</p>
 <p class="art-p"><strong>How to read this report:</strong> start with the chart caption, then ask what the metric actually means, what a non-expert should notice first, and what an expert would challenge in the source. The goal is not to memorize every number; it is to leave with a sharper question than the one you arrived with.</p>
+<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
 <h2 id="chart-1-breakdown" class="anchored">CHART 1 — BREAKDOWN</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/cia-world-factbook/charts/chart1_breakdown.plotly.json" data-fallback="/images/content/articles/cia-world-factbook/charts/chart1_breakdown.png" role="img" aria-label="Population by Country"></div>
+  <div class="art-chart-live" data-chart="/data/articles/cia-world-factbook/charts/chart1_breakdown.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/cia-world-factbook/charts/chart1_breakdown.png" role="img" aria-label="Population by Country"></div>
   <figcaption class="art-chart-caption">Population by Country</figcaption>
 </figure>
 <p class="art-p"><strong>China</strong> leads at <strong>1,355,692,576</strong>; <strong>Mexico</strong> anchors the low end at <strong>120,286,655</strong>.</p>
 <p class="art-p">Grouping by country exposes how the metric varies across the catalog's major entities.</p>
 <h2 id="chart-2-leaders" class="anchored">CHART 2 — LEADERS</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/cia-world-factbook/charts/chart2_leaders.plotly.json" data-fallback="/images/content/articles/cia-world-factbook/charts/chart2_leaders.png" role="img" aria-label="Top Country"></div>
-  <figcaption class="art-chart-caption">Top Country</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/cia-world-factbook/charts/chart2_leaders.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/cia-world-factbook/charts/chart2_leaders.png" role="img" aria-label="China leads at 1,355,692,576 — 199,415,584 marks the median among the top dozen"></div>
+  <figcaption class="art-chart-caption">China leads at 1,355,692,576 — 199,415,584 marks the median among the top dozen</figcaption>
 </figure>
 <p class="art-p"><strong>China</strong> leads at <strong>1,355,692,576</strong> — <strong>199,415,584</strong> marks the median among the top dozen.</p>
 <p class="art-p">Head-of-field concentration is where quality, scale, or brand visibly separates from the pack.</p>
 <h2 id="chart-3-distribution" class="anchored">CHART 3 — DISTRIBUTION</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/cia-world-factbook/charts/chart3_distribution.plotly.json" data-fallback="/images/content/articles/cia-world-factbook/charts/chart3_distribution.png" role="img" aria-label="Population Distribution"></div>
-  <figcaption class="art-chart-caption">Population Distribution</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/cia-world-factbook/charts/chart3_distribution.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/cia-world-factbook/charts/chart3_distribution.png" role="img" aria-label="Median 5,220,371 vs mean 32,294,361 — the shape is right-skewed"></div>
+  <figcaption class="art-chart-caption">Median 5,220,371 vs mean 32,294,361 — the shape is right-skewed</figcaption>
 </figure>
 <p class="art-p">Median <strong>5,220,371</strong> vs mean <strong>32,294,361</strong> — the shape is right-skewed.</p>
 <p class="art-p">The top decile begins at <strong>57,526,414</strong>; that tail is where defining cases live.</p>
 <h2 id="chart-4-concentration" class="anchored">CHART 4 — CONCENTRATION</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/cia-world-factbook/charts/chart4_pareto.plotly.json" data-fallback="/images/content/articles/cia-world-factbook/charts/chart4_pareto.png" role="img" aria-label="Cumulative Population"></div>
-  <figcaption class="art-chart-caption">Cumulative Population</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/cia-world-factbook/charts/chart4_pareto.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/cia-world-factbook/charts/chart4_pareto.png" role="img" aria-label="The top 5 country entries account for 72% of the aggregate population"></div>
+  <figcaption class="art-chart-caption">The top 5 country entries account for 72% of the aggregate population</figcaption>
 </figure>
 <p class="art-p">The top <strong>5</strong> country entries account for <strong>72%</strong> of the aggregate population.</p>
 <p class="art-p">Steep Pareto curves mean a small head drives most of the signal — the long tail is noise until it isn't.</p>
-<h2 id="chart-5-relationship" class="anchored">CHART 5 — RELATIONSHIP</h2>
+<h2 id="chart-5-relationship" class="anchored">SUPPLEMENT — RELATIONSHIP</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/cia-world-factbook/charts/chart5_scatter.plotly.json" data-fallback="/images/content/articles/cia-world-factbook/charts/chart5_scatter.png" role="img" aria-label="Population vs Birth rate"></div>
+  <div class="art-chart-live" data-chart="/data/articles/cia-world-factbook/charts/chart5_scatter.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/cia-world-factbook/charts/chart5_scatter.png" role="img" aria-label="Population vs Birth rate"></div>
   <figcaption class="art-chart-caption">Population vs Birth rate</figcaption>
 </figure>
 <p class="art-p">Joint plot of <strong>population</strong> and <strong>birth rate</strong> surfaces clusters the averages erase.</p>

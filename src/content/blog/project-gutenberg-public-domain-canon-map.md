@@ -38,6 +38,7 @@ draft: false
 <h2 id="dataset-context" class="anchored">DATASET CONTEXT</h2>
 <p class="art-p">Project Gutenberg provides machine-readable metadata in RDF/XML, MARC, and CSV formats. Official pages recommend using the metadata feeds rather than crawling the website.</p>
 <p class="art-p">A scaled version of this report should ingest the weekly CSV or RDF catalog, normalize subjects/languages/authors, and join to adaptation, school syllabus, and Wikidata signals.</p>
+<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
 <h2 id="language-gravity" class="anchored">CHART 1 - LANGUAGE GRAVITY</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/project-gutenberg-public-domain-canon-map/charts/chart1_language_gravity.plotly.json" data-source="Data: Project Gutenberg RDF/CSV catalog feeds, Library of Congress subject logic, Wikidata - ARTOMETRICS" role="img" aria-label="English dominates the accessible public-domain shelf"></div>

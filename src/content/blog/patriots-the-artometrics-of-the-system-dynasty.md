@@ -38,6 +38,7 @@ draft: false
 <h2 id="dataset-context" class="anchored">DATASET CONTEXT</h2>
 <p class="art-p">The report uses public Pro Football Reference franchise records, NFL postseason histories, and Forbes-style franchise value summaries. Periods are editorial groupings designed to isolate the dynasty discontinuity.</p>
 <p class="art-p">An NFL analyst would ask how much of the dynasty was quarterback versus system. A fan asks why the same logo feels so different after Brady. The charts show both questions share the same hinge.</p>
+<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
 <h2 id="system-shock" class="anchored">CHART 1 - SYSTEM SHOCK</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/patriots-the-artometrics-of-the-system-dynasty/charts/chart1_system_shock.plotly.json" data-source="Data: Pro Football Reference, NFL records, Forbes - ARTOMETRICS" role="img" aria-label="Patriots playoff wins by broad franchise period"></div>

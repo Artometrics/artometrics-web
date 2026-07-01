@@ -246,13 +246,14 @@ print(f&quot;Ratio (higher = more self-distancing): {ratio}&quot;)
 </div>
 </div>
 <hr>
+<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
 <h2 id="leadership-trait-analysis" class="anchored">LEADERSHIP TRAIT ANALYSIS</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/caesar-the-psychonomics-of-emperor-julius/charts/chart1_lta_radar.plotly.json" data-fallback="/images/content/articles/caesar-the-psychonomics-of-emperor-julius/charts/chart1_lta_radar.png" role="img" aria-label="Lta Radar"></div>
-  <figcaption class="art-chart-caption">Lta Radar</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/caesar-the-psychonomics-of-emperor-julius/charts/chart1_lta_radar.plotly.json" data-source="Data: source cited in report references - ARTOMETRICS" data-fallback="/images/content/articles/caesar-the-psychonomics-of-emperor-julius/charts/chart1_lta_radar.png" role="img" aria-label="Caesar’s LTA profile has a distinctive asymmetric shape that makes the psychonomic argument visible before you read a word"></div>
+  <figcaption class="art-chart-caption">Caesar’s LTA profile has a distinctive asymmetric shape that makes the psychonomic argument visible before you read a word</figcaption>
 </figure>
 </div>
 </div>
@@ -287,8 +288,8 @@ print(f&quot;Ratio (higher = more self-distancing): {ratio}&quot;)
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/caesar-the-psychonomics-of-emperor-julius/charts/chart2_rome_gdp.plotly.json" data-fallback="/images/content/articles/caesar-the-psychonomics-of-emperor-julius/charts/chart2_rome_gdp.png" role="img" aria-label="Rome Gdp"></div>
-  <figcaption class="art-chart-caption">Rome Gdp</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/caesar-the-psychonomics-of-emperor-julius/charts/chart2_rome_gdp.plotly.json" data-source="Data: source cited in report references - ARTOMETRICS" data-fallback="/images/content/articles/caesar-the-psychonomics-of-emperor-julius/charts/chart2_rome_gdp.png" role="img" aria-label="The most important feature of this chart is not Caesar’s era — it is what comes after it"></div>
+  <figcaption class="art-chart-caption">The most important feature of this chart is not Caesar’s era — it is what comes after it</figcaption>
 </figure>
 </div>
 </div>
@@ -320,8 +321,8 @@ print(f&quot;Ratio (higher = more self-distancing): {ratio}&quot;)
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/caesar-the-psychonomics-of-emperor-julius/charts/chart3_patronage_network.plotly.json" data-fallback="/images/content/articles/caesar-the-psychonomics-of-emperor-julius/charts/chart3_patronage_network.png" role="img" aria-label="Patronage Network"></div>
-  <figcaption class="art-chart-caption">Patronage Network</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/caesar-the-psychonomics-of-emperor-julius/charts/chart3_patronage_network.plotly.json" data-source="Data: source cited in report references - ARTOMETRICS" data-fallback="/images/content/articles/caesar-the-psychonomics-of-emperor-julius/charts/chart3_patronage_network.png" role="img" aria-label="The network chart makes the psychonomic argument structural"></div>
+  <figcaption class="art-chart-caption">The network chart makes the psychonomic argument structural</figcaption>
 </figure>
 </div>
 </div>

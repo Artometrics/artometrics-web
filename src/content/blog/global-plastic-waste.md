@@ -39,37 +39,38 @@ draft: false
 <p>The source is the TidyTuesday release from <strong>2019-05-21</strong> (R for Data Science community). This working file contains <strong>22,204</strong> rows and <strong>7</strong> columns after merging all available CSV/XLSX tables in the week folder.</p>
 <p>Charts are exported as Plotly JSON with PNG fallbacks. Medians are used for robustness where distributions skew. Index-style fields (row numbers, sequential IDs) are excluded from metric selection.</p>
 <p class="art-p"><strong>How to read this report:</strong> start with the chart caption, then ask what the metric actually means, what a non-expert should notice first, and what an expert would challenge in the source. The goal is not to memorize every number; it is to leave with a sharper question than the one you arrived with.</p>
+<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
 <h2 id="chart-1-trend" class="anchored">CHART 1 — TREND</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/global-plastic-waste/charts/chart1_trend.plotly.json" data-fallback="/images/content/articles/global-plastic-waste/charts/chart1_trend.png" role="img" aria-label="Median GDP per capita, PPP (constant 2011 international $) (Rate) Over Time"></div>
+  <div class="art-chart-live" data-chart="/data/articles/global-plastic-waste/charts/chart1_trend.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/global-plastic-waste/charts/chart1_trend.png" role="img" aria-label="Median GDP per capita, PPP (constant 2011 international $) (Rate) Over Time"></div>
   <figcaption class="art-chart-caption">Median GDP per capita, PPP (constant 2011 international $) (Rate) Over Time</figcaption>
 </figure>
 <p class="art-p">Median gdp per capita, ppp (constant 2011 international $) (rate) is <strong>rising</strong> from <strong>5,891</strong> in the opening period to <strong>12,592</strong> at the close.</p>
 <p class="art-p">Annual medians filter one-off spikes so the structural slope — not viral outliers — drives the story.</p>
 <h2 id="chart-2-leaders" class="anchored">CHART 2 — LEADERS</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/global-plastic-waste/charts/chart2_leaders.plotly.json" data-fallback="/images/content/articles/global-plastic-waste/charts/chart2_leaders.png" role="img" aria-label="Top Entity"></div>
-  <figcaption class="art-chart-caption">Top Entity</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/global-plastic-waste/charts/chart2_leaders.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/global-plastic-waste/charts/chart2_leaders.png" role="img" aria-label="Qatar leads at 118,396 — 67,799 marks the median among the top dozen"></div>
+  <figcaption class="art-chart-caption">Qatar leads at 118,396 — 67,799 marks the median among the top dozen</figcaption>
 </figure>
 <p class="art-p"><strong>Qatar</strong> leads at <strong>118,396</strong> — <strong>67,799</strong> marks the median among the top dozen.</p>
 <p class="art-p">Head-of-field concentration is where quality, scale, or brand visibly separates from the pack.</p>
 <h2 id="chart-3-distribution" class="anchored">CHART 3 — DISTRIBUTION</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/global-plastic-waste/charts/chart3_distribution.plotly.json" data-fallback="/images/content/articles/global-plastic-waste/charts/chart3_distribution.png" role="img" aria-label="GDP per capita, PPP (constant 2011 international $) (Rate) Distribution"></div>
+  <div class="art-chart-live" data-chart="/data/articles/global-plastic-waste/charts/chart3_distribution.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/global-plastic-waste/charts/chart3_distribution.png" role="img" aria-label="GDP per capita, PPP (constant 2011 international $) (Rate) Distribution"></div>
   <figcaption class="art-chart-caption">GDP per capita, PPP (constant 2011 international $) (Rate) Distribution</figcaption>
 </figure>
 <p class="art-p">Median <strong>8,447</strong> vs mean <strong>14,926</strong> — the shape is right-skewed.</p>
 <p class="art-p">The top decile begins at <strong>37,969</strong>; that tail is where defining cases live.</p>
 <h2 id="chart-4-leader-trends" class="anchored">CHART 4 — LEADER TRENDS</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/global-plastic-waste/charts/chart4_leader_trends.plotly.json" data-fallback="/images/content/articles/global-plastic-waste/charts/chart4_leader_trends.png" role="img" aria-label="Top Entity Over Time"></div>
+  <div class="art-chart-live" data-chart="/data/articles/global-plastic-waste/charts/chart4_leader_trends.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/global-plastic-waste/charts/chart4_leader_trends.png" role="img" aria-label="Top Entity Over Time"></div>
   <figcaption class="art-chart-caption">Top Entity Over Time</figcaption>
 </figure>
 <p class="art-p">The leading names do not move in lockstep — some fade as others surge.</p>
 <p class="art-p">Tracking medians over time separates sustained dominance from one-off spikes.</p>
-<h2 id="chart-5-relationship" class="anchored">CHART 5 — RELATIONSHIP</h2>
+<h2 id="chart-5-relationship" class="anchored">SUPPLEMENT — RELATIONSHIP</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/global-plastic-waste/charts/chart5_scatter.plotly.json" data-fallback="/images/content/articles/global-plastic-waste/charts/chart5_scatter.png" role="img" aria-label="GDP per capita, PPP (constant 2011 international $) (Rate) vs Per capita mismanaged plastic waste (kilograms per person per day)"></div>
+  <div class="art-chart-live" data-chart="/data/articles/global-plastic-waste/charts/chart5_scatter.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/global-plastic-waste/charts/chart5_scatter.png" role="img" aria-label="GDP per capita, PPP (constant 2011 international $) (Rate) vs Per capita mismanaged plastic waste (kilograms per person per day)"></div>
   <figcaption class="art-chart-caption">GDP per capita, PPP (constant 2011 international $) (Rate) vs Per capita mismanaged plastic waste (kilograms per person per day)</figcaption>
 </figure>
 <p class="art-p">Joint plot of <strong>gdp per capita, ppp (constant 2011 international $) (rate)</strong> and <strong>per capita mismanaged plastic waste (kilograms per person per day)</strong> surfaces clusters the averages erase.</p>

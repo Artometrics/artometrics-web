@@ -195,13 +195,14 @@ print(sbux_counts.head(10))</pre>
 </div>
 </div>
 </div>
+<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
 <h2 id="chart-1-where-great-coffee-comes-from" class="anchored">CHART 1 — WHERE GREAT COFFEE COMES FROM</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/coffee-the-artometrics-of-java/charts/chart1_country_ridgeline.plotly.json" data-fallback="/images/content/articles/coffee-the-artometrics-of-java/charts/chart1_country_ridgeline.png" role="img" aria-label="Country Ridgeline"></div>
-  <figcaption class="art-chart-caption">Country Ridgeline</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/coffee-the-artometrics-of-java/charts/chart1_country_ridgeline.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/coffee-the-artometrics-of-java/charts/chart1_country_ridgeline.png" role="img" aria-label="Ethiopia doesn’t just lead — it occupies a different part of the distribution entirely"></div>
+  <figcaption class="art-chart-caption">Ethiopia doesn’t just lead — it occupies a different part of the distribution entirely</figcaption>
 </figure>
 </div>
 </div>
@@ -270,7 +271,7 @@ ggsave(&quot;chart1_country_ridgeline.png&quot;, p1,
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/coffee-the-artometrics-of-java/charts/chart2_quality_vs_retail.plotly.json" data-fallback="/images/content/articles/coffee-the-artometrics-of-java/charts/chart2_quality_vs_retail.png" role="img" aria-label="Quality Vs Retail"></div>
+  <div class="art-chart-live" data-chart="/data/articles/coffee-the-artometrics-of-java/charts/chart2_quality_vs_retail.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/coffee-the-artometrics-of-java/charts/chart2_quality_vs_retail.png" role="img" aria-label="Quality Vs Retail"></div>
   <figcaption class="art-chart-caption">Quality Vs Retail</figcaption>
 </figure>
 </div>
@@ -342,8 +343,8 @@ ggsave(&quot;chart2_quality_vs_retail.png&quot;, p2,
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/coffee-the-artometrics-of-java/charts/chart3_submetric_heatmap.plotly.json" data-fallback="/images/content/articles/coffee-the-artometrics-of-java/charts/chart3_submetric_heatmap.png" role="img" aria-label="Submetric Heatmap"></div>
-  <figcaption class="art-chart-caption">Submetric Heatmap</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/coffee-the-artometrics-of-java/charts/chart3_submetric_heatmap.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/coffee-the-artometrics-of-java/charts/chart3_submetric_heatmap.png" role="img" aria-label="Ethiopia doesn’t just score higher overall — it scores higher on every single sub-metric"></div>
+  <figcaption class="art-chart-caption">Ethiopia doesn’t just score higher overall — it scores higher on every single sub-metric</figcaption>
 </figure>
 </div>
 </div>

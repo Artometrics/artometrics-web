@@ -38,6 +38,7 @@ draft: false
 <h2 id="dataset-context" class="anchored">DATASET CONTEXT</h2>
 <p class="art-p">The Academy maintains an official searchable database of winners and nominees. The Nobel Prize provides public API-style records. Music awards are less clean as open data, so public Recording Academy records and Wikidata-style tables become useful complements.</p>
 <p class="art-p">This report builds a framework before ingestion: prestige, category inflation, nomination conversion, attention concentration, and gatekeeping.</p>
+<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
 <h2 id="prestige-market" class="anchored">CHART 1 - PRESTIGE VERSUS MARKET</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/awards-prestige-economy-oscars-grammys-nobels/charts/chart1_prestige_vs_market.plotly.json" data-source="Data: Academy Awards Database, Nobel Prize API, Recording Academy public records, DLu/oscar_data, Wikidata - ARTOMETRICS" role="img" aria-label="Awards do not all trade in the same kind of attention"></div>

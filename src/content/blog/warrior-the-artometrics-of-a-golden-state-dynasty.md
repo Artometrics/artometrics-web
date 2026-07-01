@@ -218,12 +218,13 @@ print(records_df[[&#39;season&#39;,&#39;TEAM&#39;,&#39;W&#39;,&#39;L&#39;,&#39;w
 </div>
 </div>
 </div>
+<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
 <h2 id="win-percentage-over-time" class="anchored">WIN PERCENTAGE OVER TIME</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/warrior-the-artometrics-of-a-golden-state-dynasty/charts/chart1_win_pct_timeline.plotly.json" data-fallback="/images/content/articles/warrior-the-artometrics-of-a-golden-state-dynasty/charts/chart1_win_pct_timeline.png" role="img" aria-label="Win Pct Timeline"></div>
+  <div class="art-chart-live" data-chart="/data/articles/warrior-the-artometrics-of-a-golden-state-dynasty/charts/chart1_win_pct_timeline.plotly.json" data-source="Data: source cited in report references - ARTOMETRICS" data-fallback="/images/content/articles/warrior-the-artometrics-of-a-golden-state-dynasty/charts/chart1_win_pct_timeline.png" role="img" aria-label="Win Pct Timeline"></div>
   <figcaption class="art-chart-caption">Win Pct Timeline</figcaption>
 </figure>
 </div>
@@ -289,7 +290,7 @@ ggsave(&quot;chart1_win_pct_timeline.png&quot;, plot = p1,
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/warrior-the-artometrics-of-a-golden-state-dynasty/charts/chart2_three_point_revolution.plotly.json" data-fallback="/images/content/articles/warrior-the-artometrics-of-a-golden-state-dynasty/charts/chart2_three_point_revolution.png" role="img" aria-label="Three Point Revolution"></div>
+  <div class="art-chart-live" data-chart="/data/articles/warrior-the-artometrics-of-a-golden-state-dynasty/charts/chart2_three_point_revolution.plotly.json" data-source="Data: source cited in report references - ARTOMETRICS" data-fallback="/images/content/articles/warrior-the-artometrics-of-a-golden-state-dynasty/charts/chart2_three_point_revolution.png" role="img" aria-label="Three Point Revolution"></div>
   <figcaption class="art-chart-caption">Three Point Revolution</figcaption>
 </figure>
 </div>
@@ -345,7 +346,7 @@ ggsave(&quot;chart2_three_point_revolution.png&quot;, plot = p2,
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/warrior-the-artometrics-of-a-golden-state-dynasty/charts/chart3_73_win_context.plotly.json" data-fallback="/images/content/articles/warrior-the-artometrics-of-a-golden-state-dynasty/charts/chart3_73_win_context.png" role="img" aria-label="73 Win Context"></div>
+  <div class="art-chart-live" data-chart="/data/articles/warrior-the-artometrics-of-a-golden-state-dynasty/charts/chart3_73_win_context.plotly.json" data-source="Data: source cited in report references - ARTOMETRICS" data-fallback="/images/content/articles/warrior-the-artometrics-of-a-golden-state-dynasty/charts/chart3_73_win_context.png" role="img" aria-label="73 Win Context"></div>
   <figcaption class="art-chart-caption">73 Win Context</figcaption>
 </figure>
 </div>

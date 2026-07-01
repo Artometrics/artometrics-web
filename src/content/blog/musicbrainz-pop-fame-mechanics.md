@@ -38,6 +38,7 @@ draft: false
 <h2 id="dataset-context" class="anchored">DATASET CONTEXT</h2>
 <p class="art-p">MetaBrainz publishes MusicBrainz data dumps in PostgreSQL and JSON formats. The JSON dumps include entities such as artist, recording, release, release group, work, label, area, event, and place.</p>
 <p class="art-p">This report uses a curated editorial model over that source architecture. A scaled version would ingest artist, release-group, recording, and tag dumps, then join them to chart, award, and tour datasets.</p>
+<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
 <h2 id="catalog-now" class="anchored">CHART 1 - CATALOG AND NOW</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/musicbrainz-pop-fame-mechanics/charts/chart1_catalog_vs_attention.plotly.json" data-source="Data: MusicBrainz / MetaBrainz CC0 dumps, Wikidata, Billboard-style public chart references - ARTOMETRICS" role="img" aria-label="Pop fame balances archive depth with current heat"></div>

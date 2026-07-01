@@ -40,37 +40,38 @@ draft: false
 <p>The source is the TidyTuesday release from <strong>2018-10-23</strong> (R for Data Science community). This working file contains <strong>3,401</strong> rows and <strong>9</strong> columns after merging all available CSV/XLSX tables in the week folder.</p>
 <p>Charts are exported as Plotly JSON with PNG fallbacks. Medians are used for robustness where distributions skew. Index-style fields (row numbers, sequential IDs) are excluded from metric selection.</p>
 <p class="art-p"><strong>How to read this report:</strong> start with the chart caption, then ask what the metric actually means, what a non-expert should notice first, and what an expert would challenge in the source. The goal is not to memorize every number; it is to leave with a sharper question than the one you arrived with.</p>
+<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
 <h2 id="chart-1-trend" class="anchored">CHART 1 — TREND</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/horror-movie-profit/charts/chart1_trend.plotly.json" data-fallback="/images/content/articles/horror-movie-profit/charts/chart1_trend.png" role="img" aria-label="Median Domestic gross Over Time"></div>
+  <div class="art-chart-live" data-chart="/data/articles/horror-movie-profit/charts/chart1_trend.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/horror-movie-profit/charts/chart1_trend.png" role="img" aria-label="Median Domestic gross Over Time"></div>
   <figcaption class="art-chart-caption">Median Domestic gross Over Time</figcaption>
 </figure>
 <p class="art-p">Median domestic gross is <strong>falling</strong> from <strong>163,245</strong> in the opening period to <strong>0.00</strong> at the close.</p>
 <p class="art-p">Annual medians filter one-off spikes so the structural slope — not viral outliers — drives the story.</p>
 <h2 id="chart-2-leaders" class="anchored">CHART 2 — LEADERS</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/horror-movie-profit/charts/chart2_leaders.plotly.json" data-fallback="/images/content/articles/horror-movie-profit/charts/chart2_leaders.png" role="img" aria-label="Top Movie"></div>
-  <figcaption class="art-chart-caption">Top Movie</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/horror-movie-profit/charts/chart2_leaders.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/horror-movie-profit/charts/chart2_leaders.png" role="img" aria-label="Star Wars Ep"></div>
+  <figcaption class="art-chart-caption">Star Wars Ep</figcaption>
 </figure>
 <p class="art-p"><strong>Star Wars Ep. I: The Phantom Menace</strong> leads at <strong>474,544,677</strong> — <strong>419,277,314</strong> marks the median among the top dozen.</p>
 <p class="art-p">Head-of-field concentration is where quality, scale, or brand visibly separates from the pack.</p>
 <h2 id="chart-3-distribution" class="anchored">CHART 3 — DISTRIBUTION</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/horror-movie-profit/charts/chart3_distribution.plotly.json" data-fallback="/images/content/articles/horror-movie-profit/charts/chart3_distribution.png" role="img" aria-label="Domestic gross by Genre"></div>
+  <div class="art-chart-live" data-chart="/data/articles/horror-movie-profit/charts/chart3_distribution.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/horror-movie-profit/charts/chart3_distribution.png" role="img" aria-label="Domestic gross by Genre"></div>
   <figcaption class="art-chart-caption">Domestic gross by Genre</figcaption>
 </figure>
 <p class="art-p">Category boxes reveal whether domestic gross consensus is shared or contested across tiers.</p>
 <p class="art-p">Wide whiskers flag segments where outliers — not averages — drive reputation.</p>
 <h2 id="chart-4-gap" class="anchored">CHART 4 — GAP ANALYSIS</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/horror-movie-profit/charts/chart4_gap.plotly.json" data-fallback="/images/content/articles/horror-movie-profit/charts/chart4_gap.png" role="img" aria-label="Domestic gross vs median by Genre"></div>
+  <div class="art-chart-live" data-chart="/data/articles/horror-movie-profit/charts/chart4_gap.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/horror-movie-profit/charts/chart4_gap.png" role="img" aria-label="Domestic gross vs median by Genre"></div>
   <figcaption class="art-chart-caption">Domestic gross vs median by Genre</figcaption>
 </figure>
 <p class="art-p"><strong>Adventure</strong> sits <strong>34,936,402</strong> above the median; <strong>Drama</strong> trails by <strong>12,994,440</strong>.</p>
 <p class="art-p">Diverging from the median exposes which tiers over- or under-perform — not just who ranks first.</p>
-<h2 id="chart-5-relationship" class="anchored">CHART 5 — RELATIONSHIP</h2>
+<h2 id="chart-5-relationship" class="anchored">SUPPLEMENT — RELATIONSHIP</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/horror-movie-profit/charts/chart5_scatter.plotly.json" data-fallback="/images/content/articles/horror-movie-profit/charts/chart5_scatter.png" role="img" aria-label="Domestic gross vs Worldwide gross"></div>
+  <div class="art-chart-live" data-chart="/data/articles/horror-movie-profit/charts/chart5_scatter.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/horror-movie-profit/charts/chart5_scatter.png" role="img" aria-label="Domestic gross vs Worldwide gross"></div>
   <figcaption class="art-chart-caption">Domestic gross vs Worldwide gross</figcaption>
 </figure>
 <p class="art-p">Joint plot of <strong>domestic gross</strong> and <strong>worldwide gross</strong> surfaces clusters the averages erase.</p>

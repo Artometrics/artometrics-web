@@ -200,13 +200,14 @@ print(f&quot;\nDisney consolidated total: ${disney_summary.sum():.1f}B&quot;)</p
 </div>
 </div>
 </div>
+<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
 <h2 id="chart-1-top-20-franchises-by-revenue" class="anchored">CHART 1 — TOP 20 FRANCHISES BY REVENUE</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/franchise/charts/chart1_top20_revenue.plotly.json" data-fallback="/images/content/articles/franchise/charts/chart1_top20_revenue.png" role="img" aria-label="Top20 Revenue"></div>
-  <figcaption class="art-chart-caption">Top20 Revenue</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/franchise/charts/chart1_top20_revenue.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/franchise/charts/chart1_top20_revenue.png" role="img" aria-label="Pokémon at $91B is not just the top of this chart — it is a different kind of number"></div>
+  <figcaption class="art-chart-caption">Pokémon at $91B is not just the top of this chart — it is a different kind of number</figcaption>
 </figure>
 </div>
 </div>
@@ -281,7 +282,7 @@ ggsave(&quot;chart1_top20_revenue.png&quot;, plot = p1,
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/franchise/charts/chart2_revenue_per_year.plotly.json" data-fallback="/images/content/articles/franchise/charts/chart2_revenue_per_year.png" role="img" aria-label="Revenue Per Year"></div>
+  <div class="art-chart-live" data-chart="/data/articles/franchise/charts/chart2_revenue_per_year.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/franchise/charts/chart2_revenue_per_year.png" role="img" aria-label="Revenue Per Year"></div>
   <figcaption class="art-chart-caption">Revenue Per Year</figcaption>
 </figure>
 </div>
@@ -345,7 +346,7 @@ ggsave(&quot;chart2_revenue_per_year.png&quot;, plot = p2,
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/franchise/charts/chart3a_disney_non_consolidated.plotly.json" data-fallback="/images/content/articles/franchise/charts/chart3a_disney_non_consolidated.png" role="img" aria-label="Disney Non Consolidated"></div>
+  <div class="art-chart-live" data-chart="/data/articles/franchise/charts/chart3a_disney_non_consolidated.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/franchise/charts/chart3a_disney_non_consolidated.png" role="img" aria-label="Disney Non Consolidated"></div>
   <figcaption class="art-chart-caption">Disney Non Consolidated</figcaption>
 </figure>
 </div>
@@ -356,8 +357,8 @@ ggsave(&quot;chart2_revenue_per_year.png&quot;, plot = p2,
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/franchise/charts/chart3b_disney_consolidated.plotly.json" data-fallback="/images/content/articles/franchise/charts/chart3b_disney_consolidated.png" role="img" aria-label="Disney Consolidated"></div>
-  <figcaption class="art-chart-caption">Disney Consolidated</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/franchise/charts/chart3b_disney_consolidated.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/franchise/charts/chart3b_disney_consolidated.png" role="img" aria-label="Add them up and Disney’s true total is $426 billion "></div>
+  <figcaption class="art-chart-caption">Add them up and Disney’s true total is $426 billion </figcaption>
 </figure>
 </div>
 </div>

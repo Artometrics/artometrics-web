@@ -39,37 +39,38 @@ draft: false
 <p>The source is the TidyTuesday release from <strong>2022-09-20</strong> (R for Data Science community). This working file contains <strong>58,502</strong> rows and <strong>25</strong> columns after merging all available CSV/XLSX tables in the week folder.</p>
 <p>Charts are exported as Plotly JSON with PNG fallbacks. Medians are used for robustness where distributions skew. Index-style fields (row numbers, sequential IDs) are excluded from metric selection.</p>
 <p class="art-p"><strong>How to read this report:</strong> start with the chart caption, then ask what the metric actually means, what a non-expert should notice first, and what an expert would challenge in the source. The goal is not to memorize every number; it is to leave with a sharper question than the one you arrived with.</p>
+<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
 <h2 id="chart-1-breakdown" class="anchored">CHART 1 — BREAKDOWN</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/hydro-wastewater/charts/chart1_breakdown.plotly.json" data-fallback="/images/content/articles/hydro-wastewater/charts/chart1_breakdown.png" role="img" aria-label="WASTE DIS by COUNTRY"></div>
+  <div class="art-chart-live" data-chart="/data/articles/hydro-wastewater/charts/chart1_breakdown.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/hydro-wastewater/charts/chart1_breakdown.png" role="img" aria-label="WASTE DIS by COUNTRY"></div>
   <figcaption class="art-chart-caption">WASTE DIS by COUNTRY</figcaption>
 </figure>
 <p class="art-p"><strong>Singapore</strong> leads at <strong>223,683</strong>; <strong>Nicaragua</strong> anchors the low end at <strong>33,649</strong>.</p>
 <p class="art-p">Grouping by country exposes how the metric varies across the catalog's major entities.</p>
 <h2 id="chart-2-leaders" class="anchored">CHART 2 — LEADERS</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/hydro-wastewater/charts/chart2_leaders.plotly.json" data-fallback="/images/content/articles/hydro-wastewater/charts/chart2_leaders.png" role="img" aria-label="Top COUNTRY"></div>
-  <figcaption class="art-chart-caption">Top COUNTRY</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/hydro-wastewater/charts/chart2_leaders.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/hydro-wastewater/charts/chart2_leaders.png" role="img" aria-label="Singapore leads at 223,683 — 56,849 marks the median among the top dozen"></div>
+  <figcaption class="art-chart-caption">Singapore leads at 223,683 — 56,849 marks the median among the top dozen</figcaption>
 </figure>
 <p class="art-p"><strong>Singapore</strong> leads at <strong>223,683</strong> — <strong>56,849</strong> marks the median among the top dozen.</p>
 <p class="art-p">Head-of-field concentration is where quality, scale, or brand visibly separates from the pack.</p>
 <h2 id="chart-3-distribution" class="anchored">CHART 3 — DISTRIBUTION</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/hydro-wastewater/charts/chart3_distribution.plotly.json" data-fallback="/images/content/articles/hydro-wastewater/charts/chart3_distribution.png" role="img" aria-label="WASTE DIS by LEVEL"></div>
+  <div class="art-chart-live" data-chart="/data/articles/hydro-wastewater/charts/chart3_distribution.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/hydro-wastewater/charts/chart3_distribution.png" role="img" aria-label="WASTE DIS by LEVEL"></div>
   <figcaption class="art-chart-caption">WASTE DIS by LEVEL</figcaption>
 </figure>
 <p class="art-p">Category boxes reveal whether waste dis consensus is shared or contested across tiers.</p>
 <p class="art-p">Wide whiskers flag segments where outliers — not averages — drive reputation.</p>
 <h2 id="chart-4-gap" class="anchored">CHART 4 — GAP ANALYSIS</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/hydro-wastewater/charts/chart4_gap.plotly.json" data-fallback="/images/content/articles/hydro-wastewater/charts/chart4_gap.png" role="img" aria-label="WASTE DIS vs median by LEVEL"></div>
+  <div class="art-chart-live" data-chart="/data/articles/hydro-wastewater/charts/chart4_gap.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/hydro-wastewater/charts/chart4_gap.png" role="img" aria-label="WASTE DIS vs median by LEVEL"></div>
   <figcaption class="art-chart-caption">WASTE DIS vs median by LEVEL</figcaption>
 </figure>
 <p class="art-p"><strong>Advanced</strong> sits <strong>681</strong> above the median; <strong>Secondary</strong> trails by <strong>342</strong>.</p>
 <p class="art-p">Diverging from the median exposes which tiers over- or under-perform — not just who ranks first.</p>
-<h2 id="chart-5-relationship" class="anchored">CHART 5 — RELATIONSHIP</h2>
+<h2 id="chart-5-relationship" class="anchored">SUPPLEMENT — RELATIONSHIP</h2>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/hydro-wastewater/charts/chart5_scatter.plotly.json" data-fallback="/images/content/articles/hydro-wastewater/charts/chart5_scatter.png" role="img" aria-label="WASTE DIS vs QUAL WASTE"></div>
+  <div class="art-chart-live" data-chart="/data/articles/hydro-wastewater/charts/chart5_scatter.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/hydro-wastewater/charts/chart5_scatter.png" role="img" aria-label="WASTE DIS vs QUAL WASTE"></div>
   <figcaption class="art-chart-caption">WASTE DIS vs QUAL WASTE</figcaption>
 </figure>
 <p class="art-p">Joint plot of <strong>waste dis</strong> and <strong>qual waste</strong> surfaces clusters the averages erase.</p>
