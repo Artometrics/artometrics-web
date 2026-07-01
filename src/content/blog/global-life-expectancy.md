@@ -12,7 +12,7 @@ draft: false
     <h2 id="toc-title">IN THIS REPORT</h2>
   <ul>
   <li><a href="#fast-facts" id="toc-fast-facts">FAST FACTS</a></li>
-  <li><a href="#the-long-arc" id="toc-the-long-arc">THE LONG ARC</a></li>
+  <li><a href="#dataset-context" id="toc-dataset-context">DATASET CONTEXT</a></li>
   <li><a href="#chart-1-trend" id="toc-chart-1-trend">CHART 1 — 500 YEARS OF SURVIVAL</a></li>
   <li><a href="#chart-2-leaders" id="toc-chart-2-leaders">CHART 2 — WHO LIVES LONGEST</a></li>
   <li><a href="#chart-3-distribution" id="toc-chart-3-distribution">CHART 3 — THE SPLIT WORLD</a></li>
@@ -35,7 +35,7 @@ draft: false
   <div class="fact-box"><span class="fact-number">Hong Kong</span><span class="fact-label">Highest average life expectancy over the full dataset</span></div>
   <div class="fact-box"><span class="fact-number">472 yrs</span><span class="fact-label">Total span of the dataset: 1543 to 2015</span></div>
 </div>
-<h2 id="the-long-arc" class="anchored">THE LONG ARC</h2>
+<h2 id="dataset-context" class="anchored">DATASET CONTEXT</h2>
 <p>For most of recorded history, life expectancy at birth hovered between 25 and 40 years — not because people aged quickly, but because childhood mortality was catastrophic. A child born in 17th-century England had roughly a one-in-three chance of dying before age five. The adults who survived to 40 could often expect another 20–25 years, but so few survived childhood that the average plummeted.</p>
 <p>The modern transformation begins in earnest around 1850 with clean water infrastructure, followed by the germ theory of disease, vaccines, and antibiotics in the 20th century. Each advance lifts the floor — fewer children die — which mechanically raises the average. The post-1950 acceleration in developing countries reflects this compressed version of a process that took wealthy countries a century to complete.</p>
 <h2 id="chart-1-trend" class="anchored">CHART 1 — 500 YEARS OF SURVIVAL</h2>

@@ -12,7 +12,7 @@ draft: false
     <h2 id="toc-title">IN THIS REPORT</h2>
   <ul>
   <li><a href="#fast-facts" id="toc-fast-facts">FAST FACTS</a></li>
-  <li><a href="#the-idea" id="toc-the-idea">THE IDEA</a></li>
+  <li><a href="#dataset-context" id="toc-dataset-context">DATASET CONTEXT</a></li>
   <li><a href="#chart-1-trend" id="toc-chart-1-trend">CHART 1 — GLOBAL PRICE TREND</a></li>
   <li><a href="#chart-2-leaders" id="toc-chart-2-leaders">CHART 2 — MOST EXPENSIVE COUNTRIES</a></li>
   <li><a href="#chart-3-distribution" id="toc-chart-3-distribution">CHART 3 — HOW PRICES SPREAD</a></li>
@@ -35,7 +35,7 @@ draft: false
   <div class="fact-box"><span class="fact-number">Norway</span><span class="fact-label">Highest average dollar price over the full 20-year span</span></div>
   <div class="fact-box"><span class="fact-number">20 yrs</span><span class="fact-label">Timespan: 2000 through 2020</span></div>
 </div>
-<h2 id="the-idea" class="anchored">THE IDEA</h2>
+<h2 id="dataset-context" class="anchored">DATASET CONTEXT</h2>
 <p>Purchasing power parity (PPP) theory says exchange rates should eventually converge so that identical goods cost the same everywhere. In practice, they rarely do — tariffs, non-tradeable costs (rent, labor), and monetary policy all interfere. The Big Mac Index sidesteps complex econometric models: if a burger costs less in local currency terms than the dollar price implies, that country's currency is likely undervalued. If it costs more, it may be overvalued.</p>
 <p>The index is deliberately blunt. It is better at identifying structural divergence — Switzerland has been "overvalued" for twenty straight years — than at predicting short-run FX moves. What it reliably captures is the cost of living encoded in a single standardized product.</p>
 <h2 id="chart-1-trend" class="anchored">CHART 1 — GLOBAL PRICE TREND</h2>

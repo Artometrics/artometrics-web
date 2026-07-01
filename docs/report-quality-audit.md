@@ -12,10 +12,9 @@ It is intentionally heuristic; use it as an editorial checklist, not as a substi
 
 ## Most common issues
 
-- complete structure, clear teaching path, sources, and claim-style charts: 54
+- complete structure, clear teaching path, sources, and claim-style charts: 57
 - thin prose for a five-chart report: 22
 - expected 5 charts, found 3: 9
-- missing required sections: DATASET CONTEXT: 3
 - abstract language may outpace concrete explanation: 1
 - expected 5 charts, found 4: 1
 
@@ -55,14 +54,14 @@ It is intentionally heuristic; use it as an editorial checklist, not as a substi
 | 92 | publication-ready | `un-votes` | 629 | 5 | thin prose for a five-chart report |
 | 92 | publication-ready | `warrior-the-artometrics-of-a-golden-state-dynasty` | 3530 | 3 | expected 5 charts, found 3 |
 | 92 | publication-ready | `web-page-metrics` | 629 | 5 | thin prose for a five-chart report |
-| 96 | publication-ready | `big-mac-index` | 1152 | 5 | missing required sections: DATASET CONTEXT |
-| 96 | publication-ready | `billboard-hot-100` | 1289 | 5 | missing required sections: DATASET CONTEXT |
-| 96 | publication-ready | `global-life-expectancy` | 1283 | 5 | missing required sections: DATASET CONTEXT |
 | 100 | publication-ready | `airline-safety` | 708 | 5 | complete structure, clear teaching path, sources, and claim-style charts |
 | 100 | publication-ready | `all-the-pizza` | 677 | 5 | complete structure, clear teaching path, sources, and claim-style charts |
 | 100 | publication-ready | `beyonce-taylor-lyrics` | 651 | 5 | complete structure, clear teaching path, sources, and claim-style charts |
+| 100 | publication-ready | `big-mac-index` | 1152 | 5 | complete structure, clear teaching path, sources, and claim-style charts |
 | 100 | publication-ready | `biketown-bikeshare` | 673 | 5 | complete structure, clear teaching path, sources, and claim-style charts |
+| 100 | publication-ready | `billboard-hot-100` | 1289 | 5 | complete structure, clear teaching path, sources, and claim-style charts |
 | 100 | publication-ready | `billboard-top-100` | 657 | 5 | complete structure, clear teaching path, sources, and claim-style charts |
+| 100 | publication-ready | `board-games` | 676 | 5 | complete structure, clear teaching path, sources, and claim-style charts |
 
 ## Teacher-of-the-year checklist
 

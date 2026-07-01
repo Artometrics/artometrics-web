@@ -7,6 +7,7 @@ import Text from "@/components/fundations/elements/Text.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 // Components
 import BlogCard2 from "@/components/blog/BlogCard2.astro";
+import PodcastCardText from "@/components/podcast/PodcastCardText.astro";
 // Load all posts
 import { getCollection } from "astro:content";
 // Props
@@ -31,6 +32,18 @@ const relatedPosts = allPosts.filter(
 const relatedPodcasts = allPodcasts.filter(
   (episode) => episode.data.author === authorSlug
 );
+
+const socialLinks = [
+  { label: "Twitter", href: frontmatter.socials?.twitter },
+  { label: "LinkedIn", href: frontmatter.socials?.linkedin },
+  {
+    label: "Email",
+    href: frontmatter.socials?.email
+      ? `mailto:${frontmatter.socials.email}`
+      : undefined,
+  },
+  { label: "Website", href: frontmatter.socials?.website },
+].filter((link) => link.href && link.href !== "#_");
 ---
 
 <BaseLayout>
@@ -81,36 +94,17 @@ const relatedPodcasts = allPodcasts.filter(
               }
               {/* Social Media Links */}
               {
-                frontmatter.socials && (
+                socialLinks.length > 0 && (
                   <div class="flex items-center mt-12 gap-4">
-                    <a
-                      href={frontmatter.socials.twitter}
-                      aria-label="Twitter"
-                      class="text-base-600 hover:text-base-900"
-                    >
-                      Twitter
-                    </a>
-                    <a
-                      href={frontmatter.socials.linkedin}
-                      aria-label="LinkedIn"
-                      class="text-base-600 hover:text-base-900"
-                    >
-                      Linkedin
-                    </a>
-                    <a
-                      href={frontmatter.socials.email}
-                      aria-label="Email"
-                      class="text-base-600 hover:text-base-900"
-                    >
-                      Email
-                    </a>
-                    <a
-                      href={frontmatter.socials.website}
-                      aria-label="Website"
-                      class="text-base-600 hover:text-base-900"
-                    >
-                      Website
-                    </a>
+                    {socialLinks.map((link) => (
+                      <a
+                        href={link.href}
+                        aria-label={link.label}
+                        class="text-base-600 hover:text-base-900"
+                      >
+                        {link.label}
+                      </a>
+                    ))}
                   </div>
                 )
               }
@@ -156,7 +150,7 @@ const relatedPodcasts = allPodcasts.filter(
             </Text>
             <div class="mt-2 grid grid-cols-1 gap-6 border-t border-base-200 pt-2 md:grid-cols-2">
               {relatedPodcasts.map((episode) => (
-                <BlogCard2 post={episode} />
+                <PodcastCardText post={episode} />
               ))}
             </div>
           </div>

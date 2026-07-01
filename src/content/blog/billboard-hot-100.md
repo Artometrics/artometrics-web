@@ -12,7 +12,7 @@ draft: false
     <h2 id="toc-title">IN THIS REPORT</h2>
   <ul>
   <li><a href="#fast-facts" id="toc-fast-facts">FAST FACTS</a></li>
-  <li><a href="#the-chart" id="toc-the-chart">THE CHART</a></li>
+  <li><a href="#dataset-context" id="toc-dataset-context">DATASET CONTEXT</a></li>
   <li><a href="#chart-1-trend" id="toc-chart-1-trend">CHART 1 — RUN LENGTH OVER THE DECADES</a></li>
   <li><a href="#chart-2-leaders" id="toc-chart-2-leaders">CHART 2 — LONGEST RUNS EVER</a></li>
   <li><a href="#chart-3-distribution" id="toc-chart-3-distribution">CHART 3 — HOW ARTISTS COMPARE</a></li>
@@ -36,7 +36,7 @@ draft: false
   <div class="fact-box"><span class="fact-number">67 yrs</span><span class="fact-label">Span of the dataset: 1958 to 2025</span></div>
   <div class="fact-box"><span class="fact-number">Taylor Swift</span><span class="fact-label">Highest average run length among modern artists</span></div>
 </div>
-<h2 id="the-chart" class="anchored">THE CHART</h2>
+<h2 id="dataset-context" class="anchored">DATASET CONTEXT</h2>
 <p>The Hot 100 blends sales, radio airplay, and streaming data into a single weekly ranking. This matters for the analysis: the rules of what counts have changed substantially over the decades. Before 1991, physical sales data came from store-reported estimates, not actual scan data — which made the chart easier to game. The introduction of SoundScan in 1991 made the chart dramatically more accurate but also temporarily destabilized it as real sales data replaced guesswork. Streaming was added in 2012, and its weight has grown continuously since.</p>
 <p>The consequence: a long run in 1965 means something different from a long run in 2025. Streaming amplifies hits — the same song can accumulate streams 24 hours a day, seven days a week, without the bottleneck of radio scheduling. This structural change is visible in the data.</p>
 <h2 id="chart-1-trend" class="anchored">CHART 1 — RUN LENGTH OVER THE DECADES</h2>
