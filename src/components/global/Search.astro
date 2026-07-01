@@ -6,8 +6,9 @@ const posts = (await getCollection("blog", ({ data }) => !data.draft)).map((post
   pubDate: post.data.pubDate,
   description: post.data.description,
   slug: post.data.slug,
+  tags: post.data.tags,
   type: "blog",
-  typeLabel: "Article",
+  typeLabel: "Report",
   href: `/${post.data.slug}/`,
 }));
 
@@ -24,6 +25,18 @@ const podcasts = (await getCollection("podcast")).map((podcast) => ({
 const items = [...posts, ...podcasts].sort(
   (a, b) => new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime()
 );
+
+items.unshift({
+  title: "Methodology and Sources",
+  pubDate: new Date().toISOString(),
+  description:
+    "How Artometrics uses public datasets, official APIs, literature, derived metrics, editorial indices, and source links.",
+  slug: "methodology",
+  tags: ["source", "dataset", "literature", "TidyTuesday", "Pantheon", "IMDb", "CMS", "OEC"],
+  type: "page",
+  typeLabel: "Methodology",
+  href: "/methodology/",
+});
 
 const suggestions = items.slice(0, 6);
 ---
@@ -106,7 +119,7 @@ const suggestions = items.slice(0, 6);
     }
 
     const fuse = new Fuse(items, {
-      keys: ["title", "description", "typeLabel"],
+      keys: ["title", "description", "typeLabel", "tags", "slug"],
       threshold: 0.32,
       includeMatches: true,
     });
