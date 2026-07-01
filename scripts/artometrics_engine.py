@@ -267,9 +267,14 @@ def human_label(col: str) -> str:
     return c[:1].upper() + c[1:]
 
 
-def fmt_num(value: Any) -> str:
+def fmt_num(value: Any, *, compact: bool = False) -> str:
     if isinstance(value, (int, float, np.floating, np.integer)) and not pd.isna(value):
         v = float(value)
+        if compact:
+            if abs(v) >= 1_000_000_000:
+                return f"{v / 1_000_000_000:.1f}B".replace(".0B", "B")
+            if abs(v) >= 1_000_000:
+                return f"{v / 1_000_000:.1f}M".replace(".0M", "M")
         if abs(v) >= 1000:
             return f"{v:,.0f}"
         if abs(v) >= 100:
@@ -1679,8 +1684,8 @@ def build_charts(df: pd.DataFrame, spec: DatasetSpec, meta: dict[str, Any]) -> l
             )
             finalize(
                 fig,
-                chart_title(f"MEDIAN {ml.upper()}", f"BY {human_label(label).upper()}"),
-                x_title=f"Median {ml}",
+                chart_title(f"{ml.upper()}", f"BY {human_label(label).upper()}"),
+                x_title=ml,
             )
             charts.append(
                 chart_entry(
@@ -1751,7 +1756,7 @@ def build_charts(df: pd.DataFrame, spec: DatasetSpec, meta: dict[str, Any]) -> l
             finalize(
                 fig,
                 chart_title(f"LEADERS BY {ml.upper()}", f"<span style='color:#C0392B'>{leader.upper()[:24]}</span> ON TOP"),
-                x_title=f"Median {ml}",
+                x_title=ml,
             )
             charts.append(
                 chart_entry(
@@ -2036,7 +2041,7 @@ def build_facts(df: pd.DataFrame, meta: dict[str, Any], spec: DatasetSpec) -> li
     if metric:
         vals = df[metric].dropna()
         facts.append((fmt_num(vals.median()), f"Median {human_label(metric)}"))
-        facts.append((fmt_num(vals.max()), f"Highest observed {human_label(metric)}"))
+        facts.append((fmt_num(vals.max(), compact=True), f"Highest observed {human_label(metric)}"))
     if meta["label"] and metric:
         top = df[[meta["label"], metric]].dropna().sort_values(metric, ascending=False).head(1)
         if len(top):

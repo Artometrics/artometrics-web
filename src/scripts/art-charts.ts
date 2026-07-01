@@ -55,6 +55,27 @@ const H_BAR_MIN_HEIGHT = 300;
 
 const chartPromises = new Map<string, Promise<PlotlyExport>>();
 
+/** Compact SI-style labels for large values (Economist-style axis ticks). */
+function formatCompactNum(value: number): string {
+  const abs = Math.abs(value);
+  if (!Number.isFinite(value)) return String(value);
+  if (abs >= 1_000_000_000) return `${(value / 1_000_000_000).toFixed(1).replace(/\.0$/, "")}B`;
+  if (abs >= 1_000_000) return `${(value / 1_000_000).toFixed(1).replace(/\.0$/, "")}M`;
+  if (abs >= 10_000) return `${(value / 1_000).toFixed(0)}K`;
+  if (abs >= 1_000) return `${(value / 1_000).toFixed(1).replace(/\.0$/, "")}K`;
+  if (Number.isInteger(value)) return value.toLocaleString("en-US");
+  return value.toLocaleString("en-US", { maximumFractionDigits: 1 });
+}
+
+function axisTitleText(title: unknown): string {
+  if (!title) return "";
+  if (typeof title === "string") return title;
+  if (typeof title === "object" && title !== null && "text" in title) {
+    return String((title as { text?: string }).text ?? "");
+  }
+  return "";
+}
+
 function cleanTraces(data: PlotlyTrace[]) {
   return data.map((trace) => {
     const copy = JSON.parse(JSON.stringify(trace)) as Record<string, unknown>;
@@ -178,12 +199,10 @@ function extractTitleHtml(raw: PlotlyExport): string {
   return stackChartTitle(text);
 }
 
-function renderStaticHeading(el: HTMLElement, titleHtml: string) {
-  if (!titleHtml) return;
+function renderStaticHeading(el: HTMLElement, titleHtml: string, subtitle?: string) {
+  if (!titleHtml && !subtitle) return;
 
-  const formatted = formatHeadingHtml(titleHtml);
-  if (!formatted) return;
-
+  const formatted = titleHtml ? formatHeadingHtml(titleHtml) : "";
   let heading = el.querySelector<HTMLElement>(".art-chart-heading");
   if (!heading) {
     heading = document.createElement("div");
@@ -191,7 +210,11 @@ function renderStaticHeading(el: HTMLElement, titleHtml: string) {
     el.prepend(heading);
     el.classList.add("art-chart-has-heading");
   }
-  heading.innerHTML = formatted;
+
+  const subtitleHtml = subtitle
+    ? `<span class="art-chart-heading__subtitle">${subtitle}</span>`
+    : "";
+  heading.innerHTML = `${formatted}${subtitleHtml}`;
 }
 
 function clearStaticHeading(el: HTMLElement) {
@@ -367,6 +390,183 @@ function enhanceScatterColors(traces: Array<Record<string, unknown>>) {
   }
 }
 
+function isHorizontalBarChart(data: Array<Record<string, unknown>>) {
+  return data.some((trace) => trace.type === "bar" && trace.orientation === "h");
+}
+
+function maxNumericValue(values: unknown): number | null {
+  if (!Array.isArray(values)) return null;
+  const nums = values.filter((v): v is number => typeof v === "number" && Number.isFinite(v));
+  return nums.length ? Math.max(...nums) : null;
+}
+
+/** Leader bar gets an outside value label — Economist-style callout on the chart itself. */
+function addBarValueLabels(traces: Array<Record<string, unknown>>) {
+  for (const trace of traces) {
+    if (trace.type !== "bar") continue;
+    const isHorizontal = trace.orientation === "h";
+    const vals = isHorizontal ? trace.x : trace.y;
+    if (!Array.isArray(vals)) continue;
+    const nums = vals as number[];
+    if (!nums.length) continue;
+    const leaderIdx = nums.indexOf(Math.max(...nums));
+    const labels = nums.map((v, i) => (i === leaderIdx ? formatCompactNum(v) : ""));
+    trace.text = labels;
+    trace.textposition = "outside";
+    trace.textfont = {
+      color: ART_COLORS.dark,
+      family: "DM Sans, Helvetica, sans-serif",
+      size: 10,
+    };
+    trace.cliponaxis = false;
+    trace.hovertemplate =
+      typeof trace.hovertemplate === "string"
+        ? trace.hovertemplate
+        : isHorizontal
+          ? "<b>%{y}</b><br>%{x:,}<extra></extra>"
+          : "<b>%{x}</b><br>%{y:,}<extra></extra>";
+  }
+}
+
+/** Fix misleading "Median X" axis titles on entity-level bar charts. */
+function fixMisleadingAxisTitles(layout: PlotlyLayout, data: Array<Record<string, unknown>>) {
+  const hBar = isHorizontalBarChart(data);
+  const vBar = data.some((trace) => trace.type === "bar" && trace.orientation !== "h");
+
+  const fixAxis = (axisKey: "xaxis" | "yaxis", valueAxis: boolean) => {
+    const axis = layout[axisKey];
+    if (!axis || typeof axis !== "object" || !valueAxis) return;
+    const rawTitle = axisTitleText(axis.title);
+    const cleaned = rawTitle.replace(/^Median\s+/i, "");
+    if (cleaned && cleaned !== rawTitle) {
+      axis.title = centerAxisTitle(cleaned);
+    }
+    const trace = data.find((t) => t.type === "bar");
+    const vals = hBar
+      ? (trace?.x as unknown[] | undefined)
+      : (trace?.y as unknown[] | undefined);
+    const peak = maxNumericValue(vals);
+    if (peak != null && peak >= 10_000) {
+      axis.tickformat = "~s";
+    }
+  };
+
+  fixAxis("xaxis", hBar);
+  fixAxis("yaxis", vBar);
+}
+
+function buildEditorialAnnotations(
+  data: Array<Record<string, unknown>>,
+  layout: PlotlyLayout
+): Plotly.Layout["annotations"] {
+  const existing = Array.isArray(layout.annotations)
+    ? layout.annotations.map((annotation) => ({ ...annotation }))
+    : [];
+
+  const hasParetoLine = Array.isArray(layout.shapes)
+    && layout.shapes.some(
+      (shape) =>
+        shape &&
+        typeof shape === "object" &&
+        shape.type === "line" &&
+        shape.y0 === 80 &&
+        shape.y1 === 80
+    );
+
+  if (hasParetoLine && !existing.some((a) => String(a.text).includes("80"))) {
+    existing.push({
+      x: 1,
+      y: 80,
+      xref: "paper",
+      yref: "y",
+      text: "80% benchmark",
+      showarrow: false,
+      xanchor: "right",
+      yanchor: "bottom",
+      font: {
+        family: "DM Sans, Helvetica, sans-serif",
+        size: 9,
+        color: ART_COLORS.mid,
+      },
+    });
+  }
+
+  existing.push({
+    x: 1,
+    y: 0,
+    xref: "paper",
+    yref: "paper",
+    text: "ARTOMETRICS",
+    showarrow: false,
+    xanchor: "right",
+    yanchor: "bottom",
+    font: {
+      family: "DM Sans, Helvetica, sans-serif",
+      size: 8,
+      color: ART_COLORS.mid,
+      letterSpacing: "0.14em",
+    },
+  });
+
+  return existing;
+}
+
+function lockChartInteraction(layout: PlotlyLayout) {
+  layout.dragmode = false;
+  const lockAxis = (axis: Plotly.Layout["xaxis"] | Plotly.Layout["yaxis"]) => {
+    if (!axis || typeof axis !== "object") return;
+    axis.fixedrange = true;
+  };
+  lockAxis(layout.xaxis);
+  lockAxis(layout.yaxis);
+  if (layout.xaxis2) lockAxis(layout.xaxis2);
+  if (layout.yaxis2) lockAxis(layout.yaxis2);
+}
+
+function prepareChartFigure(figure: HTMLElement) {
+  const caption = figure.querySelector("figcaption.art-chart-caption");
+  const live = figure.querySelector<HTMLElement>(".art-chart-live");
+  if (caption && live) {
+    const text = caption.textContent?.trim();
+    if (text) live.dataset.caption = text;
+    caption.setAttribute("aria-hidden", "true");
+  }
+  figure.classList.add("art-chart--pending");
+}
+
+function formatFactNumbers() {
+  document.querySelectorAll<HTMLElement>(".facts-grid .fact-number").forEach((el) => {
+    const raw = el.textContent?.trim() ?? "";
+    const normalized = raw.replace(/,/g, "");
+    if (!/^\d+(\.\d+)?$/.test(normalized)) return;
+    const value = Number(normalized);
+    if (!Number.isFinite(value) || value < 1_000_000) return;
+    if (!el.dataset.fullValue) el.dataset.fullValue = raw;
+    el.textContent = formatCompactNum(value);
+    el.classList.add("fact-number--compact");
+  });
+}
+
+function initChartReveal() {
+  const figures = document.querySelectorAll<HTMLElement>(".art-chart");
+  if (!figures.length) return;
+
+  figures.forEach(prepareChartFigure);
+
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      for (const entry of entries) {
+        if (!entry.isIntersecting) continue;
+        entry.target.classList.add("art-chart--revealed");
+        revealObserver.unobserve(entry.target);
+      }
+    },
+    { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+  );
+
+  figures.forEach((figure) => revealObserver.observe(figure));
+}
+
 function sanitizePlotlySpec(raw: PlotlyExport, mobile: boolean) {
   const baseMargin = raw.layout?.margin ?? {};
   const fixedTitle = fixTitle(raw.layout ?? {});
@@ -381,6 +581,7 @@ function sanitizePlotlySpec(raw: PlotlyExport, mobile: boolean) {
   enhanceBarColors(data);
   enhanceMultiTraceColors(data);
   enhanceScatterColors(data);
+  addBarValueLabels(data);
 
   const chartHeight = inferChartHeight(data as PlotlyTrace[], titleLines, mobile);
 
@@ -399,13 +600,14 @@ function sanitizePlotlySpec(raw: PlotlyExport, mobile: boolean) {
     plot_bgcolor: raw.layout?.plot_bgcolor ?? ART_COLORS.cream,
     margin: {
       t: mobile ? 8 : 16,
-      r: mobile ? 14 : Math.max(40, Number(baseMargin.r) || 0),
-      b: mobile ? 52 : Math.max(52, Number(baseMargin.b) || 0),
+      r: mobile ? 28 : Math.max(56, Number(baseMargin.r) || 0),
+      b: mobile ? 48 : Math.max(48, Number(baseMargin.b) || 0),
       l: mobile
         ? hasHBar ? 60 : 46
         : Math.max(72, Number(baseMargin.l) || 0),
     },
     title: { text: "" },
+    hovermode: "closest",
     hoverlabel: {
       bgcolor: ART_COLORS.dark,
       bordercolor: ART_COLORS.dark,
@@ -424,14 +626,9 @@ function sanitizePlotlySpec(raw: PlotlyExport, mobile: boolean) {
     delete layout.height;
   }
 
-  if (Array.isArray(layout.annotations)) {
-    layout.annotations = layout.annotations.map((annotation) => ({
-      ...annotation,
-      x: 0.5,
-      xref: "paper",
-      xanchor: "center",
-    }));
-  }
+  fixMisleadingAxisTitles(layout, data);
+  layout.annotations = buildEditorialAnnotations(data, layout);
+  lockChartInteraction(layout);
 
   if (layout.xaxis && typeof layout.xaxis === "object") {
     layout.xaxis = { ...layout.xaxis, title: centerAxisTitle(layout.xaxis.title) };
@@ -475,16 +672,26 @@ function sanitizePlotlySpec(raw: PlotlyExport, mobile: boolean) {
   const config: PlotlyConfig = {
     responsive: true,
     displaylogo: false,
-    displayModeBar: mobile ? false : true,
+    displayModeBar: false,
     scrollZoom: false,
-    modeBarButtonsToRemove: ["sendDataToCloud", "lasso2d", "select2d"],
+    doubleClick: false,
+    modeBarButtonsToRemove: [
+      "zoom2d",
+      "pan2d",
+      "zoomIn2d",
+      "zoomOut2d",
+      "autoScale2d",
+      "resetScale2d",
+      "sendDataToCloud",
+      "lasso2d",
+      "select2d",
+    ],
     ...(raw.config ?? {}),
   };
 
-  // Force disable modebar on mobile regardless of raw config
-  if (mobile) {
-    config.displayModeBar = false;
-  }
+  config.displayModeBar = false;
+  config.scrollZoom = false;
+  config.doubleClick = false;
 
   return {
     data: data as PlotlyTrace[],
@@ -566,6 +773,7 @@ async function renderLiveChart(el: HTMLElement) {
   const chartUrl = el.dataset.chart;
   const fallback = el.dataset.fallback;
   const label = el.getAttribute("aria-label");
+  const subtitle = el.dataset.caption;
   if (!chartUrl || el.dataset.rendered === "true") return;
 
   el.dataset.rendered = "true";
@@ -583,7 +791,7 @@ async function renderLiveChart(el: HTMLElement) {
 
     const spec = sanitizePlotlySpec(raw, mobile);
     const titleHtml = spec.titleHtml || extractTitleHtml(raw);
-    if (titleHtml) renderStaticHeading(el, titleHtml);
+    if (titleHtml || subtitle) renderStaticHeading(el, titleHtml, subtitle);
     await Plotly.newPlot(el, spec.data, spec.layout, spec.config);
     await Plotly.Plots.resize(el);
 
@@ -592,10 +800,12 @@ async function renderLiveChart(el: HTMLElement) {
       markChartReady(el, false);
       const resize = () => {
         const mob = isMobileViewport();
-        if (titleHtml) renderStaticHeading(el, titleHtml);
-        // Re-apply mobile layout on resize crossing breakpoint
+        if (titleHtml || subtitle) renderStaticHeading(el, titleHtml, subtitle);
         const resizeLayout = sanitizePlotlySpec(raw, mob).layout;
-        Plotly.relayout(el, { margin: resizeLayout.margin });
+        Plotly.relayout(el, {
+          margin: resizeLayout.margin,
+          annotations: resizeLayout.annotations,
+        });
         Plotly.Plots.resize(el);
       };
       window.addEventListener("resize", resize, { passive: true });
@@ -611,6 +821,9 @@ async function renderLiveChart(el: HTMLElement) {
 }
 
 export function initArtCharts() {
+  initChartReveal();
+  formatFactNumbers();
+
   const nodes = document.querySelectorAll<HTMLElement>(".art-chart-live");
   if (!nodes.length) return;
 

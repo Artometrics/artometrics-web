@@ -122,6 +122,10 @@
   padding: 18px 20px;
   border-radius: 2px;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 5.5rem;
 }
 .artometrics-article-body .fact-number{
   display: block;
@@ -130,15 +134,20 @@
   color: #C0392B;
   line-height: 1.1;
   margin-bottom: 6px;
-  font-family: Helvetica, sans-serif;
+  font-family: 'Playfair Display', Georgia, serif;
   text-align: left;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+.artometrics-article-body .fact-number--compact{
+  cursor: help;
 }
 .artometrics-article-body .fact-label{
   display: block;
   font-size: 0.82rem;
   color: #6B6B6B;
   line-height: 1.45;
-  font-family: Helvetica, sans-serif;
+  font-family: 'DM Sans', Helvetica, sans-serif;
   text-align: left;
   max-width: none;
   margin: 0;
@@ -1026,23 +1035,49 @@ pre:has(> code.sourceCode.sql),
   overflow: hidden !important;
   background: #FAFAF8 !important;
   box-shadow: 0 2px 16px rgba(28, 28, 30, 0.08), 0 1px 4px rgba(28, 28, 30, 0.04) !important;
-  transition: box-shadow 0.2s ease !important;
+  transition: opacity 0.85s ease, transform 0.85s ease, box-shadow 0.2s ease !important;
+  opacity: 0;
+  transform: translateY(18px);
+  position: relative;
+}
+.artometrics-article-body .art-chart::before{
+  content: "" !important;
+  display: block !important;
+  height: 3px !important;
+  background: #C0392B !important;
+  width: 100% !important;
+}
+.artometrics-article-body .art-chart--revealed{
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  .artometrics-article-body .art-chart{
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
 }
 .artometrics-article-body .art-chart:hover{
   box-shadow: 0 4px 24px rgba(28, 28, 30, 0.12), 0 1px 6px rgba(28, 28, 30, 0.06) !important;
 }
 .artometrics-article-body .art-chart-caption,
 .artometrics-article-body .art-chart figcaption{
+  display: none !important;
+}
+.artometrics-article-body .art-chart-caption--visible,
+.artometrics-article-body .art-chart figcaption.art-chart-caption--visible{
+  display: block !important;
   margin: 0 !important;
-  padding: 0.7rem 1rem !important;
-  border-top: 1px solid #D5D5D5 !important;
-  background: #F2F0EB !important;
-  font-family: 'DM Sans', sans-serif !important;
-  font-size: 0.72rem !important;
-  font-weight: 600 !important;
-  font-style: normal !important;
-  letter-spacing: 0.14em !important;
-  text-transform: uppercase !important;
+  padding: 0.55rem 1rem 0.75rem !important;
+  border-top: none !important;
+  background: transparent !important;
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-size: 0.88rem !important;
+  font-weight: 400 !important;
+  font-style: italic !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
   text-align: center !important;
   color: #6B6B6B !important;
 }
@@ -1056,8 +1091,8 @@ pre:has(> code.sourceCode.sql),
   flex-direction: column !important;
   align-items: center !important;
   justify-content: center !important;
-  gap: 0.4rem !important;
-  padding: 0.95rem 1rem 0.8rem !important;
+  gap: 0.35rem !important;
+  padding: 1rem 1.1rem 0.85rem !important;
   text-align: center !important;
   font-family: 'DM Sans', sans-serif !important;
   background: var(--art-cream, #F2F0EB) !important;
@@ -1066,14 +1101,34 @@ pre:has(> code.sourceCode.sql),
   width: 100% !important;
   box-sizing: border-box !important;
 }
+.artometrics-article-body .art-chart-heading__subtitle{
+  display: block !important;
+  width: 100% !important;
+  max-width: 34rem !important;
+  margin: 0.15rem auto 0 !important;
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-size: 0.92rem !important;
+  font-weight: 400 !important;
+  font-style: italic !important;
+  line-height: 1.45 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  color: #6B6B6B !important;
+}
+.artometrics-article-body .art-chart-heading__line--primary{
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-size: 0.95rem !important;
+  font-weight: 700 !important;
+  color: #1C1C1E !important;
+  letter-spacing: 0.04em !important;
+  text-transform: none !important;
+}
 .artometrics-article-body .art-chart-heading__line{
   display: block !important;
   width: 100% !important;
   max-width: 100% !important;
   text-align: center !important;
   line-height: 1.4 !important;
-  letter-spacing: 0.07em !important;
-  text-transform: uppercase !important;
   word-break: break-word !important;
   overflow-wrap: anywhere !important;
   hyphens: auto !important;
@@ -1081,18 +1136,15 @@ pre:has(> code.sourceCode.sql),
   margin: 0 !important;
   text-indent: 0 !important;
 }
-.artometrics-article-body .art-chart-heading__line--primary{
-  font-size: 0.78rem !important;
-  font-weight: 700 !important;
-  color: #1C1C1E !important;
-}
 .artometrics-article-body .art-chart-heading__line--accent,
 .artometrics-article-body .art-chart-heading span[style*="C0392B"],
 .artometrics-article-body .art-chart-heading span[style*="#C0392B"]{
-  font-size: 0.73rem !important;
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 0.68rem !important;
   font-weight: 700 !important;
   color: #C0392B !important;
-  letter-spacing: 0.09em !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
 }
 .artometrics-article-body .art-chart-heading b{
   font-weight: 700 !important;
@@ -1215,7 +1267,6 @@ pre:has(> code.sourceCode.sql),
   width: 100%;
   min-height: 0 !important;
   opacity: 1;
-  transition: opacity 0.35s ease;
   border-radius: 0;
   background: var(--art-cream, #F2F0EB);
   touch-action: manipulation;
@@ -1223,6 +1274,15 @@ pre:has(> code.sourceCode.sql),
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  cursor: default;
+}
+.artometrics-article-body .art-chart-live .js-plotly-plot,
+.artometrics-article-body .art-chart-live .plotly,
+.artometrics-article-body .art-chart-live .main-svg{
+  cursor: default !important;
+}
+.artometrics-article-body .art-chart-live .modebar{
+  display: none !important;
 }
 .artometrics-article-body .art-chart-live:not(.art-chart-has-heading){
   aspect-ratio: 16 / 9;
@@ -1270,17 +1330,6 @@ pre:has(> code.sourceCode.sql),
   margin: 0 auto !important;
   width: 100% !important;
   height: 100% !important;
-}
-.artometrics-article-body .art-chart-live .modebar{
-  top: auto !important;
-  bottom: 6px !important;
-  right: 4px !important;
-  opacity: 0 !important;
-  transition: opacity 0.15s ease !important;
-}
-.artometrics-article-body .art-chart-live:hover .modebar,
-.artometrics-article-body .art-chart-live:focus-within .modebar{
-  opacity: 1 !important;
 }
 .artometrics-article-body .art-github-wrap{
   text-align: center !important;
