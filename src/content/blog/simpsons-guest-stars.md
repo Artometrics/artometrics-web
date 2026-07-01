@@ -17,7 +17,7 @@ draft: false
   <li><a href="#chart-2-leaders" id="toc-chart-2-leaders">CHART 2 — LEADERS</a></li>
   <li><a href="#chart-4-timeline" id="toc-chart-4-timeline">CHART 4 — TIMELINE</a></li>
   <li><a href="#chart-5-frequency" id="toc-chart-5-frequency">CHART 5 — FREQUENCY</a></li>
-  <li><a href="#chart-extra-mix" id="toc-chart-extra-mix">CHART 5 — MIX</a></li>
+  <li><a href="#chart-extra-mix" id="toc-chart-extra-mix">SUPPLEMENT — MIX</a></li>
   <li><a href="#limitations" id="toc-limitations">LIMITATIONS</a></li>
   <li><a href="#conclusion" id="toc-conclusion">CONCLUSION</a></li>
   <li><a href="#references" id="toc-references">REFERENCES</a></li>
@@ -35,6 +35,7 @@ draft: false
 <h2 id="dataset-context" class="anchored">DATASET CONTEXT</h2>
 <p>The source is the TidyTuesday release from <strong>2019-08-27</strong> (R for Data Science community). This working file contains <strong>1,381</strong> rows and <strong>7</strong> columns after merging all available CSV/XLSX tables in the week folder.</p>
 <p>Charts are exported as Plotly JSON with PNG fallbacks. Medians are used for robustness where distributions skew. Index-style fields (row numbers, sequential IDs) are excluded from metric selection.</p>
+<p class="art-p"><strong>How to read this report:</strong> start with the chart caption, then ask what the metric actually means, what a non-expert should notice first, and what an expert would challenge in the source. The goal is not to memorize every number; it is to leave with a sharper question than the one you arrived with.</p>
 <h2 id="chart-1-volume" class="anchored">CHART 1 — VOLUME</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/simpsons-guest-stars/charts/chart1_volume.plotly.json" data-fallback="/images/content/articles/simpsons-guest-stars/charts/chart1_volume.png" role="img" aria-label="Records By Period"></div>
@@ -63,7 +64,7 @@ draft: false
 </figure>
 <p class="art-p">Most guest star entities appear only once; a small head revisits repeatedly.</p>
 <p class="art-p">This power-law shape is typical of guest lists, credits, and catalog-style tables.</p>
-<h2 id="chart-extra-mix" class="anchored">CHART 5 — MIX</h2>
+<h2 id="chart-extra-mix" class="anchored">SUPPLEMENT — MIX</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/simpsons-guest-stars/charts/chart_extra_mix.plotly.json" data-fallback="/images/content/articles/simpsons-guest-stars/charts/chart_extra_mix.png" role="img" aria-label="Season"></div>
   <figcaption class="art-chart-caption">Season</figcaption>
@@ -71,9 +72,11 @@ draft: false
 <p class="art-p"><strong>24</strong> is the most repeated season in the extract.</p>
 <p class="art-p">Secondary dimensions add context when the primary table has no numeric score column.</p>
 <h2 id="limitations" class="anchored">LIMITATIONS</h2>
-<p>Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p><p>Findings describe the file on hand — treat them as structural signals about <strong>Simpsons Guest Stars</strong>, not exhaustive truth about the full domain.</p>
+<p>Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p>
+<p>Findings describe the file on hand — treat them as structural signals about <strong>Simpsons Guest Stars</strong>, not exhaustive truth about the full domain.</p>
 <h2 id="conclusion" class="anchored">CONCLUSION</h2>
-<p>Measured end to end, <strong>Simpsons Guest Stars</strong> rewards counting: the leaders, the long tail, and the time trend rarely tell the same story about the field.</p><p>That tension is the Artometrics mandate — data does not replace judgment, it disciplines it.</p>
+<p>Read as a teaching map, <strong>Simpsons Guest Stars</strong> shows why one metric is rarely enough: leaders, tails, trends, and relationships each answer a different question about the field.</p>
+<p>The best reading is modest: use the chart to sharpen the question, then check the source and limits before turning it into a claim.</p>
 <h2 id="references" class="anchored">REFERENCES</h2>
 <p>Data Science Learning Community. (2019). <em>TidyTuesday: Simpsons Guest Stars</em>. <a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2019/2019-08-27/simpsons-guests.csv" target="_blank" rel="noopener noreferrer">https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2019/2019-08-27/simpsons-guests.csv</a></p>
 <h2 id="editors-note" class="anchored">EDITOR'S NOTE</h2>

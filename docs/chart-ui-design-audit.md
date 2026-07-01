@@ -6,21 +6,21 @@ It checks whether each chart has a clear headline/subtitle, useful hover/tap con
 ## UI summary
 
 - Charts audited: 426
-- Publication-ready: 373
-- Needs polish: 53
+- Publication-ready: 382
+- Needs polish: 44
 - Rework before publishing: 0
 
 ## Most common UI/design issues
 
 - uses runtime source fallback to report references: 318
-- editorial premise needs sharper framing: 228
+- editorial premise needs sharper framing: 229
 - runtime supplies fallback hover/tap context; custom hover recommended: 181
-- caption too generic for casual viewers: 106
+- caption too generic for casual viewers: 91
 - uses caption as rendered headline; custom subtitle recommended: 64
 - clear headline, source, hover context, and manageable density: 51
 - runtime names missing legend series; custom legend labels recommended: 27
 - dense plot needs simplification or stronger annotations: 25
-- weak editorial premise: 14
+- weak editorial premise: 13
 - many traces can overwhelm casual viewers: 13
 - runtime hides dense always-visible labels; manual callouts recommended: 7
 - many vertical categories risk cramped mobile labels: 5
@@ -35,24 +35,24 @@ It checks whether each chart has a clear headline/subtitle, useful hover/tap con
 | 4 | `imperial` | 74.3 | 0 | 3 | chart3_extraction_gap (66); chart1_gdppc_all_empires (77); chart2_empire_lifespan_indexed (80) |
 | 5 | `caesar-the-psychonomics-of-emperor-julius` | 75.7 | 0 | 3 | chart2_rome_gdp (68); chart3_patronage_network (78); chart1_lta_radar (81) |
 | 6 | `readmitted` | 76.0 | 0 | 2 | chart1_states_penalized (65); chart3_penalty_by_ownership (75); chart2_err_by_condition (88) |
-| 7 | `un-votes` | 76.4 | 0 | 4 | chart2_leaders (71); chart_extra_mix (71); chart3_category (79) |
-| 8 | `pokemon` | 76.7 | 0 | 3 | chart3_size_scatter (73); chart2_generation_ridgeline (76); chart1_stat_heatmap (81) |
-| 9 | `languages-glottolog` | 78.0 | 0 | 4 | chart_extra_mix (71); chart2_leaders (79); chart3_category (79) |
-| 10 | `anime` | 78.7 | 0 | 3 | chart2_studio_consistency (78); chart3_genre_map (78); chart1_releases_by_year (80) |
-| 11 | `franchise` | 79.0 | 0 | 3 | chart1_top20_revenue (69); chart3b_disney_consolidated (75); chart2_revenue_per_year (81) |
-| 12 | `beyonce-taylor-lyrics` | 80.0 | 0 | 3 | chart_extra_mix (71); chart3_category (79); chart5_frequency (79) |
-| 13 | `project-gutenberg` | 80.2 | 0 | 3 | chart2_leaders (79); chart3_category (79); chart5_frequency (79) |
-| 14 | `cetaceans` | 82.4 | 0 | 3 | chart2_leaders (79); chart3_category (79); chart1_volume (81) |
-| 15 | `emmy-awards` | 82.4 | 0 | 3 | chart2_leaders (79); chart3_category (79); chart1_volume (81) |
-| 16 | `simpsons-guest-stars` | 83.0 | 0 | 2 | chart_extra_mix (71); chart5_frequency (79); chart1_volume (85) |
-| 17 | `warrior-the-artometrics-of-a-golden-state-dynasty` | 83.7 | 0 | 1 | chart1_win_pct_timeline (79); chart2_three_point_revolution (84); chart3_73_win_context (88) |
-| 18 | `hurricanes-puerto-rico` | 86.8 | 0 | 1 | chart3_distribution (74); chart2_leaders (84); chart4_pareto (90) |
-| 19 | `cia-world-factbook` | 87.6 | 0 | 1 | chart2_leaders (76); chart3_distribution (82); chart4_pareto (90) |
-| 20 | `airline-safety` | 88.2 | 0 | 0 | chart2_leaders (84); chart3_distribution (84); chart5_scatter (87) |
-| 21 | `us-tuition` | 88.4 | 0 | 1 | chart3_distribution (74); chart2_leaders (84); chart_pareto (90) |
-| 22 | `hydro-wastewater` | 88.8 | 0 | 1 | chart2_leaders (76); chart3_distribution (88); chart1_breakdown (92) |
-| 23 | `craft-beer-usa` | 89.2 | 0 | 0 | chart3_distribution (82); chart2_leaders (84); chart4_pareto (90) |
-| 24 | `exercise-usa` | 89.2 | 0 | 0 | chart3_distribution (82); chart2_leaders (84); chart4_pareto (90) |
+| 7 | `pokemon` | 76.7 | 0 | 3 | chart3_size_scatter (73); chart2_generation_ridgeline (76); chart1_stat_heatmap (81) |
+| 8 | `anime` | 78.7 | 0 | 3 | chart2_studio_consistency (78); chart3_genre_map (78); chart1_releases_by_year (80) |
+| 9 | `franchise` | 79.0 | 0 | 3 | chart1_top20_revenue (69); chart3b_disney_consolidated (75); chart2_revenue_per_year (81) |
+| 10 | `beyonce-taylor-lyrics` | 80.0 | 0 | 3 | chart_extra_mix (71); chart3_category (79); chart5_frequency (79) |
+| 11 | `cetaceans` | 82.4 | 0 | 3 | chart2_leaders (79); chart3_category (79); chart1_volume (81) |
+| 12 | `emmy-awards` | 82.4 | 0 | 3 | chart2_leaders (79); chart3_category (79); chart1_volume (81) |
+| 13 | `simpsons-guest-stars` | 83.0 | 0 | 2 | chart_extra_mix (71); chart5_frequency (79); chart1_volume (85) |
+| 14 | `warrior-the-artometrics-of-a-golden-state-dynasty` | 83.7 | 0 | 1 | chart1_win_pct_timeline (79); chart2_three_point_revolution (84); chart3_73_win_context (88) |
+| 15 | `hurricanes-puerto-rico` | 86.8 | 0 | 1 | chart3_distribution (74); chart2_leaders (84); chart4_pareto (90) |
+| 16 | `cia-world-factbook` | 87.6 | 0 | 1 | chart2_leaders (76); chart3_distribution (82); chart4_pareto (90) |
+| 17 | `languages-glottolog` | 88.0 | 0 | 1 | chart_extra_mix (81); chart2_leaders (89); chart3_category (89) |
+| 18 | `un-votes` | 88.0 | 0 | 1 | chart_extra_mix (81); chart2_leaders (89); chart3_category (89) |
+| 19 | `airline-safety` | 88.2 | 0 | 0 | chart2_leaders (84); chart3_distribution (84); chart5_scatter (87) |
+| 20 | `us-tuition` | 88.4 | 0 | 1 | chart3_distribution (74); chart2_leaders (84); chart_pareto (90) |
+| 21 | `hydro-wastewater` | 88.8 | 0 | 1 | chart2_leaders (76); chart3_distribution (88); chart1_breakdown (92) |
+| 22 | `craft-beer-usa` | 89.2 | 0 | 0 | chart3_distribution (82); chart2_leaders (84); chart4_pareto (90) |
+| 23 | `exercise-usa` | 89.2 | 0 | 0 | chart3_distribution (82); chart2_leaders (84); chart4_pareto (90) |
+| 24 | `college-major-income` | 89.6 | 0 | 0 | chart2_leaders (84); chart4_gap (86); chart3_distribution (88) |
 
 ## Lowest-scoring chart UI findings
 
@@ -67,10 +67,7 @@ It checks whether each chart has a clear headline/subtitle, useful hover/tap con
 | 71 | needs polish | `beyonce-taylor-lyrics` | `chart_extra_mix` | bar-vertical | Line | uses caption as rendered headline; custom subtitle recommended; uses runtime source fallback to report references; caption too generic for casual viewers; weak editorial premise; runtime supplies fallback hover/tap context; custom hover recommended |
 | 71 | needs polish | `coffee-the-artometrics-of-java` | `chart3_submetric_heatmap` | heatmap | Submetric Heatmap | uses caption as rendered headline; custom subtitle recommended; uses runtime source fallback to report references; caption too generic for casual viewers; runtime supplies fallback hover/tap context; custom hover recommended; runtime names missing legend series; custom legend labels recommended; runtime hides dense always-visible labels; manual callouts recommended; dense plot needs simplification or stronger annotations |
 | 71 | needs polish | `giant-the-artometrics-of-a-san-francisco-dynasty` | `chart1_win_pct` | line-marker | Win Pct | uses caption as rendered headline; custom subtitle recommended; uses runtime source fallback to report references; caption too generic for casual viewers; runtime supplies fallback hover/tap context; custom hover recommended; runtime names missing legend series; custom legend labels recommended; many traces can overwhelm casual viewers; dense plot needs simplification or stronger annotations |
-| 71 | needs polish | `languages-glottolog` | `chart_extra_mix` | bar-vertical | Id | uses caption as rendered headline; custom subtitle recommended; uses runtime source fallback to report references; caption too generic for casual viewers; weak editorial premise; runtime supplies fallback hover/tap context; custom hover recommended |
 | 71 | needs polish | `simpsons-guest-stars` | `chart_extra_mix` | bar-vertical | Season | uses caption as rendered headline; custom subtitle recommended; uses runtime source fallback to report references; caption too generic for casual viewers; weak editorial premise; runtime supplies fallback hover/tap context; custom hover recommended |
-| 71 | needs polish | `un-votes` | `chart2_leaders` | bar-horizontal | Top Country | uses caption as rendered headline; custom subtitle recommended; uses runtime source fallback to report references; caption too generic for casual viewers; weak editorial premise; runtime supplies fallback hover/tap context; custom hover recommended |
-| 71 | needs polish | `un-votes` | `chart_extra_mix` | bar-vertical | Country code | uses caption as rendered headline; custom subtitle recommended; uses runtime source fallback to report references; caption too generic for casual viewers; weak editorial premise; runtime supplies fallback hover/tap context; custom hover recommended |
 | 73 | needs polish | `pokemon` | `chart3_size_scatter` | scatter | Pokémon size is design language, not just biology | uses caption as rendered headline; custom subtitle recommended; runtime supplies fallback hover/tap context; custom hover recommended; runtime names missing legend series; custom legend labels recommended; many traces can overwhelm casual viewers; dense plot needs simplification or stronger annotations; scatterplot may need clearer callouts |
 | 74 | needs polish | `giant-the-artometrics-of-a-san-francisco-dynasty` | `chart3_payroll_wins` | line-marker | Payroll Wins | uses caption as rendered headline; custom subtitle recommended; uses runtime source fallback to report references; caption too generic for casual viewers; runtime supplies fallback hover/tap context; custom hover recommended; runtime names missing legend series; custom legend labels recommended; many traces can overwhelm casual viewers |
 | 74 | needs polish | `h3-the-artometrics-of-a-youtube-dynasty` | `chart1_era_timeline` | line-marker | Era Timeline | uses caption as rendered headline; custom subtitle recommended; uses runtime source fallback to report references; caption too generic for casual viewers; runtime supplies fallback hover/tap context; custom hover recommended; runtime names missing legend series; custom legend labels recommended; dense plot needs simplification or stronger annotations |
@@ -94,15 +91,7 @@ It checks whether each chart has a clear headline/subtitle, useful hover/tap con
 | 79 | needs polish | `cetaceans` | `chart3_category` | bar-vertical | Transfer | uses caption as rendered headline; custom subtitle recommended; uses runtime source fallback to report references; caption too generic for casual viewers; editorial premise needs sharper framing; runtime supplies fallback hover/tap context; custom hover recommended |
 | 79 | needs polish | `emmy-awards` | `chart2_leaders` | bar-horizontal | Top Title | uses caption as rendered headline; custom subtitle recommended; uses runtime source fallback to report references; caption too generic for casual viewers; editorial premise needs sharper framing; runtime supplies fallback hover/tap context; custom hover recommended |
 | 79 | needs polish | `emmy-awards` | `chart3_category` | bar-vertical | Type | uses caption as rendered headline; custom subtitle recommended; uses runtime source fallback to report references; caption too generic for casual viewers; editorial premise needs sharper framing; runtime supplies fallback hover/tap context; custom hover recommended |
-| 79 | needs polish | `languages-glottolog` | `chart2_leaders` | bar-horizontal | Top Name | uses caption as rendered headline; custom subtitle recommended; uses runtime source fallback to report references; caption too generic for casual viewers; editorial premise needs sharper framing; runtime supplies fallback hover/tap context; custom hover recommended |
-| 79 | needs polish | `languages-glottolog` | `chart3_category` | bar-vertical | Macroarea | uses caption as rendered headline; custom subtitle recommended; uses runtime source fallback to report references; caption too generic for casual viewers; editorial premise needs sharper framing; runtime supplies fallback hover/tap context; custom hover recommended |
-| 79 | needs polish | `languages-glottolog` | `chart5_frequency` | distribution | Appearance Spread | uses caption as rendered headline; custom subtitle recommended; uses runtime source fallback to report references; caption too generic for casual viewers; editorial premise needs sharper framing; runtime supplies fallback hover/tap context; custom hover recommended |
-| 79 | needs polish | `project-gutenberg` | `chart2_leaders` | bar-horizontal | Top Subject | uses caption as rendered headline; custom subtitle recommended; uses runtime source fallback to report references; caption too generic for casual viewers; editorial premise needs sharper framing; runtime supplies fallback hover/tap context; custom hover recommended |
-| 79 | needs polish | `project-gutenberg` | `chart3_category` | bar-vertical | Subject type | uses caption as rendered headline; custom subtitle recommended; uses runtime source fallback to report references; caption too generic for casual viewers; editorial premise needs sharper framing; runtime supplies fallback hover/tap context; custom hover recommended |
-| 79 | needs polish | `project-gutenberg` | `chart5_frequency` | distribution | Appearance Spread | uses caption as rendered headline; custom subtitle recommended; uses runtime source fallback to report references; caption too generic for casual viewers; editorial premise needs sharper framing; runtime supplies fallback hover/tap context; custom hover recommended |
 | 79 | needs polish | `simpsons-guest-stars` | `chart5_frequency` | distribution | Appearance Spread | uses caption as rendered headline; custom subtitle recommended; uses runtime source fallback to report references; caption too generic for casual viewers; editorial premise needs sharper framing; runtime supplies fallback hover/tap context; custom hover recommended |
-| 79 | needs polish | `un-votes` | `chart3_category` | bar-vertical | Vote | uses caption as rendered headline; custom subtitle recommended; uses runtime source fallback to report references; caption too generic for casual viewers; editorial premise needs sharper framing; runtime supplies fallback hover/tap context; custom hover recommended |
-| 79 | needs polish | `un-votes` | `chart5_frequency` | distribution | Appearance Spread | uses caption as rendered headline; custom subtitle recommended; uses runtime source fallback to report references; caption too generic for casual viewers; editorial premise needs sharper framing; runtime supplies fallback hover/tap context; custom hover recommended |
 | 79 | needs polish | `warrior-the-artometrics-of-a-golden-state-dynasty` | `chart1_win_pct_timeline` | line-marker | Win Pct Timeline | uses caption as rendered headline; custom subtitle recommended; uses runtime source fallback to report references; runtime supplies fallback hover/tap context; custom hover recommended; runtime names missing legend series; custom legend labels recommended; many traces can overwhelm casual viewers; dense plot needs simplification or stronger annotations |
 | 80 | needs polish | `anime` | `chart1_releases_by_year` | line | Releases By Year | uses caption as rendered headline; custom subtitle recommended; uses runtime source fallback to report references; runtime supplies fallback hover/tap context; custom hover recommended; runtime names missing legend series; custom legend labels recommended; many traces can overwhelm casual viewers; dense plot needs simplification or stronger annotations |
 | 80 | needs polish | `imperial` | `chart2_empire_lifespan_indexed` | line | Empire Lifespan Indexed | uses caption as rendered headline; custom subtitle recommended; uses runtime source fallback to report references; runtime supplies fallback hover/tap context; custom hover recommended; runtime names missing legend series; custom legend labels recommended; many traces can overwhelm casual viewers; dense plot needs simplification or stronger annotations |
@@ -110,7 +99,9 @@ It checks whether each chart has a clear headline/subtitle, useful hover/tap con
 | 81 | needs polish | `cetaceans` | `chart1_volume` | bar-vertical | Records By Period | uses caption as rendered headline; custom subtitle recommended; uses runtime source fallback to report references; editorial premise needs sharper framing; runtime supplies fallback hover/tap context; custom hover recommended; dense plot needs simplification or stronger annotations; many vertical categories risk cramped mobile labels |
 | 81 | needs polish | `emmy-awards` | `chart1_volume` | bar-vertical | Records By Period | uses caption as rendered headline; custom subtitle recommended; uses runtime source fallback to report references; editorial premise needs sharper framing; runtime supplies fallback hover/tap context; custom hover recommended; dense plot needs simplification or stronger annotations; many vertical categories risk cramped mobile labels |
 | 81 | needs polish | `franchise` | `chart2_revenue_per_year` | line-marker | Revenue Per Year | uses caption as rendered headline; custom subtitle recommended; uses runtime source fallback to report references; runtime supplies fallback hover/tap context; custom hover recommended; runtime names missing legend series; custom legend labels recommended; runtime hides dense always-visible labels; manual callouts recommended; dense plot needs simplification or stronger annotations |
+| 81 | needs polish | `languages-glottolog` | `chart_extra_mix` | bar-vertical | Identifier fields are metadata rather than a reader-facing thesis | uses caption as rendered headline; custom subtitle recommended; uses runtime source fallback to report references; weak editorial premise; runtime supplies fallback hover/tap context; custom hover recommended |
 | 81 | needs polish | `pokemon` | `chart1_stat_heatmap` | heatmap | Type identity is visible in the stat profile | uses caption as rendered headline; custom subtitle recommended; runtime supplies fallback hover/tap context; custom hover recommended; runtime names missing legend series; custom legend labels recommended; runtime hides dense always-visible labels; manual callouts recommended; dense plot needs simplification or stronger annotations |
+| 81 | needs polish | `un-votes` | `chart_extra_mix` | bar-vertical | Country codes add metadata rather than a new thesis | uses caption as rendered headline; custom subtitle recommended; uses runtime source fallback to report references; weak editorial premise; runtime supplies fallback hover/tap context; custom hover recommended |
 | 82 | publication-ready | `beyonce-taylor-lyrics` | `chart1_category` | bar-horizontal | Artist name | uses runtime source fallback to report references; caption too generic for casual viewers; editorial premise needs sharper framing; runtime supplies fallback hover/tap context; custom hover recommended |
 | 82 | publication-ready | `cetaceans` | `chart1_category` | bar-horizontal | Transfer | uses runtime source fallback to report references; caption too generic for casual viewers; editorial premise needs sharper framing; runtime supplies fallback hover/tap context; custom hover recommended |
 | 82 | publication-ready | `christmas-novels` | `chart3_distribution` | bar-vertical | Birthdate Distribution | uses runtime source fallback to report references; caption too generic for casual viewers; editorial premise needs sharper framing; runtime supplies fallback hover/tap context; custom hover recommended |
@@ -118,10 +109,6 @@ It checks whether each chart has a clear headline/subtitle, useful hover/tap con
 | 82 | publication-ready | `craft-beer-usa` | `chart3_distribution` | bar-vertical | Abv Distribution | uses runtime source fallback to report references; caption too generic for casual viewers; editorial premise needs sharper framing; runtime supplies fallback hover/tap context; custom hover recommended |
 | 82 | publication-ready | `emmy-awards` | `chart1_category` | bar-horizontal | Type | uses runtime source fallback to report references; caption too generic for casual viewers; editorial premise needs sharper framing; runtime supplies fallback hover/tap context; custom hover recommended |
 | 82 | publication-ready | `exercise-usa` | `chart3_distribution` | bar-vertical | Adults Distribution | uses runtime source fallback to report references; caption too generic for casual viewers; editorial premise needs sharper framing; runtime supplies fallback hover/tap context; custom hover recommended |
-| 82 | publication-ready | `languages-glottolog` | `chart1_category` | bar-horizontal | Macroarea | uses runtime source fallback to report references; caption too generic for casual viewers; editorial premise needs sharper framing; runtime supplies fallback hover/tap context; custom hover recommended |
-| 82 | publication-ready | `project-gutenberg` | `chart1_category` | bar-horizontal | Subject type | uses runtime source fallback to report references; caption too generic for casual viewers; editorial premise needs sharper framing; runtime supplies fallback hover/tap context; custom hover recommended |
-| 82 | publication-ready | `project-gutenberg` | `chart_top_names` | bar-horizontal | Top Subject | uses runtime source fallback to report references; caption too generic for casual viewers; editorial premise needs sharper framing; runtime supplies fallback hover/tap context; custom hover recommended |
-| 82 | publication-ready | `un-votes` | `chart1_category` | bar-horizontal | Vote | uses runtime source fallback to report references; caption too generic for casual viewers; editorial premise needs sharper framing; runtime supplies fallback hover/tap context; custom hover recommended |
 | 82 | publication-ready | `us-voter-turnout` | `chart3_distribution` | bar-vertical | Votes Distribution | uses runtime source fallback to report references; caption too generic for casual viewers; editorial premise needs sharper framing; runtime supplies fallback hover/tap context; custom hover recommended |
 | 84 | publication-ready | `airline-safety` | `chart2_leaders` | bar-horizontal | Top Airline | uses runtime source fallback to report references; caption too generic for casual viewers; editorial premise needs sharper framing |
 | 84 | publication-ready | `airline-safety` | `chart3_distribution` | distribution | Avail seat km per week by Type of event | uses runtime source fallback to report references; editorial premise needs sharper framing; runtime supplies fallback hover/tap context; custom hover recommended; dense plot needs simplification or stronger annotations |
@@ -133,6 +120,19 @@ It checks whether each chart has a clear headline/subtitle, useful hover/tap con
 | 84 | publication-ready | `broadway-musicals` | `chart2_leaders` | bar-horizontal | Top Show | uses runtime source fallback to report references; caption too generic for casual viewers; editorial premise needs sharper framing |
 | 84 | publication-ready | `ceo-departures` | `chart2_leaders` | bar-horizontal | Top Coname | uses runtime source fallback to report references; caption too generic for casual viewers; editorial premise needs sharper framing |
 | 84 | publication-ready | `christmas-novels` | `chart2_leaders` | bar-horizontal | Top Title | uses runtime source fallback to report references; caption too generic for casual viewers; editorial premise needs sharper framing |
+| 84 | publication-ready | `christmas-songs` | `chart2_leaders` | bar-horizontal | Top Song | uses runtime source fallback to report references; caption too generic for casual viewers; editorial premise needs sharper framing |
+| 84 | publication-ready | `college-major-income` | `chart2_leaders` | bar-horizontal | Top Major | uses runtime source fallback to report references; caption too generic for casual viewers; editorial premise needs sharper framing |
+| 84 | publication-ready | `comic-characters` | `chart2_leaders` | bar-horizontal | Top Name | uses runtime source fallback to report references; caption too generic for casual viewers; editorial premise needs sharper framing |
+| 84 | publication-ready | `craft-beer-usa` | `chart2_leaders` | bar-horizontal | Top Name | uses runtime source fallback to report references; caption too generic for casual viewers; editorial premise needs sharper framing |
+| 84 | publication-ready | `exercise-usa` | `chart2_leaders` | bar-horizontal | Top State | uses runtime source fallback to report references; caption too generic for casual viewers; editorial premise needs sharper framing |
+| 84 | publication-ready | `fast-food-calories` | `chart2_leaders` | bar-horizontal | Top Item | uses runtime source fallback to report references; caption too generic for casual viewers; editorial premise needs sharper framing |
+| 84 | publication-ready | `global-life-expectancy` | `chart3_distribution` | bar-vertical | Distribution of life expectancy — all 17,894 country-year observations | uses runtime source fallback to report references; weak editorial premise; runtime supplies fallback hover/tap context; custom hover recommended |
+| 84 | publication-ready | `global-plastic-waste` | `chart2_leaders` | bar-horizontal | Top Entity | uses runtime source fallback to report references; caption too generic for casual viewers; editorial premise needs sharper framing |
+| 84 | publication-ready | `horror-movie-profit` | `chart2_leaders` | bar-horizontal | Top Movie | uses runtime source fallback to report references; caption too generic for casual viewers; editorial premise needs sharper framing |
+| 84 | publication-ready | `horror-movies` | `chart2_leaders` | bar-horizontal | Top Title | uses runtime source fallback to report references; caption too generic for casual viewers; editorial premise needs sharper framing |
+| 84 | publication-ready | `hurricanes-puerto-rico` | `chart2_leaders` | bar-horizontal | Top State | uses runtime source fallback to report references; caption too generic for casual viewers; editorial premise needs sharper framing |
+| 84 | publication-ready | `incarceration-trends` | `chart2_leaders` | bar-horizontal | Top State | uses runtime source fallback to report references; caption too generic for casual viewers; editorial premise needs sharper framing |
+| 84 | publication-ready | `lego-database` | `chart2_leaders` | bar-horizontal | Top Name | uses runtime source fallback to report references; caption too generic for casual viewers; editorial premise needs sharper framing |
 
 ## Automated rework already applied
 

@@ -2073,9 +2073,9 @@ def build_intro(spec: DatasetSpec, df: pd.DataFrame, meta: dict[str, Any]) -> li
     ]
 
 
-def chart_html(slug: str, chart: dict[str, Any]) -> str:
+def chart_html(slug: str, chart: dict[str, Any], source_url: str) -> str:
     return f"""<figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/{slug}/charts/{chart['id']}.plotly.json" data-fallback="/images/content/articles/{slug}/charts/{chart['id']}.png" role="img" aria-label="{chart['caption']}"></div>
+  <div class="art-chart-live" data-chart="/data/articles/{slug}/charts/{chart['id']}.plotly.json" data-fallback="/images/content/articles/{slug}/charts/{chart['id']}.png" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" role="img" aria-label="{chart['caption']}"></div>
   <figcaption class="art-chart-caption">{chart['caption']}</figcaption>
 </figure>"""
 
@@ -2115,7 +2115,7 @@ def render_article(spec: DatasetSpec, df: pd.DataFrame, meta: dict[str, Any], ch
     ]
     for ch in charts:
         body.append(f'<h2 id="{ch["section_id"]}" class="anchored">{ch["section_title"]}</h2>')
-        body.append(chart_html(spec.slug, ch))
+        body.append(chart_html(spec.slug, ch, source_url))
         for p in ch["prose"]:
             body.append(f'<p class="art-p">{format_prose(p)}</p>')
     metric = meta.get("metric")
@@ -2126,8 +2126,8 @@ def render_article(spec: DatasetSpec, df: pd.DataFrame, meta: dict[str, Any], ch
         "Merged tables may fan out or duplicate rows when join keys are imperfect.</p>"
         f"<p>Findings describe the file on hand — treat them as structural signals about <strong>{spec.title}</strong>, not exhaustive truth about the full domain.</p>",
         '<h2 id="conclusion" class="anchored">CONCLUSION</h2>',
-        f"<p>Measured end to end, <strong>{spec.title}</strong> rewards counting: the leaders, the long tail, and the time trend rarely tell the same story about {ml.lower()}.</p>"
-        "<p>That tension is the Artometrics mandate — data does not replace judgment, it disciplines it.</p>",
+        f"<p>Read as a teaching map, <strong>{spec.title}</strong> shows why one metric is rarely enough: leaders, tails, time trends, and relationships each answer a different question about {ml.lower()}.</p>"
+        "<p>The best reading is modest: use the chart to sharpen the question, then check the source and limits before turning it into a claim.</p>",
         '<h2 id="references" class="anchored">REFERENCES</h2>',
         f'<p>Data Science Learning Community. ({spec.tt_date[:4]}). <em>TidyTuesday: {spec.title}</em>. '
         f'<a href="{source_url}" target="_blank" rel="noopener noreferrer">{source_url}</a></p>',

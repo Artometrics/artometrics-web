@@ -8,8 +8,8 @@ It is meant to prioritize design and chart-selection work, not to validate the m
 - Charts audited: 426
 - Articles with charts: 89
 - Keep: 184
-- Rework: 228
-- Drop candidates: 14
+- Rework: 229
+- Drop candidates: 13
 
 ## Chart families
 
@@ -26,9 +26,9 @@ It is meant to prioritize design and chart-selection work, not to validate the m
 
 | Rank | Article | Avg score | Drop | Rework | Why first |
 |---:|---|---:|---:|---:|---|
-| 1 | `un-votes` | 58.6 | 2 | 3 | chart_extra_mix (drop candidate); chart2_leaders (drop candidate) |
-| 2 | `beyonce-taylor-lyrics` | 60.4 | 1 | 4 | chart_extra_mix (drop candidate); chart5_frequency (rework) |
-| 3 | `languages-glottolog` | 60.4 | 1 | 4 | chart_extra_mix (drop candidate); chart5_frequency (rework) |
+| 1 | `beyonce-taylor-lyrics` | 60.4 | 1 | 4 | chart_extra_mix (drop candidate); chart5_frequency (rework) |
+| 2 | `languages-glottolog` | 60.4 | 1 | 4 | chart_extra_mix (drop candidate); chart5_frequency (rework) |
+| 3 | `un-votes` | 60.4 | 1 | 4 | chart_extra_mix (drop candidate); chart5_frequency (rework) |
 | 4 | `college-major-income` | 64.0 | 1 | 3 | chart4_gap (drop candidate); chart2_leaders (rework) |
 | 5 | `project-gutenberg` | 64.0 | 0 | 5 | chart5_frequency (rework); chart_top_names (rework) |
 | 6 | `simpsons-guest-stars` | 65.8 | 1 | 3 | chart_extra_mix (drop candidate); chart5_frequency (rework) |
@@ -52,25 +52,24 @@ It is meant to prioritize design and chart-selection work, not to validate the m
 | Score | Verdict | Article | Chart | Kind | Caption | Reasons |
 |---:|---|---|---|---|---|---|
 | 44 | drop candidate | `beyonce-taylor-lyrics` | `chart_extra_mix` | bar-vertical | Line | bar-vertical chart; generated filler chart id; repeats chart family in article |
-| 44 | drop candidate | `languages-glottolog` | `chart_extra_mix` | bar-vertical | Id | bar-vertical chart; generated filler chart id; repeats chart family in article |
+| 44 | drop candidate | `languages-glottolog` | `chart_extra_mix` | bar-vertical | Identifier fields are metadata rather than a reader-facing thesis | bar-vertical chart; generated filler chart id; repeats chart family in article |
 | 44 | drop candidate | `simpsons-guest-stars` | `chart_extra_mix` | bar-vertical | Season | bar-vertical chart; generated filler chart id; repeats chart family in article |
-| 44 | drop candidate | `un-votes` | `chart_extra_mix` | bar-vertical | Country code | bar-vertical chart; generated filler chart id; repeats chart family in article |
+| 44 | drop candidate | `un-votes` | `chart_extra_mix` | bar-vertical | Country codes add metadata rather than a new thesis | bar-vertical chart; generated filler chart id; repeats chart family in article |
 | 48 | drop candidate | `readmitted` | `chart3_penalty_by_ownership` | bar-vertical | Penalty By Ownership | bar-vertical chart; multi-series context; generated filler chart id; repeats chart family in article |
 | 51 | drop candidate | `cia-world-factbook` | `chart2_leaders` | bar-horizontal | Top Country | bar-horizontal chart; generic caption; repeats chart family in article; ranking chart needs a sharper editorial point; example article needs manual math/editorial review |
 | 55 | drop candidate | `alcohol-consumption` | `chart2_leaders` | bar-horizontal | Top Country | bar-horizontal chart; generic caption; repeats chart family in article; ranking chart needs a sharper editorial point |
 | 55 | drop candidate | `college-major-income` | `chart4_gap` | bar-horizontal | Low wage jobs vs median by Major category | bar-horizontal chart; strong analytical frame; generic caption; repeats chart family in article; example article needs manual math/editorial review |
 | 55 | drop candidate | `hydro-wastewater` | `chart2_leaders` | bar-horizontal | Top COUNTRY | bar-horizontal chart; generic caption; repeats chart family in article; ranking chart needs a sharper editorial point |
-| 55 | drop candidate | `un-votes` | `chart2_leaders` | bar-horizontal | Top Country | bar-horizontal chart; generic caption; repeats chart family in article; ranking chart needs a sharper editorial point |
 | 57 | drop candidate | `big-mac-index` | `chart3_distribution` | bar-vertical | Distribution of Big Mac dollar prices — all 1,386 country-year observations | bar-vertical chart; generic caption |
 | 57 | drop candidate | `global-life-expectancy` | `chart3_distribution` | bar-vertical | Distribution of life expectancy — all 17,894 country-year observations | bar-vertical chart; generic caption |
 | 57 | drop candidate | `hurricanes-puerto-rico` | `chart3_distribution` | bar-vertical | Value Distribution | bar-vertical chart; generic caption |
 | 57 | drop candidate | `us-tuition` | `chart3_distribution` | bar-vertical | Value Distribution | bar-vertical chart; generic caption |
 | 58 | rework | `beyonce-taylor-lyrics` | `chart5_frequency` | distribution | Appearance Spread | distribution chart |
-| 58 | rework | `languages-glottolog` | `chart5_frequency` | distribution | Appearance Spread | distribution chart |
-| 58 | rework | `project-gutenberg` | `chart5_frequency` | distribution | Appearance Spread | distribution chart |
+| 58 | rework | `languages-glottolog` | `chart5_frequency` | distribution | Most languages appear once while a small head repeats | distribution chart |
+| 58 | rework | `project-gutenberg` | `chart5_frequency` | distribution | Repeated subjects reveal the reusable canon | distribution chart |
 | 58 | rework | `simpsons-guest-stars` | `chart5_frequency` | distribution | Appearance Spread | distribution chart |
 | 58 | rework | `super-bowl-ads` | `chart3_distribution` | distribution | View count by Kind | distribution chart |
-| 58 | rework | `un-votes` | `chart5_frequency` | distribution | Appearance Spread | distribution chart |
+| 58 | rework | `un-votes` | `chart5_frequency` | distribution | Country appearances follow a long-tail pattern | distribution chart |
 | 59 | rework | `caesar-the-psychonomics-of-emperor-julius` | `chart1_lta_radar` | mixed | Lta Radar | mixed chart; multi-series context |
 | 59 | rework | `ramen-ratings` | `chart4_gap` | bar-horizontal | Stars vs median by Country | bar-horizontal chart; strong analytical frame; generic caption; repeats chart family in article |
 | 59 | rework | `wine-ratings` | `chart4_gap` | bar-horizontal | Points vs median by Country | bar-horizontal chart; strong analytical frame; generic caption; repeats chart family in article |
@@ -95,12 +94,13 @@ It is meant to prioritize design and chart-selection work, not to validate the m
 | 62 | rework | `incarceration-trends` | `chart3_distribution` | distribution | Population by Region | distribution chart; multi-series context |
 | 62 | rework | `netflix-engagement` | `chart3_distribution` | distribution | Hours viewed by Source | distribution chart; multi-series context |
 | 62 | rework | `patriots-the-artometrics-of-the-system-dynasty` | `chart4_conference_gate` | bar-horizontal | AFC championship appearances since 2001 | bar-horizontal chart; repeats chart family in article |
-| 62 | rework | `project-gutenberg` | `chart_top_names` | bar-horizontal | Top Subject | bar-horizontal chart; repeats chart family in article |
+| 62 | rework | `project-gutenberg` | `chart_top_names` | bar-horizontal | Subject labels become the map of the shelf | bar-horizontal chart; repeats chart family in article |
 | 62 | rework | `simpsons-guest-stars` | `chart1_volume` | bar-vertical | Records By Period | bar-vertical chart; ranking chart needs a sharper editorial point |
 | 62 | rework | `yankees-the-artometrics-of-baseballs-empire` | `chart1_banner_clusters` | bar-vertical | World Series titles by decade | bar-vertical chart; ranking chart needs a sharper editorial point |
 | 63 | rework | `billboard-hot-100` | `chart3_distribution` | distribution | Distribution of run lengths for the most frequent number-one artists | distribution chart; multi-series context |
 | 63 | rework | `board-games` | `chart3_distribution` | distribution | Average rating by Category | distribution chart; multi-series context |
 | 63 | rework | `broadway-musicals` | `chart3_distribution` | distribution | Avg ticket price by Theatre | distribution chart; multi-series context |
+| 63 | rework | `college-major-income` | `chart3_distribution` | distribution | Low wage jobs by Major category | distribution chart; multi-series context |
 
 ## Editorial guidance
 

@@ -38,6 +38,7 @@ draft: false
 <h2 id="dataset-context" class="anchored">DATASET CONTEXT</h2>
 <p>The source is the TidyTuesday release from <strong>2021-04-27</strong> (R for Data Science community). This working file contains <strong>9,423</strong> rows and <strong>19</strong> columns after merging all available CSV/XLSX tables in the week folder.</p>
 <p>Charts are exported as Plotly JSON with PNG fallbacks. Medians are used for robustness where distributions skew. Index-style fields (row numbers, sequential IDs) are excluded from metric selection.</p>
+<p class="art-p"><strong>How to read this report:</strong> start with the chart caption, then ask what the metric actually means, what a non-expert should notice first, and what an expert would challenge in the source. The goal is not to memorize every number; it is to leave with a sharper question than the one you arrived with.</p>
 <h2 id="chart-1-breakdown" class="anchored">CHART 1 — BREAKDOWN</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/ceo-departures/charts/chart1_breakdown.plotly.json" data-fallback="/images/content/articles/ceo-departures/charts/chart1_breakdown.png" role="img" aria-label="Max tenure ceodb by Coname"></div>
@@ -74,9 +75,11 @@ draft: false
 <p class="art-p">Joint plot of <strong>max tenure ceodb</strong> and <strong>tenure no ceodb</strong> surfaces clusters the averages erase.</p>
 <p class="art-p">Bubble size tracks repeat presence — outliers are archetypes, not noise.</p>
 <h2 id="limitations" class="anchored">LIMITATIONS</h2>
-<p>Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p><p>Findings describe the file on hand — treat them as structural signals about <strong>CEO Departures</strong>, not exhaustive truth about the full domain.</p>
+<p>Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p>
+<p>Findings describe the file on hand — treat them as structural signals about <strong>CEO Departures</strong>, not exhaustive truth about the full domain.</p>
 <h2 id="conclusion" class="anchored">CONCLUSION</h2>
-<p>Measured end to end, <strong>CEO Departures</strong> rewards counting: the leaders, the long tail, and the time trend rarely tell the same story about max tenure ceodb.</p><p>That tension is the Artometrics mandate — data does not replace judgment, it disciplines it.</p>
+<p>Read as a teaching map, <strong>CEO Departures</strong> shows why one metric is rarely enough: leaders, tails, trends, and relationships each answer a different question about max tenure ceodb.</p>
+<p>The best reading is modest: use the chart to sharpen the question, then check the source and limits before turning it into a claim.</p>
 <h2 id="references" class="anchored">REFERENCES</h2>
 <p>Data Science Learning Community. (2021). <em>TidyTuesday: CEO Departures</em>. <a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2021/2021-04-27/departures.csv" target="_blank" rel="noopener noreferrer">https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2021/2021-04-27/departures.csv</a></p>
 <h2 id="editors-note" class="anchored">EDITOR'S NOTE</h2>
