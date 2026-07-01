@@ -5,18 +5,18 @@ It is meant to prioritize design and chart-selection work, not to validate the m
 
 ## Corpus summary
 
-- Charts audited: 366
-- Articles with charts: 77
-- Keep: 153
-- Rework: 199
+- Charts audited: 391
+- Articles with charts: 82
+- Keep: 164
+- Rework: 213
 - Drop candidates: 14
 
 ## Chart families
 
-- bar-horizontal: 133
-- line-marker: 83
-- scatter: 56
-- bar-vertical: 45
+- bar-horizontal: 138
+- line-marker: 88
+- scatter: 68
+- bar-vertical: 48
 - distribution: 37
 - line: 8
 - heatmap: 3

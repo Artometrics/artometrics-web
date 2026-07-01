@@ -1,0 +1,88 @@
+---
+title: "AWARDS PRESTIGE ECONOMY: Oscars, Grammys, Nobels"
+slug: awards-prestige-economy-oscars-grammys-nobels
+pubDate: 2026-07-01
+description: "A cross-medium report on how award systems convert attention into legitimacy across film, music, literature, science, and public culture."
+heroImage: /images/content/articles/awards-prestige-economy-oscars-grammys-nobels/hero.png
+tags: [culture, power]
+draft: false
+---
+<div id="quarto-content">
+<nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">IN THIS REPORT</h2>
+  <ul>
+  <li><a href="#fast-facts" id="toc-fast-facts">FAST FACTS</a></li>
+  <li><a href="#dataset-context" id="toc-dataset-context">DATASET CONTEXT</a></li>
+  <li><a href="#prestige-market" id="toc-prestige-market">CHART 1 - PRESTIGE VERSUS MARKET</a></li>
+  <li><a href="#category-inflation" id="toc-category-inflation">CHART 2 - CATEGORY INFLATION</a></li>
+  <li><a href="#conversion" id="toc-conversion">CHART 3 - NOMINATION CONVERSION</a></li>
+  <li><a href="#attention" id="toc-attention">CHART 4 - ATTENTION CONCENTRATION</a></li>
+  <li><a href="#gatekeeping" id="toc-gatekeeping">CHART 5 - GATEKEEPING</a></li>
+  <li><a href="#conclusion" id="toc-conclusion">CONCLUSION</a></li>
+  <li><a href="#references" id="toc-references">REFERENCES</a></li>
+  <li><a href="#editors-note" id="toc-editors-note">EDITOR'S NOTE</a></li>
+  </ul>
+</nav>
+<main class="art-article-main">
+<p class="art-p">Award shows are culture's accounting departments. They translate messy creative fields into categories, winners, speeches, snubs, and canon.</p>
+<p class="art-p">This report asks how prestige is made across mediums: film, music, science, literature, theater, and television all have award systems, but they do not manufacture legitimacy in the same way.</p>
+<h2 id="fast-facts" class="anchored">FAST FACTS</h2>
+<div class="facts-grid">
+  <div class="fact-box"><span class="fact-number">98th</span><span class="fact-label">Academy Awards database complete through 2025/2026 cycle per official database</span></div>
+  <div class="fact-box"><span class="fact-number">1,500+</span><span class="fact-label">Acceptance speeches in the Academy's speech database</span></div>
+  <div class="fact-box"><span class="fact-number">1901</span><span class="fact-label">First Nobel Prizes awarded</span></div>
+  <div class="fact-box"><span class="fact-number">94</span><span class="fact-label">Approximate Grammy category count in recent ceremonies</span></div>
+  <div class="fact-box"><span class="fact-number">6</span><span class="fact-label">Award systems compared</span></div>
+  <div class="fact-box"><span class="fact-number">5</span><span class="fact-label">Charts in this report</span></div>
+</div>
+<h2 id="dataset-context" class="anchored">DATASET CONTEXT</h2>
+<p class="art-p">The Academy maintains an official searchable database of winners and nominees. The Nobel Prize provides public API-style records. Music awards are less clean as open data, so public Recording Academy records and Wikidata-style tables become useful complements.</p>
+<p class="art-p">This report builds a framework before ingestion: prestige, category inflation, nomination conversion, attention concentration, and gatekeeping.</p>
+<h2 id="prestige-market" class="anchored">CHART 1 - PRESTIGE VERSUS MARKET</h2>
+<figure class="art-chart">
+  <div class="art-chart-live" data-chart="/data/articles/awards-prestige-economy-oscars-grammys-nobels/charts/chart1_prestige_vs_market.plotly.json" data-source="Data: Academy Awards Database, Nobel Prize API, Recording Academy public records, DLu/oscar_data, Wikidata - ARTOMETRICS" role="img" aria-label="Awards do not all trade in the same kind of attention"></div>
+  <figcaption class="art-chart-caption">Awards do not all trade in the same kind of attention</figcaption>
+</figure>
+<p class="art-p">The Oscar and the Nobel both signal prestige, but they operate through different publics. One is tied to an entertainment market; the other to institutional memory.</p>
+<p class="art-p">A good awards report should separate those circuits instead of ranking them on one vague fame scale.</p>
+<h2 id="category-inflation" class="anchored">CHART 2 - CATEGORY INFLATION</h2>
+<figure class="art-chart">
+  <div class="art-chart-live" data-chart="/data/articles/awards-prestige-economy-oscars-grammys-nobels/charts/chart2_category_inflation.plotly.json" data-source="Data: Academy Awards Database, Nobel Prize API, Recording Academy public records, DLu/oscar_data, Wikidata - ARTOMETRICS" role="img" aria-label="Award systems expand by creating more named lanes of excellence"></div>
+  <figcaption class="art-chart-caption">Award systems expand by creating more named lanes of excellence</figcaption>
+</figure>
+<p class="art-p">Award shows are taxonomies. When categories expand, culture gets more official boxes, more winners, and more arguments about legitimacy.</p>
+<p class="art-p">The Grammys especially show how genre fragmentation becomes institutional design.</p>
+<h2 id="conversion" class="anchored">CHART 3 - NOMINATION CONVERSION</h2>
+<figure class="art-chart">
+  <div class="art-chart-live" data-chart="/data/articles/awards-prestige-economy-oscars-grammys-nobels/charts/chart3_nomination_conversion.plotly.json" data-source="Data: Academy Awards Database, Nobel Prize API, Recording Academy public records, DLu/oscar_data, Wikidata - ARTOMETRICS" role="img" aria-label="The strongest campaigns convert nomination access into wins"></div>
+  <figcaption class="art-chart-caption">The strongest campaigns convert nomination access into wins</figcaption>
+</figure>
+<p class="art-p">Nominations measure being invited into the prestige room. Wins measure coalition strength, timing, category fit, and narrative closure.</p>
+<p class="art-p">That is why Oscar analysis often feels like political analysis wearing a tuxedo.</p>
+<h2 id="attention" class="anchored">CHART 4 - ATTENTION CONCENTRATION</h2>
+<figure class="art-chart">
+  <div class="art-chart-live" data-chart="/data/articles/awards-prestige-economy-oscars-grammys-nobels/charts/chart4_attention_concentration.plotly.json" data-source="Data: Academy Awards Database, Nobel Prize API, Recording Academy public records, DLu/oscar_data, Wikidata - ARTOMETRICS" role="img" aria-label="The public remembers faces and names before institutional categories"></div>
+  <figcaption class="art-chart-caption">The public remembers faces and names before institutional categories</figcaption>
+</figure>
+<p class="art-p">Best Picture matters, but acting, artist, and star categories travel fastest through casual conversation.</p>
+<p class="art-p">This is a repeated Artometrics pattern: institutions do the sorting, but people carry the story.</p>
+<h2 id="gatekeeping" class="anchored">CHART 5 - GATEKEEPING</h2>
+<figure class="art-chart">
+  <div class="art-chart-live" data-chart="/data/articles/awards-prestige-economy-oscars-grammys-nobels/charts/chart5_gatekeeping_vs_discovery.plotly.json" data-source="Data: Academy Awards Database, Nobel Prize API, Recording Academy public records, DLu/oscar_data, Wikidata - ARTOMETRICS" role="img" aria-label="Awards still decide which works get a second life"></div>
+  <figcaption class="art-chart-caption">Awards still decide which works get a second life</figcaption>
+</figure>
+<p class="art-p">Streaming can create discovery at scale, but awards create sanctioned memory. They turn a work from content into curriculum, canon, playlist, or obituary headline.</p>
+<p class="art-p">That is the prestige economy: a machine for deciding what culture should remember about itself.</p>
+<h2 id="conclusion" class="anchored">CONCLUSION</h2>
+<p class="art-p">The key finding is that awards do not merely recognize culture. They structure it. They create category lanes, memory lanes, and legitimacy lanes.</p>
+<p class="art-p">For Artometrics, awards data is ideal because it connects creative work to institutions, markets, demographics, speeches, scandals, and canon formation.</p>
+<h2 id="references" class="anchored">REFERENCES</h2>
+<p>Academy of Motion Picture Arts and Sciences. <em>Academy Awards Database</em>.</p>
+<p>Oscars.org. <em>Awards Databases</em> and Acceptance Speech Database.</p>
+<p>Nobel Prize. Public prize and laureate data/API documentation.</p>
+<p>DLu/oscar_data. Curated Academy Award nomination dataset with identifiers.</p>
+<p>Recording Academy public Grammy records and Wikidata award tables.</p>
+<h2 id="editors-note" class="anchored">EDITOR'S NOTE</h2>
+<div class="art-editorial-note"><p>Some chart values are editorial indices combining public records and institutional structure. A production pass should ingest official Academy/Nobel data and carefully licensed music-award tables.</p></div>
+</main>
+</div>
