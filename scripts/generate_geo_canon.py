@@ -437,6 +437,191 @@ def cultural_exports_geoeconomics():
     )
 
 
+def california_texas_state_rivalry():
+    slug = "california-vs-texas-state-rivalry"
+    source = "Data: BEA, Census ACS, BLS, IRS migration summaries, OEC/ITA exports, state budget documents - ARTOMETRICS"
+
+    categories = ["GDP scale", "Population", "Tax burden debate", "Migration attention", "Energy role", "Tech role", "Cultural output"]
+    ca = [96, 94, 88, 82, 46, 94, 91]
+    tx = [86, 88, 62, 91, 96, 76, 68]
+    write_chart(slug, "chart1_why_compared", {"data": [
+        bar_h(categories, ca, [ART_RED] * len(categories), name="California", hover="<b>%{y}</b><br>California: %{x}<extra></extra>"),
+        bar_h(categories, tx, [ART_BLUE] * len(categories), name="Texas", hover="<b>%{y}</b><br>Texas: %{x}<extra></extra>"),
+    ], "layout": {**layout("California and Texas are compared because they are rival systems", "SCALE IS THE SIMILARITY; GOVERNANCE IS THE CONTRAST", x_title="Index"), "barmode": "group", "showlegend": True, "legend": {"orientation": "h", "x": 0.5, "xanchor": "center", "y": 1.05}}})
+
+    years = ["2000", "2005", "2010", "2015", "2020", "2025"]
+    ca_model = [92, 94, 91, 96, 98, 95]
+    tx_model = [61, 66, 72, 78, 86, 90]
+    write_chart(slug, "chart2_growth_story", {"data": [
+        line(years, ca_model, color=ART_RED, name="California knowledge/IP model", hover="<b>%{x}</b><br>California model strength: %{y}<extra></extra>"),
+        line(years, tx_model, color=ART_BLUE, name="Texas growth/energy model", hover="<b>%{x}</b><br>Texas model strength: %{y}<extra></extra>"),
+    ], "layout": {**layout("The rivalry is also a model competition", "ONE COMPOUNDS KNOWLEDGE; THE OTHER COMPOUNDS GROWTH CAPACITY", x_title="Period", y_title="Model strength index"), "showlegend": True, "legend": {"orientation": "h", "x": 0.5, "xanchor": "center", "y": 1.08}}})
+
+    sectors = ["Software/IP", "Energy", "Entertainment", "Aerospace", "Agriculture", "Logistics", "Advanced manufacturing"]
+    z = [
+        [98, 46, 96, 82, 72, 68, 79],
+        [76, 98, 48, 74, 78, 91, 82],
+    ]
+    write_chart(slug, "chart3_export_fingerprint", {"data": [heatmap(sectors, ["California", "Texas"], z)], "layout": layout("Their export fingerprints explain the argument", "SOFTWARE AND CULTURE VERSUS ENERGY AND LOGISTICS IS TOO SIMPLE, BUT USEFUL", x_title="Export/industry family", y_title="State")})
+
+    variables = ["Housing cost", "Tax salience", "Wage ceiling", "Business formation", "Power grid risk", "Climate risk", "Cultural magnetism"]
+    ca_values = [96, 90, 94, 83, 58, 86, 95]
+    tx_values = [64, 62, 78, 91, 82, 88, 71]
+    write_chart(slug, "chart4_hidden_tradeoffs", {"data": [scatter(ca_values, tx_values, variables, [22] * len(variables), [ART_RED if v in {"Housing cost", "Cultural magnetism"} else ART_BLUE for v in variables], hover="<b>%{text}</b><br>California intensity: %{x}<br>Texas intensity: %{y}<extra></extra>")], "layout": layout("The hidden tradeoff is not only taxes", "COST, RISK, WAGES, AND CULTURE MOVE TOGETHER", x_title="California intensity", y_title="Texas intensity")})
+
+    questions = ["Is migration tax-driven?", "Which exports are irreplaceable?", "What does each import?", "Which model handles climate?", "Where does talent compound?", "Who benefits from growth?"]
+    importance = [86, 93, 79, 91, 95, 88]
+    write_chart(slug, "chart5_rivalry_questions", {"data": [bar_v(questions, importance, [ART_RED if q in {"Which exports are irreplaceable?", "Where does talent compound?"} else ART_BLUE for q in questions], hover="<b>%{x}</b><br>Comparison value: %{y}<extra></extra>")], "layout": layout("The real comparison starts after the slogan", "TAXES ARE ONLY THE ENTRY POINT", x_title="Question", y_title="Comparison value index")})
+
+    sections = [
+        {"id": "why-compared", "title": "CHART 1 - WHY THEY ARE COMPARED", "chart": "chart1_why_compared", "caption": "California and Texas are rival systems because both are big enough to feel like countries", "prose": ["People compare California and Texas because they are not merely states. They are competing governance models, labor markets, export systems, media stories, and migration symbols.", "The easy version is taxes. The more useful version is absorption: how each state turns land, labor, energy, culture, and institutions into growth."]},
+        {"id": "growth-model", "title": "CHART 2 - GROWTH MODEL", "chart": "chart2_growth_story", "caption": "California compounds knowledge while Texas compounds growth capacity", "prose": ["California's model is IP-heavy: software, entertainment, venture capital, universities, design, and talent networks. Texas has a capacity model: energy, land, logistics, lower-cost growth, and business relocation.", "That is why the rivalry persists even when the states are not substitutable."]},
+        {"id": "fingerprint", "title": "CHART 3 - EXPORT FINGERPRINT", "chart": "chart3_export_fingerprint", "caption": "The states overlap in scale but diverge in what they export to the world", "prose": ["California sells attention, code, entertainment, agriculture, hardware, and high-end coordination. Texas sells energy, logistics, industrial growth, and increasingly technology-adjacent capacity.", "The chart shows why the same GDP conversation hides very different machinery."]},
+        {"id": "tradeoffs", "title": "CHART 4 - HIDDEN TRADEOFFS", "chart": "chart4_hidden_tradeoffs", "caption": "The rivalry is about cost, climate, wages, culture, and risk, not taxes alone", "prose": ["California's high cost is real. Texas's energy and climate exposure are real. California's wage ceiling and cultural magnetism are real. Texas's business formation and logistics advantages are real.", "A serious comparison keeps all of those variables in the frame at once."]},
+        {"id": "questions", "title": "CHART 5 - WHAT TO ASK NEXT", "chart": "chart5_rivalry_questions", "caption": "The useful California-Texas questions are about irreplaceable exports, talent, climate, and who benefits", "prose": ["The surprise question is not 'which state is better?' It is which parts of each state are impossible for the other to copy.", "That gives later reports a sharper path: migration, taxes, exports, housing, climate, and cultural production should be tested as a system."]},
+    ]
+    article(
+        slug,
+        "CALIFORNIA VS TEXAS: The Artometrics of Rival State Systems",
+        "A comparative geo-economics report on why California and Texas are paired in public debate, what they share, and where their economies, exports, risks, and identities diverge.",
+        "atlas, power",
+        [("fast-facts", "FAST FACTS"), ("dataset-context", "DATASET CONTEXT")] + [(s["id"], s["title"]) for s in sections] + [("conclusion", "CONCLUSION"), ("references", "REFERENCES"), ("editors-note", "EDITOR'S NOTE")],
+        ["California and Texas are the most common American state comparison because each is large enough to represent a theory of the country. One is the expensive knowledge-and-culture machine; the other is the growth-and-capacity machine.", "This report does not settle the rivalry. It defines why the rivalry exists and what a serious data comparison should test next."],
+        [("2", "State systems compared"), ("7", "Rivalry dimensions scored"), ("7", "Export/industry families compared"), ("6", "Next comparison questions"), ("5", "Charts in this report"), ("0", "Simple answers accepted")],
+        ["The source stack for a full production pass includes BEA state GDP by industry, Census ACS population and migration, IRS migration summaries, BLS employment, state tax/budget documents, OEC/ITA export tables, and climate/energy data.", "The charts use editorial indices to frame the argument before direct ingestion. The point is to avoid reducing the rivalry to one tax variable."],
+        sections,
+        ["California and Texas are competitors because they are two different answers to the same American question: how should scale, growth, talent, land, energy, and culture be organized?", "The most important finding is that the comparison is valid, but usually under-asked. Taxes are visible; export identity, climate risk, talent compounding, and cultural magnetism explain more."],
+        ["BEA. State GDP by industry.", "U.S. Census ACS and population estimates.", "IRS migration data summaries.", "BLS state employment statistics.", "International Trade Administration and OEC export references.", "State budget and tax agency documents."],
+        "Values are editorial indices intended to structure a later direct-data production pass. They should be replaced with source aggregates before making formal rankings.",
+        source,
+    )
+
+
+def new_york_vs_san_francisco_city_systems():
+    slug = "new-york-vs-san-francisco-city-systems"
+    source = "Data: BEA, Census ACS, DataSF, NYC Open Data, BLS, World Cities Culture Forum, PitchBook-style public venture references - ARTOMETRICS"
+
+    axes = ["Finance", "Software", "Media", "Culture", "Housing pressure", "Transit dependence", "Global command", "Startup density"]
+    ny = [98, 76, 94, 95, 90, 96, 99, 72]
+    sf = [68, 98, 72, 84, 96, 72, 78, 99]
+    write_chart(slug, "chart1_command_vs_lab", {"data": [
+        bar_h(axes, ny, [ART_RED] * len(axes), name="New York", hover="<b>%{y}</b><br>New York: %{x}<extra></extra>"),
+        bar_h(axes, sf, [ART_BLUE] * len(axes), name="San Francisco", hover="<b>%{y}</b><br>San Francisco: %{x}<extra></extra>"),
+    ], "layout": {**layout("New York is command; San Francisco is lab", "BOTH EXPORT COORDINATION, BUT AT DIFFERENT SCALES", x_title="City identity index"), "barmode": "group", "showlegend": True, "legend": {"orientation": "h", "x": 0.5, "xanchor": "center", "y": 1.05}}})
+
+    periods = ["Port city", "Industrial", "Corporate", "Digital", "Post-pandemic", "AI era"]
+    nyc = [96, 86, 98, 82, 74, 80]
+    sf = [74, 48, 64, 98, 72, 95]
+    write_chart(slug, "chart2_history_timing", {"data": [
+        line(periods, nyc, color=ART_RED, name="New York", hover="<b>%{x}</b><br>New York layer: %{y}<extra></extra>"),
+        line(periods, sf, color=ART_BLUE, name="San Francisco", hover="<b>%{x}</b><br>San Francisco layer: %{y}<extra></extra>"),
+    ], "layout": {**layout("The cities peak on different historical layers", "NEW YORK COMPOUNDS COMMAND; SF COMPOUNDS PARADIGM SHIFTS", x_title="Historical layer", y_title="Layer strength index"), "showlegend": True, "legend": {"orientation": "h", "x": 0.5, "xanchor": "center", "y": 1.08}}})
+
+    outputs = ["Capital allocation", "Software platforms", "Advertising/media", "Fashion/art", "AI labs", "Universities", "Tourism", "Public markets"]
+    z = [
+        [99, 68, 96, 94, 71, 84, 96, 98],
+        [72, 99, 74, 78, 98, 86, 68, 73],
+    ]
+    write_chart(slug, "chart3_output_fingerprint", {"data": [heatmap(outputs, ["New York", "San Francisco"], z)], "layout": layout("The output fingerprint explains the pairing", "BOTH SELL INTANGIBLE SYSTEMS, BUT DIFFERENT ONES", x_title="Output family", y_title="City")})
+
+    pressures = ["Housing", "Office reset", "Transit stress", "Talent churn", "Public disorder narrative", "Cultural retention"]
+    ny_pressure = [90, 82, 75, 78, 72, 86]
+    sf_pressure = [96, 91, 79, 88, 84, 82]
+    write_chart(slug, "chart4_pressure_pairing", {"data": [scatter(ny_pressure, sf_pressure, pressures, [22] * len(pressures), [ART_RED if p in {"Housing", "Office reset"} else ART_BLUE for p in pressures], hover="<b>%{text}</b><br>New York pressure: %{x}<br>San Francisco pressure: %{y}<extra></extra>")], "layout": layout("Their pain rhymes but does not match", "THE SAME POST-2020 WORDS HIDE DIFFERENT SYSTEMS", x_title="New York pressure index", y_title="San Francisco pressure index")})
+
+    questions = ["Which city commands capital?", "Which city invents platforms?", "Which absorbs talent better?", "Which can build housing?", "Which culture renews faster?", "Which exports status?"]
+    value = [92, 94, 88, 91, 84, 89]
+    write_chart(slug, "chart5_city_comparison_questions", {"data": [bar_v(questions, value, [ART_RED if q in {"Which city commands capital?", "Which city invents platforms?"} else ART_BLUE for q in questions], hover="<b>%{x}</b><br>Diagnostic value: %{y}<extra></extra>")], "layout": layout("The comparison is command versus invention", "THE ANSWER CHANGES BY OUTPUT", x_title="Question", y_title="Diagnostic value")})
+
+    sections = [
+        {"id": "command-lab", "title": "CHART 1 - COMMAND VERSUS LAB", "chart": "chart1_command_vs_lab", "caption": "New York commands capital and culture while San Francisco prototypes new systems", "prose": ["New York and San Francisco are compared because both export invisible value: finance, media, software, talent, coordination, status, and ideas.", "The difference is posture. New York is the command center; San Francisco is the laboratory."]},
+        {"id": "history", "title": "CHART 2 - HISTORY TIMING", "chart": "chart2_history_timing", "caption": "New York compounds older command layers while San Francisco spikes around paradigm shifts", "prose": ["New York's power is layered and old: port, finance, media, corporate headquarters, immigration, culture. San Francisco's modern power is sharper and more episodic: software, venture capital, platforms, AI.", "That is why both cities feel globally central while operating on different clocks."]},
+        {"id": "fingerprint", "title": "CHART 3 - OUTPUT FINGERPRINT", "chart": "chart3_output_fingerprint", "caption": "The cities both export intangible systems but not the same systems", "prose": ["New York exports capital allocation, status, media, fashion, finance, and market legitimacy. San Francisco exports software platforms, venture risk, AI, and a cultural permission structure for invention.", "The pairing is valid because both cities sell coordination more than physical goods."]},
+        {"id": "pressures", "title": "CHART 4 - PRESSURE PAIRING", "chart": "chart4_pressure_pairing", "caption": "Post-2020 pressures rhyme across the two cities but come from different causes", "prose": ["Both cities talk about office vacancy, housing, disorder narratives, transit, and talent churn. But the same words are not the same system.", "New York's office reset sits inside a giant command economy. San Francisco's sits inside a smaller city whose downtown was overexposed to tech-office rhythms."]},
+        {"id": "questions", "title": "CHART 5 - WHAT TO ASK NEXT", "chart": "chart5_city_comparison_questions", "caption": "The useful comparison asks which city commands, invents, absorbs, builds, renews, and exports status", "prose": ["The surprise is that neither city simply beats the other. The answer changes by output: capital, platforms, culture, housing, talent, or status.", "This gives future city reports a linked framework instead of isolated profiles."]},
+    ]
+    article(
+        slug,
+        "NEW YORK VS SAN FRANCISCO: Command City and Invention City",
+        "A comparative city report asking why New York and San Francisco are discussed together, what they share, and where their economic and cultural systems diverge.",
+        "atlas, culture",
+        [("fast-facts", "FAST FACTS"), ("dataset-context", "DATASET CONTEXT")] + [(s["id"], s["title"]) for s in sections] + [("conclusion", "CONCLUSION"), ("references", "REFERENCES"), ("editors-note", "EDITOR'S NOTE")],
+        ["New York and San Francisco are not peers by population or geography, but they are peers in the market for invisible power. They both export coordination, talent, symbols, and future-facing industries.", "This report asks why they belong in the same conversation and what people miss when they compare them only by rent, taxes, or office vacancy."],
+        [("2", "Global intangible-output cities compared"), ("8", "Identity axes scored"), ("6", "Shared pressure narratives tested"), ("5", "Charts in this comparison"), ("0", "Single-variable answers"), ("1", "Core contrast: command versus invention")],
+        ["The source stack includes BEA metro GDP, Census ACS, BLS employment, DataSF, NYC Open Data, World Cities Culture Forum, public venture-capital references, transit agencies, and office-market summaries.", "The report uses editorial indices to define the comparison frame before direct API ingestion. It also references the San Francisco Data Microscope as the local profile layer."],
+        sections,
+        ["The central finding is that New York and San Francisco are comparable because both sell systems more than goods. The difference is that New York legitimizes and commands while San Francisco invents and prototypes.", "That means the richer comparison is not which city is better, but which system each city is best at producing."] ,
+        ["BEA. Metropolitan GDP and regional industry data.", "U.S. Census ACS.", "BLS metro employment data.", "DataSF and NYC Open Data Socrata portals.", "World Cities Culture Forum CREATIVE Data Framework.", "Transit agency and office-market public summaries."],
+        "Values are editorial indices designed to structure a later direct-data comparison. They should be replaced with source aggregates for formal ranking.",
+        source,
+    )
+
+
+def export_superpowers_comparison():
+    slug = "export-superpowers-us-china-germany"
+    source = "Data: OEC, UN Comtrade, World Bank, OECD, IMF, BEA, Eurostat, national statistics offices - ARTOMETRICS"
+
+    axes = ["Scale", "Complexity", "Services/IP", "Manufacturing", "Vehicles/machinery", "Consumer platform power", "Supply-chain centrality"]
+    us = [90, 88, 98, 72, 68, 96, 78]
+    china = [99, 82, 66, 99, 78, 84, 98]
+    germany = [72, 97, 74, 88, 99, 61, 86]
+    write_chart(slug, "chart1_three_export_models", {"data": [
+        line(axes, us, color=ART_RED, name="United States", hover="<b>%{x}</b><br>United States: %{y}<extra></extra>"),
+        line(axes, china, color=ART_BLUE, name="China", hover="<b>%{x}</b><br>China: %{y}<extra></extra>"),
+        line(axes, germany, color=ART_GREEN, name="Germany", hover="<b>%{x}</b><br>Germany: %{y}<extra></extra>"),
+    ], "layout": {**layout("Three export superpowers, three models", "PLATFORM, FACTORY, AND MACHINE SYSTEMS", x_title="Export identity axis", y_title="Index"), "showlegend": True, "legend": {"orientation": "h", "x": 0.5, "xanchor": "center", "y": 1.08}}})
+
+    product = ["Software/IP", "Electronics", "Vehicles", "Machinery", "Pharma", "Energy", "Consumer goods"]
+    z = [
+        [98, 72, 61, 66, 83, 79, 65],
+        [64, 99, 79, 86, 52, 62, 97],
+        [71, 74, 99, 98, 78, 43, 58],
+    ]
+    write_chart(slug, "chart2_product_fingerprint", {"data": [heatmap(product, ["United States", "China", "Germany"], z)], "layout": layout("Product fingerprints explain the rivalry", "THE TOP LINE HIDES THREE DIFFERENT MACHINES", x_title="Export family", y_title="Country")})
+
+    dependencies = ["Semiconductors", "Energy", "Consumer demand", "High-skill labor", "Allied markets", "Shipping lanes"]
+    us_dep = [88, 62, 94, 91, 82, 71]
+    china_dep = [96, 81, 91, 74, 76, 92]
+    germany_dep = [74, 89, 76, 86, 98, 79]
+    write_chart(slug, "chart3_dependency_risk", {"data": [
+        bar_h(dependencies, us_dep, [ART_RED] * len(dependencies), name="United States", hover="<b>%{y}</b><br>U.S. dependency: %{x}<extra></extra>"),
+        bar_h(dependencies, china_dep, [ART_BLUE] * len(dependencies), name="China", hover="<b>%{y}</b><br>China dependency: %{x}<extra></extra>"),
+        bar_h(dependencies, germany_dep, [ART_GREEN] * len(dependencies), name="Germany", hover="<b>%{y}</b><br>Germany dependency: %{x}<extra></extra>"),
+    ], "layout": {**layout("Export strength creates dependency risk", "EVERY SUPERPOWER HAS A BOTTLENECK", x_title="Dependency risk index"), "barmode": "group", "showlegend": True, "legend": {"orientation": "h", "x": 0.5, "xanchor": "center", "y": 1.05}}})
+
+    countries = ["United States", "China", "Germany", "Japan", "South Korea", "India", "Mexico", "Vietnam"]
+    substitution = [72, 64, 81, 78, 76, 58, 62, 54]
+    indispensability = [94, 96, 86, 82, 78, 63, 61, 55]
+    write_chart(slug, "chart4_substitutability", {"data": [scatter(substitution, indispensability, countries, [22] * len(countries), [ART_RED if c in {"United States", "China", "Germany"} else ART_BLUE for c in countries], hover="<b>%{text}</b><br>Substitutability: %{x}<br>Indispensability: %{y}<extra></extra>")], "layout": layout("The strongest exporters are hard to replace in different ways", "INDISPENSABILITY IS NOT THE OPPOSITE OF SUBSTITUTION", x_title="Substitutability index", y_title="Indispensability index")})
+
+    questions = ["Who owns standards?", "Who controls factories?", "Who captures margins?", "Who absorbs shocks?", "Who has allies?", "Who can be replaced?"]
+    q = [94, 92, 96, 88, 84, 91]
+    write_chart(slug, "chart5_superpower_questions", {"data": [bar_v(questions, q, [ART_RED if item in {"Who captures margins?", "Who can be replaced?"} else ART_BLUE for item in questions], hover="<b>%{x}</b><br>Strategic value: %{y}<extra></extra>")], "layout": layout("The comparison is strategic, not just economic", "EXPORTS SHOW POWER, DEPENDENCE, AND REPLACEABILITY", x_title="Question", y_title="Strategic value")})
+
+    sections = [
+        {"id": "models", "title": "CHART 1 - THREE MODELS", "chart": "chart1_three_export_models", "caption": "The United States, China, and Germany represent platform, factory, and machine export systems", "prose": ["These countries are compared because they sit near the center of the global production system, but they do not do the same job.", "The United States captures software, IP, finance, and platform margins. China coordinates manufacturing scale and supply chains. Germany specializes in complex machinery, vehicles, and industrial trust."]},
+        {"id": "fingerprints", "title": "CHART 2 - PRODUCT FINGERPRINTS", "chart": "chart2_product_fingerprint", "caption": "The export fingerprints show three different machines under the same global headline", "prose": ["A GDP or export total can make the countries look like comparable blocks. The product mix reveals the real comparison.", "This is the core Artometrics move: replace vague rivalry with system fingerprints."]},
+        {"id": "dependencies", "title": "CHART 3 - DEPENDENCY RISK", "chart": "chart3_dependency_risk", "caption": "Export strength creates different bottlenecks for each superpower", "prose": ["The U.S. depends on talent, semiconductor chains, and consumer/platform demand. China depends on energy, shipping lanes, chips, and global buyers. Germany depends on allied markets, energy inputs, and industrial continuity.", "The strongest systems are not invulnerable. They are specialized."]},
+        {"id": "substitution", "title": "CHART 4 - SUBSTITUTABILITY", "chart": "chart4_substitutability", "caption": "The strongest exporters are hard to replace for different reasons", "prose": ["China is hard to replace because of scale and supply-chain integration. Germany is hard to replace because of industrial trust and precision. The U.S. is hard to replace because of standards, platforms, capital, and demand.", "The surprise is that replaceability is product-specific, not country-wide."]},
+        {"id": "questions", "title": "CHART 5 - STRATEGIC QUESTIONS", "chart": "chart5_superpower_questions", "caption": "The useful comparison asks who owns standards, factories, margins, shocks, allies, and substitutes", "prose": ["The question is not simply who exports more. It is who captures margins, who controls chokepoints, who absorbs shocks, and who can be replaced.", "That moves the report from economics into power."]},
+    ]
+    article(
+        slug,
+        "EXPORT SUPERPOWERS: United States, China, Germany",
+        "A comparative country report on why the U.S., China, and Germany are discussed together, and how their export systems differ by platforms, factories, machinery, dependencies, and replaceability.",
+        "atlas, power",
+        [("fast-facts", "FAST FACTS"), ("dataset-context", "DATASET CONTEXT")] + [(s["id"], s["title"]) for s in sections] + [("conclusion", "CONCLUSION"), ("references", "REFERENCES"), ("editors-note", "EDITOR'S NOTE")],
+        ["The United States, China, and Germany are often placed in the same economic conversation because each represents a central export system. But the systems are different: platform power, manufacturing scale, and industrial precision.", "This report builds the comparison layer for country reports: not who is bigger, but what kind of global function each country performs."],
+        [("3", "Export superpower systems compared"), ("7", "Export identity axes"), ("6", "Dependency risks scored"), ("8", "Countries placed on substitutability map"), ("5", "Charts in this report"), ("1", "Core question: who is replaceable?")],
+        ["The production version should use OEC/UN Comtrade product exports, partner concentration, World Bank/OECD services and GDP data, IMF macro context, and national industry statistics.", "This framework pass uses editorial indices to define the analytical comparison before direct product-level ingestion."],
+        sections,
+        ["The main finding is that export superpowers are not rivals in one single market. They are rival system architectures.", "The best comparison asks what each country makes hard for the world to replace, and what each country secretly depends on to keep that power."],
+        ["OEC. International trade and economic complexity API.", "UN Comtrade. Product and partner trade data.", "World Bank WDI.", "OECD Data Explorer.", "IMF data portals.", "BEA, Eurostat, and national statistical agency publications."],
+        "Values are editorial indices. They define the comparison before direct OEC/Comtrade/World Bank ingestion and should not be read as formal rankings.",
+        source,
+    )
+
+
 def write_plan():
     plan = """# Artometrics geo-economics canon source plan
 
@@ -477,6 +662,15 @@ export culturally?
 4. `cultural-exports-geoeconomics`
    - Theme: culture as soft-power trade and city/country identity.
 
+## First comparison batch
+
+1. `california-vs-texas-state-rivalry`
+   - Theme: rival state systems, taxes as entry point, exports, migration, climate, talent.
+2. `new-york-vs-san-francisco-city-systems`
+   - Theme: command city versus invention city, intangible exports, post-2020 pressures.
+3. `export-superpowers-us-china-germany`
+   - Theme: platform, factory, and machine export systems.
+
 ## Question contract
 
 Every city/country report should answer:
@@ -489,6 +683,19 @@ Every city/country report should answer:
 - What is historically inherited?
 - Who are its true competitors and why?
 - What does the data show that contradicts the slogan?
+
+## Comparison contract
+
+Every comparison report should answer:
+
+- Why are these places discussed in the same conversation?
+- What similarity makes the comparison tempting?
+- What difference makes the comparison misleading?
+- Which historical layer explains the rivalry?
+- Which exports, jobs, or cultural products make them competitors?
+- What would a casual reader expect the data to show?
+- What does the data show that is less obvious?
+- Which report should this comparison link back to?
 
 ## Next geo batch
 
@@ -513,7 +720,10 @@ def main():
     san_francisco_data_microscope()
     national_export_identity_atlas()
     cultural_exports_geoeconomics()
-    print("Generated geo-economics canon plan and 4 five-chart reports.")
+    california_texas_state_rivalry()
+    new_york_vs_san_francisco_city_systems()
+    export_superpowers_comparison()
+    print("Generated geo-economics canon plan, 4 identity reports, and 3 comparison reports.")
 
 
 if __name__ == "__main__":

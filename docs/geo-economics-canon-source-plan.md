@@ -37,6 +37,15 @@ export culturally?
 4. `cultural-exports-geoeconomics`
    - Theme: culture as soft-power trade and city/country identity.
 
+## First comparison batch
+
+1. `california-vs-texas-state-rivalry`
+   - Theme: rival state systems, taxes as entry point, exports, migration, climate, talent.
+2. `new-york-vs-san-francisco-city-systems`
+   - Theme: command city versus invention city, intangible exports, post-2020 pressures.
+3. `export-superpowers-us-china-germany`
+   - Theme: platform, factory, and machine export systems.
+
 ## Question contract
 
 Every city/country report should answer:
@@ -49,6 +58,19 @@ Every city/country report should answer:
 - What is historically inherited?
 - Who are its true competitors and why?
 - What does the data show that contradicts the slogan?
+
+## Comparison contract
+
+Every comparison report should answer:
+
+- Why are these places discussed in the same conversation?
+- What similarity makes the comparison tempting?
+- What difference makes the comparison misleading?
+- Which historical layer explains the rivalry?
+- Which exports, jobs, or cultural products make them competitors?
+- What would a casual reader expect the data to show?
+- What does the data show that is less obvious?
+- Which report should this comparison link back to?
 
 ## Next geo batch
 
