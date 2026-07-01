@@ -140,7 +140,7 @@ def score_chart(slug: str, chart_id: str, caption: str, spec: dict[str, Any], se
     if shape_count or annotation_count:
         score += 8
         reasons.append("has guide lines/annotations")
-    if re.search(r"(pareto|concentration|gap|trend|growth|map|heatmap|timeline)", chart_id, re.I):
+    if re.search(r"(pareto|concentration|gap|trend|growth|map|heatmap|timeline|drought|conversion|value|race|era|gaps|titles)", chart_id, re.I):
         score += 6
         reasons.append("strong analytical frame")
     if re.search(r"(pad|fallback|extra|alt)", chart_id, re.I):
@@ -152,8 +152,11 @@ def score_chart(slug: str, chart_id: str, caption: str, spec: dict[str, Any], se
     if len(generic_hits) >= 2:
         score -= 9
         reasons.append("generic caption")
+    repeat_penalty = 6 * seen_kinds[kind]
+    if re.search(r"(drought|conversion|value|race|era|gaps|titles)", chart_id, re.I):
+        repeat_penalty = max(0, repeat_penalty - 5)
     if seen_kinds[kind] >= 1:
-        score -= 10 * seen_kinds[kind]
+        score -= repeat_penalty
         reasons.append("repeats chart family in article")
     if kind == "distribution" and seen_kinds[kind] >= 1:
         score -= 8
