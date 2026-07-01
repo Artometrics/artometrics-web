@@ -127,3 +127,16 @@ From `README.md` (run at repo root):
 - **Changelog:** https://lexingtonthemes.com/changelog/hemingway  
 - **Support:** https://lexingtonthemes.com/legal/support/  
 - **Bundle:** https://lexingtonthemes.com  
+
+## Cursor Cloud specific instructions
+
+The VM startup update script runs `npm install`. Node here is v22 (README says 18/20; the app builds/runs fine on 22). Notes below are for running/testing, not for reinstalling deps.
+
+### Services & how to run them
+- **Static content site (core product):** `npm run dev` → http://localhost:4321 (Astro 7). This is the primary dev command. `npm run build` outputs `./dist/` (114 pages); `npm run preview` serves the build. There is **no lint script**; type-checking would be `npx astro check` but `@astrojs/check` is not installed (would need adding).
+- **Membership backend (optional):** Supabase Auth + Stripe subscriptions + Netlify Functions in `netlify/functions/` (exposed at `/api/*` via `netlify.toml`). This is **not exercised by `npm run dev`** — it requires `netlify dev` (netlify-cli is NOT a repo dependency; use `npx netlify dev`) plus a filled-in `.env` (copy `.env.example`; full guide in `docs/PRODUCT_SETUP.md`). Needs external secrets: `PUBLIC_SUPABASE_URL`, `PUBLIC_SUPABASE_ANON_KEY`, `SUPABASE_SERVICE_ROLE_KEY`, `STRIPE_SECRET_KEY`, `STRIPE_WEBHOOK_SECRET`, `STRIPE_PRICE_*`. Without them the backend cannot run.
+
+### Non-obvious gotchas
+- **Graceful degradation without secrets:** `src/lib/supabase/browser.ts` returns `null` when `PUBLIC_SUPABASE_*` are unset, so auth/billing/saved-reports/locked-transcripts silently disable and the static site still works. Do NOT create a `.env` with the placeholder values from `.env.example` — a truthy-but-fake `PUBLIC_SUPABASE_URL` makes the client attempt real (failing) network calls. Leave `.env` absent to keep those features cleanly disabled.
+- **Search needs browser network access:** the header search (`src/components/global/Search.astro`) loads Fuse.js from a CDN (`src/components/fundations/scripts/FuseJS.astro`, jsdelivr). Live results render on `input`; if the browser cannot reach the CDN, the modal opens but returns no results. This is a CDN dependency, not a bug.
+- **`scripts/*.py` / `*.R` are content-generation tools** (article/chart generation), not part of running or testing the web app; they are not needed for dev setup.
