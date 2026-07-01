@@ -5,18 +5,18 @@ It is meant to prioritize design and chart-selection work, not to validate the m
 
 ## Corpus summary
 
-- Charts audited: 336
-- Articles with charts: 71
-- Keep: 141
-- Rework: 181
+- Charts audited: 351
+- Articles with charts: 74
+- Keep: 147
+- Rework: 190
 - Drop candidates: 14
 
 ## Chart families
 
-- bar-horizontal: 123
-- line-marker: 80
-- scatter: 46
-- bar-vertical: 38
+- bar-horizontal: 129
+- line-marker: 82
+- scatter: 49
+- bar-vertical: 42
 - distribution: 37
 - line: 8
 - heatmap: 3
@@ -86,21 +86,21 @@ It is meant to prioritize design and chart-selection work, not to validate the m
 | 61 | rework | `nuclear-explosions` | `chart2_leaders` | bar-horizontal | Top Country | bar-horizontal chart; generic caption; ranking chart needs a sharper editorial point |
 | 61 | rework | `world-heritage-sites` | `chart2_leaders` | bar-horizontal | Top Country | bar-horizontal chart; generic caption; ranking chart needs a sharper editorial point |
 | 62 | rework | `biketown-bikeshare` | `chart3_distribution` | distribution | Duration min by TripType | distribution chart; multi-series context |
+| 62 | rework | `celtics-the-artometrics-of-institutional-winning` | `chart1_banner_density` | bar-vertical | Celtics NBA titles by decade | bar-vertical chart; ranking chart needs a sharper editorial point |
 | 62 | rework | `ceo-departures` | `chart3_distribution` | distribution | Max tenure ceodb by Interim coceo | distribution chart; multi-series context |
 | 62 | rework | `cetaceans` | `chart1_volume` | bar-vertical | Records By Period | bar-vertical chart; ranking chart needs a sharper editorial point |
 | 62 | rework | `cia-world-factbook` | `chart3_distribution` | bar-vertical | Population Distribution | bar-vertical chart; example article needs manual math/editorial review |
+| 62 | rework | `dodgers-the-artometrics-of-baseballs-modern-machine` | `chart1_pennant_machine` | bar-vertical | Dodgers pennants by decade | bar-vertical chart; ranking chart needs a sharper editorial point |
 | 62 | rework | `emmy-awards` | `chart1_volume` | bar-vertical | Records By Period | bar-vertical chart; ranking chart needs a sharper editorial point |
 | 62 | rework | `incarceration-trends` | `chart3_distribution` | distribution | Population by Region | distribution chart; multi-series context |
 | 62 | rework | `netflix-engagement` | `chart3_distribution` | distribution | Hours viewed by Source | distribution chart; multi-series context |
+| 62 | rework | `patriots-the-artometrics-of-the-system-dynasty` | `chart4_conference_gate` | bar-horizontal | AFC championship appearances since 2001 | bar-horizontal chart; repeats chart family in article |
 | 62 | rework | `project-gutenberg` | `chart_top_names` | bar-horizontal | Top Subject | bar-horizontal chart; repeats chart family in article |
 | 62 | rework | `simpsons-guest-stars` | `chart1_volume` | bar-vertical | Records By Period | bar-vertical chart; ranking chart needs a sharper editorial point |
 | 62 | rework | `yankees-the-artometrics-of-baseballs-empire` | `chart1_banner_clusters` | bar-vertical | World Series titles by decade | bar-vertical chart; ranking chart needs a sharper editorial point |
 | 63 | rework | `billboard-hot-100` | `chart3_distribution` | distribution | Distribution of run lengths for the most frequent number-one artists | distribution chart; multi-series context |
 | 63 | rework | `board-games` | `chart3_distribution` | distribution | Average rating by Category | distribution chart; multi-series context |
 | 63 | rework | `broadway-musicals` | `chart3_distribution` | distribution | Avg ticket price by Theatre | distribution chart; multi-series context |
-| 63 | rework | `college-major-income` | `chart3_distribution` | distribution | Low wage jobs by Major category | distribution chart; multi-series context |
-| 63 | rework | `fast-food-calories` | `chart3_distribution` | distribution | Calories by Restaurant | distribution chart; multi-series context |
-| 63 | rework | `horror-movie-profit` | `chart3_distribution` | distribution | Domestic gross by Genre | distribution chart; multi-series context |
 
 ## Editorial guidance
 

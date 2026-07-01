@@ -335,6 +335,150 @@ def cowboys():
     )
 
 
+def celtics():
+    slug = "celtics-the-artometrics-of-institutional-winning"
+    decades = ["1950s", "1960s", "1970s", "1980s", "1990s", "2000s", "2010s", "2020s"]
+    titles = [3, 9, 2, 3, 0, 1, 0, 1]
+    write_chart(slug, "chart1_banner_density", {"data": [bar_v(decades, titles, [ART_RED if v >= 3 else ART_BLUE for v in titles])], "layout": layout("Boston built the NBA's first title factory", "THE 1960s STILL DISTORT THE SCALE", x_title="Decade", y_title="NBA titles")})
+
+    peers = ["76ers", "Pistons", "Warriors", "Bulls", "Spurs", "Lakers", "Celtics"]
+    peer_titles = [3, 3, 7, 6, 5, 17, 18]
+    write_chart(slug, "chart2_title_ceiling", {"data": [bar_h(peers, peer_titles, [ART_BLUE] * 6 + [ART_RED])], "layout": layout("The Celtics sit at the NBA ceiling", "BOSTON'S LEAD IS INSTITUTIONAL, NOT JUST RECENT", x_title="Championships")})
+
+    eras = ["Russell", "Cowens/Havlicek", "Bird", "Pierce/KG", "Tatum/Brown"]
+    finals = [12, 3, 5, 2, 2]
+    rings = [11, 2, 3, 1, 1]
+    write_chart(slug, "chart3_era_conversion", {"data": [
+        bar_h(eras, finals, [ART_GREY] * len(eras), hover="%{y}<br>Finals: %{x}<extra></extra>"),
+        bar_h(eras, rings, [ART_RED] * len(eras), hover="%{y}<br>Titles: %{x}<extra></extra>"),
+    ], "layout": {**layout("Boston's best eras converted appearances", "THE RUSSELL STANDARD IS UNREPEATABLE", x_title="Finals and titles"), "barmode": "overlay", "showlegend": True, "legend": {"orientation": "h", "x": 0.5, "xanchor": "center", "y": 1.04}}})
+
+    gaps = ["1969-74", "1976-81", "1986-2008", "2008-24"]
+    years = [5, 5, 22, 16]
+    write_chart(slug, "chart4_drought_pressure", {"data": [bar_v(gaps, years, [ART_BLUE, ART_BLUE, ART_RED, ART_RED])], "layout": layout("Even the Celtics have long winters", "EXPECTATION MAKES GAPS FEEL LOUDER", x_title="Title gap", y_title="Years")})
+
+    teams = ["Lakers", "Celtics", "Spurs", "Warriors", "Heat", "Bulls"]
+    recent_finals = [8, 4, 6, 6, 7, 0]
+    recent_titles = [6, 2, 5, 4, 3, 0]
+    write_chart(slug, "chart5_modern_access", {"data": [scatter(recent_finals, recent_titles, teams, [28, 26, 28, 30, 28, 18], [ART_BLUE, ART_RED, ART_BLUE, ART_BLUE, ART_BLUE, ART_GREY], hover="%{text}<br>Finals since 1990: %{x}<br>Titles: %{y}<extra></extra>")], "layout": layout("Boston remains in the modern title economy", "ACCESS RETURNED BEFORE THE BANNERS DID", x_title="Finals appearances since 1990", y_title="Titles since 1990")})
+
+    sections = [
+        {"id": "banner-density", "title": "CHART 1 - BANNER DENSITY", "chart": "chart1_banner_density", "caption": "Celtics NBA titles by decade", "prose": ["The Celtics' historical lead is not evenly distributed. The 1960s are the gravitational anomaly: a decade so dominant it still defines the franchise's moral economy.", "The hypothesis is that Boston is less a normal contender than an institution built around inherited expectation. The data supports it."]},
+        {"id": "title-ceiling", "title": "CHART 2 - TITLE CEILING", "chart": "chart2_title_ceiling", "caption": "NBA championships by major franchise", "prose": ["Boston and Los Angeles form the NBA's summit. Everyone else is explaining distance.", "For a Celtics fan, this is not trivia. It is the operating standard by which every rebuild is judged."]},
+        {"id": "era-conversion", "title": "CHART 3 - ERA CONVERSION", "chart": "chart3_era_conversion", "caption": "Finals appearances and titles by Celtics era", "prose": ["The Russell era was not merely successful; it converted nearly every opportunity into a ring. Later eras are great by normal standards and modest by Boston standards.", "This is institutional burden in chart form: greatness becomes smaller when the archive is impossible."]},
+        {"id": "drought-pressure", "title": "CHART 4 - DROUGHT PRESSURE", "chart": "chart4_drought_pressure", "caption": "Selected Celtics championship gaps", "prose": ["A 22-year gap from Bird to Pierce/KG shows how long even a privileged franchise can wander. The 2024 title ended another pressure cycle.", "The Celtics do not avoid droughts; they narrate them as temporary violations of the natural order."]},
+        {"id": "modern-access", "title": "CHART 5 - MODERN ACCESS", "chart": "chart5_modern_access", "caption": "Modern Finals access and title conversion", "prose": ["Boston has been present in the modern title economy, but not as frequently as its mythology implies. The 2020s core matters because it reopened the institutional pipeline.", "The chart shows the gap between historical identity and contemporary output narrowing again."]},
+    ]
+    article(
+        slug,
+        "CELTICS: The Artometrics of Institutional Winning",
+        "The Celtics are basketball's clearest example of inherited expectation: a franchise whose 1960s dominance still shapes every modern season.",
+        "atlas, power",
+        [("fast-facts", "FAST FACTS"), ("dataset-context", "DATASET CONTEXT")] + [(s["id"], s["title"]) for s in sections] + [("conclusion", "CONCLUSION"), ("references", "REFERENCES"), ("editors-note", "EDITOR'S NOTE")],
+        ["The Boston Celtics are what happens when a franchise wins so much, so early, that history becomes a front-office department. Every roster is compared not only with its peers, but with ghosts.", "This report tests whether Celtics exceptionalism is still active or mostly archival. The answer is that the archive remains powerful, but the modern team has reopened the claim."],
+        [("18", "NBA championships, the league record entering 2025"), ("11", "Titles won during the Bill Russell era"), ("2024", "Most recent championship"), ("22", "Years between the 1986 and 2008 titles"), ("5", "Defining Celtics title eras used in this report"), ("2", "Modern Finals appearances by the Tatum/Brown core through 2024")],
+        ["The report uses public NBA championship records, Basketball Reference franchise summaries, and conventional era groupings around the players most responsible for each window.", "An expert fan would ask whether Boston's identity is still earned. An Artometrician asks how historical surplus changes the interpretation of modern results."],
+        sections,
+        ["The Celtics are not just successful. They are historically overcapitalized: so rich in past winning that even good seasons can feel underleveraged.", "The 2024 title matters because it reconnects the present roster to the institution's oldest claim: Boston is supposed to convert windows into banners."],
+        ["Basketball Reference. <em>Boston Celtics Franchise Index</em>.", "NBA.com historical championship records.", "Sports Reference Finals appearance summaries."],
+        "Era groupings are editorial simplifications. Counts use conventional public championship and Finals records.",
+    )
+
+
+def dodgers():
+    slug = "dodgers-the-artometrics-of-baseballs-modern-machine"
+    decades = ["1950s", "1960s", "1970s", "1980s", "1990s", "2000s", "2010s", "2020s"]
+    pennants = [5, 4, 3, 2, 0, 0, 2, 2]
+    write_chart(slug, "chart1_pennant_machine", {"data": [bar_v(decades, pennants, [ART_RED if v >= 3 else ART_BLUE for v in pennants])], "layout": layout("The Dodgers specialize in access", "PENNANTS ARRIVE MORE OFTEN THAN RINGS", x_title="Decade", y_title="NL pennants")})
+
+    clubs = ["Mets", "Braves", "Cubs", "Giants", "Cardinals", "Dodgers", "Yankees"]
+    titles = [2, 4, 3, 8, 11, 8, 27]
+    write_chart(slug, "chart2_title_context", {"data": [bar_h(clubs, titles, [ART_BLUE] * 5 + [ART_RED, ART_BLUE])], "layout": layout("The Dodgers are elite, not Yankee-scale", "MODERN CONSISTENCY IS THEIR ADVANTAGE", x_title="World Series titles")})
+
+    years = ["2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024"]
+    wins = [92, 94, 92, 91, 104, 92, 106, 43, 106, 111, 100, 98]
+    write_chart(slug, "chart3_regular_season_floor", {"data": [line(years, wins)], "layout": layout("The modern Dodgers turned 90 wins into a floor", "CONSISTENCY IS THE PRODUCT", x_title="Season", y_title="Regular-season wins")})
+
+    spend_years = [2013, 2015, 2017, 2019, 2021, 2023, 2024]
+    payroll_rank = [2, 1, 1, 3, 1, 5, 2]
+    october = [1, 1, 3, 1, 2, 0, 4]
+    write_chart(slug, "chart4_spending_conversion", {"data": [scatter(spend_years, payroll_rank, [str(y) for y in spend_years], [14 + o * 6 for o in october], [ART_RED if o >= 3 else ART_BLUE for o in october], hover="%{text}<br>Payroll rank: %{y}<extra></extra>")], "layout": {**layout("Money became infrastructure in Los Angeles", "THE QUESTION IS OCTOBER CONVERSION", x_title="Season", y_title="Payroll rank (lower is richer)"), "yaxis": {**layout("", "")["yaxis"], "autorange": "reversed", "title": {"text": "Payroll rank (lower is richer)"}}}})
+
+    gaps = ["1959-63", "1965-81", "1988-2020", "2020-24"]
+    gap_years = [4, 16, 32, 4]
+    write_chart(slug, "chart5_ring_gap", {"data": [bar_v(gaps, gap_years, [ART_BLUE, ART_BLUE, ART_RED, ART_BLUE])], "layout": layout("Access does not erase drought", "THE 1988-2020 GAP DEFINED MODERN PRESSURE", x_title="Title gap", y_title="Years")})
+
+    sections = [
+        {"id": "pennant-machine", "title": "CHART 1 - PENNANT MACHINE", "chart": "chart1_pennant_machine", "caption": "Dodgers pennants by decade", "prose": ["The Dodgers are built around access: reaching October, reaching the pennant race, repeatedly giving randomness a chance to break their way.", "The hypothesis is that Los Angeles is better understood as a machine for opportunity than as a pure championship machine."]},
+        {"id": "title-context", "title": "CHART 2 - TITLE CONTEXT", "chart": "chart2_title_context", "caption": "World Series titles among historic MLB franchises", "prose": ["The Dodgers are historically elite, but not Yankee-scale. Their modern argument rests on consistency: they have made contention feel industrial.", "For a baseball expert, the question is not whether the Dodgers are good. It is whether a high-floor machine can beat postseason variance often enough."]},
+        {"id": "regular-season-floor", "title": "CHART 3 - THE 90-WIN FLOOR", "chart": "chart3_regular_season_floor", "caption": "Dodgers regular-season wins in the modern contention era", "prose": ["Since the early 2010s, the Dodgers have made 90-win baseball look normal. That is not normal. It is organizational infrastructure showing up as a line chart.", "The shortened 2020 season interrupts the scale, but not the story: the floor stayed high."]},
+        {"id": "spending-conversion", "title": "CHART 4 - SPENDING CONVERSION", "chart": "chart4_spending_conversion", "caption": "Payroll rank and October outcome markers", "prose": ["Los Angeles spends, but the spending is less impulsive than structural: depth, scouting, player development, stars, and injury insurance.", "The contradiction is that postseason baseball can make the best infrastructure look fragile in a five-game sample."]},
+        {"id": "ring-gap", "title": "CHART 5 - THE 1988 SHADOW", "chart": "chart5_ring_gap", "caption": "Selected Dodgers championship gaps", "prose": ["The 1988-to-2020 gap is the emotional center of modern Dodger analysis. The team was often good, sometimes excellent, and still ringless.", "That is why the 2020 and 2024 titles matter differently: they validate the machine after decades of access without closure."]},
+    ]
+    article(
+        slug,
+        "DODGERS: The Artometrics of Baseball's Modern Machine",
+        "The Dodgers are baseball's modern consistency machine: a franchise that turned money, development, and depth into recurring October access.",
+        "atlas, power",
+        [("fast-facts", "FAST FACTS"), ("dataset-context", "DATASET CONTEXT")] + [(s["id"], s["title"]) for s in sections] + [("conclusion", "CONCLUSION"), ("references", "REFERENCES"), ("editors-note", "EDITOR'S NOTE")],
+        ["The Los Angeles Dodgers are the closest thing modern baseball has to an industrial contender. The roster changes, the stars change, the October heartbreak changes shape, but the regular-season floor keeps reappearing.", "This report tests whether the Dodgers are best understood as a dynasty, a spending machine, or something stranger: an access machine designed to survive variance until variance finally cooperates."],
+        [("8", "World Series championships in franchise history"), ("25", "Approximate National League pennants"), ("111", "Regular-season wins in 2022"), ("32", "Years between the 1988 and 2020 titles"), ("12", "Straight postseason appearances from 2013 through 2024"), ("2024", "Most recent championship")],
+        ["The report uses public Baseball Reference franchise records, Lahman-style season summaries, and widely cited payroll-rank histories. The charts emphasize franchise identity and era structure rather than player-level WAR modeling.", "A professional analyst would focus on depth and conversion. A fan feels the distance between being excellent for six months and surviving October. This report charts that gap."],
+        sections,
+        ["The Dodgers are not merely rich. They are system-rich: player development, payroll, scouting, and market power working together to keep the contention line high.", "The data says their defining trait is not one championship. It is repeated access to the conditions where championships become possible."],
+        ["Baseball Reference. <em>Los Angeles Dodgers Franchise History</em>.", "Lahman, S. <em>Lahman Baseball Database</em>.", "Forbes and public payroll-rank summaries.", "Retrosheet and Baseball Almanac pennant/title records."],
+        "Recent win totals and payroll ranks are rounded public-reference summaries. The 2020 shortened season is left unadjusted and interpreted separately in the prose.",
+    )
+
+
+def patriots():
+    slug = "patriots-the-artometrics-of-the-system-dynasty"
+    periods = ["1960-1992", "Parcells/Bledsoe", "Brady/Belichick", "Post-Brady"]
+    playoff_wins = [3, 3, 30, 0]
+    write_chart(slug, "chart1_system_shock", {"data": [bar_h(periods, playoff_wins, [ART_GREY, ART_BLUE, ART_RED, ART_GREY])], "layout": layout("New England's history has one giant discontinuity", "THE BRADY/BELICHICK ERA BROKE THE FRANCHISE SCALE", x_title="Approximate playoff wins")})
+
+    teams = ["Cowboys", "Steelers", "49ers", "Chiefs", "Patriots"]
+    super_bowls = [5, 6, 5, 4, 6]
+    write_chart(slug, "chart2_super_bowl_tier", {"data": [bar_h(teams, super_bowls, [ART_BLUE, ART_BLUE, ART_BLUE, ART_BLUE, ART_RED])], "layout": layout("The Patriots reached the NFL summit fast", "ONE ERA BUILT A HISTORIC TOTAL", x_title="Super Bowl wins")})
+
+    seasons = ["2001", "2003", "2004", "2007", "2011", "2014", "2016", "2017", "2018", "2019"]
+    wins = [11, 14, 14, 16, 13, 12, 14, 13, 11, 12]
+    write_chart(slug, "chart3_regular_season_machine", {"data": [line(seasons, wins)], "layout": layout("The dynasty was a regular-season machine too", "DOUBLE-DIGIT WINS BECAME ROUTINE", x_title="Season", y_title="Regular-season wins")})
+
+    afc_teams = ["Ravens", "Broncos", "Steelers", "Colts", "Chiefs", "Patriots"]
+    afc_apps = [4, 4, 5, 4, 6, 13]
+    write_chart(slug, "chart4_conference_gate", {"data": [bar_h(afc_teams, afc_apps, [ART_BLUE] * 5 + [ART_RED])], "layout": layout("For two decades, Foxborough was the AFC gate", "CONFERENCE ACCESS WAS THE TRUE CHOKEPOINT", x_title="Conference championship appearances since 2001")})
+
+    eras = ["Pre-Brady", "Brady peak", "Late Brady", "Post-Brady"]
+    value_rank = [21, 8, 2, 2]
+    football_rank = [20, 1, 2, 22]
+    write_chart(slug, "chart5_brand_after_system", {"data": [
+        scatter(value_rank, football_rank, eras, [22, 42, 36, 28], [ART_GREY, ART_RED, ART_BLUE, ART_GREY], hover="%{text}<br>Brand rank: %{x}<br>Football rank: %{y}<extra></extra>")
+    ], "layout": {**layout("The brand survived the system's end", "FOOTBALL OUTPUT FELL FASTER THAN VALUE", x_title="Estimated brand/value rank (lower is better)", y_title="Football power rank (lower is better)"), "xaxis": {**layout("", "")["xaxis"], "autorange": "reversed", "title": {"text": "Estimated brand/value rank (lower is better)"}}, "yaxis": {**layout("", "")["yaxis"], "autorange": "reversed", "title": {"text": "Football power rank (lower is better)"}}}})
+
+    sections = [
+        {"id": "system-shock", "title": "CHART 1 - SYSTEM SHOCK", "chart": "chart1_system_shock", "caption": "Patriots playoff wins by broad franchise period", "prose": ["The Patriots are not a smooth historical franchise. They are a before-and-after experiment. One era overwhelms the rest of the archive.", "The hypothesis is that New England's dynasty was not just a great team; it was a system shock that rewrote franchise identity."]},
+        {"id": "super-bowl-tier", "title": "CHART 2 - SUPER BOWL TIER", "chart": "chart2_super_bowl_tier", "caption": "Super Bowl titles among major NFL franchises", "prose": ["The Patriots reached the NFL summit with extraordinary speed. Other franchises accumulated titles over generations; New England compressed its case into two decades.", "That compression is the story. The franchise became ancient history almost overnight."]},
+        {"id": "regular-season-machine", "title": "CHART 3 - REGULAR-SEASON MACHINE", "chart": "chart3_regular_season_machine", "caption": "Selected Patriots regular-season wins during the dynasty", "prose": ["Dynasties are remembered through rings, but the Patriots' real violence was routine. Twelve, thirteen, fourteen wins stopped feeling exceptional.", "This is how a system announces itself: excellence becomes boring before it becomes legendary."]},
+        {"id": "conference-gate", "title": "CHART 4 - AFC GATE", "chart": "chart4_conference_gate", "caption": "AFC championship appearances since 2001", "prose": ["The Patriots did not merely win Super Bowls. They controlled access to the AFC's final room.", "For rival fan bases, the dynasty was experienced less as a team and more as a recurring gatekeeping mechanism."]},
+        {"id": "brand-after-system", "title": "CHART 5 - AFTER THE SYSTEM", "chart": "chart5_brand_after_system", "caption": "Brand rank and football output before and after the dynasty", "prose": ["The post-Brady years expose the separation between brand capital and football output. The value remains; the machine does not.", "That is the afterlife of a dynasty: the market remembers longer than the scoreboard does."]},
+    ]
+    article(
+        slug,
+        "PATRIOTS: The Artometrics of the System Dynasty",
+        "The Patriots are the NFL's great system shock: a franchise whose Brady/Belichick era compressed a century of legacy into two decades.",
+        "atlas, power",
+        [("fast-facts", "FAST FACTS"), ("dataset-context", "DATASET CONTEXT")] + [(s["id"], s["title"]) for s in sections] + [("conclusion", "CONCLUSION"), ("references", "REFERENCES"), ("editors-note", "EDITOR'S NOTE")],
+        ["The New England Patriots used to be ordinary. Then they became the NFL's most efficient argument about systems, quarterbacks, coaching, and institutional compounding.", "This report tests whether the dynasty is best understood as Brady, Belichick, ownership, luck, or infrastructure. The data points to a system shock: one era so large it became the franchise."],
+        [("6", "Super Bowl championships"), ("9", "Super Bowl appearances during the Brady/Belichick era"), ("30", "Approximate playoff wins from 2001 through 2019"), ("13", "AFC championship appearances since 2001"), ("16-0", "Perfect 2007 regular season"), ("2020", "First post-Brady season")],
+        ["The report uses public Pro Football Reference franchise records, NFL postseason histories, and Forbes-style franchise value summaries. Periods are editorial groupings designed to isolate the dynasty discontinuity.", "An NFL analyst would ask how much of the dynasty was quarterback versus system. A fan asks why the same logo feels so different after Brady. The charts show both questions share the same hinge."],
+        sections,
+        ["The Patriots dynasty was not normal greatness. It was a discontinuity: one era that swallowed the franchise before and after it.", "The data says New England's new challenge is not legacy. Legacy is secure. The challenge is proving the institution can produce again without the system that made it famous."],
+        ["Pro Football Reference. <em>New England Patriots Franchise Encyclopedia</em>.", "NFL historical postseason records.", "Forbes. <em>NFL Team Valuations</em>, recent estimates.", "Sports Reference team season summaries."],
+        "Period totals are rounded public-reference summaries. Brand/value and football-rank points are editorial markers for the shape of the post-dynasty transition, not a formal valuation model.",
+    )
+
+
 def write_plan():
     plan = dedent(
         """
@@ -356,6 +500,18 @@ def write_plan():
            - Theme: brand value versus postseason conversion.
            - Sources: Pro Football Reference, NFL records, Forbes.
 
+        ## Next canon batch
+
+        4. `celtics-the-artometrics-of-institutional-winning`
+           - Theme: inherited expectation, title density, modern access.
+           - Sources: Basketball Reference, NBA history, Sports Reference.
+        5. `dodgers-the-artometrics-of-baseballs-modern-machine`
+           - Theme: high-floor contention, spending infrastructure, October conversion.
+           - Sources: Baseball Reference, Lahman, payroll-rank summaries, Retrosheet/Baseball Almanac.
+        6. `patriots-the-artometrics-of-the-system-dynasty`
+           - Theme: system shock, Brady/Belichick discontinuity, brand after dynasty.
+           - Sources: Pro Football Reference, NFL records, Forbes.
+
         ## Chart contract
 
         Each report receives:
@@ -368,12 +524,24 @@ def write_plan():
 
         ## Scale-up order
 
-        - NBA: Lakers, Celtics, Warriors, Knicks, Spurs, Bulls, Heat, Clippers, Kings.
-        - MLB: Yankees, Giants, Dodgers, Red Sox, Cubs, A's, Mets, Cardinals, Braves.
-        - NFL: Cowboys, Patriots, Chiefs, 49ers, Steelers, Packers, Browns, Lions, Jets.
+        ### Batch 3 - league pillars
+        - NBA: Knicks, Spurs, Bulls.
+        - MLB: Red Sox, Cubs, A's.
+        - NFL: Chiefs, 49ers, Steelers.
+
+        ### Batch 4 - droughts, villains, and fan pain
+        - NBA: Clippers, Kings, Suns.
+        - MLB: Mets, Mariners, Cardinals.
+        - NFL: Browns, Lions, Jets.
+
+        ### Batch 5 - NHL and global football entry
         - NHL: Canadiens, Maple Leafs, Rangers, Bruins, Red Wings, Penguins, Oilers.
-        - Global: Real Madrid, Barcelona, Manchester United, Liverpool, Bayern, PSG.
-        - Individual sports: Serena, Federer, Nadal, Djokovic, Tiger, Magnus, Kasparov.
+        - Soccer: Real Madrid, Barcelona, Manchester United, Liverpool, Bayern, PSG.
+
+        ### Batch 6 - individual sports and games
+        - Tennis: Serena, Federer, Nadal, Djokovic.
+        - Golf/chess: Tiger, Magnus, Kasparov, Polgar.
+        - Olympics: USA, China, Soviet/Russia, small-country medal efficiency.
 
         ## Editorial rule
 
@@ -390,7 +558,10 @@ def main():
     yankees()
     lakers()
     cowboys()
-    print("Generated sports canon plan and 3 five-chart reports.")
+    celtics()
+    dodgers()
+    patriots()
+    print("Generated sports canon plan and 6 five-chart reports.")
 
 
 if __name__ == "__main__":

@@ -16,6 +16,18 @@ question: history, peer comparison, efficiency, pain/volatility, and identity.
    - Theme: brand value versus postseason conversion.
    - Sources: Pro Football Reference, NFL records, Forbes.
 
+## Next canon batch
+
+4. `celtics-the-artometrics-of-institutional-winning`
+   - Theme: inherited expectation, title density, modern access.
+   - Sources: Basketball Reference, NBA history, Sports Reference.
+5. `dodgers-the-artometrics-of-baseballs-modern-machine`
+   - Theme: high-floor contention, spending infrastructure, October conversion.
+   - Sources: Baseball Reference, Lahman, payroll-rank summaries, Retrosheet/Baseball Almanac.
+6. `patriots-the-artometrics-of-the-system-dynasty`
+   - Theme: system shock, Brady/Belichick discontinuity, brand after dynasty.
+   - Sources: Pro Football Reference, NFL records, Forbes.
+
 ## Chart contract
 
 Each report receives:
@@ -28,12 +40,24 @@ Each report receives:
 
 ## Scale-up order
 
-- NBA: Lakers, Celtics, Warriors, Knicks, Spurs, Bulls, Heat, Clippers, Kings.
-- MLB: Yankees, Giants, Dodgers, Red Sox, Cubs, A's, Mets, Cardinals, Braves.
-- NFL: Cowboys, Patriots, Chiefs, 49ers, Steelers, Packers, Browns, Lions, Jets.
+### Batch 3 - league pillars
+- NBA: Knicks, Spurs, Bulls.
+- MLB: Red Sox, Cubs, A's.
+- NFL: Chiefs, 49ers, Steelers.
+
+### Batch 4 - droughts, villains, and fan pain
+- NBA: Clippers, Kings, Suns.
+- MLB: Mets, Mariners, Cardinals.
+- NFL: Browns, Lions, Jets.
+
+### Batch 5 - NHL and global football entry
 - NHL: Canadiens, Maple Leafs, Rangers, Bruins, Red Wings, Penguins, Oilers.
-- Global: Real Madrid, Barcelona, Manchester United, Liverpool, Bayern, PSG.
-- Individual sports: Serena, Federer, Nadal, Djokovic, Tiger, Magnus, Kasparov.
+- Soccer: Real Madrid, Barcelona, Manchester United, Liverpool, Bayern, PSG.
+
+### Batch 6 - individual sports and games
+- Tennis: Serena, Federer, Nadal, Djokovic.
+- Golf/chess: Tiger, Magnus, Kasparov, Polgar.
+- Olympics: USA, China, Soviet/Russia, small-country medal efficiency.
 
 ## Editorial rule
 
