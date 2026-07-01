@@ -1030,12 +1030,12 @@ pre:has(> code.sourceCode.sql),
   margin: 2.5rem auto !important;
   max-width: 100% !important;
   width: 100% !important;
-  border: 1px solid #CBCAC4 !important;
-  border-radius: 8px !important;
+  border: 1px solid #D8D3C8 !important;
+  border-radius: 2px !important;
   overflow: hidden !important;
-  background: #FAFAF8 !important;
-  box-shadow: 0 2px 16px rgba(28, 28, 30, 0.08), 0 1px 4px rgba(28, 28, 30, 0.04) !important;
-  transition: opacity 0.85s ease, transform 0.85s ease, box-shadow 0.2s ease !important;
+  background: #F4F1EA !important;
+  box-shadow: none !important;
+  transition: opacity 0.85s ease, transform 0.85s ease, border-color 0.2s ease !important;
   opacity: 0;
   transform: translateY(18px);
   position: relative;
@@ -1043,9 +1043,10 @@ pre:has(> code.sourceCode.sql),
 .artometrics-article-body .art-chart::before{
   content: "" !important;
   display: block !important;
-  height: 3px !important;
+  height: 5px !important;
   background: #C0392B !important;
-  width: 100% !important;
+  width: 68px !important;
+  margin-left: 1.1rem !important;
 }
 .artometrics-article-body .art-chart--revealed{
   opacity: 1 !important;
@@ -1059,7 +1060,7 @@ pre:has(> code.sourceCode.sql),
   }
 }
 .artometrics-article-body .art-chart:hover{
-  box-shadow: 0 4px 24px rgba(28, 28, 30, 0.12), 0 1px 6px rgba(28, 28, 30, 0.06) !important;
+  border-color: #BDB7AB !important;
 }
 .artometrics-article-body .art-chart-caption,
 .artometrics-article-body .art-chart figcaption{
@@ -1092,11 +1093,11 @@ pre:has(> code.sourceCode.sql),
   align-items: center !important;
   justify-content: center !important;
   gap: 0.35rem !important;
-  padding: 1rem 1.1rem 0.85rem !important;
-  text-align: center !important;
+  padding: 1rem 1.25rem 0.75rem !important;
+  text-align: left !important;
   font-family: 'DM Sans', sans-serif !important;
-  background: var(--art-cream, #F2F0EB) !important;
-  border-bottom: 1px solid #E0DDD6 !important;
+  background: #F4F1EA !important;
+  border-bottom: none !important;
   flex: 0 0 auto !important;
   width: 100% !important;
   box-sizing: border-box !important;
@@ -1104,31 +1105,31 @@ pre:has(> code.sourceCode.sql),
 .artometrics-article-body .art-chart-heading__subtitle{
   display: block !important;
   width: 100% !important;
-  max-width: 34rem !important;
-  margin: 0.15rem auto 0 !important;
-  font-family: 'Playfair Display', Georgia, serif !important;
-  font-size: 0.92rem !important;
+  max-width: 46rem !important;
+  margin: 0.1rem 0 0 !important;
+  font-family: 'DM Sans', Helvetica, sans-serif !important;
+  font-size: 0.78rem !important;
   font-weight: 400 !important;
-  font-style: italic !important;
+  font-style: normal !important;
   line-height: 1.45 !important;
   letter-spacing: 0 !important;
   text-transform: none !important;
   color: #6B6B6B !important;
 }
 .artometrics-article-body .art-chart-heading__line--primary{
-  font-family: 'Playfair Display', Georgia, serif !important;
-  font-size: 0.95rem !important;
+  font-family: 'DM Sans', Helvetica, sans-serif !important;
+  font-size: 1.05rem !important;
   font-weight: 700 !important;
   color: #1C1C1E !important;
-  letter-spacing: 0.04em !important;
+  letter-spacing: -0.015em !important;
   text-transform: none !important;
 }
 .artometrics-article-body .art-chart-heading__line{
   display: block !important;
   width: 100% !important;
   max-width: 100% !important;
-  text-align: center !important;
-  line-height: 1.4 !important;
+  text-align: left !important;
+  line-height: 1.22 !important;
   word-break: break-word !important;
   overflow-wrap: anywhere !important;
   hyphens: auto !important;
@@ -1140,10 +1141,10 @@ pre:has(> code.sourceCode.sql),
 .artometrics-article-body .art-chart-heading span[style*="C0392B"],
 .artometrics-article-body .art-chart-heading span[style*="#C0392B"]{
   font-family: 'DM Sans', sans-serif !important;
-  font-size: 0.68rem !important;
+  font-size: 0.78rem !important;
   font-weight: 700 !important;
   color: #C0392B !important;
-  letter-spacing: 0.12em !important;
+  letter-spacing: 0.02em !important;
   text-transform: uppercase !important;
 }
 .artometrics-article-body .art-chart-heading b{
@@ -1249,15 +1250,18 @@ pre:has(> code.sourceCode.sql),
     display: none !important;
   }
   .artometrics-article-body .art-chart-heading{
-    padding: 0.8rem 0.75rem 0.65rem !important;
+    padding: 0.9rem 0.9rem 0.65rem !important;
   }
   .artometrics-article-body .art-chart-heading__line--primary{
-    font-size: 0.72rem !important;
-    letter-spacing: 0.06em !important;
+    font-size: 1rem !important;
+    letter-spacing: -0.015em !important;
   }
   .artometrics-article-body .art-chart-heading__line--accent{
-    font-size: 0.68rem !important;
-    letter-spacing: 0.08em !important;
+    font-size: 0.72rem !important;
+    letter-spacing: 0.04em !important;
+  }
+  .artometrics-article-body .art-chart-heading__subtitle{
+    font-size: 0.75rem !important;
   }
   .artometrics-article-body #art-sidebar-btn {
     display: none !important;
@@ -1268,7 +1272,7 @@ pre:has(> code.sourceCode.sql),
   min-height: 0 !important;
   opacity: 1;
   border-radius: 0;
-  background: var(--art-cream, #F2F0EB);
+  background: #F4F1EA;
   touch-action: manipulation;
   position: relative;
   overflow: hidden;
@@ -1302,7 +1306,18 @@ pre:has(> code.sourceCode.sql),
   object-fit: contain;
   object-position: center center;
   border-radius: 0;
-  background: var(--art-cream, #F2F0EB);
+  background: #F4F1EA;
+}
+.artometrics-article-body .art-chart-credit{
+  flex: 0 0 auto;
+  padding: 0.35rem 1rem 0.65rem;
+  color: #6B6B6B;
+  font-family: 'DM Sans', Helvetica, sans-serif;
+  font-size: 0.62rem;
+  line-height: 1.35;
+  text-align: left;
+  letter-spacing: 0.01em;
+  background: #F4F1EA;
 }
 .artometrics-article-body .art-chart-live--loading .art-chart-fallback{
   opacity: 0.96;
@@ -1330,6 +1345,34 @@ pre:has(> code.sourceCode.sql),
   margin: 0 auto !important;
   width: 100% !important;
   height: 100% !important;
+}
+@media (max-width: 700px) {
+  .artometrics-article-body .art-chart{
+    margin: 2.1rem auto !important;
+  }
+  .artometrics-article-body .art-chart::before{
+    margin-left: 0.9rem !important;
+    width: 54px !important;
+  }
+  .artometrics-article-body .art-chart-live.art-chart-has-heading .js-plotly-plot,
+  .artometrics-article-body .art-chart-live.art-chart-has-heading .plotly,
+  .artometrics-article-body .art-chart-live.art-chart-has-heading .art-chart-fallback{
+    aspect-ratio: auto !important;
+    min-height: clamp(360px, 92vw, 540px);
+  }
+  .artometrics-article-body .art-chart--bar-horizontal .art-chart-live.art-chart-has-heading .js-plotly-plot,
+  .artometrics-article-body .art-chart--bar-horizontal .art-chart-live.art-chart-has-heading .plotly{
+    min-height: clamp(420px, 108vw, 640px);
+  }
+  .artometrics-article-body .art-chart--line .art-chart-live.art-chart-has-heading .js-plotly-plot,
+  .artometrics-article-body .art-chart--line-marker .art-chart-live.art-chart-has-heading .js-plotly-plot,
+  .artometrics-article-body .art-chart--scatter .art-chart-live.art-chart-has-heading .js-plotly-plot{
+    min-height: clamp(390px, 98vw, 580px);
+  }
+  .artometrics-article-body .art-chart-credit{
+    padding-inline: 0.85rem;
+    font-size: 0.6rem;
+  }
 }
 .artometrics-article-body .art-github-wrap{
   text-align: center !important;

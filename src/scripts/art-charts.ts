@@ -49,7 +49,7 @@ const MAX_LIVE_TRACES = 150;
 const MAX_LIVE_POINTS = 60_000;
 
 /** Minimum height per horizontal bar row */
-const H_BAR_ROW_PX = 38;
+const H_BAR_ROW_PX = 40;
 /** Minimum height for a horizontal bar chart */
 const H_BAR_MIN_HEIGHT = 300;
 
@@ -226,7 +226,8 @@ async function enrichStaticChart(el: HTMLElement, chartUrl: string) {
   try {
     const raw = await loadChartSpec(chartUrl);
     const titleHtml = extractTitleHtml(raw);
-    if (titleHtml) renderStaticHeading(el, titleHtml);
+    if (titleHtml || el.dataset.caption) renderStaticHeading(el, titleHtml, el.dataset.caption);
+    renderChartCredit(el);
   } catch {
     /* PNG still shows without centered heading */
   }
@@ -236,17 +237,18 @@ async function enrichStaticChart(el: HTMLElement, chartUrl: string) {
 function inferChartHeight(data: PlotlyTrace[], titleLines: number, mobile: boolean): number | undefined {
   for (const trace of data) {
     const record = trace as Record<string, unknown>;
-    // Heatmap: row count × row height
+    // Heatmap: row count times row height
     if (record.type === "heatmap" && Array.isArray(record.y)) {
       const rows = record.y.length;
-      return Math.max(380, rows * 34 + titleLines * 24 + 96);
+      const px = Math.max(420, rows * 36 + titleLines * 24 + 112);
+      return mobile ? Math.min(px, 640) : px;
     }
     // Horizontal bar: each bar needs breathing room
     if (record.type === "bar" && record.orientation === "h" && Array.isArray(record.y)) {
       const rows = (record.y as unknown[]).length;
       if (rows > 6) {
-        const px = Math.max(H_BAR_MIN_HEIGHT, rows * H_BAR_ROW_PX + (mobile ? 64 : 80));
-        return mobile ? Math.min(px, 480) : px;
+        const px = Math.max(H_BAR_MIN_HEIGHT, rows * H_BAR_ROW_PX + (mobile ? 96 : 88));
+        return mobile ? Math.min(px, 640) : px;
       }
     }
   }
@@ -264,7 +266,7 @@ function isUniformColorArray(colors: unknown): boolean {
   return uniq.size <= 2;
 }
 
-/** Interpolate between two hex colors at position t ∈ [0,1] */
+/** Interpolate between two hex colors at position t in [0,1] */
 function lerpHex(a: string, b: string, t: number): string {
   const ar = parseInt(a.slice(1, 3), 16);
   const ag = parseInt(a.slice(3, 5), 16);
@@ -278,7 +280,7 @@ function lerpHex(a: string, b: string, t: number): string {
   return `#${r.toString(16).padStart(2, "0")}${g.toString(16).padStart(2, "0")}${bv.toString(16).padStart(2, "0")}`;
 }
 
-/** Sample a multi-stop gradient at position t ∈ [0,1] */
+/** Sample a multi-stop gradient at position t in [0,1] */
 function sampleGradient(stops: string[], t: number): string {
   if (stops.length === 0) return ART_COLORS.secondary;
   if (stops.length === 1) return stops[0];
@@ -299,7 +301,7 @@ function enhanceBarColors(traces: Array<Record<string, unknown>>) {
     if (!marker) continue;
 
     const rawColors = marker.color;
-    if (!isUniformColorArray(rawColors)) continue; // already varied — leave alone
+    if (!isUniformColorArray(rawColors)) continue; // already varied - leave alone
 
     const isHorizontal = trace.orientation === "h";
     const valArr = isHorizontal ? trace.x : trace.y;
@@ -400,7 +402,7 @@ function maxNumericValue(values: unknown): number | null {
   return nums.length ? Math.max(...nums) : null;
 }
 
-/** Leader bar gets an outside value label — Economist-style callout on the chart itself. */
+/** Leader bar gets an outside value label - Economist-style callout on the chart itself. */
 function addBarValueLabels(traces: Array<Record<string, unknown>>) {
   for (const trace of traces) {
     if (trace.type !== "bar") continue;
@@ -511,6 +513,41 @@ function buildEditorialAnnotations(
   return existing;
 }
 
+function classifyChart(data: Array<Record<string, unknown>>) {
+  const types = new Set(data.map((trace) => String(trace.type ?? "scatter")));
+  const hasHBar = data.some((trace) => trace.type === "bar" && trace.orientation === "h");
+  const hasVBar = data.some((trace) => trace.type === "bar" && trace.orientation !== "h");
+  const hasLine = data.some(
+    (trace) =>
+      (trace.type === "scatter" || !trace.type) &&
+      typeof trace.mode === "string" &&
+      trace.mode.includes("line")
+  );
+  const hasMarkers = data.some(
+    (trace) =>
+      (trace.type === "scatter" || !trace.type) &&
+      typeof trace.mode === "string" &&
+      trace.mode.includes("markers")
+  );
+
+  if (hasHBar) return "bar-horizontal";
+  if (hasVBar) return "bar-vertical";
+  if (types.has("heatmap")) return "heatmap";
+  if (types.has("histogram") || types.has("box") || types.has("violin")) return "distribution";
+  if (hasLine && hasMarkers) return "line-marker";
+  if (hasLine) return "line";
+  if (hasMarkers) return "scatter";
+  return "mixed";
+}
+
+function applyChartTypeClass(el: HTMLElement, data: Array<Record<string, unknown>>) {
+  const figure = el.closest<HTMLElement>(".art-chart");
+  if (!figure) return;
+  const type = classifyChart(data);
+  figure.dataset.chartType = type;
+  figure.classList.add("art-chart--typed", `art-chart--${type}`);
+}
+
 function lockChartInteraction(layout: PlotlyLayout) {
   layout.dragmode = false;
   const lockAxis = (axis: Plotly.Layout["xaxis"] | Plotly.Layout["yaxis"]) => {
@@ -532,6 +569,14 @@ function prepareChartFigure(figure: HTMLElement) {
     caption.setAttribute("aria-hidden", "true");
   }
   figure.classList.add("art-chart--pending");
+}
+
+function renderChartCredit(el: HTMLElement) {
+  if (el.querySelector(".art-chart-credit")) return;
+  const credit = document.createElement("div");
+  credit.className = "art-chart-credit";
+  credit.textContent = "Data: source cited in report references - ARTOMETRICS";
+  el.appendChild(credit);
 }
 
 function formatFactNumbers() {
@@ -766,6 +811,7 @@ function useStaticFallback(
   }
   showFallback(el, fallback, label);
   markChartReady(el, true);
+  renderChartCredit(el);
   if (chartUrl) void enrichStaticChart(el, chartUrl);
 }
 
@@ -792,8 +838,10 @@ async function renderLiveChart(el: HTMLElement) {
     const spec = sanitizePlotlySpec(raw, mobile);
     const titleHtml = spec.titleHtml || extractTitleHtml(raw);
     if (titleHtml || subtitle) renderStaticHeading(el, titleHtml, subtitle);
+    applyChartTypeClass(el, spec.data as Array<Record<string, unknown>>);
     await Plotly.newPlot(el, spec.data, spec.layout, spec.config);
     await Plotly.Plots.resize(el);
+    renderChartCredit(el);
 
     if (chartHasVisiblePlot(el)) {
       hideFallback(el);
