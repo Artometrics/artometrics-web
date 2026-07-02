@@ -71,8 +71,6 @@ draft: false
 <p>Scores on MAL are user-submitted on a 1–10 scale. The platform has a known self-selection bias: its userbase skews adult, male, and English-speaking relative to anime’s actual global audience. This produces systematic underscoring of children’s content and promotional music videos, and potential overrepresentation of properties with strong Western fandom overlap. The dataset also predates the post-2019 streaming era — <em>Demon Slayer</em>, <em>Jujutsu Kaisen</em>, <em>Chainsaw Man</em> are absent — which means any claims about current genre trends require updating.</p>
 <p>Genre tags are not mutually exclusive. A title tagged both “Action” and “Military” contributes to both genre aggregations. Studio medians for boutique operations (n &lt; 30) are statistically fragile — a single poor season can meaningfully shift the result. The popularity rank field runs inversely: rank 1 is the <em>most</em> popular title in the dataset.</p>
 <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
   <details>
     <summary class="art-code-summary">
       <span class="art-lang-tag art-lang-sql">SQL</span>
@@ -147,11 +145,7 @@ ORDER BY median_score DESC
 LIMIT 10;</pre>
   </details>
 </div>
-</div>
-</div>
 <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
   <details>
     <summary class="art-code-summary">
       <span class="art-lang-tag art-lang-python">PYTHON</span>
@@ -232,15 +226,12 @@ print("\n--- Format Summary ---")
 print(format_summary.round(3).to_string())</pre>
   </details>
 </div>
-</div>
-</div>
-<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
 <h2 id="an-industry-that-industrialized-then-diversified" class="anchored">AN INDUSTRY THAT INDUSTRIALIZED — THEN DIVERSIFIED</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/anime/charts/chart1_releases_by_year.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/anime/charts/chart1_releases_by_year.png" role="img" aria-label="Releases By Year"></div>
+  <div class="art-chart-live" data-chart="/data/articles/anime/charts/chart1_releases_by_year.plotly.json" data-fallback="/images/content/articles/anime/charts/chart1_releases_by_year.png" role="img" aria-label="Releases By Year"></div>
   <figcaption class="art-chart-caption">Releases By Year</figcaption>
 </figure>
 </div>
@@ -250,8 +241,6 @@ print(format_summary.round(3).to_string())</pre>
 <p><strong>TV</strong> is the modern engine. It industrialized in the late 1990s and has compounded steadily since. <strong>Specials</strong> peaked in the mid-2000s as a franchise extension format, then plateaued. <strong>Music</strong> videos spiked dramatically in the 2010s — largely driven by short promotional content — and then fell just as fast. The most important line on this chart is <strong>ONA</strong>: near-zero before 2010, then a vertical ascent. That is not a genre trend. It is a platform shift. Netflix, Crunchyroll, and YouTube did not just distribute anime — they created a new format category.</p>
 <p>What the faceted view makes clear is that these formats are not competing for the same audience at the same time. They are sequential industrial experiments. Each one dominated its era, then either stabilized into a niche or was superseded by the next model. The industry did not simply grow — it restructured itself around whichever distribution channel controlled access to viewers.</p>
 <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
   <details>
     <summary class="art-code-summary">
       <span class="art-lang-tag art-lang-r">R</span>
@@ -309,15 +298,13 @@ ggsave("chart1_releases_by_year.png", plot = p1, path = "charts",
        width = 12, height = 7, dpi = 300, bg = "white")</pre>
   </details>
 </div>
-</div>
-</div>
 <h2 id="bones-and-kyoani-lead-consistency-across-volume-is-the-real-achievement" class="anchored">BONES AND KYOANI LEAD — CONSISTENCY ACROSS VOLUME IS THE REAL ACHIEVEMENT</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/anime/charts/chart2_studio_consistency.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/anime/charts/chart2_studio_consistency.png" role="img" aria-label="Every studio on this chart has produced at least one great show"></div>
-  <figcaption class="art-chart-caption">Every studio on this chart has produced at least one great show</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/anime/charts/chart2_studio_consistency.plotly.json" data-fallback="/images/content/articles/anime/charts/chart2_studio_consistency.png" role="img" aria-label="Studio Consistency"></div>
+  <figcaption class="art-chart-caption">Studio Consistency</figcaption>
 </figure>
 </div>
 </div>
@@ -326,8 +313,6 @@ ggsave("chart1_releases_by_year.png", plot = p1, path = "charts",
 <p><strong>Trigger (n=23)</strong> has the widest IQR — spanning from near the baseline to above 8.0. High-risk, high-reward. <strong>Studio Deen (n=264)</strong> is the industrial cautionary tale: the largest catalog on the chart and the lowest median. Volume without curation dilutes quality. <strong>A-1 Pictures (n=190)</strong> sits in the middle — a production machine that delivers reliable output at scale, occasionally punctuated by genuine hits.</p>
 <p>The viridis color scale maps TV share. Studios with higher TV share cluster in the middle — TV volume is the primary dilution mechanism. Boutique studios with low TV share show more extreme medians in both directions. The 6.38 dashed line is the dataset median. Every studio above it is beating the field. Most of them are doing it with fewer than 50 titles — which tells you exactly how hard it is to stay above average at scale.</p>
 <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
   <details>
     <summary class="art-code-summary">
       <span class="art-lang-tag art-lang-r">R</span>
@@ -382,15 +367,13 @@ ggsave("chart2_studio_consistency.png", plot = p2, path = "charts",
        width = 12, height = 7, dpi = 300, bg = "white")</pre>
   </details>
 </div>
-</div>
-</div>
 <h2 id="genre-map-whats-popular-vs-whats-well-rated" class="anchored">GENRE MAP: WHAT’S POPULAR VS WHAT’S WELL-RATED?</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/anime/charts/chart3_genre_map.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/anime/charts/chart3_genre_map.png" role="img" aria-label="The genre map plots every major genre against two axes: how popular its titles are (X, log-reversed so most popular is right), and..."></div>
-  <figcaption class="art-chart-caption">The genre map plots every major genre against two axes: how popular its titles are (X, log-reversed so most popular is right), and...</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/anime/charts/chart3_genre_map.plotly.json" data-fallback="/images/content/articles/anime/charts/chart3_genre_map.png" role="img" aria-label="Genre Map"></div>
+  <figcaption class="art-chart-caption">Genre Map</figcaption>
 </figure>
 </div>
 </div>
@@ -399,8 +382,6 @@ ggsave("chart2_studio_consistency.png", plot = p2, path = "charts",
 <p>The <strong>Curator’s Rooms</strong> are the upper-left quadrant. <strong>Thriller</strong> sits alone at the top: highest median on the chart (~7.5), extremely low popularity rank. The genre barely exists by volume, but almost everything made in it is exceptional. <strong>Mystery</strong> and <strong>Psychological</strong> follow the same pattern — high score, mid-obscurity — which aligns with their SQL Query 2 performance. <strong>Historical</strong> sits far right: highly rated but ignored algorithmically despite strong critical reception. The starkest bottom outlier is <strong>Dementia</strong>: low popularity, low score, tiny volume.</p>
 <p><strong>Kids</strong> and <strong>Music</strong> are the bottom-right anchors — widest audiences, lowest scores. This is the self-selection problem in reverse: the MAL platform’s adult userbase applying adult critical frameworks to children’s media and promotional content. The scores are not wrong given who is rating them. They are simply the wrong instrument for the material. The genre map’s quadrant structure is the clearest single visualization of what the platform is: a tool built by and for a specific audience, measuring everything — including content that was never made for them — against that audience’s preferences.</p>
 <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
   <details>
     <summary class="art-code-summary">
       <span class="art-lang-tag art-lang-r">R</span>
@@ -448,8 +429,6 @@ p3 <- ggplot(genre_stats,
 ggsave("chart3_genre_map.png", plot = p3, path = "charts",
        width = 12, height = 7, dpi = 300, bg = "white")</pre>
   </details>
-</div>
-</div>
 </div>
 <h2 id="limitations" class="anchored">LIMITATIONS</h2>
 <p>The dataset ends in April 2019. <em>Demon Slayer</em>, <em>Jujutsu Kaisen</em>, <em>Chainsaw Man</em>, <em>Spy × Family</em> are entirely absent. Their exclusion almost certainly understates ONA growth, understates action/Shounen dominance, and means any claims about current genre trends require updating against the post-2019 streaming landscape. The industry restructured significantly around Netflix and Crunchyroll originals after this cutoff — the format and source material charts would look different with five more years of data.</p>

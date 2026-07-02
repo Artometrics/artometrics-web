@@ -111,9 +111,6 @@ generational release structure, though the TidyTuesday documentation
 does not clarify the source of the nulls explicitly.
 </p>
 <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
   <details>
     <summary class="art-code-summary">
       <span class="art-lang-tag art-lang-sql">SQL</span>
@@ -152,20 +149,16 @@ WHERE type_1 IS NOT NULL   -- drops records with no type assignment
 -- WHERE base_experience IS NOT NULL
 
 -- Chart 3: exclude records with missing height or weight
--- WHERE height IS NOT NULL AND weight IS NOT NULL</pre>
+-- WHERE height IS NOT NULL AND weight IS NOT NULL
+    </pre>
+
   </details>
-</div>
-</div>
-</div>
 </div>
 
 <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
   <details>
     <summary class="art-code-summary">
-      <span class="art-lang-tag art-lang-python">PYTHON</span>
+      <span class="art-lang-tag art-lang-python">Python</span>
     </summary>
     <pre class="art-code-pre" id="python-block-1">import pandas as pd
 
@@ -186,20 +179,18 @@ n_leg = pokemon.query(&quot;is_legendary == True or is_mythical == True&quot;).s
 print(f&quot;Legendary + mythical: {n_leg}&quot;)
 
 # Most common primary type
-print(pokemon[&quot;type_1&quot;].value_counts().head(5))</pre>
+print(pokemon[&quot;type_1&quot;].value_counts().head(5))
+    </pre>
+
   </details>
 </div>
-</div>
-</div>
-</div>
-<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
 <h2 id="stat-identity-by-type" class="anchored">STAT IDENTITY BY TYPE</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/pokemon/charts/chart1_stat_heatmap.plotly.json" data-fallback="/images/content/articles/pokemon/charts/chart1_stat_heatmap.png" data-source="Data: TidyTuesday 2025-04-01 / PokéAPI - ARTOMETRICS" role="img" aria-label="Type identity is visible in the stat profile"></div>
-  <figcaption class="art-chart-caption">Type identity is visible in the stat profile</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/pokemon/charts/chart1_stat_heatmap.plotly.json" data-fallback="/images/content/articles/pokemon/charts/chart1_stat_heatmap.png" role="img" aria-label="Stat Heatmap"></div>
+  <figcaption class="art-chart-caption">Stat Heatmap</figcaption>
 </figure>
 </div>
 </div>
@@ -239,9 +230,6 @@ unrepresentative sample, which inflates the type&#39;s apparent standing
 relative to how Flying Pokémon actually play in practice.
 </p>
 <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
   <details>
     <summary class="art-code-summary">
       <span class="art-lang-tag art-lang-r">R</span>
@@ -268,19 +256,18 @@ chart1_data |&gt;
   theme(
     panel.grid.major = element_blank(),
     axis.text.x      = element_text(face = &quot;bold&quot;)
-  )</pre>
+  )
+    </pre>
+
   </details>
-</div>
-</div>
-</div>
 </div>
 <h2 id="generation-creep" class="anchored">GENERATION CREEP</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/pokemon/charts/chart2_generation_ridgeline.plotly.json" data-fallback="/images/content/articles/pokemon/charts/chart2_generation_ridgeline.png" data-source="Data: TidyTuesday 2025-04-01 / PokéAPI - ARTOMETRICS" role="img" aria-label="Later generations widen the power distribution"></div>
-  <figcaption class="art-chart-caption">Later generations widen the power distribution</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/pokemon/charts/chart2_generation_ridgeline.plotly.json" data-fallback="/images/content/articles/pokemon/charts/chart2_generation_ridgeline.png" role="img" aria-label="Generation Ridgeline"></div>
+  <figcaption class="art-chart-caption">Generation Ridgeline</figcaption>
 </figure>
 </div>
 </div>
@@ -316,9 +303,6 @@ looks like. Whether Game Freak intended it or stumbled into it, the
 ridgeline is the evidence.
 </p>
 <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
   <details>
     <summary class="art-code-summary">
       <span class="art-lang-tag art-lang-r">R</span>
@@ -342,19 +326,18 @@ chart2_data |&gt;
     y        = NULL,
     caption  = &quot;Source: TidyTuesday 2025-04-01 | — ARTOMETRICS&quot;
   ) +
-  theme_artometrics()</pre>
+  theme_artometrics()
+    </pre>
+
   </details>
-</div>
-</div>
-</div>
 </div>
 <h2 id="built-different" class="anchored">BUILT DIFFERENT</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/pokemon/charts/chart3_size_scatter.plotly.json" data-fallback="/images/content/articles/pokemon/charts/chart3_size_scatter.png" data-source="Data: TidyTuesday 2025-04-01 / PokéAPI - ARTOMETRICS" role="img" aria-label="Pokémon size is design language, not just biology"></div>
-  <figcaption class="art-chart-caption">Pokémon size is design language, not just biology</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/pokemon/charts/chart3_size_scatter.plotly.json" data-fallback="/images/content/articles/pokemon/charts/chart3_size_scatter.png" role="img" aria-label="Size Scatter"></div>
+  <figcaption class="art-chart-caption">Size Scatter</figcaption>
 </figure>
 </div>
 </div>
@@ -394,9 +377,6 @@ there because someone at Game Freak decided that a 14-meter whale or a
 record of that decision.
 </p>
 <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
   <details>
     <summary class="art-code-summary">
       <span class="art-lang-tag art-lang-r">R</span>
@@ -439,11 +419,10 @@ chart3_data |&gt;
   theme_artometrics() +
   theme(legend.position = &quot;right&quot;,
         legend.text     = element_text(size = 7),
-        legend.key.size = unit(0.4, &quot;cm&quot;))</pre>
+        legend.key.size = unit(0.4, &quot;cm&quot;))
+    </pre>
+
   </details>
-</div>
-</div>
-</div>
 </div>
 <h2 id="limitations" class="anchored">LIMITATIONS</h2>
 <p class="art-p">

@@ -44,6 +44,10 @@ Run from the repo root:
 | `npm run build` | Production build → `./dist/` |
 | `npm run preview` | Preview the production build |
 | `npm run astro ...` | Run Astro CLI commands |
+| `npm run sync:articles` | Sync Quarto repos → blog markdown + chart assets |
+| `npm run scaffold:repo -- --batch-from-site` | Scaffold local GitHub repo layouts for Python-only articles |
+| `npm run upgrade:repos` | Audit/upgrade the 10 existing Artometrics GitHub repos |
+| `npm run render:readmitted` | Export readmitted chart PNG + Plotly JSON pairs |
 
 ## Content workflows
 

@@ -73,9 +73,6 @@ draft: false
 <p>The three-point era data requires one important framing caveat: GSW’s three-point volume in the early 1980s was not meaningfully different from league average, because no team had yet developed a coherent three-point offensive philosophy. The line existed from 1980 onward, but the strategic embrace of it took another decade league-wide and another three decades before Golden State made it the centerpiece of the most efficient offense in NBA history. That arc — from novelty to weapon to universal standard — is what Chart 2 is designed to show.</p>
 <p>Win percentage is reported as a decimal proportion (0.0–1.0) and converted to percentage for display. The 2019–20 season was shortened to 72 games due to the COVID-19 pandemic; the Warriors’ win percentage that season (.232, 15–50) reflects their actual record in games played and is directly comparable to full 82-game seasons for the purposes of this analysis.</p>
 <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
   <details>
     <summary class="art-code-summary">
       <span class="art-lang-tag art-lang-sql">SQL</span>
@@ -142,18 +139,13 @@ SELECT
 FROM nba_season_records
 WHERE wins &gt;= 68
 ORDER BY wins DESC, season_year ASC;</pre>
+
   </details>
 </div>
-</div>
-</div>
-</div>
 <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
   <details>
     <summary class="art-code-summary">
-      <span class="art-lang-tag art-lang-python">PYTHON</span>
+      <span class="art-lang-tag art-lang-python">Python</span>
     </summary>
     <pre class="art-code-pre" id="py-block-1"># Warriors Artometrics — Python EDA
 # Purpose: Dataset pull diagnostics and exploratory checks
@@ -212,19 +204,17 @@ records_df = pd.concat(records, ignore_index=True)
 records_df[&#39;win_pct&#39;] = (
     records_df[&#39;W&#39;] / (records_df[&#39;W&#39;] + records_df[&#39;L&#39;])
 )
-print(records_df[[&#39;season&#39;,&#39;TEAM&#39;,&#39;W&#39;,&#39;L&#39;,&#39;win_pct&#39;]].head(20))</pre>
+print(records_df[[&#39;season&#39;,&#39;TEAM&#39;,&#39;W&#39;,&#39;L&#39;,&#39;win_pct&#39;]].head(20))
+    </pre>
+
   </details>
 </div>
-</div>
-</div>
-</div>
-<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
 <h2 id="win-percentage-over-time" class="anchored">WIN PERCENTAGE OVER TIME</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/warrior-the-artometrics-of-a-golden-state-dynasty/charts/chart1_win_pct_timeline.plotly.json" data-source="Data: source cited in report references - ARTOMETRICS" data-fallback="/images/content/articles/warrior-the-artometrics-of-a-golden-state-dynasty/charts/chart1_win_pct_timeline.png" role="img" aria-label="Win Pct Timeline"></div>
+  <div class="art-chart-live" data-chart="/data/articles/warrior-the-artometrics-of-a-golden-state-dynasty/charts/chart1_win_pct_timeline.plotly.json" data-fallback="/images/content/articles/warrior-the-artometrics-of-a-golden-state-dynasty/charts/chart1_win_pct_timeline.png" role="img" aria-label="Win Pct Timeline"></div>
   <figcaption class="art-chart-caption">Win Pct Timeline</figcaption>
 </figure>
 </div>
@@ -234,9 +224,6 @@ print(records_df[[&#39;season&#39;,&#39;TEAM&#39;,&#39;W&#39;,&#39;L&#39;,&#39;w
 <p>The Curry era doesn’t just look different in the data — it looks categorically different. The win percentage line goes somewhere it had never been in franchise history. The 2015–16 spike to .890 is the visual anchor of the entire chart, a data point so far above everything around it that it demands its own analysis. But what’s analytically underappreciated is the consistency of the dynasty beyond that spike. From 2015 through 2019, the Warriors never won fewer than 57 games in a non-strike-shortened season. Five consecutive years above .695. No franchise in the modern NBA era had done that.</p>
 <p>The 2019–20 collapse is the steepest single-season drop in franchise history — from .707 in 2018–19 to .232 in 2019–20, a 47-point decline driven by Klay Thompson’s ACL tear and the COVID-shortened season compressing the damage into sharp relief. The 2022 championship rebound is the fastest recovery in the dataset: from .232 to .671 in two seasons, without a lottery pick, without a blockbuster trade, with the same core that won four titles. The dynasty didn’t rebuild. It waited.</p>
 <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
   <details>
     <summary class="art-code-summary">
       <span class="art-lang-tag art-lang-r">R</span>
@@ -280,17 +267,15 @@ print(records_df[[&#39;season&#39;,&#39;TEAM&#39;,&#39;W&#39;,&#39;L&#39;,&#39;w
 
 ggsave(&quot;chart1_win_pct_timeline.png&quot;, plot = p1,
        path = &quot;charts&quot;, width = 12, height = 7, dpi = 300, bg = &quot;white&quot;)</pre>
+
   </details>
-</div>
-</div>
-</div>
 </div>
 <h2 id="the-three-point-revolution" class="anchored">THE THREE-POINT REVOLUTION</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/warrior-the-artometrics-of-a-golden-state-dynasty/charts/chart2_three_point_revolution.plotly.json" data-source="Data: source cited in report references - ARTOMETRICS" data-fallback="/images/content/articles/warrior-the-artometrics-of-a-golden-state-dynasty/charts/chart2_three_point_revolution.png" role="img" aria-label="Three Point Revolution"></div>
+  <div class="art-chart-live" data-chart="/data/articles/warrior-the-artometrics-of-a-golden-state-dynasty/charts/chart2_three_point_revolution.plotly.json" data-fallback="/images/content/articles/warrior-the-artometrics-of-a-golden-state-dynasty/charts/chart2_three_point_revolution.png" role="img" aria-label="Three Point Revolution"></div>
   <figcaption class="art-chart-caption">Three Point Revolution</figcaption>
 </figure>
 </div>
@@ -300,9 +285,6 @@ ggsave(&quot;chart1_win_pct_timeline.png&quot;, plot = p1,
 <p>The divergence starts in 2013 and accelerates almost immediately. By 2015–16 — the 73-win season — the Warriors were launching 41.6 three-point attempts per game while the league average sat at 26.7. That is a 14.9-attempt gap. To put that in context: the Warriors were attempting more threes per game than the entire NBA would average five years later. The dip in the red line between 2017 and 2019 is not evidence of retreat — it is evidence of Kevin Durant. With Durant on the roster, the Warriors had easier scoring options closer to the basket, and Kerr pulled back the volume slightly without sacrificing efficiency. They were still the best offense in the league. They were just doing it differently.</p>
 <p>The convergence after 2019 is the most analytically important part of the chart. The league doesn’t retreat from the three-point line when the Warriors dynasty ends — it accelerates toward it. By 2022 the NBA average had climbed to 35 attempts per game, and the Warriors’ advantage had essentially evaporated because every team had absorbed the lesson. This is what competitive diffusion looks like in professional sports: one franchise proves a thesis, wins four championships doing it, and within a decade the entire sport has reorganized around the same idea. The Warriors didn’t just win. They changed what winning looks like.</p>
 <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
   <details>
     <summary class="art-code-summary">
       <span class="art-lang-tag art-lang-r">R</span>
@@ -336,17 +318,15 @@ ggsave(&quot;chart1_win_pct_timeline.png&quot;, plot = p1,
 
 ggsave(&quot;chart2_three_point_revolution.png&quot;, plot = p2,
        path = &quot;charts&quot;, width = 12, height = 7, dpi = 300, bg = &quot;white&quot;)</pre>
+
   </details>
-</div>
-</div>
-</div>
 </div>
 <h2 id="six-teams.-68-wins.-one-record." class="anchored">SIX TEAMS. 68+ WINS. ONE RECORD.</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/warrior-the-artometrics-of-a-golden-state-dynasty/charts/chart3_73_win_context.plotly.json" data-source="Data: source cited in report references - ARTOMETRICS" data-fallback="/images/content/articles/warrior-the-artometrics-of-a-golden-state-dynasty/charts/chart3_73_win_context.png" role="img" aria-label="73 Win Context"></div>
+  <div class="art-chart-live" data-chart="/data/articles/warrior-the-artometrics-of-a-golden-state-dynasty/charts/chart3_73_win_context.plotly.json" data-fallback="/images/content/articles/warrior-the-artometrics-of-a-golden-state-dynasty/charts/chart3_73_win_context.png" role="img" aria-label="73 Win Context"></div>
   <figcaption class="art-chart-caption">73 Win Context</figcaption>
 </figure>
 </div>
@@ -356,9 +336,6 @@ ggsave(&quot;chart2_three_point_revolution.png&quot;, plot = p2,
 <p>What the chart also reveals, and what the casual telling of this story tends to obscure, is that winning 73 games did not produce a championship. The 2015–16 Warriors lost the NBA Finals to LeBron James and the Cleveland Cavaliers in seven games, becoming the first team in Finals history to blow a 3–1 series lead. Of the six teams represented on this chart, only the Warriors and the 1971–72 Milwaukee Bucks failed to win the title in their record-setting season. The Bulls closed out their 72-win campaign with a championship. The Warriors went home. <strong>The 73-win season is simultaneously the greatest regular season in NBA history and the most famous failure to close.</strong></p>
 <p>This context matters analytically. The Warriors’ dynasty is correctly measured by its four championships — 2015, 2017, 2018, 2022 — not by its win total in any single season. The 73-win year is the ceiling of what they were capable of, a demonstration of how dominant the Death Lineup era truly was. But the franchise’s legacy doesn’t rest on that number. It rests on what they built around Curry, Thompson, and Green over a decade — and the fact that they kept winning after Durant left, after injuries piled up, after everyone assumed the window had closed.</p>
 <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
   <details>
     <summary class="art-code-summary">
       <span class="art-lang-tag art-lang-r">R</span>
@@ -395,10 +372,8 @@ ggsave(&quot;chart2_three_point_revolution.png&quot;, plot = p2,
 
 ggsave(&quot;chart3_73_win_context.png&quot;, plot = p3,
        path = &quot;charts&quot;, width = 12, height = 7, dpi = 300, bg = &quot;white&quot;)</pre>
+
   </details>
-</div>
-</div>
-</div>
 </div>
 <h2 id="limitations" class="anchored">LIMITATIONS</h2>
 <p>The win percentage data in Chart 1 is drawn from a manually verified tibble rather than a live API pull. Values are sourced from Basketball Reference’s franchise history page for the Golden State Warriors and cross-checked against season summary pages for years where the franchise operated as the Philadelphia Warriors (1946–1962) and San Francisco Warriors (1962–1971). The values are accurate to the published record, but the methodology differs from the automated pulls used in other Artometrics reports — readers who want to replicate the data pull programmatically should use the nbastatR package with single-season calls rather than multi-season range calls, which can trigger rate-limiting on the Basketball Reference scraper.</p>

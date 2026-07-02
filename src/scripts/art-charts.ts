@@ -942,9 +942,182 @@ async function renderLiveChart(el: HTMLElement) {
   }
 }
 
+function getChartSectionUrl(figure: Element): string {
+  let node: Element | null = figure;
+  while (node && node !== document.body) {
+    const prev = node.previousElementSibling;
+    if (prev?.matches("h2.anchored, h2[id]")) {
+      const id = prev.id;
+      if (id) return `${window.location.origin}${window.location.pathname}#${id}`;
+    }
+    node = node.parentElement;
+  }
+  return window.location.href;
+}
+
+function downloadChartPng(url: string) {
+  const filename = url.split("/").pop() ?? "artometrics-chart.png";
+  const anchor = document.createElement("a");
+  anchor.href = url;
+  anchor.download = filename;
+  anchor.rel = "noopener";
+  document.body.appendChild(anchor);
+  anchor.click();
+  anchor.remove();
+}
+
+function ensureShareSheet(): HTMLElement {
+  let sheet = document.getElementById("art-chart-share-sheet");
+  if (sheet) return sheet;
+
+  sheet = document.createElement("div");
+  sheet.id = "art-chart-share-sheet";
+  sheet.className = "art-chart-share-sheet";
+  sheet.hidden = true;
+  sheet.innerHTML = `
+    <div class="art-chart-share-sheet__panel-wrap">
+      <div class="art-chart-share-sheet__panel" role="dialog" aria-modal="true" aria-labelledby="art-chart-share-title">
+        <button type="button" class="art-chart-share-sheet__close" aria-label="Close share panel">&times;</button>
+        <p id="art-chart-share-title" class="art-chart-share-sheet__title">Share this chart</p>
+        <p class="art-chart-share-sheet__caption" data-share-caption></p>
+        <img class="art-chart-share-sheet__preview" data-share-preview alt="" />
+        <div class="art-chart-share-sheet__actions">
+          <button type="button" class="art-chart-share-sheet__btn art-chart-share-sheet__btn--primary" data-share-native>Share image</button>
+          <button type="button" class="art-chart-share-sheet__btn" data-share-x>X</button>
+          <button type="button" class="art-chart-share-sheet__btn" data-share-linkedin>LinkedIn</button>
+          <button type="button" class="art-chart-share-sheet__btn" data-share-copy>Copy link</button>
+          <button type="button" class="art-chart-share-sheet__btn" data-share-download>Save PNG</button>
+        </div>
+      </div>
+    </div>
+  `;
+  document.body.appendChild(sheet);
+
+  const close = () => {
+    sheet!.hidden = true;
+    document.body.style.overflow = "";
+  };
+
+  sheet.querySelector(".art-chart-share-sheet__close")?.addEventListener("click", close);
+  sheet.addEventListener("click", (event) => {
+    if (event.target === sheet) close();
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !sheet!.hidden) close();
+  });
+
+  return sheet;
+}
+
+async function openChartShareSheet(
+  figure: Element,
+  imageUrl: string,
+  caption: string
+) {
+  const sheet = ensureShareSheet();
+  const shareUrl = getChartSectionUrl(figure);
+  const pageTitle = document.title.replace(/\s*[—–-]\s*Artometrics.*$/i, "").trim();
+  const shareText = `${caption} — ${pageTitle} (Artometrics)`;
+
+  const preview = sheet.querySelector<HTMLImageElement>("[data-share-preview]");
+  const captionEl = sheet.querySelector("[data-share-caption]");
+  if (preview) {
+    preview.src = imageUrl;
+    preview.alt = caption;
+  }
+  if (captionEl) captionEl.textContent = caption;
+
+  sheet.hidden = false;
+  document.body.style.overflow = "hidden";
+
+  const nativeBtn = sheet.querySelector<HTMLButtonElement>("[data-share-native]");
+  if (nativeBtn) {
+    nativeBtn.style.display = typeof navigator.share === "function" ? "" : "none";
+    nativeBtn.onclick = async () => {
+      try {
+        const response = await fetch(imageUrl);
+        const blob = await response.blob();
+        const file = new File([blob], imageUrl.split("/").pop() ?? "chart.png", {
+          type: blob.type || "image/png",
+        });
+        if (navigator.canShare?.({ files: [file] })) {
+          await navigator.share({ title: shareText, text: shareText, url: shareUrl, files: [file] });
+          return;
+        }
+        await navigator.share({ title: shareText, text: shareText, url: shareUrl });
+      } catch {
+        /* user cancelled or share unavailable */
+      }
+    };
+  }
+
+  sheet.querySelector<HTMLButtonElement>("[data-share-x]")!.onclick = () => {
+    const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
+    window.open(twitterUrl, "_blank", "noopener,noreferrer");
+  };
+
+  sheet.querySelector<HTMLButtonElement>("[data-share-linkedin]")!.onclick = () => {
+    const linkedinUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`;
+    window.open(linkedinUrl, "_blank", "noopener,noreferrer");
+  };
+
+  sheet.querySelector<HTMLButtonElement>("[data-share-copy]")!.onclick = () => {
+    const btn = sheet.querySelector<HTMLButtonElement>("[data-share-copy]")!;
+    void navigator.clipboard.writeText(shareUrl).then(() => {
+      const original = btn.textContent;
+      btn.textContent = "Copied";
+      setTimeout(() => {
+        btn.textContent = original;
+      }, 1800);
+    });
+  };
+
+  sheet.querySelector<HTMLButtonElement>("[data-share-download]")!.onclick = () => {
+    downloadChartPng(imageUrl);
+  };
+}
+
+function initChartToolbars() {
+  document.querySelectorAll("figure.art-chart").forEach((figure) => {
+    if (figure.querySelector(".art-chart-toolbar")) return;
+
+    const live = figure.querySelector<HTMLElement>(".art-chart-live");
+    const fallback = live?.dataset.fallback;
+    if (!fallback) return;
+
+    const caption =
+      figure.querySelector("figcaption")?.textContent?.trim() ||
+      live?.getAttribute("aria-label") ||
+      "Chart";
+
+    const toolbar = document.createElement("div");
+    toolbar.className = "art-chart-toolbar";
+    toolbar.setAttribute("role", "group");
+    toolbar.setAttribute("aria-label", "Chart actions");
+
+    const saveBtn = document.createElement("button");
+    saveBtn.type = "button";
+    saveBtn.className = "art-chart-toolbar__btn";
+    saveBtn.textContent = "Save PNG";
+    saveBtn.addEventListener("click", () => downloadChartPng(fallback));
+
+    const shareBtn = document.createElement("button");
+    shareBtn.type = "button";
+    shareBtn.className = "art-chart-toolbar__btn";
+    shareBtn.textContent = "Share chart";
+    shareBtn.addEventListener("click", () => {
+      void openChartShareSheet(figure, fallback, caption);
+    });
+
+    toolbar.append(saveBtn, shareBtn);
+    figure.insertBefore(toolbar, figure.firstChild);
+  });
+}
+
 export function initArtCharts() {
   initChartReveal();
   formatFactNumbers();
+  initChartToolbars();
 
   const nodes = document.querySelectorAll<HTMLElement>(".art-chart-live");
   if (!nodes.length) return;

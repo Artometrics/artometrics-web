@@ -10,7 +10,11 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "sync:episodes": "node scripts/sync-member-episodes.mjs"
+    "sync:episodes": "node scripts/sync-member-episodes.mjs",
+    "sync:articles": "node scripts/sync-github-articles.mjs",
+    "scaffold:repo": "node scripts/scaffold-article-repo.mjs",
+    "upgrade:repos": "node scripts/upgrade-article-repos.mjs",
+    "render:readmitted": "python3 scripts/render-readmitted-charts.py"
   },
   "dependencies": {
     "@astrojs/mdx": "^7.0.0",

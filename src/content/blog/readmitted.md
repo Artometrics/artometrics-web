@@ -98,8 +98,6 @@ margin: 0;
 <p>An ERR above 1.0 triggers a penalty calculation, but the penalty tier depends on how far above 1.0 you are and the hospital’s overall performance relative to its peer group. For this analysis, hospitals are grouped into four tiers: No Penalty (ERR ≤ 1.0), Low (just above), Medium, and High. The High tier — hospitals with the worst readmission performance — is where CMS’s new TEAM model comes in. Starting January 1, 2026, 742 hospitals are mandated to participate in TEAM, a bundled payment model that goes further than HRRP by tying entire episodes of care — not just readmissions — to reimbursement. HRRP is where the penalty starts. TEAM is where the stakes get real.</p>
 <p>The data was pulled live via CMS’s open Provider Data Catalog API using Dataset ID 9n3s-kdb3. Ownership data for Chart 3 was joined from a second CMS dataset (xubh-q36u) using facility ID as the key. No local CSVs were used — the analysis is fully reproducible from the R code chunks in this document.</p>
 <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
   <details>
     <summary class="art-code-summary">
       <span class="art-lang-tag art-lang-sql">SQL</span>
@@ -147,11 +145,7 @@ GROUP BY measure_name, state
 ORDER BY avg_err DESC;</pre>
   </details>
 </div>
-</div>
-</div>
 <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
   <details>
     <summary class="art-code-summary">
       <span class="art-lang-tag art-lang-python">PYTHON</span>
@@ -222,16 +216,13 @@ print("\nTop 10 states by % penalized:")
 print(state_pct.round(1))</pre>
   </details>
 </div>
-</div>
-</div>
-<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
 <h2 id="the-geography-of-failure" class="anchored">THE GEOGRAPHY OF FAILURE</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/readmitted/charts/chart1_states_penalized.plotly.json" data-source="Data: source cited in report references - ARTOMETRICS" data-fallback="/images/content/articles/readmitted/charts/chart1_states_penalized.png" role="img" aria-label="Nearly half of all hospital-condition pairs in this dataset carry an excess readmission ratio above 1.0"></div>
-  <figcaption class="art-chart-caption">Nearly half of all hospital-condition pairs in this dataset carry an excess readmission ratio above 1.0</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/readmitted/charts/chart1_states_penalized.plotly.json" data-fallback="/images/content/articles/readmitted/charts/chart1_states_penalized.png" role="img" aria-label="States Penalized"></div>
+  <figcaption class="art-chart-caption">States Penalized</figcaption>
 </figure>
 </div>
 </div>
@@ -240,8 +231,6 @@ print(state_pct.round(1))</pre>
 <p>The rest of the top 20 tells a similar story of geographic contradiction. The South shows up heavily — Georgia, Kentucky, West Virginia, Alabama, Arkansas, Louisiana, Tennessee — which fits the expected narrative around population health disparities and chronic disease burden. But so does Illinois, California, New York, and Pennsylvania. This is not a rural poverty problem with a clean geographic boundary. It’s a systems problem that cuts across market type, hospital size, and regional demographics.</p>
 <p>The chart only shows states above the national average — the 20-odd states that are pulling the number up. But it’s worth noting that even the “better-performing” states aren’t clean. Below-average doesn’t mean penalty-free. It means a smaller share of hospital-condition pairs are exceeding the threshold, not that the problem is solved.</p>
 <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
   <details>
     <summary class="art-code-summary">
       <span class="art-lang-tag art-lang-r">R</span>
@@ -287,14 +276,12 @@ ggsave("chart1_states_penalized.png",
        path = "charts", width = 12, height = 7, dpi = 300, bg = "white")</pre>
   </details>
 </div>
-</div>
-</div>
 <h2 id="the-condition-nobody-is-solving" class="anchored">THE CONDITION NOBODY IS SOLVING</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/readmitted/charts/chart2_err_by_condition.plotly.json" data-source="Data: source cited in report references - ARTOMETRICS" data-fallback="/images/content/articles/readmitted/charts/chart2_err_by_condition.png" role="img" aria-label="Err By Condition"></div>
+  <div class="art-chart-live" data-chart="/data/articles/readmitted/charts/chart2_err_by_condition.plotly.json" data-fallback="/images/content/articles/readmitted/charts/chart2_err_by_condition.png" role="img" aria-label="Err By Condition"></div>
   <figcaption class="art-chart-caption">Err By Condition</figcaption>
 </figure>
 </div>
@@ -304,8 +291,6 @@ ggsave("chart1_states_penalized.png",
 <p>Hip/Knee is elective, scheduled surgery on an aging population with high comorbidity loads. The hospital controls the procedure. It has far less control over what happens at home on day 12 — when a blood clot develops, a fall occurs, or an infection surfaces. CMS has pushed shorter inpatient stays aggressively over the past decade, which moves patients out the door faster and shifts the risk window into a setting hospitals can’t monitor.</p>
 <p>COPD sits at the bottom of this chart at 1.0011 — but that’s not a success story. COPD patients are readmitted at high rates in absolute terms. The low ERR means hospitals are performing roughly in line with what CMS expects for that population. CMS’s risk model for COPD is calibrated to a sicker baseline. The bar is lower because the patients are harder.</p>
 <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
   <details>
     <summary class="art-code-summary">
       <span class="art-lang-tag art-lang-r">R</span>
@@ -366,15 +351,13 @@ ggsave("chart2_err_by_condition.png",
        path = "charts", width = 12, height = 7, dpi = 300, bg = "white")</pre>
   </details>
 </div>
-</div>
-</div>
 <h2 id="ownership-penalty-and-who-pays" class="anchored">OWNERSHIP, PENALTY, AND WHO PAYS</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/readmitted/charts/chart3_penalty_by_ownership.plotly.json" data-source="Data: CMS Provider Data Catalog and Hospital General Information - ARTOMETRICS" data-fallback="/images/content/articles/readmitted/charts/chart3_penalty_by_ownership.png" role="img" aria-label="For-profit hospitals are penalized slightly more often, but every ownership type has a broad no-penalty base"></div>
-  <figcaption class="art-chart-caption">For-profit hospitals are penalized slightly more often, but every ownership type has a broad no-penalty base</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/readmitted/charts/chart3_penalty_by_ownership.plotly.json" data-fallback="/images/content/articles/readmitted/charts/chart3_penalty_by_ownership.png" role="img" aria-label="Penalty By Ownership"></div>
+  <figcaption class="art-chart-caption">Penalty By Ownership</figcaption>
 </figure>
 </div>
 </div>
@@ -383,8 +366,6 @@ ggsave("chart2_err_by_condition.png",
 <p>Look at the no-penalty segment across all three bars. Every ownership type has roughly half or more of its hospital-condition pairs performing at or below the CMS expected readmission rate. That’s the counterintuitive finding. HRRP gets talked about as a widespread penalty regime — a stick CMS uses to punish underperforming hospitals. But the data says most hospitals, most of the time, are hitting the benchmark. The penalty is concentrated, not universal.</p>
 <p>Government hospitals sit in the middle — more penalized than non-profits, less than for-profits. That cuts against two assumptions that often get made about public hospitals: that they’re protected by stable public funding, or that they’re disadvantaged by chronic underfunding. Neither story holds cleanly here. Government hospitals are performing in the middle of the pack, which is its own kind of finding.</p>
 <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
   <details>
     <summary class="art-code-summary">
       <span class="art-lang-tag art-lang-r">R</span>
@@ -449,8 +430,6 @@ ggplot(plot_data, aes(x = ownership_group, y = pct, fill = penalty_tier)) +
 ggsave("chart3_penalty_by_ownership.png",
        path = "charts", width = 12, height = 7, dpi = 300, bg = "white")</pre>
   </details>
-</div>
-</div>
 </div>
 <h2 id="limitations" class="anchored">LIMITATIONS</h2>
 <p>CMS suppresses readmission data for hospitals that fall below 25 discharges per condition per measurement period. That threshold exists to protect statistical reliability, but the effect is systematic — small rural hospitals disappear from this analysis entirely. The hospitals in this dataset skew toward larger, busier facilities. Every finding in this report should be read with that in mind.</p>

@@ -59,9 +59,6 @@ draft: false
 <p>The sub-metric fingerprint analysis in Chart 3 covers seven of the ten CQI sub-metrics: aroma, flavor, aftertaste, acidity, body, balance, and cupper points. Uniformity, clean cup, and sweetness were excluded because they function more as defect-penalty fields than sensory attributes — nearly every Arabica sample in the dataset scores at or near the maximum on all three, leaving no meaningful variation to visualize. The top eight countries by sample volume were selected for the heatmap to ensure statistically stable medians.</p>
 <p>Country-level analyses were filtered to origins with 20 or more CQI samples to avoid medians driven by one or two unrepresentative submissions. This threshold reduces the country pool from 36 to 16 but substantially improves the reliability of distributional comparisons. All wrangling was performed in R using tidyverse; no imputation was applied to missing values — records with null entries in relevant fields were dropped from the specific chart requiring that field.</p>
 <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
   <details>
     <summary class="art-code-summary">
       <span class="art-lang-tag art-lang-sql">SQL</span>
@@ -110,19 +107,14 @@ FROM starbucks_locations
 WHERE Brand = &#39;Starbucks&#39;
 GROUP BY Country
 ORDER BY sbux_stores DESC;</pre>
+
   </details>
-</div>
-</div>
-</div>
 </div>
 
 <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
   <details>
     <summary class="art-code-summary">
-      <span class="art-lang-tag art-lang-python">PYTHON</span>
+      <span class="art-lang-tag art-lang-python">Python</span>
     </summary>
     <pre class="art-code-pre" id="python-block-1">import pandas as pd
 
@@ -190,19 +182,16 @@ sbux_counts = (
     .sort_values(&quot;sbux_stores&quot;, ascending=False)
 )
 print(sbux_counts.head(10))</pre>
+
   </details>
 </div>
-</div>
-</div>
-</div>
-<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
 <h2 id="chart-1-where-great-coffee-comes-from" class="anchored">CHART 1 — WHERE GREAT COFFEE COMES FROM</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/coffee-the-artometrics-of-java/charts/chart1_country_ridgeline.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/coffee-the-artometrics-of-java/charts/chart1_country_ridgeline.png" role="img" aria-label="Ethiopia doesn’t just lead — it occupies a different part of the distribution entirely"></div>
-  <figcaption class="art-chart-caption">Ethiopia doesn’t just lead — it occupies a different part of the distribution entirely</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/coffee-the-artometrics-of-java/charts/chart1_country_ridgeline.plotly.json" data-fallback="/images/content/articles/coffee-the-artometrics-of-java/charts/chart1_country_ridgeline.png" role="img" aria-label="Country Ridgeline"></div>
+  <figcaption class="art-chart-caption">Country Ridgeline</figcaption>
 </figure>
 </div>
 </div>
@@ -211,9 +200,6 @@ print(sbux_counts.head(10))</pre>
 <p>What makes this finding significant is what it implies about terroir and altitude. Ethiopia is the genetic origin of Arabica coffee — the Kaffa region in southwestern Ethiopia is where the species was first documented growing wild. The country’s range of elevation, soil diversity, and processing tradition produces a flavor complexity that Q Graders consistently reward with above-median scores across every sub-metric. This isn’t brand perception. It’s sensory evaluation by licensed professionals using a standardized protocol.</p>
 <p>The bottom of the chart is equally instructive. Nicaragua, Mexico, Honduras, and Taiwan all cluster between 81 and 83 — technically specialty grade, but right at the floor. Hawaii (USA) shows the widest distribution of any origin on the chart, reflecting the heterogeneity of Kona and Ka’u growing regions alongside lower-grade output caught in the same CQI sample pool. Brazil, the world’s largest coffee producer by volume, lands firmly in the lower half — a reminder that market dominance and cup quality are not the same thing.</p>
 <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
   <details>
     <summary class="art-code-summary">
       <span class="art-lang-tag art-lang-r">R</span>
@@ -261,17 +247,15 @@ print(sbux_counts.head(10))</pre>
 
 ggsave(&quot;chart1_country_ridgeline.png&quot;, p1,
        path = &quot;charts&quot;, width = 12, height = 7, dpi = 300, bg = &quot;white&quot;)</pre>
+
   </details>
-</div>
-</div>
-</div>
 </div>
 <h2 id="chart-2-the-quality-retail-disconnect" class="anchored">CHART 2 — THE QUALITY-RETAIL DISCONNECT</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/coffee-the-artometrics-of-java/charts/chart2_quality_vs_retail.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/coffee-the-artometrics-of-java/charts/chart2_quality_vs_retail.png" role="img" aria-label="Quality Vs Retail"></div>
+  <div class="art-chart-live" data-chart="/data/articles/coffee-the-artometrics-of-java/charts/chart2_quality_vs_retail.plotly.json" data-fallback="/images/content/articles/coffee-the-artometrics-of-java/charts/chart2_quality_vs_retail.png" role="img" aria-label="Quality Vs Retail"></div>
   <figcaption class="art-chart-caption">Quality Vs Retail</figcaption>
 </figure>
 </div>
@@ -281,9 +265,6 @@ ggsave(&quot;chart1_country_ridgeline.png&quot;, p1,
 <p>This is not accidental — it is structural. Starbucks builds stores in markets where it can sell coffee, not in markets where it sources coffee. Ethiopia’s retail consumer market is too small and too low-income to support the Starbucks price point. The company sources Ethiopian beans — its Ethiopia single-origin offerings appear in Reserve stores and seasonal rotations — but that sourcing relationship doesn’t translate into a domestic retail presence. The supply chain runs one direction.</p>
 <p>The Colombia data point reinforces it. Colombia scores a median 82.5 and sits right at zero on the y-axis — meaning Starbucks operates no stores in the country even though Colombian beans anchor its mainstream blends globally. A country can be among the most recognized coffee origins in the world while seeing essentially no retail investment from the brands that profit most from that reputation. The economic value created by growing and exporting specialty coffee does not accumulate where the coffee is grown.</p>
 <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
   <details>
     <summary class="art-code-summary">
       <span class="art-lang-tag art-lang-r">R</span>
@@ -333,18 +314,16 @@ ggsave(&quot;chart1_country_ridgeline.png&quot;, p1,
 
 ggsave(&quot;chart2_quality_vs_retail.png&quot;, p2,
        path = &quot;charts&quot;, width = 12, height = 7, dpi = 300, bg = &quot;white&quot;)</pre>
+
   </details>
-</div>
-</div>
-</div>
 </div>
 <h2 id="chart-3-the-sub-metric-fingerprint" class="anchored">CHART 3 — THE SUB-METRIC FINGERPRINT</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/coffee-the-artometrics-of-java/charts/chart3_submetric_heatmap.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/coffee-the-artometrics-of-java/charts/chart3_submetric_heatmap.png" role="img" aria-label="Ethiopia doesn’t just score higher overall — it scores higher on every single sub-metric"></div>
-  <figcaption class="art-chart-caption">Ethiopia doesn’t just score higher overall — it scores higher on every single sub-metric</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/coffee-the-artometrics-of-java/charts/chart3_submetric_heatmap.plotly.json" data-fallback="/images/content/articles/coffee-the-artometrics-of-java/charts/chart3_submetric_heatmap.png" role="img" aria-label="Submetric Heatmap"></div>
+  <figcaption class="art-chart-caption">Submetric Heatmap</figcaption>
 </figure>
 </div>
 </div>
@@ -353,9 +332,6 @@ ggsave(&quot;chart2_quality_vs_retail.png&quot;, p2,
 <p>What the heatmap also reveals is how flat the remaining six countries are. Brazil sits at 7.42–7.58 across every dimension — not bad, but undifferentiated. Honduras and Mexico are almost indistinguishable: same Aroma scores (7.5 each), near-identical Acidity and Body. When buyers and roasters talk about commodity coffee, this is the data behind the phrase. Consistent, predictable, no single attribute that dominates or surprises.</p>
 <p>Guatemala and Colombia both show elevated scores in Acidity and Balance, which maps to their market positioning as bright and balanced origins respectively. Colombia’s 7.58 across Acidity, Aftertaste, Aroma, and Balance explains why it became the template for how mass-market coffee is described — not because it’s the best, but because its profile translates well into easy consumer language. Specialty roasters call this approachability. The CQI data confirms it has a basis in fact.</p>
 <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
   <details>
     <summary class="art-code-summary">
       <span class="art-lang-tag art-lang-r">R</span>
@@ -392,10 +368,8 @@ ggsave(&quot;chart2_quality_vs_retail.png&quot;, p2,
 
 ggsave(&quot;chart3_submetric_heatmap.png&quot;, p3,
        path = &quot;charts&quot;, width = 12, height = 7, dpi = 300, bg = &quot;white&quot;)</pre>
+
   </details>
-</div>
-</div>
-</div>
 </div>
 <h2 id="limitations" class="anchored">LIMITATIONS</h2>
 <p>The CQI dataset reflects what Q Graders evaluate — which is not the same as what the global coffee market produces. Samples enter the CQI system because producers, exporters, or buyers choose to submit them. That selection process is not random. Farms that can afford Q Grader evaluations tend to be larger operations or producers already integrated into specialty supply chains. This means lower-quality, subsistence-level production from the same origin countries is systematically underrepresented. Ethiopia’s median score in this dataset may be genuinely high, but it is also the median of the coffees that Ethiopian producers chose to certify.</p>

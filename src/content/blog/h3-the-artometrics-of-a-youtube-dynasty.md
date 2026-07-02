@@ -59,9 +59,6 @@ draft: false
 <p>The core dataset was built from scratch using the YouTube Data API v3, stored at <code>github.com/Artometrics/h3</code>. Podcast episode metadata comes from the Podchaser API (680 episodes, April 2026 pull). Reddit post data was pulled from the Arctic Shift Reddit archive, covering <strong>r/h3h3productions</strong> (749,974 posts, 2014–2026) and <strong>r/h3snark</strong> (25,766 posts, April 2023–2026) — the fan sub and the critic sub, both active during the most contentious period in the brand’s history.</p>
 <p>H3 is one of the most data-rich creator brands on the internet. The combination of YouTube longevity (13 years), a documented era structure, an unusually organized fan and critic community, and a clothing brand with its own Wikipedia page creates a dataset that rewards analysis. This report does not take a position on the controversies. It reads the numbers and describes what they show.</p>
 <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
   <details>
     <summary class="art-code-summary">
       <span class="art-lang-tag art-lang-sql">SQL</span>
@@ -118,19 +115,14 @@ FROM monthly_counts mc
 JOIN subreddit_averages sa ON mc.source = sa.source
 WHERE mc.month &gt;= &#39;2023-04-01&#39;
 ORDER BY mc.source, mc.month;</pre>
+
   </details>
-</div>
-</div>
-</div>
 </div>
 
 <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
   <details>
     <summary class="art-code-summary">
-      <span class="art-lang-tag art-lang-python">PYTHON</span>
+      <span class="art-lang-tag art-lang-python">Python</span>
     </summary>
     <pre class="art-code-pre" id="python-block-1"># H3 Artometrics — Python EDA
 # Purpose: YouTube API pull structure + dataset diagnostics
@@ -211,19 +203,16 @@ snark = pd.read_csv(&quot;data/h3_snark_posts.csv&quot;,   parse_dates=[&quot;da
 
 print(f&quot;\nr/h3h3productions: {len(fans):,} posts | {fans[&#39;date&#39;].min().date()} → {fans[&#39;date&#39;].max().date()}&quot;)
 print(f&quot;r/h3snark:         {len(snark):,} posts | {snark[&#39;date&#39;].min().date()} → {snark[&#39;date&#39;].max().date()}&quot;)</pre>
+
   </details>
 </div>
-</div>
-</div>
-</div>
-<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
 <h2 id="chart-1-the-era-timeline" class="anchored">CHART 1 — THE ERA TIMELINE</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/h3-the-artometrics-of-a-youtube-dynasty/charts/chart1_era_timeline.plotly.json" data-source="Data: source cited in report references - ARTOMETRICS" data-fallback="/images/content/articles/h3-the-artometrics-of-a-youtube-dynasty/charts/chart1_era_timeline.png" role="img" aria-label="The shape of this chart tells you almost everything you need to know about the H3 Podcast’s commercial arc"></div>
-  <figcaption class="art-chart-caption">The shape of this chart tells you almost everything you need to know about the H3 Podcast’s commercial arc</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/h3-the-artometrics-of-a-youtube-dynasty/charts/chart1_era_timeline.plotly.json" data-fallback="/images/content/articles/h3-the-artometrics-of-a-youtube-dynasty/charts/chart1_era_timeline.png" role="img" aria-label="Era Timeline"></div>
+  <figcaption class="art-chart-caption">Era Timeline</figcaption>
 </figure>
 </div>
 </div>
@@ -232,9 +221,6 @@ print(f&quot;r/h3snark:         {len(snark):,} posts | {snark[&#39;date&#39;].mi
 <p>When Frenemies ended in June 2021 — abruptly, on-camera, mid-episode — views dropped back toward baseline within a single month. Leftovers launched that September and added a new audience (Hasan Piker’s political fanbase), generating a secondary bump visible in the 2022 data. But it never approached Frenemies numbers. After Leftovers ended in October 2023, the chart enters its current phase: a slow, grinding decline with no structural catalyst in sight. The mountain is the story. Everything else is the aftermath.</p>
 <p>Even at its post-2023 lows, the H3 Podcast pulls millions of monthly views. The brand did not collapse — it contracted to its core. The audience that remains watches longer episodes with more commitment than the casual Frenemies-era viewer. The cliff looks dramatic on the chart because Frenemies was genuinely anomalous. The current numbers are not a failure; they are what a major podcast looks like without a viral co-host dynamic driving weekly drama.</p>
 <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
   <details>
     <summary class="art-code-summary">
       <span class="art-lang-tag art-lang-r">R</span>
@@ -274,18 +260,16 @@ p1 &lt;- h3 |&gt;
 
 ggsave(&quot;chart1_era_timeline.png&quot;, plot = p1,
        path = &quot;charts&quot;, width = 12, height = 7, dpi = 300, bg = &quot;white&quot;)</pre>
+
   </details>
-</div>
-</div>
-</div>
 </div>
 <h2 id="chart-2-the-duration-drift" class="anchored">CHART 2 — THE DURATION DRIFT</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/h3-the-artometrics-of-a-youtube-dynasty/charts/chart2_duration_drift.plotly.json" data-source="Data: source cited in report references - ARTOMETRICS" data-fallback="/images/content/articles/h3-the-artometrics-of-a-youtube-dynasty/charts/chart2_duration_drift.png" role="img" aria-label="When H3 launched the podcast in 2017, the median episode ran 42 minutes "></div>
-  <figcaption class="art-chart-caption">When H3 launched the podcast in 2017, the median episode ran 42 minutes </figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/h3-the-artometrics-of-a-youtube-dynasty/charts/chart2_duration_drift.plotly.json" data-fallback="/images/content/articles/h3-the-artometrics-of-a-youtube-dynasty/charts/chart2_duration_drift.png" role="img" aria-label="Duration Drift"></div>
+  <figcaption class="art-chart-caption">Duration Drift</figcaption>
 </figure>
 </div>
 </div>
@@ -294,9 +278,6 @@ ggsave(&quot;chart1_era_timeline.png&quot;, plot = p1,
 <p>The clearest structural break in the duration data isn’t a spike — it’s a floor shift. Before 2022, monthly medians regularly dipped below 120 minutes. After 2022, they never did. The show locked into 3-hour-plus territory and stayed there. Leftovers (2021) normalized the extended format; by the time it ended (2023), the audience had been conditioned to expect marathon sessions as the default. That conditioning didn’t reverse when Leftovers ended.</p>
 <p>In 2024, H3 published far fewer episodes than in prior years — but duration hit its all-time high, with months regularly clearing <strong>220–240 minutes</strong>. The show was publishing less but asking more from the audience that stayed. Each episode became a larger commitment, not a smaller one. The fans who remained weren’t casual — they were in for 4 hours at a time. Whether that is sustainable is a different question. The data just shows it happened.</p>
 <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
   <details>
     <summary class="art-code-summary">
       <span class="art-lang-tag art-lang-r">R</span>
@@ -338,18 +319,16 @@ p2 &lt;- ggplot(p2_data, aes(x = month, y = median_min)) +
 
 ggsave(&quot;chart2_duration_drift.png&quot;, plot = p2,
        path = &quot;charts&quot;, width = 12, height = 7, dpi = 300, bg = &quot;white&quot;)</pre>
+
   </details>
-</div>
-</div>
-</div>
 </div>
 <h2 id="chart-3-the-fan-vs.-critic-divide" class="anchored">CHART 3 — THE FAN VS. CRITIC DIVIDE</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/h3-the-artometrics-of-a-youtube-dynasty/charts/chart3_reddit_activity.plotly.json" data-source="Data: source cited in report references - ARTOMETRICS" data-fallback="/images/content/articles/h3-the-artometrics-of-a-youtube-dynasty/charts/chart3_reddit_activity.png" role="img" aria-label="The indexed chart removes the raw scale difference between subreddits and asks a cleaner question: when did each community spike..."></div>
-  <figcaption class="art-chart-caption">The indexed chart removes the raw scale difference between subreddits and asks a cleaner question: when did each community spike...</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/h3-the-artometrics-of-a-youtube-dynasty/charts/chart3_reddit_activity.plotly.json" data-fallback="/images/content/articles/h3-the-artometrics-of-a-youtube-dynasty/charts/chart3_reddit_activity.png" role="img" aria-label="Reddit Activity"></div>
+  <figcaption class="art-chart-caption">Reddit Activity</figcaption>
 </figure>
 </div>
 </div>
@@ -358,9 +337,6 @@ ggsave(&quot;chart2_duration_drift.png&quot;, plot = p2,
 <p>The cliff in the snark data after May 2025 isn’t a controversy dying down — it’s a subreddit going dark. After Klein issued copyright claims against r/h3snark moderators and threatened legal action, the sub announced an indefinite hiatus. The index collapsed to near zero within weeks. The fan sub, meanwhile, continued its slow decline — below its own average but still functional. The snark community didn’t fade. It was shut down. That distinction matters: one line represents organic audience erosion, the other represents a legal intervention.</p>
 <p>The blue line tells its own quieter story. The fan sub never spikes the way snark does — no single event moves it dramatically above baseline. But the trend is unmistakably downward. The community isn’t in crisis; it’s in slow erosion. Fewer new things to discuss, fewer viral moments to dissect, fewer reasons to post. The legal drama — the Content Cop, the streamer lawsuits — barely registered. Whatever drives fan engagement on r/h3h3productions, it isn’t courtroom news.</p>
 <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
   <details>
     <summary class="art-code-summary">
       <span class="art-lang-tag art-lang-r">R</span>
@@ -398,10 +374,8 @@ p3 &lt;- ggplot(combined, aes(x = month, y = index, color = source)) +
 
 ggsave(&quot;chart3_reddit_activity.png&quot;, plot = p3,
        path = &quot;charts&quot;, width = 12, height = 7, dpi = 300, bg = &quot;white&quot;)</pre>
+
   </details>
-</div>
-</div>
-</div>
 </div>
 <h2 id="limitations" class="anchored">LIMITATIONS</h2>
 <p>The YouTube data captures view counts as of the April 2026 pull — not at time of publication. Older videos have had years to accumulate views through algorithmic recommendations and search, which means early h3h3Productions videos are systematically over-represented in lifetime view totals relative to their original performance. The era-based analysis on the H3 Podcast channel is less affected because the comparison is within-channel across time.</p>

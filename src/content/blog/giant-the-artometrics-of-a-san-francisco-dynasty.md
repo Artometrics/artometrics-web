@@ -71,9 +71,6 @@ draft: false
 <p>Attendance figures are official reported totals from Baseball Reference via the Lahman <code>Teams</code> table. They cover every San Francisco season from 1958 through the most recent year available and include the 2020 season, which was played without fans due to the COVID-19 pandemic. Pre-1958 attendance figures exist in the dataset but are excluded from Chart 2, which focuses on the SF era and the stadium transition story.</p>
 <p>Win percentage for Chart 1 is computed directly from the <code>W</code> and <code>L</code> columns as <code>W / (W + L)</code>. Short seasons — the 1994 and 1995 strike-shortened years, the 2020 pandemic season — are included without adjustment, which produces visible outliers in the raw data. The smoothed trend overlay uses a LOESS fit with a span of 0.15 and is less sensitive to single-season anomalies than the raw line.</p>
 <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
   <details>
     <summary class="art-code-summary">
       <span class="art-lang-tag art-lang-sql">SQL</span>
@@ -162,19 +159,14 @@ ORDER BY r.yearID;
 
 -- 2010: rank 9/30, 92 wins. 2012: rank 8/30, 94 wins.
 -- 2014: rank 4/30, 88 wins. Efficiency peaked early in window.</pre>
+
   </details>
-</div>
-</div>
-</div>
 </div>
 
 <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
   <details>
     <summary class="art-code-summary">
-      <span class="art-lang-tag art-lang-python">PYTHON</span>
+      <span class="art-lang-tag art-lang-python">Python</span>
     </summary>
     <pre class="art-code-pre" id="python-block-1"># San Francisco Giants — Artometrics Python EDA
 # Purpose: Dataset diagnostics before R chart build
@@ -250,19 +242,16 @@ dynasty = pay[
 print(&quot;\n── DYNASTY PAYROLL RANKS ────────────────────────────────&quot;)
 print(dynasty[[&quot;yearID&quot;, &quot;total_payroll&quot;, &quot;payroll_rank&quot;]]
       .to_string(index=False))</pre>
+
   </details>
 </div>
-</div>
-</div>
-</div>
-<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
 <h2 id="years-of-winning-and-the-gaps-in-between" class="anchored">141 YEARS OF WINNING — AND THE GAPS IN BETWEEN</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/giant-the-artometrics-of-a-san-francisco-dynasty/charts/chart1_win_pct.plotly.json" data-source="Data: source cited in report references - ARTOMETRICS" data-fallback="/images/content/articles/giant-the-artometrics-of-a-san-francisco-dynasty/charts/chart1_win_pct.png" role="img" aria-label="The New York Giants were one of the best franchises in baseball for the first half of the twentieth century"></div>
-  <figcaption class="art-chart-caption">The New York Giants were one of the best franchises in baseball for the first half of the twentieth century</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/giant-the-artometrics-of-a-san-francisco-dynasty/charts/chart1_win_pct.plotly.json" data-fallback="/images/content/articles/giant-the-artometrics-of-a-san-francisco-dynasty/charts/chart1_win_pct.png" role="img" aria-label="Win Pct"></div>
+  <figcaption class="art-chart-caption">Win Pct</figcaption>
 </figure>
 </div>
 </div>
@@ -271,8 +260,6 @@ print(dynasty[[&quot;yearID&quot;, &quot;total_payroll&quot;, &quot;payroll_rank
 <p>The move to San Francisco in 1958 broke that momentum and didn’t fully restore it for fifty years. The Candlestick era produced one pennant in 1962 — a seven-game World Series loss to the Yankees — and another in 1989, which ended with the Loma Prieta earthquake interrupting Game 3 and the A’s completing a sweep. The trend line during this period flatlines just below .500, punctuated by individual competitive seasons that never cohered into a sustained run. Willie Mays, Willie McCovey, and Juan Marichal were Hall of Fame talents in a franchise that couldn’t build a championship around them. The 1978 season hit a low of .383 — the worst in franchise history since the Dead Ball era.</p>
 <p>The Oracle era is the sharpest structural break on the chart. From 2000 onward the raw line is more volatile — more highs and more lows — but the smoothed trend climbs steadily into the 2010–2014 window before receding after 2016. What the trend line can’t show is what drove that climb: a front office that developed its own pitching, built around a generational catcher in Buster Posey, and won three championships in five years with a roster that looked nothing like what most people expected a dynasty to look like. The line’s descent after 2016 — dipping toward .400 in recent seasons — marks the current rebuild under Farhan Zaidi, a reset that the data shows but the story isn’t finished telling yet.</p>
 <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
   <details>
     <summary class="art-code-summary">
       <span class="art-lang-tag art-lang-r">R</span>
@@ -327,15 +314,13 @@ ggsave("chart1_win_pct.png", plot = p1, path = "charts",
        width = 12, height = 7, dpi = 300, bg = "white")</pre>
   </details>
 </div>
-</div>
-</div>
 <h2 id="oracle-park-changed-everything" class="anchored">ORACLE PARK CHANGED EVERYTHING</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/giant-the-artometrics-of-a-san-francisco-dynasty/charts/chart2_attendance.plotly.json" data-source="Data: source cited in report references - ARTOMETRICS" data-fallback="/images/content/articles/giant-the-artometrics-of-a-san-francisco-dynasty/charts/chart2_attendance.png" role="img" aria-label="Candlestick Park was bad in ways that are hard to fully communicate to anyone who didn’t sit through a night game there"></div>
-  <figcaption class="art-chart-caption">Candlestick Park was bad in ways that are hard to fully communicate to anyone who didn’t sit through a night game there</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/giant-the-artometrics-of-a-san-francisco-dynasty/charts/chart2_attendance.plotly.json" data-fallback="/images/content/articles/giant-the-artometrics-of-a-san-francisco-dynasty/charts/chart2_attendance.png" role="img" aria-label="Attendance"></div>
+  <figcaption class="art-chart-caption">Attendance</figcaption>
 </figure>
 </div>
 </div>
@@ -344,8 +329,6 @@ ggsave("chart1_win_pct.png", plot = p1, path = "charts",
 <p>Oracle Park opened on April 11, 2000, and drew 3.3 million fans in its first season. That single-season jump — from 2.1 million in Candlestick’s final year to 3.3 million in Oracle’s first — is the most important financial event in franchise history, and it didn’t require a winning team to produce it. The ballpark itself was the draw: a privately financed stadium on the waterfront, with views of McCovey Cove and a design that felt like a European soccer ground transplanted to a California setting. The Giants were the first team since the Dodgers in 1962 to build a stadium without public financing, which meant they owned the revenue streams entirely.</p>
 <p>What the chart shows from 2000 onward is a floor that Candlestick could never establish. Oracle attendance dipped during the post-Bonds transition years (2007–2009), touching 2.8 million at its lowest — still 700,000 above Candlestick’s competitive peaks. The dynasty years pushed it back above 3.3 million and held it there through three consecutive championships. COVID produced the only real interruption since opening day. The recovery to nearly 3.0 million by 2024 confirms what the data suggests throughout: Oracle Park sells itself, even when the team on the field doesn’t.</p>
 <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
   <details>
     <summary class="art-code-summary">
       <span class="art-lang-tag art-lang-r">R</span>
@@ -408,15 +391,13 @@ ggsave("chart2_attendance.png", plot = p2, path = "charts",
        width = 12, height = 7, dpi = 300, bg = "white")</pre>
   </details>
 </div>
-</div>
-</div>
 <h2 id="the-dynasty-was-built-not-bought" class="anchored">THE DYNASTY WAS BUILT, NOT BOUGHT</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/giant-the-artometrics-of-a-san-francisco-dynasty/charts/chart3_payroll_wins.plotly.json" data-source="Data: source cited in report references - ARTOMETRICS" data-fallback="/images/content/articles/giant-the-artometrics-of-a-san-francisco-dynasty/charts/chart3_payroll_wins.png" role="img" aria-label="The scatter plot covers 32 seasons of Giants payroll history, and the first thing it tells you is that money and wins have never..."></div>
-  <figcaption class="art-chart-caption">The scatter plot covers 32 seasons of Giants payroll history, and the first thing it tells you is that money and wins have never...</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/giant-the-artometrics-of-a-san-francisco-dynasty/charts/chart3_payroll_wins.plotly.json" data-fallback="/images/content/articles/giant-the-artometrics-of-a-san-francisco-dynasty/charts/chart3_payroll_wins.png" role="img" aria-label="Payroll Wins"></div>
+  <figcaption class="art-chart-caption">Payroll Wins</figcaption>
 </figure>
 </div>
 </div>
@@ -425,8 +406,6 @@ ggsave("chart2_attendance.png", plot = p2, path = "charts",
 <p>The dynasty window is the cluster of red diamonds in the right-center of the chart. In 2010, the Giants ranked ninth in MLB payroll and won 92 games and a World Series. In 2012, they ranked eighth and won 94. The 2014 title is the standout data point: payroll rank 4 — a genuine top-5 spender — with 88 wins in a season they won through the Wild Card and four survival series. What connects all three is not the spending level but what the money bought. Tim Lincecum, Matt Cain, Madison Bumgarner, and Buster Posey were all drafted by San Francisco. They arrived cheap and performed at an elite level before their arbitration clocks reset the cost. The payroll rank rose as those players got paid for what they had already done, not for what they were expected to do.</p>
 <p>By 2015 and 2016 the orange dots appear — post-dynasty, top-5 payroll, 75 to 87 wins. The pipeline that produced Lincecum and Posey had stopped delivering at the same rate, and the organization was paying full market price for players who couldn’t replace what the draft had built. It is a pattern that repeats across every dynasty in the sport: the window opens when developed players are still cheap, and closes when they get paid. The Giants rode that window for five years and won three times. Most franchises never ride it once.</p>
 <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
   <details>
     <summary class="art-code-summary">
       <span class="art-lang-tag art-lang-r">R</span>
@@ -493,8 +472,6 @@ p3 <- ggplot(giants_payroll, aes(x = payroll_rank, y = W)) +
 ggsave("chart3_payroll_wins.png", plot = p3, path = "charts",
        width = 12, height = 7, dpi = 300, bg = "white")</pre>
   </details>
-</div>
-</div>
 </div>
 <h2 id="limitations" class="anchored">LIMITATIONS</h2>
 <p>The Lahman salary data ends in 2016. Seven seasons of Giants history — including the current rebuild under Farhan Zaidi and the signings of Carlos Correa, the failed pursuit of Aaron Judge, and the transition from Joey Bart to Patrick Bailey — are entirely absent from Chart 3. Any claims about the post-2016 payroll efficiency story require updating against a more current source such as Spotrac or Baseball Reference’s payroll pages. The dynasty thesis is well-supported by the data that exists; the post-dynasty decline is directionally indicated by 2015–2016 but not fully documented here.</p>

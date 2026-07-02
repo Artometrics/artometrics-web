@@ -63,9 +63,6 @@ draft: false
 <p>This report is not a comprehensive economic history. It is a structured comparison: six empires on the same axes, asking the same questions. What does empire produce? Who captures it? And how fast does it disappear?</p>
 <div class="art-code-block">
   <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
   <details>
     <summary class="art-code-summary">
       <span class="art-lang-tag art-lang-sql">SQL</span>
@@ -128,14 +125,8 @@ ORDER BY empire, year;</pre>
   </details>
 </div>
 </div>
-</div>
-</div>
-</div>
 
 <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
   <div class="art-code-block">
   <details>
     <summary class="art-code-summary">
@@ -216,18 +207,14 @@ print(peaks)</pre>
   </details>
 </div>
 </div>
-</div>
-</div>
-</div>
 <hr>
-<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
 <h2 id="chart-1-gdp-per-capita-across-empire-cores" class="anchored">CHART 1 — GDP PER CAPITA ACROSS EMPIRE CORES</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/imperial/charts/chart1_gdppc_all_empires.plotly.json" data-source="Data: source cited in report references - ARTOMETRICS" data-fallback="/images/content/articles/imperial/charts/chart1_gdppc_all_empires.png" role="img" aria-label="For the first 1,800 years of this chart, five of the six empire cores are essentially stationary"></div>
-  <figcaption class="art-chart-caption">For the first 1,800 years of this chart, five of the six empire cores are essentially stationary</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/imperial/charts/chart1_gdppc_all_empires.plotly.json" data-fallback="/images/content/articles/imperial/charts/chart1_gdppc_all_empires.png" role="img" aria-label="Gdppc All Empires"></div>
+  <figcaption class="art-chart-caption">Gdppc All Empires</figcaption>
 </figure>
 </div>
 </div>
@@ -240,9 +227,6 @@ print(peaks)</pre>
 <h3 id="romes-peak-is-an-argument-about-ancient-living-standards" class="anchored">ROME’S PEAK IS AN ARGUMENT ABOUT ANCIENT LIVING STANDARDS</h3>
 <p>The Roman GDP line in this dataset is a back-extrapolation built from Maddison (2007), Scheidel and Friesen (2009), and Lo Cascio and Malanima (2009) — the best available estimates, with significant uncertainty bands. At roughly $1,000–1,200 in 2011 USD PPP, the Roman Empire’s peak was genuinely impressive for its era. It represents something like double the GDP per capita of its contemporaries and suggests a level of market integration — trans-Mediterranean trade, monetized labor, professional armies — that would not reappear in Europe for a thousand years after the Western collapse.</p>
 <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
   <div class="art-code-block">
   <details>
     <summary class="art-code-summary">
@@ -298,16 +282,13 @@ ggsave(&quot;chart1_gdppc_all_empires.png&quot;, plot = p1,
   </details>
 </div>
 </div>
-</div>
-</div>
-</div>
 <hr>
 <h2 id="chart-2-rise-fast-fall-faster" class="anchored">CHART 2 — RISE FAST, FALL FASTER</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/imperial/charts/chart2_empire_lifespan_indexed.plotly.json" data-source="Data: source cited in report references - ARTOMETRICS" data-fallback="/images/content/articles/imperial/charts/chart2_empire_lifespan_indexed.png" role="img" aria-label="Empire Lifespan Indexed"></div>
+  <div class="art-chart-live" data-chart="/data/articles/imperial/charts/chart2_empire_lifespan_indexed.plotly.json" data-fallback="/images/content/articles/imperial/charts/chart2_empire_lifespan_indexed.png" role="img" aria-label="Empire Lifespan Indexed"></div>
   <figcaption class="art-chart-caption">Empire Lifespan Indexed</figcaption>
 </figure>
 </div>
@@ -321,9 +302,6 @@ ggsave(&quot;chart1_gdppc_all_empires.png&quot;, plot = p1,
 <h3 id="the-roman-exception-that-proves-the-rule" class="anchored">THE ROMAN EXCEPTION THAT PROVES THE RULE</h3>
 <p>The Roman line in Chart 2 stands out as the flattest post-peak trajectory — holding above 80% of peak for nearly a century after the GDP maximum. This is not evidence of Roman resilience; it is evidence of how slowly the Western Roman political structure dissolved compared to how quickly the underlying economy had already stopped growing. Walter Scheidel’s work on Roman inequality (<em>The Great Leveler</em>, 2017) identifies this period as one of elite wealth concentration rather than broad prosperity — the GDP aggregate was holding because the very top of the distribution was insulating itself from the broader decline.</p>
 <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
   <div class="art-code-block">
   <details>
     <summary class="art-code-summary">
@@ -366,17 +344,14 @@ ggsave(&quot;chart2_empire_lifespan_indexed.png&quot;, plot = p2,
   </details>
 </div>
 </div>
-</div>
-</div>
-</div>
 <hr>
 <h2 id="chart-3-the-extraction-gap" class="anchored">CHART 3 — THE EXTRACTION GAP</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/imperial/charts/chart3_extraction_gap.plotly.json" data-source="Data: source cited in report references - ARTOMETRICS" data-fallback="/images/content/articles/imperial/charts/chart3_extraction_gap.png" role="img" aria-label="Chart 3 is the payoff"></div>
-  <figcaption class="art-chart-caption">Chart 3 is the payoff</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/imperial/charts/chart3_extraction_gap.plotly.json" data-fallback="/images/content/articles/imperial/charts/chart3_extraction_gap.png" role="img" aria-label="Extraction Gap"></div>
+  <figcaption class="art-chart-caption">Extraction Gap</figcaption>
 </figure>
 </div>
 </div>
@@ -388,9 +363,6 @@ ggsave(&quot;chart2_empire_lifespan_indexed.png&quot;, plot = p2,
 <h3 id="habsburg-spain-the-most-extreme-extraction-machine" class="anchored">HABSBURG SPAIN: THE MOST EXTREME EXTRACTION MACHINE</h3>
 <p>Habsburg Spain’s wage line is the most damning line on the chart. Starting at approximately 1.8 silver grams per day in 1500, it declines steadily to roughly 1.0 by 1600 and never recovers. This is the period during which Spanish galleons were carrying hundreds of tonnes of silver annually from Potosí and Zacatecas to Seville. The mechanism is the Price Revolution: the flood of American silver raised prices across the European economy while nominal wages failed to keep pace. Habsburg Spain extracted the largest resource windfall in pre-industrial history and distributed the gains almost entirely to the Crown, the Church, and the Genoese bankers who financed imperial debt. The workers got the inflation.</p>
 <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
   <div class="art-code-block">
   <details>
     <summary class="art-code-summary">
@@ -479,9 +451,6 @@ p3 &lt;- extraction_gap |&gt;
 ggsave(&quot;chart3_extraction_gap.png&quot;, plot = p3,
        path = &quot;charts&quot;, width = 12, height = 7, dpi = 300, bg = &quot;white&quot;)</pre>
   </details>
-</div>
-</div>
-</div>
 </div>
 </div>
 <hr>

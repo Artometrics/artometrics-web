@@ -59,9 +59,6 @@ draft: false
 <p>Revenue here is a lifetime estimate, not an annual figure. A franchise created in 1923 has had a century to accumulate; one created in 2013 has had six years. That asymmetry shapes every chart. Chart 1 shows the raw totals and what they’re made of. Chart 2 corrects for age by normalizing revenue per year — a fairer fight. Chart 3 strips away the ownership labels and asks what the leaderboard actually looks like when subsidiaries are folded into their parent companies.</p>
 <p>The <code>owners</code> column names the entity holding the IP rights as of 2019. What it doesn’t do is automatically consolidate subsidiaries under parent companies. Disney owns Marvel Entertainment and 20th Century Fox, but all three appear as separate rows in the raw data. Chart 3 exists because of this gap — it asks what the ownership picture looks like when you close it.</p>
 <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
   <details>
     <summary class="art-code-summary">
       <span class="art-lang-tag art-lang-sql">SQL</span>
@@ -118,19 +115,14 @@ GROUP BY parent_company
 HAVING COUNT(DISTINCT franchise) &gt;= 2
 ORDER BY total_revenue DESC
 LIMIT 12;</pre>
+
   </details>
-</div>
-</div>
-</div>
 </div>
 
 <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
   <details>
     <summary class="art-code-summary">
-      <span class="art-lang-tag art-lang-python">PYTHON</span>
+      <span class="art-lang-tag art-lang-python">Python</span>
     </summary>
     <pre class="art-code-pre" id="python-block-1"># Media Franchises — Python EDA
 # Mirrors the EDA logic used to validate this dataset before R analysis.
@@ -195,19 +187,16 @@ disney_summary = (disney_rows.groupby(&quot;owners&quot;)[&quot;revenue&quot;]
                   .round(1))
 print(disney_summary.to_string())
 print(f&quot;\nDisney consolidated total: ${disney_summary.sum():.1f}B&quot;)</pre>
+
   </details>
 </div>
-</div>
-</div>
-</div>
-<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
 <h2 id="chart-1-top-20-franchises-by-revenue" class="anchored">CHART 1 — TOP 20 FRANCHISES BY REVENUE</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/franchise/charts/chart1_top20_revenue.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/franchise/charts/chart1_top20_revenue.png" role="img" aria-label="Pokémon at $91B is not just the top of this chart — it is a different kind of number"></div>
-  <figcaption class="art-chart-caption">Pokémon at $91B is not just the top of this chart — it is a different kind of number</figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/franchise/charts/chart1_top20_revenue.plotly.json" data-fallback="/images/content/articles/franchise/charts/chart1_top20_revenue.png" role="img" aria-label="Top20 Revenue"></div>
+  <figcaption class="art-chart-caption">Top20 Revenue</figcaption>
 </figure>
 </div>
 </div>
@@ -216,9 +205,6 @@ print(f&quot;\nDisney consolidated total: ${disney_summary.sum():.1f}B&quot;)</p
 <p>The color logic of this chart is the argument. Merchandise, Licensing &amp; Retail (red) dominates the fill for nearly every bar in the top 20. This is not a quirk of how Wikipedia compiles revenue — it is a structural feature of how large-scale IP actually makes money. The content — films, games, episodes — functions primarily as <strong>marketing infrastructure</strong> for the real product, which is the license. The entertainment generates demand. Merchandise captures it.</p>
 <p>Three franchises break visibly from the red-dominant pattern. <strong>Mario</strong> is mostly dark blue — Nintendo has spent decades resisting the licensing temptation that Disney and Sanrio embraced fully, keeping the IP tightly coupled to its own hardware ecosystem. <strong>Shōnen Jump / Jump Comics</strong> is mostly purple (Comic or Manga) because its revenue structure is a publishing business — magazines and tankōbon volumes, not T-shirts. And <strong>Star Wars</strong> shows the most balanced mix: box office, merchandise, home video, and games each contributing meaningfully. Star Wars is the model of a fully diversified franchise — which is why Disney paid $4B for Lucasfilm in 2012.</p>
 <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
   <details>
     <summary class="art-code-summary">
       <span class="art-lang-tag art-lang-r">R</span>
@@ -272,17 +258,15 @@ p1 &lt;- ggplot(plot_data, aes(franchise, revenue, fill = revenue_category)) +
 
 ggsave(&quot;chart1_top20_revenue.png&quot;, plot = p1,
        path = &quot;charts&quot;, width = 12, height = 7, dpi = 300, bg = &quot;white&quot;)</pre>
+
   </details>
-</div>
-</div>
-</div>
 </div>
 <h2 id="chart-2-revenue-per-year-of-existence" class="anchored">CHART 2 — REVENUE PER YEAR OF EXISTENCE</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/franchise/charts/chart2_revenue_per_year.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/franchise/charts/chart2_revenue_per_year.png" role="img" aria-label="Revenue Per Year"></div>
+  <div class="art-chart-live" data-chart="/data/articles/franchise/charts/chart2_revenue_per_year.plotly.json" data-fallback="/images/content/articles/franchise/charts/chart2_revenue_per_year.png" role="img" aria-label="Revenue Per Year"></div>
   <figcaption class="art-chart-caption">Revenue Per Year</figcaption>
 </figure>
 </div>
@@ -292,9 +276,6 @@ ggsave(&quot;chart1_top20_revenue.png&quot;, plot = p1,
 <p>Several franchises that ranked very high on total revenue drop here when normalized by time. <strong>Hello Kitty</strong> ($80B total, second overall) falls to fourth at $1.8B/yr — because it has been generating that revenue since 1974, making 45 years the denominator that brings the rate down. <strong>Winnie the Pooh</strong> and <strong>Mickey Mouse</strong> drop further still. Their massive lifetime totals are the product of nearly a century of operation. The per-year lens is unforgiving to age: a franchise that earns $1B/yr for 90 years scores lower on this chart than one earning $2B/yr for 25.</p>
 <p>The franchises that rise on this chart share a structural trait: they earn across multiple simultaneous streams rather than sequentially. A film franchise earns at release, then waits for the next film. A trading-card-plus-video-game-plus-anime ecosystem earns every month, every quarter, at every retail touchpoint. The per-year chart is really a chart of business model design.</p>
 <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
   <details>
     <summary class="art-code-summary">
       <span class="art-lang-tag art-lang-r">R</span>
@@ -336,17 +317,15 @@ p2 &lt;- ggplot(chart2_data, aes(x = franchise, y = revenue_per_year)) +
 
 ggsave(&quot;chart2_revenue_per_year.png&quot;, plot = p2,
        path = &quot;charts&quot;, width = 12, height = 7, dpi = 300, bg = &quot;white&quot;)</pre>
+
   </details>
-</div>
-</div>
-</div>
 </div>
 <h2 id="chart-3-the-disney-empire-consolidated" class="anchored">CHART 3 — THE DISNEY EMPIRE, CONSOLIDATED</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/franchise/charts/chart3a_disney_non_consolidated.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/franchise/charts/chart3a_disney_non_consolidated.png" role="img" aria-label="Disney Non Consolidated"></div>
+  <div class="art-chart-live" data-chart="/data/articles/franchise/charts/chart3a_disney_non_consolidated.plotly.json" data-fallback="/images/content/articles/franchise/charts/chart3a_disney_non_consolidated.png" role="img" aria-label="Disney Non Consolidated"></div>
   <figcaption class="art-chart-caption">Disney Non Consolidated</figcaption>
 </figure>
 </div>
@@ -357,8 +336,8 @@ ggsave(&quot;chart2_revenue_per_year.png&quot;, plot = p2,
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/franchise/charts/chart3b_disney_consolidated.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/franchise/charts/chart3b_disney_consolidated.png" role="img" aria-label="Add them up and Disney’s true total is $426 billion "></div>
-  <figcaption class="art-chart-caption">Add them up and Disney’s true total is $426 billion </figcaption>
+  <div class="art-chart-live" data-chart="/data/articles/franchise/charts/chart3b_disney_consolidated.plotly.json" data-fallback="/images/content/articles/franchise/charts/chart3b_disney_consolidated.png" role="img" aria-label="Disney Consolidated"></div>
+  <figcaption class="art-chart-caption">Disney Consolidated</figcaption>
 </figure>
 </div>
 </div>
@@ -366,9 +345,6 @@ ggsave(&quot;chart2_revenue_per_year.png&quot;, plot = p2,
 <p>Add them up and Disney’s true total is <strong>$426 billion</strong>. Nintendo at $49B — still second — now represents about 11 cents on Disney’s dollar. But here’s what the math actually surfaces: Marvel ($20B) plus Fox ($17B) should consolidate to $296B. The remaining <strong>$130 billion comes from Disney-owned entities too small to crack the top 14 individually</strong> — Pixar, Lucasfilm, ABC, ESPN. Subsidiaries whose franchise rows exist in the dataset but don’t rank highly enough to appear as standalone bars. Individually invisible. Collectively, they add up to more than Nintendo’s entire lifetime output.</p>
 <p>That is the actual scale of the Disney empire. Not one dominant company. Not even three. An ecosystem of wholly-owned studios, publishers, and licensors — some famous, some not — each running their own operations, all consolidating upward to the same balance sheet. The chart makes visible something the raw data quietly obscures: <strong>in IP, ownership structure is as strategically important as the franchises themselves</strong>. Disney didn’t just build great IP. It bought the companies that owned great IP, let them keep their identities, and harvested everything upward.</p>
 <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
-  <div class="art-code-block">
   <details>
     <summary class="art-code-summary">
       <span class="art-lang-tag art-lang-r">R</span>
@@ -407,10 +383,8 @@ ggsave(&quot;chart3a_disney_non_consolidated.png&quot;, path = &quot;charts&quot
 # Chart 3b — Consolidated
 ggsave(&quot;chart3b_disney_consolidated.png&quot;, path = &quot;charts&quot;,
        width = 12, height = 7, dpi = 300, bg = &quot;white&quot;)</pre>
+
   </details>
-</div>
-</div>
-</div>
 </div>
 <h2 id="limitations" class="anchored">LIMITATIONS</h2>
 <p>This dataset reflects revenue estimates compiled from Wikipedia as of mid-2019, and carries several important caveats. Revenue figures are sourced inconsistently — some represent lifetime totals through 2019, others may reflect different windows or methodologies. Franchises are only included if they surpassed an estimated $4B threshold, meaning smaller but culturally significant IP is absent entirely. The ownership and creator fields reflect the state of the industry at the time of collection and do not account for subsequent acquisitions. Revenue categories were consolidated from over 60 raw Wikipedia subcategories into 8 groups, which involves judgment calls documented in the original TidyTuesday cleaning script.</p>

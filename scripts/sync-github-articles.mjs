@@ -718,6 +718,139 @@ function writeArticleCss() {
   border-color: #C0392B !important;
   color: #C0392B !important;
 }
+.artometrics-article-body .art-chart-toolbar {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  gap: 0.5rem !important;
+  margin: 0 0 0.75rem !important;
+}
+.artometrics-article-body .art-chart-toolbar__btn {
+  min-height: 44px !important;
+  min-width: 44px !important;
+  padding: 0.55rem 0.9rem !important;
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 0.68rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  line-height: 1 !important;
+  border: 1px solid #D5D5D5 !important;
+  border-radius: 4px !important;
+  color: #3A3A3A !important;
+  background: #fff !important;
+  cursor: pointer !important;
+  transition: color 0.15s, border-color 0.15s, background 0.15s !important;
+}
+.artometrics-article-body .art-chart-toolbar__btn:hover,
+.artometrics-article-body .art-chart-toolbar__btn:focus-visible {
+  color: #C0392B !important;
+  border-color: #C0392B !important;
+  outline: none !important;
+}
+.art-chart-share-sheet {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(28, 28, 30, 0.55);
+}
+.art-chart-share-sheet[hidden] {
+  display: none !important;
+}
+.art-chart-share-sheet__panel {
+  width: min(100%, 28rem);
+  max-height: min(90vh, 640px);
+  overflow: auto;
+  background: #fff;
+  border-radius: 8px 8px 0 0;
+  padding: 1.25rem;
+  box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.18);
+}
+@media (min-width: 640px) {
+  .art-chart-share-sheet {
+    align-items: center;
+  }
+  .art-chart-share-sheet__panel {
+    border-radius: 8px;
+  }
+}
+.art-chart-share-sheet__title {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #C0392B;
+  margin: 0 0 0.75rem;
+}
+.art-chart-share-sheet__caption {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #1C1C1E;
+  margin: 0 0 1rem;
+}
+.art-chart-share-sheet__preview {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  border: 1px solid #D5D5D5;
+  margin-bottom: 1rem;
+}
+.art-chart-share-sheet__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.art-chart-share-sheet__btn {
+  min-height: 44px;
+  padding: 0.55rem 0.9rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border: 1px solid #D5D5D5;
+  border-radius: 4px;
+  background: #fff;
+  color: #3A3A3A;
+  cursor: pointer;
+}
+.art-chart-share-sheet__btn:hover {
+  color: #C0392B;
+  border-color: #C0392B;
+}
+.art-chart-share-sheet__btn--primary {
+  background: #1C1C1E;
+  border-color: #1C1C1E;
+  color: #fff;
+}
+.art-chart-share-sheet__btn--primary:hover {
+  background: #C0392B;
+  border-color: #C0392B;
+  color: #fff;
+}
+.art-chart-share-sheet__close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  min-width: 44px;
+  min-height: 44px;
+  border: none;
+  background: transparent;
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+  color: #6B6B6B;
+}
+.art-chart-share-sheet__panel-wrap {
+  position: relative;
+}
 `;
   const combined = `${artHead}\n${artCss}\n${siteExtras}`;
   const scoped = scopeCss(combined, ".artometrics-article-body");
@@ -985,6 +1118,38 @@ function copyChartAssets(repoDir, slug, chartFiles) {
   return chartDest;
 }
 
+function copyChartJsonSpecs(repoDir, slug) {
+  const chartsDir = path.join(repoDir, "charts");
+  const jsonDest = path.join(PUBLIC, "data/articles", slug, "charts");
+  fs.mkdirSync(jsonDest, { recursive: true });
+
+  let copied = 0;
+  const sources = [];
+
+  if (fs.existsSync(chartsDir)) {
+    sources.push(
+      ...fs
+        .readdirSync(chartsDir)
+        .filter((f) => f.endsWith(".plotly.json"))
+        .map((f) => path.join(chartsDir, f))
+    );
+  }
+
+  sources.push(
+    ...fs
+      .readdirSync(repoDir)
+      .filter((f) => /^chart\d+.*\.plotly\.json$/i.test(f))
+      .map((f) => path.join(repoDir, f))
+  );
+
+  for (const srcPath of sources) {
+    fs.copyFileSync(srcPath, path.join(jsonDest, path.basename(srcPath)));
+    copied++;
+  }
+
+  return copied;
+}
+
 function copyArticleData(repoDir, slug) {
   const dataDest = path.join(PUBLIC, "data/articles", slug);
   fs.mkdirSync(dataDest, { recursive: true });
@@ -1056,11 +1221,12 @@ function syncArticle(repo, slug) {
 
   const chartFiles = collectChartFiles(repoDir);
   copyChartAssets(repoDir, slug, chartFiles);
+  const jsonFiles = copyChartJsonSpecs(repoDir, slug);
   const dataFiles = copyArticleData(repoDir, slug);
 
   if (!fs.existsSync(htmlPath)) {
     console.warn(
-      `Skip ${repo} body: missing ${repo}.html (copied ${chartFiles.length} charts, ${dataFiles} data files)`
+      `Skip ${repo} body: missing ${repo}.html (copied ${chartFiles.length} charts, ${jsonFiles} plotly specs, ${dataFiles} data files)`
     );
     patchGithubLink(mdPath, repo);
     return;
@@ -1084,7 +1250,7 @@ function syncArticle(repo, slug) {
   );
   fs.writeFileSync(mdPath, `---\n${frontmatter}\n---\n${body}\n`, "utf8");
   console.log(
-    `Synced ${slug} (${chartFiles.length} native charts, ${dataFiles} data files)`
+    `Synced ${slug} (${chartFiles.length} native charts, ${jsonFiles} plotly specs, ${dataFiles} data files)`
   );
 }
 
