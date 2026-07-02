@@ -565,18 +565,17 @@ function buildEditorialAnnotations(
 
   existing.push({
     x: 1,
-    y: 0,
+    y: -0.02,
     xref: "paper",
     yref: "paper",
-    text: "ARTOMETRICS",
+    text: "<b>ARTO</b>METRICS",
     showarrow: false,
     xanchor: "right",
-    yanchor: "bottom",
+    yanchor: "top",
     font: {
       family: "DM Sans, Helvetica, sans-serif",
-      size: 8,
+      size: 9,
       color: ART_COLORS.mid,
-      letterSpacing: "0.14em",
     },
   });
 
@@ -791,24 +790,21 @@ function sanitizePlotlySpec(raw: PlotlyExport, mobile: boolean) {
   const config: PlotlyConfig = {
     responsive: true,
     displaylogo: false,
-    displayModeBar: false,
+    displayModeBar: !mobile,
     scrollZoom: false,
     doubleClick: false,
-    modeBarButtonsToRemove: [
-      "zoom2d",
-      "pan2d",
-      "zoomIn2d",
-      "zoomOut2d",
-      "autoScale2d",
-      "resetScale2d",
-      "sendDataToCloud",
-      "lasso2d",
-      "select2d",
-    ],
+    modeBarButtons: [["toImage"]],
+    toImageButtonOptions: {
+      format: "png",
+      filename: "artometrics-chart",
+      height: chartHeight ?? 700,
+      width: 1200,
+      scale: 2,
+    },
     ...(raw.config ?? {}),
   };
 
-  config.displayModeBar = false;
+  config.displayModeBar = !mobile;
   config.scrollZoom = false;
   config.doubleClick = false;
 
@@ -955,8 +951,12 @@ function getChartSectionUrl(figure: Element): string {
   return window.location.href;
 }
 
+function chartFilename(fallback?: string) {
+  return fallback?.split("/").pop() ?? "artometrics-chart.png";
+}
+
 function downloadChartPng(url: string) {
-  const filename = url.split("/").pop() ?? "artometrics-chart.png";
+  const filename = chartFilename(url);
   const anchor = document.createElement("a");
   anchor.href = url;
   anchor.download = filename;
@@ -964,6 +964,27 @@ function downloadChartPng(url: string) {
   document.body.appendChild(anchor);
   anchor.click();
   anchor.remove();
+}
+
+async function downloadLiveChartPng(el: HTMLElement, fallback?: string) {
+  const plot = el.querySelector<HTMLElement>(".js-plotly-plot");
+  if (!plot || el.classList.contains("art-chart-live--static")) {
+    if (fallback) downloadChartPng(fallback);
+    return;
+  }
+
+  const filename = chartFilename(fallback).replace(/\.png$/i, "");
+  try {
+    await Plotly.downloadImage(el, {
+      format: "png",
+      filename,
+      width: 1200,
+      height: Math.max(el.offsetHeight, 420),
+      scale: 2,
+    });
+  } catch {
+    if (fallback) downloadChartPng(fallback);
+  }
 }
 
 function ensureShareSheet(): HTMLElement {
@@ -1083,7 +1104,7 @@ function initChartToolbars() {
 
     const live = figure.querySelector<HTMLElement>(".art-chart-live");
     const fallback = live?.dataset.fallback;
-    if (!fallback) return;
+    if (!fallback || !live) return;
 
     const caption =
       figure.querySelector("figcaption")?.textContent?.trim() ||
@@ -1098,19 +1119,25 @@ function initChartToolbars() {
     const saveBtn = document.createElement("button");
     saveBtn.type = "button";
     saveBtn.className = "art-chart-toolbar__btn";
-    saveBtn.textContent = "Save PNG";
-    saveBtn.addEventListener("click", () => downloadChartPng(fallback));
+    saveBtn.setAttribute("aria-label", "Save chart as PNG");
+    saveBtn.innerHTML =
+      '<span class="art-chart-toolbar__icon" aria-hidden="true">↓</span><span class="art-chart-toolbar__label">Save</span>';
+    saveBtn.addEventListener("click", () => {
+      void downloadLiveChartPng(live, fallback);
+    });
 
     const shareBtn = document.createElement("button");
     shareBtn.type = "button";
     shareBtn.className = "art-chart-toolbar__btn";
-    shareBtn.textContent = "Share chart";
+    shareBtn.setAttribute("aria-label", "Share chart");
+    shareBtn.innerHTML =
+      '<span class="art-chart-toolbar__icon" aria-hidden="true">↗</span><span class="art-chart-toolbar__label">Share</span>';
     shareBtn.addEventListener("click", () => {
       void openChartShareSheet(figure, fallback, caption);
     });
 
     toolbar.append(saveBtn, shareBtn);
-    figure.insertBefore(toolbar, figure.firstChild);
+    live.appendChild(toolbar);
   });
 }
 

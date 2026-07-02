@@ -502,20 +502,32 @@ function writeArticleCss() {
   background: #FAFAF8 !important;
   box-shadow: 0 2px 12px rgba(28, 28, 30, 0.05) !important;
 }
+@media (min-width: 900px) {
+  .artometrics-article-body .art-chart {
+    margin-left: -1.5rem !important;
+    margin-right: -1.5rem !important;
+    width: calc(100% + 3rem) !important;
+    max-width: calc(100% + 3rem) !important;
+  }
+}
 .artometrics-article-body .art-chart-caption,
 .artometrics-article-body .art-chart figcaption {
   margin: 0 !important;
-  padding: 0.7rem 1rem !important;
+  padding: 0.85rem 1.15rem 1rem !important;
   border-top: 1px solid #D5D5D5 !important;
-  background: #F2F0EB !important;
+  background: #FAFAF8 !important;
   font-family: 'DM Sans', sans-serif !important;
-  font-size: 0.72rem !important;
-  font-weight: 600 !important;
+  font-size: 0.82rem !important;
+  font-weight: 400 !important;
   font-style: normal !important;
-  letter-spacing: 0.14em !important;
-  text-transform: uppercase !important;
-  text-align: center !important;
-  color: #6B6B6B !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  text-align: left !important;
+  line-height: 1.55 !important;
+  color: #3A3A3A !important;
+}
+.artometrics-article-body .art-chart-caption--visible {
+  display: block !important;
 }
 .artometrics-article-body .art-chart-live .gtitle,
 .artometrics-article-body .art-chart-live .gtitle text,
@@ -523,15 +535,78 @@ function writeArticleCss() {
   text-anchor: middle !important;
 }
 .artometrics-article-body .art-chart-heading {
-  padding: 1.1rem 1.25rem 0.85rem !important;
-  text-align: center !important;
+  padding: 1.15rem 1.25rem 0.65rem !important;
+  text-align: left !important;
   font-family: 'DM Sans', sans-serif !important;
-  font-size: 0.78rem !important;
+  font-size: 0.95rem !important;
   font-weight: 700 !important;
-  line-height: 1.5 !important;
-  letter-spacing: 0.05em !important;
+  line-height: 1.35 !important;
+  letter-spacing: 0.01em !important;
   color: #1C1C1E !important;
   background: var(--art-cream, #F2F0EB) !important;
+  border-bottom: 1px solid #E8E6E1 !important;
+}
+.artometrics-article-body .art-chart-heading__line {
+  display: block !important;
+}
+.artometrics-article-body .art-chart-heading__line--primary {
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  color: #1C1C1E !important;
+  letter-spacing: 0.02em !important;
+}
+.artometrics-article-body .art-chart-heading__line--accent {
+  font-size: 0.92rem !important;
+  font-weight: 600 !important;
+  color: #C0392B !important;
+}
+.artometrics-article-body .art-chart-heading__subtitle {
+  display: block !important;
+  margin-top: 0.35rem !important;
+  font-size: 0.78rem !important;
+  font-weight: 400 !important;
+  line-height: 1.5 !important;
+  color: #6B6B6B !important;
+  letter-spacing: 0 !important;
+}
+.artometrics-article-body .art-chart-credit {
+  padding: 0.35rem 1.15rem 0.65rem !important;
+  font-family: 'DM Mono', 'DM Sans', monospace !important;
+  font-size: 0.62rem !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  color: #8A8A8A !important;
+  background: var(--art-cream, #F2F0EB) !important;
+  border-top: 1px solid #E8E6E1 !important;
+}
+.artometrics-article-body .art-chart-insight {
+  margin: 1rem 0 1.75rem !important;
+  padding: 0.9rem 1rem 0.95rem 1.15rem !important;
+  border-left: 3px solid #C0392B !important;
+  background: #FAFAF8 !important;
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 0.84rem !important;
+  line-height: 1.55 !important;
+  color: #3A3A3A !important;
+}
+.artometrics-article-body .art-chart-insight strong {
+  display: block !important;
+  margin-bottom: 0.35rem !important;
+  font-size: 0.68rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.14em !important;
+  text-transform: uppercase !important;
+  color: #C0392B !important;
+}
+.artometrics-article-body .art-chart-insight ul {
+  margin: 0 !important;
+  padding-left: 1.1rem !important;
+}
+.artometrics-article-body .art-chart-insight li {
+  margin-bottom: 0.35rem !important;
+}
+.artometrics-article-body .art-chart-insight li:last-child {
+  margin-bottom: 0 !important;
 }
 .artometrics-article-body .art-chart-heading b {
   font-weight: 700 !important;
@@ -719,28 +794,61 @@ function writeArticleCss() {
   color: #C0392B !important;
 }
 .artometrics-article-body .art-chart-toolbar {
+  position: absolute !important;
+  top: 0.55rem !important;
+  right: 0.55rem !important;
+  z-index: 4 !important;
   display: flex !important;
   flex-wrap: wrap !important;
-  justify-content: center !important;
-  gap: 0.5rem !important;
-  margin: 0 0 0.75rem !important;
+  justify-content: flex-end !important;
+  gap: 0.35rem !important;
+  margin: 0 !important;
+  pointer-events: none !important;
 }
 .artometrics-article-body .art-chart-toolbar__btn {
-  min-height: 44px !important;
-  min-width: 44px !important;
-  padding: 0.55rem 0.9rem !important;
+  pointer-events: auto !important;
+  min-height: 36px !important;
+  min-width: 36px !important;
+  padding: 0.4rem 0.65rem !important;
   font-family: 'DM Sans', sans-serif !important;
-  font-size: 0.68rem !important;
+  font-size: 0.62rem !important;
   font-weight: 600 !important;
-  letter-spacing: 0.12em !important;
+  letter-spacing: 0.08em !important;
   text-transform: uppercase !important;
   line-height: 1 !important;
-  border: 1px solid #D5D5D5 !important;
+  border: 1px solid rgba(213, 213, 213, 0.9) !important;
   border-radius: 4px !important;
   color: #3A3A3A !important;
-  background: #fff !important;
+  background: rgba(255, 255, 255, 0.94) !important;
+  backdrop-filter: blur(4px) !important;
   cursor: pointer !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.3rem !important;
+  box-shadow: 0 1px 4px rgba(28, 28, 30, 0.08) !important;
   transition: color 0.15s, border-color 0.15s, background 0.15s !important;
+}
+.artometrics-article-body .art-chart-toolbar__icon {
+  font-size: 0.85rem !important;
+  line-height: 1 !important;
+}
+@media (max-width: 600px) {
+  .artometrics-article-body .art-chart-toolbar__label {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+  }
+  .artometrics-article-body .art-chart-toolbar__btn {
+    min-width: 40px !important;
+    justify-content: center !important;
+    padding: 0.45rem !important;
+  }
 }
 .artometrics-article-body .art-chart-toolbar__btn:hover,
 .artometrics-article-body .art-chart-toolbar__btn:focus-visible {

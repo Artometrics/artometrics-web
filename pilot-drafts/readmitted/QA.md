@@ -20,9 +20,18 @@
 
 ## Prose enhancements applied
 
-- Existing franchise-grade narrative retained in `readmitted.qmd`
-- Limitations section documents CMS suppression threshold and ownership classification caveats
-- Magazine HTML export added as `readmitted-magazine.qmd` for editorial layout review
+- Opening lede cites ACA origins, Krumholz research, MedPAC critique of the 30-day window
+- Chart sections name specific systems (HCA, Tenet, Steward, RWJBarnabas, Mass General Brigham)
+- Each chart has a claim-style caption plus a **What to take away** insight box
+- References expanded with MedPAC Chapter 9
+
+## Chart design (v2)
+
+- Value labels on state bars; national-average reference line annotated
+- Chart 2 uses lollipop layout with Hip/Knee callout annotation
+- Chart 3 horizontal stacked bars with for-profit High-tier label
+- ARTOMETRICS brand mark baked into Plotly annotations
+- Save/Share toolbar overlays chart (top-right); Plotly native download on desktop hover
 
 ## Site features verified
 
