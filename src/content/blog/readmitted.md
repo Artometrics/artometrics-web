@@ -2,7 +2,7 @@
 title: "READMITTED: How America's Hospitals Are Failing the 30-Day Standard"
 slug: readmitted
 pubDate: 2026-04-21
-description: "A Data Analysis Of 11,720 Hospital-Condition Pairs Mapping Which States, Conditions, And Ownership Types Pay The Most Under CMS HRRP"
+description: "11,720 hospital-condition pairs under CMS HRRP: which states, conditions, and ownership types still exceed the 30-day readmission benchmark — and what that means for TEAM in 2026"
 heroImage: /images/content/2026/04/hf_20260421_220509_74ac5ebd-a302-4bbb-b59a-6ef0c431ec9a.png
 tags: [power, atlas]
 draft: false
@@ -17,6 +17,7 @@ draft: false
   <li><a href="#the-geography-of-failure" id="toc-the-geography-of-failure">THE GEOGRAPHY OF FAILURE</a></li>
   <li><a href="#the-condition-nobody-is-solving" id="toc-the-condition-nobody-is-solving">THE CONDITION NOBODY IS SOLVING</a></li>
   <li><a href="#ownership-penalty-and-who-pays" id="toc-ownership-penalty-and-who-pays">OWNERSHIP, PENALTY, AND WHO PAYS</a></li>
+  <li><a href="#three-myths-hrrp-gets-wrong" id="toc-three-myths-hrrp-gets-wrong">THREE MYTHS HRRP GETS WRONG</a></li>
   <li><a href="#limitations" id="toc-limitations">LIMITATIONS</a></li>
   <li><a href="#conclusion" id="toc-conclusion">CONCLUSION</a></li>
   <li><a href="#references" id="toc-references">REFERENCES</a></li>
@@ -26,6 +27,10 @@ draft: false
 <main class="art-article-main">
 <p>The Hospital Readmissions Reduction Program is a Medicare penalty system that has been running since 2012 — born in the Affordable Care Act, implemented by CMS under Administrator Marilyn Tavenner, and modeled on research by Yale’s Harlan Krumholz showing that “excess” 30-day returns were both measurable and reducible. The premise is simple: if your patients come back within 30 days of discharge at a higher rate than expected given their medical profile, CMS docks your Medicare reimbursements. The penalty caps at 3% of all Medicare payments — not just payments for the specific condition being measured. A hospital with too many heart failure readmissions doesn’t just lose heart failure revenue. It loses 3% of everything.</p>
 <p>The core metric is the Excess Readmission Ratio, or ERR. It is a ratio of predicted readmissions to expected readmissions — where “expected” is risk-adjusted for each patient’s age, comorbidities, and discharge history. An ERR of exactly 1.0 means you readmitted exactly as many patients as a hospital of your type and patient mix should. Above 1.0 means more readmissions than expected. Below 1.0 means fewer. What this analysis found: nearly every condition’s national average ERR is above 1.0. HRRP has been running for over a decade, and the average American hospital is still readmitting more patients than CMS expects. MedPAC has repeatedly questioned whether the 30-day window captures real quality failures or simply punishes hospitals for poverty, housing instability, and post-discharge care gaps they cannot control. The penalty hasn’t eliminated the problem. It has clarified where the system still leaks.</p>
+<div class="art-report-summary">
+  <p class="art-report-summary__label">Executive summary</p>
+  <p class="art-report-summary__text">CMS has fined hospitals for 30-day readmissions since 2012. Nearly half of all tracked hospital-condition pairs still exceed the benchmark. Penalties cluster in unexpected places — wealthy states alongside poor ones, elective joint surgery above acute cardiac events, for-profit chains slightly ahead of non-profits but with every ownership type still majority compliant. HRRP did not fix American discharge care. It mapped where the fixes still haven’t landed.</p>
+</div>
 <h2 id="fast-facts" class="anchored">FAST FACTS</h2>
 <style>
 .facts-grid {
@@ -454,6 +459,21 @@ ggplot(plot_data, aes(x = ownership_group, y = pct, fill = penalty_tier)) +
 ggsave("chart3_penalty_by_ownership.png",
        path = "charts", width = 12, height = 7, dpi = 300, bg = "white")</pre>
   </details>
+</div>
+<h2 id="three-myths-hrrp-gets-wrong" class="anchored">THREE MYTHS HRRP GETS WRONG</h2>
+<div class="art-myth-grid">
+  <div class="art-myth-card">
+    <p class="art-myth-card__myth">Myth 1: Readmissions are a rural poverty problem.</p>
+    <p class="art-myth-card__reality"><strong>Reality:</strong> New Jersey (65.4% penalized) and Massachusetts (62.5%) outrank most Southern states. High-penalty geography follows hospital density and discharge volume as much as it follows CDC poverty maps.</p>
+  </div>
+  <div class="art-myth-card">
+    <p class="art-myth-card__myth">Myth 2: Heart attacks and heart failure drive the penalties.</p>
+    <p class="art-myth-card__reality"><strong>Reality:</strong> Hip and knee replacement — scheduled, elective, profitable — carries the highest excess readmission ratio. CMS’s push for shorter stays moved risk into the home faster than post-acute networks could absorb it.</p>
+  </div>
+  <div class="art-myth-card">
+    <p class="art-myth-card__myth">Myth 3: For-profit hospitals are the only ones failing.</p>
+    <p class="art-myth-card__reality"><strong>Reality:</strong> For-profits carry more Medium/High tier exposure, but roughly half of all ownership types’ pairs still clear the benchmark. HRRP is a selective audit, not a sector-wide condemnation.</p>
+  </div>
 </div>
 <h2 id="limitations" class="anchored">LIMITATIONS</h2>
 <p>CMS suppresses readmission data for hospitals that fall below 25 discharges per condition per measurement period. That threshold exists to protect statistical reliability, but the effect is systematic — small rural hospitals disappear from this analysis entirely. The hospitals in this dataset skew toward larger, busier facilities. Every finding in this report should be read with that in mind.</p>

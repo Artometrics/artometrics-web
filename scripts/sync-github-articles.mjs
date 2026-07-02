@@ -608,6 +608,70 @@ function writeArticleCss() {
 .artometrics-article-body .art-chart-insight li:last-child {
   margin-bottom: 0 !important;
 }
+.artometrics-article-body .art-report-summary {
+  margin: 1.75rem 0 2.25rem !important;
+  padding: 1.15rem 1.25rem 1.2rem !important;
+  border: 1px solid #D5D5D5 !important;
+  border-left: 4px solid #2C3E6B !important;
+  background: #FAFAF8 !important;
+  max-width: 42rem !important;
+}
+.artometrics-article-body .art-report-summary__label {
+  margin: 0 0 0.5rem !important;
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 0.65rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.18em !important;
+  text-transform: uppercase !important;
+  color: #2C3E6B !important;
+}
+.artometrics-article-body .art-report-summary__text {
+  margin: 0 !important;
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 0.92rem !important;
+  line-height: 1.65 !important;
+  color: #1C1C1E !important;
+}
+.artometrics-article-body .art-myth-grid {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 1rem !important;
+  margin: 1.25rem 0 2rem !important;
+  max-width: 42rem !important;
+}
+@media (min-width: 768px) {
+  .artometrics-article-body .art-myth-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    max-width: none !important;
+  }
+}
+.artometrics-article-body .art-myth-card {
+  padding: 1rem 1.05rem !important;
+  border: 1px solid #E8E6E1 !important;
+  border-top: 3px solid #C0392B !important;
+  background: #FAFAF8 !important;
+}
+.artometrics-article-body .art-myth-card__myth {
+  margin: 0 0 0.55rem !important;
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 0.78rem !important;
+  font-weight: 700 !important;
+  line-height: 1.45 !important;
+  color: #6B6B6B !important;
+  font-style: italic !important;
+}
+.artometrics-article-body .art-myth-card__reality {
+  margin: 0 !important;
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 0.8rem !important;
+  line-height: 1.55 !important;
+  color: #3A3A3A !important;
+}
+.artometrics-article-body main.art-article-main > p {
+  text-align: left !important;
+  margin-left: 0 !important;
+  margin-right: auto !important;
+}
 .artometrics-article-body .art-chart-heading b {
   font-weight: 700 !important;
 }

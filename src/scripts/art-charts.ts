@@ -974,16 +974,66 @@ async function downloadLiveChartPng(el: HTMLElement, fallback?: string) {
   }
 
   const filename = chartFilename(fallback).replace(/\.png$/i, "");
+  const heading = el.querySelector(".art-chart-heading")?.textContent?.trim();
   try {
-    await Plotly.downloadImage(el, {
+    const dataUrl = await Plotly.toImage(el, {
       format: "png",
-      filename,
       width: 1200,
       height: Math.max(el.offsetHeight, 420),
       scale: 2,
     });
+    const img = new Image();
+    img.src = dataUrl;
+    await new Promise<void>((resolve, reject) => {
+      img.onload = () => resolve();
+      img.onerror = () => reject(new Error("chart image load failed"));
+    });
+
+    const pad = 28;
+    const titleBand = heading ? 56 : 0;
+    const canvas = document.createElement("canvas");
+    canvas.width = img.width;
+    canvas.height = img.height + titleBand + pad;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) throw new Error("canvas unavailable");
+
+    ctx.fillStyle = ART_COLORS.cream;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    if (heading) {
+      ctx.fillStyle = ART_COLORS.dark;
+      ctx.font = "700 22px DM Sans, Helvetica, sans-serif";
+      ctx.textAlign = "left";
+      const lines = heading.split(/\s{2,}|\n/).filter(Boolean);
+      lines.slice(0, 2).forEach((line, index) => {
+        ctx.fillText(line, pad, pad + index * 26);
+      });
+    }
+    ctx.drawImage(img, 0, titleBand);
+    ctx.fillStyle = ART_COLORS.mid;
+    ctx.font = "600 14px DM Sans, Helvetica, sans-serif";
+    ctx.textAlign = "right";
+    ctx.fillText("ARTOMETRICS", canvas.width - pad, canvas.height - 12);
+
+    const brandedUrl = canvas.toDataURL("image/png");
+    const anchor = document.createElement("a");
+    anchor.href = brandedUrl;
+    anchor.download = `${filename}.png`;
+    anchor.rel = "noopener";
+    document.body.appendChild(anchor);
+    anchor.click();
+    anchor.remove();
   } catch {
-    if (fallback) downloadChartPng(fallback);
+    try {
+      await Plotly.downloadImage(el, {
+        format: "png",
+        filename,
+        width: 1200,
+        height: Math.max(el.offsetHeight, 420),
+        scale: 2,
+      });
+    } catch {
+      if (fallback) downloadChartPng(fallback);
+    }
   }
 }
 
