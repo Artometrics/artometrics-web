@@ -93,6 +93,14 @@ Path alias: `@/*` → `src/*` (`tsconfig.json`).
 | `npm run build` | Production build |
 | `npm run preview` | Preview production build |
 
+## Cursor Cloud specific instructions
+
+- **Dev server:** `npm run dev` serves the Astro site at `http://localhost:4321/` (Astro's default port). Config sets `server.host: true` and `allowedHosts: true`, so it is reachable on the VM network too.
+- **Node:** README lists Node 18/20, but Astro 7 runs fine on the VM's Node 22. No version pinning file exists.
+- **Membership functions are out of scope for basic dev.** The static site (`npm run dev`) renders all content, nav, reports, podcast, authors, and legal pages without any secrets. The `netlify/functions/*` (Supabase auth + Stripe billing) require `.env` secrets from `.env.example` and only run under `netlify dev` (not `astro dev`); skip them unless a task specifically targets billing/auth.
+- **No lint or test scripts** are defined in `package.json`. `npm run build` (Astro's built-in type/content check + full page build) is the closest thing to a validation gate; run it after content-collection or config changes.
+- **Sync scripts** (`sync:articles`, `sync:episodes`, `upgrade:repos`) hit external GitHub repos and generally need network/credentials; not needed for local dev.
+
 ## Guardrails for AI / contributors
 
 - Do **not** rename `src/components/fundations/`.
