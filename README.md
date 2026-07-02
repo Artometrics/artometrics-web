@@ -52,7 +52,7 @@ Run from the repo root:
 ## Content workflows
 
 - **Blog reports:** `src/content/blog/` — frontmatter template in `src/content/blog/anime.md`
-- **Sync GitHub articles:** `node scripts/sync-github-articles.mjs`
+- **Sync GitHub articles:** `npm run sync:articles`
 - **Podcast episodes:** `src/content/podcast/` — template in `src/content/podcast/1.md`
 - **Authors:** `src/content/authors/`
 
