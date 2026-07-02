@@ -1,18 +1,21 @@
 ---
 name: Isaac Turner
-role: Lifestyle & Culture Writer
+role: Editor, History
 bio: |
-  Isaac Turner delves into the ever-evolving world of culture and lifestyle, covering everything from emerging trends to the influence of modern society on personal choices. His writing explores the way entertainment, fashion, and social movements shape daily life.
+  Isaac Turner edits History desk reports at Artometrics — civilizational cycles, imperial timelines,
+  long-run economic series, and archival datasets that reward patient reading.
 
-  With a keen eye for the intersection of lifestyle and cultural evolution, Isaac brings thought-provoking articles that inspire readers to think critically about the world around them. His work captures the pulse of contemporary culture, offering fresh perspectives on how we live, work, and play in today's fast-paced society.
+  His work emphasizes context over hot takes: when a chart spans centuries, the limitations belong in
+  the same paragraph as the headline finding.
 
-  Whether examining the impact of new technologies or the revival of past trends, Isaac's writing is an insightful commentary on the cultural forces that influence us all.
+  Isaac has written on Roman emperors, world heritage sites, nuclear testing records, and other sources
+  where time itself is the primary variable.
 image:
   url: "/src/images/authors/2.jpg"
-  alt: "Isaac Turner"
+  alt: "Isaac Turner, Artometrics editor"
 socials:
-  twitter: "#_"
-  website: "#_"
+  twitter: "https://twitter.com/artometrics"
+  website: "https://artometrics.com"
   linkedin: "#_"
   email: "#_"
 ---

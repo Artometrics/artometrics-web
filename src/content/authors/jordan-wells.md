@@ -1,18 +1,20 @@
 ---
 name: Jordan Wells
-role: Digital Sports Editor
+role: Editor, Persona
 bio: |
-  Jordan Wells is an expert in sports innovation and technology, focusing on how digital platforms and streaming services are reshaping the fan experience. With a background in both sports journalism and tech, he brings a unique perspective to the evolving world of sports media.
+  Jordan Wells covers persona-driven reports at Artometrics — dynasties, founders, creators, and the
+  behavioral profiles behind institutions that outlast any single leader.
 
-  In his work, Jordan explores the intersection of technology, entertainment, and sports, shedding light on how new technologies like virtual reality, streaming, and AI are transforming how fans engage with their favorite teams and athletes.
+  From sports franchises to YouTube channels, Jordan's desk asks who built the system, what incentives
+  shaped it, and how public data lets readers compare myth to measurable record.
 
-  Whether discussing the latest in eSports or the rise of interactive fan experiences, Jordan provides insightful commentary on the ever-changing landscape of sports and its relationship with technology.
+  He brings a background in sports analytics and narrative journalism to long-form Artometrics investigations.
 image:
   url: "/src/images/authors/5.jpg"
-  alt: "Jordan Wells"
+  alt: "Jordan Wells, Artometrics editor"
 socials:
-  twitter: "#_"
-  website: "#_"
+  twitter: "https://twitter.com/artometrics"
+  website: "https://artometrics.com"
   linkedin: "#_"
   email: "#_"
 ---

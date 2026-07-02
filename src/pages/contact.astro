@@ -9,7 +9,13 @@ import Text from "@/components/fundations/elements/Text.astro";
 import Button from "@/components/fundations/elements/Button.astro";
 ---
 
-<BaseLayout hideNav={true} hideFooter={true}>
+<BaseLayout
+  hideNav={true}
+  hideFooter={true}
+  pageTitle="Contact — Artometrics"
+  pageDescription="Questions about Artometrics reports, methodology, corrections, or membership."
+  canonicalPath="/contact/"
+>
   <div class="flex h-screen">
     <div
       class="flex items-center justify-center w-full p-8 bg-sand-100 lg:w-2/3"
@@ -25,16 +31,15 @@ import Button from "@/components/fundations/elements/Button.astro";
             variant="displayMD"
             class="font-serif font-light tracking-tight text-base-900 text-balance mt-12"
           >
-            Contact us!
+            Contact Artometrics
           </Text>
           <Text
             tag="p"
             variant="textXS"
             class="mt-2 font-medium uppercase text-base-600"
           >
-            If you have questions or need any general information, please
-            contact us on this points of refference. It will be an honor to help
-            you.
+            Questions about sources, methodology, corrections, membership, or
+            podcast inquiries — send a note and we will get back to you.
           </Text>
         </div>
         <form action="#" method="POST" class="flex flex-col mt-8 gap-4">

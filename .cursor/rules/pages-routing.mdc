@@ -1,5 +1,5 @@
 ---
-description: File-based routing and layout usage for Hemingway src/pages.
+description: File-based routing and layout usage for Artometrics src/pages.
 globs:
   - src/pages/**
 ---

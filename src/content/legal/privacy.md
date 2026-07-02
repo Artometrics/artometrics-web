@@ -3,9 +3,57 @@ page: Privacy
 pubDate: 2025-01-19
 ---
 
+Artometrics ("we," "our," or "us") operates [artometrics.com](https://artometrics.com) and related membership services. This Privacy Policy explains what information we collect, why we collect it, and the choices you have.
+
+## What we collect and why
+
+We collect information in three broad situations:
+
+**When you browse the site.** We may collect standard server logs and analytics data — such as pages viewed, approximate location derived from IP address, browser type, and referral source — to understand traffic, improve performance, and keep the site secure.
+
+**When you create an account or subscribe.** We collect the information needed to authenticate you, deliver member features, and process payments. This typically includes your email address, account identifiers, subscription status, and billing metadata handled by our payment processor (Stripe). We do not store full payment card numbers on Artometrics servers.
+
+**When you contact us.** If you use the contact form or email us directly, we collect the information you choose to provide so we can respond.
+
+We do not sell your personal information.
+
+## When we access or disclose your information
+
+We use service providers to operate the site — for example hosting (Netlify), authentication and database services (Supabase), and payment processing (Stripe). These providers process data on our behalf according to contractual safeguards.
+
+We may also disclose information when required by law, to protect the rights and safety of Artometrics and its users, or to investigate abuse of the Services.
+
+## Your rights
+
+Depending on where you live, you may have rights to access, correct, delete, or export personal information we hold about you, or to object to certain processing. To make a request, contact us through the [contact page](/contact/).
+
+We will verify requests before responding.
+
+## Retention
+
+We retain account and billing records for as long as your account is active and for a reasonable period afterward to comply with legal, tax, and security obligations. Contact-form messages are retained only as long as needed to handle the inquiry.
+
+## Cookies and analytics
+
+We use cookies and similar technologies as described in our [Cookie Policy](/legal/cookies).
+
+## Children
+
+Artometrics is not directed at children under 13, and we do not knowingly collect personal information from children.
+
+## Changes
+
+We may update this Privacy Policy from time to time. The publication date at the top of this page will change when we do.
+
+## Contact
+
+Privacy questions can be sent through the [contact page](/contact/).
+
+---
+
 California Resident Notice at Collection
 
-If you are a California resident, the California Consumer Privacy Act, as amended by the California Privacy Rights Act of 2020 (“**CCPA**”), requires us to provide some additional information to California residents. This Section only applies to you if you are a California resident, although please note that this information and the rights afforded herein are the same as offered to our other users in our main Privacy Policy. This Section does not apply to personal information we collect from our employees and job applicants in their capacity as employees and job applicants, as such information practices are described in separate policies.
+If you are a California resident, the California Consumer Privacy Act, as amended by the California Privacy Rights Act of 2020 ("**CCPA**"), requires us to provide some additional information to California residents. This Section only applies to you if you are a California resident, although please note that this information and the rights afforded herein are the same as offered to our other users in our main Privacy Policy above. This Section does not apply to personal information we collect from our employees and job applicants in their capacity as employees and job applicants, as such information practices are described in separate policies.
 
 The following chart details these activities:
 
@@ -83,7 +131,7 @@ The CCPA also allows you to limit the use or disclosure of your “sensitive per
 
 Please see the “Your rights with respect to your information” section of our Policy above for information about the additional rights you have with respect to your personal information under California law and how to exercise them.
 
-Retention of Your Personal Information. Please see the “Retention Of Your Information” section belowof our Privacy Policy for more information.
+Retention of Your Personal Information. Please see the “Retention” section of our Privacy Policy for more information.
 
 Shine the Light Disclosure
 --------------------------

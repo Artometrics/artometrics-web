@@ -1,18 +1,21 @@
 ---
 name: Emma Carter
-role: Travel & Adventure Writer
+role: Editor, Atlas
 bio: |
-  Emma Carter is a seasoned travel writer who specializes in exploring off-the-beaten-path destinations. Her writing captures the essence of remote places, providing readers with a sense of adventure and excitement.
+  Emma Carter reports on cities, regions, and spatial datasets for the Artometrics Atlas desk — housing
+  markets, restaurant inspections, bikeshare systems, museum collections, and the micro-economics of place.
 
-  With a passion for uncovering hidden gems, Emma shares her experiences through detailed guides, travel tips, and personal stories. She encourages her audience to explore beyond the typical tourist spots and find beauty in the unexpected.
+  She is especially interested in reports where a single metro area becomes a laboratory: San Francisco
+  versus New York, export superpowers mapped by country, or neighborhood-level inequality read through
+  public agency tables.
 
-  Her articles inspire wanderlust and offer practical advice for fellow travelers seeking their next great adventure.
+  Emma's background spans urban planning and data visualization before joining Artometrics.
 image:
   url: "/src/images/authors/3.jpg"
-  alt: "Emma Carter"
+  alt: "Emma Carter, Artometrics editor"
 socials:
-  twitter: "#_"
-  website: "#_"
+  twitter: "https://twitter.com/artometrics"
+  website: "https://artometrics.com"
   linkedin: "#_"
   email: "#_"
 ---

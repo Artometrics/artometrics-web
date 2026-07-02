@@ -5,27 +5,29 @@ import Text from "@/components/fundations/elements/Text.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 const pageSections = [
   {
-    title: "Static  ",
+    title: "Site",
     columns: [
       {
-        category: " Pages",
+        category: "Pages",
         links: [
           { text: "Home", href: "/" },
-          { text: "404", href: "/404" },
           { text: "About", href: "/about" },
-          { text: "Subscription", href: "/pricing" },
+          { text: "Methodology", href: "/methodology/" },
+          { text: "Membership", href: "/pricing/" },
+          { text: "404", href: "/404" },
         ],
       },
       {
-        category: "Forms",
+        category: "Account",
         links: [
-          { text: "Login", href: "/login" },
-          { text: "Sign up", href: "/signup" },
-          { text: "Contact", href: "/contact" },
+          { text: "Login", href: "/login/" },
+          { text: "Sign up", href: "/signup/" },
+          { text: "Account", href: "/account/" },
+          { text: "Contact", href: "/contact/" },
         ],
       },
       {
-        category: "System",
+        category: "Design system",
         links: [
           { text: "Colors", href: "/system/colors" },
           { text: "Links", href: "/system/link" },
@@ -34,57 +36,53 @@ const pageSections = [
         ],
       },
       {
-        category: "Resources",
+        category: "Artometrics",
         links: [
-          { text: "Social", href: "https://x.com/lexingtonthemes" },
-          {
-            text: "License",
-            href: "https://lexingtonthemes.com/legal/license",
-          },
-          {
-            text: "Documentation",
-            href: "https://lexingtonthemes.com/documentation/quick-start",
-          },
+          { text: "GitHub", href: "https://github.com/Artometrics" },
+          { text: "X / Twitter", href: "https://twitter.com/artometrics" },
+          { text: "RSS", href: "/rss.xml" },
+          { text: "Ethics", href: "/legal/ethics-statement" },
         ],
       },
     ],
   },
   {
-    title: "Content Collections",
+    title: "Content",
     columns: [
       {
-        category: "Blog ",
+        category: "Reports",
         links: [
-          { text: "Home", href: "/" },
-          { text: "Details open", href: "/blog/posts/2" },
-          { text: "Details paywall", href: "/blog/posts/1" },
-          { text: "Tag Index", href: "/blog/tags" },
-          { text: "Tag Category", href: "/blog/tags/patterns" },
+          { text: "All reports", href: "/blog/" },
+          { text: "Sample report", href: "/anime/" },
+          { text: "Culture desk", href: "/culture/" },
+          { text: "Tag index", href: "/blog/tags" },
           { text: "RSS", href: "/rss.xml" },
         ],
       },
       {
-        category: "Podcast Pages",
+        category: "Podcast",
         links: [
-          { text: "Podcast home", href: "/podcast" },
-          { text: "Interview episode open", href: "/podcast/interviews/2" },
-          { text: "Interview episode paywall", href: "/podcast/interviews/1" },
-          { text: "Tag Index", href: "/podcast/tags" },
-          { text: "Tag Category", href: "/podcast/tags/ux" },
+          { text: "Podcast home", href: "/podcast/" },
+          { text: "Episode (open)", href: "/podcast/interviews/2" },
+          { text: "Episode (member)", href: "/podcast/interviews/1" },
+          { text: "Tag index", href: "/podcast/tags" },
+          { text: "Tag: culture", href: "/podcast/tags/culture" },
         ],
       },
       {
         category: "Authors",
         links: [
-          { text: "Authors", href: "/authors" },
-          { text: "Details", href: "/authors/jordan-wells" },
+          { text: "Authors", href: "/authors/" },
+          { text: "Juliet Ramos", href: "/authors/juliet-ramos" },
         ],
       },
       {
         category: "Legal",
         links: [
-          { text: "Details", href: "/legal/privacy" },
-         
+          { text: "Privacy", href: "/legal/privacy" },
+          { text: "Terms", href: "/legal/terms" },
+          { text: "Cookies", href: "/legal/cookies" },
+          { text: "DPA", href: "/legal/dpa" },
         ],
       },
     ],
@@ -92,7 +90,7 @@ const pageSections = [
 ];
 ---
 
-<BaseLayout>
+<BaseLayout pageTitle="Site overview — Artometrics">
   <section>
     <Wrapper variant="standard" class="py-24">
       <Text
@@ -100,7 +98,10 @@ const pageSections = [
         variant="displaySM"
         class="font-medium text-base-900 uppercase"
       >
-        Overview
+        Artometrics site map
+      </Text>
+      <Text tag="p" variant="textSM" class="mt-3 max-w-2xl text-base-600">
+        Internal index of public routes, content collections, and design-system pages for the Artometrics magazine site.
       </Text>
       <div class="mt-12 flex flex-col gap-12 gap-4">
         {

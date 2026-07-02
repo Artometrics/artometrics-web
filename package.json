@@ -1,8 +1,9 @@
 {
-  "name": "@lexington/hemingway",
+  "name": "artometrics",
   "type": "module",
   "version": "0.0.1",
   "private": true,
+  "description": "Artometrics — data reports on culture, power, and the creative economy",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",

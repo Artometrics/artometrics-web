@@ -3,16 +3,28 @@ page: Cookies
 pubDate: 2025-01-19
 ---
 
-This cookie policy describes how this company ( this company ) uses “cookies” and other similar technologies, in connection with our Site and Services. For more information on this company privacy practices, please see our Privacy Policy.
+This cookie policy describes how Artometrics uses cookies and similar technologies on [artometrics.com](https://artometrics.com) and related Services. For broader privacy practices, see our [Privacy Policy](/legal/privacy).
 
-### About cookies
+## About cookies
 
-A cookie is a small piece of information stored on your computer via the web browser you use. Cookies are used to personalize your web experience with a website. They help with things like understanding how you use a website, remembering your login details, and storing site preferences.
+A cookie is a small piece of information stored on your device through the web browser you use. Cookies help websites remember preferences, keep you signed in, understand how pages are used, and protect against abuse.
 
-### How this company uses cookies
+## How Artometrics uses cookies
 
-this company uses two types of cookies: first and third-party cookies. First party cookies are set and read by us when you use this company . Third party cookies are set by companies other than this company and collect information about you which may be sent to a third party. this company uses third party cookies for site analytics purposes.
+Artometrics uses first-party and third-party cookies:
 
-### Opting out
+- **Essential cookies** keep the site working — for example session and authentication cookies when you sign in to a member account.
+- **Analytics cookies** help us understand traffic patterns and improve report discovery. These cookies are used in aggregate and are not sold to advertisers.
+- **Preference cookies** remember choices such as dismissed notices where applicable.
 
-You can customize your web browser to accept, reject, or delete cookies. All major browsers will give you the option to block some or all cookies and to clear existing cookie data.
+Third-party service providers — including our host (Netlify), authentication provider (Supabase), and payment processor (Stripe) — may set their own cookies when you use account or checkout flows. Their policies govern those cookies.
+
+## Your choices
+
+You can configure your browser to accept, reject, or delete cookies. Blocking essential cookies may prevent sign-in, checkout, or other account features from working correctly.
+
+If Artometrics adds optional analytics or marketing cookies in the future, this page will be updated to describe them and any consent controls we provide.
+
+## Contact
+
+Questions about cookies can be sent through the [contact page](/contact/).

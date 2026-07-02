@@ -1,20 +1,20 @@
 ---
 name: David Lee
-role: Fashion & Design Editor
+role: Editor, Atlas & Power
 bio: |
-  David Lee is a fashion writer with a focus on sustainable design practices. He writes about the intersection of culture and personal style, offering insights on how the fashion industry is changing.
+  David Lee edits place-based and institutional reports for Artometrics — export identity maps,
+  city-system comparisons, league economics, and the subliminal architecture of power in creative markets.
 
-  He believes in promoting eco-friendly choices and ethical production methods. His articles often highlight the role of creativity and culture in shaping modern fashion trends.
+  His work focuses on making geographic and organizational data legible to readers who care about
+  culture but do not live inside a spreadsheet. Recent desks include national export atlases,
+  regional sports identity, and franchise valuation frameworks.
 
-  David’s work has been featured in top industry magazines, and he continues to be a leading voice for sustainability in the fashion world.
+  David previously worked in civic data and economic research before joining the Artometrics editorial desk.
 image:
   url: "/src/images/authors/1.jpg"
-  alt: "#_"
-guestAvatar:
-  url: "/src/images/thumbnails/a.jpg"
-  alt: "#_"
+  alt: "David Lee, Artometrics editor"
 socials:
-  twitter: "#_"
-  website: "#_"
+  twitter: "https://twitter.com/artometrics"
+  website: "https://artometrics.com"
   linkedin: "#_"
 ---

@@ -2,42 +2,52 @@
 page: DPA
 pubDate: 2025-01-19
 ---
+
 # Data Processing Agreement (DPA)
 
 ## Introduction
 
-This Data Processing Agreement ("Agreement") outlines the terms and responsibilities related to the processing of personal data by [Processor's Name] ("Processor") on behalf of [Controller's Name] ("Controller"), in accordance with the requirements of data protection laws applicable to the processing of personal data.
+This Data Processing Agreement ("Agreement") describes how subprocessors handle personal data on behalf of Artometrics ("Controller") when providing hosting, authentication, payment, or support services for [artometrics.com](https://artometrics.com).
+
+It applies when the EU General Data Protection Regulation ("GDPR") or UK GDPR governs the processing of personal data submitted through Artometrics membership, contact, or account features.
 
 ## Definitions
 
-- **Personal Data**: Any information relating to an identified or identifiable natural person.
-- **Processing**: Any operation or set of operations which is performed on personal data or on sets of personal data.
-- **Data Subject**: An identified or identifiable natural person whose personal data is processed by the Processor on behalf of the Controller.
+- **Personal Data:** Information relating to an identified or identifiable natural person.
+- **Processing:** Any operation performed on personal data, including collection, storage, use, disclosure, or deletion.
+- **Processor:** A service provider that processes Personal Data on Artometrics' documented instructions.
+- **Data Subject:** The individual whose Personal Data is processed.
 
-## Scope and Purpose
+## Scope and purpose
 
-The purpose of this Agreement is to ensure the lawful and compliant processing of Personal Data by the Processor, as instructed by the Controller, and to define the rights and obligations of both parties.
+Processors engaged by Artometrics may process account email addresses, authentication identifiers, billing metadata, support correspondence, and technical logs strictly to deliver the Services described in our [Privacy Policy](/legal/privacy) and [Terms of Service](/legal/terms).
 
-## Data Processing Terms
+## Processing terms
 
-1. **Processing Instructions**: The Processor agrees to process personal data only based on documented instructions from the Controller, unless required to do so by law.
-2. **Security of Processing**: The Processor shall implement appropriate technical and organizational measures to ensure a level of security appropriate to the risk.
-3. **Subprocessing**: The Processor shall not engage another processor without prior specific or general written authorization from the Controller.
-4. **Data Subject Rights**: The Processor shall assist the Controller in ensuring compliance with the data subjects' rights under the applicable data protection laws.
-5. **Data Breach Notification**: The Processor shall notify the Controller without undue delay upon becoming aware of a personal data breach.
+1. **Instructions.** Processors process Personal Data only on documented instructions from Artometrics, unless required by law.
+2. **Security.** Processors implement appropriate technical and organizational measures for the risk involved.
+3. **Subprocessing.** Processors do not engage further subprocessors without Artometrics' authorization or a contractual chain that preserves equivalent protections.
+4. **Data subject rights.** Processors assist Artometrics in responding to access, correction, deletion, and portability requests where applicable.
+5. **Breach notification.** Processors notify Artometrics without undue delay after becoming aware of a Personal Data breach affecting Artometrics users.
 
-## Duration and Termination
+## Representative subprocessors
 
-This Agreement shall remain in effect as long as the Processor is processing Personal Data on behalf of the Controller. Upon termination, the Processor shall, at the choice of the Controller, delete or return all Personal Data to the Controller and delete existing copies unless EU law or the national law of an EU member state requires storage of the personal data.
+Artometrics may use providers such as:
 
-## Governing Law
+- **Netlify** — site hosting and serverless functions
+- **Supabase** — authentication and account database services
+- **Stripe** — subscription billing and payment processing
 
-This Agreement shall be governed by the laws of [Jurisdiction].
+The current list may change as infrastructure evolves. Material additions will be reflected in our Privacy Policy or vendor documentation where required.
 
-## Signature
+## Duration and termination
 
-This Agreement has been entered into on the date of the last signature below.
+This Agreement remains in effect while a Processor handles Personal Data for Artometrics. Upon termination, Processors delete or return Personal Data according to contract terms and applicable law, unless retention is legally required.
 
-[Controller's Name] Signature: ___________________________ Date: ___________
+## Governing law
 
-[Processor's Name] Signature: _____________________________ Date: ___________
+This Agreement is governed by the same jurisdiction described in the Artometrics Terms of Service, except where GDPR or UK GDPR requires otherwise for affected Data Subjects.
+
+## Contact
+
+Data processing questions can be sent through the [contact page](/contact/).

@@ -1,18 +1,21 @@
 ---
 name: Juliet Ramos
-role: Tech & Culture Columnist
+role: Editor, Culture
 bio: |
-  Juliet Ramos is a passionate columnist covering the intersection of innovation, automation, and design. Her work explores how new technologies are transforming everyday life, from smart homes to artificial intelligence, and their effects on society and culture.
+  Juliet Ramos leads the Culture desk at Artometrics — anime catalogs, streaming libraries, music charts,
+  film economics, and the business of art across the creative industries.
 
-  She is particularly interested in how automation and emerging technologies are reshaping industries and the way we interact with the world around us. Through her columns, Juliet provides insights into the future of work, digital design, and how technology continues to influence cultural trends.
+  She specializes in reports that connect audience behavior to market structure: how platforms rank work,
+  how franchises compound value, and where public datasets reveal what hype obscures.
 
-  Juliet’s writing offers a balanced view of the potential benefits and challenges posed by technological advancements, making her a leading voice in the tech and culture space.
+  Juliet writes the bridge between curiosity and evidence — long-form investigations with charts a
+  non-specialist can actually read.
 image:
   url: "/src/images/authors/4.jpg"
-  alt: "Juliet Ramos"
+  alt: "Juliet Ramos, Artometrics editor"
 socials:
-  twitter: "#_"
-  website: "#_"
+  twitter: "https://twitter.com/artometrics"
+  website: "https://artometrics.com"
   linkedin: "#_"
   email: "#_"
 ---
