@@ -15,7 +15,9 @@ draft: false
   <li><a href="#myth-1" id="toc-myth-1">MYTH 1: RURAL POVERTY</a></li>
   <li><a href="#myth-2" id="toc-myth-2">MYTH 2: HEART CONDITIONS</a></li>
   <li><a href="#myth-3" id="toc-myth-3">MYTH 3: FOR-PROFIT ONLY</a></li>
+  <li><a href="#bottom-line" id="toc-bottom-line">BOTTOM LINE</a></li>
   <li><a href="#references" id="toc-references">REFERENCES</a></li>
+  <li><a href="#editors-note" id="toc-editors-note">EDITOR'S NOTE</a></li>
   </ul>
 </nav>
 <main class="art-article-main">
@@ -103,6 +105,11 @@ draft: false
   </div>
 </section>
 
+<div class="art-report-summary art-report-summary--close" id="bottom-line">
+  <p class="art-report-summary__label">Bottom line</p>
+  <p class="art-report-summary__text">Across 11,720 hospital-condition pairs, HRRP does not reward a single story. Penalties hit wealthy states and rural ones, concentrate on hip and knee replacement more than acute cardiac care, and tilt toward for-profit systems without letting non-profits or public hospitals off the hook. That map — not the myth — is what CMS’s 2026 TEAM mandate will pressure next.</p>
+</div>
+
 <h2 id="references" class="anchored">REFERENCES</h2>
 <p class="art-p">
 Centers for Medicare &amp; Medicaid Services. <em>Hospital Readmissions Reduction Program (HRRP) — FY2025 Supplemental Data</em>. CMS Provider Data Catalog, Dataset ID: 9n3s-kdb3. Retrieved from https://data.cms.gov/provider-data/dataset/9n3s-kdb3
@@ -122,7 +129,7 @@ Zuckerman, R.B., Sheingold, S.H., Orav, E.J., Ruhter, J., &amp; Epstein, A.M. (2
 
 <h2 id="editors-note" class="anchored">EDITOR’S NOTE</h2>
 <div class="art-editorial-note"><p class="art-p">
-<em>This report combines CMS HRRP data (Dataset 9n3s-kdb3) with hospital ownership records (xubh-q36u). Small rural hospitals below CMS’s 25-discharge suppression threshold are excluded from the analysis. Full source code is on GitHub.</em>
+<em>This report analyzes 11,720 hospital-condition pairs from CMS HRRP (Dataset 9n3s-kdb3), joined to hospital ownership records (xubh-q36u). Small rural hospitals below CMS’s 25-discharge suppression threshold are excluded. Full source code and reproducible charts are on GitHub.</em>
 </p>
 <p class="art-p">
 <em>— Artometrics Editorial</em>
