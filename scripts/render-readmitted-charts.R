@@ -8,11 +8,18 @@ suppressPackageStartupMessages({
   library(jsonlite)
 })
 
-root <- if (dir.exists("data")) "." else {
-  normalizePath(file.path(dirname(sys.frame(1)$ofile %||% "."), "..", ".cache", "article-repos", "readmitted"), mustWork = FALSE)
-}
-if (!dir.exists(file.path(root, "data"))) {
-  root <- normalizePath("../../../.cache/article-repos/readmitted", mustWork = FALSE)
+script_dir <- tryCatch(
+  dirname(normalizePath(sub("^--file=", "", commandArgs(trailingOnly = FALSE)[grep("^--file=", commandArgs(trailingOnly = FALSE))][1]))),
+  error = function(e) getwd()
+)
+repo_root <- normalizePath(file.path(script_dir, ".."))
+
+root <- if (dir.exists(file.path(repo_root, "public/data/articles/readmitted/data"))) {
+  file.path(repo_root, "public/data/articles/readmitted")
+} else if (dir.exists("data")) {
+  "."
+} else {
+  normalizePath(file.path(repo_root, ".cache/article-repos/readmitted"), mustWork = FALSE)
 }
 if (!dir.exists(file.path(root, "data"))) stop("Could not locate readmitted data/")
 
