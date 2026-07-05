@@ -23,7 +23,7 @@ message("Installing: ", paste(missing, collapse = ", "))
 install.packages(
   missing,
   repos = "https://cloud.r-project.org/",
-  dependencies = TRUE
+  dependencies = c("Depends", "Imports")
 )
 
 failed <- pkgs[!vapply(pkgs, requireNamespace, quietly = TRUE, FUN.VALUE = logical(1))]

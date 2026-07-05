@@ -1,0 +1,4 @@
+# Python deps for chart export (npm run render:readmitted)
+pandas>=3.0
+plotly>=6.0
+kaleido>=1.3

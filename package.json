@@ -14,7 +14,12 @@
     "sync:articles": "node scripts/sync-github-articles.mjs",
     "scaffold:repo": "node scripts/scaffold-article-repo.mjs",
     "upgrade:repos": "node scripts/upgrade-article-repos.mjs",
-    "render:readmitted": "python3 scripts/render-readmitted-charts.py"
+    "render:readmitted": "python3 scripts/render-readmitted-charts.py",
+    "setup:r": "Rscript scripts/install-r-deps.R",
+    "setup:python": "pip3 install -r requirements.txt"
+  },
+  "engines": {
+    "node": ">=24.0.0"
   },
   "dependencies": {
     "@astrojs/mdx": "^7.0.0",
