@@ -8,6 +8,10 @@ pkgs <- c(
   "jsonlite",
   "showtext",
   "sysfonts",
+  "ggtext",
+  "cowplot",
+  "patchwork",
+  "ragg",
   "httr2",
   "dotenv"
 )
@@ -20,8 +24,14 @@ if (!length(missing)) {
 }
 
 message("Installing: ", paste(missing, collapse = ", "))
+lib <- Sys.getenv("R_LIBS_USER")
+if (!nzchar(lib)) {
+  lib <- file.path(Sys.getenv("HOME"), "R", paste0(R.version$platform, "-library"), paste0(R.version$major, ".", R.version$minor))
+}
+dir.create(lib, recursive = TRUE, showWarnings = FALSE)
 install.packages(
   missing,
+  lib = lib,
   repos = "https://cloud.r-project.org/",
   dependencies = c("Depends", "Imports")
 )
