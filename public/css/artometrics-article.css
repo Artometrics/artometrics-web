@@ -123,6 +123,7 @@
   padding: 18px 20px;
   border-radius: 2px;
   text-align: left;
+  min-width: 0;
 }
 .artometrics-article-body .fact-number{
   display: block;
@@ -144,8 +145,25 @@
   max-width: none;
   margin: 0;
 }
-@media (max-width: 700px) {
-  .facts-grid { grid-template-columns: 1fr 1fr; }
+.artometrics-article-body .fact-box {
+  min-width: 0;
+}
+.artometrics-article-body .fact-label {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+@media (max-width: 520px) {
+  .artometrics-article-body .facts-grid {
+    grid-template-columns: 1fr;
+  }
+  .artometrics-article-body .fact-number {
+    font-size: 1.45rem;
+  }
+}
+@media (min-width: 521px) and (max-width: 768px) {
+  .artometrics-article-body .facts-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 /* ── References ────────────────────────────────────────────────────── */
@@ -616,7 +634,7 @@ pre:has(> code.sourceCode.sql),
   max-width: 100% !important;
   margin: 0 !important;
   padding: 0 !important;
-  overflow: visible !important;
+  overflow-x: clip !important;
 }
 .artometrics-article-body nav#TOC{
   grid-column: 1 !important;
@@ -1260,14 +1278,6 @@ pre:has(> code.sourceCode.sql),
 }
 @media (max-width: 1100px) {
   .artometrics-article-body #quarto-content {
-    grid-template-columns: minmax(9rem, 10.5rem) minmax(0, 1fr) !important;
-  }
-  .artometrics-article-body .art-related-rail {
-    display: none !important;
-  }
-}
-@media (max-width: 900px) {
-  .artometrics-article-body #quarto-content {
     grid-template-columns: 1fr !important;
     gap: 0 !important;
   }
@@ -1529,4 +1539,90 @@ pre:has(> code.sourceCode.sql),
 }
 .artometrics-article-body .art-chart-share-sheet__panel-wrap{
   position: relative;
+}
+
+/* ── Lean report: hide interactive chrome & code toggles ───────────── */
+.artometrics-article-body .art-chart-toolbar,
+.artometrics-article-body .art-chart-share-sheet,
+.artometrics-article-body .js-plotly-plot .modebar {
+  display: none !important;
+}
+
+.artometrics-article-body .art-code-block,
+.artometrics-article-body details:has(.art-lang-tag) {
+  display: none !important;
+}
+
+/* ── Static chart images ───────────────────────────────────────────── */
+.artometrics-article-body .art-chart--static img {
+  display: block;
+  width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+@media (max-width: 899px) {
+  .artometrics-article-body .art-chart {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+/* ── Myth vs. data sections ────────────────────────────────────────── */
+.artometrics-article-body .art-myth-section {
+  margin: 2.5rem 0 0;
+  text-align: left !important;
+}
+
+.artometrics-article-body .art-myth-section__eyebrow {
+  display: block;
+  margin: 0 0 0.35rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #C0392B;
+}
+
+.artometrics-article-body .art-myth-section h2 {
+  margin: 0 0 1.25rem !important;
+  padding: 0 !important;
+  border: none !important;
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 1.05rem !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+  letter-spacing: 0.01em !important;
+  text-transform: none !important;
+  text-align: left !important;
+  color: #1C1C1E !important;
+}
+
+.artometrics-article-body .art-chart-insight {
+  text-align: left !important;
+  max-width: none !important;
+}
+
+.artometrics-article-body .art-chart-insight ul {
+  margin: 0.5rem 0 0 !important;
+  padding-left: 1.1rem !important;
+  list-style: disc !important;
+  list-style-position: outside !important;
+  text-align: left !important;
+}
+
+.artometrics-article-body .art-chart-insight li {
+  text-align: left !important;
+  list-style-position: outside !important;
+  margin-bottom: 0.45rem !important;
+}
+
+.artometrics-article-body .art-github-wrap {
+  display: flex !important;
+  justify-content: center !important;
+  width: 100% !important;
+  text-align: center !important;
 }

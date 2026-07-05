@@ -1,18 +1,14 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
-import ShareButtons from "@/components/fundations/elements/ShareButtons.astro";
 import Breadcrumbs from "@/components/blog/Breadcrumbs.astro";
 import ArticleFooter from "@/components/blog/ArticleFooter.astro";
-import ArticleProvenance from "@/components/blog/ArticleProvenance.astro";
 import ArticleJsonLd from "@/components/fundations/head/ArticleJsonLd.astro";
 import { getCollection, getEntry } from "astro:content";
-import { SECTION_META } from "@/data/sections";
 import {
   deckLine,
   getAdjacentPosts,
   getRelatedPosts,
-  primaryDesk,
 } from "@/lib/blog";
 import readingTime from "reading-time";
 
@@ -33,7 +29,6 @@ interface Props {
 
 const { frontmatter, slug, readingStats, previous = null, next = null } = Astro.props;
 const tags = frontmatter.tags ?? [];
-const desk = primaryDesk(tags);
 const deck = deckLine(frontmatter.description);
 
 const pubDateFormatted = new Date(frontmatter.pubDate).toLocaleDateString("en-US", {
@@ -61,7 +56,7 @@ const ogImage = frontmatter.heroImage
 
 const breadcrumbs = [
   { label: "Home", href: "/" },
-  ...(desk ? [{ label: SECTION_META[desk].title, href: `/${desk}/` }] : [{ label: "Articles", href: "/blog/" }]),
+  { label: "Reports", href: "/blog/" },
   { label: frontmatter.title.length > 48 ? `${frontmatter.title.slice(0, 48)}…` : frontmatter.title },
 ];
 ---
@@ -82,7 +77,6 @@ const breadcrumbs = [
     datePublished={isoDate}
     image={ogImage}
     authorName={authorName}
-    section={desk ? SECTION_META[desk].title : undefined}
   />
   <link slot="head" rel="stylesheet" href="/css/artometrics-article.css" />
 
@@ -90,17 +84,6 @@ const breadcrumbs = [
     <Wrapper variant="standard" class="pt-8 pb-6 md:pt-10">
       <header class="mx-auto max-w-3xl border-b border-base-200 pb-8">
         <Breadcrumbs items={breadcrumbs} class="mb-6 justify-center md:justify-start" />
-
-        {
-          desk && (
-            <a
-              href={`/${desk}/`}
-              class="inline-flex rounded-sm bg-accent-50 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-accent-800 transition-colors hover:bg-accent-100"
-            >
-              {SECTION_META[desk].title} desk
-            </a>
-          )
-        }
 
         <h1 class="mt-4 font-serif text-3xl font-light leading-tight text-base-900 text-pretty md:text-4xl lg:text-[2.35rem]">
           {frontmatter.title}
@@ -129,14 +112,6 @@ const breadcrumbs = [
             </>
           )}
         </div>
-
-        <ShareButtons
-          class="mt-6 justify-center md:justify-start"
-          contentType="blog"
-          title={frontmatter.title}
-          description={deck}
-          url={articleUrl}
-        />
       </header>
 
       {
@@ -157,7 +132,6 @@ const breadcrumbs = [
           </figure>
         )
       }
-      <ArticleProvenance primaryDesk={desk} />
     </Wrapper>
 
     <div class="artometrics-article-body" data-related={relatedJson}>
@@ -165,16 +139,9 @@ const breadcrumbs = [
     </div>
 
     <ArticleFooter
-      title={frontmatter.title}
-      description={deck}
-      url={articleUrl}
       slug={slug}
-      tags={tags}
       previous={previous}
       next={next}
-      primaryDesk={desk}
-      authorName={authorName}
-      pubDate={pubDateFormatted}
     />
   </article>
 

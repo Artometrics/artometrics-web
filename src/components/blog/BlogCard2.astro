@@ -1,15 +1,13 @@
 ---
 import Text from "@/components/fundations/elements/Text.astro";
-import { SECTION_META } from "@/data/sections";
 
 const post = Astro.props.post;
 const { compact = false, eagerImage = false } = Astro.props;
-const { url, title, description, pubDate, image, tags } = {
+const { url, title, description, pubDate, image } = {
   url: `/${post.data.slug}/`,
   title: post.data.title,
   image: post.data.heroImage,
   description: post.data.description,
-  tags: post.data.tags ?? [],
   pubDate: new Date(post.data.pubDate).toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",
@@ -26,9 +24,6 @@ function deckLine(description: string) {
   const line = match ? match[1] : trimmed.split(/\s+/).slice(0, 16).join(" ");
   return /[.!?]$/.test(line) ? line : `${line.replace(/[.!?]+$/, "")}.`;
 }
-
-const primaryTag = tags.find((t: string) => t in SECTION_META) ?? tags[0];
-const sectionHref = primaryTag && primaryTag in SECTION_META ? `/${primaryTag}/` : null;
 ---
 
 <article
@@ -61,31 +56,11 @@ const sectionHref = primaryTag && primaryTag in SECTION_META ? `/${primaryTag}/`
       compact ? "gap-2 p-3" : "gap-2.5 p-4",
     ]}
   >
-    <div class="flex flex-wrap items-center gap-2">
-      {
-        primaryTag && (
-          sectionHref ? (
-            <span class="relative z-20 inline-block">
-              <a
-                href={sectionHref}
-                class="inline-flex rounded-sm bg-accent-50 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-accent-800 transition-colors hover:bg-accent-100"
-              >
-                {SECTION_META[primaryTag as keyof typeof SECTION_META]?.title ?? primaryTag}
-              </a>
-            </span>
-          ) : (
-            <span class="inline-flex rounded-sm bg-base-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-base-600">
-              {primaryTag}
-            </span>
-          )
-        )
-      }
-      <Text tag="p" variant="textXS" class="shrink-0 uppercase tracking-wide text-base-400">
-        <time datetime={pubDate}>{pubDate}</time>
-        <span> · </span>
-        <span>{timeToRead.text}</span>
-      </Text>
-    </div>
+    <Text tag="p" variant="textXS" class="shrink-0 uppercase tracking-wide text-base-400">
+      <time datetime={pubDate}>{pubDate}</time>
+      <span> · </span>
+      <span>{timeToRead.text}</span>
+    </Text>
 
     <Text tag="h2" variant="textSM" class="font-bold leading-snug text-base-900 text-pretty">
       {title}

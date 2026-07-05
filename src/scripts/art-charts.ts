@@ -1194,22 +1194,24 @@ function initChartToolbars() {
 export function initArtCharts() {
   initChartReveal();
   formatFactNumbers();
-  initChartToolbars();
 
   const nodes = document.querySelectorAll<HTMLElement>(".art-chart-live");
   if (!nodes.length) return;
 
   nodes.forEach((node) => {
-    const url = node.dataset.chart;
-    if (url) prefetchChart(url);
-
     const fallback = node.dataset.fallback;
     if (fallback) {
       showFallback(node, fallback, node.getAttribute("aria-label"));
       markChartReady(node, true);
-      if (url) void enrichStaticChart(node, url);
+      return;
     }
+
+    const url = node.dataset.chart;
+    if (url) prefetchChart(url);
   });
+
+  const liveNodes = Array.from(nodes).filter((node) => !node.dataset.fallback && node.dataset.chart);
+  if (!liveNodes.length) return;
 
   const observer = new IntersectionObserver(
     (entries) => {
@@ -1222,5 +1224,5 @@ export function initArtCharts() {
     { threshold: 0, rootMargin: "120px 0px 80px 0px" }
   );
 
-  nodes.forEach((node) => observer.observe(node));
+  liveNodes.forEach((node) => observer.observe(node));
 }

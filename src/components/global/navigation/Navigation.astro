@@ -3,18 +3,10 @@ import Logo from "@/components/assets/Logo.astro";
 import Search from "@/components/global/Search.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 
-const primaryNavLinks = [
-  { href: "/culture/", link: "Culture" },
-  { href: "/atlas/", link: "Atlas" },
-  { href: "/history/", link: "History" },
-  { href: "/persona/", link: "Persona" },
-  { href: "/power/", link: "Power" },
-];
-
-const secondaryNavLinks = [
+const navLinks = [
   { href: "/blog/", link: "Reports" },
-  { href: "/methodology/", link: "Methodology" },
   { href: "/podcast/", link: "Podcast" },
+  { href: "/about", link: "About" },
 ];
 
 const pathname = Astro.url.pathname.replace(/\/$/, "") || "/";
@@ -83,7 +75,7 @@ function isActive(href: string) {
       aria-label="Primary"
     >
       {
-        primaryNavLinks.map((link) => (
+        navLinks.map((link) => (
           <a
             href={link.href}
             class:list={[
@@ -91,22 +83,6 @@ function isActive(href: string) {
               isActive(link.href)
                 ? "text-accent-700 after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-full after:bg-accent-600"
                 : "text-base-900",
-            ]}
-          >
-            {link.link}
-          </a>
-        ))
-      }
-      <span class="h-4 w-px bg-base-200" aria-hidden="true"></span>
-      {
-        secondaryNavLinks.map((link) => (
-          <a
-            href={link.href}
-            class:list={[
-              "nav-link relative transition-colors hover:text-accent-700",
-              isActive(link.href)
-                ? "text-accent-700 after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-full after:bg-accent-600"
-                : "text-base-600",
             ]}
           >
             {link.link}
@@ -122,7 +98,7 @@ function isActive(href: string) {
     >
       <nav class="grid gap-1" aria-label="Mobile primary">
         {
-          primaryNavLinks.map((link) => (
+          navLinks.map((link) => (
             <a
               href={link.href}
               class:list={[
@@ -136,28 +112,6 @@ function isActive(href: string) {
             </a>
           ))
         }
-        <div class="my-2 border-t border-base-100"></div>
-        {
-          secondaryNavLinks.map((link) => (
-            <a
-              href={link.href}
-              class:list={[
-                "rounded-md px-3 py-2.5 text-sm font-medium uppercase tracking-wide transition-colors",
-                isActive(link.href)
-                  ? "bg-accent-50 text-accent-800"
-                  : "text-base-700 hover:bg-base-100",
-              ]}
-            >
-              {link.link}
-            </a>
-          ))
-        }
-        <a
-          href="/rss.xml"
-          class="rounded-md px-3 py-2.5 text-sm font-medium uppercase tracking-wide text-base-700 transition-colors hover:bg-base-100"
-        >
-          RSS feed
-        </a>
         <a
           href="/login/"
           class="rounded-md px-3 py-2.5 text-sm font-medium uppercase tracking-wide text-base-700 transition-colors hover:bg-base-100"

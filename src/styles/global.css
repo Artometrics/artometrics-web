@@ -304,7 +304,7 @@ body.art-sidebar-collapsed #art-sidebar-btn {
   max-width: min(100%, 1656px);
   margin: 0 auto;
   padding: 1.5rem clamp(1rem, 2vw, 1.75rem) 4rem;
-  overflow-x: visible;
+  overflow-x: clip;
   box-sizing: border-box;
 }
 

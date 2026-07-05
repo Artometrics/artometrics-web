@@ -43,42 +43,85 @@ TIER_COLORS = {
 }
 
 NAT_AVG_PCT = 48.1
+WORDMARK_FONT = "Georgia, Times New Roman, serif"
 
 
 def brand_annotation() -> dict:
     return dict(
-        x=1,
-        y=0,
+        x=0.99,
+        y=0.01,
         xref="paper",
         yref="paper",
-        text="<b>ARTO</b>METRICS",
+        text="Artometrics",
         showarrow=False,
         xanchor="right",
         yanchor="bottom",
-        font=dict(family=FONT, size=9, color=ART_MID),
+        font=dict(family=WORDMARK_FONT, size=11, color=ART_MID),
     )
 
 
-def base_layout(title: str, subtitle: str = "", **kwargs) -> dict:
+def takeaway_strip(takeaway: str) -> tuple[list[dict], list[dict]]:
+    """Economist-style red header band + supporting layout offsets."""
+    shapes = [
+        dict(
+            type="rect",
+            xref="paper",
+            yref="paper",
+            x0=0,
+            x1=1,
+            y0=1.0,
+            y1=1.12,
+            fillcolor=ART_HIGHLIGHT,
+            line=dict(width=0),
+            layer="below",
+        )
+    ]
+    annotations = [
+        dict(
+            x=0.02,
+            y=1.06,
+            xref="paper",
+            yref="paper",
+            text=f"<span style='color:#FFFFFF;font-size:11px'>{takeaway}</span>",
+            showarrow=False,
+            xanchor="left",
+            yanchor="middle",
+            font=dict(family=FONT, size=11, color="#FFFFFF"),
+        )
+    ]
+    return shapes, annotations
+
+
+def base_layout(title: str, subtitle: str = "", takeaway: str = "", **kwargs) -> dict:
+    strip_shapes: list[dict] = []
+    strip_annotations: list[dict] = []
+    top_margin = 96 if takeaway else 72
+    if takeaway:
+        strip_shapes, strip_annotations = takeaway_strip(takeaway)
+        top_margin = 118
+
     layout = dict(
         title=dict(
             text=title,
             x=0,
             xanchor="left",
+            y=0.98,
+            yanchor="top",
             font=dict(family=FONT, size=16, color=ART_DARK),
         ),
         paper_bgcolor=ART_CREAM,
         plot_bgcolor=ART_CREAM,
         font=dict(color=ART_DARK, family=FONT, size=12),
-        margin=dict(l=88, r=48, t=72 if subtitle else 56, b=72),
-        annotations=[brand_annotation()],
+        margin=dict(l=88, r=48, t=top_margin if not subtitle else top_margin + 16, b=72),
+        annotations=[*strip_annotations, brand_annotation()],
+        shapes=strip_shapes,
     )
     if subtitle:
         layout["annotations"].insert(
-            0,
+            len(strip_annotations),
             dict(
                 x=0,
-                y=1.08,
+                y=1.0,
                 xref="paper",
                 yref="paper",
                 text=subtitle,
@@ -88,6 +131,10 @@ def base_layout(title: str, subtitle: str = "", **kwargs) -> dict:
                 font=dict(family=FONT, size=11, color=ART_MID),
             ),
         )
+    extra_shapes = kwargs.pop("shapes", [])
+    layout["shapes"] = [*layout.get("shapes", []), *extra_shapes]
+    extra_annotations = kwargs.pop("annotations", [])
+    layout["annotations"] = [*layout["annotations"], *extra_annotations]
     layout.update(kwargs)
     return layout
 
@@ -126,7 +173,6 @@ def chart1(state_df: pd.DataFrame) -> go.Figure:
     )
 
     annotations = [
-        brand_annotation(),
         dict(
             x=NAT_AVG_PCT,
             y=1.02,
@@ -159,6 +205,7 @@ def chart1(state_df: pd.DataFrame) -> go.Figure:
         **base_layout(
             "<b>Which <span style='color:#C0392B;'>States</span> Have the Most Penalized Hospitals?</b>",
             "Above-average states only — share of hospital-condition pairs with ERR > 1.0",
+            takeaway="Geography isn't destiny — wealthy states lead the penalty list alongside the rural South",
             xaxis=dict(
                 title="% of Hospital-Condition Pairs with ERR > 1.0",
                 range=[0, max(df["pct_penalized"]) * 1.14],
@@ -221,7 +268,6 @@ def chart2() -> go.Figure:
     )
 
     annotations = [
-        brand_annotation(),
         dict(
             x=1.00485,
             y="Hip/Knee",
@@ -254,6 +300,7 @@ def chart2() -> go.Figure:
         **base_layout(
             "<b>The <span style='color:#C0392B;'>Hip/Knee</span> Problem: ERR by Condition</b>",
             "All six HRRP conditions exceed 1.0 — but the spread is measured in thousandths",
+            takeaway="Elective joint surgery — not heart attacks — carries the highest excess readmission ratio",
             xaxis=dict(
                 title="Average Excess Readmission Ratio (ERR)",
                 range=[0.9998, 1.0055],
@@ -313,7 +360,6 @@ def chart3(own_df: pd.DataFrame) -> go.Figure:
     high_pct = float(for_profit_high.iloc[0]) if len(for_profit_high) else 0
 
     annotations = [
-        brand_annotation(),
         dict(
             x=0.98,
             y="For-Profit",
@@ -330,6 +376,7 @@ def chart3(own_df: pd.DataFrame) -> go.Figure:
         **base_layout(
             "<b><span style='color:#C0392B;'>For-Profit</span> Hospitals Carry More Penalty Weight</b>",
             "Penalty tier distribution by ownership — HCA, Tenet, and Steward sit in the for-profit column",
+            takeaway="For-profits carry more penalty weight, but every ownership type still has a majority in the no-penalty band",
             barmode="stack",
             xaxis=dict(
                 title="Share of Hospital-Condition Pairs",

@@ -1,7 +1,4 @@
 ---
-import ShareButtons from "@/components/fundations/elements/ShareButtons.astro";
-import { SECTION_META } from "@/data/sections";
-
 interface NavLink {
   title: string;
   href: string;
@@ -9,99 +6,20 @@ interface NavLink {
 
 interface Props {
   title: string;
-  description: string;
-  url: string;
   slug: string;
-  tags: string[];
   previous?: NavLink | null;
   next?: NavLink | null;
-  primaryDesk?: keyof typeof SECTION_META | null;
-  authorName?: string;
-  pubDate?: string;
 }
 
-const { title, description, url, slug, tags, previous, next, primaryDesk, authorName = "Artometrics Editorial", pubDate } = Astro.props;
-const desks = tags.filter((t): t is keyof typeof SECTION_META => t in SECTION_META);
-const citation = `${authorName}. (${pubDate ?? "n.d."}). ${title}. Artometrics. ${url}`;
+const { slug, previous, next } = Astro.props;
 ---
 
 <footer class="art-article-site-footer border-t border-base-200 bg-base-100">
   <div class="mx-auto max-w-3xl px-4 py-10 md:px-6">
     {
-      desks.length > 0 && (
-        <div class="flex flex-wrap items-center gap-2">
-          <span class="text-[10px] font-semibold uppercase tracking-widest text-base-400">
-            Filed under
-          </span>
-          {desks.map((desk) => (
-            <a
-              href={`/${desk}/`}
-              class="rounded-full border border-base-200 bg-white px-3 py-1 text-[10px] font-semibold uppercase tracking-wider text-base-700 transition-colors hover:border-accent-400 hover:text-accent-800"
-            >
-              {SECTION_META[desk].title}
-            </a>
-          ))}
-        </div>
-      )
-    }
-
-    <div class="mt-8 flex flex-wrap items-center justify-between gap-4 border-y border-base-200 py-6">
-      <p class="text-xs font-semibold uppercase tracking-widest text-base-500">Share this report</p>
-      <ShareButtons
-        contentType="blog"
-        title={title}
-        description={description}
-        url={url}
-      />
-    </div>
-
-    <section class="mt-8 rounded-sm border border-base-200 bg-white p-5" aria-label="Report audit trail">
-      <p class="text-[10px] font-semibold uppercase tracking-[0.18em] text-accent-700">
-        Audit trail
-      </p>
-      <p class="mt-2 text-sm leading-relaxed text-base-600">
-        Follow the source path before turning a chart into a claim. Methodology explains how
-        Artometrics separates observed data, derived metrics, editorial indices, and context literature.
-      </p>
-      <div class="mt-4 flex flex-wrap gap-2">
-        <a
-          href="/methodology/"
-          class="rounded-full border border-base-200 bg-base-50 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-wider text-base-700 transition-colors hover:border-accent-400 hover:text-accent-800"
-        >
-          Methodology
-        </a>
-        <a
-          href="#references"
-          class="rounded-full border border-base-200 bg-base-50 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-wider text-base-700 transition-colors hover:border-accent-400 hover:text-accent-800"
-        >
-          References
-        </a>
-        <a
-          href="/methodology/"
-          class="rounded-full border border-base-200 bg-base-50 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-wider text-base-700 transition-colors hover:border-accent-400 hover:text-accent-800"
-        >
-          Evidence standard
-        </a>
-        <a
-          href="/legal/ethics-statement"
-          class="rounded-full border border-base-200 bg-base-50 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-wider text-base-700 transition-colors hover:border-accent-400 hover:text-accent-800"
-        >
-          Ethics & corrections
-        </a>
-        <button
-          type="button"
-          data-copy-citation={citation}
-          class="rounded-full border border-base-200 bg-base-50 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-wider text-base-700 transition-colors hover:border-accent-400 hover:text-accent-800"
-        >
-          Cite this report
-        </button>
-      </div>
-    </section>
-
-    {
       (previous || next) && (
         <nav
-          class="mt-8 grid gap-4 border-b border-base-200 pb-8 sm:grid-cols-2"
+          class="grid gap-4 border-b border-base-200 pb-8 sm:grid-cols-2"
           aria-label="Article navigation"
         >
           {
@@ -144,10 +62,10 @@ const citation = `${authorName}. (${pubDate ?? "n.d."}). ${title}. Artometrics. 
 
     <div class="mt-8 flex flex-wrap items-center justify-between gap-4">
       <a
-        href={primaryDesk ? `/${primaryDesk}/` : "/blog/"}
+        href="/blog/"
         class="text-xs font-medium uppercase tracking-widest text-base-600 transition-colors hover:text-accent-700"
       >
-        {primaryDesk ? `More from ${SECTION_META[primaryDesk].title} →` : "All reports →"}
+        All reports →
       </a>
       <div class="flex flex-wrap items-center gap-4">
         <button
@@ -170,21 +88,3 @@ const citation = `${authorName}. (${pubDate ?? "n.d."}). ${title}. Artometrics. 
     <p class="art-article-endmark" aria-hidden="true">Artometrics</p>
   </div>
 </footer>
-
-<script>
-  document.querySelectorAll<HTMLButtonElement>("[data-copy-citation]").forEach((button) => {
-    button.addEventListener("click", async () => {
-      const citation = button.dataset.copyCitation;
-      if (!citation) return;
-      try {
-        await navigator.clipboard.writeText(citation);
-        button.textContent = "Citation copied";
-      } catch {
-        button.textContent = "Copy citation";
-      }
-      window.setTimeout(() => {
-        button.textContent = "Cite this report";
-      }, 1800);
-    });
-  });
-</script>

@@ -41,6 +41,51 @@ theme_artometrics <- function(base_size = 11) {
     )
 }
 
+#' Economist-style red takeaway strip (ggplot)
+art_takeaway_strip <- function(takeaway, fill = ART_HIGHLIGHT) {
+  list(
+    annotate(
+      "rect",
+      xmin = -Inf, xmax = Inf, ymin = Inf, ymax = Inf,
+      fill = fill, color = NA
+    ),
+    annotate(
+      "text",
+      x = -Inf, y = Inf,
+      label = takeaway,
+      hjust = -0.02, vjust = 1.8,
+      color = "white",
+      size = 3.2,
+      fontface = "bold",
+      family = "Helvetica"
+    )
+  )
+}
+
+#' Single Artometrics wordmark (Chomsky when showtext is available)
+art_wordmark <- function() {
+  annotate(
+    "text",
+    x = Inf, y = -Inf,
+    label = "Artometrics",
+    hjust = 1.05, vjust = -0.4,
+    size = 3.4,
+    color = ART_MID,
+    family = if (requireNamespace("showtext", quietly = TRUE)) "Chomsky" else "serif"
+  )
+}
+
+#' Apply Economist strip + wordmark to a ggplot
+finish_art_chart <- function(plot_obj, takeaway) {
+  plot_obj +
+    art_takeaway_strip(takeaway) +
+    art_wordmark() +
+    coord_cartesian(clip = "off") +
+    theme(
+      plot.margin = margin(t = 28, r = 12, b = 12, l = 12)
+    )
+}
+
 #' Save ggplot PNG and optional Plotly JSON for web embedding
 save_art_chart <- function(
   plot_obj,

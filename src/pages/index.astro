@@ -4,7 +4,6 @@ import BlogCard2 from "@/components/blog/BlogCard2.astro";
 import Text from "@/components/fundations/elements/Text.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 import { getCollection } from "astro:content";
-import { SECTION_META } from "@/data/sections";
 
 const allPosts = await getCollection("blog", ({ data }) => !data.draft);
 const sortedPosts = allPosts
@@ -35,12 +34,6 @@ function formatAuthorName(slug: string) {
     .join(" ");
 }
 
-const sectionCounts = Object.fromEntries(
-  Object.keys(SECTION_META).map((slug) => [
-    slug,
-    sortedPosts.filter((p) => p.data.tags?.includes(slug as keyof typeof SECTION_META)).length,
-  ])
-);
 ---
 
 <BaseLayout
@@ -108,29 +101,6 @@ const sectionCounts = Object.fromEntries(
       </section>
     )
   }
-
-  <section class="border-b border-base-200">
-    <Wrapper variant="standard" class="py-8">
-      <Text tag="p" variant="textXS" class="text-center uppercase tracking-[0.18em] text-base-500">
-        Browse by desk
-      </Text>
-      <div class="mt-4 flex flex-wrap justify-center gap-2 md:gap-3">
-        {
-          Object.entries(SECTION_META).map(([slug, meta]) => (
-            <a
-              href={`/${slug}/`}
-              class="group inline-flex items-center gap-2 rounded-full border border-base-200 bg-white px-4 py-2 text-xs font-medium uppercase tracking-wide text-base-800 transition-all hover:border-accent-400 hover:bg-accent-50 hover:text-accent-800"
-            >
-              {meta.title}
-              <span class="rounded-full bg-base-100 px-1.5 py-0.5 text-[10px] tabular-nums text-base-500 group-hover:bg-accent-100 group-hover:text-accent-700">
-                {sectionCounts[slug] ?? 0}
-              </span>
-            </a>
-          ))
-        }
-      </div>
-    </Wrapper>
-  </section>
 
   {
     latestPodcasts.length > 0 && (
