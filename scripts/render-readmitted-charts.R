@@ -29,8 +29,8 @@ dir.create("charts", showWarnings = FALSE)
 art_cream <- "#F2F0EB"
 art_dark <- "#1C1C1E"
 art_mid <- "#6B6B6B"
-art_highlight <- "#C0392B"
-art_secondary <- "#2C3E6B"
+art_highlight <- "#00FF88"
+art_secondary <- "#059669"
 art_muted <- "#D5D5D5"
 
 theme_artometrics <- function() {
@@ -100,7 +100,7 @@ pl1 <- plot_ly(
   hovertemplate = paste0("<b>%{y}</b><br>%{x:.1f}% penalized<extra></extra>")
 ) %>%
   layout(
-    title = list(text = "<b>Which <span style='color:#C0392B;'>States</span> Have the Most Penalized Hospitals?</b>", x = 0),
+    title = list(text = "<b>Which <span style='color:#00FF88;'>States</span> Have the Most Penalized Hospitals?</b>", x = 0),
     paper_bgcolor = art_cream,
     plot_bgcolor = art_cream,
     font = list(color = art_dark, family = "Helvetica"),
@@ -159,7 +159,7 @@ pl2 <- plot_ly(
   hovertemplate = paste0("<b>%{y}</b><br>ERR: %{x:.5f}<extra></extra>")
 ) %>%
   layout(
-    title = list(text = "<b>The <span style='color:#C0392B;'>Hip/Knee</span> Problem</b>", x = 0),
+    title = list(text = "<b>The <span style='color:#00FF88;'>Hip/Knee</span> Problem</b>", x = 0),
     paper_bgcolor = art_cream,
     plot_bgcolor = art_cream,
     font = list(color = art_dark, family = "Helvetica"),
@@ -182,10 +182,10 @@ plot_data <- read_csv("data/hrrp_ownership_condition.csv", show_col_types = FALS
   )
 
 tier_colors <- c(
-  "No Penalty" = art_secondary,
-  "Low" = "#7F8FA6",
-  "Medium" = "#E07B54",
-  "High" = art_highlight
+  "No Penalty" = "#064E3B",
+  "Low" = "#10B981",
+  "Medium" = "#34D399",
+  "High" = "#00FF88"
 )
 
 p3 <- ggplot(plot_data, aes(x = ownership_group, y = pct, fill = penalty_tier)) +
@@ -214,7 +214,7 @@ pl3 <- plot_ly(
 ) %>%
   layout(
     barmode = "stack",
-    title = list(text = "<b><span style='color:#C0392B;'>For-Profit</span> Hospitals Carry More Penalty Weight</b>", x = 0),
+    title = list(text = "<b><span style='color:#00FF88;'>For-Profit</span> Hospitals Carry More Penalty Weight</b>", x = 0),
     paper_bgcolor = art_cream,
     plot_bgcolor = art_cream,
     font = list(color = art_dark, family = "Helvetica"),

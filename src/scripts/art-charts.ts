@@ -11,37 +11,37 @@ interface PlotlyExport {
 }
 
 const ART_COLORS = {
-  highlight: "#C0392B",
-  secondary: "#2C3E6B",
+  highlight: "#00FF88",
+  secondary: "#059669",
   mid: "#6B6B6B",
   cream: "#F2F0EB",
   dark: "#1C1C1E",
 };
 
-/** Rank-gradient palette: darkest navy = leader, fading to muted blue */
+/** Rank-gradient palette: deep emerald to bright Wizard-of-Oz green */
 const ART_BAR_GRADIENT = [
-  "#1A2A4F",
-  "#243760",
-  "#2C3E6B",
-  "#3D5282",
-  "#506898",
-  "#647DAD",
-  "#7D94BE",
-  "#98ABCE",
-  "#B4C2DD",
-  "#CED7EB",
+  "#022C22",
+  "#064E3B",
+  "#065F46",
+  "#047857",
+  "#059669",
+  "#10B981",
+  "#34D399",
+  "#6EE7B7",
+  "#86EFAC",
+  "#00FF88",
 ];
 
 /** Category colors for multi-trace / box charts */
 const ART_CATEGORY_PALETTE = [
-  "#2C3E6B",
-  "#C0392B",
-  "#1A7A5E",
-  "#7B4FA6",
-  "#C47A00",
-  "#1A6FA8",
-  "#8B3F00",
-  "#3D7A4F",
+  "#064E3B",
+  "#00FF88",
+  "#10B981",
+  "#34D399",
+  "#047857",
+  "#6EE7B7",
+  "#059669",
+  "#86EFAC",
 ];
 
 const MIN_PLOT_HEIGHT = 80;
@@ -136,7 +136,7 @@ function formatHeadingHtml(raw: string): string {
     .map((line, index) => {
       const isAccent =
         index > 0 ||
-        /C0392B|#c0392b|color:\s*#C0392B/i.test(line) ||
+        /00FF88|#00ff88|00E676|#00e676|C0392B|#c0392b|color:\s*#/i.test(line) ||
         /style=['"][^'"]*color/i.test(line);
       const cls = isAccent
         ? "art-chart-heading__line art-chart-heading__line--accent"

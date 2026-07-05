@@ -5,15 +5,15 @@ suppressPackageStartupMessages({
   library(ggplot2)
 })
 
-ART_HIGHLIGHT <- "#C0392B"
-ART_SECONDARY <- "#2C3E6B"
+ART_HIGHLIGHT <- "#00FF88"
+ART_SECONDARY <- "#059669"
 ART_MID <- "#6B6B6B"
 ART_CREAM <- "#F2F0EB"
 ART_DARK <- "#1C1C1E"
 
 ART_BAR_GRADIENT <- c(
-  "#1A2A4F", "#243760", "#2C3E6B", "#3D5282", "#506898",
-  "#647DAD", "#7D94BE", "#98ABCE", "#B4C2DD", "#CED7EB"
+  "#022C22", "#064E3B", "#065F46", "#047857", "#059669",
+  "#10B981", "#34D399", "#6EE7B7", "#86EFAC", "#00FF88"
 )
 
 #' Artometrics ggplot2 theme

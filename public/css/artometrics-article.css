@@ -192,8 +192,8 @@
   --art-bg:        #FAFAF8;
   --art-dark:      #1C1C1E;
   --art-mid:       #6B6B6B;
-  --art-highlight: #C0392B;
-  --art-secondary: #2C3E6B;
+  --art-highlight: #00FF88;
+  --art-secondary: #059669;
   --art-muted:     #D5D5D5;
   --art-white:     #FFFFFF;
   --art-cream:     #F2F0EB;
@@ -1083,7 +1083,7 @@ pre:has(> code.sourceCode.sql),
 .artometrics-article-body .art-chart-heading__line--accent {
   font-size: 0.92rem !important;
   font-weight: 600 !important;
-  color: #C0392B !important;
+  color: #00FF88 !important;
 }
 .artometrics-article-body .art-chart-heading__subtitle {
   display: block !important;
