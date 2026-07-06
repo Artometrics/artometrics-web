@@ -682,6 +682,66 @@ function initChartReveal() {
   figures.forEach((figure) => revealObserver.observe(figure));
 }
 
+function isFranchiseChart(el: HTMLElement, raw: PlotlyExport): boolean {
+  if (el.dataset.style === "franchise") return true;
+  const meta = raw.layout?.meta as Record<string, unknown> | undefined;
+  return meta?.style === "franchise";
+}
+
+function sanitizeFranchisePlotlySpec(
+  raw: PlotlyExport,
+  mobile: boolean,
+  el: HTMLElement
+) {
+  const data = cleanTraces((raw.data ?? []) as PlotlyTrace[]) as Array<Record<string, unknown>>;
+  ensureHoverTemplates(data);
+
+  const titleHtml = extractTitleHtml(raw);
+  const meta = (raw.layout?.meta ?? {}) as Record<string, string>;
+  const subtitle = meta.subtitle ?? el.dataset.caption ?? "";
+  const source = meta.source ?? el.dataset.source ?? "";
+
+  const baseLayout = raw.layout ?? {};
+  const layout: PlotlyLayout = {
+    ...baseLayout,
+    title: { text: "" },
+    autosize: true,
+    hovermode: "closest",
+    paper_bgcolor: baseLayout.paper_bgcolor ?? "#F2F0EB",
+    plot_bgcolor: baseLayout.plot_bgcolor ?? "#F2F0EB",
+    font: {
+      family: "Helvetica, Arial, sans-serif",
+      color: "#1C1C1E",
+      ...(typeof baseLayout.font === "object" ? baseLayout.font : {}),
+    },
+    margin: mobile
+      ? { t: 8, r: 28, b: 48, l: 72 }
+      : (baseLayout.margin ?? { t: 16, r: 60, b: 70, l: 200 }),
+  };
+
+  if (!mobile) {
+    layout.height = baseLayout.height ?? 800;
+  } else {
+    delete layout.height;
+  }
+
+  lockChartInteraction(layout);
+  delete layout.transition;
+  delete layout.meta;
+
+  const config: PlotlyConfig = {
+    responsive: true,
+    displaylogo: false,
+    displayModeBar: !mobile,
+    scrollZoom: false,
+    doubleClick: false,
+    modeBarButtons: [["toImage"]],
+    ...(raw.config ?? {}),
+  };
+
+  return { data: data as PlotlyTrace[], layout, config, titleHtml, subtitle, source };
+}
+
 function sanitizePlotlySpec(raw: PlotlyExport, mobile: boolean) {
   const baseMargin = raw.layout?.margin ?? {};
   const fixedTitle = fixTitle(raw.layout ?? {});
@@ -905,9 +965,20 @@ async function renderLiveChart(el: HTMLElement) {
       return;
     }
 
-    const spec = sanitizePlotlySpec(raw, mobile);
+    const franchise = isFranchiseChart(el, raw);
+    if (franchise) el.classList.add("art-chart-live--franchise");
+
+    const spec = franchise
+      ? sanitizeFranchisePlotlySpec(raw, mobile, el)
+      : sanitizePlotlySpec(raw, mobile);
     const titleHtml = spec.titleHtml || extractTitleHtml(raw);
-    if (titleHtml || subtitle) renderStaticHeading(el, titleHtml, subtitle);
+    const chartSubtitle = franchise
+      ? ("subtitle" in spec ? String(spec.subtitle ?? "") : subtitle)
+      : subtitle;
+    if (franchise && "source" in spec && spec.source) {
+      el.dataset.source = String(spec.source);
+    }
+    if (titleHtml || chartSubtitle) renderStaticHeading(el, titleHtml, chartSubtitle);
     applyChartTypeClass(el, spec.data as Array<Record<string, unknown>>);
     await Plotly.newPlot(el, spec.data, spec.layout, spec.config);
     await Plotly.Plots.resize(el);
@@ -918,11 +989,13 @@ async function renderLiveChart(el: HTMLElement) {
       markChartReady(el, false);
       const resize = () => {
         const mob = isMobileViewport();
-        if (titleHtml || subtitle) renderStaticHeading(el, titleHtml, subtitle);
-        const resizeLayout = sanitizePlotlySpec(raw, mob).layout;
+        const resizeSpec = franchise
+          ? sanitizeFranchisePlotlySpec(raw, mob, el)
+          : sanitizePlotlySpec(raw, mob);
+        if (titleHtml || chartSubtitle) renderStaticHeading(el, titleHtml, chartSubtitle);
         Plotly.relayout(el, {
-          margin: resizeLayout.margin,
-          annotations: resizeLayout.annotations,
+          margin: resizeSpec.layout.margin,
+          height: resizeSpec.layout.height,
         });
         Plotly.Plots.resize(el);
       };
@@ -1199,18 +1272,24 @@ export function initArtCharts() {
   if (!nodes.length) return;
 
   nodes.forEach((node) => {
+    const url = node.dataset.chart;
     const fallback = node.dataset.fallback;
-    if (fallback) {
-      showFallback(node, fallback, node.getAttribute("aria-label"));
-      markChartReady(node, true);
+
+    if (url) {
+      prefetchChart(url);
+      if (fallback) {
+        showFallback(node, fallback, node.getAttribute("aria-label"));
+      }
       return;
     }
 
-    const url = node.dataset.chart;
-    if (url) prefetchChart(url);
+    if (fallback) {
+      showFallback(node, fallback, node.getAttribute("aria-label"));
+      markChartReady(node, true);
+    }
   });
 
-  const liveNodes = Array.from(nodes).filter((node) => !node.dataset.fallback && node.dataset.chart);
+  const liveNodes = Array.from(nodes).filter((node) => node.dataset.chart);
   if (!liveNodes.length) return;
 
   const observer = new IntersectionObserver(

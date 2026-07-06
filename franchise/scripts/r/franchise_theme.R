@@ -115,37 +115,44 @@ plotly_franchise_layout <- function(p, title_html, subtitle_text = NULL) {
   plotly::as_widget(built)
 }
 
-save_franchise_chart <- function(
-  ggplot_obj,
-  plotly_obj,
-  filename,
-  charts_dir = "charts"
-) {
+save_franchise_plotly <- function(plotly_obj, filename, charts_dir = "charts") {
   dir.create(charts_dir, recursive = TRUE, showWarnings = FALSE)
-
-  ggsave(
-    filename = paste0(filename, ".png"),
-    plot = ggplot_obj,
-    path = charts_dir,
-    width = FRANCHISE_CHART_WIDTH,
-    height = FRANCHISE_CHART_HEIGHT,
-    dpi = 300,
-    bg = art_cream
-  )
-
   built <- plotly::plotly_build(plotly_obj)
   payload <- list(
     data = built$x$data,
     layout = built$x$layout,
-    config = built$x$config %||% list(
+    config = list(
       displayModeBar = TRUE,
       displaylogo = FALSE,
-      responsive = TRUE
+      responsive = TRUE,
+      scrollZoom = FALSE,
+      modeBarButtonsToRemove = c("lasso2d", "select2d", "zoom2d", "pan2d", "select2d", "autoScale2d")
     )
   )
-  json_path <- file.path(charts_dir, paste0(filename, ".plotly.json"))
-  jsonlite::write_json(payload, json_path, auto_unbox = TRUE, pretty = TRUE)
-  invisible(json_path)
+  jsonlite::write_json(
+    payload,
+    file.path(charts_dir, paste0(filename, ".plotly.json")),
+    auto_unbox = TRUE,
+    pretty = TRUE
+  )
+  invisible(payload)
+}
+
+# Legacy ggplot + plotly export (used by franchise.qmd knit)
+save_franchise_chart <- function(ggplot_obj, plotly_obj, filename, charts_dir = "charts") {
+  dir.create(charts_dir, recursive = TRUE, showWarnings = FALSE)
+  if (!missing(ggplot_obj) && !is.null(ggplot_obj)) {
+    ggsave(
+      filename = paste0(filename, ".png"),
+      plot = ggplot_obj,
+      path = charts_dir,
+      width = FRANCHISE_CHART_WIDTH,
+      height = FRANCHISE_CHART_HEIGHT,
+      dpi = 300,
+      bg = art_cream
+    )
+  }
+  save_franchise_plotly(plotly_obj, filename, charts_dir)
 }
 
 `%||%` <- function(x, y) if (is.null(x)) y else x

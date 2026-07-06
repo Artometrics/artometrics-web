@@ -1080,6 +1080,20 @@ pre:has(> code.sourceCode.sql),
   color: #1C1C1E !important;
   letter-spacing: 0.02em !important;
 }
+.art-chart-live--franchise .art-chart-heading__line--accent,
+.art-chart-live[data-style="franchise"] .art-chart-heading__line--accent {
+  color: #C0392B !important;
+}
+.art-chart-live--franchise .art-chart-heading__subtitle,
+.art-chart-live[data-style="franchise"] .art-chart-heading__subtitle {
+  text-transform: uppercase !important;
+  letter-spacing: 0.04em !important;
+  font-size: 0.72rem !important;
+}
+.art-chart-live--franchise.art-chart-live--ready:not(.art-chart-live--static) .art-chart-fallback,
+.art-chart-live[data-style="franchise"].art-chart-live--ready:not(.art-chart-live--static) .art-chart-fallback {
+  display: none !important;
+}
 .artometrics-article-body .art-chart-heading__line--accent {
   font-size: 0.92rem !important;
   font-weight: 600 !important;

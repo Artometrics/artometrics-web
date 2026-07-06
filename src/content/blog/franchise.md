@@ -195,8 +195,8 @@ print(f&quot;\nDisney consolidated total: ${disney_summary.sum():.1f}B&quot;)</p
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/franchise/charts/chart1_top20_revenue.plotly.json" data-fallback="/images/content/articles/franchise/charts/chart1_top20_revenue.png" role="img" aria-label="Top20 Revenue"></div>
-  <figcaption class="art-chart-caption">Top20 Revenue</figcaption>
+  <div class="art-chart-live" data-style="franchise" data-chart="/data/articles/franchise/charts/chart1_top20_revenue.plotly.json" data-fallback="/images/content/articles/franchise/charts/chart1_top20_revenue.png" data-source="Data: TidyTuesday 2019-07-02 | Chart concept: David Robinson — ARTOMETRICS" role="img" aria-label="Top 20 franchises by revenue, stacked by category"></div>
+  <figcaption class="art-chart-caption">THE RED IN EVERY BAR TELLS THE SAME STORY — LICENSING &amp; RETAIL DWARFS EVERY OTHER REVENUE STREAM</figcaption>
 </figure>
 </div>
 </div>
@@ -266,8 +266,8 @@ ggsave(&quot;chart1_top20_revenue.png&quot;, plot = p1,
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/franchise/charts/chart2_revenue_per_year.plotly.json" data-fallback="/images/content/articles/franchise/charts/chart2_revenue_per_year.png" role="img" aria-label="Revenue Per Year"></div>
-  <figcaption class="art-chart-caption">Revenue Per Year</figcaption>
+  <div class="art-chart-live" data-style="franchise" data-chart="/data/articles/franchise/charts/chart2_revenue_per_year.plotly.json" data-fallback="/images/content/articles/franchise/charts/chart2_revenue_per_year.png" data-source="Data: TidyTuesday 2019-07-02 | Revenue ÷ (2019 − year created) — ARTOMETRICS" role="img" aria-label="Revenue per year of existence"></div>
+  <figcaption class="art-chart-caption">~$4B ANNUALLY SINCE 1996 — MORE THAN HELLO KITTY, WHICH IS TWICE ITS AGE</figcaption>
 </figure>
 </div>
 </div>
@@ -325,8 +325,8 @@ ggsave(&quot;chart2_revenue_per_year.png&quot;, plot = p2,
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/franchise/charts/chart3a_disney_non_consolidated.plotly.json" data-fallback="/images/content/articles/franchise/charts/chart3a_disney_non_consolidated.png" role="img" aria-label="Disney Non Consolidated"></div>
-  <figcaption class="art-chart-caption">Disney Non Consolidated</figcaption>
+  <div class="art-chart-live" data-style="franchise" data-chart="/data/articles/franchise/charts/chart3a_disney_non_consolidated.plotly.json" data-fallback="/images/content/articles/franchise/charts/chart3a_disney_non_consolidated.png" data-source="Data: Wikipedia via TidyTuesday 2019-07-02 — ARTOMETRICS" role="img" aria-label="Disney subsidiaries shown as separate owners"></div>
+  <figcaption class="art-chart-caption">MARVEL ENTERTAINMENT AND 20TH CENTURY FOX APPEAR AS SEPARATE COMPETITORS — BOTH ARE WHOLLY OWNED BY DISNEY</figcaption>
 </figure>
 </div>
 </div>
@@ -336,8 +336,8 @@ ggsave(&quot;chart2_revenue_per_year.png&quot;, plot = p2,
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/franchise/charts/chart3b_disney_consolidated.plotly.json" data-fallback="/images/content/articles/franchise/charts/chart3b_disney_consolidated.png" role="img" aria-label="Disney Consolidated"></div>
-  <figcaption class="art-chart-caption">Disney Consolidated</figcaption>
+  <div class="art-chart-live" data-style="franchise" data-chart="/data/articles/franchise/charts/chart3b_disney_consolidated.plotly.json" data-fallback="/images/content/articles/franchise/charts/chart3b_disney_consolidated.png" data-source="Data: Wikipedia via TidyTuesday 2019-07-02 — ARTOMETRICS" role="img" aria-label="Disney consolidated parent company revenue"></div>
+  <figcaption class="art-chart-caption">CONSOLIDATED BY PARENT COMPANY — MARVEL ENTERTAINMENT AND 20TH CENTURY FOX FOLDED INTO DISNEY'S TRUE TOTAL</figcaption>
 </figure>
 </div>
 </div>

@@ -1,492 +1,1324 @@
 {
   "data": [
     {
-      "x": [2, 2],
-      "y": [0.4, 15.6],
-      "text": "",
-      "type": "scatter",
-      "mode": "lines",
-      "line": {
-        "width": 1.8898,
-        "color": "rgba(192,57,43,0.6)",
-        "dash": "dash"
-      },
-      "hoveron": "points",
-      "showlegend": false,
-      "xaxis": "x",
-      "yaxis": "y",
-      "hoverinfo": "text",
-      "frame": null
-    },
-    {
-      "x": [0, 2.8182, "NA", 0, 2.318, "NA", 0, 1.7784, "NA", 0, 1.7455, "NA", 0, 1.6657, "NA", 0, 1.5001, "NA", 0, 1.3063, "NA", 0, 1.2776, "NA", 0, 1.1683, "NA", 0, 1.0769, "NA", 0, 1.0625, "NA", 0, 1.034, "NA", 0, 1, "NA", 0, 0.9216],
-      "y": [14, 14, "NA", 13, 13, "NA", 12, 12, "NA", 11, 11, "NA", 10, 10, "NA", 9, 9, "NA", 8, 8, "NA", 7, 7, "NA", 6, 6, "NA", 5, 5, "NA", 4, 4, "NA", 3, 3, "NA", 2, 2, "NA", 1, 1],
-      "text": ["franchise: Marvel Cinematic Universe<br />y: 0", "franchise: Marvel Cinematic Universe<br />y: 0", null, "franchise: Disney Princess<br />y: 0", "franchise: Disney Princess<br />y: 0", null, "franchise: Hello Kitty<br />y: 0", "franchise: Hello Kitty<br />y: 0", null, "franchise: Frozen<br />y: 0", "franchise: Frozen<br />y: 0", null, "franchise: Cars<br />y: 0", "franchise: Cars<br />y: 0", null, "franchise: Star Wars<br />y: 0", "franchise: Star Wars<br />y: 0", null, "franchise: Anpanman<br />y: 0", "franchise: Anpanman<br />y: 0", null, "franchise: Wizarding World / Harry Potter<br />y: 0", "franchise: Wizarding World / Harry Potter<br />y: 0", null, "franchise: Monster Strike<br />y: 0", "franchise: Monster Strike<br />y: 0", null, "franchise: Wii series<br />y: 0", "franchise: Wii series<br />y: 0", null, "franchise: Call of Duty<br />y: 0", "franchise: Call of Duty<br />y: 0", null, "franchise: DC Extended Universe<br />y: 0", "franchise: DC Extended Universe<br />y: 0", null, "franchise: Puzzle & Dragons<br />y: 0", "franchise: Puzzle & Dragons<br />y: 0", null, "franchise: Mario<br />y: 0", "franchise: Mario<br />y: 0"],
-      "type": "scatter",
-      "mode": "lines",
-      "line": {
-        "width": 3.0236,
-        "color": "rgba(44,62,107,1)",
-        "dash": "solid"
-      },
-      "hoveron": "points",
-      "name": "(FALSE,1)",
-      "legendgroup": "(FALSE,1)",
-      "showlegend": true,
-      "xaxis": "x",
-      "yaxis": "y",
-      "hoverinfo": "text",
-      "frame": null
-    },
-    {
       "x": [0, 3.9506],
-      "y": [15, 15],
-      "text": "franchise: Pokémon<br />y: 0",
+      "y": ["Pokémon", "Pokémon"],
       "type": "scatter",
       "mode": "lines",
       "line": {
-        "width": 3.0236,
-        "color": "rgba(192,57,43,1)",
-        "dash": "solid"
+        "color": "#C0392B",
+        "width": 2
       },
-      "hoveron": "points",
-      "name": "(TRUE,1)",
-      "legendgroup": "(TRUE,1)",
-      "showlegend": true,
-      "xaxis": "x",
-      "yaxis": "y",
-      "hoverinfo": "text",
-      "frame": null
-    },
-    {
-      "x": [2.8182, 2.318, 1.7784, 1.7455, 1.6657, 1.5001, 1.3063, 1.2776, 1.1683, 1.0769, 1.0625, 1.034, 1, 0.9216],
-      "y": [14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
-      "text": ["franchise: Marvel Cinematic Universe<br />revenue_per_year: 2.8181818", "franchise: Disney Princess<br />revenue_per_year: 2.3180000", "franchise: Hello Kitty<br />revenue_per_year: 1.7783556", "franchise: Frozen<br />revenue_per_year: 1.7455000", "franchise: Cars<br />revenue_per_year: 1.6656923", "franchise: Star Wars<br />revenue_per_year: 1.5000952", "franchise: Anpanman<br />revenue_per_year: 1.3063478", "franchise: Wizarding World / Harry Potter<br />revenue_per_year: 1.2776364", "franchise: Monster Strike<br />revenue_per_year: 1.1683333", "franchise: Wii series<br />revenue_per_year: 1.0769231", "franchise: Call of Duty<br />revenue_per_year: 1.0625000", "franchise: DC Extended Universe<br />revenue_per_year: 1.0340000", "franchise: Puzzle & Dragons<br />revenue_per_year: 1.0000000", "franchise: Mario<br />revenue_per_year: 0.9216053"],
-      "type": "scatter",
-      "mode": "markers",
+      "hovertemplate": ["<b>Pokémon<\/b><br>$4B/yr<extra><\/extra>", "<b>Pokémon<\/b><br>$4B/yr<extra><\/extra>"],
+      "showlegend": false,
       "marker": {
-        "autocolorscale": false,
-        "color": "rgba(44,62,107,1)",
-        "opacity": 1,
-        "size": 17.0079,
-        "symbol": "circle",
+        "color": "rgba(31,119,180,1)",
         "line": {
-          "width": 1.8898,
-          "color": "rgba(44,62,107,1)"
+          "color": "rgba(31,119,180,1)"
         }
       },
-      "hoveron": "points",
-      "name": "FALSE",
-      "legendgroup": "FALSE",
-      "showlegend": true,
+      "error_y": {
+        "color": "rgba(31,119,180,1)"
+      },
+      "error_x": {
+        "color": "rgba(31,119,180,1)"
+      },
       "xaxis": "x",
       "yaxis": "y",
-      "hoverinfo": "text",
       "frame": null
     },
     {
       "x": [3.9506],
-      "y": [15],
-      "text": "franchise: Pokémon<br />revenue_per_year: 3.9505652",
+      "y": ["Pokémon"],
       "type": "scatter",
       "mode": "markers",
       "marker": {
-        "autocolorscale": false,
-        "color": "rgba(192,57,43,1)",
-        "opacity": 1,
-        "size": 26.4567,
-        "symbol": "circle",
+        "color": "#C0392B",
+        "size": 14,
         "line": {
-          "width": 1.8898,
-          "color": "rgba(192,57,43,1)"
+          "color": "rgba(255,127,14,1)"
         }
       },
-      "hoveron": "points",
-      "name": "TRUE",
-      "legendgroup": "TRUE",
-      "showlegend": true,
+      "hovertemplate": "<b>Pokémon<\/b><br>$4B/yr<extra><\/extra>",
+      "showlegend": false,
+      "error_y": {
+        "color": "rgba(255,127,14,1)"
+      },
+      "error_x": {
+        "color": "rgba(255,127,14,1)"
+      },
+      "line": {
+        "color": "rgba(255,127,14,1)"
+      },
       "xaxis": "x",
       "yaxis": "y",
-      "hoverinfo": "text",
       "frame": null
     },
     {
-      "x": [3.9506, 2.8182, 2.318, 1.7784, 1.7455, 1.6657, 1.5001, 1.3063, 1.2776, 1.1683, 1.0769, 1.0625, 1.034, 1, 0.9216],
-      "y": [15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
-      "text": ["$4B/yr", "$2.8B/yr", "$2.3B/yr", "$1.8B/yr", "$1.7B/yr", "$1.7B/yr", "$1.5B/yr", "$1.3B/yr", "$1.3B/yr", "$1.2B/yr", "$1.1B/yr", "$1.1B/yr", "$1B/yr", "$1B/yr", "$0.9B/yr"],
-      "hovertext": ["franchise: Pokémon<br />revenue_per_year: 3.9505652", "franchise: Marvel Cinematic Universe<br />revenue_per_year: 2.8181818", "franchise: Disney Princess<br />revenue_per_year: 2.3180000", "franchise: Hello Kitty<br />revenue_per_year: 1.7783556", "franchise: Frozen<br />revenue_per_year: 1.7455000", "franchise: Cars<br />revenue_per_year: 1.6656923", "franchise: Star Wars<br />revenue_per_year: 1.5000952", "franchise: Anpanman<br />revenue_per_year: 1.3063478", "franchise: Wizarding World / Harry Potter<br />revenue_per_year: 1.2776364", "franchise: Monster Strike<br />revenue_per_year: 1.1683333", "franchise: Wii series<br />revenue_per_year: 1.0769231", "franchise: Call of Duty<br />revenue_per_year: 1.0625000", "franchise: DC Extended Universe<br />revenue_per_year: 1.0340000", "franchise: Puzzle & Dragons<br />revenue_per_year: 1.0000000", "franchise: Mario<br />revenue_per_year: 0.9216053"],
-      "textfont": {
-        "size": 11.3386,
-        "color": "rgba(28,28,30,1)"
-      },
+      "x": [3.9506],
+      "y": ["Pokémon"],
       "type": "scatter",
       "mode": "text",
-      "hoveron": "points",
+      "text": "$4B/yr",
+      "textposition": "middle right",
+      "textfont": {
+        "color": "#1C1C1E",
+        "size": 11
+      },
+      "hoverinfo": "skip",
       "showlegend": false,
+      "marker": {
+        "color": "rgba(44,160,44,1)",
+        "line": {
+          "color": "rgba(44,160,44,1)"
+        }
+      },
+      "error_y": {
+        "color": "rgba(44,160,44,1)"
+      },
+      "error_x": {
+        "color": "rgba(44,160,44,1)"
+      },
+      "line": {
+        "color": "rgba(44,160,44,1)"
+      },
       "xaxis": "x",
       "yaxis": "y",
-      "hoverinfo": "text",
+      "frame": null
+    },
+    {
+      "x": [0, 2.8182],
+      "y": ["Marvel Cinematic Universe", "Marvel Cinematic Universe"],
+      "type": "scatter",
+      "mode": "lines",
+      "line": {
+        "color": "#2C3E6B",
+        "width": 2
+      },
+      "hovertemplate": ["<b>Marvel Cinematic Universe<\/b><br>$2.8B/yr<extra><\/extra>", "<b>Marvel Cinematic Universe<\/b><br>$2.8B/yr<extra><\/extra>"],
+      "showlegend": false,
+      "marker": {
+        "color": "rgba(214,39,40,1)",
+        "line": {
+          "color": "rgba(214,39,40,1)"
+        }
+      },
+      "error_y": {
+        "color": "rgba(214,39,40,1)"
+      },
+      "error_x": {
+        "color": "rgba(214,39,40,1)"
+      },
+      "xaxis": "x",
+      "yaxis": "y",
+      "frame": null
+    },
+    {
+      "x": [2.8182],
+      "y": ["Marvel Cinematic Universe"],
+      "type": "scatter",
+      "mode": "markers",
+      "marker": {
+        "color": "#2C3E6B",
+        "size": 9,
+        "line": {
+          "color": "rgba(148,103,189,1)"
+        }
+      },
+      "hovertemplate": "<b>Marvel Cinematic Universe<\/b><br>$2.8B/yr<extra><\/extra>",
+      "showlegend": false,
+      "error_y": {
+        "color": "rgba(148,103,189,1)"
+      },
+      "error_x": {
+        "color": "rgba(148,103,189,1)"
+      },
+      "line": {
+        "color": "rgba(148,103,189,1)"
+      },
+      "xaxis": "x",
+      "yaxis": "y",
+      "frame": null
+    },
+    {
+      "x": [2.8182],
+      "y": ["Marvel Cinematic Universe"],
+      "type": "scatter",
+      "mode": "text",
+      "text": "$2.8B/yr",
+      "textposition": "middle right",
+      "textfont": {
+        "color": "#1C1C1E",
+        "size": 11
+      },
+      "hoverinfo": "skip",
+      "showlegend": false,
+      "marker": {
+        "color": "rgba(140,86,75,1)",
+        "line": {
+          "color": "rgba(140,86,75,1)"
+        }
+      },
+      "error_y": {
+        "color": "rgba(140,86,75,1)"
+      },
+      "error_x": {
+        "color": "rgba(140,86,75,1)"
+      },
+      "line": {
+        "color": "rgba(140,86,75,1)"
+      },
+      "xaxis": "x",
+      "yaxis": "y",
+      "frame": null
+    },
+    {
+      "x": [0, 2.318],
+      "y": ["Disney Princess", "Disney Princess"],
+      "type": "scatter",
+      "mode": "lines",
+      "line": {
+        "color": "#2C3E6B",
+        "width": 2
+      },
+      "hovertemplate": ["<b>Disney Princess<\/b><br>$2.3B/yr<extra><\/extra>", "<b>Disney Princess<\/b><br>$2.3B/yr<extra><\/extra>"],
+      "showlegend": false,
+      "marker": {
+        "color": "rgba(227,119,194,1)",
+        "line": {
+          "color": "rgba(227,119,194,1)"
+        }
+      },
+      "error_y": {
+        "color": "rgba(227,119,194,1)"
+      },
+      "error_x": {
+        "color": "rgba(227,119,194,1)"
+      },
+      "xaxis": "x",
+      "yaxis": "y",
+      "frame": null
+    },
+    {
+      "x": [2.318],
+      "y": ["Disney Princess"],
+      "type": "scatter",
+      "mode": "markers",
+      "marker": {
+        "color": "#2C3E6B",
+        "size": 9,
+        "line": {
+          "color": "rgba(127,127,127,1)"
+        }
+      },
+      "hovertemplate": "<b>Disney Princess<\/b><br>$2.3B/yr<extra><\/extra>",
+      "showlegend": false,
+      "error_y": {
+        "color": "rgba(127,127,127,1)"
+      },
+      "error_x": {
+        "color": "rgba(127,127,127,1)"
+      },
+      "line": {
+        "color": "rgba(127,127,127,1)"
+      },
+      "xaxis": "x",
+      "yaxis": "y",
+      "frame": null
+    },
+    {
+      "x": [2.318],
+      "y": ["Disney Princess"],
+      "type": "scatter",
+      "mode": "text",
+      "text": "$2.3B/yr",
+      "textposition": "middle right",
+      "textfont": {
+        "color": "#1C1C1E",
+        "size": 11
+      },
+      "hoverinfo": "skip",
+      "showlegend": false,
+      "marker": {
+        "color": "rgba(188,189,34,1)",
+        "line": {
+          "color": "rgba(188,189,34,1)"
+        }
+      },
+      "error_y": {
+        "color": "rgba(188,189,34,1)"
+      },
+      "error_x": {
+        "color": "rgba(188,189,34,1)"
+      },
+      "line": {
+        "color": "rgba(188,189,34,1)"
+      },
+      "xaxis": "x",
+      "yaxis": "y",
+      "frame": null
+    },
+    {
+      "x": [0, 1.7784],
+      "y": ["Hello Kitty", "Hello Kitty"],
+      "type": "scatter",
+      "mode": "lines",
+      "line": {
+        "color": "#2C3E6B",
+        "width": 2
+      },
+      "hovertemplate": ["<b>Hello Kitty<\/b><br>$1.8B/yr<extra><\/extra>", "<b>Hello Kitty<\/b><br>$1.8B/yr<extra><\/extra>"],
+      "showlegend": false,
+      "marker": {
+        "color": "rgba(23,190,207,1)",
+        "line": {
+          "color": "rgba(23,190,207,1)"
+        }
+      },
+      "error_y": {
+        "color": "rgba(23,190,207,1)"
+      },
+      "error_x": {
+        "color": "rgba(23,190,207,1)"
+      },
+      "xaxis": "x",
+      "yaxis": "y",
+      "frame": null
+    },
+    {
+      "x": [1.7784],
+      "y": ["Hello Kitty"],
+      "type": "scatter",
+      "mode": "markers",
+      "marker": {
+        "color": "#2C3E6B",
+        "size": 9,
+        "line": {
+          "color": "rgba(31,119,180,1)"
+        }
+      },
+      "hovertemplate": "<b>Hello Kitty<\/b><br>$1.8B/yr<extra><\/extra>",
+      "showlegend": false,
+      "error_y": {
+        "color": "rgba(31,119,180,1)"
+      },
+      "error_x": {
+        "color": "rgba(31,119,180,1)"
+      },
+      "line": {
+        "color": "rgba(31,119,180,1)"
+      },
+      "xaxis": "x",
+      "yaxis": "y",
+      "frame": null
+    },
+    {
+      "x": [1.7784],
+      "y": ["Hello Kitty"],
+      "type": "scatter",
+      "mode": "text",
+      "text": "$1.8B/yr",
+      "textposition": "middle right",
+      "textfont": {
+        "color": "#1C1C1E",
+        "size": 11
+      },
+      "hoverinfo": "skip",
+      "showlegend": false,
+      "marker": {
+        "color": "rgba(255,127,14,1)",
+        "line": {
+          "color": "rgba(255,127,14,1)"
+        }
+      },
+      "error_y": {
+        "color": "rgba(255,127,14,1)"
+      },
+      "error_x": {
+        "color": "rgba(255,127,14,1)"
+      },
+      "line": {
+        "color": "rgba(255,127,14,1)"
+      },
+      "xaxis": "x",
+      "yaxis": "y",
+      "frame": null
+    },
+    {
+      "x": [0, 1.7455],
+      "y": ["Frozen", "Frozen"],
+      "type": "scatter",
+      "mode": "lines",
+      "line": {
+        "color": "#2C3E6B",
+        "width": 2
+      },
+      "hovertemplate": ["<b>Frozen<\/b><br>$1.7B/yr<extra><\/extra>", "<b>Frozen<\/b><br>$1.7B/yr<extra><\/extra>"],
+      "showlegend": false,
+      "marker": {
+        "color": "rgba(44,160,44,1)",
+        "line": {
+          "color": "rgba(44,160,44,1)"
+        }
+      },
+      "error_y": {
+        "color": "rgba(44,160,44,1)"
+      },
+      "error_x": {
+        "color": "rgba(44,160,44,1)"
+      },
+      "xaxis": "x",
+      "yaxis": "y",
+      "frame": null
+    },
+    {
+      "x": [1.7455],
+      "y": ["Frozen"],
+      "type": "scatter",
+      "mode": "markers",
+      "marker": {
+        "color": "#2C3E6B",
+        "size": 9,
+        "line": {
+          "color": "rgba(214,39,40,1)"
+        }
+      },
+      "hovertemplate": "<b>Frozen<\/b><br>$1.7B/yr<extra><\/extra>",
+      "showlegend": false,
+      "error_y": {
+        "color": "rgba(214,39,40,1)"
+      },
+      "error_x": {
+        "color": "rgba(214,39,40,1)"
+      },
+      "line": {
+        "color": "rgba(214,39,40,1)"
+      },
+      "xaxis": "x",
+      "yaxis": "y",
+      "frame": null
+    },
+    {
+      "x": [1.7455],
+      "y": ["Frozen"],
+      "type": "scatter",
+      "mode": "text",
+      "text": "$1.7B/yr",
+      "textposition": "middle right",
+      "textfont": {
+        "color": "#1C1C1E",
+        "size": 11
+      },
+      "hoverinfo": "skip",
+      "showlegend": false,
+      "marker": {
+        "color": "rgba(148,103,189,1)",
+        "line": {
+          "color": "rgba(148,103,189,1)"
+        }
+      },
+      "error_y": {
+        "color": "rgba(148,103,189,1)"
+      },
+      "error_x": {
+        "color": "rgba(148,103,189,1)"
+      },
+      "line": {
+        "color": "rgba(148,103,189,1)"
+      },
+      "xaxis": "x",
+      "yaxis": "y",
+      "frame": null
+    },
+    {
+      "x": [0, 1.6657],
+      "y": ["Cars", "Cars"],
+      "type": "scatter",
+      "mode": "lines",
+      "line": {
+        "color": "#2C3E6B",
+        "width": 2
+      },
+      "hovertemplate": ["<b>Cars<\/b><br>$1.7B/yr<extra><\/extra>", "<b>Cars<\/b><br>$1.7B/yr<extra><\/extra>"],
+      "showlegend": false,
+      "marker": {
+        "color": "rgba(140,86,75,1)",
+        "line": {
+          "color": "rgba(140,86,75,1)"
+        }
+      },
+      "error_y": {
+        "color": "rgba(140,86,75,1)"
+      },
+      "error_x": {
+        "color": "rgba(140,86,75,1)"
+      },
+      "xaxis": "x",
+      "yaxis": "y",
+      "frame": null
+    },
+    {
+      "x": [1.6657],
+      "y": ["Cars"],
+      "type": "scatter",
+      "mode": "markers",
+      "marker": {
+        "color": "#2C3E6B",
+        "size": 9,
+        "line": {
+          "color": "rgba(227,119,194,1)"
+        }
+      },
+      "hovertemplate": "<b>Cars<\/b><br>$1.7B/yr<extra><\/extra>",
+      "showlegend": false,
+      "error_y": {
+        "color": "rgba(227,119,194,1)"
+      },
+      "error_x": {
+        "color": "rgba(227,119,194,1)"
+      },
+      "line": {
+        "color": "rgba(227,119,194,1)"
+      },
+      "xaxis": "x",
+      "yaxis": "y",
+      "frame": null
+    },
+    {
+      "x": [1.6657],
+      "y": ["Cars"],
+      "type": "scatter",
+      "mode": "text",
+      "text": "$1.7B/yr",
+      "textposition": "middle right",
+      "textfont": {
+        "color": "#1C1C1E",
+        "size": 11
+      },
+      "hoverinfo": "skip",
+      "showlegend": false,
+      "marker": {
+        "color": "rgba(127,127,127,1)",
+        "line": {
+          "color": "rgba(127,127,127,1)"
+        }
+      },
+      "error_y": {
+        "color": "rgba(127,127,127,1)"
+      },
+      "error_x": {
+        "color": "rgba(127,127,127,1)"
+      },
+      "line": {
+        "color": "rgba(127,127,127,1)"
+      },
+      "xaxis": "x",
+      "yaxis": "y",
+      "frame": null
+    },
+    {
+      "x": [0, 1.5001],
+      "y": ["Star Wars", "Star Wars"],
+      "type": "scatter",
+      "mode": "lines",
+      "line": {
+        "color": "#2C3E6B",
+        "width": 2
+      },
+      "hovertemplate": ["<b>Star Wars<\/b><br>$1.5B/yr<extra><\/extra>", "<b>Star Wars<\/b><br>$1.5B/yr<extra><\/extra>"],
+      "showlegend": false,
+      "marker": {
+        "color": "rgba(188,189,34,1)",
+        "line": {
+          "color": "rgba(188,189,34,1)"
+        }
+      },
+      "error_y": {
+        "color": "rgba(188,189,34,1)"
+      },
+      "error_x": {
+        "color": "rgba(188,189,34,1)"
+      },
+      "xaxis": "x",
+      "yaxis": "y",
+      "frame": null
+    },
+    {
+      "x": [1.5001],
+      "y": ["Star Wars"],
+      "type": "scatter",
+      "mode": "markers",
+      "marker": {
+        "color": "#2C3E6B",
+        "size": 9,
+        "line": {
+          "color": "rgba(23,190,207,1)"
+        }
+      },
+      "hovertemplate": "<b>Star Wars<\/b><br>$1.5B/yr<extra><\/extra>",
+      "showlegend": false,
+      "error_y": {
+        "color": "rgba(23,190,207,1)"
+      },
+      "error_x": {
+        "color": "rgba(23,190,207,1)"
+      },
+      "line": {
+        "color": "rgba(23,190,207,1)"
+      },
+      "xaxis": "x",
+      "yaxis": "y",
+      "frame": null
+    },
+    {
+      "x": [1.5001],
+      "y": ["Star Wars"],
+      "type": "scatter",
+      "mode": "text",
+      "text": "$1.5B/yr",
+      "textposition": "middle right",
+      "textfont": {
+        "color": "#1C1C1E",
+        "size": 11
+      },
+      "hoverinfo": "skip",
+      "showlegend": false,
+      "marker": {
+        "color": "rgba(31,119,180,1)",
+        "line": {
+          "color": "rgba(31,119,180,1)"
+        }
+      },
+      "error_y": {
+        "color": "rgba(31,119,180,1)"
+      },
+      "error_x": {
+        "color": "rgba(31,119,180,1)"
+      },
+      "line": {
+        "color": "rgba(31,119,180,1)"
+      },
+      "xaxis": "x",
+      "yaxis": "y",
+      "frame": null
+    },
+    {
+      "x": [0, 1.3063],
+      "y": ["Anpanman", "Anpanman"],
+      "type": "scatter",
+      "mode": "lines",
+      "line": {
+        "color": "#2C3E6B",
+        "width": 2
+      },
+      "hovertemplate": ["<b>Anpanman<\/b><br>$1.3B/yr<extra><\/extra>", "<b>Anpanman<\/b><br>$1.3B/yr<extra><\/extra>"],
+      "showlegend": false,
+      "marker": {
+        "color": "rgba(255,127,14,1)",
+        "line": {
+          "color": "rgba(255,127,14,1)"
+        }
+      },
+      "error_y": {
+        "color": "rgba(255,127,14,1)"
+      },
+      "error_x": {
+        "color": "rgba(255,127,14,1)"
+      },
+      "xaxis": "x",
+      "yaxis": "y",
+      "frame": null
+    },
+    {
+      "x": [1.3063],
+      "y": ["Anpanman"],
+      "type": "scatter",
+      "mode": "markers",
+      "marker": {
+        "color": "#2C3E6B",
+        "size": 9,
+        "line": {
+          "color": "rgba(44,160,44,1)"
+        }
+      },
+      "hovertemplate": "<b>Anpanman<\/b><br>$1.3B/yr<extra><\/extra>",
+      "showlegend": false,
+      "error_y": {
+        "color": "rgba(44,160,44,1)"
+      },
+      "error_x": {
+        "color": "rgba(44,160,44,1)"
+      },
+      "line": {
+        "color": "rgba(44,160,44,1)"
+      },
+      "xaxis": "x",
+      "yaxis": "y",
+      "frame": null
+    },
+    {
+      "x": [1.3063],
+      "y": ["Anpanman"],
+      "type": "scatter",
+      "mode": "text",
+      "text": "$1.3B/yr",
+      "textposition": "middle right",
+      "textfont": {
+        "color": "#1C1C1E",
+        "size": 11
+      },
+      "hoverinfo": "skip",
+      "showlegend": false,
+      "marker": {
+        "color": "rgba(214,39,40,1)",
+        "line": {
+          "color": "rgba(214,39,40,1)"
+        }
+      },
+      "error_y": {
+        "color": "rgba(214,39,40,1)"
+      },
+      "error_x": {
+        "color": "rgba(214,39,40,1)"
+      },
+      "line": {
+        "color": "rgba(214,39,40,1)"
+      },
+      "xaxis": "x",
+      "yaxis": "y",
+      "frame": null
+    },
+    {
+      "x": [0, 1.2776],
+      "y": ["Wizarding World / Harry Potter", "Wizarding World / Harry Potter"],
+      "type": "scatter",
+      "mode": "lines",
+      "line": {
+        "color": "#2C3E6B",
+        "width": 2
+      },
+      "hovertemplate": ["<b>Wizarding World / Harry Potter<\/b><br>$1.3B/yr<extra><\/extra>", "<b>Wizarding World / Harry Potter<\/b><br>$1.3B/yr<extra><\/extra>"],
+      "showlegend": false,
+      "marker": {
+        "color": "rgba(148,103,189,1)",
+        "line": {
+          "color": "rgba(148,103,189,1)"
+        }
+      },
+      "error_y": {
+        "color": "rgba(148,103,189,1)"
+      },
+      "error_x": {
+        "color": "rgba(148,103,189,1)"
+      },
+      "xaxis": "x",
+      "yaxis": "y",
+      "frame": null
+    },
+    {
+      "x": [1.2776],
+      "y": ["Wizarding World / Harry Potter"],
+      "type": "scatter",
+      "mode": "markers",
+      "marker": {
+        "color": "#2C3E6B",
+        "size": 9,
+        "line": {
+          "color": "rgba(140,86,75,1)"
+        }
+      },
+      "hovertemplate": "<b>Wizarding World / Harry Potter<\/b><br>$1.3B/yr<extra><\/extra>",
+      "showlegend": false,
+      "error_y": {
+        "color": "rgba(140,86,75,1)"
+      },
+      "error_x": {
+        "color": "rgba(140,86,75,1)"
+      },
+      "line": {
+        "color": "rgba(140,86,75,1)"
+      },
+      "xaxis": "x",
+      "yaxis": "y",
+      "frame": null
+    },
+    {
+      "x": [1.2776],
+      "y": ["Wizarding World / Harry Potter"],
+      "type": "scatter",
+      "mode": "text",
+      "text": "$1.3B/yr",
+      "textposition": "middle right",
+      "textfont": {
+        "color": "#1C1C1E",
+        "size": 11
+      },
+      "hoverinfo": "skip",
+      "showlegend": false,
+      "marker": {
+        "color": "rgba(227,119,194,1)",
+        "line": {
+          "color": "rgba(227,119,194,1)"
+        }
+      },
+      "error_y": {
+        "color": "rgba(227,119,194,1)"
+      },
+      "error_x": {
+        "color": "rgba(227,119,194,1)"
+      },
+      "line": {
+        "color": "rgba(227,119,194,1)"
+      },
+      "xaxis": "x",
+      "yaxis": "y",
+      "frame": null
+    },
+    {
+      "x": [0, 1.1683],
+      "y": ["Monster Strike", "Monster Strike"],
+      "type": "scatter",
+      "mode": "lines",
+      "line": {
+        "color": "#2C3E6B",
+        "width": 2
+      },
+      "hovertemplate": ["<b>Monster Strike<\/b><br>$1.2B/yr<extra><\/extra>", "<b>Monster Strike<\/b><br>$1.2B/yr<extra><\/extra>"],
+      "showlegend": false,
+      "marker": {
+        "color": "rgba(127,127,127,1)",
+        "line": {
+          "color": "rgba(127,127,127,1)"
+        }
+      },
+      "error_y": {
+        "color": "rgba(127,127,127,1)"
+      },
+      "error_x": {
+        "color": "rgba(127,127,127,1)"
+      },
+      "xaxis": "x",
+      "yaxis": "y",
+      "frame": null
+    },
+    {
+      "x": [1.1683],
+      "y": ["Monster Strike"],
+      "type": "scatter",
+      "mode": "markers",
+      "marker": {
+        "color": "#2C3E6B",
+        "size": 9,
+        "line": {
+          "color": "rgba(188,189,34,1)"
+        }
+      },
+      "hovertemplate": "<b>Monster Strike<\/b><br>$1.2B/yr<extra><\/extra>",
+      "showlegend": false,
+      "error_y": {
+        "color": "rgba(188,189,34,1)"
+      },
+      "error_x": {
+        "color": "rgba(188,189,34,1)"
+      },
+      "line": {
+        "color": "rgba(188,189,34,1)"
+      },
+      "xaxis": "x",
+      "yaxis": "y",
+      "frame": null
+    },
+    {
+      "x": [1.1683],
+      "y": ["Monster Strike"],
+      "type": "scatter",
+      "mode": "text",
+      "text": "$1.2B/yr",
+      "textposition": "middle right",
+      "textfont": {
+        "color": "#1C1C1E",
+        "size": 11
+      },
+      "hoverinfo": "skip",
+      "showlegend": false,
+      "marker": {
+        "color": "rgba(23,190,207,1)",
+        "line": {
+          "color": "rgba(23,190,207,1)"
+        }
+      },
+      "error_y": {
+        "color": "rgba(23,190,207,1)"
+      },
+      "error_x": {
+        "color": "rgba(23,190,207,1)"
+      },
+      "line": {
+        "color": "rgba(23,190,207,1)"
+      },
+      "xaxis": "x",
+      "yaxis": "y",
+      "frame": null
+    },
+    {
+      "x": [0, 1.0769],
+      "y": ["Wii series", "Wii series"],
+      "type": "scatter",
+      "mode": "lines",
+      "line": {
+        "color": "#2C3E6B",
+        "width": 2
+      },
+      "hovertemplate": ["<b>Wii series<\/b><br>$1.1B/yr<extra><\/extra>", "<b>Wii series<\/b><br>$1.1B/yr<extra><\/extra>"],
+      "showlegend": false,
+      "marker": {
+        "color": "rgba(31,119,180,1)",
+        "line": {
+          "color": "rgba(31,119,180,1)"
+        }
+      },
+      "error_y": {
+        "color": "rgba(31,119,180,1)"
+      },
+      "error_x": {
+        "color": "rgba(31,119,180,1)"
+      },
+      "xaxis": "x",
+      "yaxis": "y",
+      "frame": null
+    },
+    {
+      "x": [1.0769],
+      "y": ["Wii series"],
+      "type": "scatter",
+      "mode": "markers",
+      "marker": {
+        "color": "#2C3E6B",
+        "size": 9,
+        "line": {
+          "color": "rgba(255,127,14,1)"
+        }
+      },
+      "hovertemplate": "<b>Wii series<\/b><br>$1.1B/yr<extra><\/extra>",
+      "showlegend": false,
+      "error_y": {
+        "color": "rgba(255,127,14,1)"
+      },
+      "error_x": {
+        "color": "rgba(255,127,14,1)"
+      },
+      "line": {
+        "color": "rgba(255,127,14,1)"
+      },
+      "xaxis": "x",
+      "yaxis": "y",
+      "frame": null
+    },
+    {
+      "x": [1.0769],
+      "y": ["Wii series"],
+      "type": "scatter",
+      "mode": "text",
+      "text": "$1.1B/yr",
+      "textposition": "middle right",
+      "textfont": {
+        "color": "#1C1C1E",
+        "size": 11
+      },
+      "hoverinfo": "skip",
+      "showlegend": false,
+      "marker": {
+        "color": "rgba(44,160,44,1)",
+        "line": {
+          "color": "rgba(44,160,44,1)"
+        }
+      },
+      "error_y": {
+        "color": "rgba(44,160,44,1)"
+      },
+      "error_x": {
+        "color": "rgba(44,160,44,1)"
+      },
+      "line": {
+        "color": "rgba(44,160,44,1)"
+      },
+      "xaxis": "x",
+      "yaxis": "y",
+      "frame": null
+    },
+    {
+      "x": [0, 1.0625],
+      "y": ["Call of Duty", "Call of Duty"],
+      "type": "scatter",
+      "mode": "lines",
+      "line": {
+        "color": "#2C3E6B",
+        "width": 2
+      },
+      "hovertemplate": ["<b>Call of Duty<\/b><br>$1.1B/yr<extra><\/extra>", "<b>Call of Duty<\/b><br>$1.1B/yr<extra><\/extra>"],
+      "showlegend": false,
+      "marker": {
+        "color": "rgba(214,39,40,1)",
+        "line": {
+          "color": "rgba(214,39,40,1)"
+        }
+      },
+      "error_y": {
+        "color": "rgba(214,39,40,1)"
+      },
+      "error_x": {
+        "color": "rgba(214,39,40,1)"
+      },
+      "xaxis": "x",
+      "yaxis": "y",
+      "frame": null
+    },
+    {
+      "x": [1.0625],
+      "y": ["Call of Duty"],
+      "type": "scatter",
+      "mode": "markers",
+      "marker": {
+        "color": "#2C3E6B",
+        "size": 9,
+        "line": {
+          "color": "rgba(148,103,189,1)"
+        }
+      },
+      "hovertemplate": "<b>Call of Duty<\/b><br>$1.1B/yr<extra><\/extra>",
+      "showlegend": false,
+      "error_y": {
+        "color": "rgba(148,103,189,1)"
+      },
+      "error_x": {
+        "color": "rgba(148,103,189,1)"
+      },
+      "line": {
+        "color": "rgba(148,103,189,1)"
+      },
+      "xaxis": "x",
+      "yaxis": "y",
+      "frame": null
+    },
+    {
+      "x": [1.0625],
+      "y": ["Call of Duty"],
+      "type": "scatter",
+      "mode": "text",
+      "text": "$1.1B/yr",
+      "textposition": "middle right",
+      "textfont": {
+        "color": "#1C1C1E",
+        "size": 11
+      },
+      "hoverinfo": "skip",
+      "showlegend": false,
+      "marker": {
+        "color": "rgba(140,86,75,1)",
+        "line": {
+          "color": "rgba(140,86,75,1)"
+        }
+      },
+      "error_y": {
+        "color": "rgba(140,86,75,1)"
+      },
+      "error_x": {
+        "color": "rgba(140,86,75,1)"
+      },
+      "line": {
+        "color": "rgba(140,86,75,1)"
+      },
+      "xaxis": "x",
+      "yaxis": "y",
+      "frame": null
+    },
+    {
+      "x": [0, 1.034],
+      "y": ["DC Extended Universe", "DC Extended Universe"],
+      "type": "scatter",
+      "mode": "lines",
+      "line": {
+        "color": "#2C3E6B",
+        "width": 2
+      },
+      "hovertemplate": ["<b>DC Extended Universe<\/b><br>$1B/yr<extra><\/extra>", "<b>DC Extended Universe<\/b><br>$1B/yr<extra><\/extra>"],
+      "showlegend": false,
+      "marker": {
+        "color": "rgba(227,119,194,1)",
+        "line": {
+          "color": "rgba(227,119,194,1)"
+        }
+      },
+      "error_y": {
+        "color": "rgba(227,119,194,1)"
+      },
+      "error_x": {
+        "color": "rgba(227,119,194,1)"
+      },
+      "xaxis": "x",
+      "yaxis": "y",
+      "frame": null
+    },
+    {
+      "x": [1.034],
+      "y": ["DC Extended Universe"],
+      "type": "scatter",
+      "mode": "markers",
+      "marker": {
+        "color": "#2C3E6B",
+        "size": 9,
+        "line": {
+          "color": "rgba(127,127,127,1)"
+        }
+      },
+      "hovertemplate": "<b>DC Extended Universe<\/b><br>$1B/yr<extra><\/extra>",
+      "showlegend": false,
+      "error_y": {
+        "color": "rgba(127,127,127,1)"
+      },
+      "error_x": {
+        "color": "rgba(127,127,127,1)"
+      },
+      "line": {
+        "color": "rgba(127,127,127,1)"
+      },
+      "xaxis": "x",
+      "yaxis": "y",
+      "frame": null
+    },
+    {
+      "x": [1.034],
+      "y": ["DC Extended Universe"],
+      "type": "scatter",
+      "mode": "text",
+      "text": "$1B/yr",
+      "textposition": "middle right",
+      "textfont": {
+        "color": "#1C1C1E",
+        "size": 11
+      },
+      "hoverinfo": "skip",
+      "showlegend": false,
+      "marker": {
+        "color": "rgba(188,189,34,1)",
+        "line": {
+          "color": "rgba(188,189,34,1)"
+        }
+      },
+      "error_y": {
+        "color": "rgba(188,189,34,1)"
+      },
+      "error_x": {
+        "color": "rgba(188,189,34,1)"
+      },
+      "line": {
+        "color": "rgba(188,189,34,1)"
+      },
+      "xaxis": "x",
+      "yaxis": "y",
+      "frame": null
+    },
+    {
+      "x": [0, 1],
+      "y": ["Puzzle & Dragons", "Puzzle & Dragons"],
+      "type": "scatter",
+      "mode": "lines",
+      "line": {
+        "color": "#2C3E6B",
+        "width": 2
+      },
+      "hovertemplate": ["<b>Puzzle & Dragons<\/b><br>$1B/yr<extra><\/extra>", "<b>Puzzle & Dragons<\/b><br>$1B/yr<extra><\/extra>"],
+      "showlegend": false,
+      "marker": {
+        "color": "rgba(23,190,207,1)",
+        "line": {
+          "color": "rgba(23,190,207,1)"
+        }
+      },
+      "error_y": {
+        "color": "rgba(23,190,207,1)"
+      },
+      "error_x": {
+        "color": "rgba(23,190,207,1)"
+      },
+      "xaxis": "x",
+      "yaxis": "y",
+      "frame": null
+    },
+    {
+      "x": [1],
+      "y": ["Puzzle & Dragons"],
+      "type": "scatter",
+      "mode": "markers",
+      "marker": {
+        "color": "#2C3E6B",
+        "size": 9,
+        "line": {
+          "color": "rgba(31,119,180,1)"
+        }
+      },
+      "hovertemplate": "<b>Puzzle & Dragons<\/b><br>$1B/yr<extra><\/extra>",
+      "showlegend": false,
+      "error_y": {
+        "color": "rgba(31,119,180,1)"
+      },
+      "error_x": {
+        "color": "rgba(31,119,180,1)"
+      },
+      "line": {
+        "color": "rgba(31,119,180,1)"
+      },
+      "xaxis": "x",
+      "yaxis": "y",
+      "frame": null
+    },
+    {
+      "x": [1],
+      "y": ["Puzzle & Dragons"],
+      "type": "scatter",
+      "mode": "text",
+      "text": "$1B/yr",
+      "textposition": "middle right",
+      "textfont": {
+        "color": "#1C1C1E",
+        "size": 11
+      },
+      "hoverinfo": "skip",
+      "showlegend": false,
+      "marker": {
+        "color": "rgba(255,127,14,1)",
+        "line": {
+          "color": "rgba(255,127,14,1)"
+        }
+      },
+      "error_y": {
+        "color": "rgba(255,127,14,1)"
+      },
+      "error_x": {
+        "color": "rgba(255,127,14,1)"
+      },
+      "line": {
+        "color": "rgba(255,127,14,1)"
+      },
+      "xaxis": "x",
+      "yaxis": "y",
+      "frame": null
+    },
+    {
+      "x": [0, 0.9216],
+      "y": ["Mario", "Mario"],
+      "type": "scatter",
+      "mode": "lines",
+      "line": {
+        "color": "#2C3E6B",
+        "width": 2
+      },
+      "hovertemplate": ["<b>Mario<\/b><br>$0.9B/yr<extra><\/extra>", "<b>Mario<\/b><br>$0.9B/yr<extra><\/extra>"],
+      "showlegend": false,
+      "marker": {
+        "color": "rgba(44,160,44,1)",
+        "line": {
+          "color": "rgba(44,160,44,1)"
+        }
+      },
+      "error_y": {
+        "color": "rgba(44,160,44,1)"
+      },
+      "error_x": {
+        "color": "rgba(44,160,44,1)"
+      },
+      "xaxis": "x",
+      "yaxis": "y",
+      "frame": null
+    },
+    {
+      "x": [0.9216],
+      "y": ["Mario"],
+      "type": "scatter",
+      "mode": "markers",
+      "marker": {
+        "color": "#2C3E6B",
+        "size": 9,
+        "line": {
+          "color": "rgba(214,39,40,1)"
+        }
+      },
+      "hovertemplate": "<b>Mario<\/b><br>$0.9B/yr<extra><\/extra>",
+      "showlegend": false,
+      "error_y": {
+        "color": "rgba(214,39,40,1)"
+      },
+      "error_x": {
+        "color": "rgba(214,39,40,1)"
+      },
+      "line": {
+        "color": "rgba(214,39,40,1)"
+      },
+      "xaxis": "x",
+      "yaxis": "y",
+      "frame": null
+    },
+    {
+      "x": [0.9216],
+      "y": ["Mario"],
+      "type": "scatter",
+      "mode": "text",
+      "text": "$0.9B/yr",
+      "textposition": "middle right",
+      "textfont": {
+        "color": "#1C1C1E",
+        "size": 11
+      },
+      "hoverinfo": "skip",
+      "showlegend": false,
+      "marker": {
+        "color": "rgba(148,103,189,1)",
+        "line": {
+          "color": "rgba(148,103,189,1)"
+        }
+      },
+      "error_y": {
+        "color": "rgba(148,103,189,1)"
+      },
+      "error_x": {
+        "color": "rgba(148,103,189,1)"
+      },
+      "line": {
+        "color": "rgba(148,103,189,1)"
+      },
+      "xaxis": "x",
+      "yaxis": "y",
       "frame": null
     }
   ],
   "layout": {
     "margin": {
-      "t": 90,
-      "r": 60,
-      "b": 70,
-      "l": 200
-    },
-    "plot_bgcolor": "#F2F0EB",
-    "paper_bgcolor": "#F2F0EB",
-    "font": {
-      "family": "Helvetica",
-      "color": "#1C1C1E"
-    },
-    "title": {
-      "text": "<span style='color:#C0392B'><b>POKÉMON<\/b><\/span> EARNS MORE PER YEAR THAN MOST FRANCHISES EARN IN A LIFETIME",
-      "font": {
-        "family": "Helvetica",
-        "size": 16,
-        "color": "#1C1C1E"
-      },
-      "x": 0,
-      "xanchor": "left"
+      "b": 40,
+      "l": 60,
+      "t": 25,
+      "r": 10
     },
     "xaxis": {
       "domain": [0, 1],
       "automargin": true,
-      "type": "linear",
-      "autorange": false,
-      "range": [0, 5.0567],
-      "tickmode": "array",
-      "ticktext": ["$0", "$1", "$2", "$3", "$4", "$5"],
-      "tickvals": [0, 1, 2, 3, 4, 5],
-      "categoryorder": "array",
-      "categoryarray": ["$0", "$1", "$2", "$3", "$4", "$5"],
-      "nticks": null,
-      "ticks": "",
-      "tickcolor": null,
-      "ticklen": 3.653,
-      "tickwidth": 0,
-      "showticklabels": true,
-      "tickfont": {
-        "color": "rgba(107,107,107,1)",
-        "family": "Helvetica",
-        "size": 11.9552
-      },
-      "tickangle": -0,
-      "showline": false,
-      "linecolor": null,
-      "linewidth": 0,
-      "showgrid": true,
-      "gridcolor": "rgba(213,213,213,1)",
-      "gridwidth": 0.5313,
-      "zeroline": false,
-      "anchor": "y",
-      "title": {
-        "text": "<b> Revenue Per Year (Billions USD) <\/b>",
-        "font": {
-          "color": "rgba(28,28,30,1)",
-          "family": "Helvetica",
-          "size": 13.2835
-        }
-      },
-      "hoverformat": ".2f"
+      "title": []
     },
     "yaxis": {
       "domain": [0, 1],
       "automargin": true,
-      "type": "linear",
-      "autorange": false,
-      "range": [0.4, 15.6],
-      "tickmode": "array",
-      "ticktext": ["Mario", "Puzzle & Dragons", "DC Extended Universe", "Call of Duty", "Wii series", "Monster Strike", "Wizarding World / Harry Potter", "Anpanman", "Star Wars", "Cars", "Frozen", "Hello Kitty", "Disney Princess", "Marvel Cinematic Universe", "Pokémon"],
-      "tickvals": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+      "title": [],
+      "type": "category",
       "categoryorder": "array",
-      "categoryarray": ["Mario", "Puzzle & Dragons", "DC Extended Universe", "Call of Duty", "Wii series", "Monster Strike", "Wizarding World / Harry Potter", "Anpanman", "Star Wars", "Cars", "Frozen", "Hello Kitty", "Disney Princess", "Marvel Cinematic Universe", "Pokémon"],
-      "nticks": null,
-      "ticks": "",
-      "tickcolor": null,
-      "ticklen": 3.653,
-      "tickwidth": 0,
-      "showticklabels": true,
-      "tickfont": {
-        "color": "rgba(107,107,107,1)",
-        "family": "Helvetica",
-        "size": 11.9552
-      },
-      "tickangle": -0,
-      "showline": false,
-      "linecolor": null,
-      "linewidth": 0,
-      "showgrid": false,
-      "gridcolor": null,
-      "gridwidth": 0,
-      "zeroline": false,
-      "anchor": "x",
-      "title": {
-        "text": "<b>  <\/b>",
-        "font": {
-          "color": "rgba(28,28,30,1)",
-          "family": "Helvetica",
-          "size": 13.2835
-        }
-      },
-      "hoverformat": ".2f"
-    },
-    "shapes": [
-      {
-        "type": "rect",
-        "fillcolor": null,
-        "line": {
-          "color": null,
-          "width": 0,
-          "linetype": []
-        },
-        "yref": "paper",
-        "xref": "paper",
-        "x0": 0,
-        "x1": 1,
-        "y0": 0,
-        "y1": 1
-      }
-    ],
-    "showlegend": true,
-    "legend": {
-      "bgcolor": "#F2F0EB",
-      "font": {
-        "color": "#6B6B6B",
-        "size": 10
-      },
-      "title": {
-        "text": "Category",
-        "font": {
-          "color": "#1C1C1E",
-          "size": 11
-        }
-      }
+      "categoryarray": ["Mario", "Puzzle & Dragons", "DC Extended Universe", "Call of Duty", "Wii series", "Monster Strike", "Wizarding World / Harry Potter", "Anpanman", "Star Wars", "Cars", "Frozen", "Hello Kitty", "Disney Princess", "Marvel Cinematic Universe", "Pokémon"]
     },
     "hovermode": "closest",
-    "barmode": "relative",
-    "annotations": [
-      {
-        "text": "~$4B ANNUALLY SINCE 1996 — MORE THAN HELLO KITTY, WHICH IS TWICE ITS AGE",
-        "x": 0,
-        "y": 1.08,
-        "xref": "paper",
-        "yref": "paper",
-        "xanchor": "left",
-        "yanchor": "bottom",
-        "showarrow": false,
-        "font": {
-          "size": 11,
-          "color": "#6B6B6B",
-          "family": "Helvetica"
-        }
-      },
-      {
-        "x": 4.1481,
-        "y": 15,
-        "text": "$4B/yr",
-        "xanchor": "left",
-        "yanchor": "middle",
-        "showarrow": false,
-        "font": {
-          "size": 11,
-          "color": "#1C1C1E",
-          "family": "Helvetica"
-        }
-      },
-      {
-        "x": 2.9591,
-        "y": 14,
-        "text": "$2.8B/yr",
-        "xanchor": "left",
-        "yanchor": "middle",
-        "showarrow": false,
-        "font": {
-          "size": 11,
-          "color": "#1C1C1E",
-          "family": "Helvetica"
-        }
-      },
-      {
-        "x": 2.4339,
-        "y": 13,
-        "text": "$2.3B/yr",
-        "xanchor": "left",
-        "yanchor": "middle",
-        "showarrow": false,
-        "font": {
-          "size": 11,
-          "color": "#1C1C1E",
-          "family": "Helvetica"
-        }
-      },
-      {
-        "x": 1.8673,
-        "y": 12,
-        "text": "$1.8B/yr",
-        "xanchor": "left",
-        "yanchor": "middle",
-        "showarrow": false,
-        "font": {
-          "size": 11,
-          "color": "#1C1C1E",
-          "family": "Helvetica"
-        }
-      },
-      {
-        "x": 1.8328,
-        "y": 11,
-        "text": "$1.7B/yr",
-        "xanchor": "left",
-        "yanchor": "middle",
-        "showarrow": false,
-        "font": {
-          "size": 11,
-          "color": "#1C1C1E",
-          "family": "Helvetica"
-        }
-      },
-      {
-        "x": 1.749,
-        "y": 10,
-        "text": "$1.7B/yr",
-        "xanchor": "left",
-        "yanchor": "middle",
-        "showarrow": false,
-        "font": {
-          "size": 11,
-          "color": "#1C1C1E",
-          "family": "Helvetica"
-        }
-      },
-      {
-        "x": 1.5751,
-        "y": 9,
-        "text": "$1.5B/yr",
-        "xanchor": "left",
-        "yanchor": "middle",
-        "showarrow": false,
-        "font": {
-          "size": 11,
-          "color": "#1C1C1E",
-          "family": "Helvetica"
-        }
-      },
-      {
-        "x": 1.3717,
-        "y": 8,
-        "text": "$1.3B/yr",
-        "xanchor": "left",
-        "yanchor": "middle",
-        "showarrow": false,
-        "font": {
-          "size": 11,
-          "color": "#1C1C1E",
-          "family": "Helvetica"
-        }
-      },
-      {
-        "x": 1.3415,
-        "y": 7,
-        "text": "$1.3B/yr",
-        "xanchor": "left",
-        "yanchor": "middle",
-        "showarrow": false,
-        "font": {
-          "size": 11,
-          "color": "#1C1C1E",
-          "family": "Helvetica"
-        }
-      },
-      {
-        "x": 1.2268,
-        "y": 6,
-        "text": "$1.2B/yr",
-        "xanchor": "left",
-        "yanchor": "middle",
-        "showarrow": false,
-        "font": {
-          "size": 11,
-          "color": "#1C1C1E",
-          "family": "Helvetica"
-        }
-      },
-      {
-        "x": 1.1308,
-        "y": 5,
-        "text": "$1.1B/yr",
-        "xanchor": "left",
-        "yanchor": "middle",
-        "showarrow": false,
-        "font": {
-          "size": 11,
-          "color": "#1C1C1E",
-          "family": "Helvetica"
-        }
-      },
-      {
-        "x": 1.1156,
-        "y": 4,
-        "text": "$1.1B/yr",
-        "xanchor": "left",
-        "yanchor": "middle",
-        "showarrow": false,
-        "font": {
-          "size": 11,
-          "color": "#1C1C1E",
-          "family": "Helvetica"
-        }
-      },
-      {
-        "x": 1.0857,
-        "y": 3,
-        "text": "$1B/yr",
-        "xanchor": "left",
-        "yanchor": "middle",
-        "showarrow": false,
-        "font": {
-          "size": 11,
-          "color": "#1C1C1E",
-          "family": "Helvetica"
-        }
-      },
-      {
-        "x": 1.05,
-        "y": 2,
-        "text": "$1B/yr",
-        "xanchor": "left",
-        "yanchor": "middle",
-        "showarrow": false,
-        "font": {
-          "size": 11,
-          "color": "#1C1C1E",
-          "family": "Helvetica"
-        }
-      },
-      {
-        "x": 0.9677,
-        "y": 1,
-        "text": "$0.9B/yr",
-        "xanchor": "left",
-        "yanchor": "middle",
-        "showarrow": false,
-        "font": {
-          "size": 11,
-          "color": "#1C1C1E",
-          "family": "Helvetica"
-        }
-      }
-    ],
-    "width": 1000,
-    "height": 800
+    "showlegend": false
   },
   "config": {
     "displayModeBar": true,
     "displaylogo": false,
     "responsive": true,
-    "modeBarButtonsToRemove": ["lasso2d", "select2d"]
+    "scrollZoom": false,
+    "modeBarButtonsToRemove": ["lasso2d", "select2d", "zoom2d", "pan2d", "select2d", "autoScale2d"]
   }
 }

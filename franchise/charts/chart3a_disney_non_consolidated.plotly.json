@@ -1,531 +1,90 @@
 {
   "data": [
     {
+      "y": ["The Walt Disney Company", "Nintendo", "DC Entertainment (AT&T)", "Shueisha (Hitotsubashi Group)", "Nickelodeon (Viacom)", "Square Enix", "Viacom", "Marvel Entertainment (The Walt Disney Company)", "Warner Bros. (AT&T)", "20th Century Fox (The Walt Disney Company)", "Capcom", "Shueisha (Hitotsubashi Group) Pierrot", "Universal Pictures (Comcast)", "American Greetings"],
+      "x": [258.952, 49.021, 44.396, 36.256, 28.715, 22.664, 19.735, 19.623, 18.472, 16.527, 15.923, 15.92, 9.741, 9.054],
       "orientation": "h",
-      "width": 0.65,
-      "base": 0,
-      "x": [258.952],
-      "y": [14],
-      "text": "owners: The Walt Disney Company<br />total_revenue: 258.952<br />disney_flag: disney_direct",
-      "type": "bar",
-      "textposition": "none",
       "marker": {
-        "autocolorscale": false,
-        "color": "rgba(192,57,43,1)",
+        "color": ["#C0392B", "#2C3E6B", "#2C3E6B", "#2C3E6B", "#2C3E6B", "#2C3E6B", "#2C3E6B", "#D4695E", "#2C3E6B", "#E8A09A", "#2C3E6B", "#2C3E6B", "#2C3E6B", "#2C3E6B"],
         "line": {
-          "width": 1.8898,
-          "color": "transparent"
+          "color": "rgba(31,119,180,1)",
+          "width": 0
         }
       },
-      "name": "disney_direct",
-      "legendgroup": "disney_direct",
-      "showlegend": true,
+      "hovertemplate": ["<b>%{y}<\/b><br>$%{x:.0f}B<extra><\/extra>", "<b>%{y}<\/b><br>$%{x:.0f}B<extra><\/extra>", "<b>%{y}<\/b><br>$%{x:.0f}B<extra><\/extra>", "<b>%{y}<\/b><br>$%{x:.0f}B<extra><\/extra>", "<b>%{y}<\/b><br>$%{x:.0f}B<extra><\/extra>", "<b>%{y}<\/b><br>$%{x:.0f}B<extra><\/extra>", "<b>%{y}<\/b><br>$%{x:.0f}B<extra><\/extra>", "<b>%{y}<\/b><br>$%{x:.0f}B<extra><\/extra>", "<b>%{y}<\/b><br>$%{x:.0f}B<extra><\/extra>", "<b>%{y}<\/b><br>$%{x:.0f}B<extra><\/extra>", "<b>%{y}<\/b><br>$%{x:.0f}B<extra><\/extra>", "<b>%{y}<\/b><br>$%{x:.0f}B<extra><\/extra>", "<b>%{y}<\/b><br>$%{x:.0f}B<extra><\/extra>", "<b>%{y}<\/b><br>$%{x:.0f}B<extra><\/extra>"],
+      "showlegend": false,
+      "type": "bar",
+      "error_y": {
+        "color": "rgba(31,119,180,1)"
+      },
+      "error_x": {
+        "color": "rgba(31,119,180,1)"
+      },
       "xaxis": "x",
       "yaxis": "y",
-      "hoverinfo": "text",
       "frame": null
     },
     {
-      "orientation": "h",
-      "width": 0.65,
-      "base": 0,
-      "x": [16.527],
-      "y": [5],
-      "text": "owners: 20th Century Fox (The Walt Disney Company)<br />total_revenue:  16.527<br />disney_flag: disney_fox",
-      "type": "bar",
-      "textposition": "none",
+      "x": [258.952, 49.021, 44.396, 36.256, 28.715, 22.664, 19.735, 19.623, 18.472, 16.527, 15.923, 15.92, 9.741, 9.054],
+      "y": ["The Walt Disney Company", "Nintendo", "DC Entertainment (AT&T)", "Shueisha (Hitotsubashi Group)", "Nickelodeon (Viacom)", "Square Enix", "Viacom", "Marvel Entertainment (The Walt Disney Company)", "Warner Bros. (AT&T)", "20th Century Fox (The Walt Disney Company)", "Capcom", "Shueisha (Hitotsubashi Group) Pierrot", "Universal Pictures (Comcast)", "American Greetings"],
+      "type": "scatter",
+      "mode": "text",
+      "text": ["$259B", "$49B", "$44B", "$36B", "$29B", "$23B", "$20B", "$20B", "$18B", "$17B", "$16B", "$16B", "$10B", "$9B"],
+      "textposition": ["middle right", "middle right", "middle right", "middle right", "middle right", "middle right", "middle right", "middle right", "middle right", "middle right", "middle right", "middle right", "middle right", "middle right"],
+      "textfont": {
+        "color": "#1C1C1E",
+        "size": 11
+      },
+      "hoverinfo": ["skip", "skip", "skip", "skip", "skip", "skip", "skip", "skip", "skip", "skip", "skip", "skip", "skip", "skip"],
+      "showlegend": false,
       "marker": {
-        "autocolorscale": false,
-        "color": "rgba(232,160,154,1)",
+        "color": "rgba(255,127,14,1)",
         "line": {
-          "width": 1.8898,
-          "color": "transparent"
+          "color": "rgba(255,127,14,1)"
         }
       },
-      "name": "disney_fox",
-      "legendgroup": "disney_fox",
-      "showlegend": true,
-      "xaxis": "x",
-      "yaxis": "y",
-      "hoverinfo": "text",
-      "frame": null
-    },
-    {
-      "orientation": "h",
-      "width": 0.65,
-      "base": 0,
-      "x": [19.623],
-      "y": [7],
-      "text": "owners: Marvel Entertainment (The Walt Disney Company)<br />total_revenue:  19.623<br />disney_flag: disney_marvel",
-      "type": "bar",
-      "textposition": "none",
-      "marker": {
-        "autocolorscale": false,
-        "color": "rgba(212,105,94,1)",
-        "line": {
-          "width": 1.8898,
-          "color": "transparent"
-        }
+      "error_y": {
+        "color": "rgba(255,127,14,1)"
       },
-      "name": "disney_marvel",
-      "legendgroup": "disney_marvel",
-      "showlegend": true,
-      "xaxis": "x",
-      "yaxis": "y",
-      "hoverinfo": "text",
-      "frame": null
-    },
-    {
-      "orientation": "h",
-      "width": [0.65, 0.65, 0.65, 0.65, 0.65, 0.65, 0.65, 0.65, 0.65, 0.65, 0.65],
-      "base": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-      "x": [49.021, 44.396, 36.256, 28.715, 22.664, 19.735, 18.472, 15.923, 15.92, 9.741, 9.054],
-      "y": [13, 12, 11, 10, 9, 8, 6, 4, 3, 2, 1],
-      "text": ["owners: Nintendo<br />total_revenue:  49.021<br />disney_flag: other", "owners: DC Entertainment (AT&T)<br />total_revenue:  44.396<br />disney_flag: other", "owners: Shueisha (Hitotsubashi Group)<br />total_revenue:  36.256<br />disney_flag: other", "owners: Nickelodeon (Viacom)<br />total_revenue:  28.715<br />disney_flag: other", "owners: Square Enix<br />total_revenue:  22.664<br />disney_flag: other", "owners: Viacom<br />total_revenue:  19.735<br />disney_flag: other", "owners: Warner Bros. (AT&T)<br />total_revenue:  18.472<br />disney_flag: other", "owners: Capcom<br />total_revenue:  15.923<br />disney_flag: other", "owners: Shueisha (Hitotsubashi Group) Pierrot<br />total_revenue:  15.920<br />disney_flag: other", "owners: Universal Pictures (Comcast)<br />total_revenue:   9.741<br />disney_flag: other", "owners: American Greetings<br />total_revenue:   9.054<br />disney_flag: other"],
-      "type": "bar",
-      "textposition": "none",
-      "marker": {
-        "autocolorscale": false,
-        "color": "rgba(44,62,107,1)",
-        "line": {
-          "width": 1.8898,
-          "color": "transparent"
-        }
+      "error_x": {
+        "color": "rgba(255,127,14,1)"
       },
-      "name": "other",
-      "legendgroup": "other",
-      "showlegend": true,
-      "xaxis": "x",
-      "yaxis": "y",
-      "hoverinfo": "text",
-      "frame": null
-    },
-    {
-      "x": [258.952],
-      "y": [14],
-      "text": "$259B",
-      "hovertext": "owners: The Walt Disney Company<br />total_revenue: 258.952<br />disney_flag: disney_direct",
-      "textfont": {
-        "size": 12.0945,
-        "color": "rgba(28,28,30,1)"
+      "line": {
+        "color": "rgba(255,127,14,1)"
       },
-      "type": "scatter",
-      "mode": "text",
-      "hoveron": "points",
-      "name": "disney_direct",
-      "legendgroup": "disney_direct",
-      "showlegend": false,
       "xaxis": "x",
       "yaxis": "y",
-      "hoverinfo": "text",
-      "frame": null
-    },
-    {
-      "x": [16.527],
-      "y": [5],
-      "text": "$17B",
-      "hovertext": "owners: 20th Century Fox (The Walt Disney Company)<br />total_revenue:  16.527<br />disney_flag: disney_fox",
-      "textfont": {
-        "size": 12.0945,
-        "color": "rgba(28,28,30,1)"
-      },
-      "type": "scatter",
-      "mode": "text",
-      "hoveron": "points",
-      "name": "disney_fox",
-      "legendgroup": "disney_fox",
-      "showlegend": false,
-      "xaxis": "x",
-      "yaxis": "y",
-      "hoverinfo": "text",
-      "frame": null
-    },
-    {
-      "x": [19.623],
-      "y": [7],
-      "text": "$20B",
-      "hovertext": "owners: Marvel Entertainment (The Walt Disney Company)<br />total_revenue:  19.623<br />disney_flag: disney_marvel",
-      "textfont": {
-        "size": 12.0945,
-        "color": "rgba(28,28,30,1)"
-      },
-      "type": "scatter",
-      "mode": "text",
-      "hoveron": "points",
-      "name": "disney_marvel",
-      "legendgroup": "disney_marvel",
-      "showlegend": false,
-      "xaxis": "x",
-      "yaxis": "y",
-      "hoverinfo": "text",
-      "frame": null
-    },
-    {
-      "x": [49.021, 44.396, 36.256, 28.715, 22.664, 19.735, 18.472, 15.923, 15.92, 9.741, 9.054],
-      "y": [13, 12, 11, 10, 9, 8, 6, 4, 3, 2, 1],
-      "text": ["$49B", "$44B", "$36B", "$29B", "$23B", "$20B", "$18B", "$16B", "$16B", "$10B", "$9B"],
-      "hovertext": ["owners: Nintendo<br />total_revenue:  49.021<br />disney_flag: other", "owners: DC Entertainment (AT&T)<br />total_revenue:  44.396<br />disney_flag: other", "owners: Shueisha (Hitotsubashi Group)<br />total_revenue:  36.256<br />disney_flag: other", "owners: Nickelodeon (Viacom)<br />total_revenue:  28.715<br />disney_flag: other", "owners: Square Enix<br />total_revenue:  22.664<br />disney_flag: other", "owners: Viacom<br />total_revenue:  19.735<br />disney_flag: other", "owners: Warner Bros. (AT&T)<br />total_revenue:  18.472<br />disney_flag: other", "owners: Capcom<br />total_revenue:  15.923<br />disney_flag: other", "owners: Shueisha (Hitotsubashi Group) Pierrot<br />total_revenue:  15.920<br />disney_flag: other", "owners: Universal Pictures (Comcast)<br />total_revenue:   9.741<br />disney_flag: other", "owners: American Greetings<br />total_revenue:   9.054<br />disney_flag: other"],
-      "textfont": {
-        "size": 12.0945,
-        "color": "rgba(28,28,30,1)"
-      },
-      "type": "scatter",
-      "mode": "text",
-      "hoveron": "points",
-      "name": "other",
-      "legendgroup": "other",
-      "showlegend": false,
-      "xaxis": "x",
-      "yaxis": "y",
-      "hoverinfo": "text",
       "frame": null
     }
   ],
   "layout": {
     "margin": {
-      "t": 90,
-      "r": 60,
-      "b": 70,
-      "l": 200
-    },
-    "plot_bgcolor": "#F2F0EB",
-    "paper_bgcolor": "#F2F0EB",
-    "font": {
-      "family": "Helvetica",
-      "color": "#1C1C1E"
-    },
-    "title": {
-      "text": "THREE OF THESE BARS BELONG TO <span style='color:#C0392B'><b>THE SAME COMPANY<\/b><\/span>",
-      "font": {
-        "family": "Helvetica",
-        "size": 16,
-        "color": "#1C1C1E"
-      },
-      "x": 0,
-      "xanchor": "left"
+      "b": 40,
+      "l": 60,
+      "t": 25,
+      "r": 10
     },
     "xaxis": {
       "domain": [0, 1],
       "automargin": true,
-      "type": "linear",
-      "autorange": false,
-      "range": [0, 315.9214],
-      "tickmode": "array",
-      "ticktext": ["$0B", "$100B", "$200B", "$300B"],
-      "tickvals": [0, 100, 200, 300],
-      "categoryorder": "array",
-      "categoryarray": ["$0B", "$100B", "$200B", "$300B"],
-      "nticks": null,
-      "ticks": "",
-      "tickcolor": null,
-      "ticklen": 3.653,
-      "tickwidth": 0,
-      "showticklabels": true,
-      "tickfont": {
-        "color": "rgba(107,107,107,1)",
-        "family": "Helvetica",
-        "size": 11.9552
-      },
-      "tickangle": -0,
-      "showline": false,
-      "linecolor": null,
-      "linewidth": 0,
-      "showgrid": true,
-      "gridcolor": "rgba(213,213,213,1)",
-      "gridwidth": 0.5313,
-      "zeroline": false,
-      "anchor": "y",
-      "title": {
-        "text": "<b> Total Revenue (Billions USD) <\/b>",
-        "font": {
-          "color": "rgba(28,28,30,1)",
-          "family": "Helvetica",
-          "size": 13.2835
-        }
-      },
-      "hoverformat": ".2f"
+      "title": "total_revenue"
     },
     "yaxis": {
       "domain": [0, 1],
       "automargin": true,
-      "type": "linear",
-      "autorange": false,
-      "range": [0.4, 14.6],
-      "tickmode": "array",
-      "ticktext": ["American Greetings", "Universal Pictures (Comcast)", "Shueisha (Hitotsubashi Group) Pierrot", "Capcom", "20th Century Fox (The Walt Disney Company)", "Warner Bros. (AT&T)", "Marvel Entertainment (The Walt Disney Company)", "Viacom", "Square Enix", "Nickelodeon (Viacom)", "Shueisha (Hitotsubashi Group)", "DC Entertainment (AT&T)", "Nintendo", "The Walt Disney Company"],
-      "tickvals": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+      "title": "owners",
+      "type": "category",
       "categoryorder": "array",
-      "categoryarray": ["American Greetings", "Universal Pictures (Comcast)", "Shueisha (Hitotsubashi Group) Pierrot", "Capcom", "20th Century Fox (The Walt Disney Company)", "Warner Bros. (AT&T)", "Marvel Entertainment (The Walt Disney Company)", "Viacom", "Square Enix", "Nickelodeon (Viacom)", "Shueisha (Hitotsubashi Group)", "DC Entertainment (AT&T)", "Nintendo", "The Walt Disney Company"],
-      "nticks": null,
-      "ticks": "",
-      "tickcolor": null,
-      "ticklen": 3.653,
-      "tickwidth": 0,
-      "showticklabels": true,
-      "tickfont": {
-        "color": "rgba(107,107,107,1)",
-        "family": "Helvetica",
-        "size": 11.9552
-      },
-      "tickangle": -0,
-      "showline": false,
-      "linecolor": null,
-      "linewidth": 0,
-      "showgrid": true,
-      "gridcolor": "rgba(213,213,213,1)",
-      "gridwidth": 0.5313,
-      "zeroline": false,
-      "anchor": "x",
-      "title": {
-        "text": "<b>  <\/b>",
-        "font": {
-          "color": "rgba(28,28,30,1)",
-          "family": "Helvetica",
-          "size": 13.2835
-        }
-      },
-      "hoverformat": ".2f"
-    },
-    "shapes": [
-      {
-        "type": "rect",
-        "fillcolor": null,
-        "line": {
-          "color": null,
-          "width": 0,
-          "linetype": []
-        },
-        "yref": "paper",
-        "xref": "paper",
-        "x0": 0,
-        "x1": 1,
-        "y0": 0,
-        "y1": 1
-      }
-    ],
-    "showlegend": true,
-    "legend": {
-      "bgcolor": "#F2F0EB",
-      "font": {
-        "color": "#6B6B6B",
-        "size": 10
-      },
-      "title": {
-        "text": "Category",
-        "font": {
-          "color": "#1C1C1E",
-          "size": 11
-        }
-      }
+      "categoryarray": ["American Greetings", "Universal Pictures (Comcast)", "Shueisha (Hitotsubashi Group) Pierrot", "Capcom", "20th Century Fox (The Walt Disney Company)", "Warner Bros. (AT&T)", "Marvel Entertainment (The Walt Disney Company)", "Viacom", "Square Enix", "Nickelodeon (Viacom)", "Shueisha (Hitotsubashi Group)", "DC Entertainment (AT&T)", "Nintendo", "The Walt Disney Company"]
     },
     "hovermode": "closest",
-    "barmode": "relative",
-    "annotations": [
-      {
-        "text": "MARVEL ENTERTAINMENT AND 20TH CENTURY FOX APPEAR AS SEPARATE COMPETITORS — BOTH ARE WHOLLY OWNED BY DISNEY",
-        "x": 0,
-        "y": 1.08,
-        "xref": "paper",
-        "yref": "paper",
-        "xanchor": "left",
-        "yanchor": "bottom",
-        "showarrow": false,
-        "font": {
-          "size": 11,
-          "color": "#6B6B6B",
-          "family": "Helvetica"
-        }
-      },
-      {
-        "x": 266.7206,
-        "y": 14,
-        "text": "$259B",
-        "xanchor": "left",
-        "yanchor": "middle",
-        "showarrow": false,
-        "font": {
-          "size": 11,
-          "color": "#1C1C1E",
-          "family": "Helvetica"
-        }
-      },
-      {
-        "x": 50.4916,
-        "y": 13,
-        "text": "$49B",
-        "xanchor": "left",
-        "yanchor": "middle",
-        "showarrow": false,
-        "font": {
-          "size": 11,
-          "color": "#1C1C1E",
-          "family": "Helvetica"
-        }
-      },
-      {
-        "x": 45.7279,
-        "y": 12,
-        "text": "$44B",
-        "xanchor": "left",
-        "yanchor": "middle",
-        "showarrow": false,
-        "font": {
-          "size": 11,
-          "color": "#1C1C1E",
-          "family": "Helvetica"
-        }
-      },
-      {
-        "x": 37.3437,
-        "y": 11,
-        "text": "$36B",
-        "xanchor": "left",
-        "yanchor": "middle",
-        "showarrow": false,
-        "font": {
-          "size": 11,
-          "color": "#1C1C1E",
-          "family": "Helvetica"
-        }
-      },
-      {
-        "x": 29.5765,
-        "y": 10,
-        "text": "$29B",
-        "xanchor": "left",
-        "yanchor": "middle",
-        "showarrow": false,
-        "font": {
-          "size": 11,
-          "color": "#1C1C1E",
-          "family": "Helvetica"
-        }
-      },
-      {
-        "x": 23.3439,
-        "y": 9,
-        "text": "$23B",
-        "xanchor": "left",
-        "yanchor": "middle",
-        "showarrow": false,
-        "font": {
-          "size": 11,
-          "color": "#1C1C1E",
-          "family": "Helvetica"
-        }
-      },
-      {
-        "x": 20.327,
-        "y": 8,
-        "text": "$20B",
-        "xanchor": "left",
-        "yanchor": "middle",
-        "showarrow": false,
-        "font": {
-          "size": 11,
-          "color": "#1C1C1E",
-          "family": "Helvetica"
-        }
-      },
-      {
-        "x": 20.2117,
-        "y": 7,
-        "text": "$20B",
-        "xanchor": "left",
-        "yanchor": "middle",
-        "showarrow": false,
-        "font": {
-          "size": 11,
-          "color": "#1C1C1E",
-          "family": "Helvetica"
-        }
-      },
-      {
-        "x": 19.0262,
-        "y": 6,
-        "text": "$18B",
-        "xanchor": "left",
-        "yanchor": "middle",
-        "showarrow": false,
-        "font": {
-          "size": 11,
-          "color": "#1C1C1E",
-          "family": "Helvetica"
-        }
-      },
-      {
-        "x": 17.0228,
-        "y": 5,
-        "text": "$17B",
-        "xanchor": "left",
-        "yanchor": "middle",
-        "showarrow": false,
-        "font": {
-          "size": 11,
-          "color": "#1C1C1E",
-          "family": "Helvetica"
-        }
-      },
-      {
-        "x": 16.4007,
-        "y": 4,
-        "text": "$16B",
-        "xanchor": "left",
-        "yanchor": "middle",
-        "showarrow": false,
-        "font": {
-          "size": 11,
-          "color": "#1C1C1E",
-          "family": "Helvetica"
-        }
-      },
-      {
-        "x": 16.3976,
-        "y": 3,
-        "text": "$16B",
-        "xanchor": "left",
-        "yanchor": "middle",
-        "showarrow": false,
-        "font": {
-          "size": 11,
-          "color": "#1C1C1E",
-          "family": "Helvetica"
-        }
-      },
-      {
-        "x": 10.0332,
-        "y": 2,
-        "text": "$10B",
-        "xanchor": "left",
-        "yanchor": "middle",
-        "showarrow": false,
-        "font": {
-          "size": 11,
-          "color": "#1C1C1E",
-          "family": "Helvetica"
-        }
-      },
-      {
-        "x": 9.3256,
-        "y": 1,
-        "text": "$9B",
-        "xanchor": "left",
-        "yanchor": "middle",
-        "showarrow": false,
-        "font": {
-          "size": 11,
-          "color": "#1C1C1E",
-          "family": "Helvetica"
-        }
-      }
-    ],
-    "width": 1000,
-    "height": 800
+    "showlegend": false
   },
   "config": {
     "displayModeBar": true,
     "displaylogo": false,
     "responsive": true,
-    "modeBarButtonsToRemove": ["lasso2d", "select2d"]
+    "scrollZoom": false,
+    "modeBarButtonsToRemove": ["lasso2d", "select2d", "zoom2d", "pan2d", "select2d", "autoScale2d"]
   }
 }
