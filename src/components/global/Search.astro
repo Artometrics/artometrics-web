@@ -39,6 +39,7 @@ items.unshift({
 });
 
 const suggestions = items.slice(0, 6);
+const searchPayload = JSON.stringify({ items, suggestions });
 ---
 
 <div class="relative">
@@ -46,6 +47,8 @@ const suggestions = items.slice(0, 6);
     type="button"
     id="searchButton"
     aria-label="Search (Ctrl+K)"
+    aria-controls="searchModal"
+    aria-expanded="false"
     class="inline-flex items-center gap-2 rounded-md border border-base-200 px-3 py-2 text-xs font-medium uppercase tracking-widest text-base-900 transition-colors hover:border-accent-400 hover:text-accent-700"
   >
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -58,22 +61,23 @@ const suggestions = items.slice(0, 6);
       class="hidden rounded border border-base-200 bg-base-50 px-1.5 py-0.5 text-[10px] font-normal text-base-500 lg:inline"
     >⌘K</kbd>
   </button>
+
   <div
     id="searchModal"
-    class="fixed inset-0 z-[100] hidden overflow-y-auto"
+    class="site-search-modal fixed inset-0 z-[10050] hidden overflow-y-auto"
     role="dialog"
     aria-modal="true"
     aria-labelledby="searchDialogTitle"
   >
     <div class="flex min-h-screen items-start justify-center px-4 py-16 sm:py-24">
       <div
-        class="fixed inset-0 bg-base-950/55 backdrop-blur-sm transition-opacity"
+        class="site-search-overlay fixed inset-0 z-0 bg-base-950/55 backdrop-blur-sm"
         id="modalOverlay"
       ></div>
       <div
-        class="relative w-full max-w-2xl overflow-hidden rounded-lg border border-base-200 bg-white shadow-2xl"
+        class="site-search-panel relative z-10 w-full max-w-2xl overflow-hidden rounded-lg border border-base-200 bg-white shadow-2xl"
       >
-        <div class="flex items-center gap-3 border-b border-base-200 px-4 py-3">
+        <div class="site-search-input-row flex items-center gap-3 border-b border-base-200 px-4 py-3">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" class="shrink-0 text-base-400" aria-hidden="true">
             <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.75"/>
             <path d="M20 20l-3.5-3.5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
@@ -84,7 +88,8 @@ const suggestions = items.slice(0, 6);
             id="searchInput"
             placeholder="Search articles and podcast episodes…"
             autocomplete="off"
-            class="h-10 w-full border-0 bg-transparent text-sm text-base-900 placeholder-base-400 focus:outline-none focus:ring-0"
+            enterkeyhint="search"
+            class="site-search-input h-10 w-full border-0 bg-transparent text-sm text-base-900 placeholder-base-400 shadow-none ring-0 outline-none focus:border-0 focus:outline-none focus:ring-0 focus-visible:outline-none"
           />
           <button
             type="button"
@@ -97,147 +102,52 @@ const suggestions = items.slice(0, 6);
         </div>
         <div
           id="searchResults"
-          class="max-h-[min(60vh,28rem)] overflow-y-auto divide-y divide-base-100"
-        ></div>
+          class="site-search-results max-h-[min(60vh,28rem)] overflow-y-auto divide-y divide-base-100"
+        >
+          <p class="px-4 pt-4 text-[10px] font-semibold uppercase tracking-widest text-base-400">
+            Recent
+          </p>
+          {
+            suggestions.map((item, index) => (
+              <a
+                href={item.href}
+                data-index={index}
+                class="search-result block px-4 py-4 transition-colors hover:bg-base-50 focus:bg-base-50 outline-none focus-visible:outline-none"
+              >
+                <p class="text-[10px] font-semibold uppercase tracking-widest text-accent-700">
+                  {item.typeLabel || item.type || "Page"}
+                </p>
+                <h3 class="mt-1 text-sm font-semibold leading-snug text-base-900">{item.title}</h3>
+                <p class="mt-1 line-clamp-2 text-xs leading-relaxed text-base-500">
+                  {item.description}
+                </p>
+              </a>
+            ))
+          }
+        </div>
       </div>
     </div>
   </div>
 </div>
-<script is:inline define:vars={{ items, suggestions }}>
-  window.addEventListener("load", () => {
-    const searchButton = document.getElementById("searchButton");
-    const searchModal = document.getElementById("searchModal");
-    const modalOverlay = document.getElementById("modalOverlay");
-    const searchInput = document.getElementById("searchInput");
-    const searchResults = document.getElementById("searchResults");
-    const closeSearch = document.getElementById("closeSearch");
-    const searchKbd = document.getElementById("searchKbd");
-    const isMac = /Mac|iPhone|iPad/i.test(navigator.platform || "");
-    if (searchKbd) searchKbd.textContent = isMac ? "⌘K" : "Ctrl+K";
-    if (searchButton) {
-      searchButton.setAttribute("aria-label", `Search (${isMac ? "Command" : "Control"}+K)`);
+
+<script id="site-search-data" type="application/json" set:html={searchPayload} />
+<script>
+  import { initSiteSearch } from "@/scripts/site-search";
+
+  function bootSearch() {
+    const dataEl = document.getElementById("site-search-data");
+    if (!dataEl?.textContent) return;
+    try {
+      const payload = JSON.parse(dataEl.textContent);
+      initSiteSearch(payload);
+    } catch (error) {
+      console.error("Artometrics search failed to initialize:", error);
     }
+  }
 
-    const fuse = new Fuse(items, {
-      keys: ["title", "description", "typeLabel", "tags", "slug"],
-      threshold: 0.32,
-      includeMatches: true,
-    });
-
-    let activeIndex = -1;
-    let currentLinks = [];
-
-    function resultHtml(item, index) {
-      return `
-        <a href="${item.href}" data-index="${index}" class="search-result block px-4 py-4 transition-colors hover:bg-base-50 focus:bg-base-50 outline-none">
-          <p class="text-[10px] font-semibold uppercase tracking-widest text-accent-700">
-            ${item.typeLabel || item.type}
-          </p>
-          <h3 class="mt-1 text-sm font-semibold leading-snug text-base-900">${item.title}</h3>
-          <p class="mt-1 line-clamp-2 text-xs leading-relaxed text-base-500">${item.description}</p>
-        </a>
-      `;
-    }
-
-    function renderSuggestions() {
-      activeIndex = -1;
-      currentLinks = [];
-      searchResults.innerHTML = `
-        <p class="px-4 pt-4 text-[10px] font-semibold uppercase tracking-widest text-base-400">Recent</p>
-        ${suggestions.map((item, i) => resultHtml(item, i)).join("")}
-      `;
-      currentLinks = Array.from(searchResults.querySelectorAll(".search-result"));
-    }
-
-    function renderResults(results) {
-      if (!searchInput.value.trim()) {
-        renderSuggestions();
-        return;
-      }
-      if (results.length === 0) {
-        activeIndex = -1;
-        currentLinks = [];
-        searchResults.innerHTML =
-          '<p class="p-6 text-center text-sm text-base-500">No matches — try a desk name, topic, or author.</p>';
-        return;
-      }
-      activeIndex = -1;
-      searchResults.innerHTML = results
-        .slice(0, 12)
-        .map((result, i) => resultHtml(result.item, i))
-        .join("");
-      currentLinks = Array.from(searchResults.querySelectorAll(".search-result"));
-    }
-
-    function highlightActive() {
-      currentLinks.forEach((link, i) => {
-        link.classList.toggle("bg-base-50", i === activeIndex);
-        link.classList.toggle("ring-2", i === activeIndex);
-        link.classList.toggle("ring-inset", i === activeIndex);
-        link.classList.toggle("ring-accent-300", i === activeIndex);
-      });
-      if (activeIndex >= 0 && currentLinks[activeIndex]) {
-        currentLinks[activeIndex].scrollIntoView({ block: "nearest" });
-      }
-    }
-
-    function openSearch(e) {
-      if (e) {
-        e.preventDefault();
-        e.stopPropagation();
-      }
-      searchModal.classList.remove("hidden");
-      document.body.style.overflow = "hidden";
-      renderSuggestions();
-      setTimeout(() => searchInput.focus(), 50);
-    }
-
-    function closeSearchModal(e) {
-      if (e) {
-        e.preventDefault();
-        e.stopPropagation();
-      }
-      searchModal.classList.add("hidden");
-      document.body.style.overflow = "";
-      searchInput.value = "";
-      searchResults.innerHTML = "";
-      activeIndex = -1;
-    }
-
-    searchButton?.addEventListener("click", openSearch);
-    closeSearch?.addEventListener("click", closeSearchModal);
-    modalOverlay?.addEventListener("click", closeSearchModal);
-    searchInput?.addEventListener("input", (e) => {
-      const value = e.target.value.trim();
-      renderResults(value ? fuse.search(value) : []);
-    });
-
-    searchInput?.addEventListener("keydown", (e) => {
-      if (!currentLinks.length) return;
-      if (e.key === "ArrowDown") {
-        e.preventDefault();
-        activeIndex = Math.min(activeIndex + 1, currentLinks.length - 1);
-        highlightActive();
-      } else if (e.key === "ArrowUp") {
-        e.preventDefault();
-        activeIndex = Math.max(activeIndex - 1, 0);
-        highlightActive();
-      } else if (e.key === "Enter" && activeIndex >= 0) {
-        e.preventDefault();
-        currentLinks[activeIndex].click();
-      }
-    });
-
-    document.addEventListener("keydown", (e) => {
-      const mod = e.metaKey || e.ctrlKey;
-      if (mod && e.key.toLowerCase() === "k") {
-        e.preventDefault();
-        if (searchModal.classList.contains("hidden")) openSearch();
-        else closeSearchModal();
-      }
-      if (e.key === "Escape" && !searchModal.classList.contains("hidden")) {
-        closeSearchModal();
-      }
-    });
-  });
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", bootSearch, { once: true });
+  } else {
+    bootSearch();
+  }
 </script>
