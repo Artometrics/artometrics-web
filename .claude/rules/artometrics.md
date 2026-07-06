@@ -1,0 +1,9 @@
+# Artometrics — global rules
+
+- **Imports:** Use the `@/` alias for `src/` (e.g. `@/layouts/BaseLayout.astro`, `@/components/fundations/...`). Match existing patterns in this repo.
+- **`fundations` spelling:** The directory is `src/components/fundations/`. Never rename it to “foundations”; path and imports will break.
+- **Scope:** Keep changes minimal and localized. No drive-by refactors or unrelated files.
+- **Dependencies:** Do not add packages or features not requested; only use what appears in `package.json` unless the user explicitly asks to add one.
+- **Layouts:** Most pages use `BaseLayout`; blog/podcast/author/legal pages use their respective layouts (`BlogLayout`, `PodcastLayout`, `AuthorsLayout`, `LegalLayout`), which wrap `BaseLayout`.
+- **Branding:** Public-facing copy, legal pages, and project docs should use **Artometrics** — not Lexington/Hemingway theme demo text.
+- **Publisher docs:** Site and contributor documentation live in the root `README.md` and `AGENTS.md`.
