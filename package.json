@@ -15,6 +15,7 @@
     "scaffold:repo": "node scripts/scaffold-article-repo.mjs",
     "upgrade:repos": "node scripts/upgrade-article-repos.mjs",
     "render:readmitted": "Rscript scripts/render-readmitted-charts.R",
+    "render:franchise": "Rscript scripts/render-franchise-charts.R",
     "render:readmitted:py": "python3 scripts/render-readmitted-charts.py",
     "setup:r": "Rscript scripts/install-r-deps.R",
     "setup:python": "pip3 install -r requirements.txt"
