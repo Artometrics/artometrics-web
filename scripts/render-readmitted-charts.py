@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Export readmitted charts as PNG + Plotly JSON for repo and site."""
+"""Export readmitted charts as PNG + Plotly JSON (FRBSF-style academic palette)."""
 
 from __future__ import annotations
 
@@ -14,127 +14,109 @@ REPO = ROOT / ".cache/article-repos/readmitted"
 SITE_DATA = ROOT / "public/data/articles/readmitted/charts"
 SITE_IMG = ROOT / "public/images/content/articles/readmitted/charts"
 
-ART_CREAM = "#F2F0EB"
-ART_DARK = "#1C1C1E"
-ART_HIGHLIGHT = "#00FF88"
-ART_SECONDARY = "#059669"
-ART_MID = "#6B6B6B"
-ART_MUTED = "#D5D5D5"
-FONT = "DM Sans, Helvetica, Arial, sans-serif"
+# FRBSF-style academic palette
+FED_PRIMARY = "#1D4E77"
+FED_OLIVE = "#8B9A46"
+FED_RED = "#A52A2A"
+FED_CYAN = "#7BC0D3"
+FED_GREY_TEXT = "#666666"
+FED_GRID = "#E0E0E0"
+FED_BG = "#FFFFFF"
+FED_MUTED_BLUE = "#B8C9D9"
+FED_DARK = "#333333"
+
+FONT = "Helvetica, Arial, sans-serif"
 
 BAR_GRADIENT = [
-    "#022C22",
-    "#064E3B",
-    "#065F46",
-    "#047857",
-    "#059669",
-    "#10B981",
-    "#34D399",
-    "#6EE7B7",
-    "#86EFAC",
-    "#00FF88",
+    "#B8C9D9",
+    "#8FAFC4",
+    "#6B95AF",
+    "#4D7B9A",
+    "#356283",
+    "#2A5575",
+    "#1D4E77",
+    "#1A4569",
+    "#173C5B",
+    "#14334D",
 ]
 
 TIER_COLORS = {
-    "No Penalty": "#064E3B",
-    "Low": "#10B981",
-    "Medium": "#34D399",
-    "High": "#00FF88",
+    "No Penalty": FED_MUTED_BLUE,
+    "Low": FED_CYAN,
+    "Medium": FED_OLIVE,
+    "High": FED_RED,
 }
 
 NAT_AVG_PCT = 48.1
-WORDMARK_FONT = "Georgia, Times New Roman, serif"
+HRRP_SOURCE = (
+    "CMS Hospital Readmissions Reduction Program (HRRP), "
+    "FY2025 supplemental data (Dataset 9n3s-kdb3)"
+)
 
 
-def brand_annotation() -> dict:
-    return dict(
-        x=0.99,
-        y=0.01,
-        xref="paper",
-        yref="paper",
-        text="Artometrics",
-        showarrow=False,
-        xanchor="right",
-        yanchor="bottom",
-        font=dict(family=WORDMARK_FONT, size=11, color=ART_MID),
+def fed_figure_title(figure_num: int, title: str) -> str:
+    return (
+        f"<span style='color:{FED_GREY_TEXT};font-size:11px;font-weight:normal;'>"
+        f"Figure {figure_num}</span><br>"
+        f"<span style='color:{FED_PRIMARY};font-size:16px;font-weight:bold;'>{title}</span>"
     )
 
 
-def takeaway_strip(takeaway: str) -> tuple[list[dict], list[dict]]:
-    """Economist-style red header band + supporting layout offsets."""
-    shapes = [
-        dict(
-            type="rect",
-            xref="paper",
-            yref="paper",
-            x0=0,
-            x1=1,
-            y0=1.0,
-            y1=1.12,
-            fillcolor=ART_HIGHLIGHT,
-            line=dict(width=0),
-            layer="below",
-        )
-    ]
-    annotations = [
-        dict(
-            x=0.02,
-            y=1.06,
-            xref="paper",
-            yref="paper",
-            text=f"<span style='color:#FFFFFF;font-size:11px'>{takeaway}</span>",
-            showarrow=False,
-            xanchor="left",
-            yanchor="middle",
-            font=dict(family=FONT, size=11, color="#FFFFFF"),
-        )
-    ]
-    return shapes, annotations
+def fed_caption(note: str, source: str) -> str:
+    return f"<span style='color:{FED_GREY_TEXT};font-size:10px;'>Note: {note}<br>Source: {source}</span>"
 
 
-def base_layout(title: str, subtitle: str = "", takeaway: str = "", **kwargs) -> dict:
-    strip_shapes: list[dict] = []
-    strip_annotations: list[dict] = []
-    top_margin = 96 if takeaway else 72
-    if takeaway:
-        strip_shapes, strip_annotations = takeaway_strip(takeaway)
-        top_margin = 118
-
+def base_layout(
+    figure_num: int,
+    title: str,
+    note: str,
+    source: str = HRRP_SOURCE,
+    **kwargs,
+) -> dict:
     layout = dict(
         title=dict(
-            text=title,
+            text=fed_figure_title(figure_num, title),
             x=0,
             xanchor="left",
             y=0.98,
             yanchor="top",
-            font=dict(family=FONT, size=16, color=ART_DARK),
         ),
-        paper_bgcolor=ART_CREAM,
-        plot_bgcolor=ART_CREAM,
-        font=dict(color=ART_DARK, family=FONT, size=12),
-        margin=dict(l=88, r=48, t=top_margin if not subtitle else top_margin + 16, b=72),
-        annotations=[*strip_annotations, brand_annotation()],
-        shapes=strip_shapes,
+        paper_bgcolor=FED_BG,
+        plot_bgcolor=FED_BG,
+        font=dict(color=FED_DARK, family=FONT, size=12),
+        margin=dict(l=88, r=56, t=96, b=110),
+        annotations=[],
     )
-    if subtitle:
-        layout["annotations"].insert(
-            len(strip_annotations),
-            dict(
-                x=0,
-                y=1.0,
-                xref="paper",
-                yref="paper",
-                text=subtitle,
-                showarrow=False,
-                xanchor="left",
-                yanchor="bottom",
-                font=dict(family=FONT, size=11, color=ART_MID),
-            ),
-        )
-    extra_shapes = kwargs.pop("shapes", [])
-    layout["shapes"] = [*layout.get("shapes", []), *extra_shapes]
+
     extra_annotations = kwargs.pop("annotations", [])
-    layout["annotations"] = [*layout["annotations"], *extra_annotations]
+    layout["annotations"] = [
+        dict(
+            x=0.01,
+            y=0.03,
+            xref="paper",
+            yref="paper",
+            text=fed_caption(note, source),
+            showarrow=False,
+            xanchor="left",
+            yanchor="bottom",
+            align="left",
+        ),
+        dict(
+            x=0.99,
+            y=0.03,
+            xref="paper",
+            yref="paper",
+            text="ARTOMETRICS",
+            showarrow=False,
+            xanchor="right",
+            yanchor="bottom",
+            font=dict(family=FONT, size=12, color="#1C1C1E"),
+        ),
+        *extra_annotations,
+    ]
+
+    extra_shapes = kwargs.pop("shapes", [])
+    layout["shapes"] = extra_shapes
     layout.update(kwargs)
     return layout
 
@@ -153,10 +135,14 @@ def save_chart(fig: go.Figure, name: str) -> None:
 def chart1(state_df: pd.DataFrame) -> go.Figure:
     df = state_df[state_df["above_nat_avg"]].sort_values("pct_penalized")
     n = len(df)
-    colors = BAR_GRADIENT[:n] if n <= len(BAR_GRADIENT) else BAR_GRADIENT
-    if n > len(BAR_GRADIENT):
-        colors = [BAR_GRADIENT[int(i * (len(BAR_GRADIENT) - 1) / max(n - 1, 1))] for i in range(n)]
-    colors[-1] = ART_HIGHLIGHT  # leader NJ
+    if n <= len(BAR_GRADIENT):
+        colors = BAR_GRADIENT[:n]
+    else:
+        colors = [
+            BAR_GRADIENT[int(i * (len(BAR_GRADIENT) - 1) / max(n - 1, 1))]
+            for i in range(n)
+        ]
+    colors[-1] = FED_RED
 
     fig = go.Figure(
         go.Bar(
@@ -166,7 +152,7 @@ def chart1(state_df: pd.DataFrame) -> go.Figure:
             marker=dict(color=colors, line=dict(width=0)),
             text=[f"{v:.1f}%" for v in df["pct_penalized"]],
             textposition="outside",
-            textfont=dict(family=FONT, size=10, color=ART_DARK),
+            textfont=dict(family=FONT, size=10, color=FED_DARK),
             cliponaxis=False,
             hovertemplate="<b>%{y}</b><br>%{x:.1f}% of pairs penalized<extra></extra>",
         )
@@ -178,11 +164,11 @@ def chart1(state_df: pd.DataFrame) -> go.Figure:
             y=1.02,
             xref="x",
             yref="paper",
-            text=f"National avg ({NAT_AVG_PCT}%)",
+            text=f"National average ({NAT_AVG_PCT}%)",
             showarrow=False,
             xanchor="center",
             yanchor="bottom",
-            font=dict(family=FONT, size=9, color=ART_SECONDARY),
+            font=dict(family=FONT, size=9, color=FED_OLIVE),
         ),
         dict(
             x=df["pct_penalized"].iloc[-1],
@@ -194,26 +180,37 @@ def chart1(state_df: pd.DataFrame) -> go.Figure:
             arrowhead=2,
             arrowsize=0.8,
             arrowwidth=1,
-            arrowcolor=ART_HIGHLIGHT,
+            arrowcolor=FED_RED,
             ax=40,
             ay=-28,
-            font=dict(family=FONT, size=9, color=ART_HIGHLIGHT),
+            font=dict(family=FONT, size=9, color=FED_RED),
         ),
     ]
 
     fig.update_layout(
         **base_layout(
-            "<b>Which <span style='color:#00FF88;'>States</span> Have the Most Penalized Hospitals?</b>",
-            "Above-average states only — share of hospital-condition pairs with ERR > 1.0",
-            takeaway="Geography isn't destiny — wealthy states lead the penalty list alongside the rural South",
+            1,
+            "States with above-average HRRP penalty exposure",
+            (
+                "Panel shows states where the share of hospital-condition pairs with an "
+                "excess readmission ratio above 1.0 exceeds the 48.1% national average."
+            ),
             xaxis=dict(
-                title="% of Hospital-Condition Pairs with ERR > 1.0",
+                title="Share of hospital-condition pairs with ERR > 1.0 (%)",
                 range=[0, max(df["pct_penalized"]) * 1.14],
-                gridcolor=ART_MUTED,
+                gridcolor=FED_GRID,
                 gridwidth=0.5,
                 zeroline=False,
+                showline=True,
+                linecolor=FED_DARK,
+                linewidth=1,
             ),
-            yaxis=dict(title="", categoryorder="array", categoryarray=list(df["state"])),
+            yaxis=dict(
+                title="",
+                categoryorder="array",
+                categoryarray=list(df["state"]),
+                showgrid=False,
+            ),
             shapes=[
                 dict(
                     type="line",
@@ -222,11 +219,11 @@ def chart1(state_df: pd.DataFrame) -> go.Figure:
                     y0=0,
                     y1=1,
                     yref="paper",
-                    line=dict(color=ART_SECONDARY, dash="dash", width=1.5),
+                    line=dict(color=FED_OLIVE, dash="dash", width=1.5),
                 )
             ],
             annotations=annotations,
-            height=520 + n * 22,
+            height=520 + n * 22 + 80,
         )
     )
     return fig
@@ -248,20 +245,22 @@ def chart2() -> go.Figure:
                 x=[1.0, row["avg_err"]],
                 y=[row["condition"], row["condition"]],
                 mode="lines",
-                line=dict(color=ART_MUTED, width=2),
+                line=dict(color=FED_GRID, width=2),
                 showlegend=False,
                 hoverinfo="skip",
             )
         )
+
+    colors = [FED_RED if c == "Hip/Knee" else FED_PRIMARY for c in df["condition"]]
     fig.add_trace(
         go.Scatter(
             x=df["avg_err"],
             y=df["condition"],
             mode="markers+text",
-            marker=dict(color=ART_HIGHLIGHT, size=12, line=dict(width=1, color=ART_DARK)),
+            marker=dict(color=colors, size=11, line=dict(width=0.5, color=FED_DARK)),
             text=[f"{v:.5f}" for v in df["avg_err"]],
             textposition="middle right",
-            textfont=dict(family=FONT, size=10, color=ART_DARK),
+            textfont=dict(family=FONT, size=10, color=FED_DARK),
             hovertemplate="<b>%{y}</b><br>ERR: %{x:.5f}<extra></extra>",
             showlegend=False,
         )
@@ -278,10 +277,10 @@ def chart2() -> go.Figure:
             arrowhead=2,
             arrowsize=0.8,
             arrowwidth=1,
-            arrowcolor=ART_HIGHLIGHT,
+            arrowcolor=FED_RED,
             ax=55,
             ay=-35,
-            font=dict(family=FONT, size=9, color=ART_HIGHLIGHT),
+            font=dict(family=FONT, size=9, color=FED_RED),
         ),
         dict(
             x=1.0,
@@ -292,23 +291,29 @@ def chart2() -> go.Figure:
             showarrow=False,
             xanchor="center",
             yanchor="bottom",
-            font=dict(family=FONT, size=9, color=ART_MID),
+            font=dict(family=FONT, size=9, color=FED_GREY_TEXT),
         ),
     ]
 
     fig.update_layout(
         **base_layout(
-            "<b>The <span style='color:#00FF88;'>Hip/Knee</span> Problem: ERR by Condition</b>",
-            "All six HRRP conditions exceed 1.0 — but the spread is measured in thousandths",
-            takeaway="Elective joint surgery — not heart attacks — carries the highest excess readmission ratio",
+            2,
+            "Excess readmission ratio by HRRP condition",
+            (
+                "All six tracked conditions exceed the 1.0 benchmark; differences are "
+                "measured in thousandths of a ratio point."
+            ),
             xaxis=dict(
-                title="Average Excess Readmission Ratio (ERR)",
+                title="Average excess readmission ratio (ERR)",
                 range=[0.9998, 1.0055],
                 tickformat=".4f",
-                gridcolor=ART_MUTED,
+                gridcolor=FED_GRID,
                 gridwidth=0.5,
+                showline=True,
+                linecolor=FED_DARK,
+                linewidth=1,
             ),
-            yaxis=dict(title=""),
+            yaxis=dict(title="", showgrid=False),
             shapes=[
                 dict(
                     type="line",
@@ -317,11 +322,11 @@ def chart2() -> go.Figure:
                     y0=0,
                     y1=1,
                     yref="paper",
-                    line=dict(color=ART_DARK, width=1),
+                    line=dict(color=FED_DARK, width=1),
                 )
             ],
             annotations=annotations,
-            height=420,
+            height=500,
         )
     )
     return fig
@@ -359,6 +364,21 @@ def chart3(own_df: pd.DataFrame) -> go.Figure:
     ]["pct"]
     high_pct = float(for_profit_high.iloc[0]) if len(for_profit_high) else 0
 
+    tier_label_x = {"No Penalty": 0.12, "Low": 0.38, "Medium": 0.62, "High": 0.86}
+    tier_annotations = [
+        dict(
+            x=tier_label_x[tier],
+            y=1.06,
+            xref="paper",
+            yref="paper",
+            text=tier,
+            showarrow=False,
+            xanchor="center",
+            font=dict(family=FONT, size=9, color=TIER_COLORS[tier]),
+        )
+        for tier in tier_order
+    ]
+
     annotations = [
         dict(
             x=0.98,
@@ -368,39 +388,39 @@ def chart3(own_df: pd.DataFrame) -> go.Figure:
             text=f"High-tier share: {high_pct:.1%}",
             showarrow=False,
             xanchor="right",
-            font=dict(family=FONT, size=9, color=ART_HIGHLIGHT),
+            font=dict(family=FONT, size=9, color=FED_RED),
         ),
+        *tier_annotations,
     ]
 
     fig.update_layout(
         **base_layout(
-            "<b><span style='color:#00FF88;'>For-Profit</span> Hospitals Carry More Penalty Weight</b>",
-            "Penalty tier distribution by ownership — HCA, Tenet, and Steward sit in the for-profit column",
-            takeaway="For-profits carry more penalty weight, but every ownership type still has a majority in the no-penalty band",
+            3,
+            "HRRP penalty tier distribution by hospital ownership type",
+            (
+                "Stacked shares sum to 100% within each ownership group. Ownership joined "
+                "from CMS Hospital General Information (xubh-q36u)."
+            ),
             barmode="stack",
             xaxis=dict(
-                title="Share of Hospital-Condition Pairs",
+                title="Share of hospital-condition pairs (%)",
                 tickformat=".0%",
                 range=[0, 1],
-                gridcolor=ART_MUTED,
+                gridcolor=FED_GRID,
                 gridwidth=0.5,
+                showline=True,
+                linecolor=FED_DARK,
+                linewidth=1,
             ),
             yaxis=dict(
                 title="",
                 categoryorder="array",
                 categoryarray=ownership_order,
+                showgrid=False,
             ),
-            legend=dict(
-                title=dict(text="Penalty Tier", font=dict(size=10)),
-                orientation="h",
-                yanchor="bottom",
-                y=1.02,
-                xanchor="right",
-                x=1,
-                font=dict(size=10),
-            ),
+            showlegend=False,
             annotations=annotations,
-            height=380,
+            height=460,
         )
     )
     return fig

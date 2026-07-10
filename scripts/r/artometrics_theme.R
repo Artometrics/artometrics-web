@@ -27,6 +27,28 @@ ART_TIER_COLORS <- c(
 
 ART_SOURCE_DEFAULT <- "Source: CMS Hospital Readmissions Reduction Program (HRRP), FY2025 supplemental data"
 
+# Federal Reserve / academic infographic palette (FRBSF-style figures)
+FED_PRIMARY <- "#1D4E77"
+FED_OLIVE <- "#8B9A46"
+FED_RED <- "#A52A2A"
+FED_CYAN <- "#7BC0D3"
+FED_GREY_TEXT <- "#666666"
+FED_GRID <- "#E0E0E0"
+FED_BG <- "#FFFFFF"
+FED_MUTED_BLUE <- "#B8C9D9"
+
+FED_BAR_GRADIENT <- c(
+  "#B8C9D9", "#8FAFC4", "#6B95AF", "#4D7B9A", "#356283",
+  "#2A5575", "#1D4E77", "#1A4569", "#173C5B", "#14334D"
+)
+
+FED_TIER_COLORS <- c(
+  "No Penalty" = FED_MUTED_BLUE,
+  "Low" = FED_CYAN,
+  "Medium" = FED_OLIVE,
+  "High" = FED_RED
+)
+
 #' Register Chomsky wordmark font from repo (showtext)
 art_init_fonts <- function(repo_root = getwd()) {
   chomsky_path <- file.path(repo_root, "src/fonts/Chomsky.otf")
@@ -150,6 +172,119 @@ art_takeaway_grob <- function(takeaway, fill = ART_HIGHLIGHT, width = 12, height
     ggplot2::theme(
       plot.background = ggplot2::element_rect(fill = fill, color = NA),
       plot.margin = ggplot2::margin(6, 10, 6, 10)
+    )
+}
+
+fed_title_element <- function() {
+  if (requireNamespace("ggtext", quietly = TRUE)) {
+    ggtext::element_markdown(
+      color = FED_PRIMARY,
+      face = "bold",
+      size = rel(1.05),
+      margin = margin(b = 10),
+      lineheight = 1.15
+    )
+  } else {
+    element_text(
+      color = FED_PRIMARY,
+      face = "bold",
+      size = rel(1.05),
+      margin = margin(b = 10)
+    )
+  }
+}
+
+fed_figure_title <- function(figure_num, title) {
+  if (requireNamespace("ggtext", quietly = TRUE)) {
+    paste0(
+      "<span style='color:", FED_GREY_TEXT, ";font-size:10pt;font-weight:normal;'>Figure ",
+      figure_num, "</span><br>",
+      "<span style='color:", FED_PRIMARY, ";font-size:13pt;font-weight:bold;'>", title, "</span>"
+    )
+  } else {
+    paste0("Figure ", figure_num, ": ", title)
+  }
+}
+
+fed_caption <- function(note = NULL, source = ART_SOURCE_DEFAULT) {
+  lines <- c()
+  if (!is.null(note) && nzchar(note)) {
+    lines <- c(lines, paste0("Note: ", note))
+  }
+  lines <- c(lines, paste0("Source: ", sub("^Source: ", "", source)))
+  paste(lines, collapse = "\n")
+}
+
+#' FRBSF-style ggplot2 theme — white field, horizontal grid, direct labels
+theme_fed_academic <- function(base_size = 11, grid = c("horizontal", "vertical")) {
+  grid <- match.arg(grid)
+  grid_x <- if (grid == "vertical") element_line(color = FED_GRID, linewidth = 0.35) else element_blank()
+  grid_y <- if (grid == "horizontal") element_line(color = FED_GRID, linewidth = 0.35) else element_blank()
+
+  theme_minimal(base_size = base_size, base_family = "Helvetica") +
+    theme(
+      plot.background = element_rect(fill = FED_BG, color = NA),
+      panel.background = element_rect(fill = FED_BG, color = NA),
+      panel.grid.major.x = grid_x,
+      panel.grid.major.y = grid_y,
+      panel.grid.minor = element_blank(),
+      axis.line = element_line(color = "#333333", linewidth = 0.35),
+      axis.ticks = element_line(color = "#333333", linewidth = 0.3),
+      axis.title = element_text(color = FED_GREY_TEXT, size = rel(0.85)),
+      axis.text = element_text(color = "#333333", size = rel(0.8)),
+      plot.title = fed_title_element(),
+      plot.subtitle = element_blank(),
+      plot.caption = element_text(
+        color = FED_GREY_TEXT,
+        size = rel(0.68),
+        hjust = 0,
+        lineheight = 1.2,
+        margin = margin(t = 14)
+      ),
+      legend.position = "none",
+      legend.title = element_text(color = FED_PRIMARY, face = "bold", size = rel(0.78)),
+      legend.text = element_text(color = FED_GREY_TEXT, size = rel(0.75)),
+      strip.text = element_text(face = "bold", color = FED_PRIMARY)
+    )
+}
+
+fed_wordmark <- function(label = "ARTOMETRICS") {
+  annotate(
+    "text",
+    x = Inf, y = -Inf,
+    label = label,
+    hjust = 1.02, vjust = -0.35,
+    size = 3.6,
+    color = "#1C1C1E",
+    fontface = "bold",
+    family = "Helvetica"
+  )
+}
+
+#' Finish chart in FRBSF academic style (no takeaway strip)
+finish_fed_chart <- function(
+  plot_obj,
+  figure_num,
+  title,
+  note = NULL,
+  source = ART_SOURCE_DEFAULT
+) {
+  plot_obj +
+    fed_wordmark() +
+    labs(
+      title = fed_figure_title(figure_num, title),
+      caption = fed_caption(note = note, source = source)
+    ) +
+    coord_cartesian(clip = "off") +
+    theme(
+      plot.margin = margin(t = 14, r = 20, b = 22, l = 14),
+      plot.caption = element_text(
+        color = FED_GREY_TEXT,
+        size = rel(0.68),
+        hjust = 0,
+        margin = margin(t = 16),
+        family = "Helvetica"
+      )
     )
 }
 
