@@ -214,14 +214,49 @@ function writeArticleCss() {
   max-width: 38rem !important;
 }
 .artometrics-article-body .facts-grid {
-  text-align: center !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 12px !important;
+  margin: 1.25rem 0 2rem !important;
+  max-width: 100% !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  text-align: left !important;
 }
-.artometrics-article-body .fact-box,
-.artometrics-article-body .fact-number,
+@media (min-width: 768px) {
+  .artometrics-article-body .facts-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+@media (min-width: 1024px) {
+  .artometrics-article-body .facts-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+.artometrics-article-body .fact-box {
+  background: #FFFFFF !important;
+  border: 1px solid #E8E6E1 !important;
+  border-left: 4px solid #C0392B !important;
+  padding: 1rem 1.1rem !important;
+  min-width: 0 !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  text-align: left !important;
+}
+.artometrics-article-body .fact-number {
+  font-size: 1.55rem !important;
+  line-height: 1.15 !important;
+  text-align: left !important;
+}
 .artometrics-article-body .fact-label {
-  text-align: center !important;
+  font-size: 0.95rem !important;
+  line-height: 1.5 !important;
+  color: #1C1C1E !important;
+  text-align: left !important;
+}
+.artometrics-article-body .art-code-block,
+.artometrics-article-body details:has(.art-lang-tag) {
+  display: none !important;
 }
 .artometrics-article-body .art-editorial-note,
 .artometrics-article-body .art-editorial-note p {
@@ -1137,15 +1172,17 @@ function htmlToPlainCode(html) {
     .trim();
 }
 
-function buildCodeBlock(lang, langClass, blockId, code) {
-  return `<div class="art-code-block">
-  <details>
-    <summary class="art-code-summary">
-      <span class="art-lang-tag ${langClass}">${lang.toUpperCase()}</span>
-    </summary>
-    <pre class="art-code-pre" id="${blockId}">${code}</pre>
-  </details>
-</div>`;
+function buildCodeBlock(_lang, _langClass, _blockId, _code) {
+  return "";
+}
+
+function stripCodeBlocks(html) {
+  return html
+    .replace(/<div class="art-code-block">[\s\S]*?<\/div>/gi, "")
+    .replace(
+      /<details[^>]*>[\s\S]*?<span class="art-lang-tag[\s\S]*?<\/details>/gi,
+      ""
+    );
 }
 
 function normalizeCodeBlocks(html) {
@@ -1411,6 +1448,7 @@ function syncArticle(repo, slug) {
   body = replaceChartImages(body, chartFiles, chartBase);
   body = wrapNativeCharts(body, slug);
   body = normalizeCodeBlocks(body);
+  body = stripCodeBlocks(body);
   body = normalizeHtml(body);
   body = wrapEditorialNote(body);
   body = body.replace(/<\/main>/i, `${githubButton(repo)}\n</main>`);
@@ -1448,6 +1486,7 @@ function normalizeLocalArticles() {
     if (!match) continue;
     let body = match[2];
     body = normalizeCodeBlocks(body);
+    body = stripCodeBlocks(body);
     body = normalizeHtml(body);
     fs.writeFileSync(mdPath, `---\n${match[1]}\n---\n${body}`, "utf8");
     console.log(`Normalized ${file}`);

@@ -11,38 +11,46 @@ interface PlotlyExport {
 }
 
 const ART_COLORS = {
-  highlight: "#00FF88",
-  secondary: "#059669",
+  highlight: "#C0392B",
+  secondary: "#1C1C1E",
   mid: "#6B6B6B",
-  cream: "#F2F0EB",
+  cream: "#FAFAF8",
   dark: "#1C1C1E",
+  white: "#FFFFFF",
 };
 
-/** Rank-gradient palette: deep emerald to bright Wizard-of-Oz green */
+/** Rank-gradient palette: black through mid-gray to Artometrics red */
 const ART_BAR_GRADIENT = [
-  "#022C22",
-  "#064E3B",
-  "#065F46",
-  "#047857",
-  "#059669",
-  "#10B981",
-  "#34D399",
-  "#6EE7B7",
-  "#86EFAC",
-  "#00FF88",
+  "#1C1C1E",
+  "#2A2A2A",
+  "#3A3A3A",
+  "#4A4A4A",
+  "#5C5C5C",
+  "#6E3A34",
+  "#8B3228",
+  "#A93226",
+  "#C0392B",
+  "#E74C3C",
 ];
 
 /** Category colors for multi-trace / box charts */
 const ART_CATEGORY_PALETTE = [
-  "#064E3B",
-  "#00FF88",
-  "#10B981",
-  "#34D399",
-  "#047857",
-  "#6EE7B7",
-  "#059669",
-  "#86EFAC",
+  "#1C1C1E",
+  "#C0392B",
+  "#6B6B6B",
+  "#962D22",
+  "#3A3A3A",
+  "#B03A2E",
+  "#2A2A2A",
+  "#E74C3C",
 ];
+
+const LEGACY_HIGHLIGHT_COLORS = new Set([
+  "#c0392b",
+  "#00ff88",
+  "#00e676",
+  "#10b981",
+]);
 
 const MIN_PLOT_HEIGHT = 80;
 const MAX_LIVE_TRACES = 150;
@@ -74,6 +82,41 @@ function axisTitleText(title: unknown): string {
     return String((title as { text?: string }).text ?? "");
   }
   return "";
+}
+
+function remapLegacyColor(color: unknown): unknown {
+  if (typeof color !== "string") return color;
+  const lower = color.toLowerCase();
+  const map: Record<string, string> = {
+    "#00ff88": ART_COLORS.highlight,
+    "#00e676": "#E74C3C",
+    "#10b981": "#C0392B",
+    "#34d399": "#B03A2E",
+    "#6ee7b7": "#D98880",
+    "#86efac": "#E6B0AA",
+    "#059669": "#962D22",
+    "#047857": "#6E3A34",
+    "#065f46": "#5C5C5C",
+    "#064e3b": "#4A4A4A",
+    "#022c22": "#1C1C1E",
+  };
+  return map[lower] ?? color;
+}
+
+function remapTraceColors(trace: Record<string, unknown>) {
+  const marker = trace.marker as Record<string, unknown> | undefined;
+  if (marker?.color != null) {
+    if (Array.isArray(marker.color)) {
+      marker.color = (marker.color as unknown[]).map(remapLegacyColor);
+    } else {
+      marker.color = remapLegacyColor(marker.color);
+    }
+  }
+  if (trace.line && typeof trace.line === "object") {
+    const line = trace.line as Record<string, unknown>;
+    if (line.color != null) line.color = remapLegacyColor(line.color);
+  }
+  if (trace.fillcolor != null) trace.fillcolor = remapLegacyColor(trace.fillcolor);
 }
 
 function cleanTraces(data: PlotlyTrace[]) {
@@ -136,7 +179,7 @@ function formatHeadingHtml(raw: string): string {
     .map((line, index) => {
       const isAccent =
         index > 0 ||
-        /00FF88|#00ff88|00E676|#00e676|C0392B|#c0392b|color:\s*#/i.test(line) ||
+        /C0392B|#c0392b|E74C3C|#e74c3c|color:\s*#/i.test(line) ||
         /style=['"][^'"]*color/i.test(line);
       const cls = isAccent
         ? "art-chart-heading__line art-chart-heading__line--accent"
@@ -329,10 +372,10 @@ function enhanceBarColors(traces: Array<Record<string, unknown>>) {
     // Detect if the chart has the leader marked in red (first or last bar)
     const existingColors = Array.isArray(rawColors) ? (rawColors as string[]) : [];
     const hasRedHighlight = existingColors.some(
-      (c) => typeof c === "string" && c.toLowerCase() === ART_COLORS.highlight.toLowerCase()
+      (c) => typeof c === "string" && LEGACY_HIGHLIGHT_COLORS.has(c.toLowerCase())
     );
     const leaderIndex = existingColors.findIndex(
-      (c) => typeof c === "string" && c.toLowerCase() === ART_COLORS.highlight.toLowerCase()
+      (c) => typeof c === "string" && LEGACY_HIGHLIGHT_COLORS.has(c.toLowerCase())
     );
 
     // Apply gradient from dark (rank #1 position) to light (lowest rank)
@@ -488,7 +531,7 @@ function addBarValueLabels(traces: Array<Record<string, unknown>>) {
     trace.textfont = {
       color: ART_COLORS.dark,
       family: "DM Sans, Helvetica, sans-serif",
-      size: 10,
+      size: isMobileViewport() ? 12 : 13,
     };
     trace.cliponaxis = false;
     trace.hovertemplate =
@@ -557,7 +600,7 @@ function buildEditorialAnnotations(
       yanchor: "bottom",
       font: {
         family: "DM Sans, Helvetica, sans-serif",
-        size: 9,
+        size: mobile ? 11 : 12,
         color: ART_COLORS.mid,
       },
     });
@@ -691,6 +734,7 @@ function sanitizePlotlySpec(raw: PlotlyExport, mobile: boolean) {
       : "";
   const titleLines = (titleText.match(/<br\s*\/?>/gi) ?? []).length + 1;
   const data = cleanTraces((raw.data ?? []) as PlotlyTrace[]) as Array<Record<string, unknown>>;
+  data.forEach(remapTraceColors);
 
   // Enhance colors before layout calculation
   enhanceBarColors(data);
@@ -710,7 +754,7 @@ function sanitizePlotlySpec(raw: PlotlyExport, mobile: boolean) {
     font: {
       color: ART_COLORS.dark,
       family: "DM Sans, Helvetica, sans-serif",
-      size: mobile ? 11.5 : 12,
+      size: mobile ? 14 : 15,
       ...(raw.layout?.font ?? {}),
     },
     paper_bgcolor: raw.layout?.paper_bgcolor ?? ART_COLORS.cream,
@@ -731,7 +775,7 @@ function sanitizePlotlySpec(raw: PlotlyExport, mobile: boolean) {
       font: {
         color: "#FAFAF8",
         family: "DM Sans, Helvetica, sans-serif",
-        size: mobile ? 11 : 12,
+        size: mobile ? 13 : 14,
       },
     },
     autosize: true,
@@ -748,7 +792,15 @@ function sanitizePlotlySpec(raw: PlotlyExport, mobile: boolean) {
   lockChartInteraction(layout);
 
   if (layout.xaxis && typeof layout.xaxis === "object") {
-    layout.xaxis = { ...layout.xaxis, title: centerAxisTitle(layout.xaxis.title) };
+    layout.xaxis = {
+      ...layout.xaxis,
+      title: centerAxisTitle(layout.xaxis.title),
+      tickfont: {
+        ...(typeof layout.xaxis.tickfont === "object" ? layout.xaxis.tickfont : {}),
+        size: mobile ? 12.5 : 13.5,
+        color: ART_COLORS.dark,
+      },
+    };
   }
   if (layout.yaxis && typeof layout.yaxis === "object") {
     const yTickCount = Array.isArray(layout.yaxis.ticktext)
@@ -762,8 +814,8 @@ function sanitizePlotlySpec(raw: PlotlyExport, mobile: boolean) {
       automargin: true,
       tickfont: {
         ...(typeof layout.yaxis.tickfont === "object" ? layout.yaxis.tickfont : {}),
-        size: mobile ? (yTickCount > 8 ? 9 : 10) : yTickCount > 12 ? 10.5 : 11,
-        color: ART_COLORS.mid,
+        size: mobile ? (yTickCount > 8 ? 12 : 13) : yTickCount > 12 ? 12.5 : 13.5,
+        color: ART_COLORS.dark,
       },
     };
   }
@@ -778,7 +830,7 @@ function sanitizePlotlySpec(raw: PlotlyExport, mobile: boolean) {
       xanchor: "center",
       font: {
         ...(typeof layout.legend.font === "object" ? layout.legend.font : {}),
-        size: mobile ? 9.5 : 10.5,
+        size: mobile ? 12 : 13,
         color: ART_COLORS.dark,
       },
     };

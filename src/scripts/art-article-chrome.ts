@@ -51,102 +51,13 @@ function initSidebarToggle() {
   });
 }
 
-function cleanCodeSummary(summary: Element) {
-  for (const node of Array.from(summary.childNodes)) {
-    if (node.nodeType === Node.TEXT_NODE && node.textContent?.trim()) {
-      node.remove();
-    }
-  }
-
-  summary.querySelectorAll(":scope > *").forEach((node) => {
-    if (node.classList.contains("art-lang-tag")) return;
-    node.remove();
-  });
-}
-
-function upgradeLegacyCodeBlock(details: HTMLDetailsElement) {
-  const summary = details.querySelector("summary");
-  const langTag = summary?.querySelector(".art-lang-tag");
-  if (!summary || !langTag) return;
-
-  if (!details.closest(".art-code-block")) {
-    const wrapper = document.createElement("div");
-    wrapper.className = "art-code-block";
-    details.parentElement?.insertBefore(wrapper, details);
-    wrapper.appendChild(details);
-  }
-
-  summary.classList.add("art-code-summary");
-  cleanCodeSummary(summary);
-
-  details.querySelectorAll(".code-copy-button, button.code-copy-button").forEach((btn) => {
-    btn.remove();
-  });
-
-  const scaffold = details.querySelector(".code-copy-outer-scaffold");
-  const pre =
-    details.querySelector<HTMLPreElement>(".art-code-pre") ??
-    scaffold?.querySelector("pre") ??
-    details.querySelector("pre");
-
-  if (pre) {
-    pre.classList.add("art-code-pre");
-    if (scaffold && pre.closest(".code-copy-outer-scaffold") === scaffold) {
-      details.appendChild(pre);
-      scaffold.remove();
-    }
-  }
-
-  details.querySelectorAll(".sourceCode, .code-with-copy").forEach((el) => {
-    if (el !== pre && !el.contains(pre ?? null)) el.remove();
-  });
-}
-
-function initCodeBlocks() {
+function hideCodeBlocks() {
   document
-    .querySelectorAll<HTMLDetailsElement>(".artometrics-article-body details")
-    .forEach((details) => {
-      const langTag = details.querySelector(".art-lang-tag");
-      if (!langTag) return;
-
-      upgradeLegacyCodeBlock(details);
-      details.removeAttribute("open");
-
-      const pre =
-        details.querySelector<HTMLPreElement>(".art-code-pre") ??
-        details.querySelector("pre");
-      if (!pre) return;
-
-      details.querySelectorAll(".art-copy-btn").forEach((btn) => btn.remove());
-
-      const summary = details.querySelector(".art-code-summary");
-      if (summary) cleanCodeSummary(summary);
-
-      pre.setAttribute("title", "Click to copy code");
-      pre.setAttribute("role", "button");
-      pre.setAttribute("tabindex", "0");
-
-      const copyCode = () => {
-        void navigator.clipboard.writeText(pre.innerText).then(() => {
-          pre.classList.add("art-code-pre--copied");
-          pre.setAttribute("title", "Copied!");
-          setTimeout(() => {
-            pre.classList.remove("art-code-pre--copied");
-            pre.setAttribute("title", "Click to copy code");
-          }, 1800);
-        });
-      };
-
-      pre.addEventListener("click", (event) => {
-        event.stopPropagation();
-        copyCode();
-      });
-      pre.addEventListener("keydown", (event) => {
-        if (event.key === "Enter" || event.key === " ") {
-          event.preventDefault();
-          copyCode();
-        }
-      });
+    .querySelectorAll<HTMLElement>(
+      ".artometrics-article-body .art-code-block, .artometrics-article-body details:has(.art-lang-tag)"
+    )
+    .forEach((el) => {
+      el.remove();
     });
 }
 
@@ -348,6 +259,6 @@ export function initArticleChrome() {
   initTocScrollSpy();
   initMobileToc();
   initBackToTop();
-  initCodeBlocks();
+  hideCodeBlocks();
   initRelatedRail();
 }

@@ -6,23 +6,23 @@ suppressPackageStartupMessages({
   library(scales)
 })
 
-ART_HIGHLIGHT <- "#00FF88"
-ART_SECONDARY <- "#059669"
+ART_HIGHLIGHT <- "#C0392B"
+ART_SECONDARY <- "#1C1C1E"
 ART_MID <- "#6B6B6B"
-ART_CREAM <- "#F2F0EB"
+ART_CREAM <- "#FAFAF8"
 ART_DARK <- "#1C1C1E"
 ART_MUTED <- "#D5D5D5"
 
 ART_BAR_GRADIENT <- c(
-  "#022C22", "#064E3B", "#065F46", "#047857", "#059669",
-  "#10B981", "#34D399", "#6EE7B7", "#86EFAC", "#00FF88"
+  "#1C1C1E", "#2A2A2A", "#3A3A3A", "#4A4A4A", "#5C5C5C",
+  "#6E3A34", "#8B3228", "#A93226", "#C0392B", "#E74C3C"
 )
 
 ART_TIER_COLORS <- c(
-  "No Penalty" = "#064E3B",
-  "Low" = "#10B981",
-  "Medium" = "#34D399",
-  "High" = "#00FF88"
+  "No Penalty" = "#1C1C1E",
+  "Low" = "#6B6B6B",
+  "Medium" = "#B03A2E",
+  "High" = "#C0392B"
 )
 
 ART_SOURCE_DEFAULT <- "Source: CMS Hospital Readmissions Reduction Program (HRRP), FY2025 supplemental data"
