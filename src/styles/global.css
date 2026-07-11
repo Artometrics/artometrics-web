@@ -221,6 +221,18 @@
   outline-offset: 2px;
 }
 
+.site-search-input,
+.site-search-input:focus,
+.site-search-input:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body.site-search-open {
+  overflow: hidden;
+}
+
 body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

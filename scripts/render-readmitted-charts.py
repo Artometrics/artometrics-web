@@ -16,30 +16,30 @@ SITE_IMG = ROOT / "public/images/content/articles/readmitted/charts"
 
 ART_CREAM = "#F2F0EB"
 ART_DARK = "#1C1C1E"
-ART_HIGHLIGHT = "#00FF88"
-ART_SECONDARY = "#059669"
+ART_HIGHLIGHT = "#C0392B"
+ART_SECONDARY = "#1C1C1E"
 ART_MID = "#6B6B6B"
 ART_MUTED = "#D5D5D5"
 FONT = "DM Sans, Helvetica, Arial, sans-serif"
 
 BAR_GRADIENT = [
-    "#022C22",
-    "#064E3B",
-    "#065F46",
-    "#047857",
-    "#059669",
-    "#10B981",
-    "#34D399",
-    "#6EE7B7",
-    "#86EFAC",
-    "#00FF88",
+    "#1C1C1E",
+    "#2A2A2A",
+    "#3A3A3A",
+    "#4A4A4A",
+    "#5C5C5C",
+    "#6E3A34",
+    "#8B3228",
+    "#A93226",
+    "#C0392B",
+    "#E74C3C",
 ]
 
 TIER_COLORS = {
-    "No Penalty": "#064E3B",
-    "Low": "#10B981",
-    "Medium": "#34D399",
-    "High": "#00FF88",
+    "No Penalty": "#1C1C1E",
+    "Low": "#6B6B6B",
+    "Medium": "#B03A2E",
+    "High": "#C0392B",
 }
 
 NAT_AVG_PCT = 48.1
@@ -203,7 +203,7 @@ def chart1(state_df: pd.DataFrame) -> go.Figure:
 
     fig.update_layout(
         **base_layout(
-            "<b>Which <span style='color:#00FF88;'>States</span> Have the Most Penalized Hospitals?</b>",
+            "<b>Which <span style='color:#C0392B;'>States</span> Have the Most Penalized Hospitals?</b>",
             "Above-average states only — share of hospital-condition pairs with ERR > 1.0",
             takeaway="Geography isn't destiny — wealthy states lead the penalty list alongside the rural South",
             xaxis=dict(
@@ -298,7 +298,7 @@ def chart2() -> go.Figure:
 
     fig.update_layout(
         **base_layout(
-            "<b>The <span style='color:#00FF88;'>Hip/Knee</span> Problem: ERR by Condition</b>",
+            "<b>The <span style='color:#C0392B;'>Hip/Knee</span> Problem: ERR by Condition</b>",
             "All six HRRP conditions exceed 1.0 — but the spread is measured in thousandths",
             takeaway="Elective joint surgery — not heart attacks — carries the highest excess readmission ratio",
             xaxis=dict(
@@ -374,7 +374,7 @@ def chart3(own_df: pd.DataFrame) -> go.Figure:
 
     fig.update_layout(
         **base_layout(
-            "<b><span style='color:#00FF88;'>For-Profit</span> Hospitals Carry More Penalty Weight</b>",
+            "<b><span style='color:#C0392B;'>For-Profit</span> Hospitals Carry More Penalty Weight</b>",
             "Penalty tier distribution by ownership — HCA, Tenet, and Steward sit in the for-profit column",
             takeaway="For-profits carry more penalty weight, but every ownership type still has a majority in the no-penalty band",
             barmode="stack",
