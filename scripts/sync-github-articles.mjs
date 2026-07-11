@@ -669,8 +669,13 @@ function writeArticleCss() {
 }
 @media (min-width: 768px) {
   .artometrics-article-body .art-myth-grid {
-    grid-template-columns: repeat(3, 1fr) !important;
+    grid-template-columns: repeat(2, 1fr) !important;
     max-width: none !important;
+  }
+}
+@media (min-width: 1024px) {
+  .artometrics-article-body .art-myth-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
   }
 }
 .artometrics-article-body .art-myth-card {
@@ -679,20 +684,29 @@ function writeArticleCss() {
   border-top: 3px solid #C0392B !important;
   background: #FAFAF8 !important;
 }
+.artometrics-article-body .art-myth-card__index {
+  margin: 0 0 0.45rem !important;
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 0.68rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.16em !important;
+  text-transform: uppercase !important;
+  color: #C0392B !important;
+}
 .artometrics-article-body .art-myth-card__myth {
   margin: 0 0 0.55rem !important;
   font-family: 'DM Sans', sans-serif !important;
-  font-size: 0.78rem !important;
-  font-weight: 700 !important;
-  line-height: 1.45 !important;
-  color: #6B6B6B !important;
-  font-style: italic !important;
+  font-size: 0.88rem !important;
+  font-weight: 600 !important;
+  line-height: 1.5 !important;
+  color: #1C1C1E !important;
+  font-style: normal !important;
 }
 .artometrics-article-body .art-myth-card__reality {
   margin: 0 !important;
   font-family: 'DM Sans', sans-serif !important;
-  font-size: 0.8rem !important;
-  line-height: 1.55 !important;
+  font-size: 0.9rem !important;
+  line-height: 1.6 !important;
   color: #3A3A3A !important;
 }
 .artometrics-article-body main.art-article-main > p {
