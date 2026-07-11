@@ -673,12 +673,17 @@ function lockChartInteraction(layout: PlotlyLayout) {
 }
 
 function prepareChartFigure(figure: HTMLElement) {
-  const caption = figure.querySelector("figcaption.art-chart-caption");
+  const caption = figure.querySelector("figcaption.art-chart-caption, figcaption");
   const live = figure.querySelector<HTMLElement>(".art-chart-live");
   if (caption && live) {
     const text = caption.textContent?.trim();
-    if (text) live.dataset.caption = text;
-    caption.classList.add("art-chart-caption--visible");
+    if (text) {
+      live.dataset.caption = text;
+      if (!live.getAttribute("aria-label")) {
+        live.setAttribute("aria-label", text);
+      }
+    }
+    caption.remove();
   }
   figure.classList.add("art-chart--pending");
 }

@@ -547,22 +547,15 @@ function writeArticleCss() {
 }
 .artometrics-article-body .art-chart-caption,
 .artometrics-article-body .art-chart figcaption {
+  display: none !important;
   margin: 0 !important;
-  padding: 0.85rem 1.15rem 1rem !important;
-  border-top: 1px solid #D5D5D5 !important;
-  background: #FAFAF8 !important;
-  font-family: 'DM Sans', sans-serif !important;
-  font-size: 0.82rem !important;
-  font-weight: 400 !important;
-  font-style: normal !important;
-  letter-spacing: 0 !important;
-  text-transform: none !important;
-  text-align: left !important;
-  line-height: 1.55 !important;
-  color: #3A3A3A !important;
+  padding: 0 !important;
+  border: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
 }
 .artometrics-article-body .art-chart-caption--visible {
-  display: block !important;
+  display: none !important;
 }
 .artometrics-article-body .art-chart-live .gtitle,
 .artometrics-article-body .art-chart-live .gtitle text,
@@ -1124,9 +1117,11 @@ function wrapNativeCharts(html, slug) {
 
   const toLiveChart = (src, filename, alt) => {
     const jsonName = filename.replace(/\.(png|webp|jpe?g)$/i, ".plotly.json");
+    const label = String(alt ?? chartLabel(filename))
+      .replace(/&/g, "&amp;")
+      .replace(/"/g, "&quot;");
     return `<figure class="art-chart">
-  <div class="art-chart-live" data-chart="${dataBase}/${jsonName}" data-fallback="${src}" role="img" aria-label="${alt}"></div>
-  <figcaption class="art-chart-caption">${alt}</figcaption>
+  <div class="art-chart-live" data-chart="${dataBase}/${jsonName}" data-fallback="${src}" data-caption="${label}" role="img" aria-label="${label}"></div>
 </figure>`;
   };
 
@@ -1174,6 +1169,10 @@ function htmlToPlainCode(html) {
 
 function buildCodeBlock(_lang, _langClass, _blockId, _code) {
   return "";
+}
+
+function stripChartCaptions(html) {
+  return html.replace(/\s*<figcaption class="art-chart-caption">[\s\S]*?<\/figcaption>/gi, "");
 }
 
 function stripCodeBlocks(html) {
@@ -1449,6 +1448,7 @@ function syncArticle(repo, slug) {
   body = wrapNativeCharts(body, slug);
   body = normalizeCodeBlocks(body);
   body = stripCodeBlocks(body);
+  body = stripChartCaptions(body);
   body = normalizeHtml(body);
   body = wrapEditorialNote(body);
   body = body.replace(/<\/main>/i, `${githubButton(repo)}\n</main>`);
@@ -1487,6 +1487,7 @@ function normalizeLocalArticles() {
     let body = match[2];
     body = normalizeCodeBlocks(body);
     body = stripCodeBlocks(body);
+    body = stripChartCaptions(body);
     body = normalizeHtml(body);
     fs.writeFileSync(mdPath, `---\n${match[1]}\n---\n${body}`, "utf8");
     console.log(`Normalized ${file}`);
