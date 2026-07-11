@@ -572,7 +572,8 @@ function fixMisleadingAxisTitles(layout: PlotlyLayout, data: Array<Record<string
 
 function buildEditorialAnnotations(
   data: Array<Record<string, unknown>>,
-  layout: PlotlyLayout
+  layout: PlotlyLayout,
+  mobile = isMobileViewport()
 ): Plotly.Layout["annotations"] {
   const existing = Array.isArray(layout.annotations)
     ? layout.annotations.map((annotation) => ({ ...annotation }))
@@ -793,7 +794,7 @@ function sanitizePlotlySpec(raw: PlotlyExport, mobile: boolean) {
   }
 
   fixMisleadingAxisTitles(layout, data);
-  layout.annotations = buildEditorialAnnotations(data, layout);
+  layout.annotations = buildEditorialAnnotations(data, layout, mobile);
   lockChartInteraction(layout);
 
   if (layout.xaxis && typeof layout.xaxis === "object") {
@@ -943,12 +944,13 @@ function useStaticFallback(
   if (chartUrl) void enrichStaticChart(el, chartUrl);
 }
 
-async function renderLiveChart(el: HTMLElement) {
+async function renderLiveChart(el: HTMLElement, options?: { force?: boolean }) {
   const chartUrl = el.dataset.chart;
   const fallback = el.dataset.fallback;
   const label = el.getAttribute("aria-label");
   const subtitle = el.dataset.caption;
-  if (!chartUrl || el.dataset.rendered === "true") return;
+  if (!chartUrl) return;
+  if (el.dataset.rendered === "true" && !options?.force) return;
 
   el.dataset.rendered = "true";
   el.classList.add("art-chart-live--loading");
@@ -1207,6 +1209,84 @@ async function openChartShareSheet(
   };
 }
 
+type ChartViewMode = "print" | "interactive";
+
+function supportsDualModeChart(live: HTMLElement) {
+  return Boolean(live.dataset.chart && live.dataset.fallback);
+}
+
+function updateChartModeTabs(figure: HTMLElement, mode: ChartViewMode) {
+  figure.querySelectorAll<HTMLButtonElement>(".art-chart-mode-switch__btn").forEach((btn) => {
+    const active = btn.dataset.mode === mode;
+    btn.classList.toggle("is-active", active);
+    btn.setAttribute("aria-selected", String(active));
+  });
+  figure.classList.toggle("art-chart--print", mode === "print");
+  figure.classList.toggle("art-chart--interactive", mode === "interactive");
+}
+
+function initChartModeSwitch(figure: HTMLElement, live: HTMLElement) {
+  if (figure.querySelector(".art-chart-mode-switch")) return;
+
+  const switcher = document.createElement("div");
+  switcher.className = "art-chart-mode-switch";
+  switcher.setAttribute("role", "tablist");
+  switcher.setAttribute("aria-label", "Chart view mode");
+
+  const modes: Array<{ mode: ChartViewMode; label: string; hint: string }> = [
+    { mode: "print", label: "Print", hint: "Static R export — best for reading and sharing" },
+    { mode: "interactive", label: "Interactive", hint: "HTML chart — hover for values and explore" },
+  ];
+
+  modes.forEach(({ mode, label, hint }) => {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "art-chart-mode-switch__btn";
+    btn.dataset.mode = mode;
+    btn.setAttribute("role", "tab");
+    btn.setAttribute("aria-selected", mode === "print" ? "true" : "false");
+    btn.title = hint;
+    btn.textContent = label;
+    if (mode === "print") btn.classList.add("is-active");
+    btn.addEventListener("click", () => {
+      if (live.dataset.chartMode === mode) return;
+      void setChartViewMode(live, mode);
+    });
+    switcher.appendChild(btn);
+  });
+
+  figure.prepend(switcher);
+  figure.classList.add("art-chart--has-mode", "art-chart--print");
+}
+
+async function setChartViewMode(live: HTMLElement, mode: ChartViewMode) {
+  const figure = live.closest<HTMLElement>("figure.art-chart");
+  const fallback = live.dataset.fallback;
+  const chartUrl = live.dataset.chart;
+  const label = live.getAttribute("aria-label");
+
+  if (!figure || !fallback || !chartUrl) return;
+
+  live.dataset.chartMode = mode;
+  updateChartModeTabs(figure, mode);
+
+  if (mode === "print") {
+    if (live.querySelector(".js-plotly-plot")) {
+      Plotly.purge(live);
+    }
+    live.dataset.rendered = "false";
+    showFallback(live, fallback, label);
+    markChartReady(live, true);
+    void enrichStaticChart(live, chartUrl);
+    return;
+  }
+
+  hideFallback(live);
+  live.dataset.rendered = "false";
+  live.classList.add("art-chart-live--loading");
+  await renderLiveChart(live, { force: true });
+}
+
 function initChartToolbars() {
   document.querySelectorAll("figure.art-chart").forEach((figure) => {
     if (figure.querySelector(".art-chart-toolbar")) return;
@@ -1253,25 +1333,43 @@ function initChartToolbars() {
 export function initArtCharts() {
   initChartReveal();
   formatFactNumbers();
-  initChartToolbars();
 
   const nodes = document.querySelectorAll<HTMLElement>(".art-chart-live");
   if (!nodes.length) return;
 
+  const interactiveOnlyNodes: HTMLElement[] = [];
+
   nodes.forEach((node) => {
+    const figure = node.closest<HTMLElement>("figure.art-chart");
     const fallback = node.dataset.fallback;
-    if (fallback) {
+    const chartUrl = node.dataset.chart;
+
+    if (fallback && chartUrl && figure) {
+      node.dataset.chartMode = "print";
       showFallback(node, fallback, node.getAttribute("aria-label"));
       markChartReady(node, true);
+      initChartModeSwitch(figure, node);
+      prefetchChart(chartUrl);
+      void enrichStaticChart(node, chartUrl);
       return;
     }
 
-    const url = node.dataset.chart;
-    if (url) prefetchChart(url);
+    if (fallback) {
+      showFallback(node, fallback, node.getAttribute("aria-label"));
+      markChartReady(node, true);
+      if (chartUrl) void enrichStaticChart(node, chartUrl);
+      return;
+    }
+
+    if (chartUrl) {
+      prefetchChart(chartUrl);
+      interactiveOnlyNodes.push(node);
+    }
   });
 
-  const liveNodes = Array.from(nodes).filter((node) => !node.dataset.fallback && node.dataset.chart);
-  if (!liveNodes.length) return;
+  initChartToolbars();
+
+  if (!interactiveOnlyNodes.length) return;
 
   const observer = new IntersectionObserver(
     (entries) => {
@@ -1284,5 +1382,5 @@ export function initArtCharts() {
     { threshold: 0, rootMargin: "120px 0px 80px 0px" }
   );
 
-  liveNodes.forEach((node) => observer.observe(node));
+  interactiveOnlyNodes.forEach((node) => observer.observe(node));
 }

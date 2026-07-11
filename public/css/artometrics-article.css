@@ -1406,6 +1406,54 @@ pre:has(> code.sourceCode.sql),
   border-color: #C0392B !important;
   color: #C0392B !important;
 }
+.artometrics-article-body .art-chart--has-mode .art-chart-live{
+  border: 1px solid #E8E6E1 !important;
+}
+.artometrics-article-body .art-chart-mode-switch{
+  display: flex !important;
+  justify-content: flex-end !important;
+  width: fit-content !important;
+  max-width: 100% !important;
+  margin: 0 0 0.55rem auto !important;
+  border: 1px solid #D5D5D5 !important;
+  border-radius: 4px !important;
+  overflow: hidden !important;
+  background: #FFFFFF !important;
+}
+.artometrics-article-body .art-chart-mode-switch__btn{
+  min-height: 34px !important;
+  padding: 0.45rem 0.85rem !important;
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 0.62rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+  line-height: 1 !important;
+  border: 0 !important;
+  border-right: 1px solid #D5D5D5 !important;
+  border-radius: 0 !important;
+  color: #6B6B6B !important;
+  background: transparent !important;
+  cursor: pointer !important;
+  transition: color 0.15s, background 0.15s !important;
+}
+.artometrics-article-body .art-chart-mode-switch__btn:last-child{
+  border-right: 0 !important;
+}
+.artometrics-article-body .art-chart-mode-switch__btn.is-active,
+.artometrics-article-body .art-chart-mode-switch__btn[aria-selected="true"]{
+  color: #FFFFFF !important;
+  background: #C0392B !important;
+}
+.artometrics-article-body .art-chart-mode-switch__btn:hover:not(.is-active),
+.artometrics-article-body .art-chart-mode-switch__btn:focus-visible:not(.is-active){
+  color: #1C1C1E !important;
+  background: #FAFAF8 !important;
+  outline: none !important;
+}
+.artometrics-article-body .art-chart--interactive .art-chart-fallback{
+  display: none !important;
+}
 .artometrics-article-body .art-chart-toolbar{
   position: absolute !important;
   top: 0.55rem !important;
