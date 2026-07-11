@@ -46,6 +46,8 @@ const suggestions = items.slice(0, 6);
     type="button"
     id="searchButton"
     aria-label="Search (Ctrl+K)"
+    aria-controls="searchModal"
+    aria-expanded="false"
     class="inline-flex items-center gap-2 rounded-md border border-base-200 px-3 py-2 text-xs font-medium uppercase tracking-widest text-base-900 transition-colors hover:border-accent-400 hover:text-accent-700"
   >
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -58,38 +60,46 @@ const suggestions = items.slice(0, 6);
       class="hidden rounded border border-base-200 bg-base-50 px-1.5 py-0.5 text-[10px] font-normal text-base-500 lg:inline"
     >⌘K</kbd>
   </button>
+
   <div
     id="searchModal"
-    class="fixed inset-0 z-[100] hidden overflow-y-auto"
+    class="site-search-modal fixed inset-0 z-[10050] hidden overflow-y-auto"
     role="dialog"
     aria-modal="true"
     aria-labelledby="searchDialogTitle"
   >
-    <div class="flex min-h-screen items-start justify-center px-4 py-16 sm:py-24">
+    <div class="site-search-modal__frame flex min-h-full items-start justify-center px-3 pt-[max(0.75rem,env(safe-area-inset-top))] pb-6 sm:min-h-screen sm:px-4 sm:py-24">
       <div
-        class="fixed inset-0 bg-base-950/55 backdrop-blur-sm transition-opacity"
+        class="site-search-overlay fixed inset-0 z-0 bg-base-950/55 backdrop-blur-sm"
         id="modalOverlay"
       ></div>
       <div
-        class="relative w-full max-w-2xl overflow-hidden rounded-lg border border-base-200 bg-white shadow-2xl"
+        class="site-search-panel relative z-10 w-full max-w-2xl rounded-lg border border-base-200 bg-white shadow-2xl"
       >
-        <div class="flex items-center gap-3 border-b border-base-200 px-4 py-3">
+        <div class="site-search-input-row grid grid-cols-[auto_1fr_auto] items-center gap-3 border-b border-base-200 px-4 py-2.5 sm:py-3">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" class="shrink-0 text-base-400" aria-hidden="true">
             <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.75"/>
             <path d="M20 20l-3.5-3.5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
           </svg>
           <span id="searchDialogTitle" class="sr-only">Search Artometrics</span>
           <input
-            type="search"
+            type="text"
             id="searchInput"
+            role="searchbox"
+            inputmode="search"
             placeholder="Search articles and podcast episodes…"
             autocomplete="off"
-            class="h-10 w-full border-0 bg-transparent text-sm text-base-900 placeholder-base-400 focus:outline-none focus:ring-0"
+            autocorrect="off"
+            autocapitalize="off"
+            spellcheck="false"
+            enterkeyhint="search"
+            aria-label="Search articles and podcast episodes"
+            class="site-search-input min-w-0 border-0 bg-transparent text-base text-base-900 placeholder-base-400"
           />
           <button
             type="button"
             id="closeSearch"
-            class="shrink-0 rounded-md border border-base-200 px-2 py-1 text-[10px] font-medium uppercase tracking-wide text-base-500 transition-colors hover:border-base-400 hover:text-base-900"
+            class="site-search-close shrink-0 rounded-md border border-base-200 px-2.5 py-1.5 text-[10px] font-medium uppercase tracking-wide text-base-500 transition-colors hover:border-base-400 hover:text-base-900"
             aria-label="Close search"
           >
             Esc
@@ -97,12 +107,43 @@ const suggestions = items.slice(0, 6);
         </div>
         <div
           id="searchResults"
-          class="max-h-[min(60vh,28rem)] overflow-y-auto divide-y divide-base-100"
+          class="site-search-results max-h-[min(60vh,28rem)] overflow-y-auto divide-y divide-base-100"
         ></div>
       </div>
     </div>
   </div>
 </div>
+
+<style>
+  .site-search-input {
+    -webkit-appearance: none;
+    appearance: none;
+    box-sizing: border-box;
+    margin: 0;
+    height: 2.75rem;
+    padding: 0.625rem 0;
+    line-height: 1.5;
+    font-size: 1rem;
+    outline: none;
+    box-shadow: none;
+  }
+
+  .site-search-input:focus,
+  .site-search-input:focus-visible {
+    outline: none;
+    box-shadow: none;
+  }
+
+  @media (min-width: 640px) {
+    .site-search-input {
+      height: 2.5rem;
+      font-size: 0.875rem;
+      line-height: 1.43;
+      padding: 0.5rem 0;
+    }
+  }
+</style>
+
 <script is:inline define:vars={{ items, suggestions }}>
   window.addEventListener("load", () => {
     const searchButton = document.getElementById("searchButton");
@@ -118,6 +159,11 @@ const suggestions = items.slice(0, 6);
       searchButton.setAttribute("aria-label", `Search (${isMac ? "Command" : "Control"}+K)`);
     }
 
+    // Escape the nav's backdrop-filter containing block so fixed positioning uses the viewport.
+    if (searchModal && searchModal.parentElement !== document.body) {
+      document.body.appendChild(searchModal);
+    }
+
     const fuse = new Fuse(items, {
       keys: ["title", "description", "typeLabel", "tags", "slug"],
       threshold: 0.32,
@@ -129,7 +175,7 @@ const suggestions = items.slice(0, 6);
 
     function resultHtml(item, index) {
       return `
-        <a href="${item.href}" data-index="${index}" class="search-result block px-4 py-4 transition-colors hover:bg-base-50 focus:bg-base-50 outline-none">
+        <a href="${item.href}" data-index="${index}" class="search-result block px-4 py-4 transition-colors hover:bg-base-50 focus:bg-base-50 outline-none focus-visible:outline-none">
           <p class="text-[10px] font-semibold uppercase tracking-widest text-accent-700">
             ${item.typeLabel || item.type}
           </p>
@@ -181,15 +227,22 @@ const suggestions = items.slice(0, 6);
       }
     }
 
+    function setSearchOpen(open) {
+      searchButton?.setAttribute("aria-expanded", String(open));
+      document.body.classList.toggle("site-search-open", open);
+    }
+
     function openSearch(e) {
       if (e) {
         e.preventDefault();
         e.stopPropagation();
       }
       searchModal.classList.remove("hidden");
-      document.body.style.overflow = "hidden";
+      setSearchOpen(true);
       renderSuggestions();
-      setTimeout(() => searchInput.focus(), 50);
+      requestAnimationFrame(() => {
+        searchInput.focus({ preventScroll: true });
+      });
     }
 
     function closeSearchModal(e) {
@@ -198,7 +251,7 @@ const suggestions = items.slice(0, 6);
         e.stopPropagation();
       }
       searchModal.classList.add("hidden");
-      document.body.style.overflow = "";
+      setSearchOpen(false);
       searchInput.value = "";
       searchResults.innerHTML = "";
       activeIndex = -1;
@@ -213,18 +266,22 @@ const suggestions = items.slice(0, 6);
     });
 
     searchInput?.addEventListener("keydown", (e) => {
-      if (!currentLinks.length) return;
-      if (e.key === "ArrowDown") {
+      if (e.key === "ArrowDown" && currentLinks.length) {
         e.preventDefault();
         activeIndex = Math.min(activeIndex + 1, currentLinks.length - 1);
         highlightActive();
-      } else if (e.key === "ArrowUp") {
+      } else if (e.key === "ArrowUp" && currentLinks.length) {
         e.preventDefault();
         activeIndex = Math.max(activeIndex - 1, 0);
         highlightActive();
-      } else if (e.key === "Enter" && activeIndex >= 0) {
-        e.preventDefault();
-        currentLinks[activeIndex].click();
+      } else if (e.key === "Enter") {
+        if (activeIndex >= 0 && currentLinks[activeIndex]) {
+          e.preventDefault();
+          currentLinks[activeIndex].click();
+        } else if (currentLinks.length) {
+          e.preventDefault();
+          currentLinks[0].click();
+        }
       }
     });
 

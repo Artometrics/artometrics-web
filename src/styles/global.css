@@ -221,6 +221,20 @@
   outline-offset: 2px;
 }
 
+/* Site search modal — suppress global/forms focus rings on the input */
+.site-search-input,
+.site-search-input:focus,
+.site-search-input:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  --tw-ring-shadow: 0 0 #0000 !important;
+  --tw-ring-offset-shadow: 0 0 #0000 !important;
+}
+
+body.site-search-open {
+  overflow: hidden;
+}
+
 body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
