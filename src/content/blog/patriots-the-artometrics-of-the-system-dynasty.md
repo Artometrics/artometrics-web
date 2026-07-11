@@ -42,35 +42,30 @@ draft: false
 <h2 id="system-shock" class="anchored">CHART 1 - SYSTEM SHOCK</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/patriots-the-artometrics-of-the-system-dynasty/charts/chart1_system_shock.plotly.json" data-source="Data: Pro Football Reference, NFL records, Forbes - ARTOMETRICS" role="img" aria-label="Patriots playoff wins by broad franchise period"></div>
-  <figcaption class="art-chart-caption">Patriots playoff wins by broad franchise period</figcaption>
 </figure>
 <p class="art-p">The Patriots are not a smooth historical franchise. They are a before-and-after experiment. One era overwhelms the rest of the archive.</p>
 <p class="art-p">The hypothesis is that New England's dynasty was not just a great team; it was a system shock that rewrote franchise identity.</p>
 <h2 id="super-bowl-tier" class="anchored">CHART 2 - SUPER BOWL TIER</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/patriots-the-artometrics-of-the-system-dynasty/charts/chart2_super_bowl_tier.plotly.json" data-source="Data: Pro Football Reference, NFL records, Forbes - ARTOMETRICS" role="img" aria-label="Super Bowl titles among major NFL franchises"></div>
-  <figcaption class="art-chart-caption">Super Bowl titles among major NFL franchises</figcaption>
 </figure>
 <p class="art-p">The Patriots reached the NFL summit with extraordinary speed. Other franchises accumulated titles over generations; New England compressed its case into two decades.</p>
 <p class="art-p">That compression is the story. The franchise became ancient history almost overnight.</p>
 <h2 id="regular-season-machine" class="anchored">CHART 3 - REGULAR-SEASON MACHINE</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/patriots-the-artometrics-of-the-system-dynasty/charts/chart3_regular_season_machine.plotly.json" data-source="Data: Pro Football Reference, NFL records, Forbes - ARTOMETRICS" role="img" aria-label="Selected Patriots regular-season wins during the dynasty"></div>
-  <figcaption class="art-chart-caption">Selected Patriots regular-season wins during the dynasty</figcaption>
 </figure>
 <p class="art-p">Dynasties are remembered through rings, but the Patriots' real violence was routine. Twelve, thirteen, fourteen wins stopped feeling exceptional.</p>
 <p class="art-p">This is how a system announces itself: excellence becomes boring before it becomes legendary.</p>
 <h2 id="conference-gate" class="anchored">CHART 4 - AFC GATE</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/patriots-the-artometrics-of-the-system-dynasty/charts/chart4_conference_gate.plotly.json" data-source="Data: Pro Football Reference, NFL records, Forbes - ARTOMETRICS" role="img" aria-label="AFC championship appearances since 2001"></div>
-  <figcaption class="art-chart-caption">AFC championship appearances since 2001</figcaption>
 </figure>
 <p class="art-p">The Patriots did not merely win Super Bowls. They controlled access to the AFC's final room.</p>
 <p class="art-p">For rival fan bases, the dynasty was experienced less as a team and more as a recurring gatekeeping mechanism.</p>
 <h2 id="brand-after-system" class="anchored">CHART 5 - AFTER THE SYSTEM</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/patriots-the-artometrics-of-the-system-dynasty/charts/chart5_brand_after_system.plotly.json" data-source="Data: Pro Football Reference, NFL records, Forbes - ARTOMETRICS" role="img" aria-label="Brand rank and football output before and after the dynasty"></div>
-  <figcaption class="art-chart-caption">Brand rank and football output before and after the dynasty</figcaption>
 </figure>
 <p class="art-p">The post-Brady years expose the separation between brand capital and football output. The value remains; the machine does not.</p>
 <p class="art-p">That is the afterlife of a dynasty: the market remembers longer than the scoreboard does.</p>

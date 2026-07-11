@@ -72,150 +72,13 @@ draft: false
 <p>Due to rate-limiting constraints on the Basketball Reference scraper during the production of this report, season records for Charts 1 and 2 are drawn from a manually verified tibble built directly from Basketball Reference franchise and season summary pages. The values are accurate to the published record. The 68+ win seasons in Chart 3 are a fully static dataset — seven rows, all pulled directly from Basketball Reference, manually coded for championship status. No package dependency is required for that chart, and no approximations are used.</p>
 <p>The three-point era data requires one important framing caveat: GSW’s three-point volume in the early 1980s was not meaningfully different from league average, because no team had yet developed a coherent three-point offensive philosophy. The line existed from 1980 onward, but the strategic embrace of it took another decade league-wide and another three decades before Golden State made it the centerpiece of the most efficient offense in NBA history. That arc — from novelty to weapon to universal standard — is what Chart 2 is designed to show.</p>
 <p>Win percentage is reported as a decimal proportion (0.0–1.0) and converted to percentage for display. The 2019–20 season was shortened to 72 games due to the COVID-19 pandemic; the Warriors’ win percentage that season (.232, 15–50) reflects their actual record in games played and is directly comparable to full 82-game seasons for the purposes of this analysis.</p>
-<div class="art-code-block">
-  <details>
-    <summary class="art-code-summary">
-      <span class="art-lang-tag art-lang-sql">SQL</span>
-    </summary>
-    <pre class="art-code-pre" id="sql-block-1">-- WARRIORS DATASET: CORE QUERIES
--- Source: Basketball Reference via nbastatR
--- Display-only — analysis runs in R; SQL documents the logic
 
--- ── 1. Season Win % by Era ──────────────────────────────────────────
-WITH seasons AS (
-  SELECT
-    season_year,
-    wins,
-    losses,
-    ROUND(CAST(wins AS FLOAT) / (wins + losses), 4) AS win_pct
-  FROM gsw_team_seasons
-  WHERE franchise_id = &#39;GSW&#39;
-),
-era_tagged AS (
-  SELECT *,
-    CASE
-      WHEN season_year BETWEEN 1947 AND 1956 THEN &#39;Philadelphia Dynasty&#39;
-      WHEN season_year = 1975               THEN &#39;1975 Championship&#39;
-      WHEN season_year BETWEEN 2015 AND 2019 THEN &#39;Curry Dynasty&#39;
-      WHEN season_year = 2022               THEN &#39;2022 Championship&#39;
-      ELSE &#39;Rebuilding&#39;
-    END AS era
-  FROM seasons
-)
-SELECT
-  era,
-  COUNT(*)                       AS n_seasons,
-  ROUND(AVG(win_pct), 3)         AS avg_win_pct,
-  MAX(win_pct)                   AS peak_win_pct,
-  MIN(win_pct)                   AS floor_win_pct
-FROM era_tagged
-GROUP BY era
-ORDER BY avg_win_pct DESC;
-
--- ── 2. Three-Point Attempts Per Game: GSW vs. League ───────────────
-SELECT
-    t.season_year,
-    t.team_abbreviation,
-    ROUND(t.fg3a / t.games_played, 2)   AS team_3pa_pg,
-    l.league_avg_3pa_pg,
-    ROUND(
-      (t.fg3a / t.games_played)
-      - l.league_avg_3pa_pg, 2
-    )                                   AS delta_vs_league
-FROM team_season_totals t
-JOIN league_season_averages l
-  ON t.season_year = l.season_year
-WHERE t.team_abbreviation = &#39;GSW&#39;
-  AND t.season_year &gt;= 1980
-ORDER BY t.season_year;
-
--- ── 3. Historical 68+ Win Seasons ──────────────────────────────────
-SELECT
-    team_name,
-    season_year,
-    wins,
-    losses,
-    CASE WHEN champion = 1 THEN &#39;Yes&#39; ELSE &#39;No&#39; END AS won_title
-FROM nba_season_records
-WHERE wins &gt;= 68
-ORDER BY wins DESC, season_year ASC;</pre>
-
-  </details>
-</div>
-<div class="art-code-block">
-  <details>
-    <summary class="art-code-summary">
-      <span class="art-lang-tag art-lang-python">Python</span>
-    </summary>
-    <pre class="art-code-pre" id="py-block-1"># Warriors Artometrics — Python EDA
-# Purpose: Dataset pull diagnostics and exploratory checks
-# Run before R chart build to validate data shape and coverage
-
-import pandas as pd
-import numpy as np
-import requests
-
-# ── 1. Fetch GSW season logs via basketball_reference_scraper ───────
-# pip install basketball_reference_scraper
-
-from basketball_reference_scraper.teams import get_roster_stats
-
-gsw_seasons = []
-for year in range(1980, 2025):
-    try:
-        df = get_roster_stats(&#39;GSW&#39;, year, data_format=&#39;TOTALS&#39;)
-        df[&#39;season&#39;] = year
-        gsw_seasons.append(df)
-    except Exception as e:
-        print(f&quot;  {year}: {e}&quot;)
-
-gsw_df = pd.concat(gsw_seasons, ignore_index=True)
-
-# ── 2. Shape and coverage check ─────────────────────────────────────
-print(f&quot;Rows:    {len(gsw_df):,}&quot;)
-print(f&quot;Seasons: {gsw_df[&#39;season&#39;].nunique()}&quot;)
-print(f&quot;\nNull check:\n{gsw_df.isnull().sum()}&quot;)
-
-# ── 3. Three-point coverage check ───────────────────────────────────
-three_pt_cols = [c for c in gsw_df.columns if &#39;3&#39; in c.lower()]
-print(f&quot;\n3PT columns: {three_pt_cols}&quot;)
-print(gsw_df[[&#39;season&#39;] + three_pt_cols].groupby(&#39;season&#39;).sum())
-
-# ── 4. Win % by era — quick aggregation ─────────────────────────────
-from basketball_reference_scraper.seasons import get_standings
-
-records = []
-for year in range(1947, 2025):
-    try:
-        east, west = get_standings(year)
-        for df in [east, west]:
-            row = df[df[&#39;TEAM&#39;].str.contains(
-                &#39;Golden State|Philadelphia Warriors|San Francisco&#39;,
-                na=False
-            )]
-            if len(row) &gt; 0:
-                row = row.copy()
-                row[&#39;season&#39;] = year
-                records.append(row)
-    except Exception as e:
-        print(f&quot;  {year}: {e}&quot;)
-
-records_df = pd.concat(records, ignore_index=True)
-records_df[&#39;win_pct&#39;] = (
-    records_df[&#39;W&#39;] / (records_df[&#39;W&#39;] + records_df[&#39;L&#39;])
-)
-print(records_df[[&#39;season&#39;,&#39;TEAM&#39;,&#39;W&#39;,&#39;L&#39;,&#39;win_pct&#39;]].head(20))
-    </pre>
-
-  </details>
-</div>
 <h2 id="win-percentage-over-time" class="anchored">WIN PERCENTAGE OVER TIME</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/warrior-the-artometrics-of-a-golden-state-dynasty/charts/chart1_win_pct_timeline.plotly.json" data-fallback="/images/content/articles/warrior-the-artometrics-of-a-golden-state-dynasty/charts/chart1_win_pct_timeline.png" role="img" aria-label="Win Pct Timeline"></div>
-  <figcaption class="art-chart-caption">Win Pct Timeline</figcaption>
 </figure>
 </div>
 </div>
@@ -223,60 +86,13 @@ print(records_df[[&#39;season&#39;,&#39;TEAM&#39;,&#39;W&#39;,&#39;L&#39;,&#39;w
 <p>The Warriors have had exactly two dynasty windows in 78 years of professional basketball, and the gap between them is so wide it barely fits on a single chart. The Philadelphia era — anchored by the 1947 and 1956 championships — produced the franchise’s first sustained run of excellence, though it was less dominant than nostalgia suggests. The team spent several seasons in the 40–45% win range even during the dynasty band, with only isolated peaks of genuine dominance. The 1975 championship was a one-season outlier, a Rick Barry-led team that peaked at .720 and then collapsed almost immediately back into irrelevance. What the chart makes viscerally clear is what came after: roughly 35 consecutive seasons below or hovering at .500, interrupted only by the We Believe era’s brief 2007 playoff run and a few isolated winning seasons around Chris Mullin and Tim Hardaway in the early 1990s.</p>
 <p>The Curry era doesn’t just look different in the data — it looks categorically different. The win percentage line goes somewhere it had never been in franchise history. The 2015–16 spike to .890 is the visual anchor of the entire chart, a data point so far above everything around it that it demands its own analysis. But what’s analytically underappreciated is the consistency of the dynasty beyond that spike. From 2015 through 2019, the Warriors never won fewer than 57 games in a non-strike-shortened season. Five consecutive years above .695. No franchise in the modern NBA era had done that.</p>
 <p>The 2019–20 collapse is the steepest single-season drop in franchise history — from .707 in 2018–19 to .232 in 2019–20, a 47-point decline driven by Klay Thompson’s ACL tear and the COVID-shortened season compressing the damage into sharp relief. The 2022 championship rebound is the fastest recovery in the dataset: from .232 to .671 in two seasons, without a lottery pick, without a blockbuster trade, with the same core that won four titles. The dynasty didn’t rebuild. It waited.</p>
-<div class="art-code-block">
-  <details>
-    <summary class="art-code-summary">
-      <span class="art-lang-tag art-lang-r">R</span>
-    </summary>
-    <pre class="art-code-pre" id="r-block-1">p1 &lt;- ggplot(gsw_wp, aes(x = season, y = win_pct)) +
-  annotate(&quot;rect&quot;, xmin = 1947, xmax = 1957,
-           ymin = -Inf, ymax = Inf,
-           fill = art_secondary, alpha = 0.08) +
-  annotate(&quot;rect&quot;, xmin = 1974, xmax = 1977,
-           ymin = -Inf, ymax = Inf,
-           fill = art_secondary, alpha = 0.08) +
-  annotate(&quot;rect&quot;, xmin = 2014, xmax = 2020,
-           ymin = -Inf, ymax = Inf,
-           fill = art_secondary, alpha = 0.08) +
-  geom_hline(yintercept = 0.5,
-             color = art_mid, linewidth = 0.4, linetype = &quot;dashed&quot;) +
-  geom_area(fill = art_secondary, alpha = 0.12) +
-  geom_line(color = art_secondary, linewidth = 1.0) +
-  geom_point(data = champ_df,
-             aes(x = season, y = win_pct),
-             color = art_highlight, size = 3.5, shape = 18) +
-  annotate(&quot;point&quot;, x = 1960, y = 0.96,
-           color = art_highlight, size = 3.5, shape = 18) +
-  annotate(&quot;text&quot;, x = 1961.5, y = 0.96,
-           label = &quot;Championship season&quot;,
-           color = art_mid, size = 2.6, hjust = 0) +
-  scale_y_continuous(
-    labels = label_percent(accuracy = 1),
-    limits = c(0, 1), breaks = seq(0, 1, 0.25)
-  ) +
-  scale_x_continuous(
-    breaks = seq(1950, 2020, 10),
-    expand = expansion(mult = c(0.01, 0.01))
-  ) +
-  labs(
-    title = &quot;TWO DYNASTIES. ONE LONG DROUGHT. THE <span style="color:#C0392B;">WARRIORS</span> WIN PERCENTAGE, 1947-2024.&quot;,
-    caption = &quot;Source: Basketball Reference via nbastatR  -  ARTOMETRICS&quot;,
-    x = NULL, y = &quot;Win Percentage&quot;
-  ) +
-  theme_artometrics()
 
-ggsave(&quot;chart1_win_pct_timeline.png&quot;, plot = p1,
-       path = &quot;charts&quot;, width = 12, height = 7, dpi = 300, bg = &quot;white&quot;)</pre>
-
-  </details>
-</div>
 <h2 id="the-three-point-revolution" class="anchored">THE THREE-POINT REVOLUTION</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/warrior-the-artometrics-of-a-golden-state-dynasty/charts/chart2_three_point_revolution.plotly.json" data-fallback="/images/content/articles/warrior-the-artometrics-of-a-golden-state-dynasty/charts/chart2_three_point_revolution.png" role="img" aria-label="Three Point Revolution"></div>
-  <figcaption class="art-chart-caption">Three Point Revolution</figcaption>
 </figure>
 </div>
 </div>
@@ -284,50 +100,13 @@ ggsave(&quot;chart1_win_pct_timeline.png&quot;, plot = p1,
 <p>From 1980 through roughly 2012, the Golden State Warriors shot about as many threes as everyone else. The two lines in this chart run almost on top of each other for the first three decades — not because the Warriors were league-average in talent, but because nobody had yet figured out that the three-point line was the single most important structural advantage in basketball. The shot is worth 50% more than a two. You don’t need a mathematician to see why that matters. It took the league until Curry arrived to act on it.</p>
 <p>The divergence starts in 2013 and accelerates almost immediately. By 2015–16 — the 73-win season — the Warriors were launching 41.6 three-point attempts per game while the league average sat at 26.7. That is a 14.9-attempt gap. To put that in context: the Warriors were attempting more threes per game than the entire NBA would average five years later. The dip in the red line between 2017 and 2019 is not evidence of retreat — it is evidence of Kevin Durant. With Durant on the roster, the Warriors had easier scoring options closer to the basket, and Kerr pulled back the volume slightly without sacrificing efficiency. They were still the best offense in the league. They were just doing it differently.</p>
 <p>The convergence after 2019 is the most analytically important part of the chart. The league doesn’t retreat from the three-point line when the Warriors dynasty ends — it accelerates toward it. By 2022 the NBA average had climbed to 35 attempts per game, and the Warriors’ advantage had essentially evaporated because every team had absorbed the lesson. This is what competitive diffusion looks like in professional sports: one franchise proves a thesis, wins four championships doing it, and within a decade the entire sport has reorganized around the same idea. The Warriors didn’t just win. They changed what winning looks like.</p>
-<div class="art-code-block">
-  <details>
-    <summary class="art-code-summary">
-      <span class="art-lang-tag art-lang-r">R</span>
-    </summary>
-    <pre class="art-code-pre" id="r-block-2">p2 &lt;- ggplot(chart2_long,
-             aes(x = season, y = three_pa_pg,
-                 color = series, linewidth = series)) +
-  annotate(&quot;rect&quot;, xmin = 2013, xmax = 2019,
-           ymin = -Inf, ymax = Inf,
-           fill = art_highlight, alpha = 0.06) +
-  geom_line() +
-  scale_color_manual(values = c(
-    &quot;Golden State Warriors&quot; = art_highlight,
-    &quot;NBA League Average&quot;    = art_secondary
-  )) +
-  scale_linewidth_manual(values = c(
-    &quot;Golden State Warriors&quot; = 1.4,
-    &quot;NBA League Average&quot;    = 0.9
-  )) +
-  scale_x_continuous(breaks = seq(1980, 2024, 5)) +
-  scale_y_continuous(breaks = seq(0, 45, 10), limits = c(0, 45)) +
-  labs(
-    title = &quot;THE <span style="color:#C0392B;">WARRIORS</span> BENT THE SPORT. THE LEAGUE SPENT A DECADE CATCHING UP.&quot;,
-    subtitle = &quot;Three-point attempts per game - Golden State Warriors vs. NBA League Average, 1980-2024&quot;,
-    caption = &quot;Source: Basketball Reference via nbastatR  -  ARTOMETRICS&quot;,
-    x = NULL, y = &quot;3-Point Attempts Per Game&quot;,
-    color = NULL, linewidth = NULL
-  ) +
-  theme_artometrics() +
-  theme(legend.position = &quot;top&quot;)
 
-ggsave(&quot;chart2_three_point_revolution.png&quot;, plot = p2,
-       path = &quot;charts&quot;, width = 12, height = 7, dpi = 300, bg = &quot;white&quot;)</pre>
-
-  </details>
-</div>
 <h2 id="six-teams.-68-wins.-one-record." class="anchored">SIX TEAMS. 68+ WINS. ONE RECORD.</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/warrior-the-artometrics-of-a-golden-state-dynasty/charts/chart3_73_win_context.plotly.json" data-fallback="/images/content/articles/warrior-the-artometrics-of-a-golden-state-dynasty/charts/chart3_73_win_context.png" role="img" aria-label="73 Win Context"></div>
-  <figcaption class="art-chart-caption">73 Win Context</figcaption>
 </figure>
 </div>
 </div>
@@ -335,46 +114,7 @@ ggsave(&quot;chart2_three_point_revolution.png&quot;, plot = p2,
 <p>Only six teams in the entire history of the NBA have ever won 68 or more regular season games. That is not a rounding error — it is a genuine reflection of how hard it is to sustain excellence across 82 games against 29 other professional organizations all trying to beat you. The cluster at 68 and 69 wins represents the ceiling of what great teams typically achieve. The 1995–96 Chicago Bulls at 72 wins sat alone above that ceiling for nearly two decades. Then the Warriors broke it by one.</p>
 <p>What the chart also reveals, and what the casual telling of this story tends to obscure, is that winning 73 games did not produce a championship. The 2015–16 Warriors lost the NBA Finals to LeBron James and the Cleveland Cavaliers in seven games, becoming the first team in Finals history to blow a 3–1 series lead. Of the six teams represented on this chart, only the Warriors and the 1971–72 Milwaukee Bucks failed to win the title in their record-setting season. The Bulls closed out their 72-win campaign with a championship. The Warriors went home. <strong>The 73-win season is simultaneously the greatest regular season in NBA history and the most famous failure to close.</strong></p>
 <p>This context matters analytically. The Warriors’ dynasty is correctly measured by its four championships — 2015, 2017, 2018, 2022 — not by its win total in any single season. The 73-win year is the ceiling of what they were capable of, a demonstration of how dominant the Death Lineup era truly was. But the franchise’s legacy doesn’t rest on that number. It rests on what they built around Curry, Thompson, and Green over a decade — and the fact that they kept winning after Durant left, after injuries piled up, after everyone assumed the window had closed.</p>
-<div class="art-code-block">
-  <details>
-    <summary class="art-code-summary">
-      <span class="art-lang-tag art-lang-r">R</span>
-    </summary>
-    <pre class="art-code-pre" id="r-block-3">p3 &lt;- ggplot(wins_70plus,
-             aes(x = wins, y = team, color = color_flag)) +
-  geom_vline(xintercept = 72,
-             color = art_mid, linewidth = 0.4, linetype = &quot;dashed&quot;) +
-  geom_segment(aes(x = 67, xend = wins, y = team, yend = team),
-               color = art_muted, linewidth = 0.7) +
-  geom_point(size = 6) +
-  geom_text(aes(label = wins),
-            color = &quot;white&quot;, size = 2.8, fontface = &quot;bold&quot;) +
-  geom_text(
-    data = wins_70plus |&gt; filter(champion),
-    aes(label = &quot;Champions&quot;, x = wins + 0.3),
-    color = art_mid, size = 2.4, hjust = 0
-  ) +
-  scale_color_manual(values = c(
-    &quot;gsw&quot;      = art_highlight,
-    &quot;champion&quot; = art_secondary,
-    &quot;other&quot;    = art_muted
-  )) +
-  scale_x_continuous(limits = c(67, 78), breaks = seq(68, 75, 1)) +
-  labs(
-    title = &quot;SIX TEAMS. 68+ WINS. ONE RECORD. THE 2015-16 WARRIORS BROKE IT.&quot;,
-    caption = &quot;Source: Basketball Reference  -  ARTOMETRICS&quot;,
-    x = &quot;Regular Season Wins&quot;, y = NULL
-  ) +
-  theme_artometrics() +
-  theme(legend.position = &quot;none&quot;,
-        panel.grid.major.y = element_blank(),
-        axis.text.y = element_text(size = 8.5, color = art_dark))
 
-ggsave(&quot;chart3_73_win_context.png&quot;, plot = p3,
-       path = &quot;charts&quot;, width = 12, height = 7, dpi = 300, bg = &quot;white&quot;)</pre>
-
-  </details>
-</div>
 <h2 id="limitations" class="anchored">LIMITATIONS</h2>
 <p>The win percentage data in Chart 1 is drawn from a manually verified tibble rather than a live API pull. Values are sourced from Basketball Reference’s franchise history page for the Golden State Warriors and cross-checked against season summary pages for years where the franchise operated as the Philadelphia Warriors (1946–1962) and San Francisco Warriors (1962–1971). The values are accurate to the published record, but the methodology differs from the automated pulls used in other Artometrics reports — readers who want to replicate the data pull programmatically should use the nbastatR package with single-season calls rather than multi-season range calls, which can trigger rate-limiting on the Basketball Reference scraper.</p>
 <p>The three-point attempt data in Chart 2 begins in 1979–80 because the NBA did not use the three-point line before that season. This means the chart cannot show the pre-three-point era context for shooting philosophy, and any claims about the “revolution” are bounded to the 44-year window in which the shot has existed. Additionally, the Warriors’ pre-Curry three-point data (1980–2012) reflects a period in which the franchise had no coherent three-point offensive philosophy, so the GSW line during those years tracks the league average more by coincidence than design.</p>

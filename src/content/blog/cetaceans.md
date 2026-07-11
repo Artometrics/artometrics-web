@@ -41,35 +41,30 @@ draft: false
 <h2 id="chart-1-category" class="anchored">CHART 1 — LANDSCAPE</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/cetaceans/charts/chart1_category.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/cetaceans/charts/chart1_category.png" role="img" aria-label="US dominates with 2,172 records"></div>
-  <figcaption class="art-chart-caption">US dominates with 2,172 records</figcaption>
 </figure>
 <p class="art-p"><strong>US</strong> dominates with <strong>2,172</strong> records.</p>
 <p class="art-p">The main bucket carries the story; this field does not have a meaningful long-tail split.</p>
 <h2 id="chart-1-volume" class="anchored">CHART 2 — VOLUME</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/cetaceans/charts/chart1_volume.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/cetaceans/charts/chart1_volume.png" role="img" aria-label="Records By Period"></div>
-  <figcaption class="art-chart-caption">Records By Period</figcaption>
 </figure>
 <p class="art-p">Activity peaks in <strong>1972.0</strong> with <strong>170</strong> records.</p>
 <p class="art-p">Period-level counts reveal when the dataset's subject matter intensified.</p>
 <h2 id="chart-2-leaders" class="anchored">CHART 3 — LEADERS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/cetaceans/charts/chart2_leaders.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/cetaceans/charts/chart2_leaders.png" role="img" aria-label="Bottlenose appears 1,668 times — the most recurring name in the file"></div>
-  <figcaption class="art-chart-caption">Bottlenose appears 1,668 times — the most recurring name in the file</figcaption>
 </figure>
 <p class="art-p"><strong>Bottlenose</strong> appears <strong>1,668</strong> times — the most recurring name in the file.</p>
 <p class="art-p">The top dozen account for a visible share of all <strong>2,194</strong> rows.</p>
 <h2 id="chart-3-category" class="anchored">CHART 4 — CATEGORY</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/cetaceans/charts/chart3_category.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/cetaceans/charts/chart3_category.png" role="img" aria-label="US is the largest bucket with 2,172 records"></div>
-  <figcaption class="art-chart-caption">US is the largest bucket with 2,172 records</figcaption>
 </figure>
 <p class="art-p"><strong>US</strong> is the largest bucket with <strong>2,172</strong> records.</p>
 <p class="art-p">Category concentration shows where editorial attention should focus first.</p>
 <h2 id="chart-4-timeline" class="anchored">CHART 5 — TIMELINE</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/cetaceans/charts/chart4_timeline.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/cetaceans/charts/chart4_timeline.png" role="img" aria-label="Leaders Over Time"></div>
-  <figcaption class="art-chart-caption">Leaders Over Time</figcaption>
 </figure>
 <p class="art-p">The leading names do not move in lockstep — some fade as others surge.</p>
 <p class="art-p">Tracking counts over time separates sustained presence from one-off spikes.</p>

@@ -44,35 +44,30 @@ draft: false
 <h2 id="chart-1-trend" class="anchored">CHART 1 — TREND</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/web-page-metrics/charts/chart1_trend.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/web-page-metrics/charts/chart1_trend.png" role="img" aria-label="Median P50 Over Time"></div>
-  <figcaption class="art-chart-caption">Median P50 Over Time</figcaption>
 </figure>
 <p class="art-p">Median p50 is <strong>falling</strong> from <strong>7.00</strong> in the opening period to <strong>4.80</strong> at the close.</p>
 <p class="art-p">Annual medians filter one-off spikes so the structural slope — not viral outliers — drives the story.</p>
 <h2 id="chart-3-distribution" class="anchored">CHART 3 — DISTRIBUTION</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/web-page-metrics/charts/chart3_distribution.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/web-page-metrics/charts/chart3_distribution.png" role="img" aria-label="P50 by Client"></div>
-  <figcaption class="art-chart-caption">P50 by Client</figcaption>
 </figure>
 <p class="art-p">Category boxes reveal whether p50 consensus is shared or contested across tiers.</p>
 <p class="art-p">Wide whiskers flag segments where outliers — not averages — drive reputation.</p>
 <h2 id="chart-5-relationship" class="anchored">SUPPLEMENT — RELATIONSHIP</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/web-page-metrics/charts/chart5_scatter.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/web-page-metrics/charts/chart5_scatter.png" role="img" aria-label="P50 vs P90"></div>
-  <figcaption class="art-chart-caption">P50 vs P90</figcaption>
 </figure>
 <p class="art-p">Joint plot of <strong>p50</strong> and <strong>p90</strong> surfaces clusters the averages erase.</p>
 <p class="art-p">Bubble size tracks repeat presence — outliers are archetypes, not noise.</p>
 <h2 id="chart-heatmap" class="anchored">CHART 4 — HEATMAP</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/web-page-metrics/charts/chart_heatmap.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/web-page-metrics/charts/chart_heatmap.png" role="img" aria-label="P50 by Client × year"></div>
-  <figcaption class="art-chart-caption">P50 by Client × year</figcaption>
 </figure>
 <p class="art-p">Heatmaps expose which client tiers heated up or cooled down across the timeline.</p>
 <p class="art-p">Single-year bars hide drift; the grid shows structural migration between categories.</p>
 <h2 id="chart-alt-trend" class="anchored">SUPPLEMENT — TREND</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/web-page-metrics/charts/chart_alt_trend.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/web-page-metrics/charts/chart_alt_trend.png" role="img" aria-label="Median P50 Over Time"></div>
-  <figcaption class="art-chart-caption">Median P50 Over Time</figcaption>
 </figure>
 <p class="art-p">Median p50 moves from <strong>7.00</strong> to <strong>4.80</strong> across the span.</p>
 <p class="art-p">A secondary trend cut confirms whether the headline metric drifts or holds steady.</p>

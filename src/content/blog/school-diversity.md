@@ -43,35 +43,30 @@ draft: false
 <h2 id="chart-1-trend" class="anchored">CHART 1 — TREND</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/school-diversity/charts/chart1_trend.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/school-diversity/charts/chart1_trend.png" role="img" aria-label="Median Multi Over Time"></div>
-  <figcaption class="art-chart-caption">Median Multi Over Time</figcaption>
 </figure>
 <p class="art-p">Median multi is <strong>falling</strong> from <strong>2.38</strong> in the opening period to <strong>2.38</strong> at the close.</p>
 <p class="art-p">Annual medians filter one-off spikes so the structural slope — not viral outliers — drives the story.</p>
 <h2 id="chart-2-leaders" class="anchored">CHART 2 — LEADERS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/school-diversity/charts/chart2_leaders.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/school-diversity/charts/chart2_leaders.png" role="img" aria-label="Top LEA NAME"></div>
-  <figcaption class="art-chart-caption">Top LEA NAME</figcaption>
 </figure>
 <p class="art-p"><strong>butteville union elementary</strong> leads at <strong>85.3</strong> — <strong>52.0</strong> marks the median among the top dozen.</p>
 <p class="art-p">Head-of-field concentration is where quality, scale, or brand visibly separates from the pack.</p>
 <h2 id="chart-3-distribution" class="anchored">CHART 3 — DISTRIBUTION</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/school-diversity/charts/chart3_distribution.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/school-diversity/charts/chart3_distribution.png" role="img" aria-label="Multi by ST"></div>
-  <figcaption class="art-chart-caption">Multi by ST</figcaption>
 </figure>
 <p class="art-p">Category boxes reveal whether multi consensus is shared or contested across tiers.</p>
 <p class="art-p">Wide whiskers flag segments where outliers — not averages — drive reputation.</p>
 <h2 id="chart-4-gap" class="anchored">CHART 4 — GAP ANALYSIS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/school-diversity/charts/chart4_gap.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/school-diversity/charts/chart4_gap.png" role="img" aria-label="Multi vs median by ST"></div>
-  <figcaption class="art-chart-caption">Multi vs median by ST</figcaption>
 </figure>
 <p class="art-p"><strong>OK</strong> sits <strong>4.25</strong> above the median; <strong>NJ</strong> trails by <strong>0.81</strong>.</p>
 <p class="art-p">Diverging from the median exposes which tiers over- or under-perform — not just who ranks first.</p>
 <h2 id="chart-5-relationship" class="anchored">SUPPLEMENT — RELATIONSHIP</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/school-diversity/charts/chart5_scatter.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/school-diversity/charts/chart5_scatter.png" role="img" aria-label="Multi vs Variance"></div>
-  <figcaption class="art-chart-caption">Multi vs Variance</figcaption>
 </figure>
 <p class="art-p">Joint plot of <strong>multi</strong> and <strong>variance</strong> surfaces clusters the averages erase.</p>
 <p class="art-p">Bubble size tracks repeat presence — outliers are archetypes, not noise.</p>

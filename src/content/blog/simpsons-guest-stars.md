@@ -40,35 +40,30 @@ draft: false
 <h2 id="chart-1-volume" class="anchored">CHART 1 — VOLUME</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/simpsons-guest-stars/charts/chart1_volume.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/simpsons-guest-stars/charts/chart1_volume.png" role="img" aria-label="Records By Period"></div>
-  <figcaption class="art-chart-caption">Records By Period</figcaption>
 </figure>
 <p class="art-p">Activity peaks in <strong>24.0</strong> with <strong>65</strong> records.</p>
 <p class="art-p">Period-level counts reveal when the dataset's subject matter intensified.</p>
 <h2 id="chart-2-leaders" class="anchored">CHART 2 — LEADERS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/simpsons-guest-stars/charts/chart2_leaders.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/simpsons-guest-stars/charts/chart2_leaders.png" role="img" aria-label="Top Guest star"></div>
-  <figcaption class="art-chart-caption">Top Guest star</figcaption>
 </figure>
 <p class="art-p"><strong>Marcia Wallace</strong> appears <strong>175</strong> times — the most recurring name in the file.</p>
 <p class="art-p">The top dozen account for a visible share of all <strong>1,381</strong> rows.</p>
 <h2 id="chart-4-timeline" class="anchored">CHART 4 — TIMELINE</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/simpsons-guest-stars/charts/chart4_timeline.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/simpsons-guest-stars/charts/chart4_timeline.png" role="img" aria-label="Leaders Over Time"></div>
-  <figcaption class="art-chart-caption">Leaders Over Time</figcaption>
 </figure>
 <p class="art-p">The leading names do not move in lockstep — some fade as others surge.</p>
 <p class="art-p">Tracking counts over time separates sustained presence from one-off spikes.</p>
 <h2 id="chart-5-frequency" class="anchored">SUPPLEMENT — FREQUENCY</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/simpsons-guest-stars/charts/chart5_frequency.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/simpsons-guest-stars/charts/chart5_frequency.png" role="img" aria-label="Most guest star entities appear only once; a small head revisits repeatedly"></div>
-  <figcaption class="art-chart-caption">Most guest star entities appear only once; a small head revisits repeatedly</figcaption>
 </figure>
 <p class="art-p">Most guest star entities appear only once; a small head revisits repeatedly.</p>
 <p class="art-p">This power-law shape is typical of guest lists, credits, and catalog-style tables.</p>
 <h2 id="chart-extra-mix" class="anchored">SUPPLEMENT — MIX</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/simpsons-guest-stars/charts/chart_extra_mix.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/simpsons-guest-stars/charts/chart_extra_mix.png" role="img" aria-label="24 is the most repeated season in the extract"></div>
-  <figcaption class="art-chart-caption">24 is the most repeated season in the extract</figcaption>
 </figure>
 <p class="art-p"><strong>24</strong> is the most repeated season in the extract.</p>
 <p class="art-p">Secondary dimensions add context when the primary table has no numeric score column.</p>

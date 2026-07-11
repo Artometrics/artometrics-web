@@ -42,35 +42,30 @@ draft: false
 <h2 id="why-compared" class="anchored">CHART 1 - WHY THEY ARE COMPARED</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/california-vs-texas-state-rivalry/charts/chart1_why_compared.plotly.json" data-source="Data: BEA, Census ACS, BLS, IRS migration summaries, OEC/ITA exports, state budget documents - ARTOMETRICS" role="img" aria-label="California and Texas are rival systems because both are big enough to feel like countries"></div>
-  <figcaption class="art-chart-caption">California and Texas are rival systems because both are big enough to feel like countries</figcaption>
 </figure>
 <p class="art-p">People compare California and Texas because they are not merely states. They are competing governance models, labor markets, export systems, media stories, and migration symbols.</p>
 <p class="art-p">The easy version is taxes. The more useful version is absorption: how each state turns land, labor, energy, culture, and institutions into growth.</p>
 <h2 id="growth-model" class="anchored">CHART 2 - GROWTH MODEL</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/california-vs-texas-state-rivalry/charts/chart2_growth_story.plotly.json" data-source="Data: BEA, Census ACS, BLS, IRS migration summaries, OEC/ITA exports, state budget documents - ARTOMETRICS" role="img" aria-label="California compounds knowledge while Texas compounds growth capacity"></div>
-  <figcaption class="art-chart-caption">California compounds knowledge while Texas compounds growth capacity</figcaption>
 </figure>
 <p class="art-p">California's model is IP-heavy: software, entertainment, venture capital, universities, design, and talent networks. Texas has a capacity model: energy, land, logistics, lower-cost growth, and business relocation.</p>
 <p class="art-p">That is why the rivalry persists even when the states are not substitutable.</p>
 <h2 id="fingerprint" class="anchored">CHART 3 - EXPORT FINGERPRINT</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/california-vs-texas-state-rivalry/charts/chart3_export_fingerprint.plotly.json" data-source="Data: BEA, Census ACS, BLS, IRS migration summaries, OEC/ITA exports, state budget documents - ARTOMETRICS" role="img" aria-label="The states overlap in scale but diverge in what they export to the world"></div>
-  <figcaption class="art-chart-caption">The states overlap in scale but diverge in what they export to the world</figcaption>
 </figure>
 <p class="art-p">California sells attention, code, entertainment, agriculture, hardware, and high-end coordination. Texas sells energy, logistics, industrial growth, and increasingly technology-adjacent capacity.</p>
 <p class="art-p">The chart shows why the same GDP conversation hides very different machinery.</p>
 <h2 id="tradeoffs" class="anchored">CHART 4 - HIDDEN TRADEOFFS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/california-vs-texas-state-rivalry/charts/chart4_hidden_tradeoffs.plotly.json" data-source="Data: BEA, Census ACS, BLS, IRS migration summaries, OEC/ITA exports, state budget documents - ARTOMETRICS" role="img" aria-label="The rivalry is about cost, climate, wages, culture, and risk, not taxes alone"></div>
-  <figcaption class="art-chart-caption">The rivalry is about cost, climate, wages, culture, and risk, not taxes alone</figcaption>
 </figure>
 <p class="art-p">California's high cost is real. Texas's energy and climate exposure are real. California's wage ceiling and cultural magnetism are real. Texas's business formation and logistics advantages are real.</p>
 <p class="art-p">A serious comparison keeps all of those variables in the frame at once.</p>
 <h2 id="questions" class="anchored">CHART 5 - WHAT TO ASK NEXT</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/california-vs-texas-state-rivalry/charts/chart5_rivalry_questions.plotly.json" data-source="Data: BEA, Census ACS, BLS, IRS migration summaries, OEC/ITA exports, state budget documents - ARTOMETRICS" role="img" aria-label="The useful California-Texas questions are about irreplaceable exports, talent, climate, and who benefits"></div>
-  <figcaption class="art-chart-caption">The useful California-Texas questions are about irreplaceable exports, talent, climate, and who benefits</figcaption>
 </figure>
 <p class="art-p">The surprise question is not 'which state is better?' It is which parts of each state are impossible for the other to copy.</p>
 <p class="art-p">That gives later reports a sharper path: migration, taxes, exports, housing, climate, and cultural production should be tested as a system.</p>

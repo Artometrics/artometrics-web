@@ -44,35 +44,30 @@ draft: false
 <h2 id="chart-1-trend" class="anchored">CHART 1 — TREND</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/national-park-visits/charts/chart1_trend.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/national-park-visits/charts/chart1_trend.png" role="img" aria-label="Median Visitors Over Time"></div>
-  <figcaption class="art-chart-caption">Median Visitors Over Time</figcaption>
 </figure>
 <p class="art-p">Median visitors is <strong>rising</strong> from <strong>2,200</strong> in the opening period to <strong>198,478</strong> at the close.</p>
 <p class="art-p">Annual medians filter one-off spikes so the structural slope — not viral outliers — drives the story.</p>
 <h2 id="chart-2-leaders" class="anchored">CHART 2 — LEADERS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/national-park-visits/charts/chart2_leaders.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/national-park-visits/charts/chart2_leaders.png" role="img" aria-label="Golden Gate leads at 14,554,750 — 5,151,270 marks the median among the top dozen"></div>
-  <figcaption class="art-chart-caption">Golden Gate leads at 14,554,750 — 5,151,270 marks the median among the top dozen</figcaption>
 </figure>
 <p class="art-p"><strong>Golden Gate</strong> leads at <strong>14,554,750</strong> — <strong>5,151,270</strong> marks the median among the top dozen.</p>
 <p class="art-p">Head-of-field concentration is where quality, scale, or brand visibly separates from the pack.</p>
 <h2 id="chart-3-distribution" class="anchored">CHART 3 — DISTRIBUTION</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/national-park-visits/charts/chart3_distribution.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/national-park-visits/charts/chart3_distribution.png" role="img" aria-label="Visitors by Region"></div>
-  <figcaption class="art-chart-caption">Visitors by Region</figcaption>
 </figure>
 <p class="art-p">Category boxes reveal whether visitors consensus is shared or contested across tiers.</p>
 <p class="art-p">Wide whiskers flag segments where outliers — not averages — drive reputation.</p>
 <h2 id="chart-4-gap" class="anchored">CHART 4 — GAP ANALYSIS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/national-park-visits/charts/chart4_gap.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/national-park-visits/charts/chart4_gap.png" role="img" aria-label="Visitors vs median by Region"></div>
-  <figcaption class="art-chart-caption">Visitors vs median by Region</figcaption>
 </figure>
 <p class="art-p"><strong>NT</strong> sits <strong>12,634,481</strong> above the median; <strong>AK</strong> trails by <strong>142,104</strong>.</p>
 <p class="art-p">Diverging from the median exposes which tiers over- or under-perform — not just who ranks first.</p>
 <h2 id="chart-pareto" class="anchored">SUPPLEMENT — CONCENTRATION</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/national-park-visits/charts/chart_pareto.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/national-park-visits/charts/chart_pareto.png" role="img" aria-label="The top 5 parkname entries account for 52% of the aggregate visitors"></div>
-  <figcaption class="art-chart-caption">The top 5 parkname entries account for 52% of the aggregate visitors</figcaption>
 </figure>
 <p class="art-p">The top <strong>5</strong> parkname entries account for <strong>52%</strong> of the aggregate visitors.</p>
 <p class="art-p">Steep Pareto curves mean a small head drives most of the signal — the long tail is noise until it isn't.</p>

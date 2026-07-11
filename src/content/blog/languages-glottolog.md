@@ -40,35 +40,30 @@ draft: false
 <h2 id="chart-1-category" class="anchored">CHART 1 — LANDSCAPE</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/languages-glottolog/charts/chart1_category.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/languages-glottolog/charts/chart1_category.png" role="img" aria-label="Language documentation is geographically uneven"></div>
-  <figcaption class="art-chart-caption">Language documentation is geographically uneven</figcaption>
 </figure>
 <p class="art-p"><strong>Africa</strong> dominates with <strong>2,363</strong> records.</p>
 <p class="art-p">The main bucket carries the story; this field does not have a meaningful long-tail split.</p>
 <h2 id="chart-2-leaders" class="anchored">CHART 2 — LEADERS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/languages-glottolog/charts/chart2_leaders.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/languages-glottolog/charts/chart2_leaders.png" role="img" aria-label="Repeated language names show documentation density"></div>
-  <figcaption class="art-chart-caption">Repeated language names show documentation density</figcaption>
 </figure>
 <p class="art-p"><strong>Fasu</strong> appears <strong>1</strong> times — the most recurring name in the file.</p>
 <p class="art-p">The top dozen account for a visible share of all <strong>8,612</strong> rows.</p>
 <h2 id="chart-3-category" class="anchored">CHART 3 — CATEGORY</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/languages-glottolog/charts/chart3_category.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/languages-glottolog/charts/chart3_category.png" role="img" aria-label="Regional concentration shapes the language map"></div>
-  <figcaption class="art-chart-caption">Regional concentration shapes the language map</figcaption>
 </figure>
 <p class="art-p"><strong>Africa</strong> is the largest bucket with <strong>2,363</strong> records.</p>
 <p class="art-p">Category concentration shows where editorial attention should focus first.</p>
 <h2 id="chart-5-frequency" class="anchored">SUPPLEMENT — FREQUENCY</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/languages-glottolog/charts/chart5_frequency.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/languages-glottolog/charts/chart5_frequency.png" role="img" aria-label="Most languages appear once while a small head repeats"></div>
-  <figcaption class="art-chart-caption">Most languages appear once while a small head repeats</figcaption>
 </figure>
 <p class="art-p">Most name entities appear only once; a small head revisits repeatedly.</p>
 <p class="art-p">This power-law shape is typical of guest lists, credits, and catalog-style tables.</p>
 <h2 id="chart-extra-mix" class="anchored">SUPPLEMENT — MIX</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/languages-glottolog/charts/chart_extra_mix.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/languages-glottolog/charts/chart_extra_mix.png" role="img" aria-label="Identifier fields are metadata rather than a reader-facing thesis"></div>
-  <figcaption class="art-chart-caption">Identifier fields are metadata rather than a reader-facing thesis</figcaption>
 </figure>
 <p class="art-p"><strong>fasu1242</strong> is the most repeated id in the extract.</p>
 <p class="art-p">Secondary dimensions add context when the primary table has no numeric score column.</p>

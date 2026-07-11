@@ -42,35 +42,30 @@ draft: false
 <h2 id="chart-1-trend" class="anchored">CHART 1 — RUN LENGTH OVER THE DECADES</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/billboard-hot-100/charts/chart1_trend.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/billboard-hot-100/charts/chart1_trend.png" role="img" aria-label="Median weeks at number one per year — 1958 to 2025"></div>
-  <figcaption class="art-chart-caption">Median weeks at number one per year — 1958 to 2025</figcaption>
 </figure>
 <p class="art-p">The trend line tells a story in two halves. From 1958 through the 1990s, median run length drifts between 2 and 3 weeks — an era when radio play and physical sales set natural limits on how long one song could dominate. Post-2012, the median begins a slow climb as streaming rewrites the economics: a song that goes viral accumulates plays continuously, making it structurally harder for anything else to unseat it.</p>
 <p class="art-p">The highest single-year medians in the dataset cluster in the 2015–2025 range. This is the streaming era in action: longer runs, fewer number-ones per year, and a winner-take-most dynamic that concentrates attention on a shrinking pool of mega-hits.</p>
 <h2 id="chart-2-leaders" class="anchored">CHART 2 — LONGEST RUNS EVER</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/billboard-hot-100/charts/chart2_leaders.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/billboard-hot-100/charts/chart2_leaders.png" role="img" aria-label="Top 12 songs by total weeks at number one"></div>
-  <figcaption class="art-chart-caption">Top 12 songs by total weeks at number one</figcaption>
 </figure>
 <p class="art-p"><strong>"A Bar Song (Tipsy)"</strong> by Shaboozey leads the all-time list at <strong>19 weeks</strong> — a record achieved in the full streaming era where a country-rap crossover could accumulate plays from audiences that would never overlap in the pre-streaming world. The median among the top dozen is <strong>14.5 weeks</strong>, suggesting that record-length runs cluster in a narrow range rather than showing one extreme outlier followed by a rapid drop.</p>
 <p class="art-p">The most striking feature of this chart is what is absent: no Beatles song, no Motown classic, no 1970s or 1980s blockbuster. Every song on this list is from 1992 or later, with the majority from 2010 onward. The longest runs in Hot 100 history are a product of the modern era — of digital music, streaming infrastructure, and the global distribution of taste.</p>
 <h2 id="chart-3-distribution" class="anchored">CHART 3 — HOW ARTISTS COMPARE</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/billboard-hot-100/charts/chart3_distribution.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/billboard-hot-100/charts/chart3_distribution.png" role="img" aria-label="Distribution of run lengths for the most frequently appearing artists"></div>
-  <figcaption class="art-chart-caption">Distribution of run lengths for the most frequent number-one artists</figcaption>
 </figure>
 <p class="art-p">Box plots for the most frequent number-one artists reveal two distinct patterns. Artists like The Beatles have many short-run entries — they reached #1 often, but rarely held it for long, because the pre-SoundScan era cycled songs faster. Modern artists like Mariah Carey or Drake show wider distributions — some short runs, a handful of extended ones — reflecting both more volatile streaming behavior and longer careers in the streaming era.</p>
 <p class="art-p">Wide whiskers are the signal here: they identify artists whose success is inconsistent rather than structural. A narrow box with a high median is the mark of a reliable hitmaker. A wide box means the artist occasionally breaks through in a massive way but usually does not.</p>
 <h2 id="chart-4-gap" class="anchored">CHART 4 — ABOVE OR BELOW THE LINE</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/billboard-hot-100/charts/chart4_gap.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/billboard-hot-100/charts/chart4_gap.png" role="img" aria-label="Artist average run length vs the global median of 2 weeks"></div>
-  <figcaption class="art-chart-caption">Artist average run length vs the global median (2 weeks)</figcaption>
 </figure>
 <p class="art-p"><strong>Taylor Swift</strong> sits above the median — her number-one runs average longer than the historical norm, reflecting both her sustained streaming dominance and an unusually loyal fanbase that streams at high volume across long windows. The diverging bar chart makes the gap visible across artists: those to the right outperform the median; those at the line are average performers despite reaching #1.</p>
 <p class="art-p">Reaching number one is necessary but not sufficient for dominance. This chart separates artists who briefly claim the top from those who hold it — and that distinction maps cleanly onto streaming era vs. pre-streaming era careers.</p>
 <h2 id="chart-5-relationship" class="anchored">SUPPLEMENT — SCATTER: WEEKS VS REACH</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/billboard-hot-100/charts/chart5_scatter.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/billboard-hot-100/charts/chart5_scatter.png" role="img" aria-label="Weeks at number one vs secondary chart reach — scatter of all songs"></div>
-  <figcaption class="art-chart-caption">Weeks at number one vs secondary chart metric — all 1,177 songs</figcaption>
 </figure>
 <p class="art-p">The scatter of all songs against a secondary reach metric shows the expected cluster near the origin — most songs arrive briefly and reach a moderate audience — and a sparse upper-right region of true blockbusters: long runs, broad reach, and the kind of cultural saturation that transcends a single chart.</p>
 <p class="art-p">The outliers in the upper right are not outliers in the statistical sense — they are archetypes. They represent what the entire industry is optimized to produce, and what it very rarely achieves. Studying them is studying the ceiling, not the average.</p>

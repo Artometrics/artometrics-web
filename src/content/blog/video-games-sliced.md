@@ -44,35 +44,30 @@ draft: false
 <h2 id="chart-1-trend" class="anchored">CHART 1 — TREND</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/video-games-sliced/charts/chart1_trend.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/video-games-sliced/charts/chart1_trend.png" role="img" aria-label="Median Avg Over Time"></div>
-  <figcaption class="art-chart-caption">Median Avg Over Time</figcaption>
 </figure>
 <p class="art-p">Median avg is <strong>rising</strong> from <strong>212</strong> in the opening period to <strong>309</strong> at the close.</p>
 <p class="art-p">Annual medians filter one-off spikes so the structural slope — not viral outliers — drives the story.</p>
 <h2 id="chart-2-leaders" class="anchored">CHART 2 — LEADERS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/video-games-sliced/charts/chart2_leaders.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/video-games-sliced/charts/chart2_leaders.png" role="img" aria-label="Dota 2 leads at 475,924 — 64,656 marks the median among the top dozen"></div>
-  <figcaption class="art-chart-caption">Dota 2 leads at 475,924 — 64,656 marks the median among the top dozen</figcaption>
 </figure>
 <p class="art-p"><strong>Dota 2</strong> leads at <strong>475,924</strong> — <strong>64,656</strong> marks the median among the top dozen.</p>
 <p class="art-p">Head-of-field concentration is where quality, scale, or brand visibly separates from the pack.</p>
 <h2 id="chart-3-distribution" class="anchored">CHART 3 — DISTRIBUTION</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/video-games-sliced/charts/chart3_distribution.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/video-games-sliced/charts/chart3_distribution.png" role="img" aria-label="Avg by Month"></div>
-  <figcaption class="art-chart-caption">Avg by Month</figcaption>
 </figure>
 <p class="art-p">Category boxes reveal whether avg consensus is shared or contested across tiers.</p>
 <p class="art-p">Wide whiskers flag segments where outliers — not averages — drive reputation.</p>
 <h2 id="chart-4-gap" class="anchored">CHART 4 — GAP ANALYSIS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/video-games-sliced/charts/chart4_gap.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/video-games-sliced/charts/chart4_gap.png" role="img" aria-label="Avg vs median by Month"></div>
-  <figcaption class="art-chart-caption">Avg vs median by Month</figcaption>
 </figure>
 <p class="art-p"><strong>January</strong> sits <strong>36.9</strong> above the median; <strong>October</strong> trails by <strong>23.3</strong>.</p>
 <p class="art-p">Diverging from the median exposes which tiers over- or under-perform — not just who ranks first.</p>
 <h2 id="chart-5-relationship" class="anchored">SUPPLEMENT — RELATIONSHIP</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/video-games-sliced/charts/chart5_scatter.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/video-games-sliced/charts/chart5_scatter.png" role="img" aria-label="Avg vs Gain"></div>
-  <figcaption class="art-chart-caption">Avg vs Gain</figcaption>
 </figure>
 <p class="art-p">Joint plot of <strong>avg</strong> and <strong>gain</strong> surfaces clusters the averages erase.</p>
 <p class="art-p">Bubble size tracks repeat presence — outliers are archetypes, not noise.</p>

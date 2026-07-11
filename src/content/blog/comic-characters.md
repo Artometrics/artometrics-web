@@ -44,35 +44,30 @@ draft: false
 <h2 id="chart-1-trend" class="anchored">CHART 1 — TREND</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/comic-characters/charts/chart1_trend.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/comic-characters/charts/chart1_trend.png" role="img" aria-label="Median Appearances Over Time"></div>
-  <figcaption class="art-chart-caption">Median Appearances Over Time</figcaption>
 </figure>
 <p class="art-p">Median appearances is <strong>falling</strong> from <strong>125</strong> in the opening period to <strong>4.00</strong> at the close.</p>
 <p class="art-p">Annual medians filter one-off spikes so the structural slope — not viral outliers — drives the story.</p>
 <h2 id="chart-2-leaders" class="anchored">CHART 2 — LEADERS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/comic-characters/charts/chart2_leaders.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/comic-characters/charts/chart2_leaders.png" role="img" aria-label="Spider-Man (Peter Parker) leads at 4,043 — 2,377 marks the median among the top dozen"></div>
-  <figcaption class="art-chart-caption">Spider-Man (Peter Parker) leads at 4,043 — 2,377 marks the median among the top dozen</figcaption>
 </figure>
 <p class="art-p"><strong>Spider-Man (Peter Parker)</strong> leads at <strong>4,043</strong> — <strong>2,377</strong> marks the median among the top dozen.</p>
 <p class="art-p">Head-of-field concentration is where quality, scale, or brand visibly separates from the pack.</p>
 <h2 id="chart-3-distribution" class="anchored">CHART 3 — DISTRIBUTION</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/comic-characters/charts/chart3_distribution.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/comic-characters/charts/chart3_distribution.png" role="img" aria-label="Appearances by Publisher"></div>
-  <figcaption class="art-chart-caption">Appearances by Publisher</figcaption>
 </figure>
 <p class="art-p">Category boxes reveal whether appearances consensus is shared or contested across tiers.</p>
 <p class="art-p">Wide whiskers flag segments where outliers — not averages — drive reputation.</p>
 <h2 id="chart-4-concentration" class="anchored">CHART 4 — CONCENTRATION</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/comic-characters/charts/chart4_pareto.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/comic-characters/charts/chart4_pareto.png" role="img" aria-label="The top 5 name entries account for 45% of the aggregate appearances"></div>
-  <figcaption class="art-chart-caption">The top 5 name entries account for 45% of the aggregate appearances</figcaption>
 </figure>
 <p class="art-p">The top <strong>5</strong> name entries account for <strong>45%</strong> of the aggregate appearances.</p>
 <p class="art-p">Steep Pareto curves mean a small head drives most of the signal — the long tail is noise until it isn't.</p>
 <h2 id="chart-pareto" class="anchored">SUPPLEMENT — CONCENTRATION</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/comic-characters/charts/chart_pareto.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/comic-characters/charts/chart_pareto.png" role="img" aria-label="The top 5 name entries account for 45% of the aggregate appearances"></div>
-  <figcaption class="art-chart-caption">The top 5 name entries account for 45% of the aggregate appearances</figcaption>
 </figure>
 <p class="art-p">The top <strong>5</strong> name entries account for <strong>45%</strong> of the aggregate appearances.</p>
 <p class="art-p">Steep Pareto curves mean a small head drives most of the signal — the long tail is noise until it isn't.</p>

@@ -49,8 +49,8 @@ Run from the repo root:
 | `npm run upgrade:repos` | Audit/upgrade the 10 existing Artometrics GitHub repos |
 | `npm run publish:repos` | Push local repo upgrades to `Artometrics/*` on `main` (requires org write access) |
 | `npm run migration:manifest` | Write `docs/migration-manifest.json` for 79 Python-only articles |
-| `npm run render:readmitted` | Export readmitted chart PNGs via R (Chomsky wordmark, emerald palette) |
-| `npm run render:readmitted:py` | Same charts via Python/kaleido (legacy fallback) |
+| `npm run render:readmitted` | Export readmitted chart PNGs via R (requires Quarto/R locally) |
+| `npm run render:readmitted:py` | Export readmitted PNG + Plotly JSON via Python (red/white/black palette) |
 | `npm run setup:r` | Install CRAN packages for R chart export (`ggtext`, `cowplot`, `showtext`, etc.) |
 
 ## Content workflows

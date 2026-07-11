@@ -42,35 +42,30 @@ draft: false
 <h2 id="models" class="anchored">CHART 1 - THREE MODELS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/export-superpowers-us-china-germany/charts/chart1_three_export_models.plotly.json" data-source="Data: OEC, UN Comtrade, World Bank, OECD, IMF, BEA, Eurostat, national statistics offices - ARTOMETRICS" role="img" aria-label="The United States, China, and Germany represent platform, factory, and machine export systems"></div>
-  <figcaption class="art-chart-caption">The United States, China, and Germany represent platform, factory, and machine export systems</figcaption>
 </figure>
 <p class="art-p">These countries are compared because they sit near the center of the global production system, but they do not do the same job.</p>
 <p class="art-p">The United States captures software, IP, finance, and platform margins. China coordinates manufacturing scale and supply chains. Germany specializes in complex machinery, vehicles, and industrial trust.</p>
 <h2 id="fingerprints" class="anchored">CHART 2 - PRODUCT FINGERPRINTS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/export-superpowers-us-china-germany/charts/chart2_product_fingerprint.plotly.json" data-source="Data: OEC, UN Comtrade, World Bank, OECD, IMF, BEA, Eurostat, national statistics offices - ARTOMETRICS" role="img" aria-label="The export fingerprints show three different machines under the same global headline"></div>
-  <figcaption class="art-chart-caption">The export fingerprints show three different machines under the same global headline</figcaption>
 </figure>
 <p class="art-p">A GDP or export total can make the countries look like comparable blocks. The product mix reveals the real comparison.</p>
 <p class="art-p">This is the core Artometrics move: replace vague rivalry with system fingerprints.</p>
 <h2 id="dependencies" class="anchored">CHART 3 - DEPENDENCY RISK</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/export-superpowers-us-china-germany/charts/chart3_dependency_risk.plotly.json" data-source="Data: OEC, UN Comtrade, World Bank, OECD, IMF, BEA, Eurostat, national statistics offices - ARTOMETRICS" role="img" aria-label="Export strength creates different bottlenecks for each superpower"></div>
-  <figcaption class="art-chart-caption">Export strength creates different bottlenecks for each superpower</figcaption>
 </figure>
 <p class="art-p">The U.S. depends on talent, semiconductor chains, and consumer/platform demand. China depends on energy, shipping lanes, chips, and global buyers. Germany depends on allied markets, energy inputs, and industrial continuity.</p>
 <p class="art-p">The strongest systems are not invulnerable. They are specialized.</p>
 <h2 id="substitution" class="anchored">CHART 4 - SUBSTITUTABILITY</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/export-superpowers-us-china-germany/charts/chart4_substitutability.plotly.json" data-source="Data: OEC, UN Comtrade, World Bank, OECD, IMF, BEA, Eurostat, national statistics offices - ARTOMETRICS" role="img" aria-label="The strongest exporters are hard to replace for different reasons"></div>
-  <figcaption class="art-chart-caption">The strongest exporters are hard to replace for different reasons</figcaption>
 </figure>
 <p class="art-p">China is hard to replace because of scale and supply-chain integration. Germany is hard to replace because of industrial trust and precision. The U.S. is hard to replace because of standards, platforms, capital, and demand.</p>
 <p class="art-p">The surprise is that replaceability is product-specific, not country-wide.</p>
 <h2 id="questions" class="anchored">CHART 5 - STRATEGIC QUESTIONS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/export-superpowers-us-china-germany/charts/chart5_superpower_questions.plotly.json" data-source="Data: OEC, UN Comtrade, World Bank, OECD, IMF, BEA, Eurostat, national statistics offices - ARTOMETRICS" role="img" aria-label="The useful comparison asks who owns standards, factories, margins, shocks, allies, and substitutes"></div>
-  <figcaption class="art-chart-caption">The useful comparison asks who owns standards, factories, margins, shocks, allies, and substitutes</figcaption>
 </figure>
 <p class="art-p">The question is not simply who exports more. It is who captures margins, who controls chokepoints, who absorbs shocks, and who can be replaced.</p>
 <p class="art-p">That moves the report from economics into power.</p>

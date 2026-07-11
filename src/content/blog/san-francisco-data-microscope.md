@@ -42,35 +42,30 @@ draft: false
 <h2 id="identity-stack" class="anchored">CHART 1 - IDENTITY STACK</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/san-francisco-data-microscope/charts/chart1_sf_identity_stack.plotly.json" data-source="Data: DataSF, BEA, Census ACS, BLS, Commerce Metro Export Series, World Cities Culture Forum - ARTOMETRICS" role="img" aria-label="San Francisco exports software, finance coordination, and cultural permission"></div>
-  <figcaption class="art-chart-caption">San Francisco exports software, finance coordination, and cultural permission</figcaption>
 </figure>
 <p class="art-p">The simplest wrong answer is that San Francisco exports apps. The deeper answer is that it exports systems: venture risk, engineering labor, platform logic, taste, and institutional permission for strange ideas.</p>
 <p class="art-p">That is why the city can be small in population but enormous in economic imagination.</p>
 <h2 id="tradeoff" class="anchored">CHART 2 - TRADEOFF HISTORY</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/san-francisco-data-microscope/charts/chart2_sf_tradeoff_history.plotly.json" data-source="Data: DataSF, BEA, Census ACS, BLS, Commerce Metro Export Series, World Cities Culture Forum - ARTOMETRICS" role="img" aria-label="Technology concentration rose faster than the city could absorb housing pressure"></div>
-  <figcaption class="art-chart-caption">Technology concentration rose faster than the city could absorb housing pressure</figcaption>
 </figure>
 <p class="art-p">The SF story is not only success. It is absorption capacity. A small peninsula city generated global software wealth while underbuilding the physical city needed to metabolize that wealth.</p>
 <p class="art-p">The assumption to test later is whether housing, downtown vacancy, transit, and cultural retention are symptoms of the same bottleneck.</p>
 <h2 id="neighborhoods" class="anchored">CHART 3 - NEIGHBORHOOD PRESSURE</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/san-francisco-data-microscope/charts/chart3_neighborhood_pressure.plotly.json" data-source="Data: DataSF, BEA, Census ACS, BLS, Commerce Metro Export Series, World Cities Culture Forum - ARTOMETRICS" role="img" aria-label="Culture and cost rise unevenly across the neighborhood map"></div>
-  <figcaption class="art-chart-caption">Culture and cost rise unevenly across the neighborhood map</figcaption>
 </figure>
 <p class="art-p">A citywide average misses the point. SoMa, the Mission, Chinatown, the Tenderloin, and the Sunset each carry a different mixture of price, memory, commerce, and political meaning.</p>
 <p class="art-p">The DataSF layer matters because the city is small enough for block-level data to change the argument.</p>
 <h2 id="competitors" class="anchored">CHART 4 - COMPETITOR SET</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/san-francisco-data-microscope/charts/chart4_sf_competitor_set.plotly.json" data-source="Data: DataSF, BEA, Census ACS, BLS, Commerce Metro Export Series, World Cities Culture Forum - ARTOMETRICS" role="img" aria-label="San Francisco competes against other talent ecosystems, not generic cities"></div>
-  <figcaption class="art-chart-caption">San Francisco competes against other talent ecosystems, not generic cities</figcaption>
 </figure>
 <p class="art-p">Seattle is a software competitor. New York is a capital and talent competitor. Boston is a research competitor. Austin is a cost/relocation competitor.</p>
 <p class="art-p">The right competitor depends on the variable being contested.</p>
 <h2 id="questions" class="anchored">CHART 5 - OPEN QUESTIONS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/san-francisco-data-microscope/charts/chart5_sf_open_questions.plotly.json" data-source="Data: DataSF, BEA, Census ACS, BLS, Commerce Metro Export Series, World Cities Culture Forum - ARTOMETRICS" role="img" aria-label="The SF data story is about whether the city can absorb its own invention machine"></div>
-  <figcaption class="art-chart-caption">The SF data story is about whether the city can absorb its own invention machine</figcaption>
 </figure>
 <p class="art-p">The next report should not merely rank San Francisco. It should ask whether the city can build housing, refill downtown, retain artists, keep AI local, and connect biotech to the same regional engine.</p>
 <p class="art-p">That is the bioeconomics question: can a place survive the metabolism of its own strongest trait?</p>

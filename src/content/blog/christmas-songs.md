@@ -43,35 +43,30 @@ draft: false
 <h2 id="chart-1-trend" class="anchored">CHART 1 — TREND</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/christmas-songs/charts/chart1_trend.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/christmas-songs/charts/chart1_trend.png" role="img" aria-label="Median Weeks on chart Over Time"></div>
-  <figcaption class="art-chart-caption">Median Weeks on chart Over Time</figcaption>
 </figure>
 <p class="art-p">Median weeks on chart is <strong>falling</strong> from <strong>8.00</strong> in the opening period to <strong>5.00</strong> at the close.</p>
 <p class="art-p">Annual medians filter one-off spikes so the structural slope — not viral outliers — drives the story.</p>
 <h2 id="chart-2-leaders" class="anchored">CHART 2 — LEADERS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/christmas-songs/charts/chart2_leaders.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/christmas-songs/charts/chart2_leaders.png" role="img" aria-label="BETTER DAYS leads at 20.0 — 17.0 marks the median among the top dozen"></div>
-  <figcaption class="art-chart-caption">BETTER DAYS leads at 20.0 — 17.0 marks the median among the top dozen</figcaption>
 </figure>
 <p class="art-p"><strong>BETTER DAYS</strong> leads at <strong>20.0</strong> — <strong>17.0</strong> marks the median among the top dozen.</p>
 <p class="art-p">Head-of-field concentration is where quality, scale, or brand visibly separates from the pack.</p>
 <h2 id="chart-3-distribution" class="anchored">CHART 3 — DISTRIBUTION</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/christmas-songs/charts/chart3_distribution.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/christmas-songs/charts/chart3_distribution.png" role="img" aria-label="Weeks on chart Distribution"></div>
-  <figcaption class="art-chart-caption">Weeks on chart Distribution</figcaption>
 </figure>
 <p class="art-p">Median <strong>8.00</strong> vs mean <strong>9.65</strong> — the shape is right-skewed.</p>
 <p class="art-p">The top decile begins at <strong>19.0</strong>; that tail is where defining cases live.</p>
 <h2 id="chart-4-leader-trends" class="anchored">CHART 4 — LEADER TRENDS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/christmas-songs/charts/chart4_leader_trends.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/christmas-songs/charts/chart4_leader_trends.png" role="img" aria-label="Top Song Over Time"></div>
-  <figcaption class="art-chart-caption">Top Song Over Time</figcaption>
 </figure>
 <p class="art-p">The leading names do not move in lockstep — some fade as others surge.</p>
 <p class="art-p">Tracking medians over time separates sustained dominance from one-off spikes.</p>
 <h2 id="chart-5-relationship" class="anchored">SUPPLEMENT — RELATIONSHIP</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/christmas-songs/charts/chart5_scatter.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/christmas-songs/charts/chart5_scatter.png" role="img" aria-label="Weeks on chart vs Instance"></div>
-  <figcaption class="art-chart-caption">Weeks on chart vs Instance</figcaption>
 </figure>
 <p class="art-p">Joint plot of <strong>weeks on chart</strong> and <strong>instance</strong> surfaces clusters the averages erase.</p>
 <p class="art-p">Bubble size tracks repeat presence — outliers are archetypes, not noise.</p>

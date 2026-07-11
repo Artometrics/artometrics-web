@@ -42,35 +42,30 @@ draft: false
 <h2 id="chart-1-breakdown" class="anchored">CHART 1 — BREAKDOWN</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/sherlock-holmes/charts/chart1_breakdown.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/sherlock-holmes/charts/chart1_breakdown.png" role="img" aria-label="Word count by Book"></div>
-  <figcaption class="art-chart-caption">Word count by Book</figcaption>
 </figure>
 <p class="art-p"><strong>The Yellow Face</strong> leads at <strong>13.0</strong>; <strong>A Case of Identity</strong> anchors the low end at <strong>12.0</strong>.</p>
 <p class="art-p">Grouping by book exposes how the metric varies across the catalog's major entities.</p>
 <h2 id="chart-2-leaders" class="anchored">CHART 2 — LEADERS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/sherlock-holmes/charts/chart2_leaders.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/sherlock-holmes/charts/chart2_leaders.png" role="img" aria-label="The Yellow Face leads at 13.0 — 12.0 marks the median among the top dozen"></div>
-  <figcaption class="art-chart-caption">The Yellow Face leads at 13.0 — 12.0 marks the median among the top dozen</figcaption>
 </figure>
 <p class="art-p"><strong>The Yellow Face</strong> leads at <strong>13.0</strong> — <strong>12.0</strong> marks the median among the top dozen.</p>
 <p class="art-p">Head-of-field concentration is where quality, scale, or brand visibly separates from the pack.</p>
 <h2 id="chart-3-distribution" class="anchored">CHART 3 — DISTRIBUTION</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/sherlock-holmes/charts/chart3_distribution.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/sherlock-holmes/charts/chart3_distribution.png" role="img" aria-label="Word count Distribution"></div>
-  <figcaption class="art-chart-caption">Word count Distribution</figcaption>
 </figure>
 <p class="art-p">Median <strong>12.0</strong> vs mean <strong>10.9</strong> — the shape is relatively symmetric.</p>
 <p class="art-p">The top decile begins at <strong>14.0</strong>; that tail is where defining cases live.</p>
 <h2 id="chart-4-concentration" class="anchored">CHART 4 — CONCENTRATION</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/sherlock-holmes/charts/chart4_pareto.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/sherlock-holmes/charts/chart4_pareto.png" role="img" aria-label="Cumulative Word count"></div>
-  <figcaption class="art-chart-caption">Cumulative Word count</figcaption>
 </figure>
 <p class="art-p">The top <strong>5</strong> book entries account for <strong>34%</strong> of the aggregate word count.</p>
 <p class="art-p">Steep Pareto curves mean a small head drives most of the signal — the long tail is noise until it isn't.</p>
 <h2 id="chart-pareto" class="anchored">SUPPLEMENT — CONCENTRATION</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/sherlock-holmes/charts/chart_pareto.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/sherlock-holmes/charts/chart_pareto.png" role="img" aria-label="Cumulative Word count"></div>
-  <figcaption class="art-chart-caption">Cumulative Word count</figcaption>
 </figure>
 <p class="art-p">The top <strong>5</strong> book entries account for <strong>34%</strong> of the aggregate word count.</p>
 <p class="art-p">Steep Pareto curves mean a small head drives most of the signal — the long tail is noise until it isn't.</p>

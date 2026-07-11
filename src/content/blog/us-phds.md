@@ -44,35 +44,30 @@ draft: false
 <h2 id="chart-1-trend" class="anchored">CHART 1 — TREND</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/us-phds/charts/chart1_trend.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/us-phds/charts/chart1_trend.png" role="img" aria-label="Median N phds Over Time"></div>
-  <figcaption class="art-chart-caption">Median N phds Over Time</figcaption>
 </figure>
 <p class="art-p">Median n phds is <strong>rising</strong> from <strong>80.0</strong> in the opening period to <strong>87.0</strong> at the close.</p>
 <p class="art-p">Annual medians filter one-off spikes so the structural slope — not viral outliers — drives the story.</p>
 <h2 id="chart-2-leaders" class="anchored">CHART 2 — LEADERS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/us-phds/charts/chart2_leaders.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/us-phds/charts/chart2_leaders.png" role="img" aria-label="Social sciences leads at 4,944 — 915 marks the median among the top dozen"></div>
-  <figcaption class="art-chart-caption">Social sciences leads at 4,944 — 915 marks the median among the top dozen</figcaption>
 </figure>
 <p class="art-p"><strong>Social sciences</strong> leads at <strong>4,944</strong> — <strong>915</strong> marks the median among the top dozen.</p>
 <p class="art-p">Head-of-field concentration is where quality, scale, or brand visibly separates from the pack.</p>
 <h2 id="chart-3-distribution" class="anchored">CHART 3 — DISTRIBUTION</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/us-phds/charts/chart3_distribution.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/us-phds/charts/chart3_distribution.png" role="img" aria-label="N phds by Broad field"></div>
-  <figcaption class="art-chart-caption">N phds by Broad field</figcaption>
 </figure>
 <p class="art-p">Category boxes reveal whether n phds consensus is shared or contested across tiers.</p>
 <p class="art-p">Wide whiskers flag segments where outliers — not averages — drive reputation.</p>
 <h2 id="chart-4-gap" class="anchored">CHART 4 — GAP ANALYSIS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/us-phds/charts/chart4_gap.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/us-phds/charts/chart4_gap.png" role="img" aria-label="N phds vs median by Broad field"></div>
-  <figcaption class="art-chart-caption">N phds vs median by Broad field</figcaption>
 </figure>
 <p class="art-p"><strong>Psychology and social sciences</strong> sits <strong>30.5</strong> above the median; <strong>Engineering</strong> trails by <strong>21.5</strong>.</p>
 <p class="art-p">Diverging from the median exposes which tiers over- or under-perform — not just who ranks first.</p>
 <h2 id="chart-pareto" class="anchored">SUPPLEMENT — CONCENTRATION</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/us-phds/charts/chart_pareto.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/us-phds/charts/chart_pareto.png" role="img" aria-label="Cumulative N phds"></div>
-  <figcaption class="art-chart-caption">Cumulative N phds</figcaption>
 </figure>
 <p class="art-p">The top <strong>5</strong> field entries account for <strong>63%</strong> of the aggregate n phds.</p>
 <p class="art-p">Steep Pareto curves mean a small head drives most of the signal — the long tail is noise until it isn't.</p>

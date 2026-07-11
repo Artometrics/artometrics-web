@@ -42,35 +42,30 @@ draft: false
 <h2 id="command-lab" class="anchored">CHART 1 - COMMAND VERSUS LAB</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/new-york-vs-san-francisco-city-systems/charts/chart1_command_vs_lab.plotly.json" data-source="Data: BEA, Census ACS, DataSF, NYC Open Data, BLS, World Cities Culture Forum, PitchBook-style public venture references - ARTOMETRICS" role="img" aria-label="New York commands capital and culture while San Francisco prototypes new systems"></div>
-  <figcaption class="art-chart-caption">New York commands capital and culture while San Francisco prototypes new systems</figcaption>
 </figure>
 <p class="art-p">New York and San Francisco are compared because both export invisible value: finance, media, software, talent, coordination, status, and ideas.</p>
 <p class="art-p">The difference is posture. New York is the command center; San Francisco is the laboratory.</p>
 <h2 id="history" class="anchored">CHART 2 - HISTORY TIMING</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/new-york-vs-san-francisco-city-systems/charts/chart2_history_timing.plotly.json" data-source="Data: BEA, Census ACS, DataSF, NYC Open Data, BLS, World Cities Culture Forum, PitchBook-style public venture references - ARTOMETRICS" role="img" aria-label="New York compounds older command layers while San Francisco spikes around paradigm shifts"></div>
-  <figcaption class="art-chart-caption">New York compounds older command layers while San Francisco spikes around paradigm shifts</figcaption>
 </figure>
 <p class="art-p">New York's power is layered and old: port, finance, media, corporate headquarters, immigration, culture. San Francisco's modern power is sharper and more episodic: software, venture capital, platforms, AI.</p>
 <p class="art-p">That is why both cities feel globally central while operating on different clocks.</p>
 <h2 id="fingerprint" class="anchored">CHART 3 - OUTPUT FINGERPRINT</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/new-york-vs-san-francisco-city-systems/charts/chart3_output_fingerprint.plotly.json" data-source="Data: BEA, Census ACS, DataSF, NYC Open Data, BLS, World Cities Culture Forum, PitchBook-style public venture references - ARTOMETRICS" role="img" aria-label="The cities both export intangible systems but not the same systems"></div>
-  <figcaption class="art-chart-caption">The cities both export intangible systems but not the same systems</figcaption>
 </figure>
 <p class="art-p">New York exports capital allocation, status, media, fashion, finance, and market legitimacy. San Francisco exports software platforms, venture risk, AI, and a cultural permission structure for invention.</p>
 <p class="art-p">The pairing is valid because both cities sell coordination more than physical goods.</p>
 <h2 id="pressures" class="anchored">CHART 4 - PRESSURE PAIRING</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/new-york-vs-san-francisco-city-systems/charts/chart4_pressure_pairing.plotly.json" data-source="Data: BEA, Census ACS, DataSF, NYC Open Data, BLS, World Cities Culture Forum, PitchBook-style public venture references - ARTOMETRICS" role="img" aria-label="Post-2020 pressures rhyme across the two cities but come from different causes"></div>
-  <figcaption class="art-chart-caption">Post-2020 pressures rhyme across the two cities but come from different causes</figcaption>
 </figure>
 <p class="art-p">Both cities talk about office vacancy, housing, disorder narratives, transit, and talent churn. But the same words are not the same system.</p>
 <p class="art-p">New York's office reset sits inside a giant command economy. San Francisco's sits inside a smaller city whose downtown was overexposed to tech-office rhythms.</p>
 <h2 id="questions" class="anchored">CHART 5 - WHAT TO ASK NEXT</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/new-york-vs-san-francisco-city-systems/charts/chart5_city_comparison_questions.plotly.json" data-source="Data: BEA, Census ACS, DataSF, NYC Open Data, BLS, World Cities Culture Forum, PitchBook-style public venture references - ARTOMETRICS" role="img" aria-label="The useful comparison asks which city commands, invents, absorbs, builds, renews, and exports status"></div>
-  <figcaption class="art-chart-caption">The useful comparison asks which city commands, invents, absorbs, builds, renews, and exports status</figcaption>
 </figure>
 <p class="art-p">The surprise is that neither city simply beats the other. The answer changes by output: capital, platforms, culture, housing, talent, or status.</p>
 <p class="art-p">This gives future city reports a linked framework instead of isolated profiles.</p>

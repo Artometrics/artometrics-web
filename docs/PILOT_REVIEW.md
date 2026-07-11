@@ -24,7 +24,7 @@ This document summarizes the Phase 0 pilot for your approval **before any push t
 | Change | File |
 |--------|------|
 | Sync copies Plotly JSON from repos | `scripts/sync-github-articles.mjs` |
-| Per-chart save/share toolbar | `src/scripts/art-charts.ts` |
+| Per-chart save/share toolbar | `src/scripts/art-charts.ts` (`initChartToolbars`) |
 | Chart toolbar + share sheet CSS | `public/css/artometrics-article.css` (via sync) |
 | Shared R helpers | `scripts/r/artometrics_theme.R` |
 | Repo scaffold CLI | `scripts/scaffold-article-repo.mjs` |

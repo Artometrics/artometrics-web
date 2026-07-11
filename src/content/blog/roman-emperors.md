@@ -43,35 +43,30 @@ draft: false
 <h2 id="chart-1-breakdown" class="anchored">CHART 1 — BREAKDOWN</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/roman-emperors/charts/chart1_breakdown.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/roman-emperors/charts/chart1_breakdown.png" role="img" aria-label="Reign years by Name"></div>
-  <figcaption class="art-chart-caption">Reign years by Name</figcaption>
 </figure>
 <p class="art-p"><strong>Constantine the Great</strong> leads at <strong>31.0</strong>; <strong>Valentinian II</strong> anchors the low end at <strong>17.0</strong>.</p>
 <p class="art-p">Grouping by name exposes how the metric varies across the catalog's major entities.</p>
 <h2 id="chart-2-leaders" class="anchored">CHART 2 — LEADERS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/roman-emperors/charts/chart2_leaders.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/roman-emperors/charts/chart2_leaders.png" role="img" aria-label="Constantine the Great leads at 31.0 — 20.0 marks the median among the top dozen"></div>
-  <figcaption class="art-chart-caption">Constantine the Great leads at 31.0 — 20.0 marks the median among the top dozen</figcaption>
 </figure>
 <p class="art-p"><strong>Constantine the Great</strong> leads at <strong>31.0</strong> — <strong>20.0</strong> marks the median among the top dozen.</p>
 <p class="art-p">Head-of-field concentration is where quality, scale, or brand visibly separates from the pack.</p>
 <h2 id="chart-3-distribution" class="anchored">CHART 3 — DISTRIBUTION</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/roman-emperors/charts/chart3_distribution.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/roman-emperors/charts/chart3_distribution.png" role="img" aria-label="Reign years by Dynasty"></div>
-  <figcaption class="art-chart-caption">Reign years by Dynasty</figcaption>
 </figure>
 <p class="art-p">Category boxes reveal whether reign years consensus is shared or contested across tiers.</p>
 <p class="art-p">Wide whiskers flag segments where outliers — not averages — drive reputation.</p>
 <h2 id="chart-4-gap" class="anchored">CHART 4 — GAP ANALYSIS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/roman-emperors/charts/chart4_gap.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/roman-emperors/charts/chart4_gap.png" role="img" aria-label="Reign years vs median by Dynasty"></div>
-  <figcaption class="art-chart-caption">Reign years vs median by Dynasty</figcaption>
 </figure>
 <p class="art-p"><strong>Nerva-Antonine</strong> sits <strong>12.5</strong> above the median; <strong>Gordian</strong> trails by <strong>4.00</strong>.</p>
 <p class="art-p">Diverging from the median exposes which tiers over- or under-perform — not just who ranks first.</p>
 <h2 id="chart-pareto" class="anchored">SUPPLEMENT — CONCENTRATION</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/roman-emperors/charts/chart_pareto.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/roman-emperors/charts/chart_pareto.png" role="img" aria-label="Cumulative Reign years"></div>
-  <figcaption class="art-chart-caption">Cumulative Reign years</figcaption>
 </figure>
 <p class="art-p">The top <strong>5</strong> name entries account for <strong>40%</strong> of the aggregate reign years.</p>
 <p class="art-p">Steep Pareto curves mean a small head drives most of the signal — the long tail is noise until it isn't.</p>

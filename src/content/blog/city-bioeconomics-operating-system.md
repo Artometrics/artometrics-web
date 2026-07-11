@@ -42,35 +42,30 @@ draft: false
 <h2 id="system-layers" class="anchored">CHART 1 - SYSTEM LAYERS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/city-bioeconomics-operating-system/charts/chart1_city_system_layers.plotly.json" data-source="Data: BEA, DOSE, World Cities Culture Forum, DataSF/NYC Open Data, Census ACS - ARTOMETRICS" role="img" aria-label="A city identity is a stack of economic and cultural systems"></div>
-  <figcaption class="art-chart-caption">A city identity is a stack of economic and cultural systems</figcaption>
 </figure>
 <p class="art-p">A city is not one industry. It is a layered machine: firms, ports, universities, housing, cultural venues, finance, infrastructure, rules, and stories.</p>
 <p class="art-p">The first Artometrics question is not whether a city is good. It is what kind of system the city is trying to be.</p>
 <h2 id="goods-services" class="anchored">CHART 2 - GOODS AND SERVICES</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/city-bioeconomics-operating-system/charts/chart2_services_goods_split.plotly.json" data-source="Data: BEA, DOSE, World Cities Culture Forum, DataSF/NYC Open Data, Census ACS - ARTOMETRICS" role="img" aria-label="Some cities export goods while others export coordination, code, finance, or attention"></div>
-  <figcaption class="art-chart-caption">Some cities export goods while others export coordination, code, finance, or attention</figcaption>
 </figure>
 <p class="art-p">Houston and Los Angeles still have obvious goods/logistics signatures. New York and San Francisco sell more invisible products: finance, software, expertise, media, and market access.</p>
 <p class="art-p">That matters because invisible exports are harder for casual viewers to see, but they often define the city's price structure.</p>
 <h2 id="history" class="anchored">CHART 3 - HISTORY LAYERS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/city-bioeconomics-operating-system/charts/chart3_history_layers.plotly.json" data-source="Data: BEA, DOSE, World Cities Culture Forum, DataSF/NYC Open Data, Census ACS - ARTOMETRICS" role="img" aria-label="Ports, factories, corporate headquarters, and software leave measurable shadows"></div>
-  <figcaption class="art-chart-caption">Ports, factories, corporate headquarters, and software leave measurable shadows</figcaption>
 </figure>
 <p class="art-p">History is not background flavor. It is infrastructure that keeps generating data: street grids, warehouses, universities, firm clusters, zoning, and habits of migration.</p>
 <p class="art-p">A city report should explain which older layer is still driving the present numbers.</p>
 <h2 id="fingerprint" class="anchored">CHART 4 - CITY FINGERPRINT</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/city-bioeconomics-operating-system/charts/chart4_city_identity_heatmap.plotly.json" data-source="Data: BEA, DOSE, World Cities Culture Forum, DataSF/NYC Open Data, Census ACS - ARTOMETRICS" role="img" aria-label="The city fingerprint appears across GDP, housing, talent, culture, and export complexity"></div>
-  <figcaption class="art-chart-caption">The city fingerprint appears across GDP, housing, talent, culture, and export complexity</figcaption>
 </figure>
 <p class="art-p">One variable lies. A fingerprint requires a pattern. The same GDP level can mean very different things under different housing, transit, culture, and export structures.</p>
 <p class="art-p">This is why a city profile should read like a data portrait, not a fact sheet.</p>
 <h2 id="questions" class="anchored">CHART 5 - QUESTIONS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/city-bioeconomics-operating-system/charts/chart5_questions_to_ask.plotly.json" data-source="Data: BEA, DOSE, World Cities Culture Forum, DataSF/NYC Open Data, Census ACS - ARTOMETRICS" role="img" aria-label="The city microscope starts with what the place makes, imports, lacks, and competes against"></div>
-  <figcaption class="art-chart-caption">The city microscope starts with what the place makes, imports, lacks, and competes against</figcaption>
 </figure>
 <p class="art-p">Before building comparisons, the local report needs its diagnostic questions. What does the place make? What does it import? What is scarce? Which cities are its real competitors?</p>
 <p class="art-p">Those questions turn open data into an identity argument.</p>

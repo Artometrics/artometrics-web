@@ -44,35 +44,30 @@ draft: false
 <h2 id="chart-1-trend" class="anchored">CHART 1 — TREND</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/wealth-income/charts/chart1_trend.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/wealth-income/charts/chart1_trend.png" role="img" aria-label="Median Income distribution Over Time"></div>
-  <figcaption class="art-chart-caption">Median Income distribution Over Time</figcaption>
 </figure>
 <p class="art-p">Median income distribution is <strong>rising</strong> from <strong>10.9</strong> in the opening period to <strong>11.2</strong> at the close.</p>
 <p class="art-p">Annual medians filter one-off spikes so the structural slope — not viral outliers — drives the story.</p>
 <h2 id="chart-2-leaders" class="anchored">CHART 2 — LEADERS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/wealth-income/charts/chart2_leaders.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/wealth-income/charts/chart2_leaders.png" role="img" aria-label="Hispanic (Any Race) leads at 12.0 — 10.7 marks the median among the top dozen"></div>
-  <figcaption class="art-chart-caption">Hispanic (Any Race) leads at 12.0 — 10.7 marks the median among the top dozen</figcaption>
 </figure>
 <p class="art-p"><strong>Hispanic (Any Race)</strong> leads at <strong>12.0</strong> — <strong>10.7</strong> marks the median among the top dozen.</p>
 <p class="art-p">Head-of-field concentration is where quality, scale, or brand visibly separates from the pack.</p>
 <h2 id="chart-3-distribution" class="anchored">CHART 3 — DISTRIBUTION</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/wealth-income/charts/chart3_distribution.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/wealth-income/charts/chart3_distribution.png" role="img" aria-label="Income distribution by Income bracket"></div>
-  <figcaption class="art-chart-caption">Income distribution by Income bracket</figcaption>
 </figure>
 <p class="art-p">Category boxes reveal whether income distribution consensus is shared or contested across tiers.</p>
 <p class="art-p">Wide whiskers flag segments where outliers — not averages — drive reputation.</p>
 <h2 id="chart-4-gap" class="anchored">CHART 4 — GAP ANALYSIS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/wealth-income/charts/chart4_gap.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/wealth-income/charts/chart4_gap.png" role="img" aria-label="Income distribution vs median by Income bracket"></div>
-  <figcaption class="art-chart-caption">Income distribution vs median by Income bracket</figcaption>
 </figure>
 <p class="art-p"><strong>$50,000 to $74,999</strong> sits <strong>6.60</strong> above the median; <strong>$150,000 to $199,999</strong> trails by <strong>6.70</strong>.</p>
 <p class="art-p">Diverging from the median exposes which tiers over- or under-perform — not just who ranks first.</p>
 <h2 id="chart-5-relationship" class="anchored">SUPPLEMENT — RELATIONSHIP</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/wealth-income/charts/chart5_scatter.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/wealth-income/charts/chart5_scatter.png" role="img" aria-label="Income distribution vs Income median"></div>
-  <figcaption class="art-chart-caption">Income distribution vs Income median</figcaption>
 </figure>
 <p class="art-p">Joint plot of <strong>income distribution</strong> and <strong>income median</strong> surfaces clusters the averages erase.</p>
 <p class="art-p">Bubble size tracks repeat presence — outliers are archetypes, not noise.</p>

@@ -43,35 +43,30 @@ draft: false
 <h2 id="chart-1-runtime-creep" class="anchored">CHART 1 — RUNTIME CREEP</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/pixar-films/charts/chart1_runtime_timeline.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/pixar-films/charts/chart1_runtime_timeline.png" role="img" aria-label="Runtime Over Time"></div>
-  <figcaption class="art-chart-caption">Runtime Over Time</figcaption>
 </figure>
 <p class="art-p">Pixar's theatrical releases did not stay the compact 81-minute package of <em>Toy Story</em>. Median runtime climbed from the sub-100-minute era of the late 1990s to a post-<em>Incredibles 2</em> world where **nan** runs **155 minutes** — the longest entry in the canon.</p>
 <p class="art-p">The early median cluster around **98 minutes** (through 2006) versus **116 minutes** for films since 2017 is not noise. It is a structural shift in what a Pixar theatrical release is allowed to be.</p>
 <h2 id="chart-2-critic-scores" class="anchored">CHART 2 — CRITIC SCORES</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/pixar-films/charts/chart2_rt_ranking.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/pixar-films/charts/chart2_rt_ranking.png" role="img" aria-label="Rotten Tomatoes Ranking"></div>
-  <figcaption class="art-chart-caption">Rotten Tomatoes Ranking</figcaption>
 </figure>
 <p class="art-p">The median Rotten Tomatoes score across rated films is **96%** — elite by any studio standard. Pixar built a reputation on critic-proof consistency, not occasional brilliance.</p>
 <p class="art-p">The floor matters too. **Cars 2** sits at **40%**, while **Toy Story** and several sequels hit **100%**. The spread is narrow by Hollywood standards, but the low end is not random — it clusters around mid-2000s franchise experiments and the 2020s IP-forward releases.</p>
 <h2 id="chart-3-audience-vs-critics" class="anchored">CHART 3 — AUDIENCE VS CRITICS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/pixar-films/charts/chart3_critic_audience_gap.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/pixar-films/charts/chart3_critic_audience_gap.png" role="img" aria-label="Critics vs CinemaScore"></div>
-  <figcaption class="art-chart-caption">Critics vs CinemaScore</figcaption>
 </figure>
 <p class="art-p">CinemaScore grades cluster at **A** and **A+** across the board. Audiences who showed up opening weekend were rarely disappointed — or at least rarely admitted it on exit polls.</p>
 <p class="art-p">Critics were the discriminating layer. The same films that earned A+ crowd grades still span a 74–100% Rotten Tomatoes range. That gap is the story: Pixar optimized for mass affection first, prestige second.</p>
 <h2 id="chart-4-mpaa-mix" class="anchored">CHART 4 — RATING MIX</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/pixar-films/charts/chart4_rating_mix.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/pixar-films/charts/chart4_rating_mix.png" role="img" aria-label="MPAA Rating Mix"></div>
-  <figcaption class="art-chart-caption">MPAA Rating Mix</figcaption>
 </figure>
 <p class="art-p">**13** films carry a **G** rating; **10** are **PG**. The brand's family positioning is not marketing copy — it is embedded in the rating structure.</p>
 <p class="art-p">Only **0** titles in this file carry **PG-13**, and they arrive in the later era. Pixar expanded runtime and thematic weight without abandoning the all-ages lane until absolutely necessary.</p>
 <h2 id="chart-5-runtime-quality" class="anchored">SUPPLEMENT — RUNTIME VS RECEPTION</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/pixar-films/charts/chart5_runtime_vs_rt.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/pixar-films/charts/chart5_runtime_vs_rt.png" role="img" aria-label="Runtime vs Rotten Tomatoes"></div>
-  <figcaption class="art-chart-caption">Runtime vs Rotten Tomatoes</figcaption>
 </figure>
 <p class="art-p">There is no simple rule that longer films score worse — <em>Up</em>, <em>Wall-E</em>, and <em>Inside Out</em> combine runtime north of **95 minutes** with scores above **95%**.</p>
 <p class="art-p">The outliers sit in the lower-right and upper-left: <em>Cars 2</em> (shorter, weaker RT) versus epics that tested patience and still won. Bubble size tracks Metacritic where available — the reception stack is consistent across review systems.</p>

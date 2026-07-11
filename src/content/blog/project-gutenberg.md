@@ -40,35 +40,30 @@ draft: false
 <h2 id="chart-1-category" class="anchored">CHART 1 — LANDSCAPE</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/project-gutenberg/charts/chart1_category.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/project-gutenberg/charts/chart1_category.png" role="img" aria-label="Public-domain books cluster by subject type"></div>
-  <figcaption class="art-chart-caption">Public-domain books cluster by subject type</figcaption>
 </figure>
 <p class="art-p"><strong>lcsh</strong> dominates with <strong>69,027</strong> records.</p>
 <p class="art-p">The main bucket carries the story; this field does not have a meaningful long-tail split.</p>
 <h2 id="chart-2-leaders" class="anchored">CHART 2 — LEADERS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/project-gutenberg/charts/chart2_leaders.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/project-gutenberg/charts/chart2_leaders.png" role="img" aria-label="A small set of subjects anchors the catalog"></div>
-  <figcaption class="art-chart-caption">A small set of subjects anchors the catalog</figcaption>
 </figure>
 <p class="art-p"><strong>PS</strong> appears <strong>4,684</strong> times — the most recurring name in the file.</p>
 <p class="art-p">The top dozen account for a visible share of all <strong>100,000</strong> rows.</p>
 <h2 id="chart-3-category" class="anchored">CHART 3 — CATEGORY</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/project-gutenberg/charts/chart3_category.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/project-gutenberg/charts/chart3_category.png" role="img" aria-label="Subject families show the catalog's center of gravity"></div>
-  <figcaption class="art-chart-caption">Subject families show the catalog's center of gravity</figcaption>
 </figure>
 <p class="art-p"><strong>lcsh</strong> is the largest bucket with <strong>69,027</strong> records.</p>
 <p class="art-p">Category concentration shows where editorial attention should focus first.</p>
 <h2 id="chart-5-frequency" class="anchored">SUPPLEMENT — FREQUENCY</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/project-gutenberg/charts/chart5_frequency.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/project-gutenberg/charts/chart5_frequency.png" role="img" aria-label="Repeated subjects reveal the reusable canon"></div>
-  <figcaption class="art-chart-caption">Repeated subjects reveal the reusable canon</figcaption>
 </figure>
 <p class="art-p">Most subject entities appear only once; a small head revisits repeatedly.</p>
 <p class="art-p">This power-law shape is typical of guest lists, credits, and catalog-style tables.</p>
 <h2 id="chart-top-names" class="anchored">SUPPLEMENT — NAMES</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/project-gutenberg/charts/chart_top_names.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/project-gutenberg/charts/chart_top_names.png" role="img" aria-label="Subject labels become the map of the shelf"></div>
-  <figcaption class="art-chart-caption">Subject labels become the map of the shelf</figcaption>
 </figure>
 <p class="art-p"><strong>PS</strong> appears <strong>4,684</strong> times — the most repeated entry.</p>
 <p class="art-p">Frequency leaders reveal franchise depth when numeric scores are sparse.</p>

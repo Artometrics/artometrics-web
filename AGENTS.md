@@ -84,6 +84,33 @@ Path alias: `@/*` → `src/*` (`tsconfig.json`).
 - **Chrome:** `Navigation.astro`, `Footer.astro`
 - **`fundations` folder:** Do **not** rename — imports depend on this spelling
 
+| `npm run sync:articles` | Sync Quarto repos → blog markdown + chart assets |
+| `npm run scaffold:repo -- --batch-from-site` | Scaffold local GitHub repo layouts for Python-only articles |
+| `npm run upgrade:repos` | Audit/upgrade the 10 existing Artometrics GitHub repos |
+| `npm run publish:repos` | Push local repo upgrades to `Artometrics/*` on `main` (requires org write access) |
+| `npm run migration:manifest` | Write `docs/migration-manifest.json` for Python-only articles |
+| `npm run render:readmitted:py` | Export readmitted chart PNG + Plotly JSON (red/white/black palette) |
+| `npm run setup:python` | Install Python chart export dependencies |
+
+## Article pipeline (GitHub repos → site)
+
+Gold-standard reports live in singular repos under [Artometrics](https://github.com/Artometrics) (`franchise`, `anime`, `readmitted`, …). The site sync script clones each repo, copies `charts/*.png` and `charts/*.plotly.json`, and rewrites `src/content/blog/<slug>.md`.
+
+| Path | Purpose |
+|------|---------|
+| `scripts/sync-github-articles.mjs` | Clone, render Quarto, copy assets, rewrite blog body |
+| `scripts/r/artometrics_theme.R` | Shared `theme_artometrics()` + chart export helpers |
+| `scripts/scaffold-article-repo.mjs` | Scaffold new repo layouts from site articles |
+| `scripts/upgrade-article-repos.mjs` | Audit PNG/JSON pairs for the 10 existing repos |
+| `scripts/publish-article-repos.mjs` | Push `.cache/article-repos/` to GitHub `main` |
+| `pilot-drafts/readmitted/` | Phase 0 pilot bundle (local review before org push) |
+| `docs/migration-manifest.json` | 79 Python-only articles queued for R Quarto migration |
+| `.cache/article-scaffolds/` | Generated repo layouts (gitignored) |
+| `public/data/articles/<slug>/charts/` | Plotly JSON for live charts |
+| `src/scripts/art-charts.ts` | Hydrate charts, red palette, save/share toolbar |
+
+**Per-chart UI:** each `.art-chart` figure gets **Save PNG** and **Share chart** via `initChartToolbars()` in `art-charts.ts`.
+
 ## Commands
 
 | Command | Action |

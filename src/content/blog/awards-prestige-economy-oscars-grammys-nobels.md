@@ -42,35 +42,30 @@ draft: false
 <h2 id="prestige-market" class="anchored">CHART 1 - PRESTIGE VERSUS MARKET</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/awards-prestige-economy-oscars-grammys-nobels/charts/chart1_prestige_vs_market.plotly.json" data-source="Data: Academy Awards Database, Nobel Prize API, Recording Academy public records, DLu/oscar_data, Wikidata - ARTOMETRICS" role="img" aria-label="Awards do not all trade in the same kind of attention"></div>
-  <figcaption class="art-chart-caption">Awards do not all trade in the same kind of attention</figcaption>
 </figure>
 <p class="art-p">The Oscar and the Nobel both signal prestige, but they operate through different publics. One is tied to an entertainment market; the other to institutional memory.</p>
 <p class="art-p">A good awards report should separate those circuits instead of ranking them on one vague fame scale.</p>
 <h2 id="category-inflation" class="anchored">CHART 2 - CATEGORY INFLATION</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/awards-prestige-economy-oscars-grammys-nobels/charts/chart2_category_inflation.plotly.json" data-source="Data: Academy Awards Database, Nobel Prize API, Recording Academy public records, DLu/oscar_data, Wikidata - ARTOMETRICS" role="img" aria-label="Award systems expand by creating more named lanes of excellence"></div>
-  <figcaption class="art-chart-caption">Award systems expand by creating more named lanes of excellence</figcaption>
 </figure>
 <p class="art-p">Award shows are taxonomies. When categories expand, culture gets more official boxes, more winners, and more arguments about legitimacy.</p>
 <p class="art-p">The Grammys especially show how genre fragmentation becomes institutional design.</p>
 <h2 id="conversion" class="anchored">CHART 3 - NOMINATION CONVERSION</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/awards-prestige-economy-oscars-grammys-nobels/charts/chart3_nomination_conversion.plotly.json" data-source="Data: Academy Awards Database, Nobel Prize API, Recording Academy public records, DLu/oscar_data, Wikidata - ARTOMETRICS" role="img" aria-label="The strongest campaigns convert nomination access into wins"></div>
-  <figcaption class="art-chart-caption">The strongest campaigns convert nomination access into wins</figcaption>
 </figure>
 <p class="art-p">Nominations measure being invited into the prestige room. Wins measure coalition strength, timing, category fit, and narrative closure.</p>
 <p class="art-p">That is why Oscar analysis often feels like political analysis wearing a tuxedo.</p>
 <h2 id="attention" class="anchored">CHART 4 - ATTENTION CONCENTRATION</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/awards-prestige-economy-oscars-grammys-nobels/charts/chart4_attention_concentration.plotly.json" data-source="Data: Academy Awards Database, Nobel Prize API, Recording Academy public records, DLu/oscar_data, Wikidata - ARTOMETRICS" role="img" aria-label="The public remembers faces and names before institutional categories"></div>
-  <figcaption class="art-chart-caption">The public remembers faces and names before institutional categories</figcaption>
 </figure>
 <p class="art-p">Best Picture matters, but acting, artist, and star categories travel fastest through casual conversation.</p>
 <p class="art-p">This is a repeated Artometrics pattern: institutions do the sorting, but people carry the story.</p>
 <h2 id="gatekeeping" class="anchored">CHART 5 - GATEKEEPING</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/awards-prestige-economy-oscars-grammys-nobels/charts/chart5_gatekeeping_vs_discovery.plotly.json" data-source="Data: Academy Awards Database, Nobel Prize API, Recording Academy public records, DLu/oscar_data, Wikidata - ARTOMETRICS" role="img" aria-label="Awards still decide which works get a second life"></div>
-  <figcaption class="art-chart-caption">Awards still decide which works get a second life</figcaption>
 </figure>
 <p class="art-p">Streaming can create discovery at scale, but awards create sanctioned memory. They turn a work from content into curriculum, canon, playlist, or obituary headline.</p>
 <p class="art-p">That is the prestige economy: a machine for deciding what culture should remember about itself.</p>

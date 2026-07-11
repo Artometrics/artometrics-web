@@ -43,35 +43,30 @@ draft: false
 <h2 id="chart-1-trend" class="anchored">CHART 1 — TREND</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/world-heritage-sites/charts/chart1_trend.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/world-heritage-sites/charts/chart1_trend.png" role="img" aria-label="Median Value Over Time"></div>
-  <figcaption class="art-chart-caption">Median Value Over Time</figcaption>
 </figure>
 <p class="art-p">Median value is <strong>rising</strong> from <strong>5.00</strong> in the opening period to <strong>10.0</strong> at the close.</p>
 <p class="art-p">Annual medians filter one-off spikes so the structural slope — not viral outliers — drives the story.</p>
 <h2 id="chart-2-leaders" class="anchored">CHART 2 — LEADERS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/world-heritage-sites/charts/chart2_leaders.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/world-heritage-sites/charts/chart2_leaders.png" role="img" aria-label="Sweden leads at 14.0 — 7.00 marks the median among the top dozen"></div>
-  <figcaption class="art-chart-caption">Sweden leads at 14.0 — 7.00 marks the median among the top dozen</figcaption>
 </figure>
 <p class="art-p"><strong>Sweden</strong> leads at <strong>14.0</strong> — <strong>7.00</strong> marks the median among the top dozen.</p>
 <p class="art-p">Head-of-field concentration is where quality, scale, or brand visibly separates from the pack.</p>
 <h2 id="chart-4-leader-trends" class="anchored">CHART 3 — LEADER TRENDS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/world-heritage-sites/charts/chart4_leader_trends.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/world-heritage-sites/charts/chart4_leader_trends.png" role="img" aria-label="Top Country Over Time"></div>
-  <figcaption class="art-chart-caption">Top Country Over Time</figcaption>
 </figure>
 <p class="art-p">The leading names do not move in lockstep — some fade as others surge.</p>
 <p class="art-p">Tracking medians over time separates sustained dominance from one-off spikes.</p>
 <h2 id="chart-3-grouped-year" class="anchored">CHART 4 — YEAR COMPARE</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/world-heritage-sites/charts/chart3_grouped_year.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/world-heritage-sites/charts/chart3_grouped_year.png" role="img" aria-label="Value by year and Country"></div>
-  <figcaption class="art-chart-caption">Value by year and Country</figcaption>
 </figure>
 <p class="art-p">Grouped bars expose who gained between <strong>2004</strong> and <strong>2022</strong> — not just the latest leaderboard.</p>
 <p class="art-p">Small panels reward side-by-side reading; totals hide per-entity momentum.</p>
 <h2 id="chart-4-growth" class="anchored">CHART 5 — GROWTH</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/world-heritage-sites/charts/chart4_growth.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/world-heritage-sites/charts/chart4_growth.png" role="img" aria-label="Value growth by Country"></div>
-  <figcaption class="art-chart-caption">Value growth by Country</figcaption>
 </figure>
 <p class="art-p"><strong>Denmark</strong> posted the largest gain (<strong>150%</strong>) from <strong>2004</strong> to <strong>2022</strong>.</p>
 <p class="art-p">Percent-change bars normalize different starting points — essential when baselines differ.</p>

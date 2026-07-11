@@ -42,35 +42,30 @@ draft: false
 <h2 id="regional-titles" class="anchored">CHART 1 - REGIONAL TITLE DENSITY</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/regional-sports-identity-map/charts/chart1_regional_title_density.plotly.json" data-source="Data: Reference franchise histories, Census regional framing, Forbes, public attendance and championship records - ARTOMETRICS" role="img" aria-label="Championship memory clusters by region"></div>
-  <figcaption class="art-chart-caption">Championship memory clusters by region</figcaption>
 </figure>
 <p class="art-p">A region's sports identity is not only current fandom. It is the sediment of old championships, old rivalries, and inherited expectations.</p>
 <p class="art-p">The Northeast and Great Lakes have unusually deep archives because their leagues, cities, and media systems matured early.</p>
 <h2 id="market-stack" class="anchored">CHART 2 - MARKET STACK</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/regional-sports-identity-map/charts/chart2_market_stack.plotly.json" data-source="Data: Reference franchise histories, Census regional framing, Forbes, public attendance and championship records - ARTOMETRICS" role="img" aria-label="Deep markets create sports media ecosystems rather than single-team identities"></div>
-  <figcaption class="art-chart-caption">Deep markets create sports media ecosystems rather than single-team identities</figcaption>
 </figure>
 <p class="art-p">New York and Los Angeles are not simply large markets. They are sports ecosystems where multiple teams compete for attention, mythology, and local legitimacy.</p>
 <p class="art-p">That makes cross-report comparison useful: a Knicks drought and a Lakers title live in the same media bloodstream.</p>
 <h2 id="sport-dna" class="anchored">CHART 3 - SPORT DNA</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/regional-sports-identity-map/charts/chart3_sport_dna.plotly.json" data-source="Data: Reference franchise histories, Census regional framing, Forbes, public attendance and championship records - ARTOMETRICS" role="img" aria-label="Regions specialize in different sports identities"></div>
-  <figcaption class="art-chart-caption">Regions specialize in different sports identities</figcaption>
 </figure>
 <p class="art-p">Texas reads as football ritual. California leans toward basketball and glamour. The Northeast keeps baseball memory unusually alive.</p>
 <p class="art-p">The point is not stereotype; it is signal. Regional sports culture gives the same win-loss record a different accent.</p>
 <h2 id="pain-success" class="anchored">CHART 4 - CITY PAIN VERSUS SUCCESS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/regional-sports-identity-map/charts/chart4_city_pain_success.plotly.json" data-source="Data: Reference franchise histories, Census regional framing, Forbes, public attendance and championship records - ARTOMETRICS" role="img" aria-label="A city can be successful overall and still carry a famous wound"></div>
-  <figcaption class="art-chart-caption">A city can be successful overall and still carry a famous wound</figcaption>
 </figure>
 <p class="art-p">Multi-team cities do not experience success cleanly. A Boston fan can live near constant banners while a specific rival city experiences one drought as civic identity.</p>
 <p class="art-p">Pain is often team-specific, but markets distribute and amplify it.</p>
 <h2 id="identity-types" class="anchored">CHART 5 - IDENTITY TYPES</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/regional-sports-identity-map/charts/chart5_identity_types.plotly.json" data-source="Data: Reference franchise histories, Census regional framing, Forbes, public attendance and championship records - ARTOMETRICS" role="img" aria-label="Sports cities are portfolios of myths"></div>
-  <figcaption class="art-chart-caption">Sports cities are portfolios of myths</figcaption>
 </figure>
 <p class="art-p">Some places sell archive. Some sell stars. Some sell football Sundays. Some sell hunger because they have not yet received the validating title.</p>
 <p class="art-p">This is the bridge to future city bioeconomics reports: sports data is one part of a place's cultural fingerprint.</p>

@@ -42,35 +42,30 @@ draft: false
 <h2 id="scale-complexity" class="anchored">CHART 1 - SCALE AND COMPLEXITY</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/national-export-identity-atlas/charts/chart1_complexity_vs_scale.plotly.json" data-source="Data: OEC, UN Comtrade, World Bank WDI, OECD, IMF, World Bank TCdata360 - ARTOMETRICS" role="img" aria-label="Countries differ by export scale and product complexity"></div>
-  <figcaption class="art-chart-caption">Countries differ by export scale and product complexity</figcaption>
 </figure>
 <p class="art-p">The OEC lens is powerful because exports reveal what a country can reliably make and sell into the world. Scale and complexity are different forms of power.</p>
 <p class="art-p">A country can be large because it sells a lot of one thing, or complex because it sells many hard-to-make things. Those identities behave differently under stress.</p>
 <h2 id="product-identity" class="anchored">CHART 2 - PRODUCT IDENTITY</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/national-export-identity-atlas/charts/chart2_product_identity.plotly.json" data-source="Data: OEC, UN Comtrade, World Bank WDI, OECD, IMF, World Bank TCdata360 - ARTOMETRICS" role="img" aria-label="Some export categories become national symbols"></div>
-  <figcaption class="art-chart-caption">Some export categories become national symbols</figcaption>
 </figure>
 <p class="art-p">Cars, electronics, oil, pharmaceuticals, software, and food are not just commodities. They become reputational shorthand.</p>
 <p class="art-p">That is the cultural economics layer: exports can become part of national mythology.</p>
 <h2 id="frontier" class="anchored">CHART 3 - EXPORT FRONTIER</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/national-export-identity-atlas/charts/chart3_global_export_shift.plotly.json" data-source="Data: OEC, UN Comtrade, World Bank WDI, OECD, IMF, World Bank TCdata360 - ARTOMETRICS" role="img" aria-label="The frontier moved from resources to factories to systems and IP"></div>
-  <figcaption class="art-chart-caption">The frontier moved from resources to factories to systems and IP</figcaption>
 </figure>
 <p class="art-p">The last generation of globalization did not erase goods. It added services, software, intellectual property, finance, and standards to the export conversation.</p>
 <p class="art-p">This is why a modern country report must track both containers and code.</p>
 <h2 id="fingerprint" class="anchored">CHART 4 - FINGERPRINT</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/national-export-identity-atlas/charts/chart4_export_fingerprint.plotly.json" data-source="Data: OEC, UN Comtrade, World Bank WDI, OECD, IMF, World Bank TCdata360 - ARTOMETRICS" role="img" aria-label="The export fingerprint is the mix, not just the headline product"></div>
-  <figcaption class="art-chart-caption">The export fingerprint is the mix, not just the headline product</figcaption>
 </figure>
 <p class="art-p">Germany and Japan look similar through machines and vehicles, but Brazil and Saudi Arabia have very different resource/food signatures. The fingerprint matters because it reveals dependency structure.</p>
 <p class="art-p">The question is not only what a place sells. It is what would break if the world stopped buying it.</p>
 <h2 id="dependency" class="anchored">CHART 5 - DEPENDENCY QUESTIONS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/national-export-identity-atlas/charts/chart5_country_questions.plotly.json" data-source="Data: OEC, UN Comtrade, World Bank WDI, OECD, IMF, World Bank TCdata360 - ARTOMETRICS" role="img" aria-label="A country identity report asks what the world buys, substitutes, and depends on"></div>
-  <figcaption class="art-chart-caption">A country identity report asks what the world buys, substitutes, and depends on</figcaption>
 </figure>
 <p class="art-p">The export report should end with vulnerability. Who buys the product? Which inputs are imported? What competitor can replace it? What product carries prestige beyond money?</p>
 <p class="art-p">Those questions turn trade data into identity analysis.</p>

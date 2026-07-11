@@ -41,35 +41,30 @@ draft: false
 <h2 id="chart-1-trend" class="anchored">CHART 1 — 500 YEARS OF SURVIVAL</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/global-life-expectancy/charts/chart1_trend.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/global-life-expectancy/charts/chart1_trend.png" role="img" aria-label="Global median life expectancy from 1543 to 2015"></div>
-  <figcaption class="art-chart-caption">Global median life expectancy — 1543 to 2015</figcaption>
 </figure>
 <p class="art-p">The long-run trend has three distinct phases. A slow, stalling climb from 1543 to roughly 1850 — progress exists but is fragile and frequently reversed by plague and famine. A sharper acceleration from 1850 to 1950, driven by sanitation and early public health. Then a steep post-1950 surge that reflects both medical breakthroughs and their diffusion into the developing world.</p>
 <p class="art-p">Notice what does not happen: the curve does not plateau after 2000. Life expectancy continues rising even in the final years of the dataset. The question is not whether this will continue, but at what rate and for whom.</p>
 <h2 id="chart-2-leaders" class="anchored">CHART 2 — WHO LIVES LONGEST</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/global-life-expectancy/charts/chart2_leaders.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/global-life-expectancy/charts/chart2_leaders.png" role="img" aria-label="Top 12 countries by average life expectancy across all years"></div>
-  <figcaption class="art-chart-caption">Top 12 countries by average life expectancy (all years combined)</figcaption>
 </figure>
 <p class="art-p"><strong>Hong Kong</strong> leads at a <strong>75.6</strong> year average across the full dataset. The top dozen countries form a recognizable cluster: East Asian economies (Hong Kong, Japan, Singapore), Scandinavian welfare states (Iceland, Sweden, Norway), and a handful of other high-income, low-violence nations. What they share is not wealth alone — Iceland has never been rich by GDP standards — but strong public health infrastructure and social cohesion.</p>
 <p class="art-p">The gap between first (75.6) and twelfth (~73.5) is narrow. The gap between twelfth and the global median (62.4) is enormous. This is a leaders chart that reveals how thin the frontier really is — and how far back the midfield sits.</p>
 <h2 id="chart-3-distribution" class="anchored">CHART 3 — THE SPLIT WORLD</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/global-life-expectancy/charts/chart3_distribution.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/global-life-expectancy/charts/chart3_distribution.png" role="img" aria-label="Distribution of life expectancy across all country-year observations"></div>
-  <figcaption class="art-chart-caption">Distribution of life expectancy — all 17,894 country-year observations</figcaption>
 </figure>
 <p class="art-p">The distribution tells the most uncomfortable story in this dataset. It is <strong>bimodal</strong> — two peaks, not one. One cluster sits around 35–45 years (historical pre-modern observations); another sits around 65–75 years (contemporary high-income nations). The dataset spans centuries, so these two worlds coexist in the same histogram.</p>
 <p class="art-p">The median (62.4) and mean (60.0) converge near the valley between the two peaks — which means the "average" life expectancy lands precisely where few actual observations cluster. Summary statistics here actively mislead. The story is the bimodality: two eras of human survival living in the same file.</p>
 <h2 id="chart-4-leader-trends" class="anchored">CHART 4 — THE FRONTRUNNERS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/global-life-expectancy/charts/chart4_leader_trends.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/global-life-expectancy/charts/chart4_leader_trends.png" role="img" aria-label="Life expectancy trajectories for the top-ranked countries over time"></div>
-  <figcaption class="art-chart-caption">Life expectancy trajectories for top-ranked countries over time</figcaption>
 </figure>
 <p class="art-p">The frontrunner countries do not rise together at the same rate. Japan's trajectory is one of the most striking: relatively ordinary through the 1950s, then an explosive acceleration from the 1960s onward driven by universal healthcare, dietary changes, and low rates of smoking. Hong Kong mirrors this but enters the top tier even earlier through its role as a trade hub with relatively strong urban public health.</p>
 <p class="art-p">Iceland and Sweden present a different profile — high from the earliest modern data, climbing steadily rather than surging. Their longevity is structural, rooted in centuries of low-density population, clean water, and eventually one of the world's earliest welfare systems.</p>
 <h2 id="chart-pareto" class="anchored">SUPPLEMENT — WHERE LONGEVITY CONCENTRATES</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/global-life-expectancy/charts/chart_pareto.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/global-life-expectancy/charts/chart_pareto.png" role="img" aria-label="Cumulative share of total life-years by country rank"></div>
-  <figcaption class="art-chart-caption">Cumulative share of total life-years by country rank</figcaption>
 </figure>
 <p class="art-p">The Pareto curve for life expectancy is shallower than you might expect from a deeply unequal dataset. The top 5 countries account for roughly <strong>34%</strong> of aggregate life-years — significant concentration, but not the extreme 80/20 rule you see in wealth distributions.</p>
 <p class="art-p">What the curve reveals is that longevity, unlike wealth, has a hard ceiling. You cannot live 500 years regardless of how rich or healthy you are. This structural cap means the distribution cannot compress into a few extreme outliers the way financial distributions can. Progress in the long-lived countries has slowing returns; the biggest gains remaining are at the bottom of the distribution, not the top.</p>

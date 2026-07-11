@@ -97,125 +97,7 @@ margin: 0;
 <p>The suppressed rows matter. Small rural hospitals disproportionately fall below the 25-discharge threshold and disappear from the analysis. The hospitals in this dataset skew toward larger, busier facilities. That’s not a flaw in the data — it’s a feature of how CMS designed the program. But it shapes every finding in this report.</p>
 <p>An ERR above 1.0 triggers a penalty calculation, but the penalty tier depends on how far above 1.0 you are and the hospital’s overall performance relative to its peer group. For this analysis, hospitals are grouped into four tiers: No Penalty (ERR ≤ 1.0), Low (just above), Medium, and High. The High tier — hospitals with the worst readmission performance — is where CMS’s new TEAM model comes in. Starting January 1, 2026, 742 hospitals are mandated to participate in TEAM, a bundled payment model that goes further than HRRP by tying entire episodes of care — not just readmissions — to reimbursement. HRRP is where the penalty starts. TEAM is where the stakes get real.</p>
 <p>The data was pulled live via CMS’s open Provider Data Catalog API using Dataset ID 9n3s-kdb3. Ownership data for Chart 3 was joined from a second CMS dataset (xubh-q36u) using facility ID as the key. No local CSVs were used — the analysis is fully reproducible from the R code chunks in this document.</p>
-<div class="art-code-block">
-  <details>
-    <summary class="art-code-summary">
-      <span class="art-lang-tag art-lang-sql">SQL</span>
-    </summary>
-    <pre class="art-code-pre" id="cb1-1">-- HRRP READMISSIONS: CLEANING AND PENALTY TIER CLASSIFICATION
--- Mirrors the R cleaning logic in readmitted.qmd
--- Source: CMS Provider Data Catalog, Dataset ID: 9n3s-kdb3
 
-SELECT
-    facility_name,
-    facility_id,
-    state,
-    measure_name,
-    CAST(excess_readmission_ratio AS FLOAT)     AS err,
-    CAST(number_of_discharges AS INT)           AS discharges,
-    CAST(predicted_readmission_rate AS FLOAT)   AS predicted_rate,
-    CAST(expected_readmission_rate AS FLOAT)    AS expected_rate,
-    CASE
-        WHEN CAST(excess_readmission_ratio AS FLOAT) <= 1.0   THEN 'No Penalty'
-        WHEN CAST(excess_readmission_ratio AS FLOAT) <= 1.005 THEN 'Low'
-        WHEN CAST(excess_readmission_ratio AS FLOAT) <= 1.015 THEN 'Medium'
-        ELSE 'High'
-    END AS penalty_tier
-FROM hrrp_readmissions
-WHERE
-    excess_readmission_ratio NOT IN ('Too Few Cases', 'N/A', '')
-    AND excess_readmission_ratio IS NOT NULL
-ORDER BY state, facility_name, measure_name;
-
--- AGGREGATE VIEW: Average ERR by condition and state
-SELECT
-    measure_name,
-    state,
-    COUNT(*)                                                AS hospital_count,
-    ROUND(AVG(CAST(excess_readmission_ratio AS FLOAT)), 6)  AS avg_err,
-    ROUND(SUM(CASE
-        WHEN CAST(excess_readmission_ratio AS FLOAT) > 1.0
-        THEN 1 ELSE 0
-    END) * 100.0 / COUNT(*), 1)                            AS pct_penalized
-FROM hrrp_readmissions
-WHERE
-    excess_readmission_ratio NOT IN ('Too Few Cases', 'N/A', '')
-    AND excess_readmission_ratio IS NOT NULL
-GROUP BY measure_name, state
-ORDER BY avg_err DESC;</pre>
-  </details>
-</div>
-<div class="art-code-block">
-  <details>
-    <summary class="art-code-summary">
-      <span class="art-lang-tag art-lang-python">PYTHON</span>
-    </summary>
-    <pre class="art-code-pre" id="cb2-1"># HRRP Artometrics — Python EDA
-# Purpose: Dataset pull diagnostics and exploratory checks
-# Run before R chart build to validate shape and coverage
-
-import pandas as pd
-import numpy as np
-import requests
-
-# ── 1. Fetch Metadata and Download URL ──────────────────────────────────────
-
-META_URL = (
-    "https://data.cms.gov/provider-data/api/1/metastore/"
-    "schemas/dataset/items/9n3s-kdb3?show-reference-ids=false"
-)
-meta = requests.get(META_URL).json()
-download_url = meta["distribution"][0]["data"]["downloadURL"]
-print(f"Download URL: {download_url}")
-
-# ── 2. Load and Filter ───────────────────────────────────────────────────────
-
-df = pd.read_csv(download_url, na_values=["N/A", "", " "])
-df_clean = df.dropna(subset=["Excess Readmission Ratio"]).copy()
-
-print(f"Raw rows:     {len(df):,}")
-print(f"After filter: {len(df_clean):,}")
-
-# ── 3. Condition Coverage ────────────────────────────────────────────────────
-
-condition_map = {
-    "READM-30-AMI-HRRP":      "AMI",
-    "READM-30-HF-HRRP":       "Heart Failure",
-    "READM-30-PN-HRRP":       "Pneumonia",
-    "READM-30-COPD-HRRP":     "COPD",
-    "READM-30-HIP-KNEE-HRRP": "Hip/Knee",
-    "READM-30-CABG-HRRP":     "CABG",
-}
-df_clean["condition"] = df_clean["Measure Name"].map(condition_map)
-
-print(df_clean["condition"].value_counts())
-
-# ── 4. ERR Summary ───────────────────────────────────────────────────────────
-
-df_clean["err"] = pd.to_numeric(df_clean["Excess Readmission Ratio"], errors="coerce")
-
-err_summary = (
-    df_clean.groupby("condition")["err"]
-    .agg(["mean", "median", "std", "count"])
-    .sort_values("mean", ascending=False)
-)
-print(err_summary.round(6))
-
-pct_penalized = (df_clean["err"] > 1.0).mean() * 100
-print(f"\nNational % penalized: {pct_penalized:.1f}%")
-
-# ── 5. State Summary ─────────────────────────────────────────────────────────
-
-state_pct = (
-    df_clean.groupby("State")["err"]
-    .apply(lambda x: (x > 1.0).mean() * 100)
-    .sort_values(ascending=False)
-    .head(10)
-)
-print("\nTop 10 states by % penalized:")
-print(state_pct.round(1))</pre>
-  </details>
-</div>
 <h2 id="the-geography-of-failure" class="anchored">THE GEOGRAPHY OF FAILURE</h2>
 <div class="cell">
 <div class="cell-output-display">
@@ -244,52 +126,7 @@ print(state_pct.round(1))</pre>
     <p class="art-myth-card__reality"><strong>What the data shows:</strong> The chart shows only states above the national average — roughly 20 states pulling the mean up. Penalty exposure is concentrated geographically, not evenly distributed.</p>
   </article>
 </div>
-<div class="art-code-block">
-  <details>
-    <summary class="art-code-summary">
-      <span class="art-lang-tag art-lang-r">R</span>
-    </summary>
-    <pre class="art-code-pre" id="cb3-1">nat_avg <- mean(hrrp_clean$err > 1.0, na.rm = TRUE) * 100
 
-state_pct <- hrrp_clean %>%
-  group_by(state) %>%
-  summarise(
-    pct_penalized = mean(err > 1.0, na.rm = TRUE) * 100,
-    n = n(),
-    .groups = "drop"
-  ) %>%
-  filter(pct_penalized > nat_avg) %>%
-  mutate(state = fct_reorder(state, pct_penalized))
-
-ggplot(state_pct, aes(x = pct_penalized, y = state)) +
-  geom_col(fill = art_highlight, width = 0.65) +
-  geom_vline(xintercept = nat_avg, linetype = "dashed",
-             color = art_secondary, linewidth = 1.0) +
-  geom_text(
-    aes(label = paste0(round(pct_penalized, 1), "%")),
-    hjust = -0.2, size = 2.9, color = art_dark, family = "sans"
-  ) +
-  scale_x_continuous(
-    labels = function(x) paste0(x, "%"),
-    expand = expansion(mult = c(0, 0.14))
-  ) +
-  labs(
-    title    = "Which <span style='color:#C0392B;'>States</span> Have the Most Penalized Hospitals?",
-    subtitle = "Above-average states only — where more hospital-condition pairs exceed the 1.0 ERR threshold than the national rate",
-    x        = "% of Hospital-Condition Pairs with ERR > 1.0",
-    y        = NULL,
-    caption  = "Source: CMS Hospital Readmissions Reduction Program (HRRP) | — ARTOMETRICS\nDashed line = national average (48.1%)"
-  ) +
-  theme_artometrics() +
-  theme(
-    panel.grid.major.y = element_blank(),
-    panel.grid.major.x = element_line(color = art_muted, linewidth = 0.3)
-  )
-
-ggsave("chart1_states_penalized.png",
-       path = "charts", width = 12, height = 7, dpi = 300, bg = "white")</pre>
-  </details>
-</div>
 <h2 id="the-condition-nobody-is-solving" class="anchored">THE CONDITION NOBODY IS SOLVING</h2>
 <div class="cell">
 <div class="cell-output-display">
@@ -318,67 +155,7 @@ ggsave("chart1_states_penalized.png",
     <p class="art-myth-card__reality"><strong>What the data shows:</strong> Hip/Knee replacement averages 1.004 — nearly double the excess gap versus CABG and AMI at 1.0018. Elective joint surgery shifts the danger window to post-discharge days hospitals cannot monitor, especially as stays shorten.</p>
   </article>
 </div>
-<div class="art-code-block">
-  <details>
-    <summary class="art-code-summary">
-      <span class="art-lang-tag art-lang-r">R</span>
-    </summary>
-    <pre class="art-code-pre" id="cb4-1">condition_err <- hrrp_clean %>%
-  group_by(condition) %>%
-  summarise(
-    avg_err = mean(err, na.rm = TRUE),
-    .groups = "drop"
-  ) %>%
-  arrange(desc(avg_err)) %>%
-  mutate(condition = fct_reorder(condition, avg_err))
 
-x_min <- floor(min(condition_err$avg_err) * 10000) / 10000 - 0.0005
-x_max <- ceiling(max(condition_err$avg_err) * 10000) / 10000 + 0.0005
-
-ggplot(condition_err, aes(x = avg_err, y = condition)) +
-  geom_segment(
-    aes(x = 1.0, xend = avg_err, yend = condition),
-    color = art_muted, linewidth = 0.8
-  ) +
-  geom_point(color = art_highlight, size = 4) +
-  geom_vline(xintercept = 1.0, color = art_dark, linewidth = 0.6) +
-  geom_text(
-    aes(label = sprintf("%.5f", avg_err)),
-    hjust = -0.35, size = 3.2, color = art_dark, family = "sans"
-  ) +
-  annotate(
-    "text", x = 1.00385, y = 5.6,
-    label = "Nearly 2× the excess\nof the next condition",
-    hjust = 1, vjust = 0.5, size = 2.6, color = art_highlight,
-    family = "sans", fontface = "italic"
-  ) +
-  annotate(
-    "text", x = 1.0, y = 6.6,
-    label = "ERR = 1.0\n(no excess)", hjust = 0.5, vjust = 0,
-    size = 2.8, color = art_mid, family = "sans"
-  ) +
-  scale_x_continuous(
-    limits = c(x_min, x_max + 0.0015),
-    labels = function(x) sprintf("%.4f", x),
-    expand = expansion(mult = c(0.01, 0.08))
-  ) +
-  labs(
-    title    = "The <span style='color:#C0392B;'>Hip/Knee</span> Problem: Excess Readmission Ratio by Condition",
-    subtitle = "All six conditions exceed 1.0 — but the spread is measured in thousandths",
-    x        = "Average Excess Readmission Ratio (ERR)",
-    y        = NULL,
-    caption  = "Source: CMS HRRP | — ARTOMETRICS"
-  ) +
-  theme_artometrics() +
-  theme(
-    panel.grid.major.y = element_blank(),
-    panel.grid.major.x = element_line(color = art_muted, linewidth = 0.3)
-  )
-
-ggsave("chart2_err_by_condition.png",
-       path = "charts", width = 12, height = 7, dpi = 300, bg = "white")</pre>
-  </details>
-</div>
 <h2 id="ownership-penalty-and-who-pays" class="anchored">OWNERSHIP, PENALTY, AND WHO PAYS</h2>
 <div class="cell">
 <div class="cell-output-display">
@@ -407,72 +184,7 @@ ggsave("chart2_err_by_condition.png",
     <p class="art-myth-card__reality"><strong>What the data shows:</strong> Government-owned facilities land in the middle — more penalized than non-profits, less than for-profits. Neither protection nor collapse story fits cleanly.</p>
   </article>
 </div>
-<div class="art-code-block">
-  <details>
-    <summary class="art-code-summary">
-      <span class="art-lang-tag art-lang-r">R</span>
-    </summary>
-    <pre class="art-code-pre" id="cb5-1">hospital_info <- read_csv(
-  "https://data.cms.gov/provider-data/sites/default/files/resources/893c372430d9d71a1c52737d01239d47_1770163599/Hospital_General_Information.csv"
-) %>%
-  clean_names() %>%
-  select(facility_id, hospital_ownership) %>%
-  mutate(
-    ownership_group = case_when(
-      str_detect(hospital_ownership, regex("government|tribal|district", ignore_case = TRUE)) ~ "Government",
-      str_detect(hospital_ownership, regex("non-profit|voluntary|church", ignore_case = TRUE)) ~ "Non-Profit",
-      str_detect(hospital_ownership, regex("proprietary|for.profit|physician", ignore_case = TRUE)) ~ "For-Profit",
-      TRUE ~ NA_character_
-    )
-  ) %>%
-  filter(!is.na(ownership_group))
 
-joined <- hrrp_clean %>%
-  inner_join(hospital_info, by = "facility_id")
-
-tier_order  <- c("No Penalty", "Low", "Medium", "High")
-tier_colors <- c(
-  "No Penalty" = art_secondary,
-  "Low"        = "#7F8FA6",
-  "Medium"     = "#E07B54",
-  "High"       = art_highlight
-)
-
-plot_data <- joined %>%
-  filter(!is.na(penalty_tier)) %>%
-  mutate(
-    penalty_tier    = factor(penalty_tier, levels = tier_order),
-    ownership_group = factor(ownership_group,
-                             levels = c("Non-Profit", "Government", "For-Profit"))
-  ) %>%
-  count(ownership_group, penalty_tier) %>%
-  group_by(ownership_group) %>%
-  mutate(pct = n / sum(n)) %>%
-  ungroup()
-
-ggplot(plot_data, aes(x = ownership_group, y = pct, fill = penalty_tier)) +
-  geom_col(position = "fill", width = 0.6) +
-  scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +
-  scale_fill_manual(values = tier_colors, name = "Penalty Tier") +
-  coord_flip() +
-  labs(
-    title    = "<span style='color:#C0392B;'>For-Profit</span> Hospitals Carry More Penalty Weight",
-    subtitle = "Penalty tier distribution by hospital ownership type",
-    x        = NULL,
-    y        = "Share of Hospital-Condition Pairs",
-    caption  = "Source: CMS HRRP + CMS Hospital General Information (xubh-q36u) | — ARTOMETRICS"
-  ) +
-  theme_artometrics() +
-  theme(
-    panel.grid.major.y = element_blank(),
-    panel.grid.major.x = element_line(color = art_muted, linewidth = 0.3),
-    legend.position    = "right"
-  )
-
-ggsave("chart3_penalty_by_ownership.png",
-       path = "charts", width = 12, height = 7, dpi = 300, bg = "white")</pre>
-  </details>
-</div>
 <h2 id="limitations" class="anchored">LIMITATIONS</h2>
 <p>CMS suppresses readmission data for hospitals that fall below 25 discharges per condition per measurement period. That threshold exists to protect statistical reliability, but the effect is systematic — small rural hospitals disappear from this analysis entirely. The hospitals in this dataset skew toward larger, busier facilities. Every finding in this report should be read with that in mind.</p>
 <p>The ownership classification in Chart 3 is derived from CMS’s Hospital General Information dataset, which uses inconsistent labeling across hospital types. Physician-owned facilities, tribal hospitals, and church-affiliated systems don’t always map cleanly into three buckets. The Government, Non-Profit, and For-Profit groupings are reasonable approximations — not clean legal categories.</p>

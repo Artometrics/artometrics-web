@@ -42,35 +42,30 @@ draft: false
 <h2 id="titles-by-era" class="anchored">CHART 1 - TITLES BY ERA</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/cowboys-the-artometrics-of-americas-team/charts/chart1_titles_by_era.plotly.json" data-source="Data: Pro Football Reference, NFL records, Forbes - ARTOMETRICS" role="img" aria-label="Cowboys Super Bowl wins by defining era"></div>
-  <figcaption class="art-chart-caption">Cowboys Super Bowl wins by defining era</figcaption>
 </figure>
 <p class="art-p">The Cowboys' title history is concentrated in two old engines: Landry's 1970s and the Aikman-Smith-Irvin 1990s. Since then, the Super Bowl column is empty.</p>
 <p class="art-p">The hypothesis is already visible: Dallas did not stop being important when it stopped winning titles. That is precisely the Artometrics problem.</p>
 <h2 id="value-vs-playoffs" class="anchored">CHART 2 - BRAND OUTLIER</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/cowboys-the-artometrics-of-americas-team/charts/chart2_value_vs_playoffs.plotly.json" data-source="Data: Pro Football Reference, NFL records, Forbes - ARTOMETRICS" role="img" aria-label="Estimated franchise value and playoff wins since 1996"></div>
-  <figcaption class="art-chart-caption">Estimated franchise value and playoff wins since 1996</figcaption>
 </figure>
 <p class="art-p">The Cowboys are the strangest point in modern football economics: the richest brand with a modest recent playoff archive.</p>
 <p class="art-p">For a football expert, this is where the conversation gets interesting. The organization is elite at monetizing attention and only average at converting January chances.</p>
 <h2 id="playoff-machine" class="anchored">CHART 3 - THE OLD OCTOBER ENGINE</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/cowboys-the-artometrics-of-americas-team/charts/chart3_playoff_wins_decade.plotly.json" data-source="Data: Pro Football Reference, NFL records, Forbes - ARTOMETRICS" role="img" aria-label="Cowboys playoff wins by decade"></div>
-  <figcaption class="art-chart-caption">Cowboys playoff wins by decade</figcaption>
 </figure>
 <p class="art-p">The 1970s and 1990s still carry the franchise memory. The decades after do not match the logo's gravity.</p>
 <p class="art-p">This is not a losing franchise in the ordinary sense. It is a famous franchise whose postseason production no longer fits its public size.</p>
 <h2 id="qb-eras" class="anchored">CHART 4 - QUARTERBACK ERA PARADOX</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/cowboys-the-artometrics-of-americas-team/charts/chart4_qb_eras.plotly.json" data-source="Data: Pro Football Reference, NFL records, Forbes - ARTOMETRICS" role="img" aria-label="Regular-season win percentage by quarterback era"></div>
-  <figcaption class="art-chart-caption">Regular-season win percentage by quarterback era</figcaption>
 </figure>
 <p class="art-p">Quarterback competence has not been absent. Romo and Prescott produced enough regular-season winning to keep Dallas nationally relevant.</p>
 <p class="art-p">The missing variable is conversion: turning stable quarterback play into deep playoff survival.</p>
 <h2 id="conference-drought" class="anchored">CHART 5 - THE CONFERENCE WALL</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/cowboys-the-artometrics-of-americas-team/charts/chart5_conference_drought.plotly.json" data-source="Data: Pro Football Reference, NFL records, Forbes - ARTOMETRICS" role="img" aria-label="Years since selected teams reached a conference championship game"></div>
-  <figcaption class="art-chart-caption">Years since selected teams reached a conference championship game</figcaption>
 </figure>
 <p class="art-p">The Cowboys' NFC championship drought now belongs in the same chart as franchises fans instinctively associate with frustration.</p>
 <p class="art-p">That is the mirror the data holds up: Dallas is not cursed by invisibility. It is cursed by being watched.</p>

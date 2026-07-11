@@ -42,35 +42,30 @@ draft: false
 <h2 id="language-gravity" class="anchored">CHART 1 - LANGUAGE GRAVITY</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/project-gutenberg-public-domain-canon-map/charts/chart1_language_gravity.plotly.json" data-source="Data: Project Gutenberg RDF/CSV catalog feeds, Library of Congress subject logic, Wikidata - ARTOMETRICS" role="img" aria-label="English dominates the accessible public-domain shelf"></div>
-  <figcaption class="art-chart-caption">English dominates the accessible public-domain shelf</figcaption>
 </figure>
 <p class="art-p">Project Gutenberg is not just a library. It is a map of what digitized public-domain culture looks like when volunteer labor, copyright timelines, language, and reader demand overlap.</p>
 <p class="art-p">The first signature is language gravity. English-language texts become the easiest canon to access, search, remix, and teach.</p>
 <h2 id="era-machine" class="anchored">CHART 2 - ERA MACHINE</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/project-gutenberg-public-domain-canon-map/charts/chart2_era_subject_stack.plotly.json" data-source="Data: Project Gutenberg RDF/CSV catalog feeds, Library of Congress subject logic, Wikidata - ARTOMETRICS" role="img" aria-label="The 19th century becomes the public-domain literary core"></div>
-  <figcaption class="art-chart-caption">The 19th century becomes the public-domain literary core</figcaption>
 </figure>
 <p class="art-p">Copyright law turns time into a cultural filter. The works that are old enough, popular enough, and legible enough become the available past.</p>
 <p class="art-p">That makes Gutenberg a powerful meso dataset: not every book ever written, but the books most ready to be reactivated.</p>
 <h2 id="author-memory" class="anchored">CHART 3 - AUTHOR MEMORY</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/project-gutenberg-public-domain-canon-map/charts/chart3_author_availability_memory.plotly.json" data-source="Data: Project Gutenberg RDF/CSV catalog feeds, Library of Congress subject logic, Wikidata - ARTOMETRICS" role="img" aria-label="Digital availability and cultural memory reinforce each other"></div>
-  <figcaption class="art-chart-caption">Digital availability and cultural memory reinforce each other</figcaption>
 </figure>
 <p class="art-p">Authors become infrastructure when their works are everywhere: in classrooms, editions, audiobooks, adaptations, quote databases, and training corpora.</p>
 <p class="art-p">That is why public domain matters to AI culture too. Availability shapes what machines and people can easily learn from.</p>
 <h2 id="adaptation" class="anchored">CHART 4 - ADAPTATION POWER</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/project-gutenberg-public-domain-canon-map/charts/chart4_subject_adaptation_power.plotly.json" data-source="Data: Project Gutenberg RDF/CSV catalog feeds, Library of Congress subject logic, Wikidata - ARTOMETRICS" role="img" aria-label="Adventure, childhood, and gothic subjects adapt especially well"></div>
-  <figcaption class="art-chart-caption">Adventure, childhood, and gothic subjects adapt especially well</figcaption>
 </figure>
 <p class="art-p">Some subjects move cleanly across medium. Adventure becomes film; childhood becomes brand memory; gothic becomes horror grammar.</p>
 <p class="art-p">The public-domain market is therefore not dead literature. It is reusable cultural material.</p>
 <h2 id="canon-remix" class="anchored">CHART 5 - CANON AND REMIX</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/project-gutenberg-public-domain-canon-map/charts/chart5_classroom_vs_reuse.plotly.json" data-source="Data: Project Gutenberg RDF/CSV catalog feeds, Library of Congress subject logic, Wikidata - ARTOMETRICS" role="img" aria-label="Some books become curriculum while others become remix engines"></div>
-  <figcaption class="art-chart-caption">Some books become curriculum while others become remix engines</figcaption>
 </figure>
 <p class="art-p">Pride and Prejudice is classroom canon and adaptation engine. Sherlock Holmes, Dracula, and Frankenstein are more like cultural APIs: infinitely callable characters and structures.</p>
 <p class="art-p">That is the Artometrics claim: the most powerful books are not only read. They are reused.</p>

@@ -42,35 +42,30 @@ draft: false
 <h2 id="memory-domains" class="anchored">CHART 1 - MEMORY DOMAINS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/pantheon-the-artometrics-of-collective-memory/charts/chart1_memory_domains.plotly.json" data-source="Data: Pantheon 2.0 / Datawheel, MIT Collective Learning Group, Wikipedia API - ARTOMETRICS" role="img" aria-label="Power, art, and science travel farther across collective memory"></div>
-  <figcaption class="art-chart-caption">Power, art, and science travel farther across collective memory</figcaption>
 </figure>
 <p class="art-p">Pantheon is useful because it treats fame as an observable system rather than a vibe. If a person appears across many Wikipedia language editions, that is a signal of durable cross-cultural memory.</p>
 <p class="art-p">The first cut shows the archive's bias toward institutions: rulers, artists, scientists, and religious figures are the characters most likely to survive translation.</p>
 <h2 id="era-shift" class="anchored">CHART 2 - ERA SHIFT</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/pantheon-the-artometrics-of-collective-memory/charts/chart2_era_domain_shift.plotly.json" data-source="Data: Pantheon 2.0 / Datawheel, MIT Collective Learning Group, Wikipedia API - ARTOMETRICS" role="img" aria-label="The remembered person changes from ruler to cultural or scientific producer"></div>
-  <figcaption class="art-chart-caption">The remembered person changes from ruler to cultural or scientific producer</figcaption>
 </figure>
 <p class="art-p">Ancient and medieval memory is full of rulers because states kept records and dynastic legitimacy needed names. Modern memory creates celebrities, authors, scientists, athletes, and media figures at industrial scale.</p>
 <p class="art-p">The hypothesis changes here: fame is not only greatness. It is infrastructure plus transmission.</p>
 <h2 id="memory-capitals" class="anchored">CHART 3 - MEMORY CAPITALS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/pantheon-the-artometrics-of-collective-memory/charts/chart3_memory_capitals.plotly.json" data-source="Data: Pantheon 2.0 / Datawheel, MIT Collective Learning Group, Wikipedia API - ARTOMETRICS" role="img" aria-label="Cities become archives when institutions compound across centuries"></div>
-  <figcaption class="art-chart-caption">Cities become archives when institutions compound across centuries</figcaption>
 </figure>
 <p class="art-p">Paris, London, Rome, and New York are not just places. They are memory machines: universities, courts, studios, publishing houses, museums, and newspapers stacked into geographic advantage.</p>
 <p class="art-p">A city bioeconomics report can reuse this idea: a city's identity is partly the people it managed to make legible to history.</p>
 <h2 id="two-clocks" class="anchored">CHART 4 - TWO CLOCKS OF FAME</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/pantheon-the-artometrics-of-collective-memory/charts/chart4_language_vs_attention.plotly.json" data-source="Data: Pantheon 2.0 / Datawheel, MIT Collective Learning Group, Wikipedia API - ARTOMETRICS" role="img" aria-label="Some occupations have durable translation while others spike through present attention"></div>
-  <figcaption class="art-chart-caption">Some occupations have durable translation while others spike through present attention</figcaption>
 </figure>
 <p class="art-p">Language reach is the slow clock. Page attention is the fast clock. A philosopher can be translated everywhere but quiet today; an actor can dominate attention without the same depth of historical translation.</p>
 <p class="art-p">That split is exactly the kind of Artometrics layer the site should own.</p>
 <h2 id="archive-gap" class="anchored">CHART 5 - ARCHIVE GAP</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/pantheon-the-artometrics-of-collective-memory/charts/chart5_memory_gap.plotly.json" data-source="Data: Pantheon 2.0 / Datawheel, MIT Collective Learning Group, Wikipedia API - ARTOMETRICS" role="img" aria-label="The archive remembers through historical inequality"></div>
-  <figcaption class="art-chart-caption">The archive remembers through historical inequality</figcaption>
 </figure>
 <p class="art-p">Pantheon is powerful, but its power includes the bias of the world that produced the records. Gender, empire, language, and institutional access shape who becomes visible.</p>
 <p class="art-p">That means the ethical chart is not a footnote. It belongs inside the report.</p>

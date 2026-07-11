@@ -44,35 +44,30 @@ draft: false
 <h2 id="chart-1-trend" class="anchored">CHART 1 — TREND</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/netflix-engagement/charts/chart1_trend.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/netflix-engagement/charts/chart1_trend.png" role="img" aria-label="Median Hours viewed Over Time"></div>
-  <figcaption class="art-chart-caption">Median Hours viewed Over Time</figcaption>
 </figure>
 <p class="art-p">Median hours viewed is <strong>rising</strong> from <strong>5,700,000</strong> in the opening period to <strong>6,700,000</strong> at the close.</p>
 <p class="art-p">Annual medians filter one-off spikes so the structural slope — not viral outliers — drives the story.</p>
 <h2 id="chart-2-leaders" class="anchored">CHART 2 — LEADERS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/netflix-engagement/charts/chart2_leaders.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/netflix-engagement/charts/chart2_leaders.png" role="img" aria-label="Squid Game: Season 2 // 오징어 게임: 시즌 2 leads at 730,100,000 — 411,000,000 marks the median among the top dozen"></div>
-  <figcaption class="art-chart-caption">Squid Game: Season 2 // 오징어 게임: 시즌 2 leads at 730,100,000 — 411,000,000 marks the median among the top dozen</figcaption>
 </figure>
 <p class="art-p"><strong>Squid Game: Season 2 // 오징어 게임: 시즌 2</strong> leads at <strong>730,100,000</strong> — <strong>411,000,000</strong> marks the median among the top dozen.</p>
 <p class="art-p">Head-of-field concentration is where quality, scale, or brand visibly separates from the pack.</p>
 <h2 id="chart-3-distribution" class="anchored">CHART 3 — DISTRIBUTION</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/netflix-engagement/charts/chart3_distribution.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/netflix-engagement/charts/chart3_distribution.png" role="img" aria-label="Hours viewed by Source"></div>
-  <figcaption class="art-chart-caption">Hours viewed by Source</figcaption>
 </figure>
 <p class="art-p">Category boxes reveal whether hours viewed consensus is shared or contested across tiers.</p>
 <p class="art-p">Wide whiskers flag segments where outliers — not averages — drive reputation.</p>
 <h2 id="chart-4-gap" class="anchored">CHART 4 — GAP ANALYSIS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/netflix-engagement/charts/chart4_gap.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/netflix-engagement/charts/chart4_gap.png" role="img" aria-label="Hours viewed vs median by Source"></div>
-  <figcaption class="art-chart-caption">Hours viewed vs median by Source</figcaption>
 </figure>
 <p class="art-p"><strong>3_What_We_Watched_A_Netflix_Engagement_Report_2024Jan-Jun</strong> sits <strong>100,000</strong> above the median; <strong>1_What_We_Watched_A_Netflix_Engagement_Report_2025Jan-Jun</strong> trails by <strong>200,000</strong>.</p>
 <p class="art-p">Diverging from the median exposes which tiers over- or under-perform — not just who ranks first.</p>
 <h2 id="chart-5-relationship" class="anchored">SUPPLEMENT — RELATIONSHIP</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/netflix-engagement/charts/chart5_scatter.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/netflix-engagement/charts/chart5_scatter.png" role="img" aria-label="Hours viewed vs Views"></div>
-  <figcaption class="art-chart-caption">Hours viewed vs Views</figcaption>
 </figure>
 <p class="art-p">Joint plot of <strong>hours viewed</strong> and <strong>views</strong> surfaces clusters the averages erase.</p>
 <p class="art-p">Bubble size tracks repeat presence — outliers are archetypes, not noise.</p>

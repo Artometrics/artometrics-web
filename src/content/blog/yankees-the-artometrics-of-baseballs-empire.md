@@ -42,35 +42,30 @@ draft: false
 <h2 id="banner-clusters" class="anchored">CHART 1 - BANNER CLUSTERS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/yankees-the-artometrics-of-baseballs-empire/charts/chart1_banner_clusters.plotly.json" data-source="Data: Baseball Reference, Lahman, Retrosheet, Forbes - ARTOMETRICS" role="img" aria-label="World Series titles by decade"></div>
-  <figcaption class="art-chart-caption">World Series titles by decade</figcaption>
 </figure>
 <p class="art-p">The Yankees are remembered as a permanent empire, but the banners arrived in bursts. The 1930s, 1940s, and 1950s did the compounding. Later eras mostly managed the expectation created by that original surplus.</p>
 <p class="art-p">Hypothesis confirmed: the franchise's identity is not merely winning; it is historical clustering so dense that ordinary contention now reads as decline.</p>
 <h2 id="empire-gap" class="anchored">CHART 2 - THE EMPIRE GAP</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/yankees-the-artometrics-of-baseballs-empire/charts/chart2_empire_gap.plotly.json" data-source="Data: Baseball Reference, Lahman, Retrosheet, Forbes - ARTOMETRICS" role="img" aria-label="World Series titles compared with other historic MLB franchises"></div>
-  <figcaption class="art-chart-caption">World Series titles compared with other historic MLB franchises</figcaption>
 </figure>
 <p class="art-p">The Yankees do not lead baseball by a normal margin. They sit closer to a separate category: not the best team in a ranking, but the institution that defines the ranking.</p>
 <p class="art-p">For a baseball obsessive, this is the conversation: whether the Yankees are a team or a standard of measurement.</p>
 <h2 id="drought-context" class="anchored">CHART 3 - DROUGHT IS RELATIVE</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/yankees-the-artometrics-of-baseballs-empire/charts/chart3_drought_context.plotly.json" data-source="Data: Baseball Reference, Lahman, Retrosheet, Forbes - ARTOMETRICS" role="img" aria-label="Championship droughts in context"></div>
-  <figcaption class="art-chart-caption">Championship droughts in context</figcaption>
 </figure>
 <p class="art-p">A 15-year drought is not historically large. It only feels enormous because Yankee time is compressed. Other franchises waited lifetimes; the Yankees experience a decade and a half as institutional malfunction.</p>
 <p class="art-p">That emotional gap is measurable: expectation changes the meaning of the same number.</p>
 <h2 id="money-conversion" class="anchored">CHART 4 - MONEY AND OCTOBER</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/yankees-the-artometrics-of-baseballs-empire/charts/chart4_money_conversion.plotly.json" data-source="Data: Baseball Reference, Lahman, Retrosheet, Forbes - ARTOMETRICS" role="img" aria-label="Payroll rank and postseason outcome markers"></div>
-  <figcaption class="art-chart-caption">Payroll rank and postseason outcome markers</figcaption>
 </figure>
 <p class="art-p">The post-1990s Yankees still spend like an empire. What changed is conversion. The payroll rank remains elite; the championship output does not.</p>
 <p class="art-p">This is the modern front-office problem: capital is necessary, but it is no longer sufficiently rare to guarantee separation.</p>
 <h2 id="pennant-conversion" class="anchored">CHART 5 - PENNANTS TO RINGS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/yankees-the-artometrics-of-baseballs-empire/charts/chart5_pennant_conversion.plotly.json" data-source="Data: Baseball Reference, Lahman, Retrosheet, Forbes - ARTOMETRICS" role="img" aria-label="Pennants and World Series titles by Yankee era"></div>
-  <figcaption class="art-chart-caption">Pennants and World Series titles by Yankee era</figcaption>
 </figure>
 <p class="art-p">The old Yankees converted pennants into titles with terrifying efficiency. The later story is messier: enough appearances to preserve mythology, not enough rings to refresh it.</p>
 <p class="art-p">The dynasty was not just talent. It was conversion under pressure.</p>

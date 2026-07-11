@@ -44,35 +44,30 @@ draft: false
 <h2 id="chart-1-trend" class="anchored">CHART 1 — TREND</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/video-games-steam/charts/chart1_trend.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/video-games-steam/charts/chart1_trend.png" role="img" aria-label="Median Metascore Over Time"></div>
-  <figcaption class="art-chart-caption">Median Metascore Over Time</figcaption>
 </figure>
 <p class="art-p">Median metascore is <strong>rising</strong> from <strong>70.0</strong> in the opening period to <strong>73.0</strong> at the close.</p>
 <p class="art-p">Annual medians filter one-off spikes so the structural slope — not viral outliers — drives the story.</p>
 <h2 id="chart-2-leaders" class="anchored">CHART 2 — LEADERS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/video-games-steam/charts/chart2_leaders.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/video-games-steam/charts/chart2_leaders.png" role="img" aria-label="Little Triangle leads at 98.0 — 95.5 marks the median among the top dozen"></div>
-  <figcaption class="art-chart-caption">Little Triangle leads at 98.0 — 95.5 marks the median among the top dozen</figcaption>
 </figure>
 <p class="art-p"><strong>Little Triangle</strong> leads at <strong>98.0</strong> — <strong>95.5</strong> marks the median among the top dozen.</p>
 <p class="art-p">Head-of-field concentration is where quality, scale, or brand visibly separates from the pack.</p>
 <h2 id="chart-3-distribution" class="anchored">CHART 3 — DISTRIBUTION</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/video-games-steam/charts/chart3_distribution.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/video-games-steam/charts/chart3_distribution.png" role="img" aria-label="Metascore by Owners"></div>
-  <figcaption class="art-chart-caption">Metascore by Owners</figcaption>
 </figure>
 <p class="art-p">Category boxes reveal whether metascore consensus is shared or contested across tiers.</p>
 <p class="art-p">Wide whiskers flag segments where outliers — not averages — drive reputation.</p>
 <h2 id="chart-4-gap" class="anchored">CHART 4 — GAP ANALYSIS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/video-games-steam/charts/chart4_gap.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/video-games-steam/charts/chart4_gap.png" role="img" aria-label="Metascore vs median by Owners"></div>
-  <figcaption class="art-chart-caption">Metascore vs median by Owners</figcaption>
 </figure>
 <p class="art-p"><strong>2,000,000 .. 5,000,000</strong> sits <strong>10.0</strong> above the median; <strong>0 .. 20,000</strong> trails by <strong>5.00</strong>.</p>
 <p class="art-p">Diverging from the median exposes which tiers over- or under-perform — not just who ranks first.</p>
 <h2 id="chart-5-relationship" class="anchored">SUPPLEMENT — RELATIONSHIP</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/video-games-steam/charts/chart5_scatter.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/video-games-steam/charts/chart5_scatter.png" role="img" aria-label="Metascore vs Price"></div>
-  <figcaption class="art-chart-caption">Metascore vs Price</figcaption>
 </figure>
 <p class="art-p">Joint plot of <strong>metascore</strong> and <strong>price</strong> surfaces clusters the averages erase.</p>
 <p class="art-p">Bubble size tracks repeat presence — outliers are archetypes, not noise.</p>

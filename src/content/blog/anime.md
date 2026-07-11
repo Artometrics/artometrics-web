@@ -70,169 +70,13 @@ draft: false
 <p>The dataset requires meaningful cleaning before analysis. Air dates arrive as unstructured strings and must be parsed via regex to extract start and end year. Genre, studio, and producer fields are stored as Python-style list strings — bracket-delimited, comma-separated — that must be split and unnested into long-format tables for aggregation. Any title with a rank or popularity of zero is excluded, as these represent incomplete records without enough community engagement to produce reliable metrics.</p>
 <p>Scores on MAL are user-submitted on a 1–10 scale. The platform has a known self-selection bias: its userbase skews adult, male, and English-speaking relative to anime’s actual global audience. This produces systematic underscoring of children’s content and promotional music videos, and potential overrepresentation of properties with strong Western fandom overlap. The dataset also predates the post-2019 streaming era — <em>Demon Slayer</em>, <em>Jujutsu Kaisen</em>, <em>Chainsaw Man</em> are absent — which means any claims about current genre trends require updating.</p>
 <p>Genre tags are not mutually exclusive. A title tagged both “Action” and “Military” contributes to both genre aggregations. Studio medians for boutique operations (n &lt; 30) are statistically fragile — a single poor season can meaningfully shift the result. The popularity rank field runs inversely: rank 1 is the <em>most</em> popular title in the dataset.</p>
-<div class="art-code-block">
-  <details>
-    <summary class="art-code-summary">
-      <span class="art-lang-tag art-lang-sql">SQL</span>
-    </summary>
-    <pre class="art-code-pre" id="cb1-1">-- Anime Dataset: Core Aggregations
--- Source: MyAnimeList via TidyTuesday (April 23, 2019)
--- Display-only — analysis runs in R; SQL documents the logic
 
--- ── 1. Format Hit-Rates ────────────────────────────────────────────
--- What share of each format scores 8+ on MAL?
-
-WITH format_counts AS (
-  SELECT
-    type,
-    COUNT(*)                                        AS total_shows,
-    SUM(CASE WHEN score >= 8 THEN 1 ELSE 0 END)    AS elite_shows
-  FROM anime
-  WHERE rank       != 0
-    AND popularity != 0
-  GROUP BY type
-)
-SELECT
-  type,
-  total_shows,
-  elite_shows,
-  ROUND(
-    CAST(elite_shows AS FLOAT) / total_shows * 100, 2
-  ) AS elite_pct
-FROM format_counts
-WHERE total_shows > 100
-ORDER BY elite_pct DESC;
-
--- Result: TV leads at 8.12% (346/4,260). Movie at 4.82% —
--- flooded with franchise recap films. ONA at 1.21%, catalog still
--- maturing. Music at 0.20%: promotional videos in a narrative
--- scoring system.
-
--- ── 2. Top Genres by Average Score (min 500 titles) ───────────────
-
-SELECT
-  g.genre,
-  COUNT(a.animeID)        AS volume,
-  ROUND(AVG(a.score), 2)  AS avg_score
-FROM anime_genres g
-JOIN anime a ON g.animeID = a.animeID
-WHERE a.score > 0
-GROUP BY g.genre
-HAVING volume > 500
-ORDER BY avg_score DESC
-LIMIT 5;
-
--- Result: Mystery leads at 7.14 across 605 titles. Shounen at 7.02
--- across 1,770 — industrial scale without the quality dilution
--- that volume usually brings.
-
--- ── 3. Studio Consistency (min 20 titles) ─────────────────────────
-
-SELECT
-  s.studio,
-  COUNT(a.animeID)              AS n_titles,
-  ROUND(AVG(a.score), 2)        AS avg_score,
-  ROUND(
-    PERCENTILE_CONT(0.5)
-    WITHIN GROUP (ORDER BY a.score), 2
-  )                             AS median_score
-FROM anime_studios s
-JOIN anime a ON s.animeID = a.animeID
-WHERE a.score > 0
-GROUP BY s.studio
-HAVING n_titles >= 20
-ORDER BY median_score DESC
-LIMIT 10;</pre>
-  </details>
-</div>
-<div class="art-code-block">
-  <details>
-    <summary class="art-code-summary">
-      <span class="art-lang-tag art-lang-python">PYTHON</span>
-    </summary>
-    <pre class="art-code-pre" id="cb2-1"># Anime — Artometrics Python EDA
-# Purpose: Dataset diagnostics before R chart build
-# Source: MyAnimeList via TidyTuesday (2019)
-
-import pandas as pd
-import numpy as np
-
-# ── 1. Load and clean ─────────────────────────────────────────────
-
-url = (
-    "https://raw.githubusercontent.com/rfordatascience/"
-    "tidytuesday/main/data/2019/2019-04-23/raw_anime.csv"
-)
-df = pd.read_csv(url)
-
-# Filter incomplete records (mirrors R wrangle chunk)
-df_clean = df[(df["rank"] != 0) & (df["popularity"] != 0)].copy()
-df_clean = df_clean.drop_duplicates(subset="animeID")
-
-print(f"Raw titles:    {len(df):,}")
-print(f"After filter:  {len(df_clean):,}")
-# Raw: 14,478 | After filter: 13,631
-
-# ── 2. Score distribution ─────────────────────────────────────────
-
-valid = df_clean[df_clean["score"] > 0]
-
-print(f"\nScore distribution (n={len(valid):,}):")
-print(f"  Median:  {valid['score'].median():.2f}")
-print(f"  Mean:    {valid['score'].mean():.2f}")
-print(f"  Std dev: {valid['score'].std():.2f}")
-print(f"  Min:     {valid['score'].min():.1f}")
-print(f"  Max:     {valid['score'].max():.1f}")
-
-# ── 3. Correlation matrix ─────────────────────────────────────────
-
-cols = ["score", "members", "favorites", "episodes"]
-print("\n--- Pearson Correlation Matrix ---")
-print(valid[cols].corr().round(3))
-
-# score  ↔ members:   r = 0.389  (directional but not deterministic)
-# members ↔ favorites: r = 0.776  (reach and obsession tightly coupled)
-# score  ↔ episodes:  r = 0.076  (length is not quality)
-
-# ── 4. Cult classic filter ────────────────────────────────────────
-# High-scoring shows buried past popularity rank 2,000
-
-cult = df_clean[
-    (df_clean["score"]      > 8.0)  &
-    (df_clean["popularity"] > 2000) &
-    (df_clean["members"]    > 10000)
-]
-
-print(f"\nCult classics found: {len(cult)}")
-print(cult[["title_english", "score", "popularity"]].head(10))
-
-# 90 titles score above 8.0 while sitting past popularity rank 2,000.
-# Score above 8 = genuine critical consensus.
-# Rank above 2,000 = the algorithm never pushed them.
-
-# ── 5. Format breakdown ───────────────────────────────────────────
-
-format_summary = (
-    df_clean[df_clean["score"] > 0]
-    .groupby("type")
-    .agg(
-        n_titles   = ("animeID", "count"),
-        median_score = ("score", "median"),
-        elite_share  = ("score", lambda x: (x >= 8).mean())
-    )
-    .sort_values("elite_share", ascending=False)
-)
-print("\n--- Format Summary ---")
-print(format_summary.round(3).to_string())</pre>
-  </details>
-</div>
 <h2 id="an-industry-that-industrialized-then-diversified" class="anchored">AN INDUSTRY THAT INDUSTRIALIZED — THEN DIVERSIFIED</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/anime/charts/chart1_releases_by_year.plotly.json" data-fallback="/images/content/articles/anime/charts/chart1_releases_by_year.png" role="img" aria-label="Releases By Year"></div>
-  <figcaption class="art-chart-caption">Releases By Year</figcaption>
 </figure>
 </div>
 </div>
@@ -240,71 +84,13 @@ print(format_summary.round(3).to_string())</pre>
 <p>The release history of anime is not a single growth story — it is six separate ones running in parallel. <strong>Movies</strong> were the dominant format from the 1920s through the 1970s, a low-volume craft economy built for theater. The first structural break arrived in the late 1980s, when the <strong>OVA</strong> boom gave creators a direct-to-consumer channel that bypassed TV censors entirely. OVA peaked around 1990, then collapsed as TV economics took over.</p>
 <p><strong>TV</strong> is the modern engine. It industrialized in the late 1990s and has compounded steadily since. <strong>Specials</strong> peaked in the mid-2000s as a franchise extension format, then plateaued. <strong>Music</strong> videos spiked dramatically in the 2010s — largely driven by short promotional content — and then fell just as fast. The most important line on this chart is <strong>ONA</strong>: near-zero before 2010, then a vertical ascent. That is not a genre trend. It is a platform shift. Netflix, Crunchyroll, and YouTube did not just distribute anime — they created a new format category.</p>
 <p>What the faceted view makes clear is that these formats are not competing for the same audience at the same time. They are sequential industrial experiments. Each one dominated its era, then either stabilized into a niche or was superseded by the next model. The industry did not simply grow — it restructured itself around whichever distribution channel controlled access to viewers.</p>
-<div class="art-code-block">
-  <details>
-    <summary class="art-code-summary">
-      <span class="art-lang-tag art-lang-r">R</span>
-    </summary>
-    <pre class="art-code-pre" id="cb3-1">type_colors <- c(
-  "TV"      = art_secondary,
-  "Movie"   = art_highlight,
-  "OVA"     = "#E67E22",
-  "Special" = "#8E44AD",
-  "ONA"     = "#16A085",
-  "Music"   = art_mid
-)
-valid_types <- c("TV", "Movie", "OVA", "Special", "ONA", "Music")
 
-chart1_df <- anime %>%
-  filter(!is.na(aired_from_year), !is.na(type),
-         type != "", type %in% valid_types) %>%
-  count(year = aired_from_year, type, name = "n")
-
-start_year <- chart1_df %>%
-  group_by(year) %>%
-  summarise(total = sum(n)) %>%
-  filter(total >= 10) %>%
-  pull(year) %>%
-  min()
-
-end_year  <- max(chart1_df$year, na.rm = TRUE) - 1
-chart1_df <- chart1_df %>%
-  filter(year >= start_year, year <= end_year)
-
-smooth_df <- chart1_df %>%
-  group_by(type) %>%
-  filter(dplyr::n_distinct(year) >= 12) %>%
-  ungroup()
-
-p1 <- ggplot(chart1_df, aes(x = year, y = n, color = type)) +
-  geom_line(linewidth = 0.9, alpha = 0.65) +
-  geom_smooth(data = smooth_df, se = FALSE, method = "loess",
-              span = 0.35, linewidth = 1.1) +
-  facet_wrap(~ type, scales = "free_y", ncol = 3) +
-  scale_color_manual(values = type_colors, guide = "none") +
-  theme_artometrics() +
-  labs(
-    title    = "An industry that industrialized — then diversified",
-    subtitle = paste0(
-      "Each format tells a different story about how anime scaled. ",
-      "<span style='color:#C0392B'>TV</span> is the engine; ",
-      "ONA is the future arriving."
-    ),
-    x       = NULL, y = "Titles released",
-    caption = "Source: MyAnimeList via TidyTuesday (2019) | — ARTOMETRICS"
-  )
-
-ggsave("chart1_releases_by_year.png", plot = p1, path = "charts",
-       width = 12, height = 7, dpi = 300, bg = "white")</pre>
-  </details>
-</div>
 <h2 id="bones-and-kyoani-lead-consistency-across-volume-is-the-real-achievement" class="anchored">BONES AND KYOANI LEAD — CONSISTENCY ACROSS VOLUME IS THE REAL ACHIEVEMENT</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/anime/charts/chart2_studio_consistency.plotly.json" data-fallback="/images/content/articles/anime/charts/chart2_studio_consistency.png" role="img" aria-label="Studio Consistency"></div>
-  <figcaption class="art-chart-caption">Studio Consistency</figcaption>
 </figure>
 </div>
 </div>
@@ -312,68 +98,13 @@ ggsave("chart1_releases_by_year.png", plot = p1, path = "charts",
 <p>Every studio on this chart has produced at least one great show. That is not the achievement. The achievement is the <strong>IQR bar</strong> — the horizontal line showing the spread between the 25th and 75th percentile of a studio’s scores. A tight bar at a high median means the studio’s worst output is nearly as good as its best. <strong>Bones (n=115)</strong> leads in median and maintains a tight IQR across a massive catalog. <strong>White Fox (n=33)</strong> has the highest median dot but a wide IQR — the boutique model: fewer swings, but when they miss, they miss. <strong>Kyoto Animation (n=110)</strong> is the most consistent large studio on the chart: 110 titles with a tight IQR anchored well above the 6.38 baseline.</p>
 <p><strong>Trigger (n=23)</strong> has the widest IQR — spanning from near the baseline to above 8.0. High-risk, high-reward. <strong>Studio Deen (n=264)</strong> is the industrial cautionary tale: the largest catalog on the chart and the lowest median. Volume without curation dilutes quality. <strong>A-1 Pictures (n=190)</strong> sits in the middle — a production machine that delivers reliable output at scale, occasionally punctuated by genuine hits.</p>
 <p>The viridis color scale maps TV share. Studios with higher TV share cluster in the middle — TV volume is the primary dilution mechanism. Boutique studios with low TV share show more extreme medians in both directions. The 6.38 dashed line is the dataset median. Every studio above it is beating the field. Most of them are doing it with fewer than 50 titles — which tells you exactly how hard it is to stay above average at scale.</p>
-<div class="art-code-block">
-  <details>
-    <summary class="art-code-summary">
-      <span class="art-lang-tag art-lang-r">R</span>
-    </summary>
-    <pre class="art-code-pre" id="cb4-1">studio_summ <- anime_studios %>%
-  distinct(animeID, studio) %>%
-  inner_join(anime %>% distinct(animeID, score, type),
-             by = "animeID") %>%
-  filter(!is.na(studio), studio != "",
-         !is.na(score), score > 0,
-         !is.na(type),  type != "") %>%
-  group_by(studio) %>%
-  summarise(
-    n_titles     = n(),
-    median_score = median(score),
-    q1           = quantile(score, 0.25),
-    q3           = quantile(score, 0.75),
-    tv_share     = mean(type == "TV"),
-    .groups      = "drop"
-  ) %>%
-  filter(n_titles >= 20) %>%
-  arrange(desc(median_score)) %>%
-  slice_head(n = 20) %>%
-  mutate(studio_label = paste0(studio, " (n=", n_titles, ")"))
 
-p2 <- ggplot(studio_summ,
-             aes(y = reorder(studio_label, median_score),
-                 x = median_score)) +
-  geom_errorbarh(aes(xmin = q1, xmax = q3),
-                 height = 0, linewidth = 0.7, color = art_mid) +
-  geom_point(aes(size = n_titles, color = tv_share), alpha = 0.95) +
-  geom_vline(xintercept = 6.38, linetype = "dashed",
-             linewidth = 0.7, color = art_highlight, alpha = 0.7) +
-  scale_color_viridis_c(
-    option = "D",
-    labels = scales::percent_format(accuracy = 1),
-    name   = "TV share"
-  ) +
-  theme_artometrics() +
-  theme(plot.margin = margin(10, 30, 10, 10)) +
-  labs(
-    title    = "Bones and KyoAni lead — consistency across volume is the real achievement",
-    subtitle = paste0(
-      "Top 20 studios by median MAL score (min 20 titles). ",
-      "Bars = IQR. Dot size = output volume."
-    ),
-    x       = "Median MAL score", y = NULL,
-    caption = "Source: MyAnimeList via TidyTuesday (2019) | — ARTOMETRICS"
-  )
-
-ggsave("chart2_studio_consistency.png", plot = p2, path = "charts",
-       width = 12, height = 7, dpi = 300, bg = "white")</pre>
-  </details>
-</div>
 <h2 id="genre-map-whats-popular-vs-whats-well-rated" class="anchored">GENRE MAP: WHAT’S POPULAR VS WHAT’S WELL-RATED?</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/anime/charts/chart3_genre_map.plotly.json" data-fallback="/images/content/articles/anime/charts/chart3_genre_map.png" role="img" aria-label="Genre Map"></div>
-  <figcaption class="art-chart-caption">Genre Map</figcaption>
 </figure>
 </div>
 </div>
@@ -381,55 +112,7 @@ ggsave("chart2_studio_consistency.png", plot = p2, path = "charts",
 <p>The genre map plots every major genre against two axes: how popular its titles are (X, log-reversed so most popular is right), and how well-rated they are (Y). Size encodes volume. The <strong>Main Hall</strong> — Action, Comedy, Fantasy, Adventure — sits in the dense center-right cluster. Massive reach, enormous volume, medians diluted to the mid-6s by sheer output. These are the genres that define what most people think anime is.</p>
 <p>The <strong>Curator’s Rooms</strong> are the upper-left quadrant. <strong>Thriller</strong> sits alone at the top: highest median on the chart (~7.5), extremely low popularity rank. The genre barely exists by volume, but almost everything made in it is exceptional. <strong>Mystery</strong> and <strong>Psychological</strong> follow the same pattern — high score, mid-obscurity — which aligns with their SQL Query 2 performance. <strong>Historical</strong> sits far right: highly rated but ignored algorithmically despite strong critical reception. The starkest bottom outlier is <strong>Dementia</strong>: low popularity, low score, tiny volume.</p>
 <p><strong>Kids</strong> and <strong>Music</strong> are the bottom-right anchors — widest audiences, lowest scores. This is the self-selection problem in reverse: the MAL platform’s adult userbase applying adult critical frameworks to children’s media and promotional content. The scores are not wrong given who is rating them. They are simply the wrong instrument for the material. The genre map’s quadrant structure is the clearest single visualization of what the platform is: a tool built by and for a specific audience, measuring everything — including content that was never made for them — against that audience’s preferences.</p>
-<div class="art-code-block">
-  <details>
-    <summary class="art-code-summary">
-      <span class="art-lang-tag art-lang-r">R</span>
-    </summary>
-    <pre class="art-code-pre" id="cb5-1">genre_stats <- anime_genres %>%
-  distinct(animeID, genre) %>%
-  filter(genre != "") %>%
-  inner_join(
-    anime %>% select(animeID, score, popularity) %>%
-      filter(score > 0, popularity > 0),
-    by = "animeID"
-  ) %>%
-  group_by(genre) %>%
-  summarise(
-    n_titles  = n_distinct(animeID),
-    score_med = median(score),
-    pop_med   = median(popularity),
-    .groups   = "drop"
-  ) %>%
-  filter(n_titles >= 80)
 
-p3 <- ggplot(genre_stats,
-             aes(x = pop_med, y = score_med, size = n_titles)) +
-  geom_vline(xintercept = median(genre_stats$pop_med),
-             linetype = "dashed", color = art_mid, alpha = 0.4) +
-  geom_hline(yintercept = median(genre_stats$score_med),
-             linetype = "dashed", color = art_mid, alpha = 0.4) +
-  geom_point(color = art_secondary, alpha = 0.6) +
-  scale_x_reverse(trans = "log10", labels = comma) +
-  ggrepel::geom_text_repel(aes(label = genre), size = 3.2,
-                            color = art_dark, max.overlaps = Inf,
-                            show.legend = FALSE) +
-  theme_artometrics() +
-  labs(
-    title    = "Genre map: what's popular vs what's well-rated?",
-    subtitle = paste0(
-      "X = median popularity rank (log, reversed). ",
-      "Y = median score. Size = titles tagged."
-    ),
-    x       = "Median popularity rank (log scale; left = most popular)",
-    y       = "Median MAL score",
-    caption = "Source: MyAnimeList via TidyTuesday (2019) | — ARTOMETRICS"
-  )
-
-ggsave("chart3_genre_map.png", plot = p3, path = "charts",
-       width = 12, height = 7, dpi = 300, bg = "white")</pre>
-  </details>
-</div>
 <h2 id="limitations" class="anchored">LIMITATIONS</h2>
 <p>The dataset ends in April 2019. <em>Demon Slayer</em>, <em>Jujutsu Kaisen</em>, <em>Chainsaw Man</em>, <em>Spy × Family</em> are entirely absent. Their exclusion almost certainly understates ONA growth, understates action/Shounen dominance, and means any claims about current genre trends require updating against the post-2019 streaming landscape. The industry restructured significantly around Netflix and Crunchyroll originals after this cutoff — the format and source material charts would look different with five more years of data.</p>
 <p>MyAnimeList is an enthusiast platform. Its userbase skews adult, male, and English-speaking relative to anime’s actual global audience. Two direct consequences appear in the data: Kids and Music programming are systematically underscored because the rating population is not the target demographic, and shows with strong Western fandom overlap (<em>Fullmetal Alchemist: Brotherhood</em>, <em>Death Note</em>) may be overrepresented in the elite tiers. The platform measures what its users value, which is not the same as what anime’s full global audience values.</p>

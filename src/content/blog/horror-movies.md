@@ -44,35 +44,30 @@ draft: false
 <h2 id="chart-1-trend" class="anchored">CHART 1 — TREND</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/horror-movies/charts/chart1_trend.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/horror-movies/charts/chart1_trend.png" role="img" aria-label="Median Vote average Over Time"></div>
-  <figcaption class="art-chart-caption">Median Vote average Over Time</figcaption>
 </figure>
 <p class="art-p">Median vote average is <strong>rising</strong> from <strong>5.65</strong> in the opening period to <strong>6.00</strong> at the close.</p>
 <p class="art-p">Annual medians filter one-off spikes so the structural slope — not viral outliers — drives the story.</p>
 <h2 id="chart-2-leaders" class="anchored">CHART 2 — LEADERS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/horror-movies/charts/chart2_leaders.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/horror-movies/charts/chart2_leaders.png" role="img" aria-label="The House Guest leads at 10.0 — 10.0 marks the median among the top dozen"></div>
-  <figcaption class="art-chart-caption">The House Guest leads at 10.0 — 10.0 marks the median among the top dozen</figcaption>
 </figure>
 <p class="art-p"><strong>The House Guest</strong> leads at <strong>10.0</strong> — <strong>10.0</strong> marks the median among the top dozen.</p>
 <p class="art-p">Head-of-field concentration is where quality, scale, or brand visibly separates from the pack.</p>
 <h2 id="chart-3-distribution" class="anchored">CHART 3 — DISTRIBUTION</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/horror-movies/charts/chart3_distribution.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/horror-movies/charts/chart3_distribution.png" role="img" aria-label="Vote average by Primary genre"></div>
-  <figcaption class="art-chart-caption">Vote average by Primary genre</figcaption>
 </figure>
 <p class="art-p">Category boxes reveal whether vote average consensus is shared or contested across tiers.</p>
 <p class="art-p">Wide whiskers flag segments where outliers — not averages — drive reputation.</p>
 <h2 id="chart-4-gap" class="anchored">CHART 4 — GAP ANALYSIS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/horror-movies/charts/chart4_gap.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/horror-movies/charts/chart4_gap.png" role="img" aria-label="Vote average vs median by Primary genre"></div>
-  <figcaption class="art-chart-caption">Vote average vs median by Primary genre</figcaption>
 </figure>
 <p class="art-p"><strong>Crime</strong> sits <strong>1.00</strong> above the median; <strong>Animation</strong> trails by <strong>4.00</strong>.</p>
 <p class="art-p">Diverging from the median exposes which tiers over- or under-perform — not just who ranks first.</p>
 <h2 id="chart-5-relationship" class="anchored">SUPPLEMENT — RELATIONSHIP</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/horror-movies/charts/chart5_scatter.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/horror-movies/charts/chart5_scatter.png" role="img" aria-label="Vote average vs Vote count"></div>
-  <figcaption class="art-chart-caption">Vote average vs Vote count</figcaption>
 </figure>
 <p class="art-p">Joint plot of <strong>vote average</strong> and <strong>vote count</strong> surfaces clusters the averages erase.</p>
 <p class="art-p">Bubble size tracks repeat presence — outliers are archetypes, not noise.</p>

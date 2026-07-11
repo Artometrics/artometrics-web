@@ -110,87 +110,13 @@ correspond to alternate forms introduced outside the standard
 generational release structure, though the TidyTuesday documentation
 does not clarify the source of the nulls explicitly.
 </p>
-<div class="art-code-block">
-  <details>
-    <summary class="art-code-summary">
-      <span class="art-lang-tag art-lang-sql">SQL</span>
-    </summary>
-    <pre class="art-code-pre" id="sql-block-1">-- Pokémon Artometrics: Dataset Spec
--- Source: TidyTuesday 2025-04-01 pokemon_df
--- All three charts draw from this single table — no external join required.
 
-SELECT
-    id,
-    pokemon,
-    generation_id,
-    type_1,
-    type_2,
-    hp,
-    attack,
-    defense,
-    special_attack,
-    special_defense,
-    speed,
-    base_experience,
-    height,       -- decimetres (divide by 10 for metres)
-    weight,       -- hectograms (divide by 10 for kilograms)
-    is_legendary,
-    is_mythical
-
-FROM pokemon_df
-
-WHERE type_1 IS NOT NULL   -- drops records with no type assignment
-  AND id     IS NOT NULL;
-
--- Chart 1: all Pokémon included, pivot stats long, median by type
--- WHERE type_1 IS NOT NULL
-
--- Chart 2: exclude records with missing base_experience
--- WHERE base_experience IS NOT NULL
-
--- Chart 3: exclude records with missing height or weight
--- WHERE height IS NOT NULL AND weight IS NOT NULL
-    </pre>
-
-  </details>
-</div>
-
-<div class="art-code-block">
-  <details>
-    <summary class="art-code-summary">
-      <span class="art-lang-tag art-lang-python">Python</span>
-    </summary>
-    <pre class="art-code-pre" id="python-block-1">import pandas as pd
-
-# Load TidyTuesday 2025-04-01 Pokémon dataset
-URL = (
-    &quot;https://raw.githubusercontent.com/rfordatascience/tidytuesday/&quot;
-    &quot;main/data/2025/2025-04-01/pokemon_df.csv&quot;
-)
-pokemon = pd.read_csv(URL)
-
-# Basic inspection
-print(pokemon.shape)           # (N, cols)
-print(pokemon.dtypes)
-print(pokemon.isnull().sum())  # missing value audit
-
-# Legendary / mythical count
-n_leg = pokemon.query(&quot;is_legendary == True or is_mythical == True&quot;).shape[0]
-print(f&quot;Legendary + mythical: {n_leg}&quot;)
-
-# Most common primary type
-print(pokemon[&quot;type_1&quot;].value_counts().head(5))
-    </pre>
-
-  </details>
-</div>
 <h2 id="stat-identity-by-type" class="anchored">STAT IDENTITY BY TYPE</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/pokemon/charts/chart1_stat_heatmap.plotly.json" data-fallback="/images/content/articles/pokemon/charts/chart1_stat_heatmap.png" role="img" aria-label="Stat Heatmap"></div>
-  <figcaption class="art-chart-caption">Stat Heatmap</figcaption>
 </figure>
 </div>
 </div>
@@ -229,45 +155,13 @@ type — it&#39;s almost always secondary. The dataset&#39;s primary Flying entr
 unrepresentative sample, which inflates the type&#39;s apparent standing
 relative to how Flying Pokémon actually play in practice.
 </p>
-<div class="art-code-block">
-  <details>
-    <summary class="art-code-summary">
-      <span class="art-lang-tag art-lang-r">R</span>
-    </summary>
-    <pre class="art-code-pre" id="r-block-1"># Chart 1 — Stat Identity by Type
-# Heatmap: median of each base stat by primary type
-# All Pokémon included; sorted by median value across stats
 
-chart1_data |&gt;
-  ggplot(aes(x = stat, y = fct_reorder(type_1, median_val), fill = median_val)) +
-  geom_tile(color = art_cream, linewidth = 0.5) +
-  geom_text(aes(label = round(median_val, 0)),
-            size = 3, color = art_dark) +
-  scale_fill_gradient(low = art_cream, high = art_highlight,
-                      name = &quot;Median\nBase Stat&quot;) +
-  labs(
-    title    = &quot;EVERY TYPE HAS A SIGNATURE — THE NUMBERS MAKE IT VISIBLE&quot;,
-    subtitle = &quot;Median Base Stat Value By Primary Type. All Pokémon Included.&quot;,
-    x        = NULL,
-    y        = NULL,
-    caption  = &quot;Source: TidyTuesday 2025-04-01 | — ARTOMETRICS&quot;
-  ) +
-  theme_artometrics() +
-  theme(
-    panel.grid.major = element_blank(),
-    axis.text.x      = element_text(face = &quot;bold&quot;)
-  )
-    </pre>
-
-  </details>
-</div>
 <h2 id="generation-creep" class="anchored">GENERATION CREEP</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/pokemon/charts/chart2_generation_ridgeline.plotly.json" data-fallback="/images/content/articles/pokemon/charts/chart2_generation_ridgeline.png" role="img" aria-label="Generation Ridgeline"></div>
-  <figcaption class="art-chart-caption">Generation Ridgeline</figcaption>
 </figure>
 </div>
 </div>
@@ -302,42 +196,13 @@ inflation. The shape of Gen 7&#39;s curve is what controlled power creep
 looks like. Whether Game Freak intended it or stumbled into it, the
 ridgeline is the evidence.
 </p>
-<div class="art-code-block">
-  <details>
-    <summary class="art-code-summary">
-      <span class="art-lang-tag art-lang-r">R</span>
-    </summary>
-    <pre class="art-code-pre" id="r-block-2"># Chart 2 — Generation Creep
-# Ridgeline: base_experience distributions by generation
-# Shows whether Game Freak has inflated Pokémon power over time
 
-chart2_data |&gt;
-  ggplot(aes(x = base_experience,
-             y = fct_rev(factor(generation)),
-             fill = after_stat(x))) +
-  geom_density_ridges_gradient(scale = 1.8, rel_min_height = 0.01,
-                                color = art_mid, linewidth = 0.3) +
-  scale_fill_gradient(low = art_cream, high = art_highlight, guide = &quot;none&quot;) +
-  scale_x_continuous(labels = comma) +
-  labs(
-    title    = &quot;BASE EXPERIENCE HAS SHIFTED UPWARD WITH EVERY GENERATION&quot;,
-    subtitle = &quot;Distribution Of Base Experience By Generation. All Pokémon Included.&quot;,
-    x        = &quot;Base Experience&quot;,
-    y        = NULL,
-    caption  = &quot;Source: TidyTuesday 2025-04-01 | — ARTOMETRICS&quot;
-  ) +
-  theme_artometrics()
-    </pre>
-
-  </details>
-</div>
 <h2 id="built-different" class="anchored">BUILT DIFFERENT</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/pokemon/charts/chart3_size_scatter.plotly.json" data-fallback="/images/content/articles/pokemon/charts/chart3_size_scatter.png" role="img" aria-label="Size Scatter"></div>
-  <figcaption class="art-chart-caption">Size Scatter</figcaption>
 </figure>
 </div>
 </div>
@@ -376,54 +241,7 @@ there because someone at Game Freak decided that a 14-meter whale or a
 999-kilogram cosmic cocoon needed to exist, and the data is just the
 record of that decision.
 </p>
-<div class="art-code-block">
-  <details>
-    <summary class="art-code-summary">
-      <span class="art-lang-tag art-lang-r">R</span>
-    </summary>
-    <pre class="art-code-pre" id="r-block-3"># Chart 3 — Built Different
-# Scatter: height (m) vs. weight (kg), log scale on both axes
-# Colored by primary type; notable outliers labeled via ggrepel
 
-chart3_data |&gt;
-  ggplot(aes(x = weight_kg, y = height_m, color = type_label)) +
-  geom_point(alpha = 0.5, size = 1.8) +
-  ggrepel::geom_text_repel(
-    data          = chart3_labels,
-    aes(label     = str_to_title(pokemon)),
-    size          = 3,
-    color         = art_dark,
-    family        = &quot;Helvetica&quot;,
-    max.overlaps  = 20,
-    segment.color = art_muted
-  ) +
-  scale_x_continuous(name = &quot;Weight (kg)&quot;, labels = comma,
-                     trans = &quot;log10&quot;) +
-  scale_y_continuous(name = &quot;Height (m)&quot;, trans = &quot;log10&quot;) +
-  scale_color_manual(
-    name   = &quot;Primary Type&quot;,
-    values = c(
-      &quot;Normal&quot;   = &quot;#A8A77A&quot;, &quot;Fire&quot;     = &quot;#EE8130&quot;, &quot;Water&quot;    = &quot;#6390F0&quot;,
-      &quot;Electric&quot; = &quot;#F7D02C&quot;, &quot;Grass&quot;    = &quot;#7AC74C&quot;, &quot;Ice&quot;      = &quot;#96D9D6&quot;,
-      &quot;Fighting&quot; = &quot;#C22E28&quot;, &quot;Poison&quot;   = &quot;#A33EA1&quot;, &quot;Ground&quot;   = &quot;#E2BF65&quot;,
-      &quot;Flying&quot;   = &quot;#A98FF3&quot;, &quot;Psychic&quot;  = &quot;#F95587&quot;, &quot;Bug&quot;      = &quot;#A6B91A&quot;,
-      &quot;Rock&quot;     = &quot;#B6A136&quot;, &quot;Ghost&quot;    = &quot;#735797&quot;, &quot;Dragon&quot;   = &quot;#6F35FC&quot;,
-      &quot;Dark&quot;     = &quot;#705746&quot;, &quot;Steel&quot;    = &quot;#B7B7CE&quot;, &quot;Fairy&quot;    = &quot;#D685AD&quot;
-    )
-  ) +
-  labs(
-    title    = &quot;SIZE IS A DESIGN CHOICE — AND TYPE TELLS THE STORY&quot;,
-    subtitle = &quot;Height Vs. Weight Across All Pokémon. Log Scale. Colored By Primary Type.&quot;,
-    caption  = &quot;Source: TidyTuesday 2025-04-01 | — ARTOMETRICS&quot;
-  ) +
-  theme_artometrics() +
-  theme(legend.position = &quot;right&quot;,
-        legend.text     = element_text(size = 7),
-        legend.key.size = unit(0.4, &quot;cm&quot;))
-    </pre>
-
-  </details>
-</div>
 <h2 id="limitations" class="anchored">LIMITATIONS</h2>
 <p class="art-p">
 The most significant limitation of this analysis is scope: the dataset

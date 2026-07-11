@@ -939,6 +939,7 @@ function useStaticFallback(
   showFallback(el, fallback, label);
   markChartReady(el, true);
   renderChartCredit(el);
+  initChartToolbars();
   if (chartUrl) void enrichStaticChart(el, chartUrl);
 }
 
@@ -973,6 +974,7 @@ async function renderLiveChart(el: HTMLElement) {
     if (chartHasVisiblePlot(el)) {
       hideFallback(el);
       markChartReady(el, false);
+      initChartToolbars();
       const resize = () => {
         const mob = isMobileViewport();
         if (titleHtml || subtitle) renderStaticHeading(el, titleHtml, subtitle);
@@ -1251,6 +1253,7 @@ function initChartToolbars() {
 export function initArtCharts() {
   initChartReveal();
   formatFactNumbers();
+  initChartToolbars();
 
   const nodes = document.querySelectorAll<HTMLElement>(".art-chart-live");
   if (!nodes.length) return;

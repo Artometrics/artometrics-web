@@ -40,35 +40,30 @@ draft: false
 <h2 id="chart-1-category" class="anchored">CHART 1 — LANDSCAPE</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/un-votes/charts/chart1_category.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/un-votes/charts/chart1_category.png" role="img" aria-label="Yes votes dominate the sampled UN record"></div>
-  <figcaption class="art-chart-caption">Yes votes dominate the sampled UN record</figcaption>
 </figure>
 <p class="art-p"><strong>yes</strong> dominates with <strong>79,663</strong> records.</p>
 <p class="art-p">The main bucket carries the story; this field does not have a meaningful long-tail split.</p>
 <h2 id="chart-2-leaders" class="anchored">CHART 2 — LEADERS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/un-votes/charts/chart2_leaders.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/un-votes/charts/chart2_leaders.png" role="img" aria-label="Brazil appears most often in this extract"></div>
-  <figcaption class="art-chart-caption">Brazil appears most often in this extract</figcaption>
 </figure>
 <p class="art-p"><strong>Brazil</strong> appears <strong>747</strong> times — the most recurring name in the file.</p>
 <p class="art-p">The top dozen account for a visible share of all <strong>100,000</strong> rows.</p>
 <h2 id="chart-3-category" class="anchored">CHART 3 — CATEGORY</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/un-votes/charts/chart3_category.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/un-votes/charts/chart3_category.png" role="img" aria-label="Vote categories reveal the file's center of gravity"></div>
-  <figcaption class="art-chart-caption">Vote categories reveal the file's center of gravity</figcaption>
 </figure>
 <p class="art-p"><strong>yes</strong> is the largest bucket with <strong>79,663</strong> records.</p>
 <p class="art-p">Category concentration shows where editorial attention should focus first.</p>
 <h2 id="chart-5-frequency" class="anchored">SUPPLEMENT — FREQUENCY</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/un-votes/charts/chart5_frequency.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/un-votes/charts/chart5_frequency.png" role="img" aria-label="Country appearances follow a long-tail pattern"></div>
-  <figcaption class="art-chart-caption">Country appearances follow a long-tail pattern</figcaption>
 </figure>
 <p class="art-p">Most country entities appear only once; a small head revisits repeatedly.</p>
 <p class="art-p">This power-law shape is typical of guest lists, credits, and catalog-style tables.</p>
 <h2 id="chart-extra-mix" class="anchored">SUPPLEMENT — MIX</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/un-votes/charts/chart_extra_mix.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/un-votes/charts/chart_extra_mix.png" role="img" aria-label="Country codes add metadata rather than a new thesis"></div>
-  <figcaption class="art-chart-caption">Country codes add metadata rather than a new thesis</figcaption>
 </figure>
 <p class="art-p"><strong>BR</strong> is the most repeated country code in the extract.</p>
 <p class="art-p">Secondary dimensions add context when the primary table has no numeric score column.</p>

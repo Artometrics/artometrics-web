@@ -41,35 +41,30 @@ draft: false
 <h2 id="chart-1-category" class="anchored">CHART 1 — LANDSCAPE</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/emmy-awards/charts/chart1_category.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/emmy-awards/charts/chart1_category.png" role="img" aria-label="Nominee dominates with 23,739 records"></div>
-  <figcaption class="art-chart-caption">Nominee dominates with 23,739 records</figcaption>
 </figure>
 <p class="art-p"><strong>Nominee</strong> dominates with <strong>23,739</strong> records.</p>
 <p class="art-p">The main bucket carries the story; this field does not have a meaningful long-tail split.</p>
 <h2 id="chart-1-volume" class="anchored">CHART 2 — VOLUME</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/emmy-awards/charts/chart1_volume.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/emmy-awards/charts/chart1_volume.png" role="img" aria-label="Records By Period"></div>
-  <figcaption class="art-chart-caption">Records By Period</figcaption>
 </figure>
 <p class="art-p">Activity peaks in <strong>2019</strong> with <strong>2,613</strong> records.</p>
 <p class="art-p">Period-level counts reveal when the dataset's subject matter intensified.</p>
 <h2 id="chart-2-leaders" class="anchored">CHART 3 — LEADERS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/emmy-awards/charts/chart2_leaders.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/emmy-awards/charts/chart2_leaders.png" role="img" aria-label="Saturday Night Live appears 859 times — the most recurring name in the file"></div>
-  <figcaption class="art-chart-caption">Saturday Night Live appears 859 times — the most recurring name in the file</figcaption>
 </figure>
 <p class="art-p"><strong>Saturday Night Live</strong> appears <strong>859</strong> times — the most recurring name in the file.</p>
 <p class="art-p">The top dozen account for a visible share of all <strong>29,678</strong> rows.</p>
 <h2 id="chart-3-category" class="anchored">CHART 4 — CATEGORY</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/emmy-awards/charts/chart3_category.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/emmy-awards/charts/chart3_category.png" role="img" aria-label="Nominee is the largest bucket with 23,739 records"></div>
-  <figcaption class="art-chart-caption">Nominee is the largest bucket with 23,739 records</figcaption>
 </figure>
 <p class="art-p"><strong>Nominee</strong> is the largest bucket with <strong>23,739</strong> records.</p>
 <p class="art-p">Category concentration shows where editorial attention should focus first.</p>
 <h2 id="chart-4-timeline" class="anchored">CHART 5 — TIMELINE</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/emmy-awards/charts/chart4_timeline.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/emmy-awards/charts/chart4_timeline.png" role="img" aria-label="Leaders Over Time"></div>
-  <figcaption class="art-chart-caption">Leaders Over Time</figcaption>
 </figure>
 <p class="art-p">The leading names do not move in lockstep — some fade as others surge.</p>
 <p class="art-p">Tracking counts over time separates sustained presence from one-off spikes.</p>

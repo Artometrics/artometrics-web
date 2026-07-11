@@ -42,35 +42,30 @@ draft: false
 <h2 id="genre-attention" class="anchored">CHART 1 - ATTENTION VERSUS QUALITY</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/imdb-blockbuster-grammar/charts/chart1_genre_attention_quality.plotly.json" data-source="Data: IMDb non-commercial datasets, Box Office Mojo-style public records, The Numbers, TMDb metadata references - ARTOMETRICS" role="img" aria-label="Genre attention and audience rating tell different stories"></div>
-  <figcaption class="art-chart-caption">Genre attention and audience rating tell different stories</figcaption>
 </figure>
 <p class="art-p">IMDb-style datasets are useful because ratings and vote counts separate two behaviors: how many people cared enough to rate, and how positively they scored the title.</p>
 <p class="art-p">The blockbuster problem starts there. Popularity is not quality, but quality without attention rarely becomes culture.</p>
 <h2 id="sequelization" class="anchored">CHART 2 - SEQUELIZATION</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/imdb-blockbuster-grammar/charts/chart2_sequelization.plotly.json" data-source="Data: IMDb non-commercial datasets, Box Office Mojo-style public records, The Numbers, TMDb metadata references - ARTOMETRICS" role="img" aria-label="The hit movie became a serial product"></div>
-  <figcaption class="art-chart-caption">The hit movie became a serial product</figcaption>
 </figure>
 <p class="art-p">The blockbuster increasingly behaves like a portfolio asset. Studios learned that recognition lowers marketing risk, so the cultural market tilts toward sequels, universes, and repeatable IP.</p>
 <p class="art-p">This is not just nostalgia. It is risk management drawn as culture.</p>
 <h2 id="runtime" class="anchored">CHART 3 - RUNTIME AND EVENT STATUS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/imdb-blockbuster-grammar/charts/chart3_runtime_culture.plotly.json" data-source="Data: IMDb non-commercial datasets, Box Office Mojo-style public records, The Numbers, TMDb metadata references - ARTOMETRICS" role="img" aria-label="Event movies can ask audiences for more time"></div>
-  <figcaption class="art-chart-caption">Event movies can ask audiences for more time</figcaption>
 </figure>
 <p class="art-p">A common hypothesis says shorter attention spans should punish long films. The evidence is messier: the event movie can still stretch past two or three hours if the social reward is high enough.</p>
 <p class="art-p">The runtime question is really a trust question. Audiences give time when they believe the movie is an event.</p>
 <h2 id="platforms" class="anchored">CHART 4 - PLATFORMS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/imdb-blockbuster-grammar/charts/chart4_discovery_vs_ownership.plotly.json" data-source="Data: IMDb non-commercial datasets, Box Office Mojo-style public records, The Numbers, TMDb metadata references - ARTOMETRICS" role="img" aria-label="Streaming and short video changed discovery without preserving ownership"></div>
-  <figcaption class="art-chart-caption">Streaming and short video changed discovery without preserving ownership</figcaption>
 </figure>
 <p class="art-p">A theater ticket once created a clean cultural signal: you went somewhere, paid, and joined an audience. Streaming makes discovery easier but ownership fuzzier.</p>
 <p class="art-p">That is why the modern hit can feel huge and disposable at the same time.</p>
 <h2 id="studio-grammar" class="anchored">CHART 5 - STUDIO GRAMMAR</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/imdb-blockbuster-grammar/charts/chart5_studio_franchise_reliance.plotly.json" data-source="Data: IMDb non-commercial datasets, Box Office Mojo-style public records, The Numbers, TMDb metadata references - ARTOMETRICS" role="img" aria-label="Studios differ in how much they depend on franchise logic"></div>
-  <figcaption class="art-chart-caption">Studios differ in how much they depend on franchise logic</figcaption>
 </figure>
 <p class="art-p">Disney's modern advantage is not simply scale. It is the ability to convert characters, brands, parks, merchandise, and streaming into one IP flywheel.</p>
 <p class="art-p">A24 represents the opposite grammar: smaller, identity-heavy, taste-based cultural capital.</p>

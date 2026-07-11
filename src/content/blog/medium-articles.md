@@ -44,35 +44,30 @@ draft: false
 <h2 id="chart-1-trend" class="anchored">CHART 1 — TREND</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/medium-articles/charts/chart1_trend.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/medium-articles/charts/chart1_trend.png" role="img" aria-label="Median Reading time Over Time"></div>
-  <figcaption class="art-chart-caption">Median Reading time Over Time</figcaption>
 </figure>
 <p class="art-p">Median reading time is <strong>falling</strong> from <strong>4.00</strong> in the opening period to <strong>4.00</strong> at the close.</p>
 <p class="art-p">Annual medians filter one-off spikes so the structural slope — not viral outliers — drives the story.</p>
 <h2 id="chart-2-leaders" class="anchored">CHART 2 — LEADERS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/medium-articles/charts/chart2_leaders.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/medium-articles/charts/chart2_leaders.png" role="img" aria-label="My month-long quest to become a chess master from scratch leads at 100 — 68.0 marks the median among the top dozen"></div>
-  <figcaption class="art-chart-caption">My month-long quest to become a chess master from scratch leads at 100 — 68.0 marks the median among the top dozen</figcaption>
 </figure>
 <p class="art-p"><strong>My month-long quest to become a chess master from scratch</strong> leads at <strong>100</strong> — <strong>68.0</strong> marks the median among the top dozen.</p>
 <p class="art-p">Head-of-field concentration is where quality, scale, or brand visibly separates from the pack.</p>
 <h2 id="chart-3-distribution" class="anchored">CHART 3 — DISTRIBUTION</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/medium-articles/charts/chart3_distribution.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/medium-articles/charts/chart3_distribution.png" role="img" aria-label="Reading time by Publication"></div>
-  <figcaption class="art-chart-caption">Reading time by Publication</figcaption>
 </figure>
 <p class="art-p">Category boxes reveal whether reading time consensus is shared or contested across tiers.</p>
 <p class="art-p">Wide whiskers flag segments where outliers — not averages — drive reputation.</p>
 <h2 id="chart-4-gap" class="anchored">CHART 4 — GAP ANALYSIS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/medium-articles/charts/chart4_gap.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/medium-articles/charts/chart4_gap.png" role="img" aria-label="Reading time vs median by Publication"></div>
-  <figcaption class="art-chart-caption">Reading time vs median by Publication</figcaption>
 </figure>
 <p class="art-p"><strong>Towards Data Science</strong> sits <strong>2.00</strong> above the median; <strong>Data Driven Investor</strong> trails by <strong>0.00</strong>.</p>
 <p class="art-p">Diverging from the median exposes which tiers over- or under-perform — not just who ranks first.</p>
 <h2 id="chart-5-relationship" class="anchored">SUPPLEMENT — RELATIONSHIP</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/medium-articles/charts/chart5_scatter.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/medium-articles/charts/chart5_scatter.png" role="img" aria-label="Reading time vs Claps"></div>
-  <figcaption class="art-chart-caption">Reading time vs Claps</figcaption>
 </figure>
 <p class="art-p">Joint plot of <strong>reading time</strong> and <strong>claps</strong> surfaces clusters the averages erase.</p>
 <p class="art-p">Bubble size tracks repeat presence — outliers are archetypes, not noise.</p>

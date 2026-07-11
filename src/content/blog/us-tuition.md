@@ -43,35 +43,30 @@ draft: false
 <h2 id="chart-1-trend" class="anchored">CHART 1 — TREND</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/us-tuition/charts/chart1_trend.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/us-tuition/charts/chart1_trend.png" role="img" aria-label="Median Value Over Time"></div>
-  <figcaption class="art-chart-caption">Median Value Over Time</figcaption>
 </figure>
 <p class="art-p">Median value is <strong>rising</strong> from <strong>5,876</strong> in the opening period to <strong>9,141</strong> at the close.</p>
 <p class="art-p">Annual medians filter one-off spikes so the structural slope — not viral outliers — drives the story.</p>
 <h2 id="chart-2-leaders" class="anchored">CHART 2 — LEADERS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/us-tuition/charts/chart2_leaders.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/us-tuition/charts/chart2_leaders.png" role="img" aria-label="Vermont leads at 13,486 — 10,850 marks the median among the top dozen"></div>
-  <figcaption class="art-chart-caption">Vermont leads at 13,486 — 10,850 marks the median among the top dozen</figcaption>
 </figure>
 <p class="art-p"><strong>Vermont</strong> leads at <strong>13,486</strong> — <strong>10,850</strong> marks the median among the top dozen.</p>
 <p class="art-p">Head-of-field concentration is where quality, scale, or brand visibly separates from the pack.</p>
 <h2 id="chart-3-distribution" class="anchored">CHART 3 — DISTRIBUTION</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/us-tuition/charts/chart3_distribution.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/us-tuition/charts/chart3_distribution.png" role="img" aria-label="Median 7,607 vs mean 7,899 — the shape is relatively symmetric"></div>
-  <figcaption class="art-chart-caption">Median 7,607 vs mean 7,899 — the shape is relatively symmetric</figcaption>
 </figure>
 <p class="art-p">Median <strong>7,607</strong> vs mean <strong>7,899</strong> — the shape is relatively symmetric.</p>
 <p class="art-p">The top decile begins at <strong>11,204</strong>; that tail is where defining cases live.</p>
 <h2 id="chart-4-leader-trends" class="anchored">CHART 4 — LEADER TRENDS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/us-tuition/charts/chart4_leader_trends.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/us-tuition/charts/chart4_leader_trends.png" role="img" aria-label="Top State Over Time"></div>
-  <figcaption class="art-chart-caption">Top State Over Time</figcaption>
 </figure>
 <p class="art-p">The leading names do not move in lockstep — some fade as others surge.</p>
 <p class="art-p">Tracking medians over time separates sustained dominance from one-off spikes.</p>
 <h2 id="chart-pareto" class="anchored">SUPPLEMENT — CONCENTRATION</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/us-tuition/charts/chart_pareto.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/us-tuition/charts/chart_pareto.png" role="img" aria-label="The top 5 state entries account for 38% of the aggregate value"></div>
-  <figcaption class="art-chart-caption">The top 5 state entries account for 38% of the aggregate value</figcaption>
 </figure>
 <p class="art-p">The top <strong>5</strong> state entries account for <strong>38%</strong> of the aggregate value.</p>
 <p class="art-p">Steep Pareto curves mean a small head drives most of the signal — the long tail is noise until it isn't.</p>

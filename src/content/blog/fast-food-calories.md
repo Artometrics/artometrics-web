@@ -43,35 +43,30 @@ draft: false
 <h2 id="chart-1-breakdown" class="anchored">CHART 1 — BREAKDOWN</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/fast-food-calories/charts/chart1_breakdown.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/fast-food-calories/charts/chart1_breakdown.png" role="img" aria-label="Calories by Item"></div>
-  <figcaption class="art-chart-caption">Calories by Item</figcaption>
 </figure>
 <p class="art-p"><strong>20 piece Buttermilk Crispy Chicken Tenders</strong> leads at <strong>2,430</strong>; <strong>10 piece Buttermilk Crispy Chicken Tenders</strong> anchors the low end at <strong>1,210</strong>.</p>
 <p class="art-p">Grouping by item exposes how the metric varies across the catalog's major entities.</p>
 <h2 id="chart-2-leaders" class="anchored">CHART 2 — LEADERS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/fast-food-calories/charts/chart2_leaders.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/fast-food-calories/charts/chart2_leaders.png" role="img" aria-label="20 piece Buttermilk Crispy Chicken Tenders leads at 2,430 — 1,315 marks the median among the top dozen"></div>
-  <figcaption class="art-chart-caption">20 piece Buttermilk Crispy Chicken Tenders leads at 2,430 — 1,315 marks the median among the top dozen</figcaption>
 </figure>
 <p class="art-p"><strong>20 piece Buttermilk Crispy Chicken Tenders</strong> leads at <strong>2,430</strong> — <strong>1,315</strong> marks the median among the top dozen.</p>
 <p class="art-p">Head-of-field concentration is where quality, scale, or brand visibly separates from the pack.</p>
 <h2 id="chart-3-distribution" class="anchored">CHART 3 — DISTRIBUTION</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/fast-food-calories/charts/chart3_distribution.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/fast-food-calories/charts/chart3_distribution.png" role="img" aria-label="Calories by Restaurant"></div>
-  <figcaption class="art-chart-caption">Calories by Restaurant</figcaption>
 </figure>
 <p class="art-p">Category boxes reveal whether calories consensus is shared or contested across tiers.</p>
 <p class="art-p">Wide whiskers flag segments where outliers — not averages — drive reputation.</p>
 <h2 id="chart-4-gap" class="anchored">CHART 4 — GAP ANALYSIS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/fast-food-calories/charts/chart4_gap.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/fast-food-calories/charts/chart4_gap.png" role="img" aria-label="Calories vs median by Restaurant"></div>
-  <figcaption class="art-chart-caption">Calories vs median by Restaurant</figcaption>
 </figure>
 <p class="art-p"><strong>Sonic</strong> sits <strong>80.0</strong> above the median; <strong>Chick Fil-A</strong> trails by <strong>100</strong>.</p>
 <p class="art-p">Diverging from the median exposes which tiers over- or under-perform — not just who ranks first.</p>
 <h2 id="chart-5-relationship" class="anchored">SUPPLEMENT — RELATIONSHIP</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/fast-food-calories/charts/chart5_scatter.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/fast-food-calories/charts/chart5_scatter.png" role="img" aria-label="Calories vs Total fat"></div>
-  <figcaption class="art-chart-caption">Calories vs Total fat</figcaption>
 </figure>
 <p class="art-p">Joint plot of <strong>calories</strong> and <strong>total fat</strong> surfaces clusters the averages erase.</p>
 <p class="art-p">Bubble size tracks repeat presence — outliers are archetypes, not noise.</p>

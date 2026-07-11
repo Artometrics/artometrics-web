@@ -43,35 +43,30 @@ draft: false
 <h2 id="chart-1-timeline" class="anchored">CHART 1 — TIMELINE</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/hurricanes-puerto-rico/charts/chart1_timeline.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/hurricanes-puerto-rico/charts/chart1_timeline.png" role="img" aria-label="Value by State"></div>
-  <figcaption class="art-chart-caption">Value by State</figcaption>
 </figure>
 <p class="art-p">Daily value lines separate which state bore the brunt — peaks rarely align.</p>
 <p class="art-p">The maximum reading (<strong>5,072</strong>) defines the intensity ceiling for the window.</p>
 <h2 id="chart-2-leaders" class="anchored">CHART 2 — LEADERS</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/hurricanes-puerto-rico/charts/chart2_leaders.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/hurricanes-puerto-rico/charts/chart2_leaders.png" role="img" aria-label="Texas leads at 983 — 621 marks the median among the top dozen"></div>
-  <figcaption class="art-chart-caption">Texas leads at 983 — 621 marks the median among the top dozen</figcaption>
 </figure>
 <p class="art-p"><strong>Texas</strong> leads at <strong>983</strong> — <strong>621</strong> marks the median among the top dozen.</p>
 <p class="art-p">Head-of-field concentration is where quality, scale, or brand visibly separates from the pack.</p>
 <h2 id="chart-3-distribution" class="anchored">CHART 3 — DISTRIBUTION</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/hurricanes-puerto-rico/charts/chart3_distribution.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/hurricanes-puerto-rico/charts/chart3_distribution.png" role="img" aria-label="Median 703 vs mean 1,020 — the shape is right-skewed"></div>
-  <figcaption class="art-chart-caption">Median 703 vs mean 1,020 — the shape is right-skewed</figcaption>
 </figure>
 <p class="art-p">Median <strong>703</strong> vs mean <strong>1,020</strong> — the shape is right-skewed.</p>
 <p class="art-p">The top decile begins at <strong>2,214</strong>; that tail is where defining cases live.</p>
 <h2 id="chart-4-concentration" class="anchored">CHART 4 — CONCENTRATION</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/hurricanes-puerto-rico/charts/chart4_pareto.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/hurricanes-puerto-rico/charts/chart4_pareto.png" role="img" aria-label="The top 3 state entries account for 100% of the aggregate value"></div>
-  <figcaption class="art-chart-caption">The top 3 state entries account for 100% of the aggregate value</figcaption>
 </figure>
 <p class="art-p">The top <strong>3</strong> state entries account for <strong>100%</strong> of the aggregate value.</p>
 <p class="art-p">Steep Pareto curves mean a small head drives most of the signal — the long tail is noise until it isn't.</p>
 <h2 id="chart-pareto" class="anchored">SUPPLEMENT — CONCENTRATION</h2>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/hurricanes-puerto-rico/charts/chart_pareto.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/hurricanes-puerto-rico/charts/chart_pareto.png" role="img" aria-label="The top 3 state entries account for 100% of the aggregate value"></div>
-  <figcaption class="art-chart-caption">The top 3 state entries account for 100% of the aggregate value</figcaption>
 </figure>
 <p class="art-p">The top <strong>3</strong> state entries account for <strong>100%</strong> of the aggregate value.</p>
 <p class="art-p">Steep Pareto curves mean a small head drives most of the signal — the long tail is noise until it isn't.</p>
