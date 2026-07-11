@@ -14,6 +14,8 @@
     "sync:articles": "node scripts/sync-github-articles.mjs",
     "scaffold:repo": "node scripts/scaffold-article-repo.mjs",
     "upgrade:repos": "node scripts/upgrade-article-repos.mjs",
+    "publish:repos": "node scripts/publish-article-repos.mjs",
+    "migration:manifest": "node scripts/write-migration-manifest.mjs",
     "render:readmitted": "Rscript scripts/render-readmitted-charts.R",
     "render:readmitted:py": "python3 scripts/render-readmitted-charts.py",
     "setup:r": "Rscript scripts/install-r-deps.R",

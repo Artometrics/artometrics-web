@@ -1,0 +1,796 @@
+{
+  "generatedAt": "2026-07-11T19:37:33.837Z",
+  "count": 79,
+  "articles": [
+    {
+      "repo": "airline-safety",
+      "siteSlug": "airline-safety",
+      "desk": "atlas",
+      "title": "AIRLINE SAFETY: The Artometrics of Airline Safety",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/airline-safety/",
+      "githubUrl": "https://github.com/Artometrics/airline-safety",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "biketown-bikeshare",
+      "siteSlug": "biketown-bikeshare",
+      "desk": "atlas",
+      "title": "BIKETOWN BIKESHARE: The Artometrics of Biketown Bikeshare",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/biketown-bikeshare/",
+      "githubUrl": "https://github.com/Artometrics/biketown-bikeshare",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "california-vs-texas-state-rivalry",
+      "siteSlug": "california-vs-texas-state-rivalry",
+      "desk": "atlas",
+      "title": "CALIFORNIA VS TEXAS: The Artometrics of Rival State Systems",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/california-vs-texas-state-rivalry/",
+      "githubUrl": "https://github.com/Artometrics/california-vs-texas-state-rivalry",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "celtics",
+      "siteSlug": "celtics-the-artometrics-of-institutional-winning",
+      "desk": "atlas",
+      "title": "CELTICS: The Artometrics of Institutional Winning",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/celtics-the-artometrics-of-institutional-winning/",
+      "githubUrl": "https://github.com/Artometrics/celtics",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "cetaceans",
+      "siteSlug": "cetaceans",
+      "desk": "atlas",
+      "title": "CETACEANS: The Artometrics of Cetaceans",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/cetaceans/",
+      "githubUrl": "https://github.com/Artometrics/cetaceans",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "cia-world-factbook",
+      "siteSlug": "cia-world-factbook",
+      "desk": "atlas",
+      "title": "CIA WORLD FACTBOOK: The Artometrics of CIA World Factbook",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/cia-world-factbook/",
+      "githubUrl": "https://github.com/Artometrics/cia-world-factbook",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "city-bioeconomics-operating-system",
+      "siteSlug": "city-bioeconomics-operating-system",
+      "desk": "atlas",
+      "title": "CITY BIOECONOMICS: The Urban Operating System",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/city-bioeconomics-operating-system/",
+      "githubUrl": "https://github.com/Artometrics/city-bioeconomics-operating-system",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "cowboys",
+      "siteSlug": "cowboys-the-artometrics-of-americas-team",
+      "desk": "atlas",
+      "title": "COWBOYS: The Artometrics of America's Team",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/cowboys-the-artometrics-of-americas-team/",
+      "githubUrl": "https://github.com/Artometrics/cowboys",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "dodgers",
+      "siteSlug": "dodgers-the-artometrics-of-baseballs-modern-machine",
+      "desk": "atlas",
+      "title": "DODGERS: The Artometrics of Baseball's Modern Machine",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/dodgers-the-artometrics-of-baseballs-modern-machine/",
+      "githubUrl": "https://github.com/Artometrics/dodgers",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "export-superpowers-us-china-germany",
+      "siteSlug": "export-superpowers-us-china-germany",
+      "desk": "atlas",
+      "title": "EXPORT SUPERPOWERS: United States, China, Germany",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/export-superpowers-us-china-germany/",
+      "githubUrl": "https://github.com/Artometrics/export-superpowers-us-china-germany",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "global-life-expectancy",
+      "siteSlug": "global-life-expectancy",
+      "desk": "atlas",
+      "title": "GLOBAL LIFE EXPECTANCY: How Humanity Doubled Its Lifespan in 500 Years",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/global-life-expectancy/",
+      "githubUrl": "https://github.com/Artometrics/global-life-expectancy",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "global-plastic-waste",
+      "siteSlug": "global-plastic-waste",
+      "desk": "atlas",
+      "title": "GLOBAL PLASTIC WASTE: The Artometrics of Global Plastic Waste",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/global-plastic-waste/",
+      "githubUrl": "https://github.com/Artometrics/global-plastic-waste",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "hurricanes-puerto-rico",
+      "siteSlug": "hurricanes-puerto-rico",
+      "desk": "atlas",
+      "title": "HURRICANES & PUERTO RICO: The Artometrics of Hurricanes & Puerto Rico",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/hurricanes-puerto-rico/",
+      "githubUrl": "https://github.com/Artometrics/hurricanes-puerto-rico",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "hydro-wastewater",
+      "siteSlug": "hydro-wastewater",
+      "desk": "atlas",
+      "title": "HYDRO WASTEWATER PLANTS: The Artometrics of Hydro Wastewater Plants",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/hydro-wastewater/",
+      "githubUrl": "https://github.com/Artometrics/hydro-wastewater",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "languages-glottolog",
+      "siteSlug": "languages-glottolog",
+      "desk": "atlas",
+      "title": "LANGUAGES OF THE WORLD: The Artometrics of Languages of the World",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/languages-glottolog/",
+      "githubUrl": "https://github.com/Artometrics/languages-glottolog",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "league-money-skill-and-star-systems",
+      "siteSlug": "league-money-skill-and-star-systems",
+      "desk": "atlas",
+      "title": "LEAGUE MONEY, SKILL, AND STAR SYSTEMS",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/league-money-skill-and-star-systems/",
+      "githubUrl": "https://github.com/Artometrics/league-money-skill-and-star-systems",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "national-export-identity-atlas",
+      "siteSlug": "national-export-identity-atlas",
+      "desk": "atlas",
+      "title": "NATIONAL EXPORT IDENTITY ATLAS",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/national-export-identity-atlas/",
+      "githubUrl": "https://github.com/Artometrics/national-export-identity-atlas",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "national-park-visits",
+      "siteSlug": "national-park-visits",
+      "desk": "atlas",
+      "title": "NATIONAL PARK VISITS: The Artometrics of National Park Visits",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/national-park-visits/",
+      "githubUrl": "https://github.com/Artometrics/national-park-visits",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "new-york-vs-san-francisco-city-systems",
+      "siteSlug": "new-york-vs-san-francisco-city-systems",
+      "desk": "atlas",
+      "title": "NEW YORK VS SAN FRANCISCO: Command City and Invention City",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/new-york-vs-san-francisco-city-systems/",
+      "githubUrl": "https://github.com/Artometrics/new-york-vs-san-francisco-city-systems",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "nyc-restaurant-inspections",
+      "siteSlug": "nyc-restaurant-inspections",
+      "desk": "atlas",
+      "title": "NYC RESTAURANT INSPECTIONS: The Artometrics of NYC Restaurant Inspections",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/nyc-restaurant-inspections/",
+      "githubUrl": "https://github.com/Artometrics/nyc-restaurant-inspections",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "patriots",
+      "siteSlug": "patriots-the-artometrics-of-the-system-dynasty",
+      "desk": "atlas",
+      "title": "PATRIOTS: The Artometrics of the System Dynasty",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/patriots-the-artometrics-of-the-system-dynasty/",
+      "githubUrl": "https://github.com/Artometrics/patriots",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "regional-sports-identity-map",
+      "siteSlug": "regional-sports-identity-map",
+      "desk": "atlas",
+      "title": "REGIONAL SPORTS IDENTITY MAP",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/regional-sports-identity-map/",
+      "githubUrl": "https://github.com/Artometrics/regional-sports-identity-map",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "san-francisco-data-microscope",
+      "siteSlug": "san-francisco-data-microscope",
+      "desk": "atlas",
+      "title": "SAN FRANCISCO DATA MICROSCOPE: The City as an Invention Machine",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/san-francisco-data-microscope/",
+      "githubUrl": "https://github.com/Artometrics/san-francisco-data-microscope",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "sports-dynasty-index-best-and-worst-conversion",
+      "siteSlug": "sports-dynasty-index-best-and-worst-conversion",
+      "desk": "atlas",
+      "title": "SPORTS DYNASTY INDEX: Best, Worst, and Most Misleading Teams",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/sports-dynasty-index-best-and-worst-conversion/",
+      "githubUrl": "https://github.com/Artometrics/sports-dynasty-index-best-and-worst-conversion",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "world-heritage-sites",
+      "siteSlug": "world-heritage-sites",
+      "desk": "atlas",
+      "title": "WORLD HERITAGE SITES: The Artometrics of World Heritage Sites",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/world-heritage-sites/",
+      "githubUrl": "https://github.com/Artometrics/world-heritage-sites",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "yankees",
+      "siteSlug": "yankees-the-artometrics-of-baseballs-empire",
+      "desk": "atlas",
+      "title": "YANKEES: The Artometrics of Baseball's Empire",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/yankees-the-artometrics-of-baseballs-empire/",
+      "githubUrl": "https://github.com/Artometrics/yankees",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "alcohol-consumption",
+      "siteSlug": "alcohol-consumption",
+      "desk": "culture",
+      "title": "ALCOHOL CONSUMPTION: The Artometrics of Alcohol Consumption",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/alcohol-consumption/",
+      "githubUrl": "https://github.com/Artometrics/alcohol-consumption",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "all-the-pizza",
+      "siteSlug": "all-the-pizza",
+      "desk": "culture",
+      "title": "ALL THE PIZZA: The Artometrics of All The Pizza",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/all-the-pizza/",
+      "githubUrl": "https://github.com/Artometrics/all-the-pizza",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "awards-prestige-economy-oscars-grammys-nobels",
+      "siteSlug": "awards-prestige-economy-oscars-grammys-nobels",
+      "desk": "culture",
+      "title": "AWARDS PRESTIGE ECONOMY: Oscars, Grammys, Nobels",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/awards-prestige-economy-oscars-grammys-nobels/",
+      "githubUrl": "https://github.com/Artometrics/awards-prestige-economy-oscars-grammys-nobels",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "beyonce-taylor-lyrics",
+      "siteSlug": "beyonce-taylor-lyrics",
+      "desk": "culture",
+      "title": "BEYONCÉ & TAYLOR SWIFT LYRICS: The Artometrics of Beyoncé & Taylor Swift Lyrics",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/beyonce-taylor-lyrics/",
+      "githubUrl": "https://github.com/Artometrics/beyonce-taylor-lyrics",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "billboard-hot-100",
+      "siteSlug": "billboard-hot-100",
+      "desk": "culture",
+      "title": "BILLBOARD HOT 100: The Artometrics of Number-One Domination",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/billboard-hot-100/",
+      "githubUrl": "https://github.com/Artometrics/billboard-hot-100",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "billboard-top-100",
+      "siteSlug": "billboard-top-100",
+      "desk": "culture",
+      "title": "BILLBOARD TOP 100: The Artometrics of Billboard Top 100",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/billboard-top-100/",
+      "githubUrl": "https://github.com/Artometrics/billboard-top-100",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "board-games",
+      "siteSlug": "board-games",
+      "desk": "culture",
+      "title": "BOARD GAMES: The Artometrics of Board Games",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/board-games/",
+      "githubUrl": "https://github.com/Artometrics/board-games",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "broadway-musicals",
+      "siteSlug": "broadway-musicals",
+      "desk": "culture",
+      "title": "BROADWAY MUSICALS: The Artometrics of Broadway Musicals",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/broadway-musicals/",
+      "githubUrl": "https://github.com/Artometrics/broadway-musicals",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "christmas-novels",
+      "siteSlug": "christmas-novels",
+      "desk": "culture",
+      "title": "CHRISTMAS NOVELS: The Artometrics of Christmas Novels",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/christmas-novels/",
+      "githubUrl": "https://github.com/Artometrics/christmas-novels",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "christmas-songs",
+      "siteSlug": "christmas-songs",
+      "desk": "culture",
+      "title": "CHRISTMAS SONGS: The Artometrics of Christmas Songs",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/christmas-songs/",
+      "githubUrl": "https://github.com/Artometrics/christmas-songs",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "comic-characters",
+      "siteSlug": "comic-characters",
+      "desk": "culture",
+      "title": "COMIC BOOK CHARACTERS: The Artometrics of Comic Book Characters",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/comic-characters/",
+      "githubUrl": "https://github.com/Artometrics/comic-characters",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "craft-beer-usa",
+      "siteSlug": "craft-beer-usa",
+      "desk": "culture",
+      "title": "CRAFT BEER USA: The Artometrics of Craft Beer USA",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/craft-beer-usa/",
+      "githubUrl": "https://github.com/Artometrics/craft-beer-usa",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "cultural-exports-geoeconomics",
+      "siteSlug": "cultural-exports-geoeconomics",
+      "desk": "culture",
+      "title": "CULTURAL EXPORTS: The Geo-Economics of Soft Power",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/cultural-exports-geoeconomics/",
+      "githubUrl": "https://github.com/Artometrics/cultural-exports-geoeconomics",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "emmy-awards",
+      "siteSlug": "emmy-awards",
+      "desk": "culture",
+      "title": "EMMY AWARDS: The Artometrics of Emmy Awards",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/emmy-awards/",
+      "githubUrl": "https://github.com/Artometrics/emmy-awards",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "fast-food-calories",
+      "siteSlug": "fast-food-calories",
+      "desk": "culture",
+      "title": "FAST FOOD CALORIES: The Artometrics of Fast Food Calories",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/fast-food-calories/",
+      "githubUrl": "https://github.com/Artometrics/fast-food-calories",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "horror-movie-profit",
+      "siteSlug": "horror-movie-profit",
+      "desk": "culture",
+      "title": "HORROR MOVIE PROFIT: The Artometrics of Horror Movie Profit",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/horror-movie-profit/",
+      "githubUrl": "https://github.com/Artometrics/horror-movie-profit",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "horror-movies",
+      "siteSlug": "horror-movies",
+      "desk": "culture",
+      "title": "HORROR MOVIES: The Artometrics of Horror Movies",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/horror-movies/",
+      "githubUrl": "https://github.com/Artometrics/horror-movies",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "imdb-blockbuster-grammar",
+      "siteSlug": "imdb-blockbuster-grammar",
+      "desk": "culture",
+      "title": "IMDb BLOCKBUSTER GRAMMAR: The Artometrics of Movie Fame",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/imdb-blockbuster-grammar/",
+      "githubUrl": "https://github.com/Artometrics/imdb-blockbuster-grammar",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "lakers",
+      "siteSlug": "lakers-the-artometrics-of-basketball-glamour",
+      "desk": "culture",
+      "title": "LAKERS: The Artometrics of Basketball Glamour",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/lakers-the-artometrics-of-basketball-glamour/",
+      "githubUrl": "https://github.com/Artometrics/lakers",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "lego-database",
+      "siteSlug": "lego-database",
+      "desk": "culture",
+      "title": "LEGO DATABASE: The Artometrics of LEGO Database",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/lego-database/",
+      "githubUrl": "https://github.com/Artometrics/lego-database",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "medium-articles",
+      "siteSlug": "medium-articles",
+      "desk": "culture",
+      "title": "MEDIUM ARTICLE METADATA: The Artometrics of Medium Article Metadata",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/medium-articles/",
+      "githubUrl": "https://github.com/Artometrics/medium-articles",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "musicbrainz-pop-fame-mechanics",
+      "siteSlug": "musicbrainz-pop-fame-mechanics",
+      "desk": "culture",
+      "title": "MUSICBRAINZ: The Artometrics of Pop Fame",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/musicbrainz-pop-fame-mechanics/",
+      "githubUrl": "https://github.com/Artometrics/musicbrainz-pop-fame-mechanics",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "netflix-engagement",
+      "siteSlug": "netflix-engagement",
+      "desk": "culture",
+      "title": "NETFLIX ENGAGEMENT: The Artometrics of Netflix Engagement",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/netflix-engagement/",
+      "githubUrl": "https://github.com/Artometrics/netflix-engagement",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "netflix-titles",
+      "siteSlug": "netflix-titles",
+      "desk": "culture",
+      "title": "NETFLIX TITLES: The Artometrics of Netflix Titles",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/netflix-titles/",
+      "githubUrl": "https://github.com/Artometrics/netflix-titles",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "pantheon",
+      "siteSlug": "pantheon-the-artometrics-of-collective-memory",
+      "desk": "culture",
+      "title": "PANTHEON: The Artometrics of Collective Memory",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/pantheon-the-artometrics-of-collective-memory/",
+      "githubUrl": "https://github.com/Artometrics/pantheon",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "pixar-films",
+      "siteSlug": "pixar-films",
+      "desk": "culture",
+      "title": "PIXAR: The Artometrics of the Computer-Animation Canon",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/pixar-films/",
+      "githubUrl": "https://github.com/Artometrics/pixar-films",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "project-gutenberg",
+      "siteSlug": "project-gutenberg",
+      "desk": "culture",
+      "title": "PROJECT GUTENBERG: The Artometrics of Project Gutenberg",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/project-gutenberg/",
+      "githubUrl": "https://github.com/Artometrics/project-gutenberg",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "project-gutenberg-public-domain-canon-map",
+      "siteSlug": "project-gutenberg-public-domain-canon-map",
+      "desk": "culture",
+      "title": "PROJECT GUTENBERG: The Artometrics of the Public-Domain Canon",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/project-gutenberg-public-domain-canon-map/",
+      "githubUrl": "https://github.com/Artometrics/project-gutenberg-public-domain-canon-map",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "radio-stations",
+      "siteSlug": "radio-stations",
+      "desk": "culture",
+      "title": "RADIO STATIONS: The Artometrics of Radio Stations",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/radio-stations/",
+      "githubUrl": "https://github.com/Artometrics/radio-stations",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "ramen-ratings",
+      "siteSlug": "ramen-ratings",
+      "desk": "culture",
+      "title": "RAMEN RATINGS: The Artometrics of Ramen Ratings",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/ramen-ratings/",
+      "githubUrl": "https://github.com/Artometrics/ramen-ratings",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "rolling-stone-albums",
+      "siteSlug": "rolling-stone-albums",
+      "desk": "culture",
+      "title": "ROLLING STONE ALBUM RANKINGS: The Artometrics of Rolling Stone Album Rankings",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/rolling-stone-albums/",
+      "githubUrl": "https://github.com/Artometrics/rolling-stone-albums",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "sherlock-holmes",
+      "siteSlug": "sherlock-holmes",
+      "desk": "culture",
+      "title": "SHERLOCK HOLMES: The Artometrics of Sherlock Holmes",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/sherlock-holmes/",
+      "githubUrl": "https://github.com/Artometrics/sherlock-holmes",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "simpsons-guest-stars",
+      "siteSlug": "simpsons-guest-stars",
+      "desk": "culture",
+      "title": "SIMPSONS GUEST STARS: The Artometrics of Simpsons Guest Stars",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/simpsons-guest-stars/",
+      "githubUrl": "https://github.com/Artometrics/simpsons-guest-stars",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "super-bowl-ads",
+      "siteSlug": "super-bowl-ads",
+      "desk": "culture",
+      "title": "SUPER BOWL ADS: The Artometrics of Super Bowl Ads",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/super-bowl-ads/",
+      "githubUrl": "https://github.com/Artometrics/super-bowl-ads",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "tv-golden-age",
+      "siteSlug": "tv-golden-age",
+      "desk": "culture",
+      "title": "TV GOLDEN AGE: The Artometrics of TV Golden Age",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/tv-golden-age/",
+      "githubUrl": "https://github.com/Artometrics/tv-golden-age",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "uk-museums",
+      "siteSlug": "uk-museums",
+      "desk": "culture",
+      "title": "UK MUSEUMS: The Artometrics of UK Museums",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/uk-museums/",
+      "githubUrl": "https://github.com/Artometrics/uk-museums",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "video-games-sliced",
+      "siteSlug": "video-games-sliced",
+      "desk": "culture",
+      "title": "VIDEO GAMES: The Artometrics of Video Games",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/video-games-sliced/",
+      "githubUrl": "https://github.com/Artometrics/video-games-sliced",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "video-games-steam",
+      "siteSlug": "video-games-steam",
+      "desk": "culture",
+      "title": "VIDEO GAMES STEAM SPY: The Artometrics of Video Games Steam Spy",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/video-games-steam/",
+      "githubUrl": "https://github.com/Artometrics/video-games-steam",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "web-page-metrics",
+      "siteSlug": "web-page-metrics",
+      "desk": "culture",
+      "title": "WEB PAGE METRICS: The Artometrics of Web Page Metrics",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/web-page-metrics/",
+      "githubUrl": "https://github.com/Artometrics/web-page-metrics",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "wine-ratings",
+      "siteSlug": "wine-ratings",
+      "desk": "culture",
+      "title": "WINE RATINGS: The Artometrics of Wine Ratings",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/wine-ratings/",
+      "githubUrl": "https://github.com/Artometrics/wine-ratings",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "nuclear-explosions",
+      "siteSlug": "nuclear-explosions",
+      "desk": "history",
+      "title": "NUCLEAR EXPLOSIONS: The Artometrics of Nuclear Explosions",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/nuclear-explosions/",
+      "githubUrl": "https://github.com/Artometrics/nuclear-explosions",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "roman-emperors",
+      "siteSlug": "roman-emperors",
+      "desk": "history",
+      "title": "ROMAN EMPERORS: The Artometrics of Roman Emperors",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/roman-emperors/",
+      "githubUrl": "https://github.com/Artometrics/roman-emperors",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "exercise-usa",
+      "siteSlug": "exercise-usa",
+      "desk": "persona",
+      "title": "EXERCISE USA: The Artometrics of Exercise USA",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/exercise-usa/",
+      "githubUrl": "https://github.com/Artometrics/exercise-usa",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "us-phds",
+      "siteSlug": "us-phds",
+      "desk": "persona",
+      "title": "US PHDS AWARDED: The Artometrics of US PhDs Awarded",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/us-phds/",
+      "githubUrl": "https://github.com/Artometrics/us-phds",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "big-mac-index",
+      "siteSlug": "big-mac-index",
+      "desk": "power",
+      "title": "BIG MAC INDEX: The Artometrics of Purchasing Power",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/big-mac-index/",
+      "githubUrl": "https://github.com/Artometrics/big-mac-index",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "ceo-departures",
+      "siteSlug": "ceo-departures",
+      "desk": "power",
+      "title": "CEO DEPARTURES: The Artometrics of CEO Departures",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/ceo-departures/",
+      "githubUrl": "https://github.com/Artometrics/ceo-departures",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "college-major-income",
+      "siteSlug": "college-major-income",
+      "desk": "power",
+      "title": "COLLEGE MAJOR & INCOME: The Artometrics of College Major & Income",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/college-major-income/",
+      "githubUrl": "https://github.com/Artometrics/college-major-income",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "incarceration-trends",
+      "siteSlug": "incarceration-trends",
+      "desk": "power",
+      "title": "INCARCERATION TRENDS: The Artometrics of Incarceration Trends",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/incarceration-trends/",
+      "githubUrl": "https://github.com/Artometrics/incarceration-trends",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "school-diversity",
+      "siteSlug": "school-diversity",
+      "desk": "power",
+      "title": "SCHOOL DIVERSITY: The Artometrics of School Diversity",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/school-diversity/",
+      "githubUrl": "https://github.com/Artometrics/school-diversity",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "un-votes",
+      "siteSlug": "un-votes",
+      "desk": "power",
+      "title": "UN VOTES: The Artometrics of UN Votes",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/un-votes/",
+      "githubUrl": "https://github.com/Artometrics/un-votes",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "us-tuition",
+      "siteSlug": "us-tuition",
+      "desk": "power",
+      "title": "US TUITION COSTS: The Artometrics of US Tuition Costs",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/us-tuition/",
+      "githubUrl": "https://github.com/Artometrics/us-tuition",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "us-voter-turnout",
+      "siteSlug": "us-voter-turnout",
+      "desk": "power",
+      "title": "US VOTER TURNOUT: The Artometrics of US Voter Turnout",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/us-voter-turnout/",
+      "githubUrl": "https://github.com/Artometrics/us-voter-turnout",
+      "status": "scaffolded"
+    },
+    {
+      "repo": "wealth-income",
+      "siteSlug": "wealth-income",
+      "desk": "power",
+      "title": "WEALTH AND INCOME: The Artometrics of Wealth and Income",
+      "scaffoldReady": true,
+      "liveUrl": "https://artometrics.com/wealth-income/",
+      "githubUrl": "https://github.com/Artometrics/wealth-income",
+      "status": "scaffolded"
+    }
+  ]
+}

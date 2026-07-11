@@ -123,7 +123,6 @@
   padding: 18px 20px;
   border-radius: 2px;
   text-align: left;
-  min-width: 0;
 }
 .artometrics-article-body .fact-number{
   display: block;
@@ -145,25 +144,8 @@
   max-width: none;
   margin: 0;
 }
-.artometrics-article-body .fact-box {
-  min-width: 0;
-}
-.artometrics-article-body .fact-label {
-  overflow-wrap: anywhere;
-  word-break: break-word;
-}
-@media (max-width: 520px) {
-  .artometrics-article-body .facts-grid {
-    grid-template-columns: 1fr;
-  }
-  .artometrics-article-body .fact-number {
-    font-size: 1.45rem;
-  }
-}
-@media (min-width: 521px) and (max-width: 768px) {
-  .artometrics-article-body .facts-grid {
-    grid-template-columns: 1fr 1fr;
-  }
+@media (max-width: 700px) {
+  .facts-grid { grid-template-columns: 1fr 1fr; }
 }
 
 /* ── References ────────────────────────────────────────────────────── */
@@ -192,8 +174,8 @@
   --art-bg:        #FAFAF8;
   --art-dark:      #1C1C1E;
   --art-mid:       #6B6B6B;
-  --art-highlight: #00FF88;
-  --art-secondary: #059669;
+  --art-highlight: #C0392B;
+  --art-secondary: #2C3E6B;
   --art-muted:     #D5D5D5;
   --art-white:     #FFFFFF;
   --art-cream:     #F2F0EB;
@@ -634,7 +616,7 @@ pre:has(> code.sourceCode.sql),
   max-width: 100% !important;
   margin: 0 !important;
   padding: 0 !important;
-  overflow-x: clip !important;
+  overflow: visible !important;
 }
 .artometrics-article-body nav#TOC{
   grid-column: 1 !important;
@@ -1051,7 +1033,7 @@ pre:has(> code.sourceCode.sql),
   line-height: 1.55 !important;
   color: #3A3A3A !important;
 }
-.artometrics-article-body .art-chart-caption--visible {
+.artometrics-article-body .art-chart-caption--visible{
   display: block !important;
 }
 .artometrics-article-body .art-chart-live .gtitle,
@@ -1071,21 +1053,21 @@ pre:has(> code.sourceCode.sql),
   background: var(--art-cream, #F2F0EB) !important;
   border-bottom: 1px solid #E8E6E1 !important;
 }
-.artometrics-article-body .art-chart-heading__line {
+.artometrics-article-body .art-chart-heading__line{
   display: block !important;
 }
-.artometrics-article-body .art-chart-heading__line--primary {
+.artometrics-article-body .art-chart-heading__line--primary{
   font-size: 1rem !important;
   font-weight: 700 !important;
   color: #1C1C1E !important;
   letter-spacing: 0.02em !important;
 }
-.artometrics-article-body .art-chart-heading__line--accent {
+.artometrics-article-body .art-chart-heading__line--accent{
   font-size: 0.92rem !important;
   font-weight: 600 !important;
-  color: #00FF88 !important;
+  color: #C0392B !important;
 }
-.artometrics-article-body .art-chart-heading__subtitle {
+.artometrics-article-body .art-chart-heading__subtitle{
   display: block !important;
   margin-top: 0.35rem !important;
   font-size: 0.78rem !important;
@@ -1094,7 +1076,7 @@ pre:has(> code.sourceCode.sql),
   color: #6B6B6B !important;
   letter-spacing: 0 !important;
 }
-.artometrics-article-body .art-chart-credit {
+.artometrics-article-body .art-chart-credit{
   padding: 0.35rem 1.15rem 0.65rem !important;
   font-family: 'DM Mono', 'DM Sans', monospace !important;
   font-size: 0.62rem !important;
@@ -1104,7 +1086,7 @@ pre:has(> code.sourceCode.sql),
   background: var(--art-cream, #F2F0EB) !important;
   border-top: 1px solid #E8E6E1 !important;
 }
-.artometrics-article-body .art-chart-insight {
+.artometrics-article-body .art-chart-insight{
   margin: 1rem 0 1.75rem !important;
   padding: 0.9rem 1rem 0.95rem 1.15rem !important;
   border-left: 3px solid #C0392B !important;
@@ -1114,7 +1096,7 @@ pre:has(> code.sourceCode.sql),
   line-height: 1.55 !important;
   color: #3A3A3A !important;
 }
-.artometrics-article-body .art-chart-insight strong {
+.artometrics-article-body .art-chart-insight strong{
   display: block !important;
   margin-bottom: 0.35rem !important;
   font-size: 0.68rem !important;
@@ -1123,17 +1105,17 @@ pre:has(> code.sourceCode.sql),
   text-transform: uppercase !important;
   color: #C0392B !important;
 }
-.artometrics-article-body .art-chart-insight ul {
+.artometrics-article-body .art-chart-insight ul{
   margin: 0 !important;
   padding-left: 1.1rem !important;
 }
-.artometrics-article-body .art-chart-insight li {
+.artometrics-article-body .art-chart-insight li{
   margin-bottom: 0.35rem !important;
 }
-.artometrics-article-body .art-chart-insight li:last-child {
+.artometrics-article-body .art-chart-insight li:last-child{
   margin-bottom: 0 !important;
 }
-.artometrics-article-body .art-report-summary {
+.artometrics-article-body .art-report-summary{
   margin: 1.75rem 0 2.25rem !important;
   padding: 1.15rem 1.25rem 1.2rem !important;
   border: 1px solid #D5D5D5 !important;
@@ -1141,7 +1123,7 @@ pre:has(> code.sourceCode.sql),
   background: #FAFAF8 !important;
   max-width: 42rem !important;
 }
-.artometrics-article-body .art-report-summary__label {
+.artometrics-article-body .art-report-summary__label{
   margin: 0 0 0.5rem !important;
   font-family: 'DM Sans', sans-serif !important;
   font-size: 0.65rem !important;
@@ -1150,18 +1132,14 @@ pre:has(> code.sourceCode.sql),
   text-transform: uppercase !important;
   color: #2C3E6B !important;
 }
-.artometrics-article-body .art-report-summary__text {
+.artometrics-article-body .art-report-summary__text{
   margin: 0 !important;
   font-family: 'DM Sans', sans-serif !important;
   font-size: 0.92rem !important;
   line-height: 1.65 !important;
   color: #1C1C1E !important;
 }
-.artometrics-article-body .art-report-summary--close {
-  margin-top: 2.75rem !important;
-  border-left-color: #059669 !important;
-}
-.artometrics-article-body .art-myth-grid {
+.artometrics-article-body .art-myth-grid{
   display: grid !important;
   grid-template-columns: 1fr !important;
   gap: 1rem !important;
@@ -1174,13 +1152,13 @@ pre:has(> code.sourceCode.sql),
     max-width: none !important;
   }
 }
-.artometrics-article-body .art-myth-card {
+.artometrics-article-body .art-myth-card{
   padding: 1rem 1.05rem !important;
   border: 1px solid #E8E6E1 !important;
   border-top: 3px solid #C0392B !important;
   background: #FAFAF8 !important;
 }
-.artometrics-article-body .art-myth-card__myth {
+.artometrics-article-body .art-myth-card__myth{
   margin: 0 0 0.55rem !important;
   font-family: 'DM Sans', sans-serif !important;
   font-size: 0.78rem !important;
@@ -1189,14 +1167,14 @@ pre:has(> code.sourceCode.sql),
   color: #6B6B6B !important;
   font-style: italic !important;
 }
-.artometrics-article-body .art-myth-card__reality {
+.artometrics-article-body .art-myth-card__reality{
   margin: 0 !important;
   font-family: 'DM Sans', sans-serif !important;
   font-size: 0.8rem !important;
   line-height: 1.55 !important;
   color: #3A3A3A !important;
 }
-.artometrics-article-body main.art-article-main > p {
+.artometrics-article-body main.art-article-main > p{
   text-align: left !important;
   margin-left: 0 !important;
   margin-right: auto !important;
@@ -1281,6 +1259,14 @@ pre:has(> code.sourceCode.sql),
   color: #C0392B !important;
 }
 @media (max-width: 1100px) {
+  .artometrics-article-body #quarto-content {
+    grid-template-columns: minmax(9rem, 10.5rem) minmax(0, 1fr) !important;
+  }
+  .artometrics-article-body .art-related-rail {
+    display: none !important;
+  }
+}
+@media (max-width: 900px) {
   .artometrics-article-body #quarto-content {
     grid-template-columns: 1fr !important;
     gap: 0 !important;
@@ -1413,7 +1399,7 @@ pre:has(> code.sourceCode.sql),
   box-shadow: 0 1px 4px rgba(28, 28, 30, 0.08) !important;
   transition: color 0.15s, border-color 0.15s, background 0.15s !important;
 }
-.artometrics-article-body .art-chart-toolbar__icon {
+.artometrics-article-body .art-chart-toolbar__icon{
   font-size: 0.85rem !important;
   line-height: 1 !important;
 }
@@ -1543,90 +1529,4 @@ pre:has(> code.sourceCode.sql),
 }
 .artometrics-article-body .art-chart-share-sheet__panel-wrap{
   position: relative;
-}
-
-/* ── Lean report: hide interactive chrome & code toggles ───────────── */
-.artometrics-article-body .art-chart-toolbar,
-.artometrics-article-body .art-chart-share-sheet,
-.artometrics-article-body .js-plotly-plot .modebar {
-  display: none !important;
-}
-
-.artometrics-article-body .art-code-block,
-.artometrics-article-body details:has(.art-lang-tag) {
-  display: none !important;
-}
-
-/* ── Static chart images ───────────────────────────────────────────── */
-.artometrics-article-body .art-chart--static img {
-  display: block;
-  width: 100%;
-  height: auto;
-  vertical-align: top;
-}
-
-@media (max-width: 899px) {
-  .artometrics-article-body .art-chart {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-}
-
-/* ── Myth vs. data sections ────────────────────────────────────────── */
-.artometrics-article-body .art-myth-section {
-  margin: 2.5rem 0 0;
-  text-align: left !important;
-}
-
-.artometrics-article-body .art-myth-section__eyebrow {
-  display: block;
-  margin: 0 0 0.35rem;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.62rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: #059669;
-}
-
-.artometrics-article-body .art-myth-section h2 {
-  margin: 0 0 1.25rem !important;
-  padding: 0 !important;
-  border: none !important;
-  font-family: 'DM Sans', sans-serif !important;
-  font-size: 1.05rem !important;
-  font-weight: 700 !important;
-  line-height: 1.35 !important;
-  letter-spacing: 0.01em !important;
-  text-transform: none !important;
-  text-align: left !important;
-  color: #1C1C1E !important;
-}
-
-.artometrics-article-body .art-chart-insight {
-  text-align: left !important;
-  max-width: none !important;
-}
-
-.artometrics-article-body .art-chart-insight ul {
-  margin: 0.5rem 0 0 !important;
-  padding-left: 1.1rem !important;
-  list-style: disc !important;
-  list-style-position: outside !important;
-  text-align: left !important;
-}
-
-.artometrics-article-body .art-chart-insight li {
-  text-align: left !important;
-  list-style-position: outside !important;
-  margin-bottom: 0.45rem !important;
-}
-
-.artometrics-article-body .art-github-wrap {
-  display: flex !important;
-  justify-content: center !important;
-  width: 100% !important;
-  text-align: center !important;
 }

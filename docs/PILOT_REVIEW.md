@@ -48,9 +48,12 @@ See [`pilot-drafts/readmitted/QA.md`](../pilot-drafts/readmitted/QA.md):
 
 ## After you approve
 
-1. Push `pilot-drafts/readmitted/` contents to `https://github.com/Artometrics/readmitted` on **`main`**
-2. Run `npm run sync:articles` to refresh site from GitHub
-3. Continue batch upgrades for remaining 9 repos using `npm run upgrade:repos`
-4. Migrate Python-only articles from `.cache/article-scaffolds/` desk by desk
+1. From a machine with **Artometrics org write access**, run:
+   ```bash
+   npm run upgrade:repos
+   npm run publish:repos readmitted   # or publish:repos for all 10
+   ```
+2. Run `npm run sync:articles -- --clone` to refresh the site from GitHub
+3. Continue desk-by-desk migration using `docs/migration-manifest.json`
 
-**No GitHub pushes have been made in this branch.**
+**Note:** The cloud agent token cannot push to `Artometrics/<article>` repos (403). Commits are prepared locally in `.cache/article-repos/` — use `npm run publish:repos` with your credentials.
