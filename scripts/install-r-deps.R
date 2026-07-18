@@ -13,7 +13,19 @@ pkgs <- c(
   "patchwork",
   "ragg",
   "httr2",
-  "dotenv"
+  "dotenv",
+  # Used by gold Artometrics Quarto reports
+  "ggrepel",
+  "glue",
+  "janitor",
+  "ggridges",
+  "fmsb",
+  "igraph",
+  "ggraph",
+  "tidygraph",
+  "Lahman",
+  "httr",
+  "readxl"
 )
 
 missing <- pkgs[!vapply(pkgs, requireNamespace, quietly = TRUE, FUN.VALUE = logical(1))]
@@ -33,7 +45,7 @@ install.packages(
   missing,
   lib = lib,
   repos = "https://cloud.r-project.org/",
-  dependencies = c("Depends", "Imports")
+  dependencies = c("Depends", "Imports", "LinkingTo")
 )
 
 failed <- pkgs[!vapply(pkgs, requireNamespace, quietly = TRUE, FUN.VALUE = logical(1))]

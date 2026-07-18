@@ -1,4 +1,6 @@
-# Python deps for chart export (npm run render:readmitted)
+# Python deps for chart export + article generation tooling
 pandas>=3.0
 plotly>=6.0
 kaleido>=1.3
+requests>=2.32
+Pillow>=10.0

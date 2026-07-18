@@ -116,6 +116,7 @@ Gold-standard reports live in singular repos under [Artometrics](https://github.
 | Command | Action |
 |--------|--------|
 | `npm install` | Install dependencies |
+| `npm run setup:pipeline` | Install R, Quarto, CRAN + Python chart toolchain (idempotent) |
 | `npm run dev` | Dev server |
 | `npm run build` | Production build |
 | `npm run preview` | Preview production build |

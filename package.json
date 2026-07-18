@@ -19,7 +19,8 @@
     "render:readmitted": "Rscript scripts/render-readmitted-charts.R",
     "render:readmitted:py": "python3 scripts/render-readmitted-charts.py",
     "setup:r": "Rscript scripts/install-r-deps.R",
-    "setup:python": "pip3 install -r requirements.txt"
+    "setup:python": "pip3 install -r requirements.txt",
+    "setup:pipeline": "bash scripts/setup-pipeline.sh"
   },
   "engines": {
     "node": ">=24.0.0"
