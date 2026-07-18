@@ -90,5 +90,12 @@ fi
 log "Installing Python packages (npm run setup:python)"
 npm run setup:python
 
+# Kaleido 1.x needs a Chrome binary for PNG export
+export PATH="${HOME}/.local/bin:${PATH}"
+if need_cmd kaleido_get_chrome; then
+  log "Ensuring Chrome for Kaleido PNG export"
+  kaleido_get_chrome >/dev/null
+fi
+
 print_banner
 log "setup-pipeline complete"
