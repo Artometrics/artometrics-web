@@ -1,8 +1,7 @@
-import { Image, Pressable, Text, View, StyleSheet, useWindowDimensions } from "react-native";
+import { Image, Pressable, Text, View, StyleSheet } from "react-native";
 import { Link } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { BlogCard } from "@/components/BlogCard";
-import { PrimaryButton } from "@/components/PrimaryButton";
 import { Colors } from "@/constants/Colors";
 import { assetUrl } from "@/lib/assets";
 import {
@@ -13,20 +12,19 @@ import {
 } from "@/lib/content";
 
 export default function HomeScreen() {
-  const { width } = useWindowDimensions();
   const posts = getBlogPosts();
   const featured = posts[0];
   const rest = posts.slice(1);
   const podcasts = getPodcastEpisodes().slice(0, 2);
-  const multiCol = width >= 900;
+  const heroUri = assetUrl(featured?.heroImage);
 
   return (
     <View>
       {featured ? (
         <View style={styles.heroBand}>
           <Wrapper style={styles.heroInner}>
-            <View style={[styles.heroGrid, multiCol && styles.heroGridWide]}>
-              <View style={[styles.heroCopy, multiCol && { flex: 1 }]}>
+            <View style={styles.heroGrid}>
+              <View style={styles.heroCopy}>
                 <Text style={styles.eyebrow}>Latest report</Text>
                 <Link href={`/${featured.slug}`} asChild>
                   <Pressable>
@@ -36,16 +34,18 @@ export default function HomeScreen() {
                 <Text style={styles.heroDeck}>{deckLine(featured.description)}</Text>
                 <View style={styles.heroCtaRow}>
                   <Link href={`/${featured.slug}`} asChild>
-                    <PrimaryButton label="Read report" />
+                    <Pressable style={styles.readBtn}>
+                      <Text style={styles.readBtnText}>Read report</Text>
+                    </Pressable>
                   </Link>
                   <Text style={styles.meta}>{formatDate(featured.pubDate)}</Text>
                 </View>
               </View>
-              {assetUrl(featured.heroImage) ? (
+              {heroUri ? (
                 <Link href={`/${featured.slug}`} asChild>
-                  <Pressable style={[styles.heroMedia, multiCol && { flex: 1 }]}>
+                  <Pressable style={styles.heroMedia}>
                     <Image
-                      source={{ uri: assetUrl(featured.heroImage)! }}
+                      source={{ uri: heroUri }}
                       style={styles.heroImage}
                       resizeMode="cover"
                       accessibilityLabel={featured.title}
@@ -67,7 +67,7 @@ export default function HomeScreen() {
             </Pressable>
           </Link>
         </View>
-        <View style={[styles.podcastRow, width >= 700 && styles.podcastRowWide]}>
+        <View style={styles.podcastRow}>
           {podcasts.map((ep) => (
             <Link key={ep.id} href={`/podcast/interviews/${ep.id}`} asChild>
               <Pressable style={styles.podcastCard}>
@@ -93,7 +93,7 @@ export default function HomeScreen() {
             </Pressable>
           </Link>
         </View>
-        <View style={[styles.grid, width >= 700 && styles.gridWide]}>
+        <View style={styles.grid}>
           {rest.map((post) => (
             <View key={post.slug} style={styles.gridItem}>
               <BlogCard post={post} />
@@ -113,7 +113,6 @@ const styles = StyleSheet.create({
   },
   heroInner: { paddingVertical: 48 },
   heroGrid: { gap: 28 },
-  heroGridWide: { flexDirection: "row", alignItems: "center", gap: 40 },
   heroCopy: { gap: 14 },
   eyebrow: {
     fontSize: 11,
@@ -123,13 +122,26 @@ const styles = StyleSheet.create({
     fontWeight: "600",
   },
   heroTitle: {
-    fontSize: 36,
-    lineHeight: 42,
+    fontSize: 32,
+    lineHeight: 38,
     fontWeight: "300",
     color: Colors.base900,
   },
   heroDeck: { fontSize: 16, lineHeight: 26, color: Colors.base600, maxWidth: 520 },
-  heroCtaRow: { flexDirection: "row", alignItems: "center", gap: 14, marginTop: 8 },
+  heroCtaRow: { flexDirection: "row", alignItems: "center", flexWrap: "wrap", gap: 14, marginTop: 8 },
+  readBtn: {
+    backgroundColor: Colors.base900,
+    paddingHorizontal: 20,
+    paddingVertical: 12,
+    borderRadius: 2,
+  },
+  readBtnText: {
+    color: Colors.white,
+    fontSize: 12,
+    fontWeight: "700",
+    letterSpacing: 1.5,
+    textTransform: "uppercase",
+  },
   meta: { fontSize: 12, color: Colors.base500 },
   heroMedia: {
     borderWidth: 1,
@@ -143,6 +155,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "baseline",
+    flexWrap: "wrap",
     gap: 12,
   },
   sectionTitle: { fontSize: 24, fontWeight: "300", color: Colors.base900 },
@@ -153,17 +166,16 @@ const styles = StyleSheet.create({
     color: Colors.accent700,
     fontWeight: "600",
   },
-  podcastRow: { gap: 16 },
-  podcastRowWide: { flexDirection: "row" },
+  podcastRow: { gap: 16, flexDirection: "row", flexWrap: "wrap" },
   podcastCard: {
-    flex: 1,
+    flexGrow: 1,
+    flexBasis: 280,
     borderTopWidth: 2,
     borderTopColor: Colors.base900,
     paddingTop: 16,
     gap: 8,
   },
   podcastTitle: { fontSize: 20, color: Colors.base900, lineHeight: 26 },
-  grid: { gap: 20 },
-  gridWide: { flexDirection: "row", flexWrap: "wrap" },
-  gridItem: { flexBasis: "47%", flexGrow: 1, maxWidth: 540 },
+  grid: { gap: 20, flexDirection: "row", flexWrap: "wrap" },
+  gridItem: { flexBasis: 300, flexGrow: 1, maxWidth: 540 },
 });

@@ -3,7 +3,6 @@ import { Stack } from "expo-router";
 import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
 import { StatusBar } from "expo-status-bar";
-import "react-native-reanimated";
 import { AuthProvider } from "@/lib/auth";
 
 export { ErrorBoundary } from "expo-router";
@@ -28,7 +27,13 @@ export default function RootLayout() {
   return (
     <AuthProvider>
       <StatusBar style="dark" />
-      <Stack screenOptions={{ headerShown: false, contentStyle: { backgroundColor: "#fff" } }}>
+      <Stack
+        screenOptions={{
+          headerShown: false,
+          contentStyle: { backgroundColor: "#ffffff" },
+          animation: "none",
+        }}
+      >
         <Stack.Screen name="(site)" />
         <Stack.Screen name="+not-found" />
       </Stack>

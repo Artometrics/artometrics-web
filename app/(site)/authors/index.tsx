@@ -1,4 +1,4 @@
-import { Image, Pressable, Text, View, StyleSheet, useWindowDimensions } from "react-native";
+import { Image, Pressable, Text, View, StyleSheet } from "react-native";
 import { Link } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { Colors } from "@/constants/Colors";
@@ -7,29 +7,31 @@ import { getAuthors } from "@/lib/content";
 
 export default function AuthorsIndex() {
   const authors = getAuthors();
-  const { width } = useWindowDimensions();
 
   return (
     <Wrapper style={styles.wrap}>
       <Text style={styles.eyebrow}>Masthead</Text>
       <Text style={styles.title}>Authors</Text>
-      <View style={[styles.grid, width >= 700 && styles.gridWide]}>
-        {authors.map((author) => (
-          <Link key={author.id} href={`/authors/${author.id}`} asChild>
-            <Pressable style={styles.card}>
-              {assetUrl(author.image?.url) ? (
-                <Image
-                  source={{ uri: assetUrl(author.image?.url)! }}
-                  style={styles.avatar}
-                  resizeMode="cover"
-                  accessibilityLabel={author.image?.alt || author.name}
-                />
-              ) : null}
-              <Text style={styles.name}>{author.name}</Text>
-              {author.role ? <Text style={styles.role}>{author.role}</Text> : null}
-            </Pressable>
-          </Link>
-        ))}
+      <View style={styles.grid}>
+        {authors.map((author) => {
+          const avatar = assetUrl(author.image?.url);
+          return (
+            <Link key={author.id} href={`/authors/${author.id}`} asChild>
+              <Pressable style={styles.card}>
+                {avatar ? (
+                  <Image
+                    source={{ uri: avatar }}
+                    style={styles.avatar}
+                    resizeMode="cover"
+                    accessibilityLabel={author.image?.alt || author.name}
+                  />
+                ) : null}
+                <Text style={styles.name}>{author.name}</Text>
+                {author.role ? <Text style={styles.role}>{author.role}</Text> : null}
+              </Pressable>
+            </Link>
+          );
+        })}
       </View>
     </Wrapper>
   );
@@ -45,10 +47,9 @@ const styles = StyleSheet.create({
     fontWeight: "600",
   },
   title: { fontSize: 40, fontWeight: "300", color: Colors.base900, marginBottom: 12 },
-  grid: { gap: 20 },
-  gridWide: { flexDirection: "row", flexWrap: "wrap" },
+  grid: { gap: 20, flexDirection: "row", flexWrap: "wrap" },
   card: {
-    flexBasis: "30%",
+    flexBasis: 220,
     flexGrow: 1,
     borderWidth: 1,
     borderColor: Colors.base200,

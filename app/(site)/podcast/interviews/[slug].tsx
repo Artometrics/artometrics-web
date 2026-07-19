@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Image, Text, View, StyleSheet, Pressable } from "react-native";
 import { Audio } from "expo-av";
-import { Link, Stack, useLocalSearchParams } from "expo-router";
+import { Link, useLocalSearchParams } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { ArticleBody } from "@/components/ArticleBody";
 import { Colors } from "@/constants/Colors";
@@ -67,7 +67,6 @@ export default function PodcastEpisodeScreen() {
 
   return (
     <>
-      <Stack.Screen options={{ title: episode.title }} />
       <Wrapper style={styles.wrap} variant="narrow">
         <Text style={styles.eyebrow}>
           Episode {episode.episodeNumber ?? episode.id}

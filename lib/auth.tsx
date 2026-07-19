@@ -28,8 +28,10 @@ const AuthContext = createContext<AuthContextValue | null>(null);
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [session, setSession] = useState<Session | null>(null);
   const [loading, setLoading] = useState(true);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     const supabase = getSupabase();
     if (!supabase) {
       setLoading(false);
@@ -71,16 +73,17 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     if (supabase) await supabase.auth.signOut();
   }, []);
 
+  // Keep SSR/static HTML on the guest chrome until the client mounts.
   const value = useMemo(
     () => ({
-      session,
-      user: session?.user ?? null,
-      loading,
+      session: mounted ? session : null,
+      user: mounted ? (session?.user ?? null) : null,
+      loading: mounted ? loading : true,
       signIn,
       signUp,
       signOut,
     }),
-    [session, loading, signIn, signUp, signOut],
+    [session, loading, mounted, signIn, signUp, signOut],
   );
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;

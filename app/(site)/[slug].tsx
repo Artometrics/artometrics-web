@@ -1,6 +1,5 @@
 import { Image, Text, View, StyleSheet } from "react-native";
-import { Stack, useLocalSearchParams, Link } from "expo-router";
-import readingTime from "reading-time";
+import { useLocalSearchParams, Link } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { ArticleBody } from "@/components/ArticleBody";
 import { Colors } from "@/constants/Colors";
@@ -13,6 +12,12 @@ import {
   primaryDesk,
 } from "@/lib/content";
 import { SECTION_META } from "@/data/sections";
+
+function estimateMinutes(html: string) {
+  const text = html.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
+  const words = text ? text.split(" ").length : 0;
+  return Math.max(1, Math.round(words / 200));
+}
 
 export async function generateStaticParams() {
   return getBlogPosts().map((post) => ({ slug: post.slug }));
@@ -34,11 +39,12 @@ export default function ReportScreen() {
 
   const desk = primaryDesk(post.tags);
   const adjacent = getAdjacentPosts(post.slug);
-  const minutes = Math.max(1, Math.round(readingTime(post.body).minutes));
+  const minutes = estimateMinutes(post.body);
+
+  const hero = assetUrl(post.heroImage);
 
   return (
-    <>
-      <Stack.Screen options={{ title: post.title }} />
+    <View>
       <Wrapper style={styles.wrap} variant="prose">
         {desk ? <Text style={styles.eyebrow}>{SECTION_META[desk].title}</Text> : null}
         <Text style={styles.title}>{post.title}</Text>
@@ -46,9 +52,9 @@ export default function ReportScreen() {
           {formatDate(post.pubDate)} · {minutes} min read
         </Text>
         <Text style={styles.description}>{post.description}</Text>
-        {assetUrl(post.heroImage) ? (
+        {hero ? (
           <Image
-            source={{ uri: assetUrl(post.heroImage)! }}
+            source={{ uri: hero }}
             style={styles.hero}
             resizeMode="cover"
             accessibilityLabel={post.title}
@@ -74,7 +80,7 @@ export default function ReportScreen() {
           </Link>
         ) : null}
       </Wrapper>
-    </>
+    </View>
   );
 }
 

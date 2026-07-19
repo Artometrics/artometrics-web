@@ -26,7 +26,6 @@ export function SiteFooter() {
 
 const styles = StyleSheet.create({
   shell: {
-    marginTop: "auto" as unknown as number,
     borderTopWidth: StyleSheet.hairlineWidth,
     borderTopColor: Colors.base200,
     backgroundColor: Colors.base50,

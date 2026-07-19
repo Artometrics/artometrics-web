@@ -1,4 +1,4 @@
-import { Image, Pressable, Text, View, StyleSheet, useWindowDimensions } from "react-native";
+import { Image, Pressable, Text, View, StyleSheet } from "react-native";
 import { Link } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { Colors } from "@/constants/Colors";
@@ -7,7 +7,6 @@ import { formatDate, getPodcastEpisodes } from "@/lib/content";
 
 export default function PodcastIndex() {
   const episodes = getPodcastEpisodes();
-  const { width } = useWindowDimensions();
 
   return (
     <Wrapper style={styles.wrap}>
@@ -16,34 +15,33 @@ export default function PodcastIndex() {
       <Text style={styles.deck}>
         Conversations with analysts, founders, and historians extending the Artometrics desks.
       </Text>
-      <View style={[styles.list, width >= 800 && styles.listWide]}>
-        {episodes.map((ep) => (
-          <Link key={ep.id} href={`/podcast/interviews/${ep.id}`} asChild>
-            <Pressable style={styles.card}>
-              {assetUrl(ep.image?.url) ? (
-                <Image
-                  source={{ uri: assetUrl(ep.image?.url)! }}
-                  style={styles.image}
-                  resizeMode="cover"
-                />
-              ) : null}
-              <View style={styles.body}>
-                <Text style={styles.eyebrow}>
-                  Episode {ep.episodeNumber ?? ep.id}
-                  {ep.isLocked ? " · Members" : ""}
-                </Text>
-                <Text style={styles.cardTitle}>{ep.title}</Text>
-                <Text style={styles.cardDeck} numberOfLines={3}>
-                  {ep.description}
-                </Text>
-                <Text style={styles.meta}>
-                  {formatDate(ep.pubDate)}
-                  {ep.duration ? ` · ${ep.duration}` : ""}
-                </Text>
-              </View>
-            </Pressable>
-          </Link>
-        ))}
+      <View style={styles.list}>
+        {episodes.map((ep) => {
+          const image = assetUrl(ep.image?.url);
+          return (
+            <Link key={ep.id} href={`/podcast/interviews/${ep.id}`} asChild>
+              <Pressable style={styles.card}>
+                {image ? (
+                  <Image source={{ uri: image }} style={styles.image} resizeMode="cover" />
+                ) : null}
+                <View style={styles.body}>
+                  <Text style={styles.eyebrow}>
+                    Episode {ep.episodeNumber ?? ep.id}
+                    {ep.isLocked ? " · Members" : ""}
+                  </Text>
+                  <Text style={styles.cardTitle}>{ep.title}</Text>
+                  <Text style={styles.cardDeck} numberOfLines={3}>
+                    {ep.description}
+                  </Text>
+                  <Text style={styles.meta}>
+                    {formatDate(ep.pubDate)}
+                    {ep.duration ? ` · ${ep.duration}` : ""}
+                  </Text>
+                </View>
+              </Pressable>
+            </Link>
+          );
+        })}
       </View>
     </Wrapper>
   );
@@ -60,10 +58,9 @@ const styles = StyleSheet.create({
   },
   title: { fontSize: 40, fontWeight: "300", color: Colors.base900 },
   deck: { fontSize: 16, color: Colors.base600, marginBottom: 16, maxWidth: 560 },
-  list: { gap: 20 },
-  listWide: { flexDirection: "row", flexWrap: "wrap" },
+  list: { gap: 20, flexDirection: "row", flexWrap: "wrap" },
   card: {
-    flexBasis: "47%",
+    flexBasis: 300,
     flexGrow: 1,
     borderWidth: 1,
     borderColor: Colors.base200,

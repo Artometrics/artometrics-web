@@ -1,5 +1,5 @@
 import { Text, StyleSheet } from "react-native";
-import { Link, Stack, useLocalSearchParams } from "expo-router";
+import { Link, useLocalSearchParams } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { ArticleBody } from "@/components/ArticleBody";
 import { Colors } from "@/constants/Colors";
@@ -26,7 +26,6 @@ export default function LegalScreen() {
 
   return (
     <>
-      <Stack.Screen options={{ title: page.page }} />
       <Wrapper variant="prose" style={styles.wrap}>
         <Text style={styles.eyebrow}>Legal</Text>
         <Text style={styles.title}>{page.page}</Text>

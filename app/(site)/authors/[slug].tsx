@@ -1,5 +1,5 @@
 import { Image, Text, StyleSheet } from "react-native";
-import { Link, Stack, useLocalSearchParams } from "expo-router";
+import { Link, useLocalSearchParams } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { Colors } from "@/constants/Colors";
 import { assetUrl } from "@/lib/assets";
@@ -26,7 +26,6 @@ export default function AuthorScreen() {
 
   return (
     <>
-      <Stack.Screen options={{ title: author.name }} />
       <Wrapper variant="narrow" style={styles.wrap}>
         {assetUrl(author.image?.url) ? (
           <Image

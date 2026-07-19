@@ -1,11 +1,5 @@
 import { useState } from "react";
-import {
-  Pressable,
-  Text,
-  View,
-  useWindowDimensions,
-  StyleSheet,
-} from "react-native";
+import { Pressable, Text, View, StyleSheet } from "react-native";
 import { Link, usePathname } from "expo-router";
 import { Logo } from "@/components/Logo";
 import { Wrapper } from "@/components/Wrapper";
@@ -19,8 +13,7 @@ const navLinks = [
 ] as const;
 
 function normalizePath(path: string) {
-  const cleaned = path.replace(/\/$/, "") || "/";
-  return cleaned;
+  return path.replace(/\/$/, "") || "/";
 }
 
 function isActive(pathname: string, href: string) {
@@ -32,8 +25,6 @@ function isActive(pathname: string, href: string) {
 
 export function SiteHeader() {
   const pathname = usePathname();
-  const { width } = useWindowDimensions();
-  const isMobile = width < 768;
   const [open, setOpen] = useState(false);
   const { user } = useAuth();
 
@@ -41,21 +32,17 @@ export function SiteHeader() {
     <View style={styles.shell}>
       <Wrapper>
         <View style={styles.topRow}>
-          {isMobile ? (
-            <Pressable
-              onPress={() => setOpen((v) => !v)}
-              accessibilityLabel={open ? "Close menu" : "Open menu"}
-              style={styles.menuBtn}
-            >
-              <Text style={styles.menuIcon}>{open ? "✕" : "☰"}</Text>
-            </Pressable>
-          ) : (
-            <View style={styles.spacer} />
-          )}
+          <Pressable
+            onPress={() => setOpen((v) => !v)}
+            accessibilityLabel={open ? "Close menu" : "Open menu"}
+            style={styles.menuBtn}
+          >
+            <Text style={styles.menuIcon}>{open ? "✕" : "☰"}</Text>
+          </Pressable>
 
           <Link href="/" asChild>
             <Pressable style={styles.logoWrap} accessibilityLabel="Artometrics home">
-              <Logo size={isMobile ? 28 : 40} />
+              <Logo size={32} />
             </Pressable>
           </Link>
 
@@ -76,40 +63,24 @@ export function SiteHeader() {
           </View>
         </View>
 
-        {!isMobile && (
-          <View style={styles.navRow}>
-            {navLinks.map((link) => {
-              const active = isActive(pathname, link.href);
-              return (
-                <Link key={link.href} href={link.href} asChild>
-                  <Pressable>
-                    <Text style={[styles.navLink, active && styles.navLinkActive]}>
-                      {link.label}
-                    </Text>
-                    {active ? <View style={styles.navUnderline} /> : null}
-                  </Pressable>
-                </Link>
-              );
-            })}
-          </View>
-        )}
-
-        {isMobile && open ? (
-          <View style={styles.mobilePanel}>
-            {navLinks.map((link) => (
+        <View style={styles.navRow}>
+          {navLinks.map((link) => {
+            const active = isActive(pathname, link.href);
+            return (
               <Link key={link.href} href={link.href} asChild>
-                <Pressable style={styles.mobileItem} onPress={() => setOpen(false)}>
-                  <Text
-                    style={[
-                      styles.navLink,
-                      isActive(pathname, link.href) && styles.navLinkActive,
-                    ]}
-                  >
+                <Pressable>
+                  <Text style={[styles.navLink, active && styles.navLinkActive]}>
                     {link.label}
                   </Text>
+                  {active ? <View style={styles.navUnderline} /> : null}
                 </Pressable>
               </Link>
-            ))}
+            );
+          })}
+        </View>
+
+        {open ? (
+          <View style={styles.mobilePanel}>
             <Link href="/authors" asChild>
               <Pressable style={styles.mobileItem} onPress={() => setOpen(false)}>
                 <Text style={styles.navLink}>Authors</Text>
@@ -133,7 +104,7 @@ const styles = StyleSheet.create({
   shell: {
     borderBottomWidth: StyleSheet.hairlineWidth,
     borderBottomColor: Colors.base200,
-    backgroundColor: "rgba(255,255,255,0.92)",
+    backgroundColor: Colors.white,
     zIndex: 40,
   },
   topRow: {
@@ -143,7 +114,6 @@ const styles = StyleSheet.create({
     paddingVertical: 16,
     gap: 12,
   },
-  spacer: { width: 40 },
   menuBtn: {
     width: 40,
     height: 40,
@@ -179,6 +149,7 @@ const styles = StyleSheet.create({
   navRow: {
     flexDirection: "row",
     justifyContent: "center",
+    flexWrap: "wrap",
     gap: 28,
     borderTopWidth: StyleSheet.hairlineWidth,
     borderTopColor: Colors.base200,

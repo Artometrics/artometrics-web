@@ -1,4 +1,4 @@
-import { Text, View, StyleSheet, useWindowDimensions } from "react-native";
+import { Text, View, StyleSheet } from "react-native";
 import { Link } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { PrimaryButton } from "@/components/PrimaryButton";
@@ -8,7 +8,6 @@ import { apiFetch } from "@/lib/supabase/client";
 import { useAuth } from "@/lib/auth";
 
 export default function PricingScreen() {
-  const { width } = useWindowDimensions();
   const { user } = useAuth();
 
   async function checkout(tier: string) {
@@ -34,7 +33,7 @@ export default function PricingScreen() {
       <Text style={styles.deck}>
         Unlock member episodes, saved reports, and early access to new investigations.
       </Text>
-      <View style={[styles.grid, width >= 900 && styles.gridWide]}>
+      <View style={styles.grid}>
         {PLANS.map((plan) => (
           <View
             key={plan.tier}
@@ -78,10 +77,10 @@ const styles = StyleSheet.create({
   },
   title: { fontSize: 36, fontWeight: "300", color: Colors.base900 },
   deck: { fontSize: 16, color: Colors.base600, maxWidth: 560, marginBottom: 12 },
-  grid: { gap: 16 },
-  gridWide: { flexDirection: "row" },
+  grid: { gap: 16, flexDirection: "row", flexWrap: "wrap" },
   card: {
-    flex: 1,
+    flexGrow: 1,
+    flexBasis: 260,
     borderWidth: 1,
     borderColor: Colors.base200,
     padding: 24,

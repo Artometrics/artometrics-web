@@ -1,25 +1,52 @@
-import { createElement, useEffect, useRef } from "react";
+import { createElement, useEffect, useState } from "react";
 import { Colors } from "@/constants/Colors";
+
+type PlotlyLike = {
+  newPlot: (
+    el: HTMLElement,
+    data: unknown[],
+    layout?: Record<string, unknown>,
+    config?: Record<string, unknown>,
+  ) => Promise<unknown> | unknown;
+};
 
 declare global {
   interface Window {
-    Plotly?: typeof import("plotly.js-dist-min");
+    Plotly?: PlotlyLike;
   }
+}
+
+function loadPlotlyFromCdn(): Promise<PlotlyLike | null> {
+  if (typeof window === "undefined") return Promise.resolve(null);
+  if (window.Plotly) return Promise.resolve(window.Plotly);
+
+  return new Promise((resolve) => {
+    const existing = document.querySelector<HTMLScriptElement>(
+      'script[data-artometrics-plotly="1"]',
+    );
+    if (existing) {
+      existing.addEventListener("load", () => resolve(window.Plotly ?? null), {
+        once: true,
+      });
+      existing.addEventListener("error", () => resolve(null), { once: true });
+      return;
+    }
+
+    const script = document.createElement("script");
+    script.src = "https://cdn.plot.ly/plotly-2.35.2.min.js";
+    script.async = true;
+    script.dataset.artometricsPlotly = "1";
+    script.onload = () => resolve(window.Plotly ?? null);
+    script.onerror = () => resolve(null);
+    document.head.appendChild(script);
+  });
 }
 
 async function hydrateCharts(root: HTMLElement) {
   const nodes = root.querySelectorAll<HTMLElement>(".art-chart-live[data-chart]");
   if (!nodes.length) return;
 
-  let Plotly = window.Plotly;
-  if (!Plotly) {
-    try {
-      Plotly = (await import("plotly.js-dist-min")).default;
-      window.Plotly = Plotly;
-    } catch {
-      // Fall through to PNG fallbacks.
-    }
-  }
+  const Plotly = await loadPlotlyFromCdn();
 
   for (const el of Array.from(nodes)) {
     const chartUrl = el.getAttribute("data-chart");
@@ -74,19 +101,19 @@ async function hydrateCharts(root: HTMLElement) {
   }
 }
 
+/** Client-only article HTML to avoid SSR/hydration mismatches with Quarto markup. */
 export function ArticleBody({ html }: { html: string }) {
-  const ref = useRef<HTMLDivElement>(null);
+  const [root, setRoot] = useState<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    const node = ref.current;
-    if (!node) return;
-    void hydrateCharts(node);
-  }, [html]);
+    if (!root) return;
+    root.innerHTML = html;
+    void hydrateCharts(root);
+  }, [html, root]);
 
   return createElement("div", {
-    ref,
+    ref: setRoot,
     className: "artometrics-article-body",
-    dangerouslySetInnerHTML: { __html: html },
     style: { width: "100%" },
   });
 }
