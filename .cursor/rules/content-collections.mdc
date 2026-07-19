@@ -1,19 +1,14 @@
 ---
-description: Content collection schemas, frontmatter, and image() usage for src/content.
-globs:
-  - src/content/**
+description: Content markdown collections and generated JSON for the Expo app.
+globs: src/content/**/*
+alwaysApply: false
 ---
 
 # Content (`src/content/**`)
 
-- **Schemas live in** `src/content.config.ts` only. Collections: `blog`, `authors`, `podcast`, `legal` — each backed by a **glob** loader with paths under `src/content/<name>/`.
-- **Do not change Zod fields** without updating every consumer (`src/pages/**`, layouts, components, `src/pages/rss.xml.js`). Optional vs required must stay consistent with how pages read `entry.data`.
-- **`blog` collection:** `src/content/blog/**/*.{md,mdx}` with `retainBody: true`. Required frontmatter: `title`, `slug`, `pubDate`, `description`, `heroImage` (string path under `/images/content/`), `tags` (enum: `culture|atlas|history|persona|power`), `draft` (default `false`). Import via `scripts/import-ghost.mjs`.
-- **`image()`:** `authors` and `podcast` use `image: { url: image(), alt: z.string() }` (podcast also `guestAvatar`). Blog hero images are plain strings pointing at `public/images/content/`.
-- **Copy-paste templates:**
-  - Blog: any file in `src/content/blog/` (e.g. `anime.md`)
-  - Authors: `src/content/authors/juliet-ramos.md`
-  - Podcast: `src/content/podcast/1.md` (`audioSrc` under `/audios/...` → `public/audios/`)
-  - Legal: `src/content/legal/privacy.md`
-- **`blog`** uses `retainBody: true`; `src/pages/[slug].astro` uses `entry.body` with `reading-time` — be mindful when changing loader options.
-- **Author slugs in podcast** are strings (e.g. `author: "david-lee"`) that align with `src/content/authors/` entry ids/slugs.
+- Collections: `blog`, `authors`, `podcast`, `legal` under `src/content/<name>/`.
+- Built by `scripts/build-content.mjs` → `src/generated/*.json` (run via `npm run content` / prestart / prebuild).
+- **Do not change frontmatter fields** without updating the content builder and every consumer in `lib/content.ts` / `app/`.
+- **`blog`:** Required: `title`, `slug`, `pubDate`, `description`, `heroImage`, `tags` (`culture|atlas|history|persona|power`). Optional: `draft`, `author`. Body is HTML.
+- **Templates:** `src/content/blog/anime.md`, `authors/juliet-ramos.md`, `podcast/1.md`, `legal/privacy.md`.
+- Author/podcast image URLs under `/src/images/...` are rewritten to `/images/...` and copied into `public/images/` by the content builder.

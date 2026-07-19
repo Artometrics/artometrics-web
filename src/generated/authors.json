@@ -1,0 +1,81 @@
+[
+  {
+    "id": "david-lee",
+    "name": "David Lee",
+    "role": "Editor, Atlas & Power",
+    "bio": "David Lee edits place-based and institutional reports for Artometrics — export identity maps,\ncity-system comparisons, league economics, and the subliminal architecture of power in creative markets.\n\nHis work focuses on making geographic and organizational data legible to readers who care about\nculture but do not live inside a spreadsheet. Recent desks include national export atlases,\nregional sports identity, and franchise valuation frameworks.\n\nDavid previously worked in civic data and economic research before joining the Artometrics editorial desk.\n",
+    "image": {
+      "url": "/images/authors/1.jpg",
+      "alt": "David Lee, Artometrics editor"
+    },
+    "socials": {
+      "twitter": "https://twitter.com/artometrics",
+      "website": "https://artometrics.com",
+      "linkedin": "#_"
+    }
+  },
+  {
+    "id": "emma-carter",
+    "name": "Emma Carter",
+    "role": "Editor, Atlas",
+    "bio": "Emma Carter reports on cities, regions, and spatial datasets for the Artometrics Atlas desk — housing\nmarkets, restaurant inspections, bikeshare systems, museum collections, and the micro-economics of place.\n\nShe is especially interested in reports where a single metro area becomes a laboratory: San Francisco\nversus New York, export superpowers mapped by country, or neighborhood-level inequality read through\npublic agency tables.\n\nEmma's background spans urban planning and data visualization before joining Artometrics.\n",
+    "image": {
+      "url": "/images/authors/3.jpg",
+      "alt": "Emma Carter, Artometrics editor"
+    },
+    "socials": {
+      "twitter": "https://twitter.com/artometrics",
+      "website": "https://artometrics.com",
+      "linkedin": "#_",
+      "email": "#_"
+    }
+  },
+  {
+    "id": "isaac-turner",
+    "name": "Isaac Turner",
+    "role": "Editor, History",
+    "bio": "Isaac Turner edits History desk reports at Artometrics — civilizational cycles, imperial timelines,\nlong-run economic series, and archival datasets that reward patient reading.\n\nHis work emphasizes context over hot takes: when a chart spans centuries, the limitations belong in\nthe same paragraph as the headline finding.\n\nIsaac has written on Roman emperors, world heritage sites, nuclear testing records, and other sources\nwhere time itself is the primary variable.\n",
+    "image": {
+      "url": "/images/authors/2.jpg",
+      "alt": "Isaac Turner, Artometrics editor"
+    },
+    "socials": {
+      "twitter": "https://twitter.com/artometrics",
+      "website": "https://artometrics.com",
+      "linkedin": "#_",
+      "email": "#_"
+    }
+  },
+  {
+    "id": "jordan-wells",
+    "name": "Jordan Wells",
+    "role": "Editor, Persona",
+    "bio": "Jordan Wells covers persona-driven reports at Artometrics — dynasties, founders, creators, and the\nbehavioral profiles behind institutions that outlast any single leader.\n\nFrom sports franchises to YouTube channels, Jordan's desk asks who built the system, what incentives\nshaped it, and how public data lets readers compare myth to measurable record.\n\nHe brings a background in sports analytics and narrative journalism to long-form Artometrics investigations.\n",
+    "image": {
+      "url": "/images/authors/5.jpg",
+      "alt": "Jordan Wells, Artometrics editor"
+    },
+    "socials": {
+      "twitter": "https://twitter.com/artometrics",
+      "website": "https://artometrics.com",
+      "linkedin": "#_",
+      "email": "#_"
+    }
+  },
+  {
+    "id": "juliet-ramos",
+    "name": "Juliet Ramos",
+    "role": "Editor, Culture",
+    "bio": "Juliet Ramos leads the Culture desk at Artometrics — anime catalogs, streaming libraries, music charts,\nfilm economics, and the business of art across the creative industries.\n\nShe specializes in reports that connect audience behavior to market structure: how platforms rank work,\nhow franchises compound value, and where public datasets reveal what hype obscures.\n\nJuliet writes the bridge between curiosity and evidence — long-form investigations with charts a\nnon-specialist can actually read.\n",
+    "image": {
+      "url": "/images/authors/4.jpg",
+      "alt": "Juliet Ramos, Artometrics editor"
+    },
+    "socials": {
+      "twitter": "https://twitter.com/artometrics",
+      "website": "https://artometrics.com",
+      "linkedin": "#_",
+      "email": "#_"
+    }
+  }
+]

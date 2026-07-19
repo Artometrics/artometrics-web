@@ -1,0 +1,110 @@
+[
+  {
+    "id": "1",
+    "title": "Why culture needs a data desk",
+    "pubDate": "2025-05-01T00:00:00.000Z",
+    "description": "Juliet Ramos on treating anime catalogs, streaming libraries, and franchise economics as public evidence — not just fandom.",
+    "author": "juliet-ramos",
+    "image": {
+      "url": "/images/thumbnails/e1.png",
+      "alt": "Artometrics podcast episode 1"
+    },
+    "guestAvatar": {
+      "url": "/images/thumbnails/1.jpg",
+      "alt": "Juliet Ramos"
+    },
+    "episodeNumber": 1,
+    "duration": "38:12 mins",
+    "audioSrc": "/audios/placeholder.mp3",
+    "tags": [
+      "culture",
+      "creative-economy"
+    ],
+    "isRecent": true,
+    "isPopular": false,
+    "isLocked": true,
+    "body": "<p><strong>Interviewer:</strong> Welcome to the Artometrics podcast. Juliet, you edit the Culture desk. What does it mean to run a data desk inside a magazine about creative industries?</p>\n<p><strong>Juliet Ramos:</strong> It means refusing the split between &quot;numbers people&quot; and &quot;culture people.&quot; Anime rankings, Billboard charts, Steam libraries, LEGO themes — these are already datasets. The creative economy generates more measurable behavior every year. Artometrics exists because those records deserve the same editorial rigor as a financial newsroom, but aimed at readers who care about art, place, and power.</p>\n<hr>\n<p><strong>Interviewer:</strong> Where do your reports usually start?</p>\n<p><strong>Juliet Ramos:</strong> Often with a public dataset someone else maintained — TidyTuesday releases, government tables, platform exports, MusicBrainz, MyAnimeList aggregates. The question is never &quot;can we chart this?&quot; It is &quot;what claim would help a curious reader understand the system?&quot; A chart should teach one useful thing, with the source path visible.</p>\n<hr>\n<p><strong>Interviewer:</strong> What do you want listeners to take from the Culture desk?</p>\n<p><strong>Juliet Ramos:</strong> That enthusiasm and evidence reinforce each other. You can love a franchise and still ask how its revenue compounds. You can be new to data journalism and still follow a report if we disclose assumptions, label editorial indices honestly, and write like adults. That standard is what makes Artometrics a magazine — not a dashboard.</p>\n<hr>\n<p><strong>Interviewer:</strong> What&#39;s coming next on the desk?</p>\n<p><strong>Juliet Ramos:</strong> More reports where platform behavior meets institutional history — awards prestige, streaming engagement, export identity. If the creative industry leaves a public trail, we want to read it carefully and publish the limits alongside the finding.</p>\n",
+    "bodyFormat": "html"
+  },
+  {
+    "id": "2",
+    "title": "Reading an Artometrics report from scratch",
+    "pubDate": "2025-04-18T00:00:00.000Z",
+    "description": "David Lee walks through observed data, derived metrics, editorial indices, and outside literature — the four evidence types behind every report.",
+    "author": "david-lee",
+    "image": {
+      "url": "/images/thumbnails/e2.png",
+      "alt": "Artometrics podcast episode 2"
+    },
+    "guestAvatar": {
+      "url": "/images/thumbnails/b.jpg",
+      "alt": "David Lee"
+    },
+    "episodeNumber": 2,
+    "duration": "42:05 mins",
+    "audioSrc": "/audios/placeholder.mp3",
+    "tags": [
+      "methodology",
+      "atlas"
+    ],
+    "isRecent": true,
+    "isPopular": true,
+    "isLocked": false,
+    "body": "<p><strong>Interviewer:</strong> David, Artometrics publishes a shared methodology page. Why make readers learn vocabulary before they read a report?</p>\n<p><strong>David Lee:</strong> Because confusion erodes trust faster than a weak chart. When we say &quot;observed data,&quot; we mean a value taken directly from a public table or API. &quot;Derived metrics&quot; are calculations we performed — medians, shares, ranks. &quot;Editorial indices&quot; are interpretive frameworks when no official measure exists, and we label them as interpretation. &quot;Context literature&quot; is the scholarship or agency documentation that explains what the data can prove.</p>\n<hr>\n<p><strong>Interviewer:</strong> Give an example where the distinction matters.</p>\n<p><strong>David Lee:</strong> Take a sports dynasty report. Wins and championships are observed. A dynasty index that weights playoff performance across eras is derived — and we show the formula. Calling a team &quot;the most glamorous franchise&quot; would be editorial unless we define glamour with cited inputs. Readers should know which layer they are looking at without guessing.</p>\n<hr>\n<p><strong>Interviewer:</strong> What mistakes do data-curious beginners make?</p>\n<p><strong>David Lee:</strong> Treating precision as proof. A clean visualization does not make a non-representative sample representative. Another mistake is ignoring licensing — some datasets are public to read but not to republish wholesale. We cite sources in the report body and on charts so the inspection path is obvious.</p>\n<hr>\n<p><strong>Interviewer:</strong> Where should someone start on the site?</p>\n<p><strong>David Lee:</strong> Pick a desk you already care about — Culture if you follow anime or music, Atlas if you think in cities, History if you like long timelines. Read one report end to end, then open the methodology page. The goal is not to memorize jargon. It is to know where the claim lives in the evidence stack.</p>\n",
+    "bodyFormat": "html"
+  },
+  {
+    "id": "3",
+    "title": "Long timelines, small samples: history desk lessons",
+    "pubDate": "2025-03-22T00:00:00.000Z",
+    "description": "Isaac Turner on working with archival gaps, imperial datasets, and the humility required when the past does not arrive in tidy rows.",
+    "author": "isaac-turner",
+    "image": {
+      "url": "/images/thumbnails/e3.png",
+      "alt": "Artometrics podcast episode 3"
+    },
+    "guestAvatar": {
+      "url": "/images/thumbnails/c.jpg",
+      "alt": "Isaac Turner"
+    },
+    "episodeNumber": 3,
+    "duration": "35:48 mins",
+    "audioSrc": "/audios/placeholder.mp3",
+    "tags": [
+      "history",
+      "data-literacy"
+    ],
+    "isRecent": false,
+    "isPopular": false,
+    "isLocked": false,
+    "body": "<p><strong>Interviewer:</strong> Isaac, the History desk spans Roman emperors to nuclear testing records. What ties those reports together?</p>\n<p><strong>Isaac Turner:</strong> Time as the main variable — and the honest admission that historical datasets are rarely complete. An emperor reign length can be observed from a reference table; a &quot;civilizational cycle&quot; chart is interpretation built on selected series. Artometrics history reports work when we show both the record and the gap.</p>\n<hr>\n<p><strong>Interviewer:</strong> How do you keep long-run analysis readable?</p>\n<p><strong>Isaac Turner:</strong> One chart, one claim. We surround it with prose that explains scale — centuries on the x-axis require a paragraph on what is missing in the early periods. We also link agency documentation or peer-reviewed context so readers can climb from the chart to the underlying literature.</p>\n<hr>\n<p><strong>Interviewer:</strong> Do AI tools change how you work?</p>\n<p><strong>Isaac Turner:</strong> They can help organize sources or iterate code, but they do not replace archival judgment. Our ethics statement is clear: AI assistance still goes through human review, cited data, and disclosed assumptions. History punishes confident hallucination.</p>\n<hr>\n<p><strong>Interviewer:</strong> What should listeners explore next?</p>\n<p><strong>Isaac Turner:</strong> Start with a report where you already know the subject — maybe world heritage sites or Roman emperors — and read the limitations section first. If the caveats feel fair, the finding will land harder. That is the Artometrics contract.</p>\n",
+    "bodyFormat": "html"
+  },
+  {
+    "id": "4",
+    "title": "Franchise economics and the persona of a dynasty",
+    "pubDate": "2025-02-14T00:00:00.000Z",
+    "description": "Jordan Wells on measuring sports and creator dynasties — wins, revenue, platform reach, and why myth needs a spreadsheet.",
+    "author": "jordan-wells",
+    "image": {
+      "url": "/images/thumbnails/e4.png",
+      "alt": "Artometrics podcast episode 4"
+    },
+    "guestAvatar": {
+      "url": "/images/thumbnails/d.jpg",
+      "alt": "Jordan Wells"
+    },
+    "episodeNumber": 4,
+    "duration": "47:20 mins",
+    "audioSrc": "/audios/placeholder.mp3",
+    "tags": [
+      "persona",
+      "creative-economy"
+    ],
+    "isRecent": true,
+    "isPopular": false,
+    "isLocked": true,
+    "body": "<p><strong>Interviewer:</strong> Jordan, the Persona desk publishes a lot of dynasty reports — Warriors, Patriots, YouTube channels, baseball franchises. Why &quot;dynasty&quot; as a frame?</p>\n<p><strong>Jordan Wells:</strong> Because creative industries love narrative continuity — a team, a creator, a studio, a brand that compounds identity over time. Dynasty is not just wins. It is system design: roster construction, platform algorithm fit, institutional memory. Public data lets us compare the story fans tell to the record that survived.</p>\n<hr>\n<p><strong>Interviewer:</strong> How is a persona report different from a culture report?</p>\n<p><strong>Jordan Wells:</strong> Culture desk asks what the market or catalog looks like. Persona desk asks who built the machine and whether their measurable record matches the myth. A founder profile or a coach&#39;s tenure can be read through departures data, championship clusters, or audience growth curves — always with the limits stated.</p>\n<hr>\n<p><strong>Interviewer:</strong> Member-only episodes like this one — what extra do subscribers get?</p>\n<p><strong>Jordan Wells:</strong> Deeper walkthroughs of methodology choices, unpublished chart variants, and conversations about reports still in draft on GitHub. Membership funds independent work — no sponsor can buy a conclusion on the page.</p>\n<hr>\n<p><strong>Interviewer:</strong> What report should new listeners read first?</p>\n<p><strong>Jordan Wells:</strong> Pick the dynasty you already argue about with friends. Read the Artometrics report, then check the source footnotes. If you still disagree, disagree with the evidence path — that is the point.</p>\n",
+    "bodyFormat": "html"
+  }
+]

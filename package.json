@@ -1,15 +1,20 @@
 {
   "name": "artometrics",
-  "type": "module",
+  "main": "expo-router/entry",
   "version": "0.0.1",
   "private": true,
-  "description": "Artometrics — data reports on culture, power, and the creative economy",
+  "description": "Artometrics — data reports on culture, power, and the creative economy (Expo for app + web)",
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro",
+    "content": "node scripts/build-content.mjs",
+    "prestart": "npm run content",
+    "preweb": "npm run content",
+    "prebuild": "npm run content",
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "dev": "expo start --web",
+    "build": "npm run content && expo export -p web",
     "sync:episodes": "node scripts/sync-member-episodes.mjs",
     "sync:articles": "node scripts/sync-github-articles.mjs",
     "scaffold:repo": "node scripts/scaffold-article-repo.mjs",
@@ -23,24 +28,38 @@
     "setup:pipeline": "bash scripts/setup-pipeline.sh"
   },
   "engines": {
-    "node": ">=24.0.0"
+    "node": ">=20.0.0"
   },
   "dependencies": {
-    "@astrojs/mdx": "^7.0.0",
-    "@astrojs/rss": "^4.0.18",
-    "@astrojs/sitemap": "^3.7.3",
-    "@lexingtonthemes/seo": "^0.4.0",
     "@supabase/supabase-js": "^2.110.0",
-    "@tailwindcss/forms": "^0.5.11",
-    "@tailwindcss/typography": "^0.5.20",
-    "astro": "^7.0.0",
+    "expo": "~57.0.7",
+    "expo-av": "~16.0.7",
+    "expo-constants": "~57.0.6",
+    "expo-font": "~57.0.1",
+    "expo-linking": "~57.0.3",
+    "expo-router": "~57.0.7",
+    "expo-splash-screen": "~57.0.4",
+    "expo-status-bar": "~57.0.1",
+    "expo-symbols": "~57.0.1",
+    "expo-web-browser": "~57.0.1",
     "plotly.js-dist-min": "^3.6.0",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "react-native": "0.86.0",
+    "react-native-reanimated": "4.5.0",
+    "react-native-render-html": "^6.3.4",
+    "react-native-safe-area-context": "~5.7.0",
+    "react-native-screens": "4.25.2",
+    "react-native-web": "~0.21.0",
+    "react-native-webview": "13.16.1",
+    "react-native-worklets": "0.10.0",
     "reading-time": "^1.5.0",
-    "stripe": "^22.3.0",
-    "tailwind-scrollbar-hide": "^4.0.0"
+    "stripe": "^22.3.0"
   },
   "devDependencies": {
-    "@tailwindcss/vite": "^4.3.1",
-    "tailwindcss": "^4.3.1"
+    "@types/react": "~19.2.2",
+    "gray-matter": "^4.0.3",
+    "marked": "^15.0.12",
+    "typescript": "~5.9.2"
   }
 }

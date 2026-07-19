@@ -6,9 +6,9 @@ Independent data journalism on culture, place, history, persona, and power — b
 
 ## What this is
 
-Artometrics publishes long-form, data-driven reports and a podcast on the creative economy. Reports sync from the [Artometrics GitHub org](https://github.com/Artometrics) and render with interactive charts, cited sources, and a shared [methodology](/methodology/) page.
+Artometrics publishes long-form, data-driven reports and a podcast on the creative economy. The product is an **Expo** app (iOS, Android, and web) with a shared React Native codebase. Reports sync from the [Artometrics GitHub org](https://github.com/Artometrics) and render with interactive charts (web) plus PNG fallbacks (native).
 
-The site is organized into five editorial desks:
+Editorial desks:
 
 | Desk | Focus |
 |------|--------|
@@ -20,48 +20,47 @@ The site is organized into five editorial desks:
 
 ## Tech stack
 
-- [Astro](https://astro.build/) 7 + MDX
-- Tailwind CSS 4
-- Content collections (`blog`, `podcast`, `authors`, `legal`)
-- Netlify (hosting, serverless functions for auth and billing)
+- [Expo](https://expo.dev/) + [Expo Router](https://docs.expo.dev/router/introduction/) (web + native)
+- React Native / React Native Web
+- Markdown content under `src/content/` → JSON via `npm run content`
+- Netlify (static Expo web export + serverless functions for auth/billing)
 - Supabase + Stripe for membership
 
 See [AGENTS.md](./AGENTS.md) for routing, content schemas, and contributor guardrails.
 
 ## Requirements
 
-- Node.js 18 or 20 (LTS recommended)
+- Node.js 20+ (LTS recommended)
 - npm
 
 ## Commands
 
-Run from the repo root:
-
 | Command | Action |
 | :------ | :----- |
 | `npm install` | Install dependencies |
-| `npm run dev` | Start local dev server |
-| `npm run build` | Production build → `./dist/` |
-| `npm run preview` | Preview the production build |
-| `npm run astro ...` | Run Astro CLI commands |
+| `npm run content` | Build JSON from `src/content/**` |
+| `npm run dev` / `npm run web` | Expo web dev server |
+| `npm start` | Expo dev tools (pick web / iOS / Android) |
+| `npm run ios` | iOS simulator |
+| `npm run android` | Android emulator |
+| `npm run build` | Content build + `expo export -p web` → `./dist/` |
 | `npm run sync:articles` | Sync Quarto repos → blog markdown + chart assets |
 | `npm run scaffold:repo -- --batch-from-site` | Scaffold local GitHub repo layouts for Python-only articles |
 | `npm run upgrade:repos` | Audit/upgrade the 10 existing Artometrics GitHub repos |
-| `npm run publish:repos` | Push local repo upgrades to `Artometrics/*` on `main` (requires org write access) |
-| `npm run migration:manifest` | Write `docs/migration-manifest.json` for 79 Python-only articles |
-| `npm run render:readmitted` | Export readmitted chart PNGs via R (requires Quarto/R locally) |
-| `npm run render:readmitted:py` | Export readmitted PNG + Plotly JSON via Python (red/white/black palette) |
-| `npm run setup:r` | Install CRAN packages for R chart export (`ggtext`, `cowplot`, `showtext`, etc.) |
+| `npm run publish:repos` | Push local repo upgrades to `Artometrics/*` on `main` |
+| `npm run migration:manifest` | Write `docs/migration-manifest.json` |
+| `npm run render:readmitted:py` | Export readmitted PNG + Plotly JSON |
+| `npm run setup:python` | Install Python chart export dependencies |
 
 ## Content workflows
 
-- **Blog reports:** `src/content/blog/` — frontmatter template in `src/content/blog/anime.md`
+- **Blog reports:** `src/content/blog/` — template `src/content/blog/anime.md`
 - **Sync GitHub articles:** `npm run sync:articles`
-- **Podcast episodes:** `src/content/podcast/` — template in `src/content/podcast/1.md`
+- **Podcast episodes:** `src/content/podcast/`
 - **Authors:** `src/content/authors/`
+- **Generated JSON:** `src/generated/` (committed after `npm run content`, rebuilt on start/build)
 
 ## Links
 
 - **GitHub:** https://github.com/Artometrics
-- **RSS:** https://artometrics.com/rss.xml
 - **Ethics:** https://artometrics.com/legal/ethics-statement

@@ -1,14 +1,15 @@
 ---
-description: Global conventions for the Artometrics Astro site — imports, fundations folder, minimal diffs.
+description: Global conventions for the Artometrics Expo app (web + native) — imports, minimal diffs, branding.
 alwaysApply: true
 ---
 
 # Artometrics — global rules
 
-- **Imports:** Use the `@/` alias for `src/` (e.g. `@/layouts/BaseLayout.astro`, `@/components/fundations/...`). Match existing patterns in this repo.
-- **`fundations` spelling:** The directory is `src/components/fundations/`. Never rename it to “foundations”; path and imports will break.
+- **Imports:** Use the `@/` alias for the project root (e.g. `@/components/SiteHeader`, `@/lib/content`, `@/constants/Colors`). Match existing patterns in this repo.
 - **Scope:** Keep changes minimal and localized. No drive-by refactors or unrelated files.
 - **Dependencies:** Do not add packages or features not requested; only use what appears in `package.json` unless the user explicitly asks to add one.
-- **Layouts:** Most pages use `BaseLayout`; blog/podcast/author/legal pages use their respective layouts (`BlogLayout`, `PodcastLayout`, `AuthorsLayout`, `LegalLayout`), which wrap `BaseLayout`.
+- **Stack:** Expo + Expo Router only — do not reintroduce Astro.
+- **Content:** Edit markdown under `src/content/`; run `npm run content` (or rely on prestart/prebuild) so `src/generated/` stays in sync.
+- **Layouts:** Site chrome lives in `app/(site)/_layout.tsx` (`SiteHeader` + `SiteFooter`).
 - **Branding:** Public-facing copy, legal pages, and project docs should use **Artometrics** — not Lexington/Hemingway theme demo text.
-- **Publisher docs:** Site and contributor documentation live in the root `README.md` and `AGENTS.md`.
+- **Publisher docs:** Product and contributor documentation live in the root `README.md` and `AGENTS.md`.

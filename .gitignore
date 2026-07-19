@@ -1,8 +1,12 @@
 node_modules/
 dist/
+.expo/
 .astro/
 .cache/
 .DS_Store
 __pycache__/
 .env
+.env.local
 .netlify
+*.log
+web-build/
