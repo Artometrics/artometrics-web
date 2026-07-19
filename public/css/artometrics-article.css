@@ -1406,6 +1406,53 @@ pre:has(> code.sourceCode.sql),
   border-color: #C0392B !important;
   color: #C0392B !important;
 }
+.artometrics-article-body .art-files{
+  margin: 1.75rem 0 2.75rem !important;
+}
+.artometrics-article-body .art-files__heading{
+  margin: 1.5rem 0 0.65rem !important;
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 0.78rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  color: #6B6B6B !important;
+}
+.artometrics-article-body .art-files__list{
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.artometrics-article-body .art-files__list li{
+  margin: 0 0 0.55rem !important;
+  padding: 0 !important;
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 0.92rem !important;
+  line-height: 1.45 !important;
+  color: #4A4A4A !important;
+}
+.artometrics-article-body .art-files__link{
+  display: inline-flex !important;
+  align-items: center !important;
+  margin: 0 0.35rem 0 0 !important;
+  padding: 0.35rem 0.75rem !important;
+  background: transparent !important;
+  color: #1C1C1E !important;
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 0.78rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  border: 1px solid #D5D5D5 !important;
+  border-radius: 4px !important;
+  transition: color 0.15s, border-color 0.15s, background 0.15s !important;
+}
+.artometrics-article-body .art-files__link:hover{
+  background: #FAFAF8 !important;
+  border-color: #C0392B !important;
+  color: #C0392B !important;
+}
 .artometrics-article-body .art-chart--has-mode .art-chart-live{
   border: 1px solid #E8E6E1 !important;
 }

@@ -36,7 +36,8 @@ Markdown: drafts enabled; Shiki theme `css-variables`. **Site URL:** `site: "htt
 | Styles | `src/styles/global.css` | Tailwind v4 tokens |
 | Images | `src/images/` | Thumbnails, authors, about |
 | Public assets | `public/` | `public/audios/`, `public/images/content/`, `public/css/artometrics-article.css` |
-| Sync scripts | `scripts/` | GitHub article sync, member episode sync |
+| Article homes | `articles/` | Monorepo gold reports (e.g. `articles/readmitted/`) — data, Quarto, charts |
+| Sync scripts | `scripts/` | Local article sync, GitHub article sync, member episode sync |
 
 Path alias: `@/*` → `src/*` (`tsconfig.json`).
 
@@ -47,8 +48,8 @@ Path alias: `@/*` → `src/*` (`tsconfig.json`).
 - **Folder:** `src/content/blog/`
 - **Required frontmatter:** `title`, `slug`, `pubDate`, `description`, `heroImage`, `tags` (enum: `culture|atlas|history|persona|power`)
 - **Optional:** `draft`, `author`
-- **Template:** `src/content/blog/anime.md`
-- **Import:** `node scripts/sync-github-articles.mjs` from Artometrics GitHub repos
+- **Template:** `src/content/blog/anime.md` (gold monorepo prototype: `readmitted`)
+- **Import:** monorepo `articles/<slug>/` via `npm run sync:readmitted` (gold path); older pieces may still use `node scripts/sync-github-articles.mjs`
 
 ### `authors`
 
@@ -84,26 +85,33 @@ Path alias: `@/*` → `src/*` (`tsconfig.json`).
 - **Chrome:** `Navigation.astro`, `Footer.astro`
 - **`fundations` folder:** Do **not** rename — imports depend on this spelling
 
-| `npm run sync:articles` | Sync Quarto repos → blog markdown + chart assets |
+| `npm run sync:articles` | Sync Quarto repos → blog markdown + chart assets (legacy path) |
+| `npm run sync:readmitted` | Copy `articles/readmitted/` charts + data → `public/` |
+| `npm run render:readmitted` | R export PNG + Plotly JSON for READMITTED |
 | `npm run scaffold:repo -- --batch-from-site` | Scaffold local GitHub repo layouts for Python-only articles |
 | `npm run upgrade:repos` | Audit/upgrade the 10 existing Artometrics GitHub repos |
 | `npm run publish:repos` | Push local repo upgrades to `Artometrics/*` on `main` (requires org write access) |
 | `npm run migration:manifest` | Write `docs/migration-manifest.json` for Python-only articles |
-| `npm run render:readmitted:py` | Export readmitted chart PNG + Plotly JSON (red/white/black palette) |
+| `npm run render:readmitted:py` | Python fallback chart export (debug only) |
 | `npm run setup:python` | Install Python chart export dependencies |
 
-## Article pipeline (GitHub repos → site)
+## Article pipeline (monorepo gold → site)
 
-Gold-standard reports live in singular repos under [Artometrics](https://github.com/Artometrics) (`franchise`, `anime`, `readmitted`, …). The site sync script clones each repo, copies `charts/*.png` and `charts/*.plotly.json`, and rewrites `src/content/blog/<slug>.md`.
+**READMITTED** is the locked gold prototype. Analysis assets live under `articles/readmitted/` in this repo (bundled CSVs, Quarto, R chart outputs, hero). Render with `npm run render:readmitted`, sync with `npm run sync:readmitted`, publish body in `src/content/blog/readmitted.md`. No external article repo is required for this piece.
+
+Older reports may still use singular repos under [Artometrics](https://github.com/Artometrics) and `scripts/sync-github-articles.mjs` until migrated.
 
 | Path | Purpose |
 |------|---------|
-| `scripts/sync-github-articles.mjs` | Clone, render Quarto, copy assets, rewrite blog body |
+| `articles/readmitted/` | Gold report home (data, Quarto, charts, QA) |
+| `scripts/render-readmitted-charts.R` | R PNG + Plotly JSON export → `articles/` + `public/` |
+| `scripts/sync-readmitted.mjs` | Copy local article assets into `public/` |
+| `scripts/sync-github-articles.mjs` | Legacy: clone external Quarto repos, rewrite blog body |
 | `scripts/r/artometrics_theme.R` | Shared `theme_artometrics()` + chart export helpers |
 | `scripts/scaffold-article-repo.mjs` | Scaffold new repo layouts from site articles |
 | `scripts/upgrade-article-repos.mjs` | Audit PNG/JSON pairs for the 10 existing repos |
 | `scripts/publish-article-repos.mjs` | Push `.cache/article-repos/` to GitHub `main` |
-| `pilot-drafts/readmitted/` | Phase 0 pilot bundle (local review before org push) |
+| `pilot-drafts/readmitted/` | Earlier pilot bundle (superseded by `articles/readmitted/`) |
 | `docs/migration-manifest.json` | 79 Python-only articles queued for R Quarto migration |
 | `.cache/article-scaffolds/` | Generated repo layouts (gitignored) |
 | `public/data/articles/<slug>/charts/` | Plotly JSON for live charts |
