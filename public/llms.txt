@@ -7,8 +7,11 @@
 
 - Editorial desks: Culture, Atlas, History, Persona, Power
 - Reports pair editorial judgment with reproducible charts and public datasets
+- Resources: https://artometrics.com/resources
+- Datasets: https://artometrics.com/datasets
 - Ethics: https://artometrics.com/legal/ethics-statement
 - About: https://artometrics.com/about
+- Full index for models: https://artometrics.com/llms-full.txt
 
 ## Preferred citations
 
@@ -107,6 +110,13 @@
 - [FRANCHISE: The Artometrics of Media Monopolies](https://artometrics.com/franchise): A data analysis of 107 franchises mapping how the most valuable IP in history — from Pokémon to Star Wars — actually makes its money. (culture)
 - [ANIME: The Artometrics of Japanese Animation](https://artometrics.com/anime): 13,631 Titles. A Century Of Data. One Question: What Does The MyAnimeList Archive Actually Tell Us About How Anime Works As An Industry? (culture)
 
+## Podcast
+
+- [Why culture needs a data desk](https://artometrics.com/podcast/interviews/1): Juliet Ramos on treating anime catalogs, streaming libraries, and franchise economics as public evidence — not just fandom.
+- [Reading an Artometrics report from scratch](https://artometrics.com/podcast/interviews/2): David Lee walks through observed data, derived metrics, editorial indices, and outside literature — the four evidence types behind every report.
+- [Long timelines, small samples: history desk lessons](https://artometrics.com/podcast/interviews/3): Isaac Turner on working with archival gaps, imperial datasets, and the humility required when the past does not arrive in tidy rows.
+- [Franchise economics and the persona of a dynasty](https://artometrics.com/podcast/interviews/4): Jordan Wells on measuring sports and creator dynasties — wins, revenue, platform reach, and why myth needs a spreadsheet.
+
 ## Generated
 
-Updated: 2026-07-21T04:52:02.378Z
+Updated: 2026-07-21T05:03:06.439Z

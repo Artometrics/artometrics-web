@@ -14,7 +14,7 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "dev": "expo start --web",
-    "build": "npm run content && expo export -p web",
+    "build": "npm run content && npm run cos:aeo && expo export -p web",
     "sync:episodes": "node scripts/sync-member-episodes.mjs",
     "sync:articles": "node scripts/sync-github-articles.mjs",
     "scaffold:repo": "node scripts/scaffold-article-repo.mjs",
@@ -30,7 +30,9 @@
     "cos:scaffold": "node scripts/content-os/scaffold-from-brief.mjs",
     "cos:banner-prompt": "node scripts/content-os/banner-prompt.mjs",
     "cos:publish": "node scripts/content-os/publish-draft.mjs",
-    "cos:llms": "node scripts/content-os/generate-llms-txt.mjs"
+    "cos:llms": "node scripts/content-os/generate-llms-txt.mjs",
+    "cos:aeo": "node scripts/content-os/aeo-pack.mjs",
+    "cos:zine": "node scripts/content-os/pack-ig-zine.mjs"
   },
   "engines": {
     "node": ">=20.0.0"

@@ -103,9 +103,11 @@ Keyword briefs, style rules, draft scaffolds, and AEO live under `docs/content-o
 | `npm run cos:scaffold -- --brief docs/content-os/briefs/<slug>.json` | Draft HTML report scaffold |
 | `npm run cos:banner-prompt -- --brief …` | Higgsfield banner prompt |
 | `npm run cos:publish -- --slug …` | Copy draft → `src/content/blog/` + rebuild JSON + `llms.txt` |
-| `npm run cos:llms` | Regenerate `public/llms.txt` |
+| `npm run cos:aeo` | Regenerate llms.txt, llms-full, sitemap, RSS |
+| `npm run cos:zine -- --slug <slug>` | Instagram zine pack (slides.html + caption) |
 
-Style bible: `docs/content-os/STYLE_GUIDE.md`. Overview: `docs/content-os/README.md`.
+Style bible: `docs/content-os/STYLE_GUIDE.md`. Overview: `docs/content-os/README.md`.  
+Ops plan: `docs/MEDIA_COMPANY_PLAN.md`. Hand-off checklist: `docs/NEXT_STEPS.md`.
 
 ## Guardrails for AI / contributors
 

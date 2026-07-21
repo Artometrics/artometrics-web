@@ -12,6 +12,7 @@ import {
   primaryDesk,
 } from "@/lib/content";
 import { SECTION_META } from "@/data/sections";
+import { SeoJsonLd } from "@/components/SeoJsonLd";
 
 function estimateMinutes(html: string) {
   const text = html.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
@@ -43,8 +44,26 @@ export default function ReportScreen() {
 
   const hero = assetUrl(post.heroImage);
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    description: post.description,
+    datePublished: post.pubDate,
+    image: hero ? [`https://artometrics.com${post.heroImage}`] : undefined,
+    author: { "@type": "Organization", name: "Artometrics" },
+    publisher: {
+      "@type": "Organization",
+      name: "Artometrics",
+      url: "https://artometrics.com",
+    },
+    mainEntityOfPage: `https://artometrics.com/${post.slug}`,
+    articleSection: desk ? SECTION_META[desk].title : "Reports",
+  };
+
   return (
     <View>
+      <SeoJsonLd data={jsonLd} />
       <Wrapper style={styles.wrap} variant="prose">
         {desk ? <Text style={styles.eyebrow}>{SECTION_META[desk].title}</Text> : null}
         <Text style={styles.title}>{post.title}</Text>

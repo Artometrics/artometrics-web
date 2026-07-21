@@ -1,0 +1,632 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Artometrics Reports</title>
+    <link>https://artometrics.com</link>
+    <description>Data reports on culture, power, and the creative economy</description>
+    <language>en-us</language>
+    <item>
+      <title>AWARDS PRESTIGE ECONOMY: Oscars, Grammys, Nobels</title>
+      <link>https://artometrics.com/awards-prestige-economy-oscars-grammys-nobels</link>
+      <guid isPermaLink="true">https://artometrics.com/awards-prestige-economy-oscars-grammys-nobels</guid>
+      <pubDate>Wed, 01 Jul 2026 00:00:00 GMT</pubDate>
+      <description>A cross-medium report on how award systems convert attention into legitimacy across film, music, literature, science, and public culture.</description>
+    </item>
+    <item>
+      <title>CALIFORNIA VS TEXAS: The Artometrics of Rival State Systems</title>
+      <link>https://artometrics.com/california-vs-texas-state-rivalry</link>
+      <guid isPermaLink="true">https://artometrics.com/california-vs-texas-state-rivalry</guid>
+      <pubDate>Wed, 01 Jul 2026 00:00:00 GMT</pubDate>
+      <description>A comparative geo-economics report on why California and Texas are paired in public debate, what they share, and where their economies, exports, risks, and identities diverge.</description>
+    </item>
+    <item>
+      <title>CELTICS: The Artometrics of Institutional Winning</title>
+      <link>https://artometrics.com/celtics-the-artometrics-of-institutional-winning</link>
+      <guid isPermaLink="true">https://artometrics.com/celtics-the-artometrics-of-institutional-winning</guid>
+      <pubDate>Wed, 01 Jul 2026 00:00:00 GMT</pubDate>
+      <description>The Celtics are basketball's clearest example of inherited expectation: a franchise whose 1960s dominance still shapes every modern season.</description>
+    </item>
+    <item>
+      <title>CITY BIOECONOMICS: The Urban Operating System</title>
+      <link>https://artometrics.com/city-bioeconomics-operating-system</link>
+      <guid isPermaLink="true">https://artometrics.com/city-bioeconomics-operating-system</guid>
+      <pubDate>Wed, 01 Jul 2026 00:00:00 GMT</pubDate>
+      <description>A geo-economics framework for analyzing cities as layered systems of exports, services, culture, scarcity, infrastructure, and historical identity.</description>
+    </item>
+    <item>
+      <title>COWBOYS: The Artometrics of America's Team</title>
+      <link>https://artometrics.com/cowboys-the-artometrics-of-americas-team</link>
+      <guid isPermaLink="true">https://artometrics.com/cowboys-the-artometrics-of-americas-team</guid>
+      <pubDate>Wed, 01 Jul 2026 00:00:00 GMT</pubDate>
+      <description>The Dallas Cowboys are the NFL's clearest separation between brand value and postseason conversion: a global sports machine with an old championship engine.</description>
+    </item>
+    <item>
+      <title>CULTURAL EXPORTS: The Geo-Economics of Soft Power</title>
+      <link>https://artometrics.com/cultural-exports-geoeconomics</link>
+      <guid isPermaLink="true">https://artometrics.com/cultural-exports-geoeconomics</guid>
+      <pubDate>Wed, 01 Jul 2026 00:00:00 GMT</pubDate>
+      <description>A cultural economics report framing films, music, games, food, fashion, and media as exports that shape national and city identity.</description>
+    </item>
+    <item>
+      <title>DODGERS: The Artometrics of Baseball's Modern Machine</title>
+      <link>https://artometrics.com/dodgers-the-artometrics-of-baseballs-modern-machine</link>
+      <guid isPermaLink="true">https://artometrics.com/dodgers-the-artometrics-of-baseballs-modern-machine</guid>
+      <pubDate>Wed, 01 Jul 2026 00:00:00 GMT</pubDate>
+      <description>The Dodgers are baseball's modern consistency machine: a franchise that turned money, development, and depth into recurring October access.</description>
+    </item>
+    <item>
+      <title>EXPORT SUPERPOWERS: United States, China, Germany</title>
+      <link>https://artometrics.com/export-superpowers-us-china-germany</link>
+      <guid isPermaLink="true">https://artometrics.com/export-superpowers-us-china-germany</guid>
+      <pubDate>Wed, 01 Jul 2026 00:00:00 GMT</pubDate>
+      <description>A comparative country report on why the U.S., China, and Germany are discussed together, and how their export systems differ by platforms, factories, machinery, dependencies, and replaceability.</description>
+    </item>
+    <item>
+      <title>IMDb BLOCKBUSTER GRAMMAR: The Artometrics of Movie Fame</title>
+      <link>https://artometrics.com/imdb-blockbuster-grammar</link>
+      <guid isPermaLink="true">https://artometrics.com/imdb-blockbuster-grammar</guid>
+      <pubDate>Wed, 01 Jul 2026 00:00:00 GMT</pubDate>
+      <description>A film-culture report using IMDb-style public title fields, rating logic, and box-office references to explain how movies become famous.</description>
+    </item>
+    <item>
+      <title>LAKERS: The Artometrics of Basketball Glamour</title>
+      <link>https://artometrics.com/lakers-the-artometrics-of-basketball-glamour</link>
+      <guid isPermaLink="true">https://artometrics.com/lakers-the-artometrics-of-basketball-glamour</guid>
+      <pubDate>Wed, 01 Jul 2026 00:00:00 GMT</pubDate>
+      <description>The Lakers are basketball's glamour machine: a franchise that converts stars, market gravity, and expectation into recurring championship eras.</description>
+    </item>
+    <item>
+      <title>LEAGUE MONEY, SKILL, AND STAR SYSTEMS</title>
+      <link>https://artometrics.com/league-money-skill-and-star-systems</link>
+      <guid isPermaLink="true">https://artometrics.com/league-money-skill-and-star-systems</guid>
+      <pubDate>Wed, 01 Jul 2026 00:00:00 GMT</pubDate>
+      <description>A cross-sport report on how league rules, money, roster scale, event scarcity, and cultural reach shape the way teams become meaningful.</description>
+    </item>
+    <item>
+      <title>MUSICBRAINZ: The Artometrics of Pop Fame</title>
+      <link>https://artometrics.com/musicbrainz-pop-fame-mechanics</link>
+      <guid isPermaLink="true">https://artometrics.com/musicbrainz-pop-fame-mechanics</guid>
+      <pubDate>Wed, 01 Jul 2026 00:00:00 GMT</pubDate>
+      <description>A music-culture report using MusicBrainz-style metadata to explain how artists become famous through catalog depth, format shifts, genre travel, and reinvention.</description>
+    </item>
+    <item>
+      <title>NATIONAL EXPORT IDENTITY ATLAS</title>
+      <link>https://artometrics.com/national-export-identity-atlas</link>
+      <guid isPermaLink="true">https://artometrics.com/national-export-identity-atlas</guid>
+      <pubDate>Wed, 01 Jul 2026 00:00:00 GMT</pubDate>
+      <description>A country-level geo-economics report framing exports as identity: what nations sell, what they need, what competitors can replace, and what products carry prestige.</description>
+    </item>
+    <item>
+      <title>NEW YORK VS SAN FRANCISCO: Command City and Invention City</title>
+      <link>https://artometrics.com/new-york-vs-san-francisco-city-systems</link>
+      <guid isPermaLink="true">https://artometrics.com/new-york-vs-san-francisco-city-systems</guid>
+      <pubDate>Wed, 01 Jul 2026 00:00:00 GMT</pubDate>
+      <description>A comparative city report asking why New York and San Francisco are discussed together, what they share, and where their economic and cultural systems diverge.</description>
+    </item>
+    <item>
+      <title>PANTHEON: The Artometrics of Collective Memory</title>
+      <link>https://artometrics.com/pantheon-the-artometrics-of-collective-memory</link>
+      <guid isPermaLink="true">https://artometrics.com/pantheon-the-artometrics-of-collective-memory</guid>
+      <pubDate>Wed, 01 Jul 2026 00:00:00 GMT</pubDate>
+      <description>A cultural data report using Pantheon-style biography data to ask who gets remembered, where memory clusters, and how fame travels across language, era, and institution.</description>
+    </item>
+    <item>
+      <title>PATRIOTS: The Artometrics of the System Dynasty</title>
+      <link>https://artometrics.com/patriots-the-artometrics-of-the-system-dynasty</link>
+      <guid isPermaLink="true">https://artometrics.com/patriots-the-artometrics-of-the-system-dynasty</guid>
+      <pubDate>Wed, 01 Jul 2026 00:00:00 GMT</pubDate>
+      <description>The Patriots are the NFL's great system shock: a franchise whose Brady/Belichick era compressed a century of legacy into two decades.</description>
+    </item>
+    <item>
+      <title>PROJECT GUTENBERG: The Artometrics of the Public-Domain Canon</title>
+      <link>https://artometrics.com/project-gutenberg-public-domain-canon-map</link>
+      <guid isPermaLink="true">https://artometrics.com/project-gutenberg-public-domain-canon-map</guid>
+      <pubDate>Wed, 01 Jul 2026 00:00:00 GMT</pubDate>
+      <description>A literary culture report using Project Gutenberg metadata logic to map language gravity, era effects, author memory, adaptation power, and remix value.</description>
+    </item>
+    <item>
+      <title>REGIONAL SPORTS IDENTITY MAP</title>
+      <link>https://artometrics.com/regional-sports-identity-map</link>
+      <guid isPermaLink="true">https://artometrics.com/regional-sports-identity-map</guid>
+      <pubDate>Wed, 01 Jul 2026 00:00:00 GMT</pubDate>
+      <description>A cross-report map of how regions, markets, leagues, and droughts create different sports identities across American cities.</description>
+    </item>
+    <item>
+      <title>SAN FRANCISCO DATA MICROSCOPE: The City as an Invention Machine</title>
+      <link>https://artometrics.com/san-francisco-data-microscope</link>
+      <guid isPermaLink="true">https://artometrics.com/san-francisco-data-microscope</guid>
+      <pubDate>Wed, 01 Jul 2026 00:00:00 GMT</pubDate>
+      <description>A city-identity report framing San Francisco through software exports, housing pressure, neighborhood signals, competitors, and open civic questions.</description>
+    </item>
+    <item>
+      <title>SPORTS DYNASTY INDEX: Best, Worst, and Most Misleading Teams</title>
+      <link>https://artometrics.com/sports-dynasty-index-best-and-worst-conversion</link>
+      <guid isPermaLink="true">https://artometrics.com/sports-dynasty-index-best-and-worst-conversion</guid>
+      <pubDate>Wed, 01 Jul 2026 00:00:00 GMT</pubDate>
+      <description>A cross-league Artometrics report comparing championship mass, conversion, market value, parity, and fan pain across major sports franchises.</description>
+    </item>
+    <item>
+      <title>YANKEES: The Artometrics of Baseball's Empire</title>
+      <link>https://artometrics.com/yankees-the-artometrics-of-baseballs-empire</link>
+      <guid isPermaLink="true">https://artometrics.com/yankees-the-artometrics-of-baseballs-empire</guid>
+      <pubDate>Wed, 01 Jul 2026 00:00:00 GMT</pubDate>
+      <description>The Yankees are not merely baseball's most decorated franchise. They are the sport's benchmark for expectation, drought, payroll pressure, and historical scale.</description>
+    </item>
+    <item>
+      <title>AIRLINE SAFETY: The Artometrics of Airline Safety</title>
+      <link>https://artometrics.com/airline-safety</link>
+      <guid isPermaLink="true">https://artometrics.com/airline-safety</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>This report analyzes the TidyTuesday 2018-08-07 release on Airline Safety — 336 rows after cleaning and merge. Which carriers show the worst safety records in this extract?</description>
+    </item>
+    <item>
+      <title>ALCOHOL CONSUMPTION: The Artometrics of Alcohol Consumption</title>
+      <link>https://artometrics.com/alcohol-consumption</link>
+      <guid isPermaLink="true">https://artometrics.com/alcohol-consumption</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>This report analyzes the TidyTuesday 2018-06-26 release on Alcohol Consumption — 193 rows after cleaning and merge. Who drinks the most per capita — and how did consumption move?</description>
+    </item>
+    <item>
+      <title>ALL THE PIZZA: The Artometrics of All The Pizza</title>
+      <link>https://artometrics.com/all-the-pizza</link>
+      <guid isPermaLink="true">https://artometrics.com/all-the-pizza</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>This report analyzes the TidyTuesday 2019-10-01 release on All The Pizza — 10,000 rows after cleaning and merge. What does pizza cost — and what do you pay in calories?</description>
+    </item>
+    <item>
+      <title>BEYONCÉ &amp; TAYLOR SWIFT LYRICS: The Artometrics of Beyoncé &amp; Taylor Swift Lyrics</title>
+      <link>https://artometrics.com/beyonce-taylor-lyrics</link>
+      <guid isPermaLink="true">https://artometrics.com/beyonce-taylor-lyrics</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>This report analyzes the TidyTuesday 2020-09-29 release on Beyoncé &amp; Taylor Swift Lyrics — 22,616 rows after cleaning and merge. How do two era-defining catalogs compare line by line?</description>
+    </item>
+    <item>
+      <title>BIG MAC INDEX: The Artometrics of Purchasing Power</title>
+      <link>https://artometrics.com/big-mac-index</link>
+      <guid isPermaLink="true">https://artometrics.com/big-mac-index</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>A Big Mac costs $8.31 in Switzerland and under $2 in parts of Asia. Twenty years of price data reveal how currency, wages, and exchange rates shape the cost of a burger — and a lot more.</description>
+    </item>
+    <item>
+      <title>BIKETOWN BIKESHARE: The Artometrics of Biketown Bikeshare</title>
+      <link>https://artometrics.com/biketown-bikeshare</link>
+      <guid isPermaLink="true">https://artometrics.com/biketown-bikeshare</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>This report analyzes the TidyTuesday 2018-06-05 release on Biketown Bikeshare — 100,000 rows after cleaning and merge. How long and far do Portland Biketown trips run?</description>
+    </item>
+    <item>
+      <title>BILLBOARD HOT 100: The Artometrics of Number-One Domination</title>
+      <link>https://artometrics.com/billboard-hot-100</link>
+      <guid isPermaLink="true">https://artometrics.com/billboard-hot-100</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>Since 1958 the Hot 100 has crowned 1,177 number-one songs. Most lasted two weeks. A few held the top for months. This report counts who dominated, when the longest runs happened, and what has changed since streaming rewrote the rules.</description>
+    </item>
+    <item>
+      <title>BILLBOARD TOP 100: The Artometrics of Billboard Top 100</title>
+      <link>https://artometrics.com/billboard-top-100</link>
+      <guid isPermaLink="true">https://artometrics.com/billboard-top-100</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>This report analyzes the TidyTuesday 2021-09-14 release on Billboard Top 100 — 100,000 rows after cleaning and merge. How did chart positions compress at the top of the Hot 100?</description>
+    </item>
+    <item>
+      <title>BOARD GAMES: The Artometrics of Board Games</title>
+      <link>https://artometrics.com/board-games</link>
+      <guid isPermaLink="true">https://artometrics.com/board-games</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>This report analyzes the TidyTuesday 2019-03-12 release on Board Games — 10,532 rows after cleaning and merge. Which board games combine crowd scale with elite ratings?</description>
+    </item>
+    <item>
+      <title>BROADWAY MUSICALS: The Artometrics of Broadway Musicals</title>
+      <link>https://artometrics.com/broadway-musicals</link>
+      <guid isPermaLink="true">https://artometrics.com/broadway-musicals</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>This report analyzes the TidyTuesday 2020-04-28 release on Broadway Musicals — 47,524 rows after cleaning and merge. Which musicals ran longest and grossed hardest on Broadway?</description>
+    </item>
+    <item>
+      <title>CEO DEPARTURES: The Artometrics of CEO Departures</title>
+      <link>https://artometrics.com/ceo-departures</link>
+      <guid isPermaLink="true">https://artometrics.com/ceo-departures</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>This report analyzes the TidyTuesday 2021-04-27 release on CEO Departures — 9,423 rows after cleaning and merge. How long do CEOs last before departure — and how do exits cluster?</description>
+    </item>
+    <item>
+      <title>CETACEANS: The Artometrics of Cetaceans</title>
+      <link>https://artometrics.com/cetaceans</link>
+      <guid isPermaLink="true">https://artometrics.com/cetaceans</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>This report analyzes the TidyTuesday 2018-12-18 release on Cetaceans — 2,194 rows after cleaning and merge. How do cetacean sizes cluster by family — and who are the giants?</description>
+    </item>
+    <item>
+      <title>CHRISTMAS NOVELS: The Artometrics of Christmas Novels</title>
+      <link>https://artometrics.com/christmas-novels</link>
+      <guid isPermaLink="true">https://artometrics.com/christmas-novels</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>This report analyzes the TidyTuesday 2025-12-30 release on Christmas Novels — 35 rows after cleaning and merge. Which Christmas novels and authors anchor the Gutenberg holiday shelf?</description>
+    </item>
+    <item>
+      <title>CHRISTMAS SONGS: The Artometrics of Christmas Songs</title>
+      <link>https://artometrics.com/christmas-songs</link>
+      <guid isPermaLink="true">https://artometrics.com/christmas-songs</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>This report analyzes the TidyTuesday 2019-12-24 release on Christmas Songs — 387 rows after cleaning and merge. Which holiday standards refuse to leave the chart?</description>
+    </item>
+    <item>
+      <title>CIA WORLD FACTBOOK: The Artometrics of CIA World Factbook</title>
+      <link>https://artometrics.com/cia-world-factbook</link>
+      <guid isPermaLink="true">https://artometrics.com/cia-world-factbook</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>This report analyzes the TidyTuesday 2024-10-22 release on CIA World Factbook — 259 rows after cleaning and merge. How do population scale and prosperity relate across countries?</description>
+    </item>
+    <item>
+      <title>COLLEGE MAJOR &amp; INCOME: The Artometrics of College Major &amp; Income</title>
+      <link>https://artometrics.com/college-major-income</link>
+      <guid isPermaLink="true">https://artometrics.com/college-major-income</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>This report analyzes the TidyTuesday 2018-10-16 release on College Major &amp; Income — 173 rows after cleaning and merge. Which majors pay most — and which carry unemployment risk?</description>
+    </item>
+    <item>
+      <title>COMIC BOOK CHARACTERS: The Artometrics of Comic Book Characters</title>
+      <link>https://artometrics.com/comic-characters</link>
+      <guid isPermaLink="true">https://artometrics.com/comic-characters</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>This report analyzes the TidyTuesday 2018-05-29 release on Comic Book Characters — 23,272 rows after cleaning and merge. Who ranks highest on the power scale — and does size matter?</description>
+    </item>
+    <item>
+      <title>CRAFT BEER USA: The Artometrics of Craft Beer USA</title>
+      <link>https://artometrics.com/craft-beer-usa</link>
+      <guid isPermaLink="true">https://artometrics.com/craft-beer-usa</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>This report analyzes the TidyTuesday 2018-07-10 release on Craft Beer USA — 2,410 rows after cleaning and merge. How bitter and strong is American craft beer — by state and brewery?</description>
+    </item>
+    <item>
+      <title>EMMY AWARDS: The Artometrics of Emmy Awards</title>
+      <link>https://artometrics.com/emmy-awards</link>
+      <guid isPermaLink="true">https://artometrics.com/emmy-awards</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>This report analyzes the TidyTuesday 2021-09-21 release on Emmy Awards — 29,678 rows after cleaning and merge. Which shows dominated Emmy season and how lopsided was the hardware?</description>
+    </item>
+    <item>
+      <title>EXERCISE USA: The Artometrics of Exercise USA</title>
+      <link>https://artometrics.com/exercise-usa</link>
+      <guid isPermaLink="true">https://artometrics.com/exercise-usa</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>This report analyzes the TidyTuesday 2018-07-17 release on Exercise USA — 52 rows after cleaning and merge. Which states exercise most — and how did activity rates shift?</description>
+    </item>
+    <item>
+      <title>FAST FOOD CALORIES: The Artometrics of Fast Food Calories</title>
+      <link>https://artometrics.com/fast-food-calories</link>
+      <guid isPermaLink="true">https://artometrics.com/fast-food-calories</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>This report analyzes the TidyTuesday 2018-09-04 release on Fast Food Calories — 515 rows after cleaning and merge. Which chains pack the most calories per item?</description>
+    </item>
+    <item>
+      <title>GLOBAL LIFE EXPECTANCY: How Humanity Doubled Its Lifespan in 500 Years</title>
+      <link>https://artometrics.com/global-life-expectancy</link>
+      <guid isPermaLink="true">https://artometrics.com/global-life-expectancy</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>In 1543 the median human life lasted roughly 30 years. By 2015 it had climbed past 73. This report maps five centuries of survival data — who leads, who lags, and why the gap between them has never been wider.</description>
+    </item>
+    <item>
+      <title>GLOBAL PLASTIC WASTE: The Artometrics of Global Plastic Waste</title>
+      <link>https://artometrics.com/global-plastic-waste</link>
+      <guid isPermaLink="true">https://artometrics.com/global-plastic-waste</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>This report analyzes the TidyTuesday 2019-05-21 release on Global Plastic Waste — 22,204 rows after cleaning and merge. Who generates the most plastic waste — and how much goes mismanaged?</description>
+    </item>
+    <item>
+      <title>HORROR MOVIE PROFIT: The Artometrics of Horror Movie Profit</title>
+      <link>https://artometrics.com/horror-movie-profit</link>
+      <guid isPermaLink="true">https://artometrics.com/horror-movie-profit</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>This report analyzes the TidyTuesday 2018-10-23 release on Horror Movie Profit — 3,401 rows after cleaning and merge. Which horror bets returned multiples and which franchises burned cash?</description>
+    </item>
+    <item>
+      <title>HORROR MOVIES: The Artometrics of Horror Movies</title>
+      <link>https://artometrics.com/horror-movies</link>
+      <guid isPermaLink="true">https://artometrics.com/horror-movies</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>This report analyzes the TidyTuesday 2022-11-01 release on Horror Movies — 32,540 rows after cleaning and merge. Did horror get better-reviewed as the catalog exploded, or did quantity...</description>
+    </item>
+    <item>
+      <title>HURRICANES &amp; PUERTO RICO: The Artometrics of Hurricanes &amp; Puerto Rico</title>
+      <link>https://artometrics.com/hurricanes-puerto-rico</link>
+      <guid isPermaLink="true">https://artometrics.com/hurricanes-puerto-rico</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>This report analyzes the TidyTuesday 2018-06-19 release on Hurricanes &amp; Puerto Rico — 153 rows after cleaning and merge. Which storms hit hardest — wind, deaths, and frequency over time?</description>
+    </item>
+    <item>
+      <title>HYDRO WASTEWATER PLANTS: The Artometrics of Hydro Wastewater Plants</title>
+      <link>https://artometrics.com/hydro-wastewater</link>
+      <guid isPermaLink="true">https://artometrics.com/hydro-wastewater</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>This report analyzes the TidyTuesday 2022-09-20 release on Hydro Wastewater Plants — 58,502 rows after cleaning and merge. Where do wastewater plants serve the most people — and discharge...</description>
+    </item>
+    <item>
+      <title>INCARCERATION TRENDS: The Artometrics of Incarceration Trends</title>
+      <link>https://artometrics.com/incarceration-trends</link>
+      <guid isPermaLink="true">https://artometrics.com/incarceration-trends</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>This report analyzes the TidyTuesday 2019-01-22 release on Incarceration Trends — 100,000 rows after cleaning and merge. How did incarceration rates trend — and which states diverged?</description>
+    </item>
+    <item>
+      <title>LANGUAGES OF THE WORLD: The Artometrics of Languages of the World</title>
+      <link>https://artometrics.com/languages-glottolog</link>
+      <guid isPermaLink="true">https://artometrics.com/languages-glottolog</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>This report analyzes the TidyTuesday 2025-12-23 release on Languages of the World — 8,612 rows after cleaning and merge. How concentrated is human linguistic diversity at the family level?</description>
+    </item>
+    <item>
+      <title>LEGO DATABASE: The Artometrics of LEGO Database</title>
+      <link>https://artometrics.com/lego-database</link>
+      <guid isPermaLink="true">https://artometrics.com/lego-database</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>This report analyzes the TidyTuesday 2022-09-06 release on LEGO Database — 19,798 rows after cleaning and merge. How did LEGO set complexity evolve across themes?</description>
+    </item>
+    <item>
+      <title>MEDIUM ARTICLE METADATA: The Artometrics of Medium Article Metadata</title>
+      <link>https://artometrics.com/medium-articles</link>
+      <guid isPermaLink="true">https://artometrics.com/medium-articles</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>This report analyzes the TidyTuesday 2018-12-04 release on Medium Article Metadata — 78,388 rows after cleaning and merge. Did longer Medium posts earn more applause?</description>
+    </item>
+    <item>
+      <title>NATIONAL PARK VISITS: The Artometrics of National Park Visits</title>
+      <link>https://artometrics.com/national-park-visits</link>
+      <guid isPermaLink="true">https://artometrics.com/national-park-visits</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>This report analyzes the TidyTuesday 2019-09-17 release on National Park Visits — 21,560 rows after cleaning and merge. Which parks draw the crowds — and how did visitation trend?</description>
+    </item>
+    <item>
+      <title>NETFLIX ENGAGEMENT: The Artometrics of Netflix Engagement</title>
+      <link>https://artometrics.com/netflix-engagement</link>
+      <guid isPermaLink="true">https://artometrics.com/netflix-engagement</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>This report analyzes the TidyTuesday 2025-07-29 release on Netflix Engagement — 27,803 rows after cleaning and merge. Which titles consumed the most hours — the metric Netflix actually...</description>
+    </item>
+    <item>
+      <title>NETFLIX TITLES: The Artometrics of Netflix Titles</title>
+      <link>https://artometrics.com/netflix-titles</link>
+      <guid isPermaLink="true">https://artometrics.com/netflix-titles</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>This report analyzes the TidyTuesday 2021-04-20 release on Netflix Titles — 7,787 rows after cleaning and merge. How did Netflix's catalog mix shift between films and series?</description>
+    </item>
+    <item>
+      <title>NUCLEAR EXPLOSIONS: The Artometrics of Nuclear Explosions</title>
+      <link>https://artometrics.com/nuclear-explosions</link>
+      <guid isPermaLink="true">https://artometrics.com/nuclear-explosions</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>This report analyzes the TidyTuesday 2019-08-20 release on Nuclear Explosions — 2,051 rows after cleaning and merge. How did test yields and purposes shift through the nuclear age?</description>
+    </item>
+    <item>
+      <title>NYC RESTAURANT INSPECTIONS: The Artometrics of NYC Restaurant Inspections</title>
+      <link>https://artometrics.com/nyc-restaurant-inspections</link>
+      <guid isPermaLink="true">https://artometrics.com/nyc-restaurant-inspections</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>This report analyzes the TidyTuesday 2018-12-11 release on NYC Restaurant Inspections — 100,000 rows after cleaning and merge. Which cuisines score highest — and how grades distribute?</description>
+    </item>
+    <item>
+      <title>PIXAR: The Artometrics of the Computer-Animation Canon</title>
+      <link>https://artometrics.com/pixar-films</link>
+      <guid isPermaLink="true">https://artometrics.com/pixar-films</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>Pixar's 27-film canon in data: runtime creep, critic scores, audience grades, and where Cars and Lightyear broke the streak.</description>
+    </item>
+    <item>
+      <title>PROJECT GUTENBERG: The Artometrics of Project Gutenberg</title>
+      <link>https://artometrics.com/project-gutenberg</link>
+      <guid isPermaLink="true">https://artometrics.com/project-gutenberg</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>This report analyzes the TidyTuesday 2025-06-03 release on Project Gutenberg — 100,000 rows after cleaning and merge. Which subjects dominate the public-domain canon?</description>
+    </item>
+    <item>
+      <title>RADIO STATIONS: The Artometrics of Radio Stations</title>
+      <link>https://artometrics.com/radio-stations</link>
+      <guid isPermaLink="true">https://artometrics.com/radio-stations</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>This report analyzes the TidyTuesday 2022-11-08 release on Radio Stations — 17,186 rows after cleaning and merge. How do radio formats map across the dial?</description>
+    </item>
+    <item>
+      <title>RAMEN RATINGS: The Artometrics of Ramen Ratings</title>
+      <link>https://artometrics.com/ramen-ratings</link>
+      <guid isPermaLink="true">https://artometrics.com/ramen-ratings</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>This report analyzes the TidyTuesday 2019-06-04 release on Ramen Ratings — 3,180 rows after cleaning and merge. Which ramen brands earn the stars — and where do they come from?</description>
+    </item>
+    <item>
+      <title>ROLLING STONE ALBUM RANKINGS: The Artometrics of Rolling Stone Album Rankings</title>
+      <link>https://artometrics.com/rolling-stone-albums</link>
+      <guid isPermaLink="true">https://artometrics.com/rolling-stone-albums</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>This report analyzes the TidyTuesday 2024-05-07 release on Rolling Stone Album Rankings — 691 rows after cleaning and merge. Which albums sit at the canonical peak of Rolling Stone's...</description>
+    </item>
+    <item>
+      <title>ROMAN EMPERORS: The Artometrics of Roman Emperors</title>
+      <link>https://artometrics.com/roman-emperors</link>
+      <guid isPermaLink="true">https://artometrics.com/roman-emperors</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>This report analyzes the TidyTuesday 2019-08-13 release on Roman Emperors — 68 rows after cleaning and merge. Who ruled longest — and did dynasty predict tenure?</description>
+    </item>
+    <item>
+      <title>SCHOOL DIVERSITY: The Artometrics of School Diversity</title>
+      <link>https://artometrics.com/school-diversity</link>
+      <guid isPermaLink="true">https://artometrics.com/school-diversity</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>This report analyzes the TidyTuesday 2019-09-24 release on School Diversity — 27,944 rows after cleaning and merge. Where is student-body diversity highest — and how spread out are schools?</description>
+    </item>
+    <item>
+      <title>SHERLOCK HOLMES: The Artometrics of Sherlock Holmes</title>
+      <link>https://artometrics.com/sherlock-holmes</link>
+      <guid isPermaLink="true">https://artometrics.com/sherlock-holmes</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>This report analyzes the TidyTuesday 2025-11-18 release on Sherlock Holmes — 65,958 rows after cleaning and merge. How is word count distributed across the Holmes canon?</description>
+    </item>
+    <item>
+      <title>SIMPSONS GUEST STARS: The Artometrics of Simpsons Guest Stars</title>
+      <link>https://artometrics.com/simpsons-guest-stars</link>
+      <guid isPermaLink="true">https://artometrics.com/simpsons-guest-stars</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>This report analyzes the TidyTuesday 2019-08-27 release on Simpsons Guest Stars — 1,381 rows after cleaning and merge. Who guest-starred most often — and did celebrity density cluster in...</description>
+    </item>
+    <item>
+      <title>SUPER BOWL ADS: The Artometrics of Super Bowl Ads</title>
+      <link>https://artometrics.com/super-bowl-ads</link>
+      <guid isPermaLink="true">https://artometrics.com/super-bowl-ads</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>This report analyzes the TidyTuesday 2021-03-02 release on Super Bowl Ads — 247 rows after cleaning and merge. Which Super Bowl spots won the post-game internet?</description>
+    </item>
+    <item>
+      <title>TV GOLDEN AGE: The Artometrics of TV Golden Age</title>
+      <link>https://artometrics.com/tv-golden-age</link>
+      <guid isPermaLink="true">https://artometrics.com/tv-golden-age</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>This report analyzes the TidyTuesday 2019-01-08 release on TV Golden Age — 2,266 rows after cleaning and merge. When did prestige TV peak — and did critics agree with audiences?</description>
+    </item>
+    <item>
+      <title>UK MUSEUMS: The Artometrics of UK Museums</title>
+      <link>https://artometrics.com/uk-museums</link>
+      <guid isPermaLink="true">https://artometrics.com/uk-museums</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>This report analyzes the TidyTuesday 2022-11-22 release on UK Museums — 4,191 rows after cleaning and merge. Which UK museums sit in which deprivation bands — and how are they distributed?</description>
+    </item>
+    <item>
+      <title>UN VOTES: The Artometrics of UN Votes</title>
+      <link>https://artometrics.com/un-votes</link>
+      <guid isPermaLink="true">https://artometrics.com/un-votes</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>This report analyzes the TidyTuesday 2021-03-23 release on UN Votes — 100,000 rows after cleaning and merge. Which UN votes split the chamber — and who dissented most?</description>
+    </item>
+    <item>
+      <title>US PHDS AWARDED: The Artometrics of US PhDs Awarded</title>
+      <link>https://artometrics.com/us-phds</link>
+      <guid isPermaLink="true">https://artometrics.com/us-phds</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>This report analyzes the TidyTuesday 2019-02-19 release on US PhDs Awarded — 3,370 rows after cleaning and merge. Which PhD fields expanded fastest — and where is production concentrated?</description>
+    </item>
+    <item>
+      <title>US TUITION COSTS: The Artometrics of US Tuition Costs</title>
+      <link>https://artometrics.com/us-tuition</link>
+      <guid isPermaLink="true">https://artometrics.com/us-tuition</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>This report analyzes the TidyTuesday 2018-04-02 release on US Tuition Costs — 600 rows after cleaning and merge. How far did average tuition climb — and which states lead the bill?</description>
+    </item>
+    <item>
+      <title>US VOTER TURNOUT: The Artometrics of US Voter Turnout</title>
+      <link>https://artometrics.com/us-voter-turnout</link>
+      <guid isPermaLink="true">https://artometrics.com/us-voter-turnout</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>This report analyzes the TidyTuesday 2018-10-09 release on US Voter Turnout — 936 rows after cleaning and merge. Which states show up — and how did turnout move across elections?</description>
+    </item>
+    <item>
+      <title>VIDEO GAMES: The Artometrics of Video Games</title>
+      <link>https://artometrics.com/video-games-sliced</link>
+      <guid isPermaLink="true">https://artometrics.com/video-games-sliced</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>This report analyzes the TidyTuesday 2021-03-16 release on Video Games — 83,631 rows after cleaning and merge. Did critical acclaim correlate with commercial success in this slice of...</description>
+    </item>
+    <item>
+      <title>VIDEO GAMES STEAM SPY: The Artometrics of Video Games Steam Spy</title>
+      <link>https://artometrics.com/video-games-steam</link>
+      <guid isPermaLink="true">https://artometrics.com/video-games-steam</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>This report analyzes the TidyTuesday 2019-07-30 release on Video Games Steam Spy — 26,688 rows after cleaning and merge. Which Steam titles earned the most playtime per dollar?</description>
+    </item>
+    <item>
+      <title>WEALTH AND INCOME: The Artometrics of Wealth and Income</title>
+      <link>https://artometrics.com/wealth-income</link>
+      <guid isPermaLink="true">https://artometrics.com/wealth-income</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>This report analyzes the TidyTuesday 2021-02-09 release on Wealth and Income — 2,916 rows after cleaning and merge. How concentrated is wealth at the top of the distribution?</description>
+    </item>
+    <item>
+      <title>WEB PAGE METRICS: The Artometrics of Web Page Metrics</title>
+      <link>https://artometrics.com/web-page-metrics</link>
+      <guid isPermaLink="true">https://artometrics.com/web-page-metrics</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>This report analyzes the TidyTuesday 2022-11-15 release on Web Page Metrics — 238 rows after cleaning and merge. Which pages load fastest — and what metrics move together?</description>
+    </item>
+    <item>
+      <title>WINE RATINGS: The Artometrics of Wine Ratings</title>
+      <link>https://artometrics.com/wine-ratings</link>
+      <guid isPermaLink="true">https://artometrics.com/wine-ratings</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>This report analyzes the TidyTuesday 2019-05-28 release on Wine Ratings — 100,000 rows after cleaning and merge. Does price predict points — or do bargains cluster?</description>
+    </item>
+    <item>
+      <title>WORLD HERITAGE SITES: The Artometrics of World Heritage Sites</title>
+      <link>https://artometrics.com/world-heritage-sites</link>
+      <guid isPermaLink="true">https://artometrics.com/world-heritage-sites</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>This report analyzes the TidyTuesday 2024-02-06 release on World Heritage Sites — 6 rows after cleaning and merge. How did UNESCO site counts grow across Scandinavia between 2004 and 2022?</description>
+    </item>
+    <item>
+      <title>POKEMON: The Artometrics of the World's Biggest Franchise</title>
+      <link>https://artometrics.com/pokemon</link>
+      <guid isPermaLink="true">https://artometrics.com/pokemon</guid>
+      <pubDate>Wed, 06 May 2026 00:00:00 GMT</pubDate>
+      <description>Pokémon is the highest-grossing media franchise in history — more than $150 billion in lifetime revenue across games, cards, merchandise, and film. That number gets cited constantly. What gets cite...</description>
+    </item>
+    <item>
+      <title>READMITTED: How America's Hospitals Are Failing the 30-Day Standard</title>
+      <link>https://artometrics.com/readmitted</link>
+      <guid isPermaLink="true">https://artometrics.com/readmitted</guid>
+      <pubDate>Tue, 21 Apr 2026 00:00:00 GMT</pubDate>
+      <description>11,720 hospital-condition pairs under CMS HRRP: which states, conditions, and ownership types still exceed the 30-day readmission benchmark — and what that means for TEAM in 2026</description>
+    </item>
+    <item>
+      <title>CAESAR: The Psychonomics of the Great Dictator</title>
+      <link>https://artometrics.com/caesar-the-psychonomics-of-emperor-julius</link>
+      <guid isPermaLink="true">https://artometrics.com/caesar-the-psychonomics-of-emperor-julius</guid>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 GMT</pubDate>
+      <description>Economics comes from the Greek oikonomia — the management of the house. Psychonomics asks the prior question: who is managing the soul of the house, and what does their inner architecture cost ever...</description>
+    </item>
+    <item>
+      <title>GIANT: The Artometrics of A San Francisco Dynasty</title>
+      <link>https://artometrics.com/giant-the-artometrics-of-a-san-francisco-dynasty</link>
+      <guid isPermaLink="true">https://artometrics.com/giant-the-artometrics-of-a-san-francisco-dynasty</guid>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 GMT</pubDate>
+      <description>The San Francisco Giants have been playing professional baseball since 1883. That is not a typo. The franchise that now calls Oracle Park home started as the New York Gothams — a team that predates...</description>
+    </item>
+    <item>
+      <title>WARRIOR: The Artometrics of A Golden State Dynasty</title>
+      <link>https://artometrics.com/warrior-the-artometrics-of-a-golden-state-dynasty</link>
+      <guid isPermaLink="true">https://artometrics.com/warrior-the-artometrics-of-a-golden-state-dynasty</guid>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 GMT</pubDate>
+      <description>The Golden State Warriors have played 78 seasons of professional basketball. For roughly 35 of them, they were irrelevant. Not rebuilding, not transitioning — just losing, year after year, in a market...</description>
+    </item>
+    <item>
+      <title>COFFEE: The Artometrics of Java</title>
+      <link>https://artometrics.com/coffee-the-artometrics-of-java</link>
+      <guid isPermaLink="true">https://artometrics.com/coffee-the-artometrics-of-java</guid>
+      <pubDate>Tue, 14 Apr 2026 00:00:00 GMT</pubDate>
+      <description>Coffee is the world's second-largest traded commodity by value, behind only crude oil. More than 125 million people depend on it for their livelihoods. Around 2.25 billion cups are consumed every d...</description>
+    </item>
+    <item>
+      <title>H3: The Artometrics of A YouTube Dynasty</title>
+      <link>https://artometrics.com/h3-the-artometrics-of-a-youtube-dynasty</link>
+      <guid isPermaLink="true">https://artometrics.com/h3-the-artometrics-of-a-youtube-dynasty</guid>
+      <pubDate>Tue, 14 Apr 2026 00:00:00 GMT</pubDate>
+      <description>H3 is not one channel — it is a network. Since 2011, Ethan and Hila Klein have built four YouTube channels, one clothing brand, a podcast empire, and one of the most documented creator controversie...</description>
+    </item>
+    <item>
+      <title>IMPERIAL: The Evolution of Empire</title>
+      <link>https://artometrics.com/imperial</link>
+      <guid isPermaLink="true">https://artometrics.com/imperial</guid>
+      <pubDate>Tue, 14 Apr 2026 00:00:00 GMT</pubDate>
+      <description>Every empire in history has told the same story about itself: we brought order, we built roads, we made the trains run on time. What the chronicles leave out is the spreadsheet. Who actually got ri...</description>
+    </item>
+    <item>
+      <title>FRANCHISE: The Artometrics of Media Monopolies</title>
+      <link>https://artometrics.com/franchise</link>
+      <guid isPermaLink="true">https://artometrics.com/franchise</guid>
+      <pubDate>Wed, 08 Apr 2026 00:00:00 GMT</pubDate>
+      <description>A data analysis of 107 franchises mapping how the most valuable IP in history — from Pokémon to Star Wars — actually makes its money.</description>
+    </item>
+    <item>
+      <title>ANIME: The Artometrics of Japanese Animation</title>
+      <link>https://artometrics.com/anime</link>
+      <guid isPermaLink="true">https://artometrics.com/anime</guid>
+      <pubDate>Tue, 31 Mar 2026 00:00:00 GMT</pubDate>
+      <description>13,631 Titles. A Century Of Data. One Question: What Does The MyAnimeList Archive Actually Tell Us About How Anime Works As An Industry?</description>
+    </item>
+  </channel>
+</rss>

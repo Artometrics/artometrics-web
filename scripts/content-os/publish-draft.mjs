@@ -58,7 +58,7 @@ if (existsSync(manifestPath)) {
 }
 
 execSync("node scripts/build-content.mjs", { cwd: ROOT, stdio: "inherit" });
-execSync("node scripts/content-os/generate-llms-txt.mjs", {
+execSync("node scripts/content-os/aeo-pack.mjs", {
   cwd: ROOT,
   stdio: "inherit",
 });

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <channel>
+    <title>Artometrics Podcast</title>
+    <link>https://artometrics.com/podcast</link>
+    <description>Interviews extending the Artometrics desks — culture, atlas, history, persona, power.</description>
+    <language>en-us</language>
+    <itunes:author>Artometrics</itunes:author>
+    <itunes:summary>Data-science conversations for the creative industries.</itunes:summary>
+    <itunes:category text="Arts" />
+    <item>
+      <title>Why culture needs a data desk</title>
+      <link>https://artometrics.com/podcast/interviews/1</link>
+      <guid isPermaLink="true">https://artometrics.com/podcast/interviews/1</guid>
+      <pubDate>Thu, 01 May 2025 00:00:00 GMT</pubDate>
+      <description>Juliet Ramos on treating anime catalogs, streaming libraries, and franchise economics as public evidence — not just fandom.</description>
+      <enclosure url="https://artometrics.com/audios/placeholder.mp3" type="audio/mpeg" />
+    </item>
+    <item>
+      <title>Reading an Artometrics report from scratch</title>
+      <link>https://artometrics.com/podcast/interviews/2</link>
+      <guid isPermaLink="true">https://artometrics.com/podcast/interviews/2</guid>
+      <pubDate>Fri, 18 Apr 2025 00:00:00 GMT</pubDate>
+      <description>David Lee walks through observed data, derived metrics, editorial indices, and outside literature — the four evidence types behind every report.</description>
+      <enclosure url="https://artometrics.com/audios/placeholder.mp3" type="audio/mpeg" />
+    </item>
+    <item>
+      <title>Long timelines, small samples: history desk lessons</title>
+      <link>https://artometrics.com/podcast/interviews/3</link>
+      <guid isPermaLink="true">https://artometrics.com/podcast/interviews/3</guid>
+      <pubDate>Sat, 22 Mar 2025 00:00:00 GMT</pubDate>
+      <description>Isaac Turner on working with archival gaps, imperial datasets, and the humility required when the past does not arrive in tidy rows.</description>
+      <enclosure url="https://artometrics.com/audios/placeholder.mp3" type="audio/mpeg" />
+    </item>
+    <item>
+      <title>Franchise economics and the persona of a dynasty</title>
+      <link>https://artometrics.com/podcast/interviews/4</link>
+      <guid isPermaLink="true">https://artometrics.com/podcast/interviews/4</guid>
+      <pubDate>Fri, 14 Feb 2025 00:00:00 GMT</pubDate>
+      <description>Jordan Wells on measuring sports and creator dynasties — wins, revenue, platform reach, and why myth needs a spreadsheet.</description>
+      <enclosure url="https://artometrics.com/audios/placeholder.mp3" type="audio/mpeg" />
+    </item>
+  </channel>
+</rss>

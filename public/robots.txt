@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://artometrics.com/sitemap.xml
+Host: https://artometrics.com
+
+# AI / answer-engine crawlers — allow grounding via llms.txt
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /

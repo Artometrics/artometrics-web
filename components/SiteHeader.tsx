@@ -9,6 +9,7 @@ import { useAuth } from "@/lib/auth";
 const navLinks = [
   { href: "/blog", label: "Reports" },
   { href: "/podcast", label: "Podcast" },
+  { href: "/resources", label: "Resources" },
   { href: "/about", label: "About" },
 ] as const;
 
