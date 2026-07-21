@@ -21,7 +21,8 @@ export function SeoJsonLd({ data }: Props) {
     return () => {
       el?.remove();
     };
-  }, [data]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [JSON.stringify(data)]);
 
   return null;
 }
