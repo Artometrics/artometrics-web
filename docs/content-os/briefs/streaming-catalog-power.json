@@ -1,0 +1,63 @@
+{
+  "slug": "streaming-catalog-power",
+  "desk": "culture",
+  "title": "STREAMING CATALOG POWER: The Artometrics of What Platforms Actually Keep",
+  "workingTitle": "Streaming Catalog Power",
+  "primaryKeyword": "streaming catalog data",
+  "secondaryKeywords": [
+    "streaming library size",
+    "netflix catalog economics",
+    "platform content concentration",
+    "streaming availability data",
+    "SVOD catalog analysis",
+    "creative industry streaming metrics"
+  ],
+  "searchIntent": "informational",
+  "audience": "Editors, founders, and analysts who want evidence on how streaming libraries concentrate attention and inventory — not fan rankings.",
+  "metaDescription": "What public streaming-catalog data shows about library size, concentration, and the gap between hype titles and what platforms actually keep.",
+  "angle": "Treat the catalog as an industrial archive: separate what gets marketed from what remains available, then measure concentration and churn with honest limits.",
+  "dataSources": [
+    {
+      "name": "User-supplied or public streaming availability export",
+      "url": "https://artometrics.com/methodology/",
+      "notes": "Pilot scaffold expects a CSV later. Until data is attached, sections stay marked PLACEHOLDER with clear observed-vs-derived labels."
+    }
+  ],
+  "sectionPlan": [
+    {
+      "id": "library-shape",
+      "title": "HOW BIG IS THE LIBRARY — AND HOW TOP-HEAVY?",
+      "question": "What does catalog size look like once we separate unique titles from marketed hits?",
+      "keyword": "streaming library size"
+    },
+    {
+      "id": "concentration",
+      "title": "CONCENTRATION: WHO OWNS THE MIDDLE OF THE SHELF?",
+      "question": "How concentrated is inventory across genres, studios, or rights holders?",
+      "keyword": "platform content concentration"
+    },
+    {
+      "id": "availability-gap",
+      "title": "THE AVAILABILITY GAP: HYPE VS WHAT STAYS UP",
+      "question": "Where do heavily discussed titles diverge from durable catalog presence?",
+      "keyword": "streaming availability data"
+    }
+  ],
+  "banner": {
+    "mood": "Quiet documentary still of a living room screen glow on cream paper tones, spare Artometrics red accent in a single object reflection",
+    "subjects": "Television or projection light in an empty room, no logos, no UI chrome, no faces looking at camera",
+    "avoid": "Netflix/Disney logos, fake dashboards, purple neon, collage stickers, readable on-screen text"
+  },
+  "distribution": {
+    "linkedinHook": "Streaming arguments usually start with hits. Catalog power starts with what stays on the shelf.",
+    "shortFact": "Calibration number TBD once the availability export is attached.",
+    "youtubeTitle": "Streaming catalog data: what platforms keep vs what they market"
+  },
+  "relatedSlugs": [
+    "anime",
+    "franchise"
+  ],
+  "status": "draft",
+  "createdAt": "2026-07-21",
+  "updatedAt": "2026-07-21"
+}

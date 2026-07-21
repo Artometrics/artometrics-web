@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://artometrics.com/schemas/keyword-brief.json",
+  "title": "ArtometricsKeywordBrief",
+  "type": "object",
+  "required": [
+    "slug",
+    "desk",
+    "title",
+    "primaryKeyword",
+    "secondaryKeywords",
+    "searchIntent",
+    "metaDescription",
+    "status"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "desk": {
+      "type": "string",
+      "enum": ["culture", "atlas", "history", "persona", "power"]
+    },
+    "title": { "type": "string", "minLength": 8 },
+    "workingTitle": { "type": "string" },
+    "primaryKeyword": { "type": "string", "minLength": 3 },
+    "secondaryKeywords": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 12,
+      "items": { "type": "string" }
+    },
+    "searchIntent": {
+      "type": "string",
+      "enum": ["informational", "comparative", "commercial", "navigational"]
+    },
+    "audience": { "type": "string" },
+    "metaDescription": { "type": "string", "maxLength": 160 },
+    "angle": { "type": "string" },
+    "dataSources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "url"],
+        "properties": {
+          "name": { "type": "string" },
+          "url": { "type": "string" },
+          "notes": { "type": "string" }
+        }
+      }
+    },
+    "sectionPlan": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "question"],
+        "properties": {
+          "id": { "type": "string" },
+          "title": { "type": "string" },
+          "question": { "type": "string" },
+          "keyword": { "type": "string" }
+        }
+      }
+    },
+    "banner": {
+      "type": "object",
+      "properties": {
+        "mood": { "type": "string" },
+        "subjects": { "type": "string" },
+        "avoid": { "type": "string" }
+      }
+    },
+    "distribution": {
+      "type": "object",
+      "properties": {
+        "linkedinHook": { "type": "string" },
+        "shortFact": { "type": "string" },
+        "youtubeTitle": { "type": "string" }
+      }
+    },
+    "relatedSlugs": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "status": {
+      "type": "string",
+      "enum": ["brief", "scaffolded", "draft", "review", "published"]
+    },
+    "createdAt": { "type": "string" },
+    "updatedAt": { "type": "string" }
+  }
+}

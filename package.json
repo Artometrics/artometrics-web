@@ -25,7 +25,12 @@
     "render:readmitted:py": "python3 scripts/render-readmitted-charts.py",
     "setup:r": "Rscript scripts/install-r-deps.R",
     "setup:python": "pip3 install -r requirements.txt",
-    "setup:pipeline": "bash scripts/setup-pipeline.sh"
+    "setup:pipeline": "bash scripts/setup-pipeline.sh",
+    "cos:brief": "node scripts/content-os/new-brief.mjs",
+    "cos:scaffold": "node scripts/content-os/scaffold-from-brief.mjs",
+    "cos:banner-prompt": "node scripts/content-os/banner-prompt.mjs",
+    "cos:publish": "node scripts/content-os/publish-draft.mjs",
+    "cos:llms": "node scripts/content-os/generate-llms-txt.mjs"
   },
   "engines": {
     "node": ">=20.0.0"

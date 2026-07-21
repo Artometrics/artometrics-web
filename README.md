@@ -50,15 +50,19 @@ See [AGENTS.md](./AGENTS.md) for routing, content schemas, and contributor guard
 | `npm run publish:repos` | Push local repo upgrades to `Artometrics/*` on `main` |
 | `npm run migration:manifest` | Write `docs/migration-manifest.json` |
 | `npm run render:readmitted:py` | Export readmitted PNG + Plotly JSON |
-| `npm run setup:python` | Install Python chart export dependencies |
+| `npm run cos:brief` | New keyword brief |
+| `npm run cos:scaffold` | Scaffold draft HTML report from brief |
+| `npm run cos:banner-prompt` | Print Higgsfield banner prompt |
+| `npm run cos:publish` | Publish draft → `src/content/blog/` |
+| `npm run cos:llms` | Regenerate `public/llms.txt` from published posts |
 
 ## Content workflows
 
-- **Blog reports:** `src/content/blog/` — template `src/content/blog/anime.md`
+- **Content OS:** keyword brief → scaffold → banner → publish (`docs/content-os/`)
+- **Blog reports:** `src/content/blog/` — frontmatter template in `src/content/blog/anime.md`
 - **Sync GitHub articles:** `npm run sync:articles`
-- **Podcast episodes:** `src/content/podcast/`
+- **Podcast episodes:** `src/content/podcast/` — template in `src/content/podcast/1.md`
 - **Authors:** `src/content/authors/`
-- **Generated JSON:** `src/generated/` (committed after `npm run content`, rebuilt on start/build)
 
 ## Links
 

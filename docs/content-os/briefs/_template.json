@@ -1,0 +1,45 @@
+{
+  "slug": "example-topic",
+  "desk": "culture",
+  "title": "EXAMPLE TOPIC: The Artometrics of Example Topic",
+  "workingTitle": "Example Topic",
+  "primaryKeyword": "example topic data",
+  "secondaryKeywords": [
+    "example topic industry",
+    "example topic rankings",
+    "example topic economics"
+  ],
+  "searchIntent": "informational",
+  "audience": "Curious readers who follow creative industries and want evidence, not hype.",
+  "metaDescription": "A data report on example topic — what the public archive shows about structure, leaders, and limits.",
+  "angle": "Separate catalog reality from popularity, then teach one claim per chart.",
+  "dataSources": [
+    {
+      "name": "Replace with primary dataset",
+      "url": "https://example.com/data",
+      "notes": "Observed data only; label any derived metrics."
+    }
+  ],
+  "sectionPlan": [
+    {
+      "id": "leaders",
+      "title": "WHO LEADS — AND ON WHAT METRIC?",
+      "question": "Which entities lead when we use a robust metric?",
+      "keyword": "example topic rankings"
+    }
+  ],
+  "banner": {
+    "mood": "Documentary magazine still, cream paper, spare red accent",
+    "subjects": "Objects or places that signal the topic without text",
+    "avoid": "Logos, charts-in-image, purple gradients, collage stickers"
+  },
+  "distribution": {
+    "linkedinHook": "One concrete number from the archive, then the interpretive move.",
+    "shortFact": "Replace with the calibration statistic.",
+    "youtubeTitle": "What the data actually says about example topic"
+  },
+  "relatedSlugs": [],
+  "status": "brief",
+  "createdAt": "2026-07-21",
+  "updatedAt": "2026-07-21"
+}

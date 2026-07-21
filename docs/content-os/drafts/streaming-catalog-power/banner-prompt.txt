@@ -1,0 +1,5 @@
+
+> artometrics@0.0.1 cos:banner-prompt
+> node scripts/content-os/banner-prompt.mjs --brief docs/content-os/briefs/streaming-catalog-power.json
+
+Artometrics editorial hero banner, 16:9 documentary magazine still. Topic: Streaming Catalog Power. Desk: culture. Primary keyword context (do not render as text): streaming catalog data. Mood: Quiet documentary still of a living room screen glow on cream paper tones, spare Artometrics red accent in a single object reflection. Subjects: Television or projection light in an empty room, no logos, no UI chrome, no faces looking at camera. Color: cream/paper neutrals, charcoal, sparingly Artometrics red #C0392B. Avoid: Netflix/Disney logos, fake dashboards, purple neon, collage stickers, readable on-screen text. No typography. No UI. Photoreal editorial.

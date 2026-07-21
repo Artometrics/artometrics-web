@@ -1,4 +1,4 @@
-import { createElement, useEffect, useState } from "react";
+import { createElement, useEffect, useRef } from "react";
 import { Colors } from "@/constants/Colors";
 
 type PlotlyLike = {
@@ -49,6 +49,7 @@ async function hydrateCharts(root: HTMLElement) {
   const Plotly = await loadPlotlyFromCdn();
 
   for (const el of Array.from(nodes)) {
+    if (el.dataset.hydrated === "1") continue;
     const chartUrl = el.getAttribute("data-chart");
     const fallback = el.getAttribute("data-fallback");
     el.classList.add("art-chart-live--loading");
@@ -65,6 +66,7 @@ async function hydrateCharts(root: HTMLElement) {
       el.appendChild(img);
       el.classList.add("art-chart-live--static", "art-chart-live--ready");
       el.classList.remove("art-chart-live--loading");
+      el.dataset.hydrated = "1";
     };
 
     if (!chartUrl || !Plotly) {
@@ -95,25 +97,30 @@ async function hydrateCharts(root: HTMLElement) {
       );
       el.classList.add("art-chart-live--ready");
       el.classList.remove("art-chart-live--loading");
+      el.dataset.hydrated = "1";
     } catch {
       showFallback();
     }
   }
 }
 
-/** Client-only article HTML to avoid SSR/hydration mismatches with Quarto markup. */
+/**
+ * Crawlable HTML in the static export (AEO), charts enhanced client-side.
+ */
 export function ArticleBody({ html }: { html: string }) {
-  const [root, setRoot] = useState<HTMLDivElement | null>(null);
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!root) return;
-    root.innerHTML = html;
-    void hydrateCharts(root);
-  }, [html, root]);
+    const node = ref.current;
+    if (!node) return;
+    void hydrateCharts(node);
+  }, [html]);
 
   return createElement("div", {
-    ref: setRoot,
+    ref,
     className: "artometrics-article-body",
+    dangerouslySetInnerHTML: { __html: html },
+    suppressHydrationWarning: true,
     style: { width: "100%" },
   });
 }

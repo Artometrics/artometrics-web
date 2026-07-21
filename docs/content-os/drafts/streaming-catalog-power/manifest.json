@@ -1,0 +1,9 @@
+{
+  "slug": "streaming-catalog-power",
+  "brief": "docs/content-os/briefs/streaming-catalog-power.json",
+  "article": "docs/content-os/drafts/streaming-catalog-power/article.md",
+  "heroTarget": "public/images/content/articles/streaming-catalog-power/hero.png",
+  "status": "draft",
+  "createdAt": "2026-07-21",
+  "publishedPath": "src/content/blog/streaming-catalog-power.md"
+}

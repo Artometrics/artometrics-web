@@ -93,6 +93,20 @@ Unchanged from the Astro era: gold-standard reports live under [Artometrics](htt
 
 Run `npm run content` after syncing so the Expo app picks up new posts.
 
+## Content OS (editorial factory)
+
+Keyword briefs, style rules, draft scaffolds, and AEO live under `docs/content-os/`.
+
+| Command | Action |
+|--------|--------|
+| `npm run cos:brief -- --slug … --desk culture --title "…"` | New keyword brief |
+| `npm run cos:scaffold -- --brief docs/content-os/briefs/<slug>.json` | Draft HTML report scaffold |
+| `npm run cos:banner-prompt -- --brief …` | Higgsfield banner prompt |
+| `npm run cos:publish -- --slug …` | Copy draft → `src/content/blog/` + rebuild JSON + `llms.txt` |
+| `npm run cos:llms` | Regenerate `public/llms.txt` |
+
+Style bible: `docs/content-os/STYLE_GUIDE.md`. Overview: `docs/content-os/README.md`.
+
 ## Guardrails for AI / contributors
 
 - Prefer **minimal diffs** and `@/` imports from the project root.
@@ -100,3 +114,4 @@ Run `npm run content` after syncing so the Expo app picks up new posts.
 - Do **not** reintroduce Astro; this product is Expo-only.
 - Verify `npm run build` after changing routes or the content builder.
 - Netlify API redirects (`/api/*`) must stay above the SPA fallback in `netlify.toml`.
+- New reports should start from a Content OS brief when possible.
