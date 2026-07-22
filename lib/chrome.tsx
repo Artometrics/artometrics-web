@@ -14,9 +14,21 @@ type ChromeContextValue = {
   logoCompact: number;
   isArticle: boolean;
   setIsArticle: (value: boolean) => void;
+  menuOpen: boolean;
+  setMenuOpen: (value: boolean) => void;
 };
 
-const ChromeContext = createContext<ChromeContextValue | null>(null);
+const defaultChrome: ChromeContextValue = {
+  scrollY: 0,
+  setScrollY: () => {},
+  logoCompact: 0,
+  isArticle: false,
+  setIsArticle: () => {},
+  menuOpen: false,
+  setMenuOpen: () => {},
+};
+
+const ChromeContext = createContext<ChromeContextValue>(defaultChrome);
 
 const ARTICLE_COMPACT_START = 48;
 const ARTICLE_COMPACT_END = 220;
@@ -28,9 +40,10 @@ function clamp01(n: number) {
 export function ChromeProvider({ children }: { children: ReactNode }) {
   const [scrollY, setScrollYState] = useState(0);
   const [isArticle, setIsArticle] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const setScrollY = useCallback((y: number) => {
-    setScrollYState((prev) => (Math.abs(prev - y) < 1 ? prev : y));
+    setScrollYState((prev) => (Math.abs(prev - y) < 8 ? prev : y));
   }, []);
 
   const logoCompact = useMemo(() => {
@@ -48,8 +61,10 @@ export function ChromeProvider({ children }: { children: ReactNode }) {
       logoCompact,
       isArticle,
       setIsArticle,
+      menuOpen,
+      setMenuOpen,
     }),
-    [scrollY, setScrollY, logoCompact, isArticle],
+    [scrollY, setScrollY, logoCompact, isArticle, menuOpen],
   );
 
   return (
@@ -58,9 +73,5 @@ export function ChromeProvider({ children }: { children: ReactNode }) {
 }
 
 export function useChrome() {
-  const ctx = useContext(ChromeContext);
-  if (!ctx) {
-    throw new Error("useChrome must be used within ChromeProvider");
-  }
-  return ctx;
+  return useContext(ChromeContext);
 }

@@ -38,7 +38,6 @@ export function Logo({ style, size = 36, compact, containerStyle }: Props) {
         },
         containerStyle,
       ]}
-      accessibilityRole="header"
       accessibilityLabel="Artometrics"
     >
       <Text
@@ -49,15 +48,13 @@ export function Logo({ style, size = 36, compact, containerStyle }: Props) {
             color: Colors.base900,
             letterSpacing: 0.5,
             opacity: wordOpacity,
-            transform: [{ scale: 1 - progress * 0.08 }],
           },
           style,
         ]}
-        importantForAccessibility="no"
       >
         Artometrics
       </Text>
-      {MARK ? (
+      {MARK && markOpacity > 0.01 ? (
         <Image
           source={{ uri: MARK }}
           style={[
@@ -66,13 +63,12 @@ export function Logo({ style, size = 36, compact, containerStyle }: Props) {
               width: markSize,
               height: markSize,
               opacity: markOpacity,
-              transform: [{ scale: 0.85 + progress * 0.15 }],
             },
           ]}
           resizeMode="contain"
-          accessibilityIgnoresInvertColors
         />
-      ) : (
+      ) : null}
+      {!MARK && markOpacity > 0.01 ? (
         <Text
           style={[
             styles.fallbackA,
@@ -85,7 +81,7 @@ export function Logo({ style, size = 36, compact, containerStyle }: Props) {
         >
           A
         </Text>
-      )}
+      ) : null}
     </View>
   );
 }
