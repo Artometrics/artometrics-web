@@ -20,7 +20,7 @@ keyPoints:
   - 1980–2014 — Year span covered in the file
 faq:
   - question: >-
-      What does the data show about median votes rose across three decades of
+      What does the data show about Median votes rose across three decades of
       elections?
     answer: >-
       Key figure: 936 — Records in the working dataset. The source is the
@@ -28,7 +28,7 @@ faq:
       working file contains 936 rows and 7 columns after merging available
       tables in the week…
   - question: >-
-      What does the data show about the United States total dwarfs the state
+      What does the data show about The United States total dwarfs the state
       ladder?
     answer: >-
       Key figure: 1,170,867 — Median Votes. The source is the TidyTuesday
@@ -36,7 +36,7 @@ faq:
       contains 936 rows and 7 columns after merging available tables in the
       week…
   - question: >-
-      What does the data show about a right-skewed distribution with a heavy
+      What does the data show about A right-skewed distribution with a heavy
       upper tail?
     answer: >-
       Key figure: 132,609,063 — Highest observed Votes. The source is the
@@ -44,7 +44,7 @@ faq:
       working file contains 936 rows and 7 columns after merging available
       tables in the week…
   - question: >-
-      What does the data show about leading states reshuffle across election
+      What does the data show about Leading states reshuffle across election
       cycles?
     answer: >-
       Key figure: United States — Top State by Votes. The source is the

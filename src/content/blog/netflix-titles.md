@@ -40,7 +40,7 @@ faq:
       release from 2021-04-20 (R for Data Science community). The working file
       contains 7,787 rows and 13 columns after merging available tables in the
       week folder.
-  - question: What does the data show about concentration?
+  - question: What does the data show about Concentration?
     answer: >-
       Key figure: Black Mirror: Bandersnatch — Top Title by Duration. The source
       is the TidyTuesday release from 2021-04-20 (R for Data Science community).

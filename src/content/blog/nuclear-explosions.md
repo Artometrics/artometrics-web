@@ -32,7 +32,7 @@ faq:
       Key figure: 0.00 — Median Magnitude body. Zeros in the magnitude field are
       not moral quiet. They are measurement gaps, non-detections, or unfilled
       cells that pull the median to the floor while a thin upper tail records…
-  - question: What does the data show about purpose spreads magnitudes?
+  - question: What does the data show about Purpose spreads magnitudes?
     answer: >-
       Key figure: 7.40 — Highest observed Magnitude body. Zeros in the magnitude
       field are not moral quiet. They are measurement gaps, non-detections, or

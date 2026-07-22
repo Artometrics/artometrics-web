@@ -23,25 +23,25 @@ keyPoints:
   - 7 — Fame paths compared
   - 8 — Artists used as report anchors
 faq:
-  - question: What does the data show about catalog and Now?
+  - question: What does the data show about Catalog and Now?
     answer: >-
       Key figure: CC0 — MusicBrainz core database dump license for public-domain
       metadata. Core dumps are CC0 ; MetaBrainz publishes them about 2x/week .
       Documentation lists 11 JSON dump entity types. The frame below compares 7
       fame paths with 8 artist anchors across 5 charts.
-  - question: What does the data show about format Shift?
+  - question: What does the data show about Format Shift?
     answer: >-
       Key figure: 2x/week — MetaBrainz published dump cadence in public
       documentation. Core dumps are CC0 ; MetaBrainz publishes them about
       2x/week . Documentation lists 11 JSON dump entity types. The frame below
       compares 7 fame paths with 8 artist anchors across 5 charts.
-  - question: What does the data show about genre Travel?
+  - question: What does the data show about Genre Travel?
     answer: >-
       Key figure: 11 — JSON dump entity types listed in MusicBrainz
       documentation. Core dumps are CC0 ; MetaBrainz publishes them about
       2x/week . Documentation lists 11 JSON dump entity types. The frame below
       compares 7 fame paths with 8 artist anchors across 5 charts.
-  - question: What does the data show about fame Paths?
+  - question: What does the data show about Fame Paths?
     answer: >-
       Key figure: 7 — Fame paths compared. Core dumps are CC0 ; MetaBrainz
       publishes them about 2x/week . Documentation lists 11 JSON dump entity

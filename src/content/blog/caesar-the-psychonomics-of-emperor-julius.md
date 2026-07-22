@@ -40,21 +40,21 @@ keyPoints:
     led by two men Caesar had personally pardoned, appointed, and promised
     future consulships
 faq:
-  - question: What does the data show about leadership Trait Analysis?
+  - question: What does the data show about Leadership Trait Analysis?
     answer: >-
       Key figure: 100 BCE — Caesar&#39;s birth year — born into Rome&#39;s most
       turbulent political century, to a patrician family living in the Subura
       tenements. By 44 BCE, Caesar had crossed the Rubicon, won a civil war,
       reformed the debt system, redistributed land to 80,000 veterans and urban
       poor, rebuilt the calendar, and declared…
-  - question: What does the data show about the Economic Fingerprint?
+  - question: What does the data show about The Economic Fingerprint?
     answer: >-
       Key figure: 38 days — Held captive by Cilician pirates at age 25 — he
       laughed at their ransom demand, volunteered to pay more, then crucified
       every one of them after his release. By 44 BCE, Caesar had crossed the
       Rubicon, won a civil war, reformed the debt system, redistributed land to
       80,000 veterans and urban poor, rebuilt the calendar, and declared…
-  - question: What does the data show about the Patronage Network?
+  - question: What does the data show about The Patronage Network?
     answer: >-
       Key figure: 0.95 — Caesar&#39;s Need for Power score under the Hermann
       (1999) Leadership Trait Analysis framework — near the ceiling of any world

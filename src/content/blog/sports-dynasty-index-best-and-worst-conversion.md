@@ -24,7 +24,7 @@ keyPoints:
   - 57 — Maple Leafs active Stanley Cup drought entering 2025
 faq:
   - question: >-
-      What does the data show about a few franchises own championship memory
+      What does the data show about A few franchises own championship memory
       itself?
     answer: >-
       Key figure: 351 — Charts now audited across the Artometrics corpus. This
@@ -32,7 +32,7 @@ faq:
       Artometrics corpus that now holds 351 audited charts—to map championship
       mass, Finals conversion, brand…
   - question: >-
-      What does the data show about modern dynasties are finishers, not just
+      What does the data show about Modern dynasties are finishers, not just
       invitees?
     answer: >-
       Key figure: 4 — Major North American leagues compared. This index uses
@@ -40,7 +40,7 @@ faq:
       corpus that now holds 351 audited charts—to map championship mass, Finals
       conversion, brand…
   - question: >-
-      What does the data show about market power and competitive power are
+      What does the data show about Market power and competitive power are
       different variables?
     answer: >-
       Key figure: 27 — Yankees titles, the largest MLB archive. This index uses
@@ -48,7 +48,7 @@ faq:
       corpus that now holds 351 audited charts—to map championship mass, Finals
       conversion, brand…
   - question: >-
-      What does the data show about each league teaches fans a different theory
+      What does the data show about Each league teaches fans a different theory
       of fairness?
     answer: >-
       Key figure: 0 — Cowboys titles since the 1990s dynasty. This index uses

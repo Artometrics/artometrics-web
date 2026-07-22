@@ -25,7 +25,7 @@ keyPoints:
   - 2024 — Most recent championship
 faq:
   - question: >-
-      What does the data show about los Angeles is built to manufacture October
+      What does the data show about Los Angeles is built to manufacture October
       chances?
     answer: >-
       Key figure: 8 — World Series championships in franchise history. What
@@ -33,7 +33,7 @@ faq:
       historic clubs, the modern 90-win floor, spending against October markers,
       and the long shadow of the 1988-to-2020 ring gap.
   - question: >-
-      What does the data show about historically elite—without Yankee-scale
+      What does the data show about Historically elite—without Yankee-scale
       monopoly?
     answer: >-
       Key figure: 25 — Approximate National League pennants. What follows charts
@@ -41,7 +41,7 @@ faq:
       modern 90-win floor, spending against October markers, and the long shadow
       of the 1988-to-2020 ring gap.
   - question: >-
-      What does the data show about since the 2010s, 90-win baseball has looked
+      What does the data show about Since the 2010s, 90-win baseball has looked
       normal?
     answer: >-
       Key figure: 111 — Regular-season wins in 2022. What follows charts that
@@ -49,7 +49,7 @@ faq:
       modern 90-win floor, spending against October markers, and the long shadow
       of the 1988-to-2020 ring gap.
   - question: >-
-      What does the data show about spending is structural—October still breaks
+      What does the data show about Spending is structural—October still breaks
       machines?
     answer: >-
       Key figure: 32 — Years between the 1988 and 2020 titles. What follows

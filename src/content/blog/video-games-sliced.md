@@ -24,27 +24,27 @@ keyPoints:
   - February — Most common Month
 faq:
   - question: >-
-      What does the data show about median concurrency climbed across the
+      What does the data show about Median concurrency climbed across the
       decade?
     answer: >-
       Key figure: 83,631 — Records in the working dataset. The source is the
       TidyTuesday release from 2021-03-16 (R for Data Science community). The
       working file contains 83,631 rows and 8 columns after merging available
       tables in the…
-  - question: What does the data show about dota 2 leads a top tier that drops off fast?
+  - question: What does the data show about Dota 2 leads a top tier that drops off fast?
     answer: >-
       Key figure: 203 — Median Avg. The source is the TidyTuesday release from
       2021-03-16 (R for Data Science community). The working file contains
       83,631 rows and 8 columns after merging available tables in the…
   - question: >-
-      What does the data show about months carry different concurrency
+      What does the data show about Months carry different concurrency
       distributions?
     answer: >-
       Key figure: 1,584,887 — Highest observed Avg. The source is the
       TidyTuesday release from 2021-03-16 (R for Data Science community). The
       working file contains 83,631 rows and 8 columns after merging available
       tables in the…
-  - question: What does the data show about january clears the median; October trails?
+  - question: What does the data show about January clears the median; October trails?
     answer: >-
       Key figure: PLAYERUNKNOWN'S BATTLEGROUND — Top Gamename by Avg. The source
       is the TidyTuesday release from 2021-03-16 (R for Data Science community).

@@ -23,27 +23,27 @@ keyPoints:
   - 1970–1970 — Year span covered in the file
   - 'Wargame,World War II — Most common Category'
 faq:
-  - question: What does the data show about the Catalog’s Median Rating Sits Near 6.39?
+  - question: What does the data show about The Catalog’s Median Rating Sits Near 6.39?
     answer: >-
       Key figure: 10,532 — Records in the working dataset. The source is the
       TidyTuesday release from 2019-03-12 (board_games.csv). After cleaning,
       10,532 rows remain in the working frame.
   - question: >-
-      What does the data show about designer Editions and Heavy Games Own the
+      What does the data show about Designer Editions and Heavy Games Own the
       Peak?
     answer: >-
       Key figure: 6.39 — Median Average rating. The source is the TidyTuesday
       release from 2019-03-12 (board_games.csv). After cleaning, 10,532 rows
       remain in the working frame.
   - question: >-
-      What does the data show about wargame Categories Rate Higher Than Card
+      What does the data show about Wargame Categories Rate Higher Than Card
       Games?
     answer: >-
       Key figure: 9.00 — Highest observed Average rating. The source is the
       TidyTuesday release from 2019-03-12 (board_games.csv). After cleaning,
       10,532 rows remain in the working frame.
   - question: >-
-      What does the data show about civil War and Napoleonic Titles Beat the
+      What does the data show about Civil War and Napoleonic Titles Beat the
       Median Most?
     answer: >-
       Key figure: Small World Designer Edition — Top Name by Average rating. The

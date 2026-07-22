@@ -22,7 +22,7 @@ keyPoints:
   - Texas — Top State by Value
   - 2017–2017 — Year span covered in the file
 faq:
-  - question: What does the data show about timeline across states?
+  - question: What does the data show about Timeline across states?
     answer: >-
       Key figure: 153 — Records in the working dataset. This is not a full
       climatology of Caribbean cyclones. It is a season-slice that lets three
@@ -39,7 +39,7 @@ faq:
       of Caribbean cyclones. It is a season-slice that lets three hard-hit
       places be read side by side — intensity, concentration, and timing
       included.
-  - question: What does the data show about concentration of impact?
+  - question: What does the data show about Concentration of impact?
     answer: >-
       Key figure: Texas — Top State by Value. This is not a full climatology of
       Caribbean cyclones. It is a season-slice that lets three hard-hit places

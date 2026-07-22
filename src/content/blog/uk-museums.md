@@ -22,21 +22,21 @@ keyPoints:
   - /England/South West (English — Most common Admin area
 faq:
   - question: >-
-      What does the data show about named museums pin the top of the deprivation
+      What does the data show about Named museums pin the top of the deprivation
       scale?
     answer: >-
       Key figure: 4,191 — Records in the working dataset. The source is the
       TidyTuesday release from 2022-11-22 (R for Data Science community). The
       working file contains 4,191 rows and 35 columns after merging available
       tables in the…
-  - question: What does the data show about the leaders chart sits at the index ceiling?
+  - question: What does the data show about The leaders chart sits at the index ceiling?
     answer: >-
       Key figure: 5.00 — Median Area Deprivation index. The source is the
       TidyTuesday release from 2022-11-22 (R for Data Science community). The
       working file contains 4,191 rows and 35 columns after merging available
       tables in the…
   - question: >-
-      What does the data show about admin areas spread museums across different
+      What does the data show about Admin areas spread museums across different
       deprivation bands?
     answer: >-
       Key figure: 10.0 — Highest observed Area Deprivation index. The source is
@@ -44,7 +44,7 @@ faq:
       The working file contains 4,191 rows and 35 columns after merging
       available tables in the…
   - question: >-
-      What does the data show about wiltshire clears the median; Cornwall trails
+      What does the data show about Wiltshire clears the median; Cornwall trails
       in the South West cut?
     answer: >-
       Key figure: Blenheim Palace — Top Name of museum by Area Deprivation

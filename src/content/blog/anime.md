@@ -36,7 +36,7 @@ keyPoints:
     industry&#39;s primary outsourced R&amp;D pipeline
 faq:
   - question: >-
-      What does the data show about an Industry That Industrialized — Then
+      What does the data show about An Industry That Industrialized — Then
       Diversified?
     answer: >-
       Key figure: 13,631 — Unique anime titles in the dataset — from silent-era
@@ -44,7 +44,7 @@ faq:
       TidyTuesday release from April 23, 2019, maintained by the R for Data
       Science community. It contains scraped records for 13,631 unique anime…
   - question: >-
-      What does the data show about bones and Kyoani Lead — Consistency Across
+      What does the data show about Bones and Kyoani Lead — Consistency Across
       Volume Is the Real Achievement?
     answer: >-
       Key figure: 6.38 — Overall median MAL score — the mathematical baseline

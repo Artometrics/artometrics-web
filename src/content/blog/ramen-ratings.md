@@ -20,7 +20,7 @@ keyPoints:
   - Nongshim — Top Brand by Stars
   - Japan — Most common Country
 faq:
-  - question: What does the data show about stars by brand?
+  - question: What does the data show about Stars by brand?
     answer: >-
       Key figure: 3,180 — Records in the working dataset. A ceiling of 5.00 that
       many top brands share means the interesting story is often below the
@@ -31,7 +31,7 @@ faq:
       Key figure: 3.75 — Median Stars. A ceiling of 5.00 that many top brands
       share means the interesting story is often below the perfect scores: which
       countries sit above the median, and how review volume relates to praise.
-  - question: What does the data show about stars by country?
+  - question: What does the data show about Stars by country?
     answer: >-
       Key figure: 5.00 — Highest observed Stars. A ceiling of 5.00 that many top
       brands share means the interesting story is often below the perfect

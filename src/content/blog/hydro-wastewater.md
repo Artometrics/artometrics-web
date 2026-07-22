@@ -20,7 +20,7 @@ keyPoints:
   - United States — Top COUNTRY by WASTE DIS
   - Secondary — Most common LEVEL
 faq:
-  - question: What does the data show about discharge by country?
+  - question: What does the data show about Discharge by country?
     answer: >-
       Key figure: 58,502 — Records in the working dataset. Scale without
       treatment level is an incomplete story. A large plant with advanced
@@ -31,7 +31,7 @@ faq:
       Key figure: 1,079 — Median WASTE DIS. Scale without treatment level is an
       incomplete story. A large plant with advanced treatment is a different
       civic object from a large plant stuck at primary or secondary standards.
-  - question: What does the data show about treatment levels spread discharge?
+  - question: What does the data show about Treatment levels spread discharge?
     answer: >-
       Key figure: 3,073,754 — Highest observed WASTE DIS. Scale without
       treatment level is an incomplete story. A large plant with advanced

@@ -19,19 +19,19 @@ keyPoints:
   - 510 — Pokémon with a second type — the dual-type majority
   - Water — Most common primary type in the dataset
 faq:
-  - question: What does the data show about stat Identity By Type?
+  - question: What does the data show about Stat Identity By Type?
     answer: >-
       Key figure: 949 — Pokémon in the dataset with a confirmed primary type.
       The dataset is TidyTuesday Week 13, 2025 — a cleaned version of the
       PokéAPI database covering 1,028 Pokémon entries across nine generations.
       Each row represents a single Pokémon…
-  - question: What does the data show about generation Creep?
+  - question: What does the data show about Generation Creep?
     answer: >-
       Key figure: 18 — Distinct primary types represented. The dataset is
       TidyTuesday Week 13, 2025 — a cleaned version of the PokéAPI database
       covering 1,028 Pokémon entries across nine generations. Each row
       represents a single Pokémon…
-  - question: What does the data show about built Different?
+  - question: What does the data show about Built Different?
     answer: >-
       Key figure: 8 — Generation IDs in the data — Gen 8 and 9 unclassified in
       source. The dataset is TidyTuesday Week 13, 2025 — a cleaned version of

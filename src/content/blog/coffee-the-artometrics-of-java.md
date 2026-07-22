@@ -35,11 +35,11 @@ faq:
     answer: >-
       Key figure: 1,339 — Coffee samples rated by CQI Q Graders across Arabica
       and Robusta species. Keep these markers in view as the story unfolds.
-  - question: What does the data show about the Quality-Retail Disconnect?
+  - question: What does the data show about The Quality-Retail Disconnect?
     answer: >-
       Key figure: 85.3 — Ethiopia&#39;s median CQI cup score — highest of any
       country with 20+ samples. Keep these markers in view as the story unfolds.
-  - question: What does the data show about the Sub-Metric Fingerprint?
+  - question: What does the data show about The Sub-Metric Fingerprint?
     answer: >-
       Key figure: 0 — Starbucks locations in Ethiopia, Kenya, and Uganda — the
       top three scoring nations. Keep these markers in view as the story

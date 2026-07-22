@@ -24,20 +24,20 @@ keyPoints:
   - 92 — NBA star leverage index in this editorial model
   - 6 — Leagues compared
 faq:
-  - question: What does the data show about the NFL makes ordinary franchises expensive?
+  - question: What does the data show about The NFL makes ordinary franchises expensive?
     answer: >-
       Key figure: $6.5B — Approximate average NFL franchise value in recent
       Forbes-style estimates. The five charts below build a cross-league lens
       for later Artometrics profiles: value floors, star leverage, caps versus
       payroll spread, event scarcity, and the split between…
-  - question: What does the data show about basketball lets one name rewrite the jersey?
+  - question: What does the data show about Basketball lets one name rewrite the jersey?
     answer: >-
       Key figure: 17 — NFL regular-season games per team. The five charts below
       build a cross-league lens for later Artometrics profiles: value floors,
       star leverage, caps versus payroll spread, event scarcity, and the split
       between…
   - question: >-
-      What does the data show about caps and taxes decide whether money
+      What does the data show about Caps and taxes decide whether money
       separates or merely sustains?
     answer: >-
       Key figure: 162 — MLB regular-season games per team. The five charts below
@@ -45,7 +45,7 @@ faq:
       star leverage, caps versus payroll spread, event scarcity, and the split
       between…
   - question: >-
-      What does the data show about seventeen games and 162 games are different
+      What does the data show about Seventeen games and 162 games are different
       psychologies?
     answer: >-
       Key figure: 92 — NBA star leverage index in this editorial model. The five

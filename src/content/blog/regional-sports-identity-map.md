@@ -21,22 +21,22 @@ keyPoints:
   - 94 — Toronto drought/pain index in this editorial model
   - 43B — Approximate combined New York major-team value
 faq:
-  - question: What does the data show about regional Title Density?
+  - question: What does the data show about Regional Title Density?
     answer: >-
       Key figure: 10 — Large markets/cities compared. Start with the scale: 10 —
       Large markets/cities compared; and 7 — Regions grouped for title-density
       analysis.
-  - question: What does the data show about market Stack?
+  - question: What does the data show about Market Stack?
     answer: >-
       Key figure: 7 — Regions grouped for title-density analysis. Start with the
       scale: 10 — Large markets/cities compared; and 7 — Regions grouped for
       title-density analysis.
-  - question: What does the data show about sport Dna?
+  - question: What does the data show about Sport Dna?
     answer: >-
       Key figure: 6 — Identity archetypes used in the map. Start with the scale:
       10 — Large markets/cities compared; and 7 — Regions grouped for
       title-density analysis.
-  - question: What does the data show about city Pain versus Success?
+  - question: What does the data show about City Pain versus Success?
     answer: >-
       Key figure: 94 — Toronto drought/pain index in this editorial model. Start
       with the scale: 10 — Large markets/cities compared; and 7 — Regions

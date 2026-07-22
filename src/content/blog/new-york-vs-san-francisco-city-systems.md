@@ -22,20 +22,20 @@ keyPoints:
   - 0 — Single-variable answers
   - '1 — Core contrast: command versus invention'
 faq:
-  - question: What does the data show about command versus Lab?
+  - question: What does the data show about Command versus Lab?
     answer: >-
       Key figure: 2 — Global intangible-output cities compared. Start with the
       scale: 2 — Global intangible-output cities compared; and 8 — Identity axes
       scored.
-  - question: What does the data show about history Timing?
+  - question: What does the data show about History Timing?
     answer: >-
       Key figure: 8 — Identity axes scored. Start with the scale: 2 — Global
       intangible-output cities compared; and 8 — Identity axes scored.
-  - question: What does the data show about output Fingerprint?
+  - question: What does the data show about Output Fingerprint?
     answer: >-
       Key figure: 6 — Shared pressure narratives tested. Start with the scale: 2
       — Global intangible-output cities compared; and 8 — Identity axes scored.
-  - question: What does the data show about pressure Pairing?
+  - question: What does the data show about Pressure Pairing?
     answer: >-
       Key figure: 0 — Single-variable answers. Start with the scale: 2 — Global
       intangible-output cities compared; and 8 — Identity axes scored.

@@ -24,26 +24,26 @@ keyPoints:
   - recreation — Most common TripType
 faq:
   - question: >-
-      What does the data show about median Trip Length Fell Across Three
+      What does the data show about Median Trip Length Fell Across Three
       Seasons?
     answer: >-
       Key figure: 100,000 — Records in the working dataset. The source is the
       TidyTuesday release from 2018-06-05 (week10_biketown.zip). After cleaning,
       the working sample used for these charts contains 100,000 rows.
   - question: >-
-      What does the data show about pop-Up and Waterfront Hubs Stretch Ride
+      What does the data show about Pop-Up and Waterfront Hubs Stretch Ride
       Time?
     answer: >-
       Key figure: 14.5 — Median Duration min. The source is the TidyTuesday
       release from 2018-06-05 (week10_biketown.zip). After cleaning, the working
       sample used for these charts contains 100,000 rows.
-  - question: What does the data show about recreation Lasts Longer Than Work Trips?
+  - question: What does the data show about Recreation Lasts Longer Than Work Trips?
     answer: >-
       Key figure: 1,392 — Highest observed Duration min. The source is the
       TidyTuesday release from 2018-06-05 (week10_biketown.zip). After cleaning,
       the working sample used for these charts contains 100,000 rows.
   - question: >-
-      What does the data show about recreation Sits Furthest Above the System
+      What does the data show about Recreation Sits Furthest Above the System
       Median?
     answer: >-
       Key figure: SW Stark at Burnside — Top StartHub by Duration min. The

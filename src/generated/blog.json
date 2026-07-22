@@ -25,19 +25,19 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about capacity Concentrates Among Megacarriers?",
+        "question": "What does the data show about Capacity Concentrates Among Megacarriers?",
         "answer": "Key figure: 336 — Records in the working dataset. The most common event type in the file is simply labeled incidents . That matters: the archive mixes routine reportable events with rarer fatal outcomes, and treating those…"
       },
       {
-        "question": "What does the data show about the Same Names Dominate the Leader Board?",
+        "question": "What does the data show about The Same Names Dominate the Leader Board?",
         "answer": "Key figure: 802,908,893 — Median Avail seat km per week. The most common event type in the file is simply labeled incidents . That matters: the archive mixes routine reportable events with rarer fatal outcomes, and treating those…"
       },
       {
-        "question": "What does the data show about event Type Does Not Rewrite the Capacity Story?",
+        "question": "What does the data show about Event Type Does Not Rewrite the Capacity Story?",
         "answer": "Key figure: 7,139,291,291 — Highest observed Avail seat km per week. The most common event type in the file is simply labeled incidents . That matters: the archive mixes routine reportable events with rarer fatal outcomes, and treating those…"
       },
       {
-        "question": "What does the data show about gaps to the Median Are Flat Across Labels?",
+        "question": "What does the data show about Gaps to the Median Are Flat Across Labels?",
         "answer": "Key figure: United / Continental* — Top Airline by Avail seat km per week. The most common event type in the file is simply labeled incidents . That matters: the archive mixes routine reportable events with rarer fatal outcomes, and treating those…"
       }
     ],
@@ -70,19 +70,19 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about beer Consumption Has a Steep Country Ladder?",
+        "question": "What does the data show about Beer Consumption Has a Steep Country Ladder?",
         "answer": "Key figure: 193 — Records in the working dataset. The source is the TidyTuesday release from 2018-06-26 (week13_alcohol_global.csv), maintained by the R for Data Science community. The working file used here contains 193 rows after cleaning."
       },
       {
-        "question": "What does the data show about the Top Dozen Has Its Own Median?",
+        "question": "What does the data show about The Top Dozen Has Its Own Median?",
         "answer": "Key figure: 76.0 — Median Beer servings. The source is the TidyTuesday release from 2018-06-26 (week13_alcohol_global.csv), maintained by the R for Data Science community. The working file used here contains 193 rows after cleaning."
       },
       {
-        "question": "What does the data show about most Countries Cluster Far Below the Peaks?",
+        "question": "What does the data show about Most Countries Cluster Far Below the Peaks?",
         "answer": "Key figure: 376 — Highest observed Beer servings. The source is the TidyTuesday release from 2018-06-26 (week13_alcohol_global.csv), maintained by the R for Data Science community. The working file used here contains 193 rows after cleaning."
       },
       {
-        "question": "What does the data show about concentration Rises Quickly Among the Leaders?",
+        "question": "What does the data show about Concentration Rises Quickly Among the Leaders?",
         "answer": "Key figure: Namibia — Top Country by Beer servings. The source is the TidyTuesday release from 2018-06-26 (week13_alcohol_global.csv), maintained by the R for Data Science community. The working file used here contains 193 rows after cleaning."
       }
     ],
@@ -115,19 +115,19 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about price Floors Separate Everyday Shops From Destination Pies?",
+        "question": "What does the data show about Price Floors Separate Everyday Shops From Destination Pies?",
         "answer": "Key figure: 10,000 — Records in the working dataset. The source is the TidyTuesday release from 2019-10-01 (pizza_datafiniti.csv). After cleaning, the analysis frame used here contains 10,000 records."
       },
       {
-        "question": "What does the data show about the Top Dozen Is a Premium Plateau?",
+        "question": "What does the data show about The Top Dozen Is a Premium Plateau?",
         "answer": "Key figure: 0.00 — Median Price range min. The source is the TidyTuesday release from 2019-10-01 (pizza_datafiniti.csv). After cleaning, the analysis frame used here contains 10,000 records."
       },
       {
-        "question": "What does the data show about almost Everything Sits in the Low Bins?",
+        "question": "What does the data show about Almost Everything Sits in the Low Bins?",
         "answer": "Key figure: 50.0 — Highest observed Price range min. The source is the TidyTuesday release from 2019-10-01 (pizza_datafiniti.csv). After cleaning, the analysis frame used here contains 10,000 records."
       },
       {
-        "question": "What does the data show about premium Names Concentrate Quickly?",
+        "question": "What does the data show about Premium Names Concentrate Quickly?",
         "answer": "Key figure: Oregano — Top Name by Price range min. The source is the TidyTuesday release from 2019-10-01 (pizza_datafiniti.csv). After cleaning, the analysis frame used here contains 10,000 records."
       }
     ],
@@ -162,11 +162,11 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about an Industry That Industrialized — Then Diversified?",
+        "question": "What does the data show about An Industry That Industrialized — Then Diversified?",
         "answer": "Key figure: 13,631 — Unique anime titles in the dataset — from silent-era shorts to modern streaming originals. The source data is the MyAnimeList TidyTuesday release from April 23, 2019, maintained by the R for Data Science community. It contains scraped records for 13,631 unique anime…"
       },
       {
-        "question": "What does the data show about bones and Kyoani Lead — Consistency Across Volume Is the Real Achievement?",
+        "question": "What does the data show about Bones and Kyoani Lead — Consistency Across Volume Is the Real Achievement?",
         "answer": "Key figure: 6.38 — Overall median MAL score — the mathematical baseline every studio and genre is measured against. The source data is the MyAnimeList TidyTuesday release from April 23, 2019, maintained by the R for Data Science community. It contains scraped records for 13,631 unique anime…"
       },
       {
@@ -208,7 +208,7 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about prestige and market are not the same currency?",
+        "question": "What does the data show about Prestige and market are not the same currency?",
         "answer": "Key figure: 98th — Academy Awards database complete through 2025/2026 cycle per official database. The Academy Awards database is complete through the 98th cycle, with 1,500+ acceptance speeches on file. Nobel prizes date to 1901 . Recent Grammy ceremonies run roughly 94…"
       },
       {
@@ -216,7 +216,7 @@
         "answer": "Key figure: 1,500+ — Acceptance speeches in the Academy's speech database. The Academy Awards database is complete through the 98th cycle, with 1,500+ acceptance speeches on file. Nobel prizes date to 1901 . Recent Grammy ceremonies run roughly 94…"
       },
       {
-        "question": "What does the data show about getting nominated is not the same as winning?",
+        "question": "What does the data show about Getting nominated is not the same as winning?",
         "answer": "Key figure: 1901 — First Nobel Prizes awarded. The Academy Awards database is complete through the 98th cycle, with 1,500+ acceptance speeches on file. Nobel prizes date to 1901 . Recent Grammy ceremonies run roughly 94…"
       },
       {
@@ -251,7 +251,7 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about landscape?",
+        "question": "What does the data show about Landscape?",
         "answer": "Key figure: 22,616 — Records in the working dataset. The source is the TidyTuesday release from 2020-09-29 (R for Data Science community). The working file contains 22,616 rows and 6 columns after merging available tables in the week folder."
       },
       {
@@ -259,11 +259,11 @@
         "answer": "Key figure: Beyoncé — Most common Artist name. The source is the TidyTuesday release from 2020-09-29 (R for Data Science community). The working file contains 22,616 rows and 6 columns after merging available tables in the week folder."
       },
       {
-        "question": "What does the data show about category?",
+        "question": "What does the data show about Category?",
         "answer": "The source is the TidyTuesday release from 2020-09-29 (R for Data Science community). The working file contains 22,616 rows and 6 columns after merging available tables in the week folder."
       },
       {
-        "question": "What does the data show about frequency?",
+        "question": "What does the data show about Frequency?",
         "answer": "The source is the TidyTuesday release from 2020-09-29 (R for Data Science community). The working file contains 22,616 rows and 6 columns after merging available tables in the week folder."
       }
     ],
@@ -297,11 +297,11 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about global Price Trend?",
+        "question": "What does the data show about Global Price Trend?",
         "answer": "Key figure: $3.04 — Median dollar price across all countries and years. Keep the calibration numbers close: the median dollar price across all country-years is $3.04 , the peak observed is $8.31 , and the global median rose about 83% from 2000 to 2020."
       },
       {
-        "question": "What does the data show about most Expensive Countries?",
+        "question": "What does the data show about Most Expensive Countries?",
         "answer": "Key figure: $8.31 — Peak price — Switzerland at its most expensive. Keep the calibration numbers close: the median dollar price across all country-years is $3.04 , the peak observed is $8.31 , and the global median rose about 83% from 2000 to 2020."
       },
       {
@@ -309,7 +309,7 @@
         "answer": "Key figure: 83% — Price increase from 2000 to 2020 at the global median. Keep the calibration numbers close: the median dollar price across all country-years is $3.04 , the peak observed is $8.31 , and the global median rose about 83% from 2000 to 2020."
       },
       {
-        "question": "What does the data show about tracking the Leaders?",
+        "question": "What does the data show about Tracking the Leaders?",
         "answer": "Key figure: Norway — Highest average dollar price over the full 20-year span. Keep the calibration numbers close: the median dollar price across all country-years is $3.04 , the peak observed is $8.31 , and the global median rose about 83% from 2000 to 2020."
       }
     ],
@@ -344,19 +344,19 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about median Trip Length Fell Across Three Seasons?",
+        "question": "What does the data show about Median Trip Length Fell Across Three Seasons?",
         "answer": "Key figure: 100,000 — Records in the working dataset. The source is the TidyTuesday release from 2018-06-05 (week10_biketown.zip). After cleaning, the working sample used for these charts contains 100,000 rows."
       },
       {
-        "question": "What does the data show about pop-Up and Waterfront Hubs Stretch Ride Time?",
+        "question": "What does the data show about Pop-Up and Waterfront Hubs Stretch Ride Time?",
         "answer": "Key figure: 14.5 — Median Duration min. The source is the TidyTuesday release from 2018-06-05 (week10_biketown.zip). After cleaning, the working sample used for these charts contains 100,000 rows."
       },
       {
-        "question": "What does the data show about recreation Lasts Longer Than Work Trips?",
+        "question": "What does the data show about Recreation Lasts Longer Than Work Trips?",
         "answer": "Key figure: 1,392 — Highest observed Duration min. The source is the TidyTuesday release from 2018-06-05 (week10_biketown.zip). After cleaning, the working sample used for these charts contains 100,000 rows."
       },
       {
-        "question": "What does the data show about recreation Sits Furthest Above the System Median?",
+        "question": "What does the data show about Recreation Sits Furthest Above the System Median?",
         "answer": "Key figure: SW Stark at Burnside — Top StartHub by Duration min. The source is the TidyTuesday release from 2018-06-05 (week10_biketown.zip). After cleaning, the working sample used for these charts contains 100,000 rows."
       }
     ],
@@ -391,11 +391,11 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about run Length Over the Decades?",
+        "question": "What does the data show about Run Length Over the Decades?",
         "answer": "Key figure: 1,177 — Number-one songs in the dataset (1958–2025). Start with the scale: 1,177 number-one songs (1958–2025); 2 wks median run length; The Beatles with the most appearances; Taylor Swift with the highest average run length among modern artists."
       },
       {
-        "question": "What does the data show about longest Runs Ever?",
+        "question": "What does the data show about Longest Runs Ever?",
         "answer": "Key figure: 2 wks — Median run length — most #1s are fleeting. Start with the scale: 1,177 number-one songs (1958–2025); 2 wks median run length; The Beatles with the most appearances; Taylor Swift with the highest average run length among modern artists."
       },
       {
@@ -403,7 +403,7 @@
         "answer": "Key figure: 19 wks — Longest single run in the dataset. Start with the scale: 1,177 number-one songs (1958–2025); 2 wks median run length; The Beatles with the most appearances; Taylor Swift with the highest average run length among modern artists."
       },
       {
-        "question": "What does the data show about above Or Below the Line?",
+        "question": "What does the data show about Above Or Below the Line?",
         "answer": "Key figure: The Beatles — Most appearances in the dataset — 20 number-one songs. Start with the scale: 1,177 number-one songs (1958–2025); 2 wks median run length; The Beatles with the most appearances; Taylor Swift with the highest average run length among modern artists."
       }
     ],
@@ -436,19 +436,19 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about song-Level Position Averages Crowd the Bottom Rung?",
+        "question": "What does the data show about Song-Level Position Averages Crowd the Bottom Rung?",
         "answer": "Key figure: 100,000 — Records in the working dataset. The source is the TidyTuesday release from 2021-09-14 (billboard.csv). After cleaning, the analysis sample contains 100,000 records."
       },
       {
-        "question": "What does the data show about leaders by Week Position Are a Flat Elite?",
+        "question": "What does the data show about Leaders by Week Position Are a Flat Elite?",
         "answer": "Key figure: 50.0 — Median Week position. The source is the TidyTuesday release from 2021-09-14 (billboard.csv). After cleaning, the analysis sample contains 100,000 records."
       },
       {
-        "question": "What does the data show about weekly Positions Fill the Chart Almost Uniformly?",
+        "question": "What does the data show about Weekly Positions Fill the Chart Almost Uniformly?",
         "answer": "Key figure: 100 — Highest observed Week position. The source is the TidyTuesday release from 2021-09-14 (billboard.csv). After cleaning, the analysis sample contains 100,000 records."
       },
       {
-        "question": "What does the data show about concentration Among Songs Is Mechanical at First?",
+        "question": "What does the data show about Concentration Among Songs Is Mechanical at First?",
         "answer": "Key figure: Down By The River — Top Song by Week position. The source is the TidyTuesday release from 2021-09-14 (billboard.csv). After cleaning, the analysis sample contains 100,000 records."
       }
     ],
@@ -483,19 +483,19 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about the Catalog’s Median Rating Sits Near 6.39?",
+        "question": "What does the data show about The Catalog’s Median Rating Sits Near 6.39?",
         "answer": "Key figure: 10,532 — Records in the working dataset. The source is the TidyTuesday release from 2019-03-12 (board_games.csv). After cleaning, 10,532 rows remain in the working frame."
       },
       {
-        "question": "What does the data show about designer Editions and Heavy Games Own the Peak?",
+        "question": "What does the data show about Designer Editions and Heavy Games Own the Peak?",
         "answer": "Key figure: 6.39 — Median Average rating. The source is the TidyTuesday release from 2019-03-12 (board_games.csv). After cleaning, 10,532 rows remain in the working frame."
       },
       {
-        "question": "What does the data show about wargame Categories Rate Higher Than Card Games?",
+        "question": "What does the data show about Wargame Categories Rate Higher Than Card Games?",
         "answer": "Key figure: 9.00 — Highest observed Average rating. The source is the TidyTuesday release from 2019-03-12 (board_games.csv). After cleaning, 10,532 rows remain in the working frame."
       },
       {
-        "question": "What does the data show about civil War and Napoleonic Titles Beat the Median Most?",
+        "question": "What does the data show about Civil War and Napoleonic Titles Beat the Median Most?",
         "answer": "Key figure: Small World Designer Edition — Top Name by Average rating. The source is the TidyTuesday release from 2019-03-12 (board_games.csv). After cleaning, 10,532 rows remain in the working frame."
       }
     ],
@@ -529,19 +529,19 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about concert Residencies Rewrite the Price Ceiling?",
+        "question": "What does the data show about Concert Residencies Rewrite the Price Ceiling?",
         "answer": "Key figure: 47,524 — Records in the working dataset. The source is the TidyTuesday release from 2020-04-28 (grosses.csv). After cleaning, 47,524 records remain for charting."
       },
       {
-        "question": "What does the data show about even Among Leaders, Springsteen Is an Outlier?",
+        "question": "What does the data show about Even Among Leaders, Springsteen Is an Outlier?",
         "answer": "Key figure: 60.2 — Median Avg ticket price. The source is the TidyTuesday release from 2020-04-28 (grosses.csv). After cleaning, 47,524 records remain for charting."
       },
       {
-        "question": "What does the data show about house Medians Cluster Near the Industry Middle?",
+        "question": "What does the data show about House Medians Cluster Near the Industry Middle?",
         "answer": "Key figure: 512 — Highest observed Avg ticket price. The source is the TidyTuesday release from 2020-04-28 (grosses.csv). After cleaning, 47,524 records remain for charting."
       },
       {
-        "question": "What does the data show about gershwin Leads the Gap Above the Median?",
+        "question": "What does the data show about Gershwin Leads the Gap Above the Median?",
         "answer": "Key figure: Springsteen On Broadway — Top Show by Avg ticket price. The source is the TidyTuesday release from 2020-04-28 (grosses.csv). After cleaning, 47,524 records remain for charting."
       }
     ],
@@ -576,15 +576,15 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about leadership Trait Analysis?",
+        "question": "What does the data show about Leadership Trait Analysis?",
         "answer": "Key figure: 100 BCE — Caesar&#39;s birth year — born into Rome&#39;s most turbulent political century, to a patrician family living in the Subura tenements. By 44 BCE, Caesar had crossed the Rubicon, won a civil war, reformed the debt system, redistributed land to 80,000 veterans and urban poor, rebuilt the calendar, and declared…"
       },
       {
-        "question": "What does the data show about the Economic Fingerprint?",
+        "question": "What does the data show about The Economic Fingerprint?",
         "answer": "Key figure: 38 days — Held captive by Cilician pirates at age 25 — he laughed at their ransom demand, volunteered to pay more, then crucified every one of them after his release. By 44 BCE, Caesar had crossed the Rubicon, won a civil war, reformed the debt system, redistributed land to 80,000 veterans and urban poor, rebuilt the calendar, and declared…"
       },
       {
-        "question": "What does the data show about the Patronage Network?",
+        "question": "What does the data show about The Patronage Network?",
         "answer": "Key figure: 0.95 — Caesar&#39;s Need for Power score under the Hermann (1999) Leadership Trait Analysis framework — near the ceiling of any world leader ever profiled. By 44 BCE, Caesar had crossed the Rubicon, won a civil war, reformed the debt system, redistributed land to 80,000 veterans and urban poor, rebuilt the calendar, and declared…"
       },
       {
@@ -626,15 +626,15 @@
         "answer": "Key figure: 2 — State systems compared. A full production stack for this comparison includes BEA state GDP by industry, Census ACS population and migration, IRS migration summaries, BLS employment, state tax and budget…"
       },
       {
-        "question": "What does the data show about growth Model?",
+        "question": "What does the data show about Growth Model?",
         "answer": "Key figure: 7 — Rivalry dimensions scored. A full production stack for this comparison includes BEA state GDP by industry, Census ACS population and migration, IRS migration summaries, BLS employment, state tax and budget…"
       },
       {
-        "question": "What does the data show about export Fingerprint?",
+        "question": "What does the data show about Export Fingerprint?",
         "answer": "Key figure: 7 — Export/industry families compared. A full production stack for this comparison includes BEA state GDP by industry, Census ACS population and migration, IRS migration summaries, BLS employment, state tax and budget…"
       },
       {
-        "question": "What does the data show about hidden Tradeoffs?",
+        "question": "What does the data show about Hidden Tradeoffs?",
         "answer": "Key figure: 6 — Next comparison questions. A full production stack for this comparison includes BEA state GDP by industry, Census ACS population and migration, IRS migration summaries, BLS employment, state tax and budget…"
       }
     ],
@@ -669,19 +669,19 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about the 1960s are still the gravitational center?",
+        "question": "What does the data show about The 1960s are still the gravitational center?",
         "answer": "Key figure: 18 — NBA championships, the league record entering 2025. What follows reads Boston as an institution of expectation: how densely the titles stacked, how the franchise sits against the rest of the league’s ceiling, how eras converted…"
       },
       {
-        "question": "What does the data show about boston and Los Angeles define the league’s summit?",
+        "question": "What does the data show about Boston and Los Angeles define the league’s summit?",
         "answer": "Key figure: 11 — Titles won during the Bill Russell era. What follows reads Boston as an institution of expectation: how densely the titles stacked, how the franchise sits against the rest of the league’s ceiling, how eras converted…"
       },
       {
-        "question": "What does the data show about russell converted chances; later eras inherited the burden?",
+        "question": "What does the data show about Russell converted chances; later eras inherited the burden?",
         "answer": "Key figure: 2024 — Most recent championship. What follows reads Boston as an institution of expectation: how densely the titles stacked, how the franchise sits against the rest of the league’s ceiling, how eras converted…"
       },
       {
-        "question": "What does the data show about droughts do not erase the claim—they test it?",
+        "question": "What does the data show about Droughts do not erase the claim—they test it?",
         "answer": "Key figure: 22 — Years between the 1986 and 2008 titles. What follows reads Boston as an institution of expectation: how densely the titles stacked, how the franchise sits against the rest of the league’s ceiling, how eras converted…"
       }
     ],
@@ -715,19 +715,19 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about longer Max Tenures Are Rare in the Company Ranking?",
+        "question": "What does the data show about Longer Max Tenures Are Rare in the Company Ranking?",
         "answer": "Key figure: 9,423 — Records in the working dataset. The source is the TidyTuesday release from 2021-04-27 (departures.csv). After cleaning, 9,423 rows remain."
       },
       {
-        "question": "What does the data show about the Top Dozen Caps Out Quickly?",
+        "question": "What does the data show about The Top Dozen Caps Out Quickly?",
         "answer": "Key figure: 1.00 — Median Max tenure ceodb. The source is the TidyTuesday release from 2021-04-27 (departures.csv). After cleaning, 9,423 rows remain."
       },
       {
-        "question": "What does the data show about interim Labels Dominate the Category Mix?",
+        "question": "What does the data show about Interim Labels Dominate the Category Mix?",
         "answer": "Key figure: 4.00 — Highest observed Max tenure ceodb. The source is the TidyTuesday release from 2021-04-27 (departures.csv). After cleaning, 9,423 rows remain."
       },
       {
-        "question": "What does the data show about gaps to the Median Are Mostly Flat?",
+        "question": "What does the data show about Gaps to the Median Are Mostly Flat?",
         "answer": "Key figure: PHOTRONICS INC — Top Coname by Max tenure ceodb. The source is the TidyTuesday release from 2021-04-27 (departures.csv). After cleaning, 9,423 rows remain."
       }
     ],
@@ -759,19 +759,19 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about transfers Concentrate Overwhelmingly in the US?",
+        "question": "What does the data show about Transfers Concentrate Overwhelmingly in the US?",
         "answer": "Key figure: 2,194 — Records in the working dataset. The source is the TidyTuesday release from 2018-12-18 (allCetaceanData.csv). After cleaning, 2,194 rows remain."
       },
       {
-        "question": "What does the data show about annual Volume Peaked in the Early 1970s?",
+        "question": "What does the data show about Annual Volume Peaked in the Early 1970s?",
         "answer": "Key figure: 1946–2017 — Year span covered in the file. The source is the TidyTuesday release from 2018-12-18 (allCetaceanData.csv). After cleaning, 2,194 rows remain."
       },
       {
-        "question": "What does the data show about bottlenose Is the Archive’s Default Animal?",
+        "question": "What does the data show about Bottlenose Is the Archive’s Default Animal?",
         "answer": "Key figure: US — Most common Transfer. The source is the TidyTuesday release from 2018-12-18 (allCetaceanData.csv). After cleaning, 2,194 rows remain."
       },
       {
-        "question": "What does the data show about the US Bucket Is the Landscape?",
+        "question": "What does the data show about The US Bucket Is the Landscape?",
         "answer": "The source is the TidyTuesday release from 2018-12-18 (allCetaceanData.csv). After cleaning, 2,194 rows remain."
       }
     ],
@@ -806,19 +806,19 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about the Shelf Centers on Mid-Nineteenth-Century Births?",
+        "question": "What does the data show about The Shelf Centers on Mid-Nineteenth-Century Births?",
         "answer": "Key figure: 35 — Records in the working dataset. The source is the TidyTuesday release from 2025-12-30 (christmas_novels.csv). After cleaning, 35 rows remain."
       },
       {
-        "question": "What does the data show about later-Born Titles Mark the Edge of the Canon?",
+        "question": "What does the data show about Later-Born Titles Mark the Edge of the Canon?",
         "answer": "Key figure: 1,859 — Median Birthdate. The source is the TidyTuesday release from 2025-12-30 (christmas_novels.csv). After cleaning, 35 rows remain."
       },
       {
-        "question": "What does the data show about birthdates Cluster Around the 1860s?",
+        "question": "What does the data show about Birthdates Cluster Around the 1860s?",
         "answer": "Key figure: 1,891 — Highest observed Birthdate. The source is the TidyTuesday release from 2025-12-30 (christmas_novels.csv). After cleaning, 35 rows remain."
       },
       {
-        "question": "What does the data show about dickens and Thackeray Sit Earlier Than the Median?",
+        "question": "What does the data show about Dickens and Thackeray Sit Earlier Than the Median?",
         "answer": "Key figure: The Camp Fire Girls Solve a — Top Title by Birthdate. The source is the TidyTuesday release from 2025-12-30 (christmas_novels.csv). After cleaning, 35 rows remain."
       }
     ],
@@ -852,19 +852,19 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about seasonal Weeks Spiked in the Mid-2000s?",
+        "question": "What does the data show about Seasonal Weeks Spiked in the Mid-2000s?",
         "answer": "Key figure: 387 — Records in the working dataset. The source is the TidyTuesday release from 2019-12-24 (christmas_songs.csv). After cleaning, 387 rows remain."
       },
       {
-        "question": "What does the data show about twenty Weeks Marks the Upper Club?",
+        "question": "What does the data show about Twenty Weeks Marks the Upper Club?",
         "answer": "Key figure: 8.00 — Median Weeks on chart. The source is the TidyTuesday release from 2019-12-24 (christmas_songs.csv). After cleaning, 387 rows remain."
       },
       {
-        "question": "What does the data show about most Songs Cluster at Short Chart Lives?",
+        "question": "What does the data show about Most Songs Cluster at Short Chart Lives?",
         "answer": "Key figure: 20.0 — Highest observed Weeks on chart. The source is the TidyTuesday release from 2019-12-24 (christmas_songs.csv). After cleaning, 387 rows remain."
       },
       {
-        "question": "What does the data show about standards Reappear Across Decades?",
+        "question": "What does the data show about Standards Reappear Across Decades?",
         "answer": "Key figure: BETTER DAYS — Top Song by Weeks on chart. The source is the TidyTuesday release from 2019-12-24 (christmas_songs.csv). After cleaning, 387 rows remain."
       }
     ],
@@ -897,19 +897,19 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about a Handful of Giants Dominate Headcount?",
+        "question": "What does the data show about A Handful of Giants Dominate Headcount?",
         "answer": "Key figure: 259 — Records in the working dataset. The source is the TidyTuesday release from 2024-10-22 (cia_factbook.csv). After cleaning, 259 rows remain."
       },
       {
-        "question": "What does the data show about even the Top Dozen Has a Steep Internal Drop?",
+        "question": "What does the data show about Even the Top Dozen Has a Steep Internal Drop?",
         "answer": "Key figure: 5,220,371 — Median Population. The source is the TidyTuesday release from 2024-10-22 (cia_factbook.csv). After cleaning, 259 rows remain."
       },
       {
-        "question": "What does the data show about most Countries Sit in the Small-Population Mass?",
+        "question": "What does the data show about Most Countries Sit in the Small-Population Mass?",
         "answer": "Key figure: 1,355,692,576 — Highest observed Population. The source is the TidyTuesday release from 2024-10-22 (cia_factbook.csv). After cleaning, 259 rows remain."
       },
       {
-        "question": "What does the data show about the Top Five Already Hold Most of the People?",
+        "question": "What does the data show about The Top Five Already Hold Most of the People?",
         "answer": "Key figure: China — Top Country by Population. The source is the TidyTuesday release from 2024-10-22 (cia_factbook.csv). After cleaning, 259 rows remain."
       }
     ],
@@ -943,19 +943,19 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about system Layers?",
+        "question": "What does the data show about System Layers?",
         "answer": "Key figure: 1,667 — Subnational regions in DOSE v2.14 public documentation. Start with the scale: 1,667 — Subnational regions in DOSE v2.14 public documentation; and 45 — Cities in World Cities Culture Forum 5th edition summaries."
       },
       {
-        "question": "What does the data show about goods and Services?",
+        "question": "What does the data show about Goods and Services?",
         "answer": "Key figure: 45 — Cities in World Cities Culture Forum 5th edition summaries. Start with the scale: 1,667 — Subnational regions in DOSE v2.14 public documentation; and 45 — Cities in World Cities Culture Forum 5th edition summaries."
       },
       {
-        "question": "What does the data show about history Layers?",
+        "question": "What does the data show about History Layers?",
         "answer": "Key figure: 1,100+ — Datasets in DataSF public portal summaries. Start with the scale: 1,667 — Subnational regions in DOSE v2.14 public documentation; and 45 — Cities in World Cities Culture Forum 5th edition summaries."
       },
       {
-        "question": "What does the data show about city Fingerprint?",
+        "question": "What does the data show about City Fingerprint?",
         "answer": "Key figure: 6 — Diagnostic questions in the city microscope. Start with the scale: 1,667 — Subnational regions in DOSE v2.14 public documentation; and 45 — Cities in World Cities Culture Forum 5th edition summaries."
       }
     ],
@@ -994,11 +994,11 @@
         "answer": "Key figure: 1,339 — Coffee samples rated by CQI Q Graders across Arabica and Robusta species. Keep these markers in view as the story unfolds."
       },
       {
-        "question": "What does the data show about the Quality-Retail Disconnect?",
+        "question": "What does the data show about The Quality-Retail Disconnect?",
         "answer": "Key figure: 85.3 — Ethiopia&#39;s median CQI cup score — highest of any country with 20+ samples. Keep these markers in view as the story unfolds."
       },
       {
-        "question": "What does the data show about the Sub-Metric Fingerprint?",
+        "question": "What does the data show about The Sub-Metric Fingerprint?",
         "answer": "Key figure: 0 — Starbucks locations in Ethiopia, Kenya, and Uganda — the top three scoring nations. Keep these markers in view as the story unfolds."
       },
       {
@@ -1036,19 +1036,19 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about psychology Leads Low-Wage Job Counts by a Wide Margin?",
+        "question": "What does the data show about Psychology Leads Low-Wage Job Counts by a Wide Margin?",
         "answer": "Key figure: 173 — Records in the working dataset. The source is the TidyTuesday release from 2018-10-16 (recent-grads.csv). After cleaning, 173 major rows remain."
       },
       {
-        "question": "What does the data show about the Top Dozen’s Median Is Still Enormous?",
+        "question": "What does the data show about The Top Dozen’s Median Is Still Enormous?",
         "answer": "Key figure: 1,231 — Median Low wage jobs. The source is the TidyTuesday release from 2018-10-16 (recent-grads.csv). After cleaning, 173 major rows remain."
       },
       {
-        "question": "What does the data show about humanities and Business Categories Sit Higher Than Engineering?",
+        "question": "What does the data show about Humanities and Business Categories Sit Higher Than Engineering?",
         "answer": "Key figure: 48,207 — Highest observed Low wage jobs. The source is the TidyTuesday release from 2018-10-16 (recent-grads.csv). After cleaning, 173 major rows remain."
       },
       {
-        "question": "What does the data show about gaps Confirm Humanities and Business Above the Median?",
+        "question": "What does the data show about Gaps Confirm Humanities and Business Above the Median?",
         "answer": "Key figure: PSYCHOLOGY — Top Major by Low wage jobs. The source is the TidyTuesday release from 2018-10-16 (recent-grads.csv). After cleaning, 173 major rows remain."
       }
     ],
@@ -1083,19 +1083,19 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about early Characters Logged Higher Median Appearances?",
+        "question": "What does the data show about Early Characters Logged Higher Median Appearances?",
         "answer": "Key figure: 23,272 — Records in the working dataset. The source is the TidyTuesday release from 2018-05-29 (week9_comic_characters.csv). After cleaning, 23,272 rows remain."
       },
       {
-        "question": "What does the data show about a Dozen Icons Own the Appearance Summit?",
+        "question": "What does the data show about A Dozen Icons Own the Appearance Summit?",
         "answer": "Key figure: 4.00 — Median Appearances. The source is the TidyTuesday release from 2018-05-29 (week9_comic_characters.csv). After cleaning, 23,272 rows remain."
       },
       {
-        "question": "What does the data show about marvel Has More Characters; DC’s Median Appearances Run Higher?",
+        "question": "What does the data show about Marvel Has More Characters; DC’s Median Appearances Run Higher?",
         "answer": "Key figure: 4,043 — Highest observed Appearances. The source is the TidyTuesday release from 2018-05-29 (week9_comic_characters.csv). After cleaning, 23,272 rows remain."
       },
       {
-        "question": "What does the data show about the Top Five Names Hold Nearly Half the Leader Aggregate?",
+        "question": "What does the data show about The Top Five Names Hold Nearly Half the Leader Aggregate?",
         "answer": "Key figure: Spider-Man (Peter Parker) — Top Name by Appearances. The source is the TidyTuesday release from 2018-05-29 (week9_comic_characters.csv). After cleaning, 23,272 rows remain."
       }
     ],
@@ -1130,19 +1130,19 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about the Super Bowl column froze after two old engines?",
+        "question": "What does the data show about The Super Bowl column froze after two old engines?",
         "answer": "Key figure: 5 — Super Bowl championships. The charts measure that split: titles by era, franchise value against playoff wins since 1996, playoff production by decade, regular-season winning by quarterback era, and the…"
       },
       {
-        "question": "What does the data show about the richest brand, a modest recent playoff archive?",
+        "question": "What does the data show about The richest brand, a modest recent playoff archive?",
         "answer": "Key figure: 1995 — Most recent Super Bowl-winning season. The charts measure that split: titles by era, franchise value against playoff wins since 1996, playoff production by decade, regular-season winning by quarterback era, and the…"
       },
       {
-        "question": "What does the data show about the 1970s and 1990s still carry the memory?",
+        "question": "What does the data show about The 1970s and 1990s still carry the memory?",
         "answer": "Key figure: 29 — Years since last NFC championship appearance entering 2025. The charts measure that split: titles by era, franchise value against playoff wins since 1996, playoff production by decade, regular-season winning by quarterback era, and the…"
       },
       {
-        "question": "What does the data show about quarterback competence never solved conversion?",
+        "question": "What does the data show about Quarterback competence never solved conversion?",
         "answer": "Key figure: $10B+ — Widely cited estimated franchise value range. The charts measure that split: titles by era, franchise value against playoff wins since 1996, playoff production by decade, regular-season winning by quarterback era, and the…"
       }
     ],
@@ -1175,19 +1175,19 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about high-ABV Outliers Are Named Experiments?",
+        "question": "What does the data show about High-ABV Outliers Are Named Experiments?",
         "answer": "Key figure: 2,410 — Records in the working dataset. The source is the TidyTuesday release from 2018-07-10 (week15_beers.xlsx). After cleaning, 2,410 rows remain."
       },
       {
-        "question": "What does the data show about the Top Dozen Still Doubles Everyday Strength?",
+        "question": "What does the data show about The Top Dozen Still Doubles Everyday Strength?",
         "answer": "Key figure: 0.06 — Median Abv. The source is the TidyTuesday release from 2018-07-10 (week15_beers.xlsx). After cleaning, 2,410 rows remain."
       },
       {
-        "question": "What does the data show about most Beers Pile Up Near 5–6% ABV?",
+        "question": "What does the data show about Most Beers Pile Up Near 5–6% ABV?",
         "answer": "Key figure: 0.13 — Highest observed Abv. The source is the TidyTuesday release from 2018-07-10 (week15_beers.xlsx). After cleaning, 2,410 rows remain."
       },
       {
-        "question": "What does the data show about high-ABV Names Concentrate in a Short List?",
+        "question": "What does the data show about High-ABV Names Concentrate in a Short List?",
         "answer": "Key figure: Lee Hill Series Vol. 5 - Bel — Top Name by Abv. The source is the TidyTuesday release from 2018-07-10 (week15_beers.xlsx). After cleaning, 2,410 rows remain."
       }
     ],
@@ -1221,19 +1221,19 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about soft Power and Trade?",
+        "question": "What does the data show about Soft Power and Trade?",
         "answer": "Key figure: 8 — Countries and cultural-export systems highlighted. The source stack includes UNESCO cultural statistics, WIPO creative-industry indicators, World Bank and OECD services data, MusicBrainz, IMDb/TMDb-style film metadata, Wikidata,…"
       },
       {
-        "question": "What does the data show about medium Exportability?",
+        "question": "What does the data show about Medium Exportability?",
         "answer": "Key figure: 8 — Mediums scored for exportability. The source stack includes UNESCO cultural statistics, WIPO creative-industry indicators, World Bank and OECD services data, MusicBrainz, IMDb/TMDb-style film metadata, Wikidata,…"
       },
       {
-        "question": "What does the data show about cultural Waves?",
+        "question": "What does the data show about Cultural Waves?",
         "answer": "Key figure: 6 — Diagnostic cultural trade questions. The source stack includes UNESCO cultural statistics, WIPO creative-industry indicators, World Bank and OECD services data, MusicBrainz, IMDb/TMDb-style film metadata, Wikidata,…"
       },
       {
-        "question": "What does the data show about cultural Pipeline Cities?",
+        "question": "What does the data show about Cultural Pipeline Cities?",
         "answer": "Key figure: 45 — Global cities in World Cities Culture Forum 5th edition summaries. The source stack includes UNESCO cultural statistics, WIPO creative-industry indicators, World Bank and OECD services data, MusicBrainz, IMDb/TMDb-style film metadata, Wikidata,…"
       }
     ],
@@ -1268,19 +1268,19 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about los Angeles is built to manufacture October chances?",
+        "question": "What does the data show about Los Angeles is built to manufacture October chances?",
         "answer": "Key figure: 8 — World Series championships in franchise history. What follows charts that machine: pennants by decade, title context among historic clubs, the modern 90-win floor, spending against October markers, and the long shadow of the 1988-to-2020 ring gap."
       },
       {
-        "question": "What does the data show about historically elite—without Yankee-scale monopoly?",
+        "question": "What does the data show about Historically elite—without Yankee-scale monopoly?",
         "answer": "Key figure: 25 — Approximate National League pennants. What follows charts that machine: pennants by decade, title context among historic clubs, the modern 90-win floor, spending against October markers, and the long shadow of the 1988-to-2020 ring gap."
       },
       {
-        "question": "What does the data show about since the 2010s, 90-win baseball has looked normal?",
+        "question": "What does the data show about Since the 2010s, 90-win baseball has looked normal?",
         "answer": "Key figure: 111 — Regular-season wins in 2022. What follows charts that machine: pennants by decade, title context among historic clubs, the modern 90-win floor, spending against October markers, and the long shadow of the 1988-to-2020 ring gap."
       },
       {
-        "question": "What does the data show about spending is structural—October still breaks machines?",
+        "question": "What does the data show about Spending is structural—October still breaks machines?",
         "answer": "Key figure: 32 — Years between the 1988 and 2020 titles. What follows charts that machine: pennants by decade, title context among historic clubs, the modern 90-win floor, spending against October markers, and the long shadow of the 1988-to-2020 ring gap."
       }
     ],
@@ -1312,11 +1312,11 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about landscape?",
+        "question": "What does the data show about Landscape?",
         "answer": "Key figure: 29,678 — Records in the working dataset. The source is the TidyTuesday release from 2021-09-21 (R for Data Science community). The working file contains 29,678 rows and 11 columns after merging available tables in the week folder."
       },
       {
-        "question": "What does the data show about volume?",
+        "question": "What does the data show about Volume?",
         "answer": "Key figure: 1957–2021 — Year span covered in the file. The source is the TidyTuesday release from 2021-09-21 (R for Data Science community). The working file contains 29,678 rows and 11 columns after merging available tables in the week folder."
       },
       {
@@ -1324,7 +1324,7 @@
         "answer": "Key figure: Nominee — Most common Type. The source is the TidyTuesday release from 2021-09-21 (R for Data Science community). The working file contains 29,678 rows and 11 columns after merging available tables in the week folder."
       },
       {
-        "question": "What does the data show about category?",
+        "question": "What does the data show about Category?",
         "answer": "The source is the TidyTuesday release from 2021-09-21 (R for Data Science community). The working file contains 29,678 rows and 11 columns after merging available tables in the week folder."
       }
     ],
@@ -1357,19 +1357,19 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about western and New England States Lead Adult Exercise?",
+        "question": "What does the data show about Western and New England States Lead Adult Exercise?",
         "answer": "Key figure: 52 — Records in the working dataset. The source is the TidyTuesday release from 2018-07-17 (week16_exercise.xlsx). After cleaning, 52 rows remain."
       },
       {
-        "question": "What does the data show about the Top Dozen Sits Well Above the National Median?",
+        "question": "What does the data show about The Top Dozen Sits Well Above the National Median?",
         "answer": "Key figure: 23.0 — Median Adults. The source is the TidyTuesday release from 2018-07-17 (week16_exercise.xlsx). After cleaning, 52 rows remain."
       },
       {
-        "question": "What does the data show about most States Cluster Near the Low-20s?",
+        "question": "What does the data show about Most States Cluster Near the Low-20s?",
         "answer": "Key figure: 32.0 — Highest observed Adults. The source is the TidyTuesday release from 2018-07-17 (week16_exercise.xlsx). After cleaning, 52 rows remain."
       },
       {
-        "question": "What does the data show about top States Hold a Disproportionate Share of the Aggregate?",
+        "question": "What does the data show about Top States Hold a Disproportionate Share of the Aggregate?",
         "answer": "Key figure: Colorado — Top State by Adults. The source is the TidyTuesday release from 2018-07-17 (week16_exercise.xlsx). After cleaning, 52 rows remain."
       }
     ],
@@ -1403,15 +1403,15 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about three models of export power?",
+        "question": "What does the data show about Three models of export power?",
         "answer": "Key figure: 3 — Export superpower systems compared. Start with the scale: 3 export systems compared across 7 identity axes, with 6 dependency risks scored and 8 countries placed on a substitutability map."
       },
       {
-        "question": "What does the data show about product fingerprints?",
+        "question": "What does the data show about Product fingerprints?",
         "answer": "Key figure: 7 — Export identity axes. Start with the scale: 3 export systems compared across 7 identity axes, with 6 dependency risks scored and 8 countries placed on a substitutability map."
       },
       {
-        "question": "What does the data show about dependency risk?",
+        "question": "What does the data show about Dependency risk?",
         "answer": "Key figure: 6 — Dependency risks scored. Start with the scale: 3 export systems compared across 7 identity axes, with 6 dependency risks scored and 8 countries placed on a substitutability map."
       },
       {
@@ -1449,7 +1449,7 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about calorie ceilings by item?",
+        "question": "What does the data show about Calorie ceilings by item?",
         "answer": "Key figure: 515 — Records in the working dataset. Taco Bell appears most often in the working table, but frequency of listing is not the same as caloric intensity. The story is which items and which chains sit above the center of…"
       },
       {
@@ -1496,15 +1496,15 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about top 20 Franchises By Revenue?",
+        "question": "What does the data show about Top 20 Franchises By Revenue?",
         "answer": "Key figure: $91B — Pokémon lifetime revenue — the highest-grossing media franchise ever recorded, more than the MCU, Star Wars, and Harry Potter put together. The TidyTuesday 2019 media franchises dataset covers 107 properties, each with at least $4B in estimated lifetime revenue as of mid-2019. The figures are sourced from Wikipedia’s…"
       },
       {
-        "question": "What does the data show about revenue Per Year of Existence?",
+        "question": "What does the data show about Revenue Per Year of Existence?",
         "answer": "Key figure: 107 — Unique franchises in the dataset — every one of them has already cleared at least $4B in lifetime revenue. The TidyTuesday 2019 media franchises dataset covers 107 properties, each with at least $4B in estimated lifetime revenue as of mid-2019. The figures are sourced from Wikipedia’s…"
       },
       {
-        "question": "What does the data show about the Disney Empire, Consolidated?",
+        "question": "What does the data show about The Disney Empire, Consolidated?",
         "answer": "Key figure: $4B+ — Minimum threshold for inclusion — most IP that has ever existed never gets close to this number. The TidyTuesday 2019 media franchises dataset covers 107 properties, each with at least $4B in estimated lifetime revenue as of mid-2019. The figures are sourced from Wikipedia’s…"
       },
       {
@@ -1547,11 +1547,11 @@
         "answer": "Key figure: 8 — World Series titles — 1905, 1921, 1922, 1933, 1954 in New York; 2010, 2012, 2014 in San Francisco. Using the Lahman Baseball Database, the charts trace that arc across winning over time, the stadium’s economic break, and how a draft-built rotation converted a revenue floor into…"
       },
       {
-        "question": "What does the data show about oracle Park raised the floor before the dynasty arrived?",
+        "question": "What does the data show about Oracle Park raised the floor before the dynasty arrived?",
         "answer": "Key figure: 1883 — Year the franchise was founded as the New York Gothams — one of the oldest in American professional sports. Using the Lahman Baseball Database, the charts trace that arc across winning over time, the stadium’s economic break, and how a draft-built rotation converted a revenue floor into…"
       },
       {
-        "question": "What does the data show about the dynasty was built on draft cost, not free-agent monopoly?",
+        "question": "What does the data show about The dynasty was built on draft cost, not free-agent monopoly?",
         "answer": "Key figure: 141 — Seasons of franchise history covered in this report — from the Polo Grounds to Oracle Park. Using the Lahman Baseball Database, the charts trace that arc across winning over time, the stadium’s economic break, and how a draft-built rotation converted a revenue floor into…"
       },
       {
@@ -1597,11 +1597,11 @@
         "answer": "Key figure: 83.8 — Highest single observation — Hong Kong near peak. Start with the scale: 73.3 — median life expectancy in 2015, the closing year of the file; and 83.8 — the highest single observation, Hong Kong near peak. The span runs 472 years , from 1543 to 2015."
       },
       {
-        "question": "What does the data show about the split world?",
+        "question": "What does the data show about The split world?",
         "answer": "Key figure: 33.9→73 — Median lifespan: opening year to closing year. Start with the scale: 73.3 — median life expectancy in 2015, the closing year of the file; and 83.8 — the highest single observation, Hong Kong near peak. The span runs 472 years , from 1543 to 2015."
       },
       {
-        "question": "What does the data show about the frontrunners?",
+        "question": "What does the data show about The frontrunners?",
         "answer": "Key figure: Hong Kong — Highest average life expectancy over the full dataset. Start with the scale: 73.3 — median life expectancy in 2015, the closing year of the file; and 83.8 — the highest single observation, Hong Kong near peak. The span runs 472 years , from 1543 to 2015."
       }
     ],
@@ -1647,7 +1647,7 @@
         "answer": "Key figure: 135,319 — Highest observed GDP per capita, PPP (constant 2011 international $) (Rate). Income alone does not settle the mismanagement question. Rich places can fund collection systems; poorer coastal places can become leakage hotspots even at lower per-person…"
       },
       {
-        "question": "What does the data show about leader trends?",
+        "question": "What does the data show about Leader trends?",
         "answer": "Key figure: Macao — Top Entity by GDP per capita, PPP (constant 2011 international $) (Rate). Income alone does not settle the mismanagement question. Rich places can fund collection systems; poorer coastal places can become leakage hotspots even at lower per-person…"
       }
     ],
@@ -1682,15 +1682,15 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about the Era Timeline?",
+        "question": "What does the data show about The Era Timeline?",
         "answer": "Key figure: 3.24B — Total views across all four H3 channels, 2013–2026 — enough to give every person on Earth nearly half a view. The H3 ecosystem is not a single channel — it is a network. h3h3Productions launched in 2011 as a reaction-and-commentary channel built around the Fair Use legal fight that…"
       },
       {
-        "question": "What does the data show about the Duration Drift?",
+        "question": "What does the data show about The Duration Drift?",
         "answer": "Key figure: 1,638 — Videos analyzed after filtering Shorts and zero-view uploads from the original 1,876-video pull. The H3 ecosystem is not a single channel — it is a network. h3h3Productions launched in 2011 as a reaction-and-commentary channel built around the Fair Use legal fight that…"
       },
       {
-        "question": "What does the data show about the Fan Vs. Critic Divide?",
+        "question": "What does the data show about The Fan Vs. Critic Divide?",
         "answer": "Key figure: 4.5× — How much harder h3h3Productions hits per video vs. the H3 Podcast — 4.78M median vs. 1.05M. The H3 ecosystem is not a single channel — it is a network. h3h3Productions launched in 2011 as a reaction-and-commentary channel built around the Fair Use legal fight that…"
       },
       {
@@ -1822,7 +1822,7 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about timeline across states?",
+        "question": "What does the data show about Timeline across states?",
         "answer": "Key figure: 153 — Records in the working dataset. This is not a full climatology of Caribbean cyclones. It is a season-slice that lets three hard-hit places be read side by side — intensity, concentration, and timing included."
       },
       {
@@ -1834,7 +1834,7 @@
         "answer": "Key figure: 5,072 — Highest observed Value. This is not a full climatology of Caribbean cyclones. It is a season-slice that lets three hard-hit places be read side by side — intensity, concentration, and timing included."
       },
       {
-        "question": "What does the data show about concentration of impact?",
+        "question": "What does the data show about Concentration of impact?",
         "answer": "Key figure: Texas — Top State by Value. This is not a full climatology of Caribbean cyclones. It is a season-slice that lets three hard-hit places be read side by side — intensity, concentration, and timing included."
       }
     ],
@@ -1868,7 +1868,7 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about discharge by country?",
+        "question": "What does the data show about Discharge by country?",
         "answer": "Key figure: 58,502 — Records in the working dataset. Scale without treatment level is an incomplete story. A large plant with advanced treatment is a different civic object from a large plant stuck at primary or secondary standards."
       },
       {
@@ -1876,7 +1876,7 @@
         "answer": "Key figure: 1,079 — Median WASTE DIS. Scale without treatment level is an incomplete story. A large plant with advanced treatment is a different civic object from a large plant stuck at primary or secondary standards."
       },
       {
-        "question": "What does the data show about treatment levels spread discharge?",
+        "question": "What does the data show about Treatment levels spread discharge?",
         "answer": "Key figure: 3,073,754 — Highest observed WASTE DIS. Scale without treatment level is an incomplete story. A large plant with advanced treatment is a different civic object from a large plant stuck at primary or secondary standards."
       },
       {
@@ -1914,19 +1914,19 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about attention versus Quality?",
+        "question": "What does the data show about Attention versus Quality?",
         "answer": "Key figure: 7 — Core IMDb non-commercial TSV files publicly documented. Seven core TSV files are publicly documented; the refresh cadence is daily. Up to three genres can appear per title-basics row. Avatar’s runtime sits at 162 minutes. An…"
       },
       {
-        "question": "What does the data show about sequelization?",
+        "question": "What does the data show about Sequelization?",
         "answer": "Key figure: Daily — IMDb dataset refresh cadence. Seven core TSV files are publicly documented; the refresh cadence is daily. Up to three genres can appear per title-basics row. Avatar’s runtime sits at 162 minutes. An…"
       },
       {
-        "question": "What does the data show about runtime and Event Status?",
+        "question": "What does the data show about Runtime and Event Status?",
         "answer": "Key figure: 3 — Genres can be listed per IMDb title basics row. Seven core TSV files are publicly documented; the refresh cadence is daily. Up to three genres can appear per title-basics row. Avatar’s runtime sits at 162 minutes. An…"
       },
       {
-        "question": "What does the data show about platforms?",
+        "question": "What does the data show about Platforms?",
         "answer": "Key figure: 162 — Avatar runtime in minutes. Seven core TSV files are publicly documented; the refresh cadence is daily. Up to three genres can appear per title-basics row. Avatar’s runtime sits at 162 minutes. An…"
       }
     ],
@@ -1961,15 +1961,15 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about gdp Per Capita Across Empire Cores?",
+        "question": "What does the data show about Gdp Per Capita Across Empire Cores?",
         "answer": "Key figure: 1,200 yrs — Time for Western Europe to recover Rome&#39;s peak GDP per capita after the 476 CE collapse. The answer is not what the history textbooks imply. GDP goes up. Real wages mostly don’t. The rise takes centuries. The fall takes decades. And in every case, the institutions…"
       },
       {
-        "question": "What does the data show about rise Fast, Fall Faster?",
+        "question": "What does the data show about Rise Fast, Fall Faster?",
         "answer": "Key figure: 23% — Share of global population governed by the British Empire at its 1920 territorial peak — 412 million people. The answer is not what the history textbooks imply. GDP goes up. Real wages mostly don’t. The rise takes centuries. The fall takes decades. And in every case, the institutions…"
       },
       {
-        "question": "What does the data show about the Extraction Gap?",
+        "question": "What does the data show about The Extraction Gap?",
         "answer": "Key figure: ~7× — Number of times Imperial China cycled through full unification and fragmentation between 221 BCE and 1912 CE. The answer is not what the history textbooks imply. GDP goes up. Real wages mostly don’t. The rise takes centuries. The fall takes decades. And in every case, the institutions…"
       },
       {
@@ -2055,19 +2055,19 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about los Angeles does not win smoothly—it wins in acts?",
+        "question": "What does the data show about Los Angeles does not win smoothly—it wins in acts?",
         "answer": "Key figure: 17 — NBA championships in franchise history. The charts below track that machine—banner cycles by decade, the two-name ceiling with Boston, championship engines by defining star era, Finals frequency as institutional access,…"
       },
       {
-        "question": "What does the data show about the NBA’s title race is still a two-name conversation?",
+        "question": "What does the data show about The NBA’s title race is still a two-name conversation?",
         "answer": "Key figure: 32 — Approximate Finals appearances, the league's deepest final-round archive. The charts below track that machine—banner cycles by decade, the two-name ceiling with Boston, championship engines by defining star era, Finals frequency as institutional access,…"
       },
       {
-        "question": "What does the data show about the product is star gravity, not just basketball?",
+        "question": "What does the data show about The product is star gravity, not just basketball?",
         "answer": "Key figure: 5 — Titles in the Showtime decade. The charts below track that machine—banner cycles by decade, the two-name ceiling with Boston, championship engines by defining star era, Finals frequency as institutional access,…"
       },
       {
-        "question": "What does the data show about the real glamour metric is recurring invitation?",
+        "question": "What does the data show about The real glamour metric is recurring invitation?",
         "answer": "Key figure: 6 — Defining title eras from Mikan to LeBron/AD. The charts below track that machine—banner cycles by decade, the two-name ceiling with Boston, championship engines by defining star era, Finals frequency as institutional access,…"
       }
     ],
@@ -2098,7 +2098,7 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about a geographically uneven landscape?",
+        "question": "What does the data show about A geographically uneven landscape?",
         "answer": "Key figure: 8,612 — Records in the working dataset. A catalog of languages is also a catalog of scholarly attention. Places with denser fieldwork traditions look richer in the table even when the underlying human diversity story is…"
       },
       {
@@ -2106,11 +2106,11 @@
         "answer": "Key figure: Africa — Most common Macroarea. A catalog of languages is also a catalog of scholarly attention. Places with denser fieldwork traditions look richer in the table even when the underlying human diversity story is…"
       },
       {
-        "question": "What does the data show about regional concentration?",
+        "question": "What does the data show about Regional concentration?",
         "answer": "A catalog of languages is also a catalog of scholarly attention. Places with denser fieldwork traditions look richer in the table even when the underlying human diversity story is more even — or more endangered — than the row counts imply."
       },
       {
-        "question": "What does the data show about most languages appear once?",
+        "question": "What does the data show about Most languages appear once?",
         "answer": "A catalog of languages is also a catalog of scholarly attention. Places with denser fieldwork traditions look richer in the table even when the underlying human diversity story is more even — or more endangered — than the row counts imply."
       }
     ],
@@ -2144,19 +2144,19 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about the NFL makes ordinary franchises expensive?",
+        "question": "What does the data show about The NFL makes ordinary franchises expensive?",
         "answer": "Key figure: $6.5B — Approximate average NFL franchise value in recent Forbes-style estimates. The five charts below build a cross-league lens for later Artometrics profiles: value floors, star leverage, caps versus payroll spread, event scarcity, and the split between…"
       },
       {
-        "question": "What does the data show about basketball lets one name rewrite the jersey?",
+        "question": "What does the data show about Basketball lets one name rewrite the jersey?",
         "answer": "Key figure: 17 — NFL regular-season games per team. The five charts below build a cross-league lens for later Artometrics profiles: value floors, star leverage, caps versus payroll spread, event scarcity, and the split between…"
       },
       {
-        "question": "What does the data show about caps and taxes decide whether money separates or merely sustains?",
+        "question": "What does the data show about Caps and taxes decide whether money separates or merely sustains?",
         "answer": "Key figure: 162 — MLB regular-season games per team. The five charts below build a cross-league lens for later Artometrics profiles: value floors, star leverage, caps versus payroll spread, event scarcity, and the split between…"
       },
       {
-        "question": "What does the data show about seventeen games and 162 games are different psychologies?",
+        "question": "What does the data show about Seventeen games and 162 games are different psychologies?",
         "answer": "Key figure: 92 — NBA star leverage index in this editorial model. The five charts below build a cross-league lens for later Artometrics profiles: value floors, star leverage, caps versus payroll spread, event scarcity, and the split between…"
       }
     ],
@@ -2202,7 +2202,7 @@
         "answer": "Key figure: 11,695 — Highest observed Num parts. Quantity of pieces is not the same as play value, but it is a clean industrial signal: how much plastic inventory a box commits to, and how the company balances everyday sets against display pieces."
       },
       {
-        "question": "What does the data show about leader trends?",
+        "question": "What does the data show about Leader trends?",
         "answer": "Key figure: World Map — Top Name by Num parts. Quantity of pieces is not the same as play value, but it is a clean industrial signal: how much plastic inventory a box commits to, and how the company balances everyday sets against display pieces."
       }
     ],
@@ -2283,19 +2283,19 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about catalog and Now?",
+        "question": "What does the data show about Catalog and Now?",
         "answer": "Key figure: CC0 — MusicBrainz core database dump license for public-domain metadata. Core dumps are CC0 ; MetaBrainz publishes them about 2x/week . Documentation lists 11 JSON dump entity types. The frame below compares 7 fame paths with 8 artist anchors across 5 charts."
       },
       {
-        "question": "What does the data show about format Shift?",
+        "question": "What does the data show about Format Shift?",
         "answer": "Key figure: 2x/week — MetaBrainz published dump cadence in public documentation. Core dumps are CC0 ; MetaBrainz publishes them about 2x/week . Documentation lists 11 JSON dump entity types. The frame below compares 7 fame paths with 8 artist anchors across 5 charts."
       },
       {
-        "question": "What does the data show about genre Travel?",
+        "question": "What does the data show about Genre Travel?",
         "answer": "Key figure: 11 — JSON dump entity types listed in MusicBrainz documentation. Core dumps are CC0 ; MetaBrainz publishes them about 2x/week . Documentation lists 11 JSON dump entity types. The frame below compares 7 fame paths with 8 artist anchors across 5 charts."
       },
       {
-        "question": "What does the data show about fame Paths?",
+        "question": "What does the data show about Fame Paths?",
         "answer": "Key figure: 7 — Fame paths compared. Core dumps are CC0 ; MetaBrainz publishes them about 2x/week . Documentation lists 11 JSON dump entity types. The frame below compares 7 fame paths with 8 artist anchors across 5 charts."
       }
     ],
@@ -2329,19 +2329,19 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about scale and complexity?",
+        "question": "What does the data show about Scale and complexity?",
         "answer": "Key figure: 200+ — Countries/zones covered in UN Comtrade-style trade systems. Scale and complexity are different virtues. A country can be large because it sells one thing in volume, or complex because it sells many hard-to-make things. Those identities…"
       },
       {
-        "question": "What does the data show about product identity?",
+        "question": "What does the data show about Product identity?",
         "answer": "Key figure: 5,000+ — Products in OEC-style trade classifications. Scale and complexity are different virtues. A country can be large because it sells one thing in volume, or complex because it sells many hard-to-make things. Those identities…"
       },
       {
-        "question": "What does the data show about the export frontier moved?",
+        "question": "What does the data show about The export frontier moved?",
         "answer": "Key figure: HS — Harmonized System product code architecture. Scale and complexity are different virtues. A country can be large because it sells one thing in volume, or complex because it sells many hard-to-make things. Those identities…"
       },
       {
-        "question": "What does the data show about export fingerprints?",
+        "question": "What does the data show about Export fingerprints?",
         "answer": "Key figure: 6 — Diagnostic country questions. Scale and complexity are different virtues. A country can be large because it sells one thing in volume, or complex because it sells many hard-to-make things. Those identities…"
       }
     ],
@@ -2482,7 +2482,7 @@
         "answer": "Key figure: 312 — Highest observed Duration. The source is the TidyTuesday release from 2021-04-20 (R for Data Science community). The working file contains 7,787 rows and 13 columns after merging available tables in the week folder."
       },
       {
-        "question": "What does the data show about concentration?",
+        "question": "What does the data show about Concentration?",
         "answer": "Key figure: Black Mirror: Bandersnatch — Top Title by Duration. The source is the TidyTuesday release from 2021-04-20 (R for Data Science community). The working file contains 7,787 rows and 13 columns after merging available tables in the week folder."
       }
     ],
@@ -2516,19 +2516,19 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about command versus Lab?",
+        "question": "What does the data show about Command versus Lab?",
         "answer": "Key figure: 2 — Global intangible-output cities compared. Start with the scale: 2 — Global intangible-output cities compared; and 8 — Identity axes scored."
       },
       {
-        "question": "What does the data show about history Timing?",
+        "question": "What does the data show about History Timing?",
         "answer": "Key figure: 8 — Identity axes scored. Start with the scale: 2 — Global intangible-output cities compared; and 8 — Identity axes scored."
       },
       {
-        "question": "What does the data show about output Fingerprint?",
+        "question": "What does the data show about Output Fingerprint?",
         "answer": "Key figure: 6 — Shared pressure narratives tested. Start with the scale: 2 — Global intangible-output cities compared; and 8 — Identity axes scored."
       },
       {
-        "question": "What does the data show about pressure Pairing?",
+        "question": "What does the data show about Pressure Pairing?",
         "answer": "Key figure: 0 — Single-variable answers. Start with the scale: 2 — Global intangible-output cities compared; and 8 — Identity axes scored."
       }
     ],
@@ -2571,7 +2571,7 @@
         "answer": "Key figure: 0.00 — Median Magnitude body. Zeros in the magnitude field are not moral quiet. They are measurement gaps, non-detections, or unfilled cells that pull the median to the floor while a thin upper tail records…"
       },
       {
-        "question": "What does the data show about purpose spreads magnitudes?",
+        "question": "What does the data show about Purpose spreads magnitudes?",
         "answer": "Key figure: 7.40 — Highest observed Magnitude body. Zeros in the magnitude field are not moral quiet. They are measurement gaps, non-detections, or unfilled cells that pull the median to the floor while a thin upper tail records…"
       },
       {
@@ -2618,7 +2618,7 @@
         "answer": "Key figure: 15.0 — Median Score. Higher scores here mean more violation points, not better food. That inversion is easy to forget once letter grades take over the conversation."
       },
       {
-        "question": "What does the data show about scores by grade?",
+        "question": "What does the data show about Scores by grade?",
         "answer": "Key figure: 156 — Highest observed Score. Higher scores here mean more violation points, not better food. That inversion is easy to forget once letter grades take over the conversation."
       },
       {
@@ -2656,19 +2656,19 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about memory domains?",
+        "question": "What does the data show about Memory domains?",
         "answer": "Key figure: 85K+ — Biographies indexed by Pantheon in public-facing summaries. If humanity remembers some kinds of people more than others, that pattern is itself a cultural object. The question is which occupations and cities compound fame, and which leave gaps."
       },
       {
-        "question": "What does the data show about era shift?",
+        "question": "What does the data show about Era shift?",
         "answer": "Key figure: 15 — Minimum Wikipedia language editions used in Pantheon collection logic. If humanity remembers some kinds of people more than others, that pattern is itself a cultural object. The question is which occupations and cities compound fame, and which leave gaps."
       },
       {
-        "question": "What does the data show about memory capitals?",
+        "question": "What does the data show about Memory capitals?",
         "answer": "Key figure: 2016 — Scientific Data paper for Pantheon 1.0. If humanity remembers some kinds of people more than others, that pattern is itself a cultural object. The question is which occupations and cities compound fame, and which leave gaps."
       },
       {
-        "question": "What does the data show about two clocks of fame?",
+        "question": "What does the data show about Two clocks of fame?",
         "answer": "Key figure: 3 — Main memory engines: power, art, science. If humanity remembers some kinds of people more than others, that pattern is itself a cultural object. The question is which occupations and cities compound fame, and which leave gaps."
       }
     ],
@@ -2703,19 +2703,19 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about one era overwhelms the rest of the archive?",
+        "question": "What does the data show about One era overwhelms the rest of the archive?",
         "answer": "Key figure: 6 — Super Bowl championships. Was the dynasty Brady, Belichick, ownership, luck, or infrastructure? The charts treat it as a system shock—one era so large it became the franchise—then measure what remains after the system."
       },
       {
-        "question": "What does the data show about new England compressed a summit climb into two decades?",
+        "question": "What does the data show about New England compressed a summit climb into two decades?",
         "answer": "Key figure: 9 — Super Bowl appearances during the Brady/Belichick era. Was the dynasty Brady, Belichick, ownership, luck, or infrastructure? The charts treat it as a system shock—one era so large it became the franchise—then measure what remains after the system."
       },
       {
-        "question": "What does the data show about excellence became routine before it became legend?",
+        "question": "What does the data show about Excellence became routine before it became legend?",
         "answer": "Key figure: 30 — Approximate playoff wins from 2001 through 2019. Was the dynasty Brady, Belichick, ownership, luck, or infrastructure? The charts treat it as a system shock—one era so large it became the franchise—then measure what remains after the system."
       },
       {
-        "question": "What does the data show about they controlled access to the AFC’s final room?",
+        "question": "What does the data show about They controlled access to the AFC’s final room?",
         "answer": "Key figure: 13 — AFC championship appearances since 2001. Was the dynasty Brady, Belichick, ownership, luck, or infrastructure? The charts treat it as a system shock—one era so large it became the franchise—then measure what remains after the system."
       }
     ],
@@ -2750,19 +2750,19 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about runtime Creep?",
+        "question": "What does the data show about Runtime Creep?",
         "answer": "Key figure: 96% — Median Rotten Tomatoes score across rated Pixar theatrical releases. Calibration points: a 96% median Rotten Tomatoes score across rated theatrical releases; a longest runtime of 155 minutes; Toy Story’s 81 -minute floor; Cars 2 at 40% on Rotten…"
       },
       {
-        "question": "What does the data show about critic Scores?",
+        "question": "What does the data show about Critic Scores?",
         "answer": "Key figure: 155 — Longest runtime in the set — nan (2023). Calibration points: a 96% median Rotten Tomatoes score across rated theatrical releases; a longest runtime of 155 minutes; Toy Story’s 81 -minute floor; Cars 2 at 40% on Rotten…"
       },
       {
-        "question": "What does the data show about audience vs Critics?",
+        "question": "What does the data show about Audience vs Critics?",
         "answer": "Key figure: 81 — Shortest runtime — Toy Story, the film that started the canon. Calibration points: a 96% median Rotten Tomatoes score across rated theatrical releases; a longest runtime of 155 minutes; Toy Story’s 81 -minute floor; Cars 2 at 40% on Rotten…"
       },
       {
-        "question": "What does the data show about rating Mix?",
+        "question": "What does the data show about Rating Mix?",
         "answer": "Key figure: 40% — Lowest Rotten Tomatoes score — Cars 2, the critic floor. Calibration points: a 96% median Rotten Tomatoes score across rated theatrical releases; a longest runtime of 155 minutes; Toy Story’s 81 -minute floor; Cars 2 at 40% on Rotten…"
       }
     ],
@@ -2797,15 +2797,15 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about stat Identity By Type?",
+        "question": "What does the data show about Stat Identity By Type?",
         "answer": "Key figure: 949 — Pokémon in the dataset with a confirmed primary type. The dataset is TidyTuesday Week 13, 2025 — a cleaned version of the PokéAPI database covering 1,028 Pokémon entries across nine generations. Each row represents a single Pokémon…"
       },
       {
-        "question": "What does the data show about generation Creep?",
+        "question": "What does the data show about Generation Creep?",
         "answer": "Key figure: 18 — Distinct primary types represented. The dataset is TidyTuesday Week 13, 2025 — a cleaned version of the PokéAPI database covering 1,028 Pokémon entries across nine generations. Each row represents a single Pokémon…"
       },
       {
-        "question": "What does the data show about built Different?",
+        "question": "What does the data show about Built Different?",
         "answer": "Key figure: 8 — Generation IDs in the data — Gen 8 and 9 unclassified in source. The dataset is TidyTuesday Week 13, 2025 — a cleaned version of the PokéAPI database covering 1,028 Pokémon entries across nine generations. Each row represents a single Pokémon…"
       },
       {
@@ -2843,19 +2843,19 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about language gravity?",
+        "question": "What does the data show about Language gravity?",
         "answer": "Key figure: 75K+ — Approximate scale of Project Gutenberg ebooks in public-facing summaries. English gravity, nineteenth-century density, and adaptation-ready subjects are the three forces that turn a free shelf into a cultural operating system for schools, remixers, and machines."
       },
       {
-        "question": "What does the data show about the era machine?",
+        "question": "What does the data show about The era machine?",
         "answer": "Key figure: Weekly — CSV catalog update cadence noted in Gutenberg tooling docs. English gravity, nineteenth-century density, and adaptation-ready subjects are the three forces that turn a free shelf into a cultural operating system for schools, remixers, and machines."
       },
       {
-        "question": "What does the data show about author memory?",
+        "question": "What does the data show about Author memory?",
         "answer": "Key figure: Daily — RDF catalog update cadence noted by Gutenberg. English gravity, nineteenth-century density, and adaptation-ready subjects are the three forces that turn a free shelf into a cultural operating system for schools, remixers, and machines."
       },
       {
-        "question": "What does the data show about adaptation power?",
+        "question": "What does the data show about Adaptation power?",
         "answer": "Key figure: 8 — Languages compared in the first chart. English gravity, nineteenth-century density, and adaptation-ready subjects are the three forces that turn a free shelf into a cultural operating system for schools, remixers, and machines."
       }
     ],
@@ -2886,19 +2886,19 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about public-domain books cluster by subject type?",
+        "question": "What does the data show about Public-domain books cluster by subject type?",
         "answer": "Key figure: 100,000 — Records in the working dataset. Reading Gutenberg as a popularity contest misses the point. Reading it as a concentration map of reusable canon is where the data help."
       },
       {
-        "question": "What does the data show about a small set of subjects anchors the catalog?",
+        "question": "What does the data show about A small set of subjects anchors the catalog?",
         "answer": "Key figure: lcsh — Most common Subject type. Reading Gutenberg as a popularity contest misses the point. Reading it as a concentration map of reusable canon is where the data help."
       },
       {
-        "question": "What does the data show about subject families show the catalog center of gravity?",
+        "question": "What does the data show about Subject families show the catalog center of gravity?",
         "answer": "Reading Gutenberg as a popularity contest misses the point. Reading it as a concentration map of reusable canon is where the data help."
       },
       {
-        "question": "What does the data show about repeated subjects reveal the reusable canon?",
+        "question": "What does the data show about Repeated subjects reveal the reusable canon?",
         "answer": "Reading Gutenberg as a popularity contest misses the point. Reading it as a concentration map of reusable canon is where the data help."
       }
     ],
@@ -2932,7 +2932,7 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about frequency by call sign?",
+        "question": "What does the data show about Frequency by call sign?",
         "answer": "Key figure: 17,186 — Records in the working dataset. Frequency leaders at the top of the AM band are a different story from format share. The charts separate the physics of the dial from the culture of the playlist."
       },
       {
@@ -2940,7 +2940,7 @@
         "answer": "Key figure: 101 — Median Frequency. Frequency leaders at the top of the AM band are a different story from format share. The charts separate the physics of the dial from the culture of the playlist."
       },
       {
-        "question": "What does the data show about frequency by format?",
+        "question": "What does the data show about Frequency by format?",
         "answer": "Key figure: 1,700 — Highest observed Frequency. Frequency leaders at the top of the AM band are a different story from format share. The charts separate the physics of the dial from the culture of the playlist."
       },
       {
@@ -2978,7 +2978,7 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about stars by brand?",
+        "question": "What does the data show about Stars by brand?",
         "answer": "Key figure: 3,180 — Records in the working dataset. A ceiling of 5.00 that many top brands share means the interesting story is often below the perfect scores: which countries sit above the median, and how review volume relates to praise."
       },
       {
@@ -2986,7 +2986,7 @@
         "answer": "Key figure: 3.75 — Median Stars. A ceiling of 5.00 that many top brands share means the interesting story is often below the perfect scores: which countries sit above the median, and how review volume relates to praise."
       },
       {
-        "question": "What does the data show about stars by country?",
+        "question": "What does the data show about Stars by country?",
         "answer": "Key figure: 5.00 — Highest observed Stars. A ceiling of 5.00 that many top brands share means the interesting story is often below the perfect scores: which countries sit above the median, and how review volume relates to praise."
       },
       {
@@ -3025,15 +3025,15 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about the Geography of Failure?",
+        "question": "What does the data show about The Geography of Failure?",
         "answer": "Key figure: 48.1% — of HRRP-eligible hospital-condition pairs carried an excess readmission ratio above 1.0 — more readmissions than CMS models predict. The FY2025 HRRP supplemental extract covers the measurement window used for CMS’s published excess readmission ratios. After removing suppressed rows — hospitals with fewer than…"
       },
       {
-        "question": "What does the data show about the Condition Nobody Is Solving?",
+        "question": "What does the data show about The Condition Nobody Is Solving?",
         "answer": "Key figure: 6 — conditions tracked under HRRP — AMI, Heart Failure, Pneumonia, COPD, Hip/Knee, and CABG. The FY2025 HRRP supplemental extract covers the measurement window used for CMS’s published excess readmission ratios. After removing suppressed rows — hospitals with fewer than…"
       },
       {
-        "question": "What does the data show about ownership, Penalty, and Who Pays?",
+        "question": "What does the data show about Ownership, Penalty, and Who Pays?",
         "answer": "Key figure: 1.0018 — average excess readmission ratio nationally — the average hospital readmits slightly more patients than CMS models expect. The FY2025 HRRP supplemental extract covers the measurement window used for CMS’s published excess readmission ratios. After removing suppressed rows — hospitals with fewer than…"
       },
       {
@@ -3071,19 +3071,19 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about regional Title Density?",
+        "question": "What does the data show about Regional Title Density?",
         "answer": "Key figure: 10 — Large markets/cities compared. Start with the scale: 10 — Large markets/cities compared; and 7 — Regions grouped for title-density analysis."
       },
       {
-        "question": "What does the data show about market Stack?",
+        "question": "What does the data show about Market Stack?",
         "answer": "Key figure: 7 — Regions grouped for title-density analysis. Start with the scale: 10 — Large markets/cities compared; and 7 — Regions grouped for title-density analysis."
       },
       {
-        "question": "What does the data show about sport Dna?",
+        "question": "What does the data show about Sport Dna?",
         "answer": "Key figure: 6 — Identity archetypes used in the map. Start with the scale: 10 — Large markets/cities compared; and 7 — Regions grouped for title-density analysis."
       },
       {
-        "question": "What does the data show about city Pain versus Success?",
+        "question": "What does the data show about City Pain versus Success?",
         "answer": "Key figure: 94 — Toronto drought/pain index in this editorial model. Start with the scale: 10 — Large markets/cities compared; and 7 — Regions grouped for title-density analysis."
       }
     ],
@@ -3126,7 +3126,7 @@
         "answer": "Key figure: 250 — Median Rank 2003. Remember the rank inversion: lower numbers are greater prestige on a traditional list, while some chart cuts sort the numeric field as a magnitude. The prose below follows the…"
       },
       {
-        "question": "What does the data show about ranks by album type?",
+        "question": "What does the data show about Ranks by album type?",
         "answer": "Key figure: 500 — Highest observed Rank 2003. Remember the rank inversion: lower numbers are greater prestige on a traditional list, while some chart cuts sort the numeric field as a magnitude. The prose below follows the…"
       },
       {
@@ -3164,19 +3164,19 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about constantine’s thirty-one years set the name-level ceiling?",
+        "question": "What does the data show about Constantine’s thirty-one years set the name-level ceiling?",
         "answer": "Key figure: 68 — Records in the working dataset. Reign spans are derived from start and end dates in the emperors table. Negative or zero spans are excluded, so the working metric is observed tenure in years, not a modeled life…"
       },
       {
-        "question": "What does the data show about the top dozen still sits far above the median emperor?",
+        "question": "What does the data show about The top dozen still sits far above the median emperor?",
         "answer": "Key figure: 6.50 — Median Reign years. Reign spans are derived from start and end dates in the emperors table. Negative or zero spans are excluded, so the working metric is observed tenure in years, not a modeled life…"
       },
       {
-        "question": "What does the data show about dynasty boxes show contested, not uniform, tenure?",
+        "question": "What does the data show about Dynasty boxes show contested, not uniform, tenure?",
         "answer": "Key figure: 31.0 — Highest observed Reign years. Reign spans are derived from start and end dates in the emperors table. Negative or zero spans are excluded, so the working metric is observed tenure in years, not a modeled life…"
       },
       {
-        "question": "What does the data show about nerva–Antonine sits above the median; Gordian trails?",
+        "question": "What does the data show about Nerva–Antonine sits above the median; Gordian trails?",
         "answer": "Key figure: Constantine the Great — Top Name by Reign years. Reign spans are derived from start and end dates in the emperors table. Negative or zero spans are excluded, so the working metric is observed tenure in years, not a modeled life…"
       }
     ],
@@ -3210,19 +3210,19 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about identity Stack?",
+        "question": "What does the data show about Identity Stack?",
         "answer": "Key figure: 1,100+ — DataSF public portal dataset scale in public summaries. Start with the scale: 1,100+ — DataSF public portal dataset scale in public summaries; and 7 — Identity domains scored."
       },
       {
-        "question": "What does the data show about tradeoff History?",
+        "question": "What does the data show about Tradeoff History?",
         "answer": "Key figure: 7 — Identity domains scored. Start with the scale: 1,100+ — DataSF public portal dataset scale in public summaries; and 7 — Identity domains scored."
       },
       {
-        "question": "What does the data show about neighborhood Pressure?",
+        "question": "What does the data show about Neighborhood Pressure?",
         "answer": "Key figure: 6 — Open questions for the next SF production pass. Start with the scale: 1,100+ — DataSF public portal dataset scale in public summaries; and 7 — Identity domains scored."
       },
       {
-        "question": "What does the data show about competitor Set?",
+        "question": "What does the data show about Competitor Set?",
         "answer": "Key figure: 3 — Core tradeoff signals: tech, housing, tolerance. Start with the scale: 1,100+ — DataSF public portal dataset scale in public summaries; and 7 — Identity domains scored."
       }
     ],
@@ -3256,19 +3256,19 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about a flat median hides how extreme the upper tail is?",
+        "question": "What does the data show about A flat median hides how extreme the upper tail is?",
         "answer": "Key figure: 27,944 — Records in the working dataset. The source is the TidyTuesday release from 2019-09-24 (R for Data Science community). The working file contains 27,944 rows and 15 columns after merging available tables in the…"
       },
       {
-        "question": "What does the data show about butteville Union Elementary leads a steep LEA ladder?",
+        "question": "What does the data show about Butteville Union Elementary leads a steep LEA ladder?",
         "answer": "Key figure: 2.38 — Median Multi. The source is the TidyTuesday release from 2019-09-24 (R for Data Science community). The working file contains 27,944 rows and 15 columns after merging available tables in the…"
       },
       {
-        "question": "What does the data show about state boxes show how Multi spreads geographically?",
+        "question": "What does the data show about State boxes show how Multi spreads geographically?",
         "answer": "Key figure: 85.3 — Highest observed Multi. The source is the TidyTuesday release from 2019-09-24 (R for Data Science community). The working file contains 27,944 rows and 15 columns after merging available tables in the…"
       },
       {
-        "question": "What does the data show about oklahoma clears the median; New Jersey trails?",
+        "question": "What does the data show about Oklahoma clears the median; New Jersey trails?",
         "answer": "Key figure: butteville union elementary — Top LEA NAME by Multi. The source is the TidyTuesday release from 2019-09-24 (R for Data Science community). The working file contains 27,944 rows and 15 columns after merging available tables in the…"
       }
     ],
@@ -3301,19 +3301,19 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about story-level medians sit in a narrow band?",
+        "question": "What does the data show about Story-level medians sit in a narrow band?",
         "answer": "Key figure: 65,958 — Records in the working dataset. The source is the TidyTuesday release from 2025-11-18 (R for Data Science community). The working file contains 65,958 rows and 4 columns after merging available tables in the…"
       },
       {
-        "question": "What does the data show about even the leaders barely clear the file median?",
+        "question": "What does the data show about Even the leaders barely clear the file median?",
         "answer": "Key figure: 12.0 — Median Word count. The source is the TidyTuesday release from 2025-11-18 (R for Data Science community). The working file contains 65,958 rows and 4 columns after merging available tables in the…"
       },
       {
-        "question": "What does the data show about median 12.0, mean 10.9 — a mostly symmetric shape?",
+        "question": "What does the data show about Median 12.0, mean 10.9 — a mostly symmetric shape?",
         "answer": "Key figure: 18.0 — Highest observed Word count. The source is the TidyTuesday release from 2025-11-18 (R for Data Science community). The working file contains 65,958 rows and 4 columns after merging available tables in the…"
       },
       {
-        "question": "What does the data show about five books account for a third of aggregate word count?",
+        "question": "What does the data show about Five books account for a third of aggregate word count?",
         "answer": "Key figure: The Adventure of the Beryl C — Top Book by Word count. The source is the TidyTuesday release from 2025-11-18 (R for Data Science community). The working file contains 65,958 rows and 4 columns after merging available tables in the…"
       }
     ],
@@ -3344,7 +3344,7 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about volume?",
+        "question": "What does the data show about Volume?",
         "answer": "Key figure: 1,381 — Records in the working dataset. The source is the TidyTuesday release from 2019-08-27 (R for Data Science community). This working file contains 1,381 rows and 7 columns after merging all available CSV/XLSX…"
       },
       {
@@ -3352,11 +3352,11 @@
         "answer": "Key figure: 1–30 — Year span covered in the file. The source is the TidyTuesday release from 2019-08-27 (R for Data Science community). This working file contains 1,381 rows and 7 columns after merging all available CSV/XLSX…"
       },
       {
-        "question": "What does the data show about timeline?",
+        "question": "What does the data show about Timeline?",
         "answer": "The source is the TidyTuesday release from 2019-08-27 (R for Data Science community). This working file contains 1,381 rows and 7 columns after merging all available CSV/XLSX tables in the week folder."
       },
       {
-        "question": "What does the data show about frequency?",
+        "question": "What does the data show about Frequency?",
         "answer": "The source is the TidyTuesday release from 2019-08-27 (R for Data Science community). This working file contains 1,381 rows and 7 columns after merging all available CSV/XLSX tables in the week folder."
       }
     ],
@@ -3390,19 +3390,19 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about a few franchises own championship memory itself?",
+        "question": "What does the data show about A few franchises own championship memory itself?",
         "answer": "Key figure: 351 — Charts now audited across the Artometrics corpus. This index uses five charts drawn from public reference records—and from an Artometrics corpus that now holds 351 audited charts—to map championship mass, Finals conversion, brand…"
       },
       {
-        "question": "What does the data show about modern dynasties are finishers, not just invitees?",
+        "question": "What does the data show about Modern dynasties are finishers, not just invitees?",
         "answer": "Key figure: 4 — Major North American leagues compared. This index uses five charts drawn from public reference records—and from an Artometrics corpus that now holds 351 audited charts—to map championship mass, Finals conversion, brand…"
       },
       {
-        "question": "What does the data show about market power and competitive power are different variables?",
+        "question": "What does the data show about Market power and competitive power are different variables?",
         "answer": "Key figure: 27 — Yankees titles, the largest MLB archive. This index uses five charts drawn from public reference records—and from an Artometrics corpus that now holds 351 audited charts—to map championship mass, Finals conversion, brand…"
       },
       {
-        "question": "What does the data show about each league teaches fans a different theory of fairness?",
+        "question": "What does the data show about Each league teaches fans a different theory of fairness?",
         "answer": "Key figure: 0 — Cowboys titles since the 1990s dynasty. This index uses five charts drawn from public reference records—and from an Artometrics corpus that now holds 351 audited charts—to map championship mass, Finals conversion, brand…"
       }
     ],
@@ -3442,7 +3442,7 @@
         "answer": "Key figure: TBD — Catalog or sample size (observed). Editors, founders, and analysts who want evidence on how streaming libraries concentrate attention and inventory will find the frame here; the numbers arrive when the CSV does."
       },
       {
-        "question": "What does the data show about the Availability Gap: Hype vs What Stays Up?",
+        "question": "What does the data show about The Availability Gap: Hype vs What Stays Up?",
         "answer": "Key figure: TBD — Concentration or median signal (derived — label clearly). Editors, founders, and analysts who want evidence on how streaming libraries concentrate attention and inventory will find the frame here; the numbers arrive when the CSV does."
       },
       {
@@ -3481,19 +3481,19 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about median views fell as the archive got denser?",
+        "question": "What does the data show about Median views fell as the archive got denser?",
         "answer": "Key figure: 247 — Records in the working dataset. The source is the TidyTuesday release from 2021-03-02 (R for Data Science community). The working file contains 247 rows and 26 columns after merging available tables in the week…"
       },
       {
-        "question": "What does the data show about nFL leads the brand ladder on YouTube views?",
+        "question": "What does the data show about NFL leads the brand ladder on YouTube views?",
         "answer": "Key figure: 41,379 — Median View count. The source is the TidyTuesday release from 2021-03-02 (R for Data Science community). The working file contains 247 rows and 26 columns after merging available tables in the week…"
       },
       {
-        "question": "What does the data show about almost everything in the file is a YouTube video?",
+        "question": "What does the data show about Almost everything in the file is a YouTube video?",
         "answer": "Key figure: 176,373,378 — Highest observed View count. The source is the TidyTuesday release from 2021-03-02 (R for Data Science community). The working file contains 247 rows and 26 columns after merging available tables in the week…"
       },
       {
-        "question": "What does the data show about five brands hold eighty-seven percent of aggregate views?",
+        "question": "What does the data show about Five brands hold eighty-seven percent of aggregate views?",
         "answer": "Key figure: Doritos — Top Brand by View count. The source is the TidyTuesday release from 2021-03-02 (R for Data Science community). The working file contains 247 rows and 26 columns after merging available tables in the week…"
       }
     ],
@@ -3539,7 +3539,7 @@
         "answer": "Key figure: 9.68 — Highest observed Av rating. The source is the TidyTuesday release from 2019-01-08 (R for Data Science community) — the IMDb / Economist TV ratings extract. The working file contains 2,266 rows and 8 columns…"
       },
       {
-        "question": "What does the data show about leader Trends?",
+        "question": "What does the data show about Leader Trends?",
         "answer": "Key figure: Parenthood — Top Title by Av rating. The source is the TidyTuesday release from 2019-01-08 (R for Data Science community) — the IMDb / Economist TV ratings extract. The working file contains 2,266 rows and 8 columns…"
       }
     ],
@@ -3573,19 +3573,19 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about named museums pin the top of the deprivation scale?",
+        "question": "What does the data show about Named museums pin the top of the deprivation scale?",
         "answer": "Key figure: 4,191 — Records in the working dataset. The source is the TidyTuesday release from 2022-11-22 (R for Data Science community). The working file contains 4,191 rows and 35 columns after merging available tables in the…"
       },
       {
-        "question": "What does the data show about the leaders chart sits at the index ceiling?",
+        "question": "What does the data show about The leaders chart sits at the index ceiling?",
         "answer": "Key figure: 5.00 — Median Area Deprivation index. The source is the TidyTuesday release from 2022-11-22 (R for Data Science community). The working file contains 4,191 rows and 35 columns after merging available tables in the…"
       },
       {
-        "question": "What does the data show about admin areas spread museums across different deprivation bands?",
+        "question": "What does the data show about Admin areas spread museums across different deprivation bands?",
         "answer": "Key figure: 10.0 — Highest observed Area Deprivation index. The source is the TidyTuesday release from 2022-11-22 (R for Data Science community). The working file contains 4,191 rows and 35 columns after merging available tables in the…"
       },
       {
-        "question": "What does the data show about wiltshire clears the median; Cornwall trails in the South West cut?",
+        "question": "What does the data show about Wiltshire clears the median; Cornwall trails in the South West cut?",
         "answer": "Key figure: Blenheim Palace — Top Name of museum by Area Deprivation index. The source is the TidyTuesday release from 2022-11-22 (R for Data Science community). The working file contains 4,191 rows and 35 columns after merging available tables in the…"
       }
     ],
@@ -3616,19 +3616,19 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about yes votes dominate the sampled UN record?",
+        "question": "What does the data show about Yes votes dominate the sampled UN record?",
         "answer": "Key figure: 100,000 — Records in the working dataset. The source is the TidyTuesday release from 2021-03-23 (R for Data Science community). The working file contains 100,000 rows and 4 columns after merging available tables in the…"
       },
       {
-        "question": "What does the data show about brazil appears most often among country names?",
+        "question": "What does the data show about Brazil appears most often among country names?",
         "answer": "Key figure: yes — Most common Vote. The source is the TidyTuesday release from 2021-03-23 (R for Data Science community). The working file contains 100,000 rows and 4 columns after merging available tables in the…"
       },
       {
-        "question": "What does the data show about vote categories restate the file’s center of gravity?",
+        "question": "What does the data show about Vote categories restate the file’s center of gravity?",
         "answer": "The source is the TidyTuesday release from 2021-03-23 (R for Data Science community). The working file contains 100,000 rows and 4 columns after merging available tables in the week folder. Vote is the primary categorical field; country and country code…"
       },
       {
-        "question": "What does the data show about country appearances follow a long-tail pattern?",
+        "question": "What does the data show about Country appearances follow a long-tail pattern?",
         "answer": "The source is the TidyTuesday release from 2021-03-23 (R for Data Science community). The working file contains 100,000 rows and 4 columns after merging available tables in the week folder. Vote is the primary categorical field; country and country code…"
       }
     ],
@@ -3663,19 +3663,19 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about median doctorate counts edged upward across the decade?",
+        "question": "What does the data show about Median doctorate counts edged upward across the decade?",
         "answer": "Key figure: 3,370 — Records in the working dataset. The source is the TidyTuesday release from 2019-02-19 (R for Data Science community). The working file contains 3,370 rows and 6 columns after merging available tables in the week…"
       },
       {
-        "question": "What does the data show about social sciences lead the field ladder?",
+        "question": "What does the data show about Social sciences lead the field ladder?",
         "answer": "Key figure: 85.0 — Median N phds. The source is the TidyTuesday release from 2019-02-19 (R for Data Science community). The working file contains 3,370 rows and 6 columns after merging available tables in the week…"
       },
       {
-        "question": "What does the data show about broad fields do not share one production band?",
+        "question": "What does the data show about Broad fields do not share one production band?",
         "answer": "Key figure: 5,302 — Highest observed N phds. The source is the TidyTuesday release from 2019-02-19 (R for Data Science community). The working file contains 3,370 rows and 6 columns after merging available tables in the week…"
       },
       {
-        "question": "What does the data show about psychology and social sciences clear the median; engineering trails?",
+        "question": "What does the data show about Psychology and social sciences clear the median; engineering trails?",
         "answer": "Key figure: Social sciences — Top Field by N phds. The source is the TidyTuesday release from 2019-02-19 (R for Data Science community). The working file contains 3,370 rows and 6 columns after merging available tables in the week…"
       }
     ],
@@ -3709,19 +3709,19 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about median tuition climbed from the mid-five-thousands to the low-nine-thousands?",
+        "question": "What does the data show about Median tuition climbed from the mid-five-thousands to the low-nine-thousands?",
         "answer": "Key figure: 600 — Records in the working dataset. The source is the TidyTuesday release from 2018-04-02 (R for Data Science community). The working file contains 600 rows and 3 columns after merging available tables in the week…"
       },
       {
-        "question": "What does the data show about vermont leads the state ladder in the charted cut?",
+        "question": "What does the data show about Vermont leads the state ladder in the charted cut?",
         "answer": "Key figure: 7,607 — Median Value. The source is the TidyTuesday release from 2018-04-02 (R for Data Science community). The working file contains 600 rows and 3 columns after merging available tables in the week…"
       },
       {
-        "question": "What does the data show about median and mean sit close; the top decile starts above eleven thousand?",
+        "question": "What does the data show about Median and mean sit close; the top decile starts above eleven thousand?",
         "answer": "Key figure: 15,224 — Highest observed Value. The source is the TidyTuesday release from 2018-04-02 (R for Data Science community). The working file contains 600 rows and 3 columns after merging available tables in the week…"
       },
       {
-        "question": "What does the data show about leading states do not move in lockstep over time?",
+        "question": "What does the data show about Leading states do not move in lockstep over time?",
         "answer": "Key figure: New Hampshire — Top State by Value. The source is the TidyTuesday release from 2018-04-02 (R for Data Science community). The working file contains 600 rows and 3 columns after merging available tables in the week…"
       }
     ],
@@ -3755,19 +3755,19 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about median votes rose across three decades of elections?",
+        "question": "What does the data show about Median votes rose across three decades of elections?",
         "answer": "Key figure: 936 — Records in the working dataset. The source is the TidyTuesday release from 2018-10-09 (R for Data Science community). The working file contains 936 rows and 7 columns after merging available tables in the week…"
       },
       {
-        "question": "What does the data show about the United States total dwarfs the state ladder?",
+        "question": "What does the data show about The United States total dwarfs the state ladder?",
         "answer": "Key figure: 1,170,867 — Median Votes. The source is the TidyTuesday release from 2018-10-09 (R for Data Science community). The working file contains 936 rows and 7 columns after merging available tables in the week…"
       },
       {
-        "question": "What does the data show about a right-skewed distribution with a heavy upper tail?",
+        "question": "What does the data show about A right-skewed distribution with a heavy upper tail?",
         "answer": "Key figure: 132,609,063 — Highest observed Votes. The source is the TidyTuesday release from 2018-10-09 (R for Data Science community). The working file contains 936 rows and 7 columns after merging available tables in the week…"
       },
       {
-        "question": "What does the data show about leading states reshuffle across election cycles?",
+        "question": "What does the data show about Leading states reshuffle across election cycles?",
         "answer": "Key figure: United States — Top State by Votes. The source is the TidyTuesday release from 2018-10-09 (R for Data Science community). The working file contains 936 rows and 7 columns after merging available tables in the week…"
       }
     ],
@@ -3802,19 +3802,19 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about median concurrency climbed across the decade?",
+        "question": "What does the data show about Median concurrency climbed across the decade?",
         "answer": "Key figure: 83,631 — Records in the working dataset. The source is the TidyTuesday release from 2021-03-16 (R for Data Science community). The working file contains 83,631 rows and 8 columns after merging available tables in the…"
       },
       {
-        "question": "What does the data show about dota 2 leads a top tier that drops off fast?",
+        "question": "What does the data show about Dota 2 leads a top tier that drops off fast?",
         "answer": "Key figure: 203 — Median Avg. The source is the TidyTuesday release from 2021-03-16 (R for Data Science community). The working file contains 83,631 rows and 8 columns after merging available tables in the…"
       },
       {
-        "question": "What does the data show about months carry different concurrency distributions?",
+        "question": "What does the data show about Months carry different concurrency distributions?",
         "answer": "Key figure: 1,584,887 — Highest observed Avg. The source is the TidyTuesday release from 2021-03-16 (R for Data Science community). The working file contains 83,631 rows and 8 columns after merging available tables in the…"
       },
       {
-        "question": "What does the data show about january clears the median; October trails?",
+        "question": "What does the data show about January clears the median; October trails?",
         "answer": "Key figure: PLAYERUNKNOWN'S BATTLEGROUND — Top Gamename by Avg. The source is the TidyTuesday release from 2021-03-16 (R for Data Science community). The working file contains 83,631 rows and 8 columns after merging available tables in the…"
       }
     ],
@@ -3849,19 +3849,19 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about median Metascore edged up across the store’s expansion years?",
+        "question": "What does the data show about Median Metascore edged up across the store’s expansion years?",
         "answer": "Key figure: 26,688 — Records in the working dataset. The source is the TidyTuesday release from 2019-07-30 (R for Data Science community). The working file contains 26,688 rows and 11 columns after merging available tables in the…"
       },
       {
-        "question": "What does the data show about little Triangle tops a tightly packed critical elite?",
+        "question": "What does the data show about Little Triangle tops a tightly packed critical elite?",
         "answer": "Key figure: 73.0 — Median Metascore. The source is the TidyTuesday release from 2019-07-30 (R for Data Science community). The working file contains 26,688 rows and 11 columns after merging available tables in the…"
       },
       {
-        "question": "What does the data show about owner tiers carry different Metascore distributions?",
+        "question": "What does the data show about Owner tiers carry different Metascore distributions?",
         "answer": "Key figure: 98.0 — Highest observed Metascore. The source is the TidyTuesday release from 2019-07-30 (R for Data Science community). The working file contains 26,688 rows and 11 columns after merging available tables in the…"
       },
       {
-        "question": "What does the data show about mid-million owner games clear the median; tiny audiences trail?",
+        "question": "What does the data show about Mid-million owner games clear the median; tiny audiences trail?",
         "answer": "Key figure: DEEP SPACE WAIFU: NEKOMIMI — Top Game by Metascore. The source is the TidyTuesday release from 2019-07-30 (R for Data Science community). The working file contains 26,688 rows and 11 columns after merging available tables in the…"
       }
     ],
@@ -3896,7 +3896,7 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about two dynasty windows, and a desert between them?",
+        "question": "What does the data show about Two dynasty windows, and a desert between them?",
         "answer": "Key figure: 7 — NBA Championships — 1947, 1956, 1975, 2015, 2017, 2018, 2022 — across three cities and eight decades of franchise history. What follows quantifies that change: how dominant the dynasty windows actually were, how the three-point revolution unfolded in real numbers, and what it means to win 73 games in…"
       },
       {
@@ -3904,7 +3904,7 @@
         "answer": "Key figure: 73 — Regular season wins in 2015–16 — the most in NBA history, surpassing the 1995–96 Chicago Bulls record of 72 wins. What follows quantifies that change: how dominant the dynasty windows actually were, how the three-point revolution unfolded in real numbers, and what it means to win 73 games in…"
       },
       {
-        "question": "What does the data show about six teams reached 68 wins. Only one owns 73.?",
+        "question": "What does the data show about Six teams reached 68 wins. Only one owns 73.?",
         "answer": "Key figure: 3,747 — Career three-pointers made by Stephen Curry through 2024 — more than any player in NBA history, by a margin of over 700. What follows quantifies that change: how dominant the dynasty windows actually were, how the three-point revolution unfolded in real numbers, and what it means to win 73 games in…"
       },
       {
@@ -3943,19 +3943,19 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about the median income-distribution marker drifted upward?",
+        "question": "What does the data show about The median income-distribution marker drifted upward?",
         "answer": "Key figure: 2,916 — Records in the working dataset. The source is the TidyTuesday release from 2021-02-09 (R for Data Science community). The working file contains 2,916 rows and 10 columns after merging available tables in the…"
       },
       {
-        "question": "What does the data show about hispanic (Any Race) leads the charted race ladder?",
+        "question": "What does the data show about Hispanic (Any Race) leads the charted race ladder?",
         "answer": "Key figure: 10.9 — Median Income distribution. The source is the TidyTuesday release from 2021-02-09 (R for Data Science community). The working file contains 2,916 rows and 10 columns after merging available tables in the…"
       },
       {
-        "question": "What does the data show about income brackets carve different distribution bands?",
+        "question": "What does the data show about Income brackets carve different distribution bands?",
         "answer": "Key figure: 27.2 — Highest observed Income distribution. The source is the TidyTuesday release from 2021-02-09 (R for Data Science community). The working file contains 2,916 rows and 10 columns after merging available tables in the…"
       },
       {
-        "question": "What does the data show about mid brackets clear the median; high brackets trail in this cut?",
+        "question": "What does the data show about Mid brackets clear the median; high brackets trail in this cut?",
         "answer": "Key figure: Black Alone — Top Race by Income distribution. The source is the TidyTuesday release from 2021-02-09 (R for Data Science community). The working file contains 2,916 rows and 10 columns after merging available tables in the…"
       }
     ],
@@ -3990,19 +3990,19 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about median P50 fell as pages got faster at the center?",
+        "question": "What does the data show about Median P50 fell as pages got faster at the center?",
         "answer": "Key figure: 238 — Records in the working dataset. HTTP Archive-style page-weight metrics by client (desktop/mobile) and measure type, aggregated as percentile bands. The TidyTuesday release from 2022-11-15 supplies the…"
       },
       {
-        "question": "What does the data show about desktop and mobile split the P50 distribution?",
+        "question": "What does the data show about Desktop and mobile split the P50 distribution?",
         "answer": "Key figure: 5.97 — Median P50. HTTP Archive-style page-weight metrics by client (desktop/mobile) and measure type, aggregated as percentile bands. The TidyTuesday release from 2022-11-15 supplies the…"
       },
       {
-        "question": "What does the data show about p50 and P90 move together in performance space?",
+        "question": "What does the data show about P50 and P90 move together in performance space?",
         "answer": "Key figure: 9.80 — Highest observed P50. HTTP Archive-style page-weight metrics by client (desktop/mobile) and measure type, aggregated as percentile bands. The TidyTuesday release from 2022-11-15 supplies the…"
       },
       {
-        "question": "What does the data show about a client–year heatmap shows where speed migrated?",
+        "question": "What does the data show about A client–year heatmap shows where speed migrated?",
         "answer": "Key figure: speedIndex — Top Measure by P50. HTTP Archive-style page-weight metrics by client (desktop/mobile) and measure type, aggregated as percentile bands. The TidyTuesday release from 2022-11-15 supplies the…"
       }
     ],
@@ -4036,19 +4036,19 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about perfect scores crowd the title breakdown’s top slice?",
+        "question": "What does the data show about Perfect scores crowd the title breakdown’s top slice?",
         "answer": "Key figure: 100,000 — Records in the working dataset. The source is the TidyTuesday release from 2019-05-28 (R for Data Science community). The working file contains 100,000 rows and 13 columns after merging available tables in the…"
       },
       {
-        "question": "What does the data show about the leaders chart is a wall of 100-point wines?",
+        "question": "What does the data show about The leaders chart is a wall of 100-point wines?",
         "answer": "Key figure: 88.0 — Median Points. The source is the TidyTuesday release from 2019-05-28 (R for Data Science community). The working file contains 100,000 rows and 13 columns after merging available tables in the…"
       },
       {
-        "question": "What does the data show about countries spread points around a high center?",
+        "question": "What does the data show about Countries spread points around a high center?",
         "answer": "Key figure: 100 — Highest observed Points. The source is the TidyTuesday release from 2019-05-28 (R for Data Science community). The working file contains 100,000 rows and 13 columns after merging available tables in the…"
       },
       {
-        "question": "What does the data show about austria clears the median; Chile trails?",
+        "question": "What does the data show about Austria clears the median; Chile trails?",
         "answer": "Key figure: Charles Smith 2006 Royal Cit — Top Title by Points. The source is the TidyTuesday release from 2019-05-28 (R for Data Science community). The working file contains 100,000 rows and 13 columns after merging available tables in the…"
       }
     ],
@@ -4082,15 +4082,15 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about median heritage counts doubled at the center?",
+        "question": "What does the data show about Median heritage counts doubled at the center?",
         "answer": "Key figure: 6 — Records in the working dataset. The source is the TidyTuesday release from 2024-02-06 (R for Data Science community). The working file contains 6 rows and 3 columns after merging available tables in the week…"
       },
       {
-        "question": "What does the data show about sweden leads the country ladder?",
+        "question": "What does the data show about Sweden leads the country ladder?",
         "answer": "Key figure: 9.00 — Median Value. The source is the TidyTuesday release from 2024-02-06 (R for Data Science community). The working file contains 6 rows and 3 columns after merging available tables in the week…"
       },
       {
-        "question": "What does the data show about leaders diverge when tracked over time?",
+        "question": "What does the data show about Leaders diverge when tracked over time?",
         "answer": "Key figure: 15.0 — Highest observed Value. The source is the TidyTuesday release from 2024-02-06 (R for Data Science community). The working file contains 6 rows and 3 columns after merging available tables in the week…"
       },
       {
@@ -4129,19 +4129,19 @@
     ],
     "faq": [
       {
-        "question": "What does the data show about the empire arrived in bursts, not as a permanent climate?",
+        "question": "What does the data show about The empire arrived in bursts, not as a permanent climate?",
         "answer": "Key figure: 27 — World Series championships, the most in Major League Baseball. The charts that follow treat the Yankees as baseball’s benchmark: banner clusters by decade, the empire gap versus other historic clubs, droughts in relative context, payroll rank…"
       },
       {
-        "question": "What does the data show about new York does not lead baseball—it defines the ranking?",
+        "question": "What does the data show about New York does not lead baseball—it defines the ranking?",
         "answer": "Key figure: 40 — American League pennants, the deepest October archive in the sport. The charts that follow treat the Yankees as baseball’s benchmark: banner clusters by decade, the empire gap versus other historic clubs, droughts in relative context, payroll rank…"
       },
       {
-        "question": "What does the data show about fifteen years only feels endless in Yankee time?",
+        "question": "What does the data show about Fifteen years only feels endless in Yankee time?",
         "answer": "Key figure: 2009 — Most recent World Series title. The charts that follow treat the Yankees as baseball’s benchmark: banner clusters by decade, the empire gap versus other historic clubs, droughts in relative context, payroll rank…"
       },
       {
-        "question": "What does the data show about capital remains elite; conversion no longer is?",
+        "question": "What does the data show about Capital remains elite; conversion no longer is?",
         "answer": "Key figure: 15 — Active title drought entering 2025. The charts that follow treat the Yankees as baseball’s benchmark: banner clusters by decade, the empire gap versus other historic clubs, droughts in relative context, payroll rank…"
       }
     ],

@@ -24,28 +24,28 @@ keyPoints:
   - 0 — Conference championship appearances since the 1995 season
 faq:
   - question: >-
-      What does the data show about the Super Bowl column froze after two old
+      What does the data show about The Super Bowl column froze after two old
       engines?
     answer: >-
       Key figure: 5 — Super Bowl championships. The charts measure that split:
       titles by era, franchise value against playoff wins since 1996, playoff
       production by decade, regular-season winning by quarterback era, and the…
   - question: >-
-      What does the data show about the richest brand, a modest recent playoff
+      What does the data show about The richest brand, a modest recent playoff
       archive?
     answer: >-
       Key figure: 1995 — Most recent Super Bowl-winning season. The charts
       measure that split: titles by era, franchise value against playoff wins
       since 1996, playoff production by decade, regular-season winning by
       quarterback era, and the…
-  - question: What does the data show about the 1970s and 1990s still carry the memory?
+  - question: What does the data show about The 1970s and 1990s still carry the memory?
     answer: >-
       Key figure: 29 — Years since last NFC championship appearance entering
       2025. The charts measure that split: titles by era, franchise value
       against playoff wins since 1996, playoff production by decade,
       regular-season winning by quarterback era, and the…
   - question: >-
-      What does the data show about quarterback competence never solved
+      What does the data show about Quarterback competence never solved
       conversion?
     answer: >-
       Key figure: $10B+ — Widely cited estimated franchise value range. The

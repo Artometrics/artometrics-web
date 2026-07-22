@@ -24,26 +24,26 @@ keyPoints:
   - 'Dickens, Charles — Most common Author'
 faq:
   - question: >-
-      What does the data show about the Shelf Centers on Mid-Nineteenth-Century
+      What does the data show about The Shelf Centers on Mid-Nineteenth-Century
       Births?
     answer: >-
       Key figure: 35 — Records in the working dataset. The source is the
       TidyTuesday release from 2025-12-30 (christmas_novels.csv). After
       cleaning, 35 rows remain.
   - question: >-
-      What does the data show about later-Born Titles Mark the Edge of the
+      What does the data show about Later-Born Titles Mark the Edge of the
       Canon?
     answer: >-
       Key figure: 1,859 — Median Birthdate. The source is the TidyTuesday
       release from 2025-12-30 (christmas_novels.csv). After cleaning, 35 rows
       remain.
-  - question: What does the data show about birthdates Cluster Around the 1860s?
+  - question: What does the data show about Birthdates Cluster Around the 1860s?
     answer: >-
       Key figure: 1,891 — Highest observed Birthdate. The source is the
       TidyTuesday release from 2025-12-30 (christmas_novels.csv). After
       cleaning, 35 rows remain.
   - question: >-
-      What does the data show about dickens and Thackeray Sit Earlier Than the
+      What does the data show about Dickens and Thackeray Sit Earlier Than the
       Median?
     answer: >-
       Key figure: The Camp Fire Girls Solve a — Top Title by Birthdate. The

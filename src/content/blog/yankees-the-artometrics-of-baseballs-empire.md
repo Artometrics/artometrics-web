@@ -24,7 +24,7 @@ keyPoints:
   - '1923 — First Yankee championship, the Ruth-era ignition point'
 faq:
   - question: >-
-      What does the data show about the empire arrived in bursts, not as a
+      What does the data show about The empire arrived in bursts, not as a
       permanent climate?
     answer: >-
       Key figure: 27 — World Series championships, the most in Major League
@@ -32,7 +32,7 @@ faq:
       benchmark: banner clusters by decade, the empire gap versus other historic
       clubs, droughts in relative context, payroll rank…
   - question: >-
-      What does the data show about new York does not lead baseball—it defines
+      What does the data show about New York does not lead baseball—it defines
       the ranking?
     answer: >-
       Key figure: 40 — American League pennants, the deepest October archive in
@@ -40,7 +40,7 @@ faq:
       benchmark: banner clusters by decade, the empire gap versus other historic
       clubs, droughts in relative context, payroll rank…
   - question: >-
-      What does the data show about fifteen years only feels endless in Yankee
+      What does the data show about Fifteen years only feels endless in Yankee
       time?
     answer: >-
       Key figure: 2009 — Most recent World Series title. The charts that follow
@@ -48,7 +48,7 @@ faq:
       empire gap versus other historic clubs, droughts in relative context,
       payroll rank…
   - question: >-
-      What does the data show about capital remains elite; conversion no longer
+      What does the data show about Capital remains elite; conversion no longer
       is?
     answer: >-
       Key figure: 15 — Active title drought entering 2025. The charts that

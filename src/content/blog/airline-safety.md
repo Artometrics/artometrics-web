@@ -22,27 +22,27 @@ keyPoints:
   - United / Continental* — Top Airline by Avail seat km per week
   - incidents — Most common Type of event
 faq:
-  - question: What does the data show about capacity Concentrates Among Megacarriers?
+  - question: What does the data show about Capacity Concentrates Among Megacarriers?
     answer: >-
       Key figure: 336 — Records in the working dataset. The most common event
       type in the file is simply labeled incidents . That matters: the archive
       mixes routine reportable events with rarer fatal outcomes, and treating
       those…
-  - question: What does the data show about the Same Names Dominate the Leader Board?
+  - question: What does the data show about The Same Names Dominate the Leader Board?
     answer: >-
       Key figure: 802,908,893 — Median Avail seat km per week. The most common
       event type in the file is simply labeled incidents . That matters: the
       archive mixes routine reportable events with rarer fatal outcomes, and
       treating those…
   - question: >-
-      What does the data show about event Type Does Not Rewrite the Capacity
+      What does the data show about Event Type Does Not Rewrite the Capacity
       Story?
     answer: >-
       Key figure: 7,139,291,291 — Highest observed Avail seat km per week. The
       most common event type in the file is simply labeled incidents . That
       matters: the archive mixes routine reportable events with rarer fatal
       outcomes, and treating those…
-  - question: What does the data show about gaps to the Median Are Flat Across Labels?
+  - question: What does the data show about Gaps to the Median Are Flat Across Labels?
     answer: >-
       Key figure: United / Continental* — Top Airline by Avail seat km per week.
       The most common event type in the file is simply labeled incidents . That

@@ -21,20 +21,20 @@ keyPoints:
   - 2006–2021 — Year span covered in the file
   - youtube#video — Most common Kind
 faq:
-  - question: What does the data show about median views fell as the archive got denser?
+  - question: What does the data show about Median views fell as the archive got denser?
     answer: >-
       Key figure: 247 — Records in the working dataset. The source is the
       TidyTuesday release from 2021-03-02 (R for Data Science community). The
       working file contains 247 rows and 26 columns after merging available
       tables in the week…
-  - question: What does the data show about nFL leads the brand ladder on YouTube views?
+  - question: What does the data show about NFL leads the brand ladder on YouTube views?
     answer: >-
       Key figure: 41,379 — Median View count. The source is the TidyTuesday
       release from 2021-03-02 (R for Data Science community). The working file
       contains 247 rows and 26 columns after merging available tables in the
       week…
   - question: >-
-      What does the data show about almost everything in the file is a YouTube
+      What does the data show about Almost everything in the file is a YouTube
       video?
     answer: >-
       Key figure: 176,373,378 — Highest observed View count. The source is the
@@ -42,7 +42,7 @@ faq:
       working file contains 247 rows and 26 columns after merging available
       tables in the week…
   - question: >-
-      What does the data show about five brands hold eighty-seven percent of
+      What does the data show about Five brands hold eighty-seven percent of
       aggregate views?
     answer: >-
       Key figure: Doritos — Top Brand by View count. The source is the

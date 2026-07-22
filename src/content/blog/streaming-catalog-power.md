@@ -31,7 +31,7 @@ faq:
       and analysts who want evidence on how streaming libraries concentrate
       attention and inventory will find the frame here; the numbers arrive when
       the CSV does.
-  - question: 'What does the data show about the Availability Gap: Hype vs What Stays Up?'
+  - question: 'What does the data show about The Availability Gap: Hype vs What Stays Up?'
     answer: >-
       Key figure: TBD — Concentration or median signal (derived — label
       clearly). Editors, founders, and analysts who want evidence on how

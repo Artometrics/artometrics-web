@@ -21,23 +21,23 @@ keyPoints:
   - 0.13 — Highest observed Abv
   - Lee Hill Series Vol. 5 - Bel — Top Name by Abv
 faq:
-  - question: What does the data show about high-ABV Outliers Are Named Experiments?
+  - question: What does the data show about High-ABV Outliers Are Named Experiments?
     answer: >-
       Key figure: 2,410 — Records in the working dataset. The source is the
       TidyTuesday release from 2018-07-10 (week15_beers.xlsx). After cleaning,
       2,410 rows remain.
   - question: >-
-      What does the data show about the Top Dozen Still Doubles Everyday
+      What does the data show about The Top Dozen Still Doubles Everyday
       Strength?
     answer: >-
       Key figure: 0.06 — Median Abv. The source is the TidyTuesday release from
       2018-07-10 (week15_beers.xlsx). After cleaning, 2,410 rows remain.
-  - question: What does the data show about most Beers Pile Up Near 5–6% ABV?
+  - question: What does the data show about Most Beers Pile Up Near 5–6% ABV?
     answer: >-
       Key figure: 0.13 — Highest observed Abv. The source is the TidyTuesday
       release from 2018-07-10 (week15_beers.xlsx). After cleaning, 2,410 rows
       remain.
-  - question: What does the data show about high-ABV Names Concentrate in a Short List?
+  - question: What does the data show about High-ABV Names Concentrate in a Short List?
     answer: >-
       Key figure: Lee Hill Series Vol. 5 - Bel — Top Name by Abv. The source is
       the TidyTuesday release from 2018-07-10 (week15_beers.xlsx). After

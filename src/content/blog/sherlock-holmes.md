@@ -18,21 +18,21 @@ keyPoints:
   - 18.0 — Highest observed Word count
   - The Adventure of the Beryl C — Top Book by Word count
 faq:
-  - question: What does the data show about story-level medians sit in a narrow band?
+  - question: What does the data show about Story-level medians sit in a narrow band?
     answer: >-
       Key figure: 65,958 — Records in the working dataset. The source is the
       TidyTuesday release from 2025-11-18 (R for Data Science community). The
       working file contains 65,958 rows and 4 columns after merging available
       tables in the…
   - question: >-
-      What does the data show about even the leaders barely clear the file
+      What does the data show about Even the leaders barely clear the file
       median?
     answer: >-
       Key figure: 12.0 — Median Word count. The source is the TidyTuesday
       release from 2025-11-18 (R for Data Science community). The working file
       contains 65,958 rows and 4 columns after merging available tables in the…
   - question: >-
-      What does the data show about median 12.0, mean 10.9 — a mostly symmetric
+      What does the data show about Median 12.0, mean 10.9 — a mostly symmetric
       shape?
     answer: >-
       Key figure: 18.0 — Highest observed Word count. The source is the
@@ -40,7 +40,7 @@ faq:
       working file contains 65,958 rows and 4 columns after merging available
       tables in the…
   - question: >-
-      What does the data show about five books account for a third of aggregate
+      What does the data show about Five books account for a third of aggregate
       word count?
     answer: >-
       Key figure: The Adventure of the Beryl C — Top Book by Word count. The

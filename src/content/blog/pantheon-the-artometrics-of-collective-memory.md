@@ -19,25 +19,25 @@ keyPoints:
   - '3 — Main memory engines: power, art, science'
   - 10 — Memory-capital cities compared
 faq:
-  - question: What does the data show about memory domains?
+  - question: What does the data show about Memory domains?
     answer: >-
       Key figure: 85K+ — Biographies indexed by Pantheon in public-facing
       summaries. If humanity remembers some kinds of people more than others,
       that pattern is itself a cultural object. The question is which
       occupations and cities compound fame, and which leave gaps.
-  - question: What does the data show about era shift?
+  - question: What does the data show about Era shift?
     answer: >-
       Key figure: 15 — Minimum Wikipedia language editions used in Pantheon
       collection logic. If humanity remembers some kinds of people more than
       others, that pattern is itself a cultural object. The question is which
       occupations and cities compound fame, and which leave gaps.
-  - question: What does the data show about memory capitals?
+  - question: What does the data show about Memory capitals?
     answer: >-
       Key figure: 2016 — Scientific Data paper for Pantheon 1.0. If humanity
       remembers some kinds of people more than others, that pattern is itself a
       cultural object. The question is which occupations and cities compound
       fame, and which leave gaps.
-  - question: What does the data show about two clocks of fame?
+  - question: What does the data show about Two clocks of fame?
     answer: >-
       Key figure: 3 — Main memory engines: power, art, science. If humanity
       remembers some kinds of people more than others, that pattern is itself a

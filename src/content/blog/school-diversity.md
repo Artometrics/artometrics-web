@@ -20,7 +20,7 @@ keyPoints:
   - TX — Most common ST
 faq:
   - question: >-
-      What does the data show about a flat median hides how extreme the upper
+      What does the data show about A flat median hides how extreme the upper
       tail is?
     answer: >-
       Key figure: 27,944 — Records in the working dataset. The source is the
@@ -28,21 +28,21 @@ faq:
       working file contains 27,944 rows and 15 columns after merging available
       tables in the…
   - question: >-
-      What does the data show about butteville Union Elementary leads a steep
+      What does the data show about Butteville Union Elementary leads a steep
       LEA ladder?
     answer: >-
       Key figure: 2.38 — Median Multi. The source is the TidyTuesday release
       from 2019-09-24 (R for Data Science community). The working file contains
       27,944 rows and 15 columns after merging available tables in the…
   - question: >-
-      What does the data show about state boxes show how Multi spreads
+      What does the data show about State boxes show how Multi spreads
       geographically?
     answer: >-
       Key figure: 85.3 — Highest observed Multi. The source is the TidyTuesday
       release from 2019-09-24 (R for Data Science community). The working file
       contains 27,944 rows and 15 columns after merging available tables in the…
   - question: >-
-      What does the data show about oklahoma clears the median; New Jersey
+      What does the data show about Oklahoma clears the median; New Jersey
       trails?
     answer: >-
       Key figure: butteville union elementary — Top LEA NAME by Multi. The

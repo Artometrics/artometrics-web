@@ -18,25 +18,25 @@ keyPoints:
   - 45 — Global cities in World Cities Culture Forum 5th edition summaries
   - 3 — Asian cultural wave paths compared
 faq:
-  - question: What does the data show about soft Power and Trade?
+  - question: What does the data show about Soft Power and Trade?
     answer: >-
       Key figure: 8 — Countries and cultural-export systems highlighted. The
       source stack includes UNESCO cultural statistics, WIPO creative-industry
       indicators, World Bank and OECD services data, MusicBrainz,
       IMDb/TMDb-style film metadata, Wikidata,…
-  - question: What does the data show about medium Exportability?
+  - question: What does the data show about Medium Exportability?
     answer: >-
       Key figure: 8 — Mediums scored for exportability. The source stack
       includes UNESCO cultural statistics, WIPO creative-industry indicators,
       World Bank and OECD services data, MusicBrainz, IMDb/TMDb-style film
       metadata, Wikidata,…
-  - question: What does the data show about cultural Waves?
+  - question: What does the data show about Cultural Waves?
     answer: >-
       Key figure: 6 — Diagnostic cultural trade questions. The source stack
       includes UNESCO cultural statistics, WIPO creative-industry indicators,
       World Bank and OECD services data, MusicBrainz, IMDb/TMDb-style film
       metadata, Wikidata,…
-  - question: What does the data show about cultural Pipeline Cities?
+  - question: What does the data show about Cultural Pipeline Cities?
     answer: >-
       Key figure: 45 — Global cities in World Cities Culture Forum 5th edition
       summaries. The source stack includes UNESCO cultural statistics, WIPO

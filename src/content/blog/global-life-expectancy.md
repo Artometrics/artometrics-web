@@ -34,13 +34,13 @@ faq:
       with the scale: 73.3 — median life expectancy in 2015, the closing year of
       the file; and 83.8 — the highest single observation, Hong Kong near peak.
       The span runs 472 years , from 1543 to 2015.
-  - question: What does the data show about the split world?
+  - question: What does the data show about The split world?
     answer: >-
       Key figure: 33.9→73 — Median lifespan: opening year to closing year. Start
       with the scale: 73.3 — median life expectancy in 2015, the closing year of
       the file; and 83.8 — the highest single observation, Hong Kong near peak.
       The span runs 472 years , from 1543 to 2015.
-  - question: What does the data show about the frontrunners?
+  - question: What does the data show about The frontrunners?
     answer: >-
       Key figure: Hong Kong — Highest average life expectancy over the full
       dataset. Start with the scale: 73.3 — median life expectancy in 2015, the

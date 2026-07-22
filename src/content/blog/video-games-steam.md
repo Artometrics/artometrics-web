@@ -23,7 +23,7 @@ keyPoints:
   - "0\_..\_20,000 — Most common Owners"
 faq:
   - question: >-
-      What does the data show about median Metascore edged up across the store’s
+      What does the data show about Median Metascore edged up across the store’s
       expansion years?
     answer: >-
       Key figure: 26,688 — Records in the working dataset. The source is the
@@ -31,14 +31,14 @@ faq:
       working file contains 26,688 rows and 11 columns after merging available
       tables in the…
   - question: >-
-      What does the data show about little Triangle tops a tightly packed
+      What does the data show about Little Triangle tops a tightly packed
       critical elite?
     answer: >-
       Key figure: 73.0 — Median Metascore. The source is the TidyTuesday release
       from 2019-07-30 (R for Data Science community). The working file contains
       26,688 rows and 11 columns after merging available tables in the…
   - question: >-
-      What does the data show about owner tiers carry different Metascore
+      What does the data show about Owner tiers carry different Metascore
       distributions?
     answer: >-
       Key figure: 98.0 — Highest observed Metascore. The source is the
@@ -46,7 +46,7 @@ faq:
       working file contains 26,688 rows and 11 columns after merging available
       tables in the…
   - question: >-
-      What does the data show about mid-million owner games clear the median;
+      What does the data show about Mid-million owner games clear the median;
       tiny audiences trail?
     answer: >-
       Key figure: DEEP SPACE WAIFU: NEKOMIMI — Top Game by Metascore. The source

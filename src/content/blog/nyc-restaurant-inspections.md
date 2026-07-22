@@ -31,7 +31,7 @@ faq:
       Key figure: 15.0 — Median Score. Higher scores here mean more violation
       points, not better food. That inversion is easy to forget once letter
       grades take over the conversation.
-  - question: What does the data show about scores by grade?
+  - question: What does the data show about Scores by grade?
     answer: >-
       Key figure: 156 — Highest observed Score. Higher scores here mean more
       violation points, not better food. That inversion is easy to forget once

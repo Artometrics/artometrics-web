@@ -35,20 +35,20 @@ keyPoints:
     65.4% — New Jersey&#39;s share of penalized hospital-condition pairs — the
     highest-risk geography in the working dataset
 faq:
-  - question: What does the data show about the Geography of Failure?
+  - question: What does the data show about The Geography of Failure?
     answer: >-
       Key figure: 48.1% — of HRRP-eligible hospital-condition pairs carried an
       excess readmission ratio above 1.0 — more readmissions than CMS models
       predict. The FY2025 HRRP supplemental extract covers the measurement
       window used for CMS’s published excess readmission ratios. After removing
       suppressed rows — hospitals with fewer than…
-  - question: What does the data show about the Condition Nobody Is Solving?
+  - question: What does the data show about The Condition Nobody Is Solving?
     answer: >-
       Key figure: 6 — conditions tracked under HRRP — AMI, Heart Failure,
       Pneumonia, COPD, Hip/Knee, and CABG. The FY2025 HRRP supplemental extract
       covers the measurement window used for CMS’s published excess readmission
       ratios. After removing suppressed rows — hospitals with fewer than…
-  - question: 'What does the data show about ownership, Penalty, and Who Pays?'
+  - question: 'What does the data show about Ownership, Penalty, and Who Pays?'
     answer: >-
       Key figure: 1.0018 — average excess readmission ratio nationally — the
       average hospital readmits slightly more patients than CMS models expect.

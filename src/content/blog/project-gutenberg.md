@@ -16,23 +16,23 @@ keyPoints:
   - '100,000 — Records in the working dataset'
   - lcsh — Most common Subject type
 faq:
-  - question: What does the data show about public-domain books cluster by subject type?
+  - question: What does the data show about Public-domain books cluster by subject type?
     answer: >-
       Key figure: 100,000 — Records in the working dataset. Reading Gutenberg as
       a popularity contest misses the point. Reading it as a concentration map
       of reusable canon is where the data help.
-  - question: What does the data show about a small set of subjects anchors the catalog?
+  - question: What does the data show about A small set of subjects anchors the catalog?
     answer: >-
       Key figure: lcsh — Most common Subject type. Reading Gutenberg as a
       popularity contest misses the point. Reading it as a concentration map of
       reusable canon is where the data help.
   - question: >-
-      What does the data show about subject families show the catalog center of
+      What does the data show about Subject families show the catalog center of
       gravity?
     answer: >-
       Reading Gutenberg as a popularity contest misses the point. Reading it as
       a concentration map of reusable canon is where the data help.
-  - question: What does the data show about repeated subjects reveal the reusable canon?
+  - question: What does the data show about Repeated subjects reveal the reusable canon?
     answer: >-
       Reading Gutenberg as a popularity contest misses the point. Reading it as
       a concentration map of reusable canon is where the data help.

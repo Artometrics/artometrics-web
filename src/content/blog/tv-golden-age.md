@@ -40,7 +40,7 @@ faq:
       TidyTuesday release from 2019-01-08 (R for Data Science community) — the
       IMDb / Economist TV ratings extract. The working file contains 2,266 rows
       and 8 columns…
-  - question: What does the data show about leader Trends?
+  - question: What does the data show about Leader Trends?
     answer: >-
       Key figure: Parenthood — Top Title by Av rating. The source is the
       TidyTuesday release from 2019-01-08 (R for Data Science community) — the

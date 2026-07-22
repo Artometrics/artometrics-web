@@ -22,7 +22,7 @@ keyPoints:
   - Gordian — Most common Dynasty
 faq:
   - question: >-
-      What does the data show about constantine’s thirty-one years set the
+      What does the data show about Constantine’s thirty-one years set the
       name-level ceiling?
     answer: >-
       Key figure: 68 — Records in the working dataset. Reign spans are derived
@@ -30,14 +30,14 @@ faq:
       excluded, so the working metric is observed tenure in years, not a modeled
       life…
   - question: >-
-      What does the data show about the top dozen still sits far above the
+      What does the data show about The top dozen still sits far above the
       median emperor?
     answer: >-
       Key figure: 6.50 — Median Reign years. Reign spans are derived from start
       and end dates in the emperors table. Negative or zero spans are excluded,
       so the working metric is observed tenure in years, not a modeled life…
   - question: >-
-      What does the data show about dynasty boxes show contested, not uniform,
+      What does the data show about Dynasty boxes show contested, not uniform,
       tenure?
     answer: >-
       Key figure: 31.0 — Highest observed Reign years. Reign spans are derived
@@ -45,7 +45,7 @@ faq:
       excluded, so the working metric is observed tenure in years, not a modeled
       life…
   - question: >-
-      What does the data show about nerva–Antonine sits above the median;
+      What does the data show about Nerva–Antonine sits above the median;
       Gordian trails?
     answer: >-
       Key figure: Constantine the Great — Top Name by Reign years. Reign spans

@@ -20,24 +20,24 @@ keyPoints:
   - 162 — Avatar runtime in minutes
   - 69% — Illustrative sequel/franchise share of top hits in the 2020s
 faq:
-  - question: What does the data show about attention versus Quality?
+  - question: What does the data show about Attention versus Quality?
     answer: >-
       Key figure: 7 — Core IMDb non-commercial TSV files publicly documented.
       Seven core TSV files are publicly documented; the refresh cadence is
       daily. Up to three genres can appear per title-basics row. Avatar’s
       runtime sits at 162 minutes. An…
-  - question: What does the data show about sequelization?
+  - question: What does the data show about Sequelization?
     answer: >-
       Key figure: Daily — IMDb dataset refresh cadence. Seven core TSV files are
       publicly documented; the refresh cadence is daily. Up to three genres can
       appear per title-basics row. Avatar’s runtime sits at 162 minutes. An…
-  - question: What does the data show about runtime and Event Status?
+  - question: What does the data show about Runtime and Event Status?
     answer: >-
       Key figure: 3 — Genres can be listed per IMDb title basics row. Seven core
       TSV files are publicly documented; the refresh cadence is daily. Up to
       three genres can appear per title-basics row. Avatar’s runtime sits at 162
       minutes. An…
-  - question: What does the data show about platforms?
+  - question: What does the data show about Platforms?
     answer: >-
       Key figure: 162 — Avatar runtime in minutes. Seven core TSV files are
       publicly documented; the refresh cadence is daily. Up to three genres can

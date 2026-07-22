@@ -21,7 +21,7 @@ keyPoints:
   - 20 piece Buttermilk Crispy C — Top Item by Calories
   - Taco Bell — Most common Restaurant
 faq:
-  - question: What does the data show about calorie ceilings by item?
+  - question: What does the data show about Calorie ceilings by item?
     answer: >-
       Key figure: 515 — Records in the working dataset. Taco Bell appears most
       often in the working table, but frequency of listing is not the same as

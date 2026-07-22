@@ -22,13 +22,13 @@ keyPoints:
   - '67 yrs — Span of the dataset: 1958 to 2025'
   - Taylor Swift — Highest average run length among modern artists
 faq:
-  - question: What does the data show about run Length Over the Decades?
+  - question: What does the data show about Run Length Over the Decades?
     answer: >-
       Key figure: 1,177 — Number-one songs in the dataset (1958–2025). Start
       with the scale: 1,177 number-one songs (1958–2025); 2 wks median run
       length; The Beatles with the most appearances; Taylor Swift with the
       highest average run length among modern artists.
-  - question: What does the data show about longest Runs Ever?
+  - question: What does the data show about Longest Runs Ever?
     answer: >-
       Key figure: 2 wks — Median run length — most #1s are fleeting. Start with
       the scale: 1,177 number-one songs (1958–2025); 2 wks median run length;
@@ -40,7 +40,7 @@ faq:
       scale: 1,177 number-one songs (1958–2025); 2 wks median run length; The
       Beatles with the most appearances; Taylor Swift with the highest average
       run length among modern artists.
-  - question: What does the data show about above Or Below the Line?
+  - question: What does the data show about Above Or Below the Line?
     answer: >-
       Key figure: The Beatles — Most appearances in the dataset — 20 number-one
       songs. Start with the scale: 1,177 number-one songs (1958–2025); 2 wks

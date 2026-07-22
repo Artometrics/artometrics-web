@@ -21,7 +21,7 @@ keyPoints:
   - 'Under $15,000 — Most common Income bracket'
 faq:
   - question: >-
-      What does the data show about the median income-distribution marker
+      What does the data show about The median income-distribution marker
       drifted upward?
     answer: >-
       Key figure: 2,916 — Records in the working dataset. The source is the
@@ -29,7 +29,7 @@ faq:
       working file contains 2,916 rows and 10 columns after merging available
       tables in the…
   - question: >-
-      What does the data show about hispanic (Any Race) leads the charted race
+      What does the data show about Hispanic (Any Race) leads the charted race
       ladder?
     answer: >-
       Key figure: 10.9 — Median Income distribution. The source is the
@@ -37,7 +37,7 @@ faq:
       working file contains 2,916 rows and 10 columns after merging available
       tables in the…
   - question: >-
-      What does the data show about income brackets carve different distribution
+      What does the data show about Income brackets carve different distribution
       bands?
     answer: >-
       Key figure: 27.2 — Highest observed Income distribution. The source is the
@@ -45,7 +45,7 @@ faq:
       working file contains 2,916 rows and 10 columns after merging available
       tables in the…
   - question: >-
-      What does the data show about mid brackets clear the median; high brackets
+      What does the data show about Mid brackets clear the median; high brackets
       trail in this cut?
     answer: >-
       Key figure: Black Alone — Top Race by Income distribution. The source is

@@ -26,7 +26,7 @@ keyPoints:
   - 6 — Award systems compared
 faq:
   - question: >-
-      What does the data show about prestige and market are not the same
+      What does the data show about Prestige and market are not the same
       currency?
     answer: >-
       Key figure: 98th — Academy Awards database complete through 2025/2026
@@ -40,7 +40,7 @@ faq:
       1,500+ acceptance speeches on file. Nobel prizes date to 1901 . Recent
       Grammy ceremonies run roughly 94…
   - question: >-
-      What does the data show about getting nominated is not the same as
+      What does the data show about Getting nominated is not the same as
       winning?
     answer: >-
       Key figure: 1901 — First Nobel Prizes awarded. The Academy Awards database

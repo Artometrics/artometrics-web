@@ -17,21 +17,21 @@ keyPoints:
   - '100,000 — Records in the working dataset'
   - yes — Most common Vote
 faq:
-  - question: What does the data show about yes votes dominate the sampled UN record?
+  - question: What does the data show about Yes votes dominate the sampled UN record?
     answer: >-
       Key figure: 100,000 — Records in the working dataset. The source is the
       TidyTuesday release from 2021-03-23 (R for Data Science community). The
       working file contains 100,000 rows and 4 columns after merging available
       tables in the…
   - question: >-
-      What does the data show about brazil appears most often among country
+      What does the data show about Brazil appears most often among country
       names?
     answer: >-
       Key figure: yes — Most common Vote. The source is the TidyTuesday release
       from 2021-03-23 (R for Data Science community). The working file contains
       100,000 rows and 4 columns after merging available tables in the…
   - question: >-
-      What does the data show about vote categories restate the file’s center of
+      What does the data show about Vote categories restate the file’s center of
       gravity?
     answer: >-
       The source is the TidyTuesday release from 2021-03-23 (R for Data Science
@@ -39,7 +39,7 @@ faq:
       merging available tables in the week folder. Vote is the primary
       categorical field; country and country code…
   - question: >-
-      What does the data show about country appearances follow a long-tail
+      What does the data show about Country appearances follow a long-tail
       pattern?
     answer: >-
       The source is the TidyTuesday release from 2021-03-23 (R for Data Science

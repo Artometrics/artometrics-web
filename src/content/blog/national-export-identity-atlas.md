@@ -20,25 +20,25 @@ keyPoints:
   - 6 — Diagnostic country questions
   - 8 — Export families or countries highlighted
 faq:
-  - question: What does the data show about scale and complexity?
+  - question: What does the data show about Scale and complexity?
     answer: >-
       Key figure: 200+ — Countries/zones covered in UN Comtrade-style trade
       systems. Scale and complexity are different virtues. A country can be
       large because it sells one thing in volume, or complex because it sells
       many hard-to-make things. Those identities…
-  - question: What does the data show about product identity?
+  - question: What does the data show about Product identity?
     answer: >-
       Key figure: 5,000+ — Products in OEC-style trade classifications. Scale
       and complexity are different virtues. A country can be large because it
       sells one thing in volume, or complex because it sells many hard-to-make
       things. Those identities…
-  - question: What does the data show about the export frontier moved?
+  - question: What does the data show about The export frontier moved?
     answer: >-
       Key figure: HS — Harmonized System product code architecture. Scale and
       complexity are different virtues. A country can be large because it sells
       one thing in volume, or complex because it sells many hard-to-make things.
       Those identities…
-  - question: What does the data show about export fingerprints?
+  - question: What does the data show about Export fingerprints?
     answer: >-
       Key figure: 6 — Diagnostic country questions. Scale and complexity are
       different virtues. A country can be large because it sells one thing in

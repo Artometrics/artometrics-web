@@ -26,7 +26,7 @@ keyPoints:
   - 2020 — Most recent championship
 faq:
   - question: >-
-      What does the data show about los Angeles does not win smoothly—it wins in
+      What does the data show about Los Angeles does not win smoothly—it wins in
       acts?
     answer: >-
       Key figure: 17 — NBA championships in franchise history. The charts below
@@ -34,7 +34,7 @@ faq:
       Boston, championship engines by defining star era, Finals frequency as
       institutional access,…
   - question: >-
-      What does the data show about the NBA’s title race is still a two-name
+      What does the data show about The NBA’s title race is still a two-name
       conversation?
     answer: >-
       Key figure: 32 — Approximate Finals appearances, the league's deepest
@@ -42,7 +42,7 @@ faq:
       decade, the two-name ceiling with Boston, championship engines by defining
       star era, Finals frequency as institutional access,…
   - question: >-
-      What does the data show about the product is star gravity, not just
+      What does the data show about The product is star gravity, not just
       basketball?
     answer: >-
       Key figure: 5 — Titles in the Showtime decade. The charts below track that
@@ -50,7 +50,7 @@ faq:
       championship engines by defining star era, Finals frequency as
       institutional access,…
   - question: >-
-      What does the data show about the real glamour metric is recurring
+      What does the data show about The real glamour metric is recurring
       invitation?
     answer: >-
       Key figure: 6 — Defining title eras from Mikan to LeBron/AD. The charts

@@ -20,22 +20,22 @@ keyPoints:
   - '3 — Core tradeoff signals: tech, housing, tolerance'
   - 6 — Competitor cities framed
 faq:
-  - question: What does the data show about identity Stack?
+  - question: What does the data show about Identity Stack?
     answer: >-
       Key figure: 1,100+ — DataSF public portal dataset scale in public
       summaries. Start with the scale: 1,100+ — DataSF public portal dataset
       scale in public summaries; and 7 — Identity domains scored.
-  - question: What does the data show about tradeoff History?
+  - question: What does the data show about Tradeoff History?
     answer: >-
       Key figure: 7 — Identity domains scored. Start with the scale: 1,100+ —
       DataSF public portal dataset scale in public summaries; and 7 — Identity
       domains scored.
-  - question: What does the data show about neighborhood Pressure?
+  - question: What does the data show about Neighborhood Pressure?
     answer: >-
       Key figure: 6 — Open questions for the next SF production pass. Start with
       the scale: 1,100+ — DataSF public portal dataset scale in public
       summaries; and 7 — Identity domains scored.
-  - question: What does the data show about competitor Set?
+  - question: What does the data show about Competitor Set?
     answer: >-
       Key figure: 3 — Core tradeoff signals: tech, housing, tolerance. Start
       with the scale: 1,100+ — DataSF public portal dataset scale in public

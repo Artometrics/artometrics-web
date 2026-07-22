@@ -22,7 +22,7 @@ keyPoints:
   - WEUP — Top Call sign by Frequency
   - Country — Most common Format
 faq:
-  - question: What does the data show about frequency by call sign?
+  - question: What does the data show about Frequency by call sign?
     answer: >-
       Key figure: 17,186 — Records in the working dataset. Frequency leaders at
       the top of the AM band are a different story from format share. The charts
@@ -32,7 +32,7 @@ faq:
       Key figure: 101 — Median Frequency. Frequency leaders at the top of the AM
       band are a different story from format share. The charts separate the
       physics of the dial from the culture of the playlist.
-  - question: What does the data show about frequency by format?
+  - question: What does the data show about Frequency by format?
     answer: >-
       Key figure: 1,700 — Highest observed Frequency. Frequency leaders at the
       top of the AM band are a different story from format share. The charts

@@ -18,23 +18,23 @@ keyPoints:
   - US — Most common Transfer
 faq:
   - question: >-
-      What does the data show about transfers Concentrate Overwhelmingly in the
+      What does the data show about Transfers Concentrate Overwhelmingly in the
       US?
     answer: >-
       Key figure: 2,194 — Records in the working dataset. The source is the
       TidyTuesday release from 2018-12-18 (allCetaceanData.csv). After cleaning,
       2,194 rows remain.
-  - question: What does the data show about annual Volume Peaked in the Early 1970s?
+  - question: What does the data show about Annual Volume Peaked in the Early 1970s?
     answer: >-
       Key figure: 1946–2017 — Year span covered in the file. The source is the
       TidyTuesday release from 2018-12-18 (allCetaceanData.csv). After cleaning,
       2,194 rows remain.
-  - question: What does the data show about bottlenose Is the Archive’s Default Animal?
+  - question: What does the data show about Bottlenose Is the Archive’s Default Animal?
     answer: >-
       Key figure: US — Most common Transfer. The source is the TidyTuesday
       release from 2018-12-18 (allCetaceanData.csv). After cleaning, 2,194 rows
       remain.
-  - question: What does the data show about the US Bucket Is the Landscape?
+  - question: What does the data show about The US Bucket Is the Landscape?
     answer: >-
       The source is the TidyTuesday release from 2018-12-18
       (allCetaceanData.csv). After cleaning, 2,194 rows remain.

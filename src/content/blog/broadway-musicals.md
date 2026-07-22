@@ -23,27 +23,27 @@ keyPoints:
   - Broadhurst Theatre — Most common Theatre
 faq:
   - question: >-
-      What does the data show about concert Residencies Rewrite the Price
+      What does the data show about Concert Residencies Rewrite the Price
       Ceiling?
     answer: >-
       Key figure: 47,524 — Records in the working dataset. The source is the
       TidyTuesday release from 2020-04-28 (grosses.csv). After cleaning, 47,524
       records remain for charting.
   - question: >-
-      What does the data show about even Among Leaders, Springsteen Is an
+      What does the data show about Even Among Leaders, Springsteen Is an
       Outlier?
     answer: >-
       Key figure: 60.2 — Median Avg ticket price. The source is the TidyTuesday
       release from 2020-04-28 (grosses.csv). After cleaning, 47,524 records
       remain for charting.
   - question: >-
-      What does the data show about house Medians Cluster Near the Industry
+      What does the data show about House Medians Cluster Near the Industry
       Middle?
     answer: >-
       Key figure: 512 — Highest observed Avg ticket price. The source is the
       TidyTuesday release from 2020-04-28 (grosses.csv). After cleaning, 47,524
       records remain for charting.
-  - question: What does the data show about gershwin Leads the Gap Above the Median?
+  - question: What does the data show about Gershwin Leads the Gap Above the Median?
     answer: >-
       Key figure: Springsteen On Broadway — Top Show by Avg ticket price. The
       source is the TidyTuesday release from 2020-04-28 (grosses.csv). After

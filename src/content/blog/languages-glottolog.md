@@ -19,7 +19,7 @@ keyPoints:
   - '8,612 — Records in the working dataset'
   - Africa — Most common Macroarea
 faq:
-  - question: What does the data show about a geographically uneven landscape?
+  - question: What does the data show about A geographically uneven landscape?
     answer: >-
       Key figure: 8,612 — Records in the working dataset. A catalog of languages
       is also a catalog of scholarly attention. Places with denser fieldwork
@@ -31,13 +31,13 @@ faq:
       a catalog of scholarly attention. Places with denser fieldwork traditions
       look richer in the table even when the underlying human diversity story
       is…
-  - question: What does the data show about regional concentration?
+  - question: What does the data show about Regional concentration?
     answer: >-
       A catalog of languages is also a catalog of scholarly attention. Places
       with denser fieldwork traditions look richer in the table even when the
       underlying human diversity story is more even — or more endangered — than
       the row counts imply.
-  - question: What does the data show about most languages appear once?
+  - question: What does the data show about Most languages appear once?
     answer: >-
       A catalog of languages is also a catalog of scholarly attention. Places
       with denser fieldwork traditions look richer in the table even when the

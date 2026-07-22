@@ -24,25 +24,25 @@ keyPoints:
     opening below A
   - '+17 — Minutes added to median runtime, early era vs 2017–present'
 faq:
-  - question: What does the data show about runtime Creep?
+  - question: What does the data show about Runtime Creep?
     answer: >-
       Key figure: 96% — Median Rotten Tomatoes score across rated Pixar
       theatrical releases. Calibration points: a 96% median Rotten Tomatoes
       score across rated theatrical releases; a longest runtime of 155 minutes;
       Toy Story’s 81 -minute floor; Cars 2 at 40% on Rotten…
-  - question: What does the data show about critic Scores?
+  - question: What does the data show about Critic Scores?
     answer: >-
       Key figure: 155 — Longest runtime in the set — nan (2023). Calibration
       points: a 96% median Rotten Tomatoes score across rated theatrical
       releases; a longest runtime of 155 minutes; Toy Story’s 81 -minute floor;
       Cars 2 at 40% on Rotten…
-  - question: What does the data show about audience vs Critics?
+  - question: What does the data show about Audience vs Critics?
     answer: >-
       Key figure: 81 — Shortest runtime — Toy Story, the film that started the
       canon. Calibration points: a 96% median Rotten Tomatoes score across rated
       theatrical releases; a longest runtime of 155 minutes; Toy Story’s 81
       -minute floor; Cars 2 at 40% on Rotten…
-  - question: What does the data show about rating Mix?
+  - question: What does the data show about Rating Mix?
     answer: >-
       Key figure: 40% — Lowest Rotten Tomatoes score — Cars 2, the critic floor.
       Calibration points: a 96% median Rotten Tomatoes score across rated

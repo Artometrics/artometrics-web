@@ -18,7 +18,7 @@ keyPoints:
   - '22,616 — Records in the working dataset'
   - Beyoncé — Most common Artist name
 faq:
-  - question: What does the data show about landscape?
+  - question: What does the data show about Landscape?
     answer: >-
       Key figure: 22,616 — Records in the working dataset. The source is the
       TidyTuesday release from 2020-09-29 (R for Data Science community). The
@@ -30,12 +30,12 @@ faq:
       TidyTuesday release from 2020-09-29 (R for Data Science community). The
       working file contains 22,616 rows and 6 columns after merging available
       tables in the week folder.
-  - question: What does the data show about category?
+  - question: What does the data show about Category?
     answer: >-
       The source is the TidyTuesday release from 2020-09-29 (R for Data Science
       community). The working file contains 22,616 rows and 6 columns after
       merging available tables in the week folder.
-  - question: What does the data show about frequency?
+  - question: What does the data show about Frequency?
     answer: >-
       The source is the TidyTuesday release from 2020-09-29 (R for Data Science
       community). The working file contains 22,616 rows and 6 columns after

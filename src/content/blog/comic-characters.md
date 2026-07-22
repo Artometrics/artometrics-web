@@ -21,26 +21,26 @@ keyPoints:
   - Marvel — Most common Publisher
 faq:
   - question: >-
-      What does the data show about early Characters Logged Higher Median
+      What does the data show about Early Characters Logged Higher Median
       Appearances?
     answer: >-
       Key figure: 23,272 — Records in the working dataset. The source is the
       TidyTuesday release from 2018-05-29 (week9_comic_characters.csv). After
       cleaning, 23,272 rows remain.
-  - question: What does the data show about a Dozen Icons Own the Appearance Summit?
+  - question: What does the data show about A Dozen Icons Own the Appearance Summit?
     answer: >-
       Key figure: 4.00 — Median Appearances. The source is the TidyTuesday
       release from 2018-05-29 (week9_comic_characters.csv). After cleaning,
       23,272 rows remain.
   - question: >-
-      What does the data show about marvel Has More Characters; DC’s Median
+      What does the data show about Marvel Has More Characters; DC’s Median
       Appearances Run Higher?
     answer: >-
       Key figure: 4,043 — Highest observed Appearances. The source is the
       TidyTuesday release from 2018-05-29 (week9_comic_characters.csv). After
       cleaning, 23,272 rows remain.
   - question: >-
-      What does the data show about the Top Five Names Hold Nearly Half the
+      What does the data show about The Top Five Names Hold Nearly Half the
       Leader Aggregate?
     answer: >-
       Key figure: Spider-Man (Peter Parker) — Top Name by Appearances. The

@@ -32,21 +32,21 @@ keyPoints:
     353 — r/h3snark indexed activity at its April 2025 peak — 3.5× its own
     average, triggered by the iDubbbz Content Cop
 faq:
-  - question: What does the data show about the Era Timeline?
+  - question: What does the data show about The Era Timeline?
     answer: >-
       Key figure: 3.24B — Total views across all four H3 channels, 2013–2026 —
       enough to give every person on Earth nearly half a view. The H3 ecosystem
       is not a single channel — it is a network. h3h3Productions launched in
       2011 as a reaction-and-commentary channel built around the Fair Use legal
       fight that…
-  - question: What does the data show about the Duration Drift?
+  - question: What does the data show about The Duration Drift?
     answer: >-
       Key figure: 1,638 — Videos analyzed after filtering Shorts and zero-view
       uploads from the original 1,876-video pull. The H3 ecosystem is not a
       single channel — it is a network. h3h3Productions launched in 2011 as a
       reaction-and-commentary channel built around the Fair Use legal fight
       that…
-  - question: What does the data show about the Fan Vs. Critic Divide?
+  - question: What does the data show about The Fan Vs. Critic Divide?
     answer: >-
       Key figure: 4.5× — How much harder h3h3Productions hits per video vs. the
       H3 Podcast — 4.78M median vs. 1.05M. The H3 ecosystem is not a single

@@ -20,13 +20,13 @@ keyPoints:
   - 1957–2021 — Year span covered in the file
   - Nominee — Most common Type
 faq:
-  - question: What does the data show about landscape?
+  - question: What does the data show about Landscape?
     answer: >-
       Key figure: 29,678 — Records in the working dataset. The source is the
       TidyTuesday release from 2021-09-21 (R for Data Science community). The
       working file contains 29,678 rows and 11 columns after merging available
       tables in the week folder.
-  - question: What does the data show about volume?
+  - question: What does the data show about Volume?
     answer: >-
       Key figure: 1957–2021 — Year span covered in the file. The source is the
       TidyTuesday release from 2021-09-21 (R for Data Science community). The
@@ -38,7 +38,7 @@ faq:
       release from 2021-09-21 (R for Data Science community). The working file
       contains 29,678 rows and 11 columns after merging available tables in the
       week folder.
-  - question: What does the data show about category?
+  - question: What does the data show about Category?
     answer: >-
       The source is the TidyTuesday release from 2021-09-21 (R for Data Science
       community). The working file contains 29,678 rows and 11 columns after

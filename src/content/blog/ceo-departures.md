@@ -23,23 +23,23 @@ keyPoints:
   - Interim — Most common Interim coceo
 faq:
   - question: >-
-      What does the data show about longer Max Tenures Are Rare in the Company
+      What does the data show about Longer Max Tenures Are Rare in the Company
       Ranking?
     answer: >-
       Key figure: 9,423 — Records in the working dataset. The source is the
       TidyTuesday release from 2021-04-27 (departures.csv). After cleaning,
       9,423 rows remain.
-  - question: What does the data show about the Top Dozen Caps Out Quickly?
+  - question: What does the data show about The Top Dozen Caps Out Quickly?
     answer: >-
       Key figure: 1.00 — Median Max tenure ceodb. The source is the TidyTuesday
       release from 2021-04-27 (departures.csv). After cleaning, 9,423 rows
       remain.
-  - question: What does the data show about interim Labels Dominate the Category Mix?
+  - question: What does the data show about Interim Labels Dominate the Category Mix?
     answer: >-
       Key figure: 4.00 — Highest observed Max tenure ceodb. The source is the
       TidyTuesday release from 2021-04-27 (departures.csv). After cleaning,
       9,423 rows remain.
-  - question: What does the data show about gaps to the Median Are Mostly Flat?
+  - question: What does the data show about Gaps to the Median Are Mostly Flat?
     answer: >-
       Key figure: PHOTRONICS INC — Top Coname by Max tenure ceodb. The source is
       the TidyTuesday release from 2021-04-27 (departures.csv). After cleaning,

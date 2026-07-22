@@ -22,25 +22,25 @@ keyPoints:
   - 6 — Diagnostic questions in the city microscope
   - 8 — System layers scored
 faq:
-  - question: What does the data show about system Layers?
+  - question: What does the data show about System Layers?
     answer: >-
       Key figure: 1,667 — Subnational regions in DOSE v2.14 public
       documentation. Start with the scale: 1,667 — Subnational regions in DOSE
       v2.14 public documentation; and 45 — Cities in World Cities Culture Forum
       5th edition summaries.
-  - question: What does the data show about goods and Services?
+  - question: What does the data show about Goods and Services?
     answer: >-
       Key figure: 45 — Cities in World Cities Culture Forum 5th edition
       summaries. Start with the scale: 1,667 — Subnational regions in DOSE v2.14
       public documentation; and 45 — Cities in World Cities Culture Forum 5th
       edition summaries.
-  - question: What does the data show about history Layers?
+  - question: What does the data show about History Layers?
     answer: >-
       Key figure: 1,100+ — Datasets in DataSF public portal summaries. Start
       with the scale: 1,667 — Subnational regions in DOSE v2.14 public
       documentation; and 45 — Cities in World Cities Culture Forum 5th edition
       summaries.
-  - question: What does the data show about city Fingerprint?
+  - question: What does the data show about City Fingerprint?
     answer: >-
       Key figure: 6 — Diagnostic questions in the city microscope. Start with
       the scale: 1,667 — Subnational regions in DOSE v2.14 public documentation;

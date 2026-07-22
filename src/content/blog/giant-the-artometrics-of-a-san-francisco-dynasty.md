@@ -43,7 +43,7 @@ faq:
       stadium’s economic break, and how a draft-built rotation converted a
       revenue floor into…
   - question: >-
-      What does the data show about oracle Park raised the floor before the
+      What does the data show about Oracle Park raised the floor before the
       dynasty arrived?
     answer: >-
       Key figure: 1883 — Year the franchise was founded as the New York Gothams
@@ -52,7 +52,7 @@ faq:
       stadium’s economic break, and how a draft-built rotation converted a
       revenue floor into…
   - question: >-
-      What does the data show about the dynasty was built on draft cost, not
+      What does the data show about The dynasty was built on draft cost, not
       free-agent monopoly?
     answer: >-
       Key figure: 141 — Seasons of franchise history covered in this report —

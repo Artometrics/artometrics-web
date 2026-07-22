@@ -32,7 +32,7 @@ faq:
       Key figure: 250 — Median Rank 2003. Remember the rank inversion: lower
       numbers are greater prestige on a traditional list, while some chart cuts
       sort the numeric field as a magnitude. The prose below follows the…
-  - question: What does the data show about ranks by album type?
+  - question: What does the data show about Ranks by album type?
     answer: >-
       Key figure: 500 — Highest observed Rank 2003. Remember the rank inversion:
       lower numbers are greater prestige on a traditional list, while some chart

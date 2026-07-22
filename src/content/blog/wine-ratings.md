@@ -21,7 +21,7 @@ keyPoints:
   - US — Most common Country
 faq:
   - question: >-
-      What does the data show about perfect scores crowd the title breakdown’s
+      What does the data show about Perfect scores crowd the title breakdown’s
       top slice?
     answer: >-
       Key figure: 100,000 — Records in the working dataset. The source is the
@@ -29,21 +29,21 @@ faq:
       working file contains 100,000 rows and 13 columns after merging available
       tables in the…
   - question: >-
-      What does the data show about the leaders chart is a wall of 100-point
+      What does the data show about The leaders chart is a wall of 100-point
       wines?
     answer: >-
       Key figure: 88.0 — Median Points. The source is the TidyTuesday release
       from 2019-05-28 (R for Data Science community). The working file contains
       100,000 rows and 13 columns after merging available tables in the…
   - question: >-
-      What does the data show about countries spread points around a high
+      What does the data show about Countries spread points around a high
       center?
     answer: >-
       Key figure: 100 — Highest observed Points. The source is the TidyTuesday
       release from 2019-05-28 (R for Data Science community). The working file
       contains 100,000 rows and 13 columns after merging available tables in
       the…
-  - question: What does the data show about austria clears the median; Chile trails?
+  - question: What does the data show about Austria clears the median; Chile trails?
     answer: >-
       Key figure: Charles Smith 2006 Royal Cit — Top Title by Points. The source
       is the TidyTuesday release from 2019-05-28 (R for Data Science community).

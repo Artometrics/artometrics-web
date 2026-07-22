@@ -21,26 +21,26 @@ keyPoints:
   - 376 — Highest observed Beer servings
   - Namibia — Top Country by Beer servings
 faq:
-  - question: What does the data show about beer Consumption Has a Steep Country Ladder?
+  - question: What does the data show about Beer Consumption Has a Steep Country Ladder?
     answer: >-
       Key figure: 193 — Records in the working dataset. The source is the
       TidyTuesday release from 2018-06-26 (week13_alcohol_global.csv),
       maintained by the R for Data Science community. The working file used here
       contains 193 rows after cleaning.
-  - question: What does the data show about the Top Dozen Has Its Own Median?
+  - question: What does the data show about The Top Dozen Has Its Own Median?
     answer: >-
       Key figure: 76.0 — Median Beer servings. The source is the TidyTuesday
       release from 2018-06-26 (week13_alcohol_global.csv), maintained by the R
       for Data Science community. The working file used here contains 193 rows
       after cleaning.
-  - question: What does the data show about most Countries Cluster Far Below the Peaks?
+  - question: What does the data show about Most Countries Cluster Far Below the Peaks?
     answer: >-
       Key figure: 376 — Highest observed Beer servings. The source is the
       TidyTuesday release from 2018-06-26 (week13_alcohol_global.csv),
       maintained by the R for Data Science community. The working file used here
       contains 193 rows after cleaning.
   - question: >-
-      What does the data show about concentration Rises Quickly Among the
+      What does the data show about Concentration Rises Quickly Among the
       Leaders?
     answer: >-
       Key figure: Namibia — Top Country by Beer servings. The source is the

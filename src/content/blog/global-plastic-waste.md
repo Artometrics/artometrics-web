@@ -44,7 +44,7 @@ faq:
       international $) (Rate). Income alone does not settle the mismanagement
       question. Rich places can fund collection systems; poorer coastal places
       can become leakage hotspots even at lower per-person…
-  - question: What does the data show about leader trends?
+  - question: What does the data show about Leader trends?
     answer: >-
       Key figure: Macao — Top Entity by GDP per capita, PPP (constant 2011
       international $) (Rate). Income alone does not settle the mismanagement

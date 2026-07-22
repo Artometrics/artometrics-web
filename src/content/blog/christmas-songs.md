@@ -22,22 +22,22 @@ keyPoints:
   - BETTER DAYS — Top Song by Weeks on chart
   - 1958–2017 — Year span covered in the file
 faq:
-  - question: What does the data show about seasonal Weeks Spiked in the Mid-2000s?
+  - question: What does the data show about Seasonal Weeks Spiked in the Mid-2000s?
     answer: >-
       Key figure: 387 — Records in the working dataset. The source is the
       TidyTuesday release from 2019-12-24 (christmas_songs.csv). After cleaning,
       387 rows remain.
-  - question: What does the data show about twenty Weeks Marks the Upper Club?
+  - question: What does the data show about Twenty Weeks Marks the Upper Club?
     answer: >-
       Key figure: 8.00 — Median Weeks on chart. The source is the TidyTuesday
       release from 2019-12-24 (christmas_songs.csv). After cleaning, 387 rows
       remain.
-  - question: What does the data show about most Songs Cluster at Short Chart Lives?
+  - question: What does the data show about Most Songs Cluster at Short Chart Lives?
     answer: >-
       Key figure: 20.0 — Highest observed Weeks on chart. The source is the
       TidyTuesday release from 2019-12-24 (christmas_songs.csv). After cleaning,
       387 rows remain.
-  - question: What does the data show about standards Reappear Across Decades?
+  - question: What does the data show about Standards Reappear Across Decades?
     answer: >-
       Key figure: BETTER DAYS — Top Song by Weeks on chart. The source is the
       TidyTuesday release from 2019-12-24 (christmas_songs.csv). After cleaning,

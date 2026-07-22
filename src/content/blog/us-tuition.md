@@ -21,7 +21,7 @@ keyPoints:
   - 2004–2015 — Year span covered in the file
 faq:
   - question: >-
-      What does the data show about median tuition climbed from the
+      What does the data show about Median tuition climbed from the
       mid-five-thousands to the low-nine-thousands?
     answer: >-
       Key figure: 600 — Records in the working dataset. The source is the
@@ -29,14 +29,14 @@ faq:
       working file contains 600 rows and 3 columns after merging available
       tables in the week…
   - question: >-
-      What does the data show about vermont leads the state ladder in the
+      What does the data show about Vermont leads the state ladder in the
       charted cut?
     answer: >-
       Key figure: 7,607 — Median Value. The source is the TidyTuesday release
       from 2018-04-02 (R for Data Science community). The working file contains
       600 rows and 3 columns after merging available tables in the week…
   - question: >-
-      What does the data show about median and mean sit close; the top decile
+      What does the data show about Median and mean sit close; the top decile
       starts above eleven thousand?
     answer: >-
       Key figure: 15,224 — Highest observed Value. The source is the TidyTuesday
@@ -44,7 +44,7 @@ faq:
       contains 600 rows and 3 columns after merging available tables in the
       week…
   - question: >-
-      What does the data show about leading states do not move in lockstep over
+      What does the data show about Leading states do not move in lockstep over
       time?
     answer: >-
       Key figure: New Hampshire — Top State by Value. The source is the

@@ -21,23 +21,23 @@ keyPoints:
   - Oregano — Top Name by Price range min
 faq:
   - question: >-
-      What does the data show about price Floors Separate Everyday Shops From
+      What does the data show about Price Floors Separate Everyday Shops From
       Destination Pies?
     answer: >-
       Key figure: 10,000 — Records in the working dataset. The source is the
       TidyTuesday release from 2019-10-01 (pizza_datafiniti.csv). After
       cleaning, the analysis frame used here contains 10,000 records.
-  - question: What does the data show about the Top Dozen Is a Premium Plateau?
+  - question: What does the data show about The Top Dozen Is a Premium Plateau?
     answer: >-
       Key figure: 0.00 — Median Price range min. The source is the TidyTuesday
       release from 2019-10-01 (pizza_datafiniti.csv). After cleaning, the
       analysis frame used here contains 10,000 records.
-  - question: What does the data show about almost Everything Sits in the Low Bins?
+  - question: What does the data show about Almost Everything Sits in the Low Bins?
     answer: >-
       Key figure: 50.0 — Highest observed Price range min. The source is the
       TidyTuesday release from 2019-10-01 (pizza_datafiniti.csv). After
       cleaning, the analysis frame used here contains 10,000 records.
-  - question: What does the data show about premium Names Concentrate Quickly?
+  - question: What does the data show about Premium Names Concentrate Quickly?
     answer: >-
       Key figure: Oregano — Top Name by Price range min. The source is the
       TidyTuesday release from 2019-10-01 (pizza_datafiniti.csv). After

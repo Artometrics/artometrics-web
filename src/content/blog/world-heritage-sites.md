@@ -19,19 +19,19 @@ keyPoints:
   - 2004–2022 — Year span covered in the file
 faq:
   - question: >-
-      What does the data show about median heritage counts doubled at the
+      What does the data show about Median heritage counts doubled at the
       center?
     answer: >-
       Key figure: 6 — Records in the working dataset. The source is the
       TidyTuesday release from 2024-02-06 (R for Data Science community). The
       working file contains 6 rows and 3 columns after merging available tables
       in the week…
-  - question: What does the data show about sweden leads the country ladder?
+  - question: What does the data show about Sweden leads the country ladder?
     answer: >-
       Key figure: 9.00 — Median Value. The source is the TidyTuesday release
       from 2024-02-06 (R for Data Science community). The working file contains
       6 rows and 3 columns after merging available tables in the week…
-  - question: What does the data show about leaders diverge when tracked over time?
+  - question: What does the data show about Leaders diverge when tracked over time?
     answer: >-
       Key figure: 15.0 — Highest observed Value. The source is the TidyTuesday
       release from 2024-02-06 (R for Data Science community). The working file

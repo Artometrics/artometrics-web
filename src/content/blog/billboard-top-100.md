@@ -19,26 +19,26 @@ keyPoints:
   - Down By The River — Top Song by Week position
 faq:
   - question: >-
-      What does the data show about song-Level Position Averages Crowd the
+      What does the data show about Song-Level Position Averages Crowd the
       Bottom Rung?
     answer: >-
       Key figure: 100,000 — Records in the working dataset. The source is the
       TidyTuesday release from 2021-09-14 (billboard.csv). After cleaning, the
       analysis sample contains 100,000 records.
-  - question: What does the data show about leaders by Week Position Are a Flat Elite?
+  - question: What does the data show about Leaders by Week Position Are a Flat Elite?
     answer: >-
       Key figure: 50.0 — Median Week position. The source is the TidyTuesday
       release from 2021-09-14 (billboard.csv). After cleaning, the analysis
       sample contains 100,000 records.
   - question: >-
-      What does the data show about weekly Positions Fill the Chart Almost
+      What does the data show about Weekly Positions Fill the Chart Almost
       Uniformly?
     answer: >-
       Key figure: 100 — Highest observed Week position. The source is the
       TidyTuesday release from 2021-09-14 (billboard.csv). After cleaning, the
       analysis sample contains 100,000 records.
   - question: >-
-      What does the data show about concentration Among Songs Is Mechanical at
+      What does the data show about Concentration Among Songs Is Mechanical at
       First?
     answer: >-
       Key figure: Down By The River — Top Song by Week position. The source is

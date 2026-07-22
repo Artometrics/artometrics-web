@@ -22,25 +22,25 @@ keyPoints:
   - 8 — Languages compared in the first chart
   - 10 — Authors used as anchors
 faq:
-  - question: What does the data show about language gravity?
+  - question: What does the data show about Language gravity?
     answer: >-
       Key figure: 75K+ — Approximate scale of Project Gutenberg ebooks in
       public-facing summaries. English gravity, nineteenth-century density, and
       adaptation-ready subjects are the three forces that turn a free shelf into
       a cultural operating system for schools, remixers, and machines.
-  - question: What does the data show about the era machine?
+  - question: What does the data show about The era machine?
     answer: >-
       Key figure: Weekly — CSV catalog update cadence noted in Gutenberg tooling
       docs. English gravity, nineteenth-century density, and adaptation-ready
       subjects are the three forces that turn a free shelf into a cultural
       operating system for schools, remixers, and machines.
-  - question: What does the data show about author memory?
+  - question: What does the data show about Author memory?
     answer: >-
       Key figure: Daily — RDF catalog update cadence noted by Gutenberg. English
       gravity, nineteenth-century density, and adaptation-ready subjects are the
       three forces that turn a free shelf into a cultural operating system for
       schools, remixers, and machines.
-  - question: What does the data show about adaptation power?
+  - question: What does the data show about Adaptation power?
     answer: >-
       Key figure: 8 — Languages compared in the first chart. English gravity,
       nineteenth-century density, and adaptation-ready subjects are the three

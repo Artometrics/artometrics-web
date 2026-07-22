@@ -22,26 +22,26 @@ keyPoints:
   - Engineering — Most common Major category
 faq:
   - question: >-
-      What does the data show about psychology Leads Low-Wage Job Counts by a
+      What does the data show about Psychology Leads Low-Wage Job Counts by a
       Wide Margin?
     answer: >-
       Key figure: 173 — Records in the working dataset. The source is the
       TidyTuesday release from 2018-10-16 (recent-grads.csv). After cleaning,
       173 major rows remain.
-  - question: What does the data show about the Top Dozen’s Median Is Still Enormous?
+  - question: What does the data show about The Top Dozen’s Median Is Still Enormous?
     answer: >-
       Key figure: 1,231 — Median Low wage jobs. The source is the TidyTuesday
       release from 2018-10-16 (recent-grads.csv). After cleaning, 173 major rows
       remain.
   - question: >-
-      What does the data show about humanities and Business Categories Sit
+      What does the data show about Humanities and Business Categories Sit
       Higher Than Engineering?
     answer: >-
       Key figure: 48,207 — Highest observed Low wage jobs. The source is the
       TidyTuesday release from 2018-10-16 (recent-grads.csv). After cleaning,
       173 major rows remain.
   - question: >-
-      What does the data show about gaps Confirm Humanities and Business Above
+      What does the data show about Gaps Confirm Humanities and Business Above
       the Median?
     answer: >-
       Key figure: PSYCHOLOGY — Top Major by Low wage jobs. The source is the

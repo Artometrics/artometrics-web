@@ -20,17 +20,17 @@ keyPoints:
   - 8 — Countries placed on substitutability map
   - '1 — Core question: who is replaceable?'
 faq:
-  - question: What does the data show about three models of export power?
+  - question: What does the data show about Three models of export power?
     answer: >-
       Key figure: 3 — Export superpower systems compared. Start with the scale:
       3 export systems compared across 7 identity axes, with 6 dependency risks
       scored and 8 countries placed on a substitutability map.
-  - question: What does the data show about product fingerprints?
+  - question: What does the data show about Product fingerprints?
     answer: >-
       Key figure: 7 — Export identity axes. Start with the scale: 3 export
       systems compared across 7 identity axes, with 6 dependency risks scored
       and 8 countries placed on a substitutability map.
-  - question: What does the data show about dependency risk?
+  - question: What does the data show about Dependency risk?
     answer: >-
       Key figure: 6 — Dependency risks scored. Start with the scale: 3 export
       systems compared across 7 identity axes, with 6 dependency risks scored

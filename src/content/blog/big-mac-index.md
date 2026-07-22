@@ -22,13 +22,13 @@ keyPoints:
   - Norway — Highest average dollar price over the full 20-year span
   - '20 yrs — Timespan: 2000 through 2020'
 faq:
-  - question: What does the data show about global Price Trend?
+  - question: What does the data show about Global Price Trend?
     answer: >-
       Key figure: $3.04 — Median dollar price across all countries and years.
       Keep the calibration numbers close: the median dollar price across all
       country-years is $3.04 , the peak observed is $8.31 , and the global
       median rose about 83% from 2000 to 2020.
-  - question: What does the data show about most Expensive Countries?
+  - question: What does the data show about Most Expensive Countries?
     answer: >-
       Key figure: $8.31 — Peak price — Switzerland at its most expensive. Keep
       the calibration numbers close: the median dollar price across all
@@ -40,7 +40,7 @@ faq:
       Keep the calibration numbers close: the median dollar price across all
       country-years is $3.04 , the peak observed is $8.31 , and the global
       median rose about 83% from 2000 to 2020.
-  - question: What does the data show about tracking the Leaders?
+  - question: What does the data show about Tracking the Leaders?
     answer: >-
       Key figure: Norway — Highest average dollar price over the full 20-year
       span. Keep the calibration numbers close: the median dollar price across

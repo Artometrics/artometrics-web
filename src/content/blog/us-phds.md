@@ -21,20 +21,20 @@ keyPoints:
   - Life sciences — Most common Broad field
 faq:
   - question: >-
-      What does the data show about median doctorate counts edged upward across
+      What does the data show about Median doctorate counts edged upward across
       the decade?
     answer: >-
       Key figure: 3,370 — Records in the working dataset. The source is the
       TidyTuesday release from 2019-02-19 (R for Data Science community). The
       working file contains 3,370 rows and 6 columns after merging available
       tables in the week…
-  - question: What does the data show about social sciences lead the field ladder?
+  - question: What does the data show about Social sciences lead the field ladder?
     answer: >-
       Key figure: 85.0 — Median N phds. The source is the TidyTuesday release
       from 2019-02-19 (R for Data Science community). The working file contains
       3,370 rows and 6 columns after merging available tables in the week…
   - question: >-
-      What does the data show about broad fields do not share one production
+      What does the data show about Broad fields do not share one production
       band?
     answer: >-
       Key figure: 5,302 — Highest observed N phds. The source is the TidyTuesday
@@ -42,7 +42,7 @@ faq:
       contains 3,370 rows and 6 columns after merging available tables in the
       week…
   - question: >-
-      What does the data show about psychology and social sciences clear the
+      What does the data show about Psychology and social sciences clear the
       median; engineering trails?
     answer: >-
       Key figure: Social sciences — Top Field by N phds. The source is the

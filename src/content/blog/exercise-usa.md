@@ -20,25 +20,25 @@ keyPoints:
   - Colorado — Top State by Adults
 faq:
   - question: >-
-      What does the data show about western and New England States Lead Adult
+      What does the data show about Western and New England States Lead Adult
       Exercise?
     answer: >-
       Key figure: 52 — Records in the working dataset. The source is the
       TidyTuesday release from 2018-07-17 (week16_exercise.xlsx). After
       cleaning, 52 rows remain.
   - question: >-
-      What does the data show about the Top Dozen Sits Well Above the National
+      What does the data show about The Top Dozen Sits Well Above the National
       Median?
     answer: >-
       Key figure: 23.0 — Median Adults. The source is the TidyTuesday release
       from 2018-07-17 (week16_exercise.xlsx). After cleaning, 52 rows remain.
-  - question: What does the data show about most States Cluster Near the Low-20s?
+  - question: What does the data show about Most States Cluster Near the Low-20s?
     answer: >-
       Key figure: 32.0 — Highest observed Adults. The source is the TidyTuesday
       release from 2018-07-17 (week16_exercise.xlsx). After cleaning, 52 rows
       remain.
   - question: >-
-      What does the data show about top States Hold a Disproportionate Share of
+      What does the data show about Top States Hold a Disproportionate Share of
       the Aggregate?
     answer: >-
       Key figure: Colorado — Top State by Adults. The source is the TidyTuesday

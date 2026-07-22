@@ -35,21 +35,21 @@ keyPoints:
     ~61% — Share of all tracked revenue that comes from Merchandise, Licensing
     &amp; Retail — the dominant stream across the entire dataset
 faq:
-  - question: What does the data show about top 20 Franchises By Revenue?
+  - question: What does the data show about Top 20 Franchises By Revenue?
     answer: >-
       Key figure: $91B — Pokémon lifetime revenue — the highest-grossing media
       franchise ever recorded, more than the MCU, Star Wars, and Harry Potter
       put together. The TidyTuesday 2019 media franchises dataset covers 107
       properties, each with at least $4B in estimated lifetime revenue as of
       mid-2019. The figures are sourced from Wikipedia’s…
-  - question: What does the data show about revenue Per Year of Existence?
+  - question: What does the data show about Revenue Per Year of Existence?
     answer: >-
       Key figure: 107 — Unique franchises in the dataset — every one of them has
       already cleared at least $4B in lifetime revenue. The TidyTuesday 2019
       media franchises dataset covers 107 properties, each with at least $4B in
       estimated lifetime revenue as of mid-2019. The figures are sourced from
       Wikipedia’s…
-  - question: 'What does the data show about the Disney Empire, Consolidated?'
+  - question: 'What does the data show about The Disney Empire, Consolidated?'
     answer: >-
       Key figure: $4B+ — Minimum threshold for inclusion — most IP that has ever
       existed never gets close to this number. The TidyTuesday 2019 media

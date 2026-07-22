@@ -23,7 +23,7 @@ keyPoints:
   - 2 — Modern Finals appearances by the Tatum/Brown core through 2024
 faq:
   - question: >-
-      What does the data show about the 1960s are still the gravitational
+      What does the data show about The 1960s are still the gravitational
       center?
     answer: >-
       Key figure: 18 — NBA championships, the league record entering 2025. What
@@ -31,7 +31,7 @@ faq:
       titles stacked, how the franchise sits against the rest of the league’s
       ceiling, how eras converted…
   - question: >-
-      What does the data show about boston and Los Angeles define the league’s
+      What does the data show about Boston and Los Angeles define the league’s
       summit?
     answer: >-
       Key figure: 11 — Titles won during the Bill Russell era. What follows
@@ -39,7 +39,7 @@ faq:
       stacked, how the franchise sits against the rest of the league’s ceiling,
       how eras converted…
   - question: >-
-      What does the data show about russell converted chances; later eras
+      What does the data show about Russell converted chances; later eras
       inherited the burden?
     answer: >-
       Key figure: 2024 — Most recent championship. What follows reads Boston as
@@ -47,7 +47,7 @@ faq:
       franchise sits against the rest of the league’s ceiling, how eras
       converted…
   - question: >-
-      What does the data show about droughts do not erase the claim—they test
+      What does the data show about Droughts do not erase the claim—they test
       it?
     answer: >-
       Key figure: 22 — Years between the 1986 and 2008 titles. What follows

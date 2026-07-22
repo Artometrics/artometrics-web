@@ -37,7 +37,7 @@ faq:
       the same as play value, but it is a clean industrial signal: how much
       plastic inventory a box commits to, and how the company balances everyday
       sets against display pieces.
-  - question: What does the data show about leader trends?
+  - question: What does the data show about Leader trends?
     answer: >-
       Key figure: World Map — Top Name by Num parts. Quantity of pieces is not
       the same as play value, but it is a clean industrial signal: how much

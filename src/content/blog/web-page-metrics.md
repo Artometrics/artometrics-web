@@ -22,7 +22,7 @@ keyPoints:
   - desktop — Most common Client
 faq:
   - question: >-
-      What does the data show about median P50 fell as pages got faster at the
+      What does the data show about Median P50 fell as pages got faster at the
       center?
     answer: >-
       Key figure: 238 — Records in the working dataset. HTTP Archive-style
@@ -30,21 +30,21 @@ faq:
       aggregated as percentile bands. The TidyTuesday release from 2022-11-15
       supplies the…
   - question: >-
-      What does the data show about desktop and mobile split the P50
+      What does the data show about Desktop and mobile split the P50
       distribution?
     answer: >-
       Key figure: 5.97 — Median P50. HTTP Archive-style page-weight metrics by
       client (desktop/mobile) and measure type, aggregated as percentile bands.
       The TidyTuesday release from 2022-11-15 supplies the…
   - question: >-
-      What does the data show about p50 and P90 move together in performance
+      What does the data show about P50 and P90 move together in performance
       space?
     answer: >-
       Key figure: 9.80 — Highest observed P50. HTTP Archive-style page-weight
       metrics by client (desktop/mobile) and measure type, aggregated as
       percentile bands. The TidyTuesday release from 2022-11-15 supplies the…
   - question: >-
-      What does the data show about a client–year heatmap shows where speed
+      What does the data show about A client–year heatmap shows where speed
       migrated?
     answer: >-
       Key figure: speedIndex — Top Measure by P50. HTTP Archive-style

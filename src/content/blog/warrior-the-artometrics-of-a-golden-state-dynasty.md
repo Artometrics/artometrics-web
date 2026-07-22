@@ -34,7 +34,7 @@ keyPoints:
     major arena in North America built without public funding
 faq:
   - question: >-
-      What does the data show about two dynasty windows, and a desert between
+      What does the data show about Two dynasty windows, and a desert between
       them?
     answer: >-
       Key figure: 7 — NBA Championships — 1947, 1956, 1975, 2015, 2017, 2018,
@@ -50,7 +50,7 @@ faq:
       how the three-point revolution unfolded in real numbers, and what it means
       to win 73 games in…
   - question: >-
-      What does the data show about six teams reached 68 wins. Only one owns
+      What does the data show about Six teams reached 68 wins. Only one owns
       73.?
     answer: >-
       Key figure: 3,747 — Career three-pointers made by Stephen Curry through

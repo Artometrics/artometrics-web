@@ -24,14 +24,14 @@ keyPoints:
   - 16-0 — Perfect 2007 regular season
   - 2020 — First post-Brady season
 faq:
-  - question: What does the data show about one era overwhelms the rest of the archive?
+  - question: What does the data show about One era overwhelms the rest of the archive?
     answer: >-
       Key figure: 6 — Super Bowl championships. Was the dynasty Brady,
       Belichick, ownership, luck, or infrastructure? The charts treat it as a
       system shock—one era so large it became the franchise—then measure what
       remains after the system.
   - question: >-
-      What does the data show about new England compressed a summit climb into
+      What does the data show about New England compressed a summit climb into
       two decades?
     answer: >-
       Key figure: 9 — Super Bowl appearances during the Brady/Belichick era. Was
@@ -39,7 +39,7 @@ faq:
       charts treat it as a system shock—one era so large it became the
       franchise—then measure what remains after the system.
   - question: >-
-      What does the data show about excellence became routine before it became
+      What does the data show about Excellence became routine before it became
       legend?
     answer: >-
       Key figure: 30 — Approximate playoff wins from 2001 through 2019. Was the
@@ -47,7 +47,7 @@ faq:
       treat it as a system shock—one era so large it became the franchise—then
       measure what remains after the system.
   - question: >-
-      What does the data show about they controlled access to the AFC’s final
+      What does the data show about They controlled access to the AFC’s final
       room?
     answer: >-
       Key figure: 13 — AFC championship appearances since 2001. Was the dynasty

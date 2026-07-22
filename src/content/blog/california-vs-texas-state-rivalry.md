@@ -27,19 +27,19 @@ faq:
       Key figure: 2 — State systems compared. A full production stack for this
       comparison includes BEA state GDP by industry, Census ACS population and
       migration, IRS migration summaries, BLS employment, state tax and budget…
-  - question: What does the data show about growth Model?
+  - question: What does the data show about Growth Model?
     answer: >-
       Key figure: 7 — Rivalry dimensions scored. A full production stack for
       this comparison includes BEA state GDP by industry, Census ACS population
       and migration, IRS migration summaries, BLS employment, state tax and
       budget…
-  - question: What does the data show about export Fingerprint?
+  - question: What does the data show about Export Fingerprint?
     answer: >-
       Key figure: 7 — Export/industry families compared. A full production stack
       for this comparison includes BEA state GDP by industry, Census ACS
       population and migration, IRS migration summaries, BLS employment, state
       tax and budget…
-  - question: What does the data show about hidden Tradeoffs?
+  - question: What does the data show about Hidden Tradeoffs?
     answer: >-
       Key figure: 6 — Next comparison questions. A full production stack for
       this comparison includes BEA state GDP by industry, Census ACS population

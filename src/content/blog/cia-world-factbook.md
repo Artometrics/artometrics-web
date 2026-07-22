@@ -20,27 +20,27 @@ keyPoints:
   - '1,355,692,576 — Highest observed Population'
   - China — Top Country by Population
 faq:
-  - question: What does the data show about a Handful of Giants Dominate Headcount?
+  - question: What does the data show about A Handful of Giants Dominate Headcount?
     answer: >-
       Key figure: 259 — Records in the working dataset. The source is the
       TidyTuesday release from 2024-10-22 (cia_factbook.csv). After cleaning,
       259 rows remain.
   - question: >-
-      What does the data show about even the Top Dozen Has a Steep Internal
+      What does the data show about Even the Top Dozen Has a Steep Internal
       Drop?
     answer: >-
       Key figure: 5,220,371 — Median Population. The source is the TidyTuesday
       release from 2024-10-22 (cia_factbook.csv). After cleaning, 259 rows
       remain.
   - question: >-
-      What does the data show about most Countries Sit in the Small-Population
+      What does the data show about Most Countries Sit in the Small-Population
       Mass?
     answer: >-
       Key figure: 1,355,692,576 — Highest observed Population. The source is the
       TidyTuesday release from 2024-10-22 (cia_factbook.csv). After cleaning,
       259 rows remain.
   - question: >-
-      What does the data show about the Top Five Already Hold Most of the
+      What does the data show about The Top Five Already Hold Most of the
       People?
     answer: >-
       Key figure: China — Top Country by Population. The source is the
