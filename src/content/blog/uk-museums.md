@@ -9,13 +9,22 @@ heroImage: /images/content/articles/uk-museums/hero.png
 tags:
   - galleries
 draft: false
+tldr: >-
+  Museum locations and deprivation bands show how institutions map onto
+  inequality.
+keyPoints:
+  - '4,191 — Records in the working dataset'
+  - 5.00 — Median Area Deprivation index
+  - 10.0 — Highest observed Area Deprivation index
+  - Blenheim Palace — Top Name of museum by Area Deprivation index
+  - /England/South West (English — Most common Admin area
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">Britain’s museum map is also a map of place. This file places 4,191 museum records against an area deprivation index whose median is 5.00 and whose observed high is 10.0. Blenheim Palace appears among the fact-box notables; the South West of England shows up in the geographic gap analysis.</p>
 <p class="art-p">The question is not which museum is “best.” It is how cultural institutions sit on a deprivation scale — whether collections cluster in less-deprived areas, and how far named sites and admin areas sit above or below the median index of 5.00.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">A few markers set the scale before the charts.</p>
+<p class="art-p"></p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">4,191</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">5.00</span><span class="fact-label">Median Area Deprivation index</span></div>

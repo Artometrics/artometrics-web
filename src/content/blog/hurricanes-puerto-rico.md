@@ -9,6 +9,15 @@ heroImage: /images/content/articles/hurricanes-puerto-rico/hero.png
 tags:
   - cities-travel
 draft: false
+tldr: >-
+  Hurricane records compare wind, deaths, and frequency for the island’s most
+  damaging storms.
+keyPoints:
+  - 153 — Records in the working dataset
+  - 703 — Median Value
+  - '5,072 — Highest observed Value'
+  - Texas — Top State by Value
+  - 2017–2017 — Year span covered in the file
 ---
 <div id="quarto-content">
 <main class="art-article-main">
@@ -16,7 +25,7 @@ draft: false
 <p class="art-p">A compact TidyTuesday file of <strong>153</strong> records tracks values across that season's geography. The median reading is <strong>703</strong>; the highest observed value hits <strong>5,072</strong>. Texas leads the state-level totals in the working extract, but the timeline chart is where Puerto Rico's distinct peak pattern becomes visible.</p>
 <p class="art-p">This is not a full climatology of Caribbean cyclones. It is a season-slice that lets three hard-hit places be read side by side — intensity, concentration, and timing included.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">A few markers set the scale before the charts.</p>
+<p class="art-p"></p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">153</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">703</span><span class="fact-label">Median Value</span></div>

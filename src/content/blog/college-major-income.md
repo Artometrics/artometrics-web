@@ -9,13 +9,22 @@ heroImage: /images/content/articles/college-major-income/hero.png
 tags:
   - business
 draft: false
+tldr: >-
+  Earnings and unemployment by major show where degrees pay off and where risk
+  is higher.
+keyPoints:
+  - 173 — Records in the working dataset
+  - '1,231 — Median Low wage jobs'
+  - '48,207 — Highest observed Low wage jobs'
+  - PSYCHOLOGY — Top Major by Low wage jobs
+  - Engineering — Most common Major category
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">College majors are sold as income stories. The TidyTuesday recent-graduates extract used here also tracks how many alumni land in low-wage jobs. Across <strong>173</strong> majors, the median low-wage-job count is <strong>1,231</strong>, with a high of <strong>48,207</strong> in Psychology. Engineering is the most common major category label in the file.</p>
 <p class="art-p">That framing flips the usual prestige script: the chart stack leads with exposure to low-wage employment, then pairs it with unemployment rates. Pay ceilings matter; so does the size of the floor.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">A few markers set the scale before the charts.</p>
+<p class="art-p"></p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">173</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">1,231</span><span class="fact-label">Median Low wage jobs</span></div>

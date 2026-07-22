@@ -44,9 +44,10 @@ Schemas are enforced by `scripts/build-content.mjs` (not Astro Zod).
 
 ### `blog` — `src/content/blog/`
 
-- Required frontmatter: `title`, `slug`, `pubDate`, `description`, `heroImage`, `tags` (`culture|atlas|history|persona|power`)
-- Optional: `draft`, `author`
-- Body is HTML (Quarto sync)
+- Required frontmatter: `title`, `slug`, `pubDate`, `description`, `heroImage`, `tags` (one of: `sports|movies-tv|music|culture|galleries|cities-travel|games|business|books|tech`)
+- Optional: `draft`, `author`, `tldr`, `keyPoints`, `faq`, `audioSrc`
+- Body is HTML (narrative magazine prose; Plotly charts preserved)
+- Voice: professional, objective, insightful, no fluff — named/dated facts only
 - Template: `src/content/blog/anime.md` (gold monorepo prototype: `readmitted`)
 - Import: monorepo `articles/<slug>/` via `npm run sync:readmitted` (gold path); older pieces may still use `npm run sync:articles`
 

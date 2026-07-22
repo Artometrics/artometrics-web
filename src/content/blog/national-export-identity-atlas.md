@@ -7,6 +7,13 @@ heroImage: /images/content/articles/national-export-identity-atlas/hero.png
 tags:
   - business
 draft: false
+tldr: 'A country-level atlas treats exports as identity: what states sell and need.'
+keyPoints:
+  - 200+ — Countries/zones covered in UN Comtrade-style trade systems
+  - '5,000+ — Products in OEC-style trade classifications'
+  - HS — Harmonized System product code architecture
+  - 6 — Diagnostic country questions
+  - 8 — Export families or countries highlighted
 ---
 <div id="quarto-content">
 <main class="art-article-main">
@@ -14,15 +21,14 @@ draft: false
 <p class="art-p">Trade systems in the UN Comtrade and OEC style cover <strong>200+</strong> countries and zones and <strong>5,000+</strong> products under Harmonized System codes. The atlas below uses <strong>6</strong> diagnostic country questions and highlights <strong>8</strong> export families or countries to make identity readable without pretending the indices are final official rankings.</p>
 <p class="art-p">Scale and complexity are different virtues. A country can be large because it sells one thing in volume, or complex because it sells many hard-to-make things. Those identities behave differently under shock.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">A few markers set the scale before the charts.</p>
+<p class="art-p"></p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">200+</span><span class="fact-label">Countries/zones covered in UN Comtrade-style trade systems</span></div>
   <div class="fact-box"><span class="fact-number">5,000+</span><span class="fact-label">Products in OEC-style trade classifications</span></div>
   <div class="fact-box"><span class="fact-number">HS</span><span class="fact-label">Harmonized System product code architecture</span></div>
   <div class="fact-box"><span class="fact-number">6</span><span class="fact-label">Diagnostic country questions</span></div>
   <div class="fact-box"><span class="fact-number">8</span><span class="fact-label">Export families or countries highlighted</span></div>
-  <div class="fact-box"><span class="fact-number">5</span><span class="fact-label">Charts in this report</span></div>
-</div>
+  </div>
 <h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
 <p class="art-p">The source stack includes the OEC API, UN Comtrade, World Bank WDI, OECD, IMF, and national statistics offices. OEC is particularly useful for complexity-minded views of what countries can make and sell.</p>
 <p class="art-p">These charts use editorial indices to define the comparative structure before a full product-level ingestion pass. Observed trade flows, derived complexity measures, and interpretive scores are kept conceptually separate even when they appear on the same axes.</p>

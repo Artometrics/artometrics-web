@@ -9,13 +9,22 @@ heroImage: /images/content/articles/horror-movie-profit/hero.png
 tags:
   - movies-tv
 draft: false
+tldr: >-
+  Budget and box-office data for thousands of horror titles separate winners
+  from costly misses.
+keyPoints:
+  - '3,401 — Records in the working dataset'
+  - '25,533,818 — Median Domestic gross'
+  - '474,544,677 — Highest observed Domestic gross'
+  - 'Star Wars Ep. I: The Phantom — Top Movie by Domestic gross'
+  - 1936–2019 — Year span covered in the file
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">Horror is the genre studios love to describe as cheap and scalable — until the ledger says otherwise. Budget and domestic-gross figures for thousands of titles show which films returned capital and which simply burned it.</p>
 <p class="art-p">The working file holds <strong>3,401</strong> records spanning <strong>1936–2019</strong>. Median domestic gross sits at <strong>25,533,818</strong>; the highest observed domestic gross is <strong>474,544,677</strong>. Drama is the most common genre label in the merge — a reminder that genre tags in box-office tables are rarely as clean as marketing copy.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">A few markers set the scale before the charts.</p>
+<p class="art-p"></p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">3,401</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">25,533,818</span><span class="fact-label">Median Domestic gross</span></div>

@@ -10,6 +10,17 @@ heroImage: >-
 tags:
   - culture
 draft: false
+tldr: >-
+  A cross-medium look at how prizes turn visibility into legitimacy across film,
+  music, and science.
+keyPoints:
+  - >-
+    98th — Academy Awards database complete through 2025/2026 cycle per official
+    database
+  - '1,500+ — Acceptance speeches in the Academy''s speech database'
+  - 1901 — First Nobel Prizes awarded
+  - 94 — Approximate Grammy category count in recent ceremonies
+  - 6 — Award systems compared
 ---
 <div id="quarto-content">
 <main class="art-article-main">
@@ -17,15 +28,14 @@ draft: false
 <p class="art-p">Film, music, science, literature, theater, and television all run prize systems, but they do not manufacture legitimacy the same way. An Oscar night is tied to an entertainment market; a Nobel citation is tied to institutional memory. The interesting comparison is not which prize is “bigger,” but how each converts attention into a second life for the work.</p>
 <p class="art-p">The Academy Awards database is complete through the <strong>98th</strong> cycle, with <strong>1,500+</strong> acceptance speeches on file. Nobel prizes date to <strong>1901</strong>. Recent Grammy ceremonies run roughly <strong>94</strong> categories. Six award systems sit in the frame below.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">These markers set the scale before the charts.</p>
+<p class="art-p"></p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">98th</span><span class="fact-label">Academy Awards database complete through 2025/2026 cycle per official database</span></div>
   <div class="fact-box"><span class="fact-number">1,500+</span><span class="fact-label">Acceptance speeches in the Academy's speech database</span></div>
   <div class="fact-box"><span class="fact-number">1901</span><span class="fact-label">First Nobel Prizes awarded</span></div>
   <div class="fact-box"><span class="fact-number">94</span><span class="fact-label">Approximate Grammy category count in recent ceremonies</span></div>
   <div class="fact-box"><span class="fact-number">6</span><span class="fact-label">Award systems compared</span></div>
-  <div class="fact-box"><span class="fact-number">5</span><span class="fact-label">Charts in this report</span></div>
-</div>
+  </div>
 <h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
 <p class="art-p">The Academy maintains an official searchable database of winners and nominees. The Nobel Prize publishes public API-style records. Music awards are less clean as open data, so public Recording Academy records and Wikidata-style tables fill the gaps.</p>
 <p class="art-p">The framework before any chart is simple: prestige versus market attention, category inflation, nomination-to-win conversion, concentration of public memory, and gatekeeping — who still decides which works get a second life.</p>

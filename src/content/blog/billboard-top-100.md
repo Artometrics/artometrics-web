@@ -7,13 +7,19 @@ heroImage: /images/content/articles/billboard-top-100/hero.png
 tags:
   - music
 draft: false
+tldr: Large-scale Hot 100 data show how rankings compress at the summit.
+keyPoints:
+  - '100,000 — Records in the working dataset'
+  - 50.0 — Median Week position
+  - 100 — Highest observed Week position
+  - Down By The River — Top Song by Week position
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">The Billboard Hot 100 is a weekly ranking machine: 100 positions, endlessly refreshed. The TidyTuesday billboard extract used here holds <strong>100,000</strong> song-week rows, with a median week position of <strong>50.0</strong> — exactly mid-chart — and a highest observed week position of <strong>100</strong> (the bottom rung).</p>
 <p class="art-p">That median of 50 is almost tautological in a full 1–100 ranking, which is why the interesting questions shift to concentration, re-entries (instance), and which titles spend time at the chart’s edges. “Down By The River” appears among the fact-box leaders for week position in this working file.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">A few markers set the scale before the charts.</p>
+<p class="art-p"></p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">100,000</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">50.0</span><span class="fact-label">Median Week position</span></div>

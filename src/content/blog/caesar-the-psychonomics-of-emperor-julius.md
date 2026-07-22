@@ -9,6 +9,29 @@ heroImage: /images/content/2026/04/IMG_4212.webp
 tags:
   - culture
 draft: false
+tldr: >-
+  A psychonomic reading of Caesar asks what ambition cost the Roman political
+  household he ruled.
+keyPoints:
+  - >-
+    100 BCE — Caesar&#39;s birth year — born into Rome&#39;s most turbulent
+    political century, to a patrician family living in the Subura tenements
+  - >-
+    38 days — Held captive by Cilician pirates at age 25 — he laughed at their
+    ransom demand, volunteered to pay more, then crucified every one of them
+    after his release
+  - >-
+    0.95 — Caesar&#39;s Need for Power score under the Hermann (1999) Leadership
+    Trait Analysis framework — near the ceiling of any world leader ever
+    profiled
+  - >-
+    80,000 — Veterans and urban poor resettled in land colonies during
+    Caesar&#39;s dictatorship — his economic reforms addressed real structural
+    problems and built his client base simultaneously
+  - >-
+    194 yrs — How long after Caesar&#39;s assassination Rome reached its peak
+    GDP per capita — he authored the Pax Romana&#39;s prosperity without living
+    a day of it
 ---
 <div id="quarto-content">
 <main class="art-article-main">
@@ -16,7 +39,7 @@ draft: false
 <p class="art-p">Caesar was born in 100 BCE into the Subura — Rome’s roughest district — to a patrician family with a noble name and thin wallets. His father died when Caesar was fifteen, leaving him head of household with no resources and no patron. By the time he was twenty-five, Cilician pirates had captured his ship, set a ransom of twenty talents, and watched Caesar laugh, volunteer to pay fifty, spend thirty-eight days as their captive writing poetry and calling them illiterates, then return after his release with a fleet he raised himself and crucify every one of them — exactly as promised. This is not a fun anecdote. It is the earliest behavioral evidence of his core operating theory: the self is the institution. The pattern never changed. The scale did.</p>
 <p class="art-p">By 44 BCE, Caesar had crossed the Rubicon, won a civil war, reformed the debt system, redistributed land to 80,000 veterans and urban poor, rebuilt the calendar, and declared himself dictator for life. He was then stabbed twenty-three times by sixty senators — led by Brutus and Cassius, two men he had personally pardoned, appointed to the praetorship, and promised future consulships. The house he built outlasted him by five centuries. The soul that built it was load-bearing in a way no institution can survive.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">A few markers set the scale before the charts.</p>
+<p class="art-p"></p>
 <div class="facts-grid">
   <div class="fact-box">
     <span class="fact-number">100 BCE</span>

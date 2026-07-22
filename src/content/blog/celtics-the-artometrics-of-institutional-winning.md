@@ -8,6 +8,13 @@ heroImage: >-
 tags:
   - sports
 draft: false
+tldr: Boston’s championship inheritance still shapes every modern season.
+keyPoints:
+  - '18 — NBA championships, the league record entering 2025'
+  - 11 — Titles won during the Bill Russell era
+  - 2024 — Most recent championship
+  - 22 — Years between the 1986 and 2008 titles
+  - 5 — Defining Celtics title eras used in this report
 ---
 <div id="quarto-content">
 <main class="art-article-main">

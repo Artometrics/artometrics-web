@@ -7,13 +7,20 @@ heroImage: /images/content/articles/us-tuition/hero.png
 tags:
   - business
 draft: false
+tldr: State tuition time series measure the rise in college costs.
+keyPoints:
+  - 600 — Records in the working dataset
+  - '7,607 — Median Value'
+  - '15,224 — Highest observed Value'
+  - New Hampshire — Top State by Value
+  - 2004–2015 — Year span covered in the file
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">College price is a time series with a political charge. This file holds 600 state-level tuition records spanning 2004–2015, with a median value of 7,607 and a high of 15,224. New Hampshire appears in the fact-box state ranking; the charts track how the typical state price moved and which states sat at the top of the ladder.</p>
 <p class="art-p">The calibration point is that 7,607 median. Everything else — Vermont’s charted lead, the rise from 5,876 to 9,141, the top-decile threshold at 11,204 — is distance from that center of the tuition distribution.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">A few markers set the scale before the charts.</p>
+<p class="art-p"></p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">600</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">7,607</span><span class="fact-label">Median Value</span></div>

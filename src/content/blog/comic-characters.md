@@ -7,13 +7,20 @@ heroImage: /images/content/articles/comic-characters/hero.png
 tags:
   - culture
 draft: false
+tldr: Character attributes across Marvel and DC ask who sits atop power rankings.
+keyPoints:
+  - '23,272 — Records in the working dataset'
+  - 4.00 — Median Appearances
+  - '4,043 — Highest observed Appearances'
+  - Spider-Man (Peter Parker) — Top Name by Appearances
+  - 1935–2013 — Year span covered in the file
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">Comic-book universes are attention economies with capes. The TidyTuesday comic-characters extract used here holds <strong>23,272</strong> records spanning <strong>1935–2013</strong>, with a median of <strong>4.00</strong> appearances and a high of <strong>4,043</strong> for Spider-Man (Peter Parker). Marvel is the most common publisher label.</p>
 <p class="art-p">That median of four appearances is the catalog’s quiet truth: most named characters are spear-carriers. The charts follow how appearance mass concentrates in a handful of franchise engines.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">A few markers set the scale before the charts.</p>
+<p class="art-p"></p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">23,272</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">4.00</span><span class="fact-label">Median Appearances</span></div>

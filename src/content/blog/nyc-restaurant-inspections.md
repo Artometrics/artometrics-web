@@ -7,6 +7,13 @@ heroImage: /images/content/articles/nyc-restaurant-inspections/hero.png
 tags:
   - cities-travel
 draft: false
+tldr: Restaurant grades across New York show how scores distribute by cuisine.
+keyPoints:
+  - '100,000 — Records in the working dataset'
+  - 15.0 — Median Score
+  - 156 — Highest observed Score
+  - NOUS LES AMIS RESTAURANT & B — Top Dba by Score
+  - 1900–2018 — Year span covered in the file
 ---
 <div id="quarto-content">
 <main class="art-article-main">
@@ -14,7 +21,7 @@ draft: false
 <p class="art-p">A TidyTuesday working extract of <strong>100,000</strong> records puts median score at <strong>15.0</strong> and the highest observed score at <strong>156</strong>. <strong>NOUS LES AMIS RESTAURANT &amp; B</strong> leads the DBA ranking by score in the fact box, grade <strong>A</strong> is the most common label, and the year span in the file runs from a placeholder-early <strong>1900</strong> through <strong>2018</strong> — with the dense modern inspection era carrying most of the signal.</p>
 <p class="art-p">Higher scores here mean more violation points, not better food. That inversion is easy to forget once letter grades take over the conversation.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">A few markers set the scale before the charts.</p>
+<p class="art-p"></p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">100,000</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">15.0</span><span class="fact-label">Median Score</span></div>

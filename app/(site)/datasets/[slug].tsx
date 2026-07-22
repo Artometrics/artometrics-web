@@ -1,23 +1,27 @@
 import { Text, View, StyleSheet, Pressable } from "react-native";
 import { Link, useLocalSearchParams } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
-import { Colors } from "@/constants/Colors";
+import { PageSeo } from "@/components/PageSeo";
+import { Fonts } from "@/constants/Colors";
+import { useTheme } from "@/lib/theme";
 import { DATASET_PACKS, getDatasetPack } from "@/data/datasets";
+import { SECTION_META } from "@/data/sections";
 
 export async function generateStaticParams() {
   return DATASET_PACKS.map((p) => ({ slug: p.id }));
 }
 
 export default function DatasetPackScreen() {
+  const { colors } = useTheme();
   const { slug } = useLocalSearchParams<{ slug: string }>();
   const pack = getDatasetPack(slug);
 
   if (!pack) {
     return (
       <Wrapper style={styles.wrap}>
-        <Text style={styles.title}>Pack not found</Text>
+        <Text style={[styles.title, { color: colors.text }]}>Pack not found</Text>
         <Link href="/datasets">
-          <Text style={styles.link}>Back to datasets</Text>
+          <Text style={{ color: colors.accent }}>Back to datasets</Text>
         </Link>
       </Wrapper>
     );
@@ -25,33 +29,42 @@ export default function DatasetPackScreen() {
 
   return (
     <Wrapper variant="narrow" style={styles.wrap}>
-      <Text style={styles.status}>{pack.status}</Text>
-      <Text style={styles.title}>{pack.title}</Text>
-      <Text style={styles.desk}>{pack.desk} desk · {pack.primaryKeyword}</Text>
-      <Text style={styles.body}>{pack.summary}</Text>
+      <PageSeo
+        title={pack.title}
+        description={pack.summary}
+        path={`/datasets/${pack.id}`}
+      />
+      <Text style={[styles.status, { color: colors.accent }]}>{pack.status}</Text>
+      <Text style={[styles.title, { color: colors.text }]}>{pack.title}</Text>
+      <Text style={[styles.meta, { color: colors.textSubtle }]}>
+        {SECTION_META[pack.section].title} · {pack.primaryKeyword}
+      </Text>
+      <Text style={[styles.body, { color: colors.textMuted }]}>{pack.summary}</Text>
 
-      <Text style={styles.h2}>Sources</Text>
+      <Text style={[styles.h2, { color: colors.text }]}>Sources</Text>
       {pack.sources.map((s) => (
-        <Text key={s.url} style={styles.body}>
+        <Text key={s.url} style={[styles.body, { color: colors.textMuted }]}>
           · {s.name}
         </Text>
       ))}
 
-      <Text style={styles.h2}>Related reports</Text>
+      <Text style={[styles.h2, { color: colors.text }]}>Related reports</Text>
       <View style={styles.links}>
         {pack.relatedReports.map((id) => (
           <Link key={id} href={`/${id}`} asChild>
             <Pressable>
-              <Text style={styles.link}>{id}</Text>
+              <Text style={{ color: colors.accent, fontSize: 15 }}>{id}</Text>
             </Pressable>
           </Link>
         ))}
       </View>
 
       {pack.downloadPath ? (
-        <Text style={styles.body}>Download: {pack.downloadPath}</Text>
+        <Text style={[styles.body, { color: colors.textMuted }]}>
+          Download: {pack.downloadPath}
+        </Text>
       ) : (
-        <Text style={styles.note}>
+        <Text style={[styles.note, { color: colors.textSubtle }]}>
           CSV download ships when this pack moves from planned/collecting → published.
         </Text>
       )}
@@ -65,14 +78,17 @@ const styles = StyleSheet.create({
     fontSize: 10,
     letterSpacing: 1.5,
     textTransform: "uppercase",
-    color: Colors.accent700,
     fontWeight: "700",
   },
-  title: { fontSize: 34, fontWeight: "300", color: Colors.base900, lineHeight: 40 },
-  desk: { fontSize: 13, color: Colors.base500, letterSpacing: 1 },
-  body: { fontSize: 16, lineHeight: 26, color: Colors.base600 },
-  h2: { marginTop: 16, fontSize: 14, letterSpacing: 2, textTransform: "uppercase", color: Colors.base900 },
+  title: { fontSize: 34, fontWeight: "300", fontFamily: Fonts.serif, lineHeight: 40 },
+  meta: { fontSize: 13, letterSpacing: 1 },
+  body: { fontSize: 16, lineHeight: 26 },
+  h2: {
+    marginTop: 16,
+    fontSize: 14,
+    letterSpacing: 2,
+    textTransform: "uppercase",
+  },
   links: { gap: 8 },
-  link: { color: Colors.accent700, fontSize: 15 },
-  note: { marginTop: 12, fontSize: 14, color: Colors.base500, fontStyle: "italic" },
+  note: { marginTop: 12, fontSize: 14, fontStyle: "italic" },
 });

@@ -7,13 +7,30 @@ heroImage: /images/content/2026/04/IMG_4164.webp
 tags:
   - culture
 draft: false
+tldr: 'Since 2011, Ethan and Hila Klein scaled channels, a podcast, and a brand.'
+keyPoints:
+  - >-
+    3.24B — Total views across all four H3 channels, 2013–2026 — enough to give
+    every person on Earth nearly half a view
+  - >-
+    1,638 — Videos analyzed after filtering Shorts and zero-view uploads from
+    the original 1,876-video pull
+  - >-
+    4.5× — How much harder h3h3Productions hits per video vs. the H3 Podcast —
+    4.78M median vs. 1.05M
+  - >-
+    9 months — The entire Frenemies Era — the most-watched stretch in H3 Podcast
+    history, Sep 2020 to Jun 2021
+  - >-
+    680 — H3 Podcast episodes analyzed via Podchaser API — median runtime grew
+    from 42 minutes in 2017 to 220+ by 2024
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">Ethan Klein built one of YouTube’s most documented creator empires from a single channel and a lawsuit. H3h3Productions launched in 2011 as a reaction-commentary format, spent years as a meme factory, and then pivoted — twice — into something far more complicated. The H3 Podcast debuted in 2017. The Frenemies co-host era with Trisha Paytas ran for nine months in 2020–2021 and produced the highest viewership the show has ever seen. The Leftovers political co-host era with Hasan Piker ran until October 2023, when a public dispute over the Israel-Palestine conflict ended it. What remained after that is what this piece analyzes: 1,638 videos across four channels, 680 podcast episodes, and three years of Reddit post data from the fan and critic communities that formed around the brand.</p>
 <p class="art-p">This is not a hit piece and it is not a fan report. It is a data report. The numbers are what they are.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">A few markers set the scale before the charts.</p>
+<p class="art-p"></p>
 <div class="facts-grid">
   <div class="fact-box">
     <span class="fact-number">3.24B</span>

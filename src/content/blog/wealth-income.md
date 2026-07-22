@@ -7,13 +7,20 @@ heroImage: /images/content/articles/wealth-income/hero.png
 tags:
   - business
 draft: false
+tldr: Wealth and income shares measure how assets pile up at the upper end.
+keyPoints:
+  - '2,916 — Records in the working dataset'
+  - 10.9 — Median Income distribution
+  - 27.2 — Highest observed Income distribution
+  - Black Alone — Top Race by Income distribution
+  - 1967–2019 — Year span covered in the file
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">Income distribution is how a society counts who sits where. This file holds 2,916 records spanning 1967–2019, with a median income-distribution value of 10.9 and a high of 27.2. Black Alone appears in the fact-box race ranking; Under $15,000 is the most common income bracket label.</p>
 <p class="art-p">The charts track how the median moved, which race categories lead, how brackets sit relative to the median, and how income distribution relates to income median. The calibration point is 10.9 — the center of the distribution field in this extract.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">A few markers set the scale before the charts.</p>
+<p class="art-p"></p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">2,916</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">10.9</span><span class="fact-label">Median Income distribution</span></div>

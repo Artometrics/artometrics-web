@@ -22,18 +22,37 @@ const authors = existsSync(join(ROOT, "src/generated/authors.json"))
   ? JSON.parse(readFileSync(join(ROOT, "src/generated/authors.json"), "utf8"))
   : [];
 
+const SECTIONS = [
+  "sports",
+  "movies-tv",
+  "music",
+  "culture",
+  "galleries",
+  "cities-travel",
+  "games",
+  "business",
+  "books",
+  "tech",
+];
+
 const staticPaths = [
   "/",
   "/blog",
+  "/topics",
+  ...SECTIONS.map((s) => `/topics/${s}`),
   "/podcast",
   "/about",
   "/contact",
   "/pricing",
   "/resources",
   "/datasets",
+  "/library",
+  "/search",
+  "/newsletter",
   "/authors",
   "/login",
   "/signup",
+  "/get-app",
 ];
 
 function url(path, lastmod, priority = "0.6") {

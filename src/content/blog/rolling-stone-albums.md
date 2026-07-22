@@ -7,6 +7,13 @@ heroImage: /images/content/articles/rolling-stone-albums/hero.png
 tags:
   - music
 draft: false
+tldr: Canonical rankings identify the records Rolling Stone places at the summit.
+keyPoints:
+  - 691 — Records in the working dataset
+  - 250 — Median Rank 2003
+  - 500 — Highest observed Rank 2003
+  - Touch — Top Album by Rank 2003
+  - 1955–2019 — Year span covered in the file
 ---
 <div id="quarto-content">
 <main class="art-article-main">
@@ -14,7 +21,7 @@ draft: false
 <p class="art-p">A working file of <strong>691</strong> records puts median 2003 rank at <strong>250</strong> and the highest observed rank number at <strong>500</strong>. <strong>Touch</strong> leads the album ranking by the 2003 rank field in the fact box, the year span of album release years runs <strong>1955–2019</strong>, and <strong>Studio</strong> is the most common type label.</p>
 <p class="art-p">Remember the rank inversion: lower numbers are greater prestige on a traditional list, while some chart cuts sort the numeric field as a magnitude. The prose below follows the file's stated leaders and medians without inventing a second scoring system.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">A few markers set the scale before the charts.</p>
+<p class="art-p"></p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">691</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">250</span><span class="fact-label">Median Rank 2003</span></div>

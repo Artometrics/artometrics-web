@@ -1,5 +1,13 @@
-import { Platform, Pressable, Text, TextInput, View, StyleSheet } from "react-native";
-import { Link, router } from "expo-router";
+import {
+  Platform,
+  Pressable,
+  ScrollView,
+  Text,
+  TextInput,
+  View,
+  StyleSheet,
+} from "react-native";
+import { Link, router, usePathname } from "expo-router";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { Logo } from "@/components/Logo";
 import { Wrapper } from "@/components/Wrapper";
@@ -7,12 +15,14 @@ import { Fonts } from "@/constants/Colors";
 import { useAuth } from "@/lib/auth";
 import { useChrome } from "@/lib/chrome";
 import { useTheme } from "@/lib/theme";
+import { SECTION_META, SECTION_SLUGS } from "@/data/sections";
 import { useState } from "react";
 
 export function SiteHeader() {
   const { user } = useAuth();
   const { setMenuOpen } = useChrome();
   const { colors, toggle, mode } = useTheme();
+  const pathname = usePathname();
   const [q, setQ] = useState("");
   const [searchOpen, setSearchOpen] = useState(false);
 
@@ -28,11 +38,22 @@ export function SiteHeader() {
 
   return (
     <View style={[styles.shell, { backgroundColor: colors.headerBg, borderBottomColor: colors.border }]}>
-      <Wrapper>
+      <Wrapper variant="magazine">
         <View style={styles.topRow}>
+          <Pressable
+            onPress={() => setMenuOpen(true)}
+            accessibilityRole="button"
+            accessibilityLabel="Open menu"
+            style={styles.sideBtn}
+            hitSlop={12}
+            testID="site-menu-button"
+          >
+            <Ionicons name="menu-outline" size={26} color={colors.text} />
+          </Pressable>
+
           <Link href="/" asChild>
             <Pressable style={styles.logoWrap} accessibilityLabel="Artometrics home">
-              <Logo size={28} align="left" style={{ color: colors.text }} />
+              <Logo size={30} align="center" style={{ color: colors.text }} />
             </Pressable>
           </Link>
 
@@ -80,33 +101,45 @@ export function SiteHeader() {
               />
             </Pressable>
 
-            {user ? (
-              <Link href="/account" asChild>
-                <Pressable hitSlop={8} accessibilityLabel="Account" style={styles.iconBtn}>
-                  <Ionicons name="person-outline" size={20} color={colors.text} />
-                </Pressable>
-              </Link>
-            ) : (
-              <Link href="/login" asChild>
-                <Pressable hitSlop={8} accessibilityLabel="Sign in" style={styles.iconBtn}>
-                  <Ionicons name="person-outline" size={20} color={colors.text} />
-                </Pressable>
-              </Link>
-            )}
-
-            <Pressable
-              onPress={() => setMenuOpen(true)}
-              accessibilityRole="button"
-              accessibilityLabel="Open menu"
-              style={styles.iconBtn}
-              hitSlop={12}
-              testID="site-menu-button"
-            >
-              <Ionicons name="menu-outline" size={26} color={colors.text} />
-            </Pressable>
+            <Link href={user ? "/account" : "/login"} asChild>
+              <Pressable hitSlop={8} accessibilityLabel={user ? "Account" : "Sign in"} style={styles.iconBtn}>
+                <Ionicons name="person-outline" size={20} color={colors.text} />
+              </Pressable>
+            </Link>
           </View>
         </View>
       </Wrapper>
+
+      <View style={[styles.sectionBar, { borderTopColor: colors.border }]}>
+        <ScrollView
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          contentContainerStyle={styles.sectionTrack}
+        >
+          {SECTION_SLUGS.map((slug) => {
+            const active =
+              pathname === `/topics/${slug}` || pathname?.startsWith(`/topics/${slug}/`);
+            return (
+              <Link key={slug} href={`/topics/${slug}` as `/topics/${string}`} asChild>
+                <Pressable style={styles.sectionItem} hitSlop={6}>
+                  <Text
+                    style={[
+                      styles.sectionLabel,
+                      { color: active ? colors.text : colors.textMuted },
+                      active ? styles.sectionActive : null,
+                    ]}
+                  >
+                    {SECTION_META[slug].title}
+                  </Text>
+                  {active ? (
+                    <View style={[styles.sectionUnderline, { backgroundColor: colors.text }]} />
+                  ) : null}
+                </Pressable>
+              </Link>
+            );
+          })}
+        </ScrollView>
+      </View>
     </View>
   );
 }
@@ -121,15 +154,23 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
     paddingVertical: 10,
-    minHeight: 52,
-    gap: 12,
+    minHeight: 56,
+    gap: 8,
+  },
+  sideBtn: {
+    width: 44,
+    height: 44,
+    alignItems: "center",
+    justifyContent: "center",
+    zIndex: 2,
   },
   logoWrap: {
-    flexShrink: 1,
-    alignItems: "flex-start",
+    position: "absolute",
+    left: 0,
+    right: 0,
+    alignItems: "center",
     justifyContent: "center",
     zIndex: 1,
-    maxWidth: "55%",
   },
   actions: {
     flexDirection: "row",
@@ -137,7 +178,7 @@ const styles = StyleSheet.create({
     justifyContent: "flex-end",
     gap: 2,
     zIndex: 2,
-    flexShrink: 0,
+    marginLeft: "auto",
   },
   iconBtn: {
     width: 40,
@@ -158,5 +199,34 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontFamily: Fonts.sans,
     ...(Platform.OS === "web" ? ({ outlineStyle: "none" } as object) : null),
+  },
+  sectionBar: {
+    borderTopWidth: StyleSheet.hairlineWidth,
+  },
+  sectionTrack: {
+    paddingHorizontal: 16,
+    gap: 4,
+    alignItems: "center",
+    minHeight: 40,
+  },
+  sectionItem: {
+    paddingHorizontal: 10,
+    paddingVertical: 10,
+    alignItems: "center",
+  },
+  sectionLabel: {
+    fontSize: 11,
+    fontWeight: "700",
+    letterSpacing: 1.1,
+    textTransform: "uppercase",
+    fontFamily: Fonts.sans,
+  },
+  sectionActive: {
+    fontWeight: "800",
+  },
+  sectionUnderline: {
+    marginTop: 4,
+    height: 2,
+    alignSelf: "stretch",
   },
 });

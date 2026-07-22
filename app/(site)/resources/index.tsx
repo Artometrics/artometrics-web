@@ -25,7 +25,7 @@ export default function ResourcesScreen() {
       <Text style={styles.eyebrow}>Library</Text>
       <Text style={styles.title}>Resources</Text>
       <Text style={styles.deck}>
-        Guides for readers, analysts, and models — plus the dataset library behind the desks.
+        Guides for readers, analysts, and models — plus the dataset library behind the reports.
       </Text>
 
       <View style={styles.block}>

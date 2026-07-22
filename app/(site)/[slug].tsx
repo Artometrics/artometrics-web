@@ -3,6 +3,7 @@ import { useLocalSearchParams, Link } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { ArticleBody } from "@/components/ArticleBody";
 import { ArticleActions } from "@/components/ArticleActions";
+import { TldrBox } from "@/components/TldrBox";
 import { PageSeo } from "@/components/PageSeo";
 import { Fonts } from "@/constants/Colors";
 import { useTheme } from "@/lib/theme";
@@ -51,22 +52,44 @@ export default function ReportScreen() {
   const hero = assetUrl(post.heroImage);
   const authorLabel = post.author ? formatAuthorName(String(post.author)) : "Artometrics";
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: post.title,
-    description: post.description,
-    datePublished: post.pubDate,
-    image: hero ? [`https://artometrics.com${post.heroImage}`] : undefined,
-    author: { "@type": "Organization", name: authorLabel },
-    publisher: {
-      "@type": "Organization",
-      name: "Artometrics",
-      url: "https://artometrics.com",
+  const tldr = (post as { tldr?: string | null }).tldr ?? null;
+  const keyPoints = (post as { keyPoints?: string[] }).keyPoints ?? [];
+  const faq = (post as { faq?: { question: string; answer: string }[] }).faq ?? [];
+  const related = getBlogPosts()
+    .filter((p) => p.slug !== post.slug && primarySection(p.tags) === section)
+    .slice(0, 4);
+
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: post.title,
+      description: post.description,
+      datePublished: post.pubDate,
+      image: hero ? [`https://artometrics.com${post.heroImage}`] : undefined,
+      author: { "@type": "Organization", name: authorLabel },
+      publisher: {
+        "@type": "Organization",
+        name: "Artometrics",
+        url: "https://artometrics.com",
+      },
+      mainEntityOfPage: `https://artometrics.com/${post.slug}`,
+      articleSection: section ? SECTION_META[section].title : "Articles",
     },
-    mainEntityOfPage: `https://artometrics.com/${post.slug}`,
-    articleSection: section ? SECTION_META[section].title : "Articles",
-  };
+    ...(faq.length
+      ? [
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faq.map((item) => ({
+              "@type": "Question",
+              name: item.question,
+              acceptedAnswer: { "@type": "Answer", text: item.answer },
+            })),
+          },
+        ]
+      : []),
+  ];
 
   return (
     <View style={{ backgroundColor: colors.bg }}>
@@ -78,6 +101,16 @@ export default function ReportScreen() {
         type="article"
       />
       <SeoJsonLd data={jsonLd} />
+      {hero ? (
+        <Wrapper variant={bleed ? "bleed" : "magazine"} style={styles.heroWrap}>
+          <Image
+            source={{ uri: hero }}
+            style={styles.hero}
+            resizeMode="cover"
+            accessibilityLabel={post.title}
+          />
+        </Wrapper>
+      ) : null}
       <Wrapper style={styles.front} variant="prose">
         {section ? (
           <Text style={[styles.eyebrow, { color: colors.accent }]}>
@@ -91,23 +124,35 @@ export default function ReportScreen() {
           {post.pubDate ? ` · ${formatDate(post.pubDate)}` : ""}
           {` · ${minutes} min read`}
         </Text>
+        <TldrBox tldr={tldr ?? post.description} keyPoints={keyPoints} />
       </Wrapper>
-      {hero ? (
-        <Wrapper variant={bleed ? "bleed" : "prose"} style={styles.heroWrap}>
-          <Image
-            source={{ uri: hero }}
-            style={styles.hero}
-            resizeMode="cover"
-            accessibilityLabel={post.title}
-          />
-        </Wrapper>
-      ) : null}
       <Wrapper variant="prose">
         <ArticleActions slug={post.slug} title={post.title} />
       </Wrapper>
       <Wrapper variant="prose" style={styles.article}>
         <ArticleBody html={post.body} />
       </Wrapper>
+      {faq.length ? (
+        <Wrapper variant="prose" style={styles.faq}>
+          <Text style={[styles.faqTitle, { color: colors.text }]}>Frequently asked questions</Text>
+          {faq.map((item) => (
+            <View key={item.question} style={[styles.faqItem, { borderBottomColor: colors.border }]}>
+              <Text style={[styles.faqQ, { color: colors.text }]}>{item.question}</Text>
+              <Text style={[styles.faqA, { color: colors.textMuted }]}>{item.answer}</Text>
+            </View>
+          ))}
+        </Wrapper>
+      ) : null}
+      {related.length ? (
+        <Wrapper variant="prose" style={styles.related}>
+          <Text style={[styles.faqTitle, { color: colors.text }]}>Related reports</Text>
+          {related.map((r) => (
+            <Link key={r.slug} href={`/${r.slug}`} asChild>
+              <Text style={[styles.relatedLink, { color: colors.accent }]}>{r.title}</Text>
+            </Link>
+          ))}
+        </Wrapper>
+      ) : null}
       <Wrapper variant="prose" style={[styles.adjacent, { borderTopColor: colors.text }]}>
         {adjacent.previous ? (
           <Link href={adjacent.previous.href as `/${string}`}>
@@ -158,12 +203,29 @@ const styles = StyleSheet.create({
     lineHeight: 22,
     marginTop: 4,
   },
-  heroWrap: { paddingTop: 12, paddingBottom: 8 },
+  heroWrap: { paddingTop: 0, paddingBottom: 8 },
   hero: {
     width: "100%",
-    aspectRatio: 16 / 10,
+    aspectRatio: 16 / 9,
+    maxHeight: 520,
   },
   article: { paddingTop: 8, paddingBottom: 32 },
+  faq: { paddingBottom: 24, gap: 8 },
+  faqTitle: {
+    fontFamily: Fonts.sans,
+    fontSize: 20,
+    fontWeight: "800",
+    marginBottom: 8,
+  },
+  faqItem: {
+    paddingVertical: 12,
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    gap: 6,
+  },
+  faqQ: { fontSize: 16, fontWeight: "700", lineHeight: 22 },
+  faqA: { fontSize: 15, lineHeight: 22 },
+  related: { paddingBottom: 24, gap: 10 },
+  relatedLink: { fontSize: 16, lineHeight: 24, fontWeight: "600" },
   adjacent: {
     flexDirection: "row",
     justifyContent: "space-between",

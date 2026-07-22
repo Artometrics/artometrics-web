@@ -9,13 +9,32 @@ heroImage: /images/content/2026/04/IMG_4151.webp
 tags:
   - movies-tv
 draft: false
+tldr: >-
+  MyAnimeList metadata on more than 13,000 titles traces Japanese animation as a
+  production system.
+keyPoints:
+  - >-
+    13,631 — Unique anime titles in the dataset — from silent-era shorts to
+    modern streaming originals
+  - >-
+    6.38 — Overall median MAL score — the mathematical baseline every studio and
+    genre is measured against
+  - >-
+    8.12% — Share of TV anime scoring 8+ on MAL — the highest prestige hit-rate
+    of any format (346 out of 4,260 titles)
+  - >-
+    90 — High-scoring shows buried past popularity rank 2,000 — the titles the
+    algorithm never surfaced
+  - >-
+    0.389 — Pearson correlation between score and members — popularity predicts
+    quality directionally, not precisely
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">This MyAnimeList dataset covers 13,631 unique anime titles spanning 1917 to 2019 — a century-scale archive tracing the medium from prewar theater shorts to the standardized streaming machine of the 2010s. The key interpretive move here is separating catalog reality (what actually got made) from fan-canon popularity (what people actually watched and rated). Those two things rhyme, but they are not the same thing, and the gap between them is where the most interesting analysis lives.</p>
 <p class="art-p">The overall median MAL score is 6.38. That is the calibration point for everything that follows. A 6.38 is not a failure — it is the mathematical center of a platform where over 13,000 titles compete for attention. When comparing studios, formats, and genres throughout this piece, the question is never who broke 8.0 once. It is who stayed above 6.38 consistently, across volume. That is a far harder problem, and most studios never solve it.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">A few markers set the scale before the charts.</p>
+<p class="art-p"></p>
 <div class="facts-grid">
   <div class="fact-box">
     <span class="fact-number">13,631</span>

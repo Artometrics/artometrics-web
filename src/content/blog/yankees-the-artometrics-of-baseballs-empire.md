@@ -9,6 +9,15 @@ heroImage: /images/content/articles/yankees-the-artometrics-of-baseballs-empire/
 tags:
   - sports
 draft: false
+tldr: >-
+  More than titles: New York sets the standard for droughts, payroll, and
+  magnitude.
+keyPoints:
+  - '27 — World Series championships, the most in Major League Baseball'
+  - '40 — American League pennants, the deepest October archive in the sport'
+  - 2009 — Most recent World Series title
+  - 15 — Active title drought entering 2025
+  - '5 — Titles from the Core Four era, 1996-2009'
 ---
 <div id="quarto-content">
 <main class="art-article-main">

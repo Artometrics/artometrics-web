@@ -7,6 +7,13 @@ heroImage: /images/content/articles/lego-database/hero.png
 tags:
   - games
 draft: false
+tldr: Official set metadata traces rising piece counts and theme differences.
+keyPoints:
+  - '19,798 — Records in the working dataset'
+  - 34.0 — Median Num parts
+  - '11,695 — Highest observed Num parts'
+  - World Map — Top Name by Num parts
+  - 1949–2022 — Year span covered in the file
 ---
 <div id="quarto-content">
 <main class="art-article-main">
@@ -14,7 +21,7 @@ draft: false
 <p class="art-p">The working file's fact markers put the median set near <strong>34</strong> parts while the extreme end reaches into five digits — <strong>World Map</strong> leads at <strong>11,695</strong> parts on the highlighted ranking, with <strong>5,792</strong> as the median among the top dozen. Across the time span in the charts, median part counts fall from roughly <strong>142</strong> in the opening period to about <strong>59.5</strong> at the close — a reminder that the typical set and the showcase set are different products.</p>
 <p class="art-p">Quantity of pieces is not the same as play value, but it is a clean industrial signal: how much plastic inventory a box commits to, and how the company balances everyday sets against display pieces.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">A few markers set the scale before the charts.</p>
+<p class="art-p"></p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">19,798</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">34.0</span><span class="fact-label">Median Num parts</span></div>

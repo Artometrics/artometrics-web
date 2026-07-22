@@ -7,13 +7,17 @@ heroImage: /images/content/articles/simpsons-guest-stars/hero.png
 tags:
   - movies-tv
 draft: false
+tldr: Guest-appearance records count celebrity density across seasons.
+keyPoints:
+  - '1,381 — Records in the working dataset'
+  - 1–30 — Year span covered in the file
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">Guest-appearance records count celebrity density across seasons.</p>
 <p class="art-p">Start with the scale: <strong>1,381</strong> — Records in the working dataset; and <strong>1–30</strong> — Year span covered in the file.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">A few markers set the scale before the charts.</p>
+<p class="art-p"></p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">1,381</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">1–30</span><span class="fact-label">Year span covered in the file</span></div>

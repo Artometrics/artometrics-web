@@ -9,6 +9,15 @@ heroImage: /images/content/articles/national-park-visits/hero.png
 tags:
   - cities-travel
 draft: false
+tldr: >-
+  Visitation time series identify America’s busiest parks and how attendance has
+  trended.
+keyPoints:
+  - '21,560 — Records in the working dataset'
+  - '155,219 — Median Visitors'
+  - '871,922,828 — Highest observed Visitors'
+  - Golden Gate — Top Parkname by Visitors
+  - 1904–2016 — Year span covered in the file
 ---
 <div id="quarto-content">
 <main class="art-article-main">
@@ -16,7 +25,7 @@ draft: false
 <p class="art-p">A TidyTuesday working file of <strong>21,560</strong> records spans <strong>1904–2016</strong>. Median visitors sit near <strong>155,219</strong>; the highest observed visitors figure reaches <strong>871,922,828</strong> in the extreme cell of the extract. <strong>Golden Gate</strong> leads the park-name ranking used in the fact box, and region code <strong>IM</strong> is the most common regional label.</p>
 <p class="art-p">Urban gateways and memorial parkways often outdraw remote iconic wilderness. The leaderboard is as much about access and metropolitan adjacency as about scenic purity.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">A few markers set the scale before the charts.</p>
+<p class="art-p"></p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">21,560</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">155,219</span><span class="fact-label">Median Visitors</span></div>

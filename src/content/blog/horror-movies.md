@@ -9,13 +9,22 @@ heroImage: /images/content/articles/horror-movies/hero.png
 tags:
   - movies-tv
 draft: false
+tldr: >-
+  Ratings across tens of thousands of horror films ask whether quality rose with
+  volume.
+keyPoints:
+  - '32,540 — Records in the working dataset'
+  - 4.00 — Median Vote average
+  - 10.0 — Highest observed Vote average
+  - Piranha Women — Top Title by Vote average
+  - 1950–2022 — Year span covered in the file
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">Horror catalogs grow faster than any critic can watch. The open question is whether vote averages rose with that volume — or whether more titles simply filled the shelf with middling scores.</p>
 <p class="art-p">TMDB-style metadata for horror-tagged films yields <strong>32,540</strong> records from <strong>1950–2022</strong>. The median vote average is <strong>4.00</strong>; the highest observed average is <strong>10.0</strong>. Horror is the most common primary genre label, as expected in a horror-tagged extract.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">A few markers set the scale before the charts.</p>
+<p class="art-p"></p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">32,540</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">4.00</span><span class="fact-label">Median Vote average</span></div>

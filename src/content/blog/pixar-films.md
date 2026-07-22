@@ -9,6 +9,17 @@ heroImage: /images/content/articles/pixar-films/hero.png
 tags:
   - movies-tv
 draft: false
+tldr: >-
+  Data on Pixar’s canon track scores and the titles that interrupted a long
+  critical run.
+keyPoints:
+  - 96% — Median Rotten Tomatoes score across rated Pixar theatrical releases
+  - 155 — Longest runtime in the set — nan (2023)
+  - '81 — Shortest runtime — Toy Story, the film that started the canon'
+  - '40% — Lowest Rotten Tomatoes score — Cars 2, the critic floor'
+  - >-
+    A+ — Most common CinemaScore grade — audiences rarely stamped a Pixar
+    opening below A
 ---
 <div id="quarto-content">
 <main class="art-article-main">
@@ -16,7 +27,7 @@ draft: false
 <p class="art-p">Five charts, five angles on the same question: did Pixar’s films get longer, softer, or harder to love as the catalog grew? The answers are longer, still crowd-pleasing, and critic-dependent at the margins.</p>
 <p class="art-p">Calibration points: a <strong>96%</strong> median Rotten Tomatoes score across rated theatrical releases; a longest runtime of <strong>155</strong> minutes; Toy Story’s <strong>81</strong>-minute floor; Cars 2 at <strong>40%</strong> on Rotten Tomatoes; CinemaScore grades clustering at <strong>A+</strong>; and <strong>+17</strong> minutes added to median runtime from the early era to 2017–present.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">A few markers set the scale before the charts.</p>
+<p class="art-p"></p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">96%</span><span class="fact-label">Median Rotten Tomatoes score across rated Pixar theatrical releases</span></div>
   <div class="fact-box"><span class="fact-number">155</span><span class="fact-label">Longest runtime in the set — nan (2023)</span></div>

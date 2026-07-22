@@ -7,6 +7,23 @@ heroImage: /images/content/2026/04/IMG_4215.webp
 tags:
   - sports
 draft: false
+tldr: Decades of losing before a modern dynasty remade Bay Area basketball.
+keyPoints:
+  - >-
+    7 — NBA Championships — 1947, 1956, 1975, 2015, 2017, 2018, 2022 — across
+    three cities and eight decades of franchise history
+  - >-
+    73 — Regular season wins in 2015–16 — the most in NBA history, surpassing
+    the 1995–96 Chicago Bulls record of 72 wins
+  - >-
+    3,747 — Career three-pointers made by Stephen Curry through 2024 — more than
+    any player in NBA history, by a margin of over 700
+  - >-
+    $170M+ — Estimated luxury tax bill in 2022–23 — among the highest
+    single-season tax penalties ever paid by an NBA franchise
+  - >-
+    1946 — Founding year as the Philadelphia Warriors — one of the eight
+    original BAA franchises that became the foundation of the modern NBA
 ---
 <div id="quarto-content">
 <main class="art-article-main">

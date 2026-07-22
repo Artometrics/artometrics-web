@@ -7,6 +7,13 @@ heroImage: /images/content/articles/export-superpowers-us-china-germany/hero.png
 tags:
   - business
 draft: false
+tldr: 'A three-country comparison of platforms, factories, and machinery.'
+keyPoints:
+  - 3 — Export superpower systems compared
+  - 7 — Export identity axes
+  - 6 — Dependency risks scored
+  - 8 — Countries placed on substitutability map
+  - '1 — Core question: who is replaceable?'
 ---
 <div id="quarto-content">
 <main class="art-article-main">
@@ -14,13 +21,12 @@ draft: false
 <p class="art-p">The useful comparison is not who exports more in a given year. It is what kind of global function each country performs: platform and standards power in the United States, manufacturing scale and supply-chain centrality in China, and industrial precision and machinery trust in Germany. Those roles create different kinds of leverage — and different kinds of dependence.</p>
 <p class="art-p">Start with the scale: <strong>3</strong> export systems compared across <strong>7</strong> identity axes, with <strong>6</strong> dependency risks scored and <strong>8</strong> countries placed on a substitutability map.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">A few markers set the scale before the charts.</p>
+<p class="art-p"></p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">3</span><span class="fact-label">Export superpower systems compared</span></div>
   <div class="fact-box"><span class="fact-number">7</span><span class="fact-label">Export identity axes</span></div>
   <div class="fact-box"><span class="fact-number">6</span><span class="fact-label">Dependency risks scored</span></div>
   <div class="fact-box"><span class="fact-number">8</span><span class="fact-label">Countries placed on substitutability map</span></div>
-  <div class="fact-box"><span class="fact-number">5</span><span class="fact-label">Charts in this report</span></div>
   <div class="fact-box"><span class="fact-number">1</span><span class="fact-label">Core question: who is replaceable?</span></div>
 </div>
 <h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>

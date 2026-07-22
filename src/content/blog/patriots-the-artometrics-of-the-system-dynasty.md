@@ -10,6 +10,15 @@ heroImage: >-
 tags:
   - sports
 draft: false
+tldr: >-
+  Two decades of New England football compressed a century of legacy into one
+  dynasty.
+keyPoints:
+  - 6 — Super Bowl championships
+  - 9 — Super Bowl appearances during the Brady/Belichick era
+  - 30 — Approximate playoff wins from 2001 through 2019
+  - 13 — AFC championship appearances since 2001
+  - 16-0 — Perfect 2007 regular season
 ---
 <div id="quarto-content">
 <main class="art-article-main">

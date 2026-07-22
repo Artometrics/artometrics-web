@@ -31,7 +31,7 @@ export default function SearchScreen() {
         <TextInput
           value={q}
           onChangeText={setQ}
-          placeholder="Keywords, desks, topics…"
+          placeholder="Keywords, sections, topics…"
           placeholderTextColor={colors.textSubtle}
           style={[styles.input, { color: colors.text }]}
           onSubmitEditing={run}

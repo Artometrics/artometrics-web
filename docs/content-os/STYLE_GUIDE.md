@@ -35,12 +35,16 @@ Every brief must define:
 5. **Meta description** — ≤160 chars, concrete numbers when possible
 6. **Slug** — kebab-case, stable, no dates
 
-Internal links: cite methodology/ethics, related desk reports, and primary data sources with `rel="noopener noreferrer"` on external links.
+Internal links: cite methodology/ethics, related section reports, and primary data sources with `rel="noopener noreferrer"` on external links.
+
+## Voice
+
+Professional, objective, insightful, **no fluff**. Lead with the finding, then the mechanism, then the limit. Named and dated numbers only. One calm expert voice — not multi-discipline cosplay.
 
 ## Banner (hero) rules
 
 - Full-bleed editorial still, **16:9**, no text overlays, no logos, no fake charts drawn into the image
-- Atmosphere matches the desk (culture = medium/industry texture; atlas = place/systems; etc.)
+- Atmosphere matches the section (sports / movies-tv / music / culture / …)
 - Prompt must include: Artometrics red accent sparingly, cream/paper neutrals, documentary magazine photography, no purple gradients, no stock-photo smiles collage
 - File lands at `/images/content/articles/<slug>/hero.png` (or `.webp`) and frontmatter `heroImage`
 

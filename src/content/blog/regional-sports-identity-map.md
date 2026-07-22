@@ -9,6 +9,15 @@ heroImage: /images/content/articles/regional-sports-identity-map/hero.png
 tags:
   - sports
 draft: false
+tldr: >-
+  Markets, leagues, and championship droughts explain why fan cultures differ by
+  city.
+keyPoints:
+  - 10 — Large markets/cities compared
+  - 7 — Regions grouped for title-density analysis
+  - 6 — Identity archetypes used in the map
+  - 94 — Toronto drought/pain index in this editorial model
+  - 43B — Approximate combined New York major-team value
 ---
 <div id="quarto-content">
 <main class="art-article-main">
@@ -16,15 +25,14 @@ draft: false
 <p class="art-p">this piece turns the sports canon toward geography. The goal is to show how regions become recognizable under the data microscope.</p>
 <p class="art-p">Start with the scale: <strong>10</strong> — Large markets/cities compared; and <strong>7</strong> — Regions grouped for title-density analysis.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">A few markers set the scale before the charts.</p>
+<p class="art-p"></p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">10</span><span class="fact-label">Large markets/cities compared</span></div>
   <div class="fact-box"><span class="fact-number">7</span><span class="fact-label">Regions grouped for title-density analysis</span></div>
   <div class="fact-box"><span class="fact-number">6</span><span class="fact-label">Identity archetypes used in the map</span></div>
   <div class="fact-box"><span class="fact-number">94</span><span class="fact-label">Toronto drought/pain index in this editorial model</span></div>
   <div class="fact-box"><span class="fact-number">43B</span><span class="fact-label">Approximate combined New York major-team value</span></div>
-  <div class="fact-box"><span class="fact-number">5</span><span class="fact-label">Charts in this report</span></div>
-</div>
+  </div>
 <h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
 <p class="art-p">The charts use public franchise histories, rounded valuation summaries, and editorial identity indices. The indices are not official statistics; they are structured prompts for comparing markets.</p>
 <p class="art-p">A cultural economist would ask how facilities, media density, migration, ownership, and league rules shape local identity. this piece is the first map layer for that conversation.</p>

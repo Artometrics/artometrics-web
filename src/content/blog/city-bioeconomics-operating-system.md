@@ -9,6 +9,15 @@ heroImage: /images/content/articles/city-bioeconomics-operating-system/hero.png
 tags:
   - cities-travel
 draft: false
+tldr: >-
+  A geo-economics frame treats cities as layered systems of trade, culture, and
+  infrastructure.
+keyPoints:
+  - '1,667 — Subnational regions in DOSE v2.14 public documentation'
+  - 45 — Cities in World Cities Culture Forum 5th edition summaries
+  - '1,100+ — Datasets in DataSF public portal summaries'
+  - 6 — Diagnostic questions in the city microscope
+  - 8 — System layers scored
 ---
 <div id="quarto-content">
 <main class="art-article-main">
@@ -16,15 +25,14 @@ draft: false
 <p class="art-p">this piece creates the frame for the next geo-economics layer of Artometrics. Comparisons can come later; first the site needs a way to ask the right questions of a place.</p>
 <p class="art-p">Start with the scale: <strong>1,667</strong> — Subnational regions in DOSE v2.14 public documentation; and <strong>45</strong> — Cities in World Cities Culture Forum 5th edition summaries.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">A few markers set the scale before the charts.</p>
+<p class="art-p"></p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">1,667</span><span class="fact-label">Subnational regions in DOSE v2.14 public documentation</span></div>
   <div class="fact-box"><span class="fact-number">45</span><span class="fact-label">Cities in World Cities Culture Forum 5th edition summaries</span></div>
   <div class="fact-box"><span class="fact-number">1,100+</span><span class="fact-label">Datasets in DataSF public portal summaries</span></div>
   <div class="fact-box"><span class="fact-number">6</span><span class="fact-label">Diagnostic questions in the city microscope</span></div>
   <div class="fact-box"><span class="fact-number">8</span><span class="fact-label">System layers scored</span></div>
-  <div class="fact-box"><span class="fact-number">5</span><span class="fact-label">Charts in this report</span></div>
-</div>
+  </div>
 <h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
 <p class="art-p">The source stack includes BEA regional GDP, Commerce metro exports, DOSE global subnational output, Census ACS, World Cities Culture Forum, and local Socrata portals such as DataSF or NYC Open Data.</p>
 <p class="art-p">The charts use transparent editorial indices to define the report structure. A production pass should replace each index with a direct API or CSV aggregate.</p>

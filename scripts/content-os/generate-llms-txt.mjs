@@ -34,7 +34,7 @@ const short = [
   "",
   "## About",
   "",
-  "- Editorial desks: Culture, Atlas, History, Persona, Power",
+  "- Sections: Sports, Movies & TV, Music, Culture, Galleries & Museums, Cities & Travel, Games, Business, Books, Tech",
   "- Reports pair editorial judgment with reproducible charts and public datasets",
   "- Resources: https://artometrics.com/resources",
   "- Datasets: https://artometrics.com/datasets",

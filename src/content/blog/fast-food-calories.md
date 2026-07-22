@@ -7,6 +7,13 @@ heroImage: /images/content/articles/fast-food-calories/hero.png
 tags:
   - culture
 draft: false
+tldr: Menu nutrition data identify the highest-calorie items across major chains.
+keyPoints:
+  - 515 — Records in the working dataset
+  - 490 — Median Calories
+  - '2,430 — Highest observed Calories'
+  - 20 piece Buttermilk Crispy C — Top Item by Calories
+  - Taco Bell — Most common Restaurant
 ---
 <div id="quarto-content">
 <main class="art-article-main">
@@ -14,7 +21,7 @@ draft: false
 <p class="art-p">A TidyTuesday snapshot of major U.S. chain menus puts <strong>515</strong> item records on the same footing. The median item sits at <strong>490</strong> calories. The ceiling in the file is <strong>2,430</strong> — a twenty-piece buttermilk crispy chicken tender tray that makes the median look almost restrained.</p>
 <p class="art-p">Taco Bell appears most often in the working table, but frequency of listing is not the same as caloric intensity. The story is which items and which chains sit above the center of the menu, and how fat tracks with calories when the branding falls away.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">A few markers set the scale before the charts.</p>
+<p class="art-p"></p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">515</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">490</span><span class="fact-label">Median Calories</span></div>

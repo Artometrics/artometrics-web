@@ -10,6 +10,15 @@ heroImage: >-
 tags:
   - sports
 draft: false
+tldr: >-
+  A cross-league index of championship mass, conversion, market value, and fan
+  pain.
+keyPoints:
+  - 351 — Charts now audited across the Artometrics corpus
+  - 4 — Major North American leagues compared
+  - '27 — Yankees titles, the largest MLB archive'
+  - 0 — Cowboys titles since the 1990s dynasty
+  - 57 — Maple Leafs active Stanley Cup drought entering 2025
 ---
 <div id="quarto-content">
 <main class="art-article-main">

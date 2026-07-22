@@ -11,6 +11,61 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://artometrics.com/topics</loc>
+    
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artometrics.com/topics/sports</loc>
+    
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artometrics.com/topics/movies-tv</loc>
+    
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artometrics.com/topics/music</loc>
+    
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artometrics.com/topics/culture</loc>
+    
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artometrics.com/topics/galleries</loc>
+    
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artometrics.com/topics/cities-travel</loc>
+    
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artometrics.com/topics/games</loc>
+    
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artometrics.com/topics/business</loc>
+    
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artometrics.com/topics/books</loc>
+    
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artometrics.com/topics/tech</loc>
+    
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://artometrics.com/podcast</loc>
     
     <priority>0.7</priority>
@@ -41,6 +96,21 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://artometrics.com/library</loc>
+    
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artometrics.com/search</loc>
+    
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artometrics.com/newsletter</loc>
+    
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://artometrics.com/authors</loc>
     
     <priority>0.7</priority>
@@ -52,6 +122,11 @@
   </url>
   <url>
     <loc>https://artometrics.com/signup</loc>
+    
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artometrics.com/get-app</loc>
     
     <priority>0.7</priority>
   </url>

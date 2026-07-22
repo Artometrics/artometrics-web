@@ -13,7 +13,7 @@ export default function PodcastIndex() {
       <Text style={styles.eyebrow}>Podcast</Text>
       <Text style={styles.title}>Interviews</Text>
       <Text style={styles.deck}>
-        Conversations with analysts, founders, and historians extending the Artometrics desks.
+        Conversations with analysts, founders, and historians extending Artometrics reporting.
       </Text>
       <View style={styles.list}>
         {episodes.map((ep) => {

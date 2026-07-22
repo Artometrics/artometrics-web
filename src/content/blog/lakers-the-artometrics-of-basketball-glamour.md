@@ -9,6 +9,17 @@ heroImage: /images/content/articles/lakers-the-artometrics-of-basketball-glamour
 tags:
   - sports
 draft: false
+tldr: >-
+  Los Angeles basketball’s glamour machine turns market gravity into title
+  windows.
+keyPoints:
+  - 17 — NBA championships in franchise history
+  - >-
+    32 — Approximate Finals appearances, the league's deepest final-round
+    archive
+  - 5 — Titles in the Showtime decade
+  - 6 — Defining title eras from Mikan to LeBron/AD
+  - 1949 — First championship season
 ---
 <div id="quarto-content">
 <main class="art-article-main">

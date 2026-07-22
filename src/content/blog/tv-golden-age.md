@@ -9,13 +9,22 @@ heroImage: /images/content/articles/tv-golden-age/hero.png
 tags:
   - movies-tv
 draft: false
+tldr: >-
+  Golden-age scores compare critical and audience verdicts as prestige TV rose
+  and cooled.
+keyPoints:
+  - '2,266 — Records in the working dataset'
+  - 8.11 — Median Av rating
+  - 9.68 — Highest observed Av rating
+  - Parenthood — Top Title by Av rating
+  - 1990–2018 — Year span covered in the file
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">Prestige television arrived with a soundtrack of superlatives. Season-level ratings ask a quieter question: when did the golden-age scores actually peak — and did the middle of the field rise with the mythology?</p>
 <p class="art-p">The working file holds <strong>2,266</strong> records from <strong>1990–2018</strong>. Median average rating is <strong>8.11</strong>; the highest observed average is <strong>9.68</strong>. Parenthood leads the title ranking in the extract.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">A few markers set the scale before the charts.</p>
+<p class="art-p"></p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">2,266</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">8.11</span><span class="fact-label">Median Av rating</span></div>

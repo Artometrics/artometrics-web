@@ -9,13 +9,22 @@ heroImage: /images/content/articles/biketown-bikeshare/hero.png
 tags:
   - cities-travel
 draft: false
+tldr: >-
+  Trip-level bike-share data measures typical distance and duration across
+  Biketown journeys.
+keyPoints:
+  - '100,000 — Records in the working dataset'
+  - 14.5 — Median Duration min
+  - '1,392 — Highest observed Duration min'
+  - SW Stark at Burnside — Top StartHub by Duration min
+  - 2016–2018 — Year span covered in the file
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">Portland’s Biketown system turns everyday movement into timestamped trips. The TidyTuesday extract used here holds <strong>100,000</strong> ride records spanning <strong>2016–2018</strong>, with a median duration of <strong>14.5</strong> minutes and a recorded high of <strong>1,392</strong> minutes — multi-hour outliers that sit far from the commute core.</p>
 <p class="art-p">Recreation is the most common trip type in the file. That single label already hints at the system’s dual life: tourist and leisure loops on one side, workday hops on the other. Duration is the metric that organizes the charts.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">A few markers set the scale before the charts.</p>
+<p class="art-p"></p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">100,000</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">14.5</span><span class="fact-label">Median Duration min</span></div>

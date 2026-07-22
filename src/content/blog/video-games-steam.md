@@ -9,13 +9,22 @@ heroImage: /images/content/articles/video-games-steam/hero.png
 tags:
   - games
 draft: false
+tldr: >-
+  Ownership and play data identify titles that delivered the most hours relative
+  to price.
+keyPoints:
+  - '26,688 — Records in the working dataset'
+  - 73.0 — Median Metascore
+  - 98.0 — Highest observed Metascore
+  - 'DEEP SPACE WAIFU: NEKOMIMI — Top Game by Metascore'
+  - 2004–2018 — Year span covered in the file
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">Steam Spy-era metadata turns the storefront into a scored catalog. This file holds 26,688 games spanning 2004–2018, with a median Metascore of 73.0 and a high of 98.0. DEEP SPACE WAIFU: NEKOMIMI appears in the fact-box extremes; the 0 .. 20,000 owners band is the most common ownership bucket.</p>
 <p class="art-p">The question is how critic Metascore sits across time, titles, and owner tiers — and whether score and price move together. The calibration point is 73.0: above it, the critically strong; below it, the long shelf of ordinary releases.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">A few markers set the scale before the charts.</p>
+<p class="art-p"></p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">26,688</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">73.0</span><span class="fact-label">Median Metascore</span></div>

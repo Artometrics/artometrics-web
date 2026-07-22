@@ -7,6 +7,15 @@ heroImage: /images/content/articles/project-gutenberg-public-domain-canon-map/he
 tags:
   - books
 draft: false
+tldr: 'Gutenberg metadata charts language gravity, era effects, and author memory.'
+keyPoints:
+  - >-
+    75K+ — Approximate scale of Project Gutenberg ebooks in public-facing
+    summaries
+  - Weekly — CSV catalog update cadence noted in Gutenberg tooling docs
+  - Daily — RDF catalog update cadence noted by Gutenberg
+  - 8 — Languages compared in the first chart
+  - 10 — Authors used as anchors
 ---
 <div id="quarto-content">
 <main class="art-article-main">
@@ -14,15 +23,14 @@ draft: false
 <p class="art-p">Public-facing summaries place the collection on the order of <strong>75K+</strong> ebooks, with catalog feeds updating on <strong>weekly</strong> CSV and <strong>daily</strong> RDF cadences in Gutenberg tooling docs. The first chart compares <strong>8</strong> languages; later panels use <strong>10</strong> authors as anchors for availability and memory.</p>
 <p class="art-p">English gravity, nineteenth-century density, and adaptation-ready subjects are the three forces that turn a free shelf into a cultural operating system for schools, remixers, and machines.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">A few markers set the scale before the charts.</p>
+<p class="art-p"></p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">75K+</span><span class="fact-label">Approximate scale of Project Gutenberg ebooks in public-facing summaries</span></div>
   <div class="fact-box"><span class="fact-number">Weekly</span><span class="fact-label">CSV catalog update cadence noted in Gutenberg tooling docs</span></div>
   <div class="fact-box"><span class="fact-number">Daily</span><span class="fact-label">RDF catalog update cadence noted by Gutenberg</span></div>
   <div class="fact-box"><span class="fact-number">8</span><span class="fact-label">Languages compared in the first chart</span></div>
   <div class="fact-box"><span class="fact-number">10</span><span class="fact-label">Authors used as anchors</span></div>
-  <div class="fact-box"><span class="fact-number">5</span><span class="fact-label">Charts in this report</span></div>
-</div>
+  </div>
 <h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
 <p class="art-p">Project Gutenberg provides machine-readable metadata in RDF/XML, MARC, and CSV formats. Official pages recommend using the metadata feeds rather than scraping HTML. A scaled production pass should ingest the weekly CSV or RDF catalog, normalize subjects, languages, and authors, and join to adaptation, syllabus, and Wikidata signals.</p>
 <p class="art-p">The charts here use editorial indices to define that comparative structure before a full catalog join. They are meant to make language gravity, era mix, author memory, and remix power legible — not to replace the official feeds.</p>

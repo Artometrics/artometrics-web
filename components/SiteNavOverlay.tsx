@@ -181,7 +181,7 @@ const styles = StyleSheet.create({
     bottom: 0,
     zIndex: 2000,
   },
-  inner: { flex: 1, paddingTop: 8, paddingBottom: 24, maxWidth: 720 },
+  inner: { flex: 1, paddingTop: 8, paddingBottom: 24, maxWidth: 960 },
   top: {
     flexDirection: "row",
     alignItems: "center",

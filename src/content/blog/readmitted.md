@@ -9,13 +9,33 @@ heroImage: /images/content/articles/readmitted/hero.jpg
 tags:
   - business
 draft: false
+tldr: >-
+  CMS HRRP data show where states, conditions, and ownership types exceed
+  benchmarks.
+keyPoints:
+  - >-
+    48.1% — of HRRP-eligible hospital-condition pairs carried an excess
+    readmission ratio above 1.0 — more readmissions than CMS models predict
+  - >-
+    6 — conditions tracked under HRRP — AMI, Heart Failure, Pneumonia, COPD,
+    Hip/Knee, and CABG
+  - >-
+    1.0018 — average excess readmission ratio nationally — the average hospital
+    readmits slightly more patients than CMS models expect
+  - >-
+    1.00485 — Hip/Knee average ERR — the highest of the six conditions, nearly
+    2× the excess of the next closest track
+  - >-
+    742 — hospitals mandated to participate in CMS&#39;s TEAM bundled payment
+    model as of January 1, 2026 — where readmission penalties become
+    episode-level accountability
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">The Hospital Readmissions Reduction Program is a Medicare penalty system that has been running since 2012. The premise is simple: if your patients come back to the hospital within 30 days of discharge at a higher rate than expected given their medical profile, CMS docks your Medicare reimbursements. The penalty caps at 3% of all Medicare payments — not just payments for the specific condition being measured. A hospital with too many heart failure readmissions doesn’t just lose heart failure revenue. It loses 3% of everything.</p>
 <p class="art-p">The core metric is the Excess Readmission Ratio, or ERR. It is a ratio of predicted readmissions to expected readmissions — where “expected” is risk-adjusted for each patient’s age, comorbidities, and discharge history. An ERR of exactly 1.0 means you readmitted exactly as many patients as a hospital of your type and patient mix should. Above 1.0 means more readmissions than expected. Below 1.0 means fewer. What this analysis found: nearly every condition’s national average ERR is above 1.0. HRRP has been running for over a decade, and the average American hospital is still readmitting more patients than CMS expects. The penalty hasn’t eliminated the problem. It has clarified it.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">A few markers set the scale before the charts.</p>
+<p class="art-p"></p>
 <div class="facts-grid">
   <div class="fact-box">
     <span class="fact-number">48.1%</span>
@@ -108,7 +128,6 @@ Zuckerman, R.B., Sheingold, S.H., Orav, E.J., Ruhter, J., &amp; Epstein, A.M. (2
 Krumholz, H.M., et al. (2017). Relationship between hospital readmission and mortality rates for patients hospitalized with acute myocardial infarction, heart failure, or pneumonia. <em>JAMA</em>, 318(3), 270–278. Background on readmission–mortality tradeoffs under quality measurement.
 </p>
 
-
 <h2 id="files" class="anchored">Files</h2>
 
 <p class="art-p">Download the working datasets and chart exports used in this report. All files are hosted on this site — no external repo required.</p>
@@ -132,7 +151,6 @@ Krumholz, H.M., et al. (2017). Relationship between hospital readmission and mor
     <li><a class="art-files__link" download href="/data/articles/readmitted/charts/chart3_penalty_by_ownership.plotly.json">chart3_penalty_by_ownership.plotly.json</a></li>
   </ul>
 </div>
-
 
 <h2 id="editor-s-note" class="anchored">Editor’s note</h2>
 <div class="art-editorial-note"><p class="art-p">

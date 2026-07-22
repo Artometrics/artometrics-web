@@ -9,13 +9,22 @@ heroImage: /images/content/articles/video-games-sliced/hero.png
 tags:
   - games
 draft: false
+tldr: >-
+  A large games slice tests whether critic scores correlated with commercial
+  outcomes.
+keyPoints:
+  - '83,631 — Records in the working dataset'
+  - 203 — Median Avg
+  - '1,584,887 — Highest observed Avg'
+  - PLAYERUNKNOWN'S BATTLEGROUND — Top Gamename by Avg
+  - 2012–2021 — Year span covered in the file
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">Steam-era concurrency is a living audience meter. This Sliced/TidyTuesday games extract holds 83,631 records spanning 2012–2021, with a median average player count (Avg) of 203 and a high of 1,584,887. PLAYERUNKNOWN'S BATTLEGROUNDS appears among the fact-box peaks; February is the most common month label in the file.</p>
 <p class="art-p">The charts ask how median Avg moved over time, which titles sit at the top, how months differ from the median, and whether Avg and Gain travel together. The calibration point is 203 — the typical observation in a market where a few live-service titles become cities unto themselves.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">A few markers set the scale before the charts.</p>
+<p class="art-p"></p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">83,631</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">203</span><span class="fact-label">Median Avg</span></div>

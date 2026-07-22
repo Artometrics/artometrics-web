@@ -7,13 +7,20 @@ heroImage: /images/content/articles/school-diversity/hero.png
 tags:
   - business
 draft: false
+tldr: School-level composition data map where diversity concentrates.
+keyPoints:
+  - '27,944 — Records in the working dataset'
+  - 2.38 — Median Multi
+  - 85.3 — Highest observed Multi
+  - butteville union elementary — Top LEA NAME by Multi
+  - TX — Most common ST
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">School-level composition data map where student-body diversity concentrates across U.S. local education agencies. The working file holds 27,944 records. The calibration metric is Multi, with a median of 2.38 — the center of the observed diversity scores in this extract.</p>
 <p class="art-p">The ceiling is stark: butteville union elementary leads at 85.3 Multi, while Texas (TX) is the most common state abbreviation in the file. High Multi at the top of the leaderboard and a modest median across the whole table are not contradictions. They are the shape of a heavily skewed education landscape.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">A few markers set the scale before the charts.</p>
+<p class="art-p"></p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">27,944</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">2.38</span><span class="fact-label">Median Multi</span></div>

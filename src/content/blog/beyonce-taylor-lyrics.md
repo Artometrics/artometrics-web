@@ -9,13 +9,19 @@ heroImage: /images/content/articles/beyonce-taylor-lyrics/hero.png
 tags:
   - music
 draft: false
+tldr: >-
+  A lyric-level comparison of two era-defining catalogs—theme, language, and
+  structure.
+keyPoints:
+  - '22,616 — Records in the working dataset'
+  - Beyoncé — Most common Artist name
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">Two catalogs define a generation of pop authorship. Line-level lyric tables make it possible to compare them the way a critic compares albums — by recurring titles, repeated lines, and how densely each artist’s words fill the extract.</p>
 <p class="art-p">The working file holds <strong>22,616</strong> records. Beyoncé is the most common artist name in the rows on hand — a reminder to read every chart as a view of this extract’s balance, not as a claim that one career is larger than the other in absolute terms.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">A few markers set the scale before the charts.</p>
+<p class="art-p"></p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">22,616</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">Beyoncé</span><span class="fact-label">Most common Artist name</span></div>

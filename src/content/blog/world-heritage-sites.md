@@ -7,13 +7,20 @@ heroImage: /images/content/articles/world-heritage-sites/hero.png
 tags:
   - galleries
 draft: false
+tldr: UNESCO heritage counts track how Scandinavian inventories expanded.
+keyPoints:
+  - 6 — Records in the working dataset
+  - 9.00 — Median Value
+  - 15.0 — Highest observed Value
+  - Sweden — Top Country by Value
+  - 2004–2022 — Year span covered in the file
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">UNESCO World Heritage counts turn national prestige into a time series. This Scandinavian extract holds 6 records spanning 2004–2022, with a median value of 9.00 and a high of 15.0. Sweden leads the fact-box country ranking.</p>
 <p class="art-p">Six rows are enough for a clean comparative story when the table is country-by-year counts: who led, who grew fastest, and how the median moved from 5.00 to 10.0 across the window. The calibration point is 9.00 — the center of this small but sharp heritage ledger.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">A few markers set the scale before the charts.</p>
+<p class="art-p"></p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">6</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">9.00</span><span class="fact-label">Median Value</span></div>

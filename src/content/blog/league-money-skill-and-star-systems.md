@@ -9,6 +9,17 @@ heroImage: /images/content/articles/league-money-skill-and-star-systems/hero.png
 tags:
   - sports
 draft: false
+tldr: >-
+  Cross-sport rules, payroll, and scarcity show why teams become culturally
+  meaningful.
+keyPoints:
+  - >-
+    $6.5B — Approximate average NFL franchise value in recent Forbes-style
+    estimates
+  - 17 — NFL regular-season games per team
+  - 162 — MLB regular-season games per team
+  - 92 — NBA star leverage index in this editorial model
+  - 6 — Leagues compared
 ---
 <div id="quarto-content">
 <main class="art-article-main">
@@ -23,8 +34,7 @@ draft: false
   <div class="fact-box"><span class="fact-number">162</span><span class="fact-label">MLB regular-season games per team</span></div>
   <div class="fact-box"><span class="fact-number">92</span><span class="fact-label">NBA star leverage index in this editorial model</span></div>
   <div class="fact-box"><span class="fact-number">6</span><span class="fact-label">Leagues compared</span></div>
-  <div class="fact-box"><span class="fact-number">5</span><span class="fact-label">Charts in this report</span></div>
-</div>
+  </div>
 
 <h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
 <p class="art-p">Figures combine public Forbes valuation summaries, Spotrac salary-cap and payroll snapshots, and reference-record league structures from Basketball Reference, Baseball Reference, Pro Football Reference, and Hockey Reference, plus Premier League and MLS competition records. Editorial indices—including the NBA star-leverage score of 92—are deliberately transparent: they exist to compare systems, not to pretend every input was observed with laboratory precision.</p>

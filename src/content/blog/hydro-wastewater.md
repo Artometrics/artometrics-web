@@ -7,6 +7,13 @@ heroImage: /images/content/articles/hydro-wastewater/hero.png
 tags:
   - cities-travel
 draft: false
+tldr: Facility-level data map which plants serve the largest populations.
+keyPoints:
+  - '58,502 — Records in the working dataset'
+  - '1,079 — Median WASTE DIS'
+  - '3,073,754 — Highest observed WASTE DIS'
+  - United States — Top COUNTRY by WASTE DIS
+  - Secondary — Most common LEVEL
 ---
 <div id="quarto-content">
 <main class="art-article-main">
@@ -14,7 +21,7 @@ draft: false
 <p class="art-p">The working TidyTuesday extract holds <strong>58,502</strong> records. Median waste discharge (<strong>WASTE DIS</strong>) sits at <strong>1,079</strong>; the highest observed value exceeds <strong>3,073,754</strong>. The United States leads on aggregate discharge in the country rollup, while <strong>Secondary</strong> treatment is the most common level label in the file.</p>
 <p class="art-p">Scale without treatment level is an incomplete story. A large plant with advanced treatment is a different civic object from a large plant stuck at primary or secondary standards.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">A few markers set the scale before the charts.</p>
+<p class="art-p"></p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">58,502</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">1,079</span><span class="fact-label">Median WASTE DIS</span></div>

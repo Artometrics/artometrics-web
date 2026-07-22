@@ -9,13 +9,32 @@ heroImage: /images/content/2026/04/IMG_4153.webp
 tags:
   - movies-tv
 draft: false
+tldr: >-
+  Revenue maps for more than 100 franchises show where valuable IP earns across
+  media.
+keyPoints:
+  - >-
+    $91B — Pokémon lifetime revenue — the highest-grossing media franchise ever
+    recorded, more than the MCU, Star Wars, and Harry Potter put together
+  - >-
+    107 — Unique franchises in the dataset — every one of them has already
+    cleared at least $4B in lifetime revenue
+  - >-
+    $4B+ — Minimum threshold for inclusion — most IP that has ever existed never
+    gets close to this number
+  - >-
+    8 — Revenue categories tracked: Merchandise, Video Games, Box Office, Home
+    Video, Comic/Manga, Music, TV, and Book Sales
+  - >-
+    92 yrs — Span of the dataset — from Winnie the Pooh (1923) to Monster Strike
+    (2015)
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">The global media industry runs on intellectual property — and a surprisingly small number of franchises account for most of the money. The TidyTuesday 2019 media franchises dataset covers 107 properties, each with at least $4 billion in estimated lifetime revenue as of mid-2019. Every franchise here has already cleared a threshold that most IP never approaches. This is not a representative sample of the media industry. It is a map of its ceiling.</p>
 <p class="art-p">Three charts, three angles on the same structural question: where does franchise money actually come from, which properties generate it most efficiently, and what does the ownership picture look like when subsidiaries stop looking like separate competitors? The answers are Merchandise, Pokémon, and Disney — in that order.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">A few markers set the scale before the charts.</p>
+<p class="art-p"></p>
 <div class="facts-grid">
   <div class="fact-box">
     <span class="fact-number">$91B</span>

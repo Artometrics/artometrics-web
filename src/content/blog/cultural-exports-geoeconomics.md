@@ -7,21 +7,27 @@ heroImage: /images/content/articles/cultural-exports-geoeconomics/hero.png
 tags:
   - business
 draft: false
+tldr: A cultural-economics frame treats soft-power industries as export goods.
+keyPoints:
+  - 8 — Countries and cultural-export systems highlighted
+  - 8 — Mediums scored for exportability
+  - 6 — Diagnostic cultural trade questions
+  - 45 — Global cities in World Cities Culture Forum 5th edition summaries
+  - 3 — Asian cultural wave paths compared
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">Culture is an export category even when it never passes through a port. A song, show, game, cuisine, fashion house, or sports star can change what a country means in the global imagination. This framing highlights <strong>8</strong> cultural-export systems, scores <strong>8</strong> mediums for exportability, and tracks <strong>3</strong> Asian cultural-wave paths — with World Cities Culture Forum summaries covering <strong>45</strong> global cities as context.</p>
 <p class="art-p">The charts use editorial indices to define the cultural-trade question before deeper joins to UNESCO, WIPO, and platform data: what travels, where it is produced, who monetizes it, and how it becomes identity.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">A few markers set the scale before the charts.</p>
+<p class="art-p"></p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">8</span><span class="fact-label">Countries and cultural-export systems highlighted</span></div>
   <div class="fact-box"><span class="fact-number">8</span><span class="fact-label">Mediums scored for exportability</span></div>
   <div class="fact-box"><span class="fact-number">6</span><span class="fact-label">Diagnostic cultural trade questions</span></div>
   <div class="fact-box"><span class="fact-number">45</span><span class="fact-label">Global cities in World Cities Culture Forum 5th edition summaries</span></div>
   <div class="fact-box"><span class="fact-number">3</span><span class="fact-label">Asian cultural wave paths compared</span></div>
-  <div class="fact-box"><span class="fact-number">5</span><span class="fact-label">Charts in this report</span></div>
-</div>
+  </div>
 <h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
 <p class="art-p">The source stack includes UNESCO cultural statistics, WIPO creative-industry indicators, World Bank and OECD services data, MusicBrainz, IMDb/TMDb-style film metadata, Wikidata, and World Cities Culture Forum materials.</p>
 <p class="art-p">Values in the figures are editorial indices that structure the argument. A direct production pass should replace them with cultural trade, platform, awards, tourism, and city infrastructure aggregates.</p>

@@ -104,6 +104,17 @@ const blog = listFiles(join(CONTENT, "blog")).map((file) => {
     rawTags.find((t) => SECTIONS.has(t)) ||
     inferSection(slug, data.title ?? "", rawTags);
   const tags = [section];
+  const keyPoints = Array.isArray(data.keyPoints)
+    ? data.keyPoints.map(String).filter(Boolean)
+    : [];
+  const faq = Array.isArray(data.faq)
+    ? data.faq
+        .map((item) => ({
+          question: String(item?.question ?? "").trim(),
+          answer: String(item?.answer ?? "").trim(),
+        }))
+        .filter((item) => item.question && item.answer)
+    : [];
   return {
     id,
     title: data.title,
@@ -116,6 +127,10 @@ const blog = listFiles(join(CONTENT, "blog")).map((file) => {
     channels: [section],
     author: data.author ?? null,
     draft: Boolean(data.draft),
+    tldr: typeof data.tldr === "string" ? data.tldr.trim() : null,
+    keyPoints,
+    faq,
+    audioSrc: data.audioSrc ? rewriteAssetUrl(String(data.audioSrc)) : null,
     body: content.trim(),
     bodyFormat: "html",
   };

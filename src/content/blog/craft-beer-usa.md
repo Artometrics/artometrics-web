@@ -9,13 +9,21 @@ heroImage: /images/content/articles/craft-beer-usa/hero.png
 tags:
   - culture
 draft: false
+tldr: >-
+  Brewery-level IBU and ABV data map bitterness and strength across U.S. craft
+  producers.
+keyPoints:
+  - '2,410 — Records in the working dataset'
+  - 0.06 — Median Abv
+  - 0.13 — Highest observed Abv
+  - Lee Hill Series Vol. 5 - Bel — Top Name by Abv
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">American craft beer advertises itself with bitterness and strength — IBU and ABV on the tap list. The TidyTuesday beers extract used here holds <strong>2,410</strong> records with a median ABV of <strong>0.06</strong> (6%) and a high of <strong>0.13</strong> (13%) for Lee Hill Series Vol. 5 - Belgian Style Quadrupel Ale.</p>
 <p class="art-p">Most craft beers in this file are not barrel-aged monsters. They cluster near session-to-standard strength, with a right tail of barleywines, quads, and imperial experiments.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">A few markers set the scale before the charts.</p>
+<p class="art-p"></p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">2,410</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">0.06</span><span class="fact-label">Median Abv</span></div>

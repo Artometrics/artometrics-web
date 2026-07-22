@@ -9,6 +9,15 @@ heroImage: /images/content/articles/medium-articles/hero.png
 tags:
   - tech
 draft: false
+tldr: >-
+  Metadata from tens of thousands of Medium articles tests whether length
+  predicts claps.
+keyPoints:
+  - '78,388 — Records in the working dataset'
+  - 4.00 — Median Reading time
+  - 100 — Highest observed Reading time
+  - My month-long quest to becom — Top Title by Reading time
+  - 2017–2018 — Year span covered in the file
 ---
 <div id="quarto-content">
 <main class="art-article-main">
@@ -16,7 +25,7 @@ draft: false
 <p class="art-p">A TidyTuesday extract of <strong>78,388</strong> article rows from <strong>2017–2018</strong> puts median reading time at <strong>4.00</strong> minutes. The highest observed reading time hits <strong>100</strong> minutes — a month-long chess-mastery quest that sits at the extreme of the length distribution. <strong>Towards Data Science</strong> is the most common publication label in the file.</p>
 <p class="art-p">The open question is whether longer posts earned more applause. Reading time and claps are related enough to chart, and messy enough that a single correlation will not settle the culture of the platform.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">A few markers set the scale before the charts.</p>
+<p class="art-p"></p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">78,388</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">4.00</span><span class="fact-label">Median Reading time</span></div>

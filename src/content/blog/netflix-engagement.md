@@ -7,13 +7,20 @@ heroImage: /images/content/articles/netflix-engagement/hero.png
 tags:
   - movies-tv
 draft: false
+tldr: Engagement metrics Netflix reports show which titles absorbed the most hours.
+keyPoints:
+  - '27,803 — Records in the working dataset'
+  - '2,500,000 — Median Hours viewed'
+  - '840,300,000 — Highest observed Hours viewed'
+  - 'Squid Game: Season 2 // 오징어 — Top Title by Hours viewed'
+  - 2010–2025 — Year span covered in the file
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">Netflix’s public engagement tables measure attention in hours viewed — a blunt but useful currency for which titles absorbed the most time on the service.</p>
 <p class="art-p">The working file covers <strong>27,803</strong> records from <strong>2010–2025</strong>. Median hours viewed sit at <strong>2,500,000</strong>; the highest observed value is <strong>840,300,000</strong>. Squid Game: Season 2 tops the title ranking in the extract.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">A few markers set the scale before the charts.</p>
+<p class="art-p"></p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">27,803</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">2,500,000</span><span class="fact-label">Median Hours viewed</span></div>

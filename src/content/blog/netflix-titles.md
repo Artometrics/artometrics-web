@@ -7,13 +7,20 @@ heroImage: /images/content/articles/netflix-titles/hero.png
 tags:
   - movies-tv
 draft: false
+tldr: Title-level library data track the balance of movies and TV over time.
+keyPoints:
+  - '7,787 — Records in the working dataset'
+  - 88.0 — Median Duration
+  - 312 — Highest observed Duration
+  - 'Black Mirror: Bandersnatch — Top Title by Duration'
+  - 2008–2021 — Year span covered in the file
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">A streaming library is an inventory decision dressed as a homepage. Title-level Netflix catalog data show how the mix of movies and TV — and the duration field attached to each row — shifted between 2008 and 2021.</p>
 <p class="art-p">The working file holds <strong>7,787</strong> records. Median duration is <strong>88.0</strong>; the highest observed duration is <strong>312</strong>, led by Black Mirror: Bandersnatch. Movie is the most common type label.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">A few markers set the scale before the charts.</p>
+<p class="art-p"></p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">7,787</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">88.0</span><span class="fact-label">Median Duration</span></div>

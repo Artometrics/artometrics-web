@@ -15,13 +15,13 @@ export default function NewsletterScreen() {
     <Wrapper variant="narrow" style={styles.wrap}>
       <PageSeo
         title="Newsletter"
-        description="Desk notes from Artometrics — new reports, datasets, and interviews."
+        description="Notes from Artometrics — new reports, datasets, and interviews."
         path="/newsletter"
       />
       <Text style={[styles.eyebrow, { color: colors.accent }]}>Inbox</Text>
       <Text style={[styles.title, { color: colors.text }]}>Newsletter</Text>
       <Text style={[styles.deck, { color: colors.textMuted }]}>
-        Occasional notes when a desk report ships. No spam. Read the{" "}
+        Occasional notes when a report ships. No spam. Read the{" "}
         <Link href="/legal/privacy">
           <Text style={{ color: colors.accent }}>privacy policy</Text>
         </Link>

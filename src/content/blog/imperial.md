@@ -9,6 +9,25 @@ heroImage: /images/content/2026/04/IMG_4160.webp
 tags:
   - culture
 draft: false
+tldr: >-
+  A historical-economics lens asks who captured wealth when rulers claimed
+  order.
+keyPoints:
+  - >-
+    1,200 yrs — Time for Western Europe to recover Rome&#39;s peak GDP per
+    capita after the 476 CE collapse
+  - >-
+    23% — Share of global population governed by the British Empire at its 1920
+    territorial peak — 412 million people
+  - >-
+    ~7× — Number of times Imperial China cycled through full unification and
+    fragmentation between 221 BCE and 1912 CE
+  - >-
+    180,000 t — Silver extracted by Habsburg Spain from the Americas between
+    1500 and 1800 — as Castilian real wages declined
+  - >-
+    10% — Estimated share of global population killed in Mongol conquests,
+    1206–1260 — 30 to 40 million deaths
 ---
 <div id="quarto-content">
 <main class="art-article-main">
@@ -16,7 +35,7 @@ draft: false
 <p class="art-p">Those questions have answers now. The Maddison Project Database — the most comprehensive long-run economic dataset ever assembled — lets us put Rome, Britain, the Ottomans, Imperial China, the Mongols, and Habsburg Spain on the same chart and ask: what does empire actually look like as an economic system?</p>
 <p class="art-p">The answer is not what the history textbooks imply. GDP goes up. Real wages mostly don’t. The rise takes centuries. The fall takes decades. And in every case, the institutions built to extract surplus during expansion become structurally incapable of sharing it during maturation. That’s the pattern. Six empires. No exceptions.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">A few markers set the scale before the charts.</p>
+<p class="art-p"></p>
 <div class="facts-grid">
   <div class="fact-box">
     <span class="fact-number">1,200 yrs</span>

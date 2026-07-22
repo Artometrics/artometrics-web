@@ -27,11 +27,11 @@ export default function AboutScreen() {
           markets. Every report pairs editorial judgment with reproducible charts and public
           datasets.
         </Text>
-        <Text style={[styles.h, { color: colors.text }]}>About the desk</Text>
+        <Text style={[styles.h, { color: colors.text }]}>About Artometrics</Text>
         <Text style={[styles.p, { color: colors.textMuted }]}>
           We are building a media company in public: long-form investigations, a podcast, a dataset
-          library, and membership tools. The founder’s brief is simple — ship evidence with taste.
-          Contact the desk for tips, corrections, or partnerships.
+          library, and membership tools. The brief is simple — ship evidence with taste. Contact us
+          for tips, corrections, or partnerships.
         </Text>
         <Text style={[styles.h, { color: colors.text }]}>Sections</Text>
         {SECTION_SLUGS.map((s) => (

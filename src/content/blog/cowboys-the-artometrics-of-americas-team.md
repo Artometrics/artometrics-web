@@ -9,6 +9,15 @@ heroImage: /images/content/articles/cowboys-the-artometrics-of-americas-team/her
 tags:
   - sports
 draft: false
+tldr: >-
+  Dallas remains the NFL’s clearest split between global brand power and an
+  aging postseason engine.
+keyPoints:
+  - 5 — Super Bowl championships
+  - 1995 — Most recent Super Bowl-winning season
+  - 29 — Years since last NFC championship appearance entering 2025
+  - $10B+ — Widely cited estimated franchise value range
+  - 3 — Super Bowls from the 1990s Aikman-Smith-Irvin core
 ---
 <div id="quarto-content">
 <main class="art-article-main">

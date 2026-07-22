@@ -9,6 +9,15 @@ heroImage: /images/content/articles/airline-safety/hero.png
 tags:
   - cities-travel
 draft: false
+tldr: >-
+  Carrier-level accident and fatality data ask which airlines stand out for poor
+  safety outcomes.
+keyPoints:
+  - 336 — Records in the working dataset
+  - '802,908,893 — Median Avail seat km per week'
+  - '7,139,291,291 — Highest observed Avail seat km per week'
+  - United / Continental* — Top Airline by Avail seat km per week
+  - incidents — Most common Type of event
 ---
 <div id="quarto-content">
 <main class="art-article-main">
@@ -16,7 +25,7 @@ draft: false
 <p class="art-p">Capacity is not the same as risk, but it is the right denominator for a first cut. A carrier flying <strong>7.1 billion</strong> available seat kilometers per week is not in the same exposure class as one flying under <strong>2 billion</strong>. The median in this extract is <strong>802,908,893</strong> available seat kilometers per week — a calibration point for every ranking that follows.</p>
 <p class="art-p">The most common event type in the file is simply labeled <strong>incidents</strong>. That matters: the archive mixes routine reportable events with rarer fatal outcomes, and treating those categories as interchangeable would flatten the story.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">A few markers set the scale before the charts.</p>
+<p class="art-p"></p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">336</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">802,908,893</span><span class="fact-label">Median Avail seat km per week</span></div>

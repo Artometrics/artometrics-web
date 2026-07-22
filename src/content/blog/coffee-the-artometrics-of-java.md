@@ -9,6 +9,23 @@ heroImage: /images/content/2026/04/IMG_4149.webp
 tags:
   - culture
 draft: false
+tldr: >-
+  Commodity and consumption data place coffee among the world’s largest traded
+  goods.
+keyPoints:
+  - >-
+    1,339 — Coffee samples rated by CQI Q Graders across Arabica and Robusta
+    species
+  - >-
+    85.3 — Ethiopia&#39;s median CQI cup score — highest of any country with 20+
+    samples
+  - >-
+    0 — Starbucks locations in Ethiopia, Kenya, and Uganda — the top three
+    scoring nations
+  - '16 — Countries with 20+ CQI-rated Arabica samples, spanning four continents'
+  - >-
+    7 — Sensory sub-metrics scored per sample — aroma, flavor, aftertaste,
+    acidity, body, balance, cupper points
 ---
 <div id="quarto-content">
 <main class="art-article-main">

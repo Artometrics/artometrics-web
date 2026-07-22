@@ -7,6 +7,23 @@ heroImage: /images/content/2026/04/IMG_4221.webp
 tags:
   - sports
 draft: false
+tldr: A franchise history from 1883 New York origins to a modern Bay Area ballclub.
+keyPoints:
+  - >-
+    8 — World Series titles — 1905, 1921, 1922, 1933, 1954 in New York; 2010,
+    2012, 2014 in San Francisco
+  - >-
+    1883 — Year the franchise was founded as the New York Gothams — one of the
+    oldest in American professional sports
+  - >-
+    141 — Seasons of franchise history covered in this report — from the Polo
+    Grounds to Oracle Park
+  - >-
+    2000 — Year Oracle Park opened — the first privately financed MLB stadium
+    since Dodger Stadium in 1962
+  - >-
+    3.3M — Attendance in Oracle Park&#39;s first season — nearly double
+    Candlestick&#39;s worst years and a floor the franchise rarely dropped below
 ---
 <div id="quarto-content">
 <main class="art-article-main">

@@ -25,7 +25,7 @@ export default function LibraryScreen() {
           { href: "/datasets", title: "Datasets", body: "CSV packs from published stories." },
           { href: "/blog", title: "Archive", body: "Every published article." },
           { href: "/topics", title: "Sections", body: "Sports, movies & TV, music, and more." },
-          { href: "/podcast", title: "Podcasts", body: "Desk interviews and conversations." },
+          { href: "/podcast", title: "Podcasts", body: "Interviews and conversations." },
         ].map((card) => (
           <Link key={card.href} href={card.href as `/datasets`} asChild>
             <Pressable style={StyleSheet.flatten([styles.card, { borderColor: colors.border }])}>

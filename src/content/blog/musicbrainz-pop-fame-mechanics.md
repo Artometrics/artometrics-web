@@ -9,6 +9,15 @@ heroImage: /images/content/articles/musicbrainz-pop-fame-mechanics/hero.png
 tags:
   - music
 draft: false
+tldr: >-
+  MusicBrainz-style metadata links fame to release depth, genre travel, and
+  reinvention.
+keyPoints:
+  - CC0 — MusicBrainz core database dump license for public-domain metadata
+  - 2x/week — MetaBrainz published dump cadence in public documentation
+  - 11 — JSON dump entity types listed in MusicBrainz documentation
+  - 7 — Fame paths compared
+  - 8 — Artists used as report anchors
 ---
 <div id="quarto-content">
 <main class="art-article-main">
@@ -16,15 +25,14 @@ draft: false
 <p class="art-p">MusicBrainz supplies the open-data spine for a bigger question: why do some artists become eras while others become moments? Catalog depth, format, genre travel, fame-path durability, and reinvention are five ways that question becomes countable.</p>
 <p class="art-p">Core dumps are <strong>CC0</strong>; MetaBrainz publishes them about <strong>2x/week</strong>. Documentation lists <strong>11</strong> JSON dump entity types. The frame below compares <strong>7</strong> fame paths with <strong>8</strong> artist anchors across <strong>5</strong> charts.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">A few markers set the scale before the charts.</p>
+<p class="art-p"></p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">CC0</span><span class="fact-label">MusicBrainz core database dump license for public-domain metadata</span></div>
   <div class="fact-box"><span class="fact-number">2x/week</span><span class="fact-label">MetaBrainz published dump cadence in public documentation</span></div>
   <div class="fact-box"><span class="fact-number">11</span><span class="fact-label">JSON dump entity types listed in MusicBrainz documentation</span></div>
   <div class="fact-box"><span class="fact-number">7</span><span class="fact-label">Fame paths compared</span></div>
   <div class="fact-box"><span class="fact-number">8</span><span class="fact-label">Artists used as report anchors</span></div>
-  <div class="fact-box"><span class="fact-number">5</span><span class="fact-label">Charts in this report</span></div>
-</div>
+  </div>
 <h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
 <p class="art-p">MetaBrainz publishes MusicBrainz data dumps in PostgreSQL and JSON formats. The JSON dumps include entities such as artist, recording, release, release group, work, label, area, event, and place.</p>
 <p class="art-p">The charts use a curated editorial model over that source architecture. A scaled version would ingest artist, release-group, recording, and tag dumps, then join them to chart, award, and tour datasets. Several artist and genre placements are editorial indices — labeled as framework, not as audited streaming totals.</p>

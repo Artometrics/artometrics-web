@@ -7,13 +7,18 @@ heroImage: /images/content/articles/cetaceans/hero.png
 tags:
   - culture
 draft: false
+tldr: Morphometric data map which cetacean lineages produce the giants.
+keyPoints:
+  - '2,194 — Records in the working dataset'
+  - 1946–2017 — Year span covered in the file
+  - US — Most common Transfer
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">Captive and transferred cetaceans leave paper trails: species names, years, and transfer geographies. The TidyTuesday cetacean extract used here holds <strong>2,194</strong> records spanning <strong>1946–2017</strong>, with the United States labeled as the dominant transfer geography.</p>
 <p class="art-p">Bottlenose animals dominate the name counts. That single species weight shapes every timeline and leader chart that follows — this archive is mostly a bottlenose history with rarer orcas, belugas, and white-sided dolphins in the margins.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">A few markers set the scale before the charts.</p>
+<p class="art-p"></p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">2,194</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">1946–2017</span><span class="fact-label">Year span covered in the file</span></div>

@@ -1,12 +1,13 @@
 import { View, type StyleProp, type ViewStyle } from "react-native";
 
-type Variant = "standard" | "narrow" | "prose" | "wide" | "bleed";
+type Variant = "standard" | "narrow" | "prose" | "wide" | "magazine" | "bleed";
 
 const maxWidths: Record<Variant, number | "100%"> = {
-  wide: 1440,
-  standard: 1280,
+  magazine: 1600,
+  wide: 1600,
+  standard: 1400,
   narrow: 720,
-  prose: 920,
+  prose: 720,
   bleed: "100%",
 };
 

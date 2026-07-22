@@ -8,6 +8,13 @@ heroImage: >-
 tags:
   - culture
 draft: false
+tldr: Biography-scale fame data ask where collective memory clusters.
+keyPoints:
+  - 85K+ — Biographies indexed by Pantheon in public-facing summaries
+  - 15 — Minimum Wikipedia language editions used in Pantheon collection logic
+  - 2016 — Scientific Data paper for Pantheon 1.0
+  - '3 — Main memory engines: power, art, science'
+  - 10 — Memory-capital cities compared
 ---
 <div id="quarto-content">
 <main class="art-article-main">
@@ -15,15 +22,14 @@ draft: false
 <p class="art-p">Pantheon-style biography indexes — on the order of <strong>85K+</strong> lives in public-facing summaries, with a collection logic that requires presence in at least <strong>15</strong> Wikipedia language editions — make that ranking measurable. The 2016 <em>Scientific Data</em> paper for Pantheon 1.0 is the scholarly anchor. The charts below treat three main memory engines — power, art, and science — across <strong>10</strong> memory-capital cities.</p>
 <p class="art-p">If humanity remembers some kinds of people more than others, that pattern is itself a cultural object. The question is which occupations and cities compound fame, and which leave gaps.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">A few markers set the scale before the charts.</p>
+<p class="art-p"></p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">85K+</span><span class="fact-label">Biographies indexed by Pantheon in public-facing summaries</span></div>
   <div class="fact-box"><span class="fact-number">15</span><span class="fact-label">Minimum Wikipedia language editions used in Pantheon collection logic</span></div>
   <div class="fact-box"><span class="fact-number">2016</span><span class="fact-label">Scientific Data paper for Pantheon 1.0</span></div>
   <div class="fact-box"><span class="fact-number">3</span><span class="fact-label">Main memory engines: power, art, science</span></div>
   <div class="fact-box"><span class="fact-number">10</span><span class="fact-label">Memory-capital cities compared</span></div>
-  <div class="fact-box"><span class="fact-number">5</span><span class="fact-label">Charts in this report</span></div>
-</div>
+  </div>
 <h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
 <p class="art-p">Pantheon aggregates biographical notability using multilingual Wikipedia presence and related fame metrics. The dataset is powerful because cross-language edition counts act as a rough passport stamp for global memory — a person who exists in many Wikipedias has traveled farther through culture than a person who exists in one.</p>
 <p class="art-p">The charts here use editorial indices to make domain, era, city, and occupation comparisons legible. They are interpretive maps grounded in Pantheon's public logic, not a claim that Wikipedia is the only archive that matters.</p>

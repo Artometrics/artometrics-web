@@ -9,6 +9,15 @@ heroImage: /images/content/articles/radio-stations/hero.png
 tags:
   - music
 draft: false
+tldr: >-
+  Station-level format data chart where music, talk, and niche programming
+  concentrate.
+keyPoints:
+  - '17,186 — Records in the working dataset'
+  - 101 — Median Frequency
+  - '1,700 — Highest observed Frequency'
+  - WEUP — Top Call sign by Frequency
+  - Country — Most common Format
 ---
 <div id="quarto-content">
 <main class="art-article-main">
@@ -16,7 +25,7 @@ draft: false
 <p class="art-p">A TidyTuesday working file of <strong>17,186</strong> records puts median frequency at <strong>101</strong> and the highest observed frequency at <strong>1,700</strong>. <strong>WEUP</strong> leads the call-sign ranking by frequency in the fact box, and <strong>Country</strong> is the most common format label.</p>
 <p class="art-p">Frequency leaders at the top of the AM band are a different story from format share. The charts separate the physics of the dial from the culture of the playlist.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">A few markers set the scale before the charts.</p>
+<p class="art-p"></p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">17,186</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">101</span><span class="fact-label">Median Frequency</span></div>

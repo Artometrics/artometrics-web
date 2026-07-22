@@ -7,6 +7,13 @@ heroImage: /images/content/articles/incarceration-trends/hero.png
 tags:
   - business
 draft: false
+tldr: Long-run imprisonment data track national trends and which states pulled away.
+keyPoints:
+  - '100,000 — Records in the working dataset'
+  - '3,553 — Median Population'
+  - '6,801,437 — Highest observed Population'
+  - CA — Top State by Population
+  - 1970–2016 — Year span covered in the file
 ---
 <div id="quarto-content">
 <main class="art-article-main">
@@ -14,7 +21,7 @@ draft: false
 <p class="art-p">The TidyTuesday working extract used here holds <strong>100,000</strong> records spanning <strong>1970–2016</strong>. Median population in the analytic columns sits at <strong>3,553</strong>; the highest observed population value exceeds <strong>6.8 million</strong>. California leads the state rollup by population, and the South is the most common region label in the file.</p>
 <p class="art-p">Population is not identical to incarceration rate — but in this release it is the spine that lets pretrial counts, regional gaps, and long-run change be compared without pretending every county is the same size.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">A few markers set the scale before the charts.</p>
+<p class="art-p"></p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">100,000</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">3,553</span><span class="fact-label">Median Population</span></div>

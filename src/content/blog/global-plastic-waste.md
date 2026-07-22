@@ -9,6 +9,19 @@ heroImage: /images/content/articles/global-plastic-waste/hero.png
 tags:
   - business
 draft: false
+tldr: >-
+  Country-level plastic generation and mismanagement rates show where leakage
+  concentrates.
+keyPoints:
+  - '22,204 — Records in the working dataset'
+  - '8,447 — Median GDP per capita, PPP (constant 2011 international $) (Rate)'
+  - >-
+    135,319 — Highest observed GDP per capita, PPP (constant 2011 international
+    $) (Rate)
+  - >-
+    Macao — Top Entity by GDP per capita, PPP (constant 2011 international $)
+    (Rate)
+  - 1700–2017 — Year span covered in the file
 ---
 <div id="quarto-content">
 <main class="art-article-main">
@@ -16,7 +29,7 @@ draft: false
 <p class="art-p">A TidyTuesday compilation spanning country-year records puts <strong>22,204</strong> rows on the table. Median GDP per capita in the working file is <strong>8,447</strong> (PPP, constant 2011 international dollars). The highest observed rate reaches <strong>135,319</strong>, with Macao at the top of that income ranking. The year span runs from <strong>1700</strong> to <strong>2017</strong> — long enough to watch modern prosperity and modern waste arrive together.</p>
 <p class="art-p">Income alone does not settle the mismanagement question. Rich places can fund collection systems; poorer coastal places can become leakage hotspots even at lower per-person generation. The charts below separate those layers.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">A few markers set the scale before the charts.</p>
+<p class="art-p"></p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">22,204</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">8,447</span><span class="fact-label">Median GDP per capita, PPP (constant 2011 international $) (Rate)</span></div>

@@ -9,6 +9,15 @@ heroImage: /images/content/articles/new-york-vs-san-francisco-city-systems/hero.
 tags:
   - cities-travel
 draft: false
+tldr: >-
+  Why the two are paired in debate—and where their economic and cultural systems
+  diverge.
+keyPoints:
+  - 2 — Global intangible-output cities compared
+  - 8 — Identity axes scored
+  - 6 — Shared pressure narratives tested
+  - 0 — Single-variable answers
+  - '1 — Core contrast: command versus invention'
 ---
 <div id="quarto-content">
 <main class="art-article-main">
@@ -16,7 +25,7 @@ draft: false
 <p class="art-p">The question is why they belong in the same conversation and what people miss when they compare them only by rent, taxes, or office vacancy.</p>
 <p class="art-p">Start with the scale: <strong>2</strong> — Global intangible-output cities compared; and <strong>8</strong> — Identity axes scored.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">A few markers set the scale before the charts.</p>
+<p class="art-p"></p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">2</span><span class="fact-label">Global intangible-output cities compared</span></div>
   <div class="fact-box"><span class="fact-number">8</span><span class="fact-label">Identity axes scored</span></div>

@@ -7,6 +7,13 @@ heroImage: /images/content/articles/nuclear-explosions/hero.png
 tags:
   - culture
 draft: false
+tldr: 'Historical test records map yield, purpose, and timing across decades.'
+keyPoints:
+  - '2,051 — Records in the working dataset'
+  - 0.00 — Median Magnitude body
+  - 7.40 — Highest observed Magnitude body
+  - USSR — Top Country by Magnitude body
+  - 1970–1970 — Year span covered in the file
 ---
 <div id="quarto-content">
 <main class="art-article-main">
@@ -14,7 +21,7 @@ draft: false
 <p class="art-p">A TidyTuesday working extract of <strong>2,051</strong> records puts median body-wave magnitude at <strong>0.00</strong> and the highest observed magnitude at <strong>7.40</strong>. The <strong>USSR</strong> leads the country ranking by magnitude body in the fact box, and purpose code <strong>WR</strong> is the most common label. The year marker in the extract collapses to <strong>1970</strong> for one of the summary spans, so timeline charts should be read as the file's available event clock rather than a claim that testing happened only in a single year.</p>
 <p class="art-p">Zeros in the magnitude field are not moral quiet. They are measurement gaps, non-detections, or unfilled cells that pull the median to the floor while a thin upper tail records the events that shook instruments hardest.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">A few markers set the scale before the charts.</p>
+<p class="art-p"></p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">2,051</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">0.00</span><span class="fact-label">Median Magnitude body</span></div>

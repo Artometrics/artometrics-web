@@ -7,6 +7,13 @@ heroImage: /images/content/articles/san-francisco-data-microscope/hero.png
 tags:
   - cities-travel
 draft: false
+tldr: 'A city-identity report through software exports, scarcity, and neighborhoods.'
+keyPoints:
+  - '1,100+ — DataSF public portal dataset scale in public summaries'
+  - 7 — Identity domains scored
+  - 6 — Open questions for the next SF production pass
+  - '3 — Core tradeoff signals: tech, housing, tolerance'
+  - 6 — Competitor cities framed
 ---
 <div id="quarto-content">
 <main class="art-article-main">
@@ -14,15 +21,14 @@ draft: false
 <p class="art-p">this piece does not try to finish the comparison yet. It defines the questions a serious SF data portrait has to ask.</p>
 <p class="art-p">Start with the scale: <strong>1,100+</strong> — DataSF public portal dataset scale in public summaries; and <strong>7</strong> — Identity domains scored.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">A few markers set the scale before the charts.</p>
+<p class="art-p"></p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">1,100+</span><span class="fact-label">DataSF public portal dataset scale in public summaries</span></div>
   <div class="fact-box"><span class="fact-number">7</span><span class="fact-label">Identity domains scored</span></div>
   <div class="fact-box"><span class="fact-number">6</span><span class="fact-label">Open questions for the next SF production pass</span></div>
   <div class="fact-box"><span class="fact-number">3</span><span class="fact-label">Core tradeoff signals: tech, housing, tolerance</span></div>
   <div class="fact-box"><span class="fact-number">6</span><span class="fact-label">Competitor cities framed</span></div>
-  <div class="fact-box"><span class="fact-number">5</span><span class="fact-label">Charts in this report</span></div>
-</div>
+  </div>
 <h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
 <p class="art-p">DataSF provides Socrata/SODA API access to city datasets, including registered businesses, building permits, 311 cases, public safety, transportation, housing, and civic operations. Regional identity requires adding BEA, Census ACS, BLS, Commerce export data, and Bay Area transportation sources.</p>
 <p class="art-p">These charts are a framework pass: they show what the SF report should test when direct APIs are pulled.</p>

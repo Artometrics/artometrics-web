@@ -5,7 +5,6 @@ import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteNavOverlay } from "@/components/SiteNavOverlay";
-import { AppBanner } from "@/components/AppBanner";
 import { CookieBanner } from "@/components/CookieBanner";
 import { ChromeProvider, useChrome } from "@/lib/chrome";
 import { ThemeProvider, useTheme } from "@/lib/theme";
@@ -30,7 +29,6 @@ function SiteChrome() {
   return (
     <SafeAreaView style={[styles.safe, { backgroundColor: colors.bg }]} edges={["top"]}>
       <View style={[styles.root, { backgroundColor: colors.bg }]}>
-        <AppBanner />
         <SiteHeader />
         <ScrollView
           style={styles.scroll}

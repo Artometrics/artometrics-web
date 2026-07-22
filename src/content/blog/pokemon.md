@@ -8,13 +8,20 @@ heroImage: >-
 tags:
   - games
 draft: false
+tldr: 'Beyond the headline revenue figure: games, cards, merchandise, and film.'
+keyPoints:
+  - 949 — Pokémon in the dataset with a confirmed primary type
+  - 18 — Distinct primary types represented
+  - 8 — Generation IDs in the data — Gen 8 and 9 unclassified in source
+  - 157 — Median base experience across all Pokémon
+  - 510 — Pokémon with a second type — the dual-type majority
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">Pokémon is the highest-grossing media franchise in history — more than $150 billion in lifetime revenue across games, cards, merchandise, and film. That number gets cited constantly. What gets cited less is the design infrastructure underneath it: the 18-type system, the base stat framework, the generation-by-generation release cadence that has added roughly 100 new Pokémon every few years since 1996. The franchise looks like a cultural phenomenon. The data shows it&#39;s also an engineering project.</p>
 <p class="art-p">The TidyTuesday 2025-04-01 Pokémon dataset — sourced from PokéAPI and covering every Pokémon through Generation IX — lets three questions land cleanly. Do different types actually play differently, or is that a perception? Has Game Freak been inflating Pokémon power over time? And what does physical size reveal about how Pokémon are designed?</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">A few markers set the scale before the charts.</p>
+<p class="art-p"></p>
 <div class="facts-grid">
   <div class="fact-box">
     <span class="fact-number">949</span>

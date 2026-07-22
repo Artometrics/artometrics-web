@@ -10,6 +10,15 @@ heroImage: >-
 tags:
   - sports
 draft: false
+tldr: >-
+  Los Angeles turned payroll, development, and depth into recurring October
+  access.
+keyPoints:
+  - 8 — World Series championships in franchise history
+  - 25 — Approximate National League pennants
+  - 111 — Regular-season wins in 2022
+  - 32 — Years between the 1988 and 2020 titles
+  - 12 — Straight postseason appearances from 2013 through 2024
 ---
 <div id="quarto-content">
 <main class="art-article-main">

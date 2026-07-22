@@ -5,7 +5,7 @@
 
 ## About
 
-- Editorial desks: Culture, Atlas, History, Persona, Power
+- Sections: Sports, Movies & TV, Music, Culture, Galleries & Museums, Cities & Travel, Games, Business, Books, Tech
 - Reports pair editorial judgment with reproducible charts and public datasets
 - Resources: https://artometrics.com/resources
 - Datasets: https://artometrics.com/datasets
@@ -119,4 +119,4 @@
 
 ## Generated
 
-Updated: 2026-07-22T21:10:54.962Z
+Updated: 2026-07-22T23:16:09.861Z
