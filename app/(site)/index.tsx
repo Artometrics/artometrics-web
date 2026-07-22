@@ -1,4 +1,4 @@
-import { Pressable, Text, View, StyleSheet, ScrollView } from "react-native";
+import { Pressable, Text, View, StyleSheet, Image } from "react-native";
 import { Link } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { BlogCard } from "@/components/BlogCard";
@@ -6,7 +6,6 @@ import { PageSeo } from "@/components/PageSeo";
 import { Fonts } from "@/constants/Colors";
 import { useTheme } from "@/lib/theme";
 import { assetUrl } from "@/lib/assets";
-import { Image } from "react-native";
 import {
   deckLine,
   formatAuthorName,
@@ -15,7 +14,7 @@ import {
   getPodcastEpisodes,
   primarySection,
 } from "@/lib/content";
-import { SECTION_META, SECTION_SLUGS } from "@/data/sections";
+import { SECTION_META } from "@/data/sections";
 
 export default function HomeScreen() {
   const { colors } = useTheme();
@@ -37,23 +36,6 @@ export default function HomeScreen() {
         description="Data reporting on culture, sports, film, music, and cities — clear, citable, easy to read."
         path="/"
       />
-
-      <ScrollView
-        horizontal
-        showsHorizontalScrollIndicator={false}
-        contentContainerStyle={styles.sectionNav}
-        style={[styles.sectionNavWrap, { borderBottomColor: colors.border }]}
-      >
-        {SECTION_SLUGS.map((slug) => (
-          <Link key={slug} href={`/topics/${slug}` as `/topics/${string}`} asChild>
-            <Pressable style={styles.sectionChip}>
-              <Text style={[styles.sectionChipText, { color: colors.text }]}>
-                {SECTION_META[slug].title}
-              </Text>
-            </Pressable>
-          </Link>
-        ))}
-      </ScrollView>
 
       {featured ? (
         <Wrapper style={styles.lead} variant="wide">
@@ -145,21 +127,6 @@ export default function HomeScreen() {
 }
 
 const styles = StyleSheet.create({
-  sectionNavWrap: {
-    borderBottomWidth: StyleSheet.hairlineWidth,
-    maxHeight: 48,
-  },
-  sectionNav: {
-    paddingHorizontal: 16,
-    paddingVertical: 12,
-    gap: 18,
-    alignItems: "center",
-  },
-  sectionChip: { paddingVertical: 2 },
-  sectionChipText: {
-    fontSize: 13,
-    fontWeight: "600",
-  },
   lead: { paddingTop: 28, paddingBottom: 24, gap: 12 },
   eyebrow: {
     fontSize: 11,
