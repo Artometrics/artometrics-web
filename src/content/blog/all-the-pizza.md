@@ -11,62 +11,68 @@ tags:
 draft: false
 ---
 <div id="quarto-content">
-
 <main class="art-article-main">
-<p class="art-p">This report analyzes the TidyTuesday <strong>2019-10-01</strong> release on <strong>All The Pizza</strong> — <strong>10,000</strong> rows after cleaning and merge. What does pizza cost — and what do you pay in calories?</p>
-<p class="art-p">Five charts track <strong>Price range min</strong> across time, category, and named entities — trend, leaders, distribution, tiers, and relationships. Where companion files exist in the repo, they are joined before analysis so reception, geography, or metadata columns are not left on the table.</p>
-<h2 id="fast-facts" class="anchored">At a glance</h2>
+<p class="art-p">Pizza prices look simple until you try to compare 10,000 menu rows. The Datafiniti pizza extract in TidyTuesday does exactly that: restaurant-level records with price-range fields that reveal how “a slice” and “a specialty pie” live in different economic brackets. The working file holds <strong>10,000</strong> rows.</p>
+<p class="art-p">The median price-range minimum is <strong>0.00</strong> — a signal that many listings encode missing or zeroed floors rather than free pizza. The highest observed price-range minimum is <strong>50.0</strong>, shared at the top by names such as Oregano and Crust Stone Oven Pizza. That ceiling is where tasting-menu and destination pizzerias sit.</p>
+<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
+<p class="art-p">Keep these markers in view as the story unfolds.</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">10,000</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">0.00</span><span class="fact-label">Median Price range min</span></div>
   <div class="fact-box"><span class="fact-number">50.0</span><span class="fact-label">Highest observed Price range min</span></div>
   <div class="fact-box"><span class="fact-number">Oregano</span><span class="fact-label">Top Name by Price range min</span></div>
 </div>
-<h2 id="dataset-context" class="anchored">The data</h2>
-<p>The source is the TidyTuesday release from <strong>2019-10-01</strong> (R for Data Science community). This working file contains <strong>10,000</strong> rows and <strong>10</strong> columns after merging all available CSV/XLSX tables in the week folder.</p>
-<p>Charts are exported as Plotly JSON with PNG fallbacks. Medians are used for robustness where distributions skew. Index-style fields (row numbers, sequential IDs) are excluded from metric selection.</p>
-<p class="art-p"><strong>How to read this report:</strong> start with the chart caption, then ask what the metric actually means, what a non-expert should notice first, and what an expert would challenge in the source. The goal is not to memorize every number; it is to leave with a sharper question than the one you arrived with.</p>
-<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
-<h2 id="chart-1-breakdown" class="anchored">BREAKDOWN</h2>
+<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<p class="art-p">The source is the TidyTuesday release from 2019-10-01 (pizza_datafiniti.csv). After cleaning, the analysis frame used here contains 10,000 records.</p>
+<p class="art-p">Price range minimum is the ranked metric across the chart stack. Medians are used because the distribution is heavily piled at low values. Charts are Plotly JSON with PNG fallbacks.</p>
+<h2 id="price-floors-separate-everyday-shops-from-destination-pies" class="anchored">Price Floors Separate Everyday Shops From Destination Pies</h2>
+<h3 id="price-floors-separate-everyday-shops-from-destination-pies-look" class="anchored">Price range min by Name</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/all-the-pizza/charts/chart1_breakdown.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/all-the-pizza/charts/chart1_breakdown.png" role="img" aria-label="Price range min by Name"></div>
 </figure>
-<p class="art-p"><strong>Crust Stone Oven Pizza</strong> leads at <strong>50.0</strong>; <strong>Scuola Vecchia Pizza E Vino</strong> anchors the low end at <strong>25.0</strong>.</p>
-<p class="art-p">Grouping by name exposes how the metric varies across the catalog's major entities.</p>
-<h2 id="chart-2-leaders" class="anchored">LEADERS</h2>
+<p class="art-p">At the top of the price-range-minimum ranking, Oregano and Crust Stone Oven Pizza both hit <strong>50.0</strong>. Just below, a cluster of shops — Papa’s Pizza, Apizza Scholls, Barbaro, La Montanara, Spin, Dough Pizzeria Napoletana — sits at <strong>40.0</strong>.</p>
+<p class="art-p">Those are not typical delivery-store floors. They mark the upper edge of how this dataset encodes premium positioning. Most of the 10,000-row catalog never approaches that band.</p>
+
+<h2 id="the-top-dozen-is-a-premium-plateau" class="anchored">The Top Dozen Is a Premium Plateau</h2>
+<h3 id="the-top-dozen-is-a-premium-plateau-look" class="anchored">Crust Stone Oven Pizza leads at 50.0 — 40.0 marks the median among the top dozen</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/all-the-pizza/charts/chart2_leaders.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/all-the-pizza/charts/chart2_leaders.png" role="img" aria-label="Crust Stone Oven Pizza leads at 50.0 — 40.0 marks the median among the top dozen"></div>
 </figure>
-<p class="art-p"><strong>Crust Stone Oven Pizza</strong> leads at <strong>50.0</strong> — <strong>40.0</strong> marks the median among the top dozen.</p>
-<p class="art-p">Head-of-field concentration is where quality, scale, or brand visibly separates from the pack.</p>
-<h2 id="chart-3-distribution" class="anchored">DISTRIBUTION</h2>
+<p class="art-p">Crust Stone Oven Pizza appears among the leaders at <strong>50.0</strong>, and the median among the top dozen is <strong>40.0</strong>. Inside the expensive club, the story is less about a single outlier than about a shared premium floor.</p>
+<p class="art-p">That plateau is useful for citation: when someone asks what “expensive pizza” looks like in this file, the answer is a top-dozen median of 40 — not the global median of 0.</p>
+
+<h2 id="almost-everything-sits-in-the-low-bins" class="anchored">Almost Everything Sits in the Low Bins</h2>
+<h3 id="almost-everything-sits-in-the-low-bins-look" class="anchored">Price range min Distribution</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/all-the-pizza/charts/chart3_distribution.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/all-the-pizza/charts/chart3_distribution.png" role="img" aria-label="Price range min Distribution"></div>
 </figure>
-<p class="art-p">Median <strong>0.00</strong> vs mean <strong>4.66</strong> — the shape is right-skewed.</p>
-<p class="art-p">The top decile begins at <strong>25.0</strong>; that tail is where defining cases live.</p>
-<h2 id="chart-4-concentration" class="anchored">CONCENTRATION</h2>
+<p class="art-p">The distribution is extreme. Roughly <strong>8,167</strong> rows fall near the lowest price-range-minimum bin, with about <strong>1,801</strong> in the next populated band. Only a few dozen observations occupy the high bins near 40–50.</p>
+<p class="art-p">That is why the median of 0.00 is both technically correct and narratively incomplete. The mass of the market is cheap or zero-coded; the interesting cultural story lives in the thin right tail.</p>
+
+<h2 id="premium-names-concentrate-quickly" class="anchored">Premium Names Concentrate Quickly</h2>
+<h3 id="premium-names-concentrate-quickly-look" class="anchored">Cumulative Price range min</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/all-the-pizza/charts/chart4_pareto.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/all-the-pizza/charts/chart4_pareto.png" role="img" aria-label="Cumulative Price range min"></div>
 </figure>
-<p class="art-p">The top <strong>5</strong> name entries account for <strong>43%</strong> of the aggregate price range min.</p>
-<p class="art-p">Steep Pareto curves mean a small head drives most of the signal — the long tail is noise until it isn't.</p>
-<h2 id="chart-5-relationship" class="anchored">SUPPLEMENT — RELATIONSHIP</h2>
+<p class="art-p">The Pareto view of price-range minimum among leading names climbs steeply: the first five entries already hold roughly <strong>43%</strong> of the plotted aggregate, and the curve reaches the full total by the fifteenth name.</p>
+<p class="art-p">Concentration here is not about volume of pizzas sold — the file is not a sales ledger — but about how the high price-floor labels cluster among a short list of restaurant names.</p>
+
+<h2 id="minimum-and-maximum-ranges-move-together-until-they-don-t" class="anchored">Minimum and Maximum Ranges Move Together — Until They Don’t</h2>
+<h3 id="minimum-and-maximum-ranges-move-together-until-they-don-t-look" class="anchored">Price range min vs Price range max</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/all-the-pizza/charts/chart5_scatter.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/all-the-pizza/charts/chart5_scatter.png" role="img" aria-label="Price range min vs Price range max"></div>
 </figure>
-<p class="art-p">Joint plot of <strong>price range min</strong> and <strong>price range max</strong> surfaces clusters the averages erase.</p>
-<p class="art-p">Bubble size tracks repeat presence — outliers are archetypes, not noise.</p>
-<h2 id="limitations" class="anchored">Caveats</h2>
-<p>Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p>
-<p>Findings describe the file on hand — treat them as structural signals about <strong>All The Pizza</strong>, not exhaustive truth about the full domain.</p>
-<h2 id="conclusion" class="anchored">Bottom line</h2>
-<p>Read as a teaching map, <strong>All The Pizza</strong> shows why one metric is rarely enough: leaders, tails, trends, and relationships each answer a different question about price range min.</p>
-<p>The best reading is modest: use the chart to sharpen the question, then check the source and limits before turning it into a claim.</p>
-<h2 id="references" class="anchored">Sources</h2>
+<p class="art-p">Scatter points of price-range minimum against price-range maximum show the expected diagonal: shops with higher floors also tend to list higher ceilings, with some pairs reaching from 40 up toward 55.</p>
+<p class="art-p">The interesting cases are the mismatches — low floors with wide ceilings, or compressed ranges that signal a single-price menu. Those joints are where “pizza” stops being one product and becomes a price architecture.</p>
+
+<h2 id="what-this-file-cannot-tell-you" class="anchored">What this file cannot tell you</h2>
+<p class="art-p">Datafiniti restaurant scrapes are not audited menus. Zero price-range values may mean missing data rather than free food. Name collisions and chain-vs-independent ambiguity remain.</p>
+<p class="art-p">The extract cannot speak to ingredient costs, tip culture, or city-level rent. It measures listed price-range fields in a 2019 community snapshot.</p>
+<h2 id="what-to-take-away" class="anchored">What to take away</h2>
+<p class="art-p">In 10,000 pizza rows, the market’s mass sits at a median price-range minimum of 0.00, while a thin premium tier reaches 50.0.</p>
+<p class="art-p">Cite the top-dozen median of 40 when the question is about destination pizza; cite the global median when the question is about the typical listing. They describe different economies.</p>
+<h2 id="sources" class="anchored">Sources</h2>
+
 <p>Data Science Learning Community. (2019). <em>TidyTuesday: All The Pizza</em>. <a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2019/2019-10-01/pizza_datafiniti.csv" target="_blank" rel="noopener noreferrer">https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2019/2019-10-01/pizza_datafiniti.csv</a></p>
-<h2 id="editors-note" class="anchored">Editor’s note</h2>
-<div class="art-editorial-note"><p><em>Artometrics data report from the TidyTuesday research pipeline. Charts and aggregates are reproducible from the embedded exhibits and public source files.</em></p></div>
-<p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2019/2019-10-01" target="_blank" rel="noopener noreferrer">View TidyTuesday source on GitHub</a></p>
 </main>
 </div>

@@ -11,11 +11,11 @@ tags:
 draft: false
 ---
 <div id="quarto-content">
-
 <main class="art-article-main">
-<p class="art-p">This report analyzes the TidyTuesday <strong>2018-10-16</strong> release on <strong>College Major & Income</strong> — <strong>173</strong> rows after cleaning and merge. Which majors pay most — and which carry unemployment risk?</p>
-<p class="art-p">Five charts track <strong>Low wage jobs</strong> across time, category, and named entities — trend, leaders, distribution, tiers, and relationships. Where companion files exist in the repo, they are joined before analysis so reception, geography, or metadata columns are not left on the table.</p>
-<h2 id="fast-facts" class="anchored">At a glance</h2>
+<p class="art-p">College majors are sold as income stories. The TidyTuesday recent-graduates extract used here also tracks how many alumni land in low-wage jobs. Across <strong>173</strong> majors, the median low-wage-job count is <strong>1,231</strong>, with a high of <strong>48,207</strong> in Psychology. Engineering is the most common major category label in the file.</p>
+<p class="art-p">That framing flips the usual prestige script: the chart stack leads with exposure to low-wage employment, then pairs it with unemployment rates. Pay ceilings matter; so does the size of the floor.</p>
+<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
+<p class="art-p">Keep these markers in view as the story unfolds.</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">173</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">1,231</span><span class="fact-label">Median Low wage jobs</span></div>
@@ -23,51 +23,57 @@ draft: false
   <div class="fact-box"><span class="fact-number">PSYCHOLOGY</span><span class="fact-label">Top Major by Low wage jobs</span></div>
   <div class="fact-box"><span class="fact-number">Engineering</span><span class="fact-label">Most common Major category</span></div>
 </div>
-<h2 id="dataset-context" class="anchored">The data</h2>
-<p>The source is the TidyTuesday release from <strong>2018-10-16</strong> (R for Data Science community). This working file contains <strong>173</strong> rows and <strong>21</strong> columns after merging all available CSV/XLSX tables in the week folder.</p>
-<p>Charts are exported as Plotly JSON with PNG fallbacks. Medians are used for robustness where distributions skew. Index-style fields (row numbers, sequential IDs) are excluded from metric selection.</p>
-<p class="art-p"><strong>How to read this report:</strong> start with the chart caption, then ask what the metric actually means, what a non-expert should notice first, and what an expert would challenge in the source. The goal is not to memorize every number; it is to leave with a sharper question than the one you arrived with.</p>
-<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
-<h2 id="chart-1-breakdown" class="anchored">BREAKDOWN</h2>
+<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<p class="art-p">The source is the TidyTuesday release from 2018-10-16 (recent-grads.csv). After cleaning, 173 major rows remain.</p>
+<p class="art-p">Low wage jobs is the primary ranked metric; major category provides distributional context; unemployment rate appears in the scatter. Charts are Plotly JSON with PNG fallbacks.</p>
+<h2 id="psychology-leads-low-wage-job-counts-by-a-wide-margin" class="anchored">Psychology Leads Low-Wage Job Counts by a Wide Margin</h2>
+<h3 id="psychology-leads-low-wage-job-counts-by-a-wide-margin-look" class="anchored">Low wage jobs by Major</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/college-major-income/charts/chart1_breakdown.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/college-major-income/charts/chart1_breakdown.png" role="img" aria-label="Low wage jobs by Major"></div>
 </figure>
-<p class="art-p"><strong>PSYCHOLOGY</strong> leads at <strong>48,207</strong>; <strong>COMMERCIAL ART AND GRAPHIC DESIGN</strong> anchors the low end at <strong>14,839</strong>.</p>
-<p class="art-p">Grouping by major exposes how the metric varies across the catalog's major entities.</p>
-<h2 id="chart-2-leaders" class="anchored">LEADERS</h2>
+<p class="art-p">Psychology posts <strong>48,207</strong> low-wage jobs — far ahead of Business Management and Administration (<strong>32,395</strong>), Biology (<strong>28,339</strong>), Marketing (<strong>27,968</strong>), Communications (<strong>27,440</strong>), and General Business (<strong>27,320</strong>). English Language and Literature follows near <strong>26,503</strong>.</p>
+<p class="art-p">These leaders combine large graduating cohorts with labor-market absorption into lower-wage roles. The metric is a count, not a rate — scale and risk travel together.</p>
+
+<h2 id="the-top-dozen-s-median-is-still-enormous" class="anchored">The Top Dozen’s Median Is Still Enormous</h2>
+<h3 id="the-top-dozen-s-median-is-still-enormous-look" class="anchored">PSYCHOLOGY leads at 48,207 — 26,912 marks the median among the top dozen</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/college-major-income/charts/chart2_leaders.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/college-major-income/charts/chart2_leaders.png" role="img" aria-label="PSYCHOLOGY leads at 48,207 — 26,912 marks the median among the top dozen"></div>
 </figure>
-<p class="art-p"><strong>PSYCHOLOGY</strong> leads at <strong>48,207</strong> — <strong>26,912</strong> marks the median among the top dozen.</p>
-<p class="art-p">Head-of-field concentration is where quality, scale, or brand visibly separates from the pack.</p>
-<h2 id="chart-3-distribution" class="anchored">DISTRIBUTION</h2>
+<p class="art-p">Psychology remains first at <strong>48,207</strong>, while the median among the top dozen is about <strong>26,912</strong> — more than twenty times the overall median of 1,231.</p>
+<p class="art-p">The low-wage problem in this file is concentrated in a short list of high-enrollment majors, not evenly sprinkled across all 173 fields.</p>
+
+<h2 id="humanities-and-business-categories-sit-higher-than-engineeri" class="anchored">Humanities and Business Categories Sit Higher Than Engineering</h2>
+<h3 id="humanities-and-business-categories-sit-higher-than-engineeri-look" class="anchored">Low wage jobs by Major category</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/college-major-income/charts/chart3_distribution.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/college-major-income/charts/chart3_distribution.png" role="img" aria-label="Low wage jobs by Major category"></div>
 </figure>
-<p class="art-p">Category boxes reveal whether low wage jobs consensus is shared or contested across tiers.</p>
-<p class="art-p">Wide whiskers flag segments where outliers — not averages — drive reputation.</p>
-<h2 id="chart-4-gap" class="anchored">GAP ANALYSIS</h2>
+<p class="art-p">Category boxes show Humanities & Liberal Arts with a median near <strong>3,466</strong> low-wage jobs (n=15) and Business near <strong>3,046</strong> (n=13). Engineering’s median is only about <strong>372</strong> (n=29), Education about <strong>1,282</strong> (n=16), and Biology & Life Science about <strong>939</strong> (n=14).</p>
+<p class="art-p">Engineering’s low median does not mean zero risk — its maximum still reaches into the thousands — but the center of the category is far from Psychology’s scale.</p>
+
+<h2 id="gaps-confirm-humanities-and-business-above-the-median" class="anchored">Gaps Confirm Humanities and Business Above the Median</h2>
+<h3 id="gaps-confirm-humanities-and-business-above-the-median-look" class="anchored">Low wage jobs vs median by Major category</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/college-major-income/charts/chart4_gap.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/college-major-income/charts/chart4_gap.png" role="img" aria-label="Low wage jobs vs median by Major category"></div>
 </figure>
-<p class="art-p"><strong>Humanities & Liberal Arts</strong> sits <strong>2,235</strong> above the median; <strong>Physical Sciences</strong> trails by <strong>978</strong>.</p>
-<p class="art-p">Diverging from the median exposes which tiers over- or under-perform — not just who ranks first.</p>
-<h2 id="chart-5-relationship" class="anchored">SUPPLEMENT — RELATIONSHIP</h2>
+<p class="art-p">Relative to the overall low-wage median, Humanities & Liberal Arts leads at about <strong>+2,235</strong>, with Business about <strong>+1,815</strong>. Engineering, Computers & Mathematics, and Physical Sciences sit below the median by several hundred to nearly a thousand.</p>
+<p class="art-p">STEM categories in this extract are not immune to low-wage outcomes, but they clear the baseline more often than large humanities and business majors.</p>
+
+<h2 id="low-wage-counts-and-unemployment-are-different-risks" class="anchored">Low-Wage Counts and Unemployment Are Different Risks</h2>
+<h3 id="low-wage-counts-and-unemployment-are-different-risks-look" class="anchored">Low wage jobs vs Unemployment rate</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/college-major-income/charts/chart5_scatter.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/college-major-income/charts/chart5_scatter.png" role="img" aria-label="Low wage jobs vs Unemployment rate"></div>
 </figure>
-<p class="art-p">Joint plot of <strong>low wage jobs</strong> and <strong>unemployment rate</strong> surfaces clusters the averages erase.</p>
-<p class="art-p">Bubble size tracks repeat presence — outliers are archetypes, not noise.</p>
-<h2 id="limitations" class="anchored">Caveats</h2>
-<p>Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p>
-<p>Findings describe the file on hand — treat them as structural signals about <strong>College Major & Income</strong>, not exhaustive truth about the full domain.</p>
-<h2 id="conclusion" class="anchored">Bottom line</h2>
-<p>Read as a teaching map, <strong>College Major & Income</strong> shows why one metric is rarely enough: leaders, tails, trends, and relationships each answer a different question about low wage jobs.</p>
-<p>The best reading is modest: use the chart to sharpen the question, then check the source and limits before turning it into a claim.</p>
-<h2 id="references" class="anchored">Sources</h2>
+<p class="art-p">Low wage jobs versus unemployment rate spreads majors across both axes. Some fields show elevated unemployment with modest low-wage counts; others show huge low-wage tallies without sitting at the top of the unemployment ranking.</p>
+<p class="art-p">The scatter’s warning is practical: underemployment and joblessness are related labor-market failures, but they are not the same number — and majors can fail on either axis.</p>
+
+<h2 id="what-this-file-cannot-tell-you" class="anchored">What this file cannot tell you</h2>
+<p class="art-p">Low-wage job counts favor large majors; rates would reorder the list. “Recent graduates” definitions and survey vintages constrain comparison. Category bins are broad — “Engineering” hides subfield wage gaps.</p>
+<p class="art-p">The file cannot speak to graduate-school pathways that delay earnings, or to geographic cost-of-living differences that redefine what “low wage” means.</p>
+<h2 id="what-to-take-away" class="anchored">What to take away</h2>
+<p class="art-p">Across 173 majors, the median low-wage count is 1,231, while Psychology alone exceeds 48,000. The top-dozen median near 26,900 shows how concentrated the exposure is.</p>
+<p class="art-p">Cite category gaps when comparing fields of study, and keep unemployment on a separate axis — low-wage absorption and joblessness are twin risks, not synonyms.</p>
+<h2 id="sources" class="anchored">Sources</h2>
+
 <p>Data Science Learning Community. (2018). <em>TidyTuesday: College Major & Income</em>. <a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2018/2018-10-16/recent-grads.csv" target="_blank" rel="noopener noreferrer">https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2018/2018-10-16/recent-grads.csv</a></p>
-<h2 id="editors-note" class="anchored">Editor’s note</h2>
-<div class="art-editorial-note"><p><em>Artometrics data report from the TidyTuesday research pipeline. Charts and aggregates are reproducible from the embedded exhibits and public source files.</em></p></div>
-<p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2018/2018-10-16" target="_blank" rel="noopener noreferrer">View TidyTuesday source on GitHub</a></p>
 </main>
 </div>

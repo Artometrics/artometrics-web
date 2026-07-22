@@ -11,11 +11,11 @@ tags:
 draft: false
 ---
 <div id="quarto-content">
-
 <main class="art-article-main">
-<p class="art-p">This report analyzes the TidyTuesday <strong>2020-04-28</strong> release on <strong>Broadway Musicals</strong> — <strong>47,524</strong> rows after cleaning and merge. Which musicals ran longest and grossed hardest on Broadway?</p>
-<p class="art-p">Five charts track <strong>Avg ticket price</strong> across time, category, and named entities — trend, leaders, distribution, tiers, and relationships. Where companion files exist in the repo, they are joined before analysis so reception, geography, or metadata columns are not left on the table.</p>
-<h2 id="fast-facts" class="anchored">At a glance</h2>
+<p class="art-p">Broadway is a price and endurance market: average ticket price on one axis, performances on the other. The TidyTuesday grosses extract used here holds <strong>47,524</strong> rows with a median average ticket price of <strong>$60.2</strong> and a recorded high of <strong>$512</strong>. Springsteen On Broadway tops the show-level price ranking; Broadhurst Theatre is the most common theatre label in the file.</p>
+<p class="art-p">Those two facts already sketch the industry’s split: long-running musical houses with mid-range medians, and event residencies that reset what “a Broadway ticket” can mean.</p>
+<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
+<p class="art-p">Keep these markers in view as the story unfolds.</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">47,524</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">60.2</span><span class="fact-label">Median Avg ticket price</span></div>
@@ -23,51 +23,57 @@ draft: false
   <div class="fact-box"><span class="fact-number">Springsteen On Broadway</span><span class="fact-label">Top Show by Avg ticket price</span></div>
   <div class="fact-box"><span class="fact-number">Broadhurst Theatre</span><span class="fact-label">Most common Theatre</span></div>
 </div>
-<h2 id="dataset-context" class="anchored">The data</h2>
-<p>The source is the TidyTuesday release from <strong>2020-04-28</strong> (R for Data Science community). This working file contains <strong>47,524</strong> rows and <strong>14</strong> columns after merging all available CSV/XLSX tables in the week folder.</p>
-<p>Charts are exported as Plotly JSON with PNG fallbacks. Medians are used for robustness where distributions skew. Index-style fields (row numbers, sequential IDs) are excluded from metric selection.</p>
-<p class="art-p"><strong>How to read this report:</strong> start with the chart caption, then ask what the metric actually means, what a non-expert should notice first, and what an expert would challenge in the source. The goal is not to memorize every number; it is to leave with a sharper question than the one you arrived with.</p>
-<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
-<h2 id="chart-1-breakdown" class="anchored">BREAKDOWN</h2>
+<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<p class="art-p">The source is the TidyTuesday release from 2020-04-28 (grosses.csv). After cleaning, 47,524 records remain for charting.</p>
+<p class="art-p">Average ticket price is the primary metric; theatre and show fields provide the grouping. Charts are Plotly JSON with PNG fallbacks.</p>
+<h2 id="concert-residencies-rewrite-the-price-ceiling" class="anchored">Concert Residencies Rewrite the Price Ceiling</h2>
+<h3 id="concert-residencies-rewrite-the-price-ceiling-look" class="anchored">Avg ticket price by Show</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/broadway-musicals/charts/chart1_breakdown.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/broadway-musicals/charts/chart1_breakdown.png" role="img" aria-label="Avg ticket price by Show"></div>
 </figure>
-<p class="art-p"><strong>Springsteen On Broadway</strong> leads at <strong>509</strong>; <strong>The Book of Mormon</strong> anchors the low end at <strong>157</strong>.</p>
-<p class="art-p">Grouping by show exposes how the metric varies across the catalog's major entities.</p>
-<h2 id="chart-2-leaders" class="anchored">LEADERS</h2>
+<p class="art-p">Springsteen On Broadway leads at about <strong>$508.63</strong> average ticket price — nearly double Hamilton’s roughly <strong>$273</strong>. Dave Chappelle Live, Moulin Rouge!, Mel Brooks on Broadway, Morrissey, and David Byrne’s American Utopia fill the premium band above about <strong>$175</strong>.</p>
+<p class="art-p">The ranking is not a pure musicals list. It is a Broadway pricing list, and concert-style residencies occupy the summit.</p>
+
+<h2 id="even-among-leaders-springsteen-is-an-outlier" class="anchored">Even Among Leaders, Springsteen Is an Outlier</h2>
+<h3 id="even-among-leaders-springsteen-is-an-outlier-look" class="anchored">Springsteen On Broadway leads at 509 — 182 marks the median among the top dozen</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/broadway-musicals/charts/chart2_leaders.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/broadway-musicals/charts/chart2_leaders.png" role="img" aria-label="Springsteen On Broadway leads at 509 — 182 marks the median among the top dozen"></div>
 </figure>
-<p class="art-p"><strong>Springsteen On Broadway</strong> leads at <strong>509</strong> — <strong>182</strong> marks the median among the top dozen.</p>
-<p class="art-p">Head-of-field concentration is where quality, scale, or brand visibly separates from the pack.</p>
-<h2 id="chart-3-distribution" class="anchored">DISTRIBUTION</h2>
+<p class="art-p">Springsteen On Broadway still leads near <strong>$509</strong>, while the median among the top dozen is about <strong>$182</strong>. Hamilton is extraordinary relative to the industry median of $60.2 — and still nowhere near the Springsteen residency ceiling.</p>
+<p class="art-p">Cite $182 as the “expensive Broadway” club median; cite $509 when the question is about the absolute event-ticket frontier.</p>
+
+<h2 id="house-medians-cluster-near-the-industry-middle" class="anchored">House Medians Cluster Near the Industry Middle</h2>
+<h3 id="house-medians-cluster-near-the-industry-middle-look" class="anchored">Avg ticket price by Theatre</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/broadway-musicals/charts/chart3_distribution.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/broadway-musicals/charts/chart3_distribution.png" role="img" aria-label="Avg ticket price by Theatre"></div>
 </figure>
-<p class="art-p">Category boxes reveal whether avg ticket price consensus is shared or contested across tiers.</p>
-<p class="art-p">Wide whiskers flag segments where outliers — not averages — drive reputation.</p>
-<h2 id="chart-4-gap" class="anchored">GAP ANALYSIS</h2>
+<p class="art-p">Broadhurst Theatre (n=1,829) shows a median average ticket near <strong>$77</strong>; Minskoff near <strong>$77</strong>; Majestic near <strong>$60</strong>; Ambassador near <strong>$66</strong>; Imperial nearer <strong>$48</strong>. Maxima inside those houses still spike well above $100 when hit shows land.</p>
+<p class="art-p">Theatre identity matters, but show identity matters more. The same building can host a $50 median season and a $200 event week.</p>
+
+<h2 id="gershwin-leads-the-gap-above-the-median" class="anchored">Gershwin Leads the Gap Above the Median</h2>
+<h3 id="gershwin-leads-the-gap-above-the-median-look" class="anchored">Avg ticket price vs median by Theatre</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/broadway-musicals/charts/chart4_gap.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/broadway-musicals/charts/chart4_gap.png" role="img" aria-label="Avg ticket price vs median by Theatre"></div>
 </figure>
-<p class="art-p"><strong>Gershwin Theatre</strong> sits <strong>27.7</strong> above the median; <strong>Imperial Theatre</strong> trails by <strong>12.1</strong>.</p>
-<p class="art-p">Diverging from the median exposes which tiers over- or under-perform — not just who ranks first.</p>
-<h2 id="chart-5-relationship" class="anchored">SUPPLEMENT — RELATIONSHIP</h2>
+<p class="art-p">Relative to the overall average-ticket median, Gershwin Theatre leads the gap chart at about <strong>+$27.67</strong>, with Broadhurst and Minskoff also clearly positive. Imperial sits below the median by roughly <strong>$12</strong> in this view.</p>
+<p class="art-p">House premiums track programming mix: theaters that host mega-hits and premium brands pull above the $60.2 baseline.</p>
+
+<h2 id="price-and-performance-counts-are-weakly-coupled" class="anchored">Price and Performance Counts Are Weakly Coupled</h2>
+<h3 id="price-and-performance-counts-are-weakly-coupled-look" class="anchored">Avg ticket price vs Performances</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/broadway-musicals/charts/chart5_scatter.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/broadway-musicals/charts/chart5_scatter.png" role="img" aria-label="Avg ticket price vs Performances"></div>
 </figure>
-<p class="art-p">Joint plot of <strong>avg ticket price</strong> and <strong>performances</strong> surfaces clusters the averages erase.</p>
-<p class="art-p">Bubble size tracks repeat presence — outliers are archetypes, not noise.</p>
-<h2 id="limitations" class="anchored">Caveats</h2>
-<p>Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p>
-<p>Findings describe the file on hand — treat them as structural signals about <strong>Broadway Musicals</strong>, not exhaustive truth about the full domain.</p>
-<h2 id="conclusion" class="anchored">Bottom line</h2>
-<p>Read as a teaching map, <strong>Broadway Musicals</strong> shows why one metric is rarely enough: leaders, tails, trends, and relationships each answer a different question about avg ticket price.</p>
-<p>The best reading is modest: use the chart to sharpen the question, then check the source and limits before turning it into a claim.</p>
-<h2 id="references" class="anchored">Sources</h2>
+<p class="art-p">Average ticket price versus performances shows many low-price, low-performance weeks and occasional high-price short runs. Long legs at moderate prices remain the musical’s classic engine.</p>
+<p class="art-p">The scatter refuses a simple story that expensive tickets always mean short runs, or that longevity always means discounting. Broadway monetizes both scarcity and stamina — on different shows.</p>
+
+<h2 id="what-this-file-cannot-tell-you" class="anchored">What this file cannot tell you</h2>
+<p class="art-p">Grosses data can include atypical weeks, previews, and dark periods coded as zeros. Average ticket price is not the same as face value for every seat. Concert residencies mix genres inside a “Broadway” file.</p>
+<p class="art-p">The snapshot timing (through the 2020 release window) predates later reopenings and dynamic pricing expansions.</p>
+<h2 id="what-to-take-away" class="anchored">What to take away</h2>
+<p class="art-p">Broadway’s typical average ticket in this extract sits near $60, while event residencies push past $500. The top-dozen median near $182 defines the premium club without equating it to the Springsteen outlier.</p>
+<p class="art-p">Cite house medians when comparing venues; cite show leaders when comparing brands. They answer different questions about the same street.</p>
+<h2 id="sources" class="anchored">Sources</h2>
+
 <p>Data Science Learning Community. (2020). <em>TidyTuesday: Broadway Musicals</em>. <a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2020/2020-04-28/grosses.csv" target="_blank" rel="noopener noreferrer">https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2020/2020-04-28/grosses.csv</a></p>
-<h2 id="editors-note" class="anchored">Editor’s note</h2>
-<div class="art-editorial-note"><p><em>Artometrics data report from the TidyTuesday research pipeline. Charts and aggregates are reproducible from the embedded exhibits and public source files.</em></p></div>
-<p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2020/2020-04-28" target="_blank" rel="noopener noreferrer">View TidyTuesday source on GitHub</a></p>
 </main>
 </div>

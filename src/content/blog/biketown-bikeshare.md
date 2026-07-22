@@ -11,11 +11,11 @@ tags:
 draft: false
 ---
 <div id="quarto-content">
-
 <main class="art-article-main">
-<p class="art-p">This report analyzes the TidyTuesday <strong>2018-06-05</strong> release on <strong>Biketown Bikeshare</strong> — <strong>100,000</strong> rows after cleaning and merge. How long and far do Portland Biketown trips run?</p>
-<p class="art-p">Five charts track <strong>Duration min</strong> across time, category, and named entities — trend, leaders, distribution, tiers, and relationships. Where companion files exist in the repo, they are joined before analysis so reception, geography, or metadata columns are not left on the table.</p>
-<h2 id="fast-facts" class="anchored">At a glance</h2>
+<p class="art-p">Portland’s Biketown system turns everyday movement into timestamped trips. The TidyTuesday extract used here holds <strong>100,000</strong> ride records spanning <strong>2016–2018</strong>, with a median duration of <strong>14.5</strong> minutes and a recorded high of <strong>1,392</strong> minutes — multi-hour outliers that sit far from the commute core.</p>
+<p class="art-p">Recreation is the most common trip type in the file. That single label already hints at the system’s dual life: tourist and leisure loops on one side, workday hops on the other. Duration is the metric that organizes the charts.</p>
+<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
+<p class="art-p">Keep these markers in view as the story unfolds.</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">100,000</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">14.5</span><span class="fact-label">Median Duration min</span></div>
@@ -24,51 +24,57 @@ draft: false
   <div class="fact-box"><span class="fact-number">2016–2018</span><span class="fact-label">Year span covered in the file</span></div>
   <div class="fact-box"><span class="fact-number">recreation</span><span class="fact-label">Most common TripType</span></div>
 </div>
-<h2 id="dataset-context" class="anchored">The data</h2>
-<p>The source is the TidyTuesday release from <strong>2018-06-05</strong> (R for Data Science community). This working file contains <strong>100,000</strong> rows and <strong>21</strong> columns after merging all available CSV/XLSX tables in the week folder.</p>
-<p>Charts are exported as Plotly JSON with PNG fallbacks. Medians are used for robustness where distributions skew. Index-style fields (row numbers, sequential IDs) are excluded from metric selection.</p>
-<p class="art-p"><strong>How to read this report:</strong> start with the chart caption, then ask what the metric actually means, what a non-expert should notice first, and what an expert would challenge in the source. The goal is not to memorize every number; it is to leave with a sharper question than the one you arrived with.</p>
-<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
-<h2 id="chart-1-trend" class="anchored">TREND</h2>
+<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<p class="art-p">The source is the TidyTuesday release from 2018-06-05 (week10_biketown.zip). After cleaning, the working sample used for these charts contains 100,000 rows.</p>
+<p class="art-p">Hub names, trip types, duration, and distance fields drive the visual stack. Medians are used because duration has a long right tail. Charts are Plotly JSON with PNG fallbacks.</p>
+<h2 id="median-trip-length-fell-across-three-seasons" class="anchored">Median Trip Length Fell Across Three Seasons</h2>
+<h3 id="median-trip-length-fell-across-three-seasons-look" class="anchored">Median Duration min Over Time</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/biketown-bikeshare/charts/chart1_trend.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/biketown-bikeshare/charts/chart1_trend.png" role="img" aria-label="Median Duration min Over Time"></div>
 </figure>
-<p class="art-p">Median duration min is <strong>falling</strong> from <strong>15.1</strong> in the opening period to <strong>12.1</strong> at the close.</p>
-<p class="art-p">Annual medians filter one-off spikes so the structural slope — not viral outliers — drives the story.</p>
-<h2 id="chart-2-leaders" class="anchored">LEADERS</h2>
+<p class="art-p">Median duration slips from about <strong>15.1</strong> minutes in 2016 to <strong>14.6</strong> in 2017 and <strong>12.1</strong> in 2018. The system’s typical ride got shorter even as the archive grew.</p>
+<p class="art-p">That decline can reflect denser hub coverage, more habitual short hops, or a changing mix of recreation versus commute. The trend line alone cannot pick the cause — but it establishes that “a Biketown ride” was not a fixed product over these years.</p>
+
+<h2 id="pop-up-and-waterfront-hubs-stretch-ride-time" class="anchored">Pop-Up and Waterfront Hubs Stretch Ride Time</h2>
+<h3 id="pop-up-and-waterfront-hubs-stretch-ride-time-look" class="anchored">Design Week Portland Pop Up - Disabled leads at 40.6 — 29.0 marks the median among the top dozen</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/biketown-bikeshare/charts/chart2_leaders.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/biketown-bikeshare/charts/chart2_leaders.png" role="img" aria-label="Design Week Portland Pop Up - Disabled leads at 40.6 — 29.0 marks the median among the top dozen"></div>
 </figure>
-<p class="art-p"><strong>Design Week Portland Pop Up - Disabled</strong> leads at <strong>40.6</strong> — <strong>29.0</strong> marks the median among the top dozen.</p>
-<p class="art-p">Head-of-field concentration is where quality, scale, or brand visibly separates from the pack.</p>
-<h2 id="chart-3-distribution" class="anchored">DISTRIBUTION</h2>
+<p class="art-p">Design Week Portland Pop Up - Disabled leads median duration at about <strong>40.6</strong> minutes. PRIDE - Pine - Disabled follows near <strong>36.0</strong>, with waterfront and event-adjacent hubs such as SW Naito at Morrison also running long.</p>
+<p class="art-p">The median among the top dozen hubs is about <strong>29.0</strong> minutes — double the system-wide median of 14.5. Event and scenic starts systematically produce longer rides than the everyday grid.</p>
+
+<h2 id="recreation-lasts-longer-than-work-trips" class="anchored">Recreation Lasts Longer Than Work Trips</h2>
+<h3 id="recreation-lasts-longer-than-work-trips-look" class="anchored">Duration min by TripType</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/biketown-bikeshare/charts/chart3_distribution.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/biketown-bikeshare/charts/chart3_distribution.png" role="img" aria-label="Duration min by TripType"></div>
 </figure>
-<p class="art-p">Category boxes reveal whether duration min consensus is shared or contested across tiers.</p>
-<p class="art-p">Wide whiskers flag segments where outliers — not averages — drive reputation.</p>
-<h2 id="chart-4-gap" class="anchored">GAP ANALYSIS</h2>
+<p class="art-p">By trip type, recreation shows a median duration near <strong>32.6</strong> minutes (n=73 in the boxed sample), versus about <strong>25.6</strong> for commute, <strong>17.7</strong> for errand, and <strong>11.4</strong> for work.</p>
+<p class="art-p">The boxes also expose extreme outliers above 1,000 minutes in recreation, commute, and work — dock failures, forgotten returns, or data quirks. The medians remain the honest center of each category.</p>
+
+<h2 id="recreation-sits-furthest-above-the-system-median" class="anchored">Recreation Sits Furthest Above the System Median</h2>
+<h3 id="recreation-sits-furthest-above-the-system-median-look" class="anchored">Duration min vs median by TripType</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/biketown-bikeshare/charts/chart4_gap.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/biketown-bikeshare/charts/chart4_gap.png" role="img" aria-label="Duration min vs median by TripType"></div>
 </figure>
-<p class="art-p"><strong>recreation</strong> sits <strong>18.1</strong> above the median; <strong>work</strong> trails by <strong>3.08</strong>.</p>
-<p class="art-p">Diverging from the median exposes which tiers over- or under-perform — not just who ranks first.</p>
-<h2 id="chart-5-relationship" class="anchored">SUPPLEMENT — RELATIONSHIP</h2>
+<p class="art-p">Relative to the overall duration median, recreation leads the gap chart at roughly <strong>+18</strong> minutes, with commute about <strong>+11</strong> and errand slightly positive. Work sits below the median by about <strong>3</strong> minutes.</p>
+<p class="art-p">That ordering matches the city’s split personality on two wheels: leisure explores; work punches a short path.</p>
+
+<h2 id="longer-minutes-do-not-always-mean-more-miles" class="anchored">Longer Minutes Do Not Always Mean More Miles</h2>
+<h3 id="longer-minutes-do-not-always-mean-more-miles-look" class="anchored">Duration min vs Distance Miles</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/biketown-bikeshare/charts/chart5_scatter.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/biketown-bikeshare/charts/chart5_scatter.png" role="img" aria-label="Duration min vs Distance Miles"></div>
 </figure>
-<p class="art-p">Joint plot of <strong>duration min</strong> and <strong>distance miles</strong> surfaces clusters the averages erase.</p>
-<p class="art-p">Bubble size tracks repeat presence — outliers are archetypes, not noise.</p>
-<h2 id="limitations" class="anchored">Caveats</h2>
-<p>Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p>
-<p>Findings describe the file on hand — treat them as structural signals about <strong>Biketown Bikeshare</strong>, not exhaustive truth about the full domain.</p>
-<h2 id="conclusion" class="anchored">Bottom line</h2>
-<p>Read as a teaching map, <strong>Biketown Bikeshare</strong> shows why one metric is rarely enough: leaders, tails, trends, and relationships each answer a different question about duration min.</p>
-<p>The best reading is modest: use the chart to sharpen the question, then check the source and limits before turning it into a claim.</p>
-<h2 id="references" class="anchored">Sources</h2>
+<p class="art-p">Duration versus distance, colored by trip type, shows recreation spanning both long loopy rides and short spins. Commute points tighten toward moderate distances; work and errand clouds are smaller and closer to the origin.</p>
+<p class="art-p">A 40-minute recreation ride may cover only a few miles along the waterfront. Minutes measure time in possession of the bike; miles measure geography. Biketown’s archive needs both.</p>
+
+<h2 id="what-this-file-cannot-tell-you" class="anchored">What this file cannot tell you</h2>
+<p class="art-p">Hub renaming, disabled pop-up stations, and GPS noise all affect duration and distance fields. Extremely long trips may be failures to dock rather than heroic tours.</p>
+<p class="art-p">The 2016–2018 window predates later network expansions. Findings describe this extract’s behavior, not the live 2020s system map.</p>
+<h2 id="what-to-take-away" class="anchored">What to take away</h2>
+<p class="art-p">Biketown’s typical ride is short — a 14.5-minute median — and got shorter from 2016 to 2018. Recreation and event hubs pull the upper tail; work trips pull toward brevity.</p>
+<p class="art-p">The system is not one behavior. It is a leisure network and a commuting tool sharing the same docks, and duration is where that split becomes measurable.</p>
+<h2 id="sources" class="anchored">Sources</h2>
+
 <p>Data Science Learning Community. (2018). <em>TidyTuesday: Biketown Bikeshare</em>. <a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2018/2018-06-05/week10_biketown.zip" target="_blank" rel="noopener noreferrer">https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2018/2018-06-05/week10_biketown.zip</a></p>
-<h2 id="editors-note" class="anchored">Editor’s note</h2>
-<div class="art-editorial-note"><p><em>Artometrics data report from the TidyTuesday research pipeline. Charts and aggregates are reproducible from the embedded exhibits and public source files.</em></p></div>
-<p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2018/2018-06-05" target="_blank" rel="noopener noreferrer">View TidyTuesday source on GitHub</a></p>
 </main>
 </div>
