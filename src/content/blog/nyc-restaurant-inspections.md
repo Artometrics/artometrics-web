@@ -9,11 +9,12 @@ tags:
 draft: false
 ---
 <div id="quarto-content">
-
 <main class="art-article-main">
-<p class="art-p">This report analyzes the TidyTuesday <strong>2018-12-11</strong> release on <strong>NYC Restaurant Inspections</strong> — <strong>100,000</strong> rows after cleaning and merge. Which cuisines score highest — and how grades distribute?</p>
-<p class="art-p">Five charts track <strong>Score</strong> across time, category, and named entities — trend, leaders, distribution, tiers, and relationships. Where companion files exist in the repo, they are joined before analysis so reception, geography, or metadata columns are not left on the table.</p>
-<h2 id="fast-facts" class="anchored">At a glance</h2>
+<p class="art-p">New York City restaurant inspections turn hygiene into a public grade. Behind the A/B/C stickers is a numeric score distribution that is far more skewed than the cheerful window cards suggest.</p>
+<p class="art-p">A TidyTuesday working extract of <strong>100,000</strong> records puts median score at <strong>15.0</strong> and the highest observed score at <strong>156</strong>. <strong>NOUS LES AMIS RESTAURANT &amp; B</strong> leads the DBA ranking by score in the fact box, grade <strong>A</strong> is the most common label, and the year span in the file runs from a placeholder-early <strong>1900</strong> through <strong>2018</strong> — with the dense modern inspection era carrying most of the signal.</p>
+<p class="art-p">Higher scores here mean more violation points, not better food. That inversion is easy to forget once letter grades take over the conversation.</p>
+<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
+<p class="art-p">Keep these markers in view as the story unfolds.</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">100,000</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">15.0</span><span class="fact-label">Median Score</span></div>
@@ -22,51 +23,50 @@ draft: false
   <div class="fact-box"><span class="fact-number">1900–2018</span><span class="fact-label">Year span covered in the file</span></div>
   <div class="fact-box"><span class="fact-number">A</span><span class="fact-label">Most common Grade</span></div>
 </div>
-<h2 id="dataset-context" class="anchored">The data</h2>
-<p>The source is the TidyTuesday release from <strong>2018-12-11</strong> (R for Data Science community). This working file contains <strong>100,000</strong> rows and <strong>14</strong> columns after merging all available CSV/XLSX tables in the week folder.</p>
-<p>Charts are exported as Plotly JSON with PNG fallbacks. Medians are used for robustness where distributions skew. Index-style fields (row numbers, sequential IDs) are excluded from metric selection.</p>
-<p class="art-p"><strong>How to read this report:</strong> start with the chart caption, then ask what the metric actually means, what a non-expert should notice first, and what an expert would challenge in the source. The goal is not to memorize every number; it is to leave with a sharper question than the one you arrived with.</p>
-<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
-<h2 id="chart-1-trend" class="anchored">TREND</h2>
+<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<p class="art-p">The source is the TidyTuesday release built from NYC restaurant inspection open data via the R for Data Science community. The working file contains 100,000 rows after sampling or assembly — DBA names, boroughs, scores, grades, and inspection dates among the fields.</p>
+<p class="art-p">Medians matter because a thin tail of high-violation restaurants pulls means upward. Charts export as Plotly JSON with PNG fallbacks. Grades are derived from scores under city rules; treating them as independent aesthetics misses the point system underneath.</p>
+<h2 id="how-the-pattern-changed-over-time" class="anchored">How scores moved over time</h2>
+<h3 id="how-the-pattern-changed-over-time-look" class="anchored">Median Score Over Time</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/nyc-restaurant-inspections/charts/chart1_trend.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/nyc-restaurant-inspections/charts/chart1_trend.png" role="img" aria-label="Median Score Over Time"></div>
 </figure>
-<p class="art-p">Median score is <strong>rising</strong> from <strong>7.00</strong> in the opening period to <strong>17.0</strong> at the close.</p>
-<p class="art-p">Annual medians filter one-off spikes so the structural slope — not viral outliers — drives the story.</p>
-<h2 id="chart-2-leaders" class="anchored">LEADERS</h2>
+<p class="art-p">Median score over time tracks whether the typical inspected restaurant became cleaner, worse, or merely differently covered as the program matured. Flat stretches can mean stable compliance — or stable scoring practice.</p>
+<p class="art-p">Because early placeholder years can sit beside dense 2010s rows, the right-hand side of the timeline is where most interpretive weight belongs.</p>
+<h2 id="who-sits-at-the-top" class="anchored">Who sits at the top of violation scores</h2>
+<h3 id="who-sits-at-the-top-look" class="anchored">The Slope Lounge and Restaurant leads at 152 — 122 marks the median among the top dozen</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/nyc-restaurant-inspections/charts/chart2_leaders.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/nyc-restaurant-inspections/charts/chart2_leaders.png" role="img" aria-label="The Slope Lounge and Restaurant leads at 152 — 122 marks the median among the top dozen"></div>
 </figure>
-<p class="art-p"><strong>The Slope Lounge and Restaurant</strong> leads at <strong>152</strong> — <strong>122</strong> marks the median among the top dozen.</p>
-<p class="art-p">Head-of-field concentration is where quality, scale, or brand visibly separates from the pack.</p>
-<h2 id="chart-3-distribution" class="anchored">DISTRIBUTION</h2>
+<p class="art-p"><strong>The Slope Lounge and Restaurant</strong> leads at <strong>152</strong> on the highlighted cut, with <strong>122</strong> as the median among the top dozen. Those are extreme violation totals relative to a file-wide median of 15.</p>
+<p class="art-p">The head of the score distribution is where enforcement drama lives. It is also where single bad inspections can define a DBA's appearance in a ranking even if later visits improve.</p>
+<h2 id="how-the-field-is-spread" class="anchored">Scores by grade</h2>
+<h3 id="how-the-field-is-spread-look" class="anchored">Score by Grade</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/nyc-restaurant-inspections/charts/chart3_distribution.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/nyc-restaurant-inspections/charts/chart3_distribution.png" role="img" aria-label="Score by Grade"></div>
 </figure>
-<p class="art-p">Category boxes reveal whether score consensus is shared or contested across tiers.</p>
-<p class="art-p">Wide whiskers flag segments where outliers — not averages — drive reputation.</p>
-<h2 id="chart-4-gap" class="anchored">GAP ANALYSIS</h2>
+<p class="art-p">Box plots by grade show the numeric ranges that map onto A, B, C, and related labels. Grade A dominates headcount; the higher-letter grades occupy the upper score territory where violation points accumulate.</p>
+<p class="art-p">The chart makes the letter system's compression visible: many different numeric realities share an A, while the public argument concentrates on the rarer worse grades.</p>
+<h2 id="who-beats-the-median-and-who-trails" class="anchored">Who beats the median — and who trails</h2>
+<h3 id="who-beats-the-median-and-who-trails-look" class="anchored">Score vs median by Grade</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/nyc-restaurant-inspections/charts/chart4_gap.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/nyc-restaurant-inspections/charts/chart4_gap.png" role="img" aria-label="Score vs median by Grade"></div>
 </figure>
-<p class="art-p"><strong>C</strong> sits <strong>20.0</strong> above the median; <strong>P</strong> trails by <strong>10.0</strong>.</p>
-<p class="art-p">Diverging from the median exposes which tiers over- or under-perform — not just who ranks first.</p>
-<h2 id="chart-5-relationship" class="anchored">SUPPLEMENT — RELATIONSHIP</h2>
+<p class="art-p">The gap chart ranks grades above or below the median score. Worse letter grades sit far above the median by construction; A sits at or below it. The geometry is the grading rule made visual.</p>
+<p class="art-p">What remains interesting is the within-grade spread on the previous chart: even A is a band, not a point, and policy fights often happen inside that band.</p>
+<h2 id="what-moves-together" class="anchored">Scores and identifiers</h2>
+<h3 id="what-moves-together-look" class="anchored">Score vs Camis</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/nyc-restaurant-inspections/charts/chart5_scatter.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/nyc-restaurant-inspections/charts/chart5_scatter.png" role="img" aria-label="Score vs Camis"></div>
 </figure>
-<p class="art-p">Joint plot of <strong>score</strong> and <strong>camis</strong> surfaces clusters the averages erase.</p>
-<p class="art-p">Bubble size tracks repeat presence — outliers are archetypes, not noise.</p>
-<h2 id="limitations" class="anchored">Caveats</h2>
-<p>Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p>
-<p>Findings describe the file on hand — treat them as structural signals about <strong>NYC Restaurant Inspections</strong>, not exhaustive truth about the full domain.</p>
-<h2 id="conclusion" class="anchored">Bottom line</h2>
-<p>Read as a teaching map, <strong>NYC Restaurant Inspections</strong> shows why one metric is rarely enough: leaders, tails, trends, and relationships each answer a different question about score.</p>
-<p>The best reading is modest: use the chart to sharpen the question, then check the source and limits before turning it into a claim.</p>
-<h2 id="references" class="anchored">Sources</h2>
-<p>Data Science Learning Community. (2018). <em>TidyTuesday: NYC Restaurant Inspections</em>. <a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2018/2018-12-11/nyc_restaurants.csv" target="_blank" rel="noopener noreferrer">https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2018/2018-12-11/nyc_restaurants.csv</a></p>
-<h2 id="editors-note" class="anchored">Editor’s note</h2>
-<div class="art-editorial-note"><p><em>Artometrics data report from the TidyTuesday research pipeline. Charts and aggregates are reproducible from the embedded exhibits and public source files.</em></p></div>
-<p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2018/2018-12-11" target="_blank" rel="noopener noreferrer">View TidyTuesday source on GitHub</a></p>
+<p class="art-p">Plotting score against CAMIS identifiers is mostly a diagnostic scatter: restaurant IDs are not a substantive X-axis, but the cloud still shows how scores disperse across the universe of establishments rather than clustering on a few famous names.</p>
+<p class="art-p">When substantive covariates are thin, an ID scatter is a honesty device — it refuses to invent a prettier relationship than the table supports.</p>
+<h2 id="what-this-file-cannot-tell-you" class="anchored">What this file cannot tell you</h2>
+<p class="art-p">Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and sampling to 100,000 rows apply. Scores are inspection outcomes, not Yelp taste ratings.</p>
+<p class="art-p">Findings describe structural signals about NYC inspection scoring in the file — not a complete health study, and not a recommendation about where to eat tonight without checking current grades.</p>
+<h2 id="what-to-take-away" class="anchored">What to take away</h2>
+<p class="art-p">NYC restaurant inspections are a median-15 world with a long right tail past 150 violation points. Grade A is common; extreme scores are rare and loud.</p>
+<p class="art-p">The citable inversion remains: higher numbers are worse, letter grades compress a wide numeric band, and the public sticker is only the headline of a point system.</p>
+<h2 id="sources" class="anchored">Sources</h2>
 </main>
 </div>

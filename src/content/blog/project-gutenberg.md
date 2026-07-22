@@ -9,60 +9,60 @@ tags:
 draft: false
 ---
 <div id="quarto-content">
-
 <main class="art-article-main">
-<p class="art-p">This report analyzes the TidyTuesday <strong>2025-06-03</strong> release on <strong>Project Gutenberg</strong> — <strong>100,000</strong> rows after cleaning and merge. Which subjects dominate the public-domain canon?</p>
-<p class="art-p">Five charts track <strong>record counts</strong> across time, category, and named entities — trend, leaders, distribution, tiers, and relationships. Where companion files exist in the repo, they are joined before analysis so reception, geography, or metadata columns are not left on the table.</p>
-<h2 id="fast-facts" class="anchored">At a glance</h2>
+<p class="art-p">Project Gutenberg is the internet's oldest large-scale experiment in free literature. Its subject catalog — Library of Congress headings and related labels — is a map of which public-domain books volunteers could digitize and classify at scale.</p>
+<p class="art-p">A TidyTuesday working extract of <strong>100,000</strong> records shows <strong>lcsh</strong> as the most common subject type, with tens of thousands of rows in that bucket. Subject codes such as <strong>PS</strong> recur thousands of times. The catalog is not every book ever written; it is the reusable shelf that copyright expiry, volunteer labor, and classification systems made easy to share.</p>
+<p class="art-p">Reading Gutenberg as a popularity contest misses the point. Reading it as a concentration map of reusable canon is where the data help.</p>
+<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
+<p class="art-p">Keep these markers in view as the story unfolds.</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">100,000</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">lcsh</span><span class="fact-label">Most common Subject type</span></div>
 </div>
-<h2 id="dataset-context" class="anchored">The data</h2>
-<p>The source is the TidyTuesday release from <strong>2025-06-03</strong> (R for Data Science community). This working file contains <strong>100,000</strong> rows and <strong>3</strong> columns after merging all available CSV/XLSX tables in the week folder.</p>
-<p>Charts are exported as Plotly JSON with PNG fallbacks. Medians are used for robustness where distributions skew. Index-style fields (row numbers, sequential IDs) are excluded from metric selection.</p>
-<p class="art-p"><strong>How to read this report:</strong> start with the chart caption, then ask what the metric actually means, what a non-expert should notice first, and what an expert would challenge in the source. The goal is not to memorize every number; it is to leave with a sharper question than the one you arrived with.</p>
-<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
-<h2 id="chart-1-category" class="anchored">LANDSCAPE</h2>
+<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<p class="art-p">The source is the TidyTuesday Project Gutenberg release from the R for Data Science community. The working file contains 100,000 rows after assembly — subject types, subject labels, and related catalog metadata.</p>
+<p class="art-p">Because many fields are categorical, the analysis leans on counts and repetition rather than a single quality score. Charts export as Plotly JSON with PNG fallbacks. Subject headings are librarian infrastructure, not reader reviews.</p>
+<h2 id="landscape" class="anchored">Public-domain books cluster by subject type</h2>
+<h3 id="landscape-look" class="anchored">Public-domain books cluster by subject type</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/project-gutenberg/charts/chart1_category.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/project-gutenberg/charts/chart1_category.png" role="img" aria-label="Public-domain books cluster by subject type"></div>
 </figure>
-<p class="art-p"><strong>lcsh</strong> dominates with <strong>69,027</strong> records.</p>
-<p class="art-p">The main bucket carries the story; this field does not have a meaningful long-tail split.</p>
-<h2 id="chart-2-leaders" class="anchored">LEADERS</h2>
+<p class="art-p"><strong>lcsh</strong> dominates with on the order of <strong>69,027</strong> records in the highlighted cut, far ahead of thinner subject-type buckets. The main classification family carries the story; this field does not split into many equal long-tail types.</p>
+<p class="art-p">That concentration means most navigational claims about what Gutenberg contains are really claims about how LCSH-style headings organize the digitized shelf.</p>
+<h2 id="who-sits-at-the-top" class="anchored">A small set of subjects anchors the catalog</h2>
+<h3 id="who-sits-at-the-top-look" class="anchored">A small set of subjects anchors the catalog</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/project-gutenberg/charts/chart2_leaders.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/project-gutenberg/charts/chart2_leaders.png" role="img" aria-label="A small set of subjects anchors the catalog"></div>
 </figure>
-<p class="art-p"><strong>PS</strong> appears <strong>4,684</strong> times — the most recurring name in the file.</p>
-<p class="art-p">The top dozen account for a visible share of all <strong>100,000</strong> rows.</p>
-<h2 id="chart-3-category" class="anchored">CATEGORY</h2>
+<p class="art-p"><strong>PS</strong> appears about <strong>4,684</strong> times — among the most recurring subject names in the file. The top dozen account for a visible share of all 100,000 rows even though most subject entities appear only once.</p>
+<p class="art-p">American literature codes, fiction labels, and related headings form a reusable core. They are the catalog's gravitational center for teachers, scrapers, and adaptation hunters alike.</p>
+<h2 id="category" class="anchored">Subject families show the catalog center of gravity</h2>
+<h3 id="category-look" class="anchored">Subject families show the catalog's center of gravity</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/project-gutenberg/charts/chart3_category.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/project-gutenberg/charts/chart3_category.png" role="img" aria-label="Subject families show the catalog's center of gravity"></div>
 </figure>
-<p class="art-p"><strong>lcsh</strong> is the largest bucket with <strong>69,027</strong> records.</p>
-<p class="art-p">Category concentration shows where editorial attention should focus first.</p>
-<h2 id="chart-5-frequency" class="anchored">SUPPLEMENT — FREQUENCY</h2>
+<p class="art-p">lcsh is again the largest bucket on the category chart. Subject families show where editorial attention should focus first if the goal is to understand the shelf's center of gravity rather than its exotic edges.</p>
+<p class="art-p">The edges still matter for discovery. They do not define the statistical middle of a 100,000-row extract.</p>
+<h2 id="frequency" class="anchored">Repeated subjects reveal the reusable canon</h2>
+<h3 id="frequency-look" class="anchored">Repeated subjects reveal the reusable canon</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/project-gutenberg/charts/chart5_frequency.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/project-gutenberg/charts/chart5_frequency.png" role="img" aria-label="Repeated subjects reveal the reusable canon"></div>
 </figure>
-<p class="art-p">Most subject entities appear only once; a small head revisits repeatedly.</p>
-<p class="art-p">This power-law shape is typical of guest lists, credits, and catalog-style tables.</p>
-<h2 id="chart-top-names" class="anchored">SUPPLEMENT — NAMES</h2>
+<p class="art-p">Most subject entities appear only once; a small head revisits repeatedly. That power-law shape is typical of catalog tables: a reusable canon of headings, and a long inventory of singleton classifications.</p>
+<p class="art-p">Repeated subjects are the ones most likely to support classroom packs, themed collections, and machine-learning corpora. Frequency is a reuse forecast as much as a shelf description.</p>
+<h2 id="names" class="anchored">Subject labels become the map of the shelf</h2>
+<h3 id="names-look" class="anchored">Subject labels become the map of the shelf</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/project-gutenberg/charts/chart_top_names.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/project-gutenberg/charts/chart_top_names.png" role="img" aria-label="Subject labels become the map of the shelf"></div>
 </figure>
-<p class="art-p"><strong>PS</strong> appears <strong>4,684</strong> times — the most repeated entry.</p>
-<p class="art-p">Frequency leaders reveal franchise depth when numeric scores are sparse.</p>
-<h2 id="limitations" class="anchored">Caveats</h2>
-<p>Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p>
-<p>Findings describe the file on hand — treat them as structural signals about <strong>Project Gutenberg</strong>, not exhaustive truth about the full domain.</p>
-<h2 id="conclusion" class="anchored">Bottom line</h2>
-<p>Read as a teaching map, <strong>Project Gutenberg</strong> shows why one metric is rarely enough: leaders, tails, trends, and relationships each answer a different question about the field.</p>
-<p>The best reading is modest: use the chart to sharpen the question, then check the source and limits before turning it into a claim.</p>
-<h2 id="references" class="anchored">Sources</h2>
-<p>Data Science Learning Community. (2025). <em>TidyTuesday: Project Gutenberg</em>. <a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-06-03/gutenberg_subjects.csv" target="_blank" rel="noopener noreferrer">https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-06-03/gutenberg_subjects.csv</a></p>
-<h2 id="editors-note" class="anchored">Editor’s note</h2>
-<div class="art-editorial-note"><p><em>Artometrics data report from the TidyTuesday research pipeline. Charts and aggregates are reproducible from the embedded exhibits and public source files.</em></p></div>
-<p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2025/2025-06-03" target="_blank" rel="noopener noreferrer">View TidyTuesday source on GitHub</a></p>
+<p class="art-p">PS and related labels become the map of the shelf when numeric scores are sparse. Frequency leaders reveal franchise depth in literature the way studio logos reveal franchise depth in film.</p>
+<p class="art-p">The practical claim for cultural analytics is simple: if you can only afford to study a slice of Gutenberg, the repeated subject head is where coverage of the reusable public-domain canon begins.</p>
+<h2 id="what-this-file-cannot-tell-you" class="anchored">What this file cannot tell you</h2>
+<p class="art-p">Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and sampling limits apply. Subject headings are not sales, downloads, or reading-time proof.</p>
+<p class="art-p">Findings describe structural signals about Project Gutenberg subject metadata — not a complete history of world literature, and not a ranking of artistic merit.</p>
+<h2 id="what-to-take-away" class="anchored">What to take away</h2>
+<p class="art-p">Gutenberg's subject catalog is concentrated: lcsh dominates subject type, a short head of codes such as PS recurs thousands of times, and most labels appear once.</p>
+<p class="art-p">The citable lesson is about reusable canon. Public-domain literature becomes infrastructure when classification and digitization make the same subjects easy to find again and again.</p>
+<h2 id="sources" class="anchored">Sources</h2>
 </main>
 </div>
