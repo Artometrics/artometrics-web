@@ -11,11 +11,11 @@ tags:
 draft: false
 ---
 <div id="quarto-content">
-
 <main class="art-article-main">
-<p class="art-p">This report analyzes the TidyTuesday <strong>2022-11-01</strong> release on <strong>Horror Movies</strong> — <strong>32,540</strong> rows after cleaning and merge. Did horror get better-reviewed as the catalog exploded, or did quantity dilute quality?</p>
-<p class="art-p">Five charts track <strong>Vote average</strong> across time, category, and named entities — trend, leaders, distribution, tiers, and relationships. Where companion files exist in the repo, they are joined before analysis so reception, geography, or metadata columns are not left on the table.</p>
-<h2 id="fast-facts" class="anchored">At a glance</h2>
+<p class="art-p">Horror catalogs grow faster than any critic can watch. The open question is whether vote averages rose with that volume — or whether more titles simply filled the shelf with middling scores.</p>
+<p class="art-p">TMDB-style metadata for horror-tagged films yields <strong>32,540</strong> records from <strong>1950–2022</strong>. The median vote average is <strong>4.00</strong>; the highest observed average is <strong>10.0</strong>. Horror is the most common primary genre label, as expected in a horror-tagged extract.</p>
+<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
+<p class="art-p">Keep these markers in view as the story unfolds.</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">32,540</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">4.00</span><span class="fact-label">Median Vote average</span></div>
@@ -24,51 +24,59 @@ draft: false
   <div class="fact-box"><span class="fact-number">1950–2022</span><span class="fact-label">Year span covered in the file</span></div>
   <div class="fact-box"><span class="fact-number">Horror</span><span class="fact-label">Most common Primary genre</span></div>
 </div>
-<h2 id="dataset-context" class="anchored">The data</h2>
-<p>The file merges TMDB metadata for thousands of horror-tagged films: ratings, budgets, runtimes, and genre tags from 1950 through 2022.</p>
-<p>Charts are exported as Plotly JSON with PNG fallbacks. Medians are used for robustness where distributions skew. Index-style fields (row numbers, sequential IDs) are excluded from metric selection.</p>
-<p class="art-p"><strong>How to read this report:</strong> start with the chart caption, then ask what the metric actually means, what a non-expert should notice first, and what an expert would challenge in the source. The goal is not to memorize every number; it is to leave with a sharper question than the one you arrived with.</p>
-<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
-<h2 id="chart-1-trend" class="anchored">TREND</h2>
+<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<p class="art-p">The file merges TMDB metadata for thousands of horror-tagged films: ratings, budgets, runtimes, and genre tags from 1950 through 2022, released via TidyTuesday.</p>
+<p class="art-p">Charts ship as Plotly JSON with PNG fallbacks. Medians handle skew better than means. Perfect 10.0 scores often sit on thin vote counts — treat the ceiling as a signal about sparse ratings, not universal critical consensus.</p>
+
+<h2 id="how-the-pattern-changed-over-time" class="anchored">How the pattern changed over time</h2>
+<h3 id="how-the-pattern-changed-over-time-look" class="anchored">Median Vote average Over Time</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/horror-movies/charts/chart1_trend.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/horror-movies/charts/chart1_trend.png" role="img" aria-label="Median Vote average Over Time"></div>
 </figure>
-<p class="art-p">Median vote average is <strong>rising</strong> from <strong>5.65</strong> in the opening period to <strong>6.00</strong> at the close.</p>
-<p class="art-p">Annual medians filter one-off spikes so the structural slope — not viral outliers — drives the story.</p>
-<h2 id="chart-2-leaders" class="anchored">LEADERS</h2>
+<p class="art-p">Median vote average rises from 5.65 in the opening period to 6.00 at the close — a modest lift across decades of catalog growth.</p>
+<p class="art-p">That is not a renaissance claim. It is a median moving a fraction of a point while tens of thousands of titles enter the shelf. Volume exploded; the middle of the scoreboard edged up.</p>
+
+<h2 id="who-sits-at-the-top" class="anchored">Who sits at the top</h2>
+<h3 id="who-sits-at-the-top-look" class="anchored">The House Guest leads at 10.0 — 10.0 marks the median among the top dozen</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/horror-movies/charts/chart2_leaders.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/horror-movies/charts/chart2_leaders.png" role="img" aria-label="The House Guest leads at 10.0 — 10.0 marks the median among the top dozen"></div>
 </figure>
-<p class="art-p"><strong>The House Guest</strong> leads at <strong>10.0</strong> — <strong>10.0</strong> marks the median among the top dozen.</p>
-<p class="art-p">Head-of-field concentration is where quality, scale, or brand visibly separates from the pack.</p>
-<h2 id="chart-3-distribution" class="anchored">DISTRIBUTION</h2>
+<p class="art-p">The House Guest leads at 10.0 — and 10.0 also marks the median among the top dozen. The head of the leaderboard is a cluster of perfect averages, not a gentle taper.</p>
+<p class="art-p">In large rating tables, that pattern usually means low vote counts or niche titles with tiny, enthusiastic rater pools. The top is a ceiling effect, not a ranked canon of masterpieces.</p>
+
+<h2 id="how-the-field-is-spread" class="anchored">How the field is spread</h2>
+<h3 id="how-the-field-is-spread-look" class="anchored">Vote average by Primary genre</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/horror-movies/charts/chart3_distribution.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/horror-movies/charts/chart3_distribution.png" role="img" aria-label="Vote average by Primary genre"></div>
 </figure>
-<p class="art-p">Category boxes reveal whether vote average consensus is shared or contested across tiers.</p>
-<p class="art-p">Wide whiskers flag segments where outliers — not averages — drive reputation.</p>
-<h2 id="chart-4-gap" class="anchored">GAP ANALYSIS</h2>
+<p class="art-p">Primary-genre boxes show whether vote averages are shared across hybrid tags or contested by a few outliers.</p>
+<p class="art-p">Horror-tagged films still carry secondary labels — crime, animation, drama — and those buckets disagree about quality. The spread is the story: consensus is uneven once the tag set widens.</p>
+
+<h2 id="who-beats-the-median-and-who-trails" class="anchored">Who beats the median — and who trails</h2>
+<h3 id="who-beats-the-median-and-who-trails-look" class="anchored">Vote average vs median by Primary genre</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/horror-movies/charts/chart4_gap.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/horror-movies/charts/chart4_gap.png" role="img" aria-label="Vote average vs median by Primary genre"></div>
 </figure>
-<p class="art-p"><strong>Crime</strong> sits <strong>1.00</strong> above the median; <strong>Animation</strong> trails by <strong>4.00</strong>.</p>
-<p class="art-p">Diverging from the median exposes which tiers over- or under-perform — not just who ranks first.</p>
-<h2 id="chart-5-relationship" class="anchored">SUPPLEMENT — RELATIONSHIP</h2>
+<p class="art-p">Crime sits 1.00 above the median; Animation trails by 4.00.</p>
+<p class="art-p">Those gaps are relative to this file’s middle, not absolute statements about every crime or animated horror title. They point to where hybrid labeling and rater pools pull averages apart.</p>
+
+<h2 id="what-moves-together" class="anchored">What moves together</h2>
+<h3 id="what-moves-together-look" class="anchored">Vote average vs Vote count</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/horror-movies/charts/chart5_scatter.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/horror-movies/charts/chart5_scatter.png" role="img" aria-label="Vote average vs Vote count"></div>
 </figure>
-<p class="art-p">Joint plot of <strong>vote average</strong> and <strong>vote count</strong> surfaces clusters the averages erase.</p>
-<p class="art-p">Bubble size tracks repeat presence — outliers are archetypes, not noise.</p>
-<h2 id="limitations" class="anchored">Caveats</h2>
-<p>Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p>
-<p>Findings describe the file on hand — treat them as structural signals about <strong>Horror Movies</strong>, not exhaustive truth about the full domain.</p>
-<h2 id="conclusion" class="anchored">Bottom line</h2>
-<p>Read as a teaching map, <strong>Horror Movies</strong> shows why one metric is rarely enough: leaders, tails, trends, and relationships each answer a different question about vote average.</p>
-<p>The best reading is modest: use the chart to sharpen the question, then check the source and limits before turning it into a claim.</p>
-<h2 id="references" class="anchored">Sources</h2>
+<p class="art-p">Vote average and vote count do not move as a simple line. Perfect scores with tiny counts sit apart from widely watched mid-range films.</p>
+<p class="art-p">Popularity and perceived quality are related but not interchangeable — the scatter is where that distinction becomes visible.</p>
+
+<h2 id="what-this-file-cannot-tell-you" class="anchored">What this file cannot tell you</h2>
+<p class="art-p">Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p>
+<p class="art-p">Findings describe the file on hand — structural signals about horror-tagged ratings, not a complete history of the genre’s artistry.</p>
+<h2 id="what-to-take-away" class="anchored">What to take away</h2>
+<p class="art-p">As the catalog grew, the median vote average edged up from 5.65 toward 6.00 — improvement at the middle, not a clean story that “horror got better.” Perfect 10.0 leaders sit on a different mechanism than widely voted mid-scores.</p>
+<p class="art-p">Read leaders, gaps, and the average–count scatter together before treating any title as proof of a golden age.</p>
+<h2 id="sources" class="anchored">Sources</h2>
+
 <p>Data Science Learning Community. (2022). <em>TidyTuesday: Horror Movies</em>. <a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2022/2022-11-01/horror_movies.csv" target="_blank" rel="noopener noreferrer">https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2022/2022-11-01/horror_movies.csv</a></p>
-<h2 id="editors-note" class="anchored">Editor’s note</h2>
-<div class="art-editorial-note"><p><em>Artometrics data report from the TidyTuesday research pipeline. Charts and aggregates are reproducible from the embedded exhibits and public source files.</em></p></div>
-<p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2022/2022-11-01" target="_blank" rel="noopener noreferrer">View TidyTuesday source on GitHub</a></p>
+
 </main>
 </div>

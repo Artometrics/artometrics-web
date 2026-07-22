@@ -11,11 +11,11 @@ tags:
 draft: false
 ---
 <div id="quarto-content">
-
 <main class="art-article-main">
-<p class="art-p">This report analyzes the TidyTuesday <strong>2018-10-23</strong> release on <strong>Horror Movie Profit</strong> — <strong>3,401</strong> rows after cleaning and merge. Which horror bets returned multiples and which franchises burned cash?</p>
-<p class="art-p">Five charts track <strong>Domestic gross</strong> across time, category, and named entities — trend, leaders, distribution, tiers, and relationships. Where companion files exist in the repo, they are joined before analysis so reception, geography, or metadata columns are not left on the table.</p>
-<h2 id="fast-facts" class="anchored">At a glance</h2>
+<p class="art-p">Horror is the genre studios love to describe as cheap and scalable — until the ledger says otherwise. Budget and domestic-gross figures for thousands of titles show which films returned capital and which simply burned it.</p>
+<p class="art-p">The working file holds <strong>3,401</strong> records spanning <strong>1936–2019</strong>. Median domestic gross sits at <strong>25,533,818</strong>; the highest observed domestic gross is <strong>474,544,677</strong>. Drama is the most common genre label in the merge — a reminder that genre tags in box-office tables are rarely as clean as marketing copy.</p>
+<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
+<p class="art-p">Keep these markers in view as the story unfolds.</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">3,401</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">25,533,818</span><span class="fact-label">Median Domestic gross</span></div>
@@ -24,51 +24,59 @@ draft: false
   <div class="fact-box"><span class="fact-number">1936–2019</span><span class="fact-label">Year span covered in the file</span></div>
   <div class="fact-box"><span class="fact-number">Drama</span><span class="fact-label">Most common Genre</span></div>
 </div>
-<h2 id="dataset-context" class="anchored">The data</h2>
-<p>The source is the TidyTuesday release from <strong>2018-10-23</strong> (R for Data Science community). This working file contains <strong>3,401</strong> rows and <strong>9</strong> columns after merging all available CSV/XLSX tables in the week folder.</p>
-<p>Charts are exported as Plotly JSON with PNG fallbacks. Medians are used for robustness where distributions skew. Index-style fields (row numbers, sequential IDs) are excluded from metric selection.</p>
-<p class="art-p"><strong>How to read this report:</strong> start with the chart caption, then ask what the metric actually means, what a non-expert should notice first, and what an expert would challenge in the source. The goal is not to memorize every number; it is to leave with a sharper question than the one you arrived with.</p>
-<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
-<h2 id="chart-1-trend" class="anchored">TREND</h2>
+<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<p class="art-p">The source is the TidyTuesday release from 2018-10-23 (R for Data Science community). The working file contains 3,401 rows and 9 columns after merging all available CSV/XLSX tables in the week folder.</p>
+<p class="art-p">Charts are exported as Plotly JSON with PNG fallbacks. Medians are preferred where distributions skew. Index-style fields are excluded from metric selection. The table mixes genre labels and franchise outliers — read peaks as structural signals in the file, not as a pure horror-only ledger.</p>
+
+<h2 id="how-the-pattern-changed-over-time" class="anchored">How the pattern changed over time</h2>
+<h3 id="how-the-pattern-changed-over-time-look" class="anchored">Median Domestic gross Over Time</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/horror-movie-profit/charts/chart1_trend.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/horror-movie-profit/charts/chart1_trend.png" role="img" aria-label="Median Domestic gross Over Time"></div>
 </figure>
-<p class="art-p">Median domestic gross is <strong>falling</strong> from <strong>163,245</strong> in the opening period to <strong>0.00</strong> at the close.</p>
-<p class="art-p">Annual medians filter one-off spikes so the structural slope — not viral outliers — drives the story.</p>
-<h2 id="chart-2-leaders" class="anchored">LEADERS</h2>
+<p class="art-p">Median domestic gross falls from 163,245 in the opening period to 0.00 at the close — a path shaped as much by missing values and sparse later rows as by any single box-office collapse.</p>
+<p class="art-p">Trend lines in merged profit tables often encode coverage as much as commerce. Treat the decline as a prompt to inspect year density, not as a finished verdict on the genre’s economics.</p>
+
+<h2 id="who-sits-at-the-top" class="anchored">Who sits at the top</h2>
+<h3 id="who-sits-at-the-top-look" class="anchored">Star Wars Ep</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/horror-movie-profit/charts/chart2_leaders.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/horror-movie-profit/charts/chart2_leaders.png" role="img" aria-label="Star Wars Ep"></div>
 </figure>
-<p class="art-p"><strong>Star Wars Ep. I: The Phantom Menace</strong> leads at <strong>474,544,677</strong> — <strong>419,277,314</strong> marks the median among the top dozen.</p>
-<p class="art-p">Head-of-field concentration is where quality, scale, or brand visibly separates from the pack.</p>
-<h2 id="chart-3-distribution" class="anchored">DISTRIBUTION</h2>
+<p class="art-p">Star Wars Ep. I: The Phantom Menace leads at 474,544,677 — and 419,277,314 marks the median among the top dozen.</p>
+<p class="art-p">When a non-horror franchise tops a profit extract labeled for horror analysis, the chart is doing double duty: it shows concentration at the head, and it shows how genre filters leak in community-cleaned tables. The ceiling of the file is not the ceiling of the scare aisle alone.</p>
+
+<h2 id="how-the-field-is-spread" class="anchored">How the field is spread</h2>
+<h3 id="how-the-field-is-spread-look" class="anchored">Domestic gross by Genre</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/horror-movie-profit/charts/chart3_distribution.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/horror-movie-profit/charts/chart3_distribution.png" role="img" aria-label="Domestic gross by Genre"></div>
 </figure>
-<p class="art-p">Category boxes reveal whether domestic gross consensus is shared or contested across tiers.</p>
-<p class="art-p">Wide whiskers flag segments where outliers — not averages — drive reputation.</p>
-<h2 id="chart-4-gap" class="anchored">GAP ANALYSIS</h2>
+<p class="art-p">Genre boxes show how domestic gross spreads once labels are treated as categories rather than marketing slogans.</p>
+<p class="art-p">Some genres share a tight middle; others stretch into long upper whiskers. That shape is the difference between a consensus mid-budget outcome and a handful of titles that define the category’s mythology.</p>
+
+<h2 id="who-beats-the-median-and-who-trails" class="anchored">Who beats the median — and who trails</h2>
+<h3 id="who-beats-the-median-and-who-trails-look" class="anchored">Domestic gross vs median by Genre</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/horror-movie-profit/charts/chart4_gap.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/horror-movie-profit/charts/chart4_gap.png" role="img" aria-label="Domestic gross vs median by Genre"></div>
 </figure>
-<p class="art-p"><strong>Adventure</strong> sits <strong>34,936,402</strong> above the median; <strong>Drama</strong> trails by <strong>12,994,440</strong>.</p>
-<p class="art-p">Diverging from the median exposes which tiers over- or under-perform — not just who ranks first.</p>
-<h2 id="chart-5-relationship" class="anchored">SUPPLEMENT — RELATIONSHIP</h2>
+<p class="art-p">Adventure sits 34,936,402 above the median; Drama trails by 12,994,440.</p>
+<p class="art-p">The gap chart is the practical reading of the distribution: which genre labels systematically clear the file’s middle, and which sit below it even when volume is high.</p>
+
+<h2 id="what-moves-together" class="anchored">What moves together</h2>
+<h3 id="what-moves-together-look" class="anchored">Domestic gross vs Worldwide gross</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/horror-movie-profit/charts/chart5_scatter.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/horror-movie-profit/charts/chart5_scatter.png" role="img" aria-label="Domestic gross vs Worldwide gross"></div>
 </figure>
-<p class="art-p">Joint plot of <strong>domestic gross</strong> and <strong>worldwide gross</strong> surfaces clusters the averages erase.</p>
-<p class="art-p">Bubble size tracks repeat presence — outliers are archetypes, not noise.</p>
-<h2 id="limitations" class="anchored">Caveats</h2>
-<p>Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p>
-<p>Findings describe the file on hand — treat them as structural signals about <strong>Horror Movie Profit</strong>, not exhaustive truth about the full domain.</p>
-<h2 id="conclusion" class="anchored">Bottom line</h2>
-<p>Read as a teaching map, <strong>Horror Movie Profit</strong> shows why one metric is rarely enough: leaders, tails, trends, and relationships each answer a different question about domestic gross.</p>
-<p>The best reading is modest: use the chart to sharpen the question, then check the source and limits before turning it into a claim.</p>
-<h2 id="references" class="anchored">Sources</h2>
+<p class="art-p">Domestic and worldwide gross move together for most titles, but the scatter still leaves clusters that a single average would erase — films that travel abroad, films that stay domestic, and sparse points where one market dominates the total.</p>
+<p class="art-p">Profit stories live in those clusters. A multiple earned at home is not the same business as a multiple earned on the global ledger.</p>
+
+<h2 id="what-this-file-cannot-tell-you" class="anchored">What this file cannot tell you</h2>
+<p class="art-p">Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p>
+<p class="art-p">Findings describe the file on hand — structural signals about movie profit rows in this extract, not exhaustive truth about every horror release ever made.</p>
+<h2 id="what-to-take-away" class="anchored">What to take away</h2>
+<p class="art-p">Domestic gross alone is never enough: leaders, genre gaps, time coverage, and the domestic–worldwide scatter each answer a different question about who returned capital.</p>
+<p class="art-p">Use the charts to sharpen the question, then check the source and limits before turning any peak into a studio strategy claim.</p>
+<h2 id="sources" class="anchored">Sources</h2>
+
 <p>Data Science Learning Community. (2018). <em>TidyTuesday: Horror Movie Profit</em>. <a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2018/2018-10-23/movie_profit.csv" target="_blank" rel="noopener noreferrer">https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2018/2018-10-23/movie_profit.csv</a></p>
-<h2 id="editors-note" class="anchored">Editor’s note</h2>
-<div class="art-editorial-note"><p><em>Artometrics data report from the TidyTuesday research pipeline. Charts and aggregates are reproducible from the embedded exhibits and public source files.</em></p></div>
-<p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2018/2018-10-23" target="_blank" rel="noopener noreferrer">View TidyTuesday source on GitHub</a></p>
+
 </main>
 </div>
