@@ -5,7 +5,7 @@ pubDate: 2026-04-14T00:00:00.000Z
 description: >-
   Commodity and consumption data place coffee among the world’s largest traded
   goods.
-heroImage: /images/content/2026/04/IMG_4149.webp
+heroImage: /images/content/articles/coffee-the-artometrics-of-java/hero.png
 tags:
   - culture
 draft: false

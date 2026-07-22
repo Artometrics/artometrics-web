@@ -5,7 +5,7 @@ pubDate: 2026-04-14T00:00:00.000Z
 description: >-
   A historical-economics lens asks who captured wealth when rulers claimed
   order.
-heroImage: /images/content/2026/04/IMG_4160.webp
+heroImage: /images/content/articles/imperial/hero.png
 tags:
   - culture
 draft: false

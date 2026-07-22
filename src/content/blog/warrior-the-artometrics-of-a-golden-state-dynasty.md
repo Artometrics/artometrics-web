@@ -3,7 +3,7 @@ title: How Golden State Went From Irrelevant to Dynasty
 slug: warrior-the-artometrics-of-a-golden-state-dynasty
 pubDate: 2026-04-18T00:00:00.000Z
 description: Decades of losing before a modern dynasty remade Bay Area basketball.
-heroImage: /images/content/2026/04/IMG_4215.webp
+heroImage: /images/content/articles/warrior-the-artometrics-of-a-golden-state-dynasty/hero.png
 tags:
   - sports
 draft: false

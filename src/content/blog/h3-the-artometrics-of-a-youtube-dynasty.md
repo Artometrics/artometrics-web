@@ -3,7 +3,7 @@ title: How H3 Built a YouTube Network Beyond One Channel
 slug: h3-the-artometrics-of-a-youtube-dynasty
 pubDate: 2026-04-14T00:00:00.000Z
 description: 'Since 2011, Ethan and Hila Klein scaled channels, a podcast, and a brand.'
-heroImage: /images/content/2026/04/IMG_4164.webp
+heroImage: /images/content/articles/h3-the-artometrics-of-a-youtube-dynasty/hero.png
 tags:
   - culture
 draft: false

@@ -5,7 +5,7 @@ pubDate: 2026-04-18T00:00:00.000Z
 description: >-
   A psychonomic reading of Caesar asks what ambition cost the Roman political
   household he ruled.
-heroImage: /images/content/2026/04/IMG_4212.webp
+heroImage: /images/content/articles/caesar-the-psychonomics-of-emperor-julius/hero.png
 tags:
   - culture
 draft: false

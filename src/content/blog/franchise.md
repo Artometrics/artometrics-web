@@ -5,7 +5,7 @@ pubDate: 2026-04-08T00:00:00.000Z
 description: >-
   Revenue maps for more than 100 franchises show where valuable IP earns across
   media.
-heroImage: /images/content/2026/04/IMG_4153.webp
+heroImage: /images/content/articles/franchise/hero.png
 tags:
   - movies-tv
 draft: false

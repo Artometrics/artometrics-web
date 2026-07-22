@@ -5,7 +5,7 @@ pubDate: 2026-03-31T00:00:00.000Z
 description: >-
   MyAnimeList metadata on more than 13,000 titles traces Japanese animation as a
   production system.
-heroImage: /images/content/2026/04/IMG_4151.webp
+heroImage: /images/content/articles/anime/hero.png
 tags:
   - movies-tv
 draft: false

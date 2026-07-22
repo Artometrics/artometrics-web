@@ -3,7 +3,7 @@ title: The Giants’ Arc From New York Gothams to Oracle Park
 slug: giant-the-artometrics-of-a-san-francisco-dynasty
 pubDate: 2026-04-18T00:00:00.000Z
 description: A franchise history from 1883 New York origins to a modern Bay Area ballclub.
-heroImage: /images/content/2026/04/IMG_4221.webp
+heroImage: /images/content/articles/giant-the-artometrics-of-a-san-francisco-dynasty/hero.png
 tags:
   - sports
 draft: false

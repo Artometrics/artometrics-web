@@ -3,8 +3,7 @@ title: What Pokémon’s Franchise Actually Comprises
 slug: pokemon
 pubDate: 2026-05-06T00:00:00.000Z
 description: 'Beyond the headline revenue figure: games, cards, merchandise, and film.'
-heroImage: >-
-  /images/content/2026/05/hf_20260506_100612_d8abe8f2-0c40-48ca-8e05-62c73264cd19-1.png
+heroImage: /images/content/articles/pokemon/hero.png
 tags:
   - games
 draft: false

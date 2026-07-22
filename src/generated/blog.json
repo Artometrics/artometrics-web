@@ -90,7 +90,7 @@
     "slug": "anime",
     "pubDate": "2026-03-31T00:00:00.000Z",
     "description": "MyAnimeList metadata on more than 13,000 titles traces Japanese animation as a production system.",
-    "heroImage": "/images/content/2026/04/IMG_4151.webp",
+    "heroImage": "/images/content/articles/anime/hero.png",
     "tags": [
       "movies-tv"
     ],
@@ -347,7 +347,7 @@
     "slug": "caesar-the-psychonomics-of-emperor-julius",
     "pubDate": "2026-04-18T00:00:00.000Z",
     "description": "A psychonomic reading of Caesar asks what ambition cost the Roman political household he ruled.",
-    "heroImage": "/images/content/2026/04/IMG_4212.webp",
+    "heroImage": "/images/content/articles/caesar-the-psychonomics-of-emperor-julius/hero.png",
     "tags": [
       "culture"
     ],
@@ -605,7 +605,7 @@
     "slug": "coffee-the-artometrics-of-java",
     "pubDate": "2026-04-14T00:00:00.000Z",
     "description": "Commodity and consumption data place coffee among the world’s largest traded goods.",
-    "heroImage": "/images/content/2026/04/IMG_4149.webp",
+    "heroImage": "/images/content/articles/coffee-the-artometrics-of-java/hero.png",
     "tags": [
       "culture"
     ],
@@ -920,7 +920,7 @@
     "slug": "franchise",
     "pubDate": "2026-04-08T00:00:00.000Z",
     "description": "Revenue maps for more than 100 franchises show where valuable IP earns across media.",
-    "heroImage": "/images/content/2026/04/IMG_4153.webp",
+    "heroImage": "/images/content/articles/franchise/hero.png",
     "tags": [
       "movies-tv"
     ],
@@ -949,7 +949,7 @@
     "slug": "giant-the-artometrics-of-a-san-francisco-dynasty",
     "pubDate": "2026-04-18T00:00:00.000Z",
     "description": "A franchise history from 1883 New York origins to a modern Bay Area ballclub.",
-    "heroImage": "/images/content/2026/04/IMG_4221.webp",
+    "heroImage": "/images/content/articles/giant-the-artometrics-of-a-san-francisco-dynasty/hero.png",
     "tags": [
       "sports"
     ],
@@ -1036,7 +1036,7 @@
     "slug": "h3-the-artometrics-of-a-youtube-dynasty",
     "pubDate": "2026-04-14T00:00:00.000Z",
     "description": "Since 2011, Ethan and Hila Klein scaled channels, a podcast, and a brand.",
-    "heroImage": "/images/content/2026/04/IMG_4164.webp",
+    "heroImage": "/images/content/articles/h3-the-artometrics-of-a-youtube-dynasty/hero.png",
     "tags": [
       "culture"
     ],
@@ -1210,7 +1210,7 @@
     "slug": "imperial",
     "pubDate": "2026-04-14T00:00:00.000Z",
     "description": "A historical-economics lens asks who captured wealth when rulers claimed order.",
-    "heroImage": "/images/content/2026/04/IMG_4160.webp",
+    "heroImage": "/images/content/articles/imperial/hero.png",
     "tags": [
       "culture"
     ],
@@ -1729,7 +1729,7 @@
     "slug": "pokemon",
     "pubDate": "2026-05-06T00:00:00.000Z",
     "description": "Beyond the headline revenue figure: games, cards, merchandise, and film.",
-    "heroImage": "/images/content/2026/05/hf_20260506_100612_d8abe8f2-0c40-48ca-8e05-62c73264cd19-1.png",
+    "heroImage": "/images/content/articles/pokemon/hero.png",
     "tags": [
       "games"
     ],
@@ -2413,7 +2413,7 @@
     "slug": "warrior-the-artometrics-of-a-golden-state-dynasty",
     "pubDate": "2026-04-18T00:00:00.000Z",
     "description": "Decades of losing before a modern dynasty remade Bay Area basketball.",
-    "heroImage": "/images/content/2026/04/IMG_4215.webp",
+    "heroImage": "/images/content/articles/warrior-the-artometrics-of-a-golden-state-dynasty/hero.png",
     "tags": [
       "sports"
     ],
