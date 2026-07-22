@@ -33,9 +33,14 @@ export function formatDate(iso: string | null) {
   });
 }
 
-export function primaryDesk(tags: string[] | undefined): SectionSlug | null {
+export function primarySection(tags: string[] | undefined): SectionSlug | null {
   if (!tags?.length) return null;
   return (tags.find((t) => t in SECTION_META) as SectionSlug) ?? null;
+}
+
+/** @deprecated Use primarySection */
+export function primaryDesk(tags: string[] | undefined): SectionSlug | null {
+  return primarySection(tags);
 }
 
 export function getBlogPosts(): BlogPost[] {

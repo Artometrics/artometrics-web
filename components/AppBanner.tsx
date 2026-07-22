@@ -3,14 +3,17 @@ import { Link } from "expo-router";
 import { useTheme } from "@/lib/theme";
 import { Fonts } from "@/constants/Colors";
 
+/** Slim subscribe strip — Art Newspaper / NYT style. */
 export function AppBanner() {
   const { colors } = useTheme();
   return (
-    <View style={[styles.bar, { backgroundColor: colors.bgElevated, borderBottomColor: colors.border }]}>
-      <Text style={[styles.copy, { color: colors.textMuted }]}>Your Artometrics pass</Text>
-      <Link href="/get-app" asChild>
+    <View style={[styles.bar, { backgroundColor: colors.text }]}>
+      <Text style={[styles.copy, { color: colors.inverse }]} numberOfLines={1}>
+        Unlimited access to Artometrics reporting.
+      </Text>
+      <Link href="/pricing" asChild>
         <Pressable hitSlop={8}>
-          <Text style={[styles.cta, { color: colors.text }]}>GET THE APP</Text>
+          <Text style={[styles.cta, { color: colors.inverse }]}>Subscribe</Text>
         </Pressable>
       </Link>
     </View>
@@ -24,13 +27,13 @@ const styles = StyleSheet.create({
     alignItems: "center",
     paddingHorizontal: 16,
     paddingVertical: 8,
-    borderBottomWidth: StyleSheet.hairlineWidth,
+    gap: 12,
   },
-  copy: { fontSize: 11, letterSpacing: 0.3, fontFamily: Fonts.sans },
+  copy: { flex: 1, fontSize: 12, fontFamily: Fonts.sans },
   cta: {
-    fontSize: 11,
+    fontSize: 12,
     fontWeight: "700",
-    letterSpacing: 1.2,
+    textDecorationLine: "underline",
     fontFamily: Fonts.sans,
   },
 });

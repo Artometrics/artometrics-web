@@ -1,4 +1,4 @@
-import { getAuthors, getBlogPosts, getPodcastEpisodes, primaryDesk } from "@/lib/content";
+import { getAuthors, getBlogPosts, getPodcastEpisodes, primarySection } from "@/lib/content";
 import { SECTION_META } from "@/data/sections";
 
 export type SearchHit = {
@@ -22,15 +22,13 @@ export function searchSite(query: string, limit = 40): SearchHit[] {
   const hits: { score: number; hit: SearchHit }[] = [];
 
   for (const post of getBlogPosts()) {
-    const desk = primaryDesk(post.tags);
-    const channels = (post as { channels?: string[] }).channels ?? [];
+    const section = primarySection(post.tags);
     const blob = [
       post.title,
       post.description,
       post.slug,
       ...(post.tags ?? []),
-      ...channels,
-      desk ? SECTION_META[desk].title : "",
+      section ? SECTION_META[section].title : "",
     ]
       .join(" ")
       .toLowerCase();
@@ -49,7 +47,7 @@ export function searchSite(query: string, limit = 40): SearchHit[] {
           title: post.title,
           description: post.description,
           href: `/${post.slug}`,
-          meta: desk ? SECTION_META[desk].title : "Reports",
+          meta: section ? SECTION_META[section].title : "Article",
         },
       });
     }

@@ -78,6 +78,8 @@ export function ArticleActions({ slug, title }: Props) {
     { label: "PDF", href: pack.pdf },
   ];
 
+  const available = files.filter((f) => f.href);
+
   return (
     <View style={[styles.wrap, { borderColor: colors.border }]}>
       <View style={styles.row}>
@@ -88,7 +90,7 @@ export function ArticleActions({ slug, title }: Props) {
             style={[styles.btn, { borderColor: colors.text }]}
           >
             <Text style={[styles.btnText, { color: colors.text }]}>
-              {saved ? "Saved" : "Save this report"}
+              {saved ? "Saved" : "Save"}
             </Text>
           </Pressable>
         ) : (
@@ -113,20 +115,18 @@ export function ArticleActions({ slug, title }: Props) {
         </Pressable>
       </View>
 
-      <Text style={[styles.head, { color: colors.accent }]}>Reuse this report</Text>
-      <View style={styles.files}>
-        {files.map((f) =>
-          f.href ? (
-            <Pressable key={f.label} onPress={() => Linking.openURL(f.href!)}>
-              <Text style={[styles.fileLink, { color: colors.text }]}>{f.label}</Text>
-            </Pressable>
-          ) : (
-            <Text key={f.label} style={[styles.fileSoon, { color: colors.textSubtle }]}>
-              {f.label} — coming soon
-            </Text>
-          ),
-        )}
-      </View>
+      {available.length ? (
+        <>
+          <Text style={[styles.head, { color: colors.accent }]}>Downloads</Text>
+          <View style={styles.files}>
+            {available.map((f) => (
+              <Pressable key={f.label} onPress={() => Linking.openURL(f.href!)}>
+                <Text style={[styles.fileLink, { color: colors.text }]}>{f.label}</Text>
+              </Pressable>
+            ))}
+          </View>
+        </>
+      ) : null}
     </View>
   );
 }

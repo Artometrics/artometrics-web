@@ -13,7 +13,7 @@ import {
   getAdjacentPosts,
   getBlogPost,
   getBlogPosts,
-  primaryDesk,
+  primarySection,
 } from "@/lib/content";
 import { SECTION_META } from "@/data/sections";
 import { SeoJsonLd } from "@/components/SeoJsonLd";
@@ -45,7 +45,7 @@ export default function ReportScreen() {
     );
   }
 
-  const desk = primaryDesk(post.tags);
+  const section = primarySection(post.tags);
   const adjacent = getAdjacentPosts(post.slug);
   const minutes = estimateMinutes(post.body);
   const hero = assetUrl(post.heroImage);
@@ -65,7 +65,7 @@ export default function ReportScreen() {
       url: "https://artometrics.com",
     },
     mainEntityOfPage: `https://artometrics.com/${post.slug}`,
-    articleSection: desk ? SECTION_META[desk].title : "Reports",
+    articleSection: section ? SECTION_META[section].title : "Articles",
   };
 
   return (
@@ -79,9 +79,9 @@ export default function ReportScreen() {
       />
       <SeoJsonLd data={jsonLd} />
       <Wrapper style={styles.front} variant="prose">
-        {desk ? (
+        {section ? (
           <Text style={[styles.eyebrow, { color: colors.accent }]}>
-            {SECTION_META[desk].title}
+            {SECTION_META[section].title}
           </Text>
         ) : null}
         <Text style={[styles.title, { color: colors.text }]}>{post.title}</Text>

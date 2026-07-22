@@ -1,29 +1,31 @@
-import { Image, Pressable, Text, View, StyleSheet } from "react-native";
+import { Pressable, Text, View, StyleSheet, ScrollView } from "react-native";
 import { Link } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
+import { BlogCard } from "@/components/BlogCard";
 import { PageSeo } from "@/components/PageSeo";
 import { Fonts } from "@/constants/Colors";
 import { useTheme } from "@/lib/theme";
 import { assetUrl } from "@/lib/assets";
+import { Image } from "react-native";
 import {
   deckLine,
   formatAuthorName,
   formatDate,
   getBlogPosts,
   getPodcastEpisodes,
-  primaryDesk,
+  primarySection,
 } from "@/lib/content";
-import { SECTION_META } from "@/data/sections";
+import { SECTION_META, SECTION_SLUGS } from "@/data/sections";
 
 export default function HomeScreen() {
   const { colors } = useTheme();
   const posts = getBlogPosts();
   const featured = posts[0];
-  const rest = posts.slice(1, 8);
-  const more = posts.slice(8);
+  const rest = posts.slice(1, 10);
+  const more = posts.slice(10, 22);
   const podcasts = getPodcastEpisodes().slice(0, 2);
   const heroUri = assetUrl(featured?.heroImage);
-  const featuredDesk = featured ? primaryDesk(featured.tags) : null;
+  const featuredSection = featured ? primarySection(featured.tags) : null;
   const featuredAuthor = featured?.author
     ? formatAuthorName(String(featured.author))
     : "Artometrics";
@@ -32,24 +34,44 @@ export default function HomeScreen() {
     <View style={{ backgroundColor: colors.bg }}>
       <PageSeo
         title="Artometrics"
-        description="Data reports on culture, power, and the creative economy — art for data scientists and data science for artists."
+        description="Data reporting on culture, sports, film, music, and cities — clear, citable, easy to read."
         path="/"
       />
+
+      <ScrollView
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        contentContainerStyle={styles.sectionNav}
+        style={[styles.sectionNavWrap, { borderBottomColor: colors.border }]}
+      >
+        {SECTION_SLUGS.map((slug) => (
+          <Link key={slug} href={`/topics/${slug}` as `/topics/${string}`} asChild>
+            <Pressable style={styles.sectionChip}>
+              <Text style={[styles.sectionChipText, { color: colors.text }]}>
+                {SECTION_META[slug].title}
+              </Text>
+            </Pressable>
+          </Link>
+        ))}
+      </ScrollView>
+
       {featured ? (
         <Wrapper style={styles.lead} variant="wide">
-          <Text style={[styles.eyebrow, { color: colors.accent }]}>
-            {featuredDesk ? SECTION_META[featuredDesk].title : "Latest report"}
-          </Text>
+          {featuredSection ? (
+            <Text style={[styles.eyebrow, { color: colors.accent }]}>
+              {SECTION_META[featuredSection].title}
+            </Text>
+          ) : null}
           <Link href={`/${featured.slug}`} asChild>
             <Pressable>
               <Text style={[styles.leadTitle, { color: colors.text }]}>{featured.title}</Text>
             </Pressable>
           </Link>
           <Text style={[styles.leadDek, { color: colors.textMuted }]}>
-            {deckLine(featured.description, 28)}
+            {deckLine(featured.description, 32)}
           </Text>
-          <Text style={[styles.byline, { color: colors.text }]}>
-            By {featuredAuthor}
+          <Text style={[styles.byline, { color: colors.textSubtle }]}>
+            {featuredAuthor}
             {featured.pubDate ? ` · ${formatDate(featured.pubDate)}` : ""}
           </Text>
           {heroUri ? (
@@ -68,87 +90,54 @@ export default function HomeScreen() {
       ) : null}
 
       <Wrapper style={styles.section} variant="wide">
-        <Text style={[styles.sectionTitle, { color: colors.text }]}>Most popular</Text>
-        <View style={[styles.rule, { backgroundColor: colors.text }]} />
-        {rest.map((post) => {
-          const thumb = assetUrl(post.heroImage);
-          const author = post.author ? formatAuthorName(String(post.author)) : "Artometrics";
-          return (
-            <Link key={post.slug} href={`/${post.slug}`} asChild>
-              <Pressable
-                style={StyleSheet.flatten([styles.popRow, { borderBottomColor: colors.border }])}
-              >
-                <View style={styles.popCopy}>
-                  <Text style={[styles.popTitle, { color: colors.text }]}>{post.title}</Text>
-                  <Text style={[styles.popAuthor, { color: colors.textMuted }]}>{author}</Text>
-                </View>
-                {thumb ? (
-                  <Image source={{ uri: thumb }} style={styles.popThumb} resizeMode="cover" accessibilityLabel={post.title} />
-                ) : null}
-              </Pressable>
-            </Link>
-          );
-        })}
+        <Text style={[styles.sectionTitle, { color: colors.text }]}>Latest</Text>
+        <View style={[styles.rule, { backgroundColor: colors.border }]} />
+        {rest.map((post) => (
+          <BlogCard key={post.slug} post={post} variant="row" />
+        ))}
       </Wrapper>
 
-      <Wrapper style={styles.section} variant="wide">
-        <View style={styles.sectionHead}>
-          <Text style={[styles.sectionTitlePlain, { color: colors.text }]}>Latest interviews</Text>
-          <Link href="/podcast" asChild>
-            <Pressable>
-              <Text style={[styles.sectionLink, { color: colors.accent }]}>All episodes</Text>
-            </Pressable>
-          </Link>
-        </View>
-        <View style={styles.podcastRow}>
+      {podcasts.length ? (
+        <Wrapper style={styles.section} variant="wide">
+          <View style={styles.sectionHead}>
+            <Text style={[styles.sectionTitlePlain, { color: colors.text }]}>Podcasts</Text>
+            <Link href="/podcast" asChild>
+              <Pressable>
+                <Text style={[styles.sectionLink, { color: colors.accent }]}>All episodes</Text>
+              </Pressable>
+            </Link>
+          </View>
           {podcasts.map((ep) => (
             <Link key={ep.id} href={`/podcast/interviews/${ep.id}`} asChild>
               <Pressable
-                style={StyleSheet.flatten([styles.podcastCard, { borderTopColor: colors.text }])}
+                style={StyleSheet.flatten([styles.podRow, { borderBottomColor: colors.border }])}
               >
                 <Text style={[styles.eyebrow, { color: colors.accent }]}>
                   Episode {ep.episodeNumber ?? ep.id}
                 </Text>
-                <Text style={[styles.podcastTitle, { color: colors.text }]}>{ep.title}</Text>
-                <Text style={[styles.leadDek, { color: colors.textMuted }]} numberOfLines={3}>
+                <Text style={[styles.podTitle, { color: colors.text }]}>{ep.title}</Text>
+                <Text style={[styles.leadDek, { color: colors.textMuted }]} numberOfLines={2}>
                   {ep.description}
                 </Text>
               </Pressable>
             </Link>
           ))}
-        </View>
-      </Wrapper>
+        </Wrapper>
+      ) : null}
 
       {more.length ? (
         <Wrapper style={styles.section} variant="wide">
           <View style={styles.sectionHead}>
-            <Text style={[styles.sectionTitlePlain, { color: colors.text }]}>More reports</Text>
+            <Text style={[styles.sectionTitlePlain, { color: colors.text }]}>More</Text>
             <Link href="/blog" asChild>
               <Pressable>
-                <Text style={[styles.sectionLink, { color: colors.accent }]}>Browse archive</Text>
+                <Text style={[styles.sectionLink, { color: colors.accent }]}>Archive</Text>
               </Pressable>
             </Link>
           </View>
-          {more.slice(0, 12).map((post) => {
-            const desk = primaryDesk(post.tags);
-            return (
-              <Link key={post.slug} href={`/${post.slug}`} asChild>
-                <Pressable
-                  style={StyleSheet.flatten([styles.moreRow, { borderBottomColor: colors.border }])}
-                >
-                  {desk ? (
-                    <Text style={[styles.moreDesk, { color: colors.accent }]}>
-                      {SECTION_META[desk].title}
-                    </Text>
-                  ) : null}
-                  <Text style={[styles.moreTitle, { color: colors.text }]}>{post.title}</Text>
-                  <Text style={[styles.moreMeta, { color: colors.textSubtle }]}>
-                    {formatDate(post.pubDate)}
-                  </Text>
-                </Pressable>
-              </Link>
-            );
-          })}
+          {more.map((post) => (
+            <BlogCard key={post.slug} post={post} variant="row" />
+          ))}
         </Wrapper>
       ) : null}
     </View>
@@ -156,29 +145,66 @@ export default function HomeScreen() {
 }
 
 const styles = StyleSheet.create({
-  lead: { paddingTop: 36, paddingBottom: 28, gap: 14 },
-  eyebrow: { fontSize: 12, letterSpacing: 1.8, textTransform: "uppercase", fontWeight: "700" },
-  leadTitle: { fontFamily: Fonts.serif, fontSize: 34, lineHeight: 40, fontWeight: "700", letterSpacing: -0.3 },
-  leadDek: { fontFamily: Fonts.serif, fontSize: 18, lineHeight: 28, maxWidth: 720 },
-  byline: { fontFamily: Fonts.serif, fontSize: 15 },
+  sectionNavWrap: {
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    maxHeight: 48,
+  },
+  sectionNav: {
+    paddingHorizontal: 16,
+    paddingVertical: 12,
+    gap: 18,
+    alignItems: "center",
+  },
+  sectionChip: { paddingVertical: 2 },
+  sectionChipText: {
+    fontSize: 13,
+    fontWeight: "600",
+  },
+  lead: { paddingTop: 28, paddingBottom: 24, gap: 12 },
+  eyebrow: {
+    fontSize: 11,
+    letterSpacing: 1.6,
+    textTransform: "uppercase",
+    fontWeight: "700",
+  },
+  leadTitle: {
+    fontFamily: Fonts.serif,
+    fontSize: 32,
+    lineHeight: 38,
+    fontWeight: "700",
+    letterSpacing: -0.3,
+  },
+  leadDek: { fontFamily: Fonts.serif, fontSize: 17, lineHeight: 26, maxWidth: 720 },
+  byline: { fontSize: 13 },
   leadMedia: { marginTop: 8, overflow: "hidden" },
   leadImage: { width: "100%", aspectRatio: 16 / 10 },
-  section: { paddingVertical: 36 },
-  sectionTitle: { fontFamily: Fonts.serif, fontSize: 22, fontWeight: "700", letterSpacing: 1, textTransform: "uppercase", marginBottom: 10 },
-  sectionTitlePlain: { fontFamily: Fonts.serif, fontSize: 26, fontWeight: "700" },
-  rule: { height: 1, marginBottom: 4 },
-  popRow: { flexDirection: "row", alignItems: "flex-start", justifyContent: "space-between", gap: 16, paddingVertical: 18, borderBottomWidth: StyleSheet.hairlineWidth },
-  popCopy: { flex: 1, gap: 8, paddingRight: 8 },
-  popTitle: { fontFamily: Fonts.serif, fontSize: 20, lineHeight: 26 },
-  popAuthor: { fontSize: 11, letterSpacing: 1.6, textTransform: "uppercase", fontWeight: "600" },
-  popThumb: { width: 88, height: 88 },
-  sectionHead: { flexDirection: "row", justifyContent: "space-between", alignItems: "baseline", flexWrap: "wrap", gap: 12, marginBottom: 18 },
-  sectionLink: { fontSize: 12, letterSpacing: 1.2, textTransform: "uppercase", fontWeight: "700" },
-  podcastRow: { gap: 16, flexDirection: "row", flexWrap: "wrap" },
-  podcastCard: { flexGrow: 1, flexBasis: 280, borderTopWidth: 2, paddingTop: 16, gap: 8 },
-  podcastTitle: { fontFamily: Fonts.serif, fontSize: 22, lineHeight: 28 },
-  moreRow: { paddingVertical: 16, borderBottomWidth: StyleSheet.hairlineWidth, gap: 6 },
-  moreDesk: { fontSize: 11, letterSpacing: 1.6, textTransform: "uppercase", fontWeight: "700" },
-  moreTitle: { fontFamily: Fonts.serif, fontSize: 20, lineHeight: 26 },
-  moreMeta: { fontSize: 13 },
+  section: { paddingVertical: 28 },
+  sectionTitle: {
+    fontFamily: Fonts.serif,
+    fontSize: 22,
+    fontWeight: "700",
+    marginBottom: 10,
+  },
+  sectionTitlePlain: { fontFamily: Fonts.serif, fontSize: 24, fontWeight: "700" },
+  rule: { height: StyleSheet.hairlineWidth, marginBottom: 4 },
+  sectionHead: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "baseline",
+    flexWrap: "wrap",
+    gap: 12,
+    marginBottom: 12,
+  },
+  sectionLink: {
+    fontSize: 12,
+    letterSpacing: 1.2,
+    textTransform: "uppercase",
+    fontWeight: "700",
+  },
+  podRow: {
+    paddingVertical: 16,
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    gap: 6,
+  },
+  podTitle: { fontFamily: Fonts.serif, fontSize: 22, lineHeight: 28, fontWeight: "700" },
 });

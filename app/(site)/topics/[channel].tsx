@@ -6,47 +6,48 @@ import { PageSeo } from "@/components/PageSeo";
 import { Fonts } from "@/constants/Colors";
 import { useTheme } from "@/lib/theme";
 import {
-  CHANNEL_META,
-  CHANNEL_SLUGS,
-  type ChannelSlug,
+  SECTION_META,
+  SECTION_SLUGS,
+  LEGACY_DESK_TO_SECTION,
+  type SectionSlug,
 } from "@/data/sections";
-import { getBlogPosts } from "@/lib/content";
+import { getBlogPosts, primarySection } from "@/lib/content";
 
 export async function generateStaticParams() {
-  return CHANNEL_SLUGS.map((channel) => ({ channel }));
+  return SECTION_SLUGS.map((channel) => ({ channel }));
 }
 
 export default function TopicChannelPage() {
   const { channel: raw } = useLocalSearchParams<{ channel: string }>();
   const { colors } = useTheme();
-  const channel = raw as ChannelSlug;
-  const meta = CHANNEL_META[channel];
+  const mapped =
+    (raw as SectionSlug) in SECTION_META
+      ? (raw as SectionSlug)
+      : LEGACY_DESK_TO_SECTION[raw ?? ""];
+  const meta = mapped ? SECTION_META[mapped] : null;
 
-  if (!meta) {
+  if (!meta || !mapped) {
     return (
       <Wrapper style={styles.wrap}>
-        <Text style={{ color: colors.text }}>Topic not found</Text>
+        <Text style={{ color: colors.text }}>Section not found</Text>
         <Link href="/topics">
-          <Text style={{ color: colors.accent }}>All topics</Text>
+          <Text style={{ color: colors.accent }}>All sections</Text>
         </Link>
       </Wrapper>
     );
   }
 
-  const posts = getBlogPosts().filter((p) =>
-    ((p as { channels?: string[] }).channels ?? []).includes(channel),
-  );
+  const posts = getBlogPosts().filter((p) => primarySection(p.tags) === mapped);
 
   return (
     <Wrapper style={styles.wrap}>
-      <PageSeo title={meta.title} description={meta.description} path={`/topics/${channel}`} />
-      <Text style={[styles.eyebrow, { color: colors.accent }]}>Topic</Text>
+      <PageSeo title={meta.title} description={meta.description} path={`/topics/${mapped}`} />
       <Text style={[styles.title, { color: colors.text }]}>{meta.title}</Text>
       <Text style={[styles.deck, { color: colors.textMuted }]}>{meta.description}</Text>
-      <View style={[styles.rule, { backgroundColor: colors.text }]} />
+      <View style={[styles.rule, { backgroundColor: colors.border }]} />
       {posts.length === 0 ? (
         <Text style={{ color: colors.textMuted, fontFamily: Fonts.serif, fontSize: 16 }}>
-          Reports for this topic are on the way. Browse the archive.
+          More stories coming soon.
         </Text>
       ) : (
         posts.map((post) => <BlogCard key={post.slug} post={post} variant="row" />)
@@ -57,8 +58,7 @@ export default function TopicChannelPage() {
 
 const styles = StyleSheet.create({
   wrap: { paddingVertical: 40, gap: 12 },
-  eyebrow: { fontSize: 12, letterSpacing: 1.8, textTransform: "uppercase", fontWeight: "700" },
   title: { fontFamily: Fonts.serif, fontSize: 40, fontWeight: "700" },
   deck: { fontFamily: Fonts.serif, fontSize: 17, lineHeight: 26, maxWidth: 560 },
-  rule: { height: 1, marginVertical: 8 },
+  rule: { height: StyleSheet.hairlineWidth, marginVertical: 8 },
 });

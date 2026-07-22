@@ -1,0 +1,452 @@
+[
+  {
+    "slug": "airline-safety",
+    "section": "cities-travel",
+    "title": "Which Airlines Have the Worst Safety Records?"
+  },
+  {
+    "slug": "alcohol-consumption",
+    "section": "culture",
+    "title": "Who Drinks the Most Alcohol Per Capita?"
+  },
+  {
+    "slug": "all-the-pizza",
+    "section": "culture",
+    "title": "What Does a Slice of Pizza Really Cost?"
+  },
+  {
+    "slug": "anime",
+    "section": "movies-tv",
+    "title": "What a Century of Anime Titles Reveals About the Industry"
+  },
+  {
+    "slug": "awards-prestige-economy-oscars-grammys-nobels",
+    "section": "culture",
+    "title": "How Oscars, Grammys, and Nobels Convert Attention Into Prestige"
+  },
+  {
+    "slug": "beyonce-taylor-lyrics",
+    "section": "music",
+    "title": "Beyoncé and Taylor Swift, Line by Line"
+  },
+  {
+    "slug": "big-mac-index",
+    "section": "business",
+    "title": "What Twenty Years of Big Mac Prices Say About Purchasing Power"
+  },
+  {
+    "slug": "biketown-bikeshare",
+    "section": "cities-travel",
+    "title": "How Far Do Portland’s Biketown Rides Actually Go?"
+  },
+  {
+    "slug": "billboard-hot-100",
+    "section": "music",
+    "title": "How Long Number-One Hits Stay on Top of the Hot 100"
+  },
+  {
+    "slug": "billboard-top-100",
+    "section": "music",
+    "title": "How the Top of the Billboard Chart Got More Crowded"
+  },
+  {
+    "slug": "board-games",
+    "section": "games",
+    "title": "Which Board Games Combine Crowd Scale With Elite Ratings?"
+  },
+  {
+    "slug": "broadway-musicals",
+    "section": "culture",
+    "title": "Which Broadway Musicals Ran Longest and Grossed Most?"
+  },
+  {
+    "slug": "caesar-the-psychonomics-of-emperor-julius",
+    "section": "culture",
+    "title": "Julius Caesar and the Cost of Managing Power"
+  },
+  {
+    "slug": "california-vs-texas-state-rivalry",
+    "section": "cities-travel",
+    "title": "California and Texas: Where Rival State Systems Diverge"
+  },
+  {
+    "slug": "celtics-the-artometrics-of-institutional-winning",
+    "section": "sports",
+    "title": "How the Celtics Turned 1960s Dominance Into Permanent Expectation"
+  },
+  {
+    "slug": "ceo-departures",
+    "section": "business",
+    "title": "How Long Do CEOs Last Before They Leave?"
+  },
+  {
+    "slug": "cetaceans",
+    "section": "culture",
+    "title": "How Whale and Dolphin Sizes Cluster by Family"
+  },
+  {
+    "slug": "christmas-novels",
+    "section": "books",
+    "title": "Which Christmas Novels Anchor the Holiday Shelf?"
+  },
+  {
+    "slug": "christmas-songs",
+    "section": "music",
+    "title": "Which Holiday Songs Never Leave the Charts?"
+  },
+  {
+    "slug": "cia-world-factbook",
+    "section": "business",
+    "title": "How Population Scale Relates to Prosperity Across Countries"
+  },
+  {
+    "slug": "city-bioeconomics-operating-system",
+    "section": "cities-travel",
+    "title": "Cities as Operating Systems of Exports, Culture, and Scarcity"
+  },
+  {
+    "slug": "coffee-the-artometrics-of-java",
+    "section": "culture",
+    "title": "Coffee’s Place in Global Trade and Daily Life"
+  },
+  {
+    "slug": "college-major-income",
+    "section": "business",
+    "title": "Which College Majors Pay Most—and Which Carry Job Risk?"
+  },
+  {
+    "slug": "comic-characters",
+    "section": "culture",
+    "title": "Who Ranks Highest on Comic-Book Power Scales?"
+  },
+  {
+    "slug": "cowboys-the-artometrics-of-americas-team",
+    "section": "sports",
+    "title": "The Cowboys’ Gap Between Brand Value and Championship Conversion"
+  },
+  {
+    "slug": "craft-beer-usa",
+    "section": "culture",
+    "title": "How Bitter and Strong Is American Craft Beer?"
+  },
+  {
+    "slug": "cultural-exports-geoeconomics",
+    "section": "business",
+    "title": "When Films, Music, and Games Become National Exports"
+  },
+  {
+    "slug": "dodgers-the-artometrics-of-baseballs-modern-machine",
+    "section": "sports",
+    "title": "How the Dodgers Built Baseball’s Modern Consistency Machine"
+  },
+  {
+    "slug": "emmy-awards",
+    "section": "movies-tv",
+    "title": "Which Shows Dominated Emmy Season—and How Lopsided Was It?"
+  },
+  {
+    "slug": "exercise-usa",
+    "section": "culture",
+    "title": "Which U.S. States Exercise the Most?"
+  },
+  {
+    "slug": "export-superpowers-us-china-germany",
+    "section": "business",
+    "title": "Why the U.S., China, and Germany Dominate Export Debate"
+  },
+  {
+    "slug": "fast-food-calories",
+    "section": "culture",
+    "title": "Which Fast-Food Chains Pack the Most Calories Per Item?"
+  },
+  {
+    "slug": "franchise",
+    "section": "movies-tv",
+    "title": "How the World’s Biggest Media Franchises Actually Make Money"
+  },
+  {
+    "slug": "giant-the-artometrics-of-a-san-francisco-dynasty",
+    "section": "sports",
+    "title": "The Giants’ Arc From New York Gothams to Oracle Park"
+  },
+  {
+    "slug": "global-life-expectancy",
+    "section": "culture",
+    "title": "How Human Life Expectancy Doubled in Five Centuries"
+  },
+  {
+    "slug": "global-plastic-waste",
+    "section": "business",
+    "title": "Who Generates the Most Plastic Waste—and Who Mismanages It?"
+  },
+  {
+    "slug": "h3-the-artometrics-of-a-youtube-dynasty",
+    "section": "culture",
+    "title": "How H3 Built a YouTube Network Beyond One Channel"
+  },
+  {
+    "slug": "horror-movie-profit",
+    "section": "movies-tv",
+    "title": "Which Horror Movies Returned Multiples—and Which Burned Cash?"
+  },
+  {
+    "slug": "horror-movies",
+    "section": "movies-tv",
+    "title": "Did Horror Get Better as the Catalog Exploded?"
+  },
+  {
+    "slug": "hurricanes-puerto-rico",
+    "section": "cities-travel",
+    "title": "Which Storms Hit Puerto Rico Hardest?"
+  },
+  {
+    "slug": "hydro-wastewater",
+    "section": "cities-travel",
+    "title": "Where Wastewater Plants Serve the Most People"
+  },
+  {
+    "slug": "imdb-blockbuster-grammar",
+    "section": "movies-tv",
+    "title": "How Movies Become Famous on IMDb’s Public Scoreboard"
+  },
+  {
+    "slug": "imperial",
+    "section": "culture",
+    "title": "What Empire Chronicles Leave Out: Who Got Rich"
+  },
+  {
+    "slug": "incarceration-trends",
+    "section": "business",
+    "title": "How U.S. Incarceration Rates Diverged by State"
+  },
+  {
+    "slug": "lakers-the-artometrics-of-basketball-glamour",
+    "section": "sports",
+    "title": "How the Lakers Convert Stars Into Championship Eras"
+  },
+  {
+    "slug": "languages-glottolog",
+    "section": "culture",
+    "title": "How Concentrated Is the World’s Linguistic Diversity?"
+  },
+  {
+    "slug": "league-money-skill-and-star-systems",
+    "section": "sports",
+    "title": "How League Money and Roster Rules Shape Star Systems"
+  },
+  {
+    "slug": "lego-database",
+    "section": "games",
+    "title": "How LEGO Set Complexity Evolved Across Themes"
+  },
+  {
+    "slug": "medium-articles",
+    "section": "tech",
+    "title": "Did Longer Medium Posts Earn More Applause?"
+  },
+  {
+    "slug": "musicbrainz-pop-fame-mechanics",
+    "section": "music",
+    "title": "How Catalog Depth and Reinvention Make Pop Stars Famous"
+  },
+  {
+    "slug": "national-export-identity-atlas",
+    "section": "business",
+    "title": "What Nations Sell—and What That Says About Identity"
+  },
+  {
+    "slug": "national-park-visits",
+    "section": "cities-travel",
+    "title": "Which National Parks Draw the Crowds?"
+  },
+  {
+    "slug": "netflix-engagement",
+    "section": "movies-tv",
+    "title": "Which Netflix Titles Consumed the Most Viewing Hours?"
+  },
+  {
+    "slug": "netflix-titles",
+    "section": "movies-tv",
+    "title": "How Netflix’s Catalog Mix Shifted Between Films and Series"
+  },
+  {
+    "slug": "new-york-vs-san-francisco-city-systems",
+    "section": "cities-travel",
+    "title": "New York and San Francisco: Command City vs. Invention City"
+  },
+  {
+    "slug": "nuclear-explosions",
+    "section": "culture",
+    "title": "How Nuclear Test Yields Shifted Through the Atomic Age"
+  },
+  {
+    "slug": "nyc-restaurant-inspections",
+    "section": "cities-travel",
+    "title": "Which NYC Cuisines Score Highest on Health Inspections?"
+  },
+  {
+    "slug": "pantheon-the-artometrics-of-collective-memory",
+    "section": "culture",
+    "title": "Who Gets Remembered in the Global Pantheon of Fame?"
+  },
+  {
+    "slug": "patriots-the-artometrics-of-the-system-dynasty",
+    "section": "sports",
+    "title": "The Patriots’ Brady–Belichick Era as a System Shock"
+  },
+  {
+    "slug": "pixar-films",
+    "section": "movies-tv",
+    "title": "Where Pixar’s Critic Streak Broke: Cars and Lightyear"
+  },
+  {
+    "slug": "pokemon",
+    "section": "games",
+    "title": "What Pokémon’s Franchise Actually Comprises"
+  },
+  {
+    "slug": "project-gutenberg-public-domain-canon-map",
+    "section": "books",
+    "title": "Mapping the Public-Domain Canon Through Project Gutenberg"
+  },
+  {
+    "slug": "project-gutenberg",
+    "section": "books",
+    "title": "Which Subjects Dominate the Project Gutenberg Shelf?"
+  },
+  {
+    "slug": "radio-stations",
+    "section": "music",
+    "title": "How U.S. Radio Formats Map Across the Dial"
+  },
+  {
+    "slug": "ramen-ratings",
+    "section": "culture",
+    "title": "Which Ramen Brands Earn the Highest Ratings?"
+  },
+  {
+    "slug": "readmitted",
+    "section": "business",
+    "title": "Which Hospitals Still Fail the 30-Day Readmission Standard?"
+  },
+  {
+    "slug": "regional-sports-identity-map",
+    "section": "sports",
+    "title": "How American Cities Build Distinct Sports Identities"
+  },
+  {
+    "slug": "rolling-stone-albums",
+    "section": "music",
+    "title": "Which Albums Sit at the Peak of Rolling Stone’s Canon?"
+  },
+  {
+    "slug": "roman-emperors",
+    "section": "culture",
+    "title": "Who Ruled Rome Longest—and Did Dynasty Predict Tenure?"
+  },
+  {
+    "slug": "san-francisco-data-microscope",
+    "section": "cities-travel",
+    "title": "San Francisco as an Invention Machine Under Housing Pressure"
+  },
+  {
+    "slug": "school-diversity",
+    "section": "business",
+    "title": "Where U.S. Student-Body Diversity Is Highest"
+  },
+  {
+    "slug": "sherlock-holmes",
+    "section": "books",
+    "title": "How Word Count Is Distributed Across the Holmes Canon"
+  },
+  {
+    "slug": "simpsons-guest-stars",
+    "section": "movies-tv",
+    "title": "Who Guest-Starred Most Often on The Simpsons?"
+  },
+  {
+    "slug": "sports-dynasty-index-best-and-worst-conversion",
+    "section": "sports",
+    "title": "Best, Worst, and Most Misleading Sports Dynasties"
+  },
+  {
+    "slug": "streaming-catalog-power",
+    "section": "movies-tv",
+    "title": "What Streaming Platforms Actually Keep in Their Libraries"
+  },
+  {
+    "slug": "super-bowl-ads",
+    "section": "business",
+    "title": "Which Super Bowl Ads Won the Post-Game Internet?"
+  },
+  {
+    "slug": "tv-golden-age",
+    "section": "movies-tv",
+    "title": "When Did Prestige TV Peak—and Did Critics Agree?"
+  },
+  {
+    "slug": "uk-museums",
+    "section": "galleries",
+    "title": "Where UK Museums Sit on the Deprivation Map"
+  },
+  {
+    "slug": "un-votes",
+    "section": "business",
+    "title": "Which UN Votes Split the Chamber Most Sharply?"
+  },
+  {
+    "slug": "us-phds",
+    "section": "business",
+    "title": "Which U.S. PhD Fields Expanded Fastest?"
+  },
+  {
+    "slug": "us-tuition",
+    "section": "business",
+    "title": "How Far Did Average U.S. Tuition Climb by State?"
+  },
+  {
+    "slug": "us-voter-turnout",
+    "section": "business",
+    "title": "Which States Show Up at the Ballot Box?"
+  },
+  {
+    "slug": "video-games-sliced",
+    "section": "games",
+    "title": "Did Critical Acclaim Track Commercial Success in Video Games?"
+  },
+  {
+    "slug": "video-games-steam",
+    "section": "games",
+    "title": "Which Steam Games Earned the Most Playtime Per Dollar?"
+  },
+  {
+    "slug": "warrior-the-artometrics-of-a-golden-state-dynasty",
+    "section": "sports",
+    "title": "How Golden State Went From Irrelevant to Dynasty"
+  },
+  {
+    "slug": "wealth-income",
+    "section": "business",
+    "title": "How Concentrated Is Wealth at the Top of the Distribution?"
+  },
+  {
+    "slug": "web-page-metrics",
+    "section": "tech",
+    "title": "Which Web Pages Load Fastest—and What Metrics Move Together?"
+  },
+  {
+    "slug": "wine-ratings",
+    "section": "culture",
+    "title": "Does Wine Price Predict Critic Points?"
+  },
+  {
+    "slug": "world-heritage-sites",
+    "section": "galleries",
+    "title": "How UNESCO Sites Grew Across Scandinavia, 2004–2022"
+  },
+  {
+    "slug": "yankees-the-artometrics-of-baseballs-empire",
+    "section": "sports",
+    "title": "The Yankees as Baseball’s Benchmark for Expectation and Scale"
+  }
+]

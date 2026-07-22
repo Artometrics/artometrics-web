@@ -33,10 +33,10 @@ export default function AboutScreen() {
           library, and membership tools. The founder’s brief is simple — ship evidence with taste.
           Contact the desk for tips, corrections, or partnerships.
         </Text>
-        <Text style={[styles.h, { color: colors.text }]}>Desks</Text>
+        <Text style={[styles.h, { color: colors.text }]}>Sections</Text>
         {SECTION_SLUGS.map((s) => (
           <Text key={s} style={[styles.p, { color: colors.textMuted }]}>
-            <Link href={`/desks/${s}` as `/desks/${string}`}>
+            <Link href={`/topics/${s}` as `/topics/${string}`}>
               <Text style={{ color: colors.accent, fontWeight: "700" }}>{SECTION_META[s].title}</Text>
             </Link>
             {" — "}

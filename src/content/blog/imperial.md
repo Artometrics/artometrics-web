@@ -1,34 +1,23 @@
 ---
-title: "IMPERIAL: The Evolution of Empire"
+title: 'What Empire Chronicles Leave Out: Who Got Rich'
 slug: imperial
-pubDate: 2026-04-14
-description: "Every empire in history has told the same story about itself: we brought order, we built roads, we made the trains run on time. What the chronicles leave out is the spreadsheet. Who actually got ri..."
+pubDate: 2026-04-14T00:00:00.000Z
+description: >-
+  A historical-economics lens asks who captured wealth when rulers claimed
+  order.
 heroImage: /images/content/2026/04/IMG_4160.webp
-tags: [history, power]
+tags:
+  - culture
 draft: false
 ---
 <div id="quarto-content">
-<nav id="TOC" role="doc-toc">
-    <h2 id="toc-title">IN THIS REPORT</h2>
 
-  <ul>
-  <li><a href="#fast-facts" id="toc-fast-facts">FAST FACTS</a></li>
-  <li><a href="#dataset-context" id="toc-dataset-context">DATASET CONTEXT</a></li>
-  <li><a href="#chart-1-gdp-per-capita-across-empire-cores" id="toc-chart-1-gdp-per-capita-across-empire-cores">CHART 1 — GDP PER CAPITA ACROSS EMPIRE CORES</a></li>
-  <li><a href="#chart-2-rise-fast-fall-faster" id="toc-chart-2-rise-fast-fall-faster">CHART 2 — RISE FAST, FALL FASTER</a></li>
-  <li><a href="#chart-3-the-extraction-gap" id="toc-chart-3-the-extraction-gap">CHART 3 — THE EXTRACTION GAP</a></li>
-  <li><a href="#limitations" id="toc-limitations">LIMITATIONS</a></li>
-  <li><a href="#conclusion" id="toc-conclusion">CONCLUSION</a></li>
-  <li><a href="#references" id="toc-references">REFERENCES</a></li>
-  <li><a href="#editors-note" id="toc-editors-note">EDITOR’S NOTE</a></li>
-  </ul>
-</nav>
 <main class="art-article-main">
 <p>Every empire in history has told the same story about itself: we brought order, we built roads, we made the trains run on time. What the chronicles leave out is the spreadsheet. Who actually got richer? How long did the prosperity last? And when it ended, how fast did it go?</p>
 <p>Those questions have answers now. The Maddison Project Database — the most comprehensive long-run economic dataset ever assembled — lets us put Rome, Britain, the Ottomans, Imperial China, the Mongols, and Habsburg Spain on the same chart and ask: what does empire actually look like as an economic system?</p>
 <p>The answer is not what the history textbooks imply. GDP goes up. Real wages mostly don’t. The rise takes centuries. The fall takes decades. And in every case, the institutions built to extract surplus during expansion become structurally incapable of sharing it during maturation. That’s the pattern. Six empires. No exceptions.</p>
 <hr>
-<h2 id="fast-facts" class="anchored">FAST FACTS</h2>
+<h2 id="fast-facts" class="anchored">At a glance</h2>
 <div class="facts-grid">
   <div class="fact-box">
     <span class="fact-number">1,200 yrs</span>
@@ -56,7 +45,7 @@ draft: false
   </div>
 </div>
 <hr>
-<h2 id="dataset-context" class="anchored">DATASET CONTEXT</h2>
+<h2 id="dataset-context" class="anchored">The data</h2>
 <p>The Maddison Project Database is the closest thing economics has to a time machine. Originally assembled by Angus Maddison and now maintained by the University of Groningen, it provides GDP per capita estimates — expressed in 2011 USD purchasing power parity — stretching back to 1 CE for some countries and to 1000 BCE for a handful of ancient economies. The 2023 update, published by Bolt and van Zanden, is the version used here, accessed via Our World in Data’s public CSV endpoint.</p>
 <p>Six empire cores were selected to represent distinct geographies, time periods, and institutional types: the Roman Empire (proxied by Italy, back-extrapolated from 1–476 CE using Maddison 2007, Scheidel and Friesen 2009, and Lo Cascio and Malanima 2009), the British Empire (United Kingdom), the Ottoman Empire (Turkey), Imperial China (China), Habsburg-Spain (Spain), and the Mongol Empire. The Mongol series has no Maddison country code and is constructed as a population-weighted average of China (45%), Russia (30%), and Turkey (25%) for 1200–1400 CE — the best available proxy for a steppe empire that governed all three regions simultaneously.</p>
 <p>Each empire’s GDP series is capped at its historical dissolution date: Rome at 476 CE, the Mongols at 1400, Habsburg-Spain at 1808, Imperial China at 1912, the Ottoman Empire at 1918, and the British Empire at 1947 (Indian independence). Real wage data — used in Chart 3 to construct the extraction gap — comes from Robert Allen’s European wages series (2001), Özmucur and Pamuk’s Ottoman wage reconstruction (2002), and Allen et al.’s China and Asia series (2011). All wage figures are expressed in silver grams per day for an unskilled male laborer.</p>
@@ -66,7 +55,7 @@ draft: false
 
 </div>
 <hr>
-<h2 id="chart-1-gdp-per-capita-across-empire-cores" class="anchored">CHART 1 — GDP PER CAPITA ACROSS EMPIRE CORES</h2>
+<h2 id="chart-1-gdp-per-capita-across-empire-cores" class="anchored">GDP PER CAPITA ACROSS EMPIRE CORES</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -86,7 +75,7 @@ draft: false
 
 </div>
 <hr>
-<h2 id="chart-2-rise-fast-fall-faster" class="anchored">CHART 2 — RISE FAST, FALL FASTER</h2>
+<h2 id="chart-2-rise-fast-fall-faster" class="anchored">RISE FAST, FALL FASTER</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -106,7 +95,7 @@ draft: false
 
 </div>
 <hr>
-<h2 id="chart-3-the-extraction-gap" class="anchored">CHART 3 — THE EXTRACTION GAP</h2>
+<h2 id="chart-3-the-extraction-gap" class="anchored">THE EXTRACTION GAP</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -125,7 +114,7 @@ draft: false
 
 </div>
 <hr>
-<h2 id="limitations" class="anchored">LIMITATIONS</h2>
+<h2 id="limitations" class="anchored">Caveats</h2>
 <h3 id="the-mongol-data-problem" class="anchored">THE MONGOL DATA PROBLEM</h3>
 <p>The Maddison Project has no Mongol Empire country code. The figures here use a population-weighted average of China (CHN, 45%), Russia (RUS, 30%), and Turkey (TUR, 25%) for 1200–1400 CE. Turkey is the closest available proxy for the Ilkhanate’s Persia-Iraq core. This captures broad regional output but understates the empire’s Central Asian footprint. SESHAT Databank remains the most rigorous replacement.</p>
 <h3 id="pre-1000-ce-data-sparsity" class="anchored">PRE-1000 CE DATA SPARSITY</h3>
@@ -135,7 +124,7 @@ draft: false
 <h3 id="empire-proxies-are-imperfect" class="anchored">EMPIRE PROXIES ARE IMPERFECT</h3>
 <p>Mapping a multi-continental empire to a single modern country code (Britain = GBR, Ottoman = TUR) captures the metropolitan core but ignores the periphery. British GDP per capita for the UK does not include what was extracted from India, Africa, or the Caribbean. The chart shows what happened to the empire’s home population — not to its subjects.</p>
 <hr>
-<h2 id="conclusion" class="anchored">CONCLUSION</h2>
+<h2 id="conclusion" class="anchored">Bottom line</h2>
 <h3 id="the-pattern-is-the-same-every-time" class="anchored">THE PATTERN IS THE SAME EVERY TIME</h3>
 <p>Six empires. Four thousand years. The curve barely changes. A period of administrative consolidation reduces transaction costs, enables infrastructure at scale, and produces a GDP spike. That spike is real — it shows up in the Maddison data clearly. What it conceals is who captured the gains — and Chart 3 is where the concealment ends.</p>
 <h3 id="gdp-goes-up.-wages-dont-follow." class="anchored">GDP GOES UP. WAGES DON’T FOLLOW.</h3>
@@ -146,7 +135,7 @@ draft: false
 <p>Of the six empires in this dataset, Habsburg Spain is the clearest controlled experiment. Remove the silver and the empire is simply Spain — a mid-tier European power with standard institutional problems. Add 180,000 tonnes of silver and you get accelerated inflation, wage suppression, and eventual fiscal collapse. The resource abundance didn’t produce a richer empire. It produced a more efficient extraction machine that consumed itself. That’s not a 16th-century problem. It’s a template.</p>
 <p>-KSM.</p>
 <hr>
-<h2 id="references" class="anchored">REFERENCES</h2>
+<h2 id="references" class="anchored">Sources</h2>
 <p>Allen, R. C. (2001). The great divergence in European wages and prices from the Middle Ages to the First World War. <em>Explorations in Economic History, 38</em>(4), 411–447.</p>
 <p>Allen, R. C., Bassino, J. P., Ma, D., Moll-Murata, C., &amp; van Zanden, J. L. (2011). Wages, prices, and living standards in China, 1738–1925. <em>Economic History Review, 64</em>(S1), 8–38.</p>
 <p>Bolt, J., &amp; van Zanden, J. L. (2024). Maddison style estimates of the evolution of the world economy: A new 2023 update. <em>Journal of Economic Surveys</em>, 1–41. https://doi.org/10.1111/joes.12618</p>

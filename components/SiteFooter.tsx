@@ -4,19 +4,21 @@ import { Logo } from "@/components/Logo";
 import { Wrapper } from "@/components/Wrapper";
 import { Fonts } from "@/constants/Colors";
 import { useTheme } from "@/lib/theme";
-import { SECTION_META, SECTION_SLUGS, CHANNEL_META, CHANNEL_SLUGS } from "@/data/sections";
+import { SECTION_META, SECTION_SLUGS } from "@/data/sections";
 
 export function SiteFooter() {
   const year = new Date().getFullYear();
   const { colors } = useTheme();
+  const mid = Math.ceil(SECTION_SLUGS.length / 2);
+  const colA = SECTION_SLUGS.slice(0, mid);
+  const colB = SECTION_SLUGS.slice(mid);
 
   return (
     <View style={styles.shell}>
       <Wrapper style={[styles.ctaBand, { borderTopColor: colors.text }]}>
-        <Text style={[styles.ctaTitle, { color: colors.text }]}>Ideas that measure culture</Text>
+        <Text style={[styles.ctaTitle, { color: colors.text }]}>Stories you can cite</Text>
         <Text style={[styles.ctaDek, { color: colors.textMuted }]}>
-          Data reports, public datasets, and desk interviews — art for data scientists and data
-          science for artists.
+          Clear data reporting on sports, film, music, culture, and cities.
         </Text>
         <View style={styles.ctaRow}>
           <Link href="/pricing" asChild>
@@ -38,9 +40,9 @@ export function SiteFooter() {
         <Wrapper style={styles.inner}>
           <View style={styles.cols}>
             <View style={styles.col}>
-              <Text style={styles.groupTitle}>Desks</Text>
-              {SECTION_SLUGS.map((s) => (
-                <Link key={s} href={`/desks/${s}` as `/desks/${string}`} asChild>
+              <Text style={styles.groupTitle}>Sections</Text>
+              {colA.map((s) => (
+                <Link key={s} href={`/topics/${s}` as `/topics/${string}`} asChild>
                   <Pressable>
                     <Text style={styles.groupLink}>{SECTION_META[s].title}</Text>
                   </Pressable>
@@ -48,26 +50,26 @@ export function SiteFooter() {
               ))}
             </View>
             <View style={styles.col}>
-              <Text style={styles.groupTitle}>Topics</Text>
-              {CHANNEL_SLUGS.slice(0, 6).map((s) => (
+              <Text style={styles.groupTitle}> </Text>
+              {colB.map((s) => (
                 <Link key={s} href={`/topics/${s}` as `/topics/${string}`} asChild>
                   <Pressable>
-                    <Text style={styles.groupLink}>{CHANNEL_META[s].title}</Text>
+                    <Text style={styles.groupLink}>{SECTION_META[s].title}</Text>
                   </Pressable>
                 </Link>
               ))}
             </View>
             <View style={styles.col}>
-              <Text style={styles.groupTitle}>Library</Text>
+              <Text style={styles.groupTitle}>More</Text>
               {[
+                ["/blog", "Latest"],
+                ["/podcast", "Podcasts"],
+                ["/about", "About"],
+                ["/authors", "Authors"],
                 ["/library", "Library"],
-                ["/datasets", "Datasets"],
-                ["/resources", "Resources"],
-                ["/podcast", "Podcast"],
-                ["/press", "Press"],
                 ["/get-app", "Get the App"],
               ].map(([href, label]) => (
-                <Link key={href} href={href as `/library`} asChild>
+                <Link key={href} href={href as `/blog`} asChild>
                   <Pressable>
                     <Text style={styles.groupLink}>{label}</Text>
                   </Pressable>
@@ -77,7 +79,7 @@ export function SiteFooter() {
           </View>
 
           <View style={styles.brandBlock}>
-            <Logo size={40} compact={1} />
+            <Logo size={36} compact={1} align="center" />
             <Text style={styles.wordmark}>Artometrics</Text>
           </View>
 
@@ -87,7 +89,6 @@ export function SiteFooter() {
               ["/legal/terms", "Terms"],
               ["/legal/cookies", "Cookies"],
               ["/legal/ethics-statement", "Ethics"],
-              ["/legal/dpa", "DPA"],
               ["/security", "Security"],
               ["/contact", "Contact"],
             ].map(([href, label], i, arr) => (

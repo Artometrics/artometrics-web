@@ -47,12 +47,11 @@ export function ChromeProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const logoCompact = useMemo(() => {
-    if (!isArticle) return 0;
     return clamp01(
       (scrollY - ARTICLE_COMPACT_START) /
         (ARTICLE_COMPACT_END - ARTICLE_COMPACT_START),
     );
-  }, [isArticle, scrollY]);
+  }, [scrollY]);
 
   const value = useMemo(
     () => ({
