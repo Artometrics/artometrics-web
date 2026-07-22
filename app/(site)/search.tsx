@@ -48,7 +48,9 @@ export default function SearchScreen() {
       <View style={styles.list}>
         {hits.map((hit) => (
           <Link key={`${hit.type}-${hit.id}`} href={hit.href as `/`} asChild>
-            <Pressable style={[styles.row, { borderBottomColor: colors.border }]}>
+            <Pressable
+              style={StyleSheet.flatten([styles.row, { borderBottomColor: colors.border }])}
+            >
               <Text style={[styles.meta, { color: colors.accent }]}>{hit.meta}</Text>
               <Text style={[styles.hitTitle, { color: colors.text }]}>{hit.title}</Text>
               <Text style={[styles.hitDesc, { color: colors.textMuted }]} numberOfLines={2}>
