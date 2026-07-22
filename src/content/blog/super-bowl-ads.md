@@ -13,7 +13,7 @@ draft: false
 <p class="art-p">Super Bowl ads do not end when the whistle blows. They migrate to YouTube, where view counts become a second scoreboard. This working file covers 247 ad records spanning 2006–2021, with a median view count of 41,379 and a ceiling of 176,373,378. Doritos is the top brand by view count in the fact boxes; youtube#video is the dominant media kind.</p>
 <p class="art-p">The interpretive move is simple: treat post-game streaming attention as its own economy. Broadcast reach buys the first audience. YouTube decides which spots keep circulating years later. The charts track that second life — trend, leaders, kind, concentration, and the link between views and likes.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">Keep these markers in view as the story unfolds.</p>
+<p class="art-p">A few markers set the scale before the charts.</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">247</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">41,379</span><span class="fact-label">Median View count</span></div>

@@ -13,7 +13,7 @@ draft: false
 <p class="art-p">The web’s performance story is a percentile story. This file holds 238 records spanning 2016–2022, with a median P50 of 5.97 and a high of 9.80. SpeedIndex leads the fact-box measure ranking; desktop is the most common client.</p>
 <p class="art-p">The charts track how median P50 moved, how desktop and mobile differ, how P50 relates to P90, and how client–year heatmaps reveal drift. The calibration point is 5.97 — the center of the P50 field in this HTTP Archive-style extract.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">Keep these markers in view as the story unfolds.</p>
+<p class="art-p">A few markers set the scale before the charts.</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">238</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">5.97</span><span class="fact-label">Median P50</span></div>

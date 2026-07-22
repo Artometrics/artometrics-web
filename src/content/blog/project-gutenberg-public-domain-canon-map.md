@@ -14,7 +14,7 @@ draft: false
 <p class="art-p">Public-facing summaries place the collection on the order of <strong>75K+</strong> ebooks, with catalog feeds updating on <strong>weekly</strong> CSV and <strong>daily</strong> RDF cadences in Gutenberg tooling docs. The first chart compares <strong>8</strong> languages; later panels use <strong>10</strong> authors as anchors for availability and memory.</p>
 <p class="art-p">English gravity, nineteenth-century density, and adaptation-ready subjects are the three forces that turn a free shelf into a cultural operating system for schools, remixers, and machines.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">Keep these markers in view as the story unfolds.</p>
+<p class="art-p">A few markers set the scale before the charts.</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">75K+</span><span class="fact-label">Approximate scale of Project Gutenberg ebooks in public-facing summaries</span></div>
   <div class="fact-box"><span class="fact-number">Weekly</span><span class="fact-label">CSV catalog update cadence noted in Gutenberg tooling docs</span></div>

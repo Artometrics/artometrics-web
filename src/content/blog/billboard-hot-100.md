@@ -16,7 +16,7 @@ draft: false
 <p class="art-p">The file covers 1,177 distinct number-one entries — the full record of Hot 100 dominance through early 2025. The median run lasts just 2 weeks. The record holder, as of this dataset, is 19 weeks. Between those two facts sits the entire history of popular music.</p>
 <p class="art-p">Start with the scale: <strong>1,177</strong> number-one songs (1958–2025); <strong>2 wks</strong> median run length; The Beatles with the most appearances; Taylor Swift with the highest average run length among modern artists.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">Keep these markers in view as the story unfolds.</p>
+<p class="art-p">A few markers set the scale before the charts.</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">1,177</span><span class="fact-label">Number-one songs in the dataset (1958–2025)</span></div>
   <div class="fact-box"><span class="fact-number">2 wks</span><span class="fact-label">Median run length — most #1s are fleeting</span></div>

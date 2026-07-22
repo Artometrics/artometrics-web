@@ -13,7 +13,7 @@ draft: false
 <p class="art-p">A streaming library is an inventory decision dressed as a homepage. Title-level Netflix catalog data show how the mix of movies and TV — and the duration field attached to each row — shifted between 2008 and 2021.</p>
 <p class="art-p">The working file holds <strong>7,787</strong> records. Median duration is <strong>88.0</strong>; the highest observed duration is <strong>312</strong>, led by Black Mirror: Bandersnatch. Movie is the most common type label.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">Keep these markers in view as the story unfolds.</p>
+<p class="art-p">A few markers set the scale before the charts.</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">7,787</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">88.0</span><span class="fact-label">Median Duration</span></div>

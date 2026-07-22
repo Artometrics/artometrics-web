@@ -15,7 +15,7 @@ draft: false
 <p class="art-p">Britain’s museum map is also a map of place. This file places 4,191 museum records against an area deprivation index whose median is 5.00 and whose observed high is 10.0. Blenheim Palace appears among the fact-box notables; the South West of England shows up in the geographic gap analysis.</p>
 <p class="art-p">The question is not which museum is “best.” It is how cultural institutions sit on a deprivation scale — whether collections cluster in less-deprived areas, and how far named sites and admin areas sit above or below the median index of 5.00.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">Keep these markers in view as the story unfolds.</p>
+<p class="art-p">A few markers set the scale before the charts.</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">4,191</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">5.00</span><span class="fact-label">Median Area Deprivation index</span></div>

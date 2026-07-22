@@ -13,7 +13,7 @@ draft: false
 <p class="art-p">Exercise is unevenly distributed across American states — a public-health map disguised as lifestyle branding. The TidyTuesday exercise extract used here holds <strong>52</strong> records (states plus D.C.) with a median of <strong>23.0</strong> on the adults metric and a high of <strong>32.0</strong> in Colorado.</p>
 <p class="art-p">Mountain and New England states dominate the leaders. The charts ask how wide the spread is, how concentrated the top share is, and how adult rates relate to the men’s series in the file.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">Keep these markers in view as the story unfolds.</p>
+<p class="art-p">A few markers set the scale before the charts.</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">52</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">23.0</span><span class="fact-label">Median Adults</span></div>

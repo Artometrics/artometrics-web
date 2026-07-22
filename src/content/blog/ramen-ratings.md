@@ -14,7 +14,7 @@ draft: false
 <p class="art-p">A TidyTuesday working file of <strong>3,180</strong> records puts median stars at <strong>3.75</strong> and the highest observed stars at <strong>5.00</strong>. <strong>Nongshim</strong> leads the brand ranking by stars in the fact box, and <strong>Japan</strong> is the most common country label — a reminder that production geography and rating leadership are related but not identical.</p>
 <p class="art-p">A ceiling of 5.00 that many top brands share means the interesting story is often below the perfect scores: which countries sit above the median, and how review volume relates to praise.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">Keep these markers in view as the story unfolds.</p>
+<p class="art-p">A few markers set the scale before the charts.</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">3,180</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">3.75</span><span class="fact-label">Median Stars</span></div>

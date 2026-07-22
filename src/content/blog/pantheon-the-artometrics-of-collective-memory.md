@@ -15,7 +15,7 @@ draft: false
 <p class="art-p">Pantheon-style biography indexes — on the order of <strong>85K+</strong> lives in public-facing summaries, with a collection logic that requires presence in at least <strong>15</strong> Wikipedia language editions — make that ranking measurable. The 2016 <em>Scientific Data</em> paper for Pantheon 1.0 is the scholarly anchor. The charts below treat three main memory engines — power, art, and science — across <strong>10</strong> memory-capital cities.</p>
 <p class="art-p">If humanity remembers some kinds of people more than others, that pattern is itself a cultural object. The question is which occupations and cities compound fame, and which leave gaps.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">Keep these markers in view as the story unfolds.</p>
+<p class="art-p">A few markers set the scale before the charts.</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">85K+</span><span class="fact-label">Biographies indexed by Pantheon in public-facing summaries</span></div>
   <div class="fact-box"><span class="fact-number">15</span><span class="fact-label">Minimum Wikipedia language editions used in Pantheon collection logic</span></div>

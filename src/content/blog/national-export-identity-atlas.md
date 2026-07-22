@@ -14,7 +14,7 @@ draft: false
 <p class="art-p">Trade systems in the UN Comtrade and OEC style cover <strong>200+</strong> countries and zones and <strong>5,000+</strong> products under Harmonized System codes. The atlas below uses <strong>6</strong> diagnostic country questions and highlights <strong>8</strong> export families or countries to make identity readable without pretending the indices are final official rankings.</p>
 <p class="art-p">Scale and complexity are different virtues. A country can be large because it sells one thing in volume, or complex because it sells many hard-to-make things. Those identities behave differently under shock.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">Keep these markers in view as the story unfolds.</p>
+<p class="art-p">A few markers set the scale before the charts.</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">200+</span><span class="fact-label">Countries/zones covered in UN Comtrade-style trade systems</span></div>
   <div class="fact-box"><span class="fact-number">5,000+</span><span class="fact-label">Products in OEC-style trade classifications</span></div>

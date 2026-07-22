@@ -15,7 +15,7 @@ draft: false
 <p class="art-p">The global media industry runs on intellectual property — and a surprisingly small number of franchises account for most of the money. The TidyTuesday 2019 media franchises dataset covers 107 properties, each with at least $4 billion in estimated lifetime revenue as of mid-2019. Every franchise here has already cleared a threshold that most IP never approaches. This is not a representative sample of the media industry. It is a map of its ceiling.</p>
 <p class="art-p">Three charts, three angles on the same structural question: where does franchise money actually come from, which properties generate it most efficiently, and what does the ownership picture look like when subsidiaries stop looking like separate competitors? The answers are Merchandise, Pokémon, and Disney — in that order.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">Keep these markers in view as the story unfolds.</p>
+<p class="art-p">A few markers set the scale before the charts.</p>
 <div class="facts-grid">
   <div class="fact-box">
     <span class="fact-number">$91B</span>

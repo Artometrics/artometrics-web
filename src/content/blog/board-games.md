@@ -15,7 +15,7 @@ draft: false
 <p class="art-p">BoardGameGeek ratings are a public taste machine: tens of thousands of titles, each scored by the people willing to log plays. The TidyTuesday board-games extract used here holds <strong>10,532</strong> records with a median average rating of <strong>6.39</strong> and a high of <strong>9.00</strong> for Small World Designer Edition.</p>
 <p class="art-p">Wargame, World War II is the most common category label in the file. That already tilts the catalog toward conflict simulations — a hobby subculture with its own rating norms. The charts ask how ratings split by category, how leaders separate from the median, and whether crowdfunding-scale user counts track with elite scores.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">Keep these markers in view as the story unfolds.</p>
+<p class="art-p">A few markers set the scale before the charts.</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">10,532</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">6.39</span><span class="fact-label">Median Average rating</span></div>

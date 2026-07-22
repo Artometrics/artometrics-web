@@ -16,7 +16,7 @@ draft: false
 <p class="art-p">The headline number is staggering: the global median life expectancy nearly triples over five centuries, rising from around 30 to above 73. But the aggregate trend conceals the most important story — the persistent gap between the long-lived and the short-lived. Countries leading this dataset in 2015 live more than twice as long, on average, as the laggards in the same file.</p>
 <p class="art-p">Start with the scale: <strong>73.3</strong> — median life expectancy in 2015, the closing year of the file; and <strong>83.8</strong> — the highest single observation, Hong Kong near peak. The span runs <strong>472 years</strong>, from 1543 to 2015.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">Keep these markers in view as the story unfolds.</p>
+<p class="art-p">A few markers set the scale before the charts.</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">73.3</span><span class="fact-label">Median life expectancy in 2015 — the closing year of the dataset</span></div>
   <div class="fact-box"><span class="fact-number">83.8</span><span class="fact-label">Highest single observation — Hong Kong near peak</span></div>

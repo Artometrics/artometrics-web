@@ -15,7 +15,7 @@ draft: false
 <p class="art-p">Sixty-eight emperors sit in this reign-length file — enough to ask a hard question about imperial power: did belonging to a dynasty buy more time on the throne, or did longevity come from something messier? The calibration point is a median reign of 6.50 years. That is not a long reign. It is the mathematical center of a political system that chewed through rulers faster than most modern institutions replace CEOs.</p>
 <p class="art-p">The ceiling in the file is Constantine the Great at 31.0 reign years. Gordian is the dynasty label that appears most often. Between those two facts lies the real story: a few men held power for decades, while entire dynastic brands recycled short, fragile tenures. The charts that follow separate name-level longevity from dynasty-level structure so the two are not confused.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">Keep these markers in view as the story unfolds.</p>
+<p class="art-p">A few markers set the scale before the charts.</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">68</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">6.50</span><span class="fact-label">Median Reign years</span></div>

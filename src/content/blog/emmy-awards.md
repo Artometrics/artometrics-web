@@ -15,7 +15,7 @@ draft: false
 <p class="art-p">Emmy season looks like a parade of equal contenders. Nomination and win records look more like a concentration map — a few names return year after year while most titles appear once and vanish.</p>
 <p class="art-p">The working file holds <strong>29,678</strong> records from <strong>1957–2021</strong>. Nominee is the most common type label — as expected in a nominations-heavy extract.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">Keep these markers in view as the story unfolds.</p>
+<p class="art-p">A few markers set the scale before the charts.</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">29,678</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">1957–2021</span><span class="fact-label">Year span covered in the file</span></div>

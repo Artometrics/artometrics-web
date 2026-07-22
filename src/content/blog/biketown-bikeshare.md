@@ -15,7 +15,7 @@ draft: false
 <p class="art-p">Portland’s Biketown system turns everyday movement into timestamped trips. The TidyTuesday extract used here holds <strong>100,000</strong> ride records spanning <strong>2016–2018</strong>, with a median duration of <strong>14.5</strong> minutes and a recorded high of <strong>1,392</strong> minutes — multi-hour outliers that sit far from the commute core.</p>
 <p class="art-p">Recreation is the most common trip type in the file. That single label already hints at the system’s dual life: tourist and leisure loops on one side, workday hops on the other. Duration is the metric that organizes the charts.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">Keep these markers in view as the story unfolds.</p>
+<p class="art-p">A few markers set the scale before the charts.</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">100,000</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">14.5</span><span class="fact-label">Median Duration min</span></div>

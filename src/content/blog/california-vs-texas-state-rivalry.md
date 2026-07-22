@@ -15,7 +15,7 @@ draft: false
 <p class="art-p">California and Texas are the most common American state comparison because each is large enough to stand in for a theory of the country. One is cast as the expensive knowledge-and-culture machine; the other as the growth-and-capacity machine. The framing here scores <strong>2</strong> state systems across <strong>7</strong> rivalry dimensions and <strong>7</strong> export/industry families.</p>
 <p class="art-p">The charts use editorial indices to structure the argument before a full direct-data production pass. They are designed to stop the rivalry from collapsing into a single tax talking point — and to surface the six comparison questions worth asking next.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">Keep these markers in view as the story unfolds.</p>
+<p class="art-p">A few markers set the scale before the charts.</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">2</span><span class="fact-label">State systems compared</span></div>
   <div class="fact-box"><span class="fact-number">7</span><span class="fact-label">Rivalry dimensions scored</span></div>

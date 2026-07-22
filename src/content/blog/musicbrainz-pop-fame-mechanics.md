@@ -16,7 +16,7 @@ draft: false
 <p class="art-p">MusicBrainz supplies the open-data spine for a bigger question: why do some artists become eras while others become moments? Catalog depth, format, genre travel, fame-path durability, and reinvention are five ways that question becomes countable.</p>
 <p class="art-p">Core dumps are <strong>CC0</strong>; MetaBrainz publishes them about <strong>2x/week</strong>. Documentation lists <strong>11</strong> JSON dump entity types. The frame below compares <strong>7</strong> fame paths with <strong>8</strong> artist anchors across <strong>5</strong> charts.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">Keep these markers in view as the story unfolds.</p>
+<p class="art-p">A few markers set the scale before the charts.</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">CC0</span><span class="fact-label">MusicBrainz core database dump license for public-domain metadata</span></div>
   <div class="fact-box"><span class="fact-number">2x/week</span><span class="fact-label">MetaBrainz published dump cadence in public documentation</span></div>

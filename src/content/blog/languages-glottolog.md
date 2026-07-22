@@ -16,7 +16,7 @@ draft: false
 <p class="art-p">The TidyTuesday working file holds <strong>8,612</strong> records. <strong>Africa</strong> is the most common macroarea label, with <strong>2,363</strong> records in that bucket alone. The question is not only how many languages exist — it is where documentation effort, and therefore visibility, concentrates.</p>
 <p class="art-p">A catalog of languages is also a catalog of scholarly attention. Places with denser fieldwork traditions look richer in the table even when the underlying human diversity story is more even — or more endangered — than the row counts imply.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">Keep these markers in view as the story unfolds.</p>
+<p class="art-p">A few markers set the scale before the charts.</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">8,612</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">Africa</span><span class="fact-label">Most common Macroarea</span></div>

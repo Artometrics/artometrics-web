@@ -16,7 +16,7 @@ draft: true
 <p class="art-p">Until a working catalog export is attached, every numeric cell below stays marked TBD. The questions still hold — library size, concentration, and the gap between hype and durable availability — and the charts are stubs waiting for observed rows.</p>
 <p class="art-p">Editors, founders, and analysts who want evidence on how streaming libraries concentrate attention and inventory will find the frame here; the numbers arrive when the CSV does.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">Keep these markers in view as the story unfolds.</p>
+<p class="art-p">A few markers set the scale before the charts.</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">TBD</span><span class="fact-label">Calibration statistic once the dataset is attached</span></div>
   <div class="fact-box"><span class="fact-number">TBD</span><span class="fact-label">Catalog or sample size (observed)</span></div>

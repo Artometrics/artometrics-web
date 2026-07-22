@@ -15,7 +15,7 @@ draft: false
 <p class="art-p">Global alcohol data is often collapsed into a single “drinks per person” headline. The TidyTuesday global alcohol extract keeps the beverage split intact — beer, spirits, and wine servings — across <strong>193</strong> country-level records. Beer is the metric that leads these charts, with a median of <strong>76.0</strong> servings and a recorded high of <strong>376</strong> in Namibia.</p>
 <p class="art-p">That spread is the story. A median of 76 and a maximum of 376 means the top of the beer distribution is not a gentle tail; it is a different consumption regime. Country rankings on beer alone will not match rankings on spirits, and the scatter at the end makes that explicit.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">Keep these markers in view as the story unfolds.</p>
+<p class="art-p">A few markers set the scale before the charts.</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">193</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">76.0</span><span class="fact-label">Median Beer servings</span></div>

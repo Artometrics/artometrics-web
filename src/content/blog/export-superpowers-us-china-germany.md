@@ -14,7 +14,7 @@ draft: false
 <p class="art-p">The useful comparison is not who exports more in a given year. It is what kind of global function each country performs: platform and standards power in the United States, manufacturing scale and supply-chain centrality in China, and industrial precision and machinery trust in Germany. Those roles create different kinds of leverage — and different kinds of dependence.</p>
 <p class="art-p">Start with the scale: <strong>3</strong> export systems compared across <strong>7</strong> identity axes, with <strong>6</strong> dependency risks scored and <strong>8</strong> countries placed on a substitutability map.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">Keep these markers in view as the story unfolds.</p>
+<p class="art-p">A few markers set the scale before the charts.</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">3</span><span class="fact-label">Export superpower systems compared</span></div>
   <div class="fact-box"><span class="fact-number">7</span><span class="fact-label">Export identity axes</span></div>

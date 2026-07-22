@@ -15,7 +15,7 @@ draft: false
 <p class="art-p">Holiday songs have a strange chart life: they return every December, pile up weeks, then vanish until the next season. The TidyTuesday christmas-songs extract used here holds <strong>387</strong> records spanning <strong>1958–2017</strong>, with a median of <strong>8.00</strong> weeks on chart and a high of <strong>20.0</strong>.</p>
 <p class="art-p">Better Days and Believe sit among the weeks-on-chart leaders. Perennial titles — Jingle Bell Rock, All I Want for Christmas Is You, Rockin’ Around the Christmas Tree, White Christmas — define the timeline chart’s recurring cast.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">Keep these markers in view as the story unfolds.</p>
+<p class="art-p">A few markers set the scale before the charts.</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">387</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">8.00</span><span class="fact-label">Median Weeks on chart</span></div>

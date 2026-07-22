@@ -16,7 +16,7 @@ draft: false
 <p class="art-p">The gap between the cheapest and most expensive burger in any given year is not noise. It maps onto wage structures, agricultural policy, taxes, and the raw purchasing power of local currencies. Switzerland’s peak above <strong>$8</strong> encodes a high-wage cost structure; a sub-$2 burger elsewhere tells a symmetrically different story.</p>
 <p class="art-p">Keep the calibration numbers close: the median dollar price across all country-years is <strong>$3.04</strong>, the peak observed is <strong>$8.31</strong>, and the global median rose about <strong>83%</strong> from 2000 to 2020.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">Keep these markers in view as the story unfolds.</p>
+<p class="art-p">A few markers set the scale before the charts.</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">$3.04</span><span class="fact-label">Median dollar price across all countries and years</span></div>
   <div class="fact-box"><span class="fact-number">$8.31</span><span class="fact-label">Peak price — Switzerland at its most expensive</span></div>

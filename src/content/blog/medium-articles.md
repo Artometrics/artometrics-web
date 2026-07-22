@@ -16,7 +16,7 @@ draft: false
 <p class="art-p">A TidyTuesday extract of <strong>78,388</strong> article rows from <strong>2017–2018</strong> puts median reading time at <strong>4.00</strong> minutes. The highest observed reading time hits <strong>100</strong> minutes — a month-long chess-mastery quest that sits at the extreme of the length distribution. <strong>Towards Data Science</strong> is the most common publication label in the file.</p>
 <p class="art-p">The open question is whether longer posts earned more applause. Reading time and claps are related enough to chart, and messy enough that a single correlation will not settle the culture of the platform.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">Keep these markers in view as the story unfolds.</p>
+<p class="art-p">A few markers set the scale before the charts.</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">78,388</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">4.00</span><span class="fact-label">Median Reading time</span></div>

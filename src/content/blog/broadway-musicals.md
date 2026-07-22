@@ -15,7 +15,7 @@ draft: false
 <p class="art-p">Broadway is a price and endurance market: average ticket price on one axis, performances on the other. The TidyTuesday grosses extract used here holds <strong>47,524</strong> rows with a median average ticket price of <strong>$60.2</strong> and a recorded high of <strong>$512</strong>. Springsteen On Broadway tops the show-level price ranking; Broadhurst Theatre is the most common theatre label in the file.</p>
 <p class="art-p">Those two facts already sketch the industry’s split: long-running musical houses with mid-range medians, and event residencies that reset what “a Broadway ticket” can mean.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">Keep these markers in view as the story unfolds.</p>
+<p class="art-p">A few markers set the scale before the charts.</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">47,524</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">60.2</span><span class="fact-label">Median Avg ticket price</span></div>

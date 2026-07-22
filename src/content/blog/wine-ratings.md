@@ -13,7 +13,7 @@ draft: false
 <p class="art-p">A hundred thousand wine ratings are enough to test a dinner-table theory: does price predict critic points? This file’s median score is 88.0; the observed high is 100. Charles Smith 2006 Royal City appears in the fact-box title ranking; the United States is the most common country.</p>
 <p class="art-p">The charts move from title leaders to country spreads to the points-versus-price scatter. The calibration point is 88.0 — the mathematical center of a tasting culture that rarely uses the bottom of the scale.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">Keep these markers in view as the story unfolds.</p>
+<p class="art-p">A few markers set the scale before the charts.</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">100,000</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">88.0</span><span class="fact-label">Median Points</span></div>

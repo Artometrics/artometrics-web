@@ -15,7 +15,7 @@ draft: false
 <p class="art-p">CEO tenure is usually narrated as drama: a firing, a founder exit, a sudden interim. The TidyTuesday departures extract used here holds <strong>9,423</strong> records with a median max tenure (ceodb) of <strong>1.00</strong> and a high of <strong>4.00</strong>. Interim is the most common co-CEO/interim label in the file.</p>
 <p class="art-p">That median of 1.00 is the calibration point: in this coding, many departure spells are short. The charts ask which company names show longer max tenures, how interim versus co-CEO labels differ, and whether tenure fields move together.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">Keep these markers in view as the story unfolds.</p>
+<p class="art-p">A few markers set the scale before the charts.</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">9,423</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">1.00</span><span class="fact-label">Median Max tenure ceodb</span></div>

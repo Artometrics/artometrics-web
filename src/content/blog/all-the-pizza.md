@@ -15,7 +15,7 @@ draft: false
 <p class="art-p">Pizza prices look simple until you try to compare 10,000 menu rows. The Datafiniti pizza extract in TidyTuesday does exactly that: restaurant-level records with price-range fields that reveal how “a slice” and “a specialty pie” live in different economic brackets. The working file holds <strong>10,000</strong> rows.</p>
 <p class="art-p">The median price-range minimum is <strong>0.00</strong> — a signal that many listings encode missing or zeroed floors rather than free pizza. The highest observed price-range minimum is <strong>50.0</strong>, shared at the top by names such as Oregano and Crust Stone Oven Pizza. That ceiling is where tasting-menu and destination pizzerias sit.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">Keep these markers in view as the story unfolds.</p>
+<p class="art-p">A few markers set the scale before the charts.</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">10,000</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">0.00</span><span class="fact-label">Median Price range min</span></div>

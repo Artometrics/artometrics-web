@@ -15,7 +15,7 @@ draft: false
 <p class="art-p">Population is the blunt instrument of international comparison: China and India alone redraw every map. The TidyTuesday CIA World Factbook extract used here holds <strong>259</strong> records with a median population of <strong>5,220,371</strong> and a maximum of <strong>1,355,692,576</strong> for China.</p>
 <p class="art-p">Mean population in the distribution annotation (~32 million) sits far above the median — the classic right skew of a world with a few demographic giants and a long list of small states.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">Keep these markers in view as the story unfolds.</p>
+<p class="art-p">A few markers set the scale before the charts.</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">259</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">5,220,371</span><span class="fact-label">Median Population</span></div>

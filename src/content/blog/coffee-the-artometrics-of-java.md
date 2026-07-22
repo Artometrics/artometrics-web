@@ -13,6 +13,7 @@ draft: false
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">Coffee is the world’s second-largest traded commodity by value, behind only crude oil. More than 125 million people depend on it for their livelihoods. Around 2.25 billion cups are consumed every day. And yet the country that produces the highest-quality coffee on earth — by a significant margin, according to the Coffee Quality Institute’s own grading data — has exactly zero Starbucks locations. That country is Ethiopia.</p>
+<p class="art-p">What follows uses CQI cupping scores and country-level samples to ask a simple question: where does quality concentrate, and how little that map resembles the retail geography of coffee brands.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
 <p class="art-p">Keep these markers in view as the story unfolds.</p>
 <div class="facts-grid">

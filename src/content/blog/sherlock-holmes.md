@@ -13,7 +13,7 @@ draft: false
 <p class="art-p">Conan Doyle’s Sherlock Holmes corpus arrives here as a tokenized text table: 65,958 records and a median word count of 12.0. That median is the calibration point for everything that follows — not novel length in the bookstore sense, but the word-count field as stored in this working extract.</p>
 <p class="art-p">The Adventure of the Beryl Coronet tops the fact-box ranking by word count, while the charted story leaders highlight The Yellow Face at 13.0 against a top-dozen median of 12.0. The canon is famous for plot; this file is interested in textual mass and how that mass concentrates across books.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">Keep these markers in view as the story unfolds.</p>
+<p class="art-p">A few markers set the scale before the charts.</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">65,958</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">12.0</span><span class="fact-label">Median Word count</span></div>

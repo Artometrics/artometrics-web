@@ -14,7 +14,7 @@ draft: false
 <p class="art-p">A TidyTuesday working extract of <strong>100,000</strong> records shows <strong>lcsh</strong> as the most common subject type, with tens of thousands of rows in that bucket. Subject codes such as <strong>PS</strong> recur thousands of times. The catalog is not every book ever written; it is the reusable shelf that copyright expiry, volunteer labor, and classification systems made easy to share.</p>
 <p class="art-p">Reading Gutenberg as a popularity contest misses the point. Reading it as a concentration map of reusable canon is where the data help.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">Keep these markers in view as the story unfolds.</p>
+<p class="art-p">A few markers set the scale before the charts.</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">100,000</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">lcsh</span><span class="fact-label">Most common Subject type</span></div>

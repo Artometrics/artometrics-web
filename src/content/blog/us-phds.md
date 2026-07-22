@@ -13,7 +13,7 @@ draft: false
 <p class="art-p">U.S. doctorate production is a labor-market story told in field counts. This file holds 3,370 records spanning 2008–2017, with a median of 85.0 PhDs and a high of 5,302. Social sciences lead the fact-box field ranking; life sciences appear among the notable broad fields.</p>
 <p class="art-p">The question is which disciplines grew — and which sit above or below the median production level — when doctorate output is measured year by year and field by field. Medians keep a few giant programs from dictating every comparison.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">Keep these markers in view as the story unfolds.</p>
+<p class="art-p">A few markers set the scale before the charts.</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">3,370</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">85.0</span><span class="fact-label">Median N phds</span></div>

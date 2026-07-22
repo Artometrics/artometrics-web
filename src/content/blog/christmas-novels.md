@@ -15,7 +15,7 @@ draft: false
 <p class="art-p">Christmas novels are a seasonal shelf with a long memory: Dickensian ghosts, children’s mysteries, parlor sentimentalism. The TidyTuesday christmas-novels extract used here is small — <strong>35</strong> records — with a median author birthdate of <strong>1,859</strong> and a latest birthdate of <strong>1,891</strong>. Charles Dickens is the most common author label in the file.</p>
 <p class="art-p">Because the sample is tiny, every chart is a map of a curated canon rather than a complete market. Birthdate becomes a proxy for which literary generations stock the holiday shelf.</p>
 <h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p">Keep these markers in view as the story unfolds.</p>
+<p class="art-p">A few markers set the scale before the charts.</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">35</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">1,859</span><span class="fact-label">Median Birthdate</span></div>
