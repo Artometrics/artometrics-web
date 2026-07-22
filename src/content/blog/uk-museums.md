@@ -10,8 +10,10 @@ tags:
   - galleries
 draft: false
 tldr: >-
-  Museum locations and deprivation bands show how institutions map onto
-  inequality.
+  Britain’s museum map is also a map of place. This file places 4,191 museum
+  records against an area deprivation index whose median is 5.00 and whose
+  observed high is 10.0. Blenheim Palace appears among the fact-box notables;
+  the South West of England shows up in the geographic gap analysis.
 keyPoints:
   - '4,191 — Records in the working dataset'
   - 5.00 — Median Area Deprivation index
@@ -19,27 +21,43 @@ keyPoints:
   - Blenheim Palace — Top Name of museum by Area Deprivation index
   - /England/South West (English — Most common Admin area
 faq:
-  - question: What does “Named museums pin the top of the deprivation scale” show?
-    answer: >-
-      Key figure: 4,191 — Records in the working dataset. See the charts and
-      sources in the report for the full evidence.
-  - question: What does “The leaders chart sits at the index ceiling” show?
-    answer: >-
-      Key figure: 5.00 — Median Area Deprivation index. See the charts and
-      sources in the report for the full evidence.
   - question: >-
-      What does “Admin areas spread museums across different deprivation bands”
-      show?
+      What does the data show about named museums pin the top of the deprivation
+      scale?
     answer: >-
-      Key figure: 10.0 — Highest observed Area Deprivation index. See the charts
-      and sources in the report for the full evidence.
+      Key figure: 4,191 — Records in the working dataset. The source is the
+      TidyTuesday release from 2022-11-22 (R for Data Science community). The
+      working file contains 4,191 rows and 35 columns after merging available
+      tables in the…
+  - question: What does the data show about the leaders chart sits at the index ceiling?
+    answer: >-
+      Key figure: 5.00 — Median Area Deprivation index. The source is the
+      TidyTuesday release from 2022-11-22 (R for Data Science community). The
+      working file contains 4,191 rows and 35 columns after merging available
+      tables in the…
+  - question: >-
+      What does the data show about admin areas spread museums across different
+      deprivation bands?
+    answer: >-
+      Key figure: 10.0 — Highest observed Area Deprivation index. The source is
+      the TidyTuesday release from 2022-11-22 (R for Data Science community).
+      The working file contains 4,191 rows and 35 columns after merging
+      available tables in the…
+  - question: >-
+      What does the data show about wiltshire clears the median; Cornwall trails
+      in the South West cut?
+    answer: >-
+      Key figure: Blenheim Palace — Top Name of museum by Area Deprivation
+      index. The source is the TidyTuesday release from 2022-11-22 (R for Data
+      Science community). The working file contains 4,191 rows and 35 columns
+      after merging available tables in the…
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">Britain’s museum map is also a map of place. This file places 4,191 museum records against an area deprivation index whose median is 5.00 and whose observed high is 10.0. Blenheim Palace appears among the fact-box notables; the South West of England shows up in the geographic gap analysis.</p>
 <p class="art-p">The question is not which museum is “best.” It is how cultural institutions sit on a deprivation scale — whether collections cluster in less-deprived areas, and how far named sites and admin areas sit above or below the median index of 5.00.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">4,191</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">5.00</span><span class="fact-label">Median Area Deprivation index</span></div>
@@ -47,7 +65,7 @@ faq:
   <div class="fact-box"><span class="fact-number">Blenheim Palace</span><span class="fact-label">Top Name of museum by Area Deprivation index</span></div>
   <div class="fact-box"><span class="fact-number">/England/South West (English</span><span class="fact-label">Most common Admin area</span></div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The source is the TidyTuesday release from 2022-11-22 (R for Data Science community). The working file contains 4,191 rows and 35 columns after merging available tables in the week folder. Area deprivation index is the primary metric; museum name and admin area are the main categorical axes; DOMUS identifier appears in the scatter.</p>
 <p class="art-p">Medians are used for robustness. Index-style fields are excluded from metric selection. Deprivation scores describe the surrounding area context in the source, not an editorial ranking of museum quality.</p>
 

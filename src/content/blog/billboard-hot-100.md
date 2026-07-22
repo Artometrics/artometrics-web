@@ -10,35 +10,50 @@ tags:
   - music
 draft: false
 tldr: >-
-  Since 1958, most chart-toppers lasted weeks; a few held for months—and
-  streaming rewrote the pattern.
+  The Billboard Hot 100 has published a number-one song every week since August
+  1958. In that time it has absorbed the British Invasion, the disco era, the
+  rise of hip-hop, the collapse of the album format, and the complete
+  restructuring of the music industry by streaming platforms.
 keyPoints:
   - '1,177 — Number-one songs in the dataset (1958–2025)'
   - '2 wks — Median run length — most #1s are fleeting'
   - 19 wks — Longest single run in the dataset
   - The Beatles — Most appearances in the dataset — 20 number-one songs
   - '67 yrs — Span of the dataset: 1958 to 2025'
+  - Taylor Swift — Highest average run length among modern artists
 faq:
-  - question: What does “Run Length Over the Decades” show?
+  - question: What does the data show about run Length Over the Decades?
     answer: >-
-      Key figure: 1,177 — Number-one songs in the dataset (1958–2025). See the
-      charts and sources in the report for the full evidence.
-  - question: What does “Longest Runs Ever” show?
+      Key figure: 1,177 — Number-one songs in the dataset (1958–2025). Start
+      with the scale: 1,177 number-one songs (1958–2025); 2 wks median run
+      length; The Beatles with the most appearances; Taylor Swift with the
+      highest average run length among modern artists.
+  - question: What does the data show about longest Runs Ever?
     answer: >-
-      Key figure: 2 wks — Median run length — most #1s are fleeting. See the
-      charts and sources in the report for the full evidence.
-  - question: What does “How Artists Compare” show?
+      Key figure: 2 wks — Median run length — most #1s are fleeting. Start with
+      the scale: 1,177 number-one songs (1958–2025); 2 wks median run length;
+      The Beatles with the most appearances; Taylor Swift with the highest
+      average run length among modern artists.
+  - question: How Artists Compare?
     answer: >-
-      Key figure: 19 wks — Longest single run in the dataset. See the charts and
-      sources in the report for the full evidence.
+      Key figure: 19 wks — Longest single run in the dataset. Start with the
+      scale: 1,177 number-one songs (1958–2025); 2 wks median run length; The
+      Beatles with the most appearances; Taylor Swift with the highest average
+      run length among modern artists.
+  - question: What does the data show about above Or Below the Line?
+    answer: >-
+      Key figure: The Beatles — Most appearances in the dataset — 20 number-one
+      songs. Start with the scale: 1,177 number-one songs (1958–2025); 2 wks
+      median run length; The Beatles with the most appearances; Taylor Swift
+      with the highest average run length among modern artists.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">The Billboard Hot 100 has published a number-one song every week since August 1958. In that time it has absorbed the British Invasion, the disco era, the rise of hip-hop, the collapse of the album format, and the complete restructuring of the music industry by streaming platforms. Through all of it, the same basic question persists: how long can a song stay at the top?</p>
 <p class="art-p">The file covers 1,177 distinct number-one entries — the full record of Hot 100 dominance through early 2025. The median run lasts just 2 weeks. The record holder, as of this dataset, is 19 weeks. Between those two facts sits the entire history of popular music.</p>
 <p class="art-p">Start with the scale: <strong>1,177</strong> number-one songs (1958–2025); <strong>2 wks</strong> median run length; The Beatles with the most appearances; Taylor Swift with the highest average run length among modern artists.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">1,177</span><span class="fact-label">Number-one songs in the dataset (1958–2025)</span></div>
   <div class="fact-box"><span class="fact-number">2 wks</span><span class="fact-label">Median run length — most #1s are fleeting</span></div>
@@ -47,7 +62,7 @@ faq:
   <div class="fact-box"><span class="fact-number">67 yrs</span><span class="fact-label">Span of the dataset: 1958 to 2025</span></div>
   <div class="fact-box"><span class="fact-number">Taylor Swift</span><span class="fact-label">Highest average run length among modern artists</span></div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The Hot 100 blends sales, radio airplay, and streaming data into a single weekly ranking. This matters for the reading: the rules of what counts have changed substantially over the decades. Before 1991, physical sales data came from store-reported estimates, not actual scan data — which made the chart easier to game. The introduction of SoundScan in 1991 made the chart dramatically more accurate but also temporarily destabilized it as real sales data replaced guesswork. Streaming was added in 2012, and its weight has grown continuously since.</p>
 <p class="art-p">The consequence: a long run in 1965 means something different from a long run in 2025. Streaming amplifies hits — the same song can accumulate streams 24 hours a day, seven days a week, without the bottleneck of radio scheduling. This structural change is visible in the data.</p>
 <h2 id="run-length-over-the-decades" class="anchored">Run Length Over the Decades</h2>

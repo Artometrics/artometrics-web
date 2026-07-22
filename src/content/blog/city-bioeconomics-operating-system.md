@@ -10,8 +10,11 @@ tags:
   - cities-travel
 draft: false
 tldr: >-
-  A geo-economics frame treats cities as layered systems of trade, culture, and
-  infrastructure.
+  A city report should not start with a postcard. It should start with a system
+  map: what the city makes, what it imports, who it serves, what it prices out,
+  what it remembers, and what it cannot replace. this piece creates the frame
+  for the next geo-economics layer of Artometrics. Comparisons can come later;
+  first the site needs a way to ask the right questions of a place.
 keyPoints:
   - '1,667 — Subnational regions in DOSE v2.14 public documentation'
   - 45 — Cities in World Cities Culture Forum 5th edition summaries
@@ -19,27 +22,37 @@ keyPoints:
   - 6 — Diagnostic questions in the city microscope
   - 8 — System layers scored
 faq:
-  - question: What does “System Layers” show?
+  - question: What does the data show about system Layers?
     answer: >-
       Key figure: 1,667 — Subnational regions in DOSE v2.14 public
-      documentation. See the charts and sources in the report for the full
-      evidence.
-  - question: What does “Goods and Services” show?
+      documentation. Start with the scale: 1,667 — Subnational regions in DOSE
+      v2.14 public documentation; and 45 — Cities in World Cities Culture Forum
+      5th edition summaries.
+  - question: What does the data show about goods and Services?
     answer: >-
       Key figure: 45 — Cities in World Cities Culture Forum 5th edition
-      summaries. See the charts and sources in the report for the full evidence.
-  - question: What does “History Layers” show?
+      summaries. Start with the scale: 1,667 — Subnational regions in DOSE v2.14
+      public documentation; and 45 — Cities in World Cities Culture Forum 5th
+      edition summaries.
+  - question: What does the data show about history Layers?
     answer: >-
-      Key figure: 1,100+ — Datasets in DataSF public portal summaries. See the
-      charts and sources in the report for the full evidence.
+      Key figure: 1,100+ — Datasets in DataSF public portal summaries. Start
+      with the scale: 1,667 — Subnational regions in DOSE v2.14 public
+      documentation; and 45 — Cities in World Cities Culture Forum 5th edition
+      summaries.
+  - question: What does the data show about city Fingerprint?
+    answer: >-
+      Key figure: 6 — Diagnostic questions in the city microscope. Start with
+      the scale: 1,667 — Subnational regions in DOSE v2.14 public documentation;
+      and 45 — Cities in World Cities Culture Forum 5th edition summaries.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">A city report should not start with a postcard. It should start with a system map: what the city makes, what it imports, who it serves, what it prices out, what it remembers, and what it cannot replace.</p>
 <p class="art-p">this piece creates the frame for the next geo-economics layer of Artometrics. Comparisons can come later; first the site needs a way to ask the right questions of a place.</p>
 <p class="art-p">Start with the scale: <strong>1,667</strong> — Subnational regions in DOSE v2.14 public documentation; and <strong>45</strong> — Cities in World Cities Culture Forum 5th edition summaries.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">1,667</span><span class="fact-label">Subnational regions in DOSE v2.14 public documentation</span></div>
   <div class="fact-box"><span class="fact-number">45</span><span class="fact-label">Cities in World Cities Culture Forum 5th edition summaries</span></div>
@@ -47,7 +60,7 @@ faq:
   <div class="fact-box"><span class="fact-number">6</span><span class="fact-label">Diagnostic questions in the city microscope</span></div>
   <div class="fact-box"><span class="fact-number">8</span><span class="fact-label">System layers scored</span></div>
   </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The source stack includes BEA regional GDP, Commerce metro exports, DOSE global subnational output, Census ACS, World Cities Culture Forum, and local Socrata portals such as DataSF or NYC Open Data.</p>
 <p class="art-p">The charts use transparent editorial indices to define the report structure. A production pass should replace each index with a direct API or CSV aggregate.</p>
 <h2 id="system-layers" class="anchored">System Layers</h2>

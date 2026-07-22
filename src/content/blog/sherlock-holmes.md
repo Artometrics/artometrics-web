@@ -7,39 +7,60 @@ heroImage: /images/content/articles/sherlock-holmes/hero.png
 tags:
   - books
 draft: false
-tldr: Text-length analysis of Sherlock Holmes stories through Conan’s corpus.
+tldr: >-
+  Conan Doyle’s Sherlock Holmes corpus arrives here as a tokenized text table:
+  65,958 records and a median word count of 12.0. That median is the calibration
+  point for everything that follows — not novel length in the bookstore sense,
+  but the word-count field as stored in this working extract.
 keyPoints:
   - '65,958 — Records in the working dataset'
   - 12.0 — Median Word count
   - 18.0 — Highest observed Word count
   - The Adventure of the Beryl C — Top Book by Word count
 faq:
-  - question: What does “Story-level medians sit in a narrow band” show?
+  - question: What does the data show about story-level medians sit in a narrow band?
     answer: >-
-      Key figure: 65,958 — Records in the working dataset. See the charts and
-      sources in the report for the full evidence.
-  - question: What does “Even the leaders barely clear the file median” show?
+      Key figure: 65,958 — Records in the working dataset. The source is the
+      TidyTuesday release from 2025-11-18 (R for Data Science community). The
+      working file contains 65,958 rows and 4 columns after merging available
+      tables in the…
+  - question: >-
+      What does the data show about even the leaders barely clear the file
+      median?
     answer: >-
-      Key figure: 12.0 — Median Word count. See the charts and sources in the
-      report for the full evidence.
-  - question: 'What does “Median 12.0, mean 10.9 — a mostly symmetric shape” show?'
+      Key figure: 12.0 — Median Word count. The source is the TidyTuesday
+      release from 2025-11-18 (R for Data Science community). The working file
+      contains 65,958 rows and 4 columns after merging available tables in the…
+  - question: >-
+      What does the data show about median 12.0, mean 10.9 — a mostly symmetric
+      shape?
     answer: >-
-      Key figure: 18.0 — Highest observed Word count. See the charts and sources
-      in the report for the full evidence.
+      Key figure: 18.0 — Highest observed Word count. The source is the
+      TidyTuesday release from 2025-11-18 (R for Data Science community). The
+      working file contains 65,958 rows and 4 columns after merging available
+      tables in the…
+  - question: >-
+      What does the data show about five books account for a third of aggregate
+      word count?
+    answer: >-
+      Key figure: The Adventure of the Beryl C — Top Book by Word count. The
+      source is the TidyTuesday release from 2025-11-18 (R for Data Science
+      community). The working file contains 65,958 rows and 4 columns after
+      merging available tables in the…
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">Conan Doyle’s Sherlock Holmes corpus arrives here as a tokenized text table: 65,958 records and a median word count of 12.0. That median is the calibration point for everything that follows — not novel length in the bookstore sense, but the word-count field as stored in this working extract.</p>
 <p class="art-p">The Adventure of the Beryl Coronet tops the fact-box ranking by word count, while the charted story leaders highlight The Yellow Face at 13.0 against a top-dozen median of 12.0. The canon is famous for plot; this file is interested in textual mass and how that mass concentrates across books.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">65,958</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">12.0</span><span class="fact-label">Median Word count</span></div>
   <div class="fact-box"><span class="fact-number">18.0</span><span class="fact-label">Highest observed Word count</span></div>
   <div class="fact-box"><span class="fact-number">The Adventure of the Beryl C</span><span class="fact-label">Top Book by Word count</span></div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The source is the TidyTuesday release from 2025-11-18 (R for Data Science community). The working file contains 65,958 rows and 4 columns after merging available tables in the week folder. Book titles are the primary categorical axis; word count is the primary numeric metric.</p>
 <p class="art-p">Medians are used because text-length fields can skew. The distribution chart also reports a mean of 10.9 against the median of 12.0, a relatively symmetric shape for this extract. Index-style fields stay out of metric selection.</p>
 

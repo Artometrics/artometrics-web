@@ -10,8 +10,9 @@ tags:
   - movies-tv
 draft: false
 tldr: >-
-  Title fields, ratings, and box-office references explain how films accumulate
-  attention.
+  Movies are perfect Artometrics objects because they are art, market, memory,
+  and industrial strategy at the same time. A title page on IMDb is where those
+  forces leave public footprints: genres, runtimes, ratings, and vote counts.
 keyPoints:
   - 7 — Core IMDb non-commercial TSV files publicly documented
   - Daily — IMDb dataset refresh cadence
@@ -19,26 +20,36 @@ keyPoints:
   - 162 — Avatar runtime in minutes
   - 69% — Illustrative sequel/franchise share of top hits in the 2020s
 faq:
-  - question: What does “Attention versus Quality” show?
+  - question: What does the data show about attention versus Quality?
     answer: >-
       Key figure: 7 — Core IMDb non-commercial TSV files publicly documented.
-      See the charts and sources in the report for the full evidence.
-  - question: What does “Sequelization” show?
+      Seven core TSV files are publicly documented; the refresh cadence is
+      daily. Up to three genres can appear per title-basics row. Avatar’s
+      runtime sits at 162 minutes. An…
+  - question: What does the data show about sequelization?
     answer: >-
-      Key figure: Daily — IMDb dataset refresh cadence. See the charts and
-      sources in the report for the full evidence.
-  - question: What does “Runtime and Event Status” show?
+      Key figure: Daily — IMDb dataset refresh cadence. Seven core TSV files are
+      publicly documented; the refresh cadence is daily. Up to three genres can
+      appear per title-basics row. Avatar’s runtime sits at 162 minutes. An…
+  - question: What does the data show about runtime and Event Status?
     answer: >-
-      Key figure: 3 — Genres can be listed per IMDb title basics row. See the
-      charts and sources in the report for the full evidence.
+      Key figure: 3 — Genres can be listed per IMDb title basics row. Seven core
+      TSV files are publicly documented; the refresh cadence is daily. Up to
+      three genres can appear per title-basics row. Avatar’s runtime sits at 162
+      minutes. An…
+  - question: What does the data show about platforms?
+    answer: >-
+      Key figure: 162 — Avatar runtime in minutes. Seven core TSV files are
+      publicly documented; the refresh cadence is daily. Up to three genres can
+      appear per title-basics row. Avatar’s runtime sits at 162 minutes. An…
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">Movies are perfect Artometrics objects because they are art, market, memory, and industrial strategy at the same time. A title page on IMDb is where those forces leave public footprints: genres, runtimes, ratings, and vote counts.</p>
 <p class="art-p">The question is what a blockbuster is mathematically — attention, rating, runtime, franchise memory, platform behavior, and studio grammar stacked into one cultural event. The pieces below treat IMDb’s non-commercial dataset architecture as a scoreboard for that grammar, with box-office and platform references for context.</p>
 <p class="art-p">Seven core TSV files are publicly documented; the refresh cadence is daily. Up to three genres can appear per title-basics row. Avatar’s runtime sits at 162 minutes. An illustrative 69% sequel/franchise share among top hits in the 2020s frames the sequelization chart; five charts carry the argument.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">7</span><span class="fact-label">Core IMDb non-commercial TSV files publicly documented</span></div>
   <div class="fact-box"><span class="fact-number">Daily</span><span class="fact-label">IMDb dataset refresh cadence</span></div>
@@ -46,7 +57,7 @@ faq:
   <div class="fact-box"><span class="fact-number">162</span><span class="fact-label">Avatar runtime in minutes</span></div>
   <div class="fact-box"><span class="fact-number">69%</span><span class="fact-label">Illustrative sequel/franchise share of top hits in the 2020s</span></div>
   </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">IMDb publishes non-commercial TSV datasets including title basics, ratings, crew, principals, episodes, and names. The fields make it possible to join titles, genres, years, runtimes, ratings, and vote counts.</p>
 <p class="art-p">Because IMDb licensing has specific terms, This piece uses IMDb as a source architecture and includes a commercial-use caution. A production version should verify licensing or swap in fully open TMDb/Wikidata/Box Office Mojo-compatible sources.</p>
 <h2 id="attention-versus-quality" class="anchored">Attention versus Quality</h2>

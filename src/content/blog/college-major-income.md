@@ -10,8 +10,10 @@ tags:
   - business
 draft: false
 tldr: >-
-  Earnings and unemployment by major show where degrees pay off and where risk
-  is higher.
+  College majors are sold as income stories. The TidyTuesday recent-graduates
+  extract used here also tracks how many alumni land in low-wage jobs. Across
+  173 majors, the median low-wage-job count is 1,231 , with a high of 48,207 in
+  Psychology. Engineering is the most common major category label in the file.
 keyPoints:
   - 173 — Records in the working dataset
   - '1,231 — Median Low wage jobs'
@@ -19,27 +21,39 @@ keyPoints:
   - PSYCHOLOGY — Top Major by Low wage jobs
   - Engineering — Most common Major category
 faq:
-  - question: What does “Psychology Leads Low-Wage Job Counts by a Wide Margin” show?
-    answer: >-
-      Key figure: 173 — Records in the working dataset. See the charts and
-      sources in the report for the full evidence.
-  - question: What does “The Top Dozen’s Median Is Still Enormous” show?
-    answer: >-
-      Key figure: 1,231 — Median Low wage jobs. See the charts and sources in
-      the report for the full evidence.
   - question: >-
-      What does “Humanities and Business Categories Sit Higher Than Engineering”
-      show?
+      What does the data show about psychology Leads Low-Wage Job Counts by a
+      Wide Margin?
     answer: >-
-      Key figure: 48,207 — Highest observed Low wage jobs. See the charts and
-      sources in the report for the full evidence.
+      Key figure: 173 — Records in the working dataset. The source is the
+      TidyTuesday release from 2018-10-16 (recent-grads.csv). After cleaning,
+      173 major rows remain.
+  - question: What does the data show about the Top Dozen’s Median Is Still Enormous?
+    answer: >-
+      Key figure: 1,231 — Median Low wage jobs. The source is the TidyTuesday
+      release from 2018-10-16 (recent-grads.csv). After cleaning, 173 major rows
+      remain.
+  - question: >-
+      What does the data show about humanities and Business Categories Sit
+      Higher Than Engineering?
+    answer: >-
+      Key figure: 48,207 — Highest observed Low wage jobs. The source is the
+      TidyTuesday release from 2018-10-16 (recent-grads.csv). After cleaning,
+      173 major rows remain.
+  - question: >-
+      What does the data show about gaps Confirm Humanities and Business Above
+      the Median?
+    answer: >-
+      Key figure: PSYCHOLOGY — Top Major by Low wage jobs. The source is the
+      TidyTuesday release from 2018-10-16 (recent-grads.csv). After cleaning,
+      173 major rows remain.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">College majors are sold as income stories. The TidyTuesday recent-graduates extract used here also tracks how many alumni land in low-wage jobs. Across <strong>173</strong> majors, the median low-wage-job count is <strong>1,231</strong>, with a high of <strong>48,207</strong> in Psychology. Engineering is the most common major category label in the file.</p>
 <p class="art-p">That framing flips the usual prestige script: the chart stack leads with exposure to low-wage employment, then pairs it with unemployment rates. Pay ceilings matter; so does the size of the floor.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">173</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">1,231</span><span class="fact-label">Median Low wage jobs</span></div>
@@ -47,7 +61,7 @@ faq:
   <div class="fact-box"><span class="fact-number">PSYCHOLOGY</span><span class="fact-label">Top Major by Low wage jobs</span></div>
   <div class="fact-box"><span class="fact-number">Engineering</span><span class="fact-label">Most common Major category</span></div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The source is the TidyTuesday release from 2018-10-16 (recent-grads.csv). After cleaning, 173 major rows remain.</p>
 <p class="art-p">Low wage jobs is the primary ranked metric; major category provides distributional context; unemployment rate appears in the scatter. Charts are Plotly JSON with PNG fallbacks.</p>
 <h2 id="psychology-leads-low-wage-job-counts-by-a-wide-margin" class="anchored">Psychology Leads Low-Wage Job Counts by a Wide Margin</h2>

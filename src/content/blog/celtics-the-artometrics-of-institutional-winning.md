@@ -8,28 +8,52 @@ heroImage: >-
 tags:
   - sports
 draft: false
-tldr: Boston’s championship inheritance still shapes every modern season.
+tldr: >-
+  Every Boston Celtics season opens under an impossible ledger. Eighteen NBA
+  championships—the league record entering 2025—mean that a good year is never
+  only compared with Miami or Milwaukee. It is compared with Bill Russell’s
+  ghosts, with Bird’s mid-1980s certainty, and with the institutional claim that
+  banners are the franchise’s normal weather. That claim was built early.
 keyPoints:
   - '18 — NBA championships, the league record entering 2025'
   - 11 — Titles won during the Bill Russell era
   - 2024 — Most recent championship
   - 22 — Years between the 1986 and 2008 titles
   - 5 — Defining Celtics title eras used in this report
+  - 2 — Modern Finals appearances by the Tatum/Brown core through 2024
 faq:
-  - question: What does “The 1960s are still the gravitational center” show?
-    answer: >-
-      Key figure: 18 — NBA championships, the league record entering 2025. See
-      the charts and sources in the report for the full evidence.
-  - question: What does “Boston and Los Angeles define the league’s summit” show?
-    answer: >-
-      Key figure: 11 — Titles won during the Bill Russell era. See the charts
-      and sources in the report for the full evidence.
   - question: >-
-      What does “Russell converted chances; later eras inherited the burden”
-      show?
+      What does the data show about the 1960s are still the gravitational
+      center?
     answer: >-
-      Key figure: 2024 — Most recent championship. See the charts and sources in
-      the report for the full evidence.
+      Key figure: 18 — NBA championships, the league record entering 2025. What
+      follows reads Boston as an institution of expectation: how densely the
+      titles stacked, how the franchise sits against the rest of the league’s
+      ceiling, how eras converted…
+  - question: >-
+      What does the data show about boston and Los Angeles define the league’s
+      summit?
+    answer: >-
+      Key figure: 11 — Titles won during the Bill Russell era. What follows
+      reads Boston as an institution of expectation: how densely the titles
+      stacked, how the franchise sits against the rest of the league’s ceiling,
+      how eras converted…
+  - question: >-
+      What does the data show about russell converted chances; later eras
+      inherited the burden?
+    answer: >-
+      Key figure: 2024 — Most recent championship. What follows reads Boston as
+      an institution of expectation: how densely the titles stacked, how the
+      franchise sits against the rest of the league’s ceiling, how eras
+      converted…
+  - question: >-
+      What does the data show about droughts do not erase the claim—they test
+      it?
+    answer: >-
+      Key figure: 22 — Years between the 1986 and 2008 titles. What follows
+      reads Boston as an institution of expectation: how densely the titles
+      stacked, how the franchise sits against the rest of the league’s ceiling,
+      how eras converted…
 ---
 <div id="quarto-content">
 <main class="art-article-main">
@@ -37,7 +61,8 @@ faq:
 <p class="art-p">That claim was built early. Eleven of those titles arrived in the Russell era alone, a concentration dense enough to turn winning into identity rather than achievement. Later cores inherited the mythology even when the conversion rate fell. The twenty-two years between 1986 and 2008 proved that even a privileged franchise can wander; the 2024 title proved that the pressure cycle still closes when a roster finally matches the archive’s demand.</p>
 <p class="art-p">What follows reads Boston as an institution of expectation: how densely the titles stacked, how the franchise sits against the rest of the league’s ceiling, how eras converted Finals chances into rings, how droughts rewrote the emotional calendar, and whether the Tatum–Brown core has reopened the old pipeline.</p>
 
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">18</span><span class="fact-label">NBA championships, the league record entering 2025</span></div>
   <div class="fact-box"><span class="fact-number">11</span><span class="fact-label">Titles won during the Bill Russell era</span></div>
@@ -47,7 +72,7 @@ faq:
   <div class="fact-box"><span class="fact-number">2</span><span class="fact-label">Modern Finals appearances by the Tatum/Brown core through 2024</span></div>
 </div>
 
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The charts draw on public NBA championship records, Basketball Reference franchise summaries, and Sports Reference Finals appearance totals. Era buckets follow the players most responsible for each title window—Russell, Bird, Pierce/Garnett/Allen, and the current Tatum–Brown core—so the conversion story can be read as institutional chapters rather than a flat career list.</p>
 <p class="art-p">An expert fan asks whether Boston’s identity is still earned. The useful Artometrics question sits one layer higher: how does historical surplus change the meaning of modern results? A Finals appearance that would crown another franchise can feel unfinished in green, because the archive still sets the standard.</p>
 

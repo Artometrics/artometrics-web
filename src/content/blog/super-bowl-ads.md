@@ -7,33 +7,55 @@ heroImage: /images/content/articles/super-bowl-ads/hero.png
 tags:
   - business
 draft: false
-tldr: Ad-spot data track which commercials captured attention after the whistle.
+tldr: >-
+  Super Bowl ads do not end when the whistle blows. They migrate to YouTube,
+  where view counts become a second scoreboard. This working file covers 247 ad
+  records spanning 2006–2021, with a median view count of 41,379 and a ceiling
+  of 176,373,378. Doritos is the top brand by view count in the fact boxes;
+  youtube#video is the dominant media kind.
 keyPoints:
   - 247 — Records in the working dataset
   - '41,379 — Median View count'
   - '176,373,378 — Highest observed View count'
   - Doritos — Top Brand by View count
   - 2006–2021 — Year span covered in the file
+  - youtube#video — Most common Kind
 faq:
-  - question: What does “Median views fell as the archive got denser” show?
+  - question: What does the data show about median views fell as the archive got denser?
     answer: >-
-      Key figure: 247 — Records in the working dataset. See the charts and
-      sources in the report for the full evidence.
-  - question: What does “NFL leads the brand ladder on YouTube views” show?
+      Key figure: 247 — Records in the working dataset. The source is the
+      TidyTuesday release from 2021-03-02 (R for Data Science community). The
+      working file contains 247 rows and 26 columns after merging available
+      tables in the week…
+  - question: What does the data show about nFL leads the brand ladder on YouTube views?
     answer: >-
-      Key figure: 41,379 — Median View count. See the charts and sources in the
-      report for the full evidence.
-  - question: What does “Almost everything in the file is a YouTube video” show?
+      Key figure: 41,379 — Median View count. The source is the TidyTuesday
+      release from 2021-03-02 (R for Data Science community). The working file
+      contains 247 rows and 26 columns after merging available tables in the
+      week…
+  - question: >-
+      What does the data show about almost everything in the file is a YouTube
+      video?
     answer: >-
-      Key figure: 176,373,378 — Highest observed View count. See the charts and
-      sources in the report for the full evidence.
+      Key figure: 176,373,378 — Highest observed View count. The source is the
+      TidyTuesday release from 2021-03-02 (R for Data Science community). The
+      working file contains 247 rows and 26 columns after merging available
+      tables in the week…
+  - question: >-
+      What does the data show about five brands hold eighty-seven percent of
+      aggregate views?
+    answer: >-
+      Key figure: Doritos — Top Brand by View count. The source is the
+      TidyTuesday release from 2021-03-02 (R for Data Science community). The
+      working file contains 247 rows and 26 columns after merging available
+      tables in the week…
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">Super Bowl ads do not end when the whistle blows. They migrate to YouTube, where view counts become a second scoreboard. This working file covers 247 ad records spanning 2006–2021, with a median view count of 41,379 and a ceiling of 176,373,378. Doritos is the top brand by view count in the fact boxes; youtube#video is the dominant media kind.</p>
 <p class="art-p">The interpretive move is simple: treat post-game streaming attention as its own economy. Broadcast reach buys the first audience. YouTube decides which spots keep circulating years later. The charts track that second life — trend, leaders, kind, concentration, and the link between views and likes.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">247</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">41,379</span><span class="fact-label">Median View count</span></div>
@@ -42,7 +64,7 @@ faq:
   <div class="fact-box"><span class="fact-number">2006–2021</span><span class="fact-label">Year span covered in the file</span></div>
   <div class="fact-box"><span class="fact-number">youtube#video</span><span class="fact-label">Most common Kind</span></div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The source is the TidyTuesday release from 2021-03-02 (R for Data Science community). The working file contains 247 rows and 26 columns after merging available tables in the week folder. View count is the primary metric; like count appears in the scatter; brand and kind are the main categorical axes.</p>
 <p class="art-p">Medians are preferred because ad view counts are extremely skewed — a handful of viral spots dwarf the typical upload. Index-style fields are excluded from metric selection so charts describe attention, not row order.</p>
 

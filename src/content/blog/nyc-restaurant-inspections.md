@@ -7,34 +7,48 @@ heroImage: /images/content/articles/nyc-restaurant-inspections/hero.png
 tags:
   - cities-travel
 draft: false
-tldr: Restaurant grades across New York show how scores distribute by cuisine.
+tldr: >-
+  New York City restaurant inspections turn hygiene into a public grade. Behind
+  the A/B/C stickers is a numeric score distribution that is far more skewed
+  than the cheerful window cards suggest. A TidyTuesday working extract of
+  100,000 records puts median score at 15.0 and the highest observed score at
+  156 .
 keyPoints:
   - '100,000 — Records in the working dataset'
   - 15.0 — Median Score
   - 156 — Highest observed Score
   - NOUS LES AMIS RESTAURANT & B — Top Dba by Score
   - 1900–2018 — Year span covered in the file
+  - A — Most common Grade
 faq:
-  - question: What does “How scores moved over time” show?
+  - question: How scores moved over time?
     answer: >-
-      Key figure: 100,000 — Records in the working dataset. See the charts and
-      sources in the report for the full evidence.
-  - question: What does “Who sits at the top of violation scores” show?
+      Key figure: 100,000 — Records in the working dataset. Higher scores here
+      mean more violation points, not better food. That inversion is easy to
+      forget once letter grades take over the conversation.
+  - question: Who sits at the top of violation scores?
     answer: >-
-      Key figure: 15.0 — Median Score. See the charts and sources in the report
-      for the full evidence.
-  - question: What does “Scores by grade” show?
+      Key figure: 15.0 — Median Score. Higher scores here mean more violation
+      points, not better food. That inversion is easy to forget once letter
+      grades take over the conversation.
+  - question: What does the data show about scores by grade?
     answer: >-
-      Key figure: 156 — Highest observed Score. See the charts and sources in
-      the report for the full evidence.
+      Key figure: 156 — Highest observed Score. Higher scores here mean more
+      violation points, not better food. That inversion is easy to forget once
+      letter grades take over the conversation.
+  - question: Who beats the median — and who trails?
+    answer: >-
+      Key figure: NOUS LES AMIS RESTAURANT & B — Top Dba by Score. Higher scores
+      here mean more violation points, not better food. That inversion is easy
+      to forget once letter grades take over the conversation.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">New York City restaurant inspections turn hygiene into a public grade. Behind the A/B/C stickers is a numeric score distribution that is far more skewed than the cheerful window cards suggest.</p>
 <p class="art-p">A TidyTuesday working extract of <strong>100,000</strong> records puts median score at <strong>15.0</strong> and the highest observed score at <strong>156</strong>. <strong>NOUS LES AMIS RESTAURANT &amp; B</strong> leads the DBA ranking by score in the fact box, grade <strong>A</strong> is the most common label, and the year span in the file runs from a placeholder-early <strong>1900</strong> through <strong>2018</strong> — with the dense modern inspection era carrying most of the signal.</p>
 <p class="art-p">Higher scores here mean more violation points, not better food. That inversion is easy to forget once letter grades take over the conversation.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">100,000</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">15.0</span><span class="fact-label">Median Score</span></div>
@@ -43,7 +57,7 @@ faq:
   <div class="fact-box"><span class="fact-number">1900–2018</span><span class="fact-label">Year span covered in the file</span></div>
   <div class="fact-box"><span class="fact-number">A</span><span class="fact-label">Most common Grade</span></div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The source is the TidyTuesday release built from NYC restaurant inspection open data via the R for Data Science community. The working file contains 100,000 rows after sampling or assembly — DBA names, boroughs, scores, grades, and inspection dates among the fields.</p>
 <p class="art-p">Medians matter because a thin tail of high-violation restaurants pulls means upward. Charts export as Plotly JSON with PNG fallbacks. Grades are derived from scores under city rules; treating them as independent aesthetics misses the point system underneath.</p>
 <h2 id="how-the-pattern-changed-over-time" class="anchored">How scores moved over time</h2>

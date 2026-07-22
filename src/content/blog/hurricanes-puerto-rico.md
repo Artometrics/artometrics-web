@@ -10,8 +10,11 @@ tags:
   - cities-travel
 draft: false
 tldr: >-
-  Hurricane records compare wind, deaths, and frequency for the island’s most
-  damaging storms.
+  In late summer 2017, the Atlantic hurricane season forced a brutal comparative
+  question into public view: which places absorbed the worst of the storm
+  window, and how did Puerto Rico's readings sit beside Florida and Texas? A
+  compact TidyTuesday file of 153 records tracks values across that season's
+  geography. The median reading is 703 ; the highest observed value hits 5,072 .
 keyPoints:
   - 153 — Records in the working dataset
   - 703 — Median Value
@@ -19,26 +22,36 @@ keyPoints:
   - Texas — Top State by Value
   - 2017–2017 — Year span covered in the file
 faq:
-  - question: What does “Timeline across states” show?
+  - question: What does the data show about timeline across states?
     answer: >-
-      Key figure: 153 — Records in the working dataset. See the charts and
-      sources in the report for the full evidence.
-  - question: What does “Who sits at the top” show?
+      Key figure: 153 — Records in the working dataset. This is not a full
+      climatology of Caribbean cyclones. It is a season-slice that lets three
+      hard-hit places be read side by side — intensity, concentration, and
+      timing included.
+  - question: Who sits at the top?
     answer: >-
-      Key figure: 703 — Median Value. See the charts and sources in the report
-      for the full evidence.
-  - question: What does “How values are spread” show?
+      Key figure: 703 — Median Value. This is not a full climatology of
+      Caribbean cyclones. It is a season-slice that lets three hard-hit places
+      be read side by side — intensity, concentration, and timing included.
+  - question: How values are spread?
     answer: >-
-      Key figure: 5,072 — Highest observed Value. See the charts and sources in
-      the report for the full evidence.
+      Key figure: 5,072 — Highest observed Value. This is not a full climatology
+      of Caribbean cyclones. It is a season-slice that lets three hard-hit
+      places be read side by side — intensity, concentration, and timing
+      included.
+  - question: What does the data show about concentration of impact?
+    answer: >-
+      Key figure: Texas — Top State by Value. This is not a full climatology of
+      Caribbean cyclones. It is a season-slice that lets three hard-hit places
+      be read side by side — intensity, concentration, and timing included.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">In late summer 2017, the Atlantic hurricane season forced a brutal comparative question into public view: which places absorbed the worst of the storm window, and how did Puerto Rico's readings sit beside Florida and Texas?</p>
 <p class="art-p">A compact TidyTuesday file of <strong>153</strong> records tracks values across that season's geography. The median reading is <strong>703</strong>; the highest observed value hits <strong>5,072</strong>. Texas leads the state-level totals in the working extract, but the timeline chart is where Puerto Rico's distinct peak pattern becomes visible.</p>
 <p class="art-p">This is not a full climatology of Caribbean cyclones. It is a season-slice that lets three hard-hit places be read side by side — intensity, concentration, and timing included.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">153</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">703</span><span class="fact-label">Median Value</span></div>
@@ -46,7 +59,7 @@ faq:
   <div class="fact-box"><span class="fact-number">Texas</span><span class="fact-label">Top State by Value</span></div>
   <div class="fact-box"><span class="fact-number">2017–2017</span><span class="fact-label">Year span covered in the file</span></div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The source is the TidyTuesday release from 2018-06-19 (R for Data Science community). The working file contains 153 rows and 4 columns after cleaning — a narrow table built for comparison across states and territories in the 2017 window.</p>
 <p class="art-p">Medians are preferred for robustness. Charts ship as Plotly JSON with PNG fallbacks. Because the year span in the extract collapses to <strong>2017–2017</strong>, conclusions are about that season's comparative geography, not about multi-decade hurricane climatology.</p>
 <h2 id="timeline" class="anchored">Timeline across states</h2>

@@ -4,6 +4,8 @@ import { Wrapper } from "@/components/Wrapper";
 import { ArticleBody } from "@/components/ArticleBody";
 import { ArticleActions } from "@/components/ArticleActions";
 import { TldrBox } from "@/components/TldrBox";
+import { MagazineCard } from "@/components/MagazineCard";
+import { CarouselRail } from "@/components/CarouselRail";
 import { PageSeo } from "@/components/PageSeo";
 import { Fonts } from "@/constants/Colors";
 import { useTheme } from "@/lib/theme";
@@ -14,6 +16,7 @@ import {
   getAdjacentPosts,
   getBlogPost,
   getBlogPosts,
+  getRecommendedPosts,
   primarySection,
 } from "@/lib/content";
 import { SECTION_META } from "@/data/sections";
@@ -55,9 +58,8 @@ export default function ReportScreen() {
   const tldr = (post as { tldr?: string | null }).tldr ?? null;
   const keyPoints = (post as { keyPoints?: string[] }).keyPoints ?? [];
   const faq = (post as { faq?: { question: string; answer: string }[] }).faq ?? [];
-  const related = getBlogPosts()
-    .filter((p) => p.slug !== post.slug && primarySection(p.tags) === section)
-    .slice(0, 4);
+  const recommended = getRecommendedPosts(post.slug, 12);
+  const cardW = Math.min(240, Math.max(180, width * 0.55));
 
   const jsonLd = [
     {
@@ -143,16 +145,17 @@ export default function ReportScreen() {
           ))}
         </Wrapper>
       ) : null}
-      {related.length ? (
-        <Wrapper variant="prose" style={styles.related}>
-          <Text style={[styles.faqTitle, { color: colors.text }]}>Related reports</Text>
-          {related.map((r) => (
-            <Link key={r.slug} href={`/${r.slug}`} asChild>
-              <Text style={[styles.relatedLink, { color: colors.accent }]}>{r.title}</Text>
-            </Link>
-          ))}
-        </Wrapper>
+
+      {recommended.length ? (
+        <View style={styles.recommendedBlock}>
+          <CarouselRail title="Recommended reads" href="/blog">
+            {recommended.map((r) => (
+              <MagazineCard key={r.slug} post={r} variant="portrait" width={cardW} />
+            ))}
+          </CarouselRail>
+        </View>
       ) : null}
+
       <Wrapper variant="prose" style={[styles.adjacent, { borderTopColor: colors.text }]}>
         {adjacent.previous ? (
           <Link href={adjacent.previous.href as `/${string}`}>
@@ -224,8 +227,7 @@ const styles = StyleSheet.create({
   },
   faqQ: { fontSize: 16, fontWeight: "700", lineHeight: 22 },
   faqA: { fontSize: 15, lineHeight: 22 },
-  related: { paddingBottom: 24, gap: 10 },
-  relatedLink: { fontSize: 16, lineHeight: 24, fontWeight: "600" },
+  recommendedBlock: { marginTop: 8, marginBottom: 8 },
   adjacent: {
     flexDirection: "row",
     justifyContent: "space-between",

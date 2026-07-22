@@ -10,40 +10,56 @@ tags:
   - business
 draft: false
 tldr: >-
-  Factbook indicators compare nations on size and wealth—where scale and
-  prosperity align or diverge.
+  Population is the blunt instrument of international comparison: China and
+  India alone redraw every map. The TidyTuesday CIA World Factbook extract used
+  here holds 259 records with a median population of 5,220,371 and a maximum of
+  1,355,692,576 for China.
 keyPoints:
   - 259 — Records in the working dataset
   - '5,220,371 — Median Population'
   - '1,355,692,576 — Highest observed Population'
   - China — Top Country by Population
 faq:
-  - question: What does “A Handful of Giants Dominate Headcount” show?
+  - question: What does the data show about a Handful of Giants Dominate Headcount?
     answer: >-
-      Key figure: 259 — Records in the working dataset. See the charts and
-      sources in the report for the full evidence.
-  - question: What does “Even the Top Dozen Has a Steep Internal Drop” show?
+      Key figure: 259 — Records in the working dataset. The source is the
+      TidyTuesday release from 2024-10-22 (cia_factbook.csv). After cleaning,
+      259 rows remain.
+  - question: >-
+      What does the data show about even the Top Dozen Has a Steep Internal
+      Drop?
     answer: >-
-      Key figure: 5,220,371 — Median Population. See the charts and sources in
-      the report for the full evidence.
-  - question: What does “Most Countries Sit in the Small-Population Mass” show?
+      Key figure: 5,220,371 — Median Population. The source is the TidyTuesday
+      release from 2024-10-22 (cia_factbook.csv). After cleaning, 259 rows
+      remain.
+  - question: >-
+      What does the data show about most Countries Sit in the Small-Population
+      Mass?
     answer: >-
-      Key figure: 1,355,692,576 — Highest observed Population. See the charts
-      and sources in the report for the full evidence.
+      Key figure: 1,355,692,576 — Highest observed Population. The source is the
+      TidyTuesday release from 2024-10-22 (cia_factbook.csv). After cleaning,
+      259 rows remain.
+  - question: >-
+      What does the data show about the Top Five Already Hold Most of the
+      People?
+    answer: >-
+      Key figure: China — Top Country by Population. The source is the
+      TidyTuesday release from 2024-10-22 (cia_factbook.csv). After cleaning,
+      259 rows remain.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">Population is the blunt instrument of international comparison: China and India alone redraw every map. The TidyTuesday CIA World Factbook extract used here holds <strong>259</strong> records with a median population of <strong>5,220,371</strong> and a maximum of <strong>1,355,692,576</strong> for China.</p>
 <p class="art-p">Mean population in the distribution annotation (~32 million) sits far above the median — the classic right skew of a world with a few demographic giants and a long list of small states.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">259</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">5,220,371</span><span class="fact-label">Median Population</span></div>
   <div class="fact-box"><span class="fact-number">1,355,692,576</span><span class="fact-label">Highest observed Population</span></div>
   <div class="fact-box"><span class="fact-number">China</span><span class="fact-label">Top Country by Population</span></div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The source is the TidyTuesday release from 2024-10-22 (cia_factbook.csv). After cleaning, 259 rows remain.</p>
 <p class="art-p">Population is the primary ranked metric; birth rate appears in the joint scatter. Charts are Plotly JSON with PNG fallbacks.</p>
 <h2 id="a-handful-of-giants-dominate-headcount" class="anchored">A Handful of Giants Dominate Headcount</h2>

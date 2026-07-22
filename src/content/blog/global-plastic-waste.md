@@ -10,8 +10,11 @@ tags:
   - business
 draft: false
 tldr: >-
-  Country-level plastic generation and mismanagement rates show where leakage
-  concentrates.
+  Plastic waste is usually discussed as a moral story about litter. The data
+  make it an economic geography story: who generates waste, who mismanages it,
+  and how those patterns sit against income. A TidyTuesday compilation spanning
+  country-year records puts 22,204 rows on the table. Median GDP per capita in
+  the working file is 8,447 (PPP, constant 2011 international dollars).
 keyPoints:
   - '22,204 — Records in the working dataset'
   - '8,447 — Median GDP per capita, PPP (constant 2011 international $) (Rate)'
@@ -23,28 +26,38 @@ keyPoints:
     (Rate)
   - 1700–2017 — Year span covered in the file
 faq:
-  - question: What does “How prosperity moved over time” show?
+  - question: How prosperity moved over time?
     answer: >-
-      Key figure: 22,204 — Records in the working dataset. See the charts and
-      sources in the report for the full evidence.
-  - question: What does “Who sits at the top of income” show?
+      Key figure: 22,204 — Records in the working dataset. Income alone does not
+      settle the mismanagement question. Rich places can fund collection
+      systems; poorer coastal places can become leakage hotspots even at lower
+      per-person…
+  - question: Who sits at the top of income?
     answer: >-
       Key figure: 8,447 — Median GDP per capita, PPP (constant 2011
-      international $) (Rate). See the charts and sources in the report for the
-      full evidence.
-  - question: What does “How income is spread” show?
+      international $) (Rate). Income alone does not settle the mismanagement
+      question. Rich places can fund collection systems; poorer coastal places
+      can become leakage hotspots even at lower per-person…
+  - question: How income is spread?
     answer: >-
       Key figure: 135,319 — Highest observed GDP per capita, PPP (constant 2011
-      international $) (Rate). See the charts and sources in the report for the
-      full evidence.
+      international $) (Rate). Income alone does not settle the mismanagement
+      question. Rich places can fund collection systems; poorer coastal places
+      can become leakage hotspots even at lower per-person…
+  - question: What does the data show about leader trends?
+    answer: >-
+      Key figure: Macao — Top Entity by GDP per capita, PPP (constant 2011
+      international $) (Rate). Income alone does not settle the mismanagement
+      question. Rich places can fund collection systems; poorer coastal places
+      can become leakage hotspots even at lower per-person…
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">Plastic waste is usually discussed as a moral story about litter. The data make it an economic geography story: who generates waste, who mismanages it, and how those patterns sit against income.</p>
 <p class="art-p">A TidyTuesday compilation spanning country-year records puts <strong>22,204</strong> rows on the table. Median GDP per capita in the working file is <strong>8,447</strong> (PPP, constant 2011 international dollars). The highest observed rate reaches <strong>135,319</strong>, with Macao at the top of that income ranking. The year span runs from <strong>1700</strong> to <strong>2017</strong> — long enough to watch modern prosperity and modern waste arrive together.</p>
 <p class="art-p">Income alone does not settle the mismanagement question. Rich places can fund collection systems; poorer coastal places can become leakage hotspots even at lower per-person generation. The charts below separate those layers.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">22,204</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">8,447</span><span class="fact-label">Median GDP per capita, PPP (constant 2011 international $) (Rate)</span></div>
@@ -52,7 +65,7 @@ faq:
   <div class="fact-box"><span class="fact-number">Macao</span><span class="fact-label">Top Entity by GDP per capita, PPP (constant 2011 international $) (Rate)</span></div>
   <div class="fact-box"><span class="fact-number">1700–2017</span><span class="fact-label">Year span covered in the file</span></div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The source is the TidyTuesday release from 2019-05-21 (R for Data Science community). The working file contains 22,204 rows and 7 columns after assembling the week's tables — including GDP per capita (PPP) and per-capita mismanaged plastic waste in kilograms per person per day.</p>
 <p class="art-p">Medians are used where distributions skew. Charts export as Plotly JSON with PNG fallbacks. Country names, missing years, and sparse early coverage mean the long historical span is denser for income than for waste metrics; read early centuries as context for prosperity, not as a continuous waste census.</p>
 <h2 id="how-the-pattern-changed-over-time" class="anchored">How prosperity moved over time</h2>

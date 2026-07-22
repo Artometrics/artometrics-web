@@ -10,34 +10,46 @@ tags:
   - movies-tv
 draft: false
 tldr: >-
-  Ratings across tens of thousands of horror films ask whether quality rose with
-  volume.
+  Horror catalogs grow faster than any critic can watch. The open question is
+  whether vote averages rose with that volume — or whether more titles simply
+  filled the shelf with middling scores. TMDB-style metadata for horror-tagged
+  films yields 32,540 records from 1950–2022 . The median vote average is 4.00 ;
+  the highest observed average is 10.0 .
 keyPoints:
   - '32,540 — Records in the working dataset'
   - 4.00 — Median Vote average
   - 10.0 — Highest observed Vote average
   - Piranha Women — Top Title by Vote average
   - 1950–2022 — Year span covered in the file
+  - Horror — Most common Primary genre
 faq:
-  - question: What does “How the pattern changed over time” show?
+  - question: How the pattern changed over time?
     answer: >-
-      Key figure: 32,540 — Records in the working dataset. See the charts and
-      sources in the report for the full evidence.
-  - question: What does “Who sits at the top” show?
+      Key figure: 32,540 — Records in the working dataset. The file merges TMDB
+      metadata for thousands of horror-tagged films: ratings, budgets, runtimes,
+      and genre tags from 1950 through 2022, released via TidyTuesday.
+  - question: Who sits at the top?
     answer: >-
-      Key figure: 4.00 — Median Vote average. See the charts and sources in the
-      report for the full evidence.
-  - question: What does “How the field is spread” show?
+      Key figure: 4.00 — Median Vote average. The file merges TMDB metadata for
+      thousands of horror-tagged films: ratings, budgets, runtimes, and genre
+      tags from 1950 through 2022, released via TidyTuesday.
+  - question: How the field is spread?
     answer: >-
-      Key figure: 10.0 — Highest observed Vote average. See the charts and
-      sources in the report for the full evidence.
+      Key figure: 10.0 — Highest observed Vote average. The file merges TMDB
+      metadata for thousands of horror-tagged films: ratings, budgets, runtimes,
+      and genre tags from 1950 through 2022, released via TidyTuesday.
+  - question: Who beats the median — and who trails?
+    answer: >-
+      Key figure: Piranha Women — Top Title by Vote average. The file merges
+      TMDB metadata for thousands of horror-tagged films: ratings, budgets,
+      runtimes, and genre tags from 1950 through 2022, released via TidyTuesday.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">Horror catalogs grow faster than any critic can watch. The open question is whether vote averages rose with that volume — or whether more titles simply filled the shelf with middling scores.</p>
 <p class="art-p">TMDB-style metadata for horror-tagged films yields <strong>32,540</strong> records from <strong>1950–2022</strong>. The median vote average is <strong>4.00</strong>; the highest observed average is <strong>10.0</strong>. Horror is the most common primary genre label, as expected in a horror-tagged extract.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">32,540</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">4.00</span><span class="fact-label">Median Vote average</span></div>
@@ -46,7 +58,7 @@ faq:
   <div class="fact-box"><span class="fact-number">1950–2022</span><span class="fact-label">Year span covered in the file</span></div>
   <div class="fact-box"><span class="fact-number">Horror</span><span class="fact-label">Most common Primary genre</span></div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The file merges TMDB metadata for thousands of horror-tagged films: ratings, budgets, runtimes, and genre tags from 1950 through 2022, released via TidyTuesday.</p>
 <p class="art-p">Charts ship as Plotly JSON with PNG fallbacks. Medians handle skew better than means. Perfect 10.0 scores often sit on thin vote counts — treat the ceiling as a signal about sparse ratings, not universal critical consensus.</p>
 

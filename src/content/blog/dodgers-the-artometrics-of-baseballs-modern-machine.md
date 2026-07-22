@@ -11,27 +11,51 @@ tags:
   - sports
 draft: false
 tldr: >-
-  Los Angeles turned payroll, development, and depth into recurring October
-  access.
+  The Los Angeles Dodgers are the closest thing modern baseball has to an
+  industrial contender. Rosters change, stars change, and October heartbreak
+  changes shape, but the regular-season floor keeps reappearing. Eight World
+  Series titles and roughly twenty-five National League pennants place the
+  franchise among the sport’s historic elite—without Yankee-scale monopoly.
 keyPoints:
   - 8 — World Series championships in franchise history
   - 25 — Approximate National League pennants
   - 111 — Regular-season wins in 2022
   - 32 — Years between the 1988 and 2020 titles
   - 12 — Straight postseason appearances from 2013 through 2024
+  - 2024 — Most recent championship
 faq:
-  - question: What does “Los Angeles is built to manufacture October chances” show?
+  - question: >-
+      What does the data show about los Angeles is built to manufacture October
+      chances?
     answer: >-
-      Key figure: 8 — World Series championships in franchise history. See the
-      charts and sources in the report for the full evidence.
-  - question: What does “Historically elite—without Yankee-scale monopoly” show?
+      Key figure: 8 — World Series championships in franchise history. What
+      follows charts that machine: pennants by decade, title context among
+      historic clubs, the modern 90-win floor, spending against October markers,
+      and the long shadow of the 1988-to-2020 ring gap.
+  - question: >-
+      What does the data show about historically elite—without Yankee-scale
+      monopoly?
     answer: >-
-      Key figure: 25 — Approximate National League pennants. See the charts and
-      sources in the report for the full evidence.
-  - question: 'What does “Since the 2010s, 90-win baseball has looked normal” show?'
+      Key figure: 25 — Approximate National League pennants. What follows charts
+      that machine: pennants by decade, title context among historic clubs, the
+      modern 90-win floor, spending against October markers, and the long shadow
+      of the 1988-to-2020 ring gap.
+  - question: >-
+      What does the data show about since the 2010s, 90-win baseball has looked
+      normal?
     answer: >-
-      Key figure: 111 — Regular-season wins in 2022. See the charts and sources
-      in the report for the full evidence.
+      Key figure: 111 — Regular-season wins in 2022. What follows charts that
+      machine: pennants by decade, title context among historic clubs, the
+      modern 90-win floor, spending against October markers, and the long shadow
+      of the 1988-to-2020 ring gap.
+  - question: >-
+      What does the data show about spending is structural—October still breaks
+      machines?
+    answer: >-
+      Key figure: 32 — Years between the 1988 and 2020 titles. What follows
+      charts that machine: pennants by decade, title context among historic
+      clubs, the modern 90-win floor, spending against October markers, and the
+      long shadow of the 1988-to-2020 ring gap.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
@@ -39,7 +63,8 @@ faq:
 <p class="art-p">The better label may be access machine: an organization designed to survive variance until variance finally cooperates. Twelve straight postseason appearances from 2013 through 2024, a 111-win regular season in 2022, and championships in 2020 and 2024 all point at the same infrastructure—depth, development, payroll, and market power working as one system.</p>
 <p class="art-p">What follows charts that machine: pennants by decade, title context among historic clubs, the modern 90-win floor, spending against October markers, and the long shadow of the 1988-to-2020 ring gap.</p>
 
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">8</span><span class="fact-label">World Series championships in franchise history</span></div>
   <div class="fact-box"><span class="fact-number">25</span><span class="fact-label">Approximate National League pennants</span></div>
@@ -49,7 +74,7 @@ faq:
   <div class="fact-box"><span class="fact-number">2024</span><span class="fact-label">Most recent championship</span></div>
 </div>
 
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">Public Baseball Reference franchise records, Lahman-style season summaries, and widely cited payroll-rank histories feed the charts. The emphasis is franchise identity and era structure rather than player-level WAR modeling. The shortened 2020 season is left unadjusted and read separately in the prose.</p>
 <p class="art-p">Analysts focus on depth and conversion. Fans feel the distance between six months of excellence and surviving October. The gap between those experiences is the Dodgers’ modern story.</p>
 

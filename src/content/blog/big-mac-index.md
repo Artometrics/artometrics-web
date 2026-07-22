@@ -10,8 +10,11 @@ tags:
   - business
 draft: false
 tldr: >-
-  Global burger prices illustrate how currency and wages shape the real cost of
-  everyday goods.
+  A Big Mac is the same product everywhere on Earth — same bun, same patties,
+  same sauce. That sameness is exactly what makes its price interesting. The
+  Economist’s Big Mac Index, running since 1986, converts local burger prices
+  into US dollars to reveal how far currencies stray from purchasing power
+  parity.
 keyPoints:
   - $3.04 — Median dollar price across all countries and years
   - $8.31 — Peak price — Switzerland at its most expensive
@@ -19,26 +22,38 @@ keyPoints:
   - Norway — Highest average dollar price over the full 20-year span
   - '20 yrs — Timespan: 2000 through 2020'
 faq:
-  - question: What does “Global Price Trend” show?
+  - question: What does the data show about global Price Trend?
     answer: >-
       Key figure: $3.04 — Median dollar price across all countries and years.
-      See the charts and sources in the report for the full evidence.
-  - question: What does “Most Expensive Countries” show?
+      Keep the calibration numbers close: the median dollar price across all
+      country-years is $3.04 , the peak observed is $8.31 , and the global
+      median rose about 83% from 2000 to 2020.
+  - question: What does the data show about most Expensive Countries?
     answer: >-
-      Key figure: $8.31 — Peak price — Switzerland at its most expensive. See
-      the charts and sources in the report for the full evidence.
-  - question: What does “How Prices Spread” show?
+      Key figure: $8.31 — Peak price — Switzerland at its most expensive. Keep
+      the calibration numbers close: the median dollar price across all
+      country-years is $3.04 , the peak observed is $8.31 , and the global
+      median rose about 83% from 2000 to 2020.
+  - question: How Prices Spread?
     answer: >-
       Key figure: 83% — Price increase from 2000 to 2020 at the global median.
-      See the charts and sources in the report for the full evidence.
+      Keep the calibration numbers close: the median dollar price across all
+      country-years is $3.04 , the peak observed is $8.31 , and the global
+      median rose about 83% from 2000 to 2020.
+  - question: What does the data show about tracking the Leaders?
+    answer: >-
+      Key figure: Norway — Highest average dollar price over the full 20-year
+      span. Keep the calibration numbers close: the median dollar price across
+      all country-years is $3.04 , the peak observed is $8.31 , and the global
+      median rose about 83% from 2000 to 2020.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">A Big Mac is the same product everywhere on Earth — same bun, same patties, same sauce. That sameness is exactly what makes its price interesting. The Economist’s Big Mac Index, running since 1986, converts local burger prices into US dollars to reveal how far currencies stray from purchasing power parity. The working extract covers <strong>1,386</strong> observations spanning <strong>2000 through 2020</strong>.</p>
 <p class="art-p">The gap between the cheapest and most expensive burger in any given year is not noise. It maps onto wage structures, agricultural policy, taxes, and the raw purchasing power of local currencies. Switzerland’s peak above <strong>$8</strong> encodes a high-wage cost structure; a sub-$2 burger elsewhere tells a symmetrically different story.</p>
 <p class="art-p">Keep the calibration numbers close: the median dollar price across all country-years is <strong>$3.04</strong>, the peak observed is <strong>$8.31</strong>, and the global median rose about <strong>83%</strong> from 2000 to 2020.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">$3.04</span><span class="fact-label">Median dollar price across all countries and years</span></div>
   <div class="fact-box"><span class="fact-number">$8.31</span><span class="fact-label">Peak price — Switzerland at its most expensive</span></div>
@@ -46,7 +61,7 @@ faq:
   <div class="fact-box"><span class="fact-number">Norway</span><span class="fact-label">Highest average dollar price over the full 20-year span</span></div>
   <div class="fact-box"><span class="fact-number">20 yrs</span><span class="fact-label">Timespan: 2000 through 2020</span></div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">Purchasing power parity (PPP) theory says exchange rates should eventually converge so identical goods cost the same everywhere. In practice they rarely do — tariffs, non-tradeable costs (rent, labor), and monetary policy all interfere. The Big Mac Index sidesteps complex econometric models: if a burger costs less in dollar terms than the U.S. price implies, that currency is often read as undervalued; if it costs more, overvalued.</p>
 <p class="art-p">The TidyTuesday snapshot (2020-12-22) supplies the country-year price series used here. The index is deliberately blunt: better at identifying structural divergence than at predicting short-run FX moves.</p>
 <h2 id="global-price-trend" class="anchored">Global Price Trend</h2>

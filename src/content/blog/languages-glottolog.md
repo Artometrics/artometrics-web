@@ -10,37 +10,52 @@ tags:
   - culture
 draft: false
 tldr: >-
-  Glottolog family data measure how uneven language diversity is at the family
-  level.
+  Linguistic diversity is often imagined as a smooth global gradient.
+  Glottolog-style language inventories show something lumpier: documentation
+  clusters by macroarea, and a long tail of languages appear once while a short
+  head of names and identifiers repeats. The TidyTuesday working file holds
+  8,612 records.
 keyPoints:
   - '8,612 — Records in the working dataset'
   - Africa — Most common Macroarea
 faq:
-  - question: What does “A geographically uneven landscape” show?
+  - question: What does the data show about a geographically uneven landscape?
     answer: >-
-      Key figure: 8,612 — Records in the working dataset. See the charts and
-      sources in the report for the full evidence.
-  - question: What does “Who sits at the top of name repetition” show?
+      Key figure: 8,612 — Records in the working dataset. A catalog of languages
+      is also a catalog of scholarly attention. Places with denser fieldwork
+      traditions look richer in the table even when the underlying human
+      diversity story is…
+  - question: Who sits at the top of name repetition?
     answer: >-
-      Key figure: Africa — Most common Macroarea. See the charts and sources in
-      the report for the full evidence.
-  - question: What does “Regional concentration” show?
+      Key figure: Africa — Most common Macroarea. A catalog of languages is also
+      a catalog of scholarly attention. Places with denser fieldwork traditions
+      look richer in the table even when the underlying human diversity story
+      is…
+  - question: What does the data show about regional concentration?
     answer: >-
-      Glottolog family data measure how uneven language diversity is at the
-      family level.
+      A catalog of languages is also a catalog of scholarly attention. Places
+      with denser fieldwork traditions look richer in the table even when the
+      underlying human diversity story is more even — or more endangered — than
+      the row counts imply.
+  - question: What does the data show about most languages appear once?
+    answer: >-
+      A catalog of languages is also a catalog of scholarly attention. Places
+      with denser fieldwork traditions look richer in the table even when the
+      underlying human diversity story is more even — or more endangered — than
+      the row counts imply.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">Linguistic diversity is often imagined as a smooth global gradient. Glottolog-style language inventories show something lumpier: documentation clusters by macroarea, and a long tail of languages appear once while a short head of names and identifiers repeats.</p>
 <p class="art-p">The TidyTuesday working file holds <strong>8,612</strong> records. <strong>Africa</strong> is the most common macroarea label, with <strong>2,363</strong> records in that bucket alone. The question is not only how many languages exist — it is where documentation effort, and therefore visibility, concentrates.</p>
 <p class="art-p">A catalog of languages is also a catalog of scholarly attention. Places with denser fieldwork traditions look richer in the table even when the underlying human diversity story is more even — or more endangered — than the row counts imply.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">8,612</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">Africa</span><span class="fact-label">Most common Macroarea</span></div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The source is the TidyTuesday release from 2025-12-23 (R for Data Science community). The working file contains 8,612 rows and 9 columns after cleaning — language names, identifiers, macroarea labels, and related Glottolog metadata.</p>
 <p class="art-p">Because many fields are categorical rather than scored, the analysis leans on counts, concentration, and repetition rather than medians of a single numeric quality metric. Charts export as Plotly JSON with PNG fallbacks.</p>
 <h2 id="landscape" class="anchored">A geographically uneven landscape</h2>

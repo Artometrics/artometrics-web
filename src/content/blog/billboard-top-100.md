@@ -7,39 +7,57 @@ heroImage: /images/content/articles/billboard-top-100/hero.png
 tags:
   - music
 draft: false
-tldr: Large-scale Hot 100 data show how rankings compress at the summit.
+tldr: >-
+  The Billboard Hot 100 is a weekly ranking machine: 100 positions, endlessly
+  refreshed. The TidyTuesday billboard extract used here holds 100,000 song-week
+  rows, with a median week position of 50.0 — exactly mid-chart — and a highest
+  observed week position of 100 (the bottom rung).
 keyPoints:
   - '100,000 — Records in the working dataset'
   - 50.0 — Median Week position
   - 100 — Highest observed Week position
   - Down By The River — Top Song by Week position
 faq:
-  - question: What does “Song-Level Position Averages Crowd the Bottom Rung” show?
+  - question: >-
+      What does the data show about song-Level Position Averages Crowd the
+      Bottom Rung?
     answer: >-
-      Key figure: 100,000 — Records in the working dataset. See the charts and
-      sources in the report for the full evidence.
-  - question: What does “Leaders by Week Position Are a Flat Elite” show?
+      Key figure: 100,000 — Records in the working dataset. The source is the
+      TidyTuesday release from 2021-09-14 (billboard.csv). After cleaning, the
+      analysis sample contains 100,000 records.
+  - question: What does the data show about leaders by Week Position Are a Flat Elite?
     answer: >-
-      Key figure: 50.0 — Median Week position. See the charts and sources in the
-      report for the full evidence.
-  - question: What does “Weekly Positions Fill the Chart Almost Uniformly” show?
+      Key figure: 50.0 — Median Week position. The source is the TidyTuesday
+      release from 2021-09-14 (billboard.csv). After cleaning, the analysis
+      sample contains 100,000 records.
+  - question: >-
+      What does the data show about weekly Positions Fill the Chart Almost
+      Uniformly?
     answer: >-
-      Key figure: 100 — Highest observed Week position. See the charts and
-      sources in the report for the full evidence.
+      Key figure: 100 — Highest observed Week position. The source is the
+      TidyTuesday release from 2021-09-14 (billboard.csv). After cleaning, the
+      analysis sample contains 100,000 records.
+  - question: >-
+      What does the data show about concentration Among Songs Is Mechanical at
+      First?
+    answer: >-
+      Key figure: Down By The River — Top Song by Week position. The source is
+      the TidyTuesday release from 2021-09-14 (billboard.csv). After cleaning,
+      the analysis sample contains 100,000 records.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">The Billboard Hot 100 is a weekly ranking machine: 100 positions, endlessly refreshed. The TidyTuesday billboard extract used here holds <strong>100,000</strong> song-week rows, with a median week position of <strong>50.0</strong> — exactly mid-chart — and a highest observed week position of <strong>100</strong> (the bottom rung).</p>
 <p class="art-p">That median of 50 is almost tautological in a full 1–100 ranking, which is why the interesting questions shift to concentration, re-entries (instance), and which titles spend time at the chart’s edges. “Down By The River” appears among the fact-box leaders for week position in this working file.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">100,000</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">50.0</span><span class="fact-label">Median Week position</span></div>
   <div class="fact-box"><span class="fact-number">100</span><span class="fact-label">Highest observed Week position</span></div>
   <div class="fact-box"><span class="fact-number">Down By The River</span><span class="fact-label">Top Song by Week position</span></div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The source is the TidyTuesday release from 2021-09-14 (billboard.csv). After cleaning, the analysis sample contains 100,000 records.</p>
 <p class="art-p">Week position is the primary metric; lower numbers are better ranks in Billboard’s native scale, but several charts here rank the numeric position field directly as stored. Charts are Plotly JSON with PNG fallbacks.</p>
 <h2 id="song-level-position-averages-crowd-the-bottom-rung" class="anchored">Song-Level Position Averages Crowd the Bottom Rung</h2>

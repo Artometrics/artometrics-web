@@ -7,33 +7,51 @@ heroImage: /images/content/articles/netflix-engagement/hero.png
 tags:
   - movies-tv
 draft: false
-tldr: Engagement metrics Netflix reports show which titles absorbed the most hours.
+tldr: >-
+  Netflix’s public engagement tables measure attention in hours viewed — a blunt
+  but useful currency for which titles absorbed the most time on the service.
+  The working file covers 27,803 records from 2010–2025 . Median hours viewed
+  sit at 2,500,000 ; the highest observed value is 840,300,000 . Squid Game:
+  Season 2 tops the title ranking in the extract.
 keyPoints:
   - '27,803 — Records in the working dataset'
   - '2,500,000 — Median Hours viewed'
   - '840,300,000 — Highest observed Hours viewed'
   - 'Squid Game: Season 2 // 오징어 — Top Title by Hours viewed'
   - 2010–2025 — Year span covered in the file
+  - 1_What_We_Watched_A_Netflix_ — Most common Source
 faq:
-  - question: What does “How the pattern changed over time” show?
+  - question: How the pattern changed over time?
     answer: >-
-      Key figure: 27,803 — Records in the working dataset. See the charts and
-      sources in the report for the full evidence.
-  - question: What does “Who sits at the top” show?
+      Key figure: 27,803 — Records in the working dataset. Engagement reports
+      from Netflix’s weekly viewership releases — hours viewed, runtime, and
+      global availability flags — arrive here via the TidyTuesday 2025-07-29
+      shows table.
+  - question: Who sits at the top?
     answer: >-
-      Key figure: 2,500,000 — Median Hours viewed. See the charts and sources in
-      the report for the full evidence.
-  - question: What does “How the field is spread” show?
+      Key figure: 2,500,000 — Median Hours viewed. Engagement reports from
+      Netflix’s weekly viewership releases — hours viewed, runtime, and global
+      availability flags — arrive here via the TidyTuesday 2025-07-29 shows
+      table.
+  - question: How the field is spread?
     answer: >-
-      Key figure: 840,300,000 — Highest observed Hours viewed. See the charts
-      and sources in the report for the full evidence.
+      Key figure: 840,300,000 — Highest observed Hours viewed. Engagement
+      reports from Netflix’s weekly viewership releases — hours viewed, runtime,
+      and global availability flags — arrive here via the TidyTuesday 2025-07-29
+      shows table.
+  - question: Who beats the median — and who trails?
+    answer: >-
+      Key figure: Squid Game: Season 2 // 오징어 — Top Title by Hours viewed.
+      Engagement reports from Netflix’s weekly viewership releases — hours
+      viewed, runtime, and global availability flags — arrive here via the
+      TidyTuesday 2025-07-29 shows table.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">Netflix’s public engagement tables measure attention in hours viewed — a blunt but useful currency for which titles absorbed the most time on the service.</p>
 <p class="art-p">The working file covers <strong>27,803</strong> records from <strong>2010–2025</strong>. Median hours viewed sit at <strong>2,500,000</strong>; the highest observed value is <strong>840,300,000</strong>. Squid Game: Season 2 tops the title ranking in the extract.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">27,803</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">2,500,000</span><span class="fact-label">Median Hours viewed</span></div>
@@ -42,7 +60,7 @@ faq:
   <div class="fact-box"><span class="fact-number">2010–2025</span><span class="fact-label">Year span covered in the file</span></div>
   <div class="fact-box"><span class="fact-number">1_What_We_Watched_A_Netflix_</span><span class="fact-label">Most common Source</span></div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">Engagement reports from Netflix’s weekly viewership releases — hours viewed, runtime, and global availability flags — arrive here via the TidyTuesday 2025-07-29 shows table.</p>
 <p class="art-p">Source labels in the file distinguish engagement-report windows. Medians dampen mega-hit skew. Charts export as Plotly JSON with PNG fallbacks.</p>
 

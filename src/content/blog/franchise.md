@@ -10,8 +10,11 @@ tags:
   - movies-tv
 draft: false
 tldr: >-
-  Revenue maps for more than 100 franchises show where valuable IP earns across
-  media.
+  The global media industry runs on intellectual property — and a surprisingly
+  small number of franchises account for most of the money. The TidyTuesday 2019
+  media franchises dataset covers 107 properties, each with at least $4 billion
+  in estimated lifetime revenue as of mid-2019. Every franchise here has already
+  cleared a threshold that most IP never approaches.
 keyPoints:
   - >-
     $91B — Pokémon lifetime revenue — the highest-grossing media franchise ever
@@ -28,30 +31,45 @@ keyPoints:
   - >-
     92 yrs — Span of the dataset — from Winnie the Pooh (1923) to Monster Strike
     (2015)
+  - >-
+    ~61% — Share of all tracked revenue that comes from Merchandise, Licensing
+    &amp; Retail — the dominant stream across the entire dataset
 faq:
-  - question: What does “Top 20 Franchises By Revenue” show?
+  - question: What does the data show about top 20 Franchises By Revenue?
     answer: >-
       Key figure: $91B — Pokémon lifetime revenue — the highest-grossing media
       franchise ever recorded, more than the MCU, Star Wars, and Harry Potter
-      put together. See the charts and sources in the report for the full
-      evidence.
-  - question: What does “Revenue Per Year of Existence” show?
+      put together. The TidyTuesday 2019 media franchises dataset covers 107
+      properties, each with at least $4B in estimated lifetime revenue as of
+      mid-2019. The figures are sourced from Wikipedia’s…
+  - question: What does the data show about revenue Per Year of Existence?
     answer: >-
       Key figure: 107 — Unique franchises in the dataset — every one of them has
-      already cleared at least $4B in lifetime revenue. See the charts and
-      sources in the report for the full evidence.
-  - question: 'What does “The Disney Empire, Consolidated” show?'
+      already cleared at least $4B in lifetime revenue. The TidyTuesday 2019
+      media franchises dataset covers 107 properties, each with at least $4B in
+      estimated lifetime revenue as of mid-2019. The figures are sourced from
+      Wikipedia’s…
+  - question: 'What does the data show about the Disney Empire, Consolidated?'
     answer: >-
       Key figure: $4B+ — Minimum threshold for inclusion — most IP that has ever
-      existed never gets close to this number. See the charts and sources in the
-      report for the full evidence.
+      existed never gets close to this number. The TidyTuesday 2019 media
+      franchises dataset covers 107 properties, each with at least $4B in
+      estimated lifetime revenue as of mid-2019. The figures are sourced from
+      Wikipedia’s…
+  - question: What this file cannot tell you?
+    answer: >-
+      Key figure: 8 — Revenue categories tracked: Merchandise, Video Games, Box
+      Office, Home Video, Comic/Manga, Music, TV, and Book Sales. The
+      TidyTuesday 2019 media franchises dataset covers 107 properties, each with
+      at least $4B in estimated lifetime revenue as of mid-2019. The figures are
+      sourced from Wikipedia’s…
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">The global media industry runs on intellectual property — and a surprisingly small number of franchises account for most of the money. The TidyTuesday 2019 media franchises dataset covers 107 properties, each with at least $4 billion in estimated lifetime revenue as of mid-2019. Every franchise here has already cleared a threshold that most IP never approaches. This is not a representative sample of the media industry. It is a map of its ceiling.</p>
 <p class="art-p">Three charts, three angles on the same structural question: where does franchise money actually come from, which properties generate it most efficiently, and what does the ownership picture look like when subsidiaries stop looking like separate competitors? The answers are Merchandise, Pokémon, and Disney — in that order.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box">
     <span class="fact-number">$91B</span>
@@ -78,7 +96,7 @@ faq:
     <span class="fact-label">Share of all tracked revenue that comes from Merchandise, Licensing &amp; Retail — the dominant stream across the entire dataset</span>
   </div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The TidyTuesday 2019 media franchises dataset covers 107 properties, each with at least $4B in estimated lifetime revenue as of mid-2019. The figures are sourced from Wikipedia’s list of highest-grossing media franchises and compiled into eight revenue categories. Every franchise here has already cleared a threshold that most IP never approaches — this is not a representative sample of the media industry. It is a map of its ceiling.</p>
 <p class="art-p">The $4B minimum is not a small number. Most films, shows, games, and books that have ever existed never come close to it. Being in this dataset means a property has sustained commercial relevance across multiple revenue streams, often across multiple decades. The franchises below that line — culturally significant, critically acclaimed, beloved — simply aren’t here. What remains is the top tier: IP that didn’t just succeed but compounded.</p>
 <p class="art-p">Revenue here is a lifetime estimate, not an annual figure. A franchise created in 1923 has had a century to accumulate; one created in 2013 has had six years. That asymmetry shapes every chart. Chart 1 shows the raw totals and what they’re made of. Chart 2 corrects for age by normalizing revenue per year — a fairer fight. Chart 3 strips away the ownership labels and asks what the leaderboard actually looks like when subsidiaries are folded into their parent companies.</p>

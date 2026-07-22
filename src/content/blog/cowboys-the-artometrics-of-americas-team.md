@@ -10,27 +10,48 @@ tags:
   - sports
 draft: false
 tldr: >-
-  Dallas remains the NFL’s clearest split between global brand power and an
-  aging postseason engine.
+  The Dallas Cowboys are no longer just a football team. They are a national
+  attention market. Every season begins with disproportionate coverage,
+  disproportionate expectation, and the same unresolved question: when does
+  brand gravity become football gravity again? Five Super Bowl titles built the
+  mythology. The last one arrived in the 1995 season.
 keyPoints:
   - 5 — Super Bowl championships
   - 1995 — Most recent Super Bowl-winning season
   - 29 — Years since last NFC championship appearance entering 2025
   - $10B+ — Widely cited estimated franchise value range
   - 3 — Super Bowls from the 1990s Aikman-Smith-Irvin core
+  - 0 — Conference championship appearances since the 1995 season
 faq:
-  - question: What does “The Super Bowl column froze after two old engines” show?
+  - question: >-
+      What does the data show about the Super Bowl column froze after two old
+      engines?
     answer: >-
-      Key figure: 5 — Super Bowl championships. See the charts and sources in
-      the report for the full evidence.
-  - question: 'What does “The richest brand, a modest recent playoff archive” show?'
+      Key figure: 5 — Super Bowl championships. The charts measure that split:
+      titles by era, franchise value against playoff wins since 1996, playoff
+      production by decade, regular-season winning by quarterback era, and the…
+  - question: >-
+      What does the data show about the richest brand, a modest recent playoff
+      archive?
     answer: >-
-      Key figure: 1995 — Most recent Super Bowl-winning season. See the charts
-      and sources in the report for the full evidence.
-  - question: What does “The 1970s and 1990s still carry the memory” show?
+      Key figure: 1995 — Most recent Super Bowl-winning season. The charts
+      measure that split: titles by era, franchise value against playoff wins
+      since 1996, playoff production by decade, regular-season winning by
+      quarterback era, and the…
+  - question: What does the data show about the 1970s and 1990s still carry the memory?
     answer: >-
       Key figure: 29 — Years since last NFC championship appearance entering
-      2025. See the charts and sources in the report for the full evidence.
+      2025. The charts measure that split: titles by era, franchise value
+      against playoff wins since 1996, playoff production by decade,
+      regular-season winning by quarterback era, and the…
+  - question: >-
+      What does the data show about quarterback competence never solved
+      conversion?
+    answer: >-
+      Key figure: $10B+ — Widely cited estimated franchise value range. The
+      charts measure that split: titles by era, franchise value against playoff
+      wins since 1996, playoff production by decade, regular-season winning by
+      quarterback era, and the…
 ---
 <div id="quarto-content">
 <main class="art-article-main">
@@ -38,7 +59,8 @@ faq:
 <p class="art-p">Five Super Bowl titles built the mythology. The last one arrived in the 1995 season. Entering 2025, twenty-nine years without an NFC championship appearance—and zero conference title games since that 1995 season—define the modern paradox. The most valuable franchise in American sports, often cited above $10 billion, has mastered demand while failing to convert January chances under maximum visibility.</p>
 <p class="art-p">The charts measure that split: titles by era, franchise value against playoff wins since 1996, playoff production by decade, regular-season winning by quarterback era, and the conference-championship drought beside other frustrated brands.</p>
 
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">5</span><span class="fact-label">Super Bowl championships</span></div>
   <div class="fact-box"><span class="fact-number">1995</span><span class="fact-label">Most recent Super Bowl-winning season</span></div>
@@ -48,7 +70,7 @@ faq:
   <div class="fact-box"><span class="fact-number">0</span><span class="fact-label">Conference championship appearances since the 1995 season</span></div>
 </div>
 
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">Public Pro Football Reference playoff records, Sports Reference franchise summaries, and Forbes-style franchise valuation estimates supply the figures. Values are rounded because the argument depends on order of magnitude, not accounting precision. Quarterback win percentages are conventional starter-record summaries—era indicators, not individual value models.</p>
 <p class="art-p">A front-office analyst calls this a conversion problem. A Cowboys fan calls it pain. Both are measurable: the gap between attention and January output.</p>
 

@@ -8,7 +8,11 @@ heroImage: >-
 tags:
   - sports
 draft: false
-tldr: A franchise history from 1883 New York origins to a modern Bay Area ballclub.
+tldr: >-
+  The San Francisco Giants have been playing professional baseball since 1883.
+  That is not a typo. The franchise that now calls Oracle Park home started as
+  the New York Gothams—a club that predates the automobile, commercial electric
+  light, and the modern World Series by twenty years.
 keyPoints:
   - >-
     8 — World Series titles — 1905, 1921, 1922, 1933, 1954 in New York; 2010,
@@ -25,24 +29,43 @@ keyPoints:
   - >-
     3.3M — Attendance in Oracle Park&#39;s first season — nearly double
     Candlestick&#39;s worst years and a floor the franchise rarely dropped below
+  - >-
+    Rank 9 — Giants&#39; MLB payroll rank in 2010 — the first dynasty season,
+    won with a rotation built almost entirely from the draft
 faq:
-  - question: What does “141 years of winning—and the gaps that defined them” show?
+  - question: >-
+      What does the data show about 141 years of winning—and the gaps that
+      defined them?
     answer: >-
       Key figure: 8 — World Series titles — 1905, 1921, 1922, 1933, 1954 in New
-      York; 2010, 2012, 2014 in San Francisco. See the charts and sources in the
-      report for the full evidence.
-  - question: What does “Oracle Park raised the floor before the dynasty arrived” show?
+      York; 2010, 2012, 2014 in San Francisco. Using the Lahman Baseball
+      Database, the charts trace that arc across winning over time, the
+      stadium’s economic break, and how a draft-built rotation converted a
+      revenue floor into…
+  - question: >-
+      What does the data show about oracle Park raised the floor before the
+      dynasty arrived?
     answer: >-
       Key figure: 1883 — Year the franchise was founded as the New York Gothams
-      — one of the oldest in American professional sports. See the charts and
-      sources in the report for the full evidence.
+      — one of the oldest in American professional sports. Using the Lahman
+      Baseball Database, the charts trace that arc across winning over time, the
+      stadium’s economic break, and how a draft-built rotation converted a
+      revenue floor into…
   - question: >-
-      What does “The dynasty was built on draft cost, not free-agent monopoly”
-      show?
+      What does the data show about the dynasty was built on draft cost, not
+      free-agent monopoly?
     answer: >-
       Key figure: 141 — Seasons of franchise history covered in this report —
-      from the Polo Grounds to Oracle Park. See the charts and sources in the
-      report for the full evidence.
+      from the Polo Grounds to Oracle Park. Using the Lahman Baseball Database,
+      the charts trace that arc across winning over time, the stadium’s economic
+      break, and how a draft-built rotation converted a revenue floor into…
+  - question: What the charts leave open?
+    answer: >-
+      Key figure: 2000 — Year Oracle Park opened — the first privately financed
+      MLB stadium since Dodger Stadium in 1962. Using the Lahman Baseball
+      Database, the charts trace that arc across winning over time, the
+      stadium’s economic break, and how a draft-built rotation converted a
+      revenue floor into…
 ---
 <div id="quarto-content">
 <main class="art-article-main">
@@ -50,7 +73,8 @@ faq:
 <p class="art-p">The titles split cleanly by geography: five in New York (1905, 1921, 1922, 1933, 1954) and three in San Francisco (2010, 2012, 2014). Between them sits Candlestick’s long frustration and, after 2000, a privately financed ballpark that doubled the attendance floor and rebuilt the economic base. The 2010–2014 dynasty then won three championships as a mid-tier-to-top spender built largely from the draft—payroll rank 9 in the first title year.</p>
 <p class="art-p">Using the Lahman Baseball Database, the charts trace that arc across winning over time, the stadium’s economic break, and how a draft-built rotation converted a revenue floor into rings. Win percentage runs through 2024; payroll covers 1985–2016, the complete Lahman salary window that includes every dynasty season and the years that framed it.</p>
 
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box">
     <span class="fact-number">8</span>
@@ -90,7 +114,7 @@ faq:
   </div>
 </div>
 
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The primary source is the Lahman Baseball Database via the Lahman R package—Sean Lahman’s annually updated archive drawn from Baseball Reference and treated as the standard for longitudinal MLB franchise work. The Teams table supplies wins, losses, and attendance; the Giants appear as NY1 (1883–1957) and SFN (1958–present). The Salaries table covers individual player salaries from 1985 through 2016; team payroll is the sum of those salaries, ranked within each season.</p>
 <p class="art-p">Attendance figures are official reported totals from Baseball Reference via Lahman. Chart 2 focuses on the San Francisco era and the stadium transition, so pre-1958 attendance is excluded even though it exists in the file. The 2020 fanless season is included. Salary totals omit deferred compensation quirks, minor-league pay, coaching staff, and international bonuses—they measure reported major-league player salaries, the standard method for this kind of comparison.</p>
 

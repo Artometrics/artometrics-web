@@ -10,36 +10,48 @@ tags:
   - music
 draft: false
 tldr: >-
-  A lyric-level comparison of two era-defining catalogs—theme, language, and
-  structure.
+  Two catalogs define a generation of pop authorship. Line-level lyric tables
+  make it possible to compare them the way a critic compares albums — by
+  recurring titles, repeated lines, and how densely each artist’s words fill the
+  extract. The working file holds 22,616 records.
 keyPoints:
   - '22,616 — Records in the working dataset'
   - Beyoncé — Most common Artist name
 faq:
-  - question: What does “Landscape” show?
+  - question: What does the data show about landscape?
     answer: >-
-      Key figure: 22,616 — Records in the working dataset. See the charts and
-      sources in the report for the full evidence.
-  - question: What does “Who sits at the top” show?
+      Key figure: 22,616 — Records in the working dataset. The source is the
+      TidyTuesday release from 2020-09-29 (R for Data Science community). The
+      working file contains 22,616 rows and 6 columns after merging available
+      tables in the week folder.
+  - question: Who sits at the top?
     answer: >-
-      Key figure: Beyoncé — Most common Artist name. See the charts and sources
-      in the report for the full evidence.
-  - question: What does “Category” show?
+      Key figure: Beyoncé — Most common Artist name. The source is the
+      TidyTuesday release from 2020-09-29 (R for Data Science community). The
+      working file contains 22,616 rows and 6 columns after merging available
+      tables in the week folder.
+  - question: What does the data show about category?
     answer: >-
-      A lyric-level comparison of two era-defining catalogs—theme, language, and
-      structure.
+      The source is the TidyTuesday release from 2020-09-29 (R for Data Science
+      community). The working file contains 22,616 rows and 6 columns after
+      merging available tables in the week folder.
+  - question: What does the data show about frequency?
+    answer: >-
+      The source is the TidyTuesday release from 2020-09-29 (R for Data Science
+      community). The working file contains 22,616 rows and 6 columns after
+      merging available tables in the week folder.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">Two catalogs define a generation of pop authorship. Line-level lyric tables make it possible to compare them the way a critic compares albums — by recurring titles, repeated lines, and how densely each artist’s words fill the extract.</p>
 <p class="art-p">The working file holds <strong>22,616</strong> records. Beyoncé is the most common artist name in the rows on hand — a reminder to read every chart as a view of this extract’s balance, not as a claim that one career is larger than the other in absolute terms.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">22,616</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">Beyoncé</span><span class="fact-label">Most common Artist name</span></div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The source is the TidyTuesday release from 2020-09-29 (R for Data Science community). The working file contains 22,616 rows and 6 columns after merging available tables in the week folder.</p>
 <p class="art-p">Rows are lyric lines and related identifiers — song names, artist labels, and text fields — not audio features. Charts export as Plotly JSON with PNG fallbacks. Frequency and mix plots matter because the primary table has no single numeric “quality” score.</p>
 

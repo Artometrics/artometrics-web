@@ -8,7 +8,11 @@ heroImage: >-
 tags:
   - sports
 draft: false
-tldr: Decades of losing before a modern dynasty remade Bay Area basketball.
+tldr: >-
+  The Golden State Warriors have played 78 seasons of professional basketball.
+  For roughly 35 of them, they were irrelevant—not rebuilding, not
+  transitioning, just losing, year after year, in a market that had better
+  things to think about.
 keyPoints:
   - >-
     7 — NBA Championships — 1947, 1956, 1975, 2015, 2017, 2018, 2022 — across
@@ -25,22 +29,42 @@ keyPoints:
   - >-
     1946 — Founding year as the Philadelphia Warriors — one of the eight
     original BAA franchises that became the foundation of the modern NBA
+  - >-
+    18,064 — Capacity of Chase Center, San Francisco — opened 2019 as the first
+    major arena in North America built without public funding
 faq:
-  - question: 'What does “Two dynasty windows, and a desert between them” show?'
+  - question: >-
+      What does the data show about two dynasty windows, and a desert between
+      them?
     answer: >-
       Key figure: 7 — NBA Championships — 1947, 1956, 1975, 2015, 2017, 2018,
-      2022 — across three cities and eight decades of franchise history. See the
-      charts and sources in the report for the full evidence.
-  - question: What does “How one franchise forced the league to relearn offense” show?
+      2022 — across three cities and eight decades of franchise history. What
+      follows quantifies that change: how dominant the dynasty windows actually
+      were, how the three-point revolution unfolded in real numbers, and what it
+      means to win 73 games in…
+  - question: How one franchise forced the league to relearn offense?
     answer: >-
       Key figure: 73 — Regular season wins in 2015–16 — the most in NBA history,
-      surpassing the 1995–96 Chicago Bulls record of 72 wins. See the charts and
-      sources in the report for the full evidence.
-  - question: What does “Six teams reached 68 wins. Only one owns 73.” show?
+      surpassing the 1995–96 Chicago Bulls record of 72 wins. What follows
+      quantifies that change: how dominant the dynasty windows actually were,
+      how the three-point revolution unfolded in real numbers, and what it means
+      to win 73 games in…
+  - question: >-
+      What does the data show about six teams reached 68 wins. Only one owns
+      73.?
     answer: >-
       Key figure: 3,747 — Career three-pointers made by Stephen Curry through
-      2024 — more than any player in NBA history, by a margin of over 700. See
-      the charts and sources in the report for the full evidence.
+      2024 — more than any player in NBA history, by a margin of over 700. What
+      follows quantifies that change: how dominant the dynasty windows actually
+      were, how the three-point revolution unfolded in real numbers, and what it
+      means to win 73 games in…
+  - question: What the charts leave open?
+    answer: >-
+      Key figure: $170M+ — Estimated luxury tax bill in 2022–23 — among the
+      highest single-season tax penalties ever paid by an NBA franchise. What
+      follows quantifies that change: how dominant the dynasty windows actually
+      were, how the three-point revolution unfolded in real numbers, and what it
+      means to win 73 games in…
 ---
 <div id="quarto-content">
 <main class="art-article-main">
@@ -48,7 +72,8 @@ faq:
 <p class="art-p">Then Stephen Curry learned to shoot from places that weren’t supposed to be shooting spots, and everything changed—not just for the Warriors, for the entire sport. Seven championships across three cities, a 73-win regular season that still stands alone, and 3,747 career threes by Curry through 2024 mark a discontinuity so sharp it barely fits on one timeline.</p>
 <p class="art-p">What follows quantifies that change: how dominant the dynasty windows actually were, how the three-point revolution unfolded in real numbers, and what it means to win 73 games in a league where almost nobody else has even approached that ceiling. The Warriors story has two chapters. The gap between them is the story.</p>
 
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box">
     <span class="fact-number">7</span>
@@ -88,7 +113,7 @@ faq:
   </div>
 </div>
 
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">Win percentage covers every Warriors season from 1946–47 through 2023–24 across Philadelphia (1946–1962), San Francisco (1962–1971), and the Bay Area (1971–present), sourced from Basketball Reference and verified against nbastatR. Three-point attempt data begins in 1979–80—the NBA’s first three-point season—and runs through 2023–24, with league averages from team-level per-game totals.</p>
 <p class="art-p">Rate-limiting on the Basketball Reference scraper during production meant Charts 1 and 2 use a manually verified tibble built from franchise and season summary pages; values match the published record. The 68+ win seasons in Chart 3 are a static seven-row set pulled directly from Basketball Reference and coded for championship status. Early-1980s Warriors three-point volume tracked the league because no team yet had a coherent three-point philosophy—the arc from novelty to weapon to universal standard is what Chart 2 is built to show.</p>
 

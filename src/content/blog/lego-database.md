@@ -7,7 +7,11 @@ heroImage: /images/content/articles/lego-database/hero.png
 tags:
   - games
 draft: false
-tldr: Official set metadata traces rising piece counts and theme differences.
+tldr: >-
+  LEGO sets are toys, collectibles, and increasingly architectural objects. The
+  Rebrickable-style database that feeds this TidyTuesday release turns that
+  catalog into something measurable: parts counts, set names, and how complexity
+  has shifted across decades.
 keyPoints:
   - '19,798 — Records in the working dataset'
   - 34.0 — Median Num parts
@@ -15,26 +19,38 @@ keyPoints:
   - World Map — Top Name by Num parts
   - 1949–2022 — Year span covered in the file
 faq:
-  - question: What does “How part counts changed over time” show?
+  - question: How part counts changed over time?
     answer: >-
-      Key figure: 19,798 — Records in the working dataset. See the charts and
-      sources in the report for the full evidence.
-  - question: What does “Who sits at the top” show?
+      Key figure: 19,798 — Records in the working dataset. Quantity of pieces is
+      not the same as play value, but it is a clean industrial signal: how much
+      plastic inventory a box commits to, and how the company balances everyday
+      sets against display pieces.
+  - question: Who sits at the top?
     answer: >-
-      Key figure: 34.0 — Median Num parts. See the charts and sources in the
-      report for the full evidence.
-  - question: What does “How the field is spread” show?
+      Key figure: 34.0 — Median Num parts. Quantity of pieces is not the same as
+      play value, but it is a clean industrial signal: how much plastic
+      inventory a box commits to, and how the company balances everyday sets
+      against display pieces.
+  - question: How the field is spread?
     answer: >-
-      Key figure: 11,695 — Highest observed Num parts. See the charts and
-      sources in the report for the full evidence.
+      Key figure: 11,695 — Highest observed Num parts. Quantity of pieces is not
+      the same as play value, but it is a clean industrial signal: how much
+      plastic inventory a box commits to, and how the company balances everyday
+      sets against display pieces.
+  - question: What does the data show about leader trends?
+    answer: >-
+      Key figure: World Map — Top Name by Num parts. Quantity of pieces is not
+      the same as play value, but it is a clean industrial signal: how much
+      plastic inventory a box commits to, and how the company balances everyday
+      sets against display pieces.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">LEGO sets are toys, collectibles, and increasingly architectural objects. The Rebrickable-style database that feeds this TidyTuesday release turns that catalog into something measurable: parts counts, set names, and how complexity has shifted across decades.</p>
 <p class="art-p">The working file's fact markers put the median set near <strong>34</strong> parts while the extreme end reaches into five digits — <strong>World Map</strong> leads at <strong>11,695</strong> parts on the highlighted ranking, with <strong>5,792</strong> as the median among the top dozen. Across the time span in the charts, median part counts fall from roughly <strong>142</strong> in the opening period to about <strong>59.5</strong> at the close — a reminder that the typical set and the showcase set are different products.</p>
 <p class="art-p">Quantity of pieces is not the same as play value, but it is a clean industrial signal: how much plastic inventory a box commits to, and how the company balances everyday sets against display pieces.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">19,798</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">34.0</span><span class="fact-label">Median Num parts</span></div>
@@ -42,7 +58,7 @@ faq:
   <div class="fact-box"><span class="fact-number">World Map</span><span class="fact-label">Top Name by Num parts</span></div>
   <div class="fact-box"><span class="fact-number">1949–2022</span><span class="fact-label">Year span covered in the file</span></div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The source is the TidyTuesday release from 2022-09-06 (R for Data Science community). The working file contains 19,798 rows across set and parts tables after merging — set names, years, part counts, and quantity fields among them.</p>
 <p class="art-p">Medians are essential because a few architectural and mosaic sets pull means upward. Charts export as Plotly JSON with PNG fallbacks. Part counts describe inventory complexity, not retail price or build time directly.</p>
 <h2 id="how-the-pattern-changed-over-time" class="anchored">How part counts changed over time</h2>

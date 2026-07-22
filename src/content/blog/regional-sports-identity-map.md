@@ -10,8 +10,10 @@ tags:
   - sports
 draft: false
 tldr: >-
-  Markets, leagues, and championship droughts explain why fan cultures differ by
-  city.
+  A team is never just a team. It is attached to a region, a media market, a
+  league structure, and a local memory system. That context changes what the
+  same number means. this piece turns the sports canon toward geography. The
+  goal is to show how regions become recognizable under the data microscope.
 keyPoints:
   - 10 — Large markets/cities compared
   - 7 — Regions grouped for title-density analysis
@@ -19,26 +21,34 @@ keyPoints:
   - 94 — Toronto drought/pain index in this editorial model
   - 43B — Approximate combined New York major-team value
 faq:
-  - question: What does “Regional Title Density” show?
+  - question: What does the data show about regional Title Density?
     answer: >-
-      Key figure: 10 — Large markets/cities compared. See the charts and sources
-      in the report for the full evidence.
-  - question: What does “Market Stack” show?
+      Key figure: 10 — Large markets/cities compared. Start with the scale: 10 —
+      Large markets/cities compared; and 7 — Regions grouped for title-density
+      analysis.
+  - question: What does the data show about market Stack?
     answer: >-
-      Key figure: 7 — Regions grouped for title-density analysis. See the charts
-      and sources in the report for the full evidence.
-  - question: What does “Sport Dna” show?
+      Key figure: 7 — Regions grouped for title-density analysis. Start with the
+      scale: 10 — Large markets/cities compared; and 7 — Regions grouped for
+      title-density analysis.
+  - question: What does the data show about sport Dna?
     answer: >-
-      Key figure: 6 — Identity archetypes used in the map. See the charts and
-      sources in the report for the full evidence.
+      Key figure: 6 — Identity archetypes used in the map. Start with the scale:
+      10 — Large markets/cities compared; and 7 — Regions grouped for
+      title-density analysis.
+  - question: What does the data show about city Pain versus Success?
+    answer: >-
+      Key figure: 94 — Toronto drought/pain index in this editorial model. Start
+      with the scale: 10 — Large markets/cities compared; and 7 — Regions
+      grouped for title-density analysis.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">A team is never just a team. It is attached to a region, a media market, a league structure, and a local memory system. That context changes what the same number means.</p>
 <p class="art-p">this piece turns the sports canon toward geography. The goal is to show how regions become recognizable under the data microscope.</p>
 <p class="art-p">Start with the scale: <strong>10</strong> — Large markets/cities compared; and <strong>7</strong> — Regions grouped for title-density analysis.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">10</span><span class="fact-label">Large markets/cities compared</span></div>
   <div class="fact-box"><span class="fact-number">7</span><span class="fact-label">Regions grouped for title-density analysis</span></div>
@@ -46,7 +56,7 @@ faq:
   <div class="fact-box"><span class="fact-number">94</span><span class="fact-label">Toronto drought/pain index in this editorial model</span></div>
   <div class="fact-box"><span class="fact-number">43B</span><span class="fact-label">Approximate combined New York major-team value</span></div>
   </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The charts use public franchise histories, rounded valuation summaries, and editorial identity indices. The indices are not official statistics; they are structured prompts for comparing markets.</p>
 <p class="art-p">A cultural economist would ask how facilities, media density, migration, ownership, and league rules shape local identity. this piece is the first map layer for that conversation.</p>
 <h2 id="regional-title-density" class="anchored">Regional Title Density</h2>

@@ -36,7 +36,8 @@
     "cos:downloads": "node scripts/content-os/pack-article-downloads.mjs",
     "cos:zine": "node scripts/content-os/pack-ig-zine.mjs",
     "cos:magazine-cleanup": "node scripts/content-os/magazine-body-cleanup.mjs",
-    "cos:rainfall-pass": "node scripts/content-os/rainfall-article-pass.mjs"
+    "cos:rainfall-pass": "node scripts/content-os/rainfall-article-pass.mjs",
+    "cos:rainfall-rewrite": "node scripts/content-os/rainfall-full-rewrite.mjs"
   },
   "engines": {
     "node": ">=20.0.0"

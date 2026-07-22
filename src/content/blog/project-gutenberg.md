@@ -7,34 +7,48 @@ heroImage: /images/content/articles/project-gutenberg/hero.png
 tags:
   - books
 draft: false
-tldr: Public-domain metadata show which topics crowd the free-library canon.
+tldr: >-
+  Project Gutenberg is the internet's oldest large-scale experiment in free
+  literature. Its subject catalog — Library of Congress headings and related
+  labels — is a map of which public-domain books volunteers could digitize and
+  classify at scale.
 keyPoints:
   - '100,000 — Records in the working dataset'
   - lcsh — Most common Subject type
 faq:
-  - question: What does “Public-domain books cluster by subject type” show?
+  - question: What does the data show about public-domain books cluster by subject type?
     answer: >-
-      Key figure: 100,000 — Records in the working dataset. See the charts and
-      sources in the report for the full evidence.
-  - question: What does “A small set of subjects anchors the catalog” show?
+      Key figure: 100,000 — Records in the working dataset. Reading Gutenberg as
+      a popularity contest misses the point. Reading it as a concentration map
+      of reusable canon is where the data help.
+  - question: What does the data show about a small set of subjects anchors the catalog?
     answer: >-
-      Key figure: lcsh — Most common Subject type. See the charts and sources in
-      the report for the full evidence.
-  - question: What does “Subject families show the catalog center of gravity” show?
-    answer: Public-domain metadata show which topics crowd the free-library canon.
+      Key figure: lcsh — Most common Subject type. Reading Gutenberg as a
+      popularity contest misses the point. Reading it as a concentration map of
+      reusable canon is where the data help.
+  - question: >-
+      What does the data show about subject families show the catalog center of
+      gravity?
+    answer: >-
+      Reading Gutenberg as a popularity contest misses the point. Reading it as
+      a concentration map of reusable canon is where the data help.
+  - question: What does the data show about repeated subjects reveal the reusable canon?
+    answer: >-
+      Reading Gutenberg as a popularity contest misses the point. Reading it as
+      a concentration map of reusable canon is where the data help.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">Project Gutenberg is the internet's oldest large-scale experiment in free literature. Its subject catalog — Library of Congress headings and related labels — is a map of which public-domain books volunteers could digitize and classify at scale.</p>
 <p class="art-p">A TidyTuesday working extract of <strong>100,000</strong> records shows <strong>lcsh</strong> as the most common subject type, with tens of thousands of rows in that bucket. Subject codes such as <strong>PS</strong> recur thousands of times. The catalog is not every book ever written; it is the reusable shelf that copyright expiry, volunteer labor, and classification systems made easy to share.</p>
 <p class="art-p">Reading Gutenberg as a popularity contest misses the point. Reading it as a concentration map of reusable canon is where the data help.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">100,000</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">lcsh</span><span class="fact-label">Most common Subject type</span></div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The source is the TidyTuesday Project Gutenberg release from the R for Data Science community. The working file contains 100,000 rows after assembly — subject types, subject labels, and related catalog metadata.</p>
 <p class="art-p">Because many fields are categorical, the analysis leans on counts and repetition rather than a single quality score. Charts export as Plotly JSON with PNG fallbacks. Subject headings are librarian infrastructure, not reader reviews.</p>
 <h2 id="landscape" class="anchored">Public-domain books cluster by subject type</h2>

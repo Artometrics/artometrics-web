@@ -7,7 +7,13 @@ heroImage: /images/content/articles/fast-food-calories/hero.png
 tags:
   - culture
 draft: false
-tldr: Menu nutrition data identify the highest-calorie items across major chains.
+tldr: >-
+  Fast-food menus are marketing documents dressed as nutrition tables. The
+  calorie counts attached to each item are among the few numbers that cut
+  through the branding — and they vary wildly across chains that sell roughly
+  the same categories of food. A TidyTuesday snapshot of major U.S. chain menus
+  puts 515 item records on the same footing. The median item sits at 490
+  calories.
 keyPoints:
   - 515 — Records in the working dataset
   - 490 — Median Calories
@@ -15,26 +21,38 @@ keyPoints:
   - 20 piece Buttermilk Crispy C — Top Item by Calories
   - Taco Bell — Most common Restaurant
 faq:
-  - question: What does “Calorie ceilings by item” show?
+  - question: What does the data show about calorie ceilings by item?
     answer: >-
-      Key figure: 515 — Records in the working dataset. See the charts and
-      sources in the report for the full evidence.
-  - question: What does “Who sits at the top” show?
+      Key figure: 515 — Records in the working dataset. Taco Bell appears most
+      often in the working table, but frequency of listing is not the same as
+      caloric intensity. The story is which items and which chains sit above the
+      center of…
+  - question: Who sits at the top?
     answer: >-
-      Key figure: 490 — Median Calories. See the charts and sources in the
-      report for the full evidence.
-  - question: What does “How chains spread calories” show?
+      Key figure: 490 — Median Calories. Taco Bell appears most often in the
+      working table, but frequency of listing is not the same as caloric
+      intensity. The story is which items and which chains sit above the center
+      of…
+  - question: How chains spread calories?
     answer: >-
-      Key figure: 2,430 — Highest observed Calories. See the charts and sources
-      in the report for the full evidence.
+      Key figure: 2,430 — Highest observed Calories. Taco Bell appears most
+      often in the working table, but frequency of listing is not the same as
+      caloric intensity. The story is which items and which chains sit above the
+      center of…
+  - question: Who beats the median — and who trails?
+    answer: >-
+      Key figure: 20 piece Buttermilk Crispy C — Top Item by Calories. Taco Bell
+      appears most often in the working table, but frequency of listing is not
+      the same as caloric intensity. The story is which items and which chains
+      sit above the center of…
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">Fast-food menus are marketing documents dressed as nutrition tables. The calorie counts attached to each item are among the few numbers that cut through the branding — and they vary wildly across chains that sell roughly the same categories of food.</p>
 <p class="art-p">A TidyTuesday snapshot of major U.S. chain menus puts <strong>515</strong> item records on the same footing. The median item sits at <strong>490</strong> calories. The ceiling in the file is <strong>2,430</strong> — a twenty-piece buttermilk crispy chicken tender tray that makes the median look almost restrained.</p>
 <p class="art-p">Taco Bell appears most often in the working table, but frequency of listing is not the same as caloric intensity. The story is which items and which chains sit above the center of the menu, and how fat tracks with calories when the branding falls away.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">515</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">490</span><span class="fact-label">Median Calories</span></div>
@@ -42,7 +60,7 @@ faq:
   <div class="fact-box"><span class="fact-number">20 piece Buttermilk Crispy C</span><span class="fact-label">Top Item by Calories</span></div>
   <div class="fact-box"><span class="fact-number">Taco Bell</span><span class="fact-label">Most common Restaurant</span></div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The source is the TidyTuesday release from 2018-09-04, maintained by the R for Data Science community. The working file contains 515 rows and 17 columns after merging the available CSV tables in the week folder — restaurant name, item, calories, total fat, and related nutrition fields.</p>
 <p class="art-p">Medians are preferred where distributions skew. Index-style fields and sequential IDs are excluded from metric selection. Charts ship as Plotly JSON with PNG fallbacks. The snapshot is a menu catalog for a fixed release window, not a live API of every current offering.</p>
 <h2 id="breakdown" class="anchored">Calorie ceilings by item</h2>

@@ -11,27 +11,49 @@ tags:
   - sports
 draft: false
 tldr: >-
-  Two decades of New England football compressed a century of legacy into one
-  dynasty.
+  The New England Patriots used to be ordinary. Then they became the NFL’s most
+  efficient argument about systems, quarterbacks, coaching, and institutional
+  compounding. Six Super Bowl championships and nine Super Bowl appearances
+  during the Brady–Belichick era did not accumulate like a normal franchise
+  resume. They arrived as a discontinuity.
 keyPoints:
   - 6 — Super Bowl championships
   - 9 — Super Bowl appearances during the Brady/Belichick era
   - 30 — Approximate playoff wins from 2001 through 2019
   - 13 — AFC championship appearances since 2001
   - 16-0 — Perfect 2007 regular season
+  - 2020 — First post-Brady season
 faq:
-  - question: What does “One era overwhelms the rest of the archive” show?
+  - question: What does the data show about one era overwhelms the rest of the archive?
     answer: >-
-      Key figure: 6 — Super Bowl championships. See the charts and sources in
-      the report for the full evidence.
-  - question: What does “New England compressed a summit climb into two decades” show?
+      Key figure: 6 — Super Bowl championships. Was the dynasty Brady,
+      Belichick, ownership, luck, or infrastructure? The charts treat it as a
+      system shock—one era so large it became the franchise—then measure what
+      remains after the system.
+  - question: >-
+      What does the data show about new England compressed a summit climb into
+      two decades?
     answer: >-
-      Key figure: 9 — Super Bowl appearances during the Brady/Belichick era. See
-      the charts and sources in the report for the full evidence.
-  - question: What does “Excellence became routine before it became legend” show?
+      Key figure: 9 — Super Bowl appearances during the Brady/Belichick era. Was
+      the dynasty Brady, Belichick, ownership, luck, or infrastructure? The
+      charts treat it as a system shock—one era so large it became the
+      franchise—then measure what remains after the system.
+  - question: >-
+      What does the data show about excellence became routine before it became
+      legend?
     answer: >-
-      Key figure: 30 — Approximate playoff wins from 2001 through 2019. See the
-      charts and sources in the report for the full evidence.
+      Key figure: 30 — Approximate playoff wins from 2001 through 2019. Was the
+      dynasty Brady, Belichick, ownership, luck, or infrastructure? The charts
+      treat it as a system shock—one era so large it became the franchise—then
+      measure what remains after the system.
+  - question: >-
+      What does the data show about they controlled access to the AFC’s final
+      room?
+    answer: >-
+      Key figure: 13 — AFC championship appearances since 2001. Was the dynasty
+      Brady, Belichick, ownership, luck, or infrastructure? The charts treat it
+      as a system shock—one era so large it became the franchise—then measure
+      what remains after the system.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
@@ -39,7 +61,8 @@ faq:
 <p class="art-p">Roughly thirty playoff wins from 2001 through 2019, thirteen AFC championship appearances since 2001, and a perfect 16–0 regular season in 2007 compressed what other clubs take generations to claim. The first post-Brady season in 2020 marked the hinge: the brand remained; the machine did not automatically follow.</p>
 <p class="art-p">Was the dynasty Brady, Belichick, ownership, luck, or infrastructure? The charts treat it as a system shock—one era so large it became the franchise—then measure what remains after the system.</p>
 
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">6</span><span class="fact-label">Super Bowl championships</span></div>
   <div class="fact-box"><span class="fact-number">9</span><span class="fact-label">Super Bowl appearances during the Brady/Belichick era</span></div>
@@ -49,7 +72,7 @@ faq:
   <div class="fact-box"><span class="fact-number">2020</span><span class="fact-label">First post-Brady season</span></div>
 </div>
 
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">Public Pro Football Reference franchise records, NFL postseason histories, and Forbes-style franchise value summaries feed the charts. Periods are editorial groupings designed to isolate the dynasty discontinuity—before, during, and after the Brady–Belichick system.</p>
 <p class="art-p">An NFL analyst asks how much was quarterback versus scheme. A fan asks why the same logo feels different after Brady. Both questions share the same hinge: one era rewrote franchise identity.</p>
 

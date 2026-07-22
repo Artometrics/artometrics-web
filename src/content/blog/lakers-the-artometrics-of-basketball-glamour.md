@@ -10,8 +10,11 @@ tags:
   - sports
 draft: false
 tldr: >-
-  Los Angeles basketball’s glamour machine turns market gravity into title
-  windows.
+  The Los Angeles Lakers run winning and celebrity as the same operating system.
+  Other franchises develop stars; the Lakers absorb them, frame them, and
+  convert them into eras. Seventeen championships and roughly thirty-two Finals
+  appearances make that claim more than folklore. It is the deepest final-round
+  archive in the league. Glamour does not guarantee rings.
 keyPoints:
   - 17 — NBA championships in franchise history
   - >-
@@ -20,20 +23,40 @@ keyPoints:
   - 5 — Titles in the Showtime decade
   - 6 — Defining title eras from Mikan to LeBron/AD
   - 1949 — First championship season
+  - 2020 — Most recent championship
 faq:
-  - question: What does “Los Angeles does not win smoothly—it wins in acts” show?
+  - question: >-
+      What does the data show about los Angeles does not win smoothly—it wins in
+      acts?
     answer: >-
-      Key figure: 17 — NBA championships in franchise history. See the charts
-      and sources in the report for the full evidence.
-  - question: What does “The NBA’s title race is still a two-name conversation” show?
+      Key figure: 17 — NBA championships in franchise history. The charts below
+      track that machine—banner cycles by decade, the two-name ceiling with
+      Boston, championship engines by defining star era, Finals frequency as
+      institutional access,…
+  - question: >-
+      What does the data show about the NBA’s title race is still a two-name
+      conversation?
     answer: >-
       Key figure: 32 — Approximate Finals appearances, the league's deepest
-      final-round archive. See the charts and sources in the report for the full
-      evidence.
-  - question: 'What does “The product is star gravity, not just basketball” show?'
+      final-round archive. The charts below track that machine—banner cycles by
+      decade, the two-name ceiling with Boston, championship engines by defining
+      star era, Finals frequency as institutional access,…
+  - question: >-
+      What does the data show about the product is star gravity, not just
+      basketball?
     answer: >-
-      Key figure: 5 — Titles in the Showtime decade. See the charts and sources
-      in the report for the full evidence.
+      Key figure: 5 — Titles in the Showtime decade. The charts below track that
+      machine—banner cycles by decade, the two-name ceiling with Boston,
+      championship engines by defining star era, Finals frequency as
+      institutional access,…
+  - question: >-
+      What does the data show about the real glamour metric is recurring
+      invitation?
+    answer: >-
+      Key figure: 6 — Defining title eras from Mikan to LeBron/AD. The charts
+      below track that machine—banner cycles by decade, the two-name ceiling
+      with Boston, championship engines by defining star era, Finals frequency
+      as institutional access,…
 ---
 <div id="quarto-content">
 <main class="art-article-main">
@@ -41,7 +64,8 @@ faq:
 <p class="art-p">Glamour does not guarantee rings. It repeatedly lowers the cost of becoming relevant again. From the first title in 1949 through Showtime’s five banners and the 2020 bubble championship, the franchise’s pattern is not steady-state excellence. It is star gravity: when the right face arrives, the rest of the system suddenly coheres.</p>
 <p class="art-p">The charts below track that machine—banner cycles by decade, the two-name ceiling with Boston, championship engines by defining star era, Finals frequency as institutional access, and the winters between rings when the recruitment magnet has to work again.</p>
 
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">17</span><span class="fact-label">NBA championships in franchise history</span></div>
   <div class="fact-box"><span class="fact-number">32</span><span class="fact-label">Approximate Finals appearances, the league's deepest final-round archive</span></div>
@@ -51,7 +75,7 @@ faq:
   <div class="fact-box"><span class="fact-number">2020</span><span class="fact-label">Most recent championship</span></div>
 </div>
 
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">Public NBA championship records, Basketball Reference franchise histories, and Sports Reference Finals summaries supply the counts. Era buckets are editorial groupings around the players and teams most responsible for each title window—from Mikan through Showtime, Shaq and Kobe, Kobe and Pau, and LeBron and Davis.</p>
 <p class="art-p">Professionals ask how a franchise repeatedly reopens title windows. Fans ask why the jersey seems to summon stars. Both questions point at the same mechanism: market gravity plus historical proof.</p>
 

@@ -10,8 +10,11 @@ tags:
   - music
 draft: false
 tldr: >-
-  Decades of Christmas-song chart data identify the standards that return every
-  season.
+  Holiday songs have a strange chart life: they return every December, pile up
+  weeks, then vanish until the next season. The TidyTuesday christmas-songs
+  extract used here holds 387 records spanning 1958–2017 , with a median of 8.00
+  weeks on chart and a high of 20.0 . Better Days and Believe sit among the
+  weeks-on-chart leaders.
 keyPoints:
   - 387 — Records in the working dataset
   - 8.00 — Median Weeks on chart
@@ -19,25 +22,33 @@ keyPoints:
   - BETTER DAYS — Top Song by Weeks on chart
   - 1958–2017 — Year span covered in the file
 faq:
-  - question: What does “Seasonal Weeks Spiked in the Mid-2000s” show?
+  - question: What does the data show about seasonal Weeks Spiked in the Mid-2000s?
     answer: >-
-      Key figure: 387 — Records in the working dataset. See the charts and
-      sources in the report for the full evidence.
-  - question: What does “Twenty Weeks Marks the Upper Club” show?
+      Key figure: 387 — Records in the working dataset. The source is the
+      TidyTuesday release from 2019-12-24 (christmas_songs.csv). After cleaning,
+      387 rows remain.
+  - question: What does the data show about twenty Weeks Marks the Upper Club?
     answer: >-
-      Key figure: 8.00 — Median Weeks on chart. See the charts and sources in
-      the report for the full evidence.
-  - question: What does “Most Songs Cluster at Short Chart Lives” show?
+      Key figure: 8.00 — Median Weeks on chart. The source is the TidyTuesday
+      release from 2019-12-24 (christmas_songs.csv). After cleaning, 387 rows
+      remain.
+  - question: What does the data show about most Songs Cluster at Short Chart Lives?
     answer: >-
-      Key figure: 20.0 — Highest observed Weeks on chart. See the charts and
-      sources in the report for the full evidence.
+      Key figure: 20.0 — Highest observed Weeks on chart. The source is the
+      TidyTuesday release from 2019-12-24 (christmas_songs.csv). After cleaning,
+      387 rows remain.
+  - question: What does the data show about standards Reappear Across Decades?
+    answer: >-
+      Key figure: BETTER DAYS — Top Song by Weeks on chart. The source is the
+      TidyTuesday release from 2019-12-24 (christmas_songs.csv). After cleaning,
+      387 rows remain.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">Holiday songs have a strange chart life: they return every December, pile up weeks, then vanish until the next season. The TidyTuesday christmas-songs extract used here holds <strong>387</strong> records spanning <strong>1958–2017</strong>, with a median of <strong>8.00</strong> weeks on chart and a high of <strong>20.0</strong>.</p>
 <p class="art-p">Better Days and Believe sit among the weeks-on-chart leaders. Perennial titles — Jingle Bell Rock, All I Want for Christmas Is You, Rockin’ Around the Christmas Tree, White Christmas — define the timeline chart’s recurring cast.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">387</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">8.00</span><span class="fact-label">Median Weeks on chart</span></div>
@@ -45,7 +56,7 @@ faq:
   <div class="fact-box"><span class="fact-number">BETTER DAYS</span><span class="fact-label">Top Song by Weeks on chart</span></div>
   <div class="fact-box"><span class="fact-number">1958–2017</span><span class="fact-label">Year span covered in the file</span></div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The source is the TidyTuesday release from 2019-12-24 (christmas_songs.csv). After cleaning, 387 rows remain.</p>
 <p class="art-p">Weeks on chart is the primary metric; instance captures repeat chart lives. Charts are Plotly JSON with PNG fallbacks.</p>
 <h2 id="seasonal-weeks-spiked-in-the-mid-2000s" class="anchored">Seasonal Weeks Spiked in the Mid-2000s</h2>

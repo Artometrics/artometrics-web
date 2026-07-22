@@ -7,33 +7,49 @@ heroImage: /images/content/articles/pokemon/hero.png
 tags:
   - games
 draft: false
-tldr: 'Beyond the headline revenue figure: games, cards, merchandise, and film.'
+tldr: >-
+  Pokémon is the highest-grossing media franchise in history — more than $150
+  billion in lifetime revenue across games, cards, merchandise, and film. That
+  number gets cited constantly.
 keyPoints:
   - 949 — Pokémon in the dataset with a confirmed primary type
   - 18 — Distinct primary types represented
   - 8 — Generation IDs in the data — Gen 8 and 9 unclassified in source
   - 157 — Median base experience across all Pokémon
   - 510 — Pokémon with a second type — the dual-type majority
+  - Water — Most common primary type in the dataset
 faq:
-  - question: What does “Stat Identity By Type” show?
+  - question: What does the data show about stat Identity By Type?
     answer: >-
       Key figure: 949 — Pokémon in the dataset with a confirmed primary type.
-      See the charts and sources in the report for the full evidence.
-  - question: What does “Generation Creep” show?
+      The dataset is TidyTuesday Week 13, 2025 — a cleaned version of the
+      PokéAPI database covering 1,028 Pokémon entries across nine generations.
+      Each row represents a single Pokémon…
+  - question: What does the data show about generation Creep?
     answer: >-
-      Key figure: 18 — Distinct primary types represented. See the charts and
-      sources in the report for the full evidence.
-  - question: What does “Built Different” show?
+      Key figure: 18 — Distinct primary types represented. The dataset is
+      TidyTuesday Week 13, 2025 — a cleaned version of the PokéAPI database
+      covering 1,028 Pokémon entries across nine generations. Each row
+      represents a single Pokémon…
+  - question: What does the data show about built Different?
     answer: >-
       Key figure: 8 — Generation IDs in the data — Gen 8 and 9 unclassified in
-      source. See the charts and sources in the report for the full evidence.
+      source. The dataset is TidyTuesday Week 13, 2025 — a cleaned version of
+      the PokéAPI database covering 1,028 Pokémon entries across nine
+      generations. Each row represents a single Pokémon…
+  - question: What this file cannot tell you?
+    answer: >-
+      Key figure: 157 — Median base experience across all Pokémon. The dataset
+      is TidyTuesday Week 13, 2025 — a cleaned version of the PokéAPI database
+      covering 1,028 Pokémon entries across nine generations. Each row
+      represents a single Pokémon…
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">Pokémon is the highest-grossing media franchise in history — more than $150 billion in lifetime revenue across games, cards, merchandise, and film. That number gets cited constantly. What gets cited less is the design infrastructure underneath it: the 18-type system, the base stat framework, the generation-by-generation release cadence that has added roughly 100 new Pokémon every few years since 1996. The franchise looks like a cultural phenomenon. The data shows it&#39;s also an engineering project.</p>
 <p class="art-p">The TidyTuesday 2025-04-01 Pokémon dataset — sourced from PokéAPI and covering every Pokémon through Generation IX — lets three questions land cleanly. Do different types actually play differently, or is that a perception? Has Game Freak been inflating Pokémon power over time? And what does physical size reveal about how Pokémon are designed?</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box">
     <span class="fact-number">949</span>
@@ -60,7 +76,7 @@ faq:
     <span class="fact-label">Most common primary type in the dataset</span>
   </div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The dataset is TidyTuesday Week 13, 2025 — a cleaned version of the PokéAPI database covering 1,028 Pokémon entries across nine generations. Each row represents a single Pokémon form, which means alternate forms (Mega Evolutions, regional variants, Gigantamax forms) appear as separate records from their base versions. The core fields used in this piece are the six base stats (HP, Attack, Defense, Special Attack, Special Defense, Speed), base experience, primary type, height, weight, and generation ID. All values are drawn directly from the TidyTuesday source — no external APIs were joined for this analysis.</p>
 <p class="art-p">Base experience is a commonly misunderstood field. It is not the same as a Pokémon&#39;s base stat total, and it is not a measure of overall power. It is the amount of experience a trainer&#39;s Pokémon receives when defeating that species in battle — a game mechanic that reflects intended difficulty and progression pacing, not raw strength. A Pokémon with high base experience is meant to be encountered later in the game or to signal a harder fight. It correlates with power, but imperfectly.</p>
 <p class="art-p">Height and weight are stored in the dataset in their PokéAPI native units: decimetres for height and hectograms for weight. Both were converted to standard metric units (metres and kilograms respectively) before plotting. The log scale applied in Chart 3 is not a stylistic choice — the raw distributions span roughly four orders of magnitude, from Flabébé at 0.1 metres and 0.1 kilograms to Wailord at 14.5 metres and Cosmoem at 999.9 kilograms. A linear scale would make the chart unreadable.</p>

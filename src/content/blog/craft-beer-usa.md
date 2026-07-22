@@ -10,40 +10,52 @@ tags:
   - culture
 draft: false
 tldr: >-
-  Brewery-level IBU and ABV data map bitterness and strength across U.S. craft
-  producers.
+  American craft beer advertises itself with bitterness and strength — IBU and
+  ABV on the tap list. The TidyTuesday beers extract used here holds 2,410
+  records with a median ABV of 0.06 (6%) and a high of 0.13 (13%) for Lee Hill
+  Series Vol. 5 - Belgian Style Quadrupel Ale. Most craft beers in this file are
+  not barrel-aged monsters.
 keyPoints:
   - '2,410 — Records in the working dataset'
   - 0.06 — Median Abv
   - 0.13 — Highest observed Abv
   - Lee Hill Series Vol. 5 - Bel — Top Name by Abv
 faq:
-  - question: What does “High-ABV Outliers Are Named Experiments” show?
+  - question: What does the data show about high-ABV Outliers Are Named Experiments?
     answer: >-
-      Key figure: 2,410 — Records in the working dataset. See the charts and
-      sources in the report for the full evidence.
-  - question: What does “The Top Dozen Still Doubles Everyday Strength” show?
+      Key figure: 2,410 — Records in the working dataset. The source is the
+      TidyTuesday release from 2018-07-10 (week15_beers.xlsx). After cleaning,
+      2,410 rows remain.
+  - question: >-
+      What does the data show about the Top Dozen Still Doubles Everyday
+      Strength?
     answer: >-
-      Key figure: 0.06 — Median Abv. See the charts and sources in the report
-      for the full evidence.
-  - question: What does “Most Beers Pile Up Near 5–6% ABV” show?
+      Key figure: 0.06 — Median Abv. The source is the TidyTuesday release from
+      2018-07-10 (week15_beers.xlsx). After cleaning, 2,410 rows remain.
+  - question: What does the data show about most Beers Pile Up Near 5–6% ABV?
     answer: >-
-      Key figure: 0.13 — Highest observed Abv. See the charts and sources in the
-      report for the full evidence.
+      Key figure: 0.13 — Highest observed Abv. The source is the TidyTuesday
+      release from 2018-07-10 (week15_beers.xlsx). After cleaning, 2,410 rows
+      remain.
+  - question: What does the data show about high-ABV Names Concentrate in a Short List?
+    answer: >-
+      Key figure: Lee Hill Series Vol. 5 - Bel — Top Name by Abv. The source is
+      the TidyTuesday release from 2018-07-10 (week15_beers.xlsx). After
+      cleaning, 2,410 rows remain.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">American craft beer advertises itself with bitterness and strength — IBU and ABV on the tap list. The TidyTuesday beers extract used here holds <strong>2,410</strong> records with a median ABV of <strong>0.06</strong> (6%) and a high of <strong>0.13</strong> (13%) for Lee Hill Series Vol. 5 - Belgian Style Quadrupel Ale.</p>
 <p class="art-p">Most craft beers in this file are not barrel-aged monsters. They cluster near session-to-standard strength, with a right tail of barleywines, quads, and imperial experiments.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">2,410</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">0.06</span><span class="fact-label">Median Abv</span></div>
   <div class="fact-box"><span class="fact-number">0.13</span><span class="fact-label">Highest observed Abv</span></div>
   <div class="fact-box"><span class="fact-number">Lee Hill Series Vol. 5 - Bel</span><span class="fact-label">Top Name by Abv</span></div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The source is the TidyTuesday release from 2018-07-10 (week15_beers.xlsx). After cleaning, 2,410 rows remain.</p>
 <p class="art-p">ABV is the primary ranked metric; IBU joins in the scatter. Charts are Plotly JSON with PNG fallbacks.</p>
 <h2 id="high-abv-outliers-are-named-experiments" class="anchored">High-ABV Outliers Are Named Experiments</h2>

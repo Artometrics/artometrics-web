@@ -10,8 +10,10 @@ tags:
   - movies-tv
 draft: true
 tldr: >-
-  Public catalog data reveal library size and the gap between hype and retained
-  inventory.
+  Streaming marketing sells the hit. The library keeps the inventory. Those are
+  different objects: one is a campaign; the other is what remains available
+  after the campaign ends. Until a working catalog export is attached, every
+  numeric cell below stays marked TBD.
 keyPoints:
   - TBD — Calibration statistic once the dataset is attached
   - TBD — Catalog or sample size (observed)
@@ -19,30 +21,41 @@ keyPoints:
 faq:
   - question: How Big Is the Library — and How Top-heavy?
     answer: >-
-      Key figure: TBD — Calibration statistic once the dataset is attached. See
-      the charts and sources in the report for the full evidence.
+      Key figure: TBD — Calibration statistic once the dataset is attached.
+      Editors, founders, and analysts who want evidence on how streaming
+      libraries concentrate attention and inventory will find the frame here;
+      the numbers arrive when the CSV does.
   - question: 'Concentration: Who Owns the Middle of the Shelf?'
     answer: >-
-      Key figure: TBD — Catalog or sample size (observed). See the charts and
-      sources in the report for the full evidence.
-  - question: 'What does “The Availability Gap: Hype vs What Stays Up” show?'
+      Key figure: TBD — Catalog or sample size (observed). Editors, founders,
+      and analysts who want evidence on how streaming libraries concentrate
+      attention and inventory will find the frame here; the numbers arrive when
+      the CSV does.
+  - question: 'What does the data show about the Availability Gap: Hype vs What Stays Up?'
     answer: >-
       Key figure: TBD — Concentration or median signal (derived — label
-      clearly). See the charts and sources in the report for the full evidence.
+      clearly). Editors, founders, and analysts who want evidence on how
+      streaming libraries concentrate attention and inventory will find the
+      frame here; the numbers arrive when the CSV does.
+  - question: What this file cannot tell you?
+    answer: >-
+      Editors, founders, and analysts who want evidence on how streaming
+      libraries concentrate attention and inventory will find the frame here;
+      the numbers arrive when the CSV does.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">Streaming marketing sells the hit. The library keeps the inventory. Those are different objects: one is a campaign; the other is what remains available after the campaign ends.</p>
 <p class="art-p">Until a working catalog export is attached, every numeric cell below stays marked TBD. The questions still hold — library size, concentration, and the gap between hype and durable availability — and the charts are stubs waiting for observed rows.</p>
 <p class="art-p">Editors, founders, and analysts who want evidence on how streaming libraries concentrate attention and inventory will find the frame here; the numbers arrive when the CSV does.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">TBD</span><span class="fact-label">Calibration statistic once the dataset is attached</span></div>
   <div class="fact-box"><span class="fact-number">TBD</span><span class="fact-label">Catalog or sample size (observed)</span></div>
   <div class="fact-box"><span class="fact-number">TBD</span><span class="fact-label">Concentration or median signal (derived — label clearly)</span></div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">This scaffold was generated from Content OS brief streaming-catalog-power. Placeholders will be replaced with observed data, derived metrics, and cited sources per the Artometrics style guide.</p>
 <p class="art-p">User-supplied or public streaming availability export: https://artometrics.com/methodology/ — Pilot scaffold expects a CSV later. Until data is attached, sections stay marked PLACEHOLDER with clear observed-vs-derived labels.</p>
 <h2 id="how-big-is-the-library-and-how-top-heavy" class="anchored">How Big Is the Library — and How Top-heavy?</h2>

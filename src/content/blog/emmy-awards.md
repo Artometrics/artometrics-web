@@ -10,38 +10,52 @@ tags:
   - movies-tv
 draft: false
 tldr: >-
-  Nomination and win records reveal which series swept hardware—and how
-  concentrated awards became.
+  Emmy season looks like a parade of equal contenders. Nomination and win
+  records look more like a concentration map — a few names return year after
+  year while most titles appear once and vanish. The working file holds 29,678
+  records from 1957–2021 . Nominee is the most common type label — as expected
+  in a nominations-heavy extract.
 keyPoints:
   - '29,678 — Records in the working dataset'
   - 1957–2021 — Year span covered in the file
   - Nominee — Most common Type
 faq:
-  - question: What does “Landscape” show?
+  - question: What does the data show about landscape?
     answer: >-
-      Key figure: 29,678 — Records in the working dataset. See the charts and
-      sources in the report for the full evidence.
-  - question: What does “Who sits at the top” show?
+      Key figure: 29,678 — Records in the working dataset. The source is the
+      TidyTuesday release from 2021-09-21 (R for Data Science community). The
+      working file contains 29,678 rows and 11 columns after merging available
+      tables in the week folder.
+  - question: What does the data show about volume?
     answer: >-
-      Key figure: 1957–2021 — Year span covered in the file. See the charts and
-      sources in the report for the full evidence.
-  - question: What does “Category” show?
+      Key figure: 1957–2021 — Year span covered in the file. The source is the
+      TidyTuesday release from 2021-09-21 (R for Data Science community). The
+      working file contains 29,678 rows and 11 columns after merging available
+      tables in the week folder.
+  - question: Who sits at the top?
     answer: >-
-      Key figure: Nominee — Most common Type. See the charts and sources in the
-      report for the full evidence.
+      Key figure: Nominee — Most common Type. The source is the TidyTuesday
+      release from 2021-09-21 (R for Data Science community). The working file
+      contains 29,678 rows and 11 columns after merging available tables in the
+      week folder.
+  - question: What does the data show about category?
+    answer: >-
+      The source is the TidyTuesday release from 2021-09-21 (R for Data Science
+      community). The working file contains 29,678 rows and 11 columns after
+      merging available tables in the week folder.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">Emmy season looks like a parade of equal contenders. Nomination and win records look more like a concentration map — a few names return year after year while most titles appear once and vanish.</p>
 <p class="art-p">The working file holds <strong>29,678</strong> records from <strong>1957–2021</strong>. Nominee is the most common type label — as expected in a nominations-heavy extract.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">29,678</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">1957–2021</span><span class="fact-label">Year span covered in the file</span></div>
   <div class="fact-box"><span class="fact-number">Nominee</span><span class="fact-label">Most common Type</span></div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The source is the TidyTuesday release from 2021-09-21 (R for Data Science community). The working file contains 29,678 rows and 11 columns after merging available tables in the week folder.</p>
 <p class="art-p">Charts export as Plotly JSON with PNG fallbacks. Counts by type, period, and recurring name are the main instruments — this table is about volume and recurrence more than a single quality score.</p>
 

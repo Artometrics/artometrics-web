@@ -10,34 +10,50 @@ tags:
   - movies-tv
 draft: false
 tldr: >-
-  Budget and box-office data for thousands of horror titles separate winners
-  from costly misses.
+  Horror is the genre studios love to describe as cheap and scalable — until the
+  ledger says otherwise. Budget and domestic-gross figures for thousands of
+  titles show which films returned capital and which simply burned it. The
+  working file holds 3,401 records spanning 1936–2019 . Median domestic gross
+  sits at 25,533,818 ; the highest observed domestic gross is 474,544,677 .
 keyPoints:
   - '3,401 — Records in the working dataset'
   - '25,533,818 — Median Domestic gross'
   - '474,544,677 — Highest observed Domestic gross'
   - 'Star Wars Ep. I: The Phantom — Top Movie by Domestic gross'
   - 1936–2019 — Year span covered in the file
+  - Drama — Most common Genre
 faq:
-  - question: What does “How the pattern changed over time” show?
+  - question: How the pattern changed over time?
     answer: >-
-      Key figure: 3,401 — Records in the working dataset. See the charts and
-      sources in the report for the full evidence.
-  - question: What does “Who sits at the top” show?
+      Key figure: 3,401 — Records in the working dataset. The source is the
+      TidyTuesday release from 2018-10-23 (R for Data Science community). The
+      working file contains 3,401 rows and 9 columns after merging all available
+      CSV/XLSX tables in the week folder.
+  - question: Who sits at the top?
     answer: >-
-      Key figure: 25,533,818 — Median Domestic gross. See the charts and sources
-      in the report for the full evidence.
-  - question: What does “How the field is spread” show?
+      Key figure: 25,533,818 — Median Domestic gross. The source is the
+      TidyTuesday release from 2018-10-23 (R for Data Science community). The
+      working file contains 3,401 rows and 9 columns after merging all available
+      CSV/XLSX tables in the week folder.
+  - question: How the field is spread?
     answer: >-
-      Key figure: 474,544,677 — Highest observed Domestic gross. See the charts
-      and sources in the report for the full evidence.
+      Key figure: 474,544,677 — Highest observed Domestic gross. The source is
+      the TidyTuesday release from 2018-10-23 (R for Data Science community).
+      The working file contains 3,401 rows and 9 columns after merging all
+      available CSV/XLSX tables in the week folder.
+  - question: Who beats the median — and who trails?
+    answer: >-
+      Key figure: Star Wars Ep. I: The Phantom — Top Movie by Domestic gross.
+      The source is the TidyTuesday release from 2018-10-23 (R for Data Science
+      community). The working file contains 3,401 rows and 9 columns after
+      merging all available CSV/XLSX tables in the week folder.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">Horror is the genre studios love to describe as cheap and scalable — until the ledger says otherwise. Budget and domestic-gross figures for thousands of titles show which films returned capital and which simply burned it.</p>
 <p class="art-p">The working file holds <strong>3,401</strong> records spanning <strong>1936–2019</strong>. Median domestic gross sits at <strong>25,533,818</strong>; the highest observed domestic gross is <strong>474,544,677</strong>. Drama is the most common genre label in the merge — a reminder that genre tags in box-office tables are rarely as clean as marketing copy.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">3,401</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">25,533,818</span><span class="fact-label">Median Domestic gross</span></div>
@@ -46,7 +62,7 @@ faq:
   <div class="fact-box"><span class="fact-number">1936–2019</span><span class="fact-label">Year span covered in the file</span></div>
   <div class="fact-box"><span class="fact-number">Drama</span><span class="fact-label">Most common Genre</span></div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The source is the TidyTuesday release from 2018-10-23 (R for Data Science community). The working file contains 3,401 rows and 9 columns after merging all available CSV/XLSX tables in the week folder.</p>
 <p class="art-p">Charts are exported as Plotly JSON with PNG fallbacks. Medians are preferred where distributions skew. Index-style fields are excluded from metric selection. The table mixes genre labels and franchise outliers — read peaks as structural signals in the file, not as a pure horror-only ledger.</p>
 

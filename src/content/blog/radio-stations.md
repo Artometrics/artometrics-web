@@ -10,8 +10,11 @@ tags:
   - music
 draft: false
 tldr: >-
-  Station-level format data chart where music, talk, and niche programming
-  concentrate.
+  American radio still looks chaotic from the passenger seat — call letters,
+  dial numbers, format slogans. The station license table underneath is more
+  orderly: tens of thousands of rows that map frequency, format, and status
+  across the dial. A TidyTuesday working file of 17,186 records puts median
+  frequency at 101 and the highest observed frequency at 1,700 .
 keyPoints:
   - '17,186 — Records in the working dataset'
   - 101 — Median Frequency
@@ -19,26 +22,34 @@ keyPoints:
   - WEUP — Top Call sign by Frequency
   - Country — Most common Format
 faq:
-  - question: What does “Frequency by call sign” show?
+  - question: What does the data show about frequency by call sign?
     answer: >-
-      Key figure: 17,186 — Records in the working dataset. See the charts and
-      sources in the report for the full evidence.
-  - question: What does “Who sits at the top” show?
+      Key figure: 17,186 — Records in the working dataset. Frequency leaders at
+      the top of the AM band are a different story from format share. The charts
+      separate the physics of the dial from the culture of the playlist.
+  - question: Who sits at the top?
     answer: >-
-      Key figure: 101 — Median Frequency. See the charts and sources in the
-      report for the full evidence.
-  - question: What does “Frequency by format” show?
+      Key figure: 101 — Median Frequency. Frequency leaders at the top of the AM
+      band are a different story from format share. The charts separate the
+      physics of the dial from the culture of the playlist.
+  - question: What does the data show about frequency by format?
     answer: >-
-      Key figure: 1,700 — Highest observed Frequency. See the charts and sources
-      in the report for the full evidence.
+      Key figure: 1,700 — Highest observed Frequency. Frequency leaders at the
+      top of the AM band are a different story from format share. The charts
+      separate the physics of the dial from the culture of the playlist.
+  - question: Who beats the median — and who trails?
+    answer: >-
+      Key figure: WEUP — Top Call sign by Frequency. Frequency leaders at the
+      top of the AM band are a different story from format share. The charts
+      separate the physics of the dial from the culture of the playlist.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">American radio still looks chaotic from the passenger seat — call letters, dial numbers, format slogans. The station license table underneath is more orderly: tens of thousands of rows that map frequency, format, and status across the dial.</p>
 <p class="art-p">A TidyTuesday working file of <strong>17,186</strong> records puts median frequency at <strong>101</strong> and the highest observed frequency at <strong>1,700</strong>. <strong>WEUP</strong> leads the call-sign ranking by frequency in the fact box, and <strong>Country</strong> is the most common format label.</p>
 <p class="art-p">Frequency leaders at the top of the AM band are a different story from format share. The charts separate the physics of the dial from the culture of the playlist.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">17,186</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">101</span><span class="fact-label">Median Frequency</span></div>
@@ -46,7 +57,7 @@ faq:
   <div class="fact-box"><span class="fact-number">WEUP</span><span class="fact-label">Top Call sign by Frequency</span></div>
   <div class="fact-box"><span class="fact-number">Country</span><span class="fact-label">Most common Format</span></div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The source is the TidyTuesday release from 2022-11-08 (R for Data Science community). The working file contains 17,186 rows and 11 columns after cleaning — call signs, frequencies, formats, and license status fields among them.</p>
 <p class="art-p">Medians stabilize a dial that mixes FM-looking centers with AM extremes. Charts export as Plotly JSON with PNG fallbacks. A license row is not a ratings book; it is permission to exist on the dial.</p>
 <h2 id="breakdown" class="anchored">Frequency by call sign</h2>

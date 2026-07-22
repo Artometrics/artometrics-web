@@ -10,8 +10,10 @@ tags:
   - business
 draft: false
 tldr: >-
-  CMS HRRP data show where states, conditions, and ownership types exceed
-  benchmarks.
+  The Hospital Readmissions Reduction Program is a Medicare penalty system that
+  has been running since 2012. The premise is simple: if your patients come back
+  to the hospital within 30 days of discharge at a higher rate than expected
+  given their medical profile, CMS docks your Medicare reimbursements.
 keyPoints:
   - >-
     48.1% — of HRRP-eligible hospital-condition pairs carried an excess
@@ -29,29 +31,44 @@ keyPoints:
     742 — hospitals mandated to participate in CMS&#39;s TEAM bundled payment
     model as of January 1, 2026 — where readmission penalties become
     episode-level accountability
+  - >-
+    65.4% — New Jersey&#39;s share of penalized hospital-condition pairs — the
+    highest-risk geography in the working dataset
 faq:
-  - question: What does “The Geography of Failure” show?
+  - question: What does the data show about the Geography of Failure?
     answer: >-
       Key figure: 48.1% — of HRRP-eligible hospital-condition pairs carried an
       excess readmission ratio above 1.0 — more readmissions than CMS models
-      predict. See the charts and sources in the report for the full evidence.
-  - question: What does “The Condition Nobody Is Solving” show?
+      predict. The FY2025 HRRP supplemental extract covers the measurement
+      window used for CMS’s published excess readmission ratios. After removing
+      suppressed rows — hospitals with fewer than…
+  - question: What does the data show about the Condition Nobody Is Solving?
     answer: >-
       Key figure: 6 — conditions tracked under HRRP — AMI, Heart Failure,
-      Pneumonia, COPD, Hip/Knee, and CABG. See the charts and sources in the
-      report for the full evidence.
-  - question: 'What does “Ownership, Penalty, and Who Pays” show?'
+      Pneumonia, COPD, Hip/Knee, and CABG. The FY2025 HRRP supplemental extract
+      covers the measurement window used for CMS’s published excess readmission
+      ratios. After removing suppressed rows — hospitals with fewer than…
+  - question: 'What does the data show about ownership, Penalty, and Who Pays?'
     answer: >-
       Key figure: 1.0018 — average excess readmission ratio nationally — the
       average hospital readmits slightly more patients than CMS models expect.
-      See the charts and sources in the report for the full evidence.
+      The FY2025 HRRP supplemental extract covers the measurement window used
+      for CMS’s published excess readmission ratios. After removing suppressed
+      rows — hospitals with fewer than…
+  - question: What this file cannot tell you?
+    answer: >-
+      Key figure: 1.00485 — Hip/Knee average ERR — the highest of the six
+      conditions, nearly 2× the excess of the next closest track. The FY2025
+      HRRP supplemental extract covers the measurement window used for CMS’s
+      published excess readmission ratios. After removing suppressed rows —
+      hospitals with fewer than…
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">The Hospital Readmissions Reduction Program is a Medicare penalty system that has been running since 2012. The premise is simple: if your patients come back to the hospital within 30 days of discharge at a higher rate than expected given their medical profile, CMS docks your Medicare reimbursements. The penalty caps at 3% of all Medicare payments — not just payments for the specific condition being measured. A hospital with too many heart failure readmissions doesn’t just lose heart failure revenue. It loses 3% of everything.</p>
 <p class="art-p">The core metric is the Excess Readmission Ratio, or ERR. It is a ratio of predicted readmissions to expected readmissions — where “expected” is risk-adjusted for each patient’s age, comorbidities, and discharge history. An ERR of exactly 1.0 means you readmitted exactly as many patients as a hospital of your type and patient mix should. Above 1.0 means more readmissions than expected. Below 1.0 means fewer. What this analysis found: nearly every condition’s national average ERR is above 1.0. HRRP has been running for over a decade, and the average American hospital is still readmitting more patients than CMS expects. The penalty hasn’t eliminated the problem. It has clarified it.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box">
     <span class="fact-number">48.1%</span>
@@ -78,7 +95,7 @@ faq:
     <span class="fact-label">New Jersey&#39;s share of penalized hospital-condition pairs — the highest-risk geography in the working dataset</span>
   </div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The FY2025 HRRP supplemental extract covers the measurement window used for CMS’s published excess readmission ratios. After removing suppressed rows — hospitals with fewer than 25 discharges for a given condition, which CMS redacts to protect patient privacy — the working dataset contains 11,720 hospital-condition pairs across roughly 2,700 hospitals and six conditions: Acute Myocardial Infarction (AMI), Heart Failure, Pneumonia, Chronic Obstructive Pulmonary Disease (COPD), Hip &amp; Knee Arthroplasty, and Coronary Artery Bypass Graft (CABG). A hospital can perform well on five tracks and still take a hit on one.</p>
 <p class="art-p">The suppressed rows matter. Small rural hospitals disproportionately fall below the 25-discharge threshold and disappear from the analysis. The hospitals in this dataset skew toward larger, busier facilities. That is not a flaw in the extract — it is a feature of how CMS designed the program — but it shapes every finding below.</p>
 <p class="art-p">An ERR above 1.0 feeds a penalty calculation; the tier depends on how far above 1.0 a hospital sits relative to peers. For this piece, pairs are grouped into four tiers: No Penalty (ERR ≤ 1.0), Low, Medium, and High. Charts are rendered in R from the working CSVs in this monorepo ( articles/readmitted/data/ ), with PNG and interactive Plotly JSON exported side by side. Ownership labels for Chart 3 were joined from CMS Hospital General Information (dataset xubh-q36u ) and stored offline so the analysis does not depend on a live CMS download at render time.</p>

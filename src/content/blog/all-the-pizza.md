@@ -10,8 +10,10 @@ tags:
   - culture
 draft: false
 tldr: >-
-  Price and calorie data across pizza menus show what diners pay in money and
-  energy.
+  Pizza prices look simple until you try to compare 10,000 menu rows. The
+  Datafiniti pizza extract in TidyTuesday does exactly that: restaurant-level
+  records with price-range fields that reveal how “a slice” and “a specialty
+  pie” live in different economic brackets. The working file holds 10,000 rows.
 keyPoints:
   - '10,000 — Records in the working dataset'
   - 0.00 — Median Price range min
@@ -19,33 +21,41 @@ keyPoints:
   - Oregano — Top Name by Price range min
 faq:
   - question: >-
-      What does “Price Floors Separate Everyday Shops From Destination Pies”
-      show?
+      What does the data show about price Floors Separate Everyday Shops From
+      Destination Pies?
     answer: >-
-      Key figure: 10,000 — Records in the working dataset. See the charts and
-      sources in the report for the full evidence.
-  - question: What does “The Top Dozen Is a Premium Plateau” show?
+      Key figure: 10,000 — Records in the working dataset. The source is the
+      TidyTuesday release from 2019-10-01 (pizza_datafiniti.csv). After
+      cleaning, the analysis frame used here contains 10,000 records.
+  - question: What does the data show about the Top Dozen Is a Premium Plateau?
     answer: >-
-      Key figure: 0.00 — Median Price range min. See the charts and sources in
-      the report for the full evidence.
-  - question: What does “Almost Everything Sits in the Low Bins” show?
+      Key figure: 0.00 — Median Price range min. The source is the TidyTuesday
+      release from 2019-10-01 (pizza_datafiniti.csv). After cleaning, the
+      analysis frame used here contains 10,000 records.
+  - question: What does the data show about almost Everything Sits in the Low Bins?
     answer: >-
-      Key figure: 50.0 — Highest observed Price range min. See the charts and
-      sources in the report for the full evidence.
+      Key figure: 50.0 — Highest observed Price range min. The source is the
+      TidyTuesday release from 2019-10-01 (pizza_datafiniti.csv). After
+      cleaning, the analysis frame used here contains 10,000 records.
+  - question: What does the data show about premium Names Concentrate Quickly?
+    answer: >-
+      Key figure: Oregano — Top Name by Price range min. The source is the
+      TidyTuesday release from 2019-10-01 (pizza_datafiniti.csv). After
+      cleaning, the analysis frame used here contains 10,000 records.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">Pizza prices look simple until you try to compare 10,000 menu rows. The Datafiniti pizza extract in TidyTuesday does exactly that: restaurant-level records with price-range fields that reveal how “a slice” and “a specialty pie” live in different economic brackets. The working file holds <strong>10,000</strong> rows.</p>
 <p class="art-p">The median price-range minimum is <strong>0.00</strong> — a signal that many listings encode missing or zeroed floors rather than free pizza. The highest observed price-range minimum is <strong>50.0</strong>, shared at the top by names such as Oregano and Crust Stone Oven Pizza. That ceiling is where tasting-menu and destination pizzerias sit.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">10,000</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">0.00</span><span class="fact-label">Median Price range min</span></div>
   <div class="fact-box"><span class="fact-number">50.0</span><span class="fact-label">Highest observed Price range min</span></div>
   <div class="fact-box"><span class="fact-number">Oregano</span><span class="fact-label">Top Name by Price range min</span></div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The source is the TidyTuesday release from 2019-10-01 (pizza_datafiniti.csv). After cleaning, the analysis frame used here contains 10,000 records.</p>
 <p class="art-p">Price range minimum is the ranked metric across the chart stack. Medians are used because the distribution is heavily piled at low values. Charts are Plotly JSON with PNG fallbacks.</p>
 <h2 id="price-floors-separate-everyday-shops-from-destination-pies" class="anchored">Price Floors Separate Everyday Shops From Destination Pies</h2>

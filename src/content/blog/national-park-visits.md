@@ -10,35 +10,47 @@ tags:
   - cities-travel
 draft: false
 tldr: >-
-  Visitation time series identify America’s busiest parks and how attendance has
-  trended.
+  National parks are sold as wilderness and remembered as crowds. Visit counts
+  make that tension measurable: which named units absorb America's outdoor
+  attention, and how that attention has compounded since the early twentieth
+  century. A TidyTuesday working file of 21,560 records spans 1904–2016 . Median
+  visitors sit near 155,219 ;
 keyPoints:
   - '21,560 — Records in the working dataset'
   - '155,219 — Median Visitors'
   - '871,922,828 — Highest observed Visitors'
   - Golden Gate — Top Parkname by Visitors
   - 1904–2016 — Year span covered in the file
+  - IM — Most common Region
 faq:
-  - question: What does “How visits grew over time” show?
+  - question: How visits grew over time?
     answer: >-
-      Key figure: 21,560 — Records in the working dataset. See the charts and
-      sources in the report for the full evidence.
-  - question: What does “Who sits at the top” show?
+      Key figure: 21,560 — Records in the working dataset. Urban gateways and
+      memorial parkways often outdraw remote iconic wilderness. The leaderboard
+      is as much about access and metropolitan adjacency as about scenic purity.
+  - question: Who sits at the top?
     answer: >-
-      Key figure: 155,219 — Median Visitors. See the charts and sources in the
-      report for the full evidence.
-  - question: What does “How regions spread visits” show?
+      Key figure: 155,219 — Median Visitors. Urban gateways and memorial
+      parkways often outdraw remote iconic wilderness. The leaderboard is as
+      much about access and metropolitan adjacency as about scenic purity.
+  - question: How regions spread visits?
     answer: >-
-      Key figure: 871,922,828 — Highest observed Visitors. See the charts and
-      sources in the report for the full evidence.
+      Key figure: 871,922,828 — Highest observed Visitors. Urban gateways and
+      memorial parkways often outdraw remote iconic wilderness. The leaderboard
+      is as much about access and metropolitan adjacency as about scenic purity.
+  - question: Who beats the median — and who trails?
+    answer: >-
+      Key figure: Golden Gate — Top Parkname by Visitors. Urban gateways and
+      memorial parkways often outdraw remote iconic wilderness. The leaderboard
+      is as much about access and metropolitan adjacency as about scenic purity.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">National parks are sold as wilderness and remembered as crowds. Visit counts make that tension measurable: which named units absorb America's outdoor attention, and how that attention has compounded since the early twentieth century.</p>
 <p class="art-p">A TidyTuesday working file of <strong>21,560</strong> records spans <strong>1904–2016</strong>. Median visitors sit near <strong>155,219</strong>; the highest observed visitors figure reaches <strong>871,922,828</strong> in the extreme cell of the extract. <strong>Golden Gate</strong> leads the park-name ranking used in the fact box, and region code <strong>IM</strong> is the most common regional label.</p>
 <p class="art-p">Urban gateways and memorial parkways often outdraw remote iconic wilderness. The leaderboard is as much about access and metropolitan adjacency as about scenic purity.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">21,560</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">155,219</span><span class="fact-label">Median Visitors</span></div>
@@ -47,7 +59,7 @@ faq:
   <div class="fact-box"><span class="fact-number">1904–2016</span><span class="fact-label">Year span covered in the file</span></div>
   <div class="fact-box"><span class="fact-number">IM</span><span class="fact-label">Most common Region</span></div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The source is the TidyTuesday release from 2019-09-17 (R for Data Science community). The working file contains 21,560 rows and 13 columns after assembly — park names, regions, years, and visitor totals among them.</p>
 <p class="art-p">Medians handle skew from a few hyper-visited units. Charts export as Plotly JSON with PNG fallbacks. Visitor totals are administrative counts with known definition changes over a century; treat long-run levels as directional, not penny-precise.</p>
 <h2 id="how-the-pattern-changed-over-time" class="anchored">How visits grew over time</h2>

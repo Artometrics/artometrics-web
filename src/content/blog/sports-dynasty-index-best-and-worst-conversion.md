@@ -11,8 +11,11 @@ tags:
   - sports
 draft: false
 tldr: >-
-  A cross-league index of championship mass, conversion, market value, and fan
-  pain.
+  Single-team profiles answer one fan base at a time. Cross the league borders
+  and greatness stops looking like one ranking. Archive mass, conversion
+  efficiency, and attention pull apart: a franchise can dominate one category
+  and fail the broader identity test. The Yankees’ 27 titles remain baseball’s
+  largest archive.
 keyPoints:
   - 351 — Charts now audited across the Artometrics corpus
   - 4 — Major North American leagues compared
@@ -20,20 +23,38 @@ keyPoints:
   - 0 — Cowboys titles since the 1990s dynasty
   - 57 — Maple Leafs active Stanley Cup drought entering 2025
 faq:
-  - question: What does “A few franchises own championship memory itself” show?
-    answer: >-
-      Key figure: 351 — Charts now audited across the Artometrics corpus. See
-      the charts and sources in the report for the full evidence.
-  - question: 'What does “Modern dynasties are finishers, not just invitees” show?'
-    answer: >-
-      Key figure: 4 — Major North American leagues compared. See the charts and
-      sources in the report for the full evidence.
   - question: >-
-      What does “Market power and competitive power are different variables”
-      show?
+      What does the data show about a few franchises own championship memory
+      itself?
     answer: >-
-      Key figure: 27 — Yankees titles, the largest MLB archive. See the charts
-      and sources in the report for the full evidence.
+      Key figure: 351 — Charts now audited across the Artometrics corpus. This
+      index uses five charts drawn from public reference records—and from an
+      Artometrics corpus that now holds 351 audited charts—to map championship
+      mass, Finals conversion, brand…
+  - question: >-
+      What does the data show about modern dynasties are finishers, not just
+      invitees?
+    answer: >-
+      Key figure: 4 — Major North American leagues compared. This index uses
+      five charts drawn from public reference records—and from an Artometrics
+      corpus that now holds 351 audited charts—to map championship mass, Finals
+      conversion, brand…
+  - question: >-
+      What does the data show about market power and competitive power are
+      different variables?
+    answer: >-
+      Key figure: 27 — Yankees titles, the largest MLB archive. This index uses
+      five charts drawn from public reference records—and from an Artometrics
+      corpus that now holds 351 audited charts—to map championship mass, Finals
+      conversion, brand…
+  - question: >-
+      What does the data show about each league teaches fans a different theory
+      of fairness?
+    answer: >-
+      Key figure: 0 — Cowboys titles since the 1990s dynasty. This index uses
+      five charts drawn from public reference records—and from an Artometrics
+      corpus that now holds 351 audited charts—to map championship mass, Finals
+      conversion, brand…
 ---
 <div id="quarto-content">
 <main class="art-article-main">
@@ -41,7 +62,8 @@ faq:
 <p class="art-p">The Yankees’ 27 titles remain baseball’s largest archive. The Cowboys have added 0 titles since the 1990s dynasty while remaining a brand colossus. The Maple Leafs entered 2025 with a 57-year Stanley Cup drought. Those facts do not live on the same scale until someone builds a shared vocabulary across MLB, the NBA, the NFL, and the NHL.</p>
 <p class="art-p">This index uses five charts drawn from public reference records—and from an Artometrics corpus that now holds 351 audited charts—to map championship mass, Finals conversion, brand versus recent output, league title rotation, and the strange geometry of fan pain under a bright spotlight.</p>
 
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">351</span><span class="fact-label">Charts now audited across the Artometrics corpus</span></div>
   <div class="fact-box"><span class="fact-number">4</span><span class="fact-label">Major North American leagues compared</span></div>
@@ -51,7 +73,7 @@ faq:
   <div class="fact-box"><span class="fact-number">5</span><span class="fact-label">Charts in this cross-report</span></div>
 </div>
 
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">This is a curated comparative model built from public franchise records—Baseball Reference, Basketball Reference, Pro Football Reference, Hockey Reference—plus Forbes valuation lists. It is not a proprietary win-probability system. Attention markers are editorial indices labeled as such: comparative signals, not official league statistics.</p>
 <p class="art-p">A front office wants causal variables—payroll, age curves, draft capital, injuries, ownership. The useful first cut sits one level higher: what does an institution look like when winning, money, attention, and pain share the same page?</p>
 

@@ -10,8 +10,11 @@ tags:
   - culture
 draft: false
 tldr: >-
-  A historical-economics lens asks who captured wealth when rulers claimed
-  order.
+  Every empire in history has told the same story about itself: we brought
+  order, we built roads, we made the trains run on time. What the chronicles
+  leave out is the spreadsheet. Who actually got richer? How long did the
+  prosperity last? And when it ended, how fast did it go? Those questions have
+  answers now.
 keyPoints:
   - >-
     1,200 yrs — Time for Western Europe to recover Rome&#39;s peak GDP per
@@ -28,30 +31,46 @@ keyPoints:
   - >-
     10% — Estimated share of global population killed in Mongol conquests,
     1206–1260 — 30 to 40 million deaths
+  - >-
+    30–80 yrs — How far peak centralization precedes GDP peak across all six
+    empires — the institutional lag
 faq:
-  - question: What does “Gdp Per Capita Across Empire Cores” show?
+  - question: What does the data show about gdp Per Capita Across Empire Cores?
     answer: >-
       Key figure: 1,200 yrs — Time for Western Europe to recover Rome&#39;s peak
-      GDP per capita after the 476 CE collapse. See the charts and sources in
-      the report for the full evidence.
-  - question: 'What does “Rise Fast, Fall Faster” show?'
+      GDP per capita after the 476 CE collapse. The answer is not what the
+      history textbooks imply. GDP goes up. Real wages mostly don’t. The rise
+      takes centuries. The fall takes decades. And in every case, the
+      institutions…
+  - question: 'What does the data show about rise Fast, Fall Faster?'
     answer: >-
       Key figure: 23% — Share of global population governed by the British
-      Empire at its 1920 territorial peak — 412 million people. See the charts
-      and sources in the report for the full evidence.
-  - question: What does “The Extraction Gap” show?
+      Empire at its 1920 territorial peak — 412 million people. The answer is
+      not what the history textbooks imply. GDP goes up. Real wages mostly
+      don’t. The rise takes centuries. The fall takes decades. And in every
+      case, the institutions…
+  - question: What does the data show about the Extraction Gap?
     answer: >-
       Key figure: ~7× — Number of times Imperial China cycled through full
-      unification and fragmentation between 221 BCE and 1912 CE. See the charts
-      and sources in the report for the full evidence.
+      unification and fragmentation between 221 BCE and 1912 CE. The answer is
+      not what the history textbooks imply. GDP goes up. Real wages mostly
+      don’t. The rise takes centuries. The fall takes decades. And in every
+      case, the institutions…
+  - question: What this file cannot tell you?
+    answer: >-
+      Key figure: 180,000 t — Silver extracted by Habsburg Spain from the
+      Americas between 1500 and 1800 — as Castilian real wages declined. The
+      answer is not what the history textbooks imply. GDP goes up. Real wages
+      mostly don’t. The rise takes centuries. The fall takes decades. And in
+      every case, the institutions…
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">Every empire in history has told the same story about itself: we brought order, we built roads, we made the trains run on time. What the chronicles leave out is the spreadsheet. Who actually got richer? How long did the prosperity last? And when it ended, how fast did it go?</p>
 <p class="art-p">Those questions have answers now. The Maddison Project Database — the most comprehensive long-run economic dataset ever assembled — lets us put Rome, Britain, the Ottomans, Imperial China, the Mongols, and Habsburg Spain on the same chart and ask: what does empire actually look like as an economic system?</p>
 <p class="art-p">The answer is not what the history textbooks imply. GDP goes up. Real wages mostly don’t. The rise takes centuries. The fall takes decades. And in every case, the institutions built to extract surplus during expansion become structurally incapable of sharing it during maturation. That’s the pattern. Six empires. No exceptions.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box">
     <span class="fact-number">1,200 yrs</span>
@@ -78,7 +97,7 @@ faq:
     <span class="fact-label">How far peak centralization precedes GDP peak across all six empires — the institutional lag</span>
   </div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The Maddison Project Database is the closest thing economics has to a time machine. Originally assembled by Angus Maddison and now maintained by the University of Groningen, it provides GDP per capita estimates — expressed in 2011 USD purchasing power parity — stretching back to 1 CE for some countries and to 1000 BCE for a handful of ancient economies. The 2023 update, published by Bolt and van Zanden, is the version used here, accessed via Our World in Data’s public CSV endpoint.</p>
 <p class="art-p">Six empire cores were selected to represent distinct geographies, time periods, and institutional types: the Roman Empire (proxied by Italy, back-extrapolated from 1–476 CE using Maddison 2007, Scheidel and Friesen 2009, and Lo Cascio and Malanima 2009), the British Empire (United Kingdom), the Ottoman Empire (Turkey), Imperial China (China), Habsburg-Spain (Spain), and the Mongol Empire. The Mongol series has no Maddison country code and is constructed as a population-weighted average of China (45%), Russia (30%), and Turkey (25%) for 1200–1400 CE — the best available proxy for a steppe empire that governed all three regions simultaneously.</p>
 <p class="art-p">Each empire’s GDP series is capped at its historical dissolution date: Rome at 476 CE, the Mongols at 1400, Habsburg-Spain at 1808, Imperial China at 1912, the Ottoman Empire at 1918, and the British Empire at 1947 (Indian independence). Real wage data — used in Chart 3 to construct the extraction gap — comes from Robert Allen’s European wages series (2001), Özmucur and Pamuk’s Ottoman wage reconstruction (2002), and Allen et al.’s China and Asia series (2011). All wage figures are expressed in silver grams per day for an unskilled male laborer.</p>

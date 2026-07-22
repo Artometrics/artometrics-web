@@ -10,8 +10,11 @@ tags:
   - culture
 draft: false
 tldr: >-
-  A psychonomic reading of Caesar asks what ambition cost the Roman political
-  household he ruled.
+  Economics comes from the Greek oikonomia — the management of the house.
+  Psychonomics asks the prior question: who is managing the soul of the house,
+  and what does their inner architecture cost everyone living inside it? Julius
+  Caesar is the founding case study. His policies were not abstract theories.
+  They were his biography, scaled.
 keyPoints:
   - >-
     100 BCE — Caesar&#39;s birth year — born into Rome&#39;s most turbulent
@@ -32,32 +35,48 @@ keyPoints:
     194 yrs — How long after Caesar&#39;s assassination Rome reached its peak
     GDP per capita — he authored the Pax Romana&#39;s prosperity without living
     a day of it
+  - >-
+    23 — Stab wounds on the Ides of March, 44 BCE — inflicted by 60 senators,
+    led by two men Caesar had personally pardoned, appointed, and promised
+    future consulships
 faq:
-  - question: What does “Leadership Trait Analysis” show?
+  - question: What does the data show about leadership Trait Analysis?
     answer: >-
       Key figure: 100 BCE — Caesar&#39;s birth year — born into Rome&#39;s most
       turbulent political century, to a patrician family living in the Subura
-      tenements. See the charts and sources in the report for the full evidence.
-  - question: What does “The Economic Fingerprint” show?
+      tenements. By 44 BCE, Caesar had crossed the Rubicon, won a civil war,
+      reformed the debt system, redistributed land to 80,000 veterans and urban
+      poor, rebuilt the calendar, and declared…
+  - question: What does the data show about the Economic Fingerprint?
     answer: >-
       Key figure: 38 days — Held captive by Cilician pirates at age 25 — he
       laughed at their ransom demand, volunteered to pay more, then crucified
-      every one of them after his release. See the charts and sources in the
-      report for the full evidence.
-  - question: What does “The Patronage Network” show?
+      every one of them after his release. By 44 BCE, Caesar had crossed the
+      Rubicon, won a civil war, reformed the debt system, redistributed land to
+      80,000 veterans and urban poor, rebuilt the calendar, and declared…
+  - question: What does the data show about the Patronage Network?
     answer: >-
       Key figure: 0.95 — Caesar&#39;s Need for Power score under the Hermann
       (1999) Leadership Trait Analysis framework — near the ceiling of any world
-      leader ever profiled. See the charts and sources in the report for the
-      full evidence.
+      leader ever profiled. By 44 BCE, Caesar had crossed the Rubicon, won a
+      civil war, reformed the debt system, redistributed land to 80,000 veterans
+      and urban poor, rebuilt the calendar, and declared…
+  - question: What this file cannot tell you?
+    answer: >-
+      Key figure: 80,000 — Veterans and urban poor resettled in land colonies
+      during Caesar&#39;s dictatorship — his economic reforms addressed real
+      structural problems and built his client base simultaneously. By 44 BCE,
+      Caesar had crossed the Rubicon, won a civil war, reformed the debt system,
+      redistributed land to 80,000 veterans and urban poor, rebuilt the
+      calendar, and declared…
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">Economics comes from the Greek oikonomia — the management of the house. Psychonomics asks the prior question: who is managing the soul of the house, and what does their inner architecture cost everyone living inside it? Julius Caesar is the founding case study. His policies were not abstract theories. They were his biography, scaled.</p>
 <p class="art-p">Caesar was born in 100 BCE into the Subura — Rome’s roughest district — to a patrician family with a noble name and thin wallets. His father died when Caesar was fifteen, leaving him head of household with no resources and no patron. By the time he was twenty-five, Cilician pirates had captured his ship, set a ransom of twenty talents, and watched Caesar laugh, volunteer to pay fifty, spend thirty-eight days as their captive writing poetry and calling them illiterates, then return after his release with a fleet he raised himself and crucify every one of them — exactly as promised. This is not a fun anecdote. It is the earliest behavioral evidence of his core operating theory: the self is the institution. The pattern never changed. The scale did.</p>
 <p class="art-p">By 44 BCE, Caesar had crossed the Rubicon, won a civil war, reformed the debt system, redistributed land to 80,000 veterans and urban poor, rebuilt the calendar, and declared himself dictator for life. He was then stabbed twenty-three times by sixty senators — led by Brutus and Cassius, two men he had personally pardoned, appointed to the praetorship, and promised future consulships. The house he built outlasted him by five centuries. The soul that built it was load-bearing in a way no institution can survive.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box">
     <span class="fact-number">100 BCE</span>
@@ -97,7 +116,7 @@ faq:
     pardoned, appointed, and promised future consulships</span>
   </div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">this piece applies the Leadership Trait Analysis (LTA) framework, developed by political psychologist Margaret Hermann (1999) and used operationally by the CIA’s Center for the Analysis of Political Behavior. LTA scores leaders on seven psychological variables by analyzing the content of their speeches and writings: Belief in ability to control events (B), Conceptual complexity (CC), Distrust of others (D), In-group bias (IB), Need for power (P), Need for affiliation (A), and Task orientation (T). Scores are normalized against a reference group of 100+ world leaders profiled between 1945–2010, on a 0–1.0 scale.</p>
 <p class="art-p">Applying LTA to an ancient figure is a legitimate extension of the method — published scholarship has done so for historical leaders using the same coding rubric (see: Dyson, 2006, Political Psychology ; Post, 2004, Leaders and Their Followers in a Dangerous World ). For Caesar, scores are coded from three primary sources: the Commentarii de Bello Gallico (58–50 BCE, self-authored), Plutarch’s Parallel Lives: Caesar (c. AD 100), and Suetonius’s Divus Julius (c. AD 121). Comparative scores for Mao, Xi, and Thatcher are drawn from Wang &amp; Guo (2019) and the Hermann (1999) reference baseline.</p>
 <p class="art-p">The Roman GDP per capita series is drawn from Maddison (2007), with revisions by Scheidel &amp; Friesen (2009) and Lo Cascio &amp; Malanima (2011). All values are in 1990 Geary-Khamis (international) dollars — the standard comparative unit for pre-industrial economies. The Maddison Project’s earliest reliable Roman anchor is 14 AD; estimates before that date carry wider uncertainty intervals and should be read as directional rather than precise. The uncertainty band on Chart 2 reflects the low-to-high range across published scholarly estimates.</p>

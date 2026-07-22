@@ -10,8 +10,11 @@ tags:
   - cities-travel
 draft: false
 tldr: >-
-  Why the two are paired in debate—and where their economic and cultural systems
-  diverge.
+  New York and San Francisco are not peers by population or geography, but they
+  are peers in the market for invisible power. They both export coordination,
+  talent, symbols, and future-facing industries. The question is why they belong
+  in the same conversation and what people miss when they compare them only by
+  rent, taxes, or office vacancy.
 keyPoints:
   - 2 — Global intangible-output cities compared
   - 8 — Identity axes scored
@@ -19,26 +22,31 @@ keyPoints:
   - 0 — Single-variable answers
   - '1 — Core contrast: command versus invention'
 faq:
-  - question: What does “Command versus Lab” show?
+  - question: What does the data show about command versus Lab?
     answer: >-
-      Key figure: 2 — Global intangible-output cities compared. See the charts
-      and sources in the report for the full evidence.
-  - question: What does “History Timing” show?
+      Key figure: 2 — Global intangible-output cities compared. Start with the
+      scale: 2 — Global intangible-output cities compared; and 8 — Identity axes
+      scored.
+  - question: What does the data show about history Timing?
     answer: >-
-      Key figure: 8 — Identity axes scored. See the charts and sources in the
-      report for the full evidence.
-  - question: What does “Output Fingerprint” show?
+      Key figure: 8 — Identity axes scored. Start with the scale: 2 — Global
+      intangible-output cities compared; and 8 — Identity axes scored.
+  - question: What does the data show about output Fingerprint?
     answer: >-
-      Key figure: 6 — Shared pressure narratives tested. See the charts and
-      sources in the report for the full evidence.
+      Key figure: 6 — Shared pressure narratives tested. Start with the scale: 2
+      — Global intangible-output cities compared; and 8 — Identity axes scored.
+  - question: What does the data show about pressure Pairing?
+    answer: >-
+      Key figure: 0 — Single-variable answers. Start with the scale: 2 — Global
+      intangible-output cities compared; and 8 — Identity axes scored.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">New York and San Francisco are not peers by population or geography, but they are peers in the market for invisible power. They both export coordination, talent, symbols, and future-facing industries.</p>
 <p class="art-p">The question is why they belong in the same conversation and what people miss when they compare them only by rent, taxes, or office vacancy.</p>
 <p class="art-p">Start with the scale: <strong>2</strong> — Global intangible-output cities compared; and <strong>8</strong> — Identity axes scored.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">2</span><span class="fact-label">Global intangible-output cities compared</span></div>
   <div class="fact-box"><span class="fact-number">8</span><span class="fact-label">Identity axes scored</span></div>
@@ -47,7 +55,7 @@ faq:
   <div class="fact-box"><span class="fact-number">0</span><span class="fact-label">Single-variable answers</span></div>
   <div class="fact-box"><span class="fact-number">1</span><span class="fact-label">Core contrast: command versus invention</span></div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The source stack includes BEA metro GDP, Census ACS, BLS employment, DataSF, NYC Open Data, World Cities Culture Forum, public venture-capital references, transit agencies, and office-market summaries.</p>
 <p class="art-p">The report uses editorial indices to define the comparison frame before direct API ingestion. It also references the San Francisco Data Microscope as the local profile layer.</p>
 <h2 id="command-versus-lab" class="anchored">Command versus Lab</h2>

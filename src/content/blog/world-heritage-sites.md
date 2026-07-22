@@ -7,7 +7,10 @@ heroImage: /images/content/articles/world-heritage-sites/hero.png
 tags:
   - galleries
 draft: false
-tldr: UNESCO heritage counts track how Scandinavian inventories expanded.
+tldr: >-
+  UNESCO World Heritage counts turn national prestige into a time series. This
+  Scandinavian extract holds 6 records spanning 2004–2022, with a median value
+  of 9.00 and a high of 15.0. Sweden leads the fact-box country ranking.
 keyPoints:
   - 6 — Records in the working dataset
   - 9.00 — Median Value
@@ -15,25 +18,38 @@ keyPoints:
   - Sweden — Top Country by Value
   - 2004–2022 — Year span covered in the file
 faq:
-  - question: What does “Median heritage counts doubled at the center” show?
+  - question: >-
+      What does the data show about median heritage counts doubled at the
+      center?
     answer: >-
-      Key figure: 6 — Records in the working dataset. See the charts and sources
-      in the report for the full evidence.
-  - question: What does “Sweden leads the country ladder” show?
+      Key figure: 6 — Records in the working dataset. The source is the
+      TidyTuesday release from 2024-02-06 (R for Data Science community). The
+      working file contains 6 rows and 3 columns after merging available tables
+      in the week…
+  - question: What does the data show about sweden leads the country ladder?
     answer: >-
-      Key figure: 9.00 — Median Value. See the charts and sources in the report
-      for the full evidence.
-  - question: What does “Leaders diverge when tracked over time” show?
+      Key figure: 9.00 — Median Value. The source is the TidyTuesday release
+      from 2024-02-06 (R for Data Science community). The working file contains
+      6 rows and 3 columns after merging available tables in the week…
+  - question: What does the data show about leaders diverge when tracked over time?
     answer: >-
-      Key figure: 15.0 — Highest observed Value. See the charts and sources in
-      the report for the full evidence.
+      Key figure: 15.0 — Highest observed Value. The source is the TidyTuesday
+      release from 2024-02-06 (R for Data Science community). The working file
+      contains 6 rows and 3 columns after merging available tables in the week…
+  - question: >-
+      What does the data show about 2004 versus 2022 makes the gains visible
+      side by side?
+    answer: >-
+      Key figure: Sweden — Top Country by Value. The source is the TidyTuesday
+      release from 2024-02-06 (R for Data Science community). The working file
+      contains 6 rows and 3 columns after merging available tables in the week…
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">UNESCO World Heritage counts turn national prestige into a time series. This Scandinavian extract holds 6 records spanning 2004–2022, with a median value of 9.00 and a high of 15.0. Sweden leads the fact-box country ranking.</p>
 <p class="art-p">Six rows are enough for a clean comparative story when the table is country-by-year counts: who led, who grew fastest, and how the median moved from 5.00 to 10.0 across the window. The calibration point is 9.00 — the center of this small but sharp heritage ledger.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">6</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">9.00</span><span class="fact-label">Median Value</span></div>
@@ -41,7 +57,7 @@ faq:
   <div class="fact-box"><span class="fact-number">Sweden</span><span class="fact-label">Top Country by Value</span></div>
   <div class="fact-box"><span class="fact-number">2004–2022</span><span class="fact-label">Year span covered in the file</span></div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The source is the TidyTuesday release from 2024-02-06 (R for Data Science community). The working file contains 6 rows and 3 columns after merging available tables in the week folder. Value is the site-count metric; country is the entity axis; year compares 2004 with 2022.</p>
 <p class="art-p">With only six rows, every chart is close to the raw table. Medians still summarize the center; growth percentages normalize different starting points. Index-style fields are excluded from metric selection.</p>
 

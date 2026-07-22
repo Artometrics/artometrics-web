@@ -7,35 +7,52 @@ heroImage: /images/content/articles/comic-characters/hero.png
 tags:
   - culture
 draft: false
-tldr: Character attributes across Marvel and DC ask who sits atop power rankings.
+tldr: >-
+  Comic-book universes are attention economies with capes. The TidyTuesday
+  comic-characters extract used here holds 23,272 records spanning 1935–2013 ,
+  with a median of 4.00 appearances and a high of 4,043 for Spider-Man (Peter
+  Parker). Marvel is the most common publisher label.
 keyPoints:
   - '23,272 — Records in the working dataset'
   - 4.00 — Median Appearances
   - '4,043 — Highest observed Appearances'
   - Spider-Man (Peter Parker) — Top Name by Appearances
   - 1935–2013 — Year span covered in the file
+  - Marvel — Most common Publisher
 faq:
-  - question: What does “Early Characters Logged Higher Median Appearances” show?
-    answer: >-
-      Key figure: 23,272 — Records in the working dataset. See the charts and
-      sources in the report for the full evidence.
-  - question: What does “A Dozen Icons Own the Appearance Summit” show?
-    answer: >-
-      Key figure: 4.00 — Median Appearances. See the charts and sources in the
-      report for the full evidence.
   - question: >-
-      What does “Marvel Has More Characters; DC’s Median Appearances Run Higher”
-      show?
+      What does the data show about early Characters Logged Higher Median
+      Appearances?
     answer: >-
-      Key figure: 4,043 — Highest observed Appearances. See the charts and
-      sources in the report for the full evidence.
+      Key figure: 23,272 — Records in the working dataset. The source is the
+      TidyTuesday release from 2018-05-29 (week9_comic_characters.csv). After
+      cleaning, 23,272 rows remain.
+  - question: What does the data show about a Dozen Icons Own the Appearance Summit?
+    answer: >-
+      Key figure: 4.00 — Median Appearances. The source is the TidyTuesday
+      release from 2018-05-29 (week9_comic_characters.csv). After cleaning,
+      23,272 rows remain.
+  - question: >-
+      What does the data show about marvel Has More Characters; DC’s Median
+      Appearances Run Higher?
+    answer: >-
+      Key figure: 4,043 — Highest observed Appearances. The source is the
+      TidyTuesday release from 2018-05-29 (week9_comic_characters.csv). After
+      cleaning, 23,272 rows remain.
+  - question: >-
+      What does the data show about the Top Five Names Hold Nearly Half the
+      Leader Aggregate?
+    answer: >-
+      Key figure: Spider-Man (Peter Parker) — Top Name by Appearances. The
+      source is the TidyTuesday release from 2018-05-29
+      (week9_comic_characters.csv). After cleaning, 23,272 rows remain.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">Comic-book universes are attention economies with capes. The TidyTuesday comic-characters extract used here holds <strong>23,272</strong> records spanning <strong>1935–2013</strong>, with a median of <strong>4.00</strong> appearances and a high of <strong>4,043</strong> for Spider-Man (Peter Parker). Marvel is the most common publisher label.</p>
 <p class="art-p">That median of four appearances is the catalog’s quiet truth: most named characters are spear-carriers. The charts follow how appearance mass concentrates in a handful of franchise engines.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">23,272</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">4.00</span><span class="fact-label">Median Appearances</span></div>
@@ -44,7 +61,7 @@ faq:
   <div class="fact-box"><span class="fact-number">1935–2013</span><span class="fact-label">Year span covered in the file</span></div>
   <div class="fact-box"><span class="fact-number">Marvel</span><span class="fact-label">Most common Publisher</span></div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The source is the TidyTuesday release from 2018-05-29 (week9_comic_characters.csv). After cleaning, 23,272 rows remain.</p>
 <p class="art-p">Appearances is the primary metric; publisher splits Marvel versus DC; Pareto charts show concentration among leading names. Charts are Plotly JSON with PNG fallbacks.</p>
 <h2 id="early-characters-logged-higher-median-appearances" class="anchored">Early Characters Logged Higher Median Appearances</h2>

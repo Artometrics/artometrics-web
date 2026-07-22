@@ -7,37 +7,50 @@ heroImage: /images/content/articles/cetaceans/hero.png
 tags:
   - culture
 draft: false
-tldr: Morphometric data map which cetacean lineages produce the giants.
+tldr: >-
+  Captive and transferred cetaceans leave paper trails: species names, years,
+  and transfer geographies. The TidyTuesday cetacean extract used here holds
+  2,194 records spanning 1946–2017 , with the United States labeled as the
+  dominant transfer geography. Bottlenose animals dominate the name counts.
 keyPoints:
   - '2,194 — Records in the working dataset'
   - 1946–2017 — Year span covered in the file
   - US — Most common Transfer
 faq:
-  - question: What does “Transfers Concentrate Overwhelmingly in the US” show?
+  - question: >-
+      What does the data show about transfers Concentrate Overwhelmingly in the
+      US?
     answer: >-
-      Key figure: 2,194 — Records in the working dataset. See the charts and
-      sources in the report for the full evidence.
-  - question: What does “Annual Volume Peaked in the Early 1970s” show?
+      Key figure: 2,194 — Records in the working dataset. The source is the
+      TidyTuesday release from 2018-12-18 (allCetaceanData.csv). After cleaning,
+      2,194 rows remain.
+  - question: What does the data show about annual Volume Peaked in the Early 1970s?
     answer: >-
-      Key figure: 1946–2017 — Year span covered in the file. See the charts and
-      sources in the report for the full evidence.
-  - question: What does “Bottlenose Is the Archive’s Default Animal” show?
+      Key figure: 1946–2017 — Year span covered in the file. The source is the
+      TidyTuesday release from 2018-12-18 (allCetaceanData.csv). After cleaning,
+      2,194 rows remain.
+  - question: What does the data show about bottlenose Is the Archive’s Default Animal?
     answer: >-
-      Key figure: US — Most common Transfer. See the charts and sources in the
-      report for the full evidence.
+      Key figure: US — Most common Transfer. The source is the TidyTuesday
+      release from 2018-12-18 (allCetaceanData.csv). After cleaning, 2,194 rows
+      remain.
+  - question: What does the data show about the US Bucket Is the Landscape?
+    answer: >-
+      The source is the TidyTuesday release from 2018-12-18
+      (allCetaceanData.csv). After cleaning, 2,194 rows remain.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">Captive and transferred cetaceans leave paper trails: species names, years, and transfer geographies. The TidyTuesday cetacean extract used here holds <strong>2,194</strong> records spanning <strong>1946–2017</strong>, with the United States labeled as the dominant transfer geography.</p>
 <p class="art-p">Bottlenose animals dominate the name counts. That single species weight shapes every timeline and leader chart that follows — this archive is mostly a bottlenose history with rarer orcas, belugas, and white-sided dolphins in the margins.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">2,194</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">1946–2017</span><span class="fact-label">Year span covered in the file</span></div>
   <div class="fact-box"><span class="fact-number">US</span><span class="fact-label">Most common Transfer</span></div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The source is the TidyTuesday release from 2018-12-18 (allCetaceanData.csv). After cleaning, 2,194 rows remain.</p>
 <p class="art-p">Charts emphasize transfer geography, annual volume, species leaders, and timelines for the most frequent names. Charts are Plotly JSON with PNG fallbacks.</p>
 <h2 id="transfers-concentrate-overwhelmingly-in-the-us" class="anchored">Transfers Concentrate Overwhelmingly in the US</h2>

@@ -7,7 +7,12 @@ heroImage: /images/content/articles/ramen-ratings/hero.png
 tags:
   - culture
 draft: false
-tldr: Taster scores across thousands of instant ramen products identify top brands.
+tldr: >-
+  Instant ramen is a global industrial food that still gets reviewed like craft
+  beer. Star ratings compress broth, noodle texture, spice, and packaging
+  nostalgia into a single number that traveling eaters argue about for years. A
+  TidyTuesday working file of 3,180 records puts median stars at 3.75 and the
+  highest observed stars at 5.00 .
 keyPoints:
   - '3,180 — Records in the working dataset'
   - 3.75 — Median Stars
@@ -15,26 +20,37 @@ keyPoints:
   - Nongshim — Top Brand by Stars
   - Japan — Most common Country
 faq:
-  - question: What does “Stars by brand” show?
+  - question: What does the data show about stars by brand?
     answer: >-
-      Key figure: 3,180 — Records in the working dataset. See the charts and
-      sources in the report for the full evidence.
-  - question: What does “Who sits at the top” show?
+      Key figure: 3,180 — Records in the working dataset. A ceiling of 5.00 that
+      many top brands share means the interesting story is often below the
+      perfect scores: which countries sit above the median, and how review
+      volume relates to praise.
+  - question: Who sits at the top?
     answer: >-
-      Key figure: 3.75 — Median Stars. See the charts and sources in the report
-      for the full evidence.
-  - question: What does “Stars by country” show?
+      Key figure: 3.75 — Median Stars. A ceiling of 5.00 that many top brands
+      share means the interesting story is often below the perfect scores: which
+      countries sit above the median, and how review volume relates to praise.
+  - question: What does the data show about stars by country?
     answer: >-
-      Key figure: 5.00 — Highest observed Stars. See the charts and sources in
-      the report for the full evidence.
+      Key figure: 5.00 — Highest observed Stars. A ceiling of 5.00 that many top
+      brands share means the interesting story is often below the perfect
+      scores: which countries sit above the median, and how review volume
+      relates to praise.
+  - question: Who beats the median — and who trails?
+    answer: >-
+      Key figure: Nongshim — Top Brand by Stars. A ceiling of 5.00 that many top
+      brands share means the interesting story is often below the perfect
+      scores: which countries sit above the median, and how review volume
+      relates to praise.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">Instant ramen is a global industrial food that still gets reviewed like craft beer. Star ratings compress broth, noodle texture, spice, and packaging nostalgia into a single number that traveling eaters argue about for years.</p>
 <p class="art-p">A TidyTuesday working file of <strong>3,180</strong> records puts median stars at <strong>3.75</strong> and the highest observed stars at <strong>5.00</strong>. <strong>Nongshim</strong> leads the brand ranking by stars in the fact box, and <strong>Japan</strong> is the most common country label — a reminder that production geography and rating leadership are related but not identical.</p>
 <p class="art-p">A ceiling of 5.00 that many top brands share means the interesting story is often below the perfect scores: which countries sit above the median, and how review volume relates to praise.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">3,180</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">3.75</span><span class="fact-label">Median Stars</span></div>
@@ -42,7 +58,7 @@ faq:
   <div class="fact-box"><span class="fact-number">Nongshim</span><span class="fact-label">Top Brand by Stars</span></div>
   <div class="fact-box"><span class="fact-number">Japan</span><span class="fact-label">Most common Country</span></div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The source is the TidyTuesday release from 2019-06-04 (R for Data Science community). The working file contains 3,180 rows and 6 columns after cleaning — brand, variety, style, country, stars, and review number among the fields.</p>
 <p class="art-p">Medians handle a distribution piled against a hard 5.00 ceiling. Charts export as Plotly JSON with PNG fallbacks. Stars are community review scores from the source catalog, not lab nutrition assays.</p>
 <h2 id="breakdown" class="anchored">Stars by brand</h2>

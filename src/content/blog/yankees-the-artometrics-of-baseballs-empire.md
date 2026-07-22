@@ -10,27 +10,51 @@ tags:
   - sports
 draft: false
 tldr: >-
-  More than titles: New York sets the standard for droughts, payroll, and
-  magnitude.
+  Twenty-seven World Series titles do not merely decorate the New York Yankees.
+  They distort the measurement system around the franchise. Winning stopped
+  being an achievement and became an operating requirement—the standard against
+  which every other October is judged. Yankee exceptionalism is not only the
+  championship count.
 keyPoints:
   - '27 — World Series championships, the most in Major League Baseball'
   - '40 — American League pennants, the deepest October archive in the sport'
   - 2009 — Most recent World Series title
   - 15 — Active title drought entering 2025
   - '5 — Titles from the Core Four era, 1996-2009'
+  - '1923 — First Yankee championship, the Ruth-era ignition point'
 faq:
-  - question: 'What does “The empire arrived in bursts, not as a permanent climate” show?'
+  - question: >-
+      What does the data show about the empire arrived in bursts, not as a
+      permanent climate?
     answer: >-
       Key figure: 27 — World Series championships, the most in Major League
-      Baseball. See the charts and sources in the report for the full evidence.
-  - question: What does “New York does not lead baseball—it defines the ranking” show?
+      Baseball. The charts that follow treat the Yankees as baseball’s
+      benchmark: banner clusters by decade, the empire gap versus other historic
+      clubs, droughts in relative context, payroll rank…
+  - question: >-
+      What does the data show about new York does not lead baseball—it defines
+      the ranking?
     answer: >-
       Key figure: 40 — American League pennants, the deepest October archive in
-      the sport. See the charts and sources in the report for the full evidence.
-  - question: What does “Fifteen years only feels endless in Yankee time” show?
+      the sport. The charts that follow treat the Yankees as baseball’s
+      benchmark: banner clusters by decade, the empire gap versus other historic
+      clubs, droughts in relative context, payroll rank…
+  - question: >-
+      What does the data show about fifteen years only feels endless in Yankee
+      time?
     answer: >-
-      Key figure: 2009 — Most recent World Series title. See the charts and
-      sources in the report for the full evidence.
+      Key figure: 2009 — Most recent World Series title. The charts that follow
+      treat the Yankees as baseball’s benchmark: banner clusters by decade, the
+      empire gap versus other historic clubs, droughts in relative context,
+      payroll rank…
+  - question: >-
+      What does the data show about capital remains elite; conversion no longer
+      is?
+    answer: >-
+      Key figure: 15 — Active title drought entering 2025. The charts that
+      follow treat the Yankees as baseball’s benchmark: banner clusters by
+      decade, the empire gap versus other historic clubs, droughts in relative
+      context, payroll rank…
 ---
 <div id="quarto-content">
 <main class="art-article-main">
@@ -38,7 +62,8 @@ faq:
 <p class="art-p">Yankee exceptionalism is not only the championship count. It is the mismatch between historical surplus and the modern difficulty of converting money into October certainty. Forty American League pennants form the deepest postseason archive in the sport; the last title arrived in 2009. Entering 2025, a fifteen-year drought felt like institutional malfunction only because Yankee time is compressed.</p>
 <p class="art-p">The charts that follow treat the Yankees as baseball’s benchmark: banner clusters by decade, the empire gap versus other historic clubs, droughts in relative context, payroll rank against postseason markers, and the conversion rate from pennants to rings across eras.</p>
 
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">27</span><span class="fact-label">World Series championships, the most in Major League Baseball</span></div>
   <div class="fact-box"><span class="fact-number">40</span><span class="fact-label">American League pennants, the deepest October archive in the sport</span></div>
@@ -48,7 +73,7 @@ faq:
   <div class="fact-box"><span class="fact-number">1923</span><span class="fact-label">First Yankee championship, the Ruth-era ignition point</span></div>
 </div>
 
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">Curated public records from Baseball Reference, Retrosheet-style season summaries, Lahman historical tables, and widely cited payroll and valuation rankings supply the charts. The aim is institutional scale—franchise identity, era structure, and conversion—not a play-by-play win model.</p>
 <p class="art-p">A baseball professional looks for conversion: money into wins, wins into postseason chances, chances into flags. A fan feels the gap between mythology and the current roster. Both conversations belong on the same page.</p>
 

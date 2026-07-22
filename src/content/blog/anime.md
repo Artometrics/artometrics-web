@@ -10,8 +10,11 @@ tags:
   - movies-tv
 draft: false
 tldr: >-
-  MyAnimeList metadata on more than 13,000 titles traces Japanese animation as a
-  production system.
+  This MyAnimeList dataset covers 13,631 unique anime titles spanning 1917 to
+  2019 — a century-scale archive tracing the medium from prewar theater shorts
+  to the standardized streaming machine of the 2010s. The key interpretive move
+  here is separating catalog reality (what actually got made) from fan-canon
+  popularity (what people actually watched and rated).
 keyPoints:
   - >-
     13,631 — Unique anime titles in the dataset — from silent-era shorts to
@@ -28,31 +31,48 @@ keyPoints:
   - >-
     0.389 — Pearson correlation between score and members — popularity predicts
     quality directionally, not precisely
+  - >-
+    2006 — The Haruhi inflection point — when light novels became the anime
+    industry&#39;s primary outsourced R&amp;D pipeline
 faq:
-  - question: What does “An Industry That Industrialized — Then Diversified” show?
+  - question: >-
+      What does the data show about an Industry That Industrialized — Then
+      Diversified?
     answer: >-
       Key figure: 13,631 — Unique anime titles in the dataset — from silent-era
-      shorts to modern streaming originals. See the charts and sources in the
-      report for the full evidence.
+      shorts to modern streaming originals. The source data is the MyAnimeList
+      TidyTuesday release from April 23, 2019, maintained by the R for Data
+      Science community. It contains scraped records for 13,631 unique anime…
   - question: >-
-      What does “Bones and Kyoani Lead — Consistency Across Volume Is the Real
-      Achievement” show?
+      What does the data show about bones and Kyoani Lead — Consistency Across
+      Volume Is the Real Achievement?
     answer: >-
       Key figure: 6.38 — Overall median MAL score — the mathematical baseline
-      every studio and genre is measured against. See the charts and sources in
-      the report for the full evidence.
+      every studio and genre is measured against. The source data is the
+      MyAnimeList TidyTuesday release from April 23, 2019, maintained by the R
+      for Data Science community. It contains scraped records for 13,631 unique
+      anime…
   - question: 'Genre Map: What’s Popular vs What’s Well-rated?'
     answer: >-
       Key figure: 8.12% — Share of TV anime scoring 8+ on MAL — the highest
-      prestige hit-rate of any format (346 out of 4,260 titles). See the charts
-      and sources in the report for the full evidence.
+      prestige hit-rate of any format (346 out of 4,260 titles). The source data
+      is the MyAnimeList TidyTuesday release from April 23, 2019, maintained by
+      the R for Data Science community. It contains scraped records for 13,631
+      unique anime…
+  - question: What this file cannot tell you?
+    answer: >-
+      Key figure: 90 — High-scoring shows buried past popularity rank 2,000 —
+      the titles the algorithm never surfaced. The source data is the
+      MyAnimeList TidyTuesday release from April 23, 2019, maintained by the R
+      for Data Science community. It contains scraped records for 13,631 unique
+      anime…
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">This MyAnimeList dataset covers 13,631 unique anime titles spanning 1917 to 2019 — a century-scale archive tracing the medium from prewar theater shorts to the standardized streaming machine of the 2010s. The key interpretive move here is separating catalog reality (what actually got made) from fan-canon popularity (what people actually watched and rated). Those two things rhyme, but they are not the same thing, and the gap between them is where the most interesting analysis lives.</p>
 <p class="art-p">The overall median MAL score is 6.38. That is the calibration point for everything that follows. A 6.38 is not a failure — it is the mathematical center of a platform where over 13,000 titles compete for attention. When comparing studios, formats, and genres throughout this piece, the question is never who broke 8.0 once. It is who stayed above 6.38 consistently, across volume. That is a far harder problem, and most studios never solve it.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box">
     <span class="fact-number">13,631</span>
@@ -91,7 +111,7 @@ faq:
     outsourced R&amp;D pipeline</span>
   </div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The source data is the MyAnimeList TidyTuesday release from April 23, 2019, maintained by the R for Data Science community. It contains scraped records for 13,631 unique anime titles with fields for format type, source material, episode count, content rating, genre tags, studio attribution, MAL score, member count, favorites count, and air date range. The data covers titles from 1917 through early 2019.</p>
 <p class="art-p">The dataset requires meaningful cleaning before analysis. Air dates arrive as unstructured strings and must be parsed via regex to extract start and end year. Genre, studio, and producer fields are stored as Python-style list strings — bracket-delimited, comma-separated — that must be split and unnested into long-format tables for aggregation. Any title with a rank or popularity of zero is excluded, as these represent incomplete records without enough community engagement to produce reliable metrics.</p>
 <p class="art-p">Scores on MAL are user-submitted on a 1–10 scale. The platform has a known self-selection bias: its userbase skews adult, male, and English-speaking relative to anime’s actual global audience. This produces systematic underscoring of children’s content and promotional music videos, and potential overrepresentation of properties with strong Western fandom overlap. The dataset also predates the post-2019 streaming era — Demon Slayer , Jujutsu Kaisen , Chainsaw Man are absent — which means any claims about current genre trends require updating.</p>

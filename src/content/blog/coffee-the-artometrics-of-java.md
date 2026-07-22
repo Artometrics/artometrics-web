@@ -10,8 +10,9 @@ tags:
   - culture
 draft: false
 tldr: >-
-  Commodity and consumption data place coffee among the world’s largest traded
-  goods.
+  Coffee is the world’s second-largest traded commodity by value, behind only
+  crude oil. More than 125 million people depend on it for their livelihoods.
+  Around 2.25 billion cups are consumed every day.
 keyPoints:
   - >-
     1,339 — Coffee samples rated by CQI Q Graders across Arabica and Robusta
@@ -26,28 +27,33 @@ keyPoints:
   - >-
     7 — Sensory sub-metrics scored per sample — aroma, flavor, aftertaste,
     acidity, body, balance, cupper points
+  - >-
+    25,600 — Starbucks locations worldwide across 73 countries, as of the 2018
+    dataset
 faq:
-  - question: What does “Where Great Coffee Comes From” show?
+  - question: Where Great Coffee Comes From?
     answer: >-
       Key figure: 1,339 — Coffee samples rated by CQI Q Graders across Arabica
-      and Robusta species. See the charts and sources in the report for the full
-      evidence.
-  - question: What does “The Quality-Retail Disconnect” show?
+      and Robusta species. Keep these markers in view as the story unfolds.
+  - question: What does the data show about the Quality-Retail Disconnect?
     answer: >-
       Key figure: 85.3 — Ethiopia&#39;s median CQI cup score — highest of any
-      country with 20+ samples. See the charts and sources in the report for the
-      full evidence.
-  - question: What does “The Sub-Metric Fingerprint” show?
+      country with 20+ samples. Keep these markers in view as the story unfolds.
+  - question: What does the data show about the Sub-Metric Fingerprint?
     answer: >-
       Key figure: 0 — Starbucks locations in Ethiopia, Kenya, and Uganda — the
-      top three scoring nations. See the charts and sources in the report for
-      the full evidence.
+      top three scoring nations. Keep these markers in view as the story
+      unfolds.
+  - question: What this file cannot tell you?
+    answer: >-
+      Key figure: 16 — Countries with 20+ CQI-rated Arabica samples, spanning
+      four continents. Keep these markers in view as the story unfolds.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">Coffee is the world’s second-largest traded commodity by value, behind only crude oil. More than 125 million people depend on it for their livelihoods. Around 2.25 billion cups are consumed every day. And yet the country that produces the highest-quality coffee on earth — by a significant margin, according to the Coffee Quality Institute’s own grading data — has exactly zero Starbucks locations. That country is Ethiopia.</p>
 <p class="art-p">What follows uses CQI cupping scores and country-level samples to ask a simple question: where does quality concentrate, and how little that map resembles the retail geography of coffee brands.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
 <p class="art-p">Keep these markers in view as the story unfolds.</p>
 <div class="facts-grid">
   <div class="fact-box">
@@ -75,7 +81,7 @@ faq:
     <span class="fact-label">Starbucks locations worldwide across 73 countries, as of the 2018 dataset</span>
   </div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The Coffee Quality Institute is a nonprofit that trains and certifies Q Graders — licensed sensory evaluators who score coffee using a standardized 100-point protocol. A sample must score 80 or above to qualify as specialty coffee. The CQI dataset made available through TidyTuesday (2020-07-07) contains <strong>1,339</strong> samples spanning Arabica and Robusta species, with individual scores across ten sub-metrics plus a total cup points aggregate. This analysis focuses exclusively on Arabica. After removing one data entry error (a near-zero-score row), the working Arabica dataset contains 1,312 samples from 36 countries.</p>
 <p class="art-p">The Starbucks locations dataset (TidyTuesday 2018-05-07) documents <strong>25,600</strong> individual store locations across 73 countries, with brand, ownership type, city, and geographic coordinates. For the quality-versus-retail chart, Starbucks counts were aggregated at the country level and joined to CQI quality scores using ISO-2 country codes.</p>
 <p class="art-p">The sub-metric fingerprint covers seven of the ten CQI sub-metrics: aroma, flavor, aftertaste, acidity, body, balance, and cupper points. Uniformity, clean cup, and sweetness were excluded because they function more as defect-penalty fields than sensory attributes. The top eight countries by sample volume were selected for the heatmap to ensure statistically stable medians.</p>

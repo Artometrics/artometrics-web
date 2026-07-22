@@ -10,8 +10,11 @@ tags:
   - culture
 draft: false
 tldr: >-
-  Survival data from the 1500s to 2015 map who gained years of life—and who
-  lagged.
+  For most of recorded history, life expectancy at birth hovered between 25 and
+  40 years — not because adults aged quickly, but because childhood death was
+  common enough to pull the average down. The long arc from that world to the
+  present is one of the few demographic stories that can be told with a single
+  curve and still remain true.
 keyPoints:
   - 73.3 — Median life expectancy in 2015 — the closing year of the dataset
   - 83.8 — Highest single observation — Hong Kong near peak
@@ -19,27 +22,38 @@ keyPoints:
   - Hong Kong — Highest average life expectancy over the full dataset
   - '472 yrs — Total span of the dataset: 1543 to 2015'
 faq:
-  - question: What does “500 years of survival” show?
+  - question: What does the data show about 500 years of survival?
     answer: >-
       Key figure: 73.3 — Median life expectancy in 2015 — the closing year of
-      the dataset. See the charts and sources in the report for the full
-      evidence.
-  - question: What does “Who lives longest” show?
+      the dataset. Start with the scale: 73.3 — median life expectancy in 2015,
+      the closing year of the file; and 83.8 — the highest single observation,
+      Hong Kong near peak. The span runs 472 years , from 1543 to 2015.
+  - question: Who lives longest?
     answer: >-
-      Key figure: 83.8 — Highest single observation — Hong Kong near peak. See
-      the charts and sources in the report for the full evidence.
-  - question: What does “The split world” show?
+      Key figure: 83.8 — Highest single observation — Hong Kong near peak. Start
+      with the scale: 73.3 — median life expectancy in 2015, the closing year of
+      the file; and 83.8 — the highest single observation, Hong Kong near peak.
+      The span runs 472 years , from 1543 to 2015.
+  - question: What does the data show about the split world?
     answer: >-
-      Key figure: 33.9→73 — Median lifespan: opening year to closing year. See
-      the charts and sources in the report for the full evidence.
+      Key figure: 33.9→73 — Median lifespan: opening year to closing year. Start
+      with the scale: 73.3 — median life expectancy in 2015, the closing year of
+      the file; and 83.8 — the highest single observation, Hong Kong near peak.
+      The span runs 472 years , from 1543 to 2015.
+  - question: What does the data show about the frontrunners?
+    answer: >-
+      Key figure: Hong Kong — Highest average life expectancy over the full
+      dataset. Start with the scale: 73.3 — median life expectancy in 2015, the
+      closing year of the file; and 83.8 — the highest single observation, Hong
+      Kong near peak. The span runs 472 years , from 1543 to 2015.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">For most of recorded history, life expectancy at birth hovered between 25 and 40 years — not because adults aged quickly, but because childhood death was common enough to pull the average down. The long arc from that world to the present is one of the few demographic stories that can be told with a single curve and still remain true.</p>
 <p class="art-p">The headline number is staggering: the global median life expectancy nearly triples over five centuries, rising from around 30 to above 73. But the aggregate trend conceals the most important story — the persistent gap between the long-lived and the short-lived. Countries leading this dataset in 2015 live more than twice as long, on average, as the laggards in the same file.</p>
 <p class="art-p">Start with the scale: <strong>73.3</strong> — median life expectancy in 2015, the closing year of the file; and <strong>83.8</strong> — the highest single observation, Hong Kong near peak. The span runs <strong>472 years</strong>, from 1543 to 2015.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">73.3</span><span class="fact-label">Median life expectancy in 2015 — the closing year of the dataset</span></div>
   <div class="fact-box"><span class="fact-number">83.8</span><span class="fact-label">Highest single observation — Hong Kong near peak</span></div>
@@ -47,7 +61,7 @@ faq:
   <div class="fact-box"><span class="fact-number">Hong Kong</span><span class="fact-label">Highest average life expectancy over the full dataset</span></div>
   <div class="fact-box"><span class="fact-number">472 yrs</span><span class="fact-label">Total span of the dataset: 1543 to 2015</span></div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">For most of recorded history, life expectancy at birth hovered between 25 and 40 years — not because people aged quickly, but because childhood mortality dominated the average. Parish registers, early censuses, and model life tables underwrite the pre-modern estimates; modern national statistics and UN-style compilations underwrite the recent ones.</p>
 <p class="art-p">The modern transformation begins in earnest around 1850 with clean water infrastructure, followed by germ theory, vaccines, antibiotics, and the broader package of public health and nutrition that raised survival at every age. The file used here stitches country-year observations across that arc so that long-run medians and cross-country gaps can be read on the same axis.</p>
 <h2 id="500-years-of-survival" class="anchored">500 years of survival</h2>

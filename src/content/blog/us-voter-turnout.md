@@ -7,7 +7,11 @@ heroImage: /images/content/articles/us-voter-turnout/hero.png
 tags:
   - business
 draft: false
-tldr: Election turnout data compare state participation rates.
+tldr: >-
+  Turnout is democracy’s volume knob. This file holds 936 election records
+  spanning 1980–2014, with a median of 1,170,867 votes and a high of
+  132,609,063. United States appears as the top entity by votes in the fact
+  boxes — a national aggregate sitting above the state ladder.
 keyPoints:
   - 936 — Records in the working dataset
   - '1,170,867 — Median Votes'
@@ -15,25 +19,45 @@ keyPoints:
   - United States — Top State by Votes
   - 1980–2014 — Year span covered in the file
 faq:
-  - question: What does “Median votes rose across three decades of elections” show?
+  - question: >-
+      What does the data show about median votes rose across three decades of
+      elections?
     answer: >-
-      Key figure: 936 — Records in the working dataset. See the charts and
-      sources in the report for the full evidence.
-  - question: What does “The United States total dwarfs the state ladder” show?
+      Key figure: 936 — Records in the working dataset. The source is the
+      TidyTuesday release from 2018-10-09 (R for Data Science community). The
+      working file contains 936 rows and 7 columns after merging available
+      tables in the week…
+  - question: >-
+      What does the data show about the United States total dwarfs the state
+      ladder?
     answer: >-
-      Key figure: 1,170,867 — Median Votes. See the charts and sources in the
-      report for the full evidence.
-  - question: What does “A right-skewed distribution with a heavy upper tail” show?
+      Key figure: 1,170,867 — Median Votes. The source is the TidyTuesday
+      release from 2018-10-09 (R for Data Science community). The working file
+      contains 936 rows and 7 columns after merging available tables in the
+      week…
+  - question: >-
+      What does the data show about a right-skewed distribution with a heavy
+      upper tail?
     answer: >-
-      Key figure: 132,609,063 — Highest observed Votes. See the charts and
-      sources in the report for the full evidence.
+      Key figure: 132,609,063 — Highest observed Votes. The source is the
+      TidyTuesday release from 2018-10-09 (R for Data Science community). The
+      working file contains 936 rows and 7 columns after merging available
+      tables in the week…
+  - question: >-
+      What does the data show about leading states reshuffle across election
+      cycles?
+    answer: >-
+      Key figure: United States — Top State by Votes. The source is the
+      TidyTuesday release from 2018-10-09 (R for Data Science community). The
+      working file contains 936 rows and 7 columns after merging available
+      tables in the week…
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">Turnout is democracy’s volume knob. This file holds 936 election records spanning 1980–2014, with a median of 1,170,867 votes and a high of 132,609,063. United States appears as the top entity by votes in the fact boxes — a national aggregate sitting above the state ladder.</p>
 <p class="art-p">The charts separate trend, leaders, distribution shape, leader trajectories, and the relationship between votes and eligible voters. The calibration point is that 1.17 million median: below it, smaller states; above it, larger electorates and national totals.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">936</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">1,170,867</span><span class="fact-label">Median Votes</span></div>
@@ -41,7 +65,7 @@ faq:
   <div class="fact-box"><span class="fact-number">United States</span><span class="fact-label">Top State by Votes</span></div>
   <div class="fact-box"><span class="fact-number">1980–2014</span><span class="fact-label">Year span covered in the file</span></div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The source is the TidyTuesday release from 2018-10-09 (R for Data Science community). The working file contains 936 rows and 7 columns after merging available tables in the week folder. Votes is the primary metric; eligible voters appears in the scatter; state (and national totals) are the entity axis.</p>
 <p class="art-p">Medians are essential because vote totals are right-skewed — mean 3,074,280 against median 1,170,867. Index-style fields are excluded from metric selection.</p>
 

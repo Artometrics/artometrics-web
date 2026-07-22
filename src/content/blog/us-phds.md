@@ -7,33 +7,55 @@ heroImage: /images/content/articles/us-phds/hero.png
 tags:
   - business
 draft: false
-tldr: Doctorate production data show which disciplines grew quickest.
+tldr: >-
+  U.S. doctorate production is a labor-market story told in field counts. This
+  file holds 3,370 records spanning 2008–2017, with a median of 85.0 PhDs and a
+  high of 5,302. Social sciences lead the fact-box field ranking; life sciences
+  appear among the notable broad fields.
 keyPoints:
   - '3,370 — Records in the working dataset'
   - 85.0 — Median N phds
   - '5,302 — Highest observed N phds'
   - Social sciences — Top Field by N phds
   - 2008–2017 — Year span covered in the file
+  - Life sciences — Most common Broad field
 faq:
-  - question: What does “Median doctorate counts edged upward across the decade” show?
+  - question: >-
+      What does the data show about median doctorate counts edged upward across
+      the decade?
     answer: >-
-      Key figure: 3,370 — Records in the working dataset. See the charts and
-      sources in the report for the full evidence.
-  - question: What does “Social sciences lead the field ladder” show?
+      Key figure: 3,370 — Records in the working dataset. The source is the
+      TidyTuesday release from 2019-02-19 (R for Data Science community). The
+      working file contains 3,370 rows and 6 columns after merging available
+      tables in the week…
+  - question: What does the data show about social sciences lead the field ladder?
     answer: >-
-      Key figure: 85.0 — Median N phds. See the charts and sources in the report
-      for the full evidence.
-  - question: What does “Broad fields do not share one production band” show?
+      Key figure: 85.0 — Median N phds. The source is the TidyTuesday release
+      from 2019-02-19 (R for Data Science community). The working file contains
+      3,370 rows and 6 columns after merging available tables in the week…
+  - question: >-
+      What does the data show about broad fields do not share one production
+      band?
     answer: >-
-      Key figure: 5,302 — Highest observed N phds. See the charts and sources in
-      the report for the full evidence.
+      Key figure: 5,302 — Highest observed N phds. The source is the TidyTuesday
+      release from 2019-02-19 (R for Data Science community). The working file
+      contains 3,370 rows and 6 columns after merging available tables in the
+      week…
+  - question: >-
+      What does the data show about psychology and social sciences clear the
+      median; engineering trails?
+    answer: >-
+      Key figure: Social sciences — Top Field by N phds. The source is the
+      TidyTuesday release from 2019-02-19 (R for Data Science community). The
+      working file contains 3,370 rows and 6 columns after merging available
+      tables in the week…
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">U.S. doctorate production is a labor-market story told in field counts. This file holds 3,370 records spanning 2008–2017, with a median of 85.0 PhDs and a high of 5,302. Social sciences lead the fact-box field ranking; life sciences appear among the notable broad fields.</p>
 <p class="art-p">The question is which disciplines grew — and which sit above or below the median production level — when doctorate output is measured year by year and field by field. Medians keep a few giant programs from dictating every comparison.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">3,370</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">85.0</span><span class="fact-label">Median N phds</span></div>
@@ -42,7 +64,7 @@ faq:
   <div class="fact-box"><span class="fact-number">2008–2017</span><span class="fact-label">Year span covered in the file</span></div>
   <div class="fact-box"><span class="fact-number">Life sciences</span><span class="fact-label">Most common Broad field</span></div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The source is the TidyTuesday release from 2019-02-19 (R for Data Science community). The working file contains 3,370 rows and 6 columns after merging available tables in the week folder. N phds is the primary metric; broad field is the main categorical axis.</p>
 <p class="art-p">Medians are used because field sizes skew. Index-style fields are excluded from metric selection. Charts track trend, leaders, distribution, gaps to the median, and concentration across fields.</p>
 

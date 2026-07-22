@@ -7,7 +7,12 @@ heroImage: /images/content/articles/export-superpowers-us-china-germany/hero.png
 tags:
   - business
 draft: false
-tldr: 'A three-country comparison of platforms, factories, and machinery.'
+tldr: >-
+  The United States, China, and Germany sit at the center of almost every
+  serious conversation about trade. They are often treated as interchangeable
+  "export superpowers" — three large economies that ship goods and services
+  abroad at industrial scale. That shorthand collapses three different machines
+  into one headline.
 keyPoints:
   - 3 — Export superpower systems compared
   - 7 — Export identity axes
@@ -15,26 +20,34 @@ keyPoints:
   - 8 — Countries placed on substitutability map
   - '1 — Core question: who is replaceable?'
 faq:
-  - question: What does “Three models of export power” show?
+  - question: What does the data show about three models of export power?
     answer: >-
-      Key figure: 3 — Export superpower systems compared. See the charts and
-      sources in the report for the full evidence.
-  - question: What does “Product fingerprints” show?
+      Key figure: 3 — Export superpower systems compared. Start with the scale:
+      3 export systems compared across 7 identity axes, with 6 dependency risks
+      scored and 8 countries placed on a substitutability map.
+  - question: What does the data show about product fingerprints?
     answer: >-
-      Key figure: 7 — Export identity axes. See the charts and sources in the
-      report for the full evidence.
-  - question: What does “Dependency risk” show?
+      Key figure: 7 — Export identity axes. Start with the scale: 3 export
+      systems compared across 7 identity axes, with 6 dependency risks scored
+      and 8 countries placed on a substitutability map.
+  - question: What does the data show about dependency risk?
     answer: >-
-      Key figure: 6 — Dependency risks scored. See the charts and sources in the
-      report for the full evidence.
+      Key figure: 6 — Dependency risks scored. Start with the scale: 3 export
+      systems compared across 7 identity axes, with 6 dependency risks scored
+      and 8 countries placed on a substitutability map.
+  - question: Who can be replaced?
+    answer: >-
+      Key figure: 8 — Countries placed on substitutability map. Start with the
+      scale: 3 export systems compared across 7 identity axes, with 6 dependency
+      risks scored and 8 countries placed on a substitutability map.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">The United States, China, and Germany sit at the center of almost every serious conversation about trade. They are often treated as interchangeable "export superpowers" — three large economies that ship goods and services abroad at industrial scale. That shorthand collapses three different machines into one headline.</p>
 <p class="art-p">The useful comparison is not who exports more in a given year. It is what kind of global function each country performs: platform and standards power in the United States, manufacturing scale and supply-chain centrality in China, and industrial precision and machinery trust in Germany. Those roles create different kinds of leverage — and different kinds of dependence.</p>
 <p class="art-p">Start with the scale: <strong>3</strong> export systems compared across <strong>7</strong> identity axes, with <strong>6</strong> dependency risks scored and <strong>8</strong> countries placed on a substitutability map.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">3</span><span class="fact-label">Export superpower systems compared</span></div>
   <div class="fact-box"><span class="fact-number">7</span><span class="fact-label">Export identity axes</span></div>
@@ -42,7 +55,7 @@ faq:
   <div class="fact-box"><span class="fact-number">8</span><span class="fact-label">Countries placed on substitutability map</span></div>
   <div class="fact-box"><span class="fact-number">1</span><span class="fact-label">Core question: who is replaceable?</span></div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The production stack for this comparison draws on OEC and UN Comtrade product exports, partner concentration, World Bank and OECD services and GDP series, IMF macro context, and national industry statistics from agencies such as the BEA and Eurostat.</p>
 <p class="art-p">The charts here use editorial indices to define the analytical frame before a full product-level ingestion pass. They are designed to make system differences legible — not to substitute for official rankings. Observed trade totals, derived concentration metrics, and interpretive scores are kept distinct on purpose.</p>
 <h2 id="three-models" class="anchored">Three models of export power</h2>

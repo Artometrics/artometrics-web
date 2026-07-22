@@ -7,33 +7,57 @@ heroImage: /images/content/articles/web-page-metrics/hero.png
 tags:
   - tech
 draft: false
-tldr: Performance metrics show speed leaders and which technical measures correlate.
+tldr: >-
+  The web’s performance story is a percentile story. This file holds 238 records
+  spanning 2016–2022, with a median P50 of 5.97 and a high of 9.80. SpeedIndex
+  leads the fact-box measure ranking; desktop is the most common client. The
+  charts track how median P50 moved, how desktop and mobile differ, how P50
+  relates to P90, and how client–year heatmaps reveal drift.
 keyPoints:
   - 238 — Records in the working dataset
   - 5.97 — Median P50
   - 9.80 — Highest observed P50
   - speedIndex — Top Measure by P50
   - 2016–2022 — Year span covered in the file
+  - desktop — Most common Client
 faq:
-  - question: What does “Median P50 fell as pages got faster at the center” show?
+  - question: >-
+      What does the data show about median P50 fell as pages got faster at the
+      center?
     answer: >-
-      Key figure: 238 — Records in the working dataset. See the charts and
-      sources in the report for the full evidence.
-  - question: What does “Desktop and mobile split the P50 distribution” show?
+      Key figure: 238 — Records in the working dataset. HTTP Archive-style
+      page-weight metrics by client (desktop/mobile) and measure type,
+      aggregated as percentile bands. The TidyTuesday release from 2022-11-15
+      supplies the…
+  - question: >-
+      What does the data show about desktop and mobile split the P50
+      distribution?
     answer: >-
-      Key figure: 5.97 — Median P50. See the charts and sources in the report
-      for the full evidence.
-  - question: What does “P50 and P90 move together in performance space” show?
+      Key figure: 5.97 — Median P50. HTTP Archive-style page-weight metrics by
+      client (desktop/mobile) and measure type, aggregated as percentile bands.
+      The TidyTuesday release from 2022-11-15 supplies the…
+  - question: >-
+      What does the data show about p50 and P90 move together in performance
+      space?
     answer: >-
-      Key figure: 9.80 — Highest observed P50. See the charts and sources in the
-      report for the full evidence.
+      Key figure: 9.80 — Highest observed P50. HTTP Archive-style page-weight
+      metrics by client (desktop/mobile) and measure type, aggregated as
+      percentile bands. The TidyTuesday release from 2022-11-15 supplies the…
+  - question: >-
+      What does the data show about a client–year heatmap shows where speed
+      migrated?
+    answer: >-
+      Key figure: speedIndex — Top Measure by P50. HTTP Archive-style
+      page-weight metrics by client (desktop/mobile) and measure type,
+      aggregated as percentile bands. The TidyTuesday release from 2022-11-15
+      supplies the…
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">The web’s performance story is a percentile story. This file holds 238 records spanning 2016–2022, with a median P50 of 5.97 and a high of 9.80. SpeedIndex leads the fact-box measure ranking; desktop is the most common client.</p>
 <p class="art-p">The charts track how median P50 moved, how desktop and mobile differ, how P50 relates to P90, and how client–year heatmaps reveal drift. The calibration point is 5.97 — the center of the P50 field in this HTTP Archive-style extract.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">238</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">5.97</span><span class="fact-label">Median P50</span></div>
@@ -42,7 +66,7 @@ faq:
   <div class="fact-box"><span class="fact-number">2016–2022</span><span class="fact-label">Year span covered in the file</span></div>
   <div class="fact-box"><span class="fact-number">desktop</span><span class="fact-label">Most common Client</span></div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">HTTP Archive-style page-weight metrics by client (desktop/mobile) and measure type, aggregated as percentile bands. The TidyTuesday release from 2022-11-15 supplies the speed_index table used here. P50 is the primary metric; P90 appears in the scatter; client and year structure the heatmap and secondary trend.</p>
 <p class="art-p">Medians are used across skewed performance distributions. Index-style fields are excluded from metric selection.</p>
 

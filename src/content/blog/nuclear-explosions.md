@@ -7,34 +7,51 @@ heroImage: /images/content/articles/nuclear-explosions/hero.png
 tags:
   - culture
 draft: false
-tldr: 'Historical test records map yield, purpose, and timing across decades.'
+tldr: >-
+  Nuclear test histories are usually told as geopolitics. The event catalogs
+  underneath — body-wave magnitudes, dates, purposes, and depths — also form a
+  quantitative archive of how intensely states practiced the bomb. A TidyTuesday
+  working extract of 2,051 records puts median body-wave magnitude at 0.00 and
+  the highest observed magnitude at 7.40 .
 keyPoints:
   - '2,051 — Records in the working dataset'
   - 0.00 — Median Magnitude body
   - 7.40 — Highest observed Magnitude body
   - USSR — Top Country by Magnitude body
   - 1970–1970 — Year span covered in the file
+  - WR — Most common Purpose
 faq:
-  - question: What does “How magnitudes move through the record” show?
+  - question: How magnitudes move through the record?
     answer: >-
-      Key figure: 2,051 — Records in the working dataset. See the charts and
-      sources in the report for the full evidence.
-  - question: What does “Who sits at the top” show?
+      Key figure: 2,051 — Records in the working dataset. Zeros in the magnitude
+      field are not moral quiet. They are measurement gaps, non-detections, or
+      unfilled cells that pull the median to the floor while a thin upper tail
+      records…
+  - question: Who sits at the top?
     answer: >-
-      Key figure: 0.00 — Median Magnitude body. See the charts and sources in
-      the report for the full evidence.
-  - question: What does “Purpose spreads magnitudes” show?
+      Key figure: 0.00 — Median Magnitude body. Zeros in the magnitude field are
+      not moral quiet. They are measurement gaps, non-detections, or unfilled
+      cells that pull the median to the floor while a thin upper tail records…
+  - question: What does the data show about purpose spreads magnitudes?
     answer: >-
-      Key figure: 7.40 — Highest observed Magnitude body. See the charts and
-      sources in the report for the full evidence.
+      Key figure: 7.40 — Highest observed Magnitude body. Zeros in the magnitude
+      field are not moral quiet. They are measurement gaps, non-detections, or
+      unfilled cells that pull the median to the floor while a thin upper tail
+      records…
+  - question: Who beats the median — and who trails?
+    answer: >-
+      Key figure: USSR — Top Country by Magnitude body. Zeros in the magnitude
+      field are not moral quiet. They are measurement gaps, non-detections, or
+      unfilled cells that pull the median to the floor while a thin upper tail
+      records…
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">Nuclear test histories are usually told as geopolitics. The event catalogs underneath — body-wave magnitudes, dates, purposes, and depths — also form a quantitative archive of how intensely states practiced the bomb.</p>
 <p class="art-p">A TidyTuesday working extract of <strong>2,051</strong> records puts median body-wave magnitude at <strong>0.00</strong> and the highest observed magnitude at <strong>7.40</strong>. The <strong>USSR</strong> leads the country ranking by magnitude body in the fact box, and purpose code <strong>WR</strong> is the most common label. The year marker in the extract collapses to <strong>1970</strong> for one of the summary spans, so timeline charts should be read as the file's available event clock rather than a claim that testing happened only in a single year.</p>
 <p class="art-p">Zeros in the magnitude field are not moral quiet. They are measurement gaps, non-detections, or unfilled cells that pull the median to the floor while a thin upper tail records the events that shook instruments hardest.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">2,051</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">0.00</span><span class="fact-label">Median Magnitude body</span></div>
@@ -43,7 +60,7 @@ faq:
   <div class="fact-box"><span class="fact-number">1970–1970</span><span class="fact-label">Year span covered in the file</span></div>
   <div class="fact-box"><span class="fact-number">WR</span><span class="fact-label">Most common Purpose</span></div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The source is the TidyTuesday nuclear explosions release maintained by the R for Data Science community. The working file assembles event-level rows with country labels, purpose codes, body-wave magnitude, depth, and related fields after cleaning.</p>
 <p class="art-p">Medians are especially important here because missing and zero magnitudes dominate the center of the distribution. Charts export as Plotly JSON with PNG fallbacks. Public test catalogs are incomplete by nature; secrecy and uneven seismology both bite.</p>
 <h2 id="how-the-pattern-changed-over-time" class="anchored">How magnitudes move through the record</h2>

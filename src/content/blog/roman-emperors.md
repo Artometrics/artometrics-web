@@ -10,8 +10,10 @@ tags:
   - culture
 draft: false
 tldr: >-
-  Reign-length data test whether dynastic succession meant longer time on the
-  throne.
+  Sixty-eight emperors sit in this reign-length file — enough to ask a hard
+  question about imperial power: did belonging to a dynasty buy more time on the
+  throne, or did longevity come from something messier? The calibration point is
+  a median reign of 6.50 years. That is not a long reign.
 keyPoints:
   - 68 — Records in the working dataset
   - 6.50 — Median Reign years
@@ -20,26 +22,43 @@ keyPoints:
   - Gordian — Most common Dynasty
 faq:
   - question: >-
-      What does “Constantine’s thirty-one years set the name-level ceiling”
-      show?
+      What does the data show about constantine’s thirty-one years set the
+      name-level ceiling?
     answer: >-
-      Key figure: 68 — Records in the working dataset. See the charts and
-      sources in the report for the full evidence.
-  - question: What does “The top dozen still sits far above the median emperor” show?
+      Key figure: 68 — Records in the working dataset. Reign spans are derived
+      from start and end dates in the emperors table. Negative or zero spans are
+      excluded, so the working metric is observed tenure in years, not a modeled
+      life…
+  - question: >-
+      What does the data show about the top dozen still sits far above the
+      median emperor?
     answer: >-
-      Key figure: 6.50 — Median Reign years. See the charts and sources in the
-      report for the full evidence.
-  - question: 'What does “Dynasty boxes show contested, not uniform, tenure” show?'
+      Key figure: 6.50 — Median Reign years. Reign spans are derived from start
+      and end dates in the emperors table. Negative or zero spans are excluded,
+      so the working metric is observed tenure in years, not a modeled life…
+  - question: >-
+      What does the data show about dynasty boxes show contested, not uniform,
+      tenure?
     answer: >-
-      Key figure: 31.0 — Highest observed Reign years. See the charts and
-      sources in the report for the full evidence.
+      Key figure: 31.0 — Highest observed Reign years. Reign spans are derived
+      from start and end dates in the emperors table. Negative or zero spans are
+      excluded, so the working metric is observed tenure in years, not a modeled
+      life…
+  - question: >-
+      What does the data show about nerva–Antonine sits above the median;
+      Gordian trails?
+    answer: >-
+      Key figure: Constantine the Great — Top Name by Reign years. Reign spans
+      are derived from start and end dates in the emperors table. Negative or
+      zero spans are excluded, so the working metric is observed tenure in
+      years, not a modeled life…
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">Sixty-eight emperors sit in this reign-length file — enough to ask a hard question about imperial power: did belonging to a dynasty buy more time on the throne, or did longevity come from something messier? The calibration point is a median reign of 6.50 years. That is not a long reign. It is the mathematical center of a political system that chewed through rulers faster than most modern institutions replace CEOs.</p>
 <p class="art-p">The ceiling in the file is Constantine the Great at 31.0 reign years. Gordian is the dynasty label that appears most often. Between those two facts lies the real story: a few men held power for decades, while entire dynastic brands recycled short, fragile tenures. The charts that follow separate name-level longevity from dynasty-level structure so the two are not confused.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">68</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">6.50</span><span class="fact-label">Median Reign years</span></div>
@@ -47,7 +66,7 @@ faq:
   <div class="fact-box"><span class="fact-number">Constantine the Great</span><span class="fact-label">Top Name by Reign years</span></div>
   <div class="fact-box"><span class="fact-number">Gordian</span><span class="fact-label">Most common Dynasty</span></div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">Reign spans are derived from start and end dates in the emperors table. Negative or zero spans are excluded, so the working metric is observed tenure in years, not a modeled life expectancy. The source is the TidyTuesday Roman Emperors release (2019-08-13), a community-cleaned historical table rather than a live prosopography API.</p>
 <p class="art-p">Medians are preferred over means because reign distributions skew — a handful of long rulers pull averages up while the typical emperor sits near that 6.50-year center. Index-style fields (row numbers, sequential IDs) are kept out of metric selection so charts answer questions about tenure, not about how the spreadsheet was ordered.</p>
 

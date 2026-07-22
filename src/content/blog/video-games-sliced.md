@@ -10,34 +10,53 @@ tags:
   - games
 draft: false
 tldr: >-
-  A large games slice tests whether critic scores correlated with commercial
-  outcomes.
+  Steam-era concurrency is a living audience meter. This Sliced/TidyTuesday
+  games extract holds 83,631 records spanning 2012–2021, with a median average
+  player count (Avg) of 203 and a high of 1,584,887. PLAYERUNKNOWN'S
+  BATTLEGROUNDS appears among the fact-box peaks; February is the most common
+  month label in the file.
 keyPoints:
   - '83,631 — Records in the working dataset'
   - 203 — Median Avg
   - '1,584,887 — Highest observed Avg'
   - PLAYERUNKNOWN'S BATTLEGROUND — Top Gamename by Avg
   - 2012–2021 — Year span covered in the file
+  - February — Most common Month
 faq:
-  - question: What does “Median concurrency climbed across the decade” show?
+  - question: >-
+      What does the data show about median concurrency climbed across the
+      decade?
     answer: >-
-      Key figure: 83,631 — Records in the working dataset. See the charts and
-      sources in the report for the full evidence.
-  - question: What does “Dota 2 leads a top tier that drops off fast” show?
+      Key figure: 83,631 — Records in the working dataset. The source is the
+      TidyTuesday release from 2021-03-16 (R for Data Science community). The
+      working file contains 83,631 rows and 8 columns after merging available
+      tables in the…
+  - question: What does the data show about dota 2 leads a top tier that drops off fast?
     answer: >-
-      Key figure: 203 — Median Avg. See the charts and sources in the report for
-      the full evidence.
-  - question: What does “Months carry different concurrency distributions” show?
+      Key figure: 203 — Median Avg. The source is the TidyTuesday release from
+      2021-03-16 (R for Data Science community). The working file contains
+      83,631 rows and 8 columns after merging available tables in the…
+  - question: >-
+      What does the data show about months carry different concurrency
+      distributions?
     answer: >-
-      Key figure: 1,584,887 — Highest observed Avg. See the charts and sources
-      in the report for the full evidence.
+      Key figure: 1,584,887 — Highest observed Avg. The source is the
+      TidyTuesday release from 2021-03-16 (R for Data Science community). The
+      working file contains 83,631 rows and 8 columns after merging available
+      tables in the…
+  - question: What does the data show about january clears the median; October trails?
+    answer: >-
+      Key figure: PLAYERUNKNOWN'S BATTLEGROUND — Top Gamename by Avg. The source
+      is the TidyTuesday release from 2021-03-16 (R for Data Science community).
+      The working file contains 83,631 rows and 8 columns after merging
+      available tables in the…
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">Steam-era concurrency is a living audience meter. This Sliced/TidyTuesday games extract holds 83,631 records spanning 2012–2021, with a median average player count (Avg) of 203 and a high of 1,584,887. PLAYERUNKNOWN'S BATTLEGROUNDS appears among the fact-box peaks; February is the most common month label in the file.</p>
 <p class="art-p">The charts ask how median Avg moved over time, which titles sit at the top, how months differ from the median, and whether Avg and Gain travel together. The calibration point is 203 — the typical observation in a market where a few live-service titles become cities unto themselves.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">83,631</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">203</span><span class="fact-label">Median Avg</span></div>
@@ -46,7 +65,7 @@ faq:
   <div class="fact-box"><span class="fact-number">2012–2021</span><span class="fact-label">Year span covered in the file</span></div>
   <div class="fact-box"><span class="fact-number">February</span><span class="fact-label">Most common Month</span></div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The source is the TidyTuesday release from 2021-03-16 (R for Data Science community). The working file contains 83,631 rows and 8 columns after merging available tables in the week folder. Avg is the primary metric; Gain appears in the scatter; month and game name are categorical axes.</p>
 <p class="art-p">Medians are mandatory because player counts are extremely skewed. Index-style fields are excluded from metric selection.</p>
 

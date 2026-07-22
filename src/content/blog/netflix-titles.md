@@ -7,33 +7,52 @@ heroImage: /images/content/articles/netflix-titles/hero.png
 tags:
   - movies-tv
 draft: false
-tldr: Title-level library data track the balance of movies and TV over time.
+tldr: >-
+  A streaming library is an inventory decision dressed as a homepage.
+  Title-level Netflix catalog data show how the mix of movies and TV — and the
+  duration field attached to each row — shifted between 2008 and 2021. The
+  working file holds 7,787 records. Median duration is 88.0 ; the highest
+  observed duration is 312 , led by Black Mirror: Bandersnatch. Movie is the
+  most common type label.
 keyPoints:
   - '7,787 — Records in the working dataset'
   - 88.0 — Median Duration
   - 312 — Highest observed Duration
   - 'Black Mirror: Bandersnatch — Top Title by Duration'
   - 2008–2021 — Year span covered in the file
+  - Movie — Most common Type
 faq:
-  - question: What does “How the pattern changed over time” show?
+  - question: How the pattern changed over time?
     answer: >-
-      Key figure: 7,787 — Records in the working dataset. See the charts and
-      sources in the report for the full evidence.
-  - question: What does “Who sits at the top” show?
+      Key figure: 7,787 — Records in the working dataset. The source is the
+      TidyTuesday release from 2021-04-20 (R for Data Science community). The
+      working file contains 7,787 rows and 13 columns after merging available
+      tables in the week folder.
+  - question: Who sits at the top?
     answer: >-
-      Key figure: 88.0 — Median Duration. See the charts and sources in the
-      report for the full evidence.
-  - question: What does “How the field is spread” show?
+      Key figure: 88.0 — Median Duration. The source is the TidyTuesday release
+      from 2021-04-20 (R for Data Science community). The working file contains
+      7,787 rows and 13 columns after merging available tables in the week
+      folder.
+  - question: How the field is spread?
     answer: >-
-      Key figure: 312 — Highest observed Duration. See the charts and sources in
-      the report for the full evidence.
+      Key figure: 312 — Highest observed Duration. The source is the TidyTuesday
+      release from 2021-04-20 (R for Data Science community). The working file
+      contains 7,787 rows and 13 columns after merging available tables in the
+      week folder.
+  - question: What does the data show about concentration?
+    answer: >-
+      Key figure: Black Mirror: Bandersnatch — Top Title by Duration. The source
+      is the TidyTuesday release from 2021-04-20 (R for Data Science community).
+      The working file contains 7,787 rows and 13 columns after merging
+      available tables in the week folder.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">A streaming library is an inventory decision dressed as a homepage. Title-level Netflix catalog data show how the mix of movies and TV — and the duration field attached to each row — shifted between 2008 and 2021.</p>
 <p class="art-p">The working file holds <strong>7,787</strong> records. Median duration is <strong>88.0</strong>; the highest observed duration is <strong>312</strong>, led by Black Mirror: Bandersnatch. Movie is the most common type label.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">7,787</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">88.0</span><span class="fact-label">Median Duration</span></div>
@@ -42,7 +61,7 @@ faq:
   <div class="fact-box"><span class="fact-number">2008–2021</span><span class="fact-label">Year span covered in the file</span></div>
   <div class="fact-box"><span class="fact-number">Movie</span><span class="fact-label">Most common Type</span></div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The source is the TidyTuesday release from 2021-04-20 (R for Data Science community). The working file contains 7,787 rows and 13 columns after merging available tables in the week folder.</p>
 <p class="art-p">Duration here is the catalog field as published — minutes for films, season counts for some TV rows depending on how the export encoded type. Medians and Plotly exports keep the reading robust to skew and missing cells.</p>
 

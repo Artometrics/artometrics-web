@@ -10,8 +10,11 @@ tags:
   - culture
 draft: false
 tldr: >-
-  Performance and box-office records map the shows that dominated by longevity
-  and revenue.
+  Broadway is a price and endurance market: average ticket price on one axis,
+  performances on the other. The TidyTuesday grosses extract used here holds
+  47,524 rows with a median average ticket price of $60.2 and a recorded high of
+  $512 . Springsteen On Broadway tops the show-level price ranking; Broadhurst
+  Theatre is the most common theatre label in the file.
 keyPoints:
   - '47,524 — Records in the working dataset'
   - 60.2 — Median Avg ticket price
@@ -19,25 +22,39 @@ keyPoints:
   - Springsteen On Broadway — Top Show by Avg ticket price
   - Broadhurst Theatre — Most common Theatre
 faq:
-  - question: What does “Concert Residencies Rewrite the Price Ceiling” show?
+  - question: >-
+      What does the data show about concert Residencies Rewrite the Price
+      Ceiling?
     answer: >-
-      Key figure: 47,524 — Records in the working dataset. See the charts and
-      sources in the report for the full evidence.
-  - question: 'What does “Even Among Leaders, Springsteen Is an Outlier” show?'
+      Key figure: 47,524 — Records in the working dataset. The source is the
+      TidyTuesday release from 2020-04-28 (grosses.csv). After cleaning, 47,524
+      records remain for charting.
+  - question: >-
+      What does the data show about even Among Leaders, Springsteen Is an
+      Outlier?
     answer: >-
-      Key figure: 60.2 — Median Avg ticket price. See the charts and sources in
-      the report for the full evidence.
-  - question: What does “House Medians Cluster Near the Industry Middle” show?
+      Key figure: 60.2 — Median Avg ticket price. The source is the TidyTuesday
+      release from 2020-04-28 (grosses.csv). After cleaning, 47,524 records
+      remain for charting.
+  - question: >-
+      What does the data show about house Medians Cluster Near the Industry
+      Middle?
     answer: >-
-      Key figure: 512 — Highest observed Avg ticket price. See the charts and
-      sources in the report for the full evidence.
+      Key figure: 512 — Highest observed Avg ticket price. The source is the
+      TidyTuesday release from 2020-04-28 (grosses.csv). After cleaning, 47,524
+      records remain for charting.
+  - question: What does the data show about gershwin Leads the Gap Above the Median?
+    answer: >-
+      Key figure: Springsteen On Broadway — Top Show by Avg ticket price. The
+      source is the TidyTuesday release from 2020-04-28 (grosses.csv). After
+      cleaning, 47,524 records remain for charting.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">Broadway is a price and endurance market: average ticket price on one axis, performances on the other. The TidyTuesday grosses extract used here holds <strong>47,524</strong> rows with a median average ticket price of <strong>$60.2</strong> and a recorded high of <strong>$512</strong>. Springsteen On Broadway tops the show-level price ranking; Broadhurst Theatre is the most common theatre label in the file.</p>
 <p class="art-p">Those two facts already sketch the industry’s split: long-running musical houses with mid-range medians, and event residencies that reset what “a Broadway ticket” can mean.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">47,524</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">60.2</span><span class="fact-label">Median Avg ticket price</span></div>
@@ -45,7 +62,7 @@ faq:
   <div class="fact-box"><span class="fact-number">Springsteen On Broadway</span><span class="fact-label">Top Show by Avg ticket price</span></div>
   <div class="fact-box"><span class="fact-number">Broadhurst Theatre</span><span class="fact-label">Most common Theatre</span></div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The source is the TidyTuesday release from 2020-04-28 (grosses.csv). After cleaning, 47,524 records remain for charting.</p>
 <p class="art-p">Average ticket price is the primary metric; theatre and show fields provide the grouping. Charts are Plotly JSON with PNG fallbacks.</p>
 <h2 id="concert-residencies-rewrite-the-price-ceiling" class="anchored">Concert Residencies Rewrite the Price Ceiling</h2>

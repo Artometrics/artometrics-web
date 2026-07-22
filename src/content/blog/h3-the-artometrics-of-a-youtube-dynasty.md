@@ -7,7 +7,11 @@ heroImage: /images/content/articles/h3-the-artometrics-of-a-youtube-dynasty/hero
 tags:
   - culture
 draft: false
-tldr: 'Since 2011, Ethan and Hila Klein scaled channels, a podcast, and a brand.'
+tldr: >-
+  Ethan Klein built one of YouTube’s most documented creator empires from a
+  single channel and a lawsuit. H3h3Productions launched in 2011 as a
+  reaction-commentary format, spent years as a meme factory, and then pivoted —
+  twice — into something far more complicated. The H3 Podcast debuted in 2017.
 keyPoints:
   - >-
     3.24B — Total views across all four H3 channels, 2013–2026 — enough to give
@@ -24,29 +28,45 @@ keyPoints:
   - >-
     680 — H3 Podcast episodes analyzed via Podchaser API — median runtime grew
     from 42 minutes in 2017 to 220+ by 2024
+  - >-
+    353 — r/h3snark indexed activity at its April 2025 peak — 3.5× its own
+    average, triggered by the iDubbbz Content Cop
 faq:
-  - question: What does “The Era Timeline” show?
+  - question: What does the data show about the Era Timeline?
     answer: >-
       Key figure: 3.24B — Total views across all four H3 channels, 2013–2026 —
-      enough to give every person on Earth nearly half a view. See the charts
-      and sources in the report for the full evidence.
-  - question: What does “The Duration Drift” show?
+      enough to give every person on Earth nearly half a view. The H3 ecosystem
+      is not a single channel — it is a network. h3h3Productions launched in
+      2011 as a reaction-and-commentary channel built around the Fair Use legal
+      fight that…
+  - question: What does the data show about the Duration Drift?
     answer: >-
       Key figure: 1,638 — Videos analyzed after filtering Shorts and zero-view
-      uploads from the original 1,876-video pull. See the charts and sources in
-      the report for the full evidence.
-  - question: What does “The Fan Vs. Critic Divide” show?
+      uploads from the original 1,876-video pull. The H3 ecosystem is not a
+      single channel — it is a network. h3h3Productions launched in 2011 as a
+      reaction-and-commentary channel built around the Fair Use legal fight
+      that…
+  - question: What does the data show about the Fan Vs. Critic Divide?
     answer: >-
       Key figure: 4.5× — How much harder h3h3Productions hits per video vs. the
-      H3 Podcast — 4.78M median vs. 1.05M. See the charts and sources in the
-      report for the full evidence.
+      H3 Podcast — 4.78M median vs. 1.05M. The H3 ecosystem is not a single
+      channel — it is a network. h3h3Productions launched in 2011 as a
+      reaction-and-commentary channel built around the Fair Use legal fight
+      that…
+  - question: What this file cannot tell you?
+    answer: >-
+      Key figure: 9 months — The entire Frenemies Era — the most-watched stretch
+      in H3 Podcast history, Sep 2020 to Jun 2021. The H3 ecosystem is not a
+      single channel — it is a network. h3h3Productions launched in 2011 as a
+      reaction-and-commentary channel built around the Fair Use legal fight
+      that…
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">Ethan Klein built one of YouTube’s most documented creator empires from a single channel and a lawsuit. H3h3Productions launched in 2011 as a reaction-commentary format, spent years as a meme factory, and then pivoted — twice — into something far more complicated. The H3 Podcast debuted in 2017. The Frenemies co-host era with Trisha Paytas ran for nine months in 2020–2021 and produced the highest viewership the show has ever seen. The Leftovers political co-host era with Hasan Piker ran until October 2023, when a public dispute over the Israel-Palestine conflict ended it. What remained after that is what this piece analyzes: 1,638 videos across four channels, 680 podcast episodes, and three years of Reddit post data from the fan and critic communities that formed around the brand.</p>
 <p class="art-p">This is not a hit piece and it is not a fan report. It is a data report. The numbers are what they are.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box">
     <span class="fact-number">3.24B</span>
@@ -73,7 +93,7 @@ faq:
     <span class="fact-label">r/h3snark indexed activity at its April 2025 peak — 3.5× its own average, triggered by the iDubbbz Content Cop</span>
   </div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The H3 ecosystem is not a single channel — it is a network. h3h3Productions launched in 2011 as a reaction-and-commentary channel built around the Fair Use legal fight that briefly made Ethan Klein a cause célèbre in YouTube creator circles. The H3 Podcast launched in 2017 as a separate channel and quickly became the brand’s primary vehicle. Hila Klein’s channel documents the Teddy Fresh clothing brand. The Ethan Klein channel captures solo content and live streams. Looking at all four: 1,638 videos after filtering Shorts and zero-view uploads from the original 1,876-video pull via the YouTube Data API v3.</p>
 <p class="art-p">H3’s trajectory cannot be understood without the era framework. The podcast’s baseline (2017–2020) established the format: long-form conversation between Ethan and Hila, irregular cadence, modest but loyal viewership. The Frenemies Era (September 2020 – June 2021) is the single most-watched stretch in H3 Podcast history — nine months in which Ethan co-hosted with Trisha Paytas, generating a level of weekly engagement the show has never approached since. The Leftovers Era (September 2021 – October 2023) brought a political co-host in Hasan Piker, a different kind of audience, and a deeper ideological identity for the brand. When Leftovers ended over disagreements about the Israel-Palestine conflict, H3 entered its current post-format phase: fewer episodes, longer runtimes, a shrinking but committed core audience.</p>
 <p class="art-p">The core dataset was built from scratch using the YouTube Data API v3, stored at github.com/Artometrics/h3 . Podcast episode metadata comes from the Podchaser API (680 episodes, April 2026 pull). Reddit post data was pulled from the Arctic Shift Reddit archive, covering r/h3h3productions (749,974 posts, 2014–2026) and r/h3snark (25,766 posts, April 2023–2026) — the fan sub and the critic sub, both active during the most contentious period in the brand’s history.</p>

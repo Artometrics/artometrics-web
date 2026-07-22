@@ -7,7 +7,12 @@ heroImage: /images/content/articles/wine-ratings/hero.png
 tags:
   - culture
 draft: false
-tldr: A hundred thousand wine ratings test whether cost tracks scores.
+tldr: >-
+  A hundred thousand wine ratings are enough to test a dinner-table theory: does
+  price predict critic points? This file’s median score is 88.0; the observed
+  high is 100. Charles Smith 2006 Royal City appears in the fact-box title
+  ranking; the United States is the most common country. The charts move from
+  title leaders to country spreads to the points-versus-price scatter.
 keyPoints:
   - '100,000 — Records in the working dataset'
   - 88.0 — Median Points
@@ -15,25 +20,42 @@ keyPoints:
   - Charles Smith 2006 Royal Cit — Top Title by Points
   - US — Most common Country
 faq:
-  - question: What does “Perfect scores crowd the title breakdown’s top slice” show?
+  - question: >-
+      What does the data show about perfect scores crowd the title breakdown’s
+      top slice?
     answer: >-
-      Key figure: 100,000 — Records in the working dataset. See the charts and
-      sources in the report for the full evidence.
-  - question: What does “The leaders chart is a wall of 100-point wines” show?
+      Key figure: 100,000 — Records in the working dataset. The source is the
+      TidyTuesday release from 2019-05-28 (R for Data Science community). The
+      working file contains 100,000 rows and 13 columns after merging available
+      tables in the…
+  - question: >-
+      What does the data show about the leaders chart is a wall of 100-point
+      wines?
     answer: >-
-      Key figure: 88.0 — Median Points. See the charts and sources in the report
-      for the full evidence.
-  - question: What does “Countries spread points around a high center” show?
+      Key figure: 88.0 — Median Points. The source is the TidyTuesday release
+      from 2019-05-28 (R for Data Science community). The working file contains
+      100,000 rows and 13 columns after merging available tables in the…
+  - question: >-
+      What does the data show about countries spread points around a high
+      center?
     answer: >-
-      Key figure: 100 — Highest observed Points. See the charts and sources in
-      the report for the full evidence.
+      Key figure: 100 — Highest observed Points. The source is the TidyTuesday
+      release from 2019-05-28 (R for Data Science community). The working file
+      contains 100,000 rows and 13 columns after merging available tables in
+      the…
+  - question: What does the data show about austria clears the median; Chile trails?
+    answer: >-
+      Key figure: Charles Smith 2006 Royal Cit — Top Title by Points. The source
+      is the TidyTuesday release from 2019-05-28 (R for Data Science community).
+      The working file contains 100,000 rows and 13 columns after merging
+      available tables in the…
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">A hundred thousand wine ratings are enough to test a dinner-table theory: does price predict critic points? This file’s median score is 88.0; the observed high is 100. Charles Smith 2006 Royal City appears in the fact-box title ranking; the United States is the most common country.</p>
 <p class="art-p">The charts move from title leaders to country spreads to the points-versus-price scatter. The calibration point is 88.0 — the mathematical center of a tasting culture that rarely uses the bottom of the scale.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">100,000</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">88.0</span><span class="fact-label">Median Points</span></div>
@@ -41,7 +63,7 @@ faq:
   <div class="fact-box"><span class="fact-number">Charles Smith 2006 Royal Cit</span><span class="fact-label">Top Title by Points</span></div>
   <div class="fact-box"><span class="fact-number">US</span><span class="fact-label">Most common Country</span></div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The source is the TidyTuesday release from 2019-05-28 (R for Data Science community). The working file contains 100,000 rows and 13 columns after merging available tables in the week folder. Points is the primary metric; price appears in the scatter; title and country are categorical axes.</p>
 <p class="art-p">Medians are used because wine scores cluster tightly and prices skew. Index-style fields are excluded from metric selection.</p>
 

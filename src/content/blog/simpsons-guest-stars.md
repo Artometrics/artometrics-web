@@ -7,33 +7,48 @@ heroImage: /images/content/articles/simpsons-guest-stars/hero.png
 tags:
   - movies-tv
 draft: false
-tldr: Guest-appearance records count celebrity density across seasons.
+tldr: >-
+  Guest-appearance records count celebrity density across seasons. Start with
+  the scale: 1,381 — Records in the working dataset; and 1–30 — Year span
+  covered in the file.
 keyPoints:
   - '1,381 — Records in the working dataset'
   - 1–30 — Year span covered in the file
 faq:
-  - question: What does “Who sits at the top” show?
+  - question: What does the data show about volume?
     answer: >-
-      Key figure: 1,381 — Records in the working dataset. See the charts and
-      sources in the report for the full evidence.
-  - question: What does “Timeline” show?
+      Key figure: 1,381 — Records in the working dataset. The source is the
+      TidyTuesday release from 2019-08-27 (R for Data Science community). This
+      working file contains 1,381 rows and 7 columns after merging all available
+      CSV/XLSX…
+  - question: Who sits at the top?
     answer: >-
-      Key figure: 1–30 — Year span covered in the file. See the charts and
-      sources in the report for the full evidence.
-  - question: What does “Frequency” show?
-    answer: Guest-appearance records count celebrity density across seasons.
+      Key figure: 1–30 — Year span covered in the file. The source is the
+      TidyTuesday release from 2019-08-27 (R for Data Science community). This
+      working file contains 1,381 rows and 7 columns after merging all available
+      CSV/XLSX…
+  - question: What does the data show about timeline?
+    answer: >-
+      The source is the TidyTuesday release from 2019-08-27 (R for Data Science
+      community). This working file contains 1,381 rows and 7 columns after
+      merging all available CSV/XLSX tables in the week folder.
+  - question: What does the data show about frequency?
+    answer: >-
+      The source is the TidyTuesday release from 2019-08-27 (R for Data Science
+      community). This working file contains 1,381 rows and 7 columns after
+      merging all available CSV/XLSX tables in the week folder.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">Guest-appearance records count celebrity density across seasons.</p>
 <p class="art-p">Start with the scale: <strong>1,381</strong> — Records in the working dataset; and <strong>1–30</strong> — Year span covered in the file.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">1,381</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">1–30</span><span class="fact-label">Year span covered in the file</span></div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The source is the TidyTuesday release from 2019-08-27 (R for Data Science community). This working file contains 1,381 rows and 7 columns after merging all available CSV/XLSX tables in the week folder.</p>
 <p class="art-p">Charts are exported as Plotly JSON with PNG fallbacks. Medians are used for robustness where distributions skew. Index-style fields (row numbers, sequential IDs) are excluded from metric selection.</p>
 

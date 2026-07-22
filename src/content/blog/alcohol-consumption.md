@@ -10,40 +10,57 @@ tags:
   - culture
 draft: false
 tldr: >-
-  Country-level consumption data map which nations drink the most per person—and
-  how that has shifted.
+  Global alcohol data is often collapsed into a single “drinks per person”
+  headline. The TidyTuesday global alcohol extract keeps the beverage split
+  intact — beer, spirits, and wine servings — across 193 country-level records.
+  Beer is the metric that leads these charts, with a median of 76.0 servings and
+  a recorded high of 376 in Namibia. That spread is the story.
 keyPoints:
   - 193 — Records in the working dataset
   - 76.0 — Median Beer servings
   - 376 — Highest observed Beer servings
   - Namibia — Top Country by Beer servings
 faq:
-  - question: What does “Beer Consumption Has a Steep Country Ladder” show?
+  - question: What does the data show about beer Consumption Has a Steep Country Ladder?
     answer: >-
-      Key figure: 193 — Records in the working dataset. See the charts and
-      sources in the report for the full evidence.
-  - question: What does “The Top Dozen Has Its Own Median” show?
+      Key figure: 193 — Records in the working dataset. The source is the
+      TidyTuesday release from 2018-06-26 (week13_alcohol_global.csv),
+      maintained by the R for Data Science community. The working file used here
+      contains 193 rows after cleaning.
+  - question: What does the data show about the Top Dozen Has Its Own Median?
     answer: >-
-      Key figure: 76.0 — Median Beer servings. See the charts and sources in the
-      report for the full evidence.
-  - question: What does “Most Countries Cluster Far Below the Peaks” show?
+      Key figure: 76.0 — Median Beer servings. The source is the TidyTuesday
+      release from 2018-06-26 (week13_alcohol_global.csv), maintained by the R
+      for Data Science community. The working file used here contains 193 rows
+      after cleaning.
+  - question: What does the data show about most Countries Cluster Far Below the Peaks?
     answer: >-
-      Key figure: 376 — Highest observed Beer servings. See the charts and
-      sources in the report for the full evidence.
+      Key figure: 376 — Highest observed Beer servings. The source is the
+      TidyTuesday release from 2018-06-26 (week13_alcohol_global.csv),
+      maintained by the R for Data Science community. The working file used here
+      contains 193 rows after cleaning.
+  - question: >-
+      What does the data show about concentration Rises Quickly Among the
+      Leaders?
+    answer: >-
+      Key figure: Namibia — Top Country by Beer servings. The source is the
+      TidyTuesday release from 2018-06-26 (week13_alcohol_global.csv),
+      maintained by the R for Data Science community. The working file used here
+      contains 193 rows after cleaning.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">Global alcohol data is often collapsed into a single “drinks per person” headline. The TidyTuesday global alcohol extract keeps the beverage split intact — beer, spirits, and wine servings — across <strong>193</strong> country-level records. Beer is the metric that leads these charts, with a median of <strong>76.0</strong> servings and a recorded high of <strong>376</strong> in Namibia.</p>
 <p class="art-p">That spread is the story. A median of 76 and a maximum of 376 means the top of the beer distribution is not a gentle tail; it is a different consumption regime. Country rankings on beer alone will not match rankings on spirits, and the scatter at the end makes that explicit.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">193</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">76.0</span><span class="fact-label">Median Beer servings</span></div>
   <div class="fact-box"><span class="fact-number">376</span><span class="fact-label">Highest observed Beer servings</span></div>
   <div class="fact-box"><span class="fact-number">Namibia</span><span class="fact-label">Top Country by Beer servings</span></div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The source is the TidyTuesday release from 2018-06-26 (week13_alcohol_global.csv), maintained by the R for Data Science community. The working file used here contains 193 rows after cleaning.</p>
 <p class="art-p">Beer servings are the primary ranked metric in the chart stack. Medians are used where distributions skew. Charts are Plotly JSON with PNG fallbacks.</p>
 <h2 id="beer-consumption-has-a-steep-country-ladder" class="anchored">Beer Consumption Has a Steep Country Ladder</h2>

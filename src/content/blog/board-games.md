@@ -10,34 +10,52 @@ tags:
   - games
 draft: false
 tldr: >-
-  Ratings and popularity across thousands of titles find games that win both
-  mass attention and esteem.
+  BoardGameGeek ratings are a public taste machine: tens of thousands of titles,
+  each scored by the people willing to log plays. The TidyTuesday board-games
+  extract used here holds 10,532 records with a median average rating of 6.39
+  and a high of 9.00 for Small World Designer Edition. Wargame, World War II is
+  the most common category label in the file.
 keyPoints:
   - '10,532 — Records in the working dataset'
   - 6.39 — Median Average rating
   - 9.00 — Highest observed Average rating
   - Small World Designer Edition — Top Name by Average rating
   - 1970–1970 — Year span covered in the file
+  - 'Wargame,World War II — Most common Category'
 faq:
-  - question: What does “The Catalog’s Median Rating Sits Near 6.39” show?
+  - question: What does the data show about the Catalog’s Median Rating Sits Near 6.39?
     answer: >-
-      Key figure: 10,532 — Records in the working dataset. See the charts and
-      sources in the report for the full evidence.
-  - question: What does “Designer Editions and Heavy Games Own the Peak” show?
+      Key figure: 10,532 — Records in the working dataset. The source is the
+      TidyTuesday release from 2019-03-12 (board_games.csv). After cleaning,
+      10,532 rows remain in the working frame.
+  - question: >-
+      What does the data show about designer Editions and Heavy Games Own the
+      Peak?
     answer: >-
-      Key figure: 6.39 — Median Average rating. See the charts and sources in
-      the report for the full evidence.
-  - question: What does “Wargame Categories Rate Higher Than Card Games” show?
+      Key figure: 6.39 — Median Average rating. The source is the TidyTuesday
+      release from 2019-03-12 (board_games.csv). After cleaning, 10,532 rows
+      remain in the working frame.
+  - question: >-
+      What does the data show about wargame Categories Rate Higher Than Card
+      Games?
     answer: >-
-      Key figure: 9.00 — Highest observed Average rating. See the charts and
-      sources in the report for the full evidence.
+      Key figure: 9.00 — Highest observed Average rating. The source is the
+      TidyTuesday release from 2019-03-12 (board_games.csv). After cleaning,
+      10,532 rows remain in the working frame.
+  - question: >-
+      What does the data show about civil War and Napoleonic Titles Beat the
+      Median Most?
+    answer: >-
+      Key figure: Small World Designer Edition — Top Name by Average rating. The
+      source is the TidyTuesday release from 2019-03-12 (board_games.csv). After
+      cleaning, 10,532 rows remain in the working frame.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">BoardGameGeek ratings are a public taste machine: tens of thousands of titles, each scored by the people willing to log plays. The TidyTuesday board-games extract used here holds <strong>10,532</strong> records with a median average rating of <strong>6.39</strong> and a high of <strong>9.00</strong> for Small World Designer Edition.</p>
 <p class="art-p">Wargame, World War II is the most common category label in the file. That already tilts the catalog toward conflict simulations — a hobby subculture with its own rating norms. The charts ask how ratings split by category, how leaders separate from the median, and whether crowdfunding-scale user counts track with elite scores.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">10,532</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">6.39</span><span class="fact-label">Median Average rating</span></div>
@@ -46,7 +64,7 @@ faq:
   <div class="fact-box"><span class="fact-number">1970–1970</span><span class="fact-label">Year span covered in the file</span></div>
   <div class="fact-box"><span class="fact-number">Wargame,World War II</span><span class="fact-label">Most common Category</span></div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The source is the TidyTuesday release from 2019-03-12 (board_games.csv). After cleaning, 10,532 rows remain in the working frame.</p>
 <p class="art-p">Average rating is the primary metric. Category fields can be multi-label strings. Charts are Plotly JSON with PNG fallbacks. The year span encoded in the fact box reflects the filtered time field present in this build of the file.</p>
 <h2 id="the-catalog-s-median-rating-sits-near-6-39" class="anchored">The Catalog’s Median Rating Sits Near 6.39</h2>

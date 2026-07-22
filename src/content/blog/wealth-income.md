@@ -7,33 +7,58 @@ heroImage: /images/content/articles/wealth-income/hero.png
 tags:
   - business
 draft: false
-tldr: Wealth and income shares measure how assets pile up at the upper end.
+tldr: >-
+  Income distribution is how a society counts who sits where. This file holds
+  2,916 records spanning 1967–2019, with a median income-distribution value of
+  10.9 and a high of 27.2. Black Alone appears in the fact-box race ranking;
+  Under $15,000 is the most common income bracket label.
 keyPoints:
   - '2,916 — Records in the working dataset'
   - 10.9 — Median Income distribution
   - 27.2 — Highest observed Income distribution
   - Black Alone — Top Race by Income distribution
   - 1967–2019 — Year span covered in the file
+  - 'Under $15,000 — Most common Income bracket'
 faq:
-  - question: What does “The median income-distribution marker drifted upward” show?
+  - question: >-
+      What does the data show about the median income-distribution marker
+      drifted upward?
     answer: >-
-      Key figure: 2,916 — Records in the working dataset. See the charts and
-      sources in the report for the full evidence.
-  - question: What does “Hispanic (Any Race) leads the charted race ladder” show?
+      Key figure: 2,916 — Records in the working dataset. The source is the
+      TidyTuesday release from 2021-02-09 (R for Data Science community). The
+      working file contains 2,916 rows and 10 columns after merging available
+      tables in the…
+  - question: >-
+      What does the data show about hispanic (Any Race) leads the charted race
+      ladder?
     answer: >-
-      Key figure: 10.9 — Median Income distribution. See the charts and sources
-      in the report for the full evidence.
-  - question: What does “Income brackets carve different distribution bands” show?
+      Key figure: 10.9 — Median Income distribution. The source is the
+      TidyTuesday release from 2021-02-09 (R for Data Science community). The
+      working file contains 2,916 rows and 10 columns after merging available
+      tables in the…
+  - question: >-
+      What does the data show about income brackets carve different distribution
+      bands?
     answer: >-
-      Key figure: 27.2 — Highest observed Income distribution. See the charts
-      and sources in the report for the full evidence.
+      Key figure: 27.2 — Highest observed Income distribution. The source is the
+      TidyTuesday release from 2021-02-09 (R for Data Science community). The
+      working file contains 2,916 rows and 10 columns after merging available
+      tables in the…
+  - question: >-
+      What does the data show about mid brackets clear the median; high brackets
+      trail in this cut?
+    answer: >-
+      Key figure: Black Alone — Top Race by Income distribution. The source is
+      the TidyTuesday release from 2021-02-09 (R for Data Science community).
+      The working file contains 2,916 rows and 10 columns after merging
+      available tables in the…
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">Income distribution is how a society counts who sits where. This file holds 2,916 records spanning 1967–2019, with a median income-distribution value of 10.9 and a high of 27.2. Black Alone appears in the fact-box race ranking; Under $15,000 is the most common income bracket label.</p>
 <p class="art-p">The charts track how the median moved, which race categories lead, how brackets sit relative to the median, and how income distribution relates to income median. The calibration point is 10.9 — the center of the distribution field in this extract.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">2,916</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">10.9</span><span class="fact-label">Median Income distribution</span></div>
@@ -42,7 +67,7 @@ faq:
   <div class="fact-box"><span class="fact-number">1967–2019</span><span class="fact-label">Year span covered in the file</span></div>
   <div class="fact-box"><span class="fact-number">Under $15,000</span><span class="fact-label">Most common Income bracket</span></div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The source is the TidyTuesday release from 2021-02-09 (R for Data Science community). The working file contains 2,916 rows and 10 columns after merging available tables in the week folder. Income distribution is the primary metric; race and income bracket are categorical axes; income median appears in the scatter.</p>
 <p class="art-p">Medians are used for robustness across skewed economic series. Index-style fields are excluded from metric selection.</p>
 

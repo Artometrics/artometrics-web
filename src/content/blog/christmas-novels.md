@@ -10,34 +10,52 @@ tags:
   - books
 draft: false
 tldr: >-
-  A Gutenberg holiday corpus shows which seasonal novels still define the
-  Christmas canon.
+  Christmas novels are a seasonal shelf with a long memory: Dickensian ghosts,
+  children’s mysteries, parlor sentimentalism. The TidyTuesday christmas-novels
+  extract used here is small — 35 records — with a median author birthdate of
+  1,859 and a latest birthdate of 1,891 . Charles Dickens is the most common
+  author label in the file.
 keyPoints:
   - 35 — Records in the working dataset
   - '1,859 — Median Birthdate'
   - '1,891 — Highest observed Birthdate'
   - The Camp Fire Girls Solve a — Top Title by Birthdate
   - 1970–1970 — Year span covered in the file
+  - 'Dickens, Charles — Most common Author'
 faq:
-  - question: What does “The Shelf Centers on Mid-Nineteenth-Century Births” show?
+  - question: >-
+      What does the data show about the Shelf Centers on Mid-Nineteenth-Century
+      Births?
     answer: >-
-      Key figure: 35 — Records in the working dataset. See the charts and
-      sources in the report for the full evidence.
-  - question: What does “Later-Born Titles Mark the Edge of the Canon” show?
+      Key figure: 35 — Records in the working dataset. The source is the
+      TidyTuesday release from 2025-12-30 (christmas_novels.csv). After
+      cleaning, 35 rows remain.
+  - question: >-
+      What does the data show about later-Born Titles Mark the Edge of the
+      Canon?
     answer: >-
-      Key figure: 1,859 — Median Birthdate. See the charts and sources in the
-      report for the full evidence.
-  - question: What does “Birthdates Cluster Around the 1860s” show?
+      Key figure: 1,859 — Median Birthdate. The source is the TidyTuesday
+      release from 2025-12-30 (christmas_novels.csv). After cleaning, 35 rows
+      remain.
+  - question: What does the data show about birthdates Cluster Around the 1860s?
     answer: >-
-      Key figure: 1,891 — Highest observed Birthdate. See the charts and sources
-      in the report for the full evidence.
+      Key figure: 1,891 — Highest observed Birthdate. The source is the
+      TidyTuesday release from 2025-12-30 (christmas_novels.csv). After
+      cleaning, 35 rows remain.
+  - question: >-
+      What does the data show about dickens and Thackeray Sit Earlier Than the
+      Median?
+    answer: >-
+      Key figure: The Camp Fire Girls Solve a — Top Title by Birthdate. The
+      source is the TidyTuesday release from 2025-12-30 (christmas_novels.csv).
+      After cleaning, 35 rows remain.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">Christmas novels are a seasonal shelf with a long memory: Dickensian ghosts, children’s mysteries, parlor sentimentalism. The TidyTuesday christmas-novels extract used here is small — <strong>35</strong> records — with a median author birthdate of <strong>1,859</strong> and a latest birthdate of <strong>1,891</strong>. Charles Dickens is the most common author label in the file.</p>
 <p class="art-p">Because the sample is tiny, every chart is a map of a curated canon rather than a complete market. Birthdate becomes a proxy for which literary generations stock the holiday shelf.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">35</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">1,859</span><span class="fact-label">Median Birthdate</span></div>
@@ -46,7 +64,7 @@ faq:
   <div class="fact-box"><span class="fact-number">1970–1970</span><span class="fact-label">Year span covered in the file</span></div>
   <div class="fact-box"><span class="fact-number">Dickens, Charles</span><span class="fact-label">Most common Author</span></div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The source is the TidyTuesday release from 2025-12-30 (christmas_novels.csv). After cleaning, 35 rows remain.</p>
 <p class="art-p">Author birthdate is the primary numeric metric in this chart stack; deathdate appears in the joint plot. Charts are Plotly JSON with PNG fallbacks.</p>
 <h2 id="the-shelf-centers-on-mid-nineteenth-century-births" class="anchored">The Shelf Centers on Mid-Nineteenth-Century Births</h2>

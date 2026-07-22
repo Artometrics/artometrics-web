@@ -94,4 +94,16 @@ export function getAdjacentPosts(currentSlug: string) {
   };
 }
 
+/** Section-first recommended reads, filled from the wider archive. */
+export function getRecommendedPosts(currentSlug: string, limit = 12): BlogPost[] {
+  const all = getBlogPosts().filter((p) => p.slug !== currentSlug);
+  const current = getBlogPost(currentSlug);
+  const section = current ? primarySection(current.tags) : null;
+  const same = section
+    ? all.filter((p) => primarySection(p.tags) === section)
+    : [];
+  const rest = all.filter((p) => !same.some((s) => s.slug === p.slug));
+  return [...same, ...rest].slice(0, limit);
+}
+
 export { SECTION_META, SECTION_SLUGS };

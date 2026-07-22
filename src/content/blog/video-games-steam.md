@@ -10,36 +10,56 @@ tags:
   - games
 draft: false
 tldr: >-
-  Ownership and play data identify titles that delivered the most hours relative
-  to price.
+  Steam Spy-era metadata turns the storefront into a scored catalog. This file
+  holds 26,688 games spanning 2004–2018, with a median Metascore of 73.0 and a
+  high of 98.0. DEEP SPACE WAIFU: NEKOMIMI appears in the fact-box extremes; the
+  0 .. 20,000 owners band is the most common ownership bucket.
 keyPoints:
   - '26,688 — Records in the working dataset'
   - 73.0 — Median Metascore
   - 98.0 — Highest observed Metascore
   - 'DEEP SPACE WAIFU: NEKOMIMI — Top Game by Metascore'
   - 2004–2018 — Year span covered in the file
+  - "0\_..\_20,000 — Most common Owners"
 faq:
   - question: >-
-      What does “Median Metascore edged up across the store’s expansion years”
-      show?
+      What does the data show about median Metascore edged up across the store’s
+      expansion years?
     answer: >-
-      Key figure: 26,688 — Records in the working dataset. See the charts and
-      sources in the report for the full evidence.
-  - question: What does “Little Triangle tops a tightly packed critical elite” show?
+      Key figure: 26,688 — Records in the working dataset. The source is the
+      TidyTuesday release from 2019-07-30 (R for Data Science community). The
+      working file contains 26,688 rows and 11 columns after merging available
+      tables in the…
+  - question: >-
+      What does the data show about little Triangle tops a tightly packed
+      critical elite?
     answer: >-
-      Key figure: 73.0 — Median Metascore. See the charts and sources in the
-      report for the full evidence.
-  - question: What does “Owner tiers carry different Metascore distributions” show?
+      Key figure: 73.0 — Median Metascore. The source is the TidyTuesday release
+      from 2019-07-30 (R for Data Science community). The working file contains
+      26,688 rows and 11 columns after merging available tables in the…
+  - question: >-
+      What does the data show about owner tiers carry different Metascore
+      distributions?
     answer: >-
-      Key figure: 98.0 — Highest observed Metascore. See the charts and sources
-      in the report for the full evidence.
+      Key figure: 98.0 — Highest observed Metascore. The source is the
+      TidyTuesday release from 2019-07-30 (R for Data Science community). The
+      working file contains 26,688 rows and 11 columns after merging available
+      tables in the…
+  - question: >-
+      What does the data show about mid-million owner games clear the median;
+      tiny audiences trail?
+    answer: >-
+      Key figure: DEEP SPACE WAIFU: NEKOMIMI — Top Game by Metascore. The source
+      is the TidyTuesday release from 2019-07-30 (R for Data Science community).
+      The working file contains 26,688 rows and 11 columns after merging
+      available tables in the…
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">Steam Spy-era metadata turns the storefront into a scored catalog. This file holds 26,688 games spanning 2004–2018, with a median Metascore of 73.0 and a high of 98.0. DEEP SPACE WAIFU: NEKOMIMI appears in the fact-box extremes; the 0 .. 20,000 owners band is the most common ownership bucket.</p>
 <p class="art-p">The question is how critic Metascore sits across time, titles, and owner tiers — and whether score and price move together. The calibration point is 73.0: above it, the critically strong; below it, the long shelf of ordinary releases.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">26,688</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">73.0</span><span class="fact-label">Median Metascore</span></div>
@@ -48,7 +68,7 @@ faq:
   <div class="fact-box"><span class="fact-number">2004–2018</span><span class="fact-label">Year span covered in the file</span></div>
   <div class="fact-box"><span class="fact-number">0 .. 20,000</span><span class="fact-label">Most common Owners</span></div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The source is the TidyTuesday release from 2019-07-30 (R for Data Science community). The working file contains 26,688 rows and 11 columns after merging available tables in the week folder. Metascore is the primary metric; owners is the categorical size axis; price appears in the scatter.</p>
 <p class="art-p">Medians are used because scores and prices both skew. Index-style fields are excluded from metric selection.</p>
 

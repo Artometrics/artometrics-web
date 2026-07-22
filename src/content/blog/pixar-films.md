@@ -10,8 +10,10 @@ tags:
   - movies-tv
 draft: false
 tldr: >-
-  Data on Pixar’s canon track scores and the titles that interrupted a long
-  critical run.
+  Pixar is the rare studio brand that became a quality guarantee — but
+  guarantees are measurable. The TidyTuesday 2025-03-11 Pixar films release
+  joins with its public_response companion file: 27 theatrical features, 24 with
+  critic and audience scores attached.
 keyPoints:
   - 96% — Median Rotten Tomatoes score across rated Pixar theatrical releases
   - 155 — Longest runtime in the set — nan (2023)
@@ -20,28 +22,40 @@ keyPoints:
   - >-
     A+ — Most common CinemaScore grade — audiences rarely stamped a Pixar
     opening below A
+  - '+17 — Minutes added to median runtime, early era vs 2017–present'
 faq:
-  - question: What does “Runtime Creep” show?
+  - question: What does the data show about runtime Creep?
     answer: >-
       Key figure: 96% — Median Rotten Tomatoes score across rated Pixar
-      theatrical releases. See the charts and sources in the report for the full
-      evidence.
-  - question: What does “Critic Scores” show?
+      theatrical releases. Calibration points: a 96% median Rotten Tomatoes
+      score across rated theatrical releases; a longest runtime of 155 minutes;
+      Toy Story’s 81 -minute floor; Cars 2 at 40% on Rotten…
+  - question: What does the data show about critic Scores?
     answer: >-
-      Key figure: 155 — Longest runtime in the set — nan (2023). See the charts
-      and sources in the report for the full evidence.
-  - question: What does “Audience vs Critics” show?
+      Key figure: 155 — Longest runtime in the set — nan (2023). Calibration
+      points: a 96% median Rotten Tomatoes score across rated theatrical
+      releases; a longest runtime of 155 minutes; Toy Story’s 81 -minute floor;
+      Cars 2 at 40% on Rotten…
+  - question: What does the data show about audience vs Critics?
     answer: >-
       Key figure: 81 — Shortest runtime — Toy Story, the film that started the
-      canon. See the charts and sources in the report for the full evidence.
+      canon. Calibration points: a 96% median Rotten Tomatoes score across rated
+      theatrical releases; a longest runtime of 155 minutes; Toy Story’s 81
+      -minute floor; Cars 2 at 40% on Rotten…
+  - question: What does the data show about rating Mix?
+    answer: >-
+      Key figure: 40% — Lowest Rotten Tomatoes score — Cars 2, the critic floor.
+      Calibration points: a 96% median Rotten Tomatoes score across rated
+      theatrical releases; a longest runtime of 155 minutes; Toy Story’s 81
+      -minute floor; Cars 2 at 40% on Rotten…
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">Pixar is the rare studio brand that became a quality guarantee — but guarantees are measurable. The TidyTuesday 2025-03-11 Pixar films release joins with its public_response companion file: 27 theatrical features, 24 with critic and audience scores attached.</p>
 <p class="art-p">Five charts, five angles on the same question: did Pixar’s films get longer, softer, or harder to love as the catalog grew? The answers are longer, still crowd-pleasing, and critic-dependent at the margins.</p>
 <p class="art-p">Calibration points: a <strong>96%</strong> median Rotten Tomatoes score across rated theatrical releases; a longest runtime of <strong>155</strong> minutes; Toy Story’s <strong>81</strong>-minute floor; Cars 2 at <strong>40%</strong> on Rotten Tomatoes; CinemaScore grades clustering at <strong>A+</strong>; and <strong>+17</strong> minutes added to median runtime from the early era to 2017–present.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">96%</span><span class="fact-label">Median Rotten Tomatoes score across rated Pixar theatrical releases</span></div>
   <div class="fact-box"><span class="fact-number">155</span><span class="fact-label">Longest runtime in the set — nan (2023)</span></div>
@@ -50,7 +64,7 @@ faq:
   <div class="fact-box"><span class="fact-number">A+</span><span class="fact-label">Most common CinemaScore grade — audiences rarely stamped a Pixar opening below A</span></div>
   <div class="fact-box"><span class="fact-number">+17</span><span class="fact-label">Minutes added to median runtime, early era vs 2017–present</span></div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The core file pixar_films.csv lists theatrical features with release date, runtime, and MPAA rating. The companion public_response.csv adds Rotten Tomatoes, Metacritic, CinemaScore, and Critics' Choice scores. Three recent releases lack complete reception fields in the public file — treat absent values as missing data, not zero-quality signals.</p>
 <p class="art-p">This is not box-office data. The TidyTuesday readme points to a separate box_office extract in the {pixarfilms} R package for revenue analysis. Reception and runtime are the focus here because they are complete in-repo.</p>
 <h2 id="runtime-creep" class="anchored">Runtime Creep</h2>

@@ -7,39 +7,57 @@ heroImage: /images/content/articles/exercise-usa/hero.png
 tags:
   - culture
 draft: false
-tldr: State-level activity rates compare where Americans work out most.
+tldr: >-
+  Exercise is unevenly distributed across American states — a public-health map
+  disguised as lifestyle branding. The TidyTuesday exercise extract used here
+  holds 52 records (states plus D.C.) with a median of 23.0 on the adults metric
+  and a high of 32.0 in Colorado. Mountain and New England states dominate the
+  leaders.
 keyPoints:
   - 52 — Records in the working dataset
   - 23.0 — Median Adults
   - 32.0 — Highest observed Adults
   - Colorado — Top State by Adults
 faq:
-  - question: What does “Western and New England States Lead Adult Exercise” show?
+  - question: >-
+      What does the data show about western and New England States Lead Adult
+      Exercise?
     answer: >-
-      Key figure: 52 — Records in the working dataset. See the charts and
-      sources in the report for the full evidence.
-  - question: What does “The Top Dozen Sits Well Above the National Median” show?
+      Key figure: 52 — Records in the working dataset. The source is the
+      TidyTuesday release from 2018-07-17 (week16_exercise.xlsx). After
+      cleaning, 52 rows remain.
+  - question: >-
+      What does the data show about the Top Dozen Sits Well Above the National
+      Median?
     answer: >-
-      Key figure: 23.0 — Median Adults. See the charts and sources in the report
-      for the full evidence.
-  - question: What does “Most States Cluster Near the Low-20s” show?
+      Key figure: 23.0 — Median Adults. The source is the TidyTuesday release
+      from 2018-07-17 (week16_exercise.xlsx). After cleaning, 52 rows remain.
+  - question: What does the data show about most States Cluster Near the Low-20s?
     answer: >-
-      Key figure: 32.0 — Highest observed Adults. See the charts and sources in
-      the report for the full evidence.
+      Key figure: 32.0 — Highest observed Adults. The source is the TidyTuesday
+      release from 2018-07-17 (week16_exercise.xlsx). After cleaning, 52 rows
+      remain.
+  - question: >-
+      What does the data show about top States Hold a Disproportionate Share of
+      the Aggregate?
+    answer: >-
+      Key figure: Colorado — Top State by Adults. The source is the TidyTuesday
+      release from 2018-07-17 (week16_exercise.xlsx). After cleaning, 52 rows
+      remain.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">Exercise is unevenly distributed across American states — a public-health map disguised as lifestyle branding. The TidyTuesday exercise extract used here holds <strong>52</strong> records (states plus D.C.) with a median of <strong>23.0</strong> on the adults metric and a high of <strong>32.0</strong> in Colorado.</p>
 <p class="art-p">Mountain and New England states dominate the leaders. The charts ask how wide the spread is, how concentrated the top share is, and how adult rates relate to the men’s series in the file.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">52</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">23.0</span><span class="fact-label">Median Adults</span></div>
   <div class="fact-box"><span class="fact-number">32.0</span><span class="fact-label">Highest observed Adults</span></div>
   <div class="fact-box"><span class="fact-number">Colorado</span><span class="fact-label">Top State by Adults</span></div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The source is the TidyTuesday release from 2018-07-17 (week16_exercise.xlsx). After cleaning, 52 rows remain.</p>
 <p class="art-p">Adults is the primary ranked metric; Men appears in the scatter. Charts are Plotly JSON with PNG fallbacks.</p>
 <h2 id="western-and-new-england-states-lead-adult-exercise" class="anchored">Western and New England States Lead Adult Exercise</h2>

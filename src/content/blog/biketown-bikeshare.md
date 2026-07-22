@@ -10,34 +10,53 @@ tags:
   - cities-travel
 draft: false
 tldr: >-
-  Trip-level bike-share data measures typical distance and duration across
-  Biketown journeys.
+  Portland’s Biketown system turns everyday movement into timestamped trips. The
+  TidyTuesday extract used here holds 100,000 ride records spanning 2016–2018 ,
+  with a median duration of 14.5 minutes and a recorded high of 1,392 minutes —
+  multi-hour outliers that sit far from the commute core. Recreation is the most
+  common trip type in the file.
 keyPoints:
   - '100,000 — Records in the working dataset'
   - 14.5 — Median Duration min
   - '1,392 — Highest observed Duration min'
   - SW Stark at Burnside — Top StartHub by Duration min
   - 2016–2018 — Year span covered in the file
+  - recreation — Most common TripType
 faq:
-  - question: What does “Median Trip Length Fell Across Three Seasons” show?
+  - question: >-
+      What does the data show about median Trip Length Fell Across Three
+      Seasons?
     answer: >-
-      Key figure: 100,000 — Records in the working dataset. See the charts and
-      sources in the report for the full evidence.
-  - question: What does “Pop-Up and Waterfront Hubs Stretch Ride Time” show?
+      Key figure: 100,000 — Records in the working dataset. The source is the
+      TidyTuesday release from 2018-06-05 (week10_biketown.zip). After cleaning,
+      the working sample used for these charts contains 100,000 rows.
+  - question: >-
+      What does the data show about pop-Up and Waterfront Hubs Stretch Ride
+      Time?
     answer: >-
-      Key figure: 14.5 — Median Duration min. See the charts and sources in the
-      report for the full evidence.
-  - question: What does “Recreation Lasts Longer Than Work Trips” show?
+      Key figure: 14.5 — Median Duration min. The source is the TidyTuesday
+      release from 2018-06-05 (week10_biketown.zip). After cleaning, the working
+      sample used for these charts contains 100,000 rows.
+  - question: What does the data show about recreation Lasts Longer Than Work Trips?
     answer: >-
-      Key figure: 1,392 — Highest observed Duration min. See the charts and
-      sources in the report for the full evidence.
+      Key figure: 1,392 — Highest observed Duration min. The source is the
+      TidyTuesday release from 2018-06-05 (week10_biketown.zip). After cleaning,
+      the working sample used for these charts contains 100,000 rows.
+  - question: >-
+      What does the data show about recreation Sits Furthest Above the System
+      Median?
+    answer: >-
+      Key figure: SW Stark at Burnside — Top StartHub by Duration min. The
+      source is the TidyTuesday release from 2018-06-05 (week10_biketown.zip).
+      After cleaning, the working sample used for these charts contains 100,000
+      rows.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">Portland’s Biketown system turns everyday movement into timestamped trips. The TidyTuesday extract used here holds <strong>100,000</strong> ride records spanning <strong>2016–2018</strong>, with a median duration of <strong>14.5</strong> minutes and a recorded high of <strong>1,392</strong> minutes — multi-hour outliers that sit far from the commute core.</p>
 <p class="art-p">Recreation is the most common trip type in the file. That single label already hints at the system’s dual life: tourist and leisure loops on one side, workday hops on the other. Duration is the metric that organizes the charts.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">100,000</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">14.5</span><span class="fact-label">Median Duration min</span></div>
@@ -46,7 +65,7 @@ faq:
   <div class="fact-box"><span class="fact-number">2016–2018</span><span class="fact-label">Year span covered in the file</span></div>
   <div class="fact-box"><span class="fact-number">recreation</span><span class="fact-label">Most common TripType</span></div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The source is the TidyTuesday release from 2018-06-05 (week10_biketown.zip). After cleaning, the working sample used for these charts contains 100,000 rows.</p>
 <p class="art-p">Hub names, trip types, duration, and distance fields drive the visual stack. Medians are used because duration has a long right tail. Charts are Plotly JSON with PNG fallbacks.</p>
 <h2 id="median-trip-length-fell-across-three-seasons" class="anchored">Median Trip Length Fell Across Three Seasons</h2>

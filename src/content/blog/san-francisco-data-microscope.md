@@ -7,7 +7,12 @@ heroImage: /images/content/articles/san-francisco-data-microscope/hero.png
 tags:
   - cities-travel
 draft: false
-tldr: 'A city-identity report through software exports, scarcity, and neighborhoods.'
+tldr: >-
+  San Francisco is a perfect city microscope because its contradictions are
+  measurable: a small city with enormous software output, extreme housing
+  pressure, intense cultural mythology, and a regional economy larger than its
+  municipal boundary. this piece does not try to finish the comparison yet. It
+  defines the questions a serious SF data portrait has to ask.
 keyPoints:
   - '1,100+ — DataSF public portal dataset scale in public summaries'
   - 7 — Identity domains scored
@@ -15,26 +20,34 @@ keyPoints:
   - '3 — Core tradeoff signals: tech, housing, tolerance'
   - 6 — Competitor cities framed
 faq:
-  - question: What does “Identity Stack” show?
+  - question: What does the data show about identity Stack?
     answer: >-
       Key figure: 1,100+ — DataSF public portal dataset scale in public
-      summaries. See the charts and sources in the report for the full evidence.
-  - question: What does “Tradeoff History” show?
+      summaries. Start with the scale: 1,100+ — DataSF public portal dataset
+      scale in public summaries; and 7 — Identity domains scored.
+  - question: What does the data show about tradeoff History?
     answer: >-
-      Key figure: 7 — Identity domains scored. See the charts and sources in the
-      report for the full evidence.
-  - question: What does “Neighborhood Pressure” show?
+      Key figure: 7 — Identity domains scored. Start with the scale: 1,100+ —
+      DataSF public portal dataset scale in public summaries; and 7 — Identity
+      domains scored.
+  - question: What does the data show about neighborhood Pressure?
     answer: >-
-      Key figure: 6 — Open questions for the next SF production pass. See the
-      charts and sources in the report for the full evidence.
+      Key figure: 6 — Open questions for the next SF production pass. Start with
+      the scale: 1,100+ — DataSF public portal dataset scale in public
+      summaries; and 7 — Identity domains scored.
+  - question: What does the data show about competitor Set?
+    answer: >-
+      Key figure: 3 — Core tradeoff signals: tech, housing, tolerance. Start
+      with the scale: 1,100+ — DataSF public portal dataset scale in public
+      summaries; and 7 — Identity domains scored.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">San Francisco is a perfect city microscope because its contradictions are measurable: a small city with enormous software output, extreme housing pressure, intense cultural mythology, and a regional economy larger than its municipal boundary.</p>
 <p class="art-p">this piece does not try to finish the comparison yet. It defines the questions a serious SF data portrait has to ask.</p>
 <p class="art-p">Start with the scale: <strong>1,100+</strong> — DataSF public portal dataset scale in public summaries; and <strong>7</strong> — Identity domains scored.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">1,100+</span><span class="fact-label">DataSF public portal dataset scale in public summaries</span></div>
   <div class="fact-box"><span class="fact-number">7</span><span class="fact-label">Identity domains scored</span></div>
@@ -42,7 +55,7 @@ faq:
   <div class="fact-box"><span class="fact-number">3</span><span class="fact-label">Core tradeoff signals: tech, housing, tolerance</span></div>
   <div class="fact-box"><span class="fact-number">6</span><span class="fact-label">Competitor cities framed</span></div>
   </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">DataSF provides Socrata/SODA API access to city datasets, including registered businesses, building permits, 311 cases, public safety, transportation, housing, and civic operations. Regional identity requires adding BEA, Census ACS, BLS, Commerce export data, and Bay Area transportation sources.</p>
 <p class="art-p">These charts are a framework pass: they show what the SF report should test when direct APIs are pulled.</p>
 <h2 id="identity-stack" class="anchored">Identity Stack</h2>

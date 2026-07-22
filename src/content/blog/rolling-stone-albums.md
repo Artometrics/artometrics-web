@@ -7,34 +7,49 @@ heroImage: /images/content/articles/rolling-stone-albums/hero.png
 tags:
   - music
 draft: false
-tldr: Canonical rankings identify the records Rolling Stone places at the summit.
+tldr: >-
+  Rolling Stone's greatest-albums lists are canon factories. They convert
+  critical memory into ranked cultural infrastructure — and the 2003 ranking
+  spine in this TidyTuesday extract is one of the most cited versions of that
+  factory. A working file of 691 records puts median 2003 rank at 250 and the
+  highest observed rank number at 500 .
 keyPoints:
   - 691 — Records in the working dataset
   - 250 — Median Rank 2003
   - 500 — Highest observed Rank 2003
   - Touch — Top Album by Rank 2003
   - 1955–2019 — Year span covered in the file
+  - Studio — Most common Type
 faq:
-  - question: What does “How ranks sit across release years” show?
+  - question: How ranks sit across release years?
     answer: >-
-      Key figure: 691 — Records in the working dataset. See the charts and
-      sources in the report for the full evidence.
-  - question: What does “Who sits at the top of the numeric rank field” show?
+      Key figure: 691 — Records in the working dataset. Remember the rank
+      inversion: lower numbers are greater prestige on a traditional list, while
+      some chart cuts sort the numeric field as a magnitude. The prose below
+      follows the…
+  - question: Who sits at the top of the numeric rank field?
     answer: >-
-      Key figure: 250 — Median Rank 2003. See the charts and sources in the
-      report for the full evidence.
-  - question: What does “Ranks by album type” show?
+      Key figure: 250 — Median Rank 2003. Remember the rank inversion: lower
+      numbers are greater prestige on a traditional list, while some chart cuts
+      sort the numeric field as a magnitude. The prose below follows the…
+  - question: What does the data show about ranks by album type?
     answer: >-
-      Key figure: 500 — Highest observed Rank 2003. See the charts and sources
-      in the report for the full evidence.
+      Key figure: 500 — Highest observed Rank 2003. Remember the rank inversion:
+      lower numbers are greater prestige on a traditional list, while some chart
+      cuts sort the numeric field as a magnitude. The prose below follows the…
+  - question: Who beats the median — and who trails?
+    answer: >-
+      Key figure: Touch — Top Album by Rank 2003. Remember the rank inversion:
+      lower numbers are greater prestige on a traditional list, while some chart
+      cuts sort the numeric field as a magnitude. The prose below follows the…
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">Rolling Stone's greatest-albums lists are canon factories. They convert critical memory into ranked cultural infrastructure — and the 2003 ranking spine in this TidyTuesday extract is one of the most cited versions of that factory.</p>
 <p class="art-p">A working file of <strong>691</strong> records puts median 2003 rank at <strong>250</strong> and the highest observed rank number at <strong>500</strong>. <strong>Touch</strong> leads the album ranking by the 2003 rank field in the fact box, the year span of album release years runs <strong>1955–2019</strong>, and <strong>Studio</strong> is the most common type label.</p>
 <p class="art-p">Remember the rank inversion: lower numbers are greater prestige on a traditional list, while some chart cuts sort the numeric field as a magnitude. The prose below follows the file's stated leaders and medians without inventing a second scoring system.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">691</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">250</span><span class="fact-label">Median Rank 2003</span></div>
@@ -43,7 +58,7 @@ faq:
   <div class="fact-box"><span class="fact-number">1955–2019</span><span class="fact-label">Year span covered in the file</span></div>
   <div class="fact-box"><span class="fact-number">Studio</span><span class="fact-label">Most common Type</span></div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The source is the TidyTuesday Rolling Stone albums release from the R for Data Science community. The working file contains 691 rows after cleaning — album titles, artists, release years, types, genre-family labels, and 2003 rank fields among them.</p>
 <p class="art-p">Medians summarize a list that is already a curated elite rather than a random sample of recorded music. Charts export as Plotly JSON with PNG fallbacks. A magazine canon is an editorial object; treating it as market share will misread the politics of taste.</p>
 <h2 id="how-the-pattern-changed-over-time" class="anchored">How ranks sit across release years</h2>

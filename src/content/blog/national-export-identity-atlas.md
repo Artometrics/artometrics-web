@@ -7,7 +7,12 @@ heroImage: /images/content/articles/national-export-identity-atlas/hero.png
 tags:
   - business
 draft: false
-tldr: 'A country-level atlas treats exports as identity: what states sell and need.'
+tldr: >-
+  What a nation sells abroad is one of the few identity claims that must clear a
+  market test. Tourism slogans can invent a self-image; export ledgers record
+  what other countries will actually pay for. Trade systems in the UN Comtrade
+  and OEC style cover 200+ countries and zones and 5,000+ products under
+  Harmonized System codes.
 keyPoints:
   - 200+ — Countries/zones covered in UN Comtrade-style trade systems
   - '5,000+ — Products in OEC-style trade classifications'
@@ -15,26 +20,38 @@ keyPoints:
   - 6 — Diagnostic country questions
   - 8 — Export families or countries highlighted
 faq:
-  - question: What does “Scale and complexity” show?
+  - question: What does the data show about scale and complexity?
     answer: >-
       Key figure: 200+ — Countries/zones covered in UN Comtrade-style trade
-      systems. See the charts and sources in the report for the full evidence.
-  - question: What does “Product identity” show?
+      systems. Scale and complexity are different virtues. A country can be
+      large because it sells one thing in volume, or complex because it sells
+      many hard-to-make things. Those identities…
+  - question: What does the data show about product identity?
     answer: >-
-      Key figure: 5,000+ — Products in OEC-style trade classifications. See the
-      charts and sources in the report for the full evidence.
-  - question: What does “The export frontier moved” show?
+      Key figure: 5,000+ — Products in OEC-style trade classifications. Scale
+      and complexity are different virtues. A country can be large because it
+      sells one thing in volume, or complex because it sells many hard-to-make
+      things. Those identities…
+  - question: What does the data show about the export frontier moved?
     answer: >-
-      Key figure: HS — Harmonized System product code architecture. See the
-      charts and sources in the report for the full evidence.
+      Key figure: HS — Harmonized System product code architecture. Scale and
+      complexity are different virtues. A country can be large because it sells
+      one thing in volume, or complex because it sells many hard-to-make things.
+      Those identities…
+  - question: What does the data show about export fingerprints?
+    answer: >-
+      Key figure: 6 — Diagnostic country questions. Scale and complexity are
+      different virtues. A country can be large because it sells one thing in
+      volume, or complex because it sells many hard-to-make things. Those
+      identities…
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">What a nation sells abroad is one of the few identity claims that must clear a market test. Tourism slogans can invent a self-image; export ledgers record what other countries will actually pay for.</p>
 <p class="art-p">Trade systems in the UN Comtrade and OEC style cover <strong>200+</strong> countries and zones and <strong>5,000+</strong> products under Harmonized System codes. The atlas below uses <strong>6</strong> diagnostic country questions and highlights <strong>8</strong> export families or countries to make identity readable without pretending the indices are final official rankings.</p>
 <p class="art-p">Scale and complexity are different virtues. A country can be large because it sells one thing in volume, or complex because it sells many hard-to-make things. Those identities behave differently under shock.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">200+</span><span class="fact-label">Countries/zones covered in UN Comtrade-style trade systems</span></div>
   <div class="fact-box"><span class="fact-number">5,000+</span><span class="fact-label">Products in OEC-style trade classifications</span></div>
@@ -42,7 +59,7 @@ faq:
   <div class="fact-box"><span class="fact-number">6</span><span class="fact-label">Diagnostic country questions</span></div>
   <div class="fact-box"><span class="fact-number">8</span><span class="fact-label">Export families or countries highlighted</span></div>
   </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The source stack includes the OEC API, UN Comtrade, World Bank WDI, OECD, IMF, and national statistics offices. OEC is particularly useful for complexity-minded views of what countries can make and sell.</p>
 <p class="art-p">These charts use editorial indices to define the comparative structure before a full product-level ingestion pass. Observed trade flows, derived complexity measures, and interpretive scores are kept conceptually separate even when they appear on the same axes.</p>
 <h2 id="scale-and-complexity" class="anchored">Scale and complexity</h2>

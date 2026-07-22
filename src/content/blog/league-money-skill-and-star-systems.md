@@ -10,8 +10,11 @@ tags:
   - sports
 draft: false
 tldr: >-
-  Cross-sport rules, payroll, and scarcity show why teams become culturally
-  meaningful.
+  A sports league is a measurement system before it is an entertainment product.
+  It decides how much money can matter, how much one player can matter, how
+  often fans get to reset emotionally, and how widely a story can travel.
+  Compare six leagues on those axes and franchise identity stops looking
+  interchangeable.
 keyPoints:
   - >-
     $6.5B — Approximate average NFL franchise value in recent Forbes-style
@@ -21,21 +24,34 @@ keyPoints:
   - 92 — NBA star leverage index in this editorial model
   - 6 — Leagues compared
 faq:
-  - question: What does “The NFL makes ordinary franchises expensive” show?
+  - question: What does the data show about the NFL makes ordinary franchises expensive?
     answer: >-
       Key figure: $6.5B — Approximate average NFL franchise value in recent
-      Forbes-style estimates. See the charts and sources in the report for the
-      full evidence.
-  - question: What does “Basketball lets one name rewrite the jersey” show?
+      Forbes-style estimates. The five charts below build a cross-league lens
+      for later Artometrics profiles: value floors, star leverage, caps versus
+      payroll spread, event scarcity, and the split between…
+  - question: What does the data show about basketball lets one name rewrite the jersey?
     answer: >-
-      Key figure: 17 — NFL regular-season games per team. See the charts and
-      sources in the report for the full evidence.
+      Key figure: 17 — NFL regular-season games per team. The five charts below
+      build a cross-league lens for later Artometrics profiles: value floors,
+      star leverage, caps versus payroll spread, event scarcity, and the split
+      between…
   - question: >-
-      What does “Caps and taxes decide whether money separates or merely
-      sustains” show?
+      What does the data show about caps and taxes decide whether money
+      separates or merely sustains?
     answer: >-
-      Key figure: 162 — MLB regular-season games per team. See the charts and
-      sources in the report for the full evidence.
+      Key figure: 162 — MLB regular-season games per team. The five charts below
+      build a cross-league lens for later Artometrics profiles: value floors,
+      star leverage, caps versus payroll spread, event scarcity, and the split
+      between…
+  - question: >-
+      What does the data show about seventeen games and 162 games are different
+      psychologies?
+    answer: >-
+      Key figure: 92 — NBA star leverage index in this editorial model. The five
+      charts below build a cross-league lens for later Artometrics profiles:
+      value floors, star leverage, caps versus payroll spread, event scarcity,
+      and the split between…
 ---
 <div id="quarto-content">
 <main class="art-article-main">
@@ -43,7 +59,8 @@ faq:
 <p class="art-p">The NFL’s approximate $6.5 billion average franchise value sits beside a 17-game regular season; MLB asks teams to survive 162. An editorial NBA star-leverage index of 92 in this model captures how completely basketball lets individuals rewrite team identity. Those are not trivia points. They are design choices that manufacture different kinds of belonging.</p>
 <p class="art-p">The five charts below build a cross-league lens for later Artometrics profiles: value floors, star leverage, caps versus payroll spread, event scarcity, and the split between global reach and domestic ritual.</p>
 
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">$6.5B</span><span class="fact-label">Approximate average NFL franchise value in recent Forbes-style estimates</span></div>
   <div class="fact-box"><span class="fact-number">17</span><span class="fact-label">NFL regular-season games per team</span></div>
@@ -52,7 +69,7 @@ faq:
   <div class="fact-box"><span class="fact-number">6</span><span class="fact-label">Leagues compared</span></div>
   </div>
 
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">Figures combine public Forbes valuation summaries, Spotrac salary-cap and payroll snapshots, and reference-record league structures from Basketball Reference, Baseball Reference, Pro Football Reference, and Hockey Reference, plus Premier League and MLS competition records. Editorial indices—including the NBA star-leverage score of 92—are deliberately transparent: they exist to compare systems, not to pretend every input was observed with laboratory precision.</p>
 <p class="art-p">Commissioners, analysts, and fans ask different questions. The shared layer is the useful one: what does the league make easy, what does it make scarce, and what does it make emotionally expensive?</p>
 

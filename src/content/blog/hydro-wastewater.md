@@ -7,7 +7,12 @@ heroImage: /images/content/articles/hydro-wastewater/hero.png
 tags:
   - cities-travel
 draft: false
-tldr: Facility-level data map which plants serve the largest populations.
+tldr: >-
+  Wastewater plants are the unglamorous infrastructure of modern density. They
+  turn the output of cities into something rivers and coasts can sometimes
+  absorb — and the HydroWASTE-style plant register makes that system countable.
+  The working TidyTuesday extract holds 58,502 records. Median waste discharge (
+  WASTE DIS ) sits at 1,079 ;
 keyPoints:
   - '58,502 — Records in the working dataset'
   - '1,079 — Median WASTE DIS'
@@ -15,26 +20,37 @@ keyPoints:
   - United States — Top COUNTRY by WASTE DIS
   - Secondary — Most common LEVEL
 faq:
-  - question: What does “Discharge by country” show?
+  - question: What does the data show about discharge by country?
     answer: >-
-      Key figure: 58,502 — Records in the working dataset. See the charts and
-      sources in the report for the full evidence.
-  - question: What does “Who sits at the top” show?
+      Key figure: 58,502 — Records in the working dataset. Scale without
+      treatment level is an incomplete story. A large plant with advanced
+      treatment is a different civic object from a large plant stuck at primary
+      or secondary standards.
+  - question: Who sits at the top?
     answer: >-
-      Key figure: 1,079 — Median WASTE DIS. See the charts and sources in the
-      report for the full evidence.
-  - question: What does “Treatment levels spread discharge” show?
+      Key figure: 1,079 — Median WASTE DIS. Scale without treatment level is an
+      incomplete story. A large plant with advanced treatment is a different
+      civic object from a large plant stuck at primary or secondary standards.
+  - question: What does the data show about treatment levels spread discharge?
     answer: >-
-      Key figure: 3,073,754 — Highest observed WASTE DIS. See the charts and
-      sources in the report for the full evidence.
+      Key figure: 3,073,754 — Highest observed WASTE DIS. Scale without
+      treatment level is an incomplete story. A large plant with advanced
+      treatment is a different civic object from a large plant stuck at primary
+      or secondary standards.
+  - question: Who beats the median — and who trails?
+    answer: >-
+      Key figure: United States — Top COUNTRY by WASTE DIS. Scale without
+      treatment level is an incomplete story. A large plant with advanced
+      treatment is a different civic object from a large plant stuck at primary
+      or secondary standards.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">Wastewater plants are the unglamorous infrastructure of modern density. They turn the output of cities into something rivers and coasts can sometimes absorb — and the HydroWASTE-style plant register makes that system countable.</p>
 <p class="art-p">The working TidyTuesday extract holds <strong>58,502</strong> records. Median waste discharge (<strong>WASTE DIS</strong>) sits at <strong>1,079</strong>; the highest observed value exceeds <strong>3,073,754</strong>. The United States leads on aggregate discharge in the country rollup, while <strong>Secondary</strong> treatment is the most common level label in the file.</p>
 <p class="art-p">Scale without treatment level is an incomplete story. A large plant with advanced treatment is a different civic object from a large plant stuck at primary or secondary standards.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">58,502</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">1,079</span><span class="fact-label">Median WASTE DIS</span></div>
@@ -42,7 +58,7 @@ faq:
   <div class="fact-box"><span class="fact-number">United States</span><span class="fact-label">Top COUNTRY by WASTE DIS</span></div>
   <div class="fact-box"><span class="fact-number">Secondary</span><span class="fact-label">Most common LEVEL</span></div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The source is the TidyTuesday release from 2022-09-20 (R for Data Science community). The working file contains 58,502 rows and 25 columns after merging available tables — country, treatment level, discharge, and related quality fields among them.</p>
 <p class="art-p">Medians handle skew from a handful of enormous plants. Charts export as Plotly JSON with PNG fallbacks. Status labels such as operational, proposed, or decommissioned matter for interpretation: not every row is an active civic asset.</p>
 <h2 id="breakdown" class="anchored">Discharge by country</h2>

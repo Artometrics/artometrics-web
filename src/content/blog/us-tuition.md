@@ -7,7 +7,12 @@ heroImage: /images/content/articles/us-tuition/hero.png
 tags:
   - business
 draft: false
-tldr: State tuition time series measure the rise in college costs.
+tldr: >-
+  College price is a time series with a political charge. This file holds 600
+  state-level tuition records spanning 2004–2015, with a median value of 7,607
+  and a high of 15,224. New Hampshire appears in the fact-box state ranking; the
+  charts track how the typical state price moved and which states sat at the top
+  of the ladder. The calibration point is that 7,607 median.
 keyPoints:
   - 600 — Records in the working dataset
   - '7,607 — Median Value'
@@ -16,28 +21,43 @@ keyPoints:
   - 2004–2015 — Year span covered in the file
 faq:
   - question: >-
-      What does “Median tuition climbed from the mid-five-thousands to the
-      low-nine-thousands” show?
+      What does the data show about median tuition climbed from the
+      mid-five-thousands to the low-nine-thousands?
     answer: >-
-      Key figure: 600 — Records in the working dataset. See the charts and
-      sources in the report for the full evidence.
-  - question: What does “Vermont leads the state ladder in the charted cut” show?
-    answer: >-
-      Key figure: 7,607 — Median Value. See the charts and sources in the report
-      for the full evidence.
+      Key figure: 600 — Records in the working dataset. The source is the
+      TidyTuesday release from 2018-04-02 (R for Data Science community). The
+      working file contains 600 rows and 3 columns after merging available
+      tables in the week…
   - question: >-
-      What does “Median and mean sit close; the top decile starts above eleven
-      thousand” show?
+      What does the data show about vermont leads the state ladder in the
+      charted cut?
     answer: >-
-      Key figure: 15,224 — Highest observed Value. See the charts and sources in
-      the report for the full evidence.
+      Key figure: 7,607 — Median Value. The source is the TidyTuesday release
+      from 2018-04-02 (R for Data Science community). The working file contains
+      600 rows and 3 columns after merging available tables in the week…
+  - question: >-
+      What does the data show about median and mean sit close; the top decile
+      starts above eleven thousand?
+    answer: >-
+      Key figure: 15,224 — Highest observed Value. The source is the TidyTuesday
+      release from 2018-04-02 (R for Data Science community). The working file
+      contains 600 rows and 3 columns after merging available tables in the
+      week…
+  - question: >-
+      What does the data show about leading states do not move in lockstep over
+      time?
+    answer: >-
+      Key figure: New Hampshire — Top State by Value. The source is the
+      TidyTuesday release from 2018-04-02 (R for Data Science community). The
+      working file contains 600 rows and 3 columns after merging available
+      tables in the week…
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">College price is a time series with a political charge. This file holds 600 state-level tuition records spanning 2004–2015, with a median value of 7,607 and a high of 15,224. New Hampshire appears in the fact-box state ranking; the charts track how the typical state price moved and which states sat at the top of the ladder.</p>
 <p class="art-p">The calibration point is that 7,607 median. Everything else — Vermont’s charted lead, the rise from 5,876 to 9,141, the top-decile threshold at 11,204 — is distance from that center of the tuition distribution.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">600</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">7,607</span><span class="fact-label">Median Value</span></div>
@@ -45,7 +65,7 @@ faq:
   <div class="fact-box"><span class="fact-number">New Hampshire</span><span class="fact-label">Top State by Value</span></div>
   <div class="fact-box"><span class="fact-number">2004–2015</span><span class="fact-label">Year span covered in the file</span></div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The source is the TidyTuesday release from 2018-04-02 (R for Data Science community). The working file contains 600 rows and 3 columns after merging available tables in the week folder. Value is the tuition metric; state is the entity axis; year spans the mid-2000s through 2015 in the coverage window.</p>
 <p class="art-p">Medians are preferred for skewed price distributions. The file also reports a mean of 7,899 against the median of 7,607 — relatively close, which is useful for robustness. Index-style fields are excluded from metric selection.</p>
 

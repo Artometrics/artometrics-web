@@ -10,8 +10,12 @@ tags:
   - movies-tv
 draft: false
 tldr: >-
-  Golden-age scores compare critical and audience verdicts as prestige TV rose
-  and cooled.
+  Prestige television arrived with a soundtrack of superlatives. Season-level
+  ratings ask a quieter question: when did the golden-age scores actually peak —
+  and did the middle of the field rise with the mythology? The working file
+  holds 2,266 records from 1990–2018 . Median average rating is 8.11 ; the
+  highest observed average is 9.68 . Parenthood leads the title ranking in the
+  extract.
 keyPoints:
   - '2,266 — Records in the working dataset'
   - 8.11 — Median Av rating
@@ -19,25 +23,36 @@ keyPoints:
   - Parenthood — Top Title by Av rating
   - 1990–2018 — Year span covered in the file
 faq:
-  - question: What does “How the pattern changed over time” show?
+  - question: How the pattern changed over time?
     answer: >-
-      Key figure: 2,266 — Records in the working dataset. See the charts and
-      sources in the report for the full evidence.
-  - question: What does “Who sits at the top” show?
+      Key figure: 2,266 — Records in the working dataset. The source is the
+      TidyTuesday release from 2019-01-08 (R for Data Science community) — the
+      IMDb / Economist TV ratings extract. The working file contains 2,266 rows
+      and 8 columns…
+  - question: Who sits at the top?
     answer: >-
-      Key figure: 8.11 — Median Av rating. See the charts and sources in the
-      report for the full evidence.
-  - question: What does “How the field is spread” show?
+      Key figure: 8.11 — Median Av rating. The source is the TidyTuesday release
+      from 2019-01-08 (R for Data Science community) — the IMDb / Economist TV
+      ratings extract. The working file contains 2,266 rows and 8 columns…
+  - question: How the field is spread?
     answer: >-
-      Key figure: 9.68 — Highest observed Av rating. See the charts and sources
-      in the report for the full evidence.
+      Key figure: 9.68 — Highest observed Av rating. The source is the
+      TidyTuesday release from 2019-01-08 (R for Data Science community) — the
+      IMDb / Economist TV ratings extract. The working file contains 2,266 rows
+      and 8 columns…
+  - question: What does the data show about leader Trends?
+    answer: >-
+      Key figure: Parenthood — Top Title by Av rating. The source is the
+      TidyTuesday release from 2019-01-08 (R for Data Science community) — the
+      IMDb / Economist TV ratings extract. The working file contains 2,266 rows
+      and 8 columns…
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">Prestige television arrived with a soundtrack of superlatives. Season-level ratings ask a quieter question: when did the golden-age scores actually peak — and did the middle of the field rise with the mythology?</p>
 <p class="art-p">The working file holds <strong>2,266</strong> records from <strong>1990–2018</strong>. Median average rating is <strong>8.11</strong>; the highest observed average is <strong>9.68</strong>. Parenthood leads the title ranking in the extract.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">2,266</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">8.11</span><span class="fact-label">Median Av rating</span></div>
@@ -45,7 +60,7 @@ faq:
   <div class="fact-box"><span class="fact-number">Parenthood</span><span class="fact-label">Top Title by Av rating</span></div>
   <div class="fact-box"><span class="fact-number">1990–2018</span><span class="fact-label">Year span covered in the file</span></div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The source is the TidyTuesday release from 2019-01-08 (R for Data Science community) — the IMDb / Economist TV ratings extract. The working file contains 2,266 rows and 8 columns after merging available tables in the week folder.</p>
 <p class="art-p">Charts export as Plotly JSON with PNG fallbacks. Medians handle skew; season numbers join ratings so longevity can be plotted against score.</p>
 

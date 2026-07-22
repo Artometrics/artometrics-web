@@ -7,33 +7,57 @@ heroImage: /images/content/articles/un-votes/hero.png
 tags:
   - business
 draft: false
-tldr: Voting records identify resolutions that divided member states.
+tldr: >-
+  United Nations roll-call votes are a diplomacy archive written as a
+  contingency table. This working extract holds 100,000 records. The most common
+  vote value is yes — not a moral claim, a frequency claim. The charts ask where
+  that yes-mass concentrates, which countries appear most often, and how
+  long-tailed country participation becomes.
 keyPoints:
   - '100,000 — Records in the working dataset'
   - yes — Most common Vote
 faq:
-  - question: What does “Yes votes dominate the sampled UN record” show?
+  - question: What does the data show about yes votes dominate the sampled UN record?
     answer: >-
-      Key figure: 100,000 — Records in the working dataset. See the charts and
-      sources in the report for the full evidence.
-  - question: What does “Brazil appears most often among country names” show?
+      Key figure: 100,000 — Records in the working dataset. The source is the
+      TidyTuesday release from 2021-03-23 (R for Data Science community). The
+      working file contains 100,000 rows and 4 columns after merging available
+      tables in the…
+  - question: >-
+      What does the data show about brazil appears most often among country
+      names?
     answer: >-
-      Key figure: yes — Most common Vote. See the charts and sources in the
-      report for the full evidence.
-  - question: What does “Vote categories restate the file’s center of gravity” show?
-    answer: Voting records identify resolutions that divided member states.
+      Key figure: yes — Most common Vote. The source is the TidyTuesday release
+      from 2021-03-23 (R for Data Science community). The working file contains
+      100,000 rows and 4 columns after merging available tables in the…
+  - question: >-
+      What does the data show about vote categories restate the file’s center of
+      gravity?
+    answer: >-
+      The source is the TidyTuesday release from 2021-03-23 (R for Data Science
+      community). The working file contains 100,000 rows and 4 columns after
+      merging available tables in the week folder. Vote is the primary
+      categorical field; country and country code…
+  - question: >-
+      What does the data show about country appearances follow a long-tail
+      pattern?
+    answer: >-
+      The source is the TidyTuesday release from 2021-03-23 (R for Data Science
+      community). The working file contains 100,000 rows and 4 columns after
+      merging available tables in the week folder. Vote is the primary
+      categorical field; country and country code…
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">United Nations roll-call votes are a diplomacy archive written as a contingency table. This working extract holds 100,000 records. The most common vote value is yes — not a moral claim, a frequency claim. The charts ask where that yes-mass concentrates, which countries appear most often, and how long-tailed country participation becomes.</p>
 <p class="art-p">Voting records identify resolutions that divided member states, but the first job of this file is simpler: map the landscape of yes, no, and abstain, then see which member names and country codes recur in a 100,000-row slice of UN voting history.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">100,000</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">yes</span><span class="fact-label">Most common Vote</span></div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The source is the TidyTuesday release from 2021-03-23 (R for Data Science community). The working file contains 100,000 rows and 4 columns after merging available tables in the week folder. Vote is the primary categorical field; country and country code provide entity axes; frequency charts summarize repetition.</p>
 <p class="art-p">There is no single numeric “score” column driving a median leaderboard here. The analysis is categorical: counts, shares, and recurrence. Index-style fields stay out of metric selection.</p>
 

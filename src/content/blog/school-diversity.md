@@ -7,7 +7,11 @@ heroImage: /images/content/articles/school-diversity/hero.png
 tags:
   - business
 draft: false
-tldr: School-level composition data map where diversity concentrates.
+tldr: >-
+  School-level composition data map where student-body diversity concentrates
+  across U.S. local education agencies. The working file holds 27,944 records.
+  The calibration metric is Multi, with a median of 2.38 — the center of the
+  observed diversity scores in this extract.
 keyPoints:
   - '27,944 — Records in the working dataset'
   - 2.38 — Median Multi
@@ -15,25 +19,43 @@ keyPoints:
   - butteville union elementary — Top LEA NAME by Multi
   - TX — Most common ST
 faq:
-  - question: What does “A flat median hides how extreme the upper tail is” show?
+  - question: >-
+      What does the data show about a flat median hides how extreme the upper
+      tail is?
     answer: >-
-      Key figure: 27,944 — Records in the working dataset. See the charts and
-      sources in the report for the full evidence.
-  - question: What does “Butteville Union Elementary leads a steep LEA ladder” show?
+      Key figure: 27,944 — Records in the working dataset. The source is the
+      TidyTuesday release from 2019-09-24 (R for Data Science community). The
+      working file contains 27,944 rows and 15 columns after merging available
+      tables in the…
+  - question: >-
+      What does the data show about butteville Union Elementary leads a steep
+      LEA ladder?
     answer: >-
-      Key figure: 2.38 — Median Multi. See the charts and sources in the report
-      for the full evidence.
-  - question: What does “State boxes show how Multi spreads geographically” show?
+      Key figure: 2.38 — Median Multi. The source is the TidyTuesday release
+      from 2019-09-24 (R for Data Science community). The working file contains
+      27,944 rows and 15 columns after merging available tables in the…
+  - question: >-
+      What does the data show about state boxes show how Multi spreads
+      geographically?
     answer: >-
-      Key figure: 85.3 — Highest observed Multi. See the charts and sources in
-      the report for the full evidence.
+      Key figure: 85.3 — Highest observed Multi. The source is the TidyTuesday
+      release from 2019-09-24 (R for Data Science community). The working file
+      contains 27,944 rows and 15 columns after merging available tables in the…
+  - question: >-
+      What does the data show about oklahoma clears the median; New Jersey
+      trails?
+    answer: >-
+      Key figure: butteville union elementary — Top LEA NAME by Multi. The
+      source is the TidyTuesday release from 2019-09-24 (R for Data Science
+      community). The working file contains 27,944 rows and 15 columns after
+      merging available tables in the…
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">School-level composition data map where student-body diversity concentrates across U.S. local education agencies. The working file holds 27,944 records. The calibration metric is Multi, with a median of 2.38 — the center of the observed diversity scores in this extract.</p>
 <p class="art-p">The ceiling is stark: butteville union elementary leads at 85.3 Multi, while Texas (TX) is the most common state abbreviation in the file. High Multi at the top of the leaderboard and a modest median across the whole table are not contradictions. They are the shape of a heavily skewed education landscape.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">27,944</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">2.38</span><span class="fact-label">Median Multi</span></div>
@@ -41,7 +63,7 @@ faq:
   <div class="fact-box"><span class="fact-number">butteville union elementary</span><span class="fact-label">Top LEA NAME by Multi</span></div>
   <div class="fact-box"><span class="fact-number">TX</span><span class="fact-label">Most common ST</span></div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The source is the TidyTuesday release from 2019-09-24 (R for Data Science community). The working file contains 27,944 rows and 15 columns after merging available tables in the week folder. Multi is the primary observed metric used for ranking and distribution charts; Variance appears alongside it in the scatter.</p>
 <p class="art-p">Medians are used because school-level diversity metrics skew. Index-style fields are excluded from metric selection. State codes (ST) and LEA names are categorical axes for comparing how Multi sits across geography and district identity.</p>
 

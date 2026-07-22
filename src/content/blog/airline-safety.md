@@ -10,8 +10,11 @@ tags:
   - cities-travel
 draft: false
 tldr: >-
-  Carrier-level accident and fatality data ask which airlines stand out for poor
-  safety outcomes.
+  Airline safety is usually discussed one crash at a time. The TidyTuesday
+  airline-safety extract does something different: it lines carriers up by
+  available seat kilometers per week — a capacity metric — and then asks how
+  incidents, fatal accidents, and fatalities sit against that scale. The working
+  file holds 336 cleaned records after the week’s tables are merged.
 keyPoints:
   - 336 — Records in the working dataset
   - '802,908,893 — Median Avail seat km per week'
@@ -19,26 +22,40 @@ keyPoints:
   - United / Continental* — Top Airline by Avail seat km per week
   - incidents — Most common Type of event
 faq:
-  - question: What does “Capacity Concentrates Among Megacarriers” show?
+  - question: What does the data show about capacity Concentrates Among Megacarriers?
     answer: >-
-      Key figure: 336 — Records in the working dataset. See the charts and
-      sources in the report for the full evidence.
-  - question: What does “The Same Names Dominate the Leader Board” show?
+      Key figure: 336 — Records in the working dataset. The most common event
+      type in the file is simply labeled incidents . That matters: the archive
+      mixes routine reportable events with rarer fatal outcomes, and treating
+      those…
+  - question: What does the data show about the Same Names Dominate the Leader Board?
     answer: >-
-      Key figure: 802,908,893 — Median Avail seat km per week. See the charts
-      and sources in the report for the full evidence.
-  - question: What does “Event Type Does Not Rewrite the Capacity Story” show?
+      Key figure: 802,908,893 — Median Avail seat km per week. The most common
+      event type in the file is simply labeled incidents . That matters: the
+      archive mixes routine reportable events with rarer fatal outcomes, and
+      treating those…
+  - question: >-
+      What does the data show about event Type Does Not Rewrite the Capacity
+      Story?
     answer: >-
-      Key figure: 7,139,291,291 — Highest observed Avail seat km per week. See
-      the charts and sources in the report for the full evidence.
+      Key figure: 7,139,291,291 — Highest observed Avail seat km per week. The
+      most common event type in the file is simply labeled incidents . That
+      matters: the archive mixes routine reportable events with rarer fatal
+      outcomes, and treating those…
+  - question: What does the data show about gaps to the Median Are Flat Across Labels?
+    answer: >-
+      Key figure: United / Continental* — Top Airline by Avail seat km per week.
+      The most common event type in the file is simply labeled incidents . That
+      matters: the archive mixes routine reportable events with rarer fatal
+      outcomes, and treating those…
 ---
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p">Airline safety is usually discussed one crash at a time. The TidyTuesday airline-safety extract does something different: it lines carriers up by available seat kilometers per week — a capacity metric — and then asks how incidents, fatal accidents, and fatalities sit against that scale. The working file holds <strong>336</strong> cleaned records after the week’s tables are merged.</p>
 <p class="art-p">Capacity is not the same as risk, but it is the right denominator for a first cut. A carrier flying <strong>7.1 billion</strong> available seat kilometers per week is not in the same exposure class as one flying under <strong>2 billion</strong>. The median in this extract is <strong>802,908,893</strong> available seat kilometers per week — a calibration point for every ranking that follows.</p>
 <p class="art-p">The most common event type in the file is simply labeled <strong>incidents</strong>. That matters: the archive mixes routine reportable events with rarer fatal outcomes, and treating those categories as interchangeable would flatten the story.</p>
-<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
-<p class="art-p"></p>
+<h2 id="fast-facts" class="anchored">Fast facts</h2>
+<p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">336</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">802,908,893</span><span class="fact-label">Median Avail seat km per week</span></div>
@@ -46,7 +63,7 @@ faq:
   <div class="fact-box"><span class="fact-number">United / Continental*</span><span class="fact-label">Top Airline by Avail seat km per week</span></div>
   <div class="fact-box"><span class="fact-number">incidents</span><span class="fact-label">Most common Type of event</span></div>
 </div>
-<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The source is the TidyTuesday release dated 2018-08-07 from the R for Data Science community. After merging the week’s CSV and XLSX tables, the working frame has 336 rows and five analysis columns used in these charts.</p>
 <p class="art-p">Medians are preferred wherever available seat kilometers skew toward megacarriers. Index-style fields are excluded from metric selection. Charts ship as Plotly JSON with PNG fallbacks so values remain inspectable on hover.</p>
 <h2 id="capacity-concentrates-among-megacarriers" class="anchored">Capacity Concentrates Among Megacarriers</h2>
