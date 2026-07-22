@@ -27,7 +27,7 @@ export function BlogCard({
   if (variant === "stack") {
     return (
       <Link href={`/${post.slug}`} asChild>
-        <Pressable style={[styles.stack, { borderBottomColor: colors.border }]}>
+        <Pressable style={StyleSheet.flatten([styles.stack, { borderBottomColor: colors.border }])}>
           {hero ? (
             <Image
               source={{ uri: hero }}

@@ -126,7 +126,7 @@ export function SiteNavOverlay() {
           <Link href="/" asChild>
             <Pressable
               onPress={() => setMenuOpen(false)}
-              style={[styles.sectionItem, { borderBottomColor: colors.border }]}
+              style={StyleSheet.flatten([styles.sectionItem, { borderBottomColor: colors.border }])}
             >
               <Text style={[styles.sectionLink, { color: colors.text }]}>Home</Text>
             </Pressable>
@@ -135,7 +135,7 @@ export function SiteNavOverlay() {
             <Link key={slug} href={`/topics/${slug}` as `/topics/${string}`} asChild>
               <Pressable
                 onPress={() => setMenuOpen(false)}
-                style={[styles.sectionItem, { borderBottomColor: colors.border }]}
+                style={StyleSheet.flatten([styles.sectionItem, { borderBottomColor: colors.border }])}
               >
                 <Text style={[styles.sectionLink, { color: colors.text }]}>
                   {SECTION_META[slug].title}
@@ -157,7 +157,7 @@ export function SiteNavOverlay() {
             <Link key={link.href} href={link.href as `/blog`} asChild>
               <Pressable
                 onPress={() => setMenuOpen(false)}
-                style={[styles.sectionItem, { borderBottomColor: colors.border }]}
+                style={StyleSheet.flatten([styles.sectionItem, { borderBottomColor: colors.border }])}
               >
                 <Text style={[styles.moreLink, { color: colors.text }]}>{link.label}</Text>
               </Pressable>
