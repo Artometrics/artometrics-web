@@ -5,11 +5,17 @@
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "background_color": "#FAFAF8",
+  "background_color": "#FFFFFF",
   "theme_color": "#C0392B",
   "icons": [
     {
-      "src": "/images/content/2025/10/Artometrics-Icon.png",
+      "src": "/images/brand/chomsky-a-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/brand/chomsky-a.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"

@@ -2,9 +2,10 @@ import { Image, Text, View, StyleSheet } from "react-native";
 import { useLocalSearchParams, Link } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { ArticleBody } from "@/components/ArticleBody";
-import { Colors } from "@/constants/Colors";
+import { Colors, Fonts } from "@/constants/Colors";
 import { assetUrl } from "@/lib/assets";
 import {
+  formatAuthorName,
   formatDate,
   getAdjacentPosts,
   getBlogPost,
@@ -41,8 +42,8 @@ export default function ReportScreen() {
   const desk = primaryDesk(post.tags);
   const adjacent = getAdjacentPosts(post.slug);
   const minutes = estimateMinutes(post.body);
-
   const hero = assetUrl(post.heroImage);
+  const authorLabel = post.author ? formatAuthorName(String(post.author)) : "Artometrics";
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -51,7 +52,7 @@ export default function ReportScreen() {
     description: post.description,
     datePublished: post.pubDate,
     image: hero ? [`https://artometrics.com${post.heroImage}`] : undefined,
-    author: { "@type": "Organization", name: "Artometrics" },
+    author: { "@type": "Organization", name: authorLabel },
     publisher: {
       "@type": "Organization",
       name: "Artometrics",
@@ -64,22 +65,26 @@ export default function ReportScreen() {
   return (
     <View>
       <SeoJsonLd data={jsonLd} />
-      <Wrapper style={styles.wrap} variant="prose">
+      <Wrapper style={styles.front} variant="prose">
         {desk ? <Text style={styles.eyebrow}>{SECTION_META[desk].title}</Text> : null}
         <Text style={styles.title}>{post.title}</Text>
-        <Text style={styles.meta}>
-          {formatDate(post.pubDate)} · {minutes} min read
+        <Text style={styles.dek}>{post.description}</Text>
+        <Text style={styles.byline}>
+          By {authorLabel}
+          {post.pubDate ? ` · ${formatDate(post.pubDate)}` : ""}
+          {` · ${minutes} min read`}
         </Text>
-        <Text style={styles.description}>{post.description}</Text>
-        {hero ? (
+      </Wrapper>
+      {hero ? (
+        <Wrapper variant="prose" style={styles.heroWrap}>
           <Image
             source={{ uri: hero }}
             style={styles.hero}
             resizeMode="cover"
             accessibilityLabel={post.title}
           />
-        ) : null}
-      </Wrapper>
+        </Wrapper>
+      ) : null}
       <Wrapper variant="prose" style={styles.article}>
         <ArticleBody html={post.body} />
       </Wrapper>
@@ -105,40 +110,70 @@ export default function ReportScreen() {
 
 const styles = StyleSheet.create({
   wrap: { paddingTop: 40, paddingBottom: 16, gap: 12 },
-  eyebrow: {
-    fontSize: 11,
-    letterSpacing: 2.5,
-    textTransform: "uppercase",
-    color: Colors.accent700,
-    fontWeight: "600",
+  front: {
+    paddingTop: 36,
+    paddingBottom: 8,
+    gap: 16,
   },
-  title: { fontSize: 34, lineHeight: 40, fontWeight: "300", color: Colors.base900 },
-  meta: { fontSize: 13, color: Colors.base500 },
-  description: { fontSize: 17, lineHeight: 28, color: Colors.base600 },
+  eyebrow: {
+    fontSize: 12,
+    letterSpacing: 1.8,
+    textTransform: "uppercase",
+    color: Colors.accent600,
+    fontWeight: "700",
+  },
+  title: {
+    fontFamily: Fonts.serif,
+    fontSize: 36,
+    lineHeight: 42,
+    fontWeight: "700",
+    color: Colors.base900,
+    letterSpacing: -0.4,
+  },
+  dek: {
+    fontFamily: Fonts.serif,
+    fontSize: 20,
+    lineHeight: 30,
+    color: Colors.base700,
+    fontWeight: "400",
+  },
+  byline: {
+    fontFamily: Fonts.serif,
+    fontSize: 15,
+    lineHeight: 22,
+    color: Colors.base800,
+    marginTop: 4,
+  },
+  heroWrap: { paddingTop: 20, paddingBottom: 8 },
   hero: {
     width: "100%",
-    aspectRatio: 16 / 9,
-    marginTop: 12,
-    borderWidth: 1,
-    borderColor: Colors.base200,
+    aspectRatio: 16 / 10,
+    backgroundColor: Colors.base100,
   },
-  article: { paddingBottom: 32 },
+  article: { paddingTop: 20, paddingBottom: 32 },
   adjacent: {
     flexDirection: "row",
     justifyContent: "space-between",
     gap: 24,
     paddingVertical: 32,
-    borderTopWidth: StyleSheet.hairlineWidth,
-    borderTopColor: Colors.base200,
+    borderTopWidth: 2,
+    borderTopColor: Colors.base900,
     marginBottom: 24,
   },
   adjLabel: {
-    fontSize: 10,
+    fontSize: 11,
     letterSpacing: 1.5,
     textTransform: "uppercase",
     color: Colors.base500,
+    fontWeight: "600",
     marginBottom: 6,
   },
-  adjTitle: { fontSize: 16, color: Colors.base900, maxWidth: 260 },
+  adjTitle: {
+    fontFamily: Fonts.serif,
+    fontSize: 17,
+    lineHeight: 24,
+    color: Colors.base900,
+    maxWidth: 260,
+  },
   link: { color: Colors.accent700, marginTop: 12 },
 });
