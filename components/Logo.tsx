@@ -10,23 +10,26 @@ import {
 import { Colors } from "@/constants/Colors";
 import { assetUrl } from "@/lib/assets";
 import { useChrome } from "@/lib/chrome";
+import { useTheme } from "@/lib/theme";
 
 type Props = {
   style?: StyleProp<TextStyle>;
   size?: number;
-  /** Force compact mark (0–1). Defaults to chrome scroll progress. */
   compact?: number;
   containerStyle?: StyleProp<ViewStyle>;
 };
 
-const MARK = assetUrl("/images/brand/chomsky-a-mark.png");
-
 export function Logo({ style, size = 36, compact, containerStyle }: Props) {
   const { logoCompact } = useChrome();
+  const { mode, colors } = useTheme();
   const progress = Math.max(0, Math.min(1, compact ?? logoCompact));
   const markSize = Math.round(size * (0.95 + progress * 0.35));
   const wordOpacity = 1 - progress;
   const markOpacity = progress;
+  const mark =
+    mode === "dark"
+      ? assetUrl("/images/brand/chomsky-a-white.png")
+      : assetUrl("/images/brand/chomsky-a-black.png");
 
   return (
     <View
@@ -45,7 +48,7 @@ export function Logo({ style, size = 36, compact, containerStyle }: Props) {
           {
             fontFamily: "Chomsky",
             fontSize: size,
-            color: Colors.base900,
+            color: colors.text,
             letterSpacing: 0.5,
             opacity: wordOpacity,
           },
@@ -54,9 +57,9 @@ export function Logo({ style, size = 36, compact, containerStyle }: Props) {
       >
         Artometrics
       </Text>
-      {MARK && markOpacity > 0.01 ? (
+      {mark && markOpacity > 0.01 ? (
         <Image
-          source={{ uri: MARK }}
+          source={{ uri: mark }}
           style={[
             styles.mark,
             {
@@ -68,7 +71,7 @@ export function Logo({ style, size = 36, compact, containerStyle }: Props) {
           resizeMode="contain"
         />
       ) : null}
-      {!MARK && markOpacity > 0.01 ? (
+      {!mark && markOpacity > 0.01 ? (
         <Text
           style={[
             styles.fallbackA,
@@ -76,6 +79,7 @@ export function Logo({ style, size = 36, compact, containerStyle }: Props) {
               fontSize: markSize,
               opacity: markOpacity,
               lineHeight: markSize * 1.05,
+              color: Colors.accent600,
             },
           ]}
         >
@@ -93,12 +97,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     minWidth: 40,
   },
-  mark: {
-    position: "absolute",
-  },
-  fallbackA: {
-    position: "absolute",
-    fontFamily: "Chomsky",
-    color: Colors.accent600,
-  },
+  mark: { position: "absolute" },
+  fallbackA: { position: "absolute", fontFamily: "Chomsky" },
 });

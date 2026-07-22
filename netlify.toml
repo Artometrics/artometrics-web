@@ -23,52 +23,52 @@
 
 [[redirects]]
   from = "/culture/"
-  to = "/blog"
+  to = "/desks/culture"
   status = 301
 
 [[redirects]]
   from = "/culture/*"
-  to = "/blog"
+  to = "/desks/culture"
   status = 301
 
 [[redirects]]
   from = "/atlas/"
-  to = "/blog"
+  to = "/desks/atlas"
   status = 301
 
 [[redirects]]
   from = "/atlas/*"
-  to = "/blog"
+  to = "/desks/atlas"
   status = 301
 
 [[redirects]]
   from = "/history/"
-  to = "/blog"
+  to = "/desks/history"
   status = 301
 
 [[redirects]]
   from = "/history/*"
-  to = "/blog"
+  to = "/desks/history"
   status = 301
 
 [[redirects]]
   from = "/persona/"
-  to = "/blog"
+  to = "/desks/persona"
   status = 301
 
 [[redirects]]
   from = "/persona/*"
-  to = "/blog"
+  to = "/desks/persona"
   status = 301
 
 [[redirects]]
   from = "/power/"
-  to = "/blog"
+  to = "/desks/power"
   status = 301
 
 [[redirects]]
   from = "/power/*"
-  to = "/blog"
+  to = "/desks/power"
   status = 301
 
 # Expo Router static export SPA fallback (keep after API + legacy redirects)

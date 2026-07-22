@@ -1,6 +1,5 @@
 /**
- * Artometrics brand tokens (ported from the former Astro global.css).
- * Light magazine palette — red accent, Georgia stack, Chomsky wordmark.
+ * Artometrics brand tokens — light magazine + dark reading modes.
  */
 export const Colors = {
   accent50: "#FEF2F2",
@@ -38,4 +37,57 @@ export const Colors = {
 export const Fonts = {
   serif: "Georgia, 'Times New Roman', Times, serif",
   wordmark: "Chomsky",
+  sans: "system-ui, -apple-system, 'Segoe UI', sans-serif",
+  mono: "'Courier New', Courier, monospace",
 } as const;
+
+export type ThemeMode = "light" | "dark";
+
+export type ThemeColors = {
+  mode: ThemeMode;
+  bg: string;
+  bgElevated: string;
+  text: string;
+  textMuted: string;
+  textSubtle: string;
+  border: string;
+  accent: string;
+  accentSoft: string;
+  inverse: string;
+  headerBg: string;
+  overlayBg: string;
+  rule: string;
+};
+
+export const Themes: Record<ThemeMode, ThemeColors> = {
+  light: {
+    mode: "light",
+    bg: Colors.white,
+    bgElevated: Colors.cream,
+    text: Colors.base900,
+    textMuted: Colors.base600,
+    textSubtle: Colors.base500,
+    border: Colors.base200,
+    accent: Colors.accent600,
+    accentSoft: Colors.accent50,
+    inverse: Colors.white,
+    headerBg: Colors.white,
+    overlayBg: Colors.white,
+    rule: Colors.base200,
+  },
+  dark: {
+    mode: "dark",
+    bg: Colors.base950,
+    bgElevated: Colors.base900,
+    text: Colors.base50,
+    textMuted: Colors.base400,
+    textSubtle: Colors.base500,
+    border: Colors.base800,
+    accent: Colors.accent400,
+    accentSoft: Colors.accent950,
+    inverse: Colors.base950,
+    headerBg: Colors.base950,
+    overlayBg: Colors.base950,
+    rule: Colors.base700,
+  },
+};

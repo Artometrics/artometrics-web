@@ -1667,3 +1667,27 @@ pre:has(> code.sourceCode.sql),
 .artometrics-article-body .art-chart-share-sheet__panel-wrap{
   position: relative;
 }
+
+/* ── Print / PDF export ─────────────────────────────────────────────── */
+@media print {
+  .artometrics-article-body #art-progress-bar,
+  .artometrics-article-body #art-sidebar-btn,
+  .artometrics-article-body nav#TOC {
+    display: none !important;
+  }
+  .artometrics-article-body {
+    max-width: 100% !important;
+    color: #000 !important;
+    background: #fff !important;
+  }
+  .artometrics-article-body a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.75em;
+    color: #555;
+  }
+  .artometrics-article-body .art-chart,
+  .artometrics-article-body img {
+    break-inside: avoid;
+    max-width: 100% !important;
+  }
+}

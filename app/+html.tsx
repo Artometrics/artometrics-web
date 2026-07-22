@@ -12,12 +12,28 @@ export default function Root({ children }: PropsWithChildren) {
           name="description"
           content="Artometrics — data reports on culture, power, and the creative economy"
         />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/images/brand/favicon-light-32.png"
+          media="(prefers-color-scheme: light)"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/images/brand/favicon-dark-32.png"
+          media="(prefers-color-scheme: dark)"
+        />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.webmanifest" />
-        <meta name="theme-color" content="#C0392B" />
+        <meta name="theme-color" content="#C0392B" media="(prefers-color-scheme: light)" />
+        <meta name="theme-color" content="#0A0A0A" media="(prefers-color-scheme: dark)" />
+        <meta name="color-scheme" content="light dark" />
         <ScrollViewStyleReset />
         <link rel="stylesheet" href="/css/artometrics-article.css" />
         <style

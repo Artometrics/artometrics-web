@@ -5,13 +5,16 @@ import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteNavOverlay } from "@/components/SiteNavOverlay";
-import { Colors } from "@/constants/Colors";
+import { AppBanner } from "@/components/AppBanner";
+import { CookieBanner } from "@/components/CookieBanner";
 import { ChromeProvider, useChrome } from "@/lib/chrome";
+import { ThemeProvider, useTheme } from "@/lib/theme";
 import { getBlogPost } from "@/lib/content";
 
 function SiteChrome() {
   const pathname = usePathname();
   const { setScrollY, setIsArticle } = useChrome();
+  const { colors } = useTheme();
 
   useEffect(() => {
     const slug = pathname.replace(/^\//, "").replace(/\/$/, "");
@@ -25,8 +28,9 @@ function SiteChrome() {
   };
 
   return (
-    <SafeAreaView style={styles.safe} edges={["top"]}>
-      <View style={styles.root}>
+    <SafeAreaView style={[styles.safe, { backgroundColor: colors.bg }]} edges={["top"]}>
+      <View style={[styles.root, { backgroundColor: colors.bg }]}>
+        <AppBanner />
         <SiteHeader />
         <ScrollView
           style={styles.scroll}
@@ -38,6 +42,7 @@ function SiteChrome() {
           <SiteFooter />
         </ScrollView>
         <SiteNavOverlay />
+        <CookieBanner />
       </View>
     </SafeAreaView>
   );
@@ -46,16 +51,18 @@ function SiteChrome() {
 export default function SiteLayout() {
   return (
     <SafeAreaProvider>
-      <ChromeProvider>
-        <SiteChrome />
-      </ChromeProvider>
+      <ThemeProvider>
+        <ChromeProvider>
+          <SiteChrome />
+        </ChromeProvider>
+      </ThemeProvider>
     </SafeAreaProvider>
   );
 }
 
 const styles = StyleSheet.create({
-  safe: { flex: 1, backgroundColor: Colors.white },
-  root: { flex: 1, backgroundColor: Colors.white, position: "relative" },
+  safe: { flex: 1 },
+  root: { flex: 1, position: "relative" },
   scroll: { flex: 1 },
   content: { flexGrow: 1, paddingBottom: 24 },
 });

@@ -2,35 +2,59 @@ import { Text, View, StyleSheet } from "react-native";
 import { Link } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { PrimaryButton } from "@/components/PrimaryButton";
-import { Colors } from "@/constants/Colors";
+import { PageSeo } from "@/components/PageSeo";
+import { Fonts } from "@/constants/Colors";
+import { useTheme } from "@/lib/theme";
+import { SECTION_META, SECTION_SLUGS } from "@/data/sections";
 
 export default function AboutScreen() {
+  const { colors } = useTheme();
   return (
     <Wrapper variant="narrow" style={styles.wrap}>
-      <Text style={styles.eyebrow}>About</Text>
-      <Text style={styles.title}>The Artometrics editorial desk</Text>
+      <PageSeo
+        title="About"
+        description="Artometrics — art for data scientists and data science for artists."
+        path="/about"
+      />
+      <Text style={[styles.eyebrow, { color: colors.accent }]}>Masthead</Text>
+      <Text style={[styles.title, { color: colors.text }]}>
+        Art for data scientists. Data science for artists.
+      </Text>
       <View style={styles.copy}>
-        <Text style={styles.p}>
-          Artometrics is an independent publication that treats culture like data — anime catalogs,
-          franchise economics, civilizational cycles, and the institutions that shape creative markets.
-          Every report pairs editorial judgment with reproducible charts and public datasets.
+        <Text style={[styles.p, { color: colors.textMuted }]}>
+          Artometrics is an independent magazine that treats culture like data — anime catalogs,
+          franchise economics, civilizational cycles, and the institutions that shape creative
+          markets. Every report pairs editorial judgment with reproducible charts and public
+          datasets.
         </Text>
-        <Text style={styles.p}>
-          The site is organized into five desks — Culture, Atlas, History, Persona, and Power — each
-          with its own archive of long-form investigations. The podcast extends those themes through
-          interviews with analysts, founders, and historians.
+        <Text style={[styles.h, { color: colors.text }]}>About the desk</Text>
+        <Text style={[styles.p, { color: colors.textMuted }]}>
+          We are building a media company in public: long-form investigations, a podcast, a dataset
+          library, and membership tools. The founder’s brief is simple — ship evidence with taste.
+          Contact the desk for tips, corrections, or partnerships.
         </Text>
-        <Text style={styles.p}>
-          Reports are built on community datasets, open APIs, and primary sources cited in every article.
-          We publish limitations alongside findings because measured uncertainty is part of the story.
+        <Text style={[styles.h, { color: colors.text }]}>Desks</Text>
+        {SECTION_SLUGS.map((s) => (
+          <Text key={s} style={[styles.p, { color: colors.textMuted }]}>
+            <Link href={`/desks/${s}` as `/desks/${string}`}>
+              <Text style={{ color: colors.accent, fontWeight: "700" }}>{SECTION_META[s].title}</Text>
+            </Link>
+            {" — "}
+            {SECTION_META[s].description}
+          </Text>
+        ))}
+        <Text style={[styles.h, { color: colors.text }]}>How we work with AI</Text>
+        <Text style={[styles.p, { color: colors.textMuted }]}>
+          Reports may be produced in directed collaboration with AI tools under human editorial
+          judgment. We document process in editor’s notes. We do not invent statistics.
         </Text>
       </View>
       <View style={styles.actions}>
         <Link href="/blog" asChild>
           <PrimaryButton label="Browse reports" />
         </Link>
-        <Link href="/podcast" asChild>
-          <PrimaryButton label="Listen to podcast" style={styles.secondary} />
+        <Link href="/contact" asChild>
+          <PrimaryButton label="Contact" style={styles.secondary} />
         </Link>
       </View>
     </Wrapper>
@@ -40,15 +64,20 @@ export default function AboutScreen() {
 const styles = StyleSheet.create({
   wrap: { paddingVertical: 48, gap: 14 },
   eyebrow: {
-    fontSize: 11,
-    letterSpacing: 2.5,
+    fontSize: 12,
+    letterSpacing: 1.8,
     textTransform: "uppercase",
-    color: Colors.accent700,
-    fontWeight: "600",
+    fontWeight: "700",
   },
-  title: { fontSize: 36, fontWeight: "300", color: Colors.base900, lineHeight: 42 },
-  copy: { gap: 16, marginTop: 8 },
-  p: { fontSize: 16, lineHeight: 28, color: Colors.base600 },
+  title: {
+    fontFamily: Fonts.serif,
+    fontSize: 34,
+    fontWeight: "700",
+    lineHeight: 40,
+  },
+  copy: { gap: 14, marginTop: 8 },
+  h: { fontFamily: Fonts.serif, fontSize: 22, fontWeight: "700", marginTop: 8 },
+  p: { fontFamily: Fonts.serif, fontSize: 16, lineHeight: 28 },
   actions: { flexDirection: "row", flexWrap: "wrap", gap: 12, marginTop: 20 },
-  secondary: { backgroundColor: Colors.accent700 },
+  secondary: { backgroundColor: "#404040" },
 });
