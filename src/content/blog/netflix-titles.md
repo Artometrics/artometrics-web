@@ -9,11 +9,11 @@ tags:
 draft: false
 ---
 <div id="quarto-content">
-
 <main class="art-article-main">
-<p class="art-p">This report analyzes the TidyTuesday <strong>2021-04-20</strong> release on <strong>Netflix Titles</strong> — <strong>7,787</strong> rows after cleaning and merge. How did Netflix's catalog mix shift between films and series?</p>
-<p class="art-p">Five charts track <strong>Duration</strong> across time, category, and named entities — trend, leaders, distribution, tiers, and relationships. Where companion files exist in the repo, they are joined before analysis so reception, geography, or metadata columns are not left on the table.</p>
-<h2 id="fast-facts" class="anchored">At a glance</h2>
+<p class="art-p">A streaming library is an inventory decision dressed as a homepage. Title-level Netflix catalog data show how the mix of movies and TV — and the duration field attached to each row — shifted between 2008 and 2021.</p>
+<p class="art-p">The working file holds <strong>7,787</strong> records. Median duration is <strong>88.0</strong>; the highest observed duration is <strong>312</strong>, led by Black Mirror: Bandersnatch. Movie is the most common type label.</p>
+<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
+<p class="art-p">A few markers set the scale before the charts.</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">7,787</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">88.0</span><span class="fact-label">Median Duration</span></div>
@@ -22,51 +22,59 @@ draft: false
   <div class="fact-box"><span class="fact-number">2008–2021</span><span class="fact-label">Year span covered in the file</span></div>
   <div class="fact-box"><span class="fact-number">Movie</span><span class="fact-label">Most common Type</span></div>
 </div>
-<h2 id="dataset-context" class="anchored">The data</h2>
-<p>The source is the TidyTuesday release from <strong>2021-04-20</strong> (R for Data Science community). This working file contains <strong>7,787</strong> rows and <strong>13</strong> columns after merging all available CSV/XLSX tables in the week folder.</p>
-<p>Charts are exported as Plotly JSON with PNG fallbacks. Medians are used for robustness where distributions skew. Index-style fields (row numbers, sequential IDs) are excluded from metric selection.</p>
-<p class="art-p"><strong>How to read this report:</strong> start with the chart caption, then ask what the metric actually means, what a non-expert should notice first, and what an expert would challenge in the source. The goal is not to memorize every number; it is to leave with a sharper question than the one you arrived with.</p>
-<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
-<h2 id="chart-1-trend" class="anchored">TREND</h2>
+<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<p class="art-p">The source is the TidyTuesday release from 2021-04-20 (R for Data Science community). The working file contains 7,787 rows and 13 columns after merging available tables in the week folder.</p>
+<p class="art-p">Duration here is the catalog field as published — minutes for films, season counts for some TV rows depending on how the export encoded type. Medians and Plotly exports keep the reading robust to skew and missing cells.</p>
+
+<h2 id="how-the-pattern-changed-over-time" class="anchored">How the pattern changed over time</h2>
+<h3 id="how-the-pattern-changed-over-time-look" class="anchored">Median Duration Over Time</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/netflix-titles/charts/chart1_trend.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/netflix-titles/charts/chart1_trend.png" role="img" aria-label="Median Duration Over Time"></div>
 </figure>
-<p class="art-p">Median duration is <strong>rising</strong> from <strong>41.0</strong> in the opening period to <strong>98.0</strong> at the close.</p>
-<p class="art-p">Annual medians filter one-off spikes so the structural slope — not viral outliers — drives the story.</p>
-<h2 id="chart-2-leaders" class="anchored">LEADERS</h2>
+<p class="art-p">Median duration rises from 41.0 in the opening period to 98.0 at the close — a catalog whose typical row lengthens as the library ages.</p>
+<p class="art-p">That climb can reflect more feature-length films entering the shelf, longer TV encodings, or both. The trend is a mix signal, not a single format story.</p>
+
+<h2 id="who-sits-at-the-top" class="anchored">Who sits at the top</h2>
+<h3 id="who-sits-at-the-top-look" class="anchored">Black Mirror: Bandersnatch leads at 312 — 226 marks the median among the top dozen</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/netflix-titles/charts/chart2_leaders.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/netflix-titles/charts/chart2_leaders.png" role="img" aria-label="Black Mirror: Bandersnatch leads at 312 — 226 marks the median among the top dozen"></div>
 </figure>
-<p class="art-p"><strong>Black Mirror: Bandersnatch</strong> leads at <strong>312</strong> — <strong>226</strong> marks the median among the top dozen.</p>
-<p class="art-p">Head-of-field concentration is where quality, scale, or brand visibly separates from the pack.</p>
-<h2 id="chart-3-distribution" class="anchored">DISTRIBUTION</h2>
+<p class="art-p">Black Mirror: Bandersnatch leads at 312; 226 marks the median among the top dozen.</p>
+<p class="art-p">Interactive and long-form outliers define the ceiling. Most of the library lives nowhere near those peaks — which is why the median of 88.0 remains the better everyday calibration.</p>
+
+<h2 id="how-the-field-is-spread" class="anchored">How the field is spread</h2>
+<h3 id="how-the-field-is-spread-look" class="anchored">Duration by Type</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/netflix-titles/charts/chart3_distribution.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/netflix-titles/charts/chart3_distribution.png" role="img" aria-label="Duration by Type"></div>
 </figure>
-<p class="art-p">Category boxes reveal whether duration consensus is shared or contested across tiers.</p>
-<p class="art-p">Wide whiskers flag segments where outliers — not averages — drive reputation.</p>
-<h2 id="chart-4-concentration" class="anchored">CONCENTRATION</h2>
+<p class="art-p">Duration by type separates movies from TV rows in the catalog encoding. The boxes show whether each type shares a tight middle or stretches into long tails.</p>
+<p class="art-p">Movie dominance in count does not automatically mean movie dominance in duration shape. The distribution is where that distinction becomes visible.</p>
+
+<h2 id="concentration" class="anchored">Concentration</h2>
+<h3 id="concentration-look" class="anchored">The top 5 title entries account for 38% of the aggregate duration</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/netflix-titles/charts/chart4_pareto.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/netflix-titles/charts/chart4_pareto.png" role="img" aria-label="The top 5 title entries account for 38% of the aggregate duration"></div>
 </figure>
-<p class="art-p">The top <strong>5</strong> title entries account for <strong>38%</strong> of the aggregate duration.</p>
-<p class="art-p">Steep Pareto curves mean a small head drives most of the signal — the long tail is noise until it isn't.</p>
-<h2 id="chart-pareto" class="anchored">SUPPLEMENT — CONCENTRATION</h2>
+<p class="art-p">The top 5 title entries account for 38% of the aggregate duration — a steep head for a library that otherwise looks vast on the homepage.</p>
+<p class="art-p">Steep Pareto curves mean a small set of rows drives most of the summed duration signal. The long tail is real inventory; it is not where the aggregate concentrates.</p>
+
+<h2 id="concentration-pareto" class="anchored">Concentration</h2>
+<h3 id="concentration-pareto-look" class="anchored">The top 5 title entries account for 38% of the aggregate duration</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/netflix-titles/charts/chart_pareto.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/netflix-titles/charts/chart_pareto.png" role="img" aria-label="The top 5 title entries account for 38% of the aggregate duration"></div>
 </figure>
-<p class="art-p">The top <strong>5</strong> title entries account for <strong>38%</strong> of the aggregate duration.</p>
-<p class="art-p">Steep Pareto curves mean a small head drives most of the signal — the long tail is noise until it isn't.</p>
-<h2 id="limitations" class="anchored">Caveats</h2>
-<p>Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p>
-<p>Findings describe the file on hand — treat them as structural signals about <strong>Netflix Titles</strong>, not exhaustive truth about the full domain.</p>
-<h2 id="conclusion" class="anchored">Bottom line</h2>
-<p>Read as a teaching map, <strong>Netflix Titles</strong> shows why one metric is rarely enough: leaders, tails, trends, and relationships each answer a different question about duration.</p>
-<p>The best reading is modest: use the chart to sharpen the question, then check the source and limits before turning it into a claim.</p>
-<h2 id="references" class="anchored">Sources</h2>
+<p class="art-p">A second Pareto view of the same 38% concentration confirms the head–tail split under an alternate chart export.</p>
+<p class="art-p">When two exhibits agree on the same share, the claim is about structure in the file — not about a single rendering choice.</p>
+
+<h2 id="what-this-file-cannot-tell-you" class="anchored">What this file cannot tell you</h2>
+<p class="art-p">Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p>
+<p class="art-p">Findings describe the file on hand — structural signals about Netflix title rows through 2021, not today’s live catalog in every territory.</p>
+<h2 id="what-to-take-away" class="anchored">What to take away</h2>
+<p class="art-p">Median duration climbed from 41.0 toward 98.0 while Movie remained the most common type. A handful of long outliers — Bandersnatch at 312 among them — and a 38% duration concentration in the top five rows show how uneven a “library” can be once you stop counting titles and start summing length.</p>
+<p class="art-p">Use the charts to separate mix, length, and concentration before treating any homepage as a flat shelf.</p>
+<h2 id="sources" class="anchored">Sources</h2>
+
 <p>Data Science Learning Community. (2021). <em>TidyTuesday: Netflix Titles</em>. <a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2021/2021-04-20/netflix_titles.csv" target="_blank" rel="noopener noreferrer">https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2021/2021-04-20/netflix_titles.csv</a></p>
-<h2 id="editors-note" class="anchored">Editor’s note</h2>
-<div class="art-editorial-note"><p><em>Artometrics data report from the TidyTuesday research pipeline. Charts and aggregates are reproducible from the embedded exhibits and public source files.</em></p></div>
-<p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2021/2021-04-20" target="_blank" rel="noopener noreferrer">View TidyTuesday source on GitHub</a></p>
+
 </main>
 </div>

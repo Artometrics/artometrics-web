@@ -10,11 +10,12 @@ tags:
 draft: false
 ---
 <div id="quarto-content">
-
 <main class="art-article-main">
-<p class="art-p">The Boston Celtics are what happens when a franchise wins so much, so early, that history becomes a front-office department. Every roster is compared not only with its peers, but with ghosts.</p>
-<p class="art-p">This report tests whether Celtics exceptionalism is still active or mostly archival. The answer is that the archive remains powerful, but the modern team has reopened the claim.</p>
-<h2 id="fast-facts" class="anchored">At a glance</h2>
+<p class="art-p">Every Boston Celtics season opens under an impossible ledger. Eighteen NBA championships—the league record entering 2025—mean that a good year is never only compared with Miami or Milwaukee. It is compared with Bill Russell’s ghosts, with Bird’s mid-1980s certainty, and with the institutional claim that banners are the franchise’s normal weather.</p>
+<p class="art-p">That claim was built early. Eleven of those titles arrived in the Russell era alone, a concentration dense enough to turn winning into identity rather than achievement. Later cores inherited the mythology even when the conversion rate fell. The twenty-two years between 1986 and 2008 proved that even a privileged franchise can wander; the 2024 title proved that the pressure cycle still closes when a roster finally matches the archive’s demand.</p>
+<p class="art-p">What follows reads Boston as an institution of expectation: how densely the titles stacked, how the franchise sits against the rest of the league’s ceiling, how eras converted Finals chances into rings, how droughts rewrote the emotional calendar, and whether the Tatum–Brown core has reopened the old pipeline.</p>
+
+<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">18</span><span class="fact-label">NBA championships, the league record entering 2025</span></div>
   <div class="fact-box"><span class="fact-number">11</span><span class="fact-label">Titles won during the Bill Russell era</span></div>
@@ -23,48 +24,58 @@ draft: false
   <div class="fact-box"><span class="fact-number">5</span><span class="fact-label">Defining Celtics title eras used in this report</span></div>
   <div class="fact-box"><span class="fact-number">2</span><span class="fact-label">Modern Finals appearances by the Tatum/Brown core through 2024</span></div>
 </div>
-<h2 id="dataset-context" class="anchored">The data</h2>
-<p class="art-p">The report uses public NBA championship records, Basketball Reference franchise summaries, and conventional era groupings around the players most responsible for each window.</p>
-<p class="art-p">An expert fan would ask whether Boston's identity is still earned. An Artometrician asks how historical surplus changes the interpretation of modern results.</p>
-<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
-<h2 id="banner-density" class="anchored">BANNER DENSITY</h2>
+
+<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<p class="art-p">The charts draw on public NBA championship records, Basketball Reference franchise summaries, and Sports Reference Finals appearance totals. Era buckets follow the players most responsible for each title window—Russell, Bird, Pierce/Garnett/Allen, and the current Tatum–Brown core—so the conversion story can be read as institutional chapters rather than a flat career list.</p>
+<p class="art-p">An expert fan asks whether Boston’s identity is still earned. The useful Artometrics question sits one layer higher: how does historical surplus change the meaning of modern results? A Finals appearance that would crown another franchise can feel unfinished in green, because the archive still sets the standard.</p>
+
+<h2 id="how-densely-championships-stack" class="anchored">The 1960s are still the gravitational center</h2>
+<h3 id="how-densely-championships-stack-look" class="anchored">Celtics titles by decade: one anomaly, then everything else</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/celtics-the-artometrics-of-institutional-winning/charts/chart1_banner_density.plotly.json" data-source="Data: Basketball Reference, NBA.com, Sports Reference - ARTOMETRICS" role="img" aria-label="Celtics NBA titles by decade"></div>
 </figure>
-<p class="art-p">The Celtics' historical lead is not evenly distributed. The 1960s are the gravitational anomaly: a decade so dominant it still defines the franchise's moral economy.</p>
-<p class="art-p">The hypothesis is that Boston is less a normal contender than an institution built around inherited expectation. The data supports it.</p>
-<h2 id="title-ceiling" class="anchored">TITLE CEILING</h2>
+<p class="art-p">Boston’s historical lead is not evenly distributed. The 1960s remain the gravitational anomaly: a decade so dominant it still defines the franchise’s moral economy. Later banner decades matter, but they orbit that original surplus rather than replace it.</p>
+<p class="art-p">That density is why Celtics exceptionalism feels permanent even when seasons do not. The institution was capitalized early; every modern roster pays interest on that balance sheet.</p>
+
+<h2 id="the-ceiling-on-titles" class="anchored">Boston and Los Angeles define the league’s summit</h2>
+<h3 id="the-ceiling-on-titles-look" class="anchored">NBA championships by major franchise</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/celtics-the-artometrics-of-institutional-winning/charts/chart2_title_ceiling.plotly.json" data-source="Data: Basketball Reference, NBA.com, Sports Reference - ARTOMETRICS" role="img" aria-label="NBA championships by major franchise"></div>
 </figure>
-<p class="art-p">Boston and Los Angeles form the NBA's summit. Everyone else is explaining distance.</p>
-<p class="art-p">For a Celtics fan, this is not trivia. It is the operating standard by which every rebuild is judged.</p>
-<h2 id="era-conversion" class="anchored">ERA CONVERSION</h2>
+<p class="art-p">Boston and Los Angeles form the NBA’s summit. Everyone else is explaining distance. For a Celtics fan, the comparison is not trivia; it is the operating standard by which every rebuild is judged.</p>
+<p class="art-p">The chart also clarifies what “contender” means in green. Mid-tier title totals that look historic elsewhere register as unfinished business in Boston, because the franchise’s peer set is the other archive monopoly.</p>
+
+<h2 id="converting-eras-into-banners" class="anchored">Russell converted chances; later eras inherited the burden</h2>
+<h3 id="converting-eras-into-banners-look" class="anchored">Finals appearances and titles by Celtics era</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/celtics-the-artometrics-of-institutional-winning/charts/chart3_era_conversion.plotly.json" data-source="Data: Basketball Reference, NBA.com, Sports Reference - ARTOMETRICS" role="img" aria-label="Finals appearances and titles by Celtics era"></div>
 </figure>
-<p class="art-p">The Russell era was not merely successful; it converted nearly every opportunity into a ring. Later eras are great by normal standards and modest by Boston standards.</p>
-<p class="art-p">This is institutional burden in chart form: greatness becomes smaller when the archive is impossible.</p>
-<h2 id="drought-pressure" class="anchored">DROUGHT PRESSURE</h2>
+<p class="art-p">The Russell era was not merely successful; it converted nearly every opportunity into a ring. Later eras look great by ordinary standards and modest by Boston standards. That gap is institutional burden in chart form: greatness shrinks when the archive is impossible.</p>
+<p class="art-p">Five defining title eras make the pattern readable. Access still arrives. Conversion is what separates mythology from maintenance.</p>
+
+<h2 id="what-long-droughts-do-to-a-franchise" class="anchored">Droughts do not erase the claim—they test it</h2>
+<h3 id="what-long-droughts-do-to-a-franchise-look" class="anchored">Selected Celtics championship gaps</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/celtics-the-artometrics-of-institutional-winning/charts/chart4_drought_pressure.plotly.json" data-source="Data: Basketball Reference, NBA.com, Sports Reference - ARTOMETRICS" role="img" aria-label="Selected Celtics championship gaps"></div>
 </figure>
-<p class="art-p">A 22-year gap from Bird to Pierce/KG shows how long even a privileged franchise can wander. The 2024 title ended another pressure cycle.</p>
-<p class="art-p">The Celtics do not avoid droughts; they narrate them as temporary violations of the natural order.</p>
-<h2 id="modern-access" class="anchored">MODERN ACCESS</h2>
+<p class="art-p">The twenty-two-year gap from Bird to Pierce/Garnett shows how long even a privileged franchise can wander. The Celtics do not avoid droughts; they narrate them as temporary violations of the natural order. Pressure accumulates precisely because the brand never stops promising banners.</p>
+<p class="art-p">The 2024 title closed another cycle. In Boston, a ring is never only a championship. It is a restoration of institutional order.</p>
+
+<h2 id="whether-the-modern-team-still-has-a-claim" class="anchored">Has the modern core reopened the pipeline?</h2>
+<h3 id="whether-the-modern-team-still-has-a-claim-look" class="anchored">Modern Finals access and title conversion</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/celtics-the-artometrics-of-institutional-winning/charts/chart5_modern_access.plotly.json" data-source="Data: Basketball Reference, NBA.com, Sports Reference - ARTOMETRICS" role="img" aria-label="Modern Finals access and title conversion"></div>
 </figure>
-<p class="art-p">Boston has been present in the modern title economy, but not as frequently as its mythology implies. The 2020s core matters because it reopened the institutional pipeline.</p>
-<p class="art-p">The chart shows the gap between historical identity and contemporary output narrowing again.</p>
-<h2 id="conclusion" class="anchored">Bottom line</h2>
-<p class="art-p">The Celtics are not just successful. They are historically overcapitalized: so rich in past winning that even good seasons can feel underleveraged.</p>
-<p class="art-p">The 2024 title matters because it reconnects the present roster to the institution's oldest claim: Boston is supposed to convert windows into banners.</p>
-<h2 id="references" class="anchored">Sources</h2>
+<p class="art-p">Through 2024, the Tatum–Brown core produced two Finals appearances—present in the modern title economy, but not as frequently as mythology implies. Presence alone does not settle the institutional argument. Conversion does.</p>
+<p class="art-p">The 2020s matter because they reopened the pipeline: historical identity and contemporary output narrowed again. That is the live question for Boston now—not whether the archive is real, but whether the present roster can keep paying its debt.</p>
+
+<h2 id="what-to-take-away" class="anchored">What to take away</h2>
+<p class="art-p">The Celtics are not just successful. They are historically overcapitalized: so rich in past winning that even good seasons can feel underleveraged. Ordinary contention reads as shortfall because the franchise’s unit of account is banners, not mere playoff relevance.</p>
+<p class="art-p">The 2024 title matters because it reconnects the present roster to the institution’s oldest claim. Boston is supposed to convert windows into banners. The data says the expectation never left. The modern work is proving it can still be earned.</p>
+
+<h2 id="sources" class="anchored">Sources</h2>
 <p>Basketball Reference. <em>Boston Celtics Franchise Index</em>.</p>
 <p>NBA.com historical championship records.</p>
 <p>Sports Reference Finals appearance summaries.</p>
-<h2 id="editors-note" class="anchored">Editor’s note</h2>
-<div class="art-editorial-note"><p>Era groupings are editorial simplifications. Counts use conventional public championship and Finals records.</p></div>
 </main>
 </div>

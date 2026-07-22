@@ -11,11 +11,11 @@ tags:
 draft: false
 ---
 <div id="quarto-content">
-
 <main class="art-article-main">
-<p class="art-p">This report analyzes the TidyTuesday <strong>2019-12-24</strong> release on <strong>Christmas Songs</strong> — <strong>387</strong> rows after cleaning and merge. Which holiday standards refuse to leave the chart?</p>
-<p class="art-p">Five charts track <strong>Weeks on chart</strong> across time, category, and named entities — trend, leaders, distribution, tiers, and relationships. Where companion files exist in the repo, they are joined before analysis so reception, geography, or metadata columns are not left on the table.</p>
-<h2 id="fast-facts" class="anchored">At a glance</h2>
+<p class="art-p">Holiday songs have a strange chart life: they return every December, pile up weeks, then vanish until the next season. The TidyTuesday christmas-songs extract used here holds <strong>387</strong> records spanning <strong>1958–2017</strong>, with a median of <strong>8.00</strong> weeks on chart and a high of <strong>20.0</strong>.</p>
+<p class="art-p">Better Days and Believe sit among the weeks-on-chart leaders. Perennial titles — Jingle Bell Rock, All I Want for Christmas Is You, Rockin’ Around the Christmas Tree, White Christmas — define the timeline chart’s recurring cast.</p>
+<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
+<p class="art-p">A few markers set the scale before the charts.</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">387</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">8.00</span><span class="fact-label">Median Weeks on chart</span></div>
@@ -23,51 +23,57 @@ draft: false
   <div class="fact-box"><span class="fact-number">BETTER DAYS</span><span class="fact-label">Top Song by Weeks on chart</span></div>
   <div class="fact-box"><span class="fact-number">1958–2017</span><span class="fact-label">Year span covered in the file</span></div>
 </div>
-<h2 id="dataset-context" class="anchored">The data</h2>
-<p>The source is the TidyTuesday release from <strong>2019-12-24</strong> (R for Data Science community). This working file contains <strong>387</strong> rows and <strong>14</strong> columns after merging all available CSV/XLSX tables in the week folder.</p>
-<p>Charts are exported as Plotly JSON with PNG fallbacks. Medians are used for robustness where distributions skew. Index-style fields (row numbers, sequential IDs) are excluded from metric selection.</p>
-<p class="art-p"><strong>How to read this report:</strong> start with the chart caption, then ask what the metric actually means, what a non-expert should notice first, and what an expert would challenge in the source. The goal is not to memorize every number; it is to leave with a sharper question than the one you arrived with.</p>
-<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
-<h2 id="chart-1-trend" class="anchored">TREND</h2>
+<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<p class="art-p">The source is the TidyTuesday release from 2019-12-24 (christmas_songs.csv). After cleaning, 387 rows remain.</p>
+<p class="art-p">Weeks on chart is the primary metric; instance captures repeat chart lives. Charts are Plotly JSON with PNG fallbacks.</p>
+<h2 id="seasonal-weeks-spiked-in-the-mid-2000s" class="anchored">Seasonal Weeks Spiked in the Mid-2000s</h2>
+<h3 id="seasonal-weeks-spiked-in-the-mid-2000s-look" class="anchored">Median Weeks on chart Over Time</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/christmas-songs/charts/chart1_trend.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/christmas-songs/charts/chart1_trend.png" role="img" aria-label="Median Weeks on chart Over Time"></div>
 </figure>
-<p class="art-p">Median weeks on chart is <strong>falling</strong> from <strong>8.00</strong> in the opening period to <strong>5.00</strong> at the close.</p>
-<p class="art-p">Annual medians filter one-off spikes so the structural slope — not viral outliers — drives the story.</p>
-<h2 id="chart-2-leaders" class="anchored">LEADERS</h2>
+<p class="art-p">Median weeks on chart by year jumps to <strong>20</strong> in 2005–2006, with other elevated medians in the mid-2010s (2016 ~19, 2015 ~18.5). Some earlier years sit near 11–16; a few years fall to single-digit or near-1 medians.</p>
+<p class="art-p">Holiday chart rules and catalog streaming-era returns both reshape how many weeks a seasonal title can accumulate in a given year.</p>
+
+<h2 id="twenty-weeks-marks-the-upper-club" class="anchored">Twenty Weeks Marks the Upper Club</h2>
+<h3 id="twenty-weeks-marks-the-upper-club-look" class="anchored">BETTER DAYS leads at 20.0 — 17.0 marks the median among the top dozen</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/christmas-songs/charts/chart2_leaders.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/christmas-songs/charts/chart2_leaders.png" role="img" aria-label="BETTER DAYS leads at 20.0 — 17.0 marks the median among the top dozen"></div>
 </figure>
-<p class="art-p"><strong>BETTER DAYS</strong> leads at <strong>20.0</strong> — <strong>17.0</strong> marks the median among the top dozen.</p>
-<p class="art-p">Head-of-field concentration is where quality, scale, or brand visibly separates from the pack.</p>
-<h2 id="chart-3-distribution" class="anchored">DISTRIBUTION</h2>
+<p class="art-p">Believe and Better Days lead at <strong>20.0</strong> weeks. Jingle Bell Rock and All I Want for Christmas Is You follow at <strong>19</strong>; Same Old Lang Syne and Rockin’ Around the Christmas Tree at <strong>18</strong>. The median among the top dozen is <strong>17.0</strong>.</p>
+<p class="art-p">Against a file median of 8 weeks, that elite band is more than double the typical holiday chart life in this extract.</p>
+
+<h2 id="most-songs-cluster-at-short-chart-lives" class="anchored">Most Songs Cluster at Short Chart Lives</h2>
+<h3 id="most-songs-cluster-at-short-chart-lives-look" class="anchored">Weeks on chart Distribution</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/christmas-songs/charts/chart3_distribution.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/christmas-songs/charts/chart3_distribution.png" role="img" aria-label="Weeks on chart Distribution"></div>
 </figure>
-<p class="art-p">Median <strong>8.00</strong> vs mean <strong>9.65</strong> — the shape is right-skewed.</p>
-<p class="art-p">The top decile begins at <strong>19.0</strong>; that tail is where defining cases live.</p>
-<h2 id="chart-4-leader-trends" class="anchored">LEADER TRENDS</h2>
+<p class="art-p">The distribution shows large counts in both very short weeks-on-chart bins and in a high bin near the upper teens (about <strong>84</strong> observations near the top bin center). Mid-length stays fill the middle.</p>
+<p class="art-p">Holiday songs are bipolar in this file: brief seasonal brushes versus multi-week December occupations.</p>
+
+<h2 id="standards-reappear-across-decades" class="anchored">Standards Reappear Across Decades</h2>
+<h3 id="standards-reappear-across-decades-look" class="anchored">Top Song Over Time</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/christmas-songs/charts/chart4_leader_trends.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/christmas-songs/charts/chart4_leader_trends.png" role="img" aria-label="Top Song Over Time"></div>
 </figure>
-<p class="art-p">The leading names do not move in lockstep — some fade as others surge.</p>
-<p class="art-p">Tracking medians over time separates sustained dominance from one-off spikes.</p>
-<h2 id="chart-5-relationship" class="anchored">SUPPLEMENT — RELATIONSHIP</h2>
+<p class="art-p">Jingle Bell Rock posts 19-week seasons in the late 1950s–early 1960s and again in 2016–2017. All I Want for Christmas Is You shows 19-week runs across multiple 2010s seasons after an earlier quiet instance. Rockin’ Around the Christmas Tree similarly bridges early-1960s and mid-2010s peaks. White Christmas’s plotted seasons sit at 13 weeks in 1958–1962.</p>
+<p class="art-p">The timeline’s lesson is recurrence: the holiday chart is a repertoire system, not only a new-release market.</p>
+
+<h2 id="more-instances-often-meet-longer-weeks" class="anchored">More Instances Often Meet Longer Weeks</h2>
+<h3 id="more-instances-often-meet-longer-weeks-look" class="anchored">Weeks on chart vs Instance</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/christmas-songs/charts/chart5_scatter.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/christmas-songs/charts/chart5_scatter.png" role="img" aria-label="Weeks on chart vs Instance"></div>
 </figure>
-<p class="art-p">Joint plot of <strong>weeks on chart</strong> and <strong>instance</strong> surfaces clusters the averages erase.</p>
-<p class="art-p">Bubble size tracks repeat presence — outliers are archetypes, not noise.</p>
-<h2 id="limitations" class="anchored">Caveats</h2>
-<p>Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p>
-<p>Findings describe the file on hand — treat them as structural signals about <strong>Christmas Songs</strong>, not exhaustive truth about the full domain.</p>
-<h2 id="conclusion" class="anchored">Bottom line</h2>
-<p>Read as a teaching map, <strong>Christmas Songs</strong> shows why one metric is rarely enough: leaders, tails, trends, and relationships each answer a different question about weeks on chart.</p>
-<p>The best reading is modest: use the chart to sharpen the question, then check the source and limits before turning it into a claim.</p>
-<h2 id="references" class="anchored">Sources</h2>
+<p class="art-p">Weeks on chart versus instance shows perennial titles with multiple chart lives landing in the high-weeks region, while one-instance songs populate both short and long stays.</p>
+<p class="art-p">Re-entry is part of how Christmas songs manufacture longevity — the same recording, a new December, another stack of weeks.</p>
+
+<h2 id="what-this-file-cannot-tell-you" class="anchored">What this file cannot tell you</h2>
+<p class="art-p">Chart methodologies change (airplay, sales, streaming). Weeks on chart across 1958–2017 are not perfectly comparable units. Title capitalization and punctuation can split the same song.</p>
+<p class="art-p">The file privileges U.S. chart logic and does not measure global streaming playlists outside that frame.</p>
+<h2 id="what-to-take-away" class="anchored">What to take away</h2>
+<p class="art-p">Holiday chart lives center at 8 weeks, with a 20-week ceiling and a top-dozen median of 17. Standards recur across decades rather than retiring.</p>
+<p class="art-p">Cite recurrence (Jingle Bell Rock, Mariah, Brenda Lee) when the question is cultural durability; cite the 8-week median when the question is a typical seasonal visit.</p>
+<h2 id="sources" class="anchored">Sources</h2>
+
 <p>Data Science Learning Community. (2019). <em>TidyTuesday: Christmas Songs</em>. <a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2019/2019-12-24/christmas_songs.csv" target="_blank" rel="noopener noreferrer">https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2019/2019-12-24/christmas_songs.csv</a></p>
-<h2 id="editors-note" class="anchored">Editor’s note</h2>
-<div class="art-editorial-note"><p><em>Artometrics data report from the TidyTuesday research pipeline. Charts and aggregates are reproducible from the embedded exhibits and public source files.</em></p></div>
-<p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2019/2019-12-24" target="_blank" rel="noopener noreferrer">View TidyTuesday source on GitHub</a></p>
 </main>
 </div>

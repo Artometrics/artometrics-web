@@ -11,62 +11,68 @@ tags:
 draft: false
 ---
 <div id="quarto-content">
-
 <main class="art-article-main">
-<p class="art-p">This report analyzes the TidyTuesday <strong>2024-10-22</strong> release on <strong>CIA World Factbook</strong> — <strong>259</strong> rows after cleaning and merge. How do population scale and prosperity relate across countries?</p>
-<p class="art-p">Five charts track <strong>Population</strong> across time, category, and named entities — trend, leaders, distribution, tiers, and relationships. Where companion files exist in the repo, they are joined before analysis so reception, geography, or metadata columns are not left on the table.</p>
-<h2 id="fast-facts" class="anchored">At a glance</h2>
+<p class="art-p">Population is the blunt instrument of international comparison: China and India alone redraw every map. The TidyTuesday CIA World Factbook extract used here holds <strong>259</strong> records with a median population of <strong>5,220,371</strong> and a maximum of <strong>1,355,692,576</strong> for China.</p>
+<p class="art-p">Mean population in the distribution annotation (~32 million) sits far above the median — the classic right skew of a world with a few demographic giants and a long list of small states.</p>
+<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
+<p class="art-p">A few markers set the scale before the charts.</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">259</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">5,220,371</span><span class="fact-label">Median Population</span></div>
   <div class="fact-box"><span class="fact-number">1,355,692,576</span><span class="fact-label">Highest observed Population</span></div>
   <div class="fact-box"><span class="fact-number">China</span><span class="fact-label">Top Country by Population</span></div>
 </div>
-<h2 id="dataset-context" class="anchored">The data</h2>
-<p>The source is the TidyTuesday release from <strong>2024-10-22</strong> (R for Data Science community). This working file contains <strong>259</strong> rows and <strong>11</strong> columns after merging all available CSV/XLSX tables in the week folder.</p>
-<p>Charts are exported as Plotly JSON with PNG fallbacks. Medians are used for robustness where distributions skew. Index-style fields (row numbers, sequential IDs) are excluded from metric selection.</p>
-<p class="art-p"><strong>How to read this report:</strong> start with the chart caption, then ask what the metric actually means, what a non-expert should notice first, and what an expert would challenge in the source. The goal is not to memorize every number; it is to leave with a sharper question than the one you arrived with.</p>
-<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
-<h2 id="chart-1-breakdown" class="anchored">BREAKDOWN</h2>
+<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<p class="art-p">The source is the TidyTuesday release from 2024-10-22 (cia_factbook.csv). After cleaning, 259 rows remain.</p>
+<p class="art-p">Population is the primary ranked metric; birth rate appears in the joint scatter. Charts are Plotly JSON with PNG fallbacks.</p>
+<h2 id="a-handful-of-giants-dominate-headcount" class="anchored">A Handful of Giants Dominate Headcount</h2>
+<h3 id="a-handful-of-giants-dominate-headcount-look" class="anchored">Population by Country</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/cia-world-factbook/charts/chart1_breakdown.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/cia-world-factbook/charts/chart1_breakdown.png" role="img" aria-label="Population by Country"></div>
 </figure>
-<p class="art-p"><strong>China</strong> leads at <strong>1,355,692,576</strong>; <strong>Mexico</strong> anchors the low end at <strong>120,286,655</strong>.</p>
-<p class="art-p">Grouping by country exposes how the metric varies across the catalog's major entities.</p>
-<h2 id="chart-2-leaders" class="anchored">LEADERS</h2>
+<p class="art-p">China leads at about <strong>1.36 billion</strong>, India at about <strong>1.24 billion</strong>, then the European Union aggregate near <strong>511 million</strong>, the United States near <strong>319 million</strong>, Indonesia near <strong>254 million</strong>, and Brazil near <strong>203 million</strong>.</p>
+<p class="art-p">These are not peers of the median country at 5.2 million. They are a different scale class — and they drive every concentration statistic that follows.</p>
+
+<h2 id="even-the-top-dozen-has-a-steep-internal-drop" class="anchored">Even the Top Dozen Has a Steep Internal Drop</h2>
+<h3 id="even-the-top-dozen-has-a-steep-internal-drop-look" class="anchored">China leads at 1,355,692,576 — 199,415,584 marks the median among the top dozen</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/cia-world-factbook/charts/chart2_leaders.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/cia-world-factbook/charts/chart2_leaders.png" role="img" aria-label="China leads at 1,355,692,576 — 199,415,584 marks the median among the top dozen"></div>
 </figure>
-<p class="art-p"><strong>China</strong> leads at <strong>1,355,692,576</strong> — <strong>199,415,584</strong> marks the median among the top dozen.</p>
-<p class="art-p">Head-of-field concentration is where quality, scale, or brand visibly separates from the pack.</p>
-<h2 id="chart-3-distribution" class="anchored">DISTRIBUTION</h2>
+<p class="art-p">China still leads at <strong>1,355,692,576</strong>, while the median among the top dozen is about <strong>199,415,584</strong> — less than one-sixth of China’s count.</p>
+<p class="art-p">“Large country” is a pyramid, not a plateau. Second-tier giants are already far smaller than the demographic summit.</p>
+
+<h2 id="most-countries-sit-in-the-small-population-mass" class="anchored">Most Countries Sit in the Small-Population Mass</h2>
+<h3 id="most-countries-sit-in-the-small-population-mass-look" class="anchored">Median 5,220,371 vs mean 32,294,361 — the shape is right-skewed</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/cia-world-factbook/charts/chart3_distribution.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/cia-world-factbook/charts/chart3_distribution.png" role="img" aria-label="Median 5,220,371 vs mean 32,294,361 — the shape is right-skewed"></div>
 </figure>
-<p class="art-p">Median <strong>5,220,371</strong> vs mean <strong>32,294,361</strong> — the shape is right-skewed.</p>
-<p class="art-p">The top decile begins at <strong>57,526,414</strong>; that tail is where defining cases live.</p>
-<h2 id="chart-4-concentration" class="anchored">CONCENTRATION</h2>
+<p class="art-p">The histogram’s first bin holds the overwhelming majority of entries (about <strong>218</strong> of them), with only a handful of observations in the billionaire and near-billionaire bins.</p>
+<p class="art-p">That shape is why the median (5.2 million) is the honest typical-country number, and why the mean (~32 million) is pulled relentlessly upward.</p>
+
+<h2 id="the-top-five-already-hold-most-of-the-people" class="anchored">The Top Five Already Hold Most of the People</h2>
+<h3 id="the-top-five-already-hold-most-of-the-people-look" class="anchored">The top 5 country entries account for 72% of the aggregate population</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/cia-world-factbook/charts/chart4_pareto.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/cia-world-factbook/charts/chart4_pareto.png" role="img" aria-label="The top 5 country entries account for 72% of the aggregate population"></div>
 </figure>
-<p class="art-p">The top <strong>5</strong> country entries account for <strong>72%</strong> of the aggregate population.</p>
-<p class="art-p">Steep Pareto curves mean a small head drives most of the signal — the long tail is noise until it isn't.</p>
-<h2 id="chart-5-relationship" class="anchored">SUPPLEMENT — RELATIONSHIP</h2>
+<p class="art-p">The Pareto curve shows the top five country entries accounting for about <strong>72%</strong> of aggregate population in this ranking view. By fifteen entries the curve approaches the full plotted total.</p>
+<p class="art-p">Global population is not evenly distributed across flags. It is concentrated in a short list of demographic powers.</p>
+
+<h2 id="high-birth-rates-cluster-among-smaller-populations" class="anchored">High Birth Rates Cluster Among Smaller Populations</h2>
+<h3 id="high-birth-rates-cluster-among-smaller-populations-look" class="anchored">Population vs Birth rate</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/cia-world-factbook/charts/chart5_scatter.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/cia-world-factbook/charts/chart5_scatter.png" role="img" aria-label="Population vs Birth rate"></div>
 </figure>
-<p class="art-p">Joint plot of <strong>population</strong> and <strong>birth rate</strong> surfaces clusters the averages erase.</p>
-<p class="art-p">Bubble size tracks repeat presence — outliers are archetypes, not noise.</p>
-<h2 id="limitations" class="anchored">Caveats</h2>
-<p>Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p>
-<p>Findings describe the file on hand — treat them as structural signals about <strong>CIA World Factbook</strong>, not exhaustive truth about the full domain.</p>
-<h2 id="conclusion" class="anchored">Bottom line</h2>
-<p>Read as a teaching map, <strong>CIA World Factbook</strong> shows why one metric is rarely enough: leaders, tails, trends, and relationships each answer a different question about population.</p>
-<p>The best reading is modest: use the chart to sharpen the question, then check the source and limits before turning it into a claim.</p>
-<h2 id="references" class="anchored">Sources</h2>
+<p class="art-p">Population versus birth rate places some of the highest birth rates (above ~40 per 1,000) among countries well below the mega-population tier, while several large countries sit at lower birth rates.</p>
+<p class="art-p">The joint distribution warns against assuming that demographic giants are also fertility leaders. Scale and birth rate are different stories in the Factbook.</p>
+
+<h2 id="what-this-file-cannot-tell-you" class="anchored">What this file cannot tell you</h2>
+<p class="art-p">Factbook figures are estimates with uneven vintage and methodology across entities. Including the European Union alongside countries double-counts if users sum naively. Small territories and disputed entities add definitional noise.</p>
+<p class="art-p">Population totals are not prosperity scores. Pairing with birth rate is descriptive, not a development ranking.</p>
+<h2 id="what-to-take-away" class="anchored">What to take away</h2>
+<p class="art-p">In 259 Factbook rows, the median country has about 5.2 million people while China exceeds 1.35 billion. The top five entries hold roughly 72% of the aggregate in the concentration view.</p>
+<p class="art-p">Cite the median for a typical state; cite China/India and the Pareto share when the question is planetary concentration.</p>
+<h2 id="sources" class="anchored">Sources</h2>
+
 <p>Data Science Learning Community. (2024). <em>TidyTuesday: CIA World Factbook</em>. <a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2024/2024-10-22/cia_factbook.csv" target="_blank" rel="noopener noreferrer">https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2024/2024-10-22/cia_factbook.csv</a></p>
-<h2 id="editors-note" class="anchored">Editor’s note</h2>
-<div class="art-editorial-note"><p><em>Artometrics data report from the TidyTuesday research pipeline. Charts and aggregates are reproducible from the embedded exhibits and public source files.</em></p></div>
-<p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2024/2024-10-22" target="_blank" rel="noopener noreferrer">View TidyTuesday source on GitHub</a></p>
 </main>
 </div>

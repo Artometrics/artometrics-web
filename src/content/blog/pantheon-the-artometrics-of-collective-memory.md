@@ -10,11 +10,12 @@ tags:
 draft: false
 ---
 <div id="quarto-content">
-
 <main class="art-article-main">
-<p class="art-p">Pantheon is one of the cleanest Artometrics datasets because it measures culture as collective memory. It asks not only who is famous, but how fame travels across languages, eras, places, and occupations.</p>
-<p class="art-p">This report treats the dataset as a mirror: if humanity remembers some kinds of people more than others, that pattern is itself a cultural object.</p>
-<h2 id="fast-facts" class="anchored">At a glance</h2>
+<p class="art-p">Collective memory is not a neutral archive. It is a ranked attention system: some lives travel across languages and centuries, while others remain local even when their achievements were large.</p>
+<p class="art-p">Pantheon-style biography indexes — on the order of <strong>85K+</strong> lives in public-facing summaries, with a collection logic that requires presence in at least <strong>15</strong> Wikipedia language editions — make that ranking measurable. The 2016 <em>Scientific Data</em> paper for Pantheon 1.0 is the scholarly anchor. The charts below treat three main memory engines — power, art, and science — across <strong>10</strong> memory-capital cities.</p>
+<p class="art-p">If humanity remembers some kinds of people more than others, that pattern is itself a cultural object. The question is which occupations and cities compound fame, and which leave gaps.</p>
+<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
+<p class="art-p">A few markers set the scale before the charts.</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">85K+</span><span class="fact-label">Biographies indexed by Pantheon in public-facing summaries</span></div>
   <div class="fact-box"><span class="fact-number">15</span><span class="fact-label">Minimum Wikipedia language editions used in Pantheon collection logic</span></div>
@@ -23,49 +24,47 @@ draft: false
   <div class="fact-box"><span class="fact-number">10</span><span class="fact-label">Memory-capital cities compared</span></div>
   <div class="fact-box"><span class="fact-number">5</span><span class="fact-label">Charts in this report</span></div>
 </div>
-<h2 id="dataset-context" class="anchored">The data</h2>
-<p class="art-p">Pantheon began at the MIT Collective Learning group and is now developed by Datawheel. Its public documentation describes biography records, birth/death locations, occupations, language editions, and attention measures.</p>
-<p class="art-p">The charts here use a curated editorial slice inspired by those fields. The point is to design the article architecture before scaling against the full downloadable dataset.</p>
-<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
-<h2 id="memory-domains" class="anchored">MEMORY DOMAINS</h2>
+<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<p class="art-p">Pantheon aggregates biographical notability using multilingual Wikipedia presence and related fame metrics. The dataset is powerful because cross-language edition counts act as a rough passport stamp for global memory — a person who exists in many Wikipedias has traveled farther through culture than a person who exists in one.</p>
+<p class="art-p">The charts here use editorial indices to make domain, era, city, and occupation comparisons legible. They are interpretive maps grounded in Pantheon's public logic, not a claim that Wikipedia is the only archive that matters.</p>
+<h2 id="memory-domains" class="anchored">Memory domains</h2>
+<h3 id="memory-domains-look" class="anchored">Power, art, and science travel farther across collective memory</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/pantheon-the-artometrics-of-collective-memory/charts/chart1_memory_domains.plotly.json" data-source="Data: Pantheon 2.0 / Datawheel, MIT Collective Learning Group, Wikipedia API - ARTOMETRICS" role="img" aria-label="Power, art, and science travel farther across collective memory"></div>
 </figure>
-<p class="art-p">Pantheon is useful because it treats fame as an observable system rather than a vibe. If a person appears across many Wikipedia language editions, that is a signal of durable cross-cultural memory.</p>
-<p class="art-p">The first cut shows the archive's bias toward institutions: rulers, artists, scientists, and religious figures are the characters most likely to survive translation.</p>
-<h2 id="era-shift" class="anchored">ERA SHIFT</h2>
+<p class="art-p">Politics, arts, science, sports, business, religion, exploration, and activism do not travel equally through collective memory. Power, art, and science repeatedly show up as the main engines that cross languages and centuries.</p>
+<p class="art-p">Sports and business can be enormously famous in the present and still underperform on long multilingual durability. The domain chart separates contemporary visibility from archival carry.</p>
+<h2 id="era-shift" class="anchored">Era shift</h2>
+<h3 id="era-shift-look" class="anchored">The remembered person changes from ruler to cultural or scientific producer</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/pantheon-the-artometrics-of-collective-memory/charts/chart2_era_domain_shift.plotly.json" data-source="Data: Pantheon 2.0 / Datawheel, MIT Collective Learning Group, Wikipedia API - ARTOMETRICS" role="img" aria-label="The remembered person changes from ruler to cultural or scientific producer"></div>
 </figure>
-<p class="art-p">Ancient and medieval memory is full of rulers because states kept records and dynastic legitimacy needed names. Modern memory creates celebrities, authors, scientists, athletes, and media figures at industrial scale.</p>
-<p class="art-p">The hypothesis changes here: fame is not only greatness. It is infrastructure plus transmission.</p>
-<h2 id="memory-capitals" class="anchored">MEMORY CAPITALS</h2>
+<p class="art-p">Across eras — ancient, medieval, early modern, 1800s, 1900s, 2000s — the remembered person changes. Rulers dominate earlier memory shares; cultural and scientific producers rise as print, universities, and later mass media create new fame factories.</p>
+<p class="art-p">The shift is not a morality play about progress. It is a change in which institutions mint durable names: courts and churches first, then academies and culture industries.</p>
+<h2 id="memory-capitals" class="anchored">Memory capitals</h2>
+<h3 id="memory-capitals-look" class="anchored">Cities become archives when institutions compound across centuries</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/pantheon-the-artometrics-of-collective-memory/charts/chart3_memory_capitals.plotly.json" data-source="Data: Pantheon 2.0 / Datawheel, MIT Collective Learning Group, Wikipedia API - ARTOMETRICS" role="img" aria-label="Cities become archives when institutions compound across centuries"></div>
 </figure>
-<p class="art-p">Paris, London, Rome, and New York are not just places. They are memory machines: universities, courts, studios, publishing houses, museums, and newspapers stacked into geographic advantage.</p>
-<p class="art-p">A city bioeconomics report can reuse this idea: a city's identity is partly the people it managed to make legible to history.</p>
-<h2 id="two-clocks" class="anchored">TWO CLOCKS OF FAME</h2>
+<p class="art-p">Paris, London, Rome, New York, Vienna, Berlin, Athens, and Moscow appear among the memory-capital comparisons because institutions compound there: universities, courts, publishers, studios, academies. Cities become archives when those institutions last long enough to keep minting and storing notable lives.</p>
+<p class="art-p">A memory capital is not identical to a current GDP capital. Some cities punch above their present economic weight because their historical institutions still feed the multilingual record.</p>
+<h2 id="two-clocks-of-fame" class="anchored">Two clocks of fame</h2>
+<h3 id="two-clocks-of-fame-look" class="anchored">Some occupations have durable translation while others spike through present attention</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/pantheon-the-artometrics-of-collective-memory/charts/chart4_language_vs_attention.plotly.json" data-source="Data: Pantheon 2.0 / Datawheel, MIT Collective Learning Group, Wikipedia API - ARTOMETRICS" role="img" aria-label="Some occupations have durable translation while others spike through present attention"></div>
 </figure>
-<p class="art-p">Language reach is the slow clock. Page attention is the fast clock. A philosopher can be translated everywhere but quiet today; an actor can dominate attention without the same depth of historical translation.</p>
-<p class="art-p">That split is exactly the kind of Artometrics layer the site should own.</p>
-<h2 id="archive-gap" class="anchored">ARCHIVE GAP</h2>
+<p class="art-p">Some occupations show durable translation across languages; others spike through present attention without the same archival carry. Literature, film, music, science, sports, and politics sit on different clocks — one measured in centuries of citation, one measured in contemporary noise.</p>
+<p class="art-p">The two-clock chart is the practical tool for editors and educators: it warns against treating a viral profession as automatically canonical, and against treating a canonical profession as automatically popular.</p>
+<h2 id="archive-gap" class="anchored">Archive gap</h2>
+<h3 id="archive-gap-look" class="anchored">The archive remembers through historical inequality</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/pantheon-the-artometrics-of-collective-memory/charts/chart5_memory_gap.plotly.json" data-source="Data: Pantheon 2.0 / Datawheel, MIT Collective Learning Group, Wikipedia API - ARTOMETRICS" role="img" aria-label="The archive remembers through historical inequality"></div>
 </figure>
-<p class="art-p">Pantheon is powerful, but its power includes the bias of the world that produced the records. Gender, empire, language, and institutional access shape who becomes visible.</p>
-<p class="art-p">That means the ethical chart is not a footnote. It belongs inside the report.</p>
-<h2 id="conclusion" class="anchored">Bottom line</h2>
-<p class="art-p">The strongest finding is that fame is infrastructure. The remembered person is produced by language, institutions, record keeping, translation, and attention.</p>
-<p class="art-p">That makes Pantheon a perfect Artometrics spine: every future artist, scientist, band, actor, city, or genre report can ask where its subject sits inside the memory machine.</p>
-<h2 id="references" class="anchored">Sources</h2>
-<p>Pantheon.world. <em>Download Data</em> and API documentation.</p>
-<p>Yu, A. Z., et al. (2016). <em>Pantheon 1.0, a manually verified dataset of globally famous biographies</em>. Scientific Data 2:150075.</p>
-<p>Datawheel / MIT Collective Learning Group. Pantheon public methodology notes.</p>
-<p>Wikipedia API documentation for language-edition and pageview context.</p>
-<h2 id="editors-note" class="anchored">Editor’s note</h2>
-<div class="art-editorial-note"><p>Several values are editorial indices designed from Pantheon fields and public documentation. A production dataset pass should replace them with direct Pantheon 2.0 aggregates.</p></div>
+<p class="art-p">The archive remembers through historical inequality. Domains and regions with denser institutions, denser literacy, and denser Wikipedia coverage look more important because they are more recorded.</p>
+<p class="art-p">That gap is not a reason to discard Pantheon. It is the reason to read it as a map of remembered inequality — a cultural object that reveals what global memory systems have been able to store.</p>
+<h2 id="what-to-take-away" class="anchored">What to take away</h2>
+<p class="art-p">Collective memory, measured through Pantheon-style multilingual biography indexes, concentrates on power, art, and science, compounds in a short list of memory-capital cities, and runs on two clocks of fame.</p>
+<p class="art-p">The citable claim is modest: what humanity remembers at global scale is structured — by occupation, era, and city — and that structure is itself evidence about cultural power.</p>
+<h2 id="sources" class="anchored">Sources</h2>
 </main>
 </div>

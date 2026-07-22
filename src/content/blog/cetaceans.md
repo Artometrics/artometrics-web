@@ -9,61 +9,67 @@ tags:
 draft: false
 ---
 <div id="quarto-content">
-
 <main class="art-article-main">
-<p class="art-p">This report analyzes the TidyTuesday <strong>2018-12-18</strong> release on <strong>Cetaceans</strong> — <strong>2,194</strong> rows after cleaning and merge. How do cetacean sizes cluster by family — and who are the giants?</p>
-<p class="art-p">Five charts track <strong>record counts</strong> across time, category, and named entities — trend, leaders, distribution, tiers, and relationships. Where companion files exist in the repo, they are joined before analysis so reception, geography, or metadata columns are not left on the table.</p>
-<h2 id="fast-facts" class="anchored">At a glance</h2>
+<p class="art-p">Captive and transferred cetaceans leave paper trails: species names, years, and transfer geographies. The TidyTuesday cetacean extract used here holds <strong>2,194</strong> records spanning <strong>1946–2017</strong>, with the United States labeled as the dominant transfer geography.</p>
+<p class="art-p">Bottlenose animals dominate the name counts. That single species weight shapes every timeline and leader chart that follows — this archive is mostly a bottlenose history with rarer orcas, belugas, and white-sided dolphins in the margins.</p>
+<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
+<p class="art-p">A few markers set the scale before the charts.</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">2,194</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">1946–2017</span><span class="fact-label">Year span covered in the file</span></div>
   <div class="fact-box"><span class="fact-number">US</span><span class="fact-label">Most common Transfer</span></div>
 </div>
-<h2 id="dataset-context" class="anchored">The data</h2>
-<p>The source is the TidyTuesday release from <strong>2018-12-18</strong> (R for Data Science community). This working file contains <strong>2,194</strong> rows and <strong>22</strong> columns after merging all available CSV/XLSX tables in the week folder.</p>
-<p>Charts are exported as Plotly JSON with PNG fallbacks. Medians are used for robustness where distributions skew. Index-style fields (row numbers, sequential IDs) are excluded from metric selection.</p>
-<p class="art-p"><strong>How to read this report:</strong> start with the chart caption, then ask what the metric actually means, what a non-expert should notice first, and what an expert would challenge in the source. The goal is not to memorize every number; it is to leave with a sharper question than the one you arrived with.</p>
-<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
-<h2 id="chart-1-category" class="anchored">LANDSCAPE</h2>
+<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<p class="art-p">The source is the TidyTuesday release from 2018-12-18 (allCetaceanData.csv). After cleaning, 2,194 rows remain.</p>
+<p class="art-p">Charts emphasize transfer geography, annual volume, species leaders, and timelines for the most frequent names. Charts are Plotly JSON with PNG fallbacks.</p>
+<h2 id="transfers-concentrate-overwhelmingly-in-the-us" class="anchored">Transfers Concentrate Overwhelmingly in the US</h2>
+<h3 id="transfers-concentrate-overwhelmingly-in-the-us-look" class="anchored">US dominates with 2,172 records</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/cetaceans/charts/chart1_category.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/cetaceans/charts/chart1_category.png" role="img" aria-label="US dominates with 2,172 records"></div>
 </figure>
-<p class="art-p"><strong>US</strong> dominates with <strong>2,172</strong> records.</p>
-<p class="art-p">The main bucket carries the story; this field does not have a meaningful long-tail split.</p>
-<h2 id="chart-1-volume" class="anchored">VOLUME</h2>
+<p class="art-p">US-labeled transfers account for <strong>2,172</strong> records versus only <strong>22</strong> marked Foreign in this view. The geography of the file is not a balanced global map; it is a U.S.-centric captivity and transfer ledger.</p>
+<p class="art-p">Any species comparison inherits that bias. What looks like a biological pattern may partly be a reporting and institutional geography pattern.</p>
+
+<h2 id="annual-volume-peaked-in-the-early-1970s" class="anchored">Annual Volume Peaked in the Early 1970s</h2>
+<h3 id="annual-volume-peaked-in-the-early-1970s-look" class="anchored">Records By Period</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/cetaceans/charts/chart1_volume.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/cetaceans/charts/chart1_volume.png" role="img" aria-label="Records By Period"></div>
 </figure>
-<p class="art-p">Activity peaks in <strong>1972.0</strong> with <strong>170</strong> records.</p>
-<p class="art-p">Period-level counts reveal when the dataset's subject matter intensified.</p>
-<h2 id="chart-2-leaders" class="anchored">LEADERS</h2>
+<p class="art-p">Record counts by year crest around <strong>1972</strong> with about <strong>170</strong> entries, with other high years in the late 1970s and 1980s (1978 ~90, 1977 ~80, 1980 ~79). Later decades thin out toward single-digit years by the 2010s in this extract.</p>
+<p class="art-p">The volume timeline is an institutional history as much as a zoological one: when transfers were logged most densely, and when the paper trail quieted.</p>
+
+<h2 id="bottlenose-is-the-archive-s-default-animal" class="anchored">Bottlenose Is the Archive’s Default Animal</h2>
+<h3 id="bottlenose-is-the-archive-s-default-animal-look" class="anchored">Bottlenose appears 1,668 times — the most recurring name in the file</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/cetaceans/charts/chart2_leaders.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/cetaceans/charts/chart2_leaders.png" role="img" aria-label="Bottlenose appears 1,668 times — the most recurring name in the file"></div>
 </figure>
-<p class="art-p"><strong>Bottlenose</strong> appears <strong>1,668</strong> times — the most recurring name in the file.</p>
-<p class="art-p">The top dozen account for a visible share of all <strong>2,194</strong> rows.</p>
-<h2 id="chart-3-category" class="anchored">CATEGORY</h2>
+<p class="art-p">Bottlenose appears <strong>1,668</strong> times — an order of magnitude above Killer Whale/Orca (<strong>79</strong>), Beluga (<strong>68</strong>), and Pacific white-sided variants (combined labels in the several dozens).</p>
+<p class="art-p">Cite 1,668 when describing species concentration. Without bottlenose, this would be a small file; with it, every other name is a minority subplot.</p>
+
+<h2 id="the-us-bucket-is-the-landscape" class="anchored">The US Bucket Is the Landscape</h2>
+<h3 id="the-us-bucket-is-the-landscape-look" class="anchored">US is the largest bucket with 2,172 records</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/cetaceans/charts/chart3_category.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/cetaceans/charts/chart3_category.png" role="img" aria-label="US is the largest bucket with 2,172 records"></div>
 </figure>
-<p class="art-p"><strong>US</strong> is the largest bucket with <strong>2,172</strong> records.</p>
-<p class="art-p">Category concentration shows where editorial attention should focus first.</p>
-<h2 id="chart-4-timeline" class="anchored">TIMELINE</h2>
+<p class="art-p">Restating the geography: US <strong>2,172</strong> versus Foreign <strong>22</strong>. The category chart is almost a single bar.</p>
+<p class="art-p">Comparative claims about “global captivity” cannot be read straight off this extract without external sources that rebalance non-U.S. institutions.</p>
+
+<h2 id="species-timelines-follow-different-eras" class="anchored">Species Timelines Follow Different Eras</h2>
+<h3 id="species-timelines-follow-different-eras-look" class="anchored">Leaders Over Time</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/cetaceans/charts/chart4_timeline.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/cetaceans/charts/chart4_timeline.png" role="img" aria-label="Leaders Over Time"></div>
 </figure>
-<p class="art-p">The leading names do not move in lockstep — some fade as others surge.</p>
-<p class="art-p">Tracking counts over time separates sustained presence from one-off spikes.</p>
-<h2 id="limitations" class="anchored">Caveats</h2>
-<p>Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p>
-<p>Findings describe the file on hand — treat them as structural signals about <strong>Cetaceans</strong>, not exhaustive truth about the full domain.</p>
-<h2 id="conclusion" class="anchored">Bottom line</h2>
-<p>Read as a teaching map, <strong>Cetaceans</strong> shows why one metric is rarely enough: leaders, tails, trends, and relationships each answer a different question about the field.</p>
-<p>The best reading is modest: use the chart to sharpen the question, then check the source and limits before turning it into a claim.</p>
-<h2 id="references" class="anchored">Sources</h2>
+<p class="art-p">Bottlenose transfers spike with the early-1970s volume peak (about <strong>144</strong> in 1972). Orca records show smaller pulses across the late 1960s–1980s. Beluga counts rise in scattered later years. White-sided labels show notable 1970s–1980 activity.</p>
+<p class="art-p">The timelines refuse a single captivity narrative. Different species enter the ledger on different clocks — and bottlenose sets the tempo.</p>
+
+<h2 id="what-this-file-cannot-tell-you" class="anchored">What this file cannot tell you</h2>
+<p class="art-p">U.S. overrepresentation may reflect data compilation, not the true global distribution of captive cetaceans. Species name variants (Beluga vs Beluga Whale; multiple white-sided spellings) fragment counts.</p>
+<p class="art-p">The file does not measure welfare outcomes, wild population status, or legal regime changes except insofar as they change what got recorded.</p>
+<h2 id="what-to-take-away" class="anchored">What to take away</h2>
+<p class="art-p">Across 2,194 rows, the story is concentration twice over: US geography (2,172) and bottlenose identity (1,668).</p>
+<p class="art-p">Cite the 1972 volume peak when discussing historical intensity, and treat non-bottlenose species as sparse but distinct timelines inside a bottlenose-dominated ledger.</p>
+<h2 id="sources" class="anchored">Sources</h2>
+
 <p>Data Science Learning Community. (2018). <em>TidyTuesday: Cetaceans</em>. <a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2018/2018-12-18/allCetaceanData.csv" target="_blank" rel="noopener noreferrer">https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2018/2018-12-18/allCetaceanData.csv</a></p>
-<h2 id="editors-note" class="anchored">Editor’s note</h2>
-<div class="art-editorial-note"><p><em>Artometrics data report from the TidyTuesday research pipeline. Charts and aggregates are reproducible from the embedded exhibits and public source files.</em></p></div>
-<p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2018/2018-12-18" target="_blank" rel="noopener noreferrer">View TidyTuesday source on GitHub</a></p>
 </main>
 </div>

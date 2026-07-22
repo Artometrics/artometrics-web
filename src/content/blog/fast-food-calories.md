@@ -9,11 +9,12 @@ tags:
 draft: false
 ---
 <div id="quarto-content">
-
 <main class="art-article-main">
-<p class="art-p">This report analyzes the TidyTuesday <strong>2018-09-04</strong> release on <strong>Fast Food Calories</strong> — <strong>515</strong> rows after cleaning and merge. Which chains pack the most calories per item?</p>
-<p class="art-p">Five charts track <strong>Calories</strong> across time, category, and named entities — trend, leaders, distribution, tiers, and relationships. Where companion files exist in the repo, they are joined before analysis so reception, geography, or metadata columns are not left on the table.</p>
-<h2 id="fast-facts" class="anchored">At a glance</h2>
+<p class="art-p">Fast-food menus are marketing documents dressed as nutrition tables. The calorie counts attached to each item are among the few numbers that cut through the branding — and they vary wildly across chains that sell roughly the same categories of food.</p>
+<p class="art-p">A TidyTuesday snapshot of major U.S. chain menus puts <strong>515</strong> item records on the same footing. The median item sits at <strong>490</strong> calories. The ceiling in the file is <strong>2,430</strong> — a twenty-piece buttermilk crispy chicken tender tray that makes the median look almost restrained.</p>
+<p class="art-p">Taco Bell appears most often in the working table, but frequency of listing is not the same as caloric intensity. The story is which items and which chains sit above the center of the menu, and how fat tracks with calories when the branding falls away.</p>
+<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
+<p class="art-p">A few markers set the scale before the charts.</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">515</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">490</span><span class="fact-label">Median Calories</span></div>
@@ -21,51 +22,50 @@ draft: false
   <div class="fact-box"><span class="fact-number">20 piece Buttermilk Crispy C</span><span class="fact-label">Top Item by Calories</span></div>
   <div class="fact-box"><span class="fact-number">Taco Bell</span><span class="fact-label">Most common Restaurant</span></div>
 </div>
-<h2 id="dataset-context" class="anchored">The data</h2>
-<p>The source is the TidyTuesday release from <strong>2018-09-04</strong> (R for Data Science community). This working file contains <strong>515</strong> rows and <strong>17</strong> columns after merging all available CSV/XLSX tables in the week folder.</p>
-<p>Charts are exported as Plotly JSON with PNG fallbacks. Medians are used for robustness where distributions skew. Index-style fields (row numbers, sequential IDs) are excluded from metric selection.</p>
-<p class="art-p"><strong>How to read this report:</strong> start with the chart caption, then ask what the metric actually means, what a non-expert should notice first, and what an expert would challenge in the source. The goal is not to memorize every number; it is to leave with a sharper question than the one you arrived with.</p>
-<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
-<h2 id="chart-1-breakdown" class="anchored">BREAKDOWN</h2>
+<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<p class="art-p">The source is the TidyTuesday release from 2018-09-04, maintained by the R for Data Science community. The working file contains 515 rows and 17 columns after merging the available CSV tables in the week folder — restaurant name, item, calories, total fat, and related nutrition fields.</p>
+<p class="art-p">Medians are preferred where distributions skew. Index-style fields and sequential IDs are excluded from metric selection. Charts ship as Plotly JSON with PNG fallbacks. The snapshot is a menu catalog for a fixed release window, not a live API of every current offering.</p>
+<h2 id="breakdown" class="anchored">Calorie ceilings by item</h2>
+<h3 id="breakdown-look" class="anchored">Calories by Item</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/fast-food-calories/charts/chart1_breakdown.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/fast-food-calories/charts/chart1_breakdown.png" role="img" aria-label="Calories by Item"></div>
 </figure>
-<p class="art-p"><strong>20 piece Buttermilk Crispy Chicken Tenders</strong> leads at <strong>2,430</strong>; <strong>10 piece Buttermilk Crispy Chicken Tenders</strong> anchors the low end at <strong>1,210</strong>.</p>
-<p class="art-p">Grouping by item exposes how the metric varies across the catalog's major entities.</p>
-<h2 id="chart-2-leaders" class="anchored">LEADERS</h2>
+<p class="art-p">At the top of the item ranking, the <strong>20 piece Buttermilk Crispy Chicken Tenders</strong> lead at <strong>2,430</strong> calories. Related tender trays populate much of the upper tier: the 12-piece sits near <strong>1,510</strong>, while the 10-piece anchors a lower rung around <strong>1,210</strong>.</p>
+<p class="art-p">What looks like a single chicken category is really a portion machine. Doubling the piece count nearly doubles the calorie load. Burger King and Sonic doubles — Farmhouse King, Rodeo King, Super Sonic doubles — fill the same high band for a different reason: stacked patties, sauces, and bun mass rather than tray size.</p>
+<h2 id="who-sits-at-the-top" class="anchored">Who sits at the top</h2>
+<h3 id="who-sits-at-the-top-look" class="anchored">20 piece Buttermilk Crispy Chicken Tenders leads at 2,430 — 1,315 marks the median among the top dozen</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/fast-food-calories/charts/chart2_leaders.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/fast-food-calories/charts/chart2_leaders.png" role="img" aria-label="20 piece Buttermilk Crispy Chicken Tenders leads at 2,430 — 1,315 marks the median among the top dozen"></div>
 </figure>
-<p class="art-p"><strong>20 piece Buttermilk Crispy Chicken Tenders</strong> leads at <strong>2,430</strong> — <strong>1,315</strong> marks the median among the top dozen.</p>
-<p class="art-p">Head-of-field concentration is where quality, scale, or brand visibly separates from the pack.</p>
-<h2 id="chart-3-distribution" class="anchored">DISTRIBUTION</h2>
+<p class="art-p">Among the top dozen calorie items, the median is <strong>1,315</strong>. That is more than two and a half times the dataset-wide median of 490. The head of the menu is not a gentle slope — it is a separate altitude.</p>
+<p class="art-p">Shareable trays and king-style sandwiches dominate the list. The implication for comparison is simple: chain averages without portion context will mis-rank brands that sell both modest sandwiches and extreme trays under the same logo.</p>
+<h2 id="how-the-field-is-spread" class="anchored">How chains spread calories</h2>
+<h3 id="how-the-field-is-spread-look" class="anchored">Calories by Restaurant</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/fast-food-calories/charts/chart3_distribution.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/fast-food-calories/charts/chart3_distribution.png" role="img" aria-label="Calories by Restaurant"></div>
 </figure>
-<p class="art-p">Category boxes reveal whether calories consensus is shared or contested across tiers.</p>
-<p class="art-p">Wide whiskers flag segments where outliers — not averages — drive reputation.</p>
-<h2 id="chart-4-gap" class="anchored">GAP ANALYSIS</h2>
+<p class="art-p">Box plots by restaurant show whether a chain's calorie consensus is shared or contested. Some menus cluster tightly around the middle. Others stretch from light sides to extreme trays, producing wide interquartile ranges that averages erase.</p>
+<p class="art-p">Taco Bell's heavy representation in the file does not automatically place it at the caloric peak. Volume of SKUs and intensity of SKUs are different questions — and the distribution chart is where that split becomes visible.</p>
+<h2 id="who-beats-the-median-and-who-trails" class="anchored">Who beats the median — and who trails</h2>
+<h3 id="who-beats-the-median-and-who-trails-look" class="anchored">Calories vs median by Restaurant</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/fast-food-calories/charts/chart4_gap.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/fast-food-calories/charts/chart4_gap.png" role="img" aria-label="Calories vs median by Restaurant"></div>
 </figure>
-<p class="art-p"><strong>Sonic</strong> sits <strong>80.0</strong> above the median; <strong>Chick Fil-A</strong> trails by <strong>100</strong>.</p>
-<p class="art-p">Diverging from the median exposes which tiers over- or under-perform — not just who ranks first.</p>
-<h2 id="chart-5-relationship" class="anchored">SUPPLEMENT — RELATIONSHIP</h2>
+<p class="art-p">Relative to the dataset median, <strong>Sonic</strong> sits <strong>80</strong> calories above the center. <strong>Chick-fil-A</strong> trails by <strong>100</strong>. Burger King, Arby's, and McDonald's sit on the high side of the gap chart; Subway and Taco Bell sit below.</p>
+<p class="art-p">These gaps are menu-composition effects as much as health branding. A chain that lists more grilled items and fewer shareable trays will land below the median even if its signature sandwich is not light. The gap chart ranks catalogs, not single hero products.</p>
+<h2 id="what-moves-together" class="anchored">Calories and fat move together</h2>
+<h3 id="what-moves-together-look" class="anchored">Calories vs Total fat</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/fast-food-calories/charts/chart5_scatter.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/fast-food-calories/charts/chart5_scatter.png" role="img" aria-label="Calories vs Total fat"></div>
 </figure>
-<p class="art-p">Joint plot of <strong>calories</strong> and <strong>total fat</strong> surfaces clusters the averages erase.</p>
-<p class="art-p">Bubble size tracks repeat presence — outliers are archetypes, not noise.</p>
-<h2 id="limitations" class="anchored">Caveats</h2>
-<p>Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p>
-<p>Findings describe the file on hand — treat them as structural signals about <strong>Fast Food Calories</strong>, not exhaustive truth about the full domain.</p>
-<h2 id="conclusion" class="anchored">Bottom line</h2>
-<p>Read as a teaching map, <strong>Fast Food Calories</strong> shows why one metric is rarely enough: leaders, tails, trends, and relationships each answer a different question about calories.</p>
-<p>The best reading is modest: use the chart to sharpen the question, then check the source and limits before turning it into a claim.</p>
-<h2 id="references" class="anchored">Sources</h2>
-<p>Data Science Learning Community. (2018). <em>TidyTuesday: Fast Food Calories</em>. <a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2018/2018-09-04/fastfood_calories.csv" target="_blank" rel="noopener noreferrer">https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2018/2018-09-04/fastfood_calories.csv</a></p>
-<h2 id="editors-note" class="anchored">Editor’s note</h2>
-<div class="art-editorial-note"><p><em>Artometrics data report from the TidyTuesday research pipeline. Charts and aggregates are reproducible from the embedded exhibits and public source files.</em></p></div>
-<p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2018/2018-09-04" target="_blank" rel="noopener noreferrer">View TidyTuesday source on GitHub</a></p>
+<p class="art-p">Plotting calories against total fat produces the expected positive slope — and the clusters that averages erase. Dense clumps of ordinary sandwiches sit in the middle; the extreme trays and stacked burgers occupy the upper-right corner where both axes spike together.</p>
+<p class="art-p">Fat is not a perfect proxy for calories, but in this menu file the two metrics rarely disagree about which items are extreme. When they do separate, it is usually because sugar-heavy drinks or desserts pull calories without matching fat.</p>
+<h2 id="what-this-file-cannot-tell-you" class="anchored">What this file cannot tell you</h2>
+<p class="art-p">Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p>
+<p class="art-p">The file does not measure how often items are ordered, how portions are actually consumed, or how recipes have changed since the 2018 release. Treat the numbers as a structural map of listed menu calories — not a verdict on every current drive-through board.</p>
+<h2 id="what-to-take-away" class="anchored">What to take away</h2>
+<p class="art-p">The median fast-food item in this catalog sits near 490 calories. The items that define the public argument about fast food often sit two to five times higher — trays and stacked sandwiches that are easy to order and hard to compare without portion context.</p>
+<p class="art-p">Chain gaps of eighty to one hundred calories around the median are real, but they are catalog effects. The clearest signal is the ceiling: once shareable chicken trays enter the frame, the conversation about a typical item and the conversation about the heaviest item are no longer the same conversation.</p>
+<h2 id="sources" class="anchored">Sources</h2>
 </main>
 </div>

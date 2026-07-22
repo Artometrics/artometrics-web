@@ -9,11 +9,11 @@ tags:
 draft: false
 ---
 <div id="quarto-content">
-
 <main class="art-article-main">
-<p class="art-p">This report analyzes the TidyTuesday <strong>2024-02-06</strong> release on <strong>World Heritage Sites</strong> — <strong>6</strong> rows after cleaning and merge. How did UNESCO site counts grow across Scandinavia between 2004 and 2022?</p>
-<p class="art-p">Five charts track <strong>Value</strong> across time, category, and named entities — trend, leaders, distribution, tiers, and relationships. Where companion files exist in the repo, they are joined before analysis so reception, geography, or metadata columns are not left on the table.</p>
-<h2 id="fast-facts" class="anchored">At a glance</h2>
+<p class="art-p">UNESCO World Heritage counts turn national prestige into a time series. This Scandinavian extract holds 6 records spanning 2004–2022, with a median value of 9.00 and a high of 15.0. Sweden leads the fact-box country ranking.</p>
+<p class="art-p">Six rows are enough for a clean comparative story when the table is country-by-year counts: who led, who grew fastest, and how the median moved from 5.00 to 10.0 across the window. The calibration point is 9.00 — the center of this small but sharp heritage ledger.</p>
+<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
+<p class="art-p">A few markers set the scale before the charts.</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">6</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">9.00</span><span class="fact-label">Median Value</span></div>
@@ -21,51 +21,61 @@ draft: false
   <div class="fact-box"><span class="fact-number">Sweden</span><span class="fact-label">Top Country by Value</span></div>
   <div class="fact-box"><span class="fact-number">2004–2022</span><span class="fact-label">Year span covered in the file</span></div>
 </div>
-<h2 id="dataset-context" class="anchored">The data</h2>
-<p>The source is the TidyTuesday release from <strong>2024-02-06</strong> (R for Data Science community). This working file contains <strong>6</strong> rows and <strong>3</strong> columns after merging all available CSV/XLSX tables in the week folder.</p>
-<p>Charts are exported as Plotly JSON with PNG fallbacks. Medians are used for robustness where distributions skew. Index-style fields (row numbers, sequential IDs) are excluded from metric selection.</p>
-<p class="art-p"><strong>How to read this report:</strong> start with the chart caption, then ask what the metric actually means, what a non-expert should notice first, and what an expert would challenge in the source. The goal is not to memorize every number; it is to leave with a sharper question than the one you arrived with.</p>
-<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
-<h2 id="chart-1-trend" class="anchored">TREND</h2>
+<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<p class="art-p">The source is the TidyTuesday release from 2024-02-06 (R for Data Science community). The working file contains 6 rows and 3 columns after merging available tables in the week folder. Value is the site-count metric; country is the entity axis; year compares 2004 with 2022.</p>
+<p class="art-p">With only six rows, every chart is close to the raw table. Medians still summarize the center; growth percentages normalize different starting points. Index-style fields are excluded from metric selection.</p>
+
+<h2 id="median-heritage-counts-doubled-at-the-center" class="anchored">Median heritage counts doubled at the center</h2>
+<h3 id="median-heritage-counts-doubled-at-the-center-look" class="anchored">Median Value Over Time</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/world-heritage-sites/charts/chart1_trend.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/world-heritage-sites/charts/chart1_trend.png" role="img" aria-label="Median Value Over Time"></div>
 </figure>
-<p class="art-p">Median value is <strong>rising</strong> from <strong>5.00</strong> in the opening period to <strong>10.0</strong> at the close.</p>
-<p class="art-p">Annual medians filter one-off spikes so the structural slope — not viral outliers — drives the story.</p>
-<h2 id="chart-2-leaders" class="anchored">LEADERS</h2>
+<p class="art-p">Median value rises from 5.00 in the opening period to 10.0 at the close. In this extract, the center of the Scandinavian heritage-count distribution moved upward across 2004–2022.</p>
+<p class="art-p">A rising median in a six-row file is still a real trend — it is simply a trend you can nearly audit by eye against the country panels.</p>
+
+<h2 id="sweden-leads-the-country-ladder" class="anchored">Sweden leads the country ladder</h2>
+<h3 id="sweden-leads-the-country-ladder-look" class="anchored">Sweden leads at 14.0 — 7.00 marks the median among the top dozen</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/world-heritage-sites/charts/chart2_leaders.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/world-heritage-sites/charts/chart2_leaders.png" role="img" aria-label="Sweden leads at 14.0 — 7.00 marks the median among the top dozen"></div>
 </figure>
-<p class="art-p"><strong>Sweden</strong> leads at <strong>14.0</strong> — <strong>7.00</strong> marks the median among the top dozen.</p>
-<p class="art-p">Head-of-field concentration is where quality, scale, or brand visibly separates from the pack.</p>
-<h2 id="chart-4-leader-trends" class="anchored">LEADER TRENDS</h2>
+<p class="art-p">Sweden leads at 14.0, while 7.00 marks the median among the top dozen in this cut — here, effectively the small peer set of Scandinavian countries in the file. Sweden is both the fact-box top country and the charted leader.</p>
+<p class="art-p">Leadership on level is not the same as leadership on growth. The later charts separate stock from flow.</p>
+
+<h2 id="leaders-diverge-when-tracked-over-time" class="anchored">Leaders diverge when tracked over time</h2>
+<h3 id="leaders-diverge-when-tracked-over-time-look" class="anchored">Top Country Over Time</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/world-heritage-sites/charts/chart4_leader_trends.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/world-heritage-sites/charts/chart4_leader_trends.png" role="img" aria-label="Top Country Over Time"></div>
 </figure>
-<p class="art-p">The leading names do not move in lockstep — some fade as others surge.</p>
-<p class="art-p">Tracking medians over time separates sustained dominance from one-off spikes.</p>
-<h2 id="chart-3-grouped-year" class="anchored">YEAR COMPARE</h2>
+<p class="art-p">Leader trends show that leading names do not move in lockstep — some fade as others surge. Tracking value over time separates sustained dominance from one-off jumps.</p>
+<p class="art-p">In a short panel, trajectory is the whole game: who added sites between the two observed years, and who merely started ahead.</p>
+
+<h2 id="2004-versus-2022-makes-the-gains-visible-side-by-side" class="anchored">2004 versus 2022 makes the gains visible side by side</h2>
+<h3 id="2004-versus-2022-makes-the-gains-visible-side-by-side-look" class="anchored">Value by year and Country</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/world-heritage-sites/charts/chart3_grouped_year.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/world-heritage-sites/charts/chart3_grouped_year.png" role="img" aria-label="Value by year and Country"></div>
 </figure>
-<p class="art-p">Grouped bars expose who gained between <strong>2004</strong> and <strong>2022</strong> — not just the latest leaderboard.</p>
-<p class="art-p">Small panels reward side-by-side reading; totals hide per-entity momentum.</p>
-<h2 id="chart-4-growth" class="anchored">GROWTH</h2>
+<p class="art-p">Grouped bars expose who gained between 2004 and 2022 — not just the latest leaderboard. Small panels reward side-by-side reading; totals alone hide per-country momentum.</p>
+<p class="art-p">The year compare is the clearest view of absolute change before converting those changes into percentages.</p>
+
+<h2 id="denmark-posted-the-largest-percentage-gain" class="anchored">Denmark posted the largest percentage gain</h2>
+<h3 id="denmark-posted-the-largest-percentage-gain-look" class="anchored">Value growth by Country</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/world-heritage-sites/charts/chart4_growth.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/world-heritage-sites/charts/chart4_growth.png" role="img" aria-label="Value growth by Country"></div>
 </figure>
-<p class="art-p"><strong>Denmark</strong> posted the largest gain (<strong>150%</strong>) from <strong>2004</strong> to <strong>2022</strong>.</p>
-<p class="art-p">Percent-change bars normalize different starting points — essential when baselines differ.</p>
-<h2 id="limitations" class="anchored">Caveats</h2>
-<p>Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p>
-<p>Findings describe the file on hand — treat them as structural signals about <strong>World Heritage Sites</strong>, not exhaustive truth about the full domain.</p>
-<h2 id="conclusion" class="anchored">Bottom line</h2>
-<p>Read as a teaching map, <strong>World Heritage Sites</strong> shows why one metric is rarely enough: leaders, tails, trends, and relationships each answer a different question about value.</p>
-<p>The best reading is modest: use the chart to sharpen the question, then check the source and limits before turning it into a claim.</p>
-<h2 id="references" class="anchored">Sources</h2>
+<p class="art-p">Denmark posted the largest gain (150%) from 2004 to 2022. Percent-change bars normalize different starting points — essential when baselines differ across Sweden, Norway, and Denmark.</p>
+<p class="art-p">Sweden can lead on level while Denmark leads on growth. Both facts are in the file; they answer different heritage-expansion questions.</p>
+<h2 id="what-this-file-cannot-tell-you" class="anchored">What this file cannot tell you</h2>
+<p class="art-p">Community-cleaned TidyTuesday snapshots are not the live UNESCO World Heritage List API. This extract is a six-row Scandinavian panel for 2004 and 2022, not a global inventory of every site.</p>
+<p class="art-p">Findings describe this world-heritage extract — structural signals about country counts and growth — not a qualitative ranking of sites’ cultural importance.</p>
+<h2 id="what-to-take-away" class="anchored">What to take away</h2>
+<p class="art-p">Scandinavian UNESCO counts in this file rise at the median from 5.00 to 10.0, with Sweden leading on level at 14.0 and Denmark leading on growth at 150% from 2004 to 2022.</p>
+<p class="art-p">Level and growth are different trophies. The year-compare and growth charts keep them separate so prestige stock is not mistaken for expansion speed.</p>
+<h2 id="sources" class="anchored">Sources</h2>
+
 <p>Data Science Learning Community. (2024). <em>TidyTuesday: World Heritage Sites</em>. <a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2024/2024-02-06/heritage.csv" target="_blank" rel="noopener noreferrer">https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2024/2024-02-06/heritage.csv</a></p>
 <h2 id="editors-note" class="anchored">Editor’s note</h2>
 <div class="art-editorial-note"><p><em>Artometrics data report from the TidyTuesday research pipeline. Charts and aggregates are reproducible from the embedded exhibits and public source files.</em></p></div>
 <p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2024/2024-02-06" target="_blank" rel="noopener noreferrer">View TidyTuesday source on GitHub</a></p>
+
 </main>
 </div>

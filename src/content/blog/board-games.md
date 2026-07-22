@@ -11,11 +11,11 @@ tags:
 draft: false
 ---
 <div id="quarto-content">
-
 <main class="art-article-main">
-<p class="art-p">This report analyzes the TidyTuesday <strong>2019-03-12</strong> release on <strong>Board Games</strong> — <strong>10,532</strong> rows after cleaning and merge. Which board games combine crowd scale with elite ratings?</p>
-<p class="art-p">Five charts track <strong>Average rating</strong> across time, category, and named entities — trend, leaders, distribution, tiers, and relationships. Where companion files exist in the repo, they are joined before analysis so reception, geography, or metadata columns are not left on the table.</p>
-<h2 id="fast-facts" class="anchored">At a glance</h2>
+<p class="art-p">BoardGameGeek ratings are a public taste machine: tens of thousands of titles, each scored by the people willing to log plays. The TidyTuesday board-games extract used here holds <strong>10,532</strong> records with a median average rating of <strong>6.39</strong> and a high of <strong>9.00</strong> for Small World Designer Edition.</p>
+<p class="art-p">Wargame, World War II is the most common category label in the file. That already tilts the catalog toward conflict simulations — a hobby subculture with its own rating norms. The charts ask how ratings split by category, how leaders separate from the median, and whether crowdfunding-scale user counts track with elite scores.</p>
+<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
+<p class="art-p">A few markers set the scale before the charts.</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">10,532</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">6.39</span><span class="fact-label">Median Average rating</span></div>
@@ -24,51 +24,57 @@ draft: false
   <div class="fact-box"><span class="fact-number">1970–1970</span><span class="fact-label">Year span covered in the file</span></div>
   <div class="fact-box"><span class="fact-number">Wargame,World War II</span><span class="fact-label">Most common Category</span></div>
 </div>
-<h2 id="dataset-context" class="anchored">The data</h2>
-<p>The source is the TidyTuesday release from <strong>2019-03-12</strong> (R for Data Science community). This working file contains <strong>10,532</strong> rows and <strong>23</strong> columns after merging all available CSV/XLSX tables in the week folder.</p>
-<p>Charts are exported as Plotly JSON with PNG fallbacks. Medians are used for robustness where distributions skew. Index-style fields (row numbers, sequential IDs) are excluded from metric selection.</p>
-<p class="art-p"><strong>How to read this report:</strong> start with the chart caption, then ask what the metric actually means, what a non-expert should notice first, and what an expert would challenge in the source. The goal is not to memorize every number; it is to leave with a sharper question than the one you arrived with.</p>
-<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
-<h2 id="chart-1-trend" class="anchored">TREND</h2>
+<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<p class="art-p">The source is the TidyTuesday release from 2019-03-12 (board_games.csv). After cleaning, 10,532 rows remain in the working frame.</p>
+<p class="art-p">Average rating is the primary metric. Category fields can be multi-label strings. Charts are Plotly JSON with PNG fallbacks. The year span encoded in the fact box reflects the filtered time field present in this build of the file.</p>
+<h2 id="the-catalog-s-median-rating-sits-near-6-39" class="anchored">The Catalog’s Median Rating Sits Near 6.39</h2>
+<h3 id="the-catalog-s-median-rating-sits-near-6-39-look" class="anchored">Median Average rating Over Time</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/board-games/charts/chart1_trend.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/board-games/charts/chart1_trend.png" role="img" aria-label="Median Average rating Over Time"></div>
 </figure>
-<p class="art-p">Median average rating is <strong>falling</strong> from <strong>6.39</strong> in the opening period to <strong>6.39</strong> at the close.</p>
-<p class="art-p">Annual medians filter one-off spikes so the structural slope — not viral outliers — drives the story.</p>
-<h2 id="chart-2-leaders" class="anchored">LEADERS</h2>
+<p class="art-p">The time view in this extract collapses to a median average rating of about <strong>6.39</strong> — the same calibration point as the fact box. In BoardGameGeek terms, that mid-6s band is ordinary: playable, not legendary.</p>
+<p class="art-p">Everything that follows should be read against that baseline. A 9.00 specialty edition is not “a bit better than average”; it is a different prestige tier.</p>
+
+<h2 id="designer-editions-and-heavy-games-own-the-peak" class="anchored">Designer Editions and Heavy Games Own the Peak</h2>
+<h3 id="designer-editions-and-heavy-games-own-the-peak-look" class="anchored">Small World Designer Edition leads at 9.00 — 8.78 marks the median among the top dozen</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/board-games/charts/chart2_leaders.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/board-games/charts/chart2_leaders.png" role="img" aria-label="Small World Designer Edition leads at 9.00 — 8.78 marks the median among the top dozen"></div>
 </figure>
-<p class="art-p"><strong>Small World Designer Edition</strong> leads at <strong>9.00</strong> — <strong>8.78</strong> marks the median among the top dozen.</p>
-<p class="art-p">Head-of-field concentration is where quality, scale, or brand visibly separates from the pack.</p>
-<h2 id="chart-3-distribution" class="anchored">DISTRIBUTION</h2>
+<p class="art-p">Small World Designer Edition leads at <strong>9.00</strong>. Kingdom Death: Monster (~<strong>8.93</strong>), Terra Mystica: Big Box (~<strong>8.85</strong>), and a run of deep wargames — Last Chance for Victory, The Greatest Day, Last Blitzkrieg, Enemy Action: Ardennes — fill out the top dozen. The median among those leaders is about <strong>8.78</strong>.</p>
+<p class="art-p">These are not mass-market party games. They are hobby-complete objects — big boxes, campaign systems, hex-and-counter epics — rated by audiences selected for intensity.</p>
+
+<h2 id="wargame-categories-rate-higher-than-card-games" class="anchored">Wargame Categories Rate Higher Than Card Games</h2>
+<h3 id="wargame-categories-rate-higher-than-card-games-look" class="anchored">Average rating by Category</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/board-games/charts/chart3_distribution.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/board-games/charts/chart3_distribution.png" role="img" aria-label="Average rating by Category"></div>
 </figure>
-<p class="art-p">Category boxes reveal whether average rating consensus is shared or contested across tiers.</p>
-<p class="art-p">Wide whiskers flag segments where outliers — not averages — drive reputation.</p>
-<h2 id="chart-4-gap" class="anchored">GAP ANALYSIS</h2>
+<p class="art-p">Category boxes show Napoleonic wargames with a median near <strong>7.04</strong> (n=124) and World War II wargames near <strong>6.89</strong> (n=449). Card games sit lower, with a median near <strong>6.03</strong> (n=438). Abstract strategy lands near <strong>6.28</strong> (n=284).</p>
+<p class="art-p">Volume and prestige diverge: card games are numerous but center closer to the catalog median; dedicated wargame labels clear a higher bar among the people who rate them.</p>
+
+<h2 id="civil-war-and-napoleonic-titles-beat-the-median-most" class="anchored">Civil War and Napoleonic Titles Beat the Median Most</h2>
+<h3 id="civil-war-and-napoleonic-titles-beat-the-median-most-look" class="anchored">Average rating vs median by Category</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/board-games/charts/chart4_gap.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/board-games/charts/chart4_gap.png" role="img" aria-label="Average rating vs median by Category"></div>
 </figure>
-<p class="art-p"><strong>American Civil War,Wargame</strong> sits <strong>0.66</strong> above the median; <strong>Card Game</strong> trails by <strong>0.36</strong>.</p>
-<p class="art-p">Diverging from the median exposes which tiers over- or under-perform — not just who ranks first.</p>
-<h2 id="chart-5-relationship" class="anchored">SUPPLEMENT — RELATIONSHIP</h2>
+<p class="art-p">Gaps to the overall median are largest for American Civil War wargames (~<strong>+0.66</strong>) and Napoleonic wargames (~<strong>+0.65</strong>), with World War II wargames also positive. Dice and generic card-game labels sit below the median.</p>
+<p class="art-p">The pattern is consistent: historical conflict simulations, as tagged in this file, are the categories that most reliably clear the 6.39 baseline.</p>
+
+<h2 id="crowd-size-and-rating-are-related-loosely" class="anchored">Crowd Size and Rating Are Related — Loosely</h2>
+<h3 id="crowd-size-and-rating-are-related-loosely-look" class="anchored">Average rating vs Users rated</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/board-games/charts/chart5_scatter.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/board-games/charts/chart5_scatter.png" role="img" aria-label="Average rating vs Users rated"></div>
 </figure>
-<p class="art-p">Joint plot of <strong>average rating</strong> and <strong>users rated</strong> surfaces clusters the averages erase.</p>
-<p class="art-p">Bubble size tracks repeat presence — outliers are archetypes, not noise.</p>
-<h2 id="limitations" class="anchored">Caveats</h2>
-<p>Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p>
-<p>Findings describe the file on hand — treat them as structural signals about <strong>Board Games</strong>, not exhaustive truth about the full domain.</p>
-<h2 id="conclusion" class="anchored">Bottom line</h2>
-<p>Read as a teaching map, <strong>Board Games</strong> shows why one metric is rarely enough: leaders, tails, trends, and relationships each answer a different question about average rating.</p>
-<p>The best reading is modest: use the chart to sharpen the question, then check the source and limits before turning it into a claim.</p>
-<h2 id="references" class="anchored">Sources</h2>
+<p class="art-p">Average rating versus users rated shows popular hits with tens of thousands of ratings landing across the mid-to-high 7s, while many high-rated titles still have modest user counts. Elite scores without crowd scale remain possible.</p>
+<p class="art-p">The scatter’s lesson is citable: popularity predicts attention, not a precise quality score. A 9.00 designer edition and a 7.4 smash hit solve different problems in the hobby economy.</p>
+
+<h2 id="what-this-file-cannot-tell-you" class="anchored">What this file cannot tell you</h2>
+<p class="art-p">BoardGameGeek ratings are self-selected by hobbyists; children’s games and mass-market titles can be systematically under- or over-represented. Multi-label categories double-count games across boxes.</p>
+<p class="art-p">Expansions and designer editions inflate prestige relative to base games. The file is a 2019 community snapshot, not a live BGG API pull.</p>
+<h2 id="what-to-take-away" class="anchored">What to take away</h2>
+<p class="art-p">Across 10,532 games, the median rating is 6.39; the top dozen lives near 8.8–9.0. Wargame categories clear the baseline more often than broad card-game labels.</p>
+<p class="art-p">Cite 6.39 as the catalog’s center of gravity, and treat 9.00 specialty editions as a separate prestige economy — not as proof that “games got better.”</p>
+<h2 id="sources" class="anchored">Sources</h2>
+
 <p>Data Science Learning Community. (2019). <em>TidyTuesday: Board Games</em>. <a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2019/2019-03-12/board_games.csv" target="_blank" rel="noopener noreferrer">https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2019/2019-03-12/board_games.csv</a></p>
-<h2 id="editors-note" class="anchored">Editor’s note</h2>
-<div class="art-editorial-note"><p><em>Artometrics data report from the TidyTuesday research pipeline. Charts and aggregates are reproducible from the embedded exhibits and public source files.</em></p></div>
-<p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2019/2019-03-12" target="_blank" rel="noopener noreferrer">View TidyTuesday source on GitHub</a></p>
 </main>
 </div>

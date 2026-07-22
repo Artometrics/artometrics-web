@@ -11,11 +11,12 @@ tags:
 draft: false
 ---
 <div id="quarto-content">
-
 <main class="art-article-main">
-<p class="art-p">This report analyzes the TidyTuesday <strong>2018-12-04</strong> release on <strong>Medium Article Metadata</strong> — <strong>78,388</strong> rows after cleaning and merge. Did longer Medium posts earn more applause?</p>
-<p class="art-p">Five charts track <strong>Reading time</strong> across time, category, and named entities — trend, leaders, distribution, tiers, and relationships. Where companion files exist in the repo, they are joined before analysis so reception, geography, or metadata columns are not left on the table.</p>
-<h2 id="fast-facts" class="anchored">At a glance</h2>
+<p class="art-p">Medium promised a writing network where attention could attach to length, craft, and niche expertise. The metadata trail — reading time, claps, publication tags — lets that promise be tested without reading every essay.</p>
+<p class="art-p">A TidyTuesday extract of <strong>78,388</strong> article rows from <strong>2017–2018</strong> puts median reading time at <strong>4.00</strong> minutes. The highest observed reading time hits <strong>100</strong> minutes — a month-long chess-mastery quest that sits at the extreme of the length distribution. <strong>Towards Data Science</strong> is the most common publication label in the file.</p>
+<p class="art-p">The open question is whether longer posts earned more applause. Reading time and claps are related enough to chart, and messy enough that a single correlation will not settle the culture of the platform.</p>
+<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
+<p class="art-p">A few markers set the scale before the charts.</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">78,388</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">4.00</span><span class="fact-label">Median Reading time</span></div>
@@ -24,51 +25,50 @@ draft: false
   <div class="fact-box"><span class="fact-number">2017–2018</span><span class="fact-label">Year span covered in the file</span></div>
   <div class="fact-box"><span class="fact-number">Towards Data Science</span><span class="fact-label">Most common Publication</span></div>
 </div>
-<h2 id="dataset-context" class="anchored">The data</h2>
-<p>The source is the TidyTuesday release from <strong>2018-12-04</strong> (R for Data Science community). This working file contains <strong>78,388</strong> rows and <strong>22</strong> columns after merging all available CSV/XLSX tables in the week folder.</p>
-<p>Charts are exported as Plotly JSON with PNG fallbacks. Medians are used for robustness where distributions skew. Index-style fields (row numbers, sequential IDs) are excluded from metric selection.</p>
-<p class="art-p"><strong>How to read this report:</strong> start with the chart caption, then ask what the metric actually means, what a non-expert should notice first, and what an expert would challenge in the source. The goal is not to memorize every number; it is to leave with a sharper question than the one you arrived with.</p>
-<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
-<h2 id="chart-1-trend" class="anchored">TREND</h2>
+<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<p class="art-p">The source is the TidyTuesday release from 2018-12-04 (R for Data Science community). The working file contains 78,388 rows and 22 columns after assembly — titles, publications, reading time, claps, and related metadata.</p>
+<p class="art-p">Medians stabilize a distribution with a long right tail of mega-posts. Charts export as Plotly JSON with PNG fallbacks. Reading time is a platform estimate, not a stopwatch on every reader.</p>
+<h2 id="how-the-pattern-changed-over-time" class="anchored">How reading time moved</h2>
+<h3 id="how-the-pattern-changed-over-time-look" class="anchored">Median Reading time Over Time</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/medium-articles/charts/chart1_trend.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/medium-articles/charts/chart1_trend.png" role="img" aria-label="Median Reading time Over Time"></div>
 </figure>
-<p class="art-p">Median reading time is <strong>falling</strong> from <strong>4.00</strong> in the opening period to <strong>4.00</strong> at the close.</p>
-<p class="art-p">Annual medians filter one-off spikes so the structural slope — not viral outliers — drives the story.</p>
-<h2 id="chart-2-leaders" class="anchored">LEADERS</h2>
+<p class="art-p">Across the short 2017–2018 window, median reading time stays near <strong>4.00</strong> minutes from opening period to close. Stability at the median does not mean the tails were quiet — only that the typical post length did not reprice during the snapshot.</p>
+<p class="art-p">A flat median is still informative. It suggests that whatever clap dynamics existed in this period, they were not driven by a wholesale shift toward longer or shorter default essays.</p>
+<h2 id="who-sits-at-the-top" class="anchored">Who sits at the top of length</h2>
+<h3 id="who-sits-at-the-top-look" class="anchored">My month-long quest to become a chess master from scratch leads at 100 — 68.0 marks the median among the top dozen</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/medium-articles/charts/chart2_leaders.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/medium-articles/charts/chart2_leaders.png" role="img" aria-label="My month-long quest to become a chess master from scratch leads at 100 — 68.0 marks the median among the top dozen"></div>
 </figure>
-<p class="art-p"><strong>My month-long quest to become a chess master from scratch</strong> leads at <strong>100</strong> — <strong>68.0</strong> marks the median among the top dozen.</p>
-<p class="art-p">Head-of-field concentration is where quality, scale, or brand visibly separates from the pack.</p>
-<h2 id="chart-3-distribution" class="anchored">DISTRIBUTION</h2>
+<p class="art-p"><strong>My month-long quest to become a chess master from scratch</strong> leads at <strong>100</strong> minutes of estimated reading time. The median among the top dozen is <strong>68.0</strong> — still more than fifteen times the file-wide median of 4 minutes.</p>
+<p class="art-p">Deep-learning lesson writeups, AI alignment podcasts, and longform data essays populate the same extreme band. The length frontier of Medium in this file is a specialist pedagogy genre as much as a literary one.</p>
+<h2 id="how-the-field-is-spread" class="anchored">How publications spread length</h2>
+<h3 id="how-the-field-is-spread-look" class="anchored">Reading time by Publication</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/medium-articles/charts/chart3_distribution.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/medium-articles/charts/chart3_distribution.png" role="img" aria-label="Reading time by Publication"></div>
 </figure>
-<p class="art-p">Category boxes reveal whether reading time consensus is shared or contested across tiers.</p>
-<p class="art-p">Wide whiskers flag segments where outliers — not averages — drive reputation.</p>
-<h2 id="chart-4-gap" class="anchored">GAP ANALYSIS</h2>
+<p class="art-p">Publication box plots show whether reading-time consensus is shared or contested across houses. Some publications cluster tightly around short explainers; others tolerate or encourage long technical serials.</p>
+<p class="art-p">Towards Data Science's frequency as the most common publication does not automatically make it the longest. Volume of posts and length of posts are different editorial strategies that can coexist under one brand.</p>
+<h2 id="who-beats-the-median-and-who-trails" class="anchored">Who beats the median — and who trails</h2>
+<h3 id="who-beats-the-median-and-who-trails-look" class="anchored">Reading time vs median by Publication</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/medium-articles/charts/chart4_gap.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/medium-articles/charts/chart4_gap.png" role="img" aria-label="Reading time vs median by Publication"></div>
 </figure>
-<p class="art-p"><strong>Towards Data Science</strong> sits <strong>2.00</strong> above the median; <strong>Data Driven Investor</strong> trails by <strong>0.00</strong>.</p>
-<p class="art-p">Diverging from the median exposes which tiers over- or under-perform — not just who ranks first.</p>
-<h2 id="chart-5-relationship" class="anchored">SUPPLEMENT — RELATIONSHIP</h2>
+<p class="art-p"><strong>Towards Data Science</strong> sits <strong>2.00</strong> minutes above the median on the gap chart; <strong>Data Driven Investor</strong> trails by <strong>0.00</strong> in the highlighted comparison — effectively on the median line in that cut.</p>
+<p class="art-p">Publication gaps of a couple of minutes sound small until you remember the median is only four. A two-minute lift is a 50% longer typical article in that house's mix.</p>
+<h2 id="what-moves-together" class="anchored">Reading time and claps</h2>
+<h3 id="what-moves-together-look" class="anchored">Reading time vs Claps</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/medium-articles/charts/chart5_scatter.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/medium-articles/charts/chart5_scatter.png" role="img" aria-label="Reading time vs Claps"></div>
 </figure>
-<p class="art-p">Joint plot of <strong>reading time</strong> and <strong>claps</strong> surfaces clusters the averages erase.</p>
-<p class="art-p">Bubble size tracks repeat presence — outliers are archetypes, not noise.</p>
-<h2 id="limitations" class="anchored">Caveats</h2>
-<p>Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p>
-<p>Findings describe the file on hand — treat them as structural signals about <strong>Medium Article Metadata</strong>, not exhaustive truth about the full domain.</p>
-<h2 id="conclusion" class="anchored">Bottom line</h2>
-<p>Read as a teaching map, <strong>Medium Article Metadata</strong> shows why one metric is rarely enough: leaders, tails, trends, and relationships each answer a different question about reading time.</p>
-<p>The best reading is modest: use the chart to sharpen the question, then check the source and limits before turning it into a claim.</p>
-<h2 id="references" class="anchored">Sources</h2>
-<p>Data Science Learning Community. (2018). <em>TidyTuesday: Medium Article Metadata</em>. <a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2018/2018-12-04/medium_datasci.csv" target="_blank" rel="noopener noreferrer">https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2018/2018-12-04/medium_datasci.csv</a></p>
-<h2 id="editors-note" class="anchored">Editor’s note</h2>
-<div class="art-editorial-note"><p><em>Artometrics data report from the TidyTuesday research pipeline. Charts and aggregates are reproducible from the embedded exhibits and public source files.</em></p></div>
-<p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2018/2018-12-04" target="_blank" rel="noopener noreferrer">View TidyTuesday source on GitHub</a></p>
+<p class="art-p">Plotting reading time against claps shows clusters that averages erase. Many short posts earn modest applause; some long posts earn a lot; some long posts earn almost none. Length is not a reliable applause machine.</p>
+<p class="art-p">If there is a relationship, it is noisy and genre-dependent. Tutorial serials and viral short takes can both succeed. The scatter's job is to kill the slogan that longer always wins without replacing it with the opposite slogan.</p>
+<h2 id="what-this-file-cannot-tell-you" class="anchored">What this file cannot tell you</h2>
+<p class="art-p">Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and 2017–2018 coverage limits apply. Claps are a platform-specific applause metric, not revenue or unique readers.</p>
+<p class="art-p">Findings describe structural signals about Medium article metadata in the release window — not a complete theory of online writing incentives after paywalls, algorithms, and audience shifts.</p>
+<h2 id="what-to-take-away" class="anchored">What to take away</h2>
+<p class="art-p">Most Medium posts in this file are short: median reading time of four minutes. A thin upper tier stretches to hour-scale essays, especially in technical and quest narratives.</p>
+<p class="art-p">The citable answer to the title question is cautious: longer posts sometimes earn more claps, but the scatter refuses a clean law. Publication norms and genre explain as much as length alone.</p>
+<h2 id="sources" class="anchored">Sources</h2>
 </main>
 </div>
