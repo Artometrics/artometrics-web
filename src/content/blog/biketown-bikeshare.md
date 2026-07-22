@@ -18,6 +18,13 @@ keyPoints:
   - '1,392 — Highest observed Duration min'
   - SW Stark at Burnside — Top StartHub by Duration min
   - 2016–2018 — Year span covered in the file
+faq:
+  - question: What does “Median Trip Length Fell Across Three Seasons” show?
+    answer: '100,000 — Records in the working dataset'
+  - question: What does “Pop-Up and Waterfront Hubs Stretch Ride Time” show?
+    answer: 14.5 — Median Duration min
+  - question: What does “Recreation Lasts Longer Than Work Trips” show?
+    answer: '1,392 — Highest observed Duration min'
 ---
 <div id="quarto-content">
 <main class="art-article-main">

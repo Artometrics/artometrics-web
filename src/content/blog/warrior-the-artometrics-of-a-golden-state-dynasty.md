@@ -3,7 +3,8 @@ title: How Golden State Went From Irrelevant to Dynasty
 slug: warrior-the-artometrics-of-a-golden-state-dynasty
 pubDate: 2026-04-18T00:00:00.000Z
 description: Decades of losing before a modern dynasty remade Bay Area basketball.
-heroImage: /images/content/articles/warrior-the-artometrics-of-a-golden-state-dynasty/hero.png
+heroImage: >-
+  /images/content/articles/warrior-the-artometrics-of-a-golden-state-dynasty/hero.png
 tags:
   - sports
 draft: false
@@ -24,6 +25,19 @@ keyPoints:
   - >-
     1946 — Founding year as the Philadelphia Warriors — one of the eight
     original BAA franchises that became the foundation of the modern NBA
+faq:
+  - question: 'What does “Two dynasty windows, and a desert between them” show?'
+    answer: >-
+      7 — NBA Championships — 1947, 1956, 1975, 2015, 2017, 2018, 2022 — across
+      three cities and eight decades of franchise history
+  - question: What does “How one franchise forced the league to relearn offense” show?
+    answer: >-
+      73 — Regular season wins in 2015–16 — the most in NBA history, surpassing
+      the 1995–96 Chicago Bulls record of 72 wins
+  - question: What does “Six teams reached 68 wins. Only one owns 73.” show?
+    answer: >-
+      3,747 — Career three-pointers made by Stephen Curry through 2024 — more
+      than any player in NBA history, by a margin of over 700
 ---
 <div id="quarto-content">
 <main class="art-article-main">

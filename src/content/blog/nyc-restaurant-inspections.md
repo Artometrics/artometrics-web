@@ -14,6 +14,13 @@ keyPoints:
   - 156 — Highest observed Score
   - NOUS LES AMIS RESTAURANT & B — Top Dba by Score
   - 1900–2018 — Year span covered in the file
+faq:
+  - question: What does “How scores moved over time” show?
+    answer: '100,000 — Records in the working dataset'
+  - question: What does “Who sits at the top of violation scores” show?
+    answer: 15.0 — Median Score
+  - question: What does “Scores by grade” show?
+    answer: 156 — Highest observed Score
 ---
 <div id="quarto-content">
 <main class="art-article-main">

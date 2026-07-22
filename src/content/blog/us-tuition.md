@@ -14,6 +14,17 @@ keyPoints:
   - '15,224 — Highest observed Value'
   - New Hampshire — Top State by Value
   - 2004–2015 — Year span covered in the file
+faq:
+  - question: >-
+      What does “Median tuition climbed from the mid-five-thousands to the
+      low-nine-thousands” show?
+    answer: 600 — Records in the working dataset
+  - question: What does “Vermont leads the state ladder in the charted cut” show?
+    answer: '7,607 — Median Value'
+  - question: >-
+      What does “Median and mean sit close; the top decile starts above eleven
+      thousand” show?
+    answer: '15,224 — Highest observed Value'
 ---
 <div id="quarto-content">
 <main class="art-article-main">

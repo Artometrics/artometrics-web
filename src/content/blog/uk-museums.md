@@ -18,6 +18,15 @@ keyPoints:
   - 10.0 — Highest observed Area Deprivation index
   - Blenheim Palace — Top Name of museum by Area Deprivation index
   - /England/South West (English — Most common Admin area
+faq:
+  - question: What does “Named museums pin the top of the deprivation scale” show?
+    answer: '4,191 — Records in the working dataset'
+  - question: What does “The leaders chart sits at the index ceiling” show?
+    answer: 5.00 — Median Area Deprivation index
+  - question: >-
+      What does “Admin areas spread museums across different deprivation bands”
+      show?
+    answer: 10.0 — Highest observed Area Deprivation index
 ---
 <div id="quarto-content">
 <main class="art-article-main">

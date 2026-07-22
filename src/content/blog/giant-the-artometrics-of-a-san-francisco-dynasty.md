@@ -3,7 +3,8 @@ title: The Giants’ Arc From New York Gothams to Oracle Park
 slug: giant-the-artometrics-of-a-san-francisco-dynasty
 pubDate: 2026-04-18T00:00:00.000Z
 description: A franchise history from 1883 New York origins to a modern Bay Area ballclub.
-heroImage: /images/content/articles/giant-the-artometrics-of-a-san-francisco-dynasty/hero.png
+heroImage: >-
+  /images/content/articles/giant-the-artometrics-of-a-san-francisco-dynasty/hero.png
 tags:
   - sports
 draft: false
@@ -24,6 +25,21 @@ keyPoints:
   - >-
     3.3M — Attendance in Oracle Park&#39;s first season — nearly double
     Candlestick&#39;s worst years and a floor the franchise rarely dropped below
+faq:
+  - question: What does “141 years of winning—and the gaps that defined them” show?
+    answer: >-
+      8 — World Series titles — 1905, 1921, 1922, 1933, 1954 in New York; 2010,
+      2012, 2014 in San Francisco
+  - question: What does “Oracle Park raised the floor before the dynasty arrived” show?
+    answer: >-
+      1883 — Year the franchise was founded as the New York Gothams — one of the
+      oldest in American professional sports
+  - question: >-
+      What does “The dynasty was built on draft cost, not free-agent monopoly”
+      show?
+    answer: >-
+      141 — Seasons of franchise history covered in this report — from the Polo
+      Grounds to Oracle Park
 ---
 <div id="quarto-content">
 <main class="art-article-main">

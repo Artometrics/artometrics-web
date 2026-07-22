@@ -18,6 +18,13 @@ keyPoints:
   - 10.0 — Highest observed Vote average
   - Piranha Women — Top Title by Vote average
   - 1950–2022 — Year span covered in the file
+faq:
+  - question: What does “How the pattern changed over time” show?
+    answer: '32,540 — Records in the working dataset'
+  - question: What does “Who sits at the top” show?
+    answer: 4.00 — Median Vote average
+  - question: What does “How the field is spread” show?
+    answer: 10.0 — Highest observed Vote average
 ---
 <div id="quarto-content">
 <main class="art-article-main">

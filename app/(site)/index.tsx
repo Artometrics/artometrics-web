@@ -33,6 +33,8 @@ const RAIL_SECTIONS: SectionSlug[] = [
   "culture",
   "games",
   "business",
+  "cities-travel",
+  "books",
 ];
 
 export default function HomeScreen() {
@@ -40,10 +42,11 @@ export default function HomeScreen() {
   const { width } = useWindowDimensions();
   const posts = getBlogPosts();
   const featured = posts[0];
-  const ticker = posts.slice(0, 6);
+  const topCarousel = posts.slice(0, 10);
   const leadSecondary = posts.slice(1, 2)[0];
   const trending = posts.slice(2, 8);
-  const podcasts = getPodcastEpisodes().slice(0, 6);
+  const morePosts = posts.slice(8, 32);
+  const podcasts = getPodcastEpisodes().slice(0, 8);
   const heroUri = assetUrl(featured?.heroImage);
   const featuredSection = featured ? primarySection(featured.tags) : null;
   const featuredAuthor = featured?.author
@@ -51,6 +54,7 @@ export default function HomeScreen() {
     : "Artometrics";
   const cardW = Math.min(280, Math.max(200, width * 0.72));
   const portraitW = Math.min(220, Math.max(170, width * 0.55));
+  const topCardW = Math.min(300, Math.max(220, width * 0.68));
 
   return (
     <View style={{ backgroundColor: colors.bg }}>
@@ -60,10 +64,12 @@ export default function HomeScreen() {
         path="/"
       />
 
-      {/* Headline ticker */}
-      <View style={[styles.ticker, { borderBottomColor: colors.border, backgroundColor: colors.bgElevated }]}>
-        <ScrollTicker posts={ticker} colors={colors} />
-      </View>
+      {/* Top image carousel */}
+      <CarouselRail title="Top stories" href="/blog">
+        {topCarousel.map((post) => (
+          <MagazineCard key={post.slug} post={post} variant="tile" width={topCardW} />
+        ))}
+      </CarouselRail>
 
       {/* Hero + Trending */}
       {featured ? (
@@ -123,7 +129,7 @@ export default function HomeScreen() {
 
       {/* Section carousels */}
       {RAIL_SECTIONS.map((slug) => {
-        const sectionPosts = posts.filter((p) => primarySection(p.tags) === slug).slice(0, 8);
+        const sectionPosts = posts.filter((p) => primarySection(p.tags) === slug).slice(0, 10);
         if (sectionPosts.length < 2) return null;
         return (
           <CarouselRail
@@ -138,11 +144,18 @@ export default function HomeScreen() {
         );
       })}
 
+      {/* More reports carousel */}
+      <CarouselRail title="More reports" href="/blog">
+        {morePosts.map((post) => (
+          <MagazineCard key={post.slug} post={post} variant="tile" width={cardW} />
+        ))}
+      </CarouselRail>
+
       {/* Latest grid */}
       <Wrapper variant="magazine" style={styles.gridSection}>
         <Text style={[styles.sectionTitle, { color: colors.text }]}>Latest</Text>
         <View style={styles.grid}>
-          {posts.slice(0, 8).map((post) => (
+          {posts.slice(0, 12).map((post) => (
             <View key={post.slug} style={styles.gridItem}>
               <MagazineCard post={post} variant="tile" />
             </View>
@@ -180,7 +193,6 @@ export default function HomeScreen() {
         </CarouselRail>
       ) : null}
 
-      {/* All sections jump */}
       <Wrapper variant="magazine" style={styles.jump}>
         <Text style={[styles.sectionTitle, { color: colors.text }]}>Sections</Text>
         <View style={styles.jumpRow}>
@@ -199,79 +211,8 @@ export default function HomeScreen() {
   );
 }
 
-function ScrollTicker({
-  posts,
-  colors,
-}: {
-  posts: ReturnType<typeof getBlogPosts>;
-  colors: { text: string; textMuted: string; border: string; accent: string };
-}) {
-  return (
-    <ScrollView
-      horizontal
-      showsHorizontalScrollIndicator={false}
-      contentContainerStyle={styles.tickerTrack}
-    >
-      {posts.map((post, i) => {
-        const section = primarySection(post.tags);
-        return (
-          <View key={post.slug} style={styles.tickerItem}>
-            {i > 0 ? <View style={[styles.tickerRule, { backgroundColor: colors.border }]} /> : null}
-            <Link href={`/${post.slug}`} asChild>
-              <Pressable style={styles.tickerPress}>
-                {section ? (
-                  <Text style={[styles.tickerKicker, { color: colors.accent }]}>
-                    {SECTION_META[section].title}
-                  </Text>
-                ) : null}
-                <Text style={[styles.tickerTitle, { color: colors.text }]} numberOfLines={2}>
-                  {post.title}
-                </Text>
-              </Pressable>
-            </Link>
-          </View>
-        );
-      })}
-    </ScrollView>
-  );
-}
-
 const styles = StyleSheet.create({
-  ticker: {
-    borderBottomWidth: StyleSheet.hairlineWidth,
-  },
-  tickerTrack: {
-    paddingHorizontal: 12,
-    paddingVertical: 12,
-    alignItems: "stretch",
-  },
-  tickerItem: {
-    flexDirection: "row",
-    alignItems: "stretch",
-  },
-  tickerRule: {
-    width: StyleSheet.hairlineWidth,
-    marginHorizontal: 14,
-    alignSelf: "stretch",
-  },
-  tickerPress: {
-    width: 220,
-    gap: 4,
-    paddingVertical: 4,
-  },
-  tickerKicker: {
-    fontSize: 10,
-    fontWeight: "700",
-    letterSpacing: 1.2,
-    textTransform: "uppercase",
-  },
-  tickerTitle: {
-    fontFamily: Fonts.sans,
-    fontSize: 14,
-    lineHeight: 18,
-    fontWeight: "700",
-  },
-  heroBlock: { paddingTop: 24, paddingBottom: 40 },
+  heroBlock: { paddingTop: 8, paddingBottom: 40 },
   heroRow: {
     flexDirection: "row",
     flexWrap: "wrap",

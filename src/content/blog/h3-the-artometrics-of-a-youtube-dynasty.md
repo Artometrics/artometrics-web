@@ -24,6 +24,19 @@ keyPoints:
   - >-
     680 — H3 Podcast episodes analyzed via Podchaser API — median runtime grew
     from 42 minutes in 2017 to 220+ by 2024
+faq:
+  - question: What does “The Era Timeline” show?
+    answer: >-
+      3.24B — Total views across all four H3 channels, 2013–2026 — enough to
+      give every person on Earth nearly half a view
+  - question: What does “The Duration Drift” show?
+    answer: >-
+      1,638 — Videos analyzed after filtering Shorts and zero-view uploads from
+      the original 1,876-video pull
+  - question: What does “The Fan Vs. Critic Divide” show?
+    answer: >-
+      4.5× — How much harder h3h3Productions hits per video vs. the H3 Podcast —
+      4.78M median vs. 1.05M
 ---
 <div id="quarto-content">
 <main class="art-article-main">

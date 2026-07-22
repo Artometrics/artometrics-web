@@ -79,7 +79,7 @@ export function SiteFooter() {
           </View>
 
           <View style={styles.brandBlock}>
-            <Logo size={36} compact={1} align="center" />
+            <Logo size={36} compact={1} align="center" markVariant="light" showWordmark={false} />
             <Text style={styles.wordmark}>Artometrics</Text>
           </View>
 

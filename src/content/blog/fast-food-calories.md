@@ -14,6 +14,13 @@ keyPoints:
   - '2,430 — Highest observed Calories'
   - 20 piece Buttermilk Crispy C — Top Item by Calories
   - Taco Bell — Most common Restaurant
+faq:
+  - question: What does “Calorie ceilings by item” show?
+    answer: 515 — Records in the working dataset
+  - question: What does “Who sits at the top” show?
+    answer: 490 — Median Calories
+  - question: What does “How chains spread calories” show?
+    answer: '2,430 — Highest observed Calories'
 ---
 <div id="quarto-content">
 <main class="art-article-main">

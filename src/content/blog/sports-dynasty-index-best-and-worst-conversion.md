@@ -19,6 +19,15 @@ keyPoints:
   - '27 — Yankees titles, the largest MLB archive'
   - 0 — Cowboys titles since the 1990s dynasty
   - 57 — Maple Leafs active Stanley Cup drought entering 2025
+faq:
+  - question: What does “A few franchises own championship memory itself” show?
+    answer: 351 — Charts now audited across the Artometrics corpus
+  - question: 'What does “Modern dynasties are finishers, not just invitees” show?'
+    answer: 4 — Major North American leagues compared
+  - question: >-
+      What does “Market power and competitive power are different variables”
+      show?
+    answer: '27 — Yankees titles, the largest MLB archive'
 ---
 <div id="quarto-content">
 <main class="art-article-main">

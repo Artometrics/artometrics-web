@@ -13,6 +13,13 @@ keyPoints:
   - 23.0 — Median Adults
   - 32.0 — Highest observed Adults
   - Colorado — Top State by Adults
+faq:
+  - question: What does “Western and New England States Lead Adult Exercise” show?
+    answer: 52 — Records in the working dataset
+  - question: What does “The Top Dozen Sits Well Above the National Median” show?
+    answer: 23.0 — Median Adults
+  - question: What does “Most States Cluster Near the Low-20s” show?
+    answer: 32.0 — Highest observed Adults
 ---
 <div id="quarto-content">
 <main class="art-article-main">

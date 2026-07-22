@@ -18,6 +18,13 @@ keyPoints:
   - '1,584,887 — Highest observed Avg'
   - PLAYERUNKNOWN'S BATTLEGROUND — Top Gamename by Avg
   - 2012–2021 — Year span covered in the file
+faq:
+  - question: What does “Median concurrency climbed across the decade” show?
+    answer: '83,631 — Records in the working dataset'
+  - question: What does “Dota 2 leads a top tier that drops off fast” show?
+    answer: 203 — Median Avg
+  - question: What does “Months carry different concurrency distributions” show?
+    answer: '1,584,887 — Highest observed Avg'
 ---
 <div id="quarto-content">
 <main class="art-article-main">

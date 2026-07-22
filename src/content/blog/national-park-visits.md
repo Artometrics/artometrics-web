@@ -18,6 +18,13 @@ keyPoints:
   - '871,922,828 — Highest observed Visitors'
   - Golden Gate — Top Parkname by Visitors
   - 1904–2016 — Year span covered in the file
+faq:
+  - question: What does “How visits grew over time” show?
+    answer: '21,560 — Records in the working dataset'
+  - question: What does “Who sits at the top” show?
+    answer: '155,219 — Median Visitors'
+  - question: What does “How regions spread visits” show?
+    answer: '871,922,828 — Highest observed Visitors'
 ---
 <div id="quarto-content">
 <main class="art-article-main">

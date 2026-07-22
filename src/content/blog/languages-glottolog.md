@@ -15,6 +15,15 @@ tldr: >-
 keyPoints:
   - '8,612 — Records in the working dataset'
   - Africa — Most common Macroarea
+faq:
+  - question: What does “A geographically uneven landscape” show?
+    answer: '8,612 — Records in the working dataset'
+  - question: What does “Who sits at the top of name repetition” show?
+    answer: Africa — Most common Macroarea
+  - question: What does “Regional concentration” show?
+    answer: >-
+      Glottolog family data measure how uneven language diversity is at the
+      family level.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

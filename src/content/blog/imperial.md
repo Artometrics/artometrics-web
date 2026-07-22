@@ -28,6 +28,19 @@ keyPoints:
   - >-
     10% — Estimated share of global population killed in Mongol conquests,
     1206–1260 — 30 to 40 million deaths
+faq:
+  - question: What does “Gdp Per Capita Across Empire Cores” show?
+    answer: >-
+      1,200 yrs — Time for Western Europe to recover Rome&#39;s peak GDP per
+      capita after the 476 CE collapse
+  - question: 'What does “Rise Fast, Fall Faster” show?'
+    answer: >-
+      23% — Share of global population governed by the British Empire at its
+      1920 territorial peak — 412 million people
+  - question: What does “The Extraction Gap” show?
+    answer: >-
+      ~7× — Number of times Imperial China cycled through full unification and
+      fragmentation between 221 BCE and 1912 CE
 ---
 <div id="quarto-content">
 <main class="art-article-main">

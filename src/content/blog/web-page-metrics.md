@@ -14,6 +14,13 @@ keyPoints:
   - 9.80 — Highest observed P50
   - speedIndex — Top Measure by P50
   - 2016–2022 — Year span covered in the file
+faq:
+  - question: What does “Median P50 fell as pages got faster at the center” show?
+    answer: 238 — Records in the working dataset
+  - question: What does “Desktop and mobile split the P50 distribution” show?
+    answer: 5.97 — Median P50
+  - question: What does “P50 and P90 move together in performance space” show?
+    answer: 9.80 — Highest observed P50
 ---
 <div id="quarto-content">
 <main class="art-article-main">

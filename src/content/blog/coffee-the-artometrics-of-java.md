@@ -26,6 +26,19 @@ keyPoints:
   - >-
     7 — Sensory sub-metrics scored per sample — aroma, flavor, aftertaste,
     acidity, body, balance, cupper points
+faq:
+  - question: What does “Where Great Coffee Comes From” show?
+    answer: >-
+      1,339 — Coffee samples rated by CQI Q Graders across Arabica and Robusta
+      species
+  - question: What does “The Quality-Retail Disconnect” show?
+    answer: >-
+      85.3 — Ethiopia&#39;s median CQI cup score — highest of any country with
+      20+ samples
+  - question: What does “The Sub-Metric Fingerprint” show?
+    answer: >-
+      0 — Starbucks locations in Ethiopia, Kenya, and Uganda — the top three
+      scoring nations
 ---
 <div id="quarto-content">
 <main class="art-article-main">

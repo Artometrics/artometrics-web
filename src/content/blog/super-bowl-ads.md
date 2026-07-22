@@ -14,6 +14,13 @@ keyPoints:
   - '176,373,378 — Highest observed View count'
   - Doritos — Top Brand by View count
   - 2006–2021 — Year span covered in the file
+faq:
+  - question: What does “Median views fell as the archive got denser” show?
+    answer: 247 — Records in the working dataset
+  - question: What does “NFL leads the brand ladder on YouTube views” show?
+    answer: '41,379 — Median View count'
+  - question: What does “Almost everything in the file is a YouTube video” show?
+    answer: '176,373,378 — Highest observed View count'
 ---
 <div id="quarto-content">
 <main class="art-article-main">

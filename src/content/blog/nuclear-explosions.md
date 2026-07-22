@@ -14,6 +14,13 @@ keyPoints:
   - 7.40 — Highest observed Magnitude body
   - USSR — Top Country by Magnitude body
   - 1970–1970 — Year span covered in the file
+faq:
+  - question: What does “How magnitudes move through the record” show?
+    answer: '2,051 — Records in the working dataset'
+  - question: What does “Who sits at the top” show?
+    answer: 0.00 — Median Magnitude body
+  - question: What does “Purpose spreads magnitudes” show?
+    answer: 7.40 — Highest observed Magnitude body
 ---
 <div id="quarto-content">
 <main class="art-article-main">

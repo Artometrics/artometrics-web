@@ -18,6 +18,13 @@ keyPoints:
   - 83% — Price increase from 2000 to 2020 at the global median
   - Norway — Highest average dollar price over the full 20-year span
   - '20 yrs — Timespan: 2000 through 2020'
+faq:
+  - question: What does “Global Price Trend” show?
+    answer: $3.04 — Median dollar price across all countries and years
+  - question: What does “Most Expensive Countries” show?
+    answer: $8.31 — Peak price — Switzerland at its most expensive
+  - question: What does “How Prices Spread” show?
+    answer: 83% — Price increase from 2000 to 2020 at the global median
 ---
 <div id="quarto-content">
 <main class="art-article-main">

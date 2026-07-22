@@ -18,6 +18,15 @@ keyPoints:
   - 98.0 — Highest observed Metascore
   - 'DEEP SPACE WAIFU: NEKOMIMI — Top Game by Metascore'
   - 2004–2018 — Year span covered in the file
+faq:
+  - question: >-
+      What does “Median Metascore edged up across the store’s expansion years”
+      show?
+    answer: '26,688 — Records in the working dataset'
+  - question: What does “Little Triangle tops a tightly packed critical elite” show?
+    answer: 73.0 — Median Metascore
+  - question: What does “Owner tiers carry different Metascore distributions” show?
+    answer: 98.0 — Highest observed Metascore
 ---
 <div id="quarto-content">
 <main class="art-article-main">

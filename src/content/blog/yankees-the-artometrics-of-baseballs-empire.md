@@ -18,6 +18,13 @@ keyPoints:
   - 2009 — Most recent World Series title
   - 15 — Active title drought entering 2025
   - '5 — Titles from the Core Four era, 1996-2009'
+faq:
+  - question: 'What does “The empire arrived in bursts, not as a permanent climate” show?'
+    answer: '27 — World Series championships, the most in Major League Baseball'
+  - question: What does “New York does not lead baseball—it defines the ranking” show?
+    answer: '40 — American League pennants, the deepest October archive in the sport'
+  - question: What does “Fifteen years only feels endless in Yankee time” show?
+    answer: 2009 — Most recent World Series title
 ---
 <div id="quarto-content">
 <main class="art-article-main">

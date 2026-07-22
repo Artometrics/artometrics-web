@@ -14,6 +14,13 @@ keyPoints:
   - 6 — Diagnostic cultural trade questions
   - 45 — Global cities in World Cities Culture Forum 5th edition summaries
   - 3 — Asian cultural wave paths compared
+faq:
+  - question: What does “Soft Power and Trade” show?
+    answer: 8 — Countries and cultural-export systems highlighted
+  - question: What does “Medium Exportability” show?
+    answer: 8 — Mediums scored for exportability
+  - question: What does “Cultural Waves” show?
+    answer: 6 — Diagnostic cultural trade questions
 ---
 <div id="quarto-content">
 <main class="art-article-main">

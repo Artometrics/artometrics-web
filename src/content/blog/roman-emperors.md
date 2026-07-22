@@ -18,6 +18,15 @@ keyPoints:
   - 31.0 — Highest observed Reign years
   - Constantine the Great — Top Name by Reign years
   - Gordian — Most common Dynasty
+faq:
+  - question: >-
+      What does “Constantine’s thirty-one years set the name-level ceiling”
+      show?
+    answer: 68 — Records in the working dataset
+  - question: What does “The top dozen still sits far above the median emperor” show?
+    answer: 6.50 — Median Reign years
+  - question: 'What does “Dynasty boxes show contested, not uniform, tenure” show?'
+    answer: 31.0 — Highest observed Reign years
 ---
 <div id="quarto-content">
 <main class="art-article-main">

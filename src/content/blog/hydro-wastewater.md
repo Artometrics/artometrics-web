@@ -14,6 +14,13 @@ keyPoints:
   - '3,073,754 — Highest observed WASTE DIS'
   - United States — Top COUNTRY by WASTE DIS
   - Secondary — Most common LEVEL
+faq:
+  - question: What does “Discharge by country” show?
+    answer: '58,502 — Records in the working dataset'
+  - question: What does “Who sits at the top” show?
+    answer: '1,079 — Median WASTE DIS'
+  - question: What does “Treatment levels spread discharge” show?
+    answer: '3,073,754 — Highest observed WASTE DIS'
 ---
 <div id="quarto-content">
 <main class="art-article-main">

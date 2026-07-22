@@ -19,6 +19,13 @@ keyPoints:
   - 30 — Approximate playoff wins from 2001 through 2019
   - 13 — AFC championship appearances since 2001
   - 16-0 — Perfect 2007 regular season
+faq:
+  - question: What does “One era overwhelms the rest of the archive” show?
+    answer: 6 — Super Bowl championships
+  - question: What does “New England compressed a summit climb into two decades” show?
+    answer: 9 — Super Bowl appearances during the Brady/Belichick era
+  - question: What does “Excellence became routine before it became legend” show?
+    answer: 30 — Approximate playoff wins from 2001 through 2019
 ---
 <div id="quarto-content">
 <main class="art-article-main">

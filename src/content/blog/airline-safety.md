@@ -18,6 +18,13 @@ keyPoints:
   - '7,139,291,291 — Highest observed Avail seat km per week'
   - United / Continental* — Top Airline by Avail seat km per week
   - incidents — Most common Type of event
+faq:
+  - question: What does “Capacity Concentrates Among Megacarriers” show?
+    answer: 336 — Records in the working dataset
+  - question: What does “The Same Names Dominate the Leader Board” show?
+    answer: '802,908,893 — Median Avail seat km per week'
+  - question: What does “Event Type Does Not Rewrite the Capacity Story” show?
+    answer: '7,139,291,291 — Highest observed Avail seat km per week'
 ---
 <div id="quarto-content">
 <main class="art-article-main">

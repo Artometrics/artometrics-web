@@ -28,6 +28,19 @@ keyPoints:
   - >-
     92 yrs — Span of the dataset — from Winnie the Pooh (1923) to Monster Strike
     (2015)
+faq:
+  - question: What does “Top 20 Franchises By Revenue” show?
+    answer: >-
+      $91B — Pokémon lifetime revenue — the highest-grossing media franchise
+      ever recorded, more than the MCU, Star Wars, and Harry Potter put together
+  - question: What does “Revenue Per Year of Existence” show?
+    answer: >-
+      107 — Unique franchises in the dataset — every one of them has already
+      cleared at least $4B in lifetime revenue
+  - question: 'What does “The Disney Empire, Consolidated” show?'
+    answer: >-
+      $4B+ — Minimum threshold for inclusion — most IP that has ever existed
+      never gets close to this number
 ---
 <div id="quarto-content">
 <main class="art-article-main">

@@ -18,6 +18,13 @@ keyPoints:
   - 512 — Highest observed Avg ticket price
   - Springsteen On Broadway — Top Show by Avg ticket price
   - Broadhurst Theatre — Most common Theatre
+faq:
+  - question: What does “Concert Residencies Rewrite the Price Ceiling” show?
+    answer: '47,524 — Records in the working dataset'
+  - question: 'What does “Even Among Leaders, Springsteen Is an Outlier” show?'
+    answer: 60.2 — Median Avg ticket price
+  - question: What does “House Medians Cluster Near the Industry Middle” show?
+    answer: 512 — Highest observed Avg ticket price
 ---
 <div id="quarto-content">
 <main class="art-article-main">

@@ -16,6 +16,15 @@ keyPoints:
   - Daily — RDF catalog update cadence noted by Gutenberg
   - 8 — Languages compared in the first chart
   - 10 — Authors used as anchors
+faq:
+  - question: What does “Language gravity” show?
+    answer: >-
+      75K+ — Approximate scale of Project Gutenberg ebooks in public-facing
+      summaries
+  - question: What does “The era machine” show?
+    answer: Weekly — CSV catalog update cadence noted in Gutenberg tooling docs
+  - question: What does “Author memory” show?
+    answer: Daily — RDF catalog update cadence noted by Gutenberg
 ---
 <div id="quarto-content">
 <main class="art-article-main">

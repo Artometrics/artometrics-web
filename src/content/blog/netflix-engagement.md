@@ -14,6 +14,13 @@ keyPoints:
   - '840,300,000 — Highest observed Hours viewed'
   - 'Squid Game: Season 2 // 오징어 — Top Title by Hours viewed'
   - 2010–2025 — Year span covered in the file
+faq:
+  - question: What does “How the pattern changed over time” show?
+    answer: '27,803 — Records in the working dataset'
+  - question: What does “Who sits at the top” show?
+    answer: '2,500,000 — Median Hours viewed'
+  - question: What does “How the field is spread” show?
+    answer: '840,300,000 — Highest observed Hours viewed'
 ---
 <div id="quarto-content">
 <main class="art-article-main">

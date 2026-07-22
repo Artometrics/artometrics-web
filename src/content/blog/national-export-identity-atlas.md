@@ -14,6 +14,13 @@ keyPoints:
   - HS — Harmonized System product code architecture
   - 6 — Diagnostic country questions
   - 8 — Export families or countries highlighted
+faq:
+  - question: What does “Scale and complexity” show?
+    answer: 200+ — Countries/zones covered in UN Comtrade-style trade systems
+  - question: What does “Product identity” show?
+    answer: '5,000+ — Products in OEC-style trade classifications'
+  - question: What does “The export frontier moved” show?
+    answer: HS — Harmonized System product code architecture
 ---
 <div id="quarto-content">
 <main class="art-article-main">

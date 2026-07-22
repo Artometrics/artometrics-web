@@ -19,6 +19,13 @@ keyPoints:
   - 111 — Regular-season wins in 2022
   - 32 — Years between the 1988 and 2020 titles
   - 12 — Straight postseason appearances from 2013 through 2024
+faq:
+  - question: What does “Los Angeles is built to manufacture October chances” show?
+    answer: 8 — World Series championships in franchise history
+  - question: What does “Historically elite—without Yankee-scale monopoly” show?
+    answer: 25 — Approximate National League pennants
+  - question: 'What does “Since the 2010s, 90-win baseball has looked normal” show?'
+    answer: 111 — Regular-season wins in 2022
 ---
 <div id="quarto-content">
 <main class="art-article-main">

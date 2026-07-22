@@ -14,6 +14,13 @@ keyPoints:
   - 6 — Dependency risks scored
   - 8 — Countries placed on substitutability map
   - '1 — Core question: who is replaceable?'
+faq:
+  - question: What does “Three models of export power” show?
+    answer: 3 — Export superpower systems compared
+  - question: What does “Product fingerprints” show?
+    answer: 7 — Export identity axes
+  - question: What does “Dependency risk” show?
+    answer: 6 — Dependency risks scored
 ---
 <div id="quarto-content">
 <main class="art-article-main">

@@ -15,6 +15,15 @@ tldr: >-
 keyPoints:
   - '22,616 — Records in the working dataset'
   - Beyoncé — Most common Artist name
+faq:
+  - question: What does “Landscape” show?
+    answer: '22,616 — Records in the working dataset'
+  - question: What does “Who sits at the top” show?
+    answer: Beyoncé — Most common Artist name
+  - question: What does “Category” show?
+    answer: >-
+      A lyric-level comparison of two era-defining catalogs—theme, language, and
+      structure.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

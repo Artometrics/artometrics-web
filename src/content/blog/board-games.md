@@ -18,6 +18,13 @@ keyPoints:
   - 9.00 — Highest observed Average rating
   - Small World Designer Edition — Top Name by Average rating
   - 1970–1970 — Year span covered in the file
+faq:
+  - question: What does “The Catalog’s Median Rating Sits Near 6.39” show?
+    answer: '10,532 — Records in the working dataset'
+  - question: What does “Designer Editions and Heavy Games Own the Peak” show?
+    answer: 6.39 — Median Average rating
+  - question: What does “Wargame Categories Rate Higher Than Card Games” show?
+    answer: 9.00 — Highest observed Average rating
 ---
 <div id="quarto-content">
 <main class="art-article-main">

@@ -9,95 +9,105 @@ import {
 } from "react-native";
 import { Colors } from "@/constants/Colors";
 import { assetUrl } from "@/lib/assets";
-import { useChrome } from "@/lib/chrome";
 import { useTheme } from "@/lib/theme";
 
 type Props = {
   style?: StyleProp<TextStyle>;
   size?: number;
+  /** Force compact Chomsky A (0–1). Omit to always show full wordmark. */
   compact?: number;
   containerStyle?: StyleProp<ViewStyle>;
-  /** Left-aligned brand (NYT / Art Newspaper style). */
   align?: "left" | "center";
+  /** Override mark color for dark footers while site is in light mode. */
+  markVariant?: "auto" | "light" | "dark";
+  /** Show wordmark text. Default true when not fully compact. */
+  showWordmark?: boolean;
 };
 
+/**
+ * Artometrics brand mark. Scroll morph is opt-in via `compact`;
+ * Complex chrome uses the full wordmark (no morph) to avoid layout jumps.
+ */
 export function Logo({
   style,
   size = 36,
-  compact,
+  compact = 0,
   containerStyle,
   align = "left",
+  markVariant = "auto",
+  showWordmark = true,
 }: Props) {
-  const { logoCompact } = useChrome();
   const { mode, colors } = useTheme();
-  const progress = Math.max(0, Math.min(1, compact ?? logoCompact));
-  const markSize = Math.round(size * (0.95 + progress * 0.2));
-  const wordOpacity = 1 - progress;
-  const markOpacity = progress;
+  const progress = Math.max(0, Math.min(1, compact));
+  const markSize = Math.round(size * (0.95 + progress * 0.15));
+  const useMark = progress > 0.5;
+  const markMode =
+    markVariant === "auto" ? mode : markVariant === "light" ? "dark" : "light";
+  // markVariant "light" → white A (for dark surfaces); "dark" → black A
   const mark =
-    mode === "dark"
+    markMode === "dark"
       ? assetUrl("/images/brand/chomsky-a-white.png")
       : assetUrl("/images/brand/chomsky-a-black.png");
   const isLeft = align === "left";
+
+  if (useMark) {
+    return (
+      <View
+        style={[
+          styles.wrap,
+          isLeft ? styles.wrapLeft : styles.wrapCenter,
+          { height: markSize + 2, width: markSize + 4 },
+          containerStyle,
+        ]}
+        accessibilityLabel="Artometrics"
+      >
+        {mark ? (
+          <Image
+            source={{ uri: mark }}
+            style={{ width: markSize, height: markSize }}
+            resizeMode="contain"
+          />
+        ) : (
+          <Text
+            style={{
+              fontFamily: "Chomsky",
+              fontSize: markSize,
+              lineHeight: markSize * 1.05,
+              color: Colors.accent600,
+            }}
+          >
+            A
+          </Text>
+        )}
+      </View>
+    );
+  }
 
   return (
     <View
       style={[
         styles.wrap,
         isLeft ? styles.wrapLeft : styles.wrapCenter,
-        {
-          height: Math.max(size, markSize) + 2,
-          minWidth: progress > 0.85 ? markSize : isLeft ? undefined : 40,
-        },
+        { height: size + 2 },
         containerStyle,
       ]}
       accessibilityLabel="Artometrics"
     >
-      <Text
-        style={[
-          {
-            fontFamily: "Chomsky",
-            fontSize: size,
-            color: colors.text,
-            letterSpacing: 0.5,
-            opacity: wordOpacity,
-            textAlign: isLeft ? "left" : "center",
-          },
-          // Hide wordmark from layout when fully compact so A sits far left
-          progress > 0.92 ? { position: "absolute", width: 1, height: 1, opacity: 0 } : null,
-          style,
-        ]}
-        numberOfLines={1}
-      >
-        Artometrics
-      </Text>
-      {mark && markOpacity > 0.01 ? (
-        <Image
-          source={{ uri: mark }}
-          style={[
-            isLeft ? styles.markLeft : styles.markCenter,
-            {
-              width: markSize,
-              height: markSize,
-              opacity: markOpacity,
-            },
-          ]}
-          resizeMode="contain"
-        />
-      ) : null}
-      {!mark && markOpacity > 0.01 ? (
+      {showWordmark ? (
         <Text
           style={[
-            isLeft ? styles.fallbackLeft : styles.fallbackCenter,
             {
-              fontSize: markSize,
-              opacity: markOpacity,
-              lineHeight: markSize * 1.05,
-              color: Colors.accent600,
+              fontFamily: "Chomsky",
+              fontSize: size,
+              color: colors.text,
+              letterSpacing: 0.5,
+              textAlign: isLeft ? "left" : "center",
             },
+            style,
           ]}
+          numberOfLines={1}
         >
-          A
+          Artometrics
         </Text>
       ) : null}
     </View>
@@ -106,19 +116,13 @@ export function Logo({
 
 const styles = StyleSheet.create({
   wrap: {
-    position: "relative",
     minWidth: 40,
+    justifyContent: "center",
   },
   wrapLeft: {
     alignItems: "flex-start",
-    justifyContent: "center",
   },
   wrapCenter: {
     alignItems: "center",
-    justifyContent: "center",
   },
-  markLeft: { position: "absolute", left: 0, top: 0 },
-  markCenter: { position: "absolute" },
-  fallbackLeft: { position: "absolute", left: 0, fontFamily: "Chomsky" },
-  fallbackCenter: { position: "absolute", fontFamily: "Chomsky" },
 });

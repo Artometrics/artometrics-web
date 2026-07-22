@@ -20,6 +20,17 @@ keyPoints:
   - 162 — MLB regular-season games per team
   - 92 — NBA star leverage index in this editorial model
   - 6 — Leagues compared
+faq:
+  - question: What does “The NFL makes ordinary franchises expensive” show?
+    answer: >-
+      $6.5B — Approximate average NFL franchise value in recent Forbes-style
+      estimates
+  - question: What does “Basketball lets one name rewrite the jersey” show?
+    answer: 17 — NFL regular-season games per team
+  - question: >-
+      What does “Caps and taxes decide whether money separates or merely
+      sustains” show?
+    answer: 162 — MLB regular-season games per team
 ---
 <div id="quarto-content">
 <main class="art-article-main">

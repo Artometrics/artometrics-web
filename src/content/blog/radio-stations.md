@@ -18,6 +18,13 @@ keyPoints:
   - '1,700 — Highest observed Frequency'
   - WEUP — Top Call sign by Frequency
   - Country — Most common Format
+faq:
+  - question: What does “Frequency by call sign” show?
+    answer: '17,186 — Records in the working dataset'
+  - question: What does “Who sits at the top” show?
+    answer: 101 — Median Frequency
+  - question: What does “Frequency by format” show?
+    answer: '1,700 — Highest observed Frequency'
 ---
 <div id="quarto-content">
 <main class="art-article-main">

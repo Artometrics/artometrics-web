@@ -1,23 +1,32 @@
 import { Image, Pressable, Text, View, StyleSheet } from "react-native";
 import { Link } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
-import { Colors } from "@/constants/Colors";
+import { PageSeo } from "@/components/PageSeo";
+import { Fonts } from "@/constants/Colors";
+import { useTheme } from "@/lib/theme";
 import { assetUrl } from "@/lib/assets";
 import { getAuthors } from "@/lib/content";
 
 export default function AuthorsIndex() {
+  const { colors } = useTheme();
   const authors = getAuthors();
 
   return (
     <Wrapper style={styles.wrap}>
-      <Text style={styles.eyebrow}>Masthead</Text>
-      <Text style={styles.title}>Authors</Text>
+      <PageSeo title="Authors" description="Artometrics masthead." path="/authors" />
+      <Text style={[styles.eyebrow, { color: colors.accent }]}>Masthead</Text>
+      <Text style={[styles.title, { color: colors.text }]}>Authors</Text>
       <View style={styles.grid}>
         {authors.map((author) => {
           const avatar = assetUrl(author.image?.url);
           return (
             <Link key={author.id} href={`/authors/${author.id}`} asChild>
-              <Pressable style={styles.card}>
+              <Pressable
+                style={StyleSheet.flatten([
+                  styles.card,
+                  { borderColor: colors.border, backgroundColor: colors.bgElevated },
+                ])}
+              >
                 {avatar ? (
                   <Image
                     source={{ uri: avatar }}
@@ -26,8 +35,10 @@ export default function AuthorsIndex() {
                     accessibilityLabel={author.image?.alt || author.name}
                   />
                 ) : null}
-                <Text style={styles.name}>{author.name}</Text>
-                {author.role ? <Text style={styles.role}>{author.role}</Text> : null}
+                <Text style={[styles.name, { color: colors.text }]}>{author.name}</Text>
+                {author.role ? (
+                  <Text style={[styles.role, { color: colors.textMuted }]}>{author.role}</Text>
+                ) : null}
               </Pressable>
             </Link>
           );
@@ -43,21 +54,19 @@ const styles = StyleSheet.create({
     fontSize: 11,
     letterSpacing: 2.5,
     textTransform: "uppercase",
-    color: Colors.accent700,
     fontWeight: "600",
   },
-  title: { fontSize: 40, fontWeight: "300", color: Colors.base900, marginBottom: 12 },
+  title: { fontSize: 40, fontWeight: "300", fontFamily: Fonts.serif, marginBottom: 12 },
   grid: { gap: 20, flexDirection: "row", flexWrap: "wrap" },
   card: {
-    flexBasis: 220,
+    flexBasis: 200,
     flexGrow: 1,
-    borderWidth: 1,
-    borderColor: Colors.base200,
+    borderWidth: StyleSheet.hairlineWidth,
     padding: 16,
     gap: 8,
     alignItems: "flex-start",
   },
-  avatar: { width: 72, height: 72, borderRadius: 36, backgroundColor: Colors.base100 },
-  name: { fontSize: 20, color: Colors.base900 },
-  role: { fontSize: 13, color: Colors.base600 },
+  avatar: { width: 72, height: 72, borderRadius: 36 },
+  name: { fontSize: 18, fontWeight: "700" },
+  role: { fontSize: 13 },
 });

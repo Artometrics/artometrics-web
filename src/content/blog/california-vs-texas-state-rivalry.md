@@ -18,6 +18,13 @@ keyPoints:
   - 7 — Export/industry families compared
   - 6 — Next comparison questions
   - 0 — Simple answers accepted
+faq:
+  - question: What does “Why They Are Compared” show?
+    answer: 2 — State systems compared
+  - question: What does “Growth Model” show?
+    answer: 7 — Rivalry dimensions scored
+  - question: What does “Export Fingerprint” show?
+    answer: 7 — Export/industry families compared
 ---
 <div id="quarto-content">
 <main class="art-article-main">

@@ -15,6 +15,15 @@ keyPoints:
   - 2024 — Most recent championship
   - 22 — Years between the 1986 and 2008 titles
   - 5 — Defining Celtics title eras used in this report
+faq:
+  - question: What does “The 1960s are still the gravitational center” show?
+    answer: '18 — NBA championships, the league record entering 2025'
+  - question: What does “Boston and Los Angeles define the league’s summit” show?
+    answer: 11 — Titles won during the Bill Russell era
+  - question: >-
+      What does “Russell converted chances; later eras inherited the burden”
+      show?
+    answer: 2024 — Most recent championship
 ---
 <div id="quarto-content">
 <main class="art-article-main">

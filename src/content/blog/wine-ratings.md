@@ -14,6 +14,13 @@ keyPoints:
   - 100 — Highest observed Points
   - Charles Smith 2006 Royal Cit — Top Title by Points
   - US — Most common Country
+faq:
+  - question: What does “Perfect scores crowd the title breakdown’s top slice” show?
+    answer: '100,000 — Records in the working dataset'
+  - question: What does “The leaders chart is a wall of 100-point wines” show?
+    answer: 88.0 — Median Points
+  - question: What does “Countries spread points around a high center” show?
+    answer: 100 — Highest observed Points
 ---
 <div id="quarto-content">
 <main class="art-article-main">

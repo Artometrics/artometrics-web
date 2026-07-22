@@ -32,6 +32,21 @@ keyPoints:
     194 yrs — How long after Caesar&#39;s assassination Rome reached its peak
     GDP per capita — he authored the Pax Romana&#39;s prosperity without living
     a day of it
+faq:
+  - question: What does “Leadership Trait Analysis” show?
+    answer: >-
+      100 BCE — Caesar&#39;s birth year — born into Rome&#39;s most turbulent
+      political century, to a patrician family living in the Subura tenements
+  - question: What does “The Economic Fingerprint” show?
+    answer: >-
+      38 days — Held captive by Cilician pirates at age 25 — he laughed at their
+      ransom demand, volunteered to pay more, then crucified every one of them
+      after his release
+  - question: What does “The Patronage Network” show?
+    answer: >-
+      0.95 — Caesar&#39;s Need for Power score under the Hermann (1999)
+      Leadership Trait Analysis framework — near the ceiling of any world leader
+      ever profiled
 ---
 <div id="quarto-content">
 <main class="art-article-main">

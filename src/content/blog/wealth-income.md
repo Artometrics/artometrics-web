@@ -14,6 +14,13 @@ keyPoints:
   - 27.2 — Highest observed Income distribution
   - Black Alone — Top Race by Income distribution
   - 1967–2019 — Year span covered in the file
+faq:
+  - question: What does “The median income-distribution marker drifted upward” show?
+    answer: '2,916 — Records in the working dataset'
+  - question: What does “Hispanic (Any Race) leads the charted race ladder” show?
+    answer: 10.9 — Median Income distribution
+  - question: What does “Income brackets carve different distribution bands” show?
+    answer: 27.2 — Highest observed Income distribution
 ---
 <div id="quarto-content">
 <main class="art-article-main">

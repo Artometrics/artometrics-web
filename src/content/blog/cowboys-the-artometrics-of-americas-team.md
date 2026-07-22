@@ -18,6 +18,13 @@ keyPoints:
   - 29 — Years since last NFC championship appearance entering 2025
   - $10B+ — Widely cited estimated franchise value range
   - 3 — Super Bowls from the 1990s Aikman-Smith-Irvin core
+faq:
+  - question: What does “The Super Bowl column froze after two old engines” show?
+    answer: 5 — Super Bowl championships
+  - question: 'What does “The richest brand, a modest recent playoff archive” show?'
+    answer: 1995 — Most recent Super Bowl-winning season
+  - question: What does “The 1970s and 1990s still carry the memory” show?
+    answer: 29 — Years since last NFC championship appearance entering 2025
 ---
 <div id="quarto-content">
 <main class="art-article-main">

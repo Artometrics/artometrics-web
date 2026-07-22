@@ -18,6 +18,13 @@ keyPoints:
   - 9.68 — Highest observed Av rating
   - Parenthood — Top Title by Av rating
   - 1990–2018 — Year span covered in the file
+faq:
+  - question: What does “How the pattern changed over time” show?
+    answer: '2,266 — Records in the working dataset'
+  - question: What does “Who sits at the top” show?
+    answer: 8.11 — Median Av rating
+  - question: What does “How the field is spread” show?
+    answer: 9.68 — Highest observed Av rating
 ---
 <div id="quarto-content">
 <main class="art-article-main">

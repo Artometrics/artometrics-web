@@ -14,6 +14,13 @@ keyPoints:
   - 6 — Open questions for the next SF production pass
   - '3 — Core tradeoff signals: tech, housing, tolerance'
   - 6 — Competitor cities framed
+faq:
+  - question: What does “Identity Stack” show?
+    answer: '1,100+ — DataSF public portal dataset scale in public summaries'
+  - question: What does “Tradeoff History” show?
+    answer: 7 — Identity domains scored
+  - question: What does “Neighborhood Pressure” show?
+    answer: 6 — Open questions for the next SF production pass
 ---
 <div id="quarto-content">
 <main class="art-article-main">

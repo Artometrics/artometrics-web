@@ -11,6 +11,13 @@ tldr: Voting records identify resolutions that divided member states.
 keyPoints:
   - '100,000 — Records in the working dataset'
   - yes — Most common Vote
+faq:
+  - question: What does “Yes votes dominate the sampled UN record” show?
+    answer: '100,000 — Records in the working dataset'
+  - question: What does “Brazil appears most often among country names” show?
+    answer: yes — Most common Vote
+  - question: What does “Vote categories restate the file’s center of gravity” show?
+    answer: Voting records identify resolutions that divided member states.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

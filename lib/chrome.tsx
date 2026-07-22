@@ -30,13 +30,6 @@ const defaultChrome: ChromeContextValue = {
 
 const ChromeContext = createContext<ChromeContextValue>(defaultChrome);
 
-const ARTICLE_COMPACT_START = 48;
-const ARTICLE_COMPACT_END = 220;
-
-function clamp01(n: number) {
-  return Math.max(0, Math.min(1, n));
-}
-
 export function ChromeProvider({ children }: { children: ReactNode }) {
   const [scrollY, setScrollYState] = useState(0);
   const [isArticle, setIsArticle] = useState(false);
@@ -46,12 +39,8 @@ export function ChromeProvider({ children }: { children: ReactNode }) {
     setScrollYState((prev) => (Math.abs(prev - y) < 8 ? prev : y));
   }, []);
 
-  const logoCompact = useMemo(() => {
-    return clamp01(
-      (scrollY - ARTICLE_COMPACT_START) /
-        (ARTICLE_COMPACT_END - ARTICLE_COMPACT_START),
-    );
-  }, [scrollY]);
+  // Complex chrome keeps a stable centered wordmark — no scroll morph.
+  const logoCompact = 0;
 
   const value = useMemo(
     () => ({

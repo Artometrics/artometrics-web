@@ -14,6 +14,15 @@ keyPoints:
   - '4,043 — Highest observed Appearances'
   - Spider-Man (Peter Parker) — Top Name by Appearances
   - 1935–2013 — Year span covered in the file
+faq:
+  - question: What does “Early Characters Logged Higher Median Appearances” show?
+    answer: '23,272 — Records in the working dataset'
+  - question: What does “A Dozen Icons Own the Appearance Summit” show?
+    answer: 4.00 — Median Appearances
+  - question: >-
+      What does “Marvel Has More Characters; DC’s Median Appearances Run Higher”
+      show?
+    answer: '4,043 — Highest observed Appearances'
 ---
 <div id="quarto-content">
 <main class="art-article-main">

@@ -14,6 +14,13 @@ keyPoints:
   - 8 — Generation IDs in the data — Gen 8 and 9 unclassified in source
   - 157 — Median base experience across all Pokémon
   - 510 — Pokémon with a second type — the dual-type majority
+faq:
+  - question: What does “Stat Identity By Type” show?
+    answer: 949 — Pokémon in the dataset with a confirmed primary type
+  - question: What does “Generation Creep” show?
+    answer: 18 — Distinct primary types represented
+  - question: What does “Built Different” show?
+    answer: 8 — Generation IDs in the data — Gen 8 and 9 unclassified in source
 ---
 <div id="quarto-content">
 <main class="art-article-main">

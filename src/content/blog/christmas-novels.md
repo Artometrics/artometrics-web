@@ -18,6 +18,13 @@ keyPoints:
   - '1,891 — Highest observed Birthdate'
   - The Camp Fire Girls Solve a — Top Title by Birthdate
   - 1970–1970 — Year span covered in the file
+faq:
+  - question: What does “The Shelf Centers on Mid-Nineteenth-Century Births” show?
+    answer: 35 — Records in the working dataset
+  - question: What does “Later-Born Titles Mark the Edge of the Canon” show?
+    answer: '1,859 — Median Birthdate'
+  - question: What does “Birthdates Cluster Around the 1860s” show?
+    answer: '1,891 — Highest observed Birthdate'
 ---
 <div id="quarto-content">
 <main class="art-article-main">

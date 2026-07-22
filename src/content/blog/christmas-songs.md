@@ -18,6 +18,13 @@ keyPoints:
   - 20.0 — Highest observed Weeks on chart
   - BETTER DAYS — Top Song by Weeks on chart
   - 1958–2017 — Year span covered in the file
+faq:
+  - question: What does “Seasonal Weeks Spiked in the Mid-2000s” show?
+    answer: 387 — Records in the working dataset
+  - question: What does “Twenty Weeks Marks the Upper Club” show?
+    answer: 8.00 — Median Weeks on chart
+  - question: What does “Most Songs Cluster at Short Chart Lives” show?
+    answer: 20.0 — Highest observed Weeks on chart
 ---
 <div id="quarto-content">
 <main class="art-article-main">

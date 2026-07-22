@@ -14,6 +14,13 @@ keyPoints:
   - 5.00 — Highest observed Stars
   - Nongshim — Top Brand by Stars
   - Japan — Most common Country
+faq:
+  - question: What does “Stars by brand” show?
+    answer: '3,180 — Records in the working dataset'
+  - question: What does “Who sits at the top” show?
+    answer: 3.75 — Median Stars
+  - question: What does “Stars by country” show?
+    answer: 5.00 — Highest observed Stars
 ---
 <div id="quarto-content">
 <main class="art-article-main">

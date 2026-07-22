@@ -14,6 +14,13 @@ keyPoints:
   - '6,801,437 — Highest observed Population'
   - CA — Top State by Population
   - 1970–2016 — Year span covered in the file
+faq:
+  - question: What does “How the pattern changed over time” show?
+    answer: '100,000 — Records in the working dataset'
+  - question: What does “Who sits at the top” show?
+    answer: '3,553 — Median Population'
+  - question: What does “How regions spread” show?
+    answer: '6,801,437 — Highest observed Population'
 ---
 <div id="quarto-content">
 <main class="art-article-main">

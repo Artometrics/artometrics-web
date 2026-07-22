@@ -13,6 +13,13 @@ keyPoints:
   - 12.0 — Median Word count
   - 18.0 — Highest observed Word count
   - The Adventure of the Beryl C — Top Book by Word count
+faq:
+  - question: What does “Story-level medians sit in a narrow band” show?
+    answer: '65,958 — Records in the working dataset'
+  - question: What does “Even the leaders barely clear the file median” show?
+    answer: 12.0 — Median Word count
+  - question: 'What does “Median 12.0, mean 10.9 — a mostly symmetric shape” show?'
+    answer: 18.0 — Highest observed Word count
 ---
 <div id="quarto-content">
 <main class="art-article-main">

@@ -18,6 +18,13 @@ keyPoints:
   - 4.00 — Highest observed Max tenure ceodb
   - PHOTRONICS INC — Top Coname by Max tenure ceodb
   - Interim — Most common Interim coceo
+faq:
+  - question: What does “Longer Max Tenures Are Rare in the Company Ranking” show?
+    answer: '9,423 — Records in the working dataset'
+  - question: What does “The Top Dozen Caps Out Quickly” show?
+    answer: 1.00 — Median Max tenure ceodb
+  - question: What does “Interim Labels Dominate the Category Mix” show?
+    answer: 4.00 — Highest observed Max tenure ceodb
 ---
 <div id="quarto-content">
 <main class="art-article-main">

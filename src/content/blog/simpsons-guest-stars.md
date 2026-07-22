@@ -11,6 +11,13 @@ tldr: Guest-appearance records count celebrity density across seasons.
 keyPoints:
   - '1,381 — Records in the working dataset'
   - 1–30 — Year span covered in the file
+faq:
+  - question: What does “Who sits at the top” show?
+    answer: '1,381 — Records in the working dataset'
+  - question: What does “Timeline” show?
+    answer: 1–30 — Year span covered in the file
+  - question: What does “Frequency” show?
+    answer: Guest-appearance records count celebrity density across seasons.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

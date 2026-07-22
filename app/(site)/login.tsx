@@ -3,11 +3,14 @@ import { Text, TextInput, View, StyleSheet, Pressable } from "react-native";
 import { Link, router } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { PrimaryButton } from "@/components/PrimaryButton";
-import { Colors } from "@/constants/Colors";
+import { PageSeo } from "@/components/PageSeo";
+import { Fonts } from "@/constants/Colors";
 import { useAuth } from "@/lib/auth";
+import { useTheme } from "@/lib/theme";
 
 export default function LoginScreen() {
   const { signIn } = useAuth();
+  const { colors } = useTheme();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState<string | null>(null);
@@ -27,8 +30,9 @@ export default function LoginScreen() {
 
   return (
     <Wrapper variant="narrow" style={styles.wrap}>
-      <Text style={styles.eyebrow}>Members</Text>
-      <Text style={styles.title}>Log in</Text>
+      <PageSeo title="Log in" description="Sign in to Artometrics." path="/login" />
+      <Text style={[styles.eyebrow, { color: colors.accent }]}>Members</Text>
+      <Text style={[styles.title, { color: colors.text }]}>Log in</Text>
       <View style={styles.form}>
         <TextInput
           autoCapitalize="none"
@@ -36,23 +40,29 @@ export default function LoginScreen() {
           placeholder="Email"
           value={email}
           onChangeText={setEmail}
-          style={styles.input}
-          placeholderTextColor={Colors.base400}
+          style={[
+            styles.input,
+            { borderColor: colors.border, color: colors.text, backgroundColor: colors.bgElevated },
+          ]}
+          placeholderTextColor={colors.textSubtle}
         />
         <TextInput
           secureTextEntry
           placeholder="Password"
           value={password}
           onChangeText={setPassword}
-          style={styles.input}
-          placeholderTextColor={Colors.base400}
+          style={[
+            styles.input,
+            { borderColor: colors.border, color: colors.text, backgroundColor: colors.bgElevated },
+          ]}
+          placeholderTextColor={colors.textSubtle}
         />
-        {error ? <Text style={styles.error}>{error}</Text> : null}
+        {error ? <Text style={[styles.error, { color: colors.accent }]}>{error}</Text> : null}
         <PrimaryButton label={busy ? "Signing in…" : "Log in"} onPress={onSubmit} disabled={busy} />
       </View>
       <Pressable>
         <Link href="/signup">
-          <Text style={styles.link}>Need an account? Sign up</Text>
+          <Text style={{ color: colors.accent, marginTop: 8 }}>Need an account? Sign up</Text>
         </Link>
       </Pressable>
     </Wrapper>
@@ -65,20 +75,15 @@ const styles = StyleSheet.create({
     fontSize: 11,
     letterSpacing: 2.5,
     textTransform: "uppercase",
-    color: Colors.accent700,
     fontWeight: "600",
   },
-  title: { fontSize: 36, fontWeight: "300", color: Colors.base900 },
+  title: { fontSize: 36, fontWeight: "300", fontFamily: Fonts.serif },
   form: { gap: 12, marginTop: 8 },
   input: {
     borderWidth: 1,
-    borderColor: Colors.base300,
     paddingHorizontal: 14,
     paddingVertical: 12,
     fontSize: 16,
-    color: Colors.base900,
-    backgroundColor: Colors.white,
   },
-  error: { color: Colors.accent700, fontSize: 14 },
-  link: { color: Colors.accent700, marginTop: 8 },
+  error: { fontSize: 14 },
 });

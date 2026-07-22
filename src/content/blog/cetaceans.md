@@ -12,6 +12,13 @@ keyPoints:
   - '2,194 — Records in the working dataset'
   - 1946–2017 — Year span covered in the file
   - US — Most common Transfer
+faq:
+  - question: What does “Transfers Concentrate Overwhelmingly in the US” show?
+    answer: '2,194 — Records in the working dataset'
+  - question: What does “Annual Volume Peaked in the Early 1970s” show?
+    answer: 1946–2017 — Year span covered in the file
+  - question: What does “Bottlenose Is the Archive’s Default Animal” show?
+    answer: US — Most common Transfer
 ---
 <div id="quarto-content">
 <main class="art-article-main">

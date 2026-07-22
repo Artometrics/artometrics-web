@@ -18,6 +18,13 @@ keyPoints:
   - 100 — Highest observed Reading time
   - My month-long quest to becom — Top Title by Reading time
   - 2017–2018 — Year span covered in the file
+faq:
+  - question: What does “How reading time moved” show?
+    answer: '78,388 — Records in the working dataset'
+  - question: What does “Who sits at the top of length” show?
+    answer: 4.00 — Median Reading time
+  - question: What does “How publications spread length” show?
+    answer: 100 — Highest observed Reading time
 ---
 <div id="quarto-content">
 <main class="art-article-main">

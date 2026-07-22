@@ -28,6 +28,21 @@ keyPoints:
   - >-
     0.389 — Pearson correlation between score and members — popularity predicts
     quality directionally, not precisely
+faq:
+  - question: What does “An Industry That Industrialized — Then Diversified” show?
+    answer: >-
+      13,631 — Unique anime titles in the dataset — from silent-era shorts to
+      modern streaming originals
+  - question: >-
+      What does “Bones and Kyoani Lead — Consistency Across Volume Is the Real
+      Achievement” show?
+    answer: >-
+      6.38 — Overall median MAL score — the mathematical baseline every studio
+      and genre is measured against
+  - question: 'Genre Map: What’s Popular vs What’s Well-rated?'
+    answer: >-
+      8.12% — Share of TV anime scoring 8+ on MAL — the highest prestige
+      hit-rate of any format (346 out of 4,260 titles)
 ---
 <div id="quarto-content">
 <main class="art-article-main">

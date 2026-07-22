@@ -20,6 +20,13 @@ keyPoints:
   - >-
     A+ — Most common CinemaScore grade — audiences rarely stamped a Pixar
     opening below A
+faq:
+  - question: What does “Runtime Creep” show?
+    answer: 96% — Median Rotten Tomatoes score across rated Pixar theatrical releases
+  - question: What does “Critic Scores” show?
+    answer: 155 — Longest runtime in the set — nan (2023)
+  - question: What does “Audience vs Critics” show?
+    answer: '81 — Shortest runtime — Toy Story, the film that started the canon'
 ---
 <div id="quarto-content">
 <main class="art-article-main">

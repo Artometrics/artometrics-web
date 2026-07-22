@@ -14,6 +14,13 @@ keyPoints:
   - 500 — Highest observed Rank 2003
   - Touch — Top Album by Rank 2003
   - 1955–2019 — Year span covered in the file
+faq:
+  - question: What does “How ranks sit across release years” show?
+    answer: 691 — Records in the working dataset
+  - question: What does “Who sits at the top of the numeric rank field” show?
+    answer: 250 — Median Rank 2003
+  - question: What does “Ranks by album type” show?
+    answer: 500 — Highest observed Rank 2003
 ---
 <div id="quarto-content">
 <main class="art-article-main">

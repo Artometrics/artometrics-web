@@ -29,6 +29,19 @@ keyPoints:
     742 — hospitals mandated to participate in CMS&#39;s TEAM bundled payment
     model as of January 1, 2026 — where readmission penalties become
     episode-level accountability
+faq:
+  - question: What does “The Geography of Failure” show?
+    answer: >-
+      48.1% — of HRRP-eligible hospital-condition pairs carried an excess
+      readmission ratio above 1.0 — more readmissions than CMS models predict
+  - question: What does “The Condition Nobody Is Solving” show?
+    answer: >-
+      6 — conditions tracked under HRRP — AMI, Heart Failure, Pneumonia, COPD,
+      Hip/Knee, and CABG
+  - question: 'What does “Ownership, Penalty, and Who Pays” show?'
+    answer: >-
+      1.0018 — average excess readmission ratio nationally — the average
+      hospital readmits slightly more patients than CMS models expect
 ---
 <div id="quarto-content">
 <main class="art-article-main">

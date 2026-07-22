@@ -14,6 +14,13 @@ keyPoints:
   - 85.3 — Highest observed Multi
   - butteville union elementary — Top LEA NAME by Multi
   - TX — Most common ST
+faq:
+  - question: What does “A flat median hides how extreme the upper tail is” show?
+    answer: '27,944 — Records in the working dataset'
+  - question: What does “Butteville Union Elementary leads a steep LEA ladder” show?
+    answer: 2.38 — Median Multi
+  - question: What does “State boxes show how Multi spreads geographically” show?
+    answer: 85.3 — Highest observed Multi
 ---
 <div id="quarto-content">
 <main class="art-article-main">

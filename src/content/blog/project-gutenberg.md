@@ -11,6 +11,13 @@ tldr: Public-domain metadata show which topics crowd the free-library canon.
 keyPoints:
   - '100,000 — Records in the working dataset'
   - lcsh — Most common Subject type
+faq:
+  - question: What does “Public-domain books cluster by subject type” show?
+    answer: '100,000 — Records in the working dataset'
+  - question: What does “A small set of subjects anchors the catalog” show?
+    answer: lcsh — Most common Subject type
+  - question: What does “Subject families show the catalog center of gravity” show?
+    answer: Public-domain metadata show which topics crowd the free-library canon.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

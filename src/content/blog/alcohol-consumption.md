@@ -17,6 +17,13 @@ keyPoints:
   - 76.0 — Median Beer servings
   - 376 — Highest observed Beer servings
   - Namibia — Top Country by Beer servings
+faq:
+  - question: What does “Beer Consumption Has a Steep Country Ladder” show?
+    answer: 193 — Records in the working dataset
+  - question: What does “The Top Dozen Has Its Own Median” show?
+    answer: 76.0 — Median Beer servings
+  - question: What does “Most Countries Cluster Far Below the Peaks” show?
+    answer: 376 — Highest observed Beer servings
 ---
 <div id="quarto-content">
 <main class="art-article-main">

@@ -18,6 +18,13 @@ keyPoints:
   - '33.9→73 — Median lifespan: opening year to closing year'
   - Hong Kong — Highest average life expectancy over the full dataset
   - '472 yrs — Total span of the dataset: 1543 to 2015'
+faq:
+  - question: What does “500 years of survival” show?
+    answer: 73.3 — Median life expectancy in 2015 — the closing year of the dataset
+  - question: What does “Who lives longest” show?
+    answer: 83.8 — Highest single observation — Hong Kong near peak
+  - question: What does “The split world” show?
+    answer: '33.9→73 — Median lifespan: opening year to closing year'
 ---
 <div id="quarto-content">
 <main class="art-article-main">

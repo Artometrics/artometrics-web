@@ -20,6 +20,15 @@ keyPoints:
   - 5 — Titles in the Showtime decade
   - 6 — Defining title eras from Mikan to LeBron/AD
   - 1949 — First championship season
+faq:
+  - question: What does “Los Angeles does not win smoothly—it wins in acts” show?
+    answer: 17 — NBA championships in franchise history
+  - question: What does “The NBA’s title race is still a two-name conversation” show?
+    answer: >-
+      32 — Approximate Finals appearances, the league's deepest final-round
+      archive
+  - question: 'What does “The product is star gravity, not just basketball” show?'
+    answer: 5 — Titles in the Showtime decade
 ---
 <div id="quarto-content">
 <main class="art-article-main">

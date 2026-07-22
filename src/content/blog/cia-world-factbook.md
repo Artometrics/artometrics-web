@@ -17,6 +17,13 @@ keyPoints:
   - '5,220,371 — Median Population'
   - '1,355,692,576 — Highest observed Population'
   - China — Top Country by Population
+faq:
+  - question: What does “A Handful of Giants Dominate Headcount” show?
+    answer: 259 — Records in the working dataset
+  - question: What does “Even the Top Dozen Has a Steep Internal Drop” show?
+    answer: '5,220,371 — Median Population'
+  - question: What does “Most Countries Sit in the Small-Population Mass” show?
+    answer: '1,355,692,576 — Highest observed Population'
 ---
 <div id="quarto-content">
 <main class="art-article-main">

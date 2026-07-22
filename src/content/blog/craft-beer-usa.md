@@ -17,6 +17,13 @@ keyPoints:
   - 0.06 — Median Abv
   - 0.13 — Highest observed Abv
   - Lee Hill Series Vol. 5 - Bel — Top Name by Abv
+faq:
+  - question: What does “High-ABV Outliers Are Named Experiments” show?
+    answer: '2,410 — Records in the working dataset'
+  - question: What does “The Top Dozen Still Doubles Everyday Strength” show?
+    answer: 0.06 — Median Abv
+  - question: What does “Most Beers Pile Up Near 5–6% ABV” show?
+    answer: 0.13 — Highest observed Abv
 ---
 <div id="quarto-content">
 <main class="art-article-main">

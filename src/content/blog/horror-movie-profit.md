@@ -18,6 +18,13 @@ keyPoints:
   - '474,544,677 — Highest observed Domestic gross'
   - 'Star Wars Ep. I: The Phantom — Top Movie by Domestic gross'
   - 1936–2019 — Year span covered in the file
+faq:
+  - question: What does “How the pattern changed over time” show?
+    answer: '3,401 — Records in the working dataset'
+  - question: What does “Who sits at the top” show?
+    answer: '25,533,818 — Median Domestic gross'
+  - question: What does “How the field is spread” show?
+    answer: '474,544,677 — Highest observed Domestic gross'
 ---
 <div id="quarto-content">
 <main class="art-article-main">

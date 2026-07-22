@@ -79,15 +79,21 @@ async function hydrateCharts(root: HTMLElement) {
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const payload = await res.json();
       el.innerHTML = "";
+      const dark =
+        typeof document !== "undefined" &&
+        document.documentElement.dataset.theme === "dark";
       await Plotly.newPlot(
         el,
         payload.data ?? [],
         {
           ...(payload.layout ?? {}),
-          paper_bgcolor: Colors.cream,
-          plot_bgcolor: Colors.cream,
-          font: { family: "Georgia, serif", color: Colors.chartDark },
-          colorway: [Colors.chartHighlight, Colors.chartDark, Colors.chartMid],
+          paper_bgcolor: dark ? "#171717" : Colors.cream,
+          plot_bgcolor: dark ? "#171717" : Colors.cream,
+          font: {
+            family: "Georgia, serif",
+            color: dark ? "#FAFAFA" : Colors.chartDark,
+          },
+          colorway: [Colors.chartHighlight, dark ? "#E5E5E5" : Colors.chartDark, Colors.chartMid],
         },
         {
           ...(payload.config ?? {}),

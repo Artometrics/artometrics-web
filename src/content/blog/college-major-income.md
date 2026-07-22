@@ -18,6 +18,15 @@ keyPoints:
   - '48,207 — Highest observed Low wage jobs'
   - PSYCHOLOGY — Top Major by Low wage jobs
   - Engineering — Most common Major category
+faq:
+  - question: What does “Psychology Leads Low-Wage Job Counts by a Wide Margin” show?
+    answer: 173 — Records in the working dataset
+  - question: What does “The Top Dozen’s Median Is Still Enormous” show?
+    answer: '1,231 — Median Low wage jobs'
+  - question: >-
+      What does “Humanities and Business Categories Sit Higher Than Engineering”
+      show?
+    answer: '48,207 — Highest observed Low wage jobs'
 ---
 <div id="quarto-content">
 <main class="art-article-main">

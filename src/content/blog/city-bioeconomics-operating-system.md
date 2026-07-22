@@ -18,6 +18,13 @@ keyPoints:
   - '1,100+ — Datasets in DataSF public portal summaries'
   - 6 — Diagnostic questions in the city microscope
   - 8 — System layers scored
+faq:
+  - question: What does “System Layers” show?
+    answer: '1,667 — Subnational regions in DOSE v2.14 public documentation'
+  - question: What does “Goods and Services” show?
+    answer: 45 — Cities in World Cities Culture Forum 5th edition summaries
+  - question: What does “History Layers” show?
+    answer: '1,100+ — Datasets in DataSF public portal summaries'
 ---
 <div id="quarto-content">
 <main class="art-article-main">

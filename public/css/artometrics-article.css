@@ -179,6 +179,22 @@
   --art-muted:     #D5D5D5;
   --art-white:     #FFFFFF;
   --art-cream:     #F2F0EB;
+  color: var(--art-dark);
+  background-color: var(--art-bg);
+}
+
+/* Dark mode — follow site theme (documentElement dataset.theme) */
+html[data-theme="dark"] .artometrics-article-body{
+  --art-bg:        #0A0A0A;
+  --art-dark:      #FAFAFA;
+  --art-mid:       #A3A3A3;
+  --art-highlight: #E05C5C;
+  --art-secondary: #8BA3D9;
+  --art-muted:     #404040;
+  --art-white:     #171717;
+  --art-cream:     #171717;
+  color: var(--art-dark);
+  background-color: transparent;
 }
 
 /* ── Base ─────────────────────────────────────────────────── */

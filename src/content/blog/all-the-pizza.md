@@ -17,6 +17,15 @@ keyPoints:
   - 0.00 — Median Price range min
   - 50.0 — Highest observed Price range min
   - Oregano — Top Name by Price range min
+faq:
+  - question: >-
+      What does “Price Floors Separate Everyday Shops From Destination Pies”
+      show?
+    answer: '10,000 — Records in the working dataset'
+  - question: What does “The Top Dozen Is a Premium Plateau” show?
+    answer: 0.00 — Median Price range min
+  - question: What does “Almost Everything Sits in the Low Bins” show?
+    answer: 50.0 — Highest observed Price range min
 ---
 <div id="quarto-content">
 <main class="art-article-main">

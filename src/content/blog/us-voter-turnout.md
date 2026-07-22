@@ -14,6 +14,13 @@ keyPoints:
   - '132,609,063 — Highest observed Votes'
   - United States — Top State by Votes
   - 1980–2014 — Year span covered in the file
+faq:
+  - question: What does “Median votes rose across three decades of elections” show?
+    answer: 936 — Records in the working dataset
+  - question: What does “The United States total dwarfs the state ladder” show?
+    answer: '1,170,867 — Median Votes'
+  - question: What does “A right-skewed distribution with a heavy upper tail” show?
+    answer: '132,609,063 — Highest observed Votes'
 ---
 <div id="quarto-content">
 <main class="art-article-main">

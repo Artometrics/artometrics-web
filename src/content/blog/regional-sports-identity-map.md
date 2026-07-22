@@ -18,6 +18,13 @@ keyPoints:
   - 6 — Identity archetypes used in the map
   - 94 — Toronto drought/pain index in this editorial model
   - 43B — Approximate combined New York major-team value
+faq:
+  - question: What does “Regional Title Density” show?
+    answer: 10 — Large markets/cities compared
+  - question: What does “Market Stack” show?
+    answer: 7 — Regions grouped for title-density analysis
+  - question: What does “Sport Dna” show?
+    answer: 6 — Identity archetypes used in the map
 ---
 <div id="quarto-content">
 <main class="art-article-main">

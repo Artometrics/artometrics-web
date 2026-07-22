@@ -18,6 +18,13 @@ keyPoints:
   - 3 — Genres can be listed per IMDb title basics row
   - 162 — Avatar runtime in minutes
   - 69% — Illustrative sequel/franchise share of top hits in the 2020s
+faq:
+  - question: What does “Attention versus Quality” show?
+    answer: 7 — Core IMDb non-commercial TSV files publicly documented
+  - question: What does “Sequelization” show?
+    answer: Daily — IMDb dataset refresh cadence
+  - question: What does “Runtime and Event Status” show?
+    answer: 3 — Genres can be listed per IMDb title basics row
 ---
 <div id="quarto-content">
 <main class="art-article-main">

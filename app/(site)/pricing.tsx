@@ -2,13 +2,16 @@ import { Text, View, StyleSheet } from "react-native";
 import { Link } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { PrimaryButton } from "@/components/PrimaryButton";
-import { Colors } from "@/constants/Colors";
+import { PageSeo } from "@/components/PageSeo";
+import { Fonts } from "@/constants/Colors";
+import { useTheme } from "@/lib/theme";
 import { PLANS } from "@/lib/product/plans";
 import { apiFetch } from "@/lib/supabase/client";
 import { useAuth } from "@/lib/auth";
 
 export default function PricingScreen() {
   const { user } = useAuth();
+  const { colors } = useTheme();
 
   async function checkout(tier: string) {
     if (!user) return;
@@ -28,26 +31,43 @@ export default function PricingScreen() {
 
   return (
     <Wrapper style={styles.wrap}>
-      <Text style={styles.eyebrow}>Membership</Text>
-      <Text style={styles.title}>Subscribe to Artometrics</Text>
-      <Text style={styles.deck}>
+      <PageSeo
+        title="Pricing"
+        description="Subscribe to Artometrics for member episodes and saved reports."
+        path="/pricing"
+      />
+      <Text style={[styles.eyebrow, { color: colors.accent }]}>Membership</Text>
+      <Text style={[styles.title, { color: colors.text }]}>Subscribe to Artometrics</Text>
+      <Text style={[styles.deck, { color: colors.textMuted }]}>
         Unlock member episodes, saved reports, and early access to new investigations.
       </Text>
       <View style={styles.grid}>
         {PLANS.map((plan) => (
           <View
             key={plan.tier}
-            style={[styles.card, plan.popular && styles.cardPopular]}
+            style={[
+              styles.card,
+              {
+                borderColor: plan.popular ? colors.accent : colors.border,
+                backgroundColor: colors.bgElevated,
+                borderWidth: plan.popular ? 2 : StyleSheet.hairlineWidth,
+              },
+            ]}
           >
-            {plan.popular ? <Text style={styles.popular}>Most popular</Text> : null}
-            <Text style={styles.planTitle}>{plan.title}</Text>
-            <Text style={styles.price}>
+            {plan.popular ? (
+              <Text style={[styles.popular, { color: colors.accent }]}>Most popular</Text>
+            ) : null}
+            <Text style={[styles.planTitle, { color: colors.text }]}>{plan.title}</Text>
+            <Text style={[styles.price, { color: colors.text }]}>
               {plan.price}
-              <Text style={styles.period}> / {plan.period.toLowerCase()}</Text>
+              <Text style={[styles.period, { color: colors.textSubtle }]}>
+                {" "}
+                / {plan.period.toLowerCase()}
+              </Text>
             </Text>
             <View style={styles.features}>
               {plan.features.map((feature) => (
-                <Text key={feature} style={styles.feature}>
+                <Text key={feature} style={[styles.feature, { color: colors.textMuted }]}>
                   · {feature}
                 </Text>
               ))}
@@ -72,32 +92,26 @@ const styles = StyleSheet.create({
     fontSize: 11,
     letterSpacing: 2.5,
     textTransform: "uppercase",
-    color: Colors.accent700,
     fontWeight: "600",
   },
-  title: { fontSize: 36, fontWeight: "300", color: Colors.base900 },
-  deck: { fontSize: 16, color: Colors.base600, maxWidth: 560, marginBottom: 12 },
+  title: { fontSize: 36, fontWeight: "300", fontFamily: Fonts.serif },
+  deck: { fontSize: 16, maxWidth: 560, marginBottom: 12, lineHeight: 24 },
   grid: { gap: 16, flexDirection: "row", flexWrap: "wrap" },
   card: {
     flexGrow: 1,
     flexBasis: 260,
-    borderWidth: 1,
-    borderColor: Colors.base200,
     padding: 24,
     gap: 12,
-    backgroundColor: Colors.white,
   },
-  cardPopular: { borderColor: Colors.accent600, borderWidth: 2 },
   popular: {
     fontSize: 10,
     letterSpacing: 1.5,
     textTransform: "uppercase",
-    color: Colors.accent700,
     fontWeight: "700",
   },
-  planTitle: { fontSize: 22, color: Colors.base900 },
-  price: { fontSize: 32, color: Colors.base900, fontWeight: "300" },
-  period: { fontSize: 14, color: Colors.base500 },
+  planTitle: { fontSize: 22 },
+  price: { fontSize: 32, fontWeight: "300" },
+  period: { fontSize: 14 },
   features: { gap: 6, marginVertical: 8 },
-  feature: { fontSize: 14, color: Colors.base600, lineHeight: 22 },
+  feature: { fontSize: 14, lineHeight: 22 },
 });

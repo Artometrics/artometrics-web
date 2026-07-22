@@ -18,6 +18,13 @@ keyPoints:
   - '5,072 — Highest observed Value'
   - Texas — Top State by Value
   - 2017–2017 — Year span covered in the file
+faq:
+  - question: What does “Timeline across states” show?
+    answer: 153 — Records in the working dataset
+  - question: What does “Who sits at the top” show?
+    answer: 703 — Median Value
+  - question: What does “How values are spread” show?
+    answer: '5,072 — Highest observed Value'
 ---
 <div id="quarto-content">
 <main class="art-article-main">

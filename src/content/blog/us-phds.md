@@ -14,6 +14,13 @@ keyPoints:
   - '5,302 — Highest observed N phds'
   - Social sciences — Top Field by N phds
   - 2008–2017 — Year span covered in the file
+faq:
+  - question: What does “Median doctorate counts edged upward across the decade” show?
+    answer: '3,370 — Records in the working dataset'
+  - question: What does “Social sciences lead the field ladder” show?
+    answer: 85.0 — Median N phds
+  - question: What does “Broad fields do not share one production band” show?
+    answer: '5,302 — Highest observed N phds'
 ---
 <div id="quarto-content">
 <main class="art-article-main">

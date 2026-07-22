@@ -18,6 +18,13 @@ keyPoints:
   - 19 wks — Longest single run in the dataset
   - The Beatles — Most appearances in the dataset — 20 number-one songs
   - '67 yrs — Span of the dataset: 1958 to 2025'
+faq:
+  - question: What does “Run Length Over the Decades” show?
+    answer: '1,177 — Number-one songs in the dataset (1958–2025)'
+  - question: What does “Longest Runs Ever” show?
+    answer: '2 wks — Median run length — most #1s are fleeting'
+  - question: What does “How Artists Compare” show?
+    answer: 19 wks — Longest single run in the dataset
 ---
 <div id="quarto-content">
 <main class="art-article-main">

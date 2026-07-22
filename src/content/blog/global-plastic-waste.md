@@ -22,6 +22,15 @@ keyPoints:
     Macao — Top Entity by GDP per capita, PPP (constant 2011 international $)
     (Rate)
   - 1700–2017 — Year span covered in the file
+faq:
+  - question: What does “How prosperity moved over time” show?
+    answer: '22,204 — Records in the working dataset'
+  - question: What does “Who sits at the top of income” show?
+    answer: '8,447 — Median GDP per capita, PPP (constant 2011 international $) (Rate)'
+  - question: What does “How income is spread” show?
+    answer: >-
+      135,319 — Highest observed GDP per capita, PPP (constant 2011
+      international $) (Rate)
 ---
 <div id="quarto-content">
 <main class="art-article-main">

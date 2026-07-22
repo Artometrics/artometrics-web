@@ -21,6 +21,15 @@ keyPoints:
   - 1901 — First Nobel Prizes awarded
   - 94 — Approximate Grammy category count in recent ceremonies
   - 6 — Award systems compared
+faq:
+  - question: What does “Prestige and market are not the same currency” show?
+    answer: >-
+      98th — Academy Awards database complete through 2025/2026 cycle per
+      official database
+  - question: What does “When awards invent more lanes of excellence” show?
+    answer: '1,500+ — Acceptance speeches in the Academy''s speech database'
+  - question: What does “Getting nominated is not the same as winning” show?
+    answer: 1901 — First Nobel Prizes awarded
 ---
 <div id="quarto-content">
 <main class="art-article-main">

@@ -14,6 +14,13 @@ keyPoints:
   - '11,695 — Highest observed Num parts'
   - World Map — Top Name by Num parts
   - 1949–2022 — Year span covered in the file
+faq:
+  - question: What does “How part counts changed over time” show?
+    answer: '19,798 — Records in the working dataset'
+  - question: What does “Who sits at the top” show?
+    answer: 34.0 — Median Num parts
+  - question: What does “How the field is spread” show?
+    answer: '11,695 — Highest observed Num parts'
 ---
 <div id="quarto-content">
 <main class="art-article-main">

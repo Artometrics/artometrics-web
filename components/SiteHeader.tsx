@@ -53,7 +53,7 @@ export function SiteHeader() {
 
           <Link href="/" asChild>
             <Pressable style={styles.logoWrap} accessibilityLabel="Artometrics home">
-              <Logo size={30} align="center" style={{ color: colors.text }} />
+              <Logo size={30} align="center" compact={0} style={{ color: colors.text }} />
             </Pressable>
           </Link>
 

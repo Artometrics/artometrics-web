@@ -14,6 +14,13 @@ keyPoints:
   - 312 — Highest observed Duration
   - 'Black Mirror: Bandersnatch — Top Title by Duration'
   - 2008–2021 — Year span covered in the file
+faq:
+  - question: What does “How the pattern changed over time” show?
+    answer: '7,787 — Records in the working dataset'
+  - question: What does “Who sits at the top” show?
+    answer: 88.0 — Median Duration
+  - question: What does “How the field is spread” show?
+    answer: 312 — Highest observed Duration
 ---
 <div id="quarto-content">
 <main class="art-article-main">

@@ -16,6 +16,13 @@ keyPoints:
   - '29,678 — Records in the working dataset'
   - 1957–2021 — Year span covered in the file
   - Nominee — Most common Type
+faq:
+  - question: What does “Landscape” show?
+    answer: '29,678 — Records in the working dataset'
+  - question: What does “Who sits at the top” show?
+    answer: 1957–2021 — Year span covered in the file
+  - question: What does “Category” show?
+    answer: Nominee — Most common Type
 ---
 <div id="quarto-content">
 <main class="art-article-main">

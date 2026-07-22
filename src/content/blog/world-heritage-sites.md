@@ -14,6 +14,13 @@ keyPoints:
   - 15.0 — Highest observed Value
   - Sweden — Top Country by Value
   - 2004–2022 — Year span covered in the file
+faq:
+  - question: What does “Median heritage counts doubled at the center” show?
+    answer: 6 — Records in the working dataset
+  - question: What does “Sweden leads the country ladder” show?
+    answer: 9.00 — Median Value
+  - question: What does “Leaders diverge when tracked over time” show?
+    answer: 15.0 — Highest observed Value
 ---
 <div id="quarto-content">
 <main class="art-article-main">
