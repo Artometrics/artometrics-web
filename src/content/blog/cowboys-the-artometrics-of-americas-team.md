@@ -11,11 +11,12 @@ tags:
 draft: false
 ---
 <div id="quarto-content">
-
 <main class="art-article-main">
-<p class="art-p">The Dallas Cowboys are no longer just a football team. They are a national attention market. Every season begins with disproportionate coverage, disproportionate expectation, and the same question: when does brand gravity become football gravity again?</p>
-<p class="art-p">This report tests the Cowboys paradox: the most valuable franchise in American sports has not reached a conference championship game since the 1995 season. The data story is not losing. It is non-conversion under maximum visibility.</p>
-<h2 id="fast-facts" class="anchored">At a glance</h2>
+<p class="art-p">The Dallas Cowboys are no longer just a football team. They are a national attention market. Every season begins with disproportionate coverage, disproportionate expectation, and the same unresolved question: when does brand gravity become football gravity again?</p>
+<p class="art-p">Five Super Bowl titles built the mythology. The last one arrived in the 1995 season. Entering 2025, twenty-nine years without an NFC championship appearance—and zero conference title games since that 1995 season—define the modern paradox. The most valuable franchise in American sports, often cited above $10 billion, has mastered demand while failing to convert January chances under maximum visibility.</p>
+<p class="art-p">The charts measure that split: titles by era, franchise value against playoff wins since 1996, playoff production by decade, regular-season winning by quarterback era, and the conference-championship drought beside other frustrated brands.</p>
+
+<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">5</span><span class="fact-label">Super Bowl championships</span></div>
   <div class="fact-box"><span class="fact-number">1995</span><span class="fact-label">Most recent Super Bowl-winning season</span></div>
@@ -24,49 +25,59 @@ draft: false
   <div class="fact-box"><span class="fact-number">3</span><span class="fact-label">Super Bowls from the 1990s Aikman-Smith-Irvin core</span></div>
   <div class="fact-box"><span class="fact-number">0</span><span class="fact-label">Conference championship appearances since the 1995 season</span></div>
 </div>
-<h2 id="dataset-context" class="anchored">The data</h2>
-<p class="art-p">The report uses public Pro Football Reference playoff records, Sports Reference franchise summaries, and Forbes-style franchise valuation estimates. Values are rounded because the analysis depends on order of magnitude, not accounting precision.</p>
-<p class="art-p">A front-office analyst would call this a conversion problem. A Cowboys fan would call it pain. Artometrics treats both as measurable: the gap between attention and January output.</p>
-<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
-<h2 id="titles-by-era" class="anchored">TITLES BY ERA</h2>
+
+<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<p class="art-p">Public Pro Football Reference playoff records, Sports Reference franchise summaries, and Forbes-style franchise valuation estimates supply the figures. Values are rounded because the argument depends on order of magnitude, not accounting precision. Quarterback win percentages are conventional starter-record summaries—era indicators, not individual value models.</p>
+<p class="art-p">A front-office analyst calls this a conversion problem. A Cowboys fan calls it pain. Both are measurable: the gap between attention and January output.</p>
+
+<h2 id="titles-by-era" class="anchored">The Super Bowl column froze after two old engines</h2>
+<h3 id="titles-by-era-look" class="anchored">Cowboys Super Bowl wins by defining era</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/cowboys-the-artometrics-of-americas-team/charts/chart1_titles_by_era.plotly.json" data-source="Data: Pro Football Reference, NFL records, Forbes - ARTOMETRICS" role="img" aria-label="Cowboys Super Bowl wins by defining era"></div>
 </figure>
-<p class="art-p">The Cowboys' title history is concentrated in two old engines: Landry's 1970s and the Aikman-Smith-Irvin 1990s. Since then, the Super Bowl column is empty.</p>
-<p class="art-p">The hypothesis is already visible: Dallas did not stop being important when it stopped winning titles. That is precisely the Artometrics problem.</p>
-<h2 id="value-vs-playoffs" class="anchored">BRAND OUTLIER</h2>
+<p class="art-p">Dallas title history concentrates in two engines: Landry’s 1970s and the Aikman–Smith–Irvin 1990s, which delivered three of the franchise’s five Super Bowls. Since then, the Super Bowl column is empty.</p>
+<p class="art-p">Dallas did not stop being important when it stopped winning titles. That is precisely the problem: brand continuity without championship renewal.</p>
+
+<h2 id="brand-outlier" class="anchored">The richest brand, a modest recent playoff archive</h2>
+<h3 id="brand-outlier-look" class="anchored">Estimated franchise value and playoff wins since 1996</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/cowboys-the-artometrics-of-americas-team/charts/chart2_value_vs_playoffs.plotly.json" data-source="Data: Pro Football Reference, NFL records, Forbes - ARTOMETRICS" role="img" aria-label="Estimated franchise value and playoff wins since 1996"></div>
 </figure>
-<p class="art-p">The Cowboys are the strangest point in modern football economics: the richest brand with a modest recent playoff archive.</p>
-<p class="art-p">For a football expert, this is where the conversation gets interesting. The organization is elite at monetizing attention and only average at converting January chances.</p>
-<h2 id="playoff-machine" class="anchored">THE OLD OCTOBER ENGINE</h2>
+<p class="art-p">The Cowboys are the strangest point in modern football economics: the richest brand with a modest recent playoff archive. Value and January wins no longer move together.</p>
+<p class="art-p">The organization is elite at monetizing attention and only average at converting playoff chances. That split is the franchise’s true modern identity.</p>
+
+<h2 id="the-old-october-engine" class="anchored">The 1970s and 1990s still carry the memory</h2>
+<h3 id="the-old-october-engine-look" class="anchored">Cowboys playoff wins by decade</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/cowboys-the-artometrics-of-americas-team/charts/chart3_playoff_wins_decade.plotly.json" data-source="Data: Pro Football Reference, NFL records, Forbes - ARTOMETRICS" role="img" aria-label="Cowboys playoff wins by decade"></div>
 </figure>
-<p class="art-p">The 1970s and 1990s still carry the franchise memory. The decades after do not match the logo's gravity.</p>
-<p class="art-p">This is not a losing franchise in the ordinary sense. It is a famous franchise whose postseason production no longer fits its public size.</p>
-<h2 id="qb-eras" class="anchored">QUARTERBACK ERA PARADOX</h2>
+<p class="art-p">The 1970s and 1990s still carry the franchise memory. The decades after do not match the logo’s gravity. Postseason production no longer fits the public size of America’s Team.</p>
+<p class="art-p">This is not ordinary losing. It is a famous franchise whose January archive has fallen out of proportion with its attention share.</p>
+
+<h2 id="quarterback-era-paradox" class="anchored">Quarterback competence never solved conversion</h2>
+<h3 id="quarterback-era-paradox-look" class="anchored">Regular-season win percentage by quarterback era</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/cowboys-the-artometrics-of-americas-team/charts/chart4_qb_eras.plotly.json" data-source="Data: Pro Football Reference, NFL records, Forbes - ARTOMETRICS" role="img" aria-label="Regular-season win percentage by quarterback era"></div>
 </figure>
-<p class="art-p">Quarterback competence has not been absent. Romo and Prescott produced enough regular-season winning to keep Dallas nationally relevant.</p>
-<p class="art-p">The missing variable is conversion: turning stable quarterback play into deep playoff survival.</p>
-<h2 id="conference-drought" class="anchored">THE CONFERENCE WALL</h2>
+<p class="art-p">Quarterback competence has not been absent. Romo and Prescott produced enough regular-season winning to keep Dallas nationally relevant. The missing variable is conversion: turning stable quarterback play into deep playoff survival.</p>
+<p class="art-p">Regular-season competence preserves the brand. It does not automatically reopen the conference championship door.</p>
+
+<h2 id="the-conference-wall" class="anchored">The drought now sits with football’s other long waits</h2>
+<h3 id="the-conference-wall-look" class="anchored">Years since selected teams reached a conference championship game</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/cowboys-the-artometrics-of-americas-team/charts/chart5_conference_drought.plotly.json" data-source="Data: Pro Football Reference, NFL records, Forbes - ARTOMETRICS" role="img" aria-label="Years since selected teams reached a conference championship game"></div>
 </figure>
-<p class="art-p">The Cowboys' NFC championship drought now belongs in the same chart as franchises fans instinctively associate with frustration.</p>
-<p class="art-p">That is the mirror the data holds up: Dallas is not cursed by invisibility. It is cursed by being watched.</p>
-<h2 id="conclusion" class="anchored">Bottom line</h2>
+<p class="art-p">The Cowboys’ NFC championship drought now belongs on the same chart as franchises fans instinctively associate with frustration. Twenty-nine years without that appearance, entering 2025, is no longer a private Texas problem.</p>
+<p class="art-p">Dallas is not cursed by invisibility. It is cursed by being watched. The spotlight turns a football gap into national theater.</p>
+
+<h2 id="what-to-take-away" class="anchored">What to take away</h2>
 <p class="art-p">The Cowboys are not a failed sports business. They may be the most successful sports business in America. That is why the football gap is so stark.</p>
-<p class="art-p">The numbers say America's Team has mastered demand. The unfinished work is turning demand back into postseason supply.</p>
-<h2 id="references" class="anchored">Sources</h2>
+<p class="art-p">America’s Team has mastered demand. The unfinished work is turning demand back into postseason supply—conference championships first, Super Bowls only after the conversion engine restarts.</p>
+
+<h2 id="sources" class="anchored">Sources</h2>
 <p>Pro Football Reference. <em>Dallas Cowboys Franchise Encyclopedia</em>.</p>
 <p>Forbes. <em>NFL Team Valuations</em>, recent estimates.</p>
 <p>Sports Reference playoff and quarterback starter records.</p>
 <p>NFL historical postseason records.</p>
-<h2 id="editors-note" class="anchored">Editor’s note</h2>
-<div class="art-editorial-note"><p>Franchise values are rounded public estimates. Quarterback win percentages are conventional starter-record summaries and should be interpreted as era indicators, not individual value models.</p></div>
 </main>
 </div>
