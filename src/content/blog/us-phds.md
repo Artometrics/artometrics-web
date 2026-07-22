@@ -9,11 +9,11 @@ tags:
 draft: false
 ---
 <div id="quarto-content">
-
 <main class="art-article-main">
-<p class="art-p">This report analyzes the TidyTuesday <strong>2019-02-19</strong> release on <strong>US PhDs Awarded</strong> — <strong>3,370</strong> rows after cleaning and merge. Which PhD fields expanded fastest — and where is production concentrated?</p>
-<p class="art-p">Five charts track <strong>N phds</strong> across time, category, and named entities — trend, leaders, distribution, tiers, and relationships. Where companion files exist in the repo, they are joined before analysis so reception, geography, or metadata columns are not left on the table.</p>
-<h2 id="fast-facts" class="anchored">At a glance</h2>
+<p class="art-p">U.S. doctorate production is a labor-market story told in field counts. This file holds 3,370 records spanning 2008–2017, with a median of 85.0 PhDs and a high of 5,302. Social sciences lead the fact-box field ranking; life sciences appear among the notable broad fields.</p>
+<p class="art-p">The question is which disciplines grew — and which sit above or below the median production level — when doctorate output is measured year by year and field by field. Medians keep a few giant programs from dictating every comparison.</p>
+<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
+<p class="art-p">Keep these markers in view as the story unfolds.</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">3,370</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">85.0</span><span class="fact-label">Median N phds</span></div>
@@ -22,51 +22,61 @@ draft: false
   <div class="fact-box"><span class="fact-number">2008–2017</span><span class="fact-label">Year span covered in the file</span></div>
   <div class="fact-box"><span class="fact-number">Life sciences</span><span class="fact-label">Most common Broad field</span></div>
 </div>
-<h2 id="dataset-context" class="anchored">The data</h2>
-<p>The source is the TidyTuesday release from <strong>2019-02-19</strong> (R for Data Science community). This working file contains <strong>3,370</strong> rows and <strong>6</strong> columns after merging all available CSV/XLSX tables in the week folder.</p>
-<p>Charts are exported as Plotly JSON with PNG fallbacks. Medians are used for robustness where distributions skew. Index-style fields (row numbers, sequential IDs) are excluded from metric selection.</p>
-<p class="art-p"><strong>How to read this report:</strong> start with the chart caption, then ask what the metric actually means, what a non-expert should notice first, and what an expert would challenge in the source. The goal is not to memorize every number; it is to leave with a sharper question than the one you arrived with.</p>
-<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
-<h2 id="chart-1-trend" class="anchored">TREND</h2>
+<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<p class="art-p">The source is the TidyTuesday release from 2019-02-19 (R for Data Science community). The working file contains 3,370 rows and 6 columns after merging available tables in the week folder. N phds is the primary metric; broad field is the main categorical axis.</p>
+<p class="art-p">Medians are used because field sizes skew. Index-style fields are excluded from metric selection. Charts track trend, leaders, distribution, gaps to the median, and concentration across fields.</p>
+
+<h2 id="median-doctorate-counts-edged-upward-across-the-decade" class="anchored">Median doctorate counts edged upward across the decade</h2>
+<h3 id="median-doctorate-counts-edged-upward-across-the-decade-look" class="anchored">Median N phds Over Time</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/us-phds/charts/chart1_trend.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/us-phds/charts/chart1_trend.png" role="img" aria-label="Median N phds Over Time"></div>
 </figure>
-<p class="art-p">Median n phds is <strong>rising</strong> from <strong>80.0</strong> in the opening period to <strong>87.0</strong> at the close.</p>
-<p class="art-p">Annual medians filter one-off spikes so the structural slope — not viral outliers — drives the story.</p>
-<h2 id="chart-2-leaders" class="anchored">LEADERS</h2>
+<p class="art-p">Median n phds rises from 80.0 in the opening period to 87.0 at the close — a modest climb around the file median of 85.0. The typical field-year in this extract produced slightly more doctorates by the end of the window than at the start.</p>
+<p class="art-p">A rising median is not the same as uniform growth. Leader fields can surge while smaller programs move little; the trend chart reports the center, not every discipline’s path.</p>
+
+<h2 id="social-sciences-lead-the-field-ladder" class="anchored">Social sciences lead the field ladder</h2>
+<h3 id="social-sciences-lead-the-field-ladder-look" class="anchored">Social sciences leads at 4,944 — 915 marks the median among the top dozen</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/us-phds/charts/chart2_leaders.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/us-phds/charts/chart2_leaders.png" role="img" aria-label="Social sciences leads at 4,944 — 915 marks the median among the top dozen"></div>
 </figure>
-<p class="art-p"><strong>Social sciences</strong> leads at <strong>4,944</strong> — <strong>915</strong> marks the median among the top dozen.</p>
-<p class="art-p">Head-of-field concentration is where quality, scale, or brand visibly separates from the pack.</p>
-<h2 id="chart-3-distribution" class="anchored">DISTRIBUTION</h2>
+<p class="art-p">Social sciences leads at 4,944 PhDs in the leaders cut, while 915 marks the median among the top dozen. The distance between first place and that top-dozen median shows how quickly the ladder drops even inside the upper tier.</p>
+<p class="art-p">Fact-box highlights place social sciences at the top of the field ranking and note life sciences among the broad-field landmarks. The chart makes the numeric gap concrete.</p>
+
+<h2 id="broad-fields-do-not-share-one-production-band" class="anchored">Broad fields do not share one production band</h2>
+<h3 id="broad-fields-do-not-share-one-production-band-look" class="anchored">N phds by Broad field</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/us-phds/charts/chart3_distribution.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/us-phds/charts/chart3_distribution.png" role="img" aria-label="N phds by Broad field"></div>
 </figure>
-<p class="art-p">Category boxes reveal whether n phds consensus is shared or contested across tiers.</p>
-<p class="art-p">Wide whiskers flag segments where outliers — not averages — drive reputation.</p>
-<h2 id="chart-4-gap" class="anchored">GAP ANALYSIS</h2>
+<p class="art-p">Category boxes by broad field show whether doctorate counts are shared or contested across disciplinary families. Psychology and social sciences, engineering, life sciences, and others occupy different parts of the distribution.</p>
+<p class="art-p">The boxes are the right tool when fields differ in scale. A single national median of 85.0 hides those family-level spreads.</p>
+
+<h2 id="psychology-and-social-sciences-clear-the-median-engineering-trails" class="anchored">Psychology and social sciences clear the median; engineering trails</h2>
+<h3 id="psychology-and-social-sciences-clear-the-median-engineering-trails-look" class="anchored">N phds vs median by Broad field</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/us-phds/charts/chart4_gap.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/us-phds/charts/chart4_gap.png" role="img" aria-label="N phds vs median by Broad field"></div>
 </figure>
-<p class="art-p"><strong>Psychology and social sciences</strong> sits <strong>30.5</strong> above the median; <strong>Engineering</strong> trails by <strong>21.5</strong>.</p>
-<p class="art-p">Diverging from the median exposes which tiers over- or under-perform — not just who ranks first.</p>
-<h2 id="chart-pareto" class="anchored">SUPPLEMENT — CONCENTRATION</h2>
+<p class="art-p">Psychology and social sciences sits 30.5 above the median; engineering trails by 21.5. Those signed gaps convert broad-field boxes into distance from the file center.</p>
+<p class="art-p">Trailing the median is not a quality judgment. It is a statement about relative volume in this extract’s n phds metric.</p>
+
+<h2 id="five-fields-hold-most-of-the-aggregate-doctorates" class="anchored">Five fields hold most of the aggregate doctorates</h2>
+<h3 id="five-fields-hold-most-of-the-aggregate-doctorates-look" class="anchored">Cumulative N phds</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/us-phds/charts/chart_pareto.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/us-phds/charts/chart_pareto.png" role="img" aria-label="Cumulative N phds"></div>
 </figure>
-<p class="art-p">The top <strong>5</strong> field entries account for <strong>63%</strong> of the aggregate n phds.</p>
-<p class="art-p">Steep Pareto curves mean a small head drives most of the signal — the long tail is noise until it isn't.</p>
-<h2 id="limitations" class="anchored">Caveats</h2>
-<p>Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p>
-<p>Findings describe the file on hand — treat them as structural signals about <strong>US PhDs Awarded</strong>, not exhaustive truth about the full domain.</p>
-<h2 id="conclusion" class="anchored">Bottom line</h2>
-<p>Read as a teaching map, <strong>US PhDs Awarded</strong> shows why one metric is rarely enough: leaders, tails, trends, and relationships each answer a different question about n phds.</p>
-<p>The best reading is modest: use the chart to sharpen the question, then check the source and limits before turning it into a claim.</p>
-<h2 id="references" class="anchored">Sources</h2>
+<p class="art-p">The top five field entries account for 63% of the aggregate n phds. Concentration is high: a small set of fields drives most of the summed doctorate production in the file.</p>
+<p class="art-p">Steep Pareto curves mean capacity and attention cluster. The long tail of smaller fields still matters for the ecosystem, but it does not dominate the total.</p>
+<h2 id="what-this-file-cannot-tell-you" class="anchored">What this file cannot tell you</h2>
+<p class="art-p">Community-cleaned TidyTuesday snapshots are not live NSF Survey of Earned Doctorates APIs. Missing values, field-name variants, and 2008–2017 coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p>
+<p class="art-p">Findings describe this U.S. PhDs extract — structural signals about doctorate counts by field — not a full labor-market forecast or ranking of program quality.</p>
+<h2 id="what-to-take-away" class="anchored">What to take away</h2>
+<p class="art-p">Doctorate production in this file centers on a median of 85.0, edges up from 80.0 to 87.0 over the window, and concentrates heavily: five fields hold 63% of aggregate n phds.</p>
+<p class="art-p">Social sciences lead the upper ladder, psychology and social sciences sit well above the median, and engineering trails it — a volume map of disciplines, not a prestige contest.</p>
+<h2 id="sources" class="anchored">Sources</h2>
+
 <p>Data Science Learning Community. (2019). <em>TidyTuesday: US PhDs Awarded</em>. <a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2019/2019-02-19/phd_by_field.csv" target="_blank" rel="noopener noreferrer">https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2019/2019-02-19/phd_by_field.csv</a></p>
 <h2 id="editors-note" class="anchored">Editor’s note</h2>
 <div class="art-editorial-note"><p><em>Artometrics data report from the TidyTuesday research pipeline. Charts and aggregates are reproducible from the embedded exhibits and public source files.</em></p></div>
 <p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2019/2019-02-19" target="_blank" rel="noopener noreferrer">View TidyTuesday source on GitHub</a></p>
+
 </main>
 </div>

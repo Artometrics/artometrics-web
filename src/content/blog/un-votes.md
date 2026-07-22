@@ -9,60 +9,70 @@ tags:
 draft: false
 ---
 <div id="quarto-content">
-
 <main class="art-article-main">
-<p class="art-p">This report analyzes the TidyTuesday <strong>2021-03-23</strong> release on <strong>UN Votes</strong> — <strong>100,000</strong> rows after cleaning and merge. Which UN votes split the chamber — and who dissented most?</p>
-<p class="art-p">Five charts track <strong>record counts</strong> across time, category, and named entities — trend, leaders, distribution, tiers, and relationships. Where companion files exist in the repo, they are joined before analysis so reception, geography, or metadata columns are not left on the table.</p>
-<h2 id="fast-facts" class="anchored">At a glance</h2>
+<p class="art-p">United Nations roll-call votes are a diplomacy archive written as a contingency table. This working extract holds 100,000 records. The most common vote value is yes — not a moral claim, a frequency claim. The charts ask where that yes-mass concentrates, which countries appear most often, and how long-tailed country participation becomes.</p>
+<p class="art-p">Voting records identify resolutions that divided member states, but the first job of this file is simpler: map the landscape of yes, no, and abstain, then see which member names and country codes recur in a 100,000-row slice of UN voting history.</p>
+<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
+<p class="art-p">Keep these markers in view as the story unfolds.</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">100,000</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">yes</span><span class="fact-label">Most common Vote</span></div>
 </div>
-<h2 id="dataset-context" class="anchored">The data</h2>
-<p>The source is the TidyTuesday release from <strong>2021-03-23</strong> (R for Data Science community). This working file contains <strong>100,000</strong> rows and <strong>4</strong> columns after merging all available CSV/XLSX tables in the week folder.</p>
-<p>Charts are exported as Plotly JSON with PNG fallbacks. Medians are used for robustness where distributions skew. Index-style fields (row numbers, sequential IDs) are excluded from metric selection.</p>
-<p class="art-p"><strong>How to read this report:</strong> start with the chart caption, then ask what the metric actually means, what a non-expert should notice first, and what an expert would challenge in the source. The goal is not to memorize every number; it is to leave with a sharper question than the one you arrived with.</p>
-<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
-<h2 id="chart-1-category" class="anchored">LANDSCAPE</h2>
+<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<p class="art-p">The source is the TidyTuesday release from 2021-03-23 (R for Data Science community). The working file contains 100,000 rows and 4 columns after merging available tables in the week folder. Vote is the primary categorical field; country and country code provide entity axes; frequency charts summarize repetition.</p>
+<p class="art-p">There is no single numeric “score” column driving a median leaderboard here. The analysis is categorical: counts, shares, and recurrence. Index-style fields stay out of metric selection.</p>
+
+<h2 id="yes-votes-dominate-the-sampled-un-record" class="anchored">Yes votes dominate the sampled UN record</h2>
+<h3 id="yes-votes-dominate-the-sampled-un-record-look" class="anchored">Yes votes dominate the sampled UN record</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/un-votes/charts/chart1_category.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/un-votes/charts/chart1_category.png" role="img" aria-label="Yes votes dominate the sampled UN record"></div>
 </figure>
-<p class="art-p"><strong>yes</strong> dominates with <strong>79,663</strong> records.</p>
-<p class="art-p">The main bucket carries the story; this field does not have a meaningful long-tail split.</p>
-<h2 id="chart-2-leaders" class="anchored">LEADERS</h2>
+<p class="art-p">Yes dominates with 79,663 records. In a 100,000-row extract, that is the center of gravity: most recorded positions in this slice are affirmative. Abstain and no exist, but they do not match yes for volume.</p>
+<p class="art-p">Dominance here is a frequency fact about the file, not proof that the General Assembly always agrees. It tells you where the mass of the table sits before any conflict analysis begins.</p>
+
+<h2 id="brazil-appears-most-often-among-country-names" class="anchored">Brazil appears most often among country names</h2>
+<h3 id="brazil-appears-most-often-among-country-names-look" class="anchored">Brazil appears most often in this extract</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/un-votes/charts/chart2_leaders.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/un-votes/charts/chart2_leaders.png" role="img" aria-label="Brazil appears most often in this extract"></div>
 </figure>
-<p class="art-p"><strong>Brazil</strong> appears <strong>747</strong> times — the most recurring name in the file.</p>
-<p class="art-p">The top dozen account for a visible share of all <strong>100,000</strong> rows.</p>
-<h2 id="chart-3-category" class="anchored">CATEGORY</h2>
+<p class="art-p">Brazil appears 747 times — the most recurring country name in the file. The top dozen countries account for a visible share of all 100,000 rows, which is what a recurring-member chart is for: showing who is densely present in the extract.</p>
+<p class="art-p">High appearance counts can reflect coverage, membership longevity, or how the sample was built. They are presence metrics, not win rates.</p>
+
+<h2 id="vote-categories-restate-the-file-s-center-of-gravity" class="anchored">Vote categories restate the file’s center of gravity</h2>
+<h3 id="vote-categories-restate-the-file-s-center-of-gravity-look" class="anchored">Vote categories reveal the file's center of gravity</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/un-votes/charts/chart3_category.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/un-votes/charts/chart3_category.png" role="img" aria-label="Vote categories reveal the file's center of gravity"></div>
 </figure>
-<p class="art-p"><strong>yes</strong> is the largest bucket with <strong>79,663</strong> records.</p>
-<p class="art-p">Category concentration shows where editorial attention should focus first.</p>
-<h2 id="chart-5-frequency" class="anchored">SUPPLEMENT — FREQUENCY</h2>
+<p class="art-p">Yes is again the largest bucket with 79,663 records when vote categories are plotted as a bar landscape. Repeating the category cut is useful: it confirms that the headline frequency is not an artifact of a single chart type.</p>
+<p class="art-p">Category concentration shows where editorial attention should start — with the yes majority — while still leaving room to inspect the smaller no and abstain bands.</p>
+
+<h2 id="country-appearances-follow-a-long-tail-pattern" class="anchored">Country appearances follow a long-tail pattern</h2>
+<h3 id="country-appearances-follow-a-long-tail-pattern-look" class="anchored">Country appearances follow a long-tail pattern</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/un-votes/charts/chart5_frequency.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/un-votes/charts/chart5_frequency.png" role="img" aria-label="Country appearances follow a long-tail pattern"></div>
 </figure>
-<p class="art-p">Most country entities appear only once; a small head revisits repeatedly.</p>
-<p class="art-p">This power-law shape is typical of guest lists, credits, and catalog-style tables.</p>
-<h2 id="chart-extra-mix" class="anchored">SUPPLEMENT — MIX</h2>
+<p class="art-p">Most country entities appear only once in the frequency view; a small head revisits repeatedly. That power-law shape is typical of catalog-style international tables: a few members are densely observed, many are sparse.</p>
+<p class="art-p">Long tails warn against over-reading rare countries as if they had the same sample depth as Brazil-scale recurrence.</p>
+
+<h2 id="country-codes-add-a-second-identity-layer" class="anchored">Country codes add a second identity layer</h2>
+<h3 id="country-codes-add-a-second-identity-layer-look" class="anchored">Country codes add metadata rather than a new thesis</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/un-votes/charts/chart_extra_mix.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/un-votes/charts/chart_extra_mix.png" role="img" aria-label="Country codes add metadata rather than a new thesis"></div>
 </figure>
-<p class="art-p"><strong>BR</strong> is the most repeated country code in the extract.</p>
-<p class="art-p">Secondary dimensions add context when the primary table has no numeric score column.</p>
-<h2 id="limitations" class="anchored">Caveats</h2>
-<p>Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p>
-<p>Findings describe the file on hand — treat them as structural signals about <strong>UN Votes</strong>, not exhaustive truth about the full domain.</p>
-<h2 id="conclusion" class="anchored">Bottom line</h2>
-<p>Read as a teaching map, <strong>UN Votes</strong> shows why one metric is rarely enough: leaders, tails, trends, and relationships each answer a different question about the field.</p>
-<p>The best reading is modest: use the chart to sharpen the question, then check the source and limits before turning it into a claim.</p>
-<h2 id="references" class="anchored">Sources</h2>
+<p class="art-p">BR is the most repeated country code in the extract — the code-level echo of Brazil’s name-level lead. Secondary dimensions like codes add join keys and metadata when the primary table has no numeric score column.</p>
+<p class="art-p">Read codes as infrastructure for linking, not as a rival thesis to the vote-share story. They confirm entity identity across the 100,000-row sample.</p>
+<h2 id="what-this-file-cannot-tell-you" class="anchored">What this file cannot tell you</h2>
+<p class="art-p">Community-cleaned TidyTuesday snapshots are not the full UN voting API. Missing values, country-name variants, and week-of-export coverage limits apply. A 100,000-row extract may be a sample or a capped export rather than every roll call ever taken.</p>
+<p class="art-p">Findings describe this UN votes file — structural signals about vote categories and country recurrence — not a complete theory of international coalitions.</p>
+<h2 id="what-to-take-away" class="anchored">What to take away</h2>
+<p class="art-p">In this extract, yes is the majority language of recorded votes (79,663 of 100,000), Brazil is the most recurring country name (747 appearances), and BR leads among country codes.</p>
+<p class="art-p">The long tail of country appearances means presence is uneven. Start with the yes majority and the dense head of member recurrence; treat sparse countries as thin evidence until coverage is checked.</p>
+<h2 id="sources" class="anchored">Sources</h2>
+
 <p>Data Science Learning Community. (2021). <em>TidyTuesday: UN Votes</em>. <a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2021/2021-03-23/unvotes.csv" target="_blank" rel="noopener noreferrer">https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2021/2021-03-23/unvotes.csv</a></p>
 <h2 id="editors-note" class="anchored">Editor’s note</h2>
 <div class="art-editorial-note"><p><em>Artometrics data report from the TidyTuesday research pipeline. Charts and aggregates are reproducible from the embedded exhibits and public source files.</em></p></div>
 <p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2021/2021-03-23" target="_blank" rel="noopener noreferrer">View TidyTuesday source on GitHub</a></p>
+
 </main>
 </div>

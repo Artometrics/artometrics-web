@@ -9,11 +9,11 @@ tags:
 draft: false
 ---
 <div id="quarto-content">
-
 <main class="art-article-main">
-<p class="art-p">This report analyzes the TidyTuesday <strong>2019-05-28</strong> release on <strong>Wine Ratings</strong> — <strong>100,000</strong> rows after cleaning and merge. Does price predict points — or do bargains cluster?</p>
-<p class="art-p">Five charts track <strong>Points</strong> across time, category, and named entities — trend, leaders, distribution, tiers, and relationships. Where companion files exist in the repo, they are joined before analysis so reception, geography, or metadata columns are not left on the table.</p>
-<h2 id="fast-facts" class="anchored">At a glance</h2>
+<p class="art-p">A hundred thousand wine ratings are enough to test a dinner-table theory: does price predict critic points? This file’s median score is 88.0; the observed high is 100. Charles Smith 2006 Royal City appears in the fact-box title ranking; the United States is the most common country.</p>
+<p class="art-p">The charts move from title leaders to country spreads to the points-versus-price scatter. The calibration point is 88.0 — the mathematical center of a tasting culture that rarely uses the bottom of the scale.</p>
+<h2 id="the-numbers-that-matter" class="anchored">The numbers that matter</h2>
+<p class="art-p">Keep these markers in view as the story unfolds.</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">100,000</span><span class="fact-label">Records in the working dataset</span></div>
   <div class="fact-box"><span class="fact-number">88.0</span><span class="fact-label">Median Points</span></div>
@@ -21,51 +21,61 @@ draft: false
   <div class="fact-box"><span class="fact-number">Charles Smith 2006 Royal Cit</span><span class="fact-label">Top Title by Points</span></div>
   <div class="fact-box"><span class="fact-number">US</span><span class="fact-label">Most common Country</span></div>
 </div>
-<h2 id="dataset-context" class="anchored">The data</h2>
-<p>The source is the TidyTuesday release from <strong>2019-05-28</strong> (R for Data Science community). This working file contains <strong>100,000</strong> rows and <strong>13</strong> columns after merging all available CSV/XLSX tables in the week folder.</p>
-<p>Charts are exported as Plotly JSON with PNG fallbacks. Medians are used for robustness where distributions skew. Index-style fields (row numbers, sequential IDs) are excluded from metric selection.</p>
-<p class="art-p"><strong>How to read this report:</strong> start with the chart caption, then ask what the metric actually means, what a non-expert should notice first, and what an expert would challenge in the source. The goal is not to memorize every number; it is to leave with a sharper question than the one you arrived with.</p>
-<p class="art-p"><strong>Reader path:</strong> if you are new to the topic, treat each chart as a guided tour of one question: who leads, how concentrated the field is, what changes over time, and where the outliers sit. If you already know the domain, use the same charts as a challenge: check whether the metric is the right proxy, whether the source omits an important population, and whether the headline survives the limitations section.</p>
-<h2 id="chart-1-breakdown" class="anchored">BREAKDOWN</h2>
+<h2 id="where-the-numbers-come-from" class="anchored">Where the numbers come from</h2>
+<p class="art-p">The source is the TidyTuesday release from 2019-05-28 (R for Data Science community). The working file contains 100,000 rows and 13 columns after merging available tables in the week folder. Points is the primary metric; price appears in the scatter; title and country are categorical axes.</p>
+<p class="art-p">Medians are used because wine scores cluster tightly and prices skew. Index-style fields are excluded from metric selection.</p>
+
+<h2 id="perfect-scores-crowd-the-title-breakdown-s-top-slice" class="anchored">Perfect scores crowd the title breakdown’s top slice</h2>
+<h3 id="perfect-scores-crowd-the-title-breakdown-s-top-slice-look" class="anchored">Points by Title</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/wine-ratings/charts/chart1_breakdown.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/wine-ratings/charts/chart1_breakdown.png" role="img" aria-label="Points by Title"></div>
 </figure>
-<p class="art-p"><strong>Château Léoville Barton 2010  Saint-Julien</strong> leads at <strong>100</strong>; <strong>Cardinale 2006 Cabernet Sauvignon (Napa Valley)</strong> anchors the low end at <strong>100</strong>.</p>
-<p class="art-p">Grouping by title exposes how the metric varies across the catalog's major entities.</p>
-<h2 id="chart-2-leaders" class="anchored">LEADERS</h2>
+<p class="art-p">In the title breakdown, Château Léoville Barton 2010 Saint-Julien leads at 100; Cardinale 2006 Cabernet Sauvignon (Napa Valley) anchors the low end of that plotted top group at 100 as well — a flat elite band at the scale’s ceiling.</p>
+<p class="art-p">When the top slice is all 100s, the chart is telling you about saturation at the maximum, not about a wide ladder of near-misses.</p>
+
+<h2 id="the-leaders-chart-is-a-wall-of-100-point-wines" class="anchored">The leaders chart is a wall of 100-point wines</h2>
+<h3 id="the-leaders-chart-is-a-wall-of-100-point-wines-look" class="anchored">Château Léoville Barton 2010 Saint-Julien leads at 100 — 100 marks the median among the top dozen</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/wine-ratings/charts/chart2_leaders.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/wine-ratings/charts/chart2_leaders.png" role="img" aria-label="Château Léoville Barton 2010 Saint-Julien leads at 100 — 100 marks the median among the top dozen"></div>
 </figure>
-<p class="art-p"><strong>Château Léoville Barton 2010  Saint-Julien</strong> leads at <strong>100</strong> — <strong>100</strong> marks the median among the top dozen.</p>
-<p class="art-p">Head-of-field concentration is where quality, scale, or brand visibly separates from the pack.</p>
-<h2 id="chart-3-distribution" class="anchored">DISTRIBUTION</h2>
+<p class="art-p">Château Léoville Barton 2010 Saint-Julien leads at 100, and 100 marks the median among the top dozen. The elite is compressed at the ceiling. Charles Smith 2006 Royal City remains a fact-box landmark for the title ranking rule used there.</p>
+<p class="art-p">A top dozen whose median is 100 is not a typical wine; it is the ceremonial head of a 100,000-row tasting archive.</p>
+
+<h2 id="countries-spread-points-around-a-high-center" class="anchored">Countries spread points around a high center</h2>
+<h3 id="countries-spread-points-around-a-high-center-look" class="anchored">Points by Country</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/wine-ratings/charts/chart3_distribution.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/wine-ratings/charts/chart3_distribution.png" role="img" aria-label="Points by Country"></div>
 </figure>
-<p class="art-p">Category boxes reveal whether points consensus is shared or contested across tiers.</p>
-<p class="art-p">Wide whiskers flag segments where outliers — not averages — drive reputation.</p>
-<h2 id="chart-4-gap" class="anchored">GAP ANALYSIS</h2>
+<p class="art-p">Category boxes by country show whether points consensus is shared or contested across origins. The United States is the most common country by frequency; the boxes ask how scores spread inside each origin.</p>
+<p class="art-p">Country structure matters because wine writing often treats place as destiny. The boxes test how much score variation place actually carries in this file.</p>
+
+<h2 id="austria-clears-the-median-chile-trails" class="anchored">Austria clears the median; Chile trails</h2>
+<h3 id="austria-clears-the-median-chile-trails-look" class="anchored">Points vs median by Country</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/wine-ratings/charts/chart4_gap.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/wine-ratings/charts/chart4_gap.png" role="img" aria-label="Points vs median by Country"></div>
 </figure>
-<p class="art-p"><strong>Austria</strong> sits <strong>2.00</strong> above the median; <strong>Chile</strong> trails by <strong>2.00</strong>.</p>
-<p class="art-p">Diverging from the median exposes which tiers over- or under-perform — not just who ranks first.</p>
-<h2 id="chart-5-relationship" class="anchored">SUPPLEMENT — RELATIONSHIP</h2>
+<p class="art-p">Austria sits 2.00 above the median; Chile trails by 2.00. Those signed gaps are modest in points terms — a reminder that this scoring culture lives in a narrow band around 88.0.</p>
+<p class="art-p">Small gaps can still be meaningful when the whole scale’s action happens between the high 80s and the low 90s for most bottles.</p>
+
+<h2 id="points-and-price-form-the-real-test-of-the-dinner-table-theory" class="anchored">Points and price form the real test of the dinner-table theory</h2>
+<h3 id="points-and-price-form-the-real-test-of-the-dinner-table-theory-look" class="anchored">Points vs Price</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/wine-ratings/charts/chart5_scatter.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/wine-ratings/charts/chart5_scatter.png" role="img" aria-label="Points vs Price"></div>
 </figure>
-<p class="art-p">Joint plot of <strong>points</strong> and <strong>price</strong> surfaces clusters the averages erase.</p>
-<p class="art-p">Bubble size tracks repeat presence — outliers are archetypes, not noise.</p>
-<h2 id="limitations" class="anchored">Caveats</h2>
-<p>Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p>
-<p>Findings describe the file on hand — treat them as structural signals about <strong>Wine Ratings</strong>, not exhaustive truth about the full domain.</p>
-<h2 id="conclusion" class="anchored">Bottom line</h2>
-<p>Read as a teaching map, <strong>Wine Ratings</strong> shows why one metric is rarely enough: leaders, tails, trends, and relationships each answer a different question about points.</p>
-<p>The best reading is modest: use the chart to sharpen the question, then check the source and limits before turning it into a claim.</p>
-<h2 id="references" class="anchored">Sources</h2>
+<p class="art-p">Plotting points against price shows clusters that averages erase: cheap high scorers, expensive middling bottles, and the familiar cloud where spending more often accompanies higher scores without guaranteeing them.</p>
+<p class="art-p">The scatter is the relationship the title promised. It does not invent a correlation coefficient beyond what the chart shows; it shows the joint distribution in the 100,000-row extract.</p>
+<h2 id="what-this-file-cannot-tell-you" class="anchored">What this file cannot tell you</h2>
+<p class="art-p">Community-cleaned TidyTuesday snapshots are not live Wine Enthusiast APIs. Missing prices, title variants, and coverage limits apply. Critic points reflect the source’s scoring practice, which uses a compressed high end of the scale.</p>
+<p class="art-p">Findings describe this wine-ratings extract — structural signals about points, country, and price — not a universal law of taste.</p>
+<h2 id="what-to-take-away" class="anchored">What to take away</h2>
+<p class="art-p">Wine scores in this file center on a median of 88.0, peak at 100 among title leaders, and show only modest country gaps around that high center.</p>
+<p class="art-p">Austria sits above the median and Chile below by two points each, while the points–price scatter is where the cost-versus-score question becomes visible without reducing 100,000 tastings to a slogan.</p>
+<h2 id="sources" class="anchored">Sources</h2>
+
 <p>Data Science Learning Community. (2019). <em>TidyTuesday: Wine Ratings</em>. <a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2019/2019-05-28/winemag-data-130k-v2.csv" target="_blank" rel="noopener noreferrer">https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2019/2019-05-28/winemag-data-130k-v2.csv</a></p>
 <h2 id="editors-note" class="anchored">Editor’s note</h2>
 <div class="art-editorial-note"><p><em>Artometrics data report from the TidyTuesday research pipeline. Charts and aggregates are reproducible from the embedded exhibits and public source files.</em></p></div>
 <p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2019/2019-05-28" target="_blank" rel="noopener noreferrer">View TidyTuesday source on GitHub</a></p>
+
 </main>
 </div>
