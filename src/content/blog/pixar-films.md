@@ -34,7 +34,7 @@ draft: false
   <div class="art-chart-live" data-chart="/data/articles/pixar-films/charts/chart1_runtime_timeline.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/pixar-films/charts/chart1_runtime_timeline.png" role="img" aria-label="Runtime Over Time"></div>
 </figure>
 <p class="art-p">Pixar’s theatrical releases did not stay the compact 81-minute package of Toy Story. Median runtime climbed from the sub-100-minute era of the late 1990s to a post-Incredibles 2 world where the longest entry runs 155 minutes.</p>
-<p class="art-p">The early median cluster around 98 minutes (through 2006) versus 116 minutes for films since 2017 is not noise. It is a structural shift in what a Pixar theatrical release is allowed to be — and it matches the +17 minute fact-box gap between eras.</p>
+<p class="art-p">The early median cluster around 98 minutes (through 2006) versus 116 minutes for films since 2017 is not noise. It is a structural shift in what a Pixar theatrical release is allowed to be — and it matches the +17 minute gap between eras.</p>
 
 <h2 id="critic-scores" class="anchored">Critic Scores</h2>
 <h3 id="critic-scores-look" class="anchored">Rotten Tomatoes Ranking</h3>
