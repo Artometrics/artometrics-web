@@ -1,5 +1,6 @@
 import { Platform, Pressable, Text, TextInput, View, StyleSheet } from "react-native";
 import { Link, router } from "expo-router";
+import Ionicons from "@expo/vector-icons/Ionicons";
 import { Logo } from "@/components/Logo";
 import { Wrapper } from "@/components/Wrapper";
 import { Fonts } from "@/constants/Colors";
@@ -7,16 +8,6 @@ import { useAuth } from "@/lib/auth";
 import { useChrome } from "@/lib/chrome";
 import { useTheme } from "@/lib/theme";
 import { useState } from "react";
-
-function MenuIcon({ color }: { color: string }) {
-  return (
-    <View style={styles.burger} accessibilityElementsHidden>
-      <View style={[styles.burgerLine, { backgroundColor: color }]} />
-      <View style={[styles.burgerLine, { backgroundColor: color }]} />
-      <View style={[styles.burgerLine, { backgroundColor: color }]} />
-    </View>
-  );
-}
 
 export function SiteHeader() {
   const { user } = useAuth();
@@ -41,17 +32,22 @@ export function SiteHeader() {
         <View style={styles.topRow}>
           <Link href="/" asChild>
             <Pressable style={styles.logoWrap} accessibilityLabel="Artometrics home">
-              <Logo size={30} style={{ color: colors.text }} />
+              <Logo size={28} align="left" style={{ color: colors.text }} />
             </Pressable>
           </Link>
 
           <View style={styles.actions}>
             {searchOpen ? (
-              <View style={[styles.searchBox, { borderColor: colors.border, backgroundColor: colors.bgElevated }]}>
+              <View
+                style={[
+                  styles.searchBox,
+                  { borderColor: colors.border, backgroundColor: colors.bgElevated },
+                ]}
+              >
                 <TextInput
                   value={q}
                   onChangeText={setQ}
-                  placeholder="Search reports…"
+                  placeholder="Search"
                   placeholderTextColor={colors.textSubtle}
                   style={[styles.searchInput, { color: colors.text }]}
                   onSubmitEditing={submitSearch}
@@ -67,7 +63,7 @@ export function SiteHeader() {
                 hitSlop={10}
                 style={styles.iconBtn}
               >
-                <Text style={[styles.iconGlyph, { color: colors.text }]}>⌕</Text>
+                <Ionicons name="search-outline" size={22} color={colors.text} />
               </Pressable>
             )}
 
@@ -77,40 +73,36 @@ export function SiteHeader() {
               hitSlop={10}
               style={styles.iconBtn}
             >
-              <Text style={[styles.iconGlyph, { color: colors.accent }]}>
-                {mode === "dark" ? "☀" : "☾"}
-              </Text>
+              <Ionicons
+                name={mode === "dark" ? "sunny-outline" : "moon-outline"}
+                size={20}
+                color={colors.text}
+              />
             </Pressable>
 
             {user ? (
               <Link href="/account" asChild>
-                <Pressable hitSlop={8} accessibilityLabel="Account">
-                  <Text style={[styles.accountLink, { color: colors.textMuted }]}>Account</Text>
+                <Pressable hitSlop={8} accessibilityLabel="Account" style={styles.iconBtn}>
+                  <Ionicons name="person-outline" size={20} color={colors.text} />
                 </Pressable>
               </Link>
             ) : (
-              <>
-                <Link href="/login" asChild>
-                  <Pressable hitSlop={8} accessibilityLabel="Sign in">
-                    <Text style={[styles.accountLink, { color: colors.textMuted }]}>Sign in</Text>
-                  </Pressable>
-                </Link>
-                <Link href="/pricing" asChild>
-                  <Pressable hitSlop={8}>
-                    <Text style={[styles.subscribeText, { color: colors.accent }]}>Subscribe</Text>
-                  </Pressable>
-                </Link>
-              </>
+              <Link href="/login" asChild>
+                <Pressable hitSlop={8} accessibilityLabel="Sign in" style={styles.iconBtn}>
+                  <Ionicons name="person-outline" size={20} color={colors.text} />
+                </Pressable>
+              </Link>
             )}
+
             <Pressable
               onPress={() => setMenuOpen(true)}
               accessibilityRole="button"
               accessibilityLabel="Open menu"
-              style={styles.menuBtn}
+              style={styles.iconBtn}
               hitSlop={12}
               testID="site-menu-button"
             >
-              <MenuIcon color={colors.text} />
+              <Ionicons name="menu-outline" size={26} color={colors.text} />
             </Pressable>
           </View>
         </View>
@@ -127,61 +119,38 @@ const styles = StyleSheet.create({
   topRow: {
     flexDirection: "row",
     alignItems: "center",
-    justifyContent: "flex-end",
-    paddingVertical: 12,
-    minHeight: 56,
-    position: "relative",
+    justifyContent: "space-between",
+    paddingVertical: 10,
+    minHeight: 52,
+    gap: 12,
   },
   logoWrap: {
-    position: "absolute",
-    left: 0,
-    right: 0,
-    alignItems: "center",
+    flexShrink: 1,
+    alignItems: "flex-start",
     justifyContent: "center",
     zIndex: 1,
-    pointerEvents: "box-none",
+    maxWidth: "55%",
   },
   actions: {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "flex-end",
-    gap: 10,
+    gap: 2,
     zIndex: 2,
-    flexWrap: "wrap",
+    flexShrink: 0,
   },
-  subscribeText: {
-    fontSize: 12,
-    fontWeight: "700",
-    letterSpacing: 0.2,
-  },
-  accountLink: {
-    fontSize: 12,
-    fontWeight: "600",
-  },
-  menuBtn: {
+  iconBtn: {
     width: 40,
     height: 40,
     alignItems: "center",
     justifyContent: "center",
   },
-  burger: { gap: 5, width: 20 },
-  burgerLine: {
-    height: 1.5,
-    width: "100%",
-  },
-  iconBtn: {
-    width: 36,
-    height: 36,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  iconGlyph: { fontSize: 18, lineHeight: 22 },
   searchBox: {
-    borderWidth: 1,
+    borderWidth: StyleSheet.hairlineWidth,
     borderRadius: 2,
     paddingHorizontal: 10,
-    minWidth: Platform.OS === "web" ? 180 : 140,
-    maxWidth: 240,
+    minWidth: Platform.OS === "web" ? 140 : 110,
+    maxWidth: 200,
     height: 34,
     justifyContent: "center",
   },

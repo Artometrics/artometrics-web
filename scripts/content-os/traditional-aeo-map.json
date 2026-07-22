@@ -1,0 +1,542 @@
+[
+  {
+    "slug": "airline-safety",
+    "suggestedSection": "cities-travel",
+    "suggestedTitle": "Which Airlines Have the Worst Safety Records?",
+    "suggestedDescription": "Carrier-level accident and fatality data ask which airlines stand out for poor safety outcomes."
+  },
+  {
+    "slug": "alcohol-consumption",
+    "suggestedSection": "culture",
+    "suggestedTitle": "Who Drinks the Most Alcohol Per Capita?",
+    "suggestedDescription": "Country-level consumption data map which nations drink the most per person—and how that has shifted."
+  },
+  {
+    "slug": "all-the-pizza",
+    "suggestedSection": "culture",
+    "suggestedTitle": "What Does a Slice of Pizza Really Cost?",
+    "suggestedDescription": "Price and calorie data across pizza menus show what diners pay in money and energy."
+  },
+  {
+    "slug": "anime",
+    "suggestedSection": "movies-tv",
+    "suggestedTitle": "What a Century of Anime Titles Reveals About the Industry",
+    "suggestedDescription": "MyAnimeList metadata on more than 13,000 titles traces Japanese animation as a production system."
+  },
+  {
+    "slug": "awards-prestige-economy-oscars-grammys-nobels",
+    "suggestedSection": "culture",
+    "suggestedTitle": "How Oscars, Grammys, and Nobels Convert Attention Into Prestige",
+    "suggestedDescription": "A cross-medium look at how prizes turn visibility into legitimacy across film, music, and science."
+  },
+  {
+    "slug": "beyonce-taylor-lyrics",
+    "suggestedSection": "music",
+    "suggestedTitle": "Beyoncé and Taylor Swift, Line by Line",
+    "suggestedDescription": "A lyric-level comparison of two era-defining catalogs—theme, language, and structure."
+  },
+  {
+    "slug": "big-mac-index",
+    "suggestedSection": "business",
+    "suggestedTitle": "What Twenty Years of Big Mac Prices Say About Purchasing Power",
+    "suggestedDescription": "Global burger prices illustrate how currency and wages shape the real cost of everyday goods."
+  },
+  {
+    "slug": "biketown-bikeshare",
+    "suggestedSection": "cities-travel",
+    "suggestedTitle": "How Far Do Portland’s Biketown Rides Actually Go?",
+    "suggestedDescription": "Trip-level bike-share data measures typical distance and duration across Biketown journeys."
+  },
+  {
+    "slug": "billboard-hot-100",
+    "suggestedSection": "music",
+    "suggestedTitle": "How Long Number-One Hits Stay on Top of the Hot 100",
+    "suggestedDescription": "Since 1958, most chart-toppers lasted weeks; a few held for months—and streaming rewrote the pattern."
+  },
+  {
+    "slug": "billboard-top-100",
+    "suggestedSection": "music",
+    "suggestedTitle": "How the Top of the Billboard Chart Got More Crowded",
+    "suggestedDescription": "Large-scale Hot 100 data show how rankings compress at the summit."
+  },
+  {
+    "slug": "board-games",
+    "suggestedSection": "games",
+    "suggestedTitle": "Which Board Games Combine Crowd Scale With Elite Ratings?",
+    "suggestedDescription": "Ratings and popularity across thousands of titles find games that win both mass attention and esteem."
+  },
+  {
+    "slug": "broadway-musicals",
+    "suggestedSection": "culture",
+    "suggestedTitle": "Which Broadway Musicals Ran Longest and Grossed Most?",
+    "suggestedDescription": "Performance and box-office records map the shows that dominated by longevity and revenue."
+  },
+  {
+    "slug": "caesar-the-psychonomics-of-emperor-julius",
+    "suggestedSection": "culture",
+    "suggestedTitle": "Julius Caesar and the Cost of Managing Power",
+    "suggestedDescription": "A psychonomic reading of Caesar asks what ambition cost the Roman political household he ruled."
+  },
+  {
+    "slug": "california-vs-texas-state-rivalry",
+    "suggestedSection": "cities-travel",
+    "suggestedTitle": "California and Texas: Where Rival State Systems Diverge",
+    "suggestedDescription": "What the two largest U.S. states share—and where their economies, exports, and risks part ways."
+  },
+  {
+    "slug": "celtics-the-artometrics-of-institutional-winning",
+    "suggestedSection": "sports",
+    "suggestedTitle": "How the Celtics Turned 1960s Dominance Into Permanent Expectation",
+    "suggestedDescription": "Boston’s championship inheritance still shapes every modern season."
+  },
+  {
+    "slug": "ceo-departures",
+    "suggestedSection": "business",
+    "suggestedTitle": "How Long Do CEOs Last Before They Leave?",
+    "suggestedDescription": "Thousands of executive-exit records measure tenure length and how departures cluster."
+  },
+  {
+    "slug": "cetaceans",
+    "suggestedSection": "culture",
+    "suggestedTitle": "How Whale and Dolphin Sizes Cluster by Family",
+    "suggestedDescription": "Morphometric data map which cetacean lineages produce the giants."
+  },
+  {
+    "slug": "christmas-novels",
+    "suggestedSection": "books",
+    "suggestedTitle": "Which Christmas Novels Anchor the Holiday Shelf?",
+    "suggestedDescription": "A Gutenberg holiday corpus shows which seasonal novels still define the Christmas canon."
+  },
+  {
+    "slug": "christmas-songs",
+    "suggestedSection": "music",
+    "suggestedTitle": "Which Holiday Songs Never Leave the Charts?",
+    "suggestedDescription": "Decades of Christmas-song chart data identify the standards that return every season."
+  },
+  {
+    "slug": "cia-world-factbook",
+    "suggestedSection": "business",
+    "suggestedTitle": "How Population Scale Relates to Prosperity Across Countries",
+    "suggestedDescription": "Factbook indicators compare nations on size and wealth—where scale and prosperity align or diverge."
+  },
+  {
+    "slug": "city-bioeconomics-operating-system",
+    "suggestedSection": "cities-travel",
+    "suggestedTitle": "Cities as Operating Systems of Exports, Culture, and Scarcity",
+    "suggestedDescription": "A geo-economics frame treats cities as layered systems of trade, culture, and infrastructure."
+  },
+  {
+    "slug": "coffee-the-artometrics-of-java",
+    "suggestedSection": "culture",
+    "suggestedTitle": "Coffee’s Place in Global Trade and Daily Life",
+    "suggestedDescription": "Commodity and consumption data place coffee among the world’s largest traded goods."
+  },
+  {
+    "slug": "college-major-income",
+    "suggestedSection": "business",
+    "suggestedTitle": "Which College Majors Pay Most—and Which Carry Job Risk?",
+    "suggestedDescription": "Earnings and unemployment by major show where degrees pay off and where risk is higher."
+  },
+  {
+    "slug": "comic-characters",
+    "suggestedSection": "culture",
+    "suggestedTitle": "Who Ranks Highest on Comic-Book Power Scales?",
+    "suggestedDescription": "Character attributes across Marvel and DC ask who sits atop power rankings."
+  },
+  {
+    "slug": "cowboys-the-artometrics-of-americas-team",
+    "suggestedSection": "sports",
+    "suggestedTitle": "The Cowboys’ Gap Between Brand Value and Championship Conversion",
+    "suggestedDescription": "Dallas remains the NFL’s clearest split between global brand power and an aging postseason engine."
+  },
+  {
+    "slug": "craft-beer-usa",
+    "suggestedSection": "culture",
+    "suggestedTitle": "How Bitter and Strong Is American Craft Beer?",
+    "suggestedDescription": "Brewery-level IBU and ABV data map bitterness and strength across U.S. craft producers."
+  },
+  {
+    "slug": "cultural-exports-geoeconomics",
+    "suggestedSection": "business",
+    "suggestedTitle": "When Films, Music, and Games Become National Exports",
+    "suggestedDescription": "A cultural-economics frame treats soft-power industries as export goods."
+  },
+  {
+    "slug": "dodgers-the-artometrics-of-baseballs-modern-machine",
+    "suggestedSection": "sports",
+    "suggestedTitle": "How the Dodgers Built Baseball’s Modern Consistency Machine",
+    "suggestedDescription": "Los Angeles turned payroll, development, and depth into recurring October access."
+  },
+  {
+    "slug": "emmy-awards",
+    "suggestedSection": "movies-tv",
+    "suggestedTitle": "Which Shows Dominated Emmy Season—and How Lopsided Was It?",
+    "suggestedDescription": "Nomination and win records reveal which series swept hardware—and how concentrated awards became."
+  },
+  {
+    "slug": "exercise-usa",
+    "suggestedSection": "culture",
+    "suggestedTitle": "Which U.S. States Exercise the Most?",
+    "suggestedDescription": "State-level activity rates compare where Americans work out most."
+  },
+  {
+    "slug": "export-superpowers-us-china-germany",
+    "suggestedSection": "business",
+    "suggestedTitle": "Why the U.S., China, and Germany Dominate Export Debate",
+    "suggestedDescription": "A three-country comparison of platforms, factories, and machinery."
+  },
+  {
+    "slug": "fast-food-calories",
+    "suggestedSection": "culture",
+    "suggestedTitle": "Which Fast-Food Chains Pack the Most Calories Per Item?",
+    "suggestedDescription": "Menu nutrition data identify the highest-calorie items across major chains."
+  },
+  {
+    "slug": "franchise",
+    "suggestedSection": "movies-tv",
+    "suggestedTitle": "How the World’s Biggest Media Franchises Actually Make Money",
+    "suggestedDescription": "Revenue maps for more than 100 franchises show where valuable IP earns across media."
+  },
+  {
+    "slug": "giant-the-artometrics-of-a-san-francisco-dynasty",
+    "suggestedSection": "sports",
+    "suggestedTitle": "The Giants’ Arc From New York Gothams to Oracle Park",
+    "suggestedDescription": "A franchise history from 1883 New York origins to a modern Bay Area ballclub."
+  },
+  {
+    "slug": "global-life-expectancy",
+    "suggestedSection": "culture",
+    "suggestedTitle": "How Human Life Expectancy Doubled in Five Centuries",
+    "suggestedDescription": "Survival data from the 1500s to 2015 map who gained years of life—and who lagged."
+  },
+  {
+    "slug": "global-plastic-waste",
+    "suggestedSection": "business",
+    "suggestedTitle": "Who Generates the Most Plastic Waste—and Who Mismanages It?",
+    "suggestedDescription": "Country-level plastic generation and mismanagement rates show where leakage concentrates."
+  },
+  {
+    "slug": "h3-the-artometrics-of-a-youtube-dynasty",
+    "suggestedSection": "culture",
+    "suggestedTitle": "How H3 Built a YouTube Network Beyond One Channel",
+    "suggestedDescription": "Since 2011, Ethan and Hila Klein scaled channels, a podcast, and a brand."
+  },
+  {
+    "slug": "horror-movie-profit",
+    "suggestedSection": "movies-tv",
+    "suggestedTitle": "Which Horror Movies Returned Multiples—and Which Burned Cash?",
+    "suggestedDescription": "Budget and box-office data for thousands of horror titles separate winners from costly misses."
+  },
+  {
+    "slug": "horror-movies",
+    "suggestedSection": "movies-tv",
+    "suggestedTitle": "Did Horror Get Better as the Catalog Exploded?",
+    "suggestedDescription": "Ratings across tens of thousands of horror films ask whether quality rose with volume."
+  },
+  {
+    "slug": "hurricanes-puerto-rico",
+    "suggestedSection": "cities-travel",
+    "suggestedTitle": "Which Storms Hit Puerto Rico Hardest?",
+    "suggestedDescription": "Hurricane records compare wind, deaths, and frequency for the island’s most damaging storms."
+  },
+  {
+    "slug": "hydro-wastewater",
+    "suggestedSection": "cities-travel",
+    "suggestedTitle": "Where Wastewater Plants Serve the Most People",
+    "suggestedDescription": "Facility-level data map which plants serve the largest populations."
+  },
+  {
+    "slug": "imdb-blockbuster-grammar",
+    "suggestedSection": "movies-tv",
+    "suggestedTitle": "How Movies Become Famous on IMDb’s Public Scoreboard",
+    "suggestedDescription": "Title fields, ratings, and box-office references explain how films accumulate attention."
+  },
+  {
+    "slug": "imperial",
+    "suggestedSection": "culture",
+    "suggestedTitle": "What Empire Chronicles Leave Out: Who Got Rich",
+    "suggestedDescription": "A historical-economics lens asks who captured wealth when rulers claimed order."
+  },
+  {
+    "slug": "incarceration-trends",
+    "suggestedSection": "business",
+    "suggestedTitle": "How U.S. Incarceration Rates Diverged by State",
+    "suggestedDescription": "Long-run imprisonment data track national trends and which states pulled away."
+  },
+  {
+    "slug": "lakers-the-artometrics-of-basketball-glamour",
+    "suggestedSection": "sports",
+    "suggestedTitle": "How the Lakers Convert Stars Into Championship Eras",
+    "suggestedDescription": "Los Angeles basketball’s glamour machine turns market gravity into title windows."
+  },
+  {
+    "slug": "languages-glottolog",
+    "suggestedSection": "culture",
+    "suggestedTitle": "How Concentrated Is the World’s Linguistic Diversity?",
+    "suggestedDescription": "Glottolog family data measure how uneven language diversity is at the family level."
+  },
+  {
+    "slug": "league-money-skill-and-star-systems",
+    "suggestedSection": "sports",
+    "suggestedTitle": "How League Money and Roster Rules Shape Star Systems",
+    "suggestedDescription": "Cross-sport rules, payroll, and scarcity show why teams become culturally meaningful."
+  },
+  {
+    "slug": "lego-database",
+    "suggestedSection": "games",
+    "suggestedTitle": "How LEGO Set Complexity Evolved Across Themes",
+    "suggestedDescription": "Official set metadata traces rising piece counts and theme differences."
+  },
+  {
+    "slug": "medium-articles",
+    "suggestedSection": "tech",
+    "suggestedTitle": "Did Longer Medium Posts Earn More Applause?",
+    "suggestedDescription": "Metadata from tens of thousands of Medium articles tests whether length predicts claps."
+  },
+  {
+    "slug": "musicbrainz-pop-fame-mechanics",
+    "suggestedSection": "music",
+    "suggestedTitle": "How Catalog Depth and Reinvention Make Pop Stars Famous",
+    "suggestedDescription": "MusicBrainz-style metadata links fame to release depth, genre travel, and reinvention."
+  },
+  {
+    "slug": "national-export-identity-atlas",
+    "suggestedSection": "business",
+    "suggestedTitle": "What Nations Sell—and What That Says About Identity",
+    "suggestedDescription": "A country-level atlas treats exports as identity: what states sell and need."
+  },
+  {
+    "slug": "national-park-visits",
+    "suggestedSection": "cities-travel",
+    "suggestedTitle": "Which National Parks Draw the Crowds?",
+    "suggestedDescription": "Visitation time series identify America’s busiest parks and how attendance has trended."
+  },
+  {
+    "slug": "netflix-engagement",
+    "suggestedSection": "movies-tv",
+    "suggestedTitle": "Which Netflix Titles Consumed the Most Viewing Hours?",
+    "suggestedDescription": "Engagement metrics Netflix reports show which titles absorbed the most hours."
+  },
+  {
+    "slug": "netflix-titles",
+    "suggestedSection": "movies-tv",
+    "suggestedTitle": "How Netflix’s Catalog Mix Shifted Between Films and Series",
+    "suggestedDescription": "Title-level library data track the balance of movies and TV over time."
+  },
+  {
+    "slug": "new-york-vs-san-francisco-city-systems",
+    "suggestedSection": "cities-travel",
+    "suggestedTitle": "New York and San Francisco: Command City vs. Invention City",
+    "suggestedDescription": "Why the two are paired in debate—and where their economic and cultural systems diverge."
+  },
+  {
+    "slug": "nuclear-explosions",
+    "suggestedSection": "culture",
+    "suggestedTitle": "How Nuclear Test Yields Shifted Through the Atomic Age",
+    "suggestedDescription": "Historical test records map yield, purpose, and timing across decades."
+  },
+  {
+    "slug": "nyc-restaurant-inspections",
+    "suggestedSection": "cities-travel",
+    "suggestedTitle": "Which NYC Cuisines Score Highest on Health Inspections?",
+    "suggestedDescription": "Restaurant grades across New York show how scores distribute by cuisine."
+  },
+  {
+    "slug": "pantheon-the-artometrics-of-collective-memory",
+    "suggestedSection": "culture",
+    "suggestedTitle": "Who Gets Remembered in the Global Pantheon of Fame?",
+    "suggestedDescription": "Biography-scale fame data ask where collective memory clusters."
+  },
+  {
+    "slug": "patriots-the-artometrics-of-the-system-dynasty",
+    "suggestedSection": "sports",
+    "suggestedTitle": "The Patriots’ Brady–Belichick Era as a System Shock",
+    "suggestedDescription": "Two decades of New England football compressed a century of legacy into one dynasty."
+  },
+  {
+    "slug": "pixar-films",
+    "suggestedSection": "movies-tv",
+    "suggestedTitle": "Where Pixar’s Critic Streak Broke: Cars and Lightyear",
+    "suggestedDescription": "Data on Pixar’s canon track scores and the titles that interrupted a long critical run."
+  },
+  {
+    "slug": "pokemon",
+    "suggestedSection": "games",
+    "suggestedTitle": "What Pokémon’s Franchise Actually Comprises",
+    "suggestedDescription": "Beyond the headline revenue figure: games, cards, merchandise, and film."
+  },
+  {
+    "slug": "project-gutenberg-public-domain-canon-map",
+    "suggestedSection": "books",
+    "suggestedTitle": "Mapping the Public-Domain Canon Through Project Gutenberg",
+    "suggestedDescription": "Gutenberg metadata charts language gravity, era effects, and author memory."
+  },
+  {
+    "slug": "project-gutenberg",
+    "suggestedSection": "books",
+    "suggestedTitle": "Which Subjects Dominate the Project Gutenberg Shelf?",
+    "suggestedDescription": "Public-domain metadata show which topics crowd the free-library canon."
+  },
+  {
+    "slug": "radio-stations",
+    "suggestedSection": "music",
+    "suggestedTitle": "How U.S. Radio Formats Map Across the Dial",
+    "suggestedDescription": "Station-level format data chart where music, talk, and niche programming concentrate."
+  },
+  {
+    "slug": "ramen-ratings",
+    "suggestedSection": "culture",
+    "suggestedTitle": "Which Ramen Brands Earn the Highest Ratings?",
+    "suggestedDescription": "Taster scores across thousands of instant ramen products identify top brands."
+  },
+  {
+    "slug": "readmitted",
+    "suggestedSection": "business",
+    "suggestedTitle": "Which Hospitals Still Fail the 30-Day Readmission Standard?",
+    "suggestedDescription": "CMS HRRP data show where states, conditions, and ownership types exceed benchmarks."
+  },
+  {
+    "slug": "regional-sports-identity-map",
+    "suggestedSection": "sports",
+    "suggestedTitle": "How American Cities Build Distinct Sports Identities",
+    "suggestedDescription": "Markets, leagues, and championship droughts explain why fan cultures differ by city."
+  },
+  {
+    "slug": "rolling-stone-albums",
+    "suggestedSection": "music",
+    "suggestedTitle": "Which Albums Sit at the Peak of Rolling Stone’s Canon?",
+    "suggestedDescription": "Canonical rankings identify the records Rolling Stone places at the summit."
+  },
+  {
+    "slug": "roman-emperors",
+    "suggestedSection": "culture",
+    "suggestedTitle": "Who Ruled Rome Longest—and Did Dynasty Predict Tenure?",
+    "suggestedDescription": "Reign-length data test whether dynastic succession meant longer time on the throne."
+  },
+  {
+    "slug": "san-francisco-data-microscope",
+    "suggestedSection": "cities-travel",
+    "suggestedTitle": "San Francisco as an Invention Machine Under Housing Pressure",
+    "suggestedDescription": "A city-identity report through software exports, scarcity, and neighborhoods."
+  },
+  {
+    "slug": "school-diversity",
+    "suggestedSection": "business",
+    "suggestedTitle": "Where U.S. Student-Body Diversity Is Highest",
+    "suggestedDescription": "School-level composition data map where diversity concentrates."
+  },
+  {
+    "slug": "sherlock-holmes",
+    "suggestedSection": "books",
+    "suggestedTitle": "How Word Count Is Distributed Across the Holmes Canon",
+    "suggestedDescription": "Text-length analysis of Sherlock Holmes stories through Conan’s corpus."
+  },
+  {
+    "slug": "simpsons-guest-stars",
+    "suggestedSection": "movies-tv",
+    "suggestedTitle": "Who Guest-Starred Most Often on The Simpsons?",
+    "suggestedDescription": "Guest-appearance records count celebrity density across seasons."
+  },
+  {
+    "slug": "sports-dynasty-index-best-and-worst-conversion",
+    "suggestedSection": "sports",
+    "suggestedTitle": "Best, Worst, and Most Misleading Sports Dynasties",
+    "suggestedDescription": "A cross-league index of championship mass, conversion, market value, and fan pain."
+  },
+  {
+    "slug": "streaming-catalog-power",
+    "suggestedSection": "movies-tv",
+    "suggestedTitle": "What Streaming Platforms Actually Keep in Their Libraries",
+    "suggestedDescription": "Public catalog data reveal library size and the gap between hype and retained inventory."
+  },
+  {
+    "slug": "super-bowl-ads",
+    "suggestedSection": "business",
+    "suggestedTitle": "Which Super Bowl Ads Won the Post-Game Internet?",
+    "suggestedDescription": "Ad-spot data track which commercials captured attention after the whistle."
+  },
+  {
+    "slug": "tv-golden-age",
+    "suggestedSection": "movies-tv",
+    "suggestedTitle": "When Did Prestige TV Peak—and Did Critics Agree?",
+    "suggestedDescription": "Golden-age scores compare critical and audience verdicts as prestige TV rose and cooled."
+  },
+  {
+    "slug": "uk-museums",
+    "suggestedSection": "galleries",
+    "suggestedTitle": "Where UK Museums Sit on the Deprivation Map",
+    "suggestedDescription": "Museum locations and deprivation bands show how institutions map onto inequality."
+  },
+  {
+    "slug": "un-votes",
+    "suggestedSection": "business",
+    "suggestedTitle": "Which UN Votes Split the Chamber Most Sharply?",
+    "suggestedDescription": "Voting records identify resolutions that divided member states."
+  },
+  {
+    "slug": "us-phds",
+    "suggestedSection": "business",
+    "suggestedTitle": "Which U.S. PhD Fields Expanded Fastest?",
+    "suggestedDescription": "Doctorate production data show which disciplines grew quickest."
+  },
+  {
+    "slug": "us-tuition",
+    "suggestedSection": "business",
+    "suggestedTitle": "How Far Did Average U.S. Tuition Climb by State?",
+    "suggestedDescription": "State tuition time series measure the rise in college costs."
+  },
+  {
+    "slug": "us-voter-turnout",
+    "suggestedSection": "business",
+    "suggestedTitle": "Which States Show Up at the Ballot Box?",
+    "suggestedDescription": "Election turnout data compare state participation rates."
+  },
+  {
+    "slug": "video-games-sliced",
+    "suggestedSection": "games",
+    "suggestedTitle": "Did Critical Acclaim Track Commercial Success in Video Games?",
+    "suggestedDescription": "A large games slice tests whether critic scores correlated with commercial outcomes."
+  },
+  {
+    "slug": "video-games-steam",
+    "suggestedSection": "games",
+    "suggestedTitle": "Which Steam Games Earned the Most Playtime Per Dollar?",
+    "suggestedDescription": "Ownership and play data identify titles that delivered the most hours relative to price."
+  },
+  {
+    "slug": "warrior-the-artometrics-of-a-golden-state-dynasty",
+    "suggestedSection": "sports",
+    "suggestedTitle": "How Golden State Went From Irrelevant to Dynasty",
+    "suggestedDescription": "Decades of losing before a modern dynasty remade Bay Area basketball."
+  },
+  {
+    "slug": "wealth-income",
+    "suggestedSection": "business",
+    "suggestedTitle": "How Concentrated Is Wealth at the Top of the Distribution?",
+    "suggestedDescription": "Wealth and income shares measure how assets pile up at the upper end."
+  },
+  {
+    "slug": "web-page-metrics",
+    "suggestedSection": "tech",
+    "suggestedTitle": "Which Web Pages Load Fastest—and What Metrics Move Together?",
+    "suggestedDescription": "Performance metrics show speed leaders and which technical measures correlate."
+  },
+  {
+    "slug": "wine-ratings",
+    "suggestedSection": "culture",
+    "suggestedTitle": "Does Wine Price Predict Critic Points?",
+    "suggestedDescription": "A hundred thousand wine ratings test whether cost tracks scores."
+  },
+  {
+    "slug": "world-heritage-sites",
+    "suggestedSection": "galleries",
+    "suggestedTitle": "How UNESCO Sites Grew Across Scandinavia, 2004–2022",
+    "suggestedDescription": "UNESCO heritage counts track how Scandinavian inventories expanded."
+  },
+  {
+    "slug": "yankees-the-artometrics-of-baseballs-empire",
+    "suggestedSection": "sports",
+    "suggestedTitle": "The Yankees as Baseball’s Benchmark for Expectation and Scale",
+    "suggestedDescription": "More than titles: New York sets the standard for droughts, payroll, and magnitude."
+  }
+]

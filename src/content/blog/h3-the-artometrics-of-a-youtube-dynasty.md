@@ -1,32 +1,19 @@
 ---
-title: "H3: The Artometrics of A YouTube Dynasty"
+title: How H3 Built a YouTube Network Beyond One Channel
 slug: h3-the-artometrics-of-a-youtube-dynasty
-pubDate: 2026-04-14
-description: "H3 is not one channel — it is a network. Since 2011, Ethan and Hila Klein have built four YouTube channels, one clothing brand, a podcast empire, and one of the most documented creator controversie..."
+pubDate: 2026-04-14T00:00:00.000Z
+description: 'Since 2011, Ethan and Hila Klein scaled channels, a podcast, and a brand.'
 heroImage: /images/content/2026/04/IMG_4164.webp
-tags: [culture, persona]
+tags:
+  - culture
 draft: false
 ---
 <div id="quarto-content">
-<nav id="TOC" role="doc-toc">
-    <h2 id="toc-title">IN THIS REPORT</h2>
 
-  <ul>
-  <li><a href="#fast-facts" id="toc-fast-facts">FAST FACTS</a></li>
-  <li><a href="#dataset-context" id="toc-dataset-context">DATASET CONTEXT</a></li>
-  <li><a href="#chart-1-the-era-timeline" id="toc-chart-1-the-era-timeline">CHART 1 — THE ERA TIMELINE</a></li>
-  <li><a href="#chart-2-the-duration-drift" id="toc-chart-2-the-duration-drift">CHART 2 — THE DURATION DRIFT</a></li>
-  <li><a href="#chart-3-the-fan-vs.-critic-divide" id="toc-chart-3-the-fan-vs.-critic-divide">CHART 3 — THE FAN VS. CRITIC DIVIDE</a></li>
-  <li><a href="#limitations" id="toc-limitations">LIMITATIONS</a></li>
-  <li><a href="#conclusion" id="toc-conclusion">CONCLUSION</a></li>
-  <li><a href="#references" id="toc-references">REFERENCES</a></li>
-  <li><a href="#editors-note" id="toc-editors-note">EDITOR’S NOTE</a></li>
-  </ul>
-</nav>
 <main class="art-article-main">
 <p>Ethan Klein built one of YouTube’s most documented creator empires from a single channel and a lawsuit. H3h3Productions launched in 2011 as a reaction-commentary format, spent years as a meme factory, and then pivoted — twice — into something far more complicated. The H3 Podcast debuted in 2017. The Frenemies co-host era with Trisha Paytas ran for nine months in 2020–2021 and produced the highest viewership the show has ever seen. The Leftovers political co-host era with Hasan Piker ran until October 2023, when a public dispute over the Israel-Palestine conflict ended it. What remained after that is what this report analyzes: 1,638 videos across four channels, 680 podcast episodes, and three years of Reddit post data from the fan and critic communities that formed around the brand.</p>
 <p>This is not a hit piece and it is not a fan report. It is a data report. The numbers are what they are.</p>
-<h2 id="fast-facts" class="anchored">FAST FACTS</h2>
+<h2 id="fast-facts" class="anchored">At a glance</h2>
 <div class="facts-grid">
   <div class="fact-box">
     <span class="fact-number">3.24B</span>
@@ -53,13 +40,13 @@ draft: false
     <span class="fact-label">r/h3snark indexed activity at its April 2025 peak — 3.5× its own average, triggered by the iDubbbz Content Cop</span>
   </div>
 </div>
-<h2 id="dataset-context" class="anchored">DATASET CONTEXT</h2>
+<h2 id="dataset-context" class="anchored">The data</h2>
 <p>The H3 ecosystem is not a single channel — it is a network. h3h3Productions launched in 2011 as a reaction-and-commentary channel built around the Fair Use legal fight that briefly made Ethan Klein a cause célèbre in YouTube creator circles. The H3 Podcast launched in 2017 as a separate channel and quickly became the brand’s primary vehicle. Hila Klein’s channel documents the Teddy Fresh clothing brand. The Ethan Klein channel captures solo content and live streams. This report analyzes all four: <strong>1,638 videos</strong> after filtering Shorts and zero-view uploads from the original 1,876-video pull via the YouTube Data API v3.</p>
 <p>H3’s trajectory cannot be understood without the era framework. The podcast’s baseline (2017–2020) established the format: long-form conversation between Ethan and Hila, irregular cadence, modest but loyal viewership. The <strong>Frenemies Era</strong> (September 2020 – June 2021) is the single most-watched stretch in H3 Podcast history — nine months in which Ethan co-hosted with Trisha Paytas, generating a level of weekly engagement the show has never approached since. The <strong>Leftovers Era</strong> (September 2021 – October 2023) brought a political co-host in Hasan Piker, a different kind of audience, and a deeper ideological identity for the brand. When Leftovers ended over disagreements about the Israel-Palestine conflict, H3 entered its current post-format phase: fewer episodes, longer runtimes, a shrinking but committed core audience.</p>
 <p>The core dataset was built from scratch using the YouTube Data API v3, stored at <code>github.com/Artometrics/h3</code>. Podcast episode metadata comes from the Podchaser API (680 episodes, April 2026 pull). Reddit post data was pulled from the Arctic Shift Reddit archive, covering <strong>r/h3h3productions</strong> (749,974 posts, 2014–2026) and <strong>r/h3snark</strong> (25,766 posts, April 2023–2026) — the fan sub and the critic sub, both active during the most contentious period in the brand’s history.</p>
 <p>H3 is one of the most data-rich creator brands on the internet. The combination of YouTube longevity (13 years), a documented era structure, an unusually organized fan and critic community, and a clothing brand with its own Wikipedia page creates a dataset that rewards analysis. This report does not take a position on the controversies. It reads the numbers and describes what they show.</p>
 
-<h2 id="chart-1-the-era-timeline" class="anchored">CHART 1 — THE ERA TIMELINE</h2>
+<h2 id="chart-1-the-era-timeline" class="anchored">THE ERA TIMELINE</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -73,7 +60,7 @@ draft: false
 <p>When Frenemies ended in June 2021 — abruptly, on-camera, mid-episode — views dropped back toward baseline within a single month. Leftovers launched that September and added a new audience (Hasan Piker’s political fanbase), generating a secondary bump visible in the 2022 data. But it never approached Frenemies numbers. After Leftovers ended in October 2023, the chart enters its current phase: a slow, grinding decline with no structural catalyst in sight. The mountain is the story. Everything else is the aftermath.</p>
 <p>Even at its post-2023 lows, the H3 Podcast pulls millions of monthly views. The brand did not collapse — it contracted to its core. The audience that remains watches longer episodes with more commitment than the casual Frenemies-era viewer. The cliff looks dramatic on the chart because Frenemies was genuinely anomalous. The current numbers are not a failure; they are what a major podcast looks like without a viral co-host dynamic driving weekly drama.</p>
 
-<h2 id="chart-2-the-duration-drift" class="anchored">CHART 2 — THE DURATION DRIFT</h2>
+<h2 id="chart-2-the-duration-drift" class="anchored">THE DURATION DRIFT</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -87,7 +74,7 @@ draft: false
 <p>The clearest structural break in the duration data isn’t a spike — it’s a floor shift. Before 2022, monthly medians regularly dipped below 120 minutes. After 2022, they never did. The show locked into 3-hour-plus territory and stayed there. Leftovers (2021) normalized the extended format; by the time it ended (2023), the audience had been conditioned to expect marathon sessions as the default. That conditioning didn’t reverse when Leftovers ended.</p>
 <p>In 2024, H3 published far fewer episodes than in prior years — but duration hit its all-time high, with months regularly clearing <strong>220–240 minutes</strong>. The show was publishing less but asking more from the audience that stayed. Each episode became a larger commitment, not a smaller one. The fans who remained weren’t casual — they were in for 4 hours at a time. Whether that is sustainable is a different question. The data just shows it happened.</p>
 
-<h2 id="chart-3-the-fan-vs.-critic-divide" class="anchored">CHART 3 — THE FAN VS. CRITIC DIVIDE</h2>
+<h2 id="chart-3-the-fan-vs.-critic-divide" class="anchored">THE FAN VS. CRITIC DIVIDE</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -101,15 +88,15 @@ draft: false
 <p>The cliff in the snark data after May 2025 isn’t a controversy dying down — it’s a subreddit going dark. After Klein issued copyright claims against r/h3snark moderators and threatened legal action, the sub announced an indefinite hiatus. The index collapsed to near zero within weeks. The fan sub, meanwhile, continued its slow decline — below its own average but still functional. The snark community didn’t fade. It was shut down. That distinction matters: one line represents organic audience erosion, the other represents a legal intervention.</p>
 <p>The blue line tells its own quieter story. The fan sub never spikes the way snark does — no single event moves it dramatically above baseline. But the trend is unmistakably downward. The community isn’t in crisis; it’s in slow erosion. Fewer new things to discuss, fewer viral moments to dissect, fewer reasons to post. The legal drama — the Content Cop, the streamer lawsuits — barely registered. Whatever drives fan engagement on r/h3h3productions, it isn’t courtroom news.</p>
 
-<h2 id="limitations" class="anchored">LIMITATIONS</h2>
+<h2 id="limitations" class="anchored">Caveats</h2>
 <p>The YouTube data captures view counts as of the April 2026 pull — not at time of publication. Older videos have had years to accumulate views through algorithmic recommendations and search, which means early h3h3Productions videos are systematically over-represented in lifetime view totals relative to their original performance. The era-based analysis on the H3 Podcast channel is less affected because the comparison is within-channel across time.</p>
 <p>The Arctic Shift Reddit archive is comprehensive but not guaranteed complete. Deleted posts, removed comments, and accounts banned before archival are absent from the dataset. The r/h3snark data begins in April 2023 — the sub’s founding — so pre-2023 critical community activity is unrepresented. Any conclusions about the fan-vs-critic dynamic are bounded by that window.</p>
 <p>Episode duration data from Podchaser is self-reported by the show and may include inconsistencies for older episodes, live streams published as podcast episodes, and bonus or clip content. Episodes with missing duration values were excluded from Chart 2 analysis. Chart 3 indexes each subreddit to its own average across the Apr 2023–Mar 2026 window. A subreddit with low activity in early months will show inflated index values in later high-activity periods — the r/h3snark baseline is built on its full available history, which starts at launch and may slightly inflate peak readings relative to a steadier baseline.</p>
-<h2 id="conclusion" class="anchored">CONCLUSION</h2>
+<h2 id="conclusion" class="anchored">Bottom line</h2>
 <p>The H3 data tells a story about what happens when a creator brand builds its peak moment around someone else. The Frenemies Era was genuinely anomalous — nine months of co-host-driven drama that tripled the podcast’s monthly viewership and created a ceiling the show has never approached since. The chart is unambiguous about this. The current audience is not a collapse; it is a correction back to what the brand can sustain on its own terms.</p>
 <p>The duration data adds a different dimension. The show that emerged from the Frenemies aftermath is structurally different from the one that preceded it — longer, less frequent, more demanding. Whether that format is a creative choice or a symptom of a contracting audience is a question the data cannot answer. Both explanations fit the numbers.</p>
 <p>The Reddit chart is the most structurally interesting of the three. It documents not just audience behavior but audience management: a creator using legal tools to suppress a critic community. The snark subreddit’s cliff is not organic. It is the result of a deliberate intervention. The fan sub’s slower decline runs in parallel and suggests the underlying engagement problem would exist regardless. Two different communities, two different trajectories, one brand caught between them.</p>
-<h2 id="references" class="anchored">REFERENCES</h2>
+<h2 id="references" class="anchored">Sources</h2>
 <div class="art-references">
   <div class="art-ref-item">
     YouTube Data API v3. Google.

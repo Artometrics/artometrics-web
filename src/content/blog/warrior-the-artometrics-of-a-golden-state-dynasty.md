@@ -1,34 +1,20 @@
 ---
-title: "WARRIOR: The Artometrics of A Golden State Dynasty"
+title: How Golden State Went From Irrelevant to Dynasty
 slug: warrior-the-artometrics-of-a-golden-state-dynasty
-pubDate: 2026-04-18
-description: "The Golden State Warriors have played 78 seasons of professional basketball. For roughly 35 of them, they were irrelevant. Not rebuilding, not transitioning — just losing, year after year, in a market..."
+pubDate: 2026-04-18T00:00:00.000Z
+description: Decades of losing before a modern dynasty remade Bay Area basketball.
 heroImage: /images/content/2026/04/IMG_4215.webp
-tags: [atlas]
+tags:
+  - sports
 draft: false
 ---
 <div id="quarto-content">
-<nav id="TOC" role="doc-toc">
-    <h2 id="toc-title">IN THIS REPORT</h2>
 
-  <ul>
-  <li><a href="#fast-facts" id="toc-fast-facts">FAST FACTS</a></li>
-  <li><a href="#dataset-context" id="toc-dataset-context">DATASET CONTEXT</a></li>
-  <li><a href="#win-percentage-over-time" id="toc-win-percentage-over-time">WIN PERCENTAGE OVER TIME</a></li>
-  <li><a href="#the-three-point-revolution" id="toc-the-three-point-revolution">THE THREE-POINT REVOLUTION</a></li>
-  <li><a href="#six-teams.-68-wins.-one-record." id="toc-six-teams.-68-wins.-one-record.">SIX TEAMS. 68+ WINS. ONE RECORD.</a></li>
-  <li><a href="#limitations" id="toc-limitations">LIMITATIONS</a></li>
-  <li><a href="#conclusion" id="toc-conclusion">CONCLUSION</a></li>
-  <li><a href="#references" id="toc-references">REFERENCES</a></li>
-  <li><a href="#editors-note" id="toc-editors-note">EDITOR’S NOTE</a></li>
-  <li><a href="#thank-you" id="toc-thank-you">THANK YOU</a></li>
-  </ul>
-</nav>
 <main class="art-article-main">
 <p>The Golden State Warriors have played 78 seasons of professional basketball. For roughly 35 of them, they were irrelevant. Not rebuilding, not transitioning — just losing, year after year, in a market that had better things to think about. The franchise that began as the Philadelphia Warriors in 1946 spent the bulk of its middle decades as one of the NBA’s chronic underachievers, occasionally interesting, never quite good enough.</p>
 <p>Then Stephen Curry learned to shoot from places that weren’t supposed to be shooting spots, and everything changed. Not just for the Warriors. For the entire sport.</p>
 <p>What follows is an attempt to quantify what that change looks like in data — how dominant the dynasty windows actually were, how the three-point revolution unfolded in real numbers, and what it means to win 73 games in a league where nobody else has come within four games of that mark in the four decades since. The Warriors story has two chapters. The gap between them is the story.</p>
-<h2 id="fast-facts" class="anchored">FAST FACTS</h2>
+<h2 id="fast-facts" class="anchored">At a glance</h2>
 <div class="facts-grid">
   <div class="fact-box">
     <span class="fact-number">7</span>
@@ -67,7 +53,7 @@ draft: false
     North America built without public funding</span>
   </div>
 </div>
-<h2 id="dataset-context" class="anchored">DATASET CONTEXT</h2>
+<h2 id="dataset-context" class="anchored">The data</h2>
 <p>The win percentage data in Chart 1 covers every Warriors season from 1946–47 through 2023–24, spanning three franchise cities: Philadelphia (1946–1962), San Francisco (1962–1971), and the Bay Area (1971–present). Season records were sourced from Basketball Reference’s franchise history page and verified against the nbastatR package, which wraps Basketball Reference’s publicly available data via the R programming language. The three-point attempt data in Chart 2 begins in 1979–80 — the first season the NBA used the three-point line — and runs through 2023–24. League averages are computed from team-level per-game totals published annually on Basketball Reference.</p>
 <p>Due to rate-limiting constraints on the Basketball Reference scraper during the production of this report, season records for Charts 1 and 2 are drawn from a manually verified tibble built directly from Basketball Reference franchise and season summary pages. The values are accurate to the published record. The 68+ win seasons in Chart 3 are a fully static dataset — seven rows, all pulled directly from Basketball Reference, manually coded for championship status. No package dependency is required for that chart, and no approximations are used.</p>
 <p>The three-point era data requires one important framing caveat: GSW’s three-point volume in the early 1980s was not meaningfully different from league average, because no team had yet developed a coherent three-point offensive philosophy. The line existed from 1980 onward, but the strategic embrace of it took another decade league-wide and another three decades before Golden State made it the centerpiece of the most efficient offense in NBA history. That arc — from novelty to weapon to universal standard — is what Chart 2 is designed to show.</p>
@@ -115,15 +101,15 @@ draft: false
 <p>What the chart also reveals, and what the casual telling of this story tends to obscure, is that winning 73 games did not produce a championship. The 2015–16 Warriors lost the NBA Finals to LeBron James and the Cleveland Cavaliers in seven games, becoming the first team in Finals history to blow a 3–1 series lead. Of the six teams represented on this chart, only the Warriors and the 1971–72 Milwaukee Bucks failed to win the title in their record-setting season. The Bulls closed out their 72-win campaign with a championship. The Warriors went home. <strong>The 73-win season is simultaneously the greatest regular season in NBA history and the most famous failure to close.</strong></p>
 <p>This context matters analytically. The Warriors’ dynasty is correctly measured by its four championships — 2015, 2017, 2018, 2022 — not by its win total in any single season. The 73-win year is the ceiling of what they were capable of, a demonstration of how dominant the Death Lineup era truly was. But the franchise’s legacy doesn’t rest on that number. It rests on what they built around Curry, Thompson, and Green over a decade — and the fact that they kept winning after Durant left, after injuries piled up, after everyone assumed the window had closed.</p>
 
-<h2 id="limitations" class="anchored">LIMITATIONS</h2>
+<h2 id="limitations" class="anchored">Caveats</h2>
 <p>The win percentage data in Chart 1 is drawn from a manually verified tibble rather than a live API pull. Values are sourced from Basketball Reference’s franchise history page for the Golden State Warriors and cross-checked against season summary pages for years where the franchise operated as the Philadelphia Warriors (1946–1962) and San Francisco Warriors (1962–1971). The values are accurate to the published record, but the methodology differs from the automated pulls used in other Artometrics reports — readers who want to replicate the data pull programmatically should use the nbastatR package with single-season calls rather than multi-season range calls, which can trigger rate-limiting on the Basketball Reference scraper.</p>
 <p>The three-point attempt data in Chart 2 begins in 1979–80 because the NBA did not use the three-point line before that season. This means the chart cannot show the pre-three-point era context for shooting philosophy, and any claims about the “revolution” are bounded to the 44-year window in which the shot has existed. Additionally, the Warriors’ pre-Curry three-point data (1980–2012) reflects a period in which the franchise had no coherent three-point offensive philosophy, so the GSW line during those years tracks the league average more by coincidence than design.</p>
 <p>Chart 3 includes only the seven seasons in NBA history with 68 or more wins. This threshold was chosen to isolate genuinely historic seasons while keeping the chart legible. Several seasons with 67 wins — the 1996–97 Utah Jazz, the 2011–12 San Antonio Spurs in a shortened season — sit just below the cutoff and are not represented. The 2019–20 and 2020–21 seasons were shortened by COVID-19 and are excluded from consideration because win totals in 72-game and 65-game seasons are not directly comparable to 82-game baselines.</p>
-<h2 id="conclusion" class="anchored">CONCLUSION</h2>
+<h2 id="conclusion" class="anchored">Bottom line</h2>
 <p>The Warriors franchise is one of the stranger longitudinal stories in American professional sports — not because the dynasty was unexpected, but because of how completely the decades preceding it were erased by what followed. A team that spent 35 years wandering below .500 became the most analytically influential franchise in the history of the sport in the span of about four seasons. That kind of discontinuity doesn’t happen often, and when it does, it usually traces back to one player whose abilities force a structural rethinking of how the game is played. Stephen Curry is that player. The data makes it impossible to argue otherwise.</p>
 <p>What this report doesn’t fully capture is the competitive intelligence embedded in the Warriors’ approach during the dynasty years. The three-point revolution wasn’t accidental. It was the product of a front office that drafted Curry at seventh overall when most teams viewed him as a fragile shooting guard with ankle problems, a coaching staff under Steve Kerr that committed to a positionless offensive system before the rest of the league had vocabulary for it, and a core group of players who bought into a style of basketball that looked unserious — small lineups, constant ball movement, shooting from distances that hadn’t previously been considered rational — until it won four championships. <strong>The market inefficiency the Warriors exploited wasn’t just the three-point shot. It was the belief that the three-point shot could be the foundation of a championship defense.</strong></p>
 <p>The convergence in Chart 2 — the league catching up to the Warriors’ three-point volume by 2020 — is often read as the dynasty ending. That misses the point. The fact that the entire NBA reorganized its offensive philosophy around what Golden State proved is not a sign of the dynasty’s decline. It is the dynasty’s most lasting achievement. Franchises win championships. Very few franchises change what basketball looks like. The Warriors did both.</p>
-<h2 id="references" class="anchored">REFERENCES</h2>
+<h2 id="references" class="anchored">Sources</h2>
 <p>Basketball Reference. (2024). <em>Golden State Warriors franchise history.</em> Sportradar. Retrieved from https://www.basketball-reference.com/teams/GSW/</p>
 <p>Basketball Reference. (2024). <em>NBA season summaries, 1979–2024.</em> Sportradar. Retrieved from https://www.basketball-reference.com/leagues/</p>
 <p>Bresler, A. (2023). <em>nbastatR: An interface to the NBA Stats API, Basketball Reference, and related sources</em> (R package version 0.1.153). GitHub. Retrieved from https://github.com/abresler/nbastatR</p>

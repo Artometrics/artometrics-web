@@ -1691,3 +1691,7 @@ pre:has(> code.sourceCode.sql),
     max-width: 100% !important;
   }
 }
+
+/* Traditional magazine: hide TOC chrome — articles should read as articles */
+nav#TOC, #TOC, .sidebar-navigation { display: none !important; }
+.artometrics-article-body nav#TOC { display: none !important; }

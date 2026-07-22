@@ -51,39 +51,47 @@ copyDirIfExists(join(ROOT, "src/images/authors"), join(ROOT, "public/images/auth
 copyDirIfExists(join(ROOT, "src/images/thumbnails"), join(ROOT, "public/images/thumbnails"));
 copyDirIfExists(join(ROOT, "src/images/about"), join(ROOT, "public/images/about"));
 
-const DESKS = new Set(["culture", "atlas", "history", "persona", "power"]);
-const CHANNELS = new Set([
+const SECTIONS = new Set([
   "sports",
-  "travel",
-  "fashion",
-  "games",
+  "movies-tv",
   "music",
-  "film",
+  "culture",
+  "galleries",
+  "cities-travel",
+  "games",
+  "business",
+  "books",
   "tech",
-  "cities",
-  "institutions",
-  "design",
 ]);
+const LEGACY_DESK = {
+  culture: "culture",
+  atlas: "cities-travel",
+  history: "culture",
+  persona: "culture",
+  power: "business",
+};
 
-function inferChannels(slug, title, tags = []) {
+function inferSection(slug, title, tags = []) {
   const hay = `${slug} ${title} ${tags.join(" ")}`.toLowerCase();
-  const out = new Set();
   const rules = [
-    [/\b(celtics|lakers|yankees|dodgers|patriots|cowboys|warrior|giant|sports|nba|nfl|mlb|dynasty)\b/, "sports"],
-    [/\b(travel|wine|coffee|tourism|airport|airline)\b/, "travel"],
-    [/\b(fashion|vogue|runway|style)\b/, "fashion"],
-    [/\b(game|games|steam|video.?game|esport|anime|pokemon)\b/, "games"],
-    [/\b(music|grammy|spotify|album|song|hip.?hop|jazz)\b/, "music"],
-    [/\b(film|movie|oscar|disney|horror|franchise|cinema)\b/, "film"],
-    [/\b(tech|software|ai|platform|internet|web.?page)\b/, "tech"],
-    [/\b(city|cities|urban|metro|san.?francisco|new.?york|california|texas)\b/, "cities"],
-    [/\b(hospital|museum|university|college|readmit|institution|phds|tuition)\b/, "institutions"],
-    [/\b(design|typography|brand|ui)\b/, "design"],
+    [/\b(celtics|lakers|yankees|dodgers|patriots|cowboys|warrior|giant|sports|nba|nfl|mlb|dynasty|super.?bowl)\b/, "sports"],
+    [/\b(film|movie|oscar|emmy|horror|franchise|disney|cinema|netflix|pixar|simpsons|streaming|imdb|anime|tv)\b/, "movies-tv"],
+    [/\b(music|grammy|spotify|album|song|billboard|radio|rolling.?stone|musicbrainz)\b/, "music"],
+    [/\b(museum|heritage|gallery)\b/, "galleries"],
+    [/\b(game|games|steam|lego|pokemon|board.?games)\b/, "games"],
+    [/\b(gutenberg|sherlock|novel|book)\b/, "books"],
+    [/\b(web.?page|medium|tech|software)\b/, "tech"],
+    [/\b(city|cities|urban|travel|airline|biketown|park|hurricane|restaurant|california|texas|san.?francisco|new.?york)\b/, "cities-travel"],
+    [/\b(ceo|tuition|phd|voter|incarceration|wealth|export|plastic|college|school|readmit|hospital)\b/, "business"],
   ];
-  for (const [re, ch] of rules) {
-    if (re.test(hay)) out.add(ch);
+  for (const [re, section] of rules) {
+    if (re.test(hay)) return section;
   }
-  return [...out];
+  for (const t of tags) {
+    if (SECTIONS.has(t)) return t;
+    if (LEGACY_DESK[t]) return LEGACY_DESK[t];
+  }
+  return "culture";
 }
 
 const blog = listFiles(join(CONTENT, "blog")).map((file) => {
@@ -91,14 +99,11 @@ const blog = listFiles(join(CONTENT, "blog")).map((file) => {
   const { data, content } = matter(raw);
   const id = basename(file, extname(file));
   const slug = data.slug ?? id;
-  const tags = (data.tags ?? []).filter((t) => DESKS.has(t) || typeof t === "string");
-  const explicit = Array.isArray(data.channels)
-    ? data.channels.filter((c) => CHANNELS.has(c))
-    : [];
-  const channels =
-    explicit.length > 0
-      ? explicit
-      : inferChannels(slug, data.title ?? "", tags).filter((c) => CHANNELS.has(c));
+  const rawTags = Array.isArray(data.tags) ? data.tags : [];
+  const section =
+    rawTags.find((t) => SECTIONS.has(t)) ||
+    inferSection(slug, data.title ?? "", rawTags);
+  const tags = [section];
   return {
     id,
     title: data.title,
@@ -107,7 +112,8 @@ const blog = listFiles(join(CONTENT, "blog")).map((file) => {
     description: data.description ?? "",
     heroImage: rewriteAssetUrl(data.heroImage ?? ""),
     tags,
-    channels,
+    section,
+    channels: [section],
     author: data.author ?? null,
     draft: Boolean(data.draft),
     body: content.trim(),

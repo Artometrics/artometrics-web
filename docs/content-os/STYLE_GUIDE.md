@@ -16,9 +16,13 @@ Use this for banners, article HTML, data presentation, and pacing. Agents and sc
 
 Public copy is always Artometrics-branded — never theme-demo or generic “AI magazine” voice.
 
-## Desks
+## Sections
 
-Reports tag exactly one primary desk: `culture` | `atlas` | `history` | `persona` | `power`.
+Stories tag exactly one primary section:
+
+`sports` | `movies-tv` | `music` | `culture` | `galleries` | `cities-travel` | `games` | `business` | `books` | `tech`
+
+(Legacy desks `culture|atlas|history|persona|power` map into these sections.)
 
 ## Keyword / AEO rules
 
@@ -27,7 +31,7 @@ Every brief must define:
 1. **Primary keyword** — the phrase the report should own
 2. **Secondary keywords** — 3–8 related phrases used naturally in H2s and prose
 3. **Search intent** — informational / commercial / comparative
-4. **Title pattern** — `TOPIC: The Artometrics of …` (or desk-native variant)
+4. **Title pattern** — specific, citable, NYT-style question or claim (no “The Artometrics of …”)
 5. **Meta description** — ≤160 chars, concrete numbers when possible
 6. **Slug** — kebab-case, stable, no dates
 

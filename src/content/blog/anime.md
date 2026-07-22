@@ -1,32 +1,21 @@
 ---
-title: "ANIME: The Artometrics of Japanese Animation"
+title: What a Century of Anime Titles Reveals About the Industry
 slug: anime
-pubDate: 2026-03-31
-description: "13,631 Titles. A Century Of Data. One Question: What Does The MyAnimeList Archive Actually Tell Us About How Anime Works As An Industry?"
+pubDate: 2026-03-31T00:00:00.000Z
+description: >-
+  MyAnimeList metadata on more than 13,000 titles traces Japanese animation as a
+  production system.
 heroImage: /images/content/2026/04/IMG_4151.webp
-tags: [culture]
+tags:
+  - movies-tv
 draft: false
 ---
 <div id="quarto-content">
-<nav id="TOC" role="doc-toc">
-    <h2 id="toc-title">IN THIS REPORT</h2>
 
-  <ul>
-  <li><a href="#fast-facts" id="toc-fast-facts">FAST FACTS</a></li>
-  <li><a href="#dataset-context" id="toc-dataset-context">DATASET CONTEXT</a></li>
-  <li><a href="#an-industry-that-industrialized-then-diversified" id="toc-an-industry-that-industrialized-then-diversified">AN INDUSTRY THAT INDUSTRIALIZED — THEN DIVERSIFIED</a></li>
-  <li><a href="#bones-and-kyoani-lead-consistency-across-volume-is-the-real-achievement" id="toc-bones-and-kyoani-lead-consistency-across-volume-is-the-real-achievement">BONES AND KYOANI LEAD — CONSISTENCY ACROSS VOLUME IS THE REAL ACHIEVEMENT</a></li>
-  <li><a href="#genre-map-whats-popular-vs-whats-well-rated" id="toc-genre-map-whats-popular-vs-whats-well-rated">GENRE MAP: WHAT’S POPULAR VS WHAT’S WELL-RATED?</a></li>
-  <li><a href="#limitations" id="toc-limitations">LIMITATIONS</a></li>
-  <li><a href="#conclusion" id="toc-conclusion">CONCLUSION</a></li>
-  <li><a href="#references" id="toc-references">REFERENCES</a></li>
-  <li><a href="#editors-note" id="toc-editors-note">EDITOR’S NOTE</a></li>
-  </ul>
-</nav>
 <main class="art-article-main">
 <p>This MyAnimeList dataset covers 13,631 unique anime titles spanning 1917 to 2019 — a century-scale archive tracing the medium from prewar theater shorts to the standardized streaming machine of the 2010s. The key interpretive move here is separating <strong>catalog reality</strong> (what actually got made) from <strong>fan-canon popularity</strong> (what people actually watched and rated). Those two things rhyme, but they are not the same thing, and the gap between them is where the most interesting analysis lives.</p>
 <p>The overall median MAL score is 6.38. That is the calibration point for everything that follows. A 6.38 is not a failure — it is the mathematical center of a platform where over 13,000 titles compete for attention. When comparing studios, formats, and genres throughout this report, the question is never who broke 8.0 once. It is who stayed above 6.38 consistently, across volume. That is a far harder problem, and most studios never solve it.</p>
-<h2 id="fast-facts" class="anchored">FAST FACTS</h2>
+<h2 id="fast-facts" class="anchored">At a glance</h2>
 <div class="facts-grid">
   <div class="fact-box">
     <span class="fact-number">13,631</span>
@@ -65,7 +54,7 @@ draft: false
     outsourced R&amp;D pipeline</span>
   </div>
 </div>
-<h2 id="dataset-context" class="anchored">DATASET CONTEXT</h2>
+<h2 id="dataset-context" class="anchored">The data</h2>
 <p>The source data is the MyAnimeList TidyTuesday release from April 23, 2019, maintained by the R for Data Science community. It contains scraped records for 13,631 unique anime titles with fields for format type, source material, episode count, content rating, genre tags, studio attribution, MAL score, member count, favorites count, and air date range. The data covers titles from 1917 through early 2019.</p>
 <p>The dataset requires meaningful cleaning before analysis. Air dates arrive as unstructured strings and must be parsed via regex to extract start and end year. Genre, studio, and producer fields are stored as Python-style list strings — bracket-delimited, comma-separated — that must be split and unnested into long-format tables for aggregation. Any title with a rank or popularity of zero is excluded, as these represent incomplete records without enough community engagement to produce reliable metrics.</p>
 <p>Scores on MAL are user-submitted on a 1–10 scale. The platform has a known self-selection bias: its userbase skews adult, male, and English-speaking relative to anime’s actual global audience. This produces systematic underscoring of children’s content and promotional music videos, and potential overrepresentation of properties with strong Western fandom overlap. The dataset also predates the post-2019 streaming era — <em>Demon Slayer</em>, <em>Jujutsu Kaisen</em>, <em>Chainsaw Man</em> are absent — which means any claims about current genre trends require updating.</p>
@@ -113,15 +102,15 @@ draft: false
 <p>The <strong>Curator’s Rooms</strong> are the upper-left quadrant. <strong>Thriller</strong> sits alone at the top: highest median on the chart (~7.5), extremely low popularity rank. The genre barely exists by volume, but almost everything made in it is exceptional. <strong>Mystery</strong> and <strong>Psychological</strong> follow the same pattern — high score, mid-obscurity — which aligns with their SQL Query 2 performance. <strong>Historical</strong> sits far right: highly rated but ignored algorithmically despite strong critical reception. The starkest bottom outlier is <strong>Dementia</strong>: low popularity, low score, tiny volume.</p>
 <p><strong>Kids</strong> and <strong>Music</strong> are the bottom-right anchors — widest audiences, lowest scores. This is the self-selection problem in reverse: the MAL platform’s adult userbase applying adult critical frameworks to children’s media and promotional content. The scores are not wrong given who is rating them. They are simply the wrong instrument for the material. The genre map’s quadrant structure is the clearest single visualization of what the platform is: a tool built by and for a specific audience, measuring everything — including content that was never made for them — against that audience’s preferences.</p>
 
-<h2 id="limitations" class="anchored">LIMITATIONS</h2>
+<h2 id="limitations" class="anchored">Caveats</h2>
 <p>The dataset ends in April 2019. <em>Demon Slayer</em>, <em>Jujutsu Kaisen</em>, <em>Chainsaw Man</em>, <em>Spy × Family</em> are entirely absent. Their exclusion almost certainly understates ONA growth, understates action/Shounen dominance, and means any claims about current genre trends require updating against the post-2019 streaming landscape. The industry restructured significantly around Netflix and Crunchyroll originals after this cutoff — the format and source material charts would look different with five more years of data.</p>
 <p>MyAnimeList is an enthusiast platform. Its userbase skews adult, male, and English-speaking relative to anime’s actual global audience. Two direct consequences appear in the data: Kids and Music programming are systematically underscored because the rating population is not the target demographic, and shows with strong Western fandom overlap (<em>Fullmetal Alchemist: Brotherhood</em>, <em>Death Note</em>) may be overrepresented in the elite tiers. The platform measures what its users value, which is not the same as what anime’s full global audience values.</p>
 <p>Genre tags are not mutually exclusive, and studio medians for boutique operations (n &lt; 30) are statistically fragile. White Fox’s strong studio ranking rests on 33 titles — a single poor season could meaningfully shift it. Thriller’s top-ranked genre position rests on a small title count. Both results are directionally interesting and statistically fragile, and should be read as signals worth investigating rather than settled conclusions.</p>
-<h2 id="conclusion" class="anchored">CONCLUSION</h2>
+<h2 id="conclusion" class="anchored">Bottom line</h2>
 <p>Anime transformed its distribution model three times in a century: from a <strong>theatrical craft economy</strong> built for prewar audiences, to a <strong>home-video OVA market</strong> that bypassed broadcast entirely, to an <strong>industrialized TV machine</strong> running on seasonal 12-episode contracts, and finally into a <strong>diversified platform ecosystem</strong> where ONA and streaming have created a fourth distribution channel that did not exist before 2010. Each transition was driven by access — whoever controlled the path to viewers controlled the format that dominated production.</p>
 <p>Through all of it, two structural facts held. <strong>TV is the primary engine for quality output</strong> — 8.12% hit-rate, the highest of any format, confirmed by both the SQL aggregation and the genre map’s quadrant structure. And <strong>popularity and quality are correlated but not causal</strong> — the feedback loop runs both directions, the algorithm amplifies existing popularity rather than discovering hidden quality, and the score-members correlation of r = 0.389 confirms the relationship is real but far from deterministic.</p>
 <p>Ninety high-scoring titles sit past popularity rank 2,000 — past the point any algorithm will surface them. The catalog is vast. The attention economy is ruthless. If you want the best statistical odds, shop the seasonal TV hits in Mystery, Shounen, or Romance — the three genres with the highest average scores above 500 titles. But if you are willing to walk past the algorithm’s edge, there are 90 titles waiting with scores above 8.0 and audiences small enough that they never quite made the trending list.</p>
-<h2 id="references" class="anchored">REFERENCES</h2>
+<h2 id="references" class="anchored">Sources</h2>
 <p>MyAnimeList Dataset (2019). TidyTuesday, April 23, 2019. Retrieved from: https://github.com/rfordatascience/tidytuesday/tree/main/data/2019/2019-04-23</p>
 <p>MyAnimeList. (n.d.). <em>About MyAnimeList</em>. Retrieved from https://myanimelist.net/about.php</p>
 <p>Clements, J., &amp; McCarthy, H. (2015). <em>The Anime Encyclopedia: A Century of Japanese Animation</em> (3rd ed.). Stone Bridge Press.</p>

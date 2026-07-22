@@ -1,28 +1,16 @@
 ---
-title: "POKEMON: The Artometrics of the World's Biggest Franchise"
+title: What Pokémon’s Franchise Actually Comprises
 slug: pokemon
-pubDate: 2026-05-06
-description: "Pokémon is the highest-grossing media franchise in history — more than $150 billion in lifetime revenue across games, cards, merchandise, and film. That number gets cited constantly. What gets cite..."
-heroImage: /images/content/2026/05/hf_20260506_100612_d8abe8f2-0c40-48ca-8e05-62c73264cd19-1.png
-tags: [culture, power]
+pubDate: 2026-05-06T00:00:00.000Z
+description: 'Beyond the headline revenue figure: games, cards, merchandise, and film.'
+heroImage: >-
+  /images/content/2026/05/hf_20260506_100612_d8abe8f2-0c40-48ca-8e05-62c73264cd19-1.png
+tags:
+  - games
 draft: false
 ---
 <div id="quarto-content">
-<nav id="TOC" role="doc-toc">
-    <h2 id="toc-title">IN THIS REPORT</h2>
 
-  <ul>
-  <li><a href="#fast-facts" id="toc-fast-facts">FAST FACTS</a></li>
-  <li><a href="#dataset-context" id="toc-dataset-context">DATASET CONTEXT</a></li>
-  <li><a href="#stat-identity-by-type" id="toc-stat-identity-by-type">STAT IDENTITY BY TYPE</a></li>
-  <li><a href="#generation-creep" id="toc-generation-creep">GENERATION CREEP</a></li>
-  <li><a href="#built-different" id="toc-built-different">BUILT DIFFERENT</a></li>
-  <li><a href="#limitations" id="toc-limitations">LIMITATIONS</a></li>
-  <li><a href="#conclusion" id="toc-conclusion">CONCLUSION</a></li>
-  <li><a href="#references" id="toc-references">REFERENCES</a></li>
-  <li><a href="#editors-note" id="toc-editors-note">EDITOR’S NOTE</a></li>
-  </ul>
-</nav>
 <main class="art-article-main">
 <p class="art-p">
 Pokémon is the highest-grossing media franchise in history — more than
@@ -43,7 +31,7 @@ inflating Pokémon power over time? Third, what does physical size reveal
 about how Pokémon are designed? The answers are in the numbers, and the
 numbers are more interesting than the marketing.
 </p>
-<h2 id="fast-facts" class="anchored">FAST FACTS</h2>
+<h2 id="fast-facts" class="anchored">At a glance</h2>
 <div class="facts-grid">
   <div class="fact-box">
     <span class="fact-number">949</span>
@@ -70,7 +58,7 @@ numbers are more interesting than the marketing.
     <span class="fact-label">Most common primary type in the dataset</span>
   </div>
 </div>
-<h2 id="dataset-context" class="anchored">DATASET CONTEXT</h2>
+<h2 id="dataset-context" class="anchored">The data</h2>
 <p class="art-p">
 The dataset is TidyTuesday Week 13, 2025 — a cleaned version of the
 PokéAPI database covering 1,028 Pokémon entries across nine
@@ -242,7 +230,7 @@ there because someone at Game Freak decided that a 14-meter whale or a
 record of that decision.
 </p>
 
-<h2 id="limitations" class="anchored">LIMITATIONS</h2>
+<h2 id="limitations" class="anchored">Caveats</h2>
 <p class="art-p">
 The most significant limitation of this analysis is scope: the dataset
 covers base stats and physical attributes, but Pokémon competitive
@@ -273,7 +261,7 @@ a large number of new forms and mechanics that may not be fully
 represented in this version of the data. Any analysis of the most recent
 generations should be treated as preliminary.
 </p>
-<h2 id="conclusion" class="anchored">CONCLUSION</h2>
+<h2 id="conclusion" class="anchored">Bottom line</h2>
 <p class="art-p">
 The type system isn&#39;t just flavor. Dragon-types are statistically elite
 by design, Bug-types are statistically weak by design, and the
@@ -304,7 +292,7 @@ thoroughly analyzed by millions of fans, but underneath all of it is a
 set of design choices made by people, and the numbers are how you read
 them.
 </p>
-<h2 id="references" class="anchored">REFERENCES</h2>
+<h2 id="references" class="anchored">Sources</h2>
 <p class="art-p">
 Data Science Learning Community. (2025). <em>TidyTuesday: A weekly
 social data project.</em> Week 13, 2025 — Pokémon.

@@ -1,32 +1,19 @@
 ---
-title: "GIANT: The Artometrics of A San Francisco Dynasty"
+title: The Giants’ Arc From New York Gothams to Oracle Park
 slug: giant-the-artometrics-of-a-san-francisco-dynasty
-pubDate: 2026-04-18
-description: "The San Francisco Giants have been playing professional baseball since 1883. That is not a typo. The franchise that now calls Oracle Park home started as the New York Gothams — a team that predates..."
+pubDate: 2026-04-18T00:00:00.000Z
+description: A franchise history from 1883 New York origins to a modern Bay Area ballclub.
 heroImage: /images/content/2026/04/IMG_4221.webp
-tags: [atlas]
+tags:
+  - sports
 draft: false
 ---
 <div id="quarto-content">
-<nav id="TOC" role="doc-toc">
-    <h2 id="toc-title">IN THIS REPORT</h2>
 
-  <ul>
-  <li><a href="#fast-facts" id="toc-fast-facts">FAST FACTS</a></li>
-  <li><a href="#dataset-context" id="toc-dataset-context">DATASET CONTEXT</a></li>
-  <li><a href="#years-of-winning-and-the-gaps-in-between" id="toc-years-of-winning-and-the-gaps-in-between">141 YEARS OF WINNING — AND THE GAPS IN BETWEEN</a></li>
-  <li><a href="#oracle-park-changed-everything" id="toc-oracle-park-changed-everything">ORACLE PARK CHANGED EVERYTHING</a></li>
-  <li><a href="#the-dynasty-was-built-not-bought" id="toc-the-dynasty-was-built-not-bought">THE DYNASTY WAS BUILT, NOT BOUGHT</a></li>
-  <li><a href="#limitations" id="toc-limitations">LIMITATIONS</a></li>
-  <li><a href="#conclusion" id="toc-conclusion">CONCLUSION</a></li>
-  <li><a href="#references" id="toc-references">REFERENCES</a></li>
-  <li><a href="#editors-note" id="toc-editors-note">EDITOR’S NOTE</a></li>
-  </ul>
-</nav>
 <main class="art-article-main">
 <p>The San Francisco Giants have been playing professional baseball since 1883. That is not a typo. The franchise that now calls Oracle Park home started as the New York Gothams — a team that predates the automobile, the lightbulb’s commercial adoption, and the modern World Series by twenty years. In the 141 seasons since, the Giants have won eight World Series titles, relocated across a continent, played in three stadiums, and cycled through dynasties separated by decades of near-misses. No franchise in American professional sports carries a longer or more complicated arc.</p>
 <p>This report uses the Lahman Baseball Database to trace that arc across three dimensions: how the franchise has won and lost over time, how a new ballpark rebuilt the organization’s economic foundation, and how the 2010–2014 dynasty managed to win three championships as a mid-tier spender in one of the most expensive markets in the sport. The win percentage data runs through 2024; payroll data covers 1985–2016, the period for which the Lahman salary table is complete — capturing every era of the dynasty and the years that immediately preceded it. The story it tells is less about any single player or manager than about the structural conditions that made sustained winning possible.</p>
-<h2 id="fast-facts" class="anchored">FAST FACTS</h2>
+<h2 id="fast-facts" class="anchored">At a glance</h2>
 <div class="facts-grid">
   <div class="fact-box">
     <span class="fact-number">8</span>
@@ -65,7 +52,7 @@ draft: false
     built almost entirely from the draft</span>
   </div>
 </div>
-<h2 id="dataset-context" class="anchored">DATASET CONTEXT</h2>
+<h2 id="dataset-context" class="anchored">The data</h2>
 <p>The primary data source for this report is the Lahman Baseball Database, accessed via the <code>Lahman</code> R package. The database is maintained by Sean Lahman and updated annually; it draws from Baseball Reference and is considered the standard reference for longitudinal MLB franchise analysis. The <code>Teams</code> table provides season-level records for wins, losses, and attendance for every MLB franchise from 1871 through the most recent completed season. The Giants appear under two team IDs: <code>NY1</code> for the New York era (1883–1957) and <code>SFN</code> for the San Francisco era (1958–present).</p>
 <p>The <code>Salaries</code> table covers individual player salaries from 1985 through 2016. Total team payroll is computed by summing all player salaries within a given team and season, then ranking teams within each year to produce a relative payroll rank. This approach has known limitations — discussed in the Limitations section — but produces a consistent, comparable series across three decades of Giants baseball. The salary data is complete for all 30 MLB teams across the dynasty window (2010–2014), which is the period of primary analytical interest.</p>
 <p>Attendance figures are official reported totals from Baseball Reference via the Lahman <code>Teams</code> table. They cover every San Francisco season from 1958 through the most recent year available and include the 2020 season, which was played without fans due to the COVID-19 pandemic. Pre-1958 attendance figures exist in the dataset but are excluded from Chart 2, which focuses on the SF era and the stadium transition story.</p>
@@ -113,15 +100,15 @@ draft: false
 <p>The dynasty window is the cluster of red diamonds in the right-center of the chart. In 2010, the Giants ranked ninth in MLB payroll and won 92 games and a World Series. In 2012, they ranked eighth and won 94. The 2014 title is the standout data point: payroll rank 4 — a genuine top-5 spender — with 88 wins in a season they won through the Wild Card and four survival series. What connects all three is not the spending level but what the money bought. Tim Lincecum, Matt Cain, Madison Bumgarner, and Buster Posey were all drafted by San Francisco. They arrived cheap and performed at an elite level before their arbitration clocks reset the cost. The payroll rank rose as those players got paid for what they had already done, not for what they were expected to do.</p>
 <p>By 2015 and 2016 the orange dots appear — post-dynasty, top-5 payroll, 75 to 87 wins. The pipeline that produced Lincecum and Posey had stopped delivering at the same rate, and the organization was paying full market price for players who couldn’t replace what the draft had built. It is a pattern that repeats across every dynasty in the sport: the window opens when developed players are still cheap, and closes when they get paid. The Giants rode that window for five years and won three times. Most franchises never ride it once.</p>
 
-<h2 id="limitations" class="anchored">LIMITATIONS</h2>
+<h2 id="limitations" class="anchored">Caveats</h2>
 <p>The Lahman salary data ends in 2016. Seven seasons of Giants history — including the current rebuild under Farhan Zaidi and the signings of Carlos Correa, the failed pursuit of Aaron Judge, and the transition from Joey Bart to Patrick Bailey — are entirely absent from Chart 3. Any claims about the post-2016 payroll efficiency story require updating against a more current source such as Spotrac or Baseball Reference’s payroll pages. The dynasty thesis is well-supported by the data that exists; the post-dynasty decline is directionally indicated by 2015–2016 but not fully documented here.</p>
 <p>Total payroll as computed from the Lahman <code>Salaries</code> table may not capture every dollar of team spending. Deferred compensation — a significant factor in modern contracts — is not always reflected in the year it is earned. Minor league contracts, coaching staff salaries, and international signing bonuses are excluded entirely. What the table measures is major league player salaries as reported, which is the standard methodology for this type of analysis and directionally reliable, but should not be read as a precise accounting of total organizational spending.</p>
 <p>Win percentage comparisons across 141 seasons carry inherent limitations. Pre-1900 baseball used different rules — pitching distances, foul ball conventions, and schedule lengths all varied — making direct comparisons between the 1890s and the 2010s imprecise. The 1994 and 1995 strike-shortened seasons and the 2020 pandemic season produce outlier values in the raw data that the LOESS smoother partially absorbs but does not eliminate. These seasons are included rather than excluded because removing them would obscure real franchise history; readers should interpret them with the schedule context in mind.</p>
-<h2 id="conclusion" class="anchored">CONCLUSION</h2>
+<h2 id="conclusion" class="anchored">Bottom line</h2>
 <p>The San Francisco Giants are three franchises in one uniform. The New York Giants were a dynasty — one of the most successful organizations in the first half of baseball history, built around Hall of Fame managers and Hall of Fame players, winning five World Series titles before most of their fans had access to a television. The Candlestick Giants were something harder to categorize: a franchise with generational talent and a stadium that made it nearly impossible to sustain the kind of fan engagement that builds organizational stability. Willie Mays played in San Francisco for fifteen years and never won a championship there. The 2010–2014 Giants are the third franchise — the one that finally broke the Candlestick era’s pattern by changing the economic conditions that produced it.</p>
 <p>Oracle Park is the foundation that made the dynasty possible, not its product. The stadium opened in 2000, immediately doubled the franchise’s attendance floor, and gave the organization a revenue base that could sustain a top-10 payroll without burning ownership patience. When the front office — under general manager Brian Sabean and manager Bruce Bochy — developed Lincecum, Cain, Bumgarner, and Posey through the draft, the payroll structure let them retain those players through their prime years while Oracle revenue funded the supporting cast. The dynasty and the ballpark are not separate stories. They are the same story told from different angles.</p>
 <p>The harder question — the one this dataset cannot fully answer — is whether anything like it happens again. The Zaidi era has produced younger talent in Marco Luciano and Kyle Harrison, but nothing yet at the level of Bumgarner or Posey emerging from the system. The payroll remains top-10, the ballpark remains a financial engine, and the organizational infrastructure is intact. What is missing is the draft output that made the dynasty efficient rather than merely expensive. The data says the Giants know how to win without overspending. Whether they can rediscover the player development model that made that possible is the open question heading into the next era of franchise history.</p>
-<h2 id="references" class="anchored">REFERENCES</h2>
+<h2 id="references" class="anchored">Sources</h2>
 <p>Lahman, S. (2024). <em>Lahman Baseball Database</em> (Version 11.0). Retrieved from http://www.seanlahman.com/baseball-archive/statistics/</p>
 <p>Friendly, M., Dalzell, C., Monkman, M., &amp; Murphy, D. (2021). <em>Lahman: Sean ‘Lahman’ Baseball Database</em> (R package version 10.0-1). Retrieved from https://CRAN.R-project.org/package=Lahman</p>
 <p>Baseball Reference. (2024). <em>San Francisco Giants franchise history</em>. Sports Reference LLC. Retrieved from https://www.baseball-reference.com/teams/SFG/</p>

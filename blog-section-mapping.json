@@ -1,0 +1,956 @@
+[
+  {
+    "slug": "airline-safety",
+    "oldTitle": "AIRLINE SAFETY: The Artometrics of Airline Safety",
+    "tags": [
+      "atlas",
+      "history"
+    ],
+    "suggestedSection": "cities-travel",
+    "suggestedTitle": "Which Airlines Have the Worst Safety Records?",
+    "suggestedDescription": "An analysis of carrier-level accident and fatality data asks which airlines stand out for poor safety outcomes in a cleaned comparative extract."
+  },
+  {
+    "slug": "alcohol-consumption",
+    "oldTitle": "ALCOHOL CONSUMPTION: The Artometrics of Alcohol Consumption",
+    "tags": [
+      "culture",
+      "atlas"
+    ],
+    "suggestedSection": "culture",
+    "suggestedTitle": "Who Drinks the Most Alcohol Per Capita?",
+    "suggestedDescription": "Country-level consumption data maps which nations drink the most per person and how those patterns have shifted over time."
+  },
+  {
+    "slug": "all-the-pizza",
+    "oldTitle": "ALL THE PIZZA: The Artometrics of All The Pizza",
+    "tags": [
+      "culture"
+    ],
+    "suggestedSection": "culture",
+    "suggestedTitle": "What Does a Slice of Pizza Really Cost?",
+    "suggestedDescription": "Price and calorie data across thousands of pizza menu items show what diners pay in money and energy for one of America’s staple foods."
+  },
+  {
+    "slug": "anime",
+    "oldTitle": "ANIME: The Artometrics of Japanese Animation",
+    "tags": [
+      "culture"
+    ],
+    "suggestedSection": "movies-tv",
+    "suggestedTitle": "What a Century of Anime Titles Reveals About the Industry",
+    "suggestedDescription": "MyAnimeList metadata on more than 13,000 titles traces how Japanese animation scales as a production system across eras and formats."
+  },
+  {
+    "slug": "awards-prestige-economy-oscars-grammys-nobels",
+    "oldTitle": "AWARDS PRESTIGE ECONOMY: Oscars, Grammys, Nobels",
+    "tags": [
+      "culture",
+      "power"
+    ],
+    "suggestedSection": "culture",
+    "suggestedTitle": "How Oscars, Grammys, and Nobels Convert Attention Into Prestige",
+    "suggestedDescription": "A cross-medium look at award systems shows how prizes turn visibility into legitimacy across film, music, literature, and science."
+  },
+  {
+    "slug": "beyonce-taylor-lyrics",
+    "oldTitle": "BEYONCÉ & TAYLOR SWIFT LYRICS: The Artometrics of Beyoncé & Taylor Swift Lyrics",
+    "tags": [
+      "culture",
+      "persona"
+    ],
+    "suggestedSection": "music",
+    "suggestedTitle": "Beyoncé and Taylor Swift, Line by Line",
+    "suggestedDescription": "Lyric-level comparison of two era-defining catalogs measures how their songs differ in theme, language, and structure."
+  },
+  {
+    "slug": "big-mac-index",
+    "oldTitle": "BIG MAC INDEX: The Artometrics of Purchasing Power",
+    "tags": [
+      "power",
+      "atlas"
+    ],
+    "suggestedSection": "business",
+    "suggestedTitle": "What Twenty Years of Big Mac Prices Say About Purchasing Power",
+    "suggestedDescription": "Global burger prices over two decades illustrate how currency, wages, and exchange rates shape the real cost of everyday goods."
+  },
+  {
+    "slug": "biketown-bikeshare",
+    "oldTitle": "BIKETOWN BIKESHARE: The Artometrics of Biketown Bikeshare",
+    "tags": [
+      "atlas"
+    ],
+    "suggestedSection": "cities-travel",
+    "suggestedTitle": "How Far Do Portland’s Biketown Rides Actually Go?",
+    "suggestedDescription": "Trip-level bike-share data from Portland measures typical distance and duration across tens of thousands of Biketown journeys."
+  },
+  {
+    "slug": "billboard-hot-100",
+    "oldTitle": "BILLBOARD HOT 100: The Artometrics of Number-One Domination",
+    "tags": [
+      "culture"
+    ],
+    "suggestedSection": "music",
+    "suggestedTitle": "How Long Number-One Hits Stay on Top of the Hot 100",
+    "suggestedDescription": "Since 1958, most Hot 100 chart-toppers lasted only weeks; a few held for months—and streaming has rewritten the pattern."
+  },
+  {
+    "slug": "billboard-top-100",
+    "oldTitle": "BILLBOARD TOP 100: The Artometrics of Billboard Top 100",
+    "tags": [
+      "culture"
+    ],
+    "suggestedSection": "music",
+    "suggestedTitle": "How the Top of the Billboard Chart Got More Crowded",
+    "suggestedDescription": "Large-scale Hot 100 position data shows how rankings compress at the summit and what that implies for chart dominance."
+  },
+  {
+    "slug": "board-games",
+    "oldTitle": "BOARD GAMES: The Artometrics of Board Games",
+    "tags": [
+      "culture"
+    ],
+    "suggestedSection": "games",
+    "suggestedTitle": "Which Board Games Combine Crowd Scale With Elite Ratings?",
+    "suggestedDescription": "Ratings and popularity metrics across thousands of titles identify games that win both mass attention and critical esteem."
+  },
+  {
+    "slug": "broadway-musicals",
+    "oldTitle": "BROADWAY MUSICALS: The Artometrics of Broadway Musicals",
+    "tags": [
+      "culture"
+    ],
+    "suggestedSection": "culture",
+    "suggestedTitle": "Which Broadway Musicals Ran Longest and Grossed Most?",
+    "suggestedDescription": "Performance and box-office records map the shows that dominated Broadway by longevity and revenue."
+  },
+  {
+    "slug": "caesar-the-psychonomics-of-emperor-julius",
+    "oldTitle": "CAESAR: The Psychonomics of the Great Dictator",
+    "tags": [
+      "history",
+      "persona"
+    ],
+    "suggestedSection": "culture",
+    "suggestedTitle": "Julius Caesar and the Cost of Managing Power",
+    "suggestedDescription": "A psychonomic reading of Caesar asks what his inner architecture of ambition cost the Roman political household he ruled."
+  },
+  {
+    "slug": "california-vs-texas-state-rivalry",
+    "oldTitle": "CALIFORNIA VS TEXAS: The Artometrics of Rival State Systems",
+    "tags": [
+      "atlas",
+      "power"
+    ],
+    "suggestedSection": "cities-travel",
+    "suggestedTitle": "California and Texas: Where Rival State Systems Diverge",
+    "suggestedDescription": "A comparative geo-economics report on what the two largest U.S. states share—and where their economies, exports, and risks part ways."
+  },
+  {
+    "slug": "celtics-the-artometrics-of-institutional-winning",
+    "oldTitle": "CELTICS: The Artometrics of Institutional Winning",
+    "tags": [
+      "atlas",
+      "power"
+    ],
+    "suggestedSection": "sports",
+    "suggestedTitle": "How the Celtics Turned 1960s Dominance Into Permanent Expectation",
+    "suggestedDescription": "Boston’s championship inheritance still shapes every modern season: a franchise study of institutional winning and lasting pressure."
+  },
+  {
+    "slug": "ceo-departures",
+    "oldTitle": "CEO DEPARTURES: The Artometrics of CEO Departures",
+    "tags": [
+      "power"
+    ],
+    "suggestedSection": "business",
+    "suggestedTitle": "How Long Do CEOs Last Before They Leave?",
+    "suggestedDescription": "Thousands of executive-exit records measure tenure length and how CEO departures cluster across firms and years."
+  },
+  {
+    "slug": "cetaceans",
+    "oldTitle": "CETACEANS: The Artometrics of Cetaceans",
+    "tags": [
+      "atlas"
+    ],
+    "suggestedSection": "culture",
+    "suggestedTitle": "How Whale and Dolphin Sizes Cluster by Family",
+    "suggestedDescription": "Morphometric data on cetaceans maps which lineages produce the giants and how body size groups across families."
+  },
+  {
+    "slug": "christmas-novels",
+    "oldTitle": "CHRISTMAS NOVELS: The Artometrics of Christmas Novels",
+    "tags": [
+      "culture"
+    ],
+    "suggestedSection": "books",
+    "suggestedTitle": "Which Christmas Novels Anchor the Public-Domain Holiday Shelf?",
+    "suggestedDescription": "A small Gutenberg holiday corpus shows which seasonal novels and authors still define the Christmas literary canon."
+  },
+  {
+    "slug": "christmas-songs",
+    "oldTitle": "CHRISTMAS SONGS: The Artometrics of Christmas Songs",
+    "tags": [
+      "culture"
+    ],
+    "suggestedSection": "music",
+    "suggestedTitle": "Which Holiday Songs Never Leave the Charts?",
+    "suggestedDescription": "Decades of Christmas-song chart data identify the standards that return every season and refuse to fade."
+  },
+  {
+    "slug": "cia-world-factbook",
+    "oldTitle": "CIA WORLD FACTBOOK: The Artometrics of CIA World Factbook",
+    "tags": [
+      "atlas",
+      "power"
+    ],
+    "suggestedSection": "business",
+    "suggestedTitle": "How Population Scale Relates to Prosperity Across Countries",
+    "suggestedDescription": "CIA World Factbook indicators compare nations on size and wealth to show where scale and prosperity align—or diverge."
+  },
+  {
+    "slug": "city-bioeconomics-operating-system",
+    "oldTitle": "CITY BIOECONOMICS: The Urban Operating System",
+    "tags": [
+      "atlas",
+      "culture"
+    ],
+    "suggestedSection": "cities-travel",
+    "suggestedTitle": "Cities as Operating Systems of Exports, Culture, and Scarcity",
+    "suggestedDescription": "A geo-economics framework treats cities as layered systems of trade, services, culture, infrastructure, and historical identity."
+  },
+  {
+    "slug": "coffee-the-artometrics-of-java",
+    "oldTitle": "COFFEE: The Artometrics of Java",
+    "tags": [
+      "culture",
+      "atlas"
+    ],
+    "suggestedSection": "culture",
+    "suggestedTitle": "Coffee’s Place in Global Trade and Daily Life",
+    "suggestedDescription": "Commodity and consumption data place coffee among the world’s largest traded goods and map the livelihoods and cups it supports."
+  },
+  {
+    "slug": "college-major-income",
+    "oldTitle": "COLLEGE MAJOR & INCOME: The Artometrics of College Major & Income",
+    "tags": [
+      "power",
+      "persona"
+    ],
+    "suggestedSection": "business",
+    "suggestedTitle": "Which College Majors Pay Most—and Which Carry Job Risk?",
+    "suggestedDescription": "Earnings and unemployment figures by major show where degrees pay off and where graduates face higher employment risk."
+  },
+  {
+    "slug": "comic-characters",
+    "oldTitle": "COMIC BOOK CHARACTERS: The Artometrics of Comic Book Characters",
+    "tags": [
+      "culture"
+    ],
+    "suggestedSection": "culture",
+    "suggestedTitle": "Who Ranks Highest on Comic-Book Power Scales?",
+    "suggestedDescription": "Character attributes across Marvel and DC rosters ask who sits atop power rankings—and whether size predicts strength."
+  },
+  {
+    "slug": "cowboys-the-artometrics-of-americas-team",
+    "oldTitle": "COWBOYS: The Artometrics of America's Team",
+    "tags": [
+      "atlas",
+      "power"
+    ],
+    "suggestedSection": "sports",
+    "suggestedTitle": "The Cowboys’ Gap Between Brand Value and Championship Conversion",
+    "suggestedDescription": "Dallas remains the NFL’s clearest split between global brand power and an aging postseason engine."
+  },
+  {
+    "slug": "craft-beer-usa",
+    "oldTitle": "CRAFT BEER USA: The Artometrics of Craft Beer USA",
+    "tags": [
+      "culture"
+    ],
+    "suggestedSection": "culture",
+    "suggestedTitle": "How Bitter and Strong Is American Craft Beer?",
+    "suggestedDescription": "Brewery-level IBU and ABV data map bitterness and strength across U.S. states and craft producers."
+  },
+  {
+    "slug": "cultural-exports-geoeconomics",
+    "oldTitle": "CULTURAL EXPORTS: The Geo-Economics of Soft Power",
+    "tags": [
+      "culture",
+      "atlas"
+    ],
+    "suggestedSection": "business",
+    "suggestedTitle": "When Films, Music, and Games Become National Exports",
+    "suggestedDescription": "A cultural-economics frame treats soft-power industries as export goods that shape national and city identity."
+  },
+  {
+    "slug": "dodgers-the-artometrics-of-baseballs-modern-machine",
+    "oldTitle": "DODGERS: The Artometrics of Baseball's Modern Machine",
+    "tags": [
+      "atlas",
+      "power"
+    ],
+    "suggestedSection": "sports",
+    "suggestedTitle": "How the Dodgers Built Baseball’s Modern Consistency Machine",
+    "suggestedDescription": "Los Angeles turned payroll, development, and depth into recurring October access—a model of sustained contention."
+  },
+  {
+    "slug": "emmy-awards",
+    "oldTitle": "EMMY AWARDS: The Artometrics of Emmy Awards",
+    "tags": [
+      "culture"
+    ],
+    "suggestedSection": "movies-tv",
+    "suggestedTitle": "Which Shows Dominated Emmy Season—and How Lopsided Was It?",
+    "suggestedDescription": "Emmy nomination and win records reveal which series swept hardware and how concentrated prestige television awards became."
+  },
+  {
+    "slug": "exercise-usa",
+    "oldTitle": "EXERCISE USA: The Artometrics of Exercise USA",
+    "tags": [
+      "persona"
+    ],
+    "suggestedSection": "culture",
+    "suggestedTitle": "Which U.S. States Exercise the Most?",
+    "suggestedDescription": "State-level activity rates compare where Americans work out most and how participation has shifted over time."
+  },
+  {
+    "slug": "export-superpowers-us-china-germany",
+    "oldTitle": "EXPORT SUPERPOWERS: United States, China, Germany",
+    "tags": [
+      "atlas",
+      "power"
+    ],
+    "suggestedSection": "business",
+    "suggestedTitle": "Why the U.S., China, and Germany Dominate Export Debate",
+    "suggestedDescription": "A three-country comparison contrasts platforms, factories, and machinery—and what each can or cannot replace."
+  },
+  {
+    "slug": "fast-food-calories",
+    "oldTitle": "FAST FOOD CALORIES: The Artometrics of Fast Food Calories",
+    "tags": [
+      "culture"
+    ],
+    "suggestedSection": "culture",
+    "suggestedTitle": "Which Fast-Food Chains Pack the Most Calories Per Item?",
+    "suggestedDescription": "Menu nutrition data across major chains identifies the highest-calorie items and where caloric density concentrates."
+  },
+  {
+    "slug": "franchise",
+    "oldTitle": "FRANCHISE: The Artometrics of Media Monopolies",
+    "tags": [
+      "culture",
+      "history",
+      "power"
+    ],
+    "suggestedSection": "movies-tv",
+    "suggestedTitle": "How the World’s Biggest Media Franchises Actually Make Money",
+    "suggestedDescription": "Revenue maps for more than 100 franchises—from Pokémon to Star Wars—show where valuable IP earns across media."
+  },
+  {
+    "slug": "giant-the-artometrics-of-a-san-francisco-dynasty",
+    "oldTitle": "GIANT: The Artometrics of A San Francisco Dynasty",
+    "tags": [
+      "atlas"
+    ],
+    "suggestedSection": "sports",
+    "suggestedTitle": "The Giants’ 140-Year Arc From New York Gothams to Oracle Park",
+    "suggestedDescription": "A franchise history of the San Francisco Giants traces continuity from 1883 New York origins to a modern Bay Area dynasty."
+  },
+  {
+    "slug": "global-life-expectancy",
+    "oldTitle": "GLOBAL LIFE EXPECTANCY: How Humanity Doubled Its Lifespan in 500 Years",
+    "tags": [
+      "atlas",
+      "history"
+    ],
+    "suggestedSection": "culture",
+    "suggestedTitle": "How Human Life Expectancy Doubled in Five Centuries",
+    "suggestedDescription": "Survival data from the 1500s to 2015 map who gained years of life, who lagged, and why gaps between countries persist."
+  },
+  {
+    "slug": "global-plastic-waste",
+    "oldTitle": "GLOBAL PLASTIC WASTE: The Artometrics of Global Plastic Waste",
+    "tags": [
+      "atlas",
+      "power"
+    ],
+    "suggestedSection": "business",
+    "suggestedTitle": "Who Generates the Most Plastic Waste—and Who Mismanages It?",
+    "suggestedDescription": "Country-level plastic generation and mismanagement rates show where waste volume and leakage concentrate worldwide."
+  },
+  {
+    "slug": "h3-the-artometrics-of-a-youtube-dynasty",
+    "oldTitle": "H3: The Artometrics of A YouTube Dynasty",
+    "tags": [
+      "culture",
+      "persona"
+    ],
+    "suggestedSection": "culture",
+    "suggestedTitle": "How H3 Built a YouTube Network Beyond One Channel",
+    "suggestedDescription": "Since 2011, Ethan and Hila Klein scaled multiple channels, a podcast, and a brand—documenting a creator-era media dynasty."
+  },
+  {
+    "slug": "horror-movie-profit",
+    "oldTitle": "HORROR MOVIE PROFIT: The Artometrics of Horror Movie Profit",
+    "tags": [
+      "culture",
+      "power"
+    ],
+    "suggestedSection": "movies-tv",
+    "suggestedTitle": "Which Horror Movies Returned Multiples—and Which Burned Cash?",
+    "suggestedDescription": "Budget and box-office data for thousands of horror titles separate franchise winners from costly misses."
+  },
+  {
+    "slug": "horror-movies",
+    "oldTitle": "HORROR MOVIES: The Artometrics of Horror Movies",
+    "tags": [
+      "culture"
+    ],
+    "suggestedSection": "movies-tv",
+    "suggestedTitle": "Did Horror Get Better as the Catalog Exploded?",
+    "suggestedDescription": "Ratings across tens of thousands of horror films ask whether critical quality rose with volume—or diluted."
+  },
+  {
+    "slug": "hurricanes-puerto-rico",
+    "oldTitle": "HURRICANES & PUERTO RICO: The Artometrics of Hurricanes & Puerto Rico",
+    "tags": [
+      "atlas",
+      "history"
+    ],
+    "suggestedSection": "cities-travel",
+    "suggestedTitle": "Which Storms Hit Puerto Rico Hardest?",
+    "suggestedDescription": "Hurricane records for Puerto Rico compare wind, deaths, and frequency to identify the island’s most damaging storms."
+  },
+  {
+    "slug": "hydro-wastewater",
+    "oldTitle": "HYDRO WASTEWATER PLANTS: The Artometrics of Hydro Wastewater Plants",
+    "tags": [
+      "atlas"
+    ],
+    "suggestedSection": "cities-travel",
+    "suggestedTitle": "Where Wastewater Plants Serve the Most People",
+    "suggestedDescription": "Facility-level hydro and discharge data map which plants serve the largest populations and release the most outflow."
+  },
+  {
+    "slug": "imdb-blockbuster-grammar",
+    "oldTitle": "IMDb BLOCKBUSTER GRAMMAR: The Artometrics of Movie Fame",
+    "tags": [
+      "culture",
+      "power"
+    ],
+    "suggestedSection": "movies-tv",
+    "suggestedTitle": "How Movies Become Famous on IMDb’s Public Scoreboard",
+    "suggestedDescription": "Title fields, ratings, and box-office references explain the grammar by which films accumulate fame and attention."
+  },
+  {
+    "slug": "imperial",
+    "oldTitle": "IMPERIAL: The Evolution of Empire",
+    "tags": [
+      "history",
+      "power"
+    ],
+    "suggestedSection": "culture",
+    "suggestedTitle": "What Empire Chronicles Leave Out: Who Got Rich",
+    "suggestedDescription": "A historical economics lens on empires asks who captured wealth when rulers claimed order, roads, and on-time trains."
+  },
+  {
+    "slug": "incarceration-trends",
+    "oldTitle": "INCARCERATION TRENDS: The Artometrics of Incarceration Trends",
+    "tags": [
+      "power",
+      "history"
+    ],
+    "suggestedSection": "business",
+    "suggestedTitle": "How U.S. Incarceration Rates Diverged by State",
+    "suggestedDescription": "Long-run imprisonment data track national trends and which states pulled away from the pack."
+  },
+  {
+    "slug": "lakers-the-artometrics-of-basketball-glamour",
+    "oldTitle": "LAKERS: The Artometrics of Basketball Glamour",
+    "tags": [
+      "culture",
+      "power"
+    ],
+    "suggestedSection": "sports",
+    "suggestedTitle": "How the Lakers Convert Stars Into Championship Eras",
+    "suggestedDescription": "Los Angeles basketball’s glamour machine turns market gravity and star power into recurring title windows."
+  },
+  {
+    "slug": "languages-glottolog",
+    "oldTitle": "LANGUAGES OF THE WORLD: The Artometrics of Languages of the World",
+    "tags": [
+      "atlas",
+      "history"
+    ],
+    "suggestedSection": "culture",
+    "suggestedTitle": "How Concentrated Is the World’s Linguistic Diversity?",
+    "suggestedDescription": "Glottolog family data measure how human languages cluster—and how uneven diversity is at the family level."
+  },
+  {
+    "slug": "league-money-skill-and-star-systems",
+    "oldTitle": "LEAGUE MONEY, SKILL, AND STAR SYSTEMS",
+    "tags": [
+      "atlas",
+      "culture"
+    ],
+    "suggestedSection": "sports",
+    "suggestedTitle": "How League Money and Roster Rules Shape Star Systems",
+    "suggestedDescription": "A cross-sport comparison of rules, payroll, roster scale, and scarcity shows why teams become culturally meaningful."
+  },
+  {
+    "slug": "lego-database",
+    "oldTitle": "LEGO DATABASE: The Artometrics of LEGO Database",
+    "tags": [
+      "culture"
+    ],
+    "suggestedSection": "games",
+    "suggestedTitle": "How LEGO Set Complexity Evolved Across Themes",
+    "suggestedDescription": "Official set metadata traces rising piece counts and theme differences in the modern LEGO catalog."
+  },
+  {
+    "slug": "medium-articles",
+    "oldTitle": "MEDIUM ARTICLE METADATA: The Artometrics of Medium Article Metadata",
+    "tags": [
+      "culture"
+    ],
+    "suggestedSection": "tech",
+    "suggestedTitle": "Did Longer Medium Posts Earn More Applause?",
+    "suggestedDescription": "Metadata from tens of thousands of Medium articles tests whether length predicts claps and engagement."
+  },
+  {
+    "slug": "musicbrainz-pop-fame-mechanics",
+    "oldTitle": "MUSICBRAINZ: The Artometrics of Pop Fame",
+    "tags": [
+      "culture",
+      "persona"
+    ],
+    "suggestedSection": "music",
+    "suggestedTitle": "How Catalog Depth and Reinvention Make Pop Stars Famous",
+    "suggestedDescription": "MusicBrainz-style metadata links fame to release depth, format shifts, genre travel, and artistic reinvention."
+  },
+  {
+    "slug": "national-export-identity-atlas",
+    "oldTitle": "NATIONAL EXPORT IDENTITY ATLAS",
+    "tags": [
+      "atlas",
+      "power"
+    ],
+    "suggestedSection": "business",
+    "suggestedTitle": "What Nations Sell—and What That Says About Identity",
+    "suggestedDescription": "A country-level atlas treats exports as identity: what states sell, need, can replace, and attach prestige to."
+  },
+  {
+    "slug": "national-park-visits",
+    "oldTitle": "NATIONAL PARK VISITS: The Artometrics of National Park Visits",
+    "tags": [
+      "atlas"
+    ],
+    "suggestedSection": "cities-travel",
+    "suggestedTitle": "Which National Parks Draw the Crowds?",
+    "suggestedDescription": "Visitation time series identify America’s busiest parks and how attendance has trended over decades."
+  },
+  {
+    "slug": "netflix-engagement",
+    "oldTitle": "NETFLIX ENGAGEMENT: The Artometrics of Netflix Engagement",
+    "tags": [
+      "culture",
+      "power"
+    ],
+    "suggestedSection": "movies-tv",
+    "suggestedTitle": "Which Netflix Titles Consumed the Most Viewing Hours?",
+    "suggestedDescription": "Engagement metrics Netflix actually reports show which titles absorbed the most hours across the catalog."
+  },
+  {
+    "slug": "netflix-titles",
+    "oldTitle": "NETFLIX TITLES: The Artometrics of Netflix Titles",
+    "tags": [
+      "culture"
+    ],
+    "suggestedSection": "movies-tv",
+    "suggestedTitle": "How Netflix’s Catalog Mix Shifted Between Films and Series",
+    "suggestedDescription": "Title-level library data track the balance of movies and TV as Netflix’s catalog composition changed."
+  },
+  {
+    "slug": "new-york-vs-san-francisco-city-systems",
+    "oldTitle": "NEW YORK VS SAN FRANCISCO: Command City and Invention City",
+    "tags": [
+      "atlas",
+      "culture"
+    ],
+    "suggestedSection": "cities-travel",
+    "suggestedTitle": "New York and San Francisco: Command City vs. Invention City",
+    "suggestedDescription": "A comparative city report on why the two are paired in debate—and where their economic and cultural systems diverge."
+  },
+  {
+    "slug": "nuclear-explosions",
+    "oldTitle": "NUCLEAR EXPLOSIONS: The Artometrics of Nuclear Explosions",
+    "tags": [
+      "history",
+      "power"
+    ],
+    "suggestedSection": "culture",
+    "suggestedTitle": "How Nuclear Test Yields Shifted Through the Atomic Age",
+    "suggestedDescription": "Historical test records map yield, purpose, and timing as nuclear explosions evolved across decades."
+  },
+  {
+    "slug": "nyc-restaurant-inspections",
+    "oldTitle": "NYC RESTAURANT INSPECTIONS: The Artometrics of NYC Restaurant Inspections",
+    "tags": [
+      "atlas",
+      "culture"
+    ],
+    "suggestedSection": "cities-travel",
+    "suggestedTitle": "Which NYC Cuisines Score Highest on Health Inspections?",
+    "suggestedDescription": "Restaurant inspection grades across New York show how scores distribute by cuisine and neighborhood."
+  },
+  {
+    "slug": "pantheon-the-artometrics-of-collective-memory",
+    "oldTitle": "PANTHEON: The Artometrics of Collective Memory",
+    "tags": [
+      "culture",
+      "history"
+    ],
+    "suggestedSection": "culture",
+    "suggestedTitle": "Who Gets Remembered in the Global Pantheon of Fame?",
+    "suggestedDescription": "Biography-scale fame data ask where collective memory clusters across language, era, and institution."
+  },
+  {
+    "slug": "patriots-the-artometrics-of-the-system-dynasty",
+    "oldTitle": "PATRIOTS: The Artometrics of the System Dynasty",
+    "tags": [
+      "atlas",
+      "power"
+    ],
+    "suggestedSection": "sports",
+    "suggestedTitle": "The Patriots’ Brady–Belichick Era as a System Shock",
+    "suggestedDescription": "Two decades of New England football compressed a century of legacy into one system dynasty."
+  },
+  {
+    "slug": "pixar-films",
+    "oldTitle": "PIXAR: The Artometrics of the Computer-Animation Canon",
+    "tags": [
+      "culture"
+    ],
+    "suggestedSection": "movies-tv",
+    "suggestedTitle": "Where Pixar’s Critic Streak Broke: Cars and Lightyear",
+    "suggestedDescription": "Data on Pixar’s film canon track runtime, scores, and the titles that interrupted a long critical run."
+  },
+  {
+    "slug": "pokemon",
+    "oldTitle": "POKEMON: The Artometrics of the World's Biggest Franchise",
+    "tags": [
+      "culture",
+      "power"
+    ],
+    "suggestedSection": "games",
+    "suggestedTitle": "What Pokémon’s $150 Billion Franchise Actually Comprises",
+    "suggestedDescription": "Beyond the headline revenue figure, a breakdown of games, cards, merchandise, and film maps how the franchise earns."
+  },
+  {
+    "slug": "project-gutenberg-public-domain-canon-map",
+    "oldTitle": "PROJECT GUTENBERG: The Artometrics of the Public-Domain Canon",
+    "tags": [
+      "culture",
+      "history"
+    ],
+    "suggestedSection": "books",
+    "suggestedTitle": "Mapping the Public-Domain Canon Through Project Gutenberg",
+    "suggestedDescription": "Gutenberg metadata logic charts language gravity, era effects, author memory, and adaptation power in free literature."
+  },
+  {
+    "slug": "project-gutenberg",
+    "oldTitle": "PROJECT GUTENBERG: The Artometrics of Project Gutenberg",
+    "tags": [
+      "culture",
+      "history"
+    ],
+    "suggestedSection": "books",
+    "suggestedTitle": "Which Subjects Dominate the Project Gutenberg Shelf?",
+    "suggestedDescription": "Large-scale public-domain metadata show which topics and subjects crowd the digital free-library canon."
+  },
+  {
+    "slug": "radio-stations",
+    "oldTitle": "RADIO STATIONS: The Artometrics of Radio Stations",
+    "tags": [
+      "culture"
+    ],
+    "suggestedSection": "music",
+    "suggestedTitle": "How U.S. Radio Formats Map Across the Dial",
+    "suggestedDescription": "Station-level format data chart where music, talk, and niche programming concentrate on American radio."
+  },
+  {
+    "slug": "ramen-ratings",
+    "oldTitle": "RAMEN RATINGS: The Artometrics of Ramen Ratings",
+    "tags": [
+      "culture"
+    ],
+    "suggestedSection": "culture",
+    "suggestedTitle": "Which Ramen Brands Earn the Highest Ratings?",
+    "suggestedDescription": "Taster scores across thousands of instant ramen products identify top brands and their countries of origin."
+  },
+  {
+    "slug": "readmitted",
+    "oldTitle": "READMITTED: How America's Hospitals Are Failing the 30-Day Standard",
+    "tags": [
+      "power",
+      "atlas"
+    ],
+    "suggestedSection": "business",
+    "suggestedTitle": "Which Hospitals Still Fail the 30-Day Readmission Standard?",
+    "suggestedDescription": "CMS HRRP data on hospital-condition pairs show where states, conditions, and ownership types exceed readmission benchmarks."
+  },
+  {
+    "slug": "regional-sports-identity-map",
+    "oldTitle": "REGIONAL SPORTS IDENTITY MAP",
+    "tags": [
+      "atlas",
+      "culture"
+    ],
+    "suggestedSection": "sports",
+    "suggestedTitle": "How American Cities Build Distinct Sports Identities",
+    "suggestedDescription": "A cross-region map of markets, leagues, and championship droughts explains why fan cultures differ by city."
+  },
+  {
+    "slug": "rolling-stone-albums",
+    "oldTitle": "ROLLING STONE ALBUM RANKINGS: The Artometrics of Rolling Stone Album Rankings",
+    "tags": [
+      "culture"
+    ],
+    "suggestedSection": "music",
+    "suggestedTitle": "Which Albums Sit at the Peak of Rolling Stone’s Canon?",
+    "suggestedDescription": "Canonical album rankings identify the records Rolling Stone places at the summit of popular-music history."
+  },
+  {
+    "slug": "roman-emperors",
+    "oldTitle": "ROMAN EMPERORS: The Artometrics of Roman Emperors",
+    "tags": [
+      "history",
+      "persona"
+    ],
+    "suggestedSection": "culture",
+    "suggestedTitle": "Who Ruled Rome Longest—and Did Dynasty Predict Tenure?",
+    "suggestedDescription": "Reign-length data on Roman emperors test whether dynastic succession meant longer—or safer—time on the throne."
+  },
+  {
+    "slug": "san-francisco-data-microscope",
+    "oldTitle": "SAN FRANCISCO DATA MICROSCOPE: The City as an Invention Machine",
+    "tags": [
+      "atlas",
+      "culture"
+    ],
+    "suggestedSection": "cities-travel",
+    "suggestedTitle": "San Francisco as an Invention Machine Under Housing Pressure",
+    "suggestedDescription": "A city-identity report frames San Francisco through software exports, scarcity, neighborhoods, and open civic questions."
+  },
+  {
+    "slug": "school-diversity",
+    "oldTitle": "SCHOOL DIVERSITY: The Artometrics of School Diversity",
+    "tags": [
+      "power",
+      "persona"
+    ],
+    "suggestedSection": "business",
+    "suggestedTitle": "Where U.S. Student-Body Diversity Is Highest",
+    "suggestedDescription": "School-level composition data map where diversity concentrates and how unevenly it spreads across campuses."
+  },
+  {
+    "slug": "sherlock-holmes",
+    "oldTitle": "SHERLOCK HOLMES: The Artometrics of Sherlock Holmes",
+    "tags": [
+      "culture",
+      "persona"
+    ],
+    "suggestedSection": "books",
+    "suggestedTitle": "How Word Count Is Distributed Across the Holmes Canon",
+    "suggestedDescription": "Text-length analysis of Sherlock Holmes stories shows how narrative volume is spread through Conan’s corpus."
+  },
+  {
+    "slug": "simpsons-guest-stars",
+    "oldTitle": "SIMPSONS GUEST STARS: The Artometrics of Simpsons Guest Stars",
+    "tags": [
+      "culture"
+    ],
+    "suggestedSection": "movies-tv",
+    "suggestedTitle": "Who Guest-Starred Most Often on The Simpsons?",
+    "suggestedDescription": "Guest-appearance records count celebrity density across seasons and who returned to Springfield most often."
+  },
+  {
+    "slug": "sports-dynasty-index-best-and-worst-conversion",
+    "oldTitle": "SPORTS DYNASTY INDEX: Best, Worst, and Most Misleading Teams",
+    "tags": [
+      "atlas",
+      "power"
+    ],
+    "suggestedSection": "sports",
+    "suggestedTitle": "Best, Worst, and Most Misleading Sports Dynasties",
+    "suggestedDescription": "A cross-league index compares championship mass, conversion, market value, parity, and fan pain across franchises."
+  },
+  {
+    "slug": "streaming-catalog-power",
+    "oldTitle": "STREAMING CATALOG POWER: The Artometrics of What Platforms Actually Keep",
+    "tags": [
+      "culture"
+    ],
+    "suggestedSection": "movies-tv",
+    "suggestedTitle": "What Streaming Platforms Actually Keep in Their Libraries",
+    "suggestedDescription": "Public catalog data reveal library size, concentration, and the gap between hyped titles and retained inventory."
+  },
+  {
+    "slug": "super-bowl-ads",
+    "oldTitle": "SUPER BOWL ADS: The Artometrics of Super Bowl Ads",
+    "tags": [
+      "culture",
+      "power"
+    ],
+    "suggestedSection": "business",
+    "suggestedTitle": "Which Super Bowl Ads Won the Post-Game Internet?",
+    "suggestedDescription": "Ad-spot data from Super Bowl broadcasts track which commercials captured attention after the final whistle."
+  },
+  {
+    "slug": "tv-golden-age",
+    "oldTitle": "TV GOLDEN AGE: The Artometrics of TV Golden Age",
+    "tags": [
+      "culture"
+    ],
+    "suggestedSection": "movies-tv",
+    "suggestedTitle": "When Did Prestige TV Peak—and Did Critics Agree?",
+    "suggestedDescription": "Golden-age television scores compare critical and audience verdicts as the prestige-TV boom rose and cooled."
+  },
+  {
+    "slug": "uk-museums",
+    "oldTitle": "UK MUSEUMS: The Artometrics of UK Museums",
+    "tags": [
+      "culture",
+      "atlas"
+    ],
+    "suggestedSection": "galleries",
+    "suggestedTitle": "Where UK Museums Sit on the Deprivation Map",
+    "suggestedDescription": "Museum locations and deprivation bands show how cultural institutions are distributed across Britain’s inequality geography."
+  },
+  {
+    "slug": "un-votes",
+    "oldTitle": "UN VOTES: The Artometrics of UN Votes",
+    "tags": [
+      "power",
+      "history"
+    ],
+    "suggestedSection": "business",
+    "suggestedTitle": "Which UN Votes Split the Chamber Most Sharply?",
+    "suggestedDescription": "Voting records identify the resolutions that divided member states—and which countries dissented most often."
+  },
+  {
+    "slug": "us-phds",
+    "oldTitle": "US PHDS AWARDED: The Artometrics of US PhDs Awarded",
+    "tags": [
+      "persona",
+      "power"
+    ],
+    "suggestedSection": "business",
+    "suggestedTitle": "Which U.S. PhD Fields Expanded Fastest?",
+    "suggestedDescription": "Doctorate production data show which disciplines grew quickest and where degree output concentrates."
+  },
+  {
+    "slug": "us-tuition",
+    "oldTitle": "US TUITION COSTS: The Artometrics of US Tuition Costs",
+    "tags": [
+      "power"
+    ],
+    "suggestedSection": "business",
+    "suggestedTitle": "How Far Did Average U.S. Tuition Climb by State?",
+    "suggestedDescription": "State tuition time series measure the rise in college costs and which states lead the bill."
+  },
+  {
+    "slug": "us-voter-turnout",
+    "oldTitle": "US VOTER TURNOUT: The Artometrics of US Voter Turnout",
+    "tags": [
+      "power"
+    ],
+    "suggestedSection": "business",
+    "suggestedTitle": "Which States Show Up at the Ballot Box?",
+    "suggestedDescription": "Election turnout data compare state participation rates and how they moved across recent contests."
+  },
+  {
+    "slug": "video-games-sliced",
+    "oldTitle": "VIDEO GAMES: The Artometrics of Video Games",
+    "tags": [
+      "culture"
+    ],
+    "suggestedSection": "games",
+    "suggestedTitle": "Did Critical Acclaim Track Commercial Success in Video Games?",
+    "suggestedDescription": "A large games slice tests whether critic scores correlated with commercial outcomes in this release window."
+  },
+  {
+    "slug": "video-games-steam",
+    "oldTitle": "VIDEO GAMES STEAM SPY: The Artometrics of Video Games Steam Spy",
+    "tags": [
+      "culture"
+    ],
+    "suggestedSection": "games",
+    "suggestedTitle": "Which Steam Games Earned the Most Playtime Per Dollar?",
+    "suggestedDescription": "Steam Spy-style ownership and play data identify titles that delivered the most hours relative to price."
+  },
+  {
+    "slug": "warrior-the-artometrics-of-a-golden-state-dynasty",
+    "oldTitle": "WARRIOR: The Artometrics of A Golden State Dynasty",
+    "tags": [
+      "atlas"
+    ],
+    "suggestedSection": "sports",
+    "suggestedTitle": "How Golden State Went From Irrelevant to Dynasty",
+    "suggestedDescription": "Seventy-eight Warriors seasons include decades of losing before a modern dynasty remade Bay Area basketball."
+  },
+  {
+    "slug": "wealth-income",
+    "oldTitle": "WEALTH AND INCOME: The Artometrics of Wealth and Income",
+    "tags": [
+      "power"
+    ],
+    "suggestedSection": "business",
+    "suggestedTitle": "How Concentrated Is Wealth at the Top of the Distribution?",
+    "suggestedDescription": "Wealth and income shares measure how assets pile up at the upper end of the distribution over time."
+  },
+  {
+    "slug": "web-page-metrics",
+    "oldTitle": "WEB PAGE METRICS: The Artometrics of Web Page Metrics",
+    "tags": [
+      "culture",
+      "power"
+    ],
+    "suggestedSection": "tech",
+    "suggestedTitle": "Which Web Pages Load Fastest—and What Metrics Move Together?",
+    "suggestedDescription": "Performance metrics across sampled pages show speed leaders and which technical measures correlate."
+  },
+  {
+    "slug": "wine-ratings",
+    "oldTitle": "WINE RATINGS: The Artometrics of Wine Ratings",
+    "tags": [
+      "culture"
+    ],
+    "suggestedSection": "culture",
+    "suggestedTitle": "Does Wine Price Predict Critic Points?",
+    "suggestedDescription": "A hundred thousand wine ratings test whether cost tracks scores—or whether bargains cluster elsewhere."
+  },
+  {
+    "slug": "world-heritage-sites",
+    "oldTitle": "WORLD HERITAGE SITES: The Artometrics of World Heritage Sites",
+    "tags": [
+      "atlas",
+      "history"
+    ],
+    "suggestedSection": "galleries",
+    "suggestedTitle": "How UNESCO Sites Grew Across Scandinavia, 2004–2022",
+    "suggestedDescription": "UNESCO heritage counts track how Scandinavian site inventories expanded between 2004 and 2022."
+  },
+  {
+    "slug": "yankees-the-artometrics-of-baseballs-empire",
+    "oldTitle": "YANKEES: The Artometrics of Baseball's Empire",
+    "tags": [
+      "atlas",
+      "power"
+    ],
+    "suggestedSection": "sports",
+    "suggestedTitle": "The Yankees as Baseball’s Benchmark for Expectation and Scale",
+    "suggestedDescription": "More than titles: New York sets the sport’s standard for droughts, payroll pressure, and historical magnitude."
+  }
+]

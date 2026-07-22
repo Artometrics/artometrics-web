@@ -1,33 +1,21 @@
 ---
-title: "READMITTED: How America's Hospitals Are Failing the 30-Day Standard"
+title: Which Hospitals Still Fail the 30-Day Readmission Standard?
 slug: readmitted
-pubDate: 2026-04-21
-description: "11,720 hospital-condition pairs under CMS HRRP: which states, conditions, and ownership types still exceed the 30-day readmission benchmark — and what that means for TEAM in 2026"
+pubDate: 2026-04-21T00:00:00.000Z
+description: >-
+  CMS HRRP data show where states, conditions, and ownership types exceed
+  benchmarks.
 heroImage: /images/content/articles/readmitted/hero.jpg
-tags: [power, atlas]
+tags:
+  - business
 draft: false
 ---
 <div id="quarto-content">
-<nav id="TOC" role="doc-toc">
-    <h2 id="toc-title">IN THIS REPORT</h2>
 
-  <ul>
-  <li><a href="#fast-facts" id="toc-fast-facts">FAST FACTS</a></li>
-  <li><a href="#dataset-context" id="toc-dataset-context">DATASET CONTEXT</a></li>
-  <li><a href="#the-geography-of-failure" id="toc-the-geography-of-failure">THE GEOGRAPHY OF FAILURE</a></li>
-  <li><a href="#the-condition-nobody-is-solving" id="toc-the-condition-nobody-is-solving">THE CONDITION NOBODY IS SOLVING</a></li>
-  <li><a href="#ownership-penalty-and-who-pays" id="toc-ownership-penalty-and-who-pays">OWNERSHIP, PENALTY, AND WHO PAYS</a></li>
-  <li><a href="#limitations" id="toc-limitations">LIMITATIONS</a></li>
-  <li><a href="#conclusion" id="toc-conclusion">CONCLUSION</a></li>
-  <li><a href="#references" id="toc-references">REFERENCES</a></li>
-  <li><a href="#files" id="toc-files">FILES</a></li>
-  <li><a href="#editors-note" id="toc-editors-note">EDITOR’S NOTE</a></li>
-  </ul>
-</nav>
 <main class="art-article-main">
 <p>The Hospital Readmissions Reduction Program is a Medicare penalty system that has been running since 2012. The premise is simple: if your patients come back to the hospital within 30 days of discharge at a higher rate than expected given their medical profile, CMS docks your Medicare reimbursements. The penalty caps at 3% of all Medicare payments — not just payments for the specific condition being measured. A hospital with too many heart failure readmissions doesn’t just lose heart failure revenue. It loses 3% of everything.</p>
 <p>The core metric is the Excess Readmission Ratio, or ERR. It is a ratio of predicted readmissions to expected readmissions — where “expected” is risk-adjusted for each patient’s age, comorbidities, and discharge history. An ERR of exactly 1.0 means you readmitted exactly as many patients as a hospital of your type and patient mix should. Above 1.0 means more readmissions than expected. Below 1.0 means fewer. What this analysis found: nearly every condition’s national average ERR is above 1.0. HRRP has been running for over a decade, and the average American hospital is still readmitting more patients than CMS expects. The penalty hasn’t eliminated the problem. It has clarified it.</p>
-<h2 id="fast-facts" class="anchored">FAST FACTS</h2>
+<h2 id="fast-facts" class="anchored">At a glance</h2>
 <style>
 .facts-grid {
 display: grid;
@@ -93,7 +81,7 @@ margin: 0;
     <span class="fact-label">New Jersey&#39;s share of penalized hospital-condition pairs — the highest-risk geography in the working dataset</span>
   </div>
 </div>
-<h2 id="dataset-context" class="anchored">DATASET CONTEXT</h2>
+<h2 id="dataset-context" class="anchored">The data</h2>
 <p>The FY2025 HRRP supplemental extract covers the measurement window used for CMS’s published excess readmission ratios. After removing suppressed rows — hospitals with fewer than 25 discharges for a given condition, which CMS redacts to protect patient privacy — the working dataset contains <strong>11,720</strong> hospital-condition pairs across roughly 2,700 hospitals and six conditions: Acute Myocardial Infarction (AMI), Heart Failure, Pneumonia, Chronic Obstructive Pulmonary Disease (COPD), Hip &amp; Knee Arthroplasty, and Coronary Artery Bypass Graft (CABG). A hospital can perform well on five tracks and still take a hit on one.</p>
 <p>The suppressed rows matter. Small rural hospitals disproportionately fall below the 25-discharge threshold and disappear from the analysis. The hospitals in this dataset skew toward larger, busier facilities. That is not a flaw in the extract — it is a feature of how CMS designed the program — but it shapes every finding below.</p>
 <p>An ERR above 1.0 feeds a penalty calculation; the tier depends on how far above 1.0 a hospital sits relative to peers. For this report, pairs are grouped into four tiers: No Penalty (ERR ≤ 1.0), Low, Medium, and High. Charts are rendered in R from the working CSVs in this monorepo (<code>articles/readmitted/data/</code>), with PNG and interactive Plotly JSON exported side by side. Ownership labels for Chart 3 were joined from CMS Hospital General Information (dataset <code>xubh-q36u</code>) and stored offline so the analysis does not depend on a live CMS download at render time.</p>
@@ -138,15 +126,15 @@ margin: 0;
 <h3>Government hospitals sit in the middle</h3>
 <p>Government-owned facilities land between non-profit and for-profit. Neither the safety-net excuse nor the public-accountability story fits cleanly. County systems operate under political oversight that can slow discharge innovation; middle-of-pack performance is its own finding.</p>
 
-<h2 id="limitations" class="anchored">LIMITATIONS</h2>
+<h2 id="limitations" class="anchored">Caveats</h2>
 <p>CMS suppresses readmission data for hospitals that fall below 25 discharges per condition per measurement period. That threshold protects statistical reliability, but the effect is systematic — small rural hospitals disappear from this analysis. The hospitals remaining skew toward larger, busier facilities.</p>
 <p>Ownership classification for Chart 3 comes from CMS Hospital General Information, which uses inconsistent labeling across hospital types. Physician-owned facilities, tribal hospitals, and church-affiliated systems do not always map cleanly into three buckets. The Government, Non-Profit, and For-Profit groupings are reasonable approximations — not clean legal categories.</p>
 <p>ERR compares actual readmissions to what CMS’s risk model predicts for a hospital’s patient mix. Case-mix adjustment is imperfect. Hospitals in high-poverty, high-comorbidity markets may still face structural disadvantage the model does not fully absorb. Observation-status shifts after the ACA (documented by Zuckerman et al., 2016) also mean some returns never appear as inpatient readmissions.</p>
-<h2 id="conclusion" class="anchored">CONCLUSION</h2>
+<h2 id="conclusion" class="anchored">Bottom line</h2>
 <p>Nearly half of all hospital-condition pairs still exceed CMS’s expected readmission rate — but the distribution is uneven. The highest-penalty states cut across market type and regional demographics. Hip/Knee replacement sits nearly 2× above the next closest condition on excess readmissions. For-profit hospitals carry modestly more penalty exposure than non-profits, though all three ownership types remain majority no-penalty.</p>
 <p>HRRP has been in effect since 2012. That 48.1% of pairs still clear the 1.0 ERR threshold more than a decade later says something about the limits of financial penalties as a behavior-change mechanism. Hospitals have responded — rates have declined — but the program has defined the problem more than it has solved it.</p>
 <p>CMS’s TEAM model, mandatory for 742 hospitals starting January 1, 2026, goes further by tying entire episodes of care to reimbursement. The hospitals that struggled under HRRP are the ones most likely to feel TEAM. This report describes the problem TEAM is designed to address. Whether bundled payments succeed where readmission penalties have not is the next question.</p>
-<h2 id="references" class="anchored">REFERENCES</h2>
+<h2 id="references" class="anchored">Sources</h2>
 <p class="art-p">
 Centers for Medicare &amp; Medicaid Services. <em>Hospital Readmissions Reduction Program (HRRP) — FY2025 Supplemental Data</em>. CMS Provider Data Catalog, Dataset ID: 9n3s-kdb3. <a href="https://data.cms.gov/provider-data/dataset/9n3s-kdb3" target="_blank" rel="noopener noreferrer">https://data.cms.gov/provider-data/dataset/9n3s-kdb3</a>
 </p>
