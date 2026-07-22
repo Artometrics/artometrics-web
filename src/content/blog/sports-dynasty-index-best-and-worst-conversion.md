@@ -21,13 +21,19 @@ keyPoints:
   - 57 — Maple Leafs active Stanley Cup drought entering 2025
 faq:
   - question: What does “A few franchises own championship memory itself” show?
-    answer: 351 — Charts now audited across the Artometrics corpus
+    answer: >-
+      Key figure: 351 — Charts now audited across the Artometrics corpus. See
+      the charts and sources in the report for the full evidence.
   - question: 'What does “Modern dynasties are finishers, not just invitees” show?'
-    answer: 4 — Major North American leagues compared
+    answer: >-
+      Key figure: 4 — Major North American leagues compared. See the charts and
+      sources in the report for the full evidence.
   - question: >-
       What does “Market power and competitive power are different variables”
       show?
-    answer: '27 — Yankees titles, the largest MLB archive'
+    answer: >-
+      Key figure: 27 — Yankees titles, the largest MLB archive. See the charts
+      and sources in the report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

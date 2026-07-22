@@ -19,12 +19,17 @@ keyPoints:
 faq:
   - question: What does “Language gravity” show?
     answer: >-
-      75K+ — Approximate scale of Project Gutenberg ebooks in public-facing
-      summaries
+      Key figure: 75K+ — Approximate scale of Project Gutenberg ebooks in
+      public-facing summaries. See the charts and sources in the report for the
+      full evidence.
   - question: What does “The era machine” show?
-    answer: Weekly — CSV catalog update cadence noted in Gutenberg tooling docs
+    answer: >-
+      Key figure: Weekly — CSV catalog update cadence noted in Gutenberg tooling
+      docs. See the charts and sources in the report for the full evidence.
   - question: What does “Author memory” show?
-    answer: Daily — RDF catalog update cadence noted by Gutenberg
+    answer: >-
+      Key figure: Daily — RDF catalog update cadence noted by Gutenberg. See the
+      charts and sources in the report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

@@ -16,11 +16,17 @@ keyPoints:
   - TX — Most common ST
 faq:
   - question: What does “A flat median hides how extreme the upper tail is” show?
-    answer: '27,944 — Records in the working dataset'
+    answer: >-
+      Key figure: 27,944 — Records in the working dataset. See the charts and
+      sources in the report for the full evidence.
   - question: What does “Butteville Union Elementary leads a steep LEA ladder” show?
-    answer: 2.38 — Median Multi
+    answer: >-
+      Key figure: 2.38 — Median Multi. See the charts and sources in the report
+      for the full evidence.
   - question: What does “State boxes show how Multi spreads geographically” show?
-    answer: 85.3 — Highest observed Multi
+    answer: >-
+      Key figure: 85.3 — Highest observed Multi. See the charts and sources in
+      the report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

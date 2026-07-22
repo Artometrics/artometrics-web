@@ -21,11 +21,17 @@ keyPoints:
   - 16-0 — Perfect 2007 regular season
 faq:
   - question: What does “One era overwhelms the rest of the archive” show?
-    answer: 6 — Super Bowl championships
+    answer: >-
+      Key figure: 6 — Super Bowl championships. See the charts and sources in
+      the report for the full evidence.
   - question: What does “New England compressed a summit climb into two decades” show?
-    answer: 9 — Super Bowl appearances during the Brady/Belichick era
+    answer: >-
+      Key figure: 9 — Super Bowl appearances during the Brady/Belichick era. See
+      the charts and sources in the report for the full evidence.
   - question: What does “Excellence became routine before it became legend” show?
-    answer: 30 — Approximate playoff wins from 2001 through 2019
+    answer: >-
+      Key figure: 30 — Approximate playoff wins from 2001 through 2019. See the
+      charts and sources in the report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

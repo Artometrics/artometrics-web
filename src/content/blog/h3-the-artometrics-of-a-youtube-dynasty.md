@@ -27,16 +27,19 @@ keyPoints:
 faq:
   - question: What does “The Era Timeline” show?
     answer: >-
-      3.24B — Total views across all four H3 channels, 2013–2026 — enough to
-      give every person on Earth nearly half a view
+      Key figure: 3.24B — Total views across all four H3 channels, 2013–2026 —
+      enough to give every person on Earth nearly half a view. See the charts
+      and sources in the report for the full evidence.
   - question: What does “The Duration Drift” show?
     answer: >-
-      1,638 — Videos analyzed after filtering Shorts and zero-view uploads from
-      the original 1,876-video pull
+      Key figure: 1,638 — Videos analyzed after filtering Shorts and zero-view
+      uploads from the original 1,876-video pull. See the charts and sources in
+      the report for the full evidence.
   - question: What does “The Fan Vs. Critic Divide” show?
     answer: >-
-      4.5× — How much harder h3h3Productions hits per video vs. the H3 Podcast —
-      4.78M median vs. 1.05M
+      Key figure: 4.5× — How much harder h3h3Productions hits per video vs. the
+      H3 Podcast — 4.78M median vs. 1.05M. See the charts and sources in the
+      report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

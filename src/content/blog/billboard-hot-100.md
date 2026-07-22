@@ -20,11 +20,17 @@ keyPoints:
   - '67 yrs — Span of the dataset: 1958 to 2025'
 faq:
   - question: What does “Run Length Over the Decades” show?
-    answer: '1,177 — Number-one songs in the dataset (1958–2025)'
+    answer: >-
+      Key figure: 1,177 — Number-one songs in the dataset (1958–2025). See the
+      charts and sources in the report for the full evidence.
   - question: What does “Longest Runs Ever” show?
-    answer: '2 wks — Median run length — most #1s are fleeting'
+    answer: >-
+      Key figure: 2 wks — Median run length — most #1s are fleeting. See the
+      charts and sources in the report for the full evidence.
   - question: What does “How Artists Compare” show?
-    answer: 19 wks — Longest single run in the dataset
+    answer: >-
+      Key figure: 19 wks — Longest single run in the dataset. See the charts and
+      sources in the report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

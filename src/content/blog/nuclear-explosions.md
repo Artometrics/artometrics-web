@@ -16,11 +16,17 @@ keyPoints:
   - 1970–1970 — Year span covered in the file
 faq:
   - question: What does “How magnitudes move through the record” show?
-    answer: '2,051 — Records in the working dataset'
+    answer: >-
+      Key figure: 2,051 — Records in the working dataset. See the charts and
+      sources in the report for the full evidence.
   - question: What does “Who sits at the top” show?
-    answer: 0.00 — Median Magnitude body
+    answer: >-
+      Key figure: 0.00 — Median Magnitude body. See the charts and sources in
+      the report for the full evidence.
   - question: What does “Purpose spreads magnitudes” show?
-    answer: 7.40 — Highest observed Magnitude body
+    answer: >-
+      Key figure: 7.40 — Highest observed Magnitude body. See the charts and
+      sources in the report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

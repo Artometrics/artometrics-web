@@ -16,11 +16,17 @@ keyPoints:
   - 1980–2014 — Year span covered in the file
 faq:
   - question: What does “Median votes rose across three decades of elections” show?
-    answer: 936 — Records in the working dataset
+    answer: >-
+      Key figure: 936 — Records in the working dataset. See the charts and
+      sources in the report for the full evidence.
   - question: What does “The United States total dwarfs the state ladder” show?
-    answer: '1,170,867 — Median Votes'
+    answer: >-
+      Key figure: 1,170,867 — Median Votes. See the charts and sources in the
+      report for the full evidence.
   - question: What does “A right-skewed distribution with a heavy upper tail” show?
-    answer: '132,609,063 — Highest observed Votes'
+    answer: >-
+      Key figure: 132,609,063 — Highest observed Votes. See the charts and
+      sources in the report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

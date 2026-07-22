@@ -20,11 +20,18 @@ keyPoints:
   - '472 yrs — Total span of the dataset: 1543 to 2015'
 faq:
   - question: What does “500 years of survival” show?
-    answer: 73.3 — Median life expectancy in 2015 — the closing year of the dataset
+    answer: >-
+      Key figure: 73.3 — Median life expectancy in 2015 — the closing year of
+      the dataset. See the charts and sources in the report for the full
+      evidence.
   - question: What does “Who lives longest” show?
-    answer: 83.8 — Highest single observation — Hong Kong near peak
+    answer: >-
+      Key figure: 83.8 — Highest single observation — Hong Kong near peak. See
+      the charts and sources in the report for the full evidence.
   - question: What does “The split world” show?
-    answer: '33.9→73 — Median lifespan: opening year to closing year'
+    answer: >-
+      Key figure: 33.9→73 — Median lifespan: opening year to closing year. See
+      the charts and sources in the report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

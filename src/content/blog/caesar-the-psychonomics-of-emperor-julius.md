@@ -35,18 +35,21 @@ keyPoints:
 faq:
   - question: What does “Leadership Trait Analysis” show?
     answer: >-
-      100 BCE — Caesar&#39;s birth year — born into Rome&#39;s most turbulent
-      political century, to a patrician family living in the Subura tenements
+      Key figure: 100 BCE — Caesar&#39;s birth year — born into Rome&#39;s most
+      turbulent political century, to a patrician family living in the Subura
+      tenements. See the charts and sources in the report for the full evidence.
   - question: What does “The Economic Fingerprint” show?
     answer: >-
-      38 days — Held captive by Cilician pirates at age 25 — he laughed at their
-      ransom demand, volunteered to pay more, then crucified every one of them
-      after his release
+      Key figure: 38 days — Held captive by Cilician pirates at age 25 — he
+      laughed at their ransom demand, volunteered to pay more, then crucified
+      every one of them after his release. See the charts and sources in the
+      report for the full evidence.
   - question: What does “The Patronage Network” show?
     answer: >-
-      0.95 — Caesar&#39;s Need for Power score under the Hermann (1999)
-      Leadership Trait Analysis framework — near the ceiling of any world leader
-      ever profiled
+      Key figure: 0.95 — Caesar&#39;s Need for Power score under the Hermann
+      (1999) Leadership Trait Analysis framework — near the ceiling of any world
+      leader ever profiled. See the charts and sources in the report for the
+      full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

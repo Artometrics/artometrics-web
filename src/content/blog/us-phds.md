@@ -16,11 +16,17 @@ keyPoints:
   - 2008–2017 — Year span covered in the file
 faq:
   - question: What does “Median doctorate counts edged upward across the decade” show?
-    answer: '3,370 — Records in the working dataset'
+    answer: >-
+      Key figure: 3,370 — Records in the working dataset. See the charts and
+      sources in the report for the full evidence.
   - question: What does “Social sciences lead the field ladder” show?
-    answer: 85.0 — Median N phds
+    answer: >-
+      Key figure: 85.0 — Median N phds. See the charts and sources in the report
+      for the full evidence.
   - question: What does “Broad fields do not share one production band” show?
-    answer: '5,302 — Highest observed N phds'
+    answer: >-
+      Key figure: 5,302 — Highest observed N phds. See the charts and sources in
+      the report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

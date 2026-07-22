@@ -18,11 +18,17 @@ keyPoints:
   - Nominee — Most common Type
 faq:
   - question: What does “Landscape” show?
-    answer: '29,678 — Records in the working dataset'
+    answer: >-
+      Key figure: 29,678 — Records in the working dataset. See the charts and
+      sources in the report for the full evidence.
   - question: What does “Who sits at the top” show?
-    answer: 1957–2021 — Year span covered in the file
+    answer: >-
+      Key figure: 1957–2021 — Year span covered in the file. See the charts and
+      sources in the report for the full evidence.
   - question: What does “Category” show?
-    answer: Nominee — Most common Type
+    answer: >-
+      Key figure: Nominee — Most common Type. See the charts and sources in the
+      report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

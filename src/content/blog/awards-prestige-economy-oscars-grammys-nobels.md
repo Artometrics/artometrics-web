@@ -24,12 +24,17 @@ keyPoints:
 faq:
   - question: What does “Prestige and market are not the same currency” show?
     answer: >-
-      98th — Academy Awards database complete through 2025/2026 cycle per
-      official database
+      Key figure: 98th — Academy Awards database complete through 2025/2026
+      cycle per official database. See the charts and sources in the report for
+      the full evidence.
   - question: What does “When awards invent more lanes of excellence” show?
-    answer: '1,500+ — Acceptance speeches in the Academy''s speech database'
+    answer: >-
+      Key figure: 1,500+ — Acceptance speeches in the Academy's speech database.
+      See the charts and sources in the report for the full evidence.
   - question: What does “Getting nominated is not the same as winning” show?
-    answer: 1901 — First Nobel Prizes awarded
+    answer: >-
+      Key figure: 1901 — First Nobel Prizes awarded. See the charts and sources
+      in the report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

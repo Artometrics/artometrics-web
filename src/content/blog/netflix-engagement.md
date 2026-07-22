@@ -16,11 +16,17 @@ keyPoints:
   - 2010–2025 — Year span covered in the file
 faq:
   - question: What does “How the pattern changed over time” show?
-    answer: '27,803 — Records in the working dataset'
+    answer: >-
+      Key figure: 27,803 — Records in the working dataset. See the charts and
+      sources in the report for the full evidence.
   - question: What does “Who sits at the top” show?
-    answer: '2,500,000 — Median Hours viewed'
+    answer: >-
+      Key figure: 2,500,000 — Median Hours viewed. See the charts and sources in
+      the report for the full evidence.
   - question: What does “How the field is spread” show?
-    answer: '840,300,000 — Highest observed Hours viewed'
+    answer: >-
+      Key figure: 840,300,000 — Highest observed Hours viewed. See the charts
+      and sources in the report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

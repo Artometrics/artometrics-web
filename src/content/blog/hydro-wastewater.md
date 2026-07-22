@@ -16,11 +16,17 @@ keyPoints:
   - Secondary — Most common LEVEL
 faq:
   - question: What does “Discharge by country” show?
-    answer: '58,502 — Records in the working dataset'
+    answer: >-
+      Key figure: 58,502 — Records in the working dataset. See the charts and
+      sources in the report for the full evidence.
   - question: What does “Who sits at the top” show?
-    answer: '1,079 — Median WASTE DIS'
+    answer: >-
+      Key figure: 1,079 — Median WASTE DIS. See the charts and sources in the
+      report for the full evidence.
   - question: What does “Treatment levels spread discharge” show?
-    answer: '3,073,754 — Highest observed WASTE DIS'
+    answer: >-
+      Key figure: 3,073,754 — Highest observed WASTE DIS. See the charts and
+      sources in the report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

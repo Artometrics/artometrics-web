@@ -17,13 +17,19 @@ keyPoints:
   - 5 — Defining Celtics title eras used in this report
 faq:
   - question: What does “The 1960s are still the gravitational center” show?
-    answer: '18 — NBA championships, the league record entering 2025'
+    answer: >-
+      Key figure: 18 — NBA championships, the league record entering 2025. See
+      the charts and sources in the report for the full evidence.
   - question: What does “Boston and Los Angeles define the league’s summit” show?
-    answer: 11 — Titles won during the Bill Russell era
+    answer: >-
+      Key figure: 11 — Titles won during the Bill Russell era. See the charts
+      and sources in the report for the full evidence.
   - question: >-
       What does “Russell converted chances; later eras inherited the burden”
       show?
-    answer: 2024 — Most recent championship
+    answer: >-
+      Key figure: 2024 — Most recent championship. See the charts and sources in
+      the report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

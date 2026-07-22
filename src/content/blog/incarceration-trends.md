@@ -16,11 +16,17 @@ keyPoints:
   - 1970–2016 — Year span covered in the file
 faq:
   - question: What does “How the pattern changed over time” show?
-    answer: '100,000 — Records in the working dataset'
+    answer: >-
+      Key figure: 100,000 — Records in the working dataset. See the charts and
+      sources in the report for the full evidence.
   - question: What does “Who sits at the top” show?
-    answer: '3,553 — Median Population'
+    answer: >-
+      Key figure: 3,553 — Median Population. See the charts and sources in the
+      report for the full evidence.
   - question: What does “How regions spread” show?
-    answer: '6,801,437 — Highest observed Population'
+    answer: >-
+      Key figure: 6,801,437 — Highest observed Population. See the charts and
+      sources in the report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

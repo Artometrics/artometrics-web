@@ -31,16 +31,19 @@ keyPoints:
 faq:
   - question: What does “Gdp Per Capita Across Empire Cores” show?
     answer: >-
-      1,200 yrs — Time for Western Europe to recover Rome&#39;s peak GDP per
-      capita after the 476 CE collapse
+      Key figure: 1,200 yrs — Time for Western Europe to recover Rome&#39;s peak
+      GDP per capita after the 476 CE collapse. See the charts and sources in
+      the report for the full evidence.
   - question: 'What does “Rise Fast, Fall Faster” show?'
     answer: >-
-      23% — Share of global population governed by the British Empire at its
-      1920 territorial peak — 412 million people
+      Key figure: 23% — Share of global population governed by the British
+      Empire at its 1920 territorial peak — 412 million people. See the charts
+      and sources in the report for the full evidence.
   - question: What does “The Extraction Gap” show?
     answer: >-
-      ~7× — Number of times Imperial China cycled through full unification and
-      fragmentation between 221 BCE and 1912 CE
+      Key figure: ~7× — Number of times Imperial China cycled through full
+      unification and fragmentation between 221 BCE and 1912 CE. See the charts
+      and sources in the report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

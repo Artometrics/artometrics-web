@@ -20,11 +20,17 @@ keyPoints:
   - Interim — Most common Interim coceo
 faq:
   - question: What does “Longer Max Tenures Are Rare in the Company Ranking” show?
-    answer: '9,423 — Records in the working dataset'
+    answer: >-
+      Key figure: 9,423 — Records in the working dataset. See the charts and
+      sources in the report for the full evidence.
   - question: What does “The Top Dozen Caps Out Quickly” show?
-    answer: 1.00 — Median Max tenure ceodb
+    answer: >-
+      Key figure: 1.00 — Median Max tenure ceodb. See the charts and sources in
+      the report for the full evidence.
   - question: What does “Interim Labels Dominate the Category Mix” show?
-    answer: 4.00 — Highest observed Max tenure ceodb
+    answer: >-
+      Key figure: 4.00 — Highest observed Max tenure ceodb. See the charts and
+      sources in the report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

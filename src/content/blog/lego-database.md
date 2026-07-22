@@ -16,11 +16,17 @@ keyPoints:
   - 1949–2022 — Year span covered in the file
 faq:
   - question: What does “How part counts changed over time” show?
-    answer: '19,798 — Records in the working dataset'
+    answer: >-
+      Key figure: 19,798 — Records in the working dataset. See the charts and
+      sources in the report for the full evidence.
   - question: What does “Who sits at the top” show?
-    answer: 34.0 — Median Num parts
+    answer: >-
+      Key figure: 34.0 — Median Num parts. See the charts and sources in the
+      report for the full evidence.
   - question: What does “How the field is spread” show?
-    answer: '11,695 — Highest observed Num parts'
+    answer: >-
+      Key figure: 11,695 — Highest observed Num parts. See the charts and
+      sources in the report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

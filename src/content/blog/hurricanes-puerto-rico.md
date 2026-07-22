@@ -20,11 +20,17 @@ keyPoints:
   - 2017–2017 — Year span covered in the file
 faq:
   - question: What does “Timeline across states” show?
-    answer: 153 — Records in the working dataset
+    answer: >-
+      Key figure: 153 — Records in the working dataset. See the charts and
+      sources in the report for the full evidence.
   - question: What does “Who sits at the top” show?
-    answer: 703 — Median Value
+    answer: >-
+      Key figure: 703 — Median Value. See the charts and sources in the report
+      for the full evidence.
   - question: What does “How values are spread” show?
-    answer: '5,072 — Highest observed Value'
+    answer: >-
+      Key figure: 5,072 — Highest observed Value. See the charts and sources in
+      the report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

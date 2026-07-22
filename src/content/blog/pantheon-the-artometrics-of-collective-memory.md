@@ -17,11 +17,18 @@ keyPoints:
   - 10 — Memory-capital cities compared
 faq:
   - question: What does “Memory domains” show?
-    answer: 85K+ — Biographies indexed by Pantheon in public-facing summaries
+    answer: >-
+      Key figure: 85K+ — Biographies indexed by Pantheon in public-facing
+      summaries. See the charts and sources in the report for the full evidence.
   - question: What does “Era shift” show?
-    answer: 15 — Minimum Wikipedia language editions used in Pantheon collection logic
+    answer: >-
+      Key figure: 15 — Minimum Wikipedia language editions used in Pantheon
+      collection logic. See the charts and sources in the report for the full
+      evidence.
   - question: What does “Memory capitals” show?
-    answer: 2016 — Scientific Data paper for Pantheon 1.0
+    answer: >-
+      Key figure: 2016 — Scientific Data paper for Pantheon 1.0. See the charts
+      and sources in the report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

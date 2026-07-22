@@ -29,16 +29,19 @@ keyPoints:
 faq:
   - question: What does “Where Great Coffee Comes From” show?
     answer: >-
-      1,339 — Coffee samples rated by CQI Q Graders across Arabica and Robusta
-      species
+      Key figure: 1,339 — Coffee samples rated by CQI Q Graders across Arabica
+      and Robusta species. See the charts and sources in the report for the full
+      evidence.
   - question: What does “The Quality-Retail Disconnect” show?
     answer: >-
-      85.3 — Ethiopia&#39;s median CQI cup score — highest of any country with
-      20+ samples
+      Key figure: 85.3 — Ethiopia&#39;s median CQI cup score — highest of any
+      country with 20+ samples. See the charts and sources in the report for the
+      full evidence.
   - question: What does “The Sub-Metric Fingerprint” show?
     answer: >-
-      0 — Starbucks locations in Ethiopia, Kenya, and Uganda — the top three
-      scoring nations
+      Key figure: 0 — Starbucks locations in Ethiopia, Kenya, and Uganda — the
+      top three scoring nations. See the charts and sources in the report for
+      the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

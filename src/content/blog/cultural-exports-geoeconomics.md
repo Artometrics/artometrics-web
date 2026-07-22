@@ -16,11 +16,17 @@ keyPoints:
   - 3 — Asian cultural wave paths compared
 faq:
   - question: What does “Soft Power and Trade” show?
-    answer: 8 — Countries and cultural-export systems highlighted
+    answer: >-
+      Key figure: 8 — Countries and cultural-export systems highlighted. See the
+      charts and sources in the report for the full evidence.
   - question: What does “Medium Exportability” show?
-    answer: 8 — Mediums scored for exportability
+    answer: >-
+      Key figure: 8 — Mediums scored for exportability. See the charts and
+      sources in the report for the full evidence.
   - question: What does “Cultural Waves” show?
-    answer: 6 — Diagnostic cultural trade questions
+    answer: >-
+      Key figure: 6 — Diagnostic cultural trade questions. See the charts and
+      sources in the report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

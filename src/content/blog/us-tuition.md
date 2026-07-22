@@ -18,13 +18,19 @@ faq:
   - question: >-
       What does “Median tuition climbed from the mid-five-thousands to the
       low-nine-thousands” show?
-    answer: 600 — Records in the working dataset
+    answer: >-
+      Key figure: 600 — Records in the working dataset. See the charts and
+      sources in the report for the full evidence.
   - question: What does “Vermont leads the state ladder in the charted cut” show?
-    answer: '7,607 — Median Value'
+    answer: >-
+      Key figure: 7,607 — Median Value. See the charts and sources in the report
+      for the full evidence.
   - question: >-
       What does “Median and mean sit close; the top decile starts above eleven
       thousand” show?
-    answer: '15,224 — Highest observed Value'
+    answer: >-
+      Key figure: 15,224 — Highest observed Value. See the charts and sources in
+      the report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

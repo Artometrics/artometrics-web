@@ -20,11 +20,18 @@ keyPoints:
   - 8 — System layers scored
 faq:
   - question: What does “System Layers” show?
-    answer: '1,667 — Subnational regions in DOSE v2.14 public documentation'
+    answer: >-
+      Key figure: 1,667 — Subnational regions in DOSE v2.14 public
+      documentation. See the charts and sources in the report for the full
+      evidence.
   - question: What does “Goods and Services” show?
-    answer: 45 — Cities in World Cities Culture Forum 5th edition summaries
+    answer: >-
+      Key figure: 45 — Cities in World Cities Culture Forum 5th edition
+      summaries. See the charts and sources in the report for the full evidence.
   - question: What does “History Layers” show?
-    answer: '1,100+ — Datasets in DataSF public portal summaries'
+    answer: >-
+      Key figure: 1,100+ — Datasets in DataSF public portal summaries. See the
+      charts and sources in the report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

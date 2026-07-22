@@ -20,11 +20,17 @@ keyPoints:
   - 3 — Super Bowls from the 1990s Aikman-Smith-Irvin core
 faq:
   - question: What does “The Super Bowl column froze after two old engines” show?
-    answer: 5 — Super Bowl championships
+    answer: >-
+      Key figure: 5 — Super Bowl championships. See the charts and sources in
+      the report for the full evidence.
   - question: 'What does “The richest brand, a modest recent playoff archive” show?'
-    answer: 1995 — Most recent Super Bowl-winning season
+    answer: >-
+      Key figure: 1995 — Most recent Super Bowl-winning season. See the charts
+      and sources in the report for the full evidence.
   - question: What does “The 1970s and 1990s still carry the memory” show?
-    answer: 29 — Years since last NFC championship appearance entering 2025
+    answer: >-
+      Key figure: 29 — Years since last NFC championship appearance entering
+      2025. See the charts and sources in the report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

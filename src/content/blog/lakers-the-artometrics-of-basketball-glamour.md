@@ -22,13 +22,18 @@ keyPoints:
   - 1949 — First championship season
 faq:
   - question: What does “Los Angeles does not win smoothly—it wins in acts” show?
-    answer: 17 — NBA championships in franchise history
+    answer: >-
+      Key figure: 17 — NBA championships in franchise history. See the charts
+      and sources in the report for the full evidence.
   - question: What does “The NBA’s title race is still a two-name conversation” show?
     answer: >-
-      32 — Approximate Finals appearances, the league's deepest final-round
-      archive
+      Key figure: 32 — Approximate Finals appearances, the league's deepest
+      final-round archive. See the charts and sources in the report for the full
+      evidence.
   - question: 'What does “The product is star gravity, not just basketball” show?'
-    answer: 5 — Titles in the Showtime decade
+    answer: >-
+      Key figure: 5 — Titles in the Showtime decade. See the charts and sources
+      in the report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

@@ -20,11 +20,17 @@ keyPoints:
   - 1970–1970 — Year span covered in the file
 faq:
   - question: What does “The Catalog’s Median Rating Sits Near 6.39” show?
-    answer: '10,532 — Records in the working dataset'
+    answer: >-
+      Key figure: 10,532 — Records in the working dataset. See the charts and
+      sources in the report for the full evidence.
   - question: What does “Designer Editions and Heavy Games Own the Peak” show?
-    answer: 6.39 — Median Average rating
+    answer: >-
+      Key figure: 6.39 — Median Average rating. See the charts and sources in
+      the report for the full evidence.
   - question: What does “Wargame Categories Rate Higher Than Card Games” show?
-    answer: 9.00 — Highest observed Average rating
+    answer: >-
+      Key figure: 9.00 — Highest observed Average rating. See the charts and
+      sources in the report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

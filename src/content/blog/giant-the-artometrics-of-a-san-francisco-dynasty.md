@@ -28,18 +28,21 @@ keyPoints:
 faq:
   - question: What does “141 years of winning—and the gaps that defined them” show?
     answer: >-
-      8 — World Series titles — 1905, 1921, 1922, 1933, 1954 in New York; 2010,
-      2012, 2014 in San Francisco
+      Key figure: 8 — World Series titles — 1905, 1921, 1922, 1933, 1954 in New
+      York; 2010, 2012, 2014 in San Francisco. See the charts and sources in the
+      report for the full evidence.
   - question: What does “Oracle Park raised the floor before the dynasty arrived” show?
     answer: >-
-      1883 — Year the franchise was founded as the New York Gothams — one of the
-      oldest in American professional sports
+      Key figure: 1883 — Year the franchise was founded as the New York Gothams
+      — one of the oldest in American professional sports. See the charts and
+      sources in the report for the full evidence.
   - question: >-
       What does “The dynasty was built on draft cost, not free-agent monopoly”
       show?
     answer: >-
-      141 — Seasons of franchise history covered in this report — from the Polo
-      Grounds to Oracle Park
+      Key figure: 141 — Seasons of franchise history covered in this report —
+      from the Polo Grounds to Oracle Park. See the charts and sources in the
+      report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

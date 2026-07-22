@@ -16,11 +16,17 @@ keyPoints:
   - 1900–2018 — Year span covered in the file
 faq:
   - question: What does “How scores moved over time” show?
-    answer: '100,000 — Records in the working dataset'
+    answer: >-
+      Key figure: 100,000 — Records in the working dataset. See the charts and
+      sources in the report for the full evidence.
   - question: What does “Who sits at the top of violation scores” show?
-    answer: 15.0 — Median Score
+    answer: >-
+      Key figure: 15.0 — Median Score. See the charts and sources in the report
+      for the full evidence.
   - question: What does “Scores by grade” show?
-    answer: 156 — Highest observed Score
+    answer: >-
+      Key figure: 156 — Highest observed Score. See the charts and sources in
+      the report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

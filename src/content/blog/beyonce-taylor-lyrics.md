@@ -17,9 +17,13 @@ keyPoints:
   - Beyoncé — Most common Artist name
 faq:
   - question: What does “Landscape” show?
-    answer: '22,616 — Records in the working dataset'
+    answer: >-
+      Key figure: 22,616 — Records in the working dataset. See the charts and
+      sources in the report for the full evidence.
   - question: What does “Who sits at the top” show?
-    answer: Beyoncé — Most common Artist name
+    answer: >-
+      Key figure: Beyoncé — Most common Artist name. See the charts and sources
+      in the report for the full evidence.
   - question: What does “Category” show?
     answer: >-
       A lyric-level comparison of two era-defining catalogs—theme, language, and

@@ -20,13 +20,19 @@ keyPoints:
   - Engineering — Most common Major category
 faq:
   - question: What does “Psychology Leads Low-Wage Job Counts by a Wide Margin” show?
-    answer: 173 — Records in the working dataset
+    answer: >-
+      Key figure: 173 — Records in the working dataset. See the charts and
+      sources in the report for the full evidence.
   - question: What does “The Top Dozen’s Median Is Still Enormous” show?
-    answer: '1,231 — Median Low wage jobs'
+    answer: >-
+      Key figure: 1,231 — Median Low wage jobs. See the charts and sources in
+      the report for the full evidence.
   - question: >-
       What does “Humanities and Business Categories Sit Higher Than Engineering”
       show?
-    answer: '48,207 — Highest observed Low wage jobs'
+    answer: >-
+      Key figure: 48,207 — Highest observed Low wage jobs. See the charts and
+      sources in the report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

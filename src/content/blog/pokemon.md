@@ -16,11 +16,17 @@ keyPoints:
   - 510 — Pokémon with a second type — the dual-type majority
 faq:
   - question: What does “Stat Identity By Type” show?
-    answer: 949 — Pokémon in the dataset with a confirmed primary type
+    answer: >-
+      Key figure: 949 — Pokémon in the dataset with a confirmed primary type.
+      See the charts and sources in the report for the full evidence.
   - question: What does “Generation Creep” show?
-    answer: 18 — Distinct primary types represented
+    answer: >-
+      Key figure: 18 — Distinct primary types represented. See the charts and
+      sources in the report for the full evidence.
   - question: What does “Built Different” show?
-    answer: 8 — Generation IDs in the data — Gen 8 and 9 unclassified in source
+    answer: >-
+      Key figure: 8 — Generation IDs in the data — Gen 8 and 9 unclassified in
+      source. See the charts and sources in the report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

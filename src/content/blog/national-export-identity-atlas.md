@@ -16,11 +16,17 @@ keyPoints:
   - 8 — Export families or countries highlighted
 faq:
   - question: What does “Scale and complexity” show?
-    answer: 200+ — Countries/zones covered in UN Comtrade-style trade systems
+    answer: >-
+      Key figure: 200+ — Countries/zones covered in UN Comtrade-style trade
+      systems. See the charts and sources in the report for the full evidence.
   - question: What does “Product identity” show?
-    answer: '5,000+ — Products in OEC-style trade classifications'
+    answer: >-
+      Key figure: 5,000+ — Products in OEC-style trade classifications. See the
+      charts and sources in the report for the full evidence.
   - question: What does “The export frontier moved” show?
-    answer: HS — Harmonized System product code architecture
+    answer: >-
+      Key figure: HS — Harmonized System product code architecture. See the
+      charts and sources in the report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

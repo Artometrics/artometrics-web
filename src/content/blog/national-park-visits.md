@@ -20,11 +20,17 @@ keyPoints:
   - 1904–2016 — Year span covered in the file
 faq:
   - question: What does “How visits grew over time” show?
-    answer: '21,560 — Records in the working dataset'
+    answer: >-
+      Key figure: 21,560 — Records in the working dataset. See the charts and
+      sources in the report for the full evidence.
   - question: What does “Who sits at the top” show?
-    answer: '155,219 — Median Visitors'
+    answer: >-
+      Key figure: 155,219 — Median Visitors. See the charts and sources in the
+      report for the full evidence.
   - question: What does “How regions spread visits” show?
-    answer: '871,922,828 — Highest observed Visitors'
+    answer: >-
+      Key figure: 871,922,828 — Highest observed Visitors. See the charts and
+      sources in the report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

@@ -31,16 +31,20 @@ keyPoints:
 faq:
   - question: What does “Top 20 Franchises By Revenue” show?
     answer: >-
-      $91B — Pokémon lifetime revenue — the highest-grossing media franchise
-      ever recorded, more than the MCU, Star Wars, and Harry Potter put together
+      Key figure: $91B — Pokémon lifetime revenue — the highest-grossing media
+      franchise ever recorded, more than the MCU, Star Wars, and Harry Potter
+      put together. See the charts and sources in the report for the full
+      evidence.
   - question: What does “Revenue Per Year of Existence” show?
     answer: >-
-      107 — Unique franchises in the dataset — every one of them has already
-      cleared at least $4B in lifetime revenue
+      Key figure: 107 — Unique franchises in the dataset — every one of them has
+      already cleared at least $4B in lifetime revenue. See the charts and
+      sources in the report for the full evidence.
   - question: 'What does “The Disney Empire, Consolidated” show?'
     answer: >-
-      $4B+ — Minimum threshold for inclusion — most IP that has ever existed
-      never gets close to this number
+      Key figure: $4B+ — Minimum threshold for inclusion — most IP that has ever
+      existed never gets close to this number. See the charts and sources in the
+      report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

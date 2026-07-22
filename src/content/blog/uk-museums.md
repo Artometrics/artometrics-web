@@ -20,13 +20,19 @@ keyPoints:
   - /England/South West (English — Most common Admin area
 faq:
   - question: What does “Named museums pin the top of the deprivation scale” show?
-    answer: '4,191 — Records in the working dataset'
+    answer: >-
+      Key figure: 4,191 — Records in the working dataset. See the charts and
+      sources in the report for the full evidence.
   - question: What does “The leaders chart sits at the index ceiling” show?
-    answer: 5.00 — Median Area Deprivation index
+    answer: >-
+      Key figure: 5.00 — Median Area Deprivation index. See the charts and
+      sources in the report for the full evidence.
   - question: >-
       What does “Admin areas spread museums across different deprivation bands”
       show?
-    answer: 10.0 — Highest observed Area Deprivation index
+    answer: >-
+      Key figure: 10.0 — Highest observed Area Deprivation index. See the charts
+      and sources in the report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

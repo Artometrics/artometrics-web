@@ -16,11 +16,17 @@ keyPoints:
   - 2004–2022 — Year span covered in the file
 faq:
   - question: What does “Median heritage counts doubled at the center” show?
-    answer: 6 — Records in the working dataset
+    answer: >-
+      Key figure: 6 — Records in the working dataset. See the charts and sources
+      in the report for the full evidence.
   - question: What does “Sweden leads the country ladder” show?
-    answer: 9.00 — Median Value
+    answer: >-
+      Key figure: 9.00 — Median Value. See the charts and sources in the report
+      for the full evidence.
   - question: What does “Leaders diverge when tracked over time” show?
-    answer: 15.0 — Highest observed Value
+    answer: >-
+      Key figure: 15.0 — Highest observed Value. See the charts and sources in
+      the report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

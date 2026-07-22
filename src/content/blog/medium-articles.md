@@ -20,11 +20,17 @@ keyPoints:
   - 2017–2018 — Year span covered in the file
 faq:
   - question: What does “How reading time moved” show?
-    answer: '78,388 — Records in the working dataset'
+    answer: >-
+      Key figure: 78,388 — Records in the working dataset. See the charts and
+      sources in the report for the full evidence.
   - question: What does “Who sits at the top of length” show?
-    answer: 4.00 — Median Reading time
+    answer: >-
+      Key figure: 4.00 — Median Reading time. See the charts and sources in the
+      report for the full evidence.
   - question: What does “How publications spread length” show?
-    answer: 100 — Highest observed Reading time
+    answer: >-
+      Key figure: 100 — Highest observed Reading time. See the charts and
+      sources in the report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

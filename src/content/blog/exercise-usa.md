@@ -15,11 +15,17 @@ keyPoints:
   - Colorado — Top State by Adults
 faq:
   - question: What does “Western and New England States Lead Adult Exercise” show?
-    answer: 52 — Records in the working dataset
+    answer: >-
+      Key figure: 52 — Records in the working dataset. See the charts and
+      sources in the report for the full evidence.
   - question: What does “The Top Dozen Sits Well Above the National Median” show?
-    answer: 23.0 — Median Adults
+    answer: >-
+      Key figure: 23.0 — Median Adults. See the charts and sources in the report
+      for the full evidence.
   - question: What does “Most States Cluster Near the Low-20s” show?
-    answer: 32.0 — Highest observed Adults
+    answer: >-
+      Key figure: 32.0 — Highest observed Adults. See the charts and sources in
+      the report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

@@ -20,11 +20,19 @@ keyPoints:
   - 8 — Artists used as report anchors
 faq:
   - question: What does “Catalog and Now” show?
-    answer: CC0 — MusicBrainz core database dump license for public-domain metadata
+    answer: >-
+      Key figure: CC0 — MusicBrainz core database dump license for public-domain
+      metadata. See the charts and sources in the report for the full evidence.
   - question: What does “Format Shift” show?
-    answer: 2x/week — MetaBrainz published dump cadence in public documentation
+    answer: >-
+      Key figure: 2x/week — MetaBrainz published dump cadence in public
+      documentation. See the charts and sources in the report for the full
+      evidence.
   - question: What does “Genre Travel” show?
-    answer: 11 — JSON dump entity types listed in MusicBrainz documentation
+    answer: >-
+      Key figure: 11 — JSON dump entity types listed in MusicBrainz
+      documentation. See the charts and sources in the report for the full
+      evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

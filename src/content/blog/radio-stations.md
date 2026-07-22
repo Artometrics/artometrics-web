@@ -20,11 +20,17 @@ keyPoints:
   - Country — Most common Format
 faq:
   - question: What does “Frequency by call sign” show?
-    answer: '17,186 — Records in the working dataset'
+    answer: >-
+      Key figure: 17,186 — Records in the working dataset. See the charts and
+      sources in the report for the full evidence.
   - question: What does “Who sits at the top” show?
-    answer: 101 — Median Frequency
+    answer: >-
+      Key figure: 101 — Median Frequency. See the charts and sources in the
+      report for the full evidence.
   - question: What does “Frequency by format” show?
-    answer: '1,700 — Highest observed Frequency'
+    answer: >-
+      Key figure: 1,700 — Highest observed Frequency. See the charts and sources
+      in the report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

@@ -24,13 +24,19 @@ keyPoints:
   - 1700–2017 — Year span covered in the file
 faq:
   - question: What does “How prosperity moved over time” show?
-    answer: '22,204 — Records in the working dataset'
+    answer: >-
+      Key figure: 22,204 — Records in the working dataset. See the charts and
+      sources in the report for the full evidence.
   - question: What does “Who sits at the top of income” show?
-    answer: '8,447 — Median GDP per capita, PPP (constant 2011 international $) (Rate)'
+    answer: >-
+      Key figure: 8,447 — Median GDP per capita, PPP (constant 2011
+      international $) (Rate). See the charts and sources in the report for the
+      full evidence.
   - question: What does “How income is spread” show?
     answer: >-
-      135,319 — Highest observed GDP per capita, PPP (constant 2011
-      international $) (Rate)
+      Key figure: 135,319 — Highest observed GDP per capita, PPP (constant 2011
+      international $) (Rate). See the charts and sources in the report for the
+      full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

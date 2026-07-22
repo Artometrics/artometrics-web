@@ -13,9 +13,13 @@ keyPoints:
   - 1–30 — Year span covered in the file
 faq:
   - question: What does “Who sits at the top” show?
-    answer: '1,381 — Records in the working dataset'
+    answer: >-
+      Key figure: 1,381 — Records in the working dataset. See the charts and
+      sources in the report for the full evidence.
   - question: What does “Timeline” show?
-    answer: 1–30 — Year span covered in the file
+    answer: >-
+      Key figure: 1–30 — Year span covered in the file. See the charts and
+      sources in the report for the full evidence.
   - question: What does “Frequency” show?
     answer: Guest-appearance records count celebrity density across seasons.
 ---

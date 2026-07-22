@@ -21,11 +21,17 @@ keyPoints:
   - 12 — Straight postseason appearances from 2013 through 2024
 faq:
   - question: What does “Los Angeles is built to manufacture October chances” show?
-    answer: 8 — World Series championships in franchise history
+    answer: >-
+      Key figure: 8 — World Series championships in franchise history. See the
+      charts and sources in the report for the full evidence.
   - question: What does “Historically elite—without Yankee-scale monopoly” show?
-    answer: 25 — Approximate National League pennants
+    answer: >-
+      Key figure: 25 — Approximate National League pennants. See the charts and
+      sources in the report for the full evidence.
   - question: 'What does “Since the 2010s, 90-win baseball has looked normal” show?'
-    answer: 111 — Regular-season wins in 2022
+    answer: >-
+      Key figure: 111 — Regular-season wins in 2022. See the charts and sources
+      in the report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

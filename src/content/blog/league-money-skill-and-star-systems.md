@@ -23,14 +23,19 @@ keyPoints:
 faq:
   - question: What does “The NFL makes ordinary franchises expensive” show?
     answer: >-
-      $6.5B — Approximate average NFL franchise value in recent Forbes-style
-      estimates
+      Key figure: $6.5B — Approximate average NFL franchise value in recent
+      Forbes-style estimates. See the charts and sources in the report for the
+      full evidence.
   - question: What does “Basketball lets one name rewrite the jersey” show?
-    answer: 17 — NFL regular-season games per team
+    answer: >-
+      Key figure: 17 — NFL regular-season games per team. See the charts and
+      sources in the report for the full evidence.
   - question: >-
       What does “Caps and taxes decide whether money separates or merely
       sustains” show?
-    answer: 162 — MLB regular-season games per team
+    answer: >-
+      Key figure: 162 — MLB regular-season games per team. See the charts and
+      sources in the report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

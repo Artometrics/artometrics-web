@@ -18,11 +18,17 @@ keyPoints:
   - TBD — Concentration or median signal (derived — label clearly)
 faq:
   - question: How Big Is the Library — and How Top-heavy?
-    answer: TBD — Calibration statistic once the dataset is attached
+    answer: >-
+      Key figure: TBD — Calibration statistic once the dataset is attached. See
+      the charts and sources in the report for the full evidence.
   - question: 'Concentration: Who Owns the Middle of the Shelf?'
-    answer: TBD — Catalog or sample size (observed)
+    answer: >-
+      Key figure: TBD — Catalog or sample size (observed). See the charts and
+      sources in the report for the full evidence.
   - question: 'What does “The Availability Gap: Hype vs What Stays Up” show?'
-    answer: TBD — Concentration or median signal (derived — label clearly)
+    answer: >-
+      Key figure: TBD — Concentration or median signal (derived — label
+      clearly). See the charts and sources in the report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

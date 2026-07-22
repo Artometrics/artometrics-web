@@ -20,11 +20,17 @@ keyPoints:
   - 69% — Illustrative sequel/franchise share of top hits in the 2020s
 faq:
   - question: What does “Attention versus Quality” show?
-    answer: 7 — Core IMDb non-commercial TSV files publicly documented
+    answer: >-
+      Key figure: 7 — Core IMDb non-commercial TSV files publicly documented.
+      See the charts and sources in the report for the full evidence.
   - question: What does “Sequelization” show?
-    answer: Daily — IMDb dataset refresh cadence
+    answer: >-
+      Key figure: Daily — IMDb dataset refresh cadence. See the charts and
+      sources in the report for the full evidence.
   - question: What does “Runtime and Event Status” show?
-    answer: 3 — Genres can be listed per IMDb title basics row
+    answer: >-
+      Key figure: 3 — Genres can be listed per IMDb title basics row. See the
+      charts and sources in the report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

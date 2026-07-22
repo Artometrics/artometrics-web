@@ -16,11 +16,17 @@ keyPoints:
   - US — Most common Country
 faq:
   - question: What does “Perfect scores crowd the title breakdown’s top slice” show?
-    answer: '100,000 — Records in the working dataset'
+    answer: >-
+      Key figure: 100,000 — Records in the working dataset. See the charts and
+      sources in the report for the full evidence.
   - question: What does “The leaders chart is a wall of 100-point wines” show?
-    answer: 88.0 — Median Points
+    answer: >-
+      Key figure: 88.0 — Median Points. See the charts and sources in the report
+      for the full evidence.
   - question: What does “Countries spread points around a high center” show?
-    answer: 100 — Highest observed Points
+    answer: >-
+      Key figure: 100 — Highest observed Points. See the charts and sources in
+      the report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

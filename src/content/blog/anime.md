@@ -31,18 +31,21 @@ keyPoints:
 faq:
   - question: What does “An Industry That Industrialized — Then Diversified” show?
     answer: >-
-      13,631 — Unique anime titles in the dataset — from silent-era shorts to
-      modern streaming originals
+      Key figure: 13,631 — Unique anime titles in the dataset — from silent-era
+      shorts to modern streaming originals. See the charts and sources in the
+      report for the full evidence.
   - question: >-
       What does “Bones and Kyoani Lead — Consistency Across Volume Is the Real
       Achievement” show?
     answer: >-
-      6.38 — Overall median MAL score — the mathematical baseline every studio
-      and genre is measured against
+      Key figure: 6.38 — Overall median MAL score — the mathematical baseline
+      every studio and genre is measured against. See the charts and sources in
+      the report for the full evidence.
   - question: 'Genre Map: What’s Popular vs What’s Well-rated?'
     answer: >-
-      8.12% — Share of TV anime scoring 8+ on MAL — the highest prestige
-      hit-rate of any format (346 out of 4,260 titles)
+      Key figure: 8.12% — Share of TV anime scoring 8+ on MAL — the highest
+      prestige hit-rate of any format (346 out of 4,260 titles). See the charts
+      and sources in the report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

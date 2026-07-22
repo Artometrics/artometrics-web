@@ -16,11 +16,17 @@ keyPoints:
   - Japan — Most common Country
 faq:
   - question: What does “Stars by brand” show?
-    answer: '3,180 — Records in the working dataset'
+    answer: >-
+      Key figure: 3,180 — Records in the working dataset. See the charts and
+      sources in the report for the full evidence.
   - question: What does “Who sits at the top” show?
-    answer: 3.75 — Median Stars
+    answer: >-
+      Key figure: 3.75 — Median Stars. See the charts and sources in the report
+      for the full evidence.
   - question: What does “Stars by country” show?
-    answer: 5.00 — Highest observed Stars
+    answer: >-
+      Key figure: 5.00 — Highest observed Stars. See the charts and sources in
+      the report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

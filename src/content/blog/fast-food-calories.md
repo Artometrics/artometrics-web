@@ -16,11 +16,17 @@ keyPoints:
   - Taco Bell — Most common Restaurant
 faq:
   - question: What does “Calorie ceilings by item” show?
-    answer: 515 — Records in the working dataset
+    answer: >-
+      Key figure: 515 — Records in the working dataset. See the charts and
+      sources in the report for the full evidence.
   - question: What does “Who sits at the top” show?
-    answer: 490 — Median Calories
+    answer: >-
+      Key figure: 490 — Median Calories. See the charts and sources in the
+      report for the full evidence.
   - question: What does “How chains spread calories” show?
-    answer: '2,430 — Highest observed Calories'
+    answer: >-
+      Key figure: 2,430 — Highest observed Calories. See the charts and sources
+      in the report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

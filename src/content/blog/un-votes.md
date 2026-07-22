@@ -13,9 +13,13 @@ keyPoints:
   - yes — Most common Vote
 faq:
   - question: What does “Yes votes dominate the sampled UN record” show?
-    answer: '100,000 — Records in the working dataset'
+    answer: >-
+      Key figure: 100,000 — Records in the working dataset. See the charts and
+      sources in the report for the full evidence.
   - question: What does “Brazil appears most often among country names” show?
-    answer: yes — Most common Vote
+    answer: >-
+      Key figure: yes — Most common Vote. See the charts and sources in the
+      report for the full evidence.
   - question: What does “Vote categories restate the file’s center of gravity” show?
     answer: Voting records identify resolutions that divided member states.
 ---

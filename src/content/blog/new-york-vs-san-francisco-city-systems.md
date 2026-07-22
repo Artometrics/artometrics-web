@@ -20,11 +20,17 @@ keyPoints:
   - '1 — Core contrast: command versus invention'
 faq:
   - question: What does “Command versus Lab” show?
-    answer: 2 — Global intangible-output cities compared
+    answer: >-
+      Key figure: 2 — Global intangible-output cities compared. See the charts
+      and sources in the report for the full evidence.
   - question: What does “History Timing” show?
-    answer: 8 — Identity axes scored
+    answer: >-
+      Key figure: 8 — Identity axes scored. See the charts and sources in the
+      report for the full evidence.
   - question: What does “Output Fingerprint” show?
-    answer: 6 — Shared pressure narratives tested
+    answer: >-
+      Key figure: 6 — Shared pressure narratives tested. See the charts and
+      sources in the report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

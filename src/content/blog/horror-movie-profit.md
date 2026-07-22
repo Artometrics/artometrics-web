@@ -20,11 +20,17 @@ keyPoints:
   - 1936–2019 — Year span covered in the file
 faq:
   - question: What does “How the pattern changed over time” show?
-    answer: '3,401 — Records in the working dataset'
+    answer: >-
+      Key figure: 3,401 — Records in the working dataset. See the charts and
+      sources in the report for the full evidence.
   - question: What does “Who sits at the top” show?
-    answer: '25,533,818 — Median Domestic gross'
+    answer: >-
+      Key figure: 25,533,818 — Median Domestic gross. See the charts and sources
+      in the report for the full evidence.
   - question: What does “How the field is spread” show?
-    answer: '474,544,677 — Highest observed Domestic gross'
+    answer: >-
+      Key figure: 474,544,677 — Highest observed Domestic gross. See the charts
+      and sources in the report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

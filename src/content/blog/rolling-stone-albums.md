@@ -16,11 +16,17 @@ keyPoints:
   - 1955–2019 — Year span covered in the file
 faq:
   - question: What does “How ranks sit across release years” show?
-    answer: 691 — Records in the working dataset
+    answer: >-
+      Key figure: 691 — Records in the working dataset. See the charts and
+      sources in the report for the full evidence.
   - question: What does “Who sits at the top of the numeric rank field” show?
-    answer: 250 — Median Rank 2003
+    answer: >-
+      Key figure: 250 — Median Rank 2003. See the charts and sources in the
+      report for the full evidence.
   - question: What does “Ranks by album type” show?
-    answer: 500 — Highest observed Rank 2003
+    answer: >-
+      Key figure: 500 — Highest observed Rank 2003. See the charts and sources
+      in the report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

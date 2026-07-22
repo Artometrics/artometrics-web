@@ -14,11 +14,17 @@ keyPoints:
   - US — Most common Transfer
 faq:
   - question: What does “Transfers Concentrate Overwhelmingly in the US” show?
-    answer: '2,194 — Records in the working dataset'
+    answer: >-
+      Key figure: 2,194 — Records in the working dataset. See the charts and
+      sources in the report for the full evidence.
   - question: What does “Annual Volume Peaked in the Early 1970s” show?
-    answer: 1946–2017 — Year span covered in the file
+    answer: >-
+      Key figure: 1946–2017 — Year span covered in the file. See the charts and
+      sources in the report for the full evidence.
   - question: What does “Bottlenose Is the Archive’s Default Animal” show?
-    answer: US — Most common Transfer
+    answer: >-
+      Key figure: US — Most common Transfer. See the charts and sources in the
+      report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

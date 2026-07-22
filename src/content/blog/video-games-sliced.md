@@ -20,11 +20,17 @@ keyPoints:
   - 2012–2021 — Year span covered in the file
 faq:
   - question: What does “Median concurrency climbed across the decade” show?
-    answer: '83,631 — Records in the working dataset'
+    answer: >-
+      Key figure: 83,631 — Records in the working dataset. See the charts and
+      sources in the report for the full evidence.
   - question: What does “Dota 2 leads a top tier that drops off fast” show?
-    answer: 203 — Median Avg
+    answer: >-
+      Key figure: 203 — Median Avg. See the charts and sources in the report for
+      the full evidence.
   - question: What does “Months carry different concurrency distributions” show?
-    answer: '1,584,887 — Highest observed Avg'
+    answer: >-
+      Key figure: 1,584,887 — Highest observed Avg. See the charts and sources
+      in the report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

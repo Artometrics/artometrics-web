@@ -16,11 +16,17 @@ keyPoints:
   - 6 — Competitor cities framed
 faq:
   - question: What does “Identity Stack” show?
-    answer: '1,100+ — DataSF public portal dataset scale in public summaries'
+    answer: >-
+      Key figure: 1,100+ — DataSF public portal dataset scale in public
+      summaries. See the charts and sources in the report for the full evidence.
   - question: What does “Tradeoff History” show?
-    answer: 7 — Identity domains scored
+    answer: >-
+      Key figure: 7 — Identity domains scored. See the charts and sources in the
+      report for the full evidence.
   - question: What does “Neighborhood Pressure” show?
-    answer: 6 — Open questions for the next SF production pass
+    answer: >-
+      Key figure: 6 — Open questions for the next SF production pass. See the
+      charts and sources in the report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

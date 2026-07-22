@@ -20,11 +20,17 @@ keyPoints:
   - '20 yrs — Timespan: 2000 through 2020'
 faq:
   - question: What does “Global Price Trend” show?
-    answer: $3.04 — Median dollar price across all countries and years
+    answer: >-
+      Key figure: $3.04 — Median dollar price across all countries and years.
+      See the charts and sources in the report for the full evidence.
   - question: What does “Most Expensive Countries” show?
-    answer: $8.31 — Peak price — Switzerland at its most expensive
+    answer: >-
+      Key figure: $8.31 — Peak price — Switzerland at its most expensive. See
+      the charts and sources in the report for the full evidence.
   - question: What does “How Prices Spread” show?
-    answer: 83% — Price increase from 2000 to 2020 at the global median
+    answer: >-
+      Key figure: 83% — Price increase from 2000 to 2020 at the global median.
+      See the charts and sources in the report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

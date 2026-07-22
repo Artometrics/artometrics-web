@@ -20,11 +20,17 @@ keyPoints:
   - 43B — Approximate combined New York major-team value
 faq:
   - question: What does “Regional Title Density” show?
-    answer: 10 — Large markets/cities compared
+    answer: >-
+      Key figure: 10 — Large markets/cities compared. See the charts and sources
+      in the report for the full evidence.
   - question: What does “Market Stack” show?
-    answer: 7 — Regions grouped for title-density analysis
+    answer: >-
+      Key figure: 7 — Regions grouped for title-density analysis. See the charts
+      and sources in the report for the full evidence.
   - question: What does “Sport Dna” show?
-    answer: 6 — Identity archetypes used in the map
+    answer: >-
+      Key figure: 6 — Identity archetypes used in the map. See the charts and
+      sources in the report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

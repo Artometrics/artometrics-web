@@ -20,11 +20,17 @@ keyPoints:
   - 1950–2022 — Year span covered in the file
 faq:
   - question: What does “How the pattern changed over time” show?
-    answer: '32,540 — Records in the working dataset'
+    answer: >-
+      Key figure: 32,540 — Records in the working dataset. See the charts and
+      sources in the report for the full evidence.
   - question: What does “Who sits at the top” show?
-    answer: 4.00 — Median Vote average
+    answer: >-
+      Key figure: 4.00 — Median Vote average. See the charts and sources in the
+      report for the full evidence.
   - question: What does “How the field is spread” show?
-    answer: 10.0 — Highest observed Vote average
+    answer: >-
+      Key figure: 10.0 — Highest observed Vote average. See the charts and
+      sources in the report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

@@ -16,13 +16,19 @@ keyPoints:
   - 1935–2013 — Year span covered in the file
 faq:
   - question: What does “Early Characters Logged Higher Median Appearances” show?
-    answer: '23,272 — Records in the working dataset'
+    answer: >-
+      Key figure: 23,272 — Records in the working dataset. See the charts and
+      sources in the report for the full evidence.
   - question: What does “A Dozen Icons Own the Appearance Summit” show?
-    answer: 4.00 — Median Appearances
+    answer: >-
+      Key figure: 4.00 — Median Appearances. See the charts and sources in the
+      report for the full evidence.
   - question: >-
       What does “Marvel Has More Characters; DC’s Median Appearances Run Higher”
       show?
-    answer: '4,043 — Highest observed Appearances'
+    answer: >-
+      Key figure: 4,043 — Highest observed Appearances. See the charts and
+      sources in the report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

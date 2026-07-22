@@ -20,11 +20,17 @@ keyPoints:
   - Broadhurst Theatre — Most common Theatre
 faq:
   - question: What does “Concert Residencies Rewrite the Price Ceiling” show?
-    answer: '47,524 — Records in the working dataset'
+    answer: >-
+      Key figure: 47,524 — Records in the working dataset. See the charts and
+      sources in the report for the full evidence.
   - question: 'What does “Even Among Leaders, Springsteen Is an Outlier” show?'
-    answer: 60.2 — Median Avg ticket price
+    answer: >-
+      Key figure: 60.2 — Median Avg ticket price. See the charts and sources in
+      the report for the full evidence.
   - question: What does “House Medians Cluster Near the Industry Middle” show?
-    answer: 512 — Highest observed Avg ticket price
+    answer: >-
+      Key figure: 512 — Highest observed Avg ticket price. See the charts and
+      sources in the report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

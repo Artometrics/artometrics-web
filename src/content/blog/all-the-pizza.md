@@ -21,11 +21,17 @@ faq:
   - question: >-
       What does “Price Floors Separate Everyday Shops From Destination Pies”
       show?
-    answer: '10,000 — Records in the working dataset'
+    answer: >-
+      Key figure: 10,000 — Records in the working dataset. See the charts and
+      sources in the report for the full evidence.
   - question: What does “The Top Dozen Is a Premium Plateau” show?
-    answer: 0.00 — Median Price range min
+    answer: >-
+      Key figure: 0.00 — Median Price range min. See the charts and sources in
+      the report for the full evidence.
   - question: What does “Almost Everything Sits in the Low Bins” show?
-    answer: 50.0 — Highest observed Price range min
+    answer: >-
+      Key figure: 50.0 — Highest observed Price range min. See the charts and
+      sources in the report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

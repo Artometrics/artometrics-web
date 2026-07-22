@@ -20,11 +20,17 @@ keyPoints:
   - 1958–2017 — Year span covered in the file
 faq:
   - question: What does “Seasonal Weeks Spiked in the Mid-2000s” show?
-    answer: 387 — Records in the working dataset
+    answer: >-
+      Key figure: 387 — Records in the working dataset. See the charts and
+      sources in the report for the full evidence.
   - question: What does “Twenty Weeks Marks the Upper Club” show?
-    answer: 8.00 — Median Weeks on chart
+    answer: >-
+      Key figure: 8.00 — Median Weeks on chart. See the charts and sources in
+      the report for the full evidence.
   - question: What does “Most Songs Cluster at Short Chart Lives” show?
-    answer: 20.0 — Highest observed Weeks on chart
+    answer: >-
+      Key figure: 20.0 — Highest observed Weeks on chart. See the charts and
+      sources in the report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

@@ -22,11 +22,17 @@ faq:
   - question: >-
       What does “Median Metascore edged up across the store’s expansion years”
       show?
-    answer: '26,688 — Records in the working dataset'
+    answer: >-
+      Key figure: 26,688 — Records in the working dataset. See the charts and
+      sources in the report for the full evidence.
   - question: What does “Little Triangle tops a tightly packed critical elite” show?
-    answer: 73.0 — Median Metascore
+    answer: >-
+      Key figure: 73.0 — Median Metascore. See the charts and sources in the
+      report for the full evidence.
   - question: What does “Owner tiers carry different Metascore distributions” show?
-    answer: 98.0 — Highest observed Metascore
+    answer: >-
+      Key figure: 98.0 — Highest observed Metascore. See the charts and sources
+      in the report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

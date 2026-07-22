@@ -19,11 +19,17 @@ keyPoints:
   - China — Top Country by Population
 faq:
   - question: What does “A Handful of Giants Dominate Headcount” show?
-    answer: 259 — Records in the working dataset
+    answer: >-
+      Key figure: 259 — Records in the working dataset. See the charts and
+      sources in the report for the full evidence.
   - question: What does “Even the Top Dozen Has a Steep Internal Drop” show?
-    answer: '5,220,371 — Median Population'
+    answer: >-
+      Key figure: 5,220,371 — Median Population. See the charts and sources in
+      the report for the full evidence.
   - question: What does “Most Countries Sit in the Small-Population Mass” show?
-    answer: '1,355,692,576 — Highest observed Population'
+    answer: >-
+      Key figure: 1,355,692,576 — Highest observed Population. See the charts
+      and sources in the report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

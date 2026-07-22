@@ -16,11 +16,17 @@ keyPoints:
   - '1 — Core question: who is replaceable?'
 faq:
   - question: What does “Three models of export power” show?
-    answer: 3 — Export superpower systems compared
+    answer: >-
+      Key figure: 3 — Export superpower systems compared. See the charts and
+      sources in the report for the full evidence.
   - question: What does “Product fingerprints” show?
-    answer: 7 — Export identity axes
+    answer: >-
+      Key figure: 7 — Export identity axes. See the charts and sources in the
+      report for the full evidence.
   - question: What does “Dependency risk” show?
-    answer: 6 — Dependency risks scored
+    answer: >-
+      Key figure: 6 — Dependency risks scored. See the charts and sources in the
+      report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

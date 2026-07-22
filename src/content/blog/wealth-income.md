@@ -16,11 +16,17 @@ keyPoints:
   - 1967–2019 — Year span covered in the file
 faq:
   - question: What does “The median income-distribution marker drifted upward” show?
-    answer: '2,916 — Records in the working dataset'
+    answer: >-
+      Key figure: 2,916 — Records in the working dataset. See the charts and
+      sources in the report for the full evidence.
   - question: What does “Hispanic (Any Race) leads the charted race ladder” show?
-    answer: 10.9 — Median Income distribution
+    answer: >-
+      Key figure: 10.9 — Median Income distribution. See the charts and sources
+      in the report for the full evidence.
   - question: What does “Income brackets carve different distribution bands” show?
-    answer: 27.2 — Highest observed Income distribution
+    answer: >-
+      Key figure: 27.2 — Highest observed Income distribution. See the charts
+      and sources in the report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">

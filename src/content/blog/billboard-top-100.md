@@ -15,11 +15,17 @@ keyPoints:
   - Down By The River — Top Song by Week position
 faq:
   - question: What does “Song-Level Position Averages Crowd the Bottom Rung” show?
-    answer: '100,000 — Records in the working dataset'
+    answer: >-
+      Key figure: 100,000 — Records in the working dataset. See the charts and
+      sources in the report for the full evidence.
   - question: What does “Leaders by Week Position Are a Flat Elite” show?
-    answer: 50.0 — Median Week position
+    answer: >-
+      Key figure: 50.0 — Median Week position. See the charts and sources in the
+      report for the full evidence.
   - question: What does “Weekly Positions Fill the Chart Almost Uniformly” show?
-    answer: 100 — Highest observed Week position
+    answer: >-
+      Key figure: 100 — Highest observed Week position. See the charts and
+      sources in the report for the full evidence.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
