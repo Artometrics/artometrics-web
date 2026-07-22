@@ -1,0 +1,722 @@
+{
+  "airline-safety": {
+    "slug": "airline-safety",
+    "dataset": "/data/articles/airline-safety/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/airline-safety"
+  },
+  "alcohol-consumption": {
+    "slug": "alcohol-consumption",
+    "dataset": "/data/articles/alcohol-consumption/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/alcohol-consumption"
+  },
+  "all-the-pizza": {
+    "slug": "all-the-pizza",
+    "dataset": "/data/articles/all-the-pizza/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/all-the-pizza"
+  },
+  "anime": {
+    "slug": "anime",
+    "dataset": "/data/articles/anime/anime.csv",
+    "quarto": null,
+    "html": "/exports/anime.html",
+    "pdf": null,
+    "github": "https://github.com/Artometrics/anime"
+  },
+  "awards-prestige-economy-oscars-grammys-nobels": {
+    "slug": "awards-prestige-economy-oscars-grammys-nobels",
+    "dataset": null,
+    "quarto": null,
+    "html": "/exports/awards-prestige-economy-oscars-grammys-nobels.html",
+    "pdf": null,
+    "github": "https://github.com/Artometrics/awards-prestige-economy-oscars-grammys-nobels"
+  },
+  "beyonce-taylor-lyrics": {
+    "slug": "beyonce-taylor-lyrics",
+    "dataset": "/data/articles/beyonce-taylor-lyrics/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/beyonce-taylor-lyrics"
+  },
+  "big-mac-index": {
+    "slug": "big-mac-index",
+    "dataset": "/data/articles/big-mac-index/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/big-mac-index"
+  },
+  "biketown-bikeshare": {
+    "slug": "biketown-bikeshare",
+    "dataset": "/data/articles/biketown-bikeshare/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/biketown-bikeshare"
+  },
+  "billboard-hot-100": {
+    "slug": "billboard-hot-100",
+    "dataset": "/data/articles/billboard-hot-100/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/billboard-hot-100"
+  },
+  "billboard-top-100": {
+    "slug": "billboard-top-100",
+    "dataset": "/data/articles/billboard-top-100/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/billboard-top-100"
+  },
+  "board-games": {
+    "slug": "board-games",
+    "dataset": "/data/articles/board-games/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/board-games"
+  },
+  "broadway-musicals": {
+    "slug": "broadway-musicals",
+    "dataset": "/data/articles/broadway-musicals/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/broadway-musicals"
+  },
+  "caesar-the-psychonomics-of-emperor-julius": {
+    "slug": "caesar-the-psychonomics-of-emperor-julius",
+    "dataset": "/data/articles/caesar-the-psychonomics-of-emperor-julius/caesar_gdp.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/caesar-the-psychonomics-of-emperor-julius"
+  },
+  "california-vs-texas-state-rivalry": {
+    "slug": "california-vs-texas-state-rivalry",
+    "dataset": null,
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/california-vs-texas-state-rivalry"
+  },
+  "celtics-the-artometrics-of-institutional-winning": {
+    "slug": "celtics-the-artometrics-of-institutional-winning",
+    "dataset": null,
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/celtics-the-artometrics-of-institutional-winning"
+  },
+  "ceo-departures": {
+    "slug": "ceo-departures",
+    "dataset": "/data/articles/ceo-departures/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/ceo-departures"
+  },
+  "cetaceans": {
+    "slug": "cetaceans",
+    "dataset": "/data/articles/cetaceans/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/cetaceans"
+  },
+  "christmas-novels": {
+    "slug": "christmas-novels",
+    "dataset": "/data/articles/christmas-novels/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/christmas-novels"
+  },
+  "christmas-songs": {
+    "slug": "christmas-songs",
+    "dataset": "/data/articles/christmas-songs/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/christmas-songs"
+  },
+  "cia-world-factbook": {
+    "slug": "cia-world-factbook",
+    "dataset": "/data/articles/cia-world-factbook/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/cia-world-factbook"
+  },
+  "city-bioeconomics-operating-system": {
+    "slug": "city-bioeconomics-operating-system",
+    "dataset": null,
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/city-bioeconomics-operating-system"
+  },
+  "coffee-the-artometrics-of-java": {
+    "slug": "coffee-the-artometrics-of-java",
+    "dataset": "/data/articles/coffee-the-artometrics-of-java/coffee.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/coffee-the-artometrics-of-java"
+  },
+  "college-major-income": {
+    "slug": "college-major-income",
+    "dataset": "/data/articles/college-major-income/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/college-major-income"
+  },
+  "comic-characters": {
+    "slug": "comic-characters",
+    "dataset": "/data/articles/comic-characters/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/comic-characters"
+  },
+  "cowboys-the-artometrics-of-americas-team": {
+    "slug": "cowboys-the-artometrics-of-americas-team",
+    "dataset": null,
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/cowboys-the-artometrics-of-americas-team"
+  },
+  "craft-beer-usa": {
+    "slug": "craft-beer-usa",
+    "dataset": "/data/articles/craft-beer-usa/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/craft-beer-usa"
+  },
+  "cultural-exports-geoeconomics": {
+    "slug": "cultural-exports-geoeconomics",
+    "dataset": null,
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/cultural-exports-geoeconomics"
+  },
+  "dodgers-the-artometrics-of-baseballs-modern-machine": {
+    "slug": "dodgers-the-artometrics-of-baseballs-modern-machine",
+    "dataset": null,
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/dodgers-the-artometrics-of-baseballs-modern-machine"
+  },
+  "emmy-awards": {
+    "slug": "emmy-awards",
+    "dataset": "/data/articles/emmy-awards/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/emmy-awards"
+  },
+  "exercise-usa": {
+    "slug": "exercise-usa",
+    "dataset": "/data/articles/exercise-usa/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/exercise-usa"
+  },
+  "export-superpowers-us-china-germany": {
+    "slug": "export-superpowers-us-china-germany",
+    "dataset": null,
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/export-superpowers-us-china-germany"
+  },
+  "fast-food-calories": {
+    "slug": "fast-food-calories",
+    "dataset": "/data/articles/fast-food-calories/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/fast-food-calories"
+  },
+  "franchise": {
+    "slug": "franchise",
+    "dataset": "/data/articles/franchise/data/media_franchises.csv",
+    "quarto": null,
+    "html": "/exports/franchise.html",
+    "pdf": null,
+    "github": "https://github.com/Artometrics/franchise"
+  },
+  "giant-the-artometrics-of-a-san-francisco-dynasty": {
+    "slug": "giant-the-artometrics-of-a-san-francisco-dynasty",
+    "dataset": "/data/articles/giant-the-artometrics-of-a-san-francisco-dynasty/giant.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/giant-the-artometrics-of-a-san-francisco-dynasty"
+  },
+  "global-life-expectancy": {
+    "slug": "global-life-expectancy",
+    "dataset": "/data/articles/global-life-expectancy/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/global-life-expectancy"
+  },
+  "global-plastic-waste": {
+    "slug": "global-plastic-waste",
+    "dataset": "/data/articles/global-plastic-waste/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/global-plastic-waste"
+  },
+  "h3-the-artometrics-of-a-youtube-dynasty": {
+    "slug": "h3-the-artometrics-of-a-youtube-dynasty",
+    "dataset": "/data/articles/h3-the-artometrics-of-a-youtube-dynasty/data/h3_master.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/h3-the-artometrics-of-a-youtube-dynasty"
+  },
+  "horror-movie-profit": {
+    "slug": "horror-movie-profit",
+    "dataset": "/data/articles/horror-movie-profit/dataset.csv",
+    "quarto": null,
+    "html": "/exports/horror-movie-profit.html",
+    "pdf": null,
+    "github": "https://github.com/Artometrics/horror-movie-profit"
+  },
+  "horror-movies": {
+    "slug": "horror-movies",
+    "dataset": "/data/articles/horror-movies/dataset.csv",
+    "quarto": null,
+    "html": "/exports/horror-movies.html",
+    "pdf": null,
+    "github": "https://github.com/Artometrics/horror-movies"
+  },
+  "hurricanes-puerto-rico": {
+    "slug": "hurricanes-puerto-rico",
+    "dataset": "/data/articles/hurricanes-puerto-rico/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/hurricanes-puerto-rico"
+  },
+  "hydro-wastewater": {
+    "slug": "hydro-wastewater",
+    "dataset": "/data/articles/hydro-wastewater/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/hydro-wastewater"
+  },
+  "imdb-blockbuster-grammar": {
+    "slug": "imdb-blockbuster-grammar",
+    "dataset": null,
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/imdb-blockbuster-grammar"
+  },
+  "imperial": {
+    "slug": "imperial",
+    "dataset": "/data/articles/imperial/data/mpd2023.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/imperial"
+  },
+  "incarceration-trends": {
+    "slug": "incarceration-trends",
+    "dataset": "/data/articles/incarceration-trends/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/incarceration-trends"
+  },
+  "lakers-the-artometrics-of-basketball-glamour": {
+    "slug": "lakers-the-artometrics-of-basketball-glamour",
+    "dataset": null,
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/lakers-the-artometrics-of-basketball-glamour"
+  },
+  "languages-glottolog": {
+    "slug": "languages-glottolog",
+    "dataset": "/data/articles/languages-glottolog/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/languages-glottolog"
+  },
+  "league-money-skill-and-star-systems": {
+    "slug": "league-money-skill-and-star-systems",
+    "dataset": null,
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/league-money-skill-and-star-systems"
+  },
+  "lego-database": {
+    "slug": "lego-database",
+    "dataset": "/data/articles/lego-database/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/lego-database"
+  },
+  "medium-articles": {
+    "slug": "medium-articles",
+    "dataset": "/data/articles/medium-articles/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/medium-articles"
+  },
+  "musicbrainz-pop-fame-mechanics": {
+    "slug": "musicbrainz-pop-fame-mechanics",
+    "dataset": null,
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/musicbrainz-pop-fame-mechanics"
+  },
+  "national-export-identity-atlas": {
+    "slug": "national-export-identity-atlas",
+    "dataset": null,
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/national-export-identity-atlas"
+  },
+  "national-park-visits": {
+    "slug": "national-park-visits",
+    "dataset": "/data/articles/national-park-visits/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/national-park-visits"
+  },
+  "netflix-engagement": {
+    "slug": "netflix-engagement",
+    "dataset": "/data/articles/netflix-engagement/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/netflix-engagement"
+  },
+  "netflix-titles": {
+    "slug": "netflix-titles",
+    "dataset": "/data/articles/netflix-titles/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/netflix-titles"
+  },
+  "new-york-vs-san-francisco-city-systems": {
+    "slug": "new-york-vs-san-francisco-city-systems",
+    "dataset": null,
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/new-york-vs-san-francisco-city-systems"
+  },
+  "nuclear-explosions": {
+    "slug": "nuclear-explosions",
+    "dataset": "/data/articles/nuclear-explosions/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/nuclear-explosions"
+  },
+  "nyc-restaurant-inspections": {
+    "slug": "nyc-restaurant-inspections",
+    "dataset": "/data/articles/nyc-restaurant-inspections/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/nyc-restaurant-inspections"
+  },
+  "pantheon-the-artometrics-of-collective-memory": {
+    "slug": "pantheon-the-artometrics-of-collective-memory",
+    "dataset": null,
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/pantheon-the-artometrics-of-collective-memory"
+  },
+  "patriots-the-artometrics-of-the-system-dynasty": {
+    "slug": "patriots-the-artometrics-of-the-system-dynasty",
+    "dataset": null,
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/patriots-the-artometrics-of-the-system-dynasty"
+  },
+  "pixar-films": {
+    "slug": "pixar-films",
+    "dataset": "/data/articles/pixar-films/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/pixar-films"
+  },
+  "pokemon": {
+    "slug": "pokemon",
+    "dataset": "/data/articles/pokemon/pokemon.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/pokemon"
+  },
+  "project-gutenberg-public-domain-canon-map": {
+    "slug": "project-gutenberg-public-domain-canon-map",
+    "dataset": null,
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/project-gutenberg-public-domain-canon-map"
+  },
+  "project-gutenberg": {
+    "slug": "project-gutenberg",
+    "dataset": "/data/articles/project-gutenberg/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/project-gutenberg"
+  },
+  "radio-stations": {
+    "slug": "radio-stations",
+    "dataset": "/data/articles/radio-stations/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/radio-stations"
+  },
+  "ramen-ratings": {
+    "slug": "ramen-ratings",
+    "dataset": "/data/articles/ramen-ratings/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/ramen-ratings"
+  },
+  "readmitted": {
+    "slug": "readmitted",
+    "dataset": "/data/articles/readmitted/data/hrrp_condition_err.csv",
+    "quarto": null,
+    "html": "/exports/readmitted.html",
+    "pdf": null,
+    "github": "https://github.com/Artometrics/artometrics-web"
+  },
+  "regional-sports-identity-map": {
+    "slug": "regional-sports-identity-map",
+    "dataset": null,
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/regional-sports-identity-map"
+  },
+  "rolling-stone-albums": {
+    "slug": "rolling-stone-albums",
+    "dataset": "/data/articles/rolling-stone-albums/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/rolling-stone-albums"
+  },
+  "roman-emperors": {
+    "slug": "roman-emperors",
+    "dataset": "/data/articles/roman-emperors/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/roman-emperors"
+  },
+  "san-francisco-data-microscope": {
+    "slug": "san-francisco-data-microscope",
+    "dataset": null,
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/san-francisco-data-microscope"
+  },
+  "school-diversity": {
+    "slug": "school-diversity",
+    "dataset": "/data/articles/school-diversity/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/school-diversity"
+  },
+  "sherlock-holmes": {
+    "slug": "sherlock-holmes",
+    "dataset": "/data/articles/sherlock-holmes/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/sherlock-holmes"
+  },
+  "simpsons-guest-stars": {
+    "slug": "simpsons-guest-stars",
+    "dataset": "/data/articles/simpsons-guest-stars/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/simpsons-guest-stars"
+  },
+  "sports-dynasty-index-best-and-worst-conversion": {
+    "slug": "sports-dynasty-index-best-and-worst-conversion",
+    "dataset": null,
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/sports-dynasty-index-best-and-worst-conversion"
+  },
+  "streaming-catalog-power": {
+    "slug": "streaming-catalog-power",
+    "dataset": null,
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": null
+  },
+  "super-bowl-ads": {
+    "slug": "super-bowl-ads",
+    "dataset": "/data/articles/super-bowl-ads/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/super-bowl-ads"
+  },
+  "tv-golden-age": {
+    "slug": "tv-golden-age",
+    "dataset": "/data/articles/tv-golden-age/dataset.csv",
+    "quarto": null,
+    "html": "/exports/tv-golden-age.html",
+    "pdf": null,
+    "github": "https://github.com/Artometrics/tv-golden-age"
+  },
+  "uk-museums": {
+    "slug": "uk-museums",
+    "dataset": "/data/articles/uk-museums/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/uk-museums"
+  },
+  "un-votes": {
+    "slug": "un-votes",
+    "dataset": "/data/articles/un-votes/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/un-votes"
+  },
+  "us-phds": {
+    "slug": "us-phds",
+    "dataset": "/data/articles/us-phds/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/us-phds"
+  },
+  "us-tuition": {
+    "slug": "us-tuition",
+    "dataset": "/data/articles/us-tuition/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/us-tuition"
+  },
+  "us-voter-turnout": {
+    "slug": "us-voter-turnout",
+    "dataset": "/data/articles/us-voter-turnout/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/us-voter-turnout"
+  },
+  "video-games-sliced": {
+    "slug": "video-games-sliced",
+    "dataset": "/data/articles/video-games-sliced/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/video-games-sliced"
+  },
+  "video-games-steam": {
+    "slug": "video-games-steam",
+    "dataset": "/data/articles/video-games-steam/dataset.csv",
+    "quarto": null,
+    "html": "/exports/video-games-steam.html",
+    "pdf": null,
+    "github": "https://github.com/Artometrics/video-games-steam"
+  },
+  "warrior-the-artometrics-of-a-golden-state-dynasty": {
+    "slug": "warrior-the-artometrics-of-a-golden-state-dynasty",
+    "dataset": "/data/articles/warrior-the-artometrics-of-a-golden-state-dynasty/warrior.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/warrior-the-artometrics-of-a-golden-state-dynasty"
+  },
+  "wealth-income": {
+    "slug": "wealth-income",
+    "dataset": "/data/articles/wealth-income/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/wealth-income"
+  },
+  "web-page-metrics": {
+    "slug": "web-page-metrics",
+    "dataset": "/data/articles/web-page-metrics/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/web-page-metrics"
+  },
+  "wine-ratings": {
+    "slug": "wine-ratings",
+    "dataset": "/data/articles/wine-ratings/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/wine-ratings"
+  },
+  "world-heritage-sites": {
+    "slug": "world-heritage-sites",
+    "dataset": "/data/articles/world-heritage-sites/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/world-heritage-sites"
+  },
+  "yankees-the-artometrics-of-baseballs-empire": {
+    "slug": "yankees-the-artometrics-of-baseballs-empire",
+    "dataset": null,
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "github": "https://github.com/Artometrics/yankees-the-artometrics-of-baseballs-empire"
+  }
+}

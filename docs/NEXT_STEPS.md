@@ -2,7 +2,9 @@
 
 Content OS + media foundation + Atlantic chrome + READMITTED gold are on `main`. Use this checklist.
 
-North-star vision (MCP factory, Buffer, narration, magazine packs, Expo app): `docs/MEDIA_EMPIRE_VISION.md`.
+North-star vision: `docs/MEDIA_EMPIRE_VISION.md`.
+
+Owner checklist: `docs/OWNER_PLAYBOOK.md` · MCP/skills: `docs/MCP_AND_SKILLS.md` · Brand: `docs/BRAND_KIT.md`.
 
 ---
 
@@ -18,6 +20,9 @@ North-star vision (MCP factory, Buffer, narration, magazine packs, Expo app): `d
 - Media company plan: `docs/MEDIA_COMPANY_PLAN.md`
 - Atlantic-style article fronts, top-right nav overlay, Chomsky A logo/favicon
 - READMITTED monorepo gold (`articles/readmitted/` + `sync:readmitted`)
+- Full magazine chrome: dark/light, search, desks/topics, library, get-app, saves UI, download rails
+- Dual Chomsky A favicons (light/dark)
+- Owner playbook + security/MCP/brand docs
 
 ---
 

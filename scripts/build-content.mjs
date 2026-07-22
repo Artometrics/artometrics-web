@@ -51,18 +51,63 @@ copyDirIfExists(join(ROOT, "src/images/authors"), join(ROOT, "public/images/auth
 copyDirIfExists(join(ROOT, "src/images/thumbnails"), join(ROOT, "public/images/thumbnails"));
 copyDirIfExists(join(ROOT, "src/images/about"), join(ROOT, "public/images/about"));
 
+const DESKS = new Set(["culture", "atlas", "history", "persona", "power"]);
+const CHANNELS = new Set([
+  "sports",
+  "travel",
+  "fashion",
+  "games",
+  "music",
+  "film",
+  "tech",
+  "cities",
+  "institutions",
+  "design",
+]);
+
+function inferChannels(slug, title, tags = []) {
+  const hay = `${slug} ${title} ${tags.join(" ")}`.toLowerCase();
+  const out = new Set();
+  const rules = [
+    [/\b(celtics|lakers|yankees|dodgers|patriots|cowboys|warrior|giant|sports|nba|nfl|mlb|dynasty)\b/, "sports"],
+    [/\b(travel|wine|coffee|tourism|airport|airline)\b/, "travel"],
+    [/\b(fashion|vogue|runway|style)\b/, "fashion"],
+    [/\b(game|games|steam|video.?game|esport|anime|pokemon)\b/, "games"],
+    [/\b(music|grammy|spotify|album|song|hip.?hop|jazz)\b/, "music"],
+    [/\b(film|movie|oscar|disney|horror|franchise|cinema)\b/, "film"],
+    [/\b(tech|software|ai|platform|internet|web.?page)\b/, "tech"],
+    [/\b(city|cities|urban|metro|san.?francisco|new.?york|california|texas)\b/, "cities"],
+    [/\b(hospital|museum|university|college|readmit|institution|phds|tuition)\b/, "institutions"],
+    [/\b(design|typography|brand|ui)\b/, "design"],
+  ];
+  for (const [re, ch] of rules) {
+    if (re.test(hay)) out.add(ch);
+  }
+  return [...out];
+}
+
 const blog = listFiles(join(CONTENT, "blog")).map((file) => {
   const raw = readFileSync(file, "utf8");
   const { data, content } = matter(raw);
   const id = basename(file, extname(file));
+  const slug = data.slug ?? id;
+  const tags = (data.tags ?? []).filter((t) => DESKS.has(t) || typeof t === "string");
+  const explicit = Array.isArray(data.channels)
+    ? data.channels.filter((c) => CHANNELS.has(c))
+    : [];
+  const channels =
+    explicit.length > 0
+      ? explicit
+      : inferChannels(slug, data.title ?? "", tags).filter((c) => CHANNELS.has(c));
   return {
     id,
     title: data.title,
-    slug: data.slug ?? id,
+    slug,
     pubDate: data.pubDate ? new Date(data.pubDate).toISOString() : null,
     description: data.description ?? "",
     heroImage: rewriteAssetUrl(data.heroImage ?? ""),
-    tags: data.tags ?? [],
+    tags,
+    channels,
     author: data.author ?? null,
     draft: Boolean(data.draft),
     body: content.trim(),

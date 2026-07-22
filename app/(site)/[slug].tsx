@@ -1,8 +1,11 @@
-import { Image, Text, View, StyleSheet } from "react-native";
+import { Image, Text, View, StyleSheet, useWindowDimensions } from "react-native";
 import { useLocalSearchParams, Link } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { ArticleBody } from "@/components/ArticleBody";
-import { Colors, Fonts } from "@/constants/Colors";
+import { ArticleActions } from "@/components/ArticleActions";
+import { PageSeo } from "@/components/PageSeo";
+import { Fonts } from "@/constants/Colors";
+import { useTheme } from "@/lib/theme";
 import { assetUrl } from "@/lib/assets";
 import {
   formatAuthorName,
@@ -26,14 +29,17 @@ export async function generateStaticParams() {
 }
 
 export default function ReportScreen() {
+  const { colors } = useTheme();
+  const { width } = useWindowDimensions();
+  const bleed = width < 900;
   const { slug } = useLocalSearchParams<{ slug: string }>();
   const post = getBlogPost(slug);
   if (!post) {
     return (
       <Wrapper style={styles.wrap}>
-        <Text style={styles.title}>Report not found</Text>
+        <Text style={[styles.title, { color: colors.text }]}>Report not found</Text>
         <Link href="/blog">
-          <Text style={styles.link}>Back to reports</Text>
+          <Text style={{ color: colors.accent }}>Back to reports</Text>
         </Link>
       </Wrapper>
     );
@@ -63,20 +69,31 @@ export default function ReportScreen() {
   };
 
   return (
-    <View>
+    <View style={{ backgroundColor: colors.bg }}>
+      <PageSeo
+        title={post.title}
+        description={post.description}
+        path={`/${post.slug}`}
+        image={post.heroImage || undefined}
+        type="article"
+      />
       <SeoJsonLd data={jsonLd} />
       <Wrapper style={styles.front} variant="prose">
-        {desk ? <Text style={styles.eyebrow}>{SECTION_META[desk].title}</Text> : null}
-        <Text style={styles.title}>{post.title}</Text>
-        <Text style={styles.dek}>{post.description}</Text>
-        <Text style={styles.byline}>
+        {desk ? (
+          <Text style={[styles.eyebrow, { color: colors.accent }]}>
+            {SECTION_META[desk].title}
+          </Text>
+        ) : null}
+        <Text style={[styles.title, { color: colors.text }]}>{post.title}</Text>
+        <Text style={[styles.dek, { color: colors.textMuted }]}>{post.description}</Text>
+        <Text style={[styles.byline, { color: colors.text }]}>
           By {authorLabel}
           {post.pubDate ? ` · ${formatDate(post.pubDate)}` : ""}
           {` · ${minutes} min read`}
         </Text>
       </Wrapper>
       {hero ? (
-        <Wrapper variant="prose" style={styles.heroWrap}>
+        <Wrapper variant={bleed ? "bleed" : "prose"} style={styles.heroWrap}>
           <Image
             source={{ uri: hero }}
             style={styles.hero}
@@ -85,22 +102,27 @@ export default function ReportScreen() {
           />
         </Wrapper>
       ) : null}
+      <Wrapper variant="prose">
+        <ArticleActions slug={post.slug} title={post.title} />
+      </Wrapper>
       <Wrapper variant="prose" style={styles.article}>
         <ArticleBody html={post.body} />
       </Wrapper>
-      <Wrapper variant="prose" style={styles.adjacent}>
+      <Wrapper variant="prose" style={[styles.adjacent, { borderTopColor: colors.text }]}>
         {adjacent.previous ? (
           <Link href={adjacent.previous.href as `/${string}`}>
-            <Text style={styles.adjLabel}>Previous</Text>
-            <Text style={styles.adjTitle}>{adjacent.previous.title}</Text>
+            <Text style={[styles.adjLabel, { color: colors.textSubtle }]}>Previous</Text>
+            <Text style={[styles.adjTitle, { color: colors.text }]}>
+              {adjacent.previous.title}
+            </Text>
           </Link>
         ) : (
           <View />
         )}
         {adjacent.next ? (
           <Link href={adjacent.next.href as `/${string}`}>
-            <Text style={styles.adjLabel}>Next</Text>
-            <Text style={styles.adjTitle}>{adjacent.next.title}</Text>
+            <Text style={[styles.adjLabel, { color: colors.textSubtle }]}>Next</Text>
+            <Text style={[styles.adjTitle, { color: colors.text }]}>{adjacent.next.title}</Text>
           </Link>
         ) : null}
       </Wrapper>
@@ -110,16 +132,11 @@ export default function ReportScreen() {
 
 const styles = StyleSheet.create({
   wrap: { paddingTop: 40, paddingBottom: 16, gap: 12 },
-  front: {
-    paddingTop: 36,
-    paddingBottom: 8,
-    gap: 16,
-  },
+  front: { paddingTop: 36, paddingBottom: 8, gap: 16 },
   eyebrow: {
     fontSize: 12,
     letterSpacing: 1.8,
     textTransform: "uppercase",
-    color: Colors.accent600,
     fontWeight: "700",
   },
   title: {
@@ -127,44 +144,38 @@ const styles = StyleSheet.create({
     fontSize: 36,
     lineHeight: 42,
     fontWeight: "700",
-    color: Colors.base900,
     letterSpacing: -0.4,
   },
   dek: {
     fontFamily: Fonts.serif,
     fontSize: 20,
     lineHeight: 30,
-    color: Colors.base700,
     fontWeight: "400",
   },
   byline: {
     fontFamily: Fonts.serif,
     fontSize: 15,
     lineHeight: 22,
-    color: Colors.base800,
     marginTop: 4,
   },
-  heroWrap: { paddingTop: 20, paddingBottom: 8 },
+  heroWrap: { paddingTop: 12, paddingBottom: 8 },
   hero: {
     width: "100%",
     aspectRatio: 16 / 10,
-    backgroundColor: Colors.base100,
   },
-  article: { paddingTop: 20, paddingBottom: 32 },
+  article: { paddingTop: 8, paddingBottom: 32 },
   adjacent: {
     flexDirection: "row",
     justifyContent: "space-between",
     gap: 24,
     paddingVertical: 32,
     borderTopWidth: 2,
-    borderTopColor: Colors.base900,
     marginBottom: 24,
   },
   adjLabel: {
     fontSize: 11,
     letterSpacing: 1.5,
     textTransform: "uppercase",
-    color: Colors.base500,
     fontWeight: "600",
     marginBottom: 6,
   },
@@ -172,8 +183,6 @@ const styles = StyleSheet.create({
     fontFamily: Fonts.serif,
     fontSize: 17,
     lineHeight: 24,
-    color: Colors.base900,
     maxWidth: 260,
   },
-  link: { color: Colors.accent700, marginTop: 12 },
 });

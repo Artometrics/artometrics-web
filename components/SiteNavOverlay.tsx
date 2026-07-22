@@ -1,51 +1,34 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import {
   Platform,
   Pressable,
   ScrollView,
   Text,
+  TextInput,
   View,
   StyleSheet,
 } from "react-native";
-import { Link, usePathname } from "expo-router";
-import { Colors, Fonts } from "@/constants/Colors";
+import { Link, usePathname, router } from "expo-router";
+import { Fonts } from "@/constants/Colors";
 import { useChrome } from "@/lib/chrome";
-import { SECTION_META, SECTION_SLUGS } from "@/data/sections";
+import { useTheme } from "@/lib/theme";
 import { useAuth } from "@/lib/auth";
 import { Wrapper } from "@/components/Wrapper";
-
-const primaryLinks = [
-  { href: "/blog", label: "Reports" },
-  { href: "/podcast", label: "Podcast" },
-  { href: "/resources", label: "Resources" },
-  { href: "/datasets", label: "Datasets" },
-  { href: "/authors", label: "Authors" },
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
-  { href: "/pricing", label: "Pricing" },
-] as const;
-
-const quickLinks = [
-  { href: "/blog", label: "Latest" },
-  { href: "/podcast", label: "Podcast" },
-  { href: "/pricing", label: "Subscribe" },
-] as const;
-
-function normalizePath(path: string) {
-  return path.replace(/\/$/, "") || "/";
-}
-
-function isActive(pathname: string, href: string) {
-  const current = normalizePath(pathname);
-  const target = normalizePath(href);
-  if (target === "/") return current === "/";
-  return current === target || current.startsWith(`${target}/`);
-}
+import {
+  CHANNEL_META,
+  CHANNEL_SLUGS,
+  SECTION_META,
+  SECTION_SLUGS,
+} from "@/data/sections";
 
 export function SiteNavOverlay() {
   const pathname = usePathname();
   const { menuOpen, setMenuOpen } = useChrome();
   const { user } = useAuth();
+  const { colors, toggle, mode } = useTheme();
+  const [q, setQ] = useState("");
+  const [openPillar, setOpenPillar] = useState(true);
+  const [openChannel, setOpenChannel] = useState(true);
 
   useEffect(() => {
     setMenuOpen(false);
@@ -62,15 +45,20 @@ export function SiteNavOverlay() {
 
   if (!menuOpen) return null;
 
-  const sectionCols = [
-    SECTION_SLUGS.slice(0, Math.ceil(SECTION_SLUGS.length / 2)),
-    SECTION_SLUGS.slice(Math.ceil(SECTION_SLUGS.length / 2)),
-  ];
+  function goSearch() {
+    const query = q.trim();
+    setMenuOpen(false);
+    if (query) router.push(`/search?q=${encodeURIComponent(query)}`);
+    else router.push("/search");
+  }
 
   return (
-    <View style={styles.overlay} accessibilityViewIsModal>
+    <View
+      style={[styles.overlay, { backgroundColor: colors.overlayBg }]}
+      accessibilityViewIsModal
+    >
       <Wrapper style={styles.inner}>
-        <View style={styles.top}>
+        <View style={[styles.top, { borderBottomColor: colors.border }]}>
           <Pressable
             onPress={() => setMenuOpen(false)}
             accessibilityRole="button"
@@ -78,25 +66,30 @@ export function SiteNavOverlay() {
             style={styles.closeBtn}
             hitSlop={12}
           >
-            <Text style={styles.closeGlyph}>✕</Text>
+            <Text style={[styles.closeGlyph, { color: colors.accent }]}>✕</Text>
           </Pressable>
           <View style={styles.auth}>
+            <Pressable onPress={toggle} hitSlop={8}>
+              <Text style={{ color: colors.accent, fontSize: 14, fontWeight: "600" }}>
+                {mode === "dark" ? "Light" : "Dark"}
+              </Text>
+            </Pressable>
             {user ? (
               <Link href="/account" asChild>
                 <Pressable onPress={() => setMenuOpen(false)}>
-                  <Text style={styles.signIn}>Account</Text>
+                  <Text style={[styles.signIn, { color: colors.text }]}>Account</Text>
                 </Pressable>
               </Link>
             ) : (
               <>
                 <Link href="/login" asChild>
                   <Pressable onPress={() => setMenuOpen(false)}>
-                    <Text style={styles.signIn}>Sign In</Text>
+                    <Text style={[styles.signIn, { color: colors.text }]}>Sign In</Text>
                   </Pressable>
                 </Link>
                 <Link href="/pricing" asChild>
                   <Pressable onPress={() => setMenuOpen(false)}>
-                    <Text style={styles.subscribe}>Subscribe</Text>
+                    <Text style={[styles.subscribe, { color: colors.accent }]}>Subscribe</Text>
                   </Pressable>
                 </Link>
               </>
@@ -104,18 +97,32 @@ export function SiteNavOverlay() {
           </View>
         </View>
 
+        <View style={[styles.searchRow, { borderColor: colors.border }]}>
+          <TextInput
+            value={q}
+            onChangeText={setQ}
+            placeholder="Search"
+            placeholderTextColor={colors.textSubtle}
+            style={[styles.searchInput, { color: colors.text }]}
+            onSubmitEditing={goSearch}
+            returnKeyType="search"
+          />
+          <Pressable onPress={goSearch} hitSlop={8}>
+            <Text style={{ color: colors.accent, fontWeight: "700" }}>Go</Text>
+          </Pressable>
+        </View>
+
         <View style={styles.quickRow}>
-          {quickLinks.map((link) => (
-            <Link key={link.href} href={link.href} asChild>
+          {[
+            { href: "/blog", label: "Latest" },
+            { href: "/podcast", label: "Podcast" },
+            { href: "/library", label: "Library" },
+            { href: "/get-app", label: "Get the App" },
+            { href: "/pricing", label: "Subscribe" },
+          ].map((link) => (
+            <Link key={link.href} href={link.href as `/blog`} asChild>
               <Pressable onPress={() => setMenuOpen(false)} style={styles.quickItem}>
-                <Text
-                  style={[
-                    styles.quickLink,
-                    isActive(pathname, link.href) && styles.quickActive,
-                  ]}
-                >
-                  {link.label}
-                </Text>
+                <Text style={[styles.quickLink, { color: colors.text }]}>{link.label}</Text>
               </Pressable>
             </Link>
           ))}
@@ -126,46 +133,58 @@ export function SiteNavOverlay() {
           contentContainerStyle={styles.scrollContent}
           showsVerticalScrollIndicator={false}
         >
-          <Text style={styles.sectionsLabel}>Sections</Text>
-          <View style={styles.sectionGrid}>
-            {sectionCols.map((col, i) => (
-              <View key={i} style={styles.sectionCol}>
-                {col.map((slug) => (
-                  <Link
-                    key={slug}
-                    href={`/blog?desk=${slug}` as `/blog?desk=${string}`}
-                    asChild
-                  >
-                    <Pressable
-                      onPress={() => setMenuOpen(false)}
-                      style={styles.sectionItem}
-                    >
-                      <Text style={styles.sectionLink}>
-                        {SECTION_META[slug].title}
-                      </Text>
-                    </Pressable>
-                  </Link>
-                ))}
-              </View>
-            ))}
-          </View>
+          <Pressable onPress={() => setOpenPillar((v) => !v)} style={styles.sectionHead}>
+            <Text style={[styles.sectionsLabel, { color: colors.accent }]}>Desks</Text>
+            <Text style={{ color: colors.textMuted }}>{openPillar ? "−" : "+"}</Text>
+          </Pressable>
+          {openPillar
+            ? SECTION_SLUGS.map((slug) => (
+                <Link key={slug} href={`/desks/${slug}` as `/desks/${string}`} asChild>
+                  <Pressable onPress={() => setMenuOpen(false)} style={styles.sectionItem}>
+                    <Text style={[styles.sectionLink, { color: colors.text }]}>
+                      {SECTION_META[slug].title}
+                    </Text>
+                  </Pressable>
+                </Link>
+              ))
+            : null}
 
-          <View style={styles.divider} />
+          <Pressable
+            onPress={() => setOpenChannel((v) => !v)}
+            style={[styles.sectionHead, { marginTop: 24 }]}
+          >
+            <Text style={[styles.sectionsLabel, { color: colors.accent }]}>Topics</Text>
+            <Text style={{ color: colors.textMuted }}>{openChannel ? "−" : "+"}</Text>
+          </Pressable>
+          {openChannel ? (
+            <View style={styles.sectionGrid}>
+              {CHANNEL_SLUGS.map((slug) => (
+                <Link key={slug} href={`/topics/${slug}` as `/topics/${string}`} asChild>
+                  <Pressable onPress={() => setMenuOpen(false)} style={styles.channelItem}>
+                    <Text style={[styles.channelLink, { color: colors.text }]}>
+                      {CHANNEL_META[slug].title}
+                    </Text>
+                  </Pressable>
+                </Link>
+              ))}
+            </View>
+          ) : null}
 
-          {primaryLinks.map((link) => (
-            <Link key={link.href} href={link.href} asChild>
-              <Pressable
-                onPress={() => setMenuOpen(false)}
-                style={styles.moreItem}
-              >
-                <Text
-                  style={[
-                    styles.moreLink,
-                    isActive(pathname, link.href) && styles.quickActive,
-                  ]}
-                >
-                  {link.label}
-                </Text>
+          <View style={[styles.divider, { backgroundColor: colors.border }]} />
+
+          {[
+            { href: "/about", label: "About" },
+            { href: "/authors", label: "Authors" },
+            { href: "/resources", label: "Resources" },
+            { href: "/datasets", label: "Datasets" },
+            { href: "/press", label: "Press" },
+            { href: "/newsletter", label: "Newsletter" },
+            { href: "/contact", label: "Contact" },
+            { href: "/security", label: "Security" },
+          ].map((link) => (
+            <Link key={link.href} href={link.href as `/about`} asChild>
+              <Pressable onPress={() => setMenuOpen(false)} style={styles.moreItem}>
+                <Text style={[styles.moreLink, { color: colors.text }]}>{link.label}</Text>
               </Pressable>
             </Link>
           ))}
@@ -185,7 +204,6 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     bottom: 0,
-    backgroundColor: Colors.white,
     zIndex: 2000,
   },
   inner: { flex: 1, paddingTop: 12, paddingBottom: 24, maxWidth: 720 },
@@ -195,7 +213,6 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     paddingVertical: 12,
     borderBottomWidth: StyleSheet.hairlineWidth,
-    borderBottomColor: Colors.base200,
   },
   closeBtn: {
     width: 44,
@@ -203,52 +220,52 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  closeGlyph: { fontSize: 22, color: Colors.accent600, lineHeight: 24 },
-  auth: { flexDirection: "row", alignItems: "center", gap: 18 },
-  signIn: { fontSize: 14, color: Colors.base900, fontWeight: "500" },
-  subscribe: { fontSize: 14, color: Colors.accent600, fontWeight: "700" },
+  closeGlyph: { fontSize: 22, lineHeight: 24 },
+  auth: { flexDirection: "row", alignItems: "center", gap: 16 },
+  signIn: { fontSize: 14, fontWeight: "500" },
+  subscribe: { fontSize: 14, fontWeight: "700" },
+  searchRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 12,
+    marginTop: 16,
+    borderWidth: 1,
+    paddingHorizontal: 12,
+    paddingVertical: 10,
+  },
+  searchInput: { flex: 1, fontSize: 16, fontFamily: Fonts.sans },
   quickRow: {
     flexDirection: "row",
-    gap: 22,
+    flexWrap: "wrap",
+    gap: 16,
     paddingVertical: 16,
-    borderBottomWidth: StyleSheet.hairlineWidth,
-    borderBottomColor: Colors.base200,
   },
   quickItem: { paddingVertical: 4 },
-  quickLink: { fontSize: 14, color: Colors.base800, fontWeight: "500" },
-  quickActive: { color: Colors.accent700 },
+  quickLink: { fontSize: 14, fontWeight: "600" },
   scroll: { flex: 1 },
-  scrollContent: { paddingTop: 28, paddingBottom: 48 },
+  scrollContent: { paddingTop: 8, paddingBottom: 48 },
+  sectionHead: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginBottom: 12,
+  },
   sectionsLabel: {
     fontSize: 12,
     fontWeight: "700",
     letterSpacing: 2,
     textTransform: "uppercase",
-    color: Colors.accent600,
-    marginBottom: 18,
   },
-  sectionGrid: { flexDirection: "row", gap: 24 },
-  sectionCol: { flex: 1, gap: 14 },
-  sectionItem: { paddingVertical: 2 },
+  sectionItem: { paddingVertical: 8 },
   sectionLink: {
     fontFamily: Fonts.serif,
     fontSize: 22,
     lineHeight: 28,
-    color: Colors.base900,
   },
-  divider: {
-    height: StyleSheet.hairlineWidth,
-    backgroundColor: Colors.base200,
-    marginVertical: 28,
-  },
-  moreItem: {
-    paddingVertical: 12,
-    borderBottomWidth: StyleSheet.hairlineWidth,
-    borderBottomColor: Colors.base100,
-  },
-  moreLink: {
-    fontFamily: Fonts.serif,
-    fontSize: 18,
-    color: Colors.base900,
-  },
+  sectionGrid: { flexDirection: "row", flexWrap: "wrap", gap: 8 },
+  channelItem: { width: "46%", paddingVertical: 8 },
+  channelLink: { fontFamily: Fonts.serif, fontSize: 18 },
+  divider: { height: StyleSheet.hairlineWidth, marginVertical: 24 },
+  moreItem: { paddingVertical: 12 },
+  moreLink: { fontFamily: Fonts.serif, fontSize: 18 },
 });
