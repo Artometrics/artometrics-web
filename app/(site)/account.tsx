@@ -116,7 +116,9 @@ export default function AccountScreen() {
           const post = getBlogPost(item.article_slug);
           return (
             <Link key={item.article_slug} href={`/${item.article_slug}` as `/`} asChild>
-              <Pressable style={[styles.savedRow, { borderBottomColor: colors.border }]}>
+              <Pressable
+                style={StyleSheet.flatten([styles.savedRow, { borderBottomColor: colors.border }])}
+              >
                 <Text style={[styles.savedTitle, { color: colors.text }]}>
                   {post?.title ?? item.article_slug}
                 </Text>

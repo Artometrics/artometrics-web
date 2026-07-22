@@ -75,7 +75,9 @@ export default function HomeScreen() {
           const author = post.author ? formatAuthorName(String(post.author)) : "Artometrics";
           return (
             <Link key={post.slug} href={`/${post.slug}`} asChild>
-              <Pressable style={[styles.popRow, { borderBottomColor: colors.border }]}>
+              <Pressable
+                style={StyleSheet.flatten([styles.popRow, { borderBottomColor: colors.border }])}
+              >
                 <View style={styles.popCopy}>
                   <Text style={[styles.popTitle, { color: colors.text }]}>{post.title}</Text>
                   <Text style={[styles.popAuthor, { color: colors.textMuted }]}>{author}</Text>
@@ -101,7 +103,9 @@ export default function HomeScreen() {
         <View style={styles.podcastRow}>
           {podcasts.map((ep) => (
             <Link key={ep.id} href={`/podcast/interviews/${ep.id}`} asChild>
-              <Pressable style={[styles.podcastCard, { borderTopColor: colors.text }]}>
+              <Pressable
+                style={StyleSheet.flatten([styles.podcastCard, { borderTopColor: colors.text }])}
+              >
                 <Text style={[styles.eyebrow, { color: colors.accent }]}>
                   Episode {ep.episodeNumber ?? ep.id}
                 </Text>
@@ -129,7 +133,9 @@ export default function HomeScreen() {
             const desk = primaryDesk(post.tags);
             return (
               <Link key={post.slug} href={`/${post.slug}`} asChild>
-                <Pressable style={[styles.moreRow, { borderBottomColor: colors.border }]}>
+                <Pressable
+                  style={StyleSheet.flatten([styles.moreRow, { borderBottomColor: colors.border }])}
+                >
                   {desk ? (
                     <Text style={[styles.moreDesk, { color: colors.accent }]}>
                       {SECTION_META[desk].title}

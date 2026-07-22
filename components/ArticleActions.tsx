@@ -93,7 +93,7 @@ export function ArticleActions({ slug, title }: Props) {
           </Pressable>
         ) : (
           <Link href="/login" asChild>
-            <Pressable style={[styles.btn, { borderColor: colors.text }]}>
+            <Pressable style={StyleSheet.flatten([styles.btn, { borderColor: colors.text }])}>
               <Text style={[styles.btnText, { color: colors.text }]}>Sign in to save</Text>
             </Pressable>
           </Link>

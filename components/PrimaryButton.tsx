@@ -16,7 +16,8 @@ export const PrimaryButton = forwardRef<React.ElementRef<typeof Pressable>, Prop
         ref={ref}
         onPress={onPress}
         disabled={disabled}
-        style={[styles.btn, disabled && styles.disabled, style]}
+        // Flatten: Link asChild + array styles crash RN Web (Safari).
+        style={StyleSheet.flatten([styles.btn, disabled && styles.disabled, style])}
       >
         <Text style={styles.label}>{label}</Text>
       </Pressable>

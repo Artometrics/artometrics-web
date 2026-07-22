@@ -188,6 +188,6 @@ const styles = StyleSheet.create({
   searchInput: {
     fontSize: 14,
     fontFamily: Fonts.sans,
-    outlineStyle: "none" as unknown as undefined,
+    ...(Platform.OS === "web" ? ({ outlineStyle: "none" } as object) : null),
   },
 });

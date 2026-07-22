@@ -20,7 +20,9 @@ export function SiteFooter() {
         </Text>
         <View style={styles.ctaRow}>
           <Link href="/pricing" asChild>
-            <Pressable style={[styles.subscribe, { backgroundColor: colors.text }]}>
+            <Pressable
+              style={StyleSheet.flatten([styles.subscribe, { backgroundColor: colors.text }])}
+            >
               <Text style={[styles.subscribeText, { color: colors.inverse }]}>Subscribe</Text>
             </Pressable>
           </Link>

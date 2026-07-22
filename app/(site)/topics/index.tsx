@@ -23,7 +23,9 @@ export default function TopicsIndex() {
       <View style={styles.list}>
         {CHANNEL_SLUGS.map((slug) => (
           <Link key={slug} href={`/topics/${slug}` as `/topics/${string}`} asChild>
-            <Pressable style={[styles.row, { borderBottomColor: colors.border }]}>
+            <Pressable
+              style={StyleSheet.flatten([styles.row, { borderBottomColor: colors.border }])}
+            >
               <Text style={[styles.rowTitle, { color: colors.text }]}>
                 {CHANNEL_META[slug].title}
               </Text>

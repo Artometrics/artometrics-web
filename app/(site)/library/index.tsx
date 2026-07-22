@@ -29,7 +29,7 @@ export default function LibraryScreen() {
           { href: "/topics", title: "Topics", body: "Sports, travel, fashion, games, and more." },
         ].map((card) => (
           <Link key={card.href} href={card.href as `/datasets`} asChild>
-            <Pressable style={[styles.card, { borderColor: colors.border }]}>
+            <Pressable style={StyleSheet.flatten([styles.card, { borderColor: colors.border }])}>
               <Text style={[styles.cardTitle, { color: colors.text }]}>{card.title}</Text>
               <Text style={[styles.cardBody, { color: colors.textMuted }]}>{card.body}</Text>
             </Pressable>
@@ -41,7 +41,7 @@ export default function LibraryScreen() {
       <View style={styles.chips}>
         {SECTION_SLUGS.map((s) => (
           <Link key={s} href={`/desks/${s}` as `/desks/${string}`} asChild>
-            <Pressable style={[styles.chip, { borderColor: colors.border }]}>
+            <Pressable style={StyleSheet.flatten([styles.chip, { borderColor: colors.border }])}>
               <Text style={{ color: colors.accent, fontWeight: "700" }}>{SECTION_META[s].title}</Text>
             </Pressable>
           </Link>
@@ -52,7 +52,7 @@ export default function LibraryScreen() {
       <View style={styles.chips}>
         {CHANNEL_SLUGS.map((s) => (
           <Link key={s} href={`/topics/${s}` as `/topics/${string}`} asChild>
-            <Pressable style={[styles.chip, { borderColor: colors.border }]}>
+            <Pressable style={StyleSheet.flatten([styles.chip, { borderColor: colors.border }])}>
               <Text style={{ color: colors.text }}>{CHANNEL_META[s].title}</Text>
             </Pressable>
           </Link>
