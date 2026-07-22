@@ -1,6 +1,8 @@
 # Next steps — Artometrics media company
 
-Content OS + media foundation are on `main` / this PR. Use this checklist.
+Content OS + media foundation + Atlantic chrome + READMITTED gold are on `main`. Use this checklist.
+
+North-star vision (MCP factory, Buffer, narration, magazine packs, Expo app): `docs/MEDIA_EMPIRE_VISION.md`.
 
 ---
 
@@ -14,6 +16,8 @@ Content OS + media foundation are on `main` / this PR. Use this checklist.
 - Article JSON-LD on report pages
 - Crawlable article HTML
 - Media company plan: `docs/MEDIA_COMPANY_PLAN.md`
+- Atlantic-style article fronts, top-right nav overlay, Chomsky A logo/favicon
+- READMITTED monorepo gold (`articles/readmitted/` + `sync:readmitted`)
 
 ---
 
