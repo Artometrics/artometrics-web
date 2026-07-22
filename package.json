@@ -17,6 +17,7 @@
     "build": "npm run content && npm run cos:aeo && expo export -p web",
     "sync:episodes": "node scripts/sync-member-episodes.mjs",
     "sync:articles": "node scripts/sync-github-articles.mjs",
+    "sync:readmitted": "node scripts/sync-readmitted.mjs",
     "scaffold:repo": "node scripts/scaffold-article-repo.mjs",
     "upgrade:repos": "node scripts/upgrade-article-repos.mjs",
     "publish:repos": "node scripts/publish-article-repos.mjs",

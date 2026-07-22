@@ -29,7 +29,8 @@ From `package.json` and `app.json`:
 | Brand tokens | `constants/Colors.ts` | Accent red + base neutrals |
 | Content (source) | `src/content/` | Markdown/MDX per collection |
 | Content (built) | `src/generated/` | JSON consumed by the app |
-| Scripts | `scripts/` | Content build, GitHub article sync |
+| Article homes | `articles/` | Monorepo gold reports (e.g. `articles/readmitted/`) — data, Quarto, charts |
+| Scripts | `scripts/` | Content build, GitHub article sync, READMITTED render/sync |
 | Styles (articles) | `public/css/artometrics-article.css` | Quarto/article chrome |
 | Public assets | `public/` | Images, audios, chart JSON, fonts |
 | Native assets | `assets/` | Icons, splash, Chomsky font |
@@ -46,7 +47,8 @@ Schemas are enforced by `scripts/build-content.mjs` (not Astro Zod).
 - Required frontmatter: `title`, `slug`, `pubDate`, `description`, `heroImage`, `tags` (`culture|atlas|history|persona|power`)
 - Optional: `draft`, `author`
 - Body is HTML (Quarto sync)
-- Template: `src/content/blog/anime.md`
+- Template: `src/content/blog/anime.md` (gold monorepo prototype: `readmitted`)
+- Import: monorepo `articles/<slug>/` via `npm run sync:readmitted` (gold path); older pieces may still use `npm run sync:articles`
 
 ### `authors` — `src/content/authors/`
 
@@ -75,6 +77,7 @@ Schemas are enforced by `scripts/build-content.mjs` (not Astro Zod).
 - **Legal:** `/legal/<id>`
 - **Membership:** `/login`, `/signup`, `/pricing`, `/account`
 - **About / contact:** `/about`, `/contact`
+- **RSS / AEO:** `/rss.xml`, `/llms.txt`, `/sitemap.xml`
 
 ## Commands
 
@@ -85,13 +88,26 @@ Schemas are enforced by `scripts/build-content.mjs` (not Astro Zod).
 | `npm run dev` | Expo web |
 | `npm start` | Expo CLI |
 | `npm run build` | Static web export → `dist/` |
-| `npm run sync:articles` | Sync Quarto repos → blog markdown + chart assets |
+| `npm run sync:articles` | Sync Quarto repos → blog markdown + chart assets (legacy path) |
+| `npm run sync:readmitted` | Copy `articles/readmitted/` charts + data → `public/` |
+| `npm run render:readmitted` | R export PNG + Plotly JSON for READMITTED |
+| `npm run render:readmitted:py` | Python fallback chart export (debug only) |
 
-## Article pipeline (GitHub repos → app)
+## Article pipeline (monorepo gold → app)
 
-Unchanged from the Astro era: gold-standard reports live under [Artometrics](https://github.com/Artometrics). `scripts/sync-github-articles.mjs` still writes `src/content/blog/<slug>.md` and chart assets under `public/`.
+**READMITTED** is the locked gold prototype. Analysis assets live under `articles/readmitted/` (bundled CSVs, Quarto, R chart outputs, hero). Render with `npm run render:readmitted`, sync with `npm run sync:readmitted`, publish body in `src/content/blog/readmitted.md`.
 
-Run `npm run content` after syncing so the Expo app picks up new posts.
+Older reports may still use singular repos under [Artometrics](https://github.com/Artometrics) and `scripts/sync-github-articles.mjs` until migrated. Run `npm run content` after syncing so the Expo app picks up new posts.
+
+| Path | Purpose |
+|------|---------|
+| `articles/readmitted/` | Gold report home (data, Quarto, charts, QA) |
+| `scripts/render-readmitted-charts.R` | R PNG + Plotly JSON export → `articles/` + `public/` |
+| `scripts/sync-readmitted.mjs` | Copy local article assets into `public/` |
+| `scripts/sync-github-articles.mjs` | Legacy: clone external Quarto repos, rewrite blog body |
+| `scripts/r/artometrics_theme.R` | Shared `theme_artometrics()` + chart export helpers |
+| `pilot-drafts/readmitted/` | Earlier pilot bundle (superseded by `articles/readmitted/`) |
+| `public/data/articles/<slug>/charts/` | Plotly JSON for live charts |
 
 ## Content OS (editorial factory)
 
@@ -107,7 +123,7 @@ Keyword briefs, style rules, draft scaffolds, and AEO live under `docs/content-o
 | `npm run cos:zine -- --slug <slug>` | Instagram zine pack (slides.html + caption) |
 
 Style bible: `docs/content-os/STYLE_GUIDE.md`. Overview: `docs/content-os/README.md`.  
-Ops plan: `docs/MEDIA_COMPANY_PLAN.md`. Hand-off checklist: `docs/NEXT_STEPS.md`.
+Ops plan: `docs/MEDIA_COMPANY_PLAN.md`. Vision: `docs/MEDIA_EMPIRE_VISION.md`. Hand-off checklist: `docs/NEXT_STEPS.md`.
 
 ## Guardrails for AI / contributors
 
