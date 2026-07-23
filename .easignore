@@ -1,21 +1,22 @@
 # Keep EAS iOS archives small. Native loads site assets from artometrics.com.
+# Patterns are gitignore-style: use a leading / so we only match the repo root
+# (e.g. "supabase/" would also wipe lib/supabase/).
 
-articles/
-pilot-drafts/
-docs/
-dist/
-.netlify/
-.git/
+/articles/
+/pilot-drafts/
+/docs/
+/dist/
+/.netlify/
+/.git/
 *.log
 
-# Entire public/ tree is web CDN content — not required to compile the binary
-public/
+# Web CDN content — not required to compile the binary
+/public/
 
-# Analysis / tooling not required for Expo native compile
-# Keep scripts/content-os out of the upload, but do NOT ignore data/ (app imports @/data/*)
-scripts/
+# Root tooling only (do NOT use bare "supabase/" — that kills @/lib/supabase)
+/scripts/
+/supabase/
+/store/
 *.R
 *.Rproj
 requirements.txt
-supabase/
-store/
