@@ -35,8 +35,16 @@ What you hook up, make, and verify after the magazine site ships on `main`.
 | Buffer + social channels | Buffer dashboard |
 | Apple Developer ($99/yr) + EAS | Get the App for real |
 | ElevenLabs / Semrush | Later phases |
+| Notion + Figma MCPs | Editorial + print systems |
 
+Full hookup session: `docs/BACKEND_HOOKUP_SESSION.md`  
 See `.env.example`, `docs/PRODUCT_SETUP.md`, `docs/MCP_AND_SKILLS.md`, `docs/SECURITY.md`.
+
+```bash
+npm run doctor           # toolchain inventory
+npm run setup:pipeline   # R + Quarto + Python + print libs
+npm run setup:clis       # netlify / supabase / stripe CLIs
+```
 
 ## Brand kit to export
 

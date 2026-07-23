@@ -55,6 +55,14 @@ for (const post of blog) {
     `/data/articles/${slug}/article.pdf`,
     `/exports/${slug}.pdf`,
   ]);
+  const epub = firstExisting([
+    `/data/articles/${slug}/article.epub`,
+    `/exports/${slug}.epub`,
+  ]);
+  const audio = firstExisting([
+    `/audios/${slug}.mp3`,
+    `/data/articles/${slug}/narration.mp3`,
+  ]);
   const quarto = firstExisting([
     `/data/articles/${slug}/source.zip`,
     `/exports/${slug}-source.zip`,
@@ -65,6 +73,8 @@ for (const post of blog) {
     quarto,
     html,
     pdf,
+    epub,
+    audio,
     github: post.draft ? null : github,
   };
 }

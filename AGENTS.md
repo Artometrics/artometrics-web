@@ -85,6 +85,9 @@ Schemas are enforced by `scripts/build-content.mjs` (not Astro Zod).
 | Command | Action |
 |--------|--------|
 | `npm install` | Install dependencies |
+| `npm run setup:pipeline` | R + Quarto + pandoc + Python + print libs |
+| `npm run setup:clis` | Netlify / Supabase / Stripe CLIs |
+| `npm run doctor` | Green/red toolchain inventory |
 | `npm run content` | Rebuild `src/generated/*` |
 | `npm run dev` | Expo web |
 | `npm start` | Expo CLI |
@@ -93,6 +96,11 @@ Schemas are enforced by `scripts/build-content.mjs` (not Astro Zod).
 | `npm run sync:readmitted` | Copy `articles/readmitted/` charts + data → `public/` |
 | `npm run render:readmitted` | R export PNG + Plotly JSON for READMITTED |
 | `npm run render:readmitted:py` | Python fallback chart export (debug only) |
+| `npm run cos:pdf -- --slug …` | Article PDF → `public/exports/` |
+| `npm run cos:ebook -- --slug …` | Article EPUB |
+| `npm run cos:narrate -- --slug …` | ElevenLabs MP3 (needs `ELEVENLABS_API_KEY`) |
+
+Backend hookup session: `docs/BACKEND_HOOKUP_SESSION.md`.
 
 ## Article pipeline (monorepo gold → app)
 
@@ -122,9 +130,12 @@ Keyword briefs, style rules, draft scaffolds, and AEO live under `docs/content-o
 | `npm run cos:publish -- --slug …` | Copy draft → `src/content/blog/` + rebuild JSON + `llms.txt` |
 | `npm run cos:aeo` | Regenerate llms.txt, llms-full, sitemap, RSS |
 | `npm run cos:zine -- --slug <slug>` | Instagram zine pack (slides.html + caption) |
+| `npm run cos:pdf -- --slug <slug>` | Print PDF pack |
+| `npm run cos:ebook -- --slug <slug>` | EPUB pack |
+| `npm run cos:narrate -- --slug <slug>` | ElevenLabs narration MP3 |
 
 Style bible: `docs/content-os/STYLE_GUIDE.md`. Overview: `docs/content-os/README.md`.  
-Ops plan: `docs/MEDIA_COMPANY_PLAN.md`. Vision: `docs/MEDIA_EMPIRE_VISION.md`. Hand-off checklist: `docs/NEXT_STEPS.md`.
+Ops plan: `docs/MEDIA_COMPANY_PLAN.md`. Vision: `docs/MEDIA_EMPIRE_VISION.md`. Hand-off checklist: `docs/NEXT_STEPS.md`. Backend session: `docs/BACKEND_HOOKUP_SESSION.md`.
 
 ## Guardrails for AI / contributors
 

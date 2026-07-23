@@ -26,6 +26,20 @@ Owner checklist: `docs/OWNER_PLAYBOOK.md` · MCP/skills: `docs/MCP_AND_SKILLS.md
 
 ---
 
+## Backend hookup session (next few hours)
+
+Follow **`docs/BACKEND_HOOKUP_SESSION.md`** end-to-end:
+
+1. `npm run setup:pipeline` + `npm run doctor`  
+2. Netlify env + `npx netlify dev`  
+3. Supabase migration + `media` bucket  
+4. Stripe (if billing today)  
+5. Higgsfield / ElevenLabs / Notion / Figma MCPs for reels, podcasts, PDFs, print  
+
+Media commands already in Content OS: `cos:zine`, `cos:pdf`, `cos:ebook`, `cos:narrate`, `cos:downloads`.
+
+---
+
 ## Your turn (in order)
 
 ### 1. Confirm Netlify is building Expo

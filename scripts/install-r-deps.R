@@ -38,9 +38,15 @@ if (!length(missing)) {
 message("Installing: ", paste(missing, collapse = ", "))
 lib <- Sys.getenv("R_LIBS_USER")
 if (!nzchar(lib)) {
-  lib <- file.path(Sys.getenv("HOME"), "R", paste0(R.version$platform, "-library"), paste0(R.version$major, ".", R.version$minor))
+  lib <- file.path(
+    Sys.getenv("HOME"),
+    "R",
+    paste0(R.version$platform, "-library"),
+    paste0(R.version$major, ".", strsplit(R.version$minor, "[.]")[[1]][[1]])
+  )
 }
 dir.create(lib, recursive = TRUE, showWarnings = FALSE)
+.libPaths(c(lib, .libPaths()))
 install.packages(
   missing,
   lib = lib,
@@ -48,6 +54,7 @@ install.packages(
   dependencies = c("Depends", "Imports", "LinkingTo")
 )
 
+# Re-probe with the user library on the path (fresh R sessions already do this).
 failed <- pkgs[!vapply(pkgs, requireNamespace, quietly = TRUE, FUN.VALUE = logical(1))]
 if (length(failed)) {
   stop("Failed to install: ", paste(failed, collapse = ", "))

@@ -22,14 +22,17 @@ Style bible: `docs/content-os/STYLE_GUIDE.md` · Article template: `docs/content
 
 | MCP / tool | Use | Status |
 |------------|-----|--------|
-| **Higgsfield** | Hero banners, motion, brand stills | Re-auth in Cursor MCP settings |
+| **Higgsfield** | Hero banners, reels, explainers, voice | Re-auth in Cursor MCP settings |
 | **Buffer** | Schedule LinkedIn / IG / YT / FB / Pinterest | Connect after Buffer account exists |
 | **GA4 / Analytics MCP** | Traffic, report popularity | Needs `EXPO_PUBLIC_GA_ID` |
 | **Semrush** | Keyword briefs at scale | When publishing weekly |
-| **ElevenLabs** | Report narration | After first gold audio pass |
+| **ElevenLabs** | Report narration (`npm run cos:narrate`) | `ELEVENLABS_API_KEY` in `.env` |
+| **Notion** | Editorial calendar → briefs | Add Notion MCP + DB id |
+| **Figma** | Print magazine / covers | Add Figma MCP + file key |
 | **Supabase** | Auth, saves, media Storage | Env keys + `media` bucket |
 | **Netlify** | Deploy, functions, forms | Site already linked |
 
+Hookup session playbook: `docs/BACKEND_HOOKUP_SESSION.md`  
 Vision: `docs/MEDIA_EMPIRE_VISION.md` · Owner checklist: `docs/OWNER_PLAYBOOK.md`
 
 ## Cursor rules / skills to use

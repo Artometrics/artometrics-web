@@ -22,6 +22,10 @@ install_apt_deps() {
     r-base \
     r-base-dev \
     pandoc \
+    imagemagick \
+    ghostscript \
+    fonts-dejavu-core \
+    fonts-liberation \
     libcurl4-openssl-dev \
     libssl-dev \
     libxml2-dev \
@@ -36,6 +40,11 @@ install_apt_deps() {
     libuv1-dev \
     libsass-dev \
     libgit2-dev \
+    libpango-1.0-0 \
+    libpangocairo-1.0-0 \
+    libgdk-pixbuf-2.0-0 \
+    libffi-dev \
+    shared-mime-info \
     pkg-config
 }
 
@@ -97,5 +106,12 @@ if need_cmd kaleido_get_chrome; then
   kaleido_get_chrome >/dev/null
 fi
 
+# Product CLIs (Netlify / Supabase / Stripe) — best effort, non-fatal
+if [[ -x "$ROOT/scripts/setup-product-clis.sh" ]]; then
+  log "Installing product CLIs (best effort)"
+  bash "$ROOT/scripts/setup-product-clis.sh" || true
+fi
+
 print_banner
 log "setup-pipeline complete"
+log "Next: npm run doctor && see docs/BACKEND_HOOKUP_SESSION.md"

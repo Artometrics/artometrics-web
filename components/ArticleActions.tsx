@@ -13,6 +13,8 @@ type Pack = {
   quarto?: string | null;
   html?: string | null;
   pdf?: string | null;
+  epub?: string | null;
+  audio?: string | null;
   github?: string | null;
 };
 
@@ -76,6 +78,8 @@ export function ArticleActions({ slug, title }: Props) {
     { label: "Quarto / source", href: pack.quarto ?? pack.github },
     { label: "Article HTML", href: pack.html },
     { label: "PDF", href: pack.pdf },
+    { label: "Ebook (EPUB)", href: pack.epub },
+    { label: "Narration (MP3)", href: pack.audio },
   ];
 
   const available = files.filter((f) => f.href);
