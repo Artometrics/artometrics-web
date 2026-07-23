@@ -57,7 +57,7 @@ export default function HomeScreen() {
   const topCardW = Math.min(300, Math.max(220, width * 0.68));
 
   return (
-    <View style={{ backgroundColor: colors.bg }}>
+    <>
       <PageSeo
         title="Artometrics"
         description="Data reporting on culture, sports, film, music, and cities — clear, citable, easy to read."
@@ -89,30 +89,30 @@ export default function HomeScreen() {
                 </Link>
               ) : null}
               {featuredSection ? (
-                <Text style={[styles.eyebrow, { color: colors.accent }]}>
+                <Text style={StyleSheet.flatten([styles.eyebrow, { color: colors.accent }])}>
                   {SECTION_META[featuredSection].title}
                 </Text>
               ) : null}
               <Link href={`/${featured.slug}`} asChild>
                 <Pressable>
-                  <Text style={[styles.heroTitle, { color: colors.text }]}>{featured.title}</Text>
+                  <Text style={StyleSheet.flatten([styles.heroTitle, { color: colors.text }])}>{featured.title}</Text>
                 </Pressable>
               </Link>
-              <Text style={[styles.heroDek, { color: colors.textMuted }]}>
+              <Text style={StyleSheet.flatten([styles.heroDek, { color: colors.textMuted }])}>
                 {deckLine(featured.description, 36)}
               </Text>
-              <Text style={[styles.byline, { color: colors.textSubtle }]}>
+              <Text style={StyleSheet.flatten([styles.byline, { color: colors.textSubtle }])}>
                 {featuredAuthor}
                 {featured.pubDate ? ` · ${formatDate(featured.pubDate)}` : ""}
               </Text>
               {leadSecondary ? (
-                <View style={[styles.secondary, { borderTopColor: colors.border }]}>
+                <View style={StyleSheet.flatten([styles.secondary, { borderTopColor: colors.border }])}>
                   <Link href={`/${leadSecondary.slug}`} asChild>
                     <Pressable>
-                      <Text style={[styles.secondaryTitle, { color: colors.text }]}>
+                      <Text style={StyleSheet.flatten([styles.secondaryTitle, { color: colors.text }])}>
                         {leadSecondary.title}
                       </Text>
-                      <Text style={[styles.secondaryDek, { color: colors.textMuted }]} numberOfLines={2}>
+                      <Text style={StyleSheet.flatten([styles.secondaryDek, { color: colors.textMuted }])} numberOfLines={2}>
                         {deckLine(leadSecondary.description, 22)}
                       </Text>
                     </Pressable>
@@ -153,7 +153,7 @@ export default function HomeScreen() {
 
       {/* Latest grid */}
       <Wrapper variant="magazine" style={styles.gridSection}>
-        <Text style={[styles.sectionTitle, { color: colors.text }]}>Latest</Text>
+        <Text style={StyleSheet.flatten([styles.sectionTitle, { color: colors.text }])}>Latest</Text>
         <View style={styles.grid}>
           {posts.slice(0, 12).map((post) => (
             <View key={post.slug} style={styles.gridItem}>
@@ -194,12 +194,12 @@ export default function HomeScreen() {
       ) : null}
 
       <Wrapper variant="magazine" style={styles.jump}>
-        <Text style={[styles.sectionTitle, { color: colors.text }]}>Sections</Text>
+        <Text style={StyleSheet.flatten([styles.sectionTitle, { color: colors.text }])}>Sections</Text>
         <View style={styles.jumpRow}>
           {SECTION_SLUGS.map((slug) => (
             <Link key={slug} href={`/topics/${slug}` as `/topics/${string}`} asChild>
-              <Pressable style={[styles.jumpChip, { borderColor: colors.border }]}>
-                <Text style={[styles.jumpText, { color: colors.text }]}>
+              <Pressable style={StyleSheet.flatten([styles.jumpChip, { borderColor: colors.border }])}>
+                <Text style={StyleSheet.flatten([styles.jumpText, { color: colors.text }])}>
                   {SECTION_META[slug].title}
                 </Text>
               </Pressable>
@@ -207,7 +207,7 @@ export default function HomeScreen() {
           ))}
         </View>
       </Wrapper>
-    </View>
+    </>
   );
 }
 

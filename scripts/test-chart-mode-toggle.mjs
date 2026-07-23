@@ -15,6 +15,7 @@ try {
   }
 
   const firstChart = page.locator("figure.art-chart").first();
+  await firstChart.scrollIntoViewIfNeeded();
   const printBtn = firstChart.locator('[data-mode="print"]');
   const firstLive = firstChart.locator(".art-chart-live");
   const firstFallback = firstLive.locator(".art-chart-fallback");
@@ -25,6 +26,11 @@ try {
     throw new Error("Print mode should be selected by default");
   }
 
+  await firstFallback.waitFor({ state: "visible", timeout: 15000 });
+  await page.waitForFunction(() => {
+    const img = document.querySelector("figure.art-chart .art-chart-fallback");
+    return !!img && img.complete && img.naturalWidth > 0;
+  }, { timeout: 15000 });
   if (!(await firstFallback.isVisible())) {
     throw new Error("Static PNG fallback should be visible in print mode");
   }

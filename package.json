@@ -39,7 +39,8 @@
     "cos:rainfall-pass": "node scripts/content-os/rainfall-article-pass.mjs",
     "cos:rainfall-rewrite": "node scripts/content-os/rainfall-full-rewrite.mjs",
     "charts:backfill": "python3 scripts/backfill-chart-pngs.py",
-    "test:chart-toggle": "node scripts/test-chart-mode-toggle.mjs"
+    "test:chart-toggle": "node scripts/test-chart-mode-toggle.mjs",
+    "test:charts": "node scripts/test-charts-smoke.mjs"
   },
   "engines": {
     "node": ">=20.0.0"
@@ -73,6 +74,7 @@
     "@types/react": "~19.2.2",
     "gray-matter": "^4.0.3",
     "marked": "^15.0.12",
+    "playwright": "^1.61.1",
     "typescript": "~5.9.2"
   }
 }

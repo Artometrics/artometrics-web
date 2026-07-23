@@ -52,7 +52,8 @@ function showFallback(live: HTMLElement, fallback: string, label: string | null)
   img.src = fallback;
   img.alt = label || live.getAttribute("data-title") || "Chart";
   img.className = "art-chart-fallback";
-  img.loading = "lazy";
+  // Eager: lazy + SPA re-renders left charts as empty gray boxes below the fold.
+  img.loading = "eager";
   img.decoding = "async";
   img.style.width = "100%";
   img.style.height = "auto";
@@ -329,6 +330,10 @@ async function hydrateCharts(root: HTMLElement) {
 /**
  * Crawlable HTML in the static export (AEO), charts enhanced client-side.
  * Dual-mode charts default to Print (static R PNG) with an Interactive HTML toggle.
+ *
+ * Parent theme toggles re-render this component and can reset dangerouslySetInnerHTML
+ * without changing `html`, wiping JS-injected mode switches. We therefore re-hydrate
+ * whenever unhydrated chart nodes appear.
  */
 export function ArticleBody({ html }: { html: string }) {
   const ref = useRef<HTMLDivElement>(null);
@@ -336,8 +341,52 @@ export function ArticleBody({ html }: { html: string }) {
   useEffect(() => {
     const node = ref.current;
     if (!node) return;
-    void hydrateCharts(node);
+
+    let cancelled = false;
+    let raf = 0;
+    const run = () => {
+      if (cancelled) return;
+      const needs = node.querySelector(
+        '.art-chart-live[data-chart]:not([data-hydrated="1"])',
+      );
+      if (needs) void hydrateCharts(node);
+    };
+    const schedule = () => {
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(run);
+    };
+
+    run();
+    // React may replace children after paint when ancestors re-render (theme, layout).
+    const mo = new MutationObserver(schedule);
+    mo.observe(node, { childList: true, subtree: true });
+
+    // Re-paint interactive plots when the document theme flips.
+    const onTheme = () => {
+      const hosts = node.querySelectorAll<HTMLElement>(
+        '.art-chart-live[data-chart-mode="interactive"]',
+      );
+      if (!hosts.length) return;
+      void loadPlotlyFromCdn().then((Plotly) => {
+        if (!Plotly) return;
+        hosts.forEach((live) => {
+          void renderInteractive(live, Plotly);
+        });
+      });
+    };
+    const themeMo = new MutationObserver(onTheme);
+    if (typeof document !== "undefined") {
+      themeMo.observe(document.documentElement, {
+        attributes: true,
+        attributeFilter: ["data-theme"],
+      });
+    }
+
     return () => {
+      cancelled = true;
+      cancelAnimationFrame(raf);
+      mo.disconnect();
+      themeMo.disconnect();
       const cleanup = (node as HTMLElement & { __artChartCleanup?: () => void })
         .__artChartCleanup;
       cleanup?.();
