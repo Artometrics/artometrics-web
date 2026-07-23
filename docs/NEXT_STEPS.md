@@ -26,6 +26,10 @@ Owner checklist: `docs/OWNER_PLAYBOOK.md` · MCP/skills: `docs/MCP_AND_SKILLS.md
 
 ---
 
+## Full recipe (services, tiers, unlocks)
+
+See **`docs/FULL_STACK_RECIPE.md`** — every affordable API/service, which tier to buy, what each hookup unlocks, and the end-state factory (reports → reels → podcast → PDF → newsletter).
+
 ## Backend hookup session (next few hours)
 
 Follow **`docs/BACKEND_HOOKUP_SESSION.md`** end-to-end:

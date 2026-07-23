@@ -2,6 +2,7 @@
 
 Use this for a focused few-hour pass: **Cursor ↔ Netlify ↔ Expo ↔ Supabase**, then media APIs for reels, podcasts, explainers, PDFs, and print packs.
 
+Full recipe (tiers + costs + unlocks): `docs/FULL_STACK_RECIPE.md`  
 Vision: `docs/MEDIA_EMPIRE_VISION.md` · Product: `docs/PRODUCT_SETUP.md` · MCP: `docs/MCP_AND_SKILLS.md`
 
 ## Before you start

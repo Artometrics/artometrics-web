@@ -100,7 +100,7 @@ Schemas are enforced by `scripts/build-content.mjs` (not Astro Zod).
 | `npm run cos:ebook -- --slug …` | Article EPUB |
 | `npm run cos:narrate -- --slug …` | ElevenLabs MP3 (needs `ELEVENLABS_API_KEY`) |
 
-Backend hookup session: `docs/BACKEND_HOOKUP_SESSION.md`.
+Full stack recipe: `docs/FULL_STACK_RECIPE.md`. Backend hookup: `docs/BACKEND_HOOKUP_SESSION.md`.
 
 ## Article pipeline (monorepo gold → app)
 

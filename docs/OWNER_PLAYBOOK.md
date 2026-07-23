@@ -37,7 +37,8 @@ What you hook up, make, and verify after the magazine site ships on `main`.
 | ElevenLabs / Semrush | Later phases |
 | Notion + Figma MCPs | Editorial + print systems |
 
-Full hookup session: `docs/BACKEND_HOOKUP_SESSION.md`  
+Full service recipe (tiers + unlocks): `docs/FULL_STACK_RECIPE.md`  
+Hookup session: `docs/BACKEND_HOOKUP_SESSION.md`  
 See `.env.example`, `docs/PRODUCT_SETUP.md`, `docs/MCP_AND_SKILLS.md`, `docs/SECURITY.md`.
 
 ```bash
