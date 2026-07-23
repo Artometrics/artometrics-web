@@ -73,7 +73,7 @@ faq:
 <h2 id="prestige-and-market-are-not-the-same-currency" class="anchored">Prestige and market are not the same currency</h2>
 <h3 id="prestige-and-market-are-not-the-same-currency-look" class="anchored">Awards do not all trade in the same kind of attention</h3>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/awards-prestige-economy-oscars-grammys-nobels/charts/chart1_prestige_vs_market.plotly.json" data-source="Data: Academy Awards Database, Nobel Prize API, Recording Academy public records, DLu/oscar_data, Wikidata - ARTOMETRICS" role="img" aria-label="Awards do not all trade in the same kind of attention"></div>
+  <div class="art-chart-live" data-chart="/data/articles/awards-prestige-economy-oscars-grammys-nobels/charts/chart1_prestige_vs_market.plotly.json" data-source="Data: Academy Awards Database, Nobel Prize API, Recording Academy public records, DLu/oscar_data, Wikidata - ARTOMETRICS" role="img" aria-label="Awards do not all trade in the same kind of attention" data-fallback="/images/content/articles/awards-prestige-economy-oscars-grammys-nobels/charts/chart1_prestige_vs_market.png"></div>
 </figure>
 <p class="art-p">The Oscar and the Nobel both signal prestige, but they serve different publics. One is wired into box office, campaigns, and red-carpet media; the other into universities, citation networks, and institutional history.</p>
 <p class="art-p">Ranking them on a single “fame” scale collapses those circuits. The cleaner move is to separate prestige currency from market currency — then watch how each prize spends both.</p>
@@ -81,7 +81,7 @@ faq:
 <h2 id="when-awards-invent-more-lanes-of-excellence" class="anchored">When awards invent more lanes of excellence</h2>
 <h3 id="when-awards-invent-more-lanes-of-excellence-look" class="anchored">Award systems expand by creating more named lanes of excellence</h3>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/awards-prestige-economy-oscars-grammys-nobels/charts/chart2_category_inflation.plotly.json" data-source="Data: Academy Awards Database, Nobel Prize API, Recording Academy public records, DLu/oscar_data, Wikidata - ARTOMETRICS" role="img" aria-label="Award systems expand by creating more named lanes of excellence"></div>
+  <div class="art-chart-live" data-chart="/data/articles/awards-prestige-economy-oscars-grammys-nobels/charts/chart2_category_inflation.plotly.json" data-source="Data: Academy Awards Database, Nobel Prize API, Recording Academy public records, DLu/oscar_data, Wikidata - ARTOMETRICS" role="img" aria-label="Award systems expand by creating more named lanes of excellence" data-fallback="/images/content/articles/awards-prestige-economy-oscars-grammys-nobels/charts/chart2_category_inflation.png"></div>
 </figure>
 <p class="art-p">Award shows are taxonomies. When categories expand, culture gets more official boxes, more winners, and more arguments about who belongs.</p>
 <p class="art-p">The Grammys make the pattern clearest: genre fragmentation becomes institutional design. More lanes mean more legitimacy to distribute — and more fights over whether a win still means the same thing.</p>
@@ -89,7 +89,7 @@ faq:
 <h2 id="getting-nominated-is-not-the-same-as-winning" class="anchored">Getting nominated is not the same as winning</h2>
 <h3 id="getting-nominated-is-not-the-same-as-winning-look" class="anchored">The strongest campaigns convert nomination access into wins</h3>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/awards-prestige-economy-oscars-grammys-nobels/charts/chart3_nomination_conversion.plotly.json" data-source="Data: Academy Awards Database, Nobel Prize API, Recording Academy public records, DLu/oscar_data, Wikidata - ARTOMETRICS" role="img" aria-label="The strongest campaigns convert nomination access into wins"></div>
+  <div class="art-chart-live" data-chart="/data/articles/awards-prestige-economy-oscars-grammys-nobels/charts/chart3_nomination_conversion.plotly.json" data-source="Data: Academy Awards Database, Nobel Prize API, Recording Academy public records, DLu/oscar_data, Wikidata - ARTOMETRICS" role="img" aria-label="The strongest campaigns convert nomination access into wins" data-fallback="/images/content/articles/awards-prestige-economy-oscars-grammys-nobels/charts/chart3_nomination_conversion.png"></div>
 </figure>
 <p class="art-p">Nominations measure being invited into the prestige room. Wins measure coalition strength, timing, category fit, and narrative closure.</p>
 <p class="art-p">That is why Oscar season often reads like political analysis in evening wear: access is one contest; conversion is another.</p>
@@ -97,7 +97,7 @@ faq:
 <h2 id="what-the-public-actually-remembers" class="anchored">What the public actually remembers</h2>
 <h3 id="what-the-public-actually-remembers-look" class="anchored">The public remembers faces and names before institutional categories</h3>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/awards-prestige-economy-oscars-grammys-nobels/charts/chart4_attention_concentration.plotly.json" data-source="Data: Academy Awards Database, Nobel Prize API, Recording Academy public records, DLu/oscar_data, Wikidata - ARTOMETRICS" role="img" aria-label="The public remembers faces and names before institutional categories"></div>
+  <div class="art-chart-live" data-chart="/data/articles/awards-prestige-economy-oscars-grammys-nobels/charts/chart4_attention_concentration.plotly.json" data-source="Data: Academy Awards Database, Nobel Prize API, Recording Academy public records, DLu/oscar_data, Wikidata - ARTOMETRICS" role="img" aria-label="The public remembers faces and names before institutional categories" data-fallback="/images/content/articles/awards-prestige-economy-oscars-grammys-nobels/charts/chart4_attention_concentration.png"></div>
 </figure>
 <p class="art-p">Best Picture matters inside the industry. Acting, artist, and star categories travel faster through casual conversation.</p>
 <p class="art-p">Institutions do the sorting; people carry the names. Prestige that never sticks to a face tends to fade into ballot trivia.</p>
@@ -105,7 +105,7 @@ faq:
 <h2 id="who-still-decides-what-gets-a-second-life" class="anchored">Who still decides what gets a second life</h2>
 <h3 id="who-still-decides-what-gets-a-second-life-look" class="anchored">Awards still decide which works get a second life</h3>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/awards-prestige-economy-oscars-grammys-nobels/charts/chart5_gatekeeping_vs_discovery.plotly.json" data-source="Data: Academy Awards Database, Nobel Prize API, Recording Academy public records, DLu/oscar_data, Wikidata - ARTOMETRICS" role="img" aria-label="Awards still decide which works get a second life"></div>
+  <div class="art-chart-live" data-chart="/data/articles/awards-prestige-economy-oscars-grammys-nobels/charts/chart5_gatekeeping_vs_discovery.plotly.json" data-source="Data: Academy Awards Database, Nobel Prize API, Recording Academy public records, DLu/oscar_data, Wikidata - ARTOMETRICS" role="img" aria-label="Awards still decide which works get a second life" data-fallback="/images/content/articles/awards-prestige-economy-oscars-grammys-nobels/charts/chart5_gatekeeping_vs_discovery.png"></div>
 </figure>
 <p class="art-p">Streaming can create discovery at scale. Awards create sanctioned memory — turning a work from content into curriculum, canon, playlist staple, or obituary headline.</p>
 <p class="art-p">That is the prestige economy: a machine for deciding what culture should remember about itself after the premiere week ends.</p>

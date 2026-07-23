@@ -77,7 +77,7 @@ faq:
 <h2 id="titles-by-era" class="anchored">The Super Bowl column froze after two old engines</h2>
 <h3 id="titles-by-era-look" class="anchored">Cowboys Super Bowl wins by defining era</h3>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/cowboys-the-artometrics-of-americas-team/charts/chart1_titles_by_era.plotly.json" data-source="Data: Pro Football Reference, NFL records, Forbes - ARTOMETRICS" role="img" aria-label="Cowboys Super Bowl wins by defining era"></div>
+  <div class="art-chart-live" data-chart="/data/articles/cowboys-the-artometrics-of-americas-team/charts/chart1_titles_by_era.plotly.json" data-source="Data: Pro Football Reference, NFL records, Forbes - ARTOMETRICS" role="img" aria-label="Cowboys Super Bowl wins by defining era" data-fallback="/images/content/articles/cowboys-the-artometrics-of-americas-team/charts/chart1_titles_by_era.png"></div>
 </figure>
 <p class="art-p">Dallas title history concentrates in two engines: Landry’s 1970s and the Aikman–Smith–Irvin 1990s, which delivered three of the franchise’s five Super Bowls. Since then, the Super Bowl column is empty.</p>
 <p class="art-p">Dallas did not stop being important when it stopped winning titles. That is precisely the problem: brand continuity without championship renewal.</p>
@@ -85,7 +85,7 @@ faq:
 <h2 id="brand-outlier" class="anchored">The richest brand, a modest recent playoff archive</h2>
 <h3 id="brand-outlier-look" class="anchored">Estimated franchise value and playoff wins since 1996</h3>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/cowboys-the-artometrics-of-americas-team/charts/chart2_value_vs_playoffs.plotly.json" data-source="Data: Pro Football Reference, NFL records, Forbes - ARTOMETRICS" role="img" aria-label="Estimated franchise value and playoff wins since 1996"></div>
+  <div class="art-chart-live" data-chart="/data/articles/cowboys-the-artometrics-of-americas-team/charts/chart2_value_vs_playoffs.plotly.json" data-source="Data: Pro Football Reference, NFL records, Forbes - ARTOMETRICS" role="img" aria-label="Estimated franchise value and playoff wins since 1996" data-fallback="/images/content/articles/cowboys-the-artometrics-of-americas-team/charts/chart2_value_vs_playoffs.png"></div>
 </figure>
 <p class="art-p">The Cowboys are the strangest point in modern football economics: the richest brand with a modest recent playoff archive. Value and January wins no longer move together.</p>
 <p class="art-p">The organization is elite at monetizing attention and only average at converting playoff chances. That split is the franchise’s true modern identity.</p>
@@ -93,7 +93,7 @@ faq:
 <h2 id="the-old-october-engine" class="anchored">The 1970s and 1990s still carry the memory</h2>
 <h3 id="the-old-october-engine-look" class="anchored">Cowboys playoff wins by decade</h3>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/cowboys-the-artometrics-of-americas-team/charts/chart3_playoff_wins_decade.plotly.json" data-source="Data: Pro Football Reference, NFL records, Forbes - ARTOMETRICS" role="img" aria-label="Cowboys playoff wins by decade"></div>
+  <div class="art-chart-live" data-chart="/data/articles/cowboys-the-artometrics-of-americas-team/charts/chart3_playoff_wins_decade.plotly.json" data-source="Data: Pro Football Reference, NFL records, Forbes - ARTOMETRICS" role="img" aria-label="Cowboys playoff wins by decade" data-fallback="/images/content/articles/cowboys-the-artometrics-of-americas-team/charts/chart3_playoff_wins_decade.png"></div>
 </figure>
 <p class="art-p">The 1970s and 1990s still carry the franchise memory. The decades after do not match the logo’s gravity. Postseason production no longer fits the public size of America’s Team.</p>
 <p class="art-p">This is not ordinary losing. It is a famous franchise whose January archive has fallen out of proportion with its attention share.</p>
@@ -101,7 +101,7 @@ faq:
 <h2 id="quarterback-era-paradox" class="anchored">Quarterback competence never solved conversion</h2>
 <h3 id="quarterback-era-paradox-look" class="anchored">Regular-season win percentage by quarterback era</h3>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/cowboys-the-artometrics-of-americas-team/charts/chart4_qb_eras.plotly.json" data-source="Data: Pro Football Reference, NFL records, Forbes - ARTOMETRICS" role="img" aria-label="Regular-season win percentage by quarterback era"></div>
+  <div class="art-chart-live" data-chart="/data/articles/cowboys-the-artometrics-of-americas-team/charts/chart4_qb_eras.plotly.json" data-source="Data: Pro Football Reference, NFL records, Forbes - ARTOMETRICS" role="img" aria-label="Regular-season win percentage by quarterback era" data-fallback="/images/content/articles/cowboys-the-artometrics-of-americas-team/charts/chart4_qb_eras.png"></div>
 </figure>
 <p class="art-p">Quarterback competence has not been absent. Romo and Prescott produced enough regular-season winning to keep Dallas nationally relevant. The missing variable is conversion: turning stable quarterback play into deep playoff survival.</p>
 <p class="art-p">Regular-season competence preserves the brand. It does not automatically reopen the conference championship door.</p>
@@ -109,7 +109,7 @@ faq:
 <h2 id="the-conference-wall" class="anchored">The drought now sits with football’s other long waits</h2>
 <h3 id="the-conference-wall-look" class="anchored">Years since selected teams reached a conference championship game</h3>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/cowboys-the-artometrics-of-americas-team/charts/chart5_conference_drought.plotly.json" data-source="Data: Pro Football Reference, NFL records, Forbes - ARTOMETRICS" role="img" aria-label="Years since selected teams reached a conference championship game"></div>
+  <div class="art-chart-live" data-chart="/data/articles/cowboys-the-artometrics-of-americas-team/charts/chart5_conference_drought.plotly.json" data-source="Data: Pro Football Reference, NFL records, Forbes - ARTOMETRICS" role="img" aria-label="Years since selected teams reached a conference championship game" data-fallback="/images/content/articles/cowboys-the-artometrics-of-americas-team/charts/chart5_conference_drought.png"></div>
 </figure>
 <p class="art-p">The Cowboys’ NFC championship drought now belongs on the same chart as franchises fans instinctively associate with frustration. Twenty-nine years without that appearance, entering 2025, is no longer a private Texas problem.</p>
 <p class="art-p">Dallas is not cursed by invisibility. It is cursed by being watched. The spotlight turns a football gap into national theater.</p>

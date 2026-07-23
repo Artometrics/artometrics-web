@@ -68,7 +68,7 @@ faq:
 <h2 id="catalog-and-now" class="anchored">Catalog and Now</h2>
 <h3 id="catalog-and-now-look" class="anchored">Pop fame balances archive depth with current heat</h3>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/musicbrainz-pop-fame-mechanics/charts/chart1_catalog_vs_attention.plotly.json" data-source="Data: MusicBrainz / MetaBrainz CC0 dumps, Wikidata, Billboard-style public chart references - ARTOMETRICS" role="img" aria-label="Pop fame balances archive depth with current heat"></div>
+  <div class="art-chart-live" data-chart="/data/articles/musicbrainz-pop-fame-mechanics/charts/chart1_catalog_vs_attention.plotly.json" data-source="Data: MusicBrainz / MetaBrainz CC0 dumps, Wikidata, Billboard-style public chart references - ARTOMETRICS" role="img" aria-label="Pop fame balances archive depth with current heat" data-fallback="/images/content/articles/musicbrainz-pop-fame-mechanics/charts/chart1_catalog_vs_attention.png"></div>
 </figure>
 <p class="art-p">MusicBrainz is valuable because music metadata is relational: artists, releases, recordings, works, labels, genres, aliases, and places are connected.</p>
 <p class="art-p">A famous artist can win by having a deep archive, a current attention spike, or both. Those are different shapes of fame — and catalog-versus-now charts keep them from collapsing into one vague popularity score.</p>
@@ -76,7 +76,7 @@ faq:
 <h2 id="format-shift" class="anchored">Format Shift</h2>
 <h3 id="format-shift-look" class="anchored">The unit of music fame moved from album to track</h3>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/musicbrainz-pop-fame-mechanics/charts/chart2_album_to_single_shift.plotly.json" data-source="Data: MusicBrainz / MetaBrainz CC0 dumps, Wikidata, Billboard-style public chart references - ARTOMETRICS" role="img" aria-label="The unit of music fame moved from album to track"></div>
+  <div class="art-chart-live" data-chart="/data/articles/musicbrainz-pop-fame-mechanics/charts/chart2_album_to_single_shift.plotly.json" data-source="Data: MusicBrainz / MetaBrainz CC0 dumps, Wikidata, Billboard-style public chart references - ARTOMETRICS" role="img" aria-label="The unit of music fame moved from album to track" data-fallback="/images/content/articles/musicbrainz-pop-fame-mechanics/charts/chart2_album_to_single_shift.png"></div>
 </figure>
 <p class="art-p">The album was once the central unit of career meaning. Streaming did not erase albums, but it weakened their monopoly over measurement.</p>
 <p class="art-p">That changes how artists are evaluated: volume, playlisting, singles, and virality can now compete with the old album-cycle narrative. Release-group and recording counts in MusicBrainz are how that shift becomes visible in metadata.</p>
@@ -84,7 +84,7 @@ faq:
 <h2 id="genre-travel" class="anchored">Genre Travel</h2>
 <h3 id="genre-travel-look" class="anchored">Genres travel through different balances of global reach and local identity</h3>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/musicbrainz-pop-fame-mechanics/charts/chart3_genre_global_local.plotly.json" data-source="Data: MusicBrainz / MetaBrainz CC0 dumps, Wikidata, Billboard-style public chart references - ARTOMETRICS" role="img" aria-label="Genres travel through different balances of global reach and local identity"></div>
+  <div class="art-chart-live" data-chart="/data/articles/musicbrainz-pop-fame-mechanics/charts/chart3_genre_global_local.plotly.json" data-source="Data: MusicBrainz / MetaBrainz CC0 dumps, Wikidata, Billboard-style public chart references - ARTOMETRICS" role="img" aria-label="Genres travel through different balances of global reach and local identity" data-fallback="/images/content/articles/musicbrainz-pop-fame-mechanics/charts/chart3_genre_global_local.png"></div>
 </figure>
 <p class="art-p">Latin music shows that local identity can be a globalization engine. Country shows the opposite problem: a powerful local ritual that travels less cleanly.</p>
 <p class="art-p">Genres are cultural systems, not just sound categories. Tag and area fields in open music databases are one way to watch those systems cross borders.</p>
@@ -92,7 +92,7 @@ faq:
 <h2 id="fame-paths" class="anchored">Fame Paths</h2>
 <h3 id="fame-paths-look" class="anchored">Some fame paths decay faster than others</h3>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/musicbrainz-pop-fame-mechanics/charts/chart4_fame_path_durability.plotly.json" data-source="Data: MusicBrainz / MetaBrainz CC0 dumps, Wikidata, Billboard-style public chart references - ARTOMETRICS" role="img" aria-label="Some fame paths decay faster than others"></div>
+  <div class="art-chart-live" data-chart="/data/articles/musicbrainz-pop-fame-mechanics/charts/chart4_fame_path_durability.plotly.json" data-source="Data: MusicBrainz / MetaBrainz CC0 dumps, Wikidata, Billboard-style public chart references - ARTOMETRICS" role="img" aria-label="Some fame paths decay faster than others" data-fallback="/images/content/articles/musicbrainz-pop-fame-mechanics/charts/chart4_fame_path_durability.png"></div>
 </figure>
 <p class="art-p">Virality can be enormous and fragile. Band mythology, touring, and critical canon move more slowly but often last longer.</p>
 <p class="art-p">That is why one-hit wonder, cult classic, superstar, and legacy act are different data shapes — seven paths in the frame, not one ladder.</p>
@@ -100,7 +100,7 @@ faq:
 <h2 id="reinvention" class="anchored">Reinvention</h2>
 <h3 id="reinvention-look" class="anchored">Reinvention lets artists become eras rather than single moments</h3>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/musicbrainz-pop-fame-mechanics/charts/chart5_reinvention_vs_canon.plotly.json" data-source="Data: MusicBrainz / MetaBrainz CC0 dumps, Wikidata, Billboard-style public chart references - ARTOMETRICS" role="img" aria-label="Reinvention lets artists become eras rather than single moments"></div>
+  <div class="art-chart-live" data-chart="/data/articles/musicbrainz-pop-fame-mechanics/charts/chart5_reinvention_vs_canon.plotly.json" data-source="Data: MusicBrainz / MetaBrainz CC0 dumps, Wikidata, Billboard-style public chart references - ARTOMETRICS" role="img" aria-label="Reinvention lets artists become eras rather than single moments" data-fallback="/images/content/articles/musicbrainz-pop-fame-mechanics/charts/chart5_reinvention_vs_canon.png"></div>
 </figure>
 <p class="art-p">Madonna, Taylor Swift, Beyoncé, and the Beatles each show a different version of era-making. They do not merely release songs; they reorganize their own interpretive frame.</p>
 <p class="art-p">That is a cultural metric: the ability to make the audience learn a new version of you — visible in aliases, style tags, and release eras as much as in chart peaks.</p>

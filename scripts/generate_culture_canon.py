@@ -15,6 +15,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 BLOG_DIR = ROOT / "src" / "content" / "blog"
 DATA_DIR = ROOT / "public" / "data" / "articles"
+IMG_DIR = ROOT / "public" / "images" / "content" / "articles"
 PUBLIC = ROOT / "public"
 DOCS_DIR = ROOT / "docs"
 
@@ -67,6 +68,21 @@ def write_chart(slug: str, chart_id: str, spec: dict):
     path = DATA_DIR / slug / "charts" / f"{chart_id}.plotly.json"
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(spec, separators=(",", ":")))
+    try:
+        import plotly.graph_objects as go
+
+        fig = go.Figure(data=spec.get("data") or [], layout=spec.get("layout") or {}, skip_invalid=True)
+        png_path = IMG_DIR / slug / "charts" / f"{chart_id}.png"
+        png_path.parent.mkdir(parents=True, exist_ok=True)
+        fig.write_image(str(png_path), width=1200, height=700, scale=2)
+        fig.write_html(
+            str(path.with_name(f"{chart_id}.html")),
+            include_plotlyjs="cdn",
+            full_html=True,
+            config={"responsive": True, "displayModeBar": False},
+        )
+    except Exception as exc:  # noqa: BLE001
+        print(f"warn: could not dual-export {slug}/{chart_id}: {exc}")
 
 
 def bar_h(y, x, colors=None, *, name="", hover="<b>%{y}</b><br>Value: %{x}<extra></extra>"):
@@ -145,6 +161,7 @@ def chart_html(slug: str, chart_id: str, caption: str, source: str) -> str:
     return (
         '<figure class="art-chart">\n'
         f'  <div class="art-chart-live" data-chart="/data/articles/{slug}/charts/{chart_id}.plotly.json" '
+        f'data-fallback="/images/content/articles/{slug}/charts/{chart_id}.png" '
         f'data-source="{source}" role="img" aria-label="{caption}"></div>\n'
         f'  <figcaption class="art-chart-caption">{caption}</figcaption>\n'
         "</figure>"

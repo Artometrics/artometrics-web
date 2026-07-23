@@ -10,11 +10,15 @@ const FALLBACK_SCRIPT = `
     el.innerHTML = '';
     var img = document.createElement('img');
     img.src = fb;
-    img.alt = el.getAttribute('data-title') || 'Chart';
+    img.alt = el.getAttribute('aria-label') || el.getAttribute('data-title') || 'Chart';
+    img.className = 'art-chart-fallback';
     img.style.width = '100%';
     img.style.height = 'auto';
+    img.loading = 'lazy';
     el.appendChild(img);
     el.classList.add('art-chart-live--static', 'art-chart-live--ready');
+    var figure = el.closest('figure.art-chart');
+    if (figure) figure.classList.add('art-chart--print');
   });
 })();
 true;

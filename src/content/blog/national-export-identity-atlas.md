@@ -65,35 +65,35 @@ faq:
 <h2 id="scale-and-complexity" class="anchored">Scale and complexity</h2>
 <h3 id="scale-and-complexity-look" class="anchored">Countries differ by export scale and product complexity</h3>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/national-export-identity-atlas/charts/chart1_complexity_vs_scale.plotly.json" data-source="Data: OEC, UN Comtrade, World Bank WDI, OECD, IMF, World Bank TCdata360 - ARTOMETRICS" role="img" aria-label="Countries differ by export scale and product complexity"></div>
+  <div class="art-chart-live" data-chart="/data/articles/national-export-identity-atlas/charts/chart1_complexity_vs_scale.plotly.json" data-source="Data: OEC, UN Comtrade, World Bank WDI, OECD, IMF, World Bank TCdata360 - ARTOMETRICS" role="img" aria-label="Countries differ by export scale and product complexity" data-fallback="/images/content/articles/national-export-identity-atlas/charts/chart1_complexity_vs_scale.png"></div>
 </figure>
 <p class="art-p">The OEC lens is powerful because exports reveal what a country can reliably make and sell into the world. Scale and complexity are different axes: volume without sophistication is one identity; sophistication without volume is another; both together is rarer.</p>
 <p class="art-p">Countries plotted high on both dimensions occupy a different strategic neighborhood from resource giants that score high on scale alone. The chart's job is to stop those neighborhoods from being collapsed into a single big-exporter label.</p>
 <h2 id="product-identity" class="anchored">Product identity</h2>
 <h3 id="product-identity-look" class="anchored">Some export categories become national symbols</h3>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/national-export-identity-atlas/charts/chart2_product_identity.plotly.json" data-source="Data: OEC, UN Comtrade, World Bank WDI, OECD, IMF, World Bank TCdata360 - ARTOMETRICS" role="img" aria-label="Some export categories become national symbols"></div>
+  <div class="art-chart-live" data-chart="/data/articles/national-export-identity-atlas/charts/chart2_product_identity.plotly.json" data-source="Data: OEC, UN Comtrade, World Bank WDI, OECD, IMF, World Bank TCdata360 - ARTOMETRICS" role="img" aria-label="Some export categories become national symbols" data-fallback="/images/content/articles/national-export-identity-atlas/charts/chart2_product_identity.png"></div>
 </figure>
 <p class="art-p">Cars, electronics, oil, pharmaceuticals, aircraft, software, agriculture, and textiles are not just commodities. They become reputational shorthand — Germany and machines, Saudi Arabia and energy, the United States and software services.</p>
 <p class="art-p">That is the cultural economics layer of trade: exports become part of national mythology when they are repeated long enough to feel like character. The data still matter because mythology that loses market share eventually becomes nostalgia.</p>
 <h2 id="export-frontier" class="anchored">The export frontier moved</h2>
 <h3 id="export-frontier-look" class="anchored">The frontier moved from resources to factories to systems and IP</h3>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/national-export-identity-atlas/charts/chart3_global_export_shift.plotly.json" data-source="Data: OEC, UN Comtrade, World Bank WDI, OECD, IMF, World Bank TCdata360 - ARTOMETRICS" role="img" aria-label="The frontier moved from resources to factories to systems and IP"></div>
+  <div class="art-chart-live" data-chart="/data/articles/national-export-identity-atlas/charts/chart3_global_export_shift.plotly.json" data-source="Data: OEC, UN Comtrade, World Bank WDI, OECD, IMF, World Bank TCdata360 - ARTOMETRICS" role="img" aria-label="The frontier moved from resources to factories to systems and IP" data-fallback="/images/content/articles/national-export-identity-atlas/charts/chart3_global_export_shift.png"></div>
 </figure>
 <p class="art-p">The last generation of globalization did not erase goods. It added services, software, intellectual property, finance, and standards to the frontier. Manufacturing indices that peak and then soften while services and IP climb are the signature of that shift.</p>
 <p class="art-p">A modern country atlas must therefore track both containers and code. An economy that only reports tonnage will misread its own power — and its own vulnerability.</p>
 <h2 id="fingerprint" class="anchored">Export fingerprints</h2>
 <h3 id="fingerprint-look" class="anchored">The export fingerprint is the mix, not just the headline product</h3>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/national-export-identity-atlas/charts/chart4_export_fingerprint.plotly.json" data-source="Data: OEC, UN Comtrade, World Bank WDI, OECD, IMF, World Bank TCdata360 - ARTOMETRICS" role="img" aria-label="The export fingerprint is the mix, not just the headline product"></div>
+  <div class="art-chart-live" data-chart="/data/articles/national-export-identity-atlas/charts/chart4_export_fingerprint.plotly.json" data-source="Data: OEC, UN Comtrade, World Bank WDI, OECD, IMF, World Bank TCdata360 - ARTOMETRICS" role="img" aria-label="The export fingerprint is the mix, not just the headline product" data-fallback="/images/content/articles/national-export-identity-atlas/charts/chart4_export_fingerprint.png"></div>
 </figure>
 <p class="art-p">Germany and Japan can look similar through machines and vehicles, while Brazil and Saudi Arabia show very different resource and food signatures. The fingerprint is the mix across machines, vehicles, chemicals, resources, food, and services — not a single headline product.</p>
 <p class="art-p">The question is not only what a place sells. It is what would break if the world stopped buying it, and what prestige categories would remain even if volume fell.</p>
 <h2 id="dependency-questions" class="anchored">Dependency questions</h2>
 <h3 id="dependency-questions-look" class="anchored">A country identity atlas asks what the world buys, substitutes, and depends on</h3>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/national-export-identity-atlas/charts/chart5_country_questions.plotly.json" data-source="Data: OEC, UN Comtrade, World Bank WDI, OECD, IMF, World Bank TCdata360 - ARTOMETRICS" role="img" aria-label="A country identity report asks what the world buys, substitutes, and depends on"></div>
+  <div class="art-chart-live" data-chart="/data/articles/national-export-identity-atlas/charts/chart5_country_questions.plotly.json" data-source="Data: OEC, UN Comtrade, World Bank WDI, OECD, IMF, World Bank TCdata360 - ARTOMETRICS" role="img" aria-label="A country identity report asks what the world buys, substitutes, and depends on" data-fallback="/images/content/articles/national-export-identity-atlas/charts/chart5_country_questions.png"></div>
 </figure>
 <p class="art-p">The atlas ends with vulnerability questions: what does the country sell, who buys it, what inputs does it need, what could replace it, what carries prestige, and what is vulnerable? Those six prompts turn trade tables into identity analysis.</p>
 <p class="art-p">Countries that cannot answer them with data are flying blind about their own external face. Countries that answer only with slogans are doing public relations, not strategy.</p>

@@ -65,7 +65,7 @@ faq:
 <h2 id="why-they-are-compared" class="anchored">Why They Are Compared</h2>
 <h3 id="why-they-are-compared-look" class="anchored">California and Texas are rival systems because both are big enough to feel like countries</h3>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/california-vs-texas-state-rivalry/charts/chart1_why_compared.plotly.json" data-source="Data: BEA, Census ACS, BLS, IRS migration summaries, OEC/ITA exports, state budget documents - ARTOMETRICS" role="img" aria-label="California and Texas are rival systems because both are big enough to feel like countries"></div>
+  <div class="art-chart-live" data-chart="/data/articles/california-vs-texas-state-rivalry/charts/chart1_why_compared.plotly.json" data-source="Data: BEA, Census ACS, BLS, IRS migration summaries, OEC/ITA exports, state budget documents - ARTOMETRICS" role="img" aria-label="California and Texas are rival systems because both are big enough to feel like countries" data-fallback="/images/content/articles/california-vs-texas-state-rivalry/charts/chart1_why_compared.png"></div>
 </figure>
 <p class="art-p">On the rivalry radar, California scores at the top on GDP scale (<strong>96</strong>), population (<strong>94</strong>), tech role (<strong>94</strong>), and cultural output (<strong>91</strong>), with a high tax-burden debate score (<strong>88</strong>) and a low energy-role score (<strong>46</strong>). Texas mirrors with energy at <strong>96</strong>, migration attention at <strong>91</strong>, population at <strong>88</strong>, and GDP scale at <strong>86</strong>, while cultural output sits lower at <strong>68</strong>.</p>
 <p class="art-p">People compare them because they are competing governance models, labor markets, export systems, and migration symbols — not because they are interchangeable states with different logos.</p>
@@ -73,7 +73,7 @@ faq:
 <h2 id="growth-model" class="anchored">Growth Model</h2>
 <h3 id="growth-model-look" class="anchored">California compounds knowledge while Texas compounds growth capacity</h3>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/california-vs-texas-state-rivalry/charts/chart2_growth_story.plotly.json" data-source="Data: BEA, Census ACS, BLS, IRS migration summaries, OEC/ITA exports, state budget documents - ARTOMETRICS" role="img" aria-label="California compounds knowledge while Texas compounds growth capacity"></div>
+  <div class="art-chart-live" data-chart="/data/articles/california-vs-texas-state-rivalry/charts/chart2_growth_story.plotly.json" data-source="Data: BEA, Census ACS, BLS, IRS migration summaries, OEC/ITA exports, state budget documents - ARTOMETRICS" role="img" aria-label="California compounds knowledge while Texas compounds growth capacity" data-fallback="/images/content/articles/california-vs-texas-state-rivalry/charts/chart2_growth_story.png"></div>
 </figure>
 <p class="art-p">California’s knowledge/IP model index stays high across the timeline — from the low <strong>90s</strong> in 2000–2010 to a peak near <strong>98</strong> in 2020. Texas’s growth/energy model climbs from about <strong>61</strong> in 2000 to about <strong>90</strong> by 2025 in this editorial series.</p>
 <p class="art-p">One compounds intellectual property, entertainment, venture networks, and universities. The other compounds energy, land, logistics, and relocation capacity. The rivalry persists because the models are not substitutes.</p>
@@ -81,7 +81,7 @@ faq:
 <h2 id="export-fingerprint" class="anchored">Export Fingerprint</h2>
 <h3 id="export-fingerprint-look" class="anchored">The states overlap in scale but diverge in what they export to the world</h3>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/california-vs-texas-state-rivalry/charts/chart3_export_fingerprint.plotly.json" data-source="Data: BEA, Census ACS, BLS, IRS migration summaries, OEC/ITA exports, state budget documents - ARTOMETRICS" role="img" aria-label="The states overlap in scale but diverge in what they export to the world"></div>
+  <div class="art-chart-live" data-chart="/data/articles/california-vs-texas-state-rivalry/charts/chart3_export_fingerprint.plotly.json" data-source="Data: BEA, Census ACS, BLS, IRS migration summaries, OEC/ITA exports, state budget documents - ARTOMETRICS" role="img" aria-label="The states overlap in scale but diverge in what they export to the world" data-fallback="/images/content/articles/california-vs-texas-state-rivalry/charts/chart3_export_fingerprint.png"></div>
 </figure>
 <p class="art-p">The export fingerprint contrasts software/IP, entertainment, and related strengths on the California side with energy and logistics weight on the Texas side, while agriculture, aerospace, and other families overlap in more complicated ways than slogan versions admit.</p>
 <p class="art-p">Same-scale GDP conversations hide different machinery. What each state sells to the world is the cleanest way to keep the comparison honest.</p>
@@ -89,7 +89,7 @@ faq:
 <h2 id="hidden-tradeoffs" class="anchored">Hidden Tradeoffs</h2>
 <h3 id="hidden-tradeoffs-look" class="anchored">The rivalry is about cost, climate, wages, culture, and risk, not taxes alone</h3>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/california-vs-texas-state-rivalry/charts/chart4_hidden_tradeoffs.plotly.json" data-source="Data: BEA, Census ACS, BLS, IRS migration summaries, OEC/ITA exports, state budget documents - ARTOMETRICS" role="img" aria-label="The rivalry is about cost, climate, wages, culture, and risk, not taxes alone"></div>
+  <div class="art-chart-live" data-chart="/data/articles/california-vs-texas-state-rivalry/charts/chart4_hidden_tradeoffs.plotly.json" data-source="Data: BEA, Census ACS, BLS, IRS migration summaries, OEC/ITA exports, state budget documents - ARTOMETRICS" role="img" aria-label="The rivalry is about cost, climate, wages, culture, and risk, not taxes alone" data-fallback="/images/content/articles/california-vs-texas-state-rivalry/charts/chart4_hidden_tradeoffs.png"></div>
 </figure>
 <p class="art-p">Cost, climate risk, wages, culture, and business formation do not move as a single tax variable. The tradeoff scatter keeps multiple dimensions in view at once — high-cost magnetism on one side, capacity and exposure on the other.</p>
 <p class="art-p">California’s wage ceiling and cultural pull are real; Texas’s formation and logistics advantages are real; energy and climate risk are real. A serious comparison refuses to delete any of those axes.</p>
@@ -97,7 +97,7 @@ faq:
 <h2 id="what-to-ask-next" class="anchored">What to Ask Next</h2>
 <h3 id="what-to-ask-next-look" class="anchored">The useful California-Texas questions are about irreplaceable exports, talent, climate, and who benefits</h3>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/california-vs-texas-state-rivalry/charts/chart5_rivalry_questions.plotly.json" data-source="Data: BEA, Census ACS, BLS, IRS migration summaries, OEC/ITA exports, state budget documents - ARTOMETRICS" role="img" aria-label="The useful California-Texas questions are about irreplaceable exports, talent, climate, and who benefits"></div>
+  <div class="art-chart-live" data-chart="/data/articles/california-vs-texas-state-rivalry/charts/chart5_rivalry_questions.plotly.json" data-source="Data: BEA, Census ACS, BLS, IRS migration summaries, OEC/ITA exports, state budget documents - ARTOMETRICS" role="img" aria-label="The useful California-Texas questions are about irreplaceable exports, talent, climate, and who benefits" data-fallback="/images/content/articles/california-vs-texas-state-rivalry/charts/chart5_rivalry_questions.png"></div>
 </figure>
 <p class="art-p">The ranked questions elevate talent compounding (<strong>95</strong>), irreplaceable exports (<strong>93</strong>), climate handling (<strong>91</strong>), who benefits from growth (<strong>88</strong>), whether migration is tax-driven (<strong>86</strong>), and what each state must import (<strong>79</strong>).</p>
 <p class="art-p">The useful prompt is not “which state is better?” It is which capabilities each system cannot copy from the other — the starting point for migration, housing, export, and culture follow-ups.</p>

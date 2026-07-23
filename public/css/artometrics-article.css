@@ -1517,6 +1517,39 @@ pre:has(> code.sourceCode.sql),
 .artometrics-article-body .art-chart--interactive .art-chart-fallback{
   display: none !important;
 }
+html[data-theme="dark"] .artometrics-article-body .art-chart--has-mode .art-chart-live{
+  border-color: #404040 !important;
+}
+html[data-theme="dark"] .artometrics-article-body .art-chart-mode-switch{
+  border-color: #525252 !important;
+  background: #171717 !important;
+}
+html[data-theme="dark"] .artometrics-article-body .art-chart-mode-switch__btn{
+  color: #A3A3A3 !important;
+  border-right-color: #525252 !important;
+}
+html[data-theme="dark"] .artometrics-article-body .art-chart-mode-switch__btn.is-active,
+html[data-theme="dark"] .artometrics-article-body .art-chart-mode-switch__btn[aria-selected="true"]{
+  color: #FAFAFA !important;
+  background: #C0392B !important;
+}
+html[data-theme="dark"] .artometrics-article-body .art-chart-mode-switch__btn:hover:not(.is-active),
+html[data-theme="dark"] .artometrics-article-body .art-chart-mode-switch__btn:focus-visible:not(.is-active){
+  color: #FAFAFA !important;
+  background: #262626 !important;
+}
+@media (max-width: 600px) {
+  .artometrics-article-body .art-chart-mode-switch{
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .artometrics-article-body .art-chart-mode-switch__btn{
+    flex: 1 1 50% !important;
+    text-align: center !important;
+  }
+}
 .artometrics-article-body .art-chart-toolbar{
   position: absolute !important;
   top: 0.55rem !important;

@@ -82,7 +82,7 @@ faq:
 <h2 id="banner-cycles" class="anchored">Los Angeles does not win smoothly—it wins in acts</h2>
 <h3 id="banner-cycles-look" class="anchored">Lakers championships by decade</h3>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/lakers-the-artometrics-of-basketball-glamour/charts/chart1_titles_by_decade.plotly.json" data-source="Data: Basketball Reference, NBA.com, Sports Reference - ARTOMETRICS" role="img" aria-label="Lakers championships by decade"></div>
+  <div class="art-chart-live" data-chart="/data/articles/lakers-the-artometrics-of-basketball-glamour/charts/chart1_titles_by_decade.plotly.json" data-source="Data: Basketball Reference, NBA.com, Sports Reference - ARTOMETRICS" role="img" aria-label="Lakers championships by decade" data-fallback="/images/content/articles/lakers-the-artometrics-of-basketball-glamour/charts/chart1_titles_by_decade.png"></div>
 </figure>
 <p class="art-p">The Lakers do not win as a smooth institution. They win in eras: Mikan, Showtime, Shaq and Kobe, Kobe and Pau, LeBron and Davis. Showtime’s five titles in a single decade remain the clearest proof that concentrated star power can industrialize a window.</p>
 <p class="art-p">The data confirms the folklore. Los Angeles is not a steady-state winner. It is a machine for converting transcendent stars into concentrated title runs.</p>
@@ -90,7 +90,7 @@ faq:
 <h2 id="the-two-name-ceiling" class="anchored">The NBA’s title race is still a two-name conversation</h2>
 <h3 id="the-two-name-ceiling-look" class="anchored">NBA championships by major franchise</h3>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/lakers-the-artometrics-of-basketball-glamour/charts/chart2_title_race.plotly.json" data-source="Data: Basketball Reference, NBA.com, Sports Reference - ARTOMETRICS" role="img" aria-label="NBA championships by major franchise"></div>
+  <div class="art-chart-live" data-chart="/data/articles/lakers-the-artometrics-of-basketball-glamour/charts/chart2_title_race.plotly.json" data-source="Data: Basketball Reference, NBA.com, Sports Reference - ARTOMETRICS" role="img" aria-label="NBA championships by major franchise" data-fallback="/images/content/articles/lakers-the-artometrics-of-basketball-glamour/charts/chart2_title_race.png"></div>
 </figure>
 <p class="art-p">The Lakers–Celtics comparison is not sports-talk filler. It is the actual shape of NBA history. Everyone else fights for the second tier while Boston and Los Angeles define the ceiling.</p>
 <p class="art-p">For an NBA expert, the live argument is not whether the Lakers are elite. It is how often glamour can rebuild itself before the market advantage decays.</p>
@@ -98,7 +98,7 @@ faq:
 <h2 id="star-engines" class="anchored">The product is star gravity, not just basketball</h2>
 <h3 id="star-engines-look" class="anchored">Championships by defining Lakers star era</h3>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/lakers-the-artometrics-of-basketball-glamour/charts/chart3_star_engines.plotly.json" data-source="Data: Basketball Reference, NBA.com, Sports Reference - ARTOMETRICS" role="img" aria-label="Championships by defining Lakers star era"></div>
+  <div class="art-chart-live" data-chart="/data/articles/lakers-the-artometrics-of-basketball-glamour/charts/chart3_star_engines.plotly.json" data-source="Data: Basketball Reference, NBA.com, Sports Reference - ARTOMETRICS" role="img" aria-label="Championships by defining Lakers star era" data-fallback="/images/content/articles/lakers-the-artometrics-of-basketball-glamour/charts/chart3_star_engines.png"></div>
 </figure>
 <p class="art-p">Six defining title eras from Mikan to LeBron/AD show the same front-office product: star gravity. When the right face arrives, supporting pieces and narrative suddenly align. When the face leaves, the franchise can look ordinary faster than its brand admits.</p>
 <p class="art-p">That risk is the cost of the model. Hollywood acts need casting. Between leads, the script stalls.</p>
@@ -106,7 +106,7 @@ faq:
 <h2 id="final-table-frequency" class="anchored">The real glamour metric is recurring invitation</h2>
 <h3 id="final-table-frequency-look" class="anchored">Finals appearances by decade</h3>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/lakers-the-artometrics-of-basketball-glamour/charts/chart4_finals_frequency.plotly.json" data-source="Data: Basketball Reference, NBA.com, Sports Reference - ARTOMETRICS" role="img" aria-label="Finals appearances by decade"></div>
+  <div class="art-chart-live" data-chart="/data/articles/lakers-the-artometrics-of-basketball-glamour/charts/chart4_finals_frequency.plotly.json" data-source="Data: Basketball Reference, NBA.com, Sports Reference - ARTOMETRICS" role="img" aria-label="Finals appearances by decade" data-fallback="/images/content/articles/lakers-the-artometrics-of-basketball-glamour/charts/chart4_finals_frequency.png"></div>
 </figure>
 <p class="art-p">Championships are rare. Appearances measure institutional access. Across tactical eras, ownership eras, and league economics, the Lakers have repeatedly returned to the final table.</p>
 <p class="art-p">That is the durable glamour metric: not invincibility, but recurring invitation. The franchise stays in the rooms where eras can begin.</p>
@@ -114,7 +114,7 @@ faq:
 <h2 id="winter-in-los-angeles" class="anchored">Even Hollywood winters demand the next organizing star</h2>
 <h3 id="winter-in-los-angeles-look" class="anchored">Selected gaps between Lakers championships</h3>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/lakers-the-artometrics-of-basketball-glamour/charts/chart5_banner_gaps.plotly.json" data-source="Data: Basketball Reference, NBA.com, Sports Reference - ARTOMETRICS" role="img" aria-label="Selected gaps between Lakers championships"></div>
+  <div class="art-chart-live" data-chart="/data/articles/lakers-the-artometrics-of-basketball-glamour/charts/chart5_banner_gaps.plotly.json" data-source="Data: Basketball Reference, NBA.com, Sports Reference - ARTOMETRICS" role="img" aria-label="Selected gaps between Lakers championships" data-fallback="/images/content/articles/lakers-the-artometrics-of-basketball-glamour/charts/chart5_banner_gaps.png"></div>
 </figure>
 <p class="art-p">The Lakers have winters. They just rarely become permanent seasons. The brand’s advantage is patience with a recruitment magnet attached: the next star can always imagine becoming the next chapter.</p>
 <p class="art-p">The gaps are reminders, not obituaries. Even the most glamorous franchise needs the next organizing star before the machine restarts.</p>

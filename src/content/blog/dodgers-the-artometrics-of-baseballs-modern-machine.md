@@ -81,7 +81,7 @@ faq:
 <h2 id="pennant-machine" class="anchored">Los Angeles is built to manufacture October chances</h2>
 <h3 id="pennant-machine-look" class="anchored">Dodgers pennants by decade</h3>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/dodgers-the-artometrics-of-baseballs-modern-machine/charts/chart1_pennant_machine.plotly.json" data-source="Data: Baseball Reference, Lahman, Retrosheet, Forbes - ARTOMETRICS" role="img" aria-label="Dodgers pennants by decade"></div>
+  <div class="art-chart-live" data-chart="/data/articles/dodgers-the-artometrics-of-baseballs-modern-machine/charts/chart1_pennant_machine.plotly.json" data-source="Data: Baseball Reference, Lahman, Retrosheet, Forbes - ARTOMETRICS" role="img" aria-label="Dodgers pennants by decade" data-fallback="/images/content/articles/dodgers-the-artometrics-of-baseballs-modern-machine/charts/chart1_pennant_machine.png"></div>
 </figure>
 <p class="art-p">The Dodgers are built around access: reaching October, staying in the pennant race, repeatedly giving randomness a chance to break their way. Pennants by decade show an organization that treats opportunity as a renewable resource.</p>
 <p class="art-p">Read that way, Los Angeles looks less like a pure championship factory and more like a machine for creating the conditions where championships become possible.</p>
@@ -89,7 +89,7 @@ faq:
 <h2 id="title-context" class="anchored">Historically elite—without Yankee-scale monopoly</h2>
 <h3 id="title-context-look" class="anchored">World Series titles among historic MLB franchises</h3>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/dodgers-the-artometrics-of-baseballs-modern-machine/charts/chart2_title_context.plotly.json" data-source="Data: Baseball Reference, Lahman, Retrosheet, Forbes - ARTOMETRICS" role="img" aria-label="World Series titles among historic MLB franchises"></div>
+  <div class="art-chart-live" data-chart="/data/articles/dodgers-the-artometrics-of-baseballs-modern-machine/charts/chart2_title_context.plotly.json" data-source="Data: Baseball Reference, Lahman, Retrosheet, Forbes - ARTOMETRICS" role="img" aria-label="World Series titles among historic MLB franchises" data-fallback="/images/content/articles/dodgers-the-artometrics-of-baseballs-modern-machine/charts/chart2_title_context.png"></div>
 </figure>
 <p class="art-p">Eight titles place the Dodgers among baseball’s historic clubs without putting them in the Yankees’ separate category. Their modern argument rests on consistency: they have made contention feel industrial.</p>
 <p class="art-p">For a baseball expert, the question is not whether the Dodgers are good. It is whether a high-floor machine can beat postseason variance often enough to match its regular-season reputation.</p>
@@ -97,7 +97,7 @@ faq:
 <h2 id="the-90-win-floor" class="anchored">Since the 2010s, 90-win baseball has looked normal</h2>
 <h3 id="the-90-win-floor-look" class="anchored">Dodgers regular-season wins in the modern contention era</h3>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/dodgers-the-artometrics-of-baseballs-modern-machine/charts/chart3_regular_season_floor.plotly.json" data-source="Data: Baseball Reference, Lahman, Retrosheet, Forbes - ARTOMETRICS" role="img" aria-label="Dodgers regular-season wins in the modern contention era"></div>
+  <div class="art-chart-live" data-chart="/data/articles/dodgers-the-artometrics-of-baseballs-modern-machine/charts/chart3_regular_season_floor.plotly.json" data-source="Data: Baseball Reference, Lahman, Retrosheet, Forbes - ARTOMETRICS" role="img" aria-label="Dodgers regular-season wins in the modern contention era" data-fallback="/images/content/articles/dodgers-the-artometrics-of-baseballs-modern-machine/charts/chart3_regular_season_floor.png"></div>
 </figure>
 <p class="art-p">Since the early 2010s, the Dodgers have made 90-win baseball look normal. That is not normal. It is organizational infrastructure showing up as a line chart—the 111-win 2022 season as the ceiling spike inside a sustained high floor.</p>
 <p class="art-p">The shortened 2020 season interrupts the scale, but not the story. The floor stayed high even when the schedule compressed.</p>
@@ -105,7 +105,7 @@ faq:
 <h2 id="spending-conversion" class="anchored">Spending is structural—October still breaks machines</h2>
 <h3 id="spending-conversion-look" class="anchored">Payroll rank and October outcome markers</h3>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/dodgers-the-artometrics-of-baseballs-modern-machine/charts/chart4_spending_conversion.plotly.json" data-source="Data: Baseball Reference, Lahman, Retrosheet, Forbes - ARTOMETRICS" role="img" aria-label="Payroll rank and October outcome markers"></div>
+  <div class="art-chart-live" data-chart="/data/articles/dodgers-the-artometrics-of-baseballs-modern-machine/charts/chart4_spending_conversion.plotly.json" data-source="Data: Baseball Reference, Lahman, Retrosheet, Forbes - ARTOMETRICS" role="img" aria-label="Payroll rank and October outcome markers" data-fallback="/images/content/articles/dodgers-the-artometrics-of-baseballs-modern-machine/charts/chart4_spending_conversion.png"></div>
 </figure>
 <p class="art-p">Los Angeles spends, but the spending is less impulsive than structural: depth, scouting, player development, stars, and injury insurance. Payroll rank and October markers show how often that infrastructure buys access—and how often short series erase it.</p>
 <p class="art-p">Postseason baseball can make the best system look fragile in a five-game sample. The contradiction is the point of the modern Dodgers debate.</p>
@@ -113,7 +113,7 @@ faq:
 <h2 id="the-1988-shadow" class="anchored">Thirty-two years of access without closure still shape the brand</h2>
 <h3 id="the-1988-shadow-look" class="anchored">Selected Dodgers championship gaps</h3>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/dodgers-the-artometrics-of-baseballs-modern-machine/charts/chart5_ring_gap.plotly.json" data-source="Data: Baseball Reference, Lahman, Retrosheet, Forbes - ARTOMETRICS" role="img" aria-label="Selected Dodgers championship gaps"></div>
+  <div class="art-chart-live" data-chart="/data/articles/dodgers-the-artometrics-of-baseballs-modern-machine/charts/chart5_ring_gap.plotly.json" data-source="Data: Baseball Reference, Lahman, Retrosheet, Forbes - ARTOMETRICS" role="img" aria-label="Selected Dodgers championship gaps" data-fallback="/images/content/articles/dodgers-the-artometrics-of-baseballs-modern-machine/charts/chart5_ring_gap.png"></div>
 </figure>
 <p class="art-p">The thirty-two years between 1988 and 2020 remain the emotional center of modern Dodger analysis. The team was often good, sometimes excellent, and still ringless. Access without closure became the franchise’s defining frustration.</p>
 <p class="art-p">That is why 2020 and 2024 matter differently. They validate the machine after decades of opportunity that refused to finish.</p>

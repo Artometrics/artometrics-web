@@ -37,7 +37,9 @@
     "cos:zine": "node scripts/content-os/pack-ig-zine.mjs",
     "cos:magazine-cleanup": "node scripts/content-os/magazine-body-cleanup.mjs",
     "cos:rainfall-pass": "node scripts/content-os/rainfall-article-pass.mjs",
-    "cos:rainfall-rewrite": "node scripts/content-os/rainfall-full-rewrite.mjs"
+    "cos:rainfall-rewrite": "node scripts/content-os/rainfall-full-rewrite.mjs",
+    "charts:backfill": "python3 scripts/backfill-chart-pngs.py",
+    "test:chart-toggle": "node scripts/test-chart-mode-toggle.mjs"
   },
   "engines": {
     "node": ">=20.0.0"
