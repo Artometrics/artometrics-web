@@ -4,8 +4,21 @@ import { PageSeo } from "@/components/PageSeo";
 import { Fonts } from "@/constants/Colors";
 import { useTheme } from "@/lib/theme";
 
+const IOS_URL =
+  process.env.EXPO_PUBLIC_IOS_STORE_URL?.trim() ||
+  process.env.EXPO_PUBLIC_APP_STORE_URL?.trim() ||
+  "";
+const ANDROID_URL =
+  process.env.EXPO_PUBLIC_ANDROID_STORE_URL?.trim() ||
+  process.env.EXPO_PUBLIC_PLAY_STORE_URL?.trim() ||
+  "";
+const TESTFLIGHT_URL = process.env.EXPO_PUBLIC_TESTFLIGHT_URL?.trim() || "";
+
 export default function GetAppScreen() {
   const { colors } = useTheme();
+  const iosReady = Boolean(IOS_URL);
+  const androidReady = Boolean(ANDROID_URL);
+
   return (
     <Wrapper variant="narrow" style={styles.wrap}>
       <PageSeo
@@ -16,27 +29,42 @@ export default function GetAppScreen() {
       <Text style={[styles.eyebrow, { color: colors.accent }]}>Mobile</Text>
       <Text style={[styles.title, { color: colors.text }]}>Get the App</Text>
       <Text style={[styles.deck, { color: colors.textMuted }]}>
-        The Artometrics Expo app brings the magazine to your pocket. App Store and Play listings
-        ship after Apple Developer + EAS setup — TestFlight links land here first.
+        The Artometrics Expo app brings the magazine to your pocket — same reports, charts, and
+        membership as the web. Publisher setup guide: docs/APP_STORE_LAUNCH.md in the repo.
       </Text>
       <View style={styles.actions}>
         <Pressable
-          style={[styles.btn, { backgroundColor: colors.text }]}
-          onPress={() => Linking.openURL("https://artometrics.com")}
+          style={[styles.btn, { backgroundColor: colors.text, opacity: iosReady ? 1 : 0.55 }]}
+          onPress={() => Linking.openURL(iosReady ? IOS_URL : "https://artometrics.com/contact")}
         >
-          <Text style={[styles.btnText, { color: colors.inverse }]}>App Store — coming soon</Text>
+          <Text style={[styles.btnText, { color: colors.inverse }]}>
+            {iosReady ? "Download on the App Store" : "App Store — launching soon"}
+          </Text>
         </Pressable>
+        {TESTFLIGHT_URL ? (
+          <Pressable
+            style={[styles.btnOutline, { borderColor: colors.border }]}
+            onPress={() => Linking.openURL(TESTFLIGHT_URL)}
+          >
+            <Text style={[styles.btnOutlineText, { color: colors.text }]}>Join TestFlight</Text>
+          </Pressable>
+        ) : null}
         <Pressable
-          style={[styles.btnOutline, { borderColor: colors.border }]}
-          onPress={() => Linking.openURL("https://artometrics.com")}
+          style={[styles.btnOutline, { borderColor: colors.border, opacity: androidReady ? 1 : 0.55 }]}
+          onPress={() =>
+            Linking.openURL(androidReady ? ANDROID_URL : "https://artometrics.com/contact")
+          }
         >
           <Text style={[styles.btnOutlineText, { color: colors.text }]}>
-            Google Play — coming soon
+            {androidReady ? "Get it on Google Play" : "Google Play — after iOS"}
           </Text>
         </Pressable>
       </View>
       <Text style={[styles.note, { color: colors.textSubtle }]}>
         Prefer the web magazine? You’re already here — same reports, charts, and membership.
+        {iosReady
+          ? ""
+          : " Owner: enroll at developer.apple.com ($99/yr), then EAS build — see APP_STORE_LAUNCH.md."}
       </Text>
     </Wrapper>
   );

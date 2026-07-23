@@ -1,0 +1,21 @@
+# Privacy answers (App Store Connect questionnaire)
+
+Use these when filling **App Privacy**. Adjust if you enable ATT/IDFA later.
+
+## Data collected
+| Type | Collect? | Linked to user? | Used for tracking? | Purpose |
+|------|----------|-----------------|--------------------|---------|
+| Email address | Yes (if account) | Yes | No | App Functionality |
+| Customer support | Yes (contact) | Yes | No | App Functionality |
+| Product interaction | Yes (optional analytics) | No | No | Analytics |
+| Purchase history | Yes (subscription status via backend) | Yes | No | App Functionality |
+
+## Tracking
+**v1: No.** Do not show App Tracking Transparency. Omit advertising ID.
+
+## Third-party partners (declare if wired)
+- Supabase — auth / account  
+- Stripe — billing on web (if opened from app)  
+- Google Analytics — only if `EXPO_PUBLIC_GA_ID` set on native  
+
+Privacy policy URL: https://artometrics.com/legal/privacy

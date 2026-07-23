@@ -63,8 +63,8 @@ Prices are approximate **2026 USD list / starter tiers**. Confirm at signup. Pre
 |---|---------|-----------|--------|---------|
 | 13 | **Resend** *or* **Buttondown** | Resend free → paid; Buttondown ~$9+ | API key · Netlify form or function · `/newsletter` | Real newsletter (not HubSpot) |
 | 14 | **Transistor** *or* keep self-host | Transistor starter when downloads matter | Point `podcast.xml` / host MP3s | Professional podcast hosting + analytics |
-| 15 | **Apple Developer** | $99/**year** | Apple ID · EAS when ready | App Store (skip until web membership works) |
-| 16 | **Expo EAS** | Free tier → paid builds later | `eas.json` when shipping native | iOS/Android binaries |
+| 15 | **Apple Developer** | $99/**year** | Enroll + App Store Connect · see `docs/APP_STORE_LAUNCH.md` | Publish Artometrics as iOS publisher |
+| 16 | **Expo EAS** | Free tier → paid builds later | `eas login` · `eas.json` · secrets | Cloud iOS/Android binaries + submit |
 
 ### Tier D — Only when weekly volume justifies
 

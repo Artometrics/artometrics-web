@@ -30,6 +30,10 @@ Owner checklist: `docs/OWNER_PLAYBOOK.md` · MCP/skills: `docs/MCP_AND_SKILLS.md
 
 See **`docs/FULL_STACK_RECIPE.md`** — every affordable API/service, which tier to buy, what each hookup unlocks, and the end-state factory (reports → reels → podcast → PDF → newsletter).
 
+## App Store (iOS publisher)
+
+See **`docs/APP_STORE_LAUNCH.md`** — Apple Developer enrollment, App Store Connect, EAS build/submit, listing copy in `store/ios/`.
+
 ## Backend hookup session (next few hours)
 
 Follow **`docs/BACKEND_HOOKUP_SESSION.md`** end-to-end:

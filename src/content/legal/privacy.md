@@ -3,7 +3,7 @@ page: Privacy
 pubDate: 2025-01-19
 ---
 
-Artometrics ("we," "our," or "us") operates [artometrics.com](https://artometrics.com) and related membership services. This Privacy Policy explains what information we collect, why we collect it, and the choices you have.
+Artometrics ("we," "our," or "us") operates [artometrics.com](https://artometrics.com), the Artometrics mobile apps, and related membership services. This Privacy Policy explains what information we collect, why we collect it, and the choices you have.
 
 ## What we collect and why
 
