@@ -15,7 +15,10 @@
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false,
         "CFBundleDisplayName": "Artometrics",
-        "LSApplicationQueriesSchemes": ["https", "http"]
+        "LSApplicationQueriesSchemes": [
+          "https",
+          "http"
+        ]
       },
       "config": {
         "usesNonExemptEncryption": false
@@ -56,7 +59,8 @@
           "recordAudioAndroid": false,
           "enableBackgroundPlayback": true
         }
-      ]
+      ],
+      "expo-asset"
     ],
     "experiments": {
       "typedRoutes": true

@@ -8,17 +8,14 @@ dist/
 .git/
 *.log
 
-# Large CDN / web content (not needed to compile the binary)
-public/images/content/
-public/data/
-public/exports/
-public/audios/
-public/css/
-public/fonts/
+# Entire public/ tree is web CDN content — not required to compile the binary
+public/
 
 # Analysis / tooling not required for Expo native compile
-scripts/r/
+scripts/
 *.R
 *.Rproj
 requirements.txt
 supabase/
+store/
+data/
