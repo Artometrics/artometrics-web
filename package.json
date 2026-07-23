@@ -38,6 +38,7 @@
     "cos:downloads": "node scripts/content-os/pack-article-downloads.mjs",
     "cos:zine": "node scripts/content-os/pack-ig-zine.mjs",
     "cos:pdf": "node scripts/content-os/pack-pdf.mjs",
+    "brand:favicons": "python3 scripts/brand/generate-favicons.py",
     "cos:ebook": "node scripts/content-os/pack-ebook.mjs",
     "cos:narrate": "node scripts/content-os/narrate-elevenlabs.mjs",
     "cos:magazine-cleanup": "node scripts/content-os/magazine-body-cleanup.mjs",

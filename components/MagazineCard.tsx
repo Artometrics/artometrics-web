@@ -22,11 +22,14 @@ export function MagazineCard({
   variant?: Variant;
   width?: number;
 }) {
-  const { colors } = useTheme();
+  const { colors, mode } = useTheme();
   const label = sectionLabel(post.tags);
   const hero = assetUrl(post.heroImage);
   const author = post.author ? formatAuthorName(String(post.author)) : "Artometrics";
   const aspect = variant === "portrait" ? 4 / 5 : 16 / 10;
+  const fallbackMark = assetUrl(
+    mode === "dark" ? "/images/brand/chomsky-a-white.png" : "/images/brand/chomsky-a-black.png"
+  );
 
   return (
     <Link href={`/${post.slug}`} asChild>
@@ -48,9 +51,17 @@ export function MagazineCard({
           <View
             style={[
               styles.image,
+              styles.imageFallback,
               { aspectRatio: aspect, backgroundColor: colors.bgElevated },
             ]}
-          />
+          >
+            <Image
+              source={{ uri: fallbackMark }}
+              style={styles.fallbackMark}
+              resizeMode="contain"
+              accessibilityLabel="Artometrics"
+            />
+          </View>
         )}
         <View style={styles.body}>
           {label ? (
@@ -84,6 +95,8 @@ const styles = StyleSheet.create({
   cardFlex: { flex: 1, minWidth: 200 },
   compact: { minWidth: 160 },
   image: { width: "100%", backgroundColor: "#e5e5e5" },
+  imageFallback: { alignItems: "center", justifyContent: "center" },
+  fallbackMark: { width: 56, height: 56, opacity: 0.35 },
   body: { gap: 6 },
   kicker: {
     fontSize: 10,
