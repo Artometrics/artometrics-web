@@ -47,9 +47,9 @@
     "charts:backfill": "python3 scripts/backfill-chart-pngs.py",
     "test:chart-toggle": "node scripts/test-chart-mode-toggle.mjs",
     "test:charts": "node scripts/test-charts-smoke.mjs",
-    "eas:build:ios": "eas build -p ios --profile production",
-    "eas:build:preview": "eas build -p ios --profile preview",
-    "eas:submit:ios": "eas submit -p ios --profile production --latest"
+    "eas:build:ios": "npx eas-cli build -p ios --profile production",
+    "eas:build:preview": "npx eas-cli build -p ios --profile preview",
+    "eas:submit:ios": "npx eas-cli submit -p ios --profile production --latest"
   },
   "engines": {
     "node": ">=20.0.0"
@@ -58,7 +58,7 @@
     "@expo/vector-icons": "^15.0.2",
     "@supabase/supabase-js": "^2.110.0",
     "expo": "~57.0.8",
-    "expo-av": "~16.0.7",
+    "expo-audio": "~57.0.3",
     "expo-clipboard": "~57.0.1",
     "expo-constants": "~57.0.7",
     "expo-file-system": "~57.0.1",

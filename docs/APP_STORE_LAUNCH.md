@@ -89,10 +89,12 @@ eas secret:create --name EXPO_PUBLIC_GA_ID --value "G-…" --scope project
 
 ```bash
 # Production IPA (auto-increments buildNumber via eas.json)
-eas build -p ios --profile production
+# Use npx if `eas` is not installed globally:
+npx eas-cli build -p ios --profile production
+# or: npm run eas:build:ios
 
 # After first successful build + App Store Connect app exists:
-eas submit -p ios --profile production --latest
+npx eas-cli submit -p ios --profile production --latest
 ```
 
 TestFlight: App Store Connect → TestFlight → add **Internal** testers (your Apple ID) → install on iPhone → smoke magazine, login, charts (PNG), podcast.

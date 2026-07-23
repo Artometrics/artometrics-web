@@ -1,0 +1,24 @@
+# Keep EAS iOS archives small. Native loads site assets from artometrics.com.
+
+articles/
+pilot-drafts/
+docs/
+dist/
+.netlify/
+.git/
+*.log
+
+# Large CDN / web content (not needed to compile the binary)
+public/images/content/
+public/data/
+public/exports/
+public/audios/
+public/css/
+public/fonts/
+
+# Analysis / tooling not required for Expo native compile
+scripts/r/
+*.R
+*.Rproj
+requirements.txt
+supabase/

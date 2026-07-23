@@ -7,6 +7,7 @@
     "icon": "./assets/images/icon.png",
     "scheme": "artometrics",
     "userInterfaceStyle": "automatic",
+    "owner": "kmc11",
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.artometrics.app",
@@ -47,10 +48,23 @@
         }
       ],
       "expo-web-browser",
-      "expo-sharing"
+      "expo-sharing",
+      [
+        "expo-audio",
+        {
+          "microphonePermission": false,
+          "recordAudioAndroid": false,
+          "enableBackgroundPlayback": true
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "d286d6de-4a63-43fd-b0eb-fe83fffcd3cc"
+      }
     }
   }
 }

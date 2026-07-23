@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react";
 import { Image, Text, View, StyleSheet, Pressable } from "react-native";
-import { Audio } from "expo-av";
+import { useAudioPlayer, useAudioPlayerStatus } from "expo-audio";
 import { Link, useLocalSearchParams } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { ArticleBody } from "@/components/ArticleBody";
@@ -22,14 +21,11 @@ export default function PodcastEpisodeScreen() {
   const { slug } = useLocalSearchParams<{ slug: string }>();
   const episode = getPodcastEpisode(slug);
   const { user } = useAuth();
-  const [sound, setSound] = useState<Audio.Sound | null>(null);
-  const [playing, setPlaying] = useState(false);
-
-  useEffect(() => {
-    return () => {
-      void sound?.unloadAsync();
-    };
-  }, [sound]);
+  const locked = Boolean(episode?.isLocked && !user);
+  const audioUri =
+    episode?.audioSrc && !locked ? assetUrl(episode.audioSrc) : undefined;
+  const player = useAudioPlayer(audioUri);
+  const status = useAudioPlayerStatus(player);
 
   if (!episode) {
     return (
@@ -42,27 +38,13 @@ export default function PodcastEpisodeScreen() {
     );
   }
 
-  const locked = episode.isLocked && !user;
-
-  async function toggleAudio() {
-    if (!episode?.audioSrc || locked) return;
-    if (sound) {
-      if (playing) {
-        await sound.pauseAsync();
-        setPlaying(false);
-      } else {
-        await sound.playAsync();
-        setPlaying(true);
-      }
-      return;
+  function toggleAudio() {
+    if (!audioUri) return;
+    if (status.playing) {
+      player.pause();
+    } else {
+      player.play();
     }
-    const uri = assetUrl(episode.audioSrc)!;
-    const { sound: next } = await Audio.Sound.createAsync(
-      { uri },
-      { shouldPlay: true },
-    );
-    setSound(next);
-    setPlaying(true);
   }
 
   return (
@@ -100,7 +82,9 @@ export default function PodcastEpisodeScreen() {
           </View>
         ) : episode.audioSrc ? (
           <Pressable style={styles.playBtn} onPress={toggleAudio}>
-            <Text style={styles.playLabel}>{playing ? "Pause" : "Play episode"}</Text>
+            <Text style={styles.playLabel}>
+              {status.playing ? "Pause" : "Play episode"}
+            </Text>
           </Pressable>
         ) : null}
 
