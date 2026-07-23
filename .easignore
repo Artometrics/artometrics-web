@@ -12,10 +12,10 @@ dist/
 public/
 
 # Analysis / tooling not required for Expo native compile
+# Keep scripts/content-os out of the upload, but do NOT ignore data/ (app imports @/data/*)
 scripts/
 *.R
 *.Rproj
 requirements.txt
 supabase/
 store/
-data/

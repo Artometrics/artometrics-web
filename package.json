@@ -87,6 +87,6 @@
     "gray-matter": "^4.0.3",
     "marked": "^15.0.12",
     "playwright": "^1.61.1",
-    "typescript": "~5.9.2"
+    "typescript": "~6.0.3"
   }
 }
