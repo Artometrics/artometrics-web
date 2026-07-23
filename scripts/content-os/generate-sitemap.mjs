@@ -23,16 +23,12 @@ const authors = existsSync(join(ROOT, "src/generated/authors.json"))
   : [];
 
 const SECTIONS = [
+  "arts",
   "sports",
-  "movies-tv",
-  "music",
+  "science",
+  "humanities",
+  "civics",
   "culture",
-  "galleries",
-  "cities-travel",
-  "games",
-  "business",
-  "books",
-  "tech",
 ];
 
 const staticPaths = [

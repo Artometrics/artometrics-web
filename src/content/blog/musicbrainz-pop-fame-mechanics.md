@@ -6,9 +6,10 @@ description: >-
   MusicBrainz-style metadata links fame to release depth, genre travel, and
   reinvention.
 heroImage: /images/content/articles/musicbrainz-pop-fame-mechanics/hero.png
-tags:
-  - music
 draft: false
+tags:
+  - arts
+  - music
 tldr: >-
   Music fame looks emotional, but it leaves metadata everywhere: releases,
   recordings, aliases, collaborations, labels, genres, works, tours, awards, and

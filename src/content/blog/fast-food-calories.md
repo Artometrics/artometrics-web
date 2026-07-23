@@ -4,9 +4,10 @@ slug: fast-food-calories
 pubDate: 2026-06-15T00:00:00.000Z
 description: Menu nutrition data identify the highest-calorie items across major chains.
 heroImage: /images/content/articles/fast-food-calories/hero.png
+draft: false
 tags:
   - culture
-draft: false
+  - food
 tldr: >-
   Fast-food menus are marketing documents dressed as nutrition tables. The
   calorie counts attached to each item are among the few numbers that cut

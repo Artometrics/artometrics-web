@@ -7,11 +7,13 @@
     "description": "Carrier-level accident and fatality data ask which airlines stand out for poor safety outcomes.",
     "heroImage": "/images/content/articles/airline-safety/hero.png",
     "tags": [
-      "cities-travel"
+      "culture",
+      "travel"
     ],
-    "section": "cities-travel",
+    "section": "culture",
+    "subdomain": "travel",
     "channels": [
-      "cities-travel"
+      "culture"
     ],
     "author": null,
     "draft": false,
@@ -53,9 +55,11 @@
     "description": "Country-level consumption data map which nations drink the most per person—and how that has shifted.",
     "heroImage": "/images/content/articles/alcohol-consumption/hero.png",
     "tags": [
-      "culture"
+      "culture",
+      "food"
     ],
     "section": "culture",
+    "subdomain": "food",
     "channels": [
       "culture"
     ],
@@ -98,9 +102,11 @@
     "description": "Price and calorie data across pizza menus show what diners pay in money and energy.",
     "heroImage": "/images/content/articles/all-the-pizza/hero.png",
     "tags": [
-      "culture"
+      "culture",
+      "food"
     ],
     "section": "culture",
+    "subdomain": "food",
     "channels": [
       "culture"
     ],
@@ -143,11 +149,13 @@
     "description": "MyAnimeList metadata on more than 13,000 titles traces Japanese animation as a production system.",
     "heroImage": "/images/content/articles/anime/hero.png",
     "tags": [
-      "movies-tv"
+      "arts",
+      "film"
     ],
-    "section": "movies-tv",
+    "section": "arts",
+    "subdomain": "film",
     "channels": [
-      "movies-tv"
+      "arts"
     ],
     "author": null,
     "draft": false,
@@ -190,11 +198,13 @@
     "description": "A cross-medium look at how prizes turn visibility into legitimacy across film, music, and science.",
     "heroImage": "/images/content/articles/awards-prestige-economy-oscars-grammys-nobels/hero.png",
     "tags": [
-      "culture"
+      "humanities",
+      "sociology"
     ],
-    "section": "culture",
+    "section": "humanities",
+    "subdomain": "sociology",
     "channels": [
-      "culture"
+      "humanities"
     ],
     "author": null,
     "draft": false,
@@ -236,11 +246,13 @@
     "description": "A lyric-level comparison of two era-defining catalogs—theme, language, and structure.",
     "heroImage": "/images/content/articles/beyonce-taylor-lyrics/hero.png",
     "tags": [
+      "arts",
       "music"
     ],
-    "section": "music",
+    "section": "arts",
+    "subdomain": "music",
     "channels": [
-      "music"
+      "arts"
     ],
     "author": null,
     "draft": false,
@@ -279,11 +291,13 @@
     "description": "Global burger prices illustrate how currency and wages shape the real cost of everyday goods.",
     "heroImage": "/images/content/articles/big-mac-index/hero.png",
     "tags": [
-      "business"
+      "civics",
+      "economics"
     ],
-    "section": "business",
+    "section": "civics",
+    "subdomain": "economics",
     "channels": [
-      "business"
+      "civics"
     ],
     "author": null,
     "draft": false,
@@ -325,11 +339,13 @@
     "description": "Trip-level bike-share data measures typical distance and duration across Biketown journeys.",
     "heroImage": "/images/content/articles/biketown-bikeshare/hero.png",
     "tags": [
-      "cities-travel"
+      "culture",
+      "travel"
     ],
-    "section": "cities-travel",
+    "section": "culture",
+    "subdomain": "travel",
     "channels": [
-      "cities-travel"
+      "culture"
     ],
     "author": null,
     "draft": false,
@@ -372,11 +388,13 @@
     "description": "Since 1958, most chart-toppers lasted weeks; a few held for months—and streaming rewrote the pattern.",
     "heroImage": "/images/content/articles/billboard-hot-100/hero.png",
     "tags": [
+      "arts",
       "music"
     ],
-    "section": "music",
+    "section": "arts",
+    "subdomain": "music",
     "channels": [
-      "music"
+      "arts"
     ],
     "author": null,
     "draft": false,
@@ -419,11 +437,13 @@
     "description": "Large-scale Hot 100 data show how rankings compress at the summit.",
     "heroImage": "/images/content/articles/billboard-top-100/hero.png",
     "tags": [
+      "arts",
       "music"
     ],
-    "section": "music",
+    "section": "arts",
+    "subdomain": "music",
     "channels": [
-      "music"
+      "arts"
     ],
     "author": null,
     "draft": false,
@@ -464,11 +484,13 @@
     "description": "Ratings and popularity across thousands of titles find games that win both mass attention and esteem.",
     "heroImage": "/images/content/articles/board-games/hero.png",
     "tags": [
-      "games"
+      "sports",
+      "gaming"
     ],
-    "section": "games",
+    "section": "sports",
+    "subdomain": "gaming",
     "channels": [
-      "games"
+      "sports"
     ],
     "author": null,
     "draft": false,
@@ -511,11 +533,13 @@
     "description": "Performance and box-office records map the shows that dominated by longevity and revenue.",
     "heroImage": "/images/content/articles/broadway-musicals/hero.png",
     "tags": [
-      "culture"
+      "arts",
+      "theater"
     ],
-    "section": "culture",
+    "section": "arts",
+    "subdomain": "theater",
     "channels": [
-      "culture"
+      "arts"
     ],
     "author": null,
     "draft": false,
@@ -557,11 +581,13 @@
     "description": "A psychonomic reading of Caesar asks what ambition cost the Roman political household he ruled.",
     "heroImage": "/images/content/articles/caesar-the-psychonomics-of-emperor-julius/hero.png",
     "tags": [
-      "culture"
+      "humanities",
+      "history"
     ],
-    "section": "culture",
+    "section": "humanities",
+    "subdomain": "history",
     "channels": [
-      "culture"
+      "humanities"
     ],
     "author": null,
     "draft": false,
@@ -604,11 +630,13 @@
     "description": "What the two largest U.S. states share—and where their economies, exports, and risks part ways.",
     "heroImage": "/images/content/articles/california-vs-texas-state-rivalry/hero.png",
     "tags": [
-      "cities-travel"
+      "civics",
+      "politics"
     ],
-    "section": "cities-travel",
+    "section": "civics",
+    "subdomain": "politics",
     "channels": [
-      "cities-travel"
+      "civics"
     ],
     "author": null,
     "draft": false,
@@ -650,9 +678,11 @@
     "description": "Boston’s championship inheritance still shapes every modern season.",
     "heroImage": "/images/content/articles/celtics-the-artometrics-of-institutional-winning/hero.png",
     "tags": [
-      "sports"
+      "sports",
+      "basketball"
     ],
     "section": "sports",
+    "subdomain": "basketball",
     "channels": [
       "sports"
     ],
@@ -697,11 +727,13 @@
     "description": "Thousands of executive-exit records measure tenure length and how departures cluster.",
     "heroImage": "/images/content/articles/ceo-departures/hero.png",
     "tags": [
+      "civics",
       "business"
     ],
-    "section": "business",
+    "section": "civics",
+    "subdomain": "business",
     "channels": [
-      "business"
+      "civics"
     ],
     "author": null,
     "draft": false,
@@ -743,11 +775,13 @@
     "description": "Morphometric data map which cetacean lineages produce the giants.",
     "heroImage": "/images/content/articles/cetaceans/hero.png",
     "tags": [
-      "culture"
+      "science",
+      "biology"
     ],
-    "section": "culture",
+    "section": "science",
+    "subdomain": "biology",
     "channels": [
-      "culture"
+      "science"
     ],
     "author": null,
     "draft": false,
@@ -787,11 +821,13 @@
     "description": "A Gutenberg holiday corpus shows which seasonal novels still define the Christmas canon.",
     "heroImage": "/images/content/articles/christmas-novels/hero.png",
     "tags": [
-      "books"
+      "arts",
+      "language"
     ],
-    "section": "books",
+    "section": "arts",
+    "subdomain": "language",
     "channels": [
-      "books"
+      "arts"
     ],
     "author": null,
     "draft": false,
@@ -834,11 +870,13 @@
     "description": "Decades of Christmas-song chart data identify the standards that return every season.",
     "heroImage": "/images/content/articles/christmas-songs/hero.png",
     "tags": [
+      "arts",
       "music"
     ],
-    "section": "music",
+    "section": "arts",
+    "subdomain": "music",
     "channels": [
-      "music"
+      "arts"
     ],
     "author": null,
     "draft": false,
@@ -880,11 +918,13 @@
     "description": "Factbook indicators compare nations on size and wealth—where scale and prosperity align or diverge.",
     "heroImage": "/images/content/articles/cia-world-factbook/hero.png",
     "tags": [
-      "business"
+      "civics",
+      "economics"
     ],
-    "section": "business",
+    "section": "civics",
+    "subdomain": "economics",
     "channels": [
-      "business"
+      "civics"
     ],
     "author": null,
     "draft": false,
@@ -925,11 +965,13 @@
     "description": "A geo-economics frame treats cities as layered systems of trade, culture, and infrastructure.",
     "heroImage": "/images/content/articles/city-bioeconomics-operating-system/hero.png",
     "tags": [
-      "cities-travel"
+      "civics",
+      "economics"
     ],
-    "section": "cities-travel",
+    "section": "civics",
+    "subdomain": "economics",
     "channels": [
-      "cities-travel"
+      "civics"
     ],
     "author": null,
     "draft": false,
@@ -971,9 +1013,11 @@
     "description": "Commodity and consumption data place coffee among the world’s largest traded goods.",
     "heroImage": "/images/content/articles/coffee-the-artometrics-of-java/hero.png",
     "tags": [
-      "culture"
+      "culture",
+      "food"
     ],
     "section": "culture",
+    "subdomain": "food",
     "channels": [
       "culture"
     ],
@@ -1018,11 +1062,13 @@
     "description": "Earnings and unemployment by major show where degrees pay off and where risk is higher.",
     "heroImage": "/images/content/articles/college-major-income/hero.png",
     "tags": [
-      "business"
+      "civics",
+      "education"
     ],
-    "section": "business",
+    "section": "civics",
+    "subdomain": "education",
     "channels": [
-      "business"
+      "civics"
     ],
     "author": null,
     "draft": false,
@@ -1064,11 +1110,13 @@
     "description": "Character attributes across Marvel and DC ask who sits atop power rankings.",
     "heroImage": "/images/content/articles/comic-characters/hero.png",
     "tags": [
-      "culture"
+      "arts",
+      "design"
     ],
-    "section": "culture",
+    "section": "arts",
+    "subdomain": "design",
     "channels": [
-      "culture"
+      "arts"
     ],
     "author": null,
     "draft": false,
@@ -1111,9 +1159,11 @@
     "description": "Dallas remains the NFL’s clearest split between global brand power and an aging postseason engine.",
     "heroImage": "/images/content/articles/cowboys-the-artometrics-of-americas-team/hero.png",
     "tags": [
-      "sports"
+      "sports",
+      "football"
     ],
     "section": "sports",
+    "subdomain": "football",
     "channels": [
       "sports"
     ],
@@ -1158,9 +1208,11 @@
     "description": "Brewery-level IBU and ABV data map bitterness and strength across U.S. craft producers.",
     "heroImage": "/images/content/articles/craft-beer-usa/hero.png",
     "tags": [
-      "culture"
+      "culture",
+      "food"
     ],
     "section": "culture",
+    "subdomain": "food",
     "channels": [
       "culture"
     ],
@@ -1203,11 +1255,13 @@
     "description": "A cultural-economics frame treats soft-power industries as export goods.",
     "heroImage": "/images/content/articles/cultural-exports-geoeconomics/hero.png",
     "tags": [
-      "business"
+      "civics",
+      "economics"
     ],
-    "section": "business",
+    "section": "civics",
+    "subdomain": "economics",
     "channels": [
-      "business"
+      "civics"
     ],
     "author": null,
     "draft": false,
@@ -1249,9 +1303,11 @@
     "description": "Los Angeles turned payroll, development, and depth into recurring October access.",
     "heroImage": "/images/content/articles/dodgers-the-artometrics-of-baseballs-modern-machine/hero.png",
     "tags": [
-      "sports"
+      "sports",
+      "baseball"
     ],
     "section": "sports",
+    "subdomain": "baseball",
     "channels": [
       "sports"
     ],
@@ -1296,11 +1352,13 @@
     "description": "Nomination and win records reveal which series swept hardware—and how concentrated awards became.",
     "heroImage": "/images/content/articles/emmy-awards/hero.png",
     "tags": [
-      "movies-tv"
+      "arts",
+      "film"
     ],
-    "section": "movies-tv",
+    "section": "arts",
+    "subdomain": "film",
     "channels": [
-      "movies-tv"
+      "arts"
     ],
     "author": null,
     "draft": false,
@@ -1340,9 +1398,11 @@
     "description": "State-level activity rates compare where Americans work out most.",
     "heroImage": "/images/content/articles/exercise-usa/hero.png",
     "tags": [
-      "culture"
+      "culture",
+      "wellness"
     ],
     "section": "culture",
+    "subdomain": "wellness",
     "channels": [
       "culture"
     ],
@@ -1385,11 +1445,13 @@
     "description": "A three-country comparison of platforms, factories, and machinery.",
     "heroImage": "/images/content/articles/export-superpowers-us-china-germany/hero.png",
     "tags": [
-      "business"
+      "civics",
+      "economics"
     ],
-    "section": "business",
+    "section": "civics",
+    "subdomain": "economics",
     "channels": [
-      "business"
+      "civics"
     ],
     "author": null,
     "draft": false,
@@ -1431,9 +1493,11 @@
     "description": "Menu nutrition data identify the highest-calorie items across major chains.",
     "heroImage": "/images/content/articles/fast-food-calories/hero.png",
     "tags": [
-      "culture"
+      "culture",
+      "food"
     ],
     "section": "culture",
+    "subdomain": "food",
     "channels": [
       "culture"
     ],
@@ -1477,11 +1541,13 @@
     "description": "Revenue maps for more than 100 franchises show where valuable IP earns across media.",
     "heroImage": "/images/content/articles/franchise/hero.png",
     "tags": [
-      "movies-tv"
+      "arts",
+      "film"
     ],
-    "section": "movies-tv",
+    "section": "arts",
+    "subdomain": "film",
     "channels": [
-      "movies-tv"
+      "arts"
     ],
     "author": null,
     "draft": false,
@@ -1524,9 +1590,11 @@
     "description": "A franchise history from 1883 New York origins to a modern Bay Area ballclub.",
     "heroImage": "/images/content/articles/giant-the-artometrics-of-a-san-francisco-dynasty/hero.png",
     "tags": [
-      "sports"
+      "sports",
+      "baseball"
     ],
     "section": "sports",
+    "subdomain": "baseball",
     "channels": [
       "sports"
     ],
@@ -1571,11 +1639,13 @@
     "description": "Survival data from the 1500s to 2015 map who gained years of life—and who lagged.",
     "heroImage": "/images/content/articles/global-life-expectancy/hero.png",
     "tags": [
-      "culture"
+      "science",
+      "medicine"
     ],
-    "section": "culture",
+    "section": "science",
+    "subdomain": "medicine",
     "channels": [
-      "culture"
+      "science"
     ],
     "author": null,
     "draft": false,
@@ -1617,11 +1687,13 @@
     "description": "Country-level plastic generation and mismanagement rates show where leakage concentrates.",
     "heroImage": "/images/content/articles/global-plastic-waste/hero.png",
     "tags": [
-      "business"
+      "culture",
+      "environment"
     ],
-    "section": "business",
+    "section": "culture",
+    "subdomain": "environment",
     "channels": [
-      "business"
+      "culture"
     ],
     "author": null,
     "draft": false,
@@ -1663,11 +1735,13 @@
     "description": "Since 2011, Ethan and Hila Klein scaled channels, a podcast, and a brand.",
     "heroImage": "/images/content/articles/h3-the-artometrics-of-a-youtube-dynasty/hero.png",
     "tags": [
-      "culture"
+      "civics",
+      "communication"
     ],
-    "section": "culture",
+    "section": "civics",
+    "subdomain": "communication",
     "channels": [
-      "culture"
+      "civics"
     ],
     "author": null,
     "draft": false,
@@ -1710,11 +1784,13 @@
     "description": "Budget and box-office data for thousands of horror titles separate winners from costly misses.",
     "heroImage": "/images/content/articles/horror-movie-profit/hero.png",
     "tags": [
-      "movies-tv"
+      "arts",
+      "film"
     ],
-    "section": "movies-tv",
+    "section": "arts",
+    "subdomain": "film",
     "channels": [
-      "movies-tv"
+      "arts"
     ],
     "author": null,
     "draft": false,
@@ -1757,11 +1833,13 @@
     "description": "Ratings across tens of thousands of horror films ask whether quality rose with volume.",
     "heroImage": "/images/content/articles/horror-movies/hero.png",
     "tags": [
-      "movies-tv"
+      "arts",
+      "film"
     ],
-    "section": "movies-tv",
+    "section": "arts",
+    "subdomain": "film",
     "channels": [
-      "movies-tv"
+      "arts"
     ],
     "author": null,
     "draft": false,
@@ -1804,11 +1882,13 @@
     "description": "Hurricane records compare wind, deaths, and frequency for the island’s most damaging storms.",
     "heroImage": "/images/content/articles/hurricanes-puerto-rico/hero.png",
     "tags": [
-      "cities-travel"
+      "culture",
+      "environment"
     ],
-    "section": "cities-travel",
+    "section": "culture",
+    "subdomain": "environment",
     "channels": [
-      "cities-travel"
+      "culture"
     ],
     "author": null,
     "draft": false,
@@ -1850,11 +1930,13 @@
     "description": "Facility-level data map which plants serve the largest populations.",
     "heroImage": "/images/content/articles/hydro-wastewater/hero.png",
     "tags": [
-      "cities-travel"
+      "science",
+      "engineering"
     ],
-    "section": "cities-travel",
+    "section": "science",
+    "subdomain": "engineering",
     "channels": [
-      "cities-travel"
+      "science"
     ],
     "author": null,
     "draft": false,
@@ -1896,11 +1978,13 @@
     "description": "Title fields, ratings, and box-office references explain how films accumulate attention.",
     "heroImage": "/images/content/articles/imdb-blockbuster-grammar/hero.png",
     "tags": [
-      "movies-tv"
+      "arts",
+      "film"
     ],
-    "section": "movies-tv",
+    "section": "arts",
+    "subdomain": "film",
     "channels": [
-      "movies-tv"
+      "arts"
     ],
     "author": null,
     "draft": false,
@@ -1942,11 +2026,13 @@
     "description": "A historical-economics lens asks who captured wealth when rulers claimed order.",
     "heroImage": "/images/content/articles/imperial/hero.png",
     "tags": [
-      "culture"
+      "humanities",
+      "history"
     ],
-    "section": "culture",
+    "section": "humanities",
+    "subdomain": "history",
     "channels": [
-      "culture"
+      "humanities"
     ],
     "author": null,
     "draft": false,
@@ -1989,11 +2075,13 @@
     "description": "Long-run imprisonment data track national trends and which states pulled away.",
     "heroImage": "/images/content/articles/incarceration-trends/hero.png",
     "tags": [
-      "business"
+      "civics",
+      "law"
     ],
-    "section": "business",
+    "section": "civics",
+    "subdomain": "law",
     "channels": [
-      "business"
+      "civics"
     ],
     "author": null,
     "draft": false,
@@ -2036,9 +2124,11 @@
     "description": "Los Angeles basketball’s glamour machine turns market gravity into title windows.",
     "heroImage": "/images/content/articles/lakers-the-artometrics-of-basketball-glamour/hero.png",
     "tags": [
-      "sports"
+      "sports",
+      "basketball"
     ],
     "section": "sports",
+    "subdomain": "basketball",
     "channels": [
       "sports"
     ],
@@ -2083,11 +2173,13 @@
     "description": "Glottolog family data measure how uneven language diversity is at the family level.",
     "heroImage": "/images/content/articles/languages-glottolog/hero.png",
     "tags": [
-      "culture"
+      "arts",
+      "language"
     ],
-    "section": "culture",
+    "section": "arts",
+    "subdomain": "language",
     "channels": [
-      "culture"
+      "arts"
     ],
     "author": null,
     "draft": false,
@@ -2126,9 +2218,11 @@
     "description": "Cross-sport rules, payroll, and scarcity show why teams become culturally meaningful.",
     "heroImage": "/images/content/articles/league-money-skill-and-star-systems/hero.png",
     "tags": [
-      "sports"
+      "sports",
+      "football"
     ],
     "section": "sports",
+    "subdomain": "football",
     "channels": [
       "sports"
     ],
@@ -2172,11 +2266,13 @@
     "description": "Official set metadata traces rising piece counts and theme differences.",
     "heroImage": "/images/content/articles/lego-database/hero.png",
     "tags": [
-      "games"
+      "culture",
+      "leisure"
     ],
-    "section": "games",
+    "section": "culture",
+    "subdomain": "leisure",
     "channels": [
-      "games"
+      "culture"
     ],
     "author": null,
     "draft": false,
@@ -2218,11 +2314,13 @@
     "description": "Metadata from tens of thousands of Medium articles tests whether length predicts claps.",
     "heroImage": "/images/content/articles/medium-articles/hero.png",
     "tags": [
+      "science",
       "tech"
     ],
-    "section": "tech",
+    "section": "science",
+    "subdomain": "tech",
     "channels": [
-      "tech"
+      "science"
     ],
     "author": null,
     "draft": false,
@@ -2265,11 +2363,13 @@
     "description": "MusicBrainz-style metadata links fame to release depth, genre travel, and reinvention.",
     "heroImage": "/images/content/articles/musicbrainz-pop-fame-mechanics/hero.png",
     "tags": [
+      "arts",
       "music"
     ],
-    "section": "music",
+    "section": "arts",
+    "subdomain": "music",
     "channels": [
-      "music"
+      "arts"
     ],
     "author": null,
     "draft": false,
@@ -2311,11 +2411,13 @@
     "description": "A country-level atlas treats exports as identity: what states sell and need.",
     "heroImage": "/images/content/articles/national-export-identity-atlas/hero.png",
     "tags": [
-      "business"
+      "civics",
+      "economics"
     ],
-    "section": "business",
+    "section": "civics",
+    "subdomain": "economics",
     "channels": [
-      "business"
+      "civics"
     ],
     "author": null,
     "draft": false,
@@ -2357,11 +2459,13 @@
     "description": "Visitation time series identify America’s busiest parks and how attendance has trended.",
     "heroImage": "/images/content/articles/national-park-visits/hero.png",
     "tags": [
-      "cities-travel"
+      "culture",
+      "travel"
     ],
-    "section": "cities-travel",
+    "section": "culture",
+    "subdomain": "travel",
     "channels": [
-      "cities-travel"
+      "culture"
     ],
     "author": null,
     "draft": false,
@@ -2404,11 +2508,13 @@
     "description": "Engagement metrics Netflix reports show which titles absorbed the most hours.",
     "heroImage": "/images/content/articles/netflix-engagement/hero.png",
     "tags": [
-      "movies-tv"
+      "arts",
+      "film"
     ],
-    "section": "movies-tv",
+    "section": "arts",
+    "subdomain": "film",
     "channels": [
-      "movies-tv"
+      "arts"
     ],
     "author": null,
     "draft": false,
@@ -2451,11 +2557,13 @@
     "description": "Title-level library data track the balance of movies and TV over time.",
     "heroImage": "/images/content/articles/netflix-titles/hero.png",
     "tags": [
-      "movies-tv"
+      "arts",
+      "film"
     ],
-    "section": "movies-tv",
+    "section": "arts",
+    "subdomain": "film",
     "channels": [
-      "movies-tv"
+      "arts"
     ],
     "author": null,
     "draft": false,
@@ -2498,11 +2606,13 @@
     "description": "Why the two are paired in debate—and where their economic and cultural systems diverge.",
     "heroImage": "/images/content/articles/new-york-vs-san-francisco-city-systems/hero.png",
     "tags": [
-      "cities-travel"
+      "civics",
+      "economics"
     ],
-    "section": "cities-travel",
+    "section": "civics",
+    "subdomain": "economics",
     "channels": [
-      "cities-travel"
+      "civics"
     ],
     "author": null,
     "draft": false,
@@ -2544,11 +2654,13 @@
     "description": "Historical test records map yield, purpose, and timing across decades.",
     "heroImage": "/images/content/articles/nuclear-explosions/hero.png",
     "tags": [
-      "culture"
+      "science",
+      "physics"
     ],
-    "section": "culture",
+    "section": "science",
+    "subdomain": "physics",
     "channels": [
-      "culture"
+      "science"
     ],
     "author": null,
     "draft": false,
@@ -2591,11 +2703,13 @@
     "description": "Restaurant grades across New York show how scores distribute by cuisine.",
     "heroImage": "/images/content/articles/nyc-restaurant-inspections/hero.png",
     "tags": [
-      "cities-travel"
+      "culture",
+      "food"
     ],
-    "section": "cities-travel",
+    "section": "culture",
+    "subdomain": "food",
     "channels": [
-      "cities-travel"
+      "culture"
     ],
     "author": null,
     "draft": false,
@@ -2638,11 +2752,13 @@
     "description": "Biography-scale fame data ask where collective memory clusters.",
     "heroImage": "/images/content/articles/pantheon-the-artometrics-of-collective-memory/hero.png",
     "tags": [
-      "culture"
+      "humanities",
+      "sociology"
     ],
-    "section": "culture",
+    "section": "humanities",
+    "subdomain": "sociology",
     "channels": [
-      "culture"
+      "humanities"
     ],
     "author": null,
     "draft": false,
@@ -2684,9 +2800,11 @@
     "description": "Two decades of New England football compressed a century of legacy into one dynasty.",
     "heroImage": "/images/content/articles/patriots-the-artometrics-of-the-system-dynasty/hero.png",
     "tags": [
-      "sports"
+      "sports",
+      "football"
     ],
     "section": "sports",
+    "subdomain": "football",
     "channels": [
       "sports"
     ],
@@ -2731,11 +2849,13 @@
     "description": "Data on Pixar’s canon track scores and the titles that interrupted a long critical run.",
     "heroImage": "/images/content/articles/pixar-films/hero.png",
     "tags": [
-      "movies-tv"
+      "arts",
+      "film"
     ],
-    "section": "movies-tv",
+    "section": "arts",
+    "subdomain": "film",
     "channels": [
-      "movies-tv"
+      "arts"
     ],
     "author": null,
     "draft": false,
@@ -2778,11 +2898,13 @@
     "description": "Beyond the headline revenue figure: games, cards, merchandise, and film.",
     "heroImage": "/images/content/articles/pokemon/hero.png",
     "tags": [
-      "games"
+      "sports",
+      "gaming"
     ],
-    "section": "games",
+    "section": "sports",
+    "subdomain": "gaming",
     "channels": [
-      "games"
+      "sports"
     ],
     "author": null,
     "draft": false,
@@ -2825,11 +2947,13 @@
     "description": "Gutenberg metadata charts language gravity, era effects, and author memory.",
     "heroImage": "/images/content/articles/project-gutenberg-public-domain-canon-map/hero.png",
     "tags": [
-      "books"
+      "arts",
+      "language"
     ],
-    "section": "books",
+    "section": "arts",
+    "subdomain": "language",
     "channels": [
-      "books"
+      "arts"
     ],
     "author": null,
     "draft": false,
@@ -2871,11 +2995,13 @@
     "description": "Public-domain metadata show which topics crowd the free-library canon.",
     "heroImage": "/images/content/articles/project-gutenberg/hero.png",
     "tags": [
-      "books"
+      "arts",
+      "language"
     ],
-    "section": "books",
+    "section": "arts",
+    "subdomain": "language",
     "channels": [
-      "books"
+      "arts"
     ],
     "author": null,
     "draft": false,
@@ -2914,11 +3040,13 @@
     "description": "Station-level format data chart where music, talk, and niche programming concentrate.",
     "heroImage": "/images/content/articles/radio-stations/hero.png",
     "tags": [
+      "arts",
       "music"
     ],
-    "section": "music",
+    "section": "arts",
+    "subdomain": "music",
     "channels": [
-      "music"
+      "arts"
     ],
     "author": null,
     "draft": false,
@@ -2960,9 +3088,11 @@
     "description": "Taster scores across thousands of instant ramen products identify top brands.",
     "heroImage": "/images/content/articles/ramen-ratings/hero.png",
     "tags": [
-      "culture"
+      "culture",
+      "food"
     ],
     "section": "culture",
+    "subdomain": "food",
     "channels": [
       "culture"
     ],
@@ -3006,11 +3136,13 @@
     "description": "CMS HRRP data show where states, conditions, and ownership types exceed benchmarks.",
     "heroImage": "/images/content/articles/readmitted/hero.jpg",
     "tags": [
-      "business"
+      "science",
+      "medicine"
     ],
-    "section": "business",
+    "section": "science",
+    "subdomain": "medicine",
     "channels": [
-      "business"
+      "science"
     ],
     "author": null,
     "draft": false,
@@ -3053,9 +3185,11 @@
     "description": "Markets, leagues, and championship droughts explain why fan cultures differ by city.",
     "heroImage": "/images/content/articles/regional-sports-identity-map/hero.png",
     "tags": [
-      "sports"
+      "sports",
+      "football"
     ],
     "section": "sports",
+    "subdomain": "football",
     "channels": [
       "sports"
     ],
@@ -3099,11 +3233,13 @@
     "description": "Canonical rankings identify the records Rolling Stone places at the summit.",
     "heroImage": "/images/content/articles/rolling-stone-albums/hero.png",
     "tags": [
+      "arts",
       "music"
     ],
-    "section": "music",
+    "section": "arts",
+    "subdomain": "music",
     "channels": [
-      "music"
+      "arts"
     ],
     "author": null,
     "draft": false,
@@ -3146,11 +3282,13 @@
     "description": "Reign-length data test whether dynastic succession meant longer time on the throne.",
     "heroImage": "/images/content/articles/roman-emperors/hero.png",
     "tags": [
-      "culture"
+      "humanities",
+      "history"
     ],
-    "section": "culture",
+    "section": "humanities",
+    "subdomain": "history",
     "channels": [
-      "culture"
+      "humanities"
     ],
     "author": null,
     "draft": false,
@@ -3192,11 +3330,13 @@
     "description": "A city-identity report through software exports, scarcity, and neighborhoods.",
     "heroImage": "/images/content/articles/san-francisco-data-microscope/hero.png",
     "tags": [
-      "cities-travel"
+      "civics",
+      "economics"
     ],
-    "section": "cities-travel",
+    "section": "civics",
+    "subdomain": "economics",
     "channels": [
-      "cities-travel"
+      "civics"
     ],
     "author": null,
     "draft": false,
@@ -3238,11 +3378,13 @@
     "description": "School-level composition data map where diversity concentrates.",
     "heroImage": "/images/content/articles/school-diversity/hero.png",
     "tags": [
-      "business"
+      "civics",
+      "education"
     ],
-    "section": "business",
+    "section": "civics",
+    "subdomain": "education",
     "channels": [
-      "business"
+      "civics"
     ],
     "author": null,
     "draft": false,
@@ -3284,11 +3426,13 @@
     "description": "Text-length analysis of Sherlock Holmes stories through Conan’s corpus.",
     "heroImage": "/images/content/articles/sherlock-holmes/hero.png",
     "tags": [
-      "books"
+      "arts",
+      "language"
     ],
-    "section": "books",
+    "section": "arts",
+    "subdomain": "language",
     "channels": [
-      "books"
+      "arts"
     ],
     "author": null,
     "draft": false,
@@ -3329,11 +3473,13 @@
     "description": "Guest-appearance records count celebrity density across seasons.",
     "heroImage": "/images/content/articles/simpsons-guest-stars/hero.png",
     "tags": [
-      "movies-tv"
+      "arts",
+      "film"
     ],
-    "section": "movies-tv",
+    "section": "arts",
+    "subdomain": "film",
     "channels": [
-      "movies-tv"
+      "arts"
     ],
     "author": null,
     "draft": false,
@@ -3372,9 +3518,11 @@
     "description": "A cross-league index of championship mass, conversion, market value, and fan pain.",
     "heroImage": "/images/content/articles/sports-dynasty-index-best-and-worst-conversion/hero.png",
     "tags": [
-      "sports"
+      "sports",
+      "football"
     ],
     "section": "sports",
+    "subdomain": "football",
     "channels": [
       "sports"
     ],
@@ -3418,11 +3566,13 @@
     "description": "Public catalog data reveal library size and the gap between hype and retained inventory.",
     "heroImage": "/images/content/articles/streaming-catalog-power/hero.png",
     "tags": [
-      "movies-tv"
+      "arts",
+      "film"
     ],
-    "section": "movies-tv",
+    "section": "arts",
+    "subdomain": "film",
     "channels": [
-      "movies-tv"
+      "arts"
     ],
     "author": null,
     "draft": true,
@@ -3462,11 +3612,13 @@
     "description": "Ad-spot data track which commercials captured attention after the whistle.",
     "heroImage": "/images/content/articles/super-bowl-ads/hero.png",
     "tags": [
-      "business"
+      "civics",
+      "communication"
     ],
-    "section": "business",
+    "section": "civics",
+    "subdomain": "communication",
     "channels": [
-      "business"
+      "civics"
     ],
     "author": null,
     "draft": false,
@@ -3509,11 +3661,13 @@
     "description": "Golden-age scores compare critical and audience verdicts as prestige TV rose and cooled.",
     "heroImage": "/images/content/articles/tv-golden-age/hero.png",
     "tags": [
-      "movies-tv"
+      "arts",
+      "film"
     ],
-    "section": "movies-tv",
+    "section": "arts",
+    "subdomain": "film",
     "channels": [
-      "movies-tv"
+      "arts"
     ],
     "author": null,
     "draft": false,
@@ -3555,11 +3709,13 @@
     "description": "Museum locations and deprivation bands show how institutions map onto inequality.",
     "heroImage": "/images/content/articles/uk-museums/hero.png",
     "tags": [
-      "galleries"
+      "arts",
+      "architecture"
     ],
-    "section": "galleries",
+    "section": "arts",
+    "subdomain": "architecture",
     "channels": [
-      "galleries"
+      "arts"
     ],
     "author": null,
     "draft": false,
@@ -3601,11 +3757,13 @@
     "description": "Voting records identify resolutions that divided member states.",
     "heroImage": "/images/content/articles/un-votes/hero.png",
     "tags": [
-      "business"
+      "civics",
+      "politics"
     ],
-    "section": "business",
+    "section": "civics",
+    "subdomain": "politics",
     "channels": [
-      "business"
+      "civics"
     ],
     "author": null,
     "draft": false,
@@ -3644,11 +3802,13 @@
     "description": "Doctorate production data show which disciplines grew quickest.",
     "heroImage": "/images/content/articles/us-phds/hero.png",
     "tags": [
-      "business"
+      "civics",
+      "education"
     ],
-    "section": "business",
+    "section": "civics",
+    "subdomain": "education",
     "channels": [
-      "business"
+      "civics"
     ],
     "author": null,
     "draft": false,
@@ -3691,11 +3851,13 @@
     "description": "State tuition time series measure the rise in college costs.",
     "heroImage": "/images/content/articles/us-tuition/hero.png",
     "tags": [
-      "business"
+      "civics",
+      "education"
     ],
-    "section": "business",
+    "section": "civics",
+    "subdomain": "education",
     "channels": [
-      "business"
+      "civics"
     ],
     "author": null,
     "draft": false,
@@ -3737,11 +3899,13 @@
     "description": "Election turnout data compare state participation rates.",
     "heroImage": "/images/content/articles/us-voter-turnout/hero.png",
     "tags": [
-      "business"
+      "civics",
+      "politics"
     ],
-    "section": "business",
+    "section": "civics",
+    "subdomain": "politics",
     "channels": [
-      "business"
+      "civics"
     ],
     "author": null,
     "draft": false,
@@ -3783,11 +3947,13 @@
     "description": "A large games slice tests whether critic scores correlated with commercial outcomes.",
     "heroImage": "/images/content/articles/video-games-sliced/hero.png",
     "tags": [
-      "games"
+      "sports",
+      "gaming"
     ],
-    "section": "games",
+    "section": "sports",
+    "subdomain": "gaming",
     "channels": [
-      "games"
+      "sports"
     ],
     "author": null,
     "draft": false,
@@ -3830,11 +3996,13 @@
     "description": "Ownership and play data identify titles that delivered the most hours relative to price.",
     "heroImage": "/images/content/articles/video-games-steam/hero.png",
     "tags": [
-      "games"
+      "sports",
+      "gaming"
     ],
-    "section": "games",
+    "section": "sports",
+    "subdomain": "gaming",
     "channels": [
-      "games"
+      "sports"
     ],
     "author": null,
     "draft": false,
@@ -3877,9 +4045,11 @@
     "description": "Decades of losing before a modern dynasty remade Bay Area basketball.",
     "heroImage": "/images/content/articles/warrior-the-artometrics-of-a-golden-state-dynasty/hero.png",
     "tags": [
-      "sports"
+      "sports",
+      "basketball"
     ],
     "section": "sports",
+    "subdomain": "basketball",
     "channels": [
       "sports"
     ],
@@ -3924,11 +4094,13 @@
     "description": "Wealth and income shares measure how assets pile up at the upper end.",
     "heroImage": "/images/content/articles/wealth-income/hero.png",
     "tags": [
-      "business"
+      "civics",
+      "economics"
     ],
-    "section": "business",
+    "section": "civics",
+    "subdomain": "economics",
     "channels": [
-      "business"
+      "civics"
     ],
     "author": null,
     "draft": false,
@@ -3971,11 +4143,13 @@
     "description": "Performance metrics show speed leaders and which technical measures correlate.",
     "heroImage": "/images/content/articles/web-page-metrics/hero.png",
     "tags": [
+      "science",
       "tech"
     ],
-    "section": "tech",
+    "section": "science",
+    "subdomain": "tech",
     "channels": [
-      "tech"
+      "science"
     ],
     "author": null,
     "draft": false,
@@ -4018,9 +4192,11 @@
     "description": "A hundred thousand wine ratings test whether cost tracks scores.",
     "heroImage": "/images/content/articles/wine-ratings/hero.png",
     "tags": [
-      "culture"
+      "culture",
+      "food"
     ],
     "section": "culture",
+    "subdomain": "food",
     "channels": [
       "culture"
     ],
@@ -4064,11 +4240,13 @@
     "description": "UNESCO heritage counts track how Scandinavian inventories expanded.",
     "heroImage": "/images/content/articles/world-heritage-sites/hero.png",
     "tags": [
-      "galleries"
+      "culture",
+      "travel"
     ],
-    "section": "galleries",
+    "section": "culture",
+    "subdomain": "travel",
     "channels": [
-      "galleries"
+      "culture"
     ],
     "author": null,
     "draft": false,
@@ -4110,9 +4288,11 @@
     "description": "More than titles: New York sets the standard for droughts, payroll, and magnitude.",
     "heroImage": "/images/content/articles/yankees-the-artometrics-of-baseballs-empire/hero.png",
     "tags": [
-      "sports"
+      "sports",
+      "baseball"
     ],
     "section": "sports",
+    "subdomain": "baseball",
     "channels": [
       "sports"
     ],

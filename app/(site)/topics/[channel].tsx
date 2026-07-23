@@ -6,28 +6,41 @@ import { PageSeo } from "@/components/PageSeo";
 import { Fonts } from "@/constants/Colors";
 import { useTheme } from "@/lib/theme";
 import {
+  DOMAIN_META,
+  LEGACY_DESK_TO_SECTION,
+  LEGACY_SECTION_TO_DOMAIN,
   SECTION_META,
   SECTION_SLUGS,
-  LEGACY_DESK_TO_SECTION,
   type SectionSlug,
 } from "@/data/sections";
 import { getBlogPosts, primarySection } from "@/lib/content";
 
+function resolveDomain(raw: string | undefined): SectionSlug | null {
+  if (!raw) return null;
+  if ((raw as SectionSlug) in SECTION_META) return raw as SectionSlug;
+  return (
+    LEGACY_SECTION_TO_DOMAIN[raw] ??
+    LEGACY_DESK_TO_SECTION[raw] ??
+    null
+  );
+}
+
 export async function generateStaticParams() {
+  const legacy = new Set([
+    ...Object.keys(LEGACY_SECTION_TO_DOMAIN),
+    ...Object.keys(LEGACY_DESK_TO_SECTION),
+  ]);
   return [
     ...SECTION_SLUGS.map((channel) => ({ channel })),
-    ...Object.keys(LEGACY_DESK_TO_SECTION).map((channel) => ({ channel })),
+    ...[...legacy].map((channel) => ({ channel })),
   ];
 }
 
 export default function TopicChannelPage() {
   const { channel: raw } = useLocalSearchParams<{ channel: string }>();
   const { colors } = useTheme();
-  const mapped =
-    (raw as SectionSlug) in SECTION_META
-      ? (raw as SectionSlug)
-      : LEGACY_DESK_TO_SECTION[raw ?? ""];
-  const meta = mapped ? SECTION_META[mapped] : null;
+  const mapped = resolveDomain(raw);
+  const meta = mapped ? DOMAIN_META[mapped] : null;
 
   if (!meta || !mapped) {
     return (

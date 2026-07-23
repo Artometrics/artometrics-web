@@ -5,9 +5,10 @@ pubDate: 2026-07-01T00:00:00.000Z
 description: Boston’s championship inheritance still shapes every modern season.
 heroImage: >-
   /images/content/articles/celtics-the-artometrics-of-institutional-winning/hero.png
+draft: false
 tags:
   - sports
-draft: false
+  - basketball
 tldr: >-
   Every Boston Celtics season opens under an impossible ledger. Eighteen NBA
   championships—the league record entering 2025—mean that a good year is never

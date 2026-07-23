@@ -6,9 +6,10 @@ description: >-
   Golden-age scores compare critical and audience verdicts as prestige TV rose
   and cooled.
 heroImage: /images/content/articles/tv-golden-age/hero.png
-tags:
-  - movies-tv
 draft: false
+tags:
+  - arts
+  - film
 tldr: >-
   Prestige television arrived with a soundtrack of superlatives. Season-level
   ratings ask a quieter question: when did the golden-age scores actually peak —

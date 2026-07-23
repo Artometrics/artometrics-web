@@ -6,9 +6,10 @@ description: >-
   MyAnimeList metadata on more than 13,000 titles traces Japanese animation as a
   production system.
 heroImage: /images/content/articles/anime/hero.png
-tags:
-  - movies-tv
 draft: false
+tags:
+  - arts
+  - film
 tldr: >-
   This MyAnimeList dataset covers 13,631 unique anime titles spanning 1917 to
   2019 — a century-scale archive tracing the medium from prewar theater shorts

@@ -17,18 +17,18 @@ export const DATASET_PACKS: DatasetPack[] = [
   {
     id: "movies",
     title: "Movies pack",
-    section: "movies-tv",
+    section: "arts",
     status: "planned",
     summary:
       "Title-level film economics and reception joins — studios, genres, ratings, box office where licensed. One schema, clear citations.",
     primaryKeyword: "movie industry data",
     relatedReports: ["imdb-blockbuster-grammar", "franchise"],
-    sources: [{ name: "Report methodology", url: "/about" }],
+    sources: [{ name: "Arts reports", url: "/topics/arts" }],
   },
   {
     id: "streaming-catalogs",
     title: "Streaming catalogs pack",
-    section: "movies-tv",
+    section: "arts",
     status: "collecting",
     summary:
       "Availability / library-shape tables for SVOD analysis. Powers the streaming-catalog-power brief.",
@@ -54,12 +54,12 @@ export const DATASET_PACKS: DatasetPack[] = [
   {
     id: "creative-exports",
     title: "Creative exports pack",
-    section: "business",
+    section: "civics",
     status: "planned",
     summary: "Country and city soft-power / export tables used in geo-economics reports.",
     primaryKeyword: "cultural exports data",
     relatedReports: ["cultural-exports-geoeconomics", "national-export-identity-atlas"],
-    sources: [{ name: "Business reports", url: "/topics/business" }],
+    sources: [{ name: "Civics reports", url: "/topics/civics" }],
   },
 ];
 

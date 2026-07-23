@@ -6,9 +6,10 @@ description: >-
   Why the two are paired in debate—and where their economic and cultural systems
   diverge.
 heroImage: /images/content/articles/new-york-vs-san-francisco-city-systems/hero.png
-tags:
-  - cities-travel
 draft: false
+tags:
+  - civics
+  - economics
 tldr: >-
   New York and San Francisco are not peers by population or geography, but they
   are peers in the market for invisible power. They both export coordination,

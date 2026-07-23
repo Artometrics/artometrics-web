@@ -6,9 +6,10 @@ description: >-
   Ownership and play data identify titles that delivered the most hours relative
   to price.
 heroImage: /images/content/articles/video-games-steam/hero.png
-tags:
-  - games
 draft: false
+tags:
+  - sports
+  - gaming
 tldr: >-
   Steam Spy-era metadata turns the storefront into a scored catalog. This file
   holds 26,688 games spanning 2004–2018, with a median Metascore of 73.0 and a

@@ -6,9 +6,10 @@ description: >-
   Country-level plastic generation and mismanagement rates show where leakage
   concentrates.
 heroImage: /images/content/articles/global-plastic-waste/hero.png
-tags:
-  - business
 draft: false
+tags:
+  - culture
+  - environment
 tldr: >-
   Plastic waste is usually discussed as a moral story about litter. The data
   make it an economic geography story: who generates waste, who mismanages it,

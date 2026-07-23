@@ -7,9 +7,10 @@ description: >-
   access.
 heroImage: >-
   /images/content/articles/dodgers-the-artometrics-of-baseballs-modern-machine/hero.png
+draft: false
 tags:
   - sports
-draft: false
+  - baseball
 tldr: >-
   The Los Angeles Dodgers are the closest thing modern baseball has to an
   industrial contender. Rosters change, stars change, and October heartbreak

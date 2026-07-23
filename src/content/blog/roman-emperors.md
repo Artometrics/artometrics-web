@@ -6,9 +6,10 @@ description: >-
   Reign-length data test whether dynastic succession meant longer time on the
   throne.
 heroImage: /images/content/articles/roman-emperors/hero.png
-tags:
-  - culture
 draft: false
+tags:
+  - humanities
+  - history
 tldr: >-
   Sixty-eight emperors sit in this reign-length file — enough to ask a hard
   question about imperial power: did belonging to a dynasty buy more time on the

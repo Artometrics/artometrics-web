@@ -4,9 +4,10 @@ slug: us-voter-turnout
 pubDate: 2026-06-15T00:00:00.000Z
 description: Election turnout data compare state participation rates.
 heroImage: /images/content/articles/us-voter-turnout/hero.png
-tags:
-  - business
 draft: false
+tags:
+  - civics
+  - politics
 tldr: >-
   Turnout is democracy’s volume knob. This file holds 936 election records
   spanning 1980–2014, with a median of 1,170,867 votes and a high of

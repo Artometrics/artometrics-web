@@ -6,9 +6,10 @@ description: >-
   Title fields, ratings, and box-office references explain how films accumulate
   attention.
 heroImage: /images/content/articles/imdb-blockbuster-grammar/hero.png
-tags:
-  - movies-tv
 draft: false
+tags:
+  - arts
+  - film
 tldr: >-
   Movies are perfect Artometrics objects because they are art, market, memory,
   and industrial strategy at the same time. A title page on IMDb is where those

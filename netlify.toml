@@ -21,54 +21,152 @@
   to = "/about"
   status = 301
 
+# Legacy root desk paths → topics (domains)
 [[redirects]]
-  from = "/culture/"
-  to = "/desks/culture"
+  from = "/culture"
+  to = "/topics/culture"
   status = 301
 
 [[redirects]]
   from = "/culture/*"
-  to = "/desks/culture"
+  to = "/topics/culture"
   status = 301
 
 [[redirects]]
-  from = "/atlas/"
-  to = "/desks/atlas"
+  from = "/atlas"
+  to = "/topics/culture"
   status = 301
 
 [[redirects]]
   from = "/atlas/*"
-  to = "/desks/atlas"
+  to = "/topics/culture"
   status = 301
 
 [[redirects]]
-  from = "/history/"
-  to = "/desks/history"
+  from = "/history"
+  to = "/topics/humanities"
   status = 301
 
 [[redirects]]
   from = "/history/*"
-  to = "/desks/history"
+  to = "/topics/humanities"
   status = 301
 
 [[redirects]]
-  from = "/persona/"
-  to = "/desks/persona"
+  from = "/persona"
+  to = "/topics/humanities"
   status = 301
 
 [[redirects]]
   from = "/persona/*"
-  to = "/desks/persona"
+  to = "/topics/humanities"
   status = 301
 
 [[redirects]]
-  from = "/power/"
-  to = "/desks/power"
+  from = "/power"
+  to = "/topics/civics"
   status = 301
 
 [[redirects]]
   from = "/power/*"
-  to = "/desks/power"
+  to = "/topics/civics"
+  status = 301
+
+# Legacy /desks/* → /topics/:domain
+[[redirects]]
+  from = "/desks/culture"
+  to = "/topics/culture"
+  status = 301
+
+[[redirects]]
+  from = "/desks/atlas"
+  to = "/topics/culture"
+  status = 301
+
+[[redirects]]
+  from = "/desks/history"
+  to = "/topics/humanities"
+  status = 301
+
+[[redirects]]
+  from = "/desks/persona"
+  to = "/topics/humanities"
+  status = 301
+
+[[redirects]]
+  from = "/desks/power"
+  to = "/topics/civics"
+  status = 301
+
+[[redirects]]
+  from = "/desks/arts"
+  to = "/topics/arts"
+  status = 301
+
+[[redirects]]
+  from = "/desks/sports"
+  to = "/topics/sports"
+  status = 301
+
+[[redirects]]
+  from = "/desks/science"
+  to = "/topics/science"
+  status = 301
+
+[[redirects]]
+  from = "/desks/humanities"
+  to = "/topics/humanities"
+  status = 301
+
+[[redirects]]
+  from = "/desks/civics"
+  to = "/topics/civics"
+  status = 301
+
+[[redirects]]
+  from = "/desks/*"
+  to = "/topics/:splat"
+  status = 301
+
+# Legacy magazine sections → domains
+[[redirects]]
+  from = "/topics/movies-tv"
+  to = "/topics/arts"
+  status = 301
+
+[[redirects]]
+  from = "/topics/music"
+  to = "/topics/arts"
+  status = 301
+
+[[redirects]]
+  from = "/topics/galleries"
+  to = "/topics/arts"
+  status = 301
+
+[[redirects]]
+  from = "/topics/books"
+  to = "/topics/arts"
+  status = 301
+
+[[redirects]]
+  from = "/topics/games"
+  to = "/topics/sports"
+  status = 301
+
+[[redirects]]
+  from = "/topics/business"
+  to = "/topics/civics"
+  status = 301
+
+[[redirects]]
+  from = "/topics/tech"
+  to = "/topics/science"
+  status = 301
+
+[[redirects]]
+  from = "/topics/cities-travel"
+  to = "/topics/culture"
   status = 301
 
 # Expo Router static export SPA fallback (keep after API + legacy redirects)

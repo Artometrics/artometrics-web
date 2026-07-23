@@ -6,9 +6,10 @@ description: >-
   A historical-economics lens asks who captured wealth when rulers claimed
   order.
 heroImage: /images/content/articles/imperial/hero.png
-tags:
-  - culture
 draft: false
+tags:
+  - humanities
+  - history
 tldr: >-
   Every empire in history has told the same story about itself: we brought
   order, we built roads, we made the trains run on time. What the chronicles

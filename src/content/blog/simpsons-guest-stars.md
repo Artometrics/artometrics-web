@@ -4,9 +4,10 @@ slug: simpsons-guest-stars
 pubDate: 2026-06-15T00:00:00.000Z
 description: Guest-appearance records count celebrity density across seasons.
 heroImage: /images/content/articles/simpsons-guest-stars/hero.png
-tags:
-  - movies-tv
 draft: false
+tags:
+  - arts
+  - film
 tldr: >-
   Guest-appearance records count celebrity density across seasons. Start with
   the scale: 1,381 — Records in the working dataset; and 1–30 — Year span

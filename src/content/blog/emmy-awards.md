@@ -6,9 +6,10 @@ description: >-
   Nomination and win records reveal which series swept hardware—and how
   concentrated awards became.
 heroImage: /images/content/articles/emmy-awards/hero.png
-tags:
-  - movies-tv
 draft: false
+tags:
+  - arts
+  - film
 tldr: >-
   Emmy season looks like a parade of equal contenders. Nomination and win
   records look more like a concentration map — a few names return year after

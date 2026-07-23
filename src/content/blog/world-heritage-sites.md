@@ -4,9 +4,10 @@ slug: world-heritage-sites
 pubDate: 2026-06-15T00:00:00.000Z
 description: UNESCO heritage counts track how Scandinavian inventories expanded.
 heroImage: /images/content/articles/world-heritage-sites/hero.png
-tags:
-  - galleries
 draft: false
+tags:
+  - culture
+  - travel
 tldr: >-
   UNESCO World Heritage counts turn national prestige into a time series. This
   Scandinavian extract holds 6 records spanning 2004–2022, with a median value

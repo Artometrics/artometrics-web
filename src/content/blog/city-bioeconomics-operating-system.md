@@ -6,9 +6,10 @@ description: >-
   A geo-economics frame treats cities as layered systems of trade, culture, and
   infrastructure.
 heroImage: /images/content/articles/city-bioeconomics-operating-system/hero.png
-tags:
-  - cities-travel
 draft: false
+tags:
+  - civics
+  - economics
 tldr: >-
   A city report should not start with a postcard. It should start with a system
   map: what the city makes, what it imports, who it serves, what it prices out,

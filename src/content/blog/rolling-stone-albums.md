@@ -4,9 +4,10 @@ slug: rolling-stone-albums
 pubDate: 2026-06-15T00:00:00.000Z
 description: Canonical rankings identify the records Rolling Stone places at the summit.
 heroImage: /images/content/articles/rolling-stone-albums/hero.png
-tags:
-  - music
 draft: false
+tags:
+  - arts
+  - music
 tldr: >-
   Rolling Stone's greatest-albums lists are canon factories. They convert
   critical memory into ranked cultural infrastructure — and the 2003 ranking

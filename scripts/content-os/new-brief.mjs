@@ -3,7 +3,7 @@
  * Create a new Artometrics keyword brief from the template.
  *
  * Usage:
- *   node scripts/content-os/new-brief.mjs --slug my-topic --desk culture --title "My Topic"
+ *   node scripts/content-os/new-brief.mjs --slug my-topic --desk arts --subdomain film --title "My Topic"
  */
 import { copyFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
@@ -29,9 +29,60 @@ if (!slug) {
   process.exit(1);
 }
 
-const allowed = new Set(["culture", "atlas", "history", "persona", "power"]);
+const allowed = new Set(["arts", "sports", "science", "humanities", "civics", "culture"]);
 if (!allowed.has(desk)) {
-  console.error(`Invalid --desk ${desk}`);
+  console.error(`Invalid --desk ${desk} (use a domain: arts|sports|science|humanities|civics|culture)`);
+  process.exit(1);
+}
+
+const subdomain = arg("subdomain", "");
+const allowedSub = new Set([
+  "design",
+  "music",
+  "film",
+  "theater",
+  "architecture",
+  "fashion",
+  "language",
+  "football",
+  "basketball",
+  "baseball",
+  "soccer",
+  "hockey",
+  "golf",
+  "tennis",
+  "fighting",
+  "gaming",
+  "motorsports",
+  "chemistry",
+  "physics",
+  "biology",
+  "astronomy",
+  "geology",
+  "math",
+  "medicine",
+  "engineering",
+  "tech",
+  "history",
+  "philosophy",
+  "religion",
+  "psychology",
+  "sociology",
+  "anthropology",
+  "economics",
+  "business",
+  "politics",
+  "law",
+  "education",
+  "communication",
+  "travel",
+  "food",
+  "leisure",
+  "environment",
+  "wellness",
+]);
+if (subdomain && !allowedSub.has(subdomain)) {
+  console.error(`Invalid --subdomain ${subdomain}`);
   process.exit(1);
 }
 
@@ -46,6 +97,7 @@ const today = new Date().toISOString().slice(0, 10);
 const brief = JSON.parse(readFileSync(TEMPLATE, "utf8"));
 brief.slug = slug;
 brief.desk = desk;
+if (subdomain) brief.subdomain = subdomain;
 brief.workingTitle = titleBase.replace(/\b\w/g, (c) => c.toUpperCase());
 brief.title = `${brief.workingTitle.toUpperCase()}: The Artometrics of ${brief.workingTitle}`;
 brief.primaryKeyword = `${titleBase.toLowerCase()} data`;

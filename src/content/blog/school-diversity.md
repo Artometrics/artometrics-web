@@ -4,9 +4,10 @@ slug: school-diversity
 pubDate: 2026-06-15T00:00:00.000Z
 description: School-level composition data map where diversity concentrates.
 heroImage: /images/content/articles/school-diversity/hero.png
-tags:
-  - business
 draft: false
+tags:
+  - civics
+  - education
 tldr: >-
   School-level composition data map where student-body diversity concentrates
   across U.S. local education agencies. The working file holds 27,944 records.

@@ -6,9 +6,10 @@ description: >-
   Price and calorie data across pizza menus show what diners pay in money and
   energy.
 heroImage: /images/content/articles/all-the-pizza/hero.png
+draft: false
 tags:
   - culture
-draft: false
+  - food
 tldr: >-
   Pizza prices look simple until you try to compare 10,000 menu rows. The
   Datafiniti pizza extract in TidyTuesday does exactly that: restaurant-level

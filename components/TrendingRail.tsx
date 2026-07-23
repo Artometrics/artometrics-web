@@ -2,8 +2,7 @@ import { Pressable, Text, View, StyleSheet } from "react-native";
 import { Link } from "expo-router";
 import { Fonts } from "@/constants/Colors";
 import { useTheme } from "@/lib/theme";
-import { primarySection, type BlogPost } from "@/lib/content";
-import { SECTION_META } from "@/data/sections";
+import { sectionLabel, type BlogPost } from "@/lib/content";
 
 export function TrendingRail({ posts }: { posts: BlogPost[] }) {
   const { colors } = useTheme();
@@ -12,7 +11,7 @@ export function TrendingRail({ posts }: { posts: BlogPost[] }) {
     <View style={[styles.wrap, { borderColor: colors.border }]}>
       <Text style={[styles.title, { color: colors.text }]}>Trending</Text>
       {posts.map((post, i) => {
-        const section = primarySection(post.tags);
+        const label = sectionLabel(post.tags);
         const n = String(i + 1).padStart(2, "0");
         return (
           <Link key={post.slug} href={`/${post.slug}`} asChild>
@@ -25,10 +24,8 @@ export function TrendingRail({ posts }: { posts: BlogPost[] }) {
             >
               <Text style={[styles.num, { color: colors.textSubtle }]}>{n}</Text>
               <View style={styles.copy}>
-                {section ? (
-                  <Text style={[styles.kicker, { color: colors.textSubtle }]}>
-                    {SECTION_META[section].title}
-                  </Text>
+                {label ? (
+                  <Text style={[styles.kicker, { color: colors.textSubtle }]}>{label}</Text>
                 ) : null}
                 <Text style={[styles.headline, { color: colors.text }]} numberOfLines={3}>
                   {post.title}

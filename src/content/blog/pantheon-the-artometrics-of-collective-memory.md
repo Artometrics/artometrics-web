@@ -5,9 +5,10 @@ pubDate: 2026-07-01T00:00:00.000Z
 description: Biography-scale fame data ask where collective memory clusters.
 heroImage: >-
   /images/content/articles/pantheon-the-artometrics-of-collective-memory/hero.png
-tags:
-  - culture
 draft: false
+tags:
+  - humanities
+  - sociology
 tldr: >-
   Collective memory is not a neutral archive. It is a ranked attention system:
   some lives travel across languages and centuries, while others remain local

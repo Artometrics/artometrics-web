@@ -4,9 +4,10 @@ slug: netflix-engagement
 pubDate: 2026-06-15T00:00:00.000Z
 description: Engagement metrics Netflix reports show which titles absorbed the most hours.
 heroImage: /images/content/articles/netflix-engagement/hero.png
-tags:
-  - movies-tv
 draft: false
+tags:
+  - arts
+  - film
 tldr: >-
   Netflix’s public engagement tables measure attention in hours viewed — a blunt
   but useful currency for which titles absorbed the most time on the service.

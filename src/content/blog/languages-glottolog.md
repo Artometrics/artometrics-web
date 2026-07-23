@@ -6,9 +6,10 @@ description: >-
   Glottolog family data measure how uneven language diversity is at the family
   level.
 heroImage: /images/content/articles/languages-glottolog/hero.png
-tags:
-  - culture
 draft: false
+tags:
+  - arts
+  - language
 tldr: >-
   Linguistic diversity is often imagined as a smooth global gradient.
   Glottolog-style language inventories show something lumpier: documentation

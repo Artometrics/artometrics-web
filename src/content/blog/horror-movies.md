@@ -6,9 +6,10 @@ description: >-
   Ratings across tens of thousands of horror films ask whether quality rose with
   volume.
 heroImage: /images/content/articles/horror-movies/hero.png
-tags:
-  - movies-tv
 draft: false
+tags:
+  - arts
+  - film
 tldr: >-
   Horror catalogs grow faster than any critic can watch. The open question is
   whether vote averages rose with that volume — or whether more titles simply

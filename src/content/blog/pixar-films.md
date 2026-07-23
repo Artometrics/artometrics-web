@@ -6,9 +6,10 @@ description: >-
   Data on Pixar’s canon track scores and the titles that interrupted a long
   critical run.
 heroImage: /images/content/articles/pixar-films/hero.png
-tags:
-  - movies-tv
 draft: false
+tags:
+  - arts
+  - film
 tldr: >-
   Pixar is the rare studio brand that became a quality guarantee — but
   guarantees are measurable. The TidyTuesday 2025-03-11 Pixar films release

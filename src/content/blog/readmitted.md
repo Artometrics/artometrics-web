@@ -6,9 +6,10 @@ description: >-
   CMS HRRP data show where states, conditions, and ownership types exceed
   benchmarks.
 heroImage: /images/content/articles/readmitted/hero.jpg
-tags:
-  - business
 draft: false
+tags:
+  - science
+  - medicine
 tldr: >-
   The Hospital Readmissions Reduction Program is a Medicare penalty system that
   has been running since 2012. The premise is simple: if your patients come back

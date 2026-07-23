@@ -6,9 +6,10 @@ description: >-
   Ratings and popularity across thousands of titles find games that win both
   mass attention and esteem.
 heroImage: /images/content/articles/board-games/hero.png
-tags:
-  - games
 draft: false
+tags:
+  - sports
+  - gaming
 tldr: >-
   BoardGameGeek ratings are a public taste machine: tens of thousands of titles,
   each scored by the people willing to log plays. The TidyTuesday board-games

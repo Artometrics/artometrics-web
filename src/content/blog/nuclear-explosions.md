@@ -4,9 +4,10 @@ slug: nuclear-explosions
 pubDate: 2026-06-15T00:00:00.000Z
 description: 'Historical test records map yield, purpose, and timing across decades.'
 heroImage: /images/content/articles/nuclear-explosions/hero.png
-tags:
-  - culture
 draft: false
+tags:
+  - science
+  - physics
 tldr: >-
   Nuclear test histories are usually told as geopolitics. The event catalogs
   underneath — body-wave magnitudes, dates, purposes, and depths — also form a

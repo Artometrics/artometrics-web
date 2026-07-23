@@ -4,9 +4,10 @@ slug: wealth-income
 pubDate: 2026-06-15T00:00:00.000Z
 description: Wealth and income shares measure how assets pile up at the upper end.
 heroImage: /images/content/articles/wealth-income/hero.png
-tags:
-  - business
 draft: false
+tags:
+  - civics
+  - economics
 tldr: >-
   Income distribution is how a society counts who sits where. This file holds
   2,916 records spanning 1967–2019, with a median income-distribution value of

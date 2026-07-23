@@ -4,9 +4,10 @@ slug: project-gutenberg-public-domain-canon-map
 pubDate: 2026-07-01T00:00:00.000Z
 description: 'Gutenberg metadata charts language gravity, era effects, and author memory.'
 heroImage: /images/content/articles/project-gutenberg-public-domain-canon-map/hero.png
-tags:
-  - books
 draft: false
+tags:
+  - arts
+  - language
 tldr: >-
   Project Gutenberg is not only a library. It is a map of what digitized
   public-domain culture looks like when volunteer labor, copyright timers, and

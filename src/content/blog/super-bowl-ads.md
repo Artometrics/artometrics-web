@@ -4,9 +4,10 @@ slug: super-bowl-ads
 pubDate: 2026-06-15T00:00:00.000Z
 description: Ad-spot data track which commercials captured attention after the whistle.
 heroImage: /images/content/articles/super-bowl-ads/hero.png
-tags:
-  - business
 draft: false
+tags:
+  - civics
+  - communication
 tldr: >-
   Super Bowl ads do not end when the whistle blows. They migrate to YouTube,
   where view counts become a second scoreboard. This working file covers 247 ad

@@ -6,9 +6,10 @@ description: >-
   Public catalog data reveal library size and the gap between hype and retained
   inventory.
 heroImage: /images/content/articles/streaming-catalog-power/hero.png
-tags:
-  - movies-tv
 draft: true
+tags:
+  - arts
+  - film
 tldr: >-
   Streaming marketing sells the hit. The library keeps the inventory. Those are
   different objects: one is a campaign; the other is what remains available

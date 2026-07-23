@@ -4,9 +4,10 @@ slug: netflix-titles
 pubDate: 2026-06-15T00:00:00.000Z
 description: Title-level library data track the balance of movies and TV over time.
 heroImage: /images/content/articles/netflix-titles/hero.png
-tags:
-  - movies-tv
 draft: false
+tags:
+  - arts
+  - film
 tldr: >-
   A streaming library is an inventory decision dressed as a homepage.
   Title-level Netflix catalog data show how the mix of movies and TV — and the

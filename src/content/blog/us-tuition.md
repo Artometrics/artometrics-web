@@ -4,9 +4,10 @@ slug: us-tuition
 pubDate: 2026-06-15T00:00:00.000Z
 description: State tuition time series measure the rise in college costs.
 heroImage: /images/content/articles/us-tuition/hero.png
-tags:
-  - business
 draft: false
+tags:
+  - civics
+  - education
 tldr: >-
   College price is a time series with a political charge. This file holds 600
   state-level tuition records spanning 2004–2015, with a median value of 7,607

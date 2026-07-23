@@ -4,9 +4,10 @@ slug: export-superpowers-us-china-germany
 pubDate: 2026-07-01T00:00:00.000Z
 description: 'A three-country comparison of platforms, factories, and machinery.'
 heroImage: /images/content/articles/export-superpowers-us-china-germany/hero.png
-tags:
-  - business
 draft: false
+tags:
+  - civics
+  - economics
 tldr: >-
   The United States, China, and Germany sit at the center of almost every
   serious conversation about trade. They are often treated as interchangeable

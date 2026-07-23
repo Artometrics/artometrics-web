@@ -18,6 +18,7 @@ import {
   getBlogPosts,
   getRecommendedPosts,
   primarySection,
+  sectionLabel,
 } from "@/lib/content";
 import { SECTION_META } from "@/data/sections";
 import { SeoJsonLd } from "@/components/SeoJsonLd";
@@ -50,6 +51,7 @@ export default function ReportScreen() {
   }
 
   const section = primarySection(post.tags);
+  const label = sectionLabel(post.tags);
   const adjacent = getAdjacentPosts(post.slug);
   const minutes = estimateMinutes(post.body);
   const hero = assetUrl(post.heroImage);
@@ -76,7 +78,7 @@ export default function ReportScreen() {
         url: "https://artometrics.com",
       },
       mainEntityOfPage: `https://artometrics.com/${post.slug}`,
-      articleSection: section ? SECTION_META[section].title : "Articles",
+      articleSection: label ?? (section ? SECTION_META[section].title : "Articles"),
     },
     ...(faq.length
       ? [
@@ -114,10 +116,8 @@ export default function ReportScreen() {
         </Wrapper>
       ) : null}
       <Wrapper style={styles.front} variant="prose">
-        {section ? (
-          <Text style={[styles.eyebrow, { color: colors.accent }]}>
-            {SECTION_META[section].title}
-          </Text>
+        {label ? (
+          <Text style={[styles.eyebrow, { color: colors.accent }]}>{label}</Text>
         ) : null}
         <Text style={[styles.title, { color: colors.text }]}>{post.title}</Text>
         <Text style={[styles.dek, { color: colors.textMuted }]}>{post.description}</Text>

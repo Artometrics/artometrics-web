@@ -6,9 +6,10 @@ description: >-
   A lyric-level comparison of two era-defining catalogs—theme, language, and
   structure.
 heroImage: /images/content/articles/beyonce-taylor-lyrics/hero.png
-tags:
-  - music
 draft: false
+tags:
+  - arts
+  - music
 tldr: >-
   Two catalogs define a generation of pop authorship. Line-level lyric tables
   make it possible to compare them the way a critic compares albums — by

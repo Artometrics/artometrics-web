@@ -4,9 +4,10 @@ slug: exercise-usa
 pubDate: 2026-06-15T00:00:00.000Z
 description: State-level activity rates compare where Americans work out most.
 heroImage: /images/content/articles/exercise-usa/hero.png
+draft: false
 tags:
   - culture
-draft: false
+  - wellness
 tldr: >-
   Exercise is unevenly distributed across American states — a public-health map
   disguised as lifestyle branding. The TidyTuesday exercise extract used here

@@ -6,9 +6,10 @@ description: >-
   Performance and box-office records map the shows that dominated by longevity
   and revenue.
 heroImage: /images/content/articles/broadway-musicals/hero.png
-tags:
-  - culture
 draft: false
+tags:
+  - arts
+  - theater
 tldr: >-
   Broadway is a price and endurance market: average ticket price on one axis,
   performances on the other. The TidyTuesday grosses extract used here holds

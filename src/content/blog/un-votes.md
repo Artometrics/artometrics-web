@@ -4,9 +4,10 @@ slug: un-votes
 pubDate: 2026-06-15T00:00:00.000Z
 description: Voting records identify resolutions that divided member states.
 heroImage: /images/content/articles/un-votes/hero.png
-tags:
-  - business
 draft: false
+tags:
+  - civics
+  - politics
 tldr: >-
   United Nations roll-call votes are a diplomacy archive written as a
   contingency table. This working extract holds 100,000 records. The most common

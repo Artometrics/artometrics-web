@@ -76,7 +76,7 @@ const podcastRss = `<?xml version="1.0" encoding="UTF-8"?>
   <channel>
     <title>Artometrics Podcast</title>
     <link>${SITE}/podcast</link>
-    <description>Interviews extending the Artometrics desks — culture, atlas, history, persona, power.</description>
+    <description>Interviews extending the Artometrics archive — arts, sports, science, humanities, civics, culture.</description>
     <language>en-us</language>
     <itunes:author>Artometrics</itunes:author>
     <itunes:summary>Data-science conversations for the creative industries.</itunes:summary>

@@ -2,7 +2,15 @@ import blogData from "@/src/generated/blog.json";
 import podcastData from "@/src/generated/podcast.json";
 import authorsData from "@/src/generated/authors.json";
 import legalData from "@/src/generated/legal.json";
-import { SECTION_META, SECTION_SLUGS, type SectionSlug } from "@/data/sections";
+import {
+  DOMAIN_META,
+  SECTION_META,
+  SECTION_SLUGS,
+  SUBDOMAIN_META,
+  primaryDomain,
+  primarySubdomain,
+  type SectionSlug,
+} from "@/data/sections";
 
 export type BlogPost = (typeof blogData)[number];
 export type PodcastEpisode = (typeof podcastData)[number];
@@ -33,9 +41,21 @@ export function formatDate(iso: string | null) {
   });
 }
 
+/** Primary domain from tags (`arts` | `sports` | …). */
 export function primarySection(tags: string[] | undefined): SectionSlug | null {
   if (!tags?.length) return null;
-  return (tags.find((t) => t in SECTION_META) as SectionSlug) ?? null;
+  return primaryDomain(tags);
+}
+
+/** Desk eyebrow: "Arts · Film" when subdomain known. */
+export function sectionLabel(tags: string[] | undefined): string | null {
+  if (!tags?.length) return null;
+  const domain = primaryDomain(tags);
+  const sub = primarySubdomain(tags);
+  if (sub && SUBDOMAIN_META[sub]) {
+    return `${DOMAIN_META[domain].title} · ${SUBDOMAIN_META[sub].title}`;
+  }
+  return DOMAIN_META[domain].title;
 }
 
 /** @deprecated Use primarySection */
@@ -106,4 +126,11 @@ export function getRecommendedPosts(currentSlug: string, limit = 12): BlogPost[]
   return [...same, ...rest].slice(0, limit);
 }
 
-export { SECTION_META, SECTION_SLUGS };
+export {
+  DOMAIN_META,
+  SECTION_META,
+  SECTION_SLUGS,
+  SUBDOMAIN_META,
+  primaryDomain,
+  primarySubdomain,
+};

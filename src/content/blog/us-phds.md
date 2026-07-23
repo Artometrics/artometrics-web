@@ -4,9 +4,10 @@ slug: us-phds
 pubDate: 2026-06-15T00:00:00.000Z
 description: Doctorate production data show which disciplines grew quickest.
 heroImage: /images/content/articles/us-phds/hero.png
-tags:
-  - business
 draft: false
+tags:
+  - civics
+  - education
 tldr: >-
   U.S. doctorate production is a labor-market story told in field counts. This
   file holds 3,370 records spanning 2008–2017, with a median of 85.0 PhDs and a

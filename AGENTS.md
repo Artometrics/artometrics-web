@@ -44,7 +44,7 @@ Schemas are enforced by `scripts/build-content.mjs` (not Astro Zod).
 
 ### `blog` — `src/content/blog/`
 
-- Required frontmatter: `title`, `slug`, `pubDate`, `description`, `heroImage`, `tags` (one of: `sports|movies-tv|music|culture|galleries|cities-travel|games|business|books|tech`)
+- Required frontmatter: `title`, `slug`, `pubDate`, `description`, `heroImage`, `tags` (`[domain, subdomain]` — domains: `arts|sports|science|humanities|civics|culture`; see `data/sections.ts` for the 43 subdomains)
 - Optional: `draft`, `author`, `tldr`, `keyPoints`, `faq`, `audioSrc`
 - Body is HTML (narrative magazine prose; Plotly charts preserved)
 - Voice: professional, objective, insightful, no fluff — named/dated facts only
@@ -124,7 +124,7 @@ Keyword briefs, style rules, draft scaffolds, and AEO live under `docs/content-o
 
 | Command | Action |
 |--------|--------|
-| `npm run cos:brief -- --slug … --desk culture --title "…"` | New keyword brief |
+| `npm run cos:brief -- --slug … --desk arts --subdomain film --title "…"` | New keyword brief |
 | `npm run cos:scaffold -- --brief docs/content-os/briefs/<slug>.json` | Draft HTML report scaffold |
 | `npm run cos:banner-prompt -- --brief …` | Higgsfield banner prompt |
 | `npm run cos:publish -- --slug …` | Copy draft → `src/content/blog/` + rebuild JSON + `llms.txt` |

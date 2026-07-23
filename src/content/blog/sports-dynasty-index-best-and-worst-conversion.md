@@ -7,9 +7,10 @@ description: >-
   pain.
 heroImage: >-
   /images/content/articles/sports-dynasty-index-best-and-worst-conversion/hero.png
+draft: false
 tags:
   - sports
-draft: false
+  - football
 tldr: >-
   Single-team profiles answer one fan base at a time. Cross the league borders
   and greatness stops looking like one ranking. Archive mass, conversion

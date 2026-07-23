@@ -6,9 +6,10 @@ description: >-
   Factbook indicators compare nations on size and wealth—where scale and
   prosperity align or diverge.
 heroImage: /images/content/articles/cia-world-factbook/hero.png
-tags:
-  - business
 draft: false
+tags:
+  - civics
+  - economics
 tldr: >-
   Population is the blunt instrument of international comparison: China and
   India alone redraw every map. The TidyTuesday CIA World Factbook extract used

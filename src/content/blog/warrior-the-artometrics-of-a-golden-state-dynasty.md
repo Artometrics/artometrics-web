@@ -5,9 +5,10 @@ pubDate: 2026-04-18T00:00:00.000Z
 description: Decades of losing before a modern dynasty remade Bay Area basketball.
 heroImage: >-
   /images/content/articles/warrior-the-artometrics-of-a-golden-state-dynasty/hero.png
+draft: false
 tags:
   - sports
-draft: false
+  - basketball
 tldr: >-
   The Golden State Warriors have played 78 seasons of professional basketball.
   For roughly 35 of them, they were irrelevant—not rebuilding, not

@@ -6,9 +6,10 @@ description: >-
   Since 1958, most chart-toppers lasted weeks; a few held for months—and
   streaming rewrote the pattern.
 heroImage: /images/content/articles/billboard-hot-100/hero.png
-tags:
-  - music
 draft: false
+tags:
+  - arts
+  - music
 tldr: >-
   The Billboard Hot 100 has published a number-one song every week since August
   1958. In that time it has absorbed the British Invasion, the disco era, the

@@ -6,9 +6,10 @@ description: >-
   Thousands of executive-exit records measure tenure length and how departures
   cluster.
 heroImage: /images/content/articles/ceo-departures/hero.png
-tags:
-  - business
 draft: false
+tags:
+  - civics
+  - business
 tldr: >-
   CEO tenure is usually narrated as drama: a firing, a founder exit, a sudden
   interim. The TidyTuesday departures extract used here holds 9,423 records with

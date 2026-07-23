@@ -136,7 +136,8 @@ slug: ${slug}
 pubDate: ${today}
 description: "${String(brief.metaDescription || "").replace(/"/g, '\\"')}"
 heroImage: /images/content/articles/${slug}/hero.png
-tags: [${brief.desk}]
+tags:
+  - ${brief.desk}${brief.subdomain ? `\n  - ${brief.subdomain}` : ""}
 draft: true
 ---
 `;

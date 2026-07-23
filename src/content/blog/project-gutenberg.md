@@ -4,9 +4,10 @@ slug: project-gutenberg
 pubDate: 2026-06-15T00:00:00.000Z
 description: Public-domain metadata show which topics crowd the free-library canon.
 heroImage: /images/content/articles/project-gutenberg/hero.png
-tags:
-  - books
 draft: false
+tags:
+  - arts
+  - language
 tldr: >-
   Project Gutenberg is the internet's oldest large-scale experiment in free
   literature. Its subject catalog — Library of Congress headings and related

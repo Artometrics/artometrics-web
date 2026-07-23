@@ -7,10 +7,9 @@ import {
   deckLine,
   formatAuthorName,
   formatDate,
-  primarySection,
+  sectionLabel,
   type BlogPost,
 } from "@/lib/content";
-import { SECTION_META } from "@/data/sections";
 
 type Variant = "tile" | "portrait" | "compact";
 
@@ -24,7 +23,7 @@ export function MagazineCard({
   width?: number;
 }) {
   const { colors } = useTheme();
-  const section = primarySection(post.tags);
+  const label = sectionLabel(post.tags);
   const hero = assetUrl(post.heroImage);
   const author = post.author ? formatAuthorName(String(post.author)) : "Artometrics";
   const aspect = variant === "portrait" ? 4 / 5 : 16 / 10;
@@ -54,10 +53,8 @@ export function MagazineCard({
           />
         )}
         <View style={styles.body}>
-          {section ? (
-            <Text style={[styles.kicker, { color: colors.accent }]}>
-              {SECTION_META[section].title}
-            </Text>
+          {label ? (
+            <Text style={[styles.kicker, { color: colors.accent }]}>{label}</Text>
           ) : null}
           <Text
             style={[

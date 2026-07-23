@@ -4,9 +4,10 @@ slug: h3-the-artometrics-of-a-youtube-dynasty
 pubDate: 2026-04-14T00:00:00.000Z
 description: 'Since 2011, Ethan and Hila Klein scaled channels, a podcast, and a brand.'
 heroImage: /images/content/articles/h3-the-artometrics-of-a-youtube-dynasty/hero.png
-tags:
-  - culture
 draft: false
+tags:
+  - civics
+  - communication
 tldr: >-
   Ethan Klein built one of YouTube’s most documented creator empires from a
   single channel and a lawsuit. H3h3Productions launched in 2011 as a

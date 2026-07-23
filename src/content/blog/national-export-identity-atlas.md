@@ -4,9 +4,10 @@ slug: national-export-identity-atlas
 pubDate: 2026-07-01T00:00:00.000Z
 description: 'A country-level atlas treats exports as identity: what states sell and need.'
 heroImage: /images/content/articles/national-export-identity-atlas/hero.png
-tags:
-  - business
 draft: false
+tags:
+  - civics
+  - economics
 tldr: >-
   What a nation sells abroad is one of the few identity claims that must clear a
   market test. Tourism slogans can invent a self-image; export ledgers record

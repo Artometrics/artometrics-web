@@ -6,9 +6,10 @@ description: >-
   Cross-sport rules, payroll, and scarcity show why teams become culturally
   meaningful.
 heroImage: /images/content/articles/league-money-skill-and-star-systems/hero.png
+draft: false
 tags:
   - sports
-draft: false
+  - football
 tldr: >-
   A sports league is a measurement system before it is an entertainment product.
   It decides how much money can matter, how much one player can matter, how

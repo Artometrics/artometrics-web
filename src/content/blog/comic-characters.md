@@ -4,9 +4,10 @@ slug: comic-characters
 pubDate: 2026-06-15T00:00:00.000Z
 description: Character attributes across Marvel and DC ask who sits atop power rankings.
 heroImage: /images/content/articles/comic-characters/hero.png
-tags:
-  - culture
 draft: false
+tags:
+  - arts
+  - design
 tldr: >-
   Comic-book universes are attention economies with capes. The TidyTuesday
   comic-characters extract used here holds 23,272 records spanning 1935–2013 ,

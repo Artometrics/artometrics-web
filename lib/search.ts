@@ -1,5 +1,4 @@
-import { getAuthors, getBlogPosts, getPodcastEpisodes, primarySection } from "@/lib/content";
-import { SECTION_META } from "@/data/sections";
+import { getAuthors, getBlogPosts, getPodcastEpisodes, sectionLabel } from "@/lib/content";
 
 export type SearchHit = {
   type: "report" | "podcast" | "author";
@@ -22,13 +21,13 @@ export function searchSite(query: string, limit = 40): SearchHit[] {
   const hits: { score: number; hit: SearchHit }[] = [];
 
   for (const post of getBlogPosts()) {
-    const section = primarySection(post.tags);
+    const label = sectionLabel(post.tags);
     const blob = [
       post.title,
       post.description,
       post.slug,
       ...(post.tags ?? []),
-      section ? SECTION_META[section].title : "",
+      label ?? "",
     ]
       .join(" ")
       .toLowerCase();
@@ -47,7 +46,7 @@ export function searchSite(query: string, limit = 40): SearchHit[] {
           title: post.title,
           description: post.description,
           href: `/${post.slug}`,
-          meta: section ? SECTION_META[section].title : "Article",
+          meta: label ?? "Article",
         },
       });
     }

@@ -23,19 +23,11 @@ import {
   getBlogPosts,
   getPodcastEpisodes,
   primarySection,
+  sectionLabel,
 } from "@/lib/content";
 import { SECTION_META, SECTION_SLUGS, type SectionSlug } from "@/data/sections";
 
-const RAIL_SECTIONS: SectionSlug[] = [
-  "movies-tv",
-  "sports",
-  "music",
-  "culture",
-  "games",
-  "business",
-  "cities-travel",
-  "books",
-];
+const RAIL_SECTIONS: SectionSlug[] = [...SECTION_SLUGS];
 
 export default function HomeScreen() {
   const { colors } = useTheme();
@@ -48,7 +40,7 @@ export default function HomeScreen() {
   const morePosts = posts.slice(8, 32);
   const podcasts = getPodcastEpisodes().slice(0, 8);
   const heroUri = assetUrl(featured?.heroImage);
-  const featuredSection = featured ? primarySection(featured.tags) : null;
+  const featuredLabel = featured ? sectionLabel(featured.tags) : null;
   const featuredAuthor = featured?.author
     ? formatAuthorName(String(featured.author))
     : "Artometrics";
@@ -88,9 +80,9 @@ export default function HomeScreen() {
                   </Pressable>
                 </Link>
               ) : null}
-              {featuredSection ? (
+              {featuredLabel ? (
                 <Text style={StyleSheet.flatten([styles.eyebrow, { color: colors.accent }])}>
-                  {SECTION_META[featuredSection].title}
+                  {featuredLabel}
                 </Text>
               ) : null}
               <Link href={`/${featured.slug}`} asChild>

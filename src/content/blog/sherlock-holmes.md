@@ -4,9 +4,10 @@ slug: sherlock-holmes
 pubDate: 2026-06-15T00:00:00.000Z
 description: Text-length analysis of Sherlock Holmes stories through Conan’s corpus.
 heroImage: /images/content/articles/sherlock-holmes/hero.png
-tags:
-  - books
 draft: false
+tags:
+  - arts
+  - language
 tldr: >-
   Conan Doyle’s Sherlock Holmes corpus arrives here as a tokenized text table:
   65,958 records and a median word count of 12.0. That median is the calibration

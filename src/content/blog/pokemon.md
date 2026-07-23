@@ -4,9 +4,10 @@ slug: pokemon
 pubDate: 2026-05-06T00:00:00.000Z
 description: 'Beyond the headline revenue figure: games, cards, merchandise, and film.'
 heroImage: /images/content/articles/pokemon/hero.png
-tags:
-  - games
 draft: false
+tags:
+  - sports
+  - gaming
 tldr: >-
   Pokémon is the highest-grossing media franchise in history — more than $150
   billion in lifetime revenue across games, cards, merchandise, and film. That

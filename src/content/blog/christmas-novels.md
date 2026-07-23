@@ -6,9 +6,10 @@ description: >-
   A Gutenberg holiday corpus shows which seasonal novels still define the
   Christmas canon.
 heroImage: /images/content/articles/christmas-novels/hero.png
-tags:
-  - books
 draft: false
+tags:
+  - arts
+  - language
 tldr: >-
   Christmas novels are a seasonal shelf with a long memory: Dickensian ghosts,
   children’s mysteries, parlor sentimentalism. The TidyTuesday christmas-novels

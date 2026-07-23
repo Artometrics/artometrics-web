@@ -7,9 +7,10 @@ description: >-
   dynasty.
 heroImage: >-
   /images/content/articles/patriots-the-artometrics-of-the-system-dynasty/hero.png
+draft: false
 tags:
   - sports
-draft: false
+  - football
 tldr: >-
   The New England Patriots used to be ordinary. Then they became the NFL’s most
   efficient argument about systems, quarterbacks, coaching, and institutional

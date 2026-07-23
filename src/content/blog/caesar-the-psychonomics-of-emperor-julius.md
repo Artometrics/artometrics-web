@@ -6,9 +6,10 @@ description: >-
   A psychonomic reading of Caesar asks what ambition cost the Roman political
   household he ruled.
 heroImage: /images/content/articles/caesar-the-psychonomics-of-emperor-julius/hero.png
-tags:
-  - culture
 draft: false
+tags:
+  - humanities
+  - history
 tldr: >-
   Economics comes from the Greek oikonomia — the management of the house.
   Psychonomics asks the prior question: who is managing the soul of the house,

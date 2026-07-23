@@ -6,9 +6,10 @@ description: >-
   Visitation time series identify America’s busiest parks and how attendance has
   trended.
 heroImage: /images/content/articles/national-park-visits/hero.png
-tags:
-  - cities-travel
 draft: false
+tags:
+  - culture
+  - travel
 tldr: >-
   National parks are sold as wilderness and remembered as crowds. Visit counts
   make that tension measurable: which named units absorb America's outdoor

@@ -4,9 +4,10 @@ slug: san-francisco-data-microscope
 pubDate: 2026-07-01T00:00:00.000Z
 description: 'A city-identity report through software exports, scarcity, and neighborhoods.'
 heroImage: /images/content/articles/san-francisco-data-microscope/hero.png
-tags:
-  - cities-travel
 draft: false
+tags:
+  - civics
+  - economics
 tldr: >-
   San Francisco is a perfect city microscope because its contradictions are
   measurable: a small city with enormous software output, extreme housing

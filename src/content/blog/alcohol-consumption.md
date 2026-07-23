@@ -6,9 +6,10 @@ description: >-
   Country-level consumption data map which nations drink the most per person—and
   how that has shifted.
 heroImage: /images/content/articles/alcohol-consumption/hero.png
+draft: false
 tags:
   - culture
-draft: false
+  - food
 tldr: >-
   Global alcohol data is often collapsed into a single “drinks per person”
   headline. The TidyTuesday global alcohol extract keeps the beverage split

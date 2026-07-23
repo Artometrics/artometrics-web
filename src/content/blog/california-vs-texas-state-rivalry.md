@@ -6,9 +6,10 @@ description: >-
   What the two largest U.S. states share—and where their economies, exports, and
   risks part ways.
 heroImage: /images/content/articles/california-vs-texas-state-rivalry/hero.png
-tags:
-  - cities-travel
 draft: false
+tags:
+  - civics
+  - politics
 tldr: >-
   California and Texas are the most common American state comparison because
   each is large enough to stand in for a theory of the country. One is cast as

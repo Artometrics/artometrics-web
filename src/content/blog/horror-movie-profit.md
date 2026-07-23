@@ -6,9 +6,10 @@ description: >-
   Budget and box-office data for thousands of horror titles separate winners
   from costly misses.
 heroImage: /images/content/articles/horror-movie-profit/hero.png
-tags:
-  - movies-tv
 draft: false
+tags:
+  - arts
+  - film
 tldr: >-
   Horror is the genre studios love to describe as cheap and scalable — until the
   ledger says otherwise. Budget and domestic-gross figures for thousands of

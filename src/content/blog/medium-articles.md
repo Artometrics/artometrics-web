@@ -6,9 +6,10 @@ description: >-
   Metadata from tens of thousands of Medium articles tests whether length
   predicts claps.
 heroImage: /images/content/articles/medium-articles/hero.png
-tags:
-  - tech
 draft: false
+tags:
+  - science
+  - tech
 tldr: >-
   Medium promised a writing network where attention could attach to length,
   craft, and niche expertise. The metadata trail — reading time, claps,

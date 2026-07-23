@@ -6,9 +6,10 @@ description: >-
   Global burger prices illustrate how currency and wages shape the real cost of
   everyday goods.
 heroImage: /images/content/articles/big-mac-index/hero.png
-tags:
-  - business
 draft: false
+tags:
+  - civics
+  - economics
 tldr: >-
   A Big Mac is the same product everywhere on Earth — same bun, same patties,
   same sauce. That sameness is exactly what makes its price interesting. The

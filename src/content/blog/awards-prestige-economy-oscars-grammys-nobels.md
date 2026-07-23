@@ -7,9 +7,10 @@ description: >-
   music, and science.
 heroImage: >-
   /images/content/articles/awards-prestige-economy-oscars-grammys-nobels/hero.png
-tags:
-  - culture
 draft: false
+tags:
+  - humanities
+  - sociology
 tldr: >-
   Award shows are culture’s accounting departments. They translate messy
   creative fields into categories, winners, speeches, snubs, and canon — then

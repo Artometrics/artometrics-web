@@ -6,9 +6,10 @@ description: >-
   Los Angeles basketball’s glamour machine turns market gravity into title
   windows.
 heroImage: /images/content/articles/lakers-the-artometrics-of-basketball-glamour/hero.png
+draft: false
 tags:
   - sports
-draft: false
+  - basketball
 tldr: >-
   The Los Angeles Lakers run winning and celebrity as the same operating system.
   Other franchises develop stars; the Lakers absorb them, frame them, and

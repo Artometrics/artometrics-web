@@ -6,9 +6,10 @@ description: >-
   Survival data from the 1500s to 2015 map who gained years of life—and who
   lagged.
 heroImage: /images/content/articles/global-life-expectancy/hero.png
-tags:
-  - culture
 draft: false
+tags:
+  - science
+  - medicine
 tldr: >-
   For most of recorded history, life expectancy at birth hovered between 25 and
   40 years — not because adults aged quickly, but because childhood death was

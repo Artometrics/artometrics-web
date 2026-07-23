@@ -4,9 +4,10 @@ slug: cultural-exports-geoeconomics
 pubDate: 2026-07-01T00:00:00.000Z
 description: A cultural-economics frame treats soft-power industries as export goods.
 heroImage: /images/content/articles/cultural-exports-geoeconomics/hero.png
-tags:
-  - business
 draft: false
+tags:
+  - civics
+  - economics
 tldr: >-
   Culture is an export category even when it never passes through a port. A
   song, show, game, cuisine, fashion house, or sports star can change what a

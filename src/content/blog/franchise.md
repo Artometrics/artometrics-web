@@ -6,9 +6,10 @@ description: >-
   Revenue maps for more than 100 franchises show where valuable IP earns across
   media.
 heroImage: /images/content/articles/franchise/hero.png
-tags:
-  - movies-tv
 draft: false
+tags:
+  - arts
+  - film
 tldr: >-
   The global media industry runs on intellectual property — and a surprisingly
   small number of franchises account for most of the money. The TidyTuesday 2019

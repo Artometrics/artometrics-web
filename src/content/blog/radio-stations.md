@@ -6,9 +6,10 @@ description: >-
   Station-level format data chart where music, talk, and niche programming
   concentrate.
 heroImage: /images/content/articles/radio-stations/hero.png
-tags:
-  - music
 draft: false
+tags:
+  - arts
+  - music
 tldr: >-
   American radio still looks chaotic from the passenger seat — call letters,
   dial numbers, format slogans. The station license table underneath is more

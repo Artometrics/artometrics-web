@@ -6,9 +6,10 @@ description: >-
   Earnings and unemployment by major show where degrees pay off and where risk
   is higher.
 heroImage: /images/content/articles/college-major-income/hero.png
-tags:
-  - business
 draft: false
+tags:
+  - civics
+  - education
 tldr: >-
   College majors are sold as income stories. The TidyTuesday recent-graduates
   extract used here also tracks how many alumni land in low-wage jobs. Across

@@ -6,9 +6,10 @@ description: >-
   Carrier-level accident and fatality data ask which airlines stand out for poor
   safety outcomes.
 heroImage: /images/content/articles/airline-safety/hero.png
-tags:
-  - cities-travel
 draft: false
+tags:
+  - culture
+  - travel
 tldr: >-
   Airline safety is usually discussed one crash at a time. The TidyTuesday
   airline-safety extract does something different: it lines carriers up by

@@ -6,9 +6,10 @@ description: >-
   More than titles: New York sets the standard for droughts, payroll, and
   magnitude.
 heroImage: /images/content/articles/yankees-the-artometrics-of-baseballs-empire/hero.png
+draft: false
 tags:
   - sports
-draft: false
+  - baseball
 tldr: >-
   Twenty-seven World Series titles do not merely decorate the New York Yankees.
   They distort the measurement system around the franchise. Winning stopped

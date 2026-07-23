@@ -4,9 +4,10 @@ slug: lego-database
 pubDate: 2026-06-15T00:00:00.000Z
 description: Official set metadata traces rising piece counts and theme differences.
 heroImage: /images/content/articles/lego-database/hero.png
-tags:
-  - games
 draft: false
+tags:
+  - culture
+  - leisure
 tldr: >-
   LEGO sets are toys, collectibles, and increasingly architectural objects. The
   Rebrickable-style database that feeds this TidyTuesday release turns that

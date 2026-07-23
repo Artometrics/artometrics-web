@@ -6,9 +6,10 @@ description: >-
   Dallas remains the NFL’s clearest split between global brand power and an
   aging postseason engine.
 heroImage: /images/content/articles/cowboys-the-artometrics-of-americas-team/hero.png
+draft: false
 tags:
   - sports
-draft: false
+  - football
 tldr: >-
   The Dallas Cowboys are no longer just a football team. They are a national
   attention market. Every season begins with disproportionate coverage,

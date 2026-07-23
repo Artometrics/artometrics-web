@@ -6,9 +6,10 @@ description: >-
   Trip-level bike-share data measures typical distance and duration across
   Biketown journeys.
 heroImage: /images/content/articles/biketown-bikeshare/hero.png
-tags:
-  - cities-travel
 draft: false
+tags:
+  - culture
+  - travel
 tldr: >-
   Portland’s Biketown system turns everyday movement into timestamped trips. The
   TidyTuesday extract used here holds 100,000 ride records spanning 2016–2018 ,

@@ -6,9 +6,10 @@ description: >-
   Decades of Christmas-song chart data identify the standards that return every
   season.
 heroImage: /images/content/articles/christmas-songs/hero.png
-tags:
-  - music
 draft: false
+tags:
+  - arts
+  - music
 tldr: >-
   Holiday songs have a strange chart life: they return every December, pile up
   weeks, then vanish until the next season. The TidyTuesday christmas-songs

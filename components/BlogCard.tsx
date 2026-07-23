@@ -7,10 +7,9 @@ import {
   deckLine,
   formatAuthorName,
   formatDate,
-  primarySection,
+  sectionLabel,
   type BlogPost,
 } from "@/lib/content";
-import { SECTION_META } from "@/data/sections";
 
 export function BlogCard({
   post,
@@ -20,7 +19,7 @@ export function BlogCard({
   variant?: "stack" | "row";
 }) {
   const { colors } = useTheme();
-  const section = primarySection(post.tags);
+  const label = sectionLabel(post.tags);
   const hero = assetUrl(post.heroImage);
   const author = post.author ? formatAuthorName(String(post.author)) : "Artometrics";
 
@@ -37,10 +36,8 @@ export function BlogCard({
             />
           ) : null}
           <View style={styles.body}>
-            {section ? (
-              <Text style={[styles.kicker, { color: colors.accent }]}>
-                {SECTION_META[section].title}
-              </Text>
+            {label ? (
+              <Text style={[styles.kicker, { color: colors.accent }]}>{label}</Text>
             ) : null}
             <Text style={[styles.title, { color: colors.text }]}>{post.title}</Text>
             <Text style={[styles.deck, { color: colors.textMuted }]} numberOfLines={3}>
@@ -59,10 +56,8 @@ export function BlogCard({
     <Link href={`/${post.slug}`} asChild>
       <Pressable style={StyleSheet.flatten([styles.row, { borderBottomColor: colors.border }])}>
         <View style={styles.rowCopy}>
-          {section ? (
-            <Text style={[styles.kicker, { color: colors.accent }]}>
-              {SECTION_META[section].title}
-            </Text>
+          {label ? (
+            <Text style={[styles.kicker, { color: colors.accent }]}>{label}</Text>
           ) : null}
           <Text style={[styles.rowTitle, { color: colors.text }]}>{post.title}</Text>
           <Text style={[styles.deck, { color: colors.textMuted }]} numberOfLines={2}>

@@ -6,9 +6,10 @@ description: >-
   Markets, leagues, and championship droughts explain why fan cultures differ by
   city.
 heroImage: /images/content/articles/regional-sports-identity-map/hero.png
+draft: false
 tags:
   - sports
-draft: false
+  - football
 tldr: >-
   A team is never just a team. It is attached to a region, a media market, a
   league structure, and a local memory system. That context changes what the

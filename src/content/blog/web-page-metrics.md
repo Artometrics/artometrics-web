@@ -4,9 +4,10 @@ slug: web-page-metrics
 pubDate: 2026-06-15T00:00:00.000Z
 description: Performance metrics show speed leaders and which technical measures correlate.
 heroImage: /images/content/articles/web-page-metrics/hero.png
-tags:
-  - tech
 draft: false
+tags:
+  - science
+  - tech
 tldr: >-
   The web’s performance story is a percentile story. This file holds 238 records
   spanning 2016–2022, with a median P50 of 5.97 and a high of 9.80. SpeedIndex

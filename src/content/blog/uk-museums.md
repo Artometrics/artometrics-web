@@ -6,9 +6,10 @@ description: >-
   Museum locations and deprivation bands show how institutions map onto
   inequality.
 heroImage: /images/content/articles/uk-museums/hero.png
-tags:
-  - galleries
 draft: false
+tags:
+  - arts
+  - architecture
 tldr: >-
   Britain’s museum map is also a map of place. This file places 4,191 museum
   records against an area deprivation index whose median is 5.00 and whose

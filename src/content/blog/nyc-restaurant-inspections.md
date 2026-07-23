@@ -4,9 +4,10 @@ slug: nyc-restaurant-inspections
 pubDate: 2026-06-15T00:00:00.000Z
 description: Restaurant grades across New York show how scores distribute by cuisine.
 heroImage: /images/content/articles/nyc-restaurant-inspections/hero.png
-tags:
-  - cities-travel
 draft: false
+tags:
+  - culture
+  - food
 tldr: >-
   New York City restaurant inspections turn hygiene into a public grade. Behind
   the A/B/C stickers is a numeric score distribution that is far more skewed

@@ -6,9 +6,10 @@ description: >-
   A large games slice tests whether critic scores correlated with commercial
   outcomes.
 heroImage: /images/content/articles/video-games-sliced/hero.png
-tags:
-  - games
 draft: false
+tags:
+  - sports
+  - gaming
 tldr: >-
   Steam-era concurrency is a living audience meter. This Sliced/TidyTuesday
   games extract holds 83,631 records spanning 2012–2021, with a median average

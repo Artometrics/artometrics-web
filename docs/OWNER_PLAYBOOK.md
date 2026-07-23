@@ -7,8 +7,9 @@ What you hook up, make, and verify after the magazine site ships on `main`.
 - https://artometrics.com/
 - https://artometrics.com/search?q=anime
 - https://artometrics.com/blog
-- https://artometrics.com/topics/games
-- https://artometrics.com/desks/culture
+- https://artometrics.com/topics/sports
+- https://artometrics.com/topics/arts
+- https://artometrics.com/topics/culture
 - https://artometrics.com/library
 - https://artometrics.com/about
 - https://artometrics.com/press

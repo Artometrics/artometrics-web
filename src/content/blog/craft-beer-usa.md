@@ -6,9 +6,10 @@ description: >-
   Brewery-level IBU and ABV data map bitterness and strength across U.S. craft
   producers.
 heroImage: /images/content/articles/craft-beer-usa/hero.png
+draft: false
 tags:
   - culture
-draft: false
+  - food
 tldr: >-
   American craft beer advertises itself with bitterness and strength — IBU and
   ABV on the tap list. The TidyTuesday beers extract used here holds 2,410

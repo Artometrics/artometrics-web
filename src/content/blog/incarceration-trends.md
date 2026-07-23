@@ -4,9 +4,10 @@ slug: incarceration-trends
 pubDate: 2026-06-15T00:00:00.000Z
 description: Long-run imprisonment data track national trends and which states pulled away.
 heroImage: /images/content/articles/incarceration-trends/hero.png
-tags:
-  - business
 draft: false
+tags:
+  - civics
+  - law
 tldr: >-
   U.S. incarceration is often narrated as a single national curve. County- and
   state-level population files show something more fractured: regional regimes

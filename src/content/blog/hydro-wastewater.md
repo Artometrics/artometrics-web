@@ -4,9 +4,10 @@ slug: hydro-wastewater
 pubDate: 2026-06-15T00:00:00.000Z
 description: Facility-level data map which plants serve the largest populations.
 heroImage: /images/content/articles/hydro-wastewater/hero.png
-tags:
-  - cities-travel
 draft: false
+tags:
+  - science
+  - engineering
 tldr: >-
   Wastewater plants are the unglamorous infrastructure of modern density. They
   turn the output of cities into something rivers and coasts can sometimes

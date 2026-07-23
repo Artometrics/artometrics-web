@@ -4,9 +4,10 @@ slug: cetaceans
 pubDate: 2026-06-15T00:00:00.000Z
 description: Morphometric data map which cetacean lineages produce the giants.
 heroImage: /images/content/articles/cetaceans/hero.png
-tags:
-  - culture
 draft: false
+tags:
+  - science
+  - biology
 tldr: >-
   Captive and transferred cetaceans leave paper trails: species names, years,
   and transfer geographies. The TidyTuesday cetacean extract used here holds

@@ -4,9 +4,10 @@ slug: ramen-ratings
 pubDate: 2026-06-15T00:00:00.000Z
 description: Taster scores across thousands of instant ramen products identify top brands.
 heroImage: /images/content/articles/ramen-ratings/hero.png
+draft: false
 tags:
   - culture
-draft: false
+  - food
 tldr: >-
   Instant ramen is a global industrial food that still gets reviewed like craft
   beer. Star ratings compress broth, noodle texture, spice, and packaging

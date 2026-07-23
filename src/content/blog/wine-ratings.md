@@ -4,9 +4,10 @@ slug: wine-ratings
 pubDate: 2026-06-15T00:00:00.000Z
 description: A hundred thousand wine ratings test whether cost tracks scores.
 heroImage: /images/content/articles/wine-ratings/hero.png
+draft: false
 tags:
   - culture
-draft: false
+  - food
 tldr: >-
   A hundred thousand wine ratings are enough to test a dinner-table theory: does
   price predict critic points? This file’s median score is 88.0; the observed

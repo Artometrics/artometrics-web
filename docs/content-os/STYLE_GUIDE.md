@@ -16,13 +16,28 @@ Use this for banners, article HTML, data presentation, and pacing. Agents and sc
 
 Public copy is always Artometrics-branded — never theme-demo or generic “AI magazine” voice.
 
-## Sections
+## Taxonomy (domains · subdomains)
 
-Stories tag exactly one primary section:
+Stories tag a **domain** then a **subdomain** (see `data/sections.ts`):
 
-`sports` | `movies-tv` | `music` | `culture` | `galleries` | `cities-travel` | `games` | `business` | `books` | `tech`
+| Domain | Subdomains |
+|--------|------------|
+| `arts` | design · music · film · theater · architecture · fashion · language |
+| `sports` | football · basketball · baseball · soccer · hockey · golf · tennis · fighting · gaming · motorsports |
+| `science` | chemistry · physics · biology · astronomy · geology · math · medicine · engineering · tech |
+| `humanities` | history · philosophy · religion · psychology · sociology · anthropology |
+| `civics` | economics · business · politics · law · education · communication |
+| `culture` | travel · food · leisure · environment · wellness |
 
-(Legacy desks `culture|atlas|history|persona|power` map into these sections.)
+Frontmatter example:
+
+```yaml
+tags:
+  - arts
+  - film
+```
+
+Nav and `/topics/:domain` use the six domains only. Legacy section/desk slugs redirect into domains.
 
 ## Keyword / AEO rules
 
@@ -44,7 +59,7 @@ Professional, objective, insightful, **no fluff**. Lead with the finding, then t
 ## Banner (hero) rules
 
 - Full-bleed editorial still, **16:9**, no text overlays, no logos, no fake charts drawn into the image
-- Atmosphere matches the section (sports / movies-tv / music / culture / …)
+- Atmosphere matches the domain (arts / sports / science / humanities / civics / culture)
 - Prompt must include: Artometrics red accent sparingly, cream/paper neutrals, documentary magazine photography, no purple gradients, no stock-photo smiles collage
 - File lands at `/images/content/articles/<slug>/hero.png` (or `.webp`) and frontmatter `heroImage`
 

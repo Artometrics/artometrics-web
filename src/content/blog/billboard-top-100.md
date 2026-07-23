@@ -4,9 +4,10 @@ slug: billboard-top-100
 pubDate: 2026-06-15T00:00:00.000Z
 description: Large-scale Hot 100 data show how rankings compress at the summit.
 heroImage: /images/content/articles/billboard-top-100/hero.png
-tags:
-  - music
 draft: false
+tags:
+  - arts
+  - music
 tldr: >-
   The Billboard Hot 100 is a weekly ranking machine: 100 positions, endlessly
   refreshed. The TidyTuesday billboard extract used here holds 100,000 song-week

@@ -6,9 +6,10 @@ description: >-
   Hurricane records compare wind, deaths, and frequency for the island’s most
   damaging storms.
 heroImage: /images/content/articles/hurricanes-puerto-rico/hero.png
-tags:
-  - cities-travel
 draft: false
+tags:
+  - culture
+  - environment
 tldr: >-
   In late summer 2017, the Atlantic hurricane season forced a brutal comparative
   question into public view: which places absorbed the worst of the storm

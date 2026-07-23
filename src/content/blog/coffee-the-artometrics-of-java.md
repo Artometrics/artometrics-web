@@ -6,9 +6,10 @@ description: >-
   Commodity and consumption data place coffee among the world’s largest traded
   goods.
 heroImage: /images/content/articles/coffee-the-artometrics-of-java/hero.png
+draft: false
 tags:
   - culture
-draft: false
+  - food
 tldr: >-
   Coffee is the world’s second-largest traded commodity by value, behind only
   crude oil. More than 125 million people depend on it for their livelihoods.
