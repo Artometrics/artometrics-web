@@ -1,4 +1,4 @@
-export type PlanTier = "listener" | "engager" | "collaborator";
+export type PlanTier = "monthly" | "annual";
 
 export interface PlanDefinition {
   tier: PlanTier;
@@ -7,46 +7,43 @@ export interface PlanDefinition {
   period: string;
   features: string[];
   popular?: boolean;
+  badge?: string;
+  trialLabel: string;
 }
 
+/** Vogue-style: monthly + annual with 1-week free trial. */
 export const PLANS: PlanDefinition[] = [
   {
-    tier: "listener",
-    title: "Listener",
-    price: "$4.99",
-    period: "Per month",
+    tier: "annual",
+    title: "Annual",
+    price: "$19.99",
+    period: "Per year",
+    popular: true,
+    badge: "Save 67%",
+    trialLabel: "Try 1 week free, then $19.99 / year",
     features: [
       "Full podcast library",
       "Subscriber-only episodes",
-      "Weekly editorial highlights",
-      "RSS + saved reading list",
+      "Saved reports library",
+      "Early access to new investigations",
     ],
   },
   {
-    tier: "engager",
-    title: "Engager",
-    price: "$9.99",
+    tier: "monthly",
+    title: "Monthly",
+    price: "$4.99",
     period: "Per month",
-    popular: true,
+    trialLabel: "Try 1 week free, then $4.99 / month",
     features: [
-      "Everything in Listener",
-      "Early access to new reports",
-      "Ad-free reading experience",
-      "Priority newsletter",
-    ],
-  },
-  {
-    tier: "collaborator",
-    title: "Collaborator",
-    price: "$14.99",
-    period: "Per month",
-    features: [
-      "Everything in Engager",
-      "Behind-the-scenes notes",
-      "Member discussion access",
-      "Creator collaboration tools",
+      "Full podcast library",
+      "Subscriber-only episodes",
+      "Saved reports library",
+      "Early access to new investigations",
     ],
   },
 ];
 
 export const ACTIVE_STATUSES = new Set(["active", "trialing"]);
+
+/** Stripe Checkout trial length (days). */
+export const STRIPE_TRIAL_DAYS = 7;

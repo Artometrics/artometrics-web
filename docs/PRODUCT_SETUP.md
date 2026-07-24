@@ -32,15 +32,15 @@ Client calls use `/api/*` (rewritten to Netlify Functions in `netlify.toml`).
 
 ## 2. Stripe
 
-1. Create three recurring products/prices in [Stripe Dashboard](https://dashboard.stripe.com/products):
-   - Listener (~$8/mo)
-   - Engager (~$20/mo)
-   - Collaborator (~$40/mo)
+1. Create two recurring products/prices in [Stripe Dashboard](https://dashboard.stripe.com/products) (**Test mode** first):
+   - Monthly — **$4.99 / month**
+   - Annual — **$19.99 / year** (≈67% vs monthly)
+
+   Checkout adds a **7-day free trial** in code (`trial_period_days: 7`).
 
 2. Copy each **Price ID** (`price_…`) to env vars:
-   - `STRIPE_PRICE_LISTENER`
-   - `STRIPE_PRICE_ENGAGER`
-   - `STRIPE_PRICE_COLLABORATOR`
+   - `STRIPE_PRICE_MONTHLY`
+   - `STRIPE_PRICE_ANNUAL`
 
 3. Copy **Secret key** → `STRIPE_SECRET_KEY`
 
@@ -66,9 +66,8 @@ PUBLIC_SUPABASE_ANON_KEY=
 SUPABASE_SERVICE_ROLE_KEY=
 STRIPE_SECRET_KEY=
 STRIPE_WEBHOOK_SECRET=
-STRIPE_PRICE_LISTENER=
-STRIPE_PRICE_ENGAGER=
-STRIPE_PRICE_COLLABORATOR=
+STRIPE_PRICE_MONTHLY=
+STRIPE_PRICE_ANNUAL=
 ```
 
 `EXPO_PUBLIC_*` vars are inlined into the Expo web/native client at build time. Server secrets stay on Netlify Functions only.

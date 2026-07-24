@@ -37,9 +37,11 @@ export default function PricingScreen() {
         path="/pricing"
       />
       <Text style={[styles.eyebrow, { color: colors.accent }]}>Membership</Text>
-      <Text style={[styles.title, { color: colors.text }]}>Subscribe to Artometrics</Text>
+      <Text style={[styles.title, { color: colors.text }]}>
+        Subscribe for unlimited digital access
+      </Text>
       <Text style={[styles.deck, { color: colors.textMuted }]}>
-        Unlock member episodes, saved reports, and early access to new investigations.
+        Your first week is free. Then pick monthly or annual — cancel anytime.
       </Text>
       <View style={styles.grid}>
         {PLANS.map((plan) => (
@@ -54,17 +56,18 @@ export default function PricingScreen() {
               },
             ]}
           >
-            {plan.popular ? (
-              <Text style={[styles.popular, { color: colors.accent }]}>Most popular</Text>
+            {plan.badge ? (
+              <Text style={[styles.popular, { color: colors.accent }]}>{plan.badge}</Text>
             ) : null}
             <Text style={[styles.planTitle, { color: colors.text }]}>{plan.title}</Text>
             <Text style={[styles.price, { color: colors.text }]}>
               {plan.price}
               <Text style={[styles.period, { color: colors.textSubtle }]}>
                 {" "}
-                / {plan.period.toLowerCase()}
+                / {plan.period.replace(/^Per /i, "").toLowerCase()}
               </Text>
             </Text>
+            <Text style={[styles.trial, { color: colors.textMuted }]}>{plan.trialLabel}</Text>
             <View style={styles.features}>
               {plan.features.map((feature) => (
                 <Text key={feature} style={[styles.feature, { color: colors.textMuted }]}>
@@ -73,10 +76,10 @@ export default function PricingScreen() {
               ))}
             </View>
             {user ? (
-              <PrimaryButton label="Checkout" onPress={() => checkout(plan.tier)} />
+              <PrimaryButton label="Start free trial" onPress={() => checkout(plan.tier)} />
             ) : (
               <Link href="/signup" asChild>
-                <PrimaryButton label="Get started" />
+                <PrimaryButton label="Start free trial" />
               </Link>
             )}
           </View>
@@ -112,6 +115,7 @@ const styles = StyleSheet.create({
   planTitle: { fontSize: 22 },
   price: { fontSize: 32, fontWeight: "300" },
   period: { fontSize: 14 },
+  trial: { fontSize: 13, lineHeight: 20 },
   features: { gap: 6, marginVertical: 8 },
   feature: { fontSize: 14, lineHeight: 22 },
 });

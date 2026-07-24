@@ -63,9 +63,12 @@ export async function userFromAuthHeader(request: Request) {
 
 export function priceIdForTier(tier: string): string | null {
   const map: Record<string, string | undefined> = {
-    listener: process.env.STRIPE_PRICE_LISTENER,
-    engager: process.env.STRIPE_PRICE_ENGAGER,
-    collaborator: process.env.STRIPE_PRICE_COLLABORATOR,
+    monthly: process.env.STRIPE_PRICE_MONTHLY,
+    annual: process.env.STRIPE_PRICE_ANNUAL,
+    // Legacy aliases (older env / docs)
+    listener: process.env.STRIPE_PRICE_MONTHLY ?? process.env.STRIPE_PRICE_LISTENER,
+    engager: process.env.STRIPE_PRICE_ANNUAL ?? process.env.STRIPE_PRICE_ENGAGER,
+    collaborator: process.env.STRIPE_PRICE_ANNUAL ?? process.env.STRIPE_PRICE_COLLABORATOR,
   };
   return map[tier] ?? null;
 }

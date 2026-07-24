@@ -67,6 +67,7 @@ export default async (request: Request) => {
       client_reference_id: user.id,
       metadata: { supabase_user_id: user.id, plan_tier: tier },
       subscription_data: {
+        trial_period_days: 7,
         metadata: { supabase_user_id: user.id, plan_tier: tier },
       },
     });
