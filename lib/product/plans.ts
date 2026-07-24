@@ -13,7 +13,7 @@ export const PLANS: PlanDefinition[] = [
   {
     tier: "listener",
     title: "Listener",
-    price: "$8",
+    price: "$4.99",
     period: "Per month",
     features: [
       "Full podcast library",
@@ -25,7 +25,7 @@ export const PLANS: PlanDefinition[] = [
   {
     tier: "engager",
     title: "Engager",
-    price: "$20",
+    price: "$9.99",
     period: "Per month",
     popular: true,
     features: [
@@ -38,7 +38,7 @@ export const PLANS: PlanDefinition[] = [
   {
     tier: "collaborator",
     title: "Collaborator",
-    price: "$40",
+    price: "$14.99",
     period: "Per month",
     features: [
       "Everything in Engager",
