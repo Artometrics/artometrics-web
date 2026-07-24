@@ -29,10 +29,21 @@ export function requireEnv(name: string): string {
   return value;
 }
 
+/** Prefer EXPO_PUBLIC_* (Expo) with PUBLIC_* aliases for Netlify Functions. */
+export function requirePublicEnv(expoName: string, legacyName: string): string {
+  const value = process.env[expoName] || process.env[legacyName];
+  if (!value) {
+    throw new Error(
+      `Missing environment variable: ${expoName} (or legacy ${legacyName})`,
+    );
+  }
+  return value;
+}
+
 export function adminSupabase() {
   return createClient(
-    requireEnv("PUBLIC_SUPABASE_URL"),
-    requireEnv("SUPABASE_SERVICE_ROLE_KEY")
+    requirePublicEnv("EXPO_PUBLIC_SUPABASE_URL", "PUBLIC_SUPABASE_URL"),
+    requireEnv("SUPABASE_SERVICE_ROLE_KEY"),
   );
 }
 

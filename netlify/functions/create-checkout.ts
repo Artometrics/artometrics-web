@@ -4,7 +4,7 @@ import {
   getSubscriptionForUser,
   json,
   priceIdForTier,
-  requireEnv,
+  requirePublicEnv,
   stripeClient,
   userFromAuthHeader,
 } from "../lib/shared";
@@ -29,7 +29,10 @@ export default async (request: Request) => {
     return json({ error: "Invalid plan tier" }, 400);
   }
 
-  const siteUrl = requireEnv("PUBLIC_SITE_URL").replace(/\/$/, "");
+  const siteUrl = requirePublicEnv(
+    "EXPO_PUBLIC_SITE_URL",
+    "PUBLIC_SITE_URL",
+  ).replace(/\/$/, "");
   const stripe = stripeClient();
   const supabase = adminSupabase();
 
