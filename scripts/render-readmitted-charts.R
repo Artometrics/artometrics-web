@@ -48,11 +48,7 @@ write_plotly_json <- function(fig, path) {
   payload <- list(
     data = built$x$data,
     layout = built$x$layout,
-    config = list(
-      displayModeBar = FALSE,
-      displaylogo = FALSE,
-      responsive = TRUE
-    )
+    config = art_plotly_config()
   )
   write_json(payload, path, auto_unbox = TRUE, pretty = TRUE, null = "null", na = "null")
   message("Wrote ", path)
@@ -450,5 +446,142 @@ fig3 <- fig3 %>% layout(
 )
 write_plotly_json(fig3, file.path(charts_dir, "chart3_penalty_by_ownership.plotly.json"))
 copy_to_public("chart3_penalty_by_ownership")
+
+# ── Chart 4: Top states by average ERR ───────────────────────────────────────
+
+state_err <- read_csv(file.path(data_dir, "hrrp_state_summary.csv"), show_col_types = FALSE) %>%
+  arrange(avg_err) %>%
+  slice_tail(n = 15)
+
+p4 <- ggplot(state_err, aes(x = avg_err, y = reorder(state, avg_err), fill = avg_err)) +
+  geom_col(width = 0.72, color = NA) +
+  geom_vline(xintercept = 1, linetype = "dotted", color = ART_DARK, linewidth = 0.45) +
+  scale_fill_gradient(low = "#1C1C1E", high = ART_HIGHLIGHT, guide = "none") +
+  scale_x_continuous(expand = expansion(mult = c(0, 0.08))) +
+  labs(
+    title = "Average excess readmission ratio by state (top 15)",
+    subtitle = "Intensity of excess above CMS expected line (ERR = 1.0)",
+    x = "Average ERR",
+    y = NULL
+  ) +
+  theme_artometrics(12) +
+  theme(panel.grid.major.y = element_blank())
+
+p4 <- finish_art_chart(
+  p4,
+  takeaway = "Massachusetts posts the highest average ERR among states in the working extract",
+  source = HRRP_SOURCE
+)
+save_png(p4, "chart4_state_avg_err", height = 6.2)
+
+fig4 <- plot_ly(
+  state_err,
+  x = ~avg_err,
+  y = ~state,
+  type = "bar",
+  orientation = "h",
+  marker = list(color = art_bar_colors(nrow(state_err))),
+  text = ~sprintf("%.4f", avg_err),
+  textposition = "outside",
+  cliponaxis = FALSE,
+  hovertemplate = "<b>%{y}</b><br>Avg ERR %{x:.5f}<extra></extra>"
+) %>%
+  layout(
+    title = list(
+      text = "Average excess readmission ratio by state (top 15)",
+      font = list(family = FONT, size = 15, color = ART_DARK),
+      x = 0, xanchor = "left"
+    ),
+    paper_bgcolor = ART_CREAM,
+    plot_bgcolor = ART_CREAM,
+    font = list(family = FONT, color = ART_DARK, size = 12),
+    xaxis = list(title = "Average ERR", gridcolor = ART_MUTED, fixedrange = TRUE, zeroline = FALSE),
+    yaxis = list(
+      title = "",
+      categoryorder = "array",
+      categoryarray = state_err$state,
+      fixedrange = TRUE
+    ),
+    dragmode = FALSE,
+    annotations = list(list(
+      x = 0.99, y = 0.01, xref = "paper", yref = "paper",
+      text = "Artometrics", showarrow = FALSE,
+      xanchor = "right", yanchor = "bottom",
+      font = list(size = 11, color = ART_MID, family = "Georgia, serif")
+    )),
+    margin = list(l = 72, r = 36, t = 96, b = 56)
+  )
+write_plotly_json(fig4, file.path(charts_dir, "chart4_state_avg_err.plotly.json"))
+copy_to_public("chart4_state_avg_err")
+
+# ── Chart 5: High-tier share by ownership ────────────────────────────────────
+
+own_high <- read_csv(file.path(data_dir, "hrrp_ownership_condition.csv"), show_col_types = FALSE) %>%
+  group_by(ownership_group) %>%
+  summarise(
+    n = sum(n),
+    high = sum(n[penalty_tier == "High"]),
+    .groups = "drop"
+  ) %>%
+  mutate(pct_high = 100 * high / n) %>%
+  mutate(ownership_group = factor(ownership_group, levels = c("Government", "Non-Profit", "For-Profit")))
+
+p5 <- ggplot(own_high, aes(x = ownership_group, y = pct_high, fill = ownership_group)) +
+  geom_col(width = 0.62, color = NA) +
+  scale_fill_manual(values = c(
+    "Government" = "#1C1C1E",
+    "Non-Profit" = "#6B6B6B",
+    "For-Profit" = ART_HIGHLIGHT
+  ), guide = "none") +
+  scale_y_continuous(expand = expansion(mult = c(0, 0.12))) +
+  labs(
+    title = "Share of hospital–condition pairs in High penalty tier by ownership",
+    subtitle = "High tier = pairs farthest above CMS expected readmissions",
+    x = "Ownership",
+    y = "High-tier share (%)"
+  ) +
+  theme_artometrics(12)
+
+p5 <- finish_art_chart(
+  p5,
+  takeaway = "For-profit hospitals carry the highest share of High-tier penalty pairs",
+  source = HRRP_SOURCE
+)
+save_png(p5, "chart5_high_penalty_by_ownership", height = 5.2)
+
+fig5 <- plot_ly(
+  own_high,
+  x = ~ownership_group,
+  y = ~pct_high,
+  type = "bar",
+  marker = list(color = c("#1C1C1E", "#6B6B6B", ART_HIGHLIGHT)),
+  text = ~sprintf("%.1f%%", pct_high),
+  textposition = "outside",
+  cliponaxis = FALSE,
+  hovertemplate = "<b>%{x}</b><br>High tier %{y:.1f}%<extra></extra>"
+) %>%
+  layout(
+    title = list(
+      text = "Share of hospital–condition pairs in High penalty tier by ownership",
+      font = list(family = FONT, size = 15, color = ART_DARK),
+      x = 0, xanchor = "left"
+    ),
+    paper_bgcolor = ART_CREAM,
+    plot_bgcolor = ART_CREAM,
+    font = list(family = FONT, color = ART_DARK, size = 12),
+    xaxis = list(title = "Ownership", fixedrange = TRUE),
+    yaxis = list(title = "High-tier share (%)", gridcolor = ART_MUTED, fixedrange = TRUE, zeroline = FALSE),
+    dragmode = FALSE,
+    bargap = 0.35,
+    annotations = list(list(
+      x = 0.99, y = 0.01, xref = "paper", yref = "paper",
+      text = "Artometrics", showarrow = FALSE,
+      xanchor = "right", yanchor = "bottom",
+      font = list(size = 11, color = ART_MID, family = "Georgia, serif")
+    )),
+    margin = list(l = 56, r = 28, t = 96, b = 64)
+  )
+write_plotly_json(fig5, file.path(charts_dir, "chart5_high_penalty_by_ownership.plotly.json"))
+copy_to_public("chart5_high_penalty_by_ownership")
 
 cat("All readmitted R charts exported to", charts_dir, "and synced to public/\n")

@@ -652,7 +652,7 @@
   "readmitted": {
     "slug": "readmitted",
     "dataset": "/data/articles/readmitted/data/hrrp_condition_err.csv",
-    "quarto": null,
+    "quarto": "/data/articles/readmitted/source.qmd",
     "html": "/exports/readmitted.html",
     "pdf": null,
     "epub": null,

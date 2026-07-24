@@ -10,8 +10,8 @@ try {
 
   const switchers = page.locator(".art-chart-mode-switch");
   const count = await switchers.count();
-  if (count !== 3) {
-    throw new Error(`Expected 3 chart mode switchers on readmitted, found ${count}`);
+  if (count !== 5) {
+    throw new Error(`Expected 5 chart mode switchers on readmitted, found ${count}`);
   }
 
   const firstChart = page.locator("figure.art-chart").first();

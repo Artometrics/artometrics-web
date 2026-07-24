@@ -75,10 +75,11 @@ Reports are HTML bodies (not Markdown prose) inside frontmatter MD files:
   </nav>
   <main class="art-article-main">
     <!-- deck paragraphs -->
+    <h2 id="research-question" class="anchored">RESEARCH QUESTION</h2>
     <h2 id="fast-facts" class="anchored">FAST FACTS</h2>
     <div class="facts-grid">…</div>
-    <h2 id="dataset-context" class="anchored">DATASET CONTEXT</h2>
-    <!-- finding sections with charts -->
+    <h2 id="dataset-context" class="anchored">DATA AND METHOD</h2>
+    <!-- finding sections with charts (target: 5) -->
     <h2 id="limitations" class="anchored">LIMITATIONS</h2>
     <h2 id="conclusion" class="anchored">CONCLUSION</h2>
     <h2 id="references" class="anchored">REFERENCES</h2>
@@ -87,18 +88,45 @@ Reports are HTML bodies (not Markdown prose) inside frontmatter MD files:
 </div>
 ```
 
+### Scientific magazine shape (not a journal paper)
+
+Artometrics reports should feel **citable and scientific**, without copying APA journal theater.
+
+**Do include**
+
+1. **Research question** — one falsifiable reader question (not a formal H₀/H₁ block)
+2. **Named, dated sources** — CMS dataset IDs, papers with years, agency reports, named institutions
+3. **Data and method** — rows kept/dropped, joins, derived vs observed metrics, measurement window
+4. **Five charts** — each answers a different sub-question; caption is a claim
+5. **Uncertainty / non-claims** — what the file cannot show
+6. **References** — DOIs / stable URLs; distinguish primary data from context literature
+7. **Reproducibility** — downloadable CSV + Quarto/source (site Download menu)
+
+**Do not require**
+
+- Formal null/alternative hypothesis notation (H₀/H₁)
+- Literature-review padding or methods appendices that bury the finding
+- p-hacking theater or significance stars without a stated test
+
+If a section is a **framework or hypothesis map** rather than measured evidence, say so plainly in the caption and prose.
+
 ### Section progression
 
 1. **Deck** — 1–2 paragraphs: what the archive is, the interpretive move, the calibration number
-2. **FAST FACTS** — 3–6 `fact-box` cells (number + label)
-3. **DATASET CONTEXT** — source, rows, cleaning, what is observed vs derived vs editorial index
-4. **Findings** — each H2 answers one question; one chart teaches one claim
-5. **LIMITATIONS** — coverage, bias, non-claims
-6. **CONCLUSION** — modest; sharpen the question, don’t oversell
-7. **REFERENCES** — citable sources with URLs
-8. **EDITOR'S NOTE** — Artometrics reproducibility note
+2. **RESEARCH QUESTION** — the question the five charts are designed to answer
+3. **FAST FACTS** — 3–6 `fact-box` cells (number + label)
+4. **DATA AND METHOD** — source, rows, cleaning, observed vs derived vs editorial index
+5. **Findings** — each H2 answers one question; **five charts** teach five claims
+6. **LIMITATIONS** — coverage, bias, non-claims
+7. **CONCLUSION** — modest; sharpen the question, don’t oversell
+8. **REFERENCES** — citable sources with URLs (named authors, years, DOIs when available)
+9. **EDITOR'S NOTE** — Artometrics reproducibility note
+
+Target depth: **named actors, dated facts, and mechanism** — not abstract “trends.” Prefer ~1,200–3,500 words of dense report prose once five charts are in place.
 
 ### Charts
+
+Target **five** live charts per report (`data-chart` + `data-fallback` pairs).
 
 ```html
 <figure class="art-chart">
@@ -115,6 +143,9 @@ Reports are HTML bodies (not Markdown prose) inside frontmatter MD files:
 ```
 
 Always ship PNG + Plotly JSON pairs. Caption states the claim, not the column name.
+Interactive embeds are **hover-only** (no scroll-zoom, drag-zoom, or mode bar). Print mode remains the default static R/PNG view.
+
+Site chrome: **Share** sits above the article body; **Download** (Data / Code / Download all) sits below the body and pulls from `src/generated/downloads.json`.
 
 ## Evidence labels (ethics)
 
