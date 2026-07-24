@@ -6,9 +6,11 @@ function tierFromSubscription(sub: Stripe.Subscription): string | null {
   if (meta) return meta;
   const priceId = sub.items.data[0]?.price?.id;
   const map: Record<string, string | undefined> = {
-    [process.env.STRIPE_PRICE_LISTENER ?? ""]: "listener",
-    [process.env.STRIPE_PRICE_ENGAGER ?? ""]: "engager",
-    [process.env.STRIPE_PRICE_COLLABORATOR ?? ""]: "collaborator",
+    [process.env.STRIPE_PRICE_MONTHLY ?? ""]: "monthly",
+    [process.env.STRIPE_PRICE_ANNUAL ?? ""]: "annual",
+    [process.env.STRIPE_PRICE_LISTENER ?? ""]: "monthly",
+    [process.env.STRIPE_PRICE_ENGAGER ?? ""]: "annual",
+    [process.env.STRIPE_PRICE_COLLABORATOR ?? ""]: "annual",
   };
   return priceId ? map[priceId] ?? null : null;
 }

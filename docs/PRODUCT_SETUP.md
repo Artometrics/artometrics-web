@@ -22,25 +22,25 @@ Client calls use `/api/*` (rewritten to Netlify Functions in `netlify.toml`).
    `supabase/migrations/001_product.sql`
 
 3. Copy from **Project Settings → API**:
-   - Project URL → `PUBLIC_SUPABASE_URL`
-   - `anon` key → `PUBLIC_SUPABASE_ANON_KEY`
+   - Project URL → `EXPO_PUBLIC_SUPABASE_URL` (and optional alias `PUBLIC_SUPABASE_URL`)
+   - `anon` key → `EXPO_PUBLIC_SUPABASE_ANON_KEY` (and optional alias `PUBLIC_SUPABASE_ANON_KEY`)
    - `service_role` key → `SUPABASE_SERVICE_ROLE_KEY` (Netlify only, never in the browser)
 
-4. **Authentication → URL configuration**: add your site URL and `https://your-site.netlify.app` to redirect allow list.
+4. **Authentication → URL configuration**: add `https://artometrics.com`, `https://artometrics.netlify.app`, and local `http://localhost:8081` / `http://localhost:8888` to the redirect allow list.
 
 5. Optional: disable email confirmation in development (**Auth → Providers → Email**) for faster testing.
 
 ## 2. Stripe
 
-1. Create three recurring products/prices in [Stripe Dashboard](https://dashboard.stripe.com/products):
-   - Listener (~$8/mo)
-   - Engager (~$20/mo)
-   - Collaborator (~$40/mo)
+1. Create two recurring products/prices in [Stripe Dashboard](https://dashboard.stripe.com/products) (**Test mode** first):
+   - Monthly — **$4.99 / month**
+   - Annual — **$19.99 / year** (≈67% vs monthly)
+
+   Checkout adds a **7-day free trial** in code (`trial_period_days: 7`).
 
 2. Copy each **Price ID** (`price_…`) to env vars:
-   - `STRIPE_PRICE_LISTENER`
-   - `STRIPE_PRICE_ENGAGER`
-   - `STRIPE_PRICE_COLLABORATOR`
+   - `STRIPE_PRICE_MONTHLY`
+   - `STRIPE_PRICE_ANNUAL`
 
 3. Copy **Secret key** → `STRIPE_SECRET_KEY`
 
@@ -56,18 +56,21 @@ Client calls use `/api/*` (rewritten to Netlify Functions in `netlify.toml`).
 Set in **Site configuration → Environment variables** (and locally in `.env` for `netlify dev`):
 
 ```env
+EXPO_PUBLIC_SITE_URL=https://artometrics.com
+EXPO_PUBLIC_SUPABASE_URL=
+EXPO_PUBLIC_SUPABASE_ANON_KEY=
+# Optional legacy aliases (functions accept either)
+PUBLIC_SITE_URL=https://artometrics.com
 PUBLIC_SUPABASE_URL=
 PUBLIC_SUPABASE_ANON_KEY=
-PUBLIC_SITE_URL=https://artometrics.com
 SUPABASE_SERVICE_ROLE_KEY=
 STRIPE_SECRET_KEY=
 STRIPE_WEBHOOK_SECRET=
-STRIPE_PRICE_LISTENER=
-STRIPE_PRICE_ENGAGER=
-STRIPE_PRICE_COLLABORATOR=
+STRIPE_PRICE_MONTHLY=
+STRIPE_PRICE_ANNUAL=
 ```
 
-`PUBLIC_*` vars are available at Astro build time and in the browser.
+`EXPO_PUBLIC_*` vars are inlined into the Expo web/native client at build time. Server secrets stay on Netlify Functions only.
 
 ## 4. Sync locked podcast content
 
