@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Image, Text, View, StyleSheet, Pressable } from "react-native";
 import { useAudioPlayer, useAudioPlayerStatus } from "expo-audio";
 import { Link, useLocalSearchParams } from "expo-router";
@@ -12,6 +13,7 @@ import {
   getPodcastEpisodes,
 } from "@/lib/content";
 import { useAuth } from "@/lib/auth";
+import { apiFetch } from "@/lib/supabase/client";
 
 export async function generateStaticParams() {
   return getPodcastEpisodes().map((ep) => ({ slug: ep.id }));
@@ -20,10 +22,62 @@ export async function generateStaticParams() {
 export default function PodcastEpisodeScreen() {
   const { slug } = useLocalSearchParams<{ slug: string }>();
   const episode = getPodcastEpisode(slug);
-  const { user } = useAuth();
-  const locked = Boolean(episode?.isLocked && !user);
-  const audioUri =
-    episode?.audioSrc && !locked ? assetUrl(episode.audioSrc) : undefined;
+  const { user, loading: authLoading } = useAuth();
+  const [subActive, setSubActive] = useState(false);
+  const [memberHtml, setMemberHtml] = useState<string | null>(null);
+  const [gateLoading, setGateLoading] = useState(Boolean(episode?.isLocked));
+
+  useEffect(() => {
+    let cancelled = false;
+    async function loadMemberAccess() {
+      if (!episode?.isLocked) {
+        setGateLoading(false);
+        return;
+      }
+      if (authLoading) return;
+      if (!user) {
+        if (!cancelled) {
+          setSubActive(false);
+          setMemberHtml(null);
+          setGateLoading(false);
+        }
+        return;
+      }
+      setGateLoading(true);
+      try {
+        const statusRes = await apiFetch("subscription-status");
+        if (!statusRes.ok) {
+          if (!cancelled) setSubActive(false);
+          return;
+        }
+        const status = (await statusRes.json()) as { active?: boolean };
+        if (!status.active) {
+          if (!cancelled) setSubActive(false);
+          return;
+        }
+        if (!cancelled) setSubActive(true);
+        const epRes = await apiFetch(
+          `member-episode?slug=${encodeURIComponent(episode.id)}`,
+        );
+        if (epRes.ok) {
+          const data = (await epRes.json()) as { html?: string };
+          if (!cancelled) setMemberHtml(data.html ?? "");
+        }
+      } catch {
+        if (!cancelled) setSubActive(false);
+      } finally {
+        if (!cancelled) setGateLoading(false);
+      }
+    }
+    void loadMemberAccess();
+    return () => {
+      cancelled = true;
+    };
+  }, [authLoading, user, episode?.id, episode?.isLocked]);
+
+  const locked = Boolean(episode?.isLocked && !subActive);
+  const bodyHtml = episode?.isLocked ? memberHtml : episode?.body;
+  const audioUri = !locked ? assetUrl(episode?.audioSrc) : undefined;
   const player = useAudioPlayer(audioUri);
   const status = useAudioPlayerStatus(player);
 
@@ -70,7 +124,9 @@ export default function PodcastEpisodeScreen() {
           />
         ) : null}
 
-        {locked ? (
+        {gateLoading ? (
+          <Text style={styles.gateCopy}>Checking membership…</Text>
+        ) : locked ? (
           <View style={styles.gate}>
             <Text style={styles.gateTitle}>Members episode</Text>
             <Text style={styles.gateCopy}>
@@ -80,7 +136,7 @@ export default function PodcastEpisodeScreen() {
               <Text style={styles.link}>View membership plans</Text>
             </Link>
           </View>
-        ) : episode.audioSrc ? (
+        ) : audioUri ? (
           <Pressable style={styles.playBtn} onPress={toggleAudio}>
             <Text style={styles.playLabel}>
               {status.playing ? "Pause" : "Play episode"}
@@ -88,7 +144,7 @@ export default function PodcastEpisodeScreen() {
           </Pressable>
         ) : null}
 
-        {!locked ? <ArticleBody html={episode.body} /> : null}
+        {!locked && bodyHtml ? <ArticleBody html={bodyHtml} /> : null}
       </Wrapper>
     </>
   );

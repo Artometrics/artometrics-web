@@ -264,6 +264,7 @@ const podcast = listFiles(join(CONTENT, "podcast")).map((file) => {
   const raw = readFileSync(file, "utf8");
   const { data, content } = matter(raw);
   const id = basename(file, extname(file));
+  const isLocked = Boolean(data.isLocked);
   return {
     id,
     title: data.title,
@@ -278,8 +279,9 @@ const podcast = listFiles(join(CONTENT, "podcast")).map((file) => {
     tags: data.tags ?? [],
     isRecent: Boolean(data.isRecent),
     isPopular: Boolean(data.isPopular),
-    isLocked: Boolean(data.isLocked),
-    body: marked.parse(content.trim(), { async: false }),
+    isLocked,
+    // Locked transcripts ship via Supabase + /api/member-episode, not the static JSON.
+    body: isLocked ? "" : marked.parse(content.trim(), { async: false }),
     bodyFormat: "html",
   };
 });

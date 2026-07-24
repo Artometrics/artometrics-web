@@ -1,18 +1,22 @@
 import Stripe from "stripe";
-import { adminSupabase, isActiveSubscription, requireEnv, stripeClient } from "../lib/shared";
+import { adminSupabase, requireEnv, stripeClient } from "../lib/shared";
 
 function tierFromSubscription(sub: Stripe.Subscription): string | null {
   const meta = sub.metadata?.plan_tier;
-  if (meta) return meta;
+  if (meta === "monthly" || meta === "annual") return meta;
   const priceId = sub.items.data[0]?.price?.id;
-  const map: Record<string, string | undefined> = {
-    [process.env.STRIPE_PRICE_MONTHLY ?? ""]: "monthly",
-    [process.env.STRIPE_PRICE_ANNUAL ?? ""]: "annual",
-    [process.env.STRIPE_PRICE_LISTENER ?? ""]: "monthly",
-    [process.env.STRIPE_PRICE_ENGAGER ?? ""]: "annual",
-    [process.env.STRIPE_PRICE_COLLABORATOR ?? ""]: "annual",
-  };
-  return priceId ? map[priceId] ?? null : null;
+  if (!priceId) return null;
+  if (priceId === process.env.STRIPE_PRICE_MONTHLY) return "monthly";
+  if (priceId === process.env.STRIPE_PRICE_ANNUAL) return "annual";
+  return null;
+}
+
+/** Stripe API 2025+: period lives on subscription items, not the Subscription root. */
+function periodEndUnix(sub: Stripe.Subscription): number | null {
+  const fromItem = sub.items?.data?.[0]?.current_period_end;
+  if (typeof fromItem === "number") return fromItem;
+  const legacy = (sub as { current_period_end?: number }).current_period_end;
+  return typeof legacy === "number" ? legacy : null;
 }
 
 async function upsertSubscription(params: {
@@ -24,7 +28,7 @@ async function upsertSubscription(params: {
   currentPeriodEnd?: number | null;
 }) {
   const supabase = adminSupabase();
-  await supabase.from("subscriptions").upsert(
+  const { error } = await supabase.from("subscriptions").upsert(
     {
       user_id: params.userId,
       stripe_customer_id: params.customerId ?? undefined,
@@ -37,6 +41,7 @@ async function upsertSubscription(params: {
     },
     { onConflict: "user_id" }
   );
+  if (error) throw error;
 }
 
 export default async (request: Request) => {
@@ -75,7 +80,7 @@ export default async (request: Request) => {
           subscriptionId: sub.id,
           status: sub.status,
           planTier: tierFromSubscription(sub),
-          currentPeriodEnd: sub.current_period_end,
+          currentPeriodEnd: periodEndUnix(sub),
         });
         break;
       }
@@ -90,7 +95,7 @@ export default async (request: Request) => {
           subscriptionId: sub.id,
           status: event.type.endsWith("deleted") ? "canceled" : sub.status,
           planTier: tierFromSubscription(sub),
-          currentPeriodEnd: sub.current_period_end,
+          currentPeriodEnd: periodEndUnix(sub),
         });
         break;
       }
