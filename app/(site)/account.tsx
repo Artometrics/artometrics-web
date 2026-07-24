@@ -9,12 +9,28 @@ import { useTheme } from "@/lib/theme";
 import { useAuth } from "@/lib/auth";
 import { apiFetch } from "@/lib/supabase/client";
 import { getBlogPost } from "@/lib/content";
+import { PLANS, type PlanTier } from "@/lib/product/plans";
+
+function formatPlanLabel(planTier: string | null, status: string | null) {
+  if (planTier) {
+    const plan = PLANS.find((p) => p.tier === (planTier as PlanTier));
+    if (plan) {
+      const statusNote =
+        status === "trialing" ? " (trial)" : status && status !== "active" ? ` (${status})` : "";
+      return `${plan.title}${statusNote}`;
+    }
+  }
+  if (status && status !== "inactive") return status;
+  return null;
+}
 
 export default function AccountScreen() {
   const { colors } = useTheme();
   const { user, loading, signOut } = useAuth();
   const [saved, setSaved] = useState<{ article_slug: string; saved_at?: string }[]>([]);
-  const [plan, setPlan] = useState<string | null>(null);
+  const [planLabel, setPlanLabel] = useState<string | null>(null);
+  const [active, setActive] = useState(false);
+  const [actionError, setActionError] = useState<string | null>(null);
 
   useEffect(() => {
     if (!user) return;
@@ -31,8 +47,13 @@ export default function AccountScreen() {
       try {
         const res = await apiFetch("subscription-status");
         if (res.ok) {
-          const data = (await res.json()) as { plan?: string; status?: string };
-          setPlan(data.plan ?? data.status ?? null);
+          const data = (await res.json()) as {
+            planTier?: string | null;
+            status?: string | null;
+            active?: boolean;
+          };
+          setActive(Boolean(data.active));
+          setPlanLabel(formatPlanLabel(data.planTier ?? null, data.status ?? null));
         }
       } catch {
         /* soft */
@@ -70,14 +91,17 @@ export default function AccountScreen() {
   }
 
   async function openPortal() {
+    setActionError(null);
     try {
       const res = await apiFetch("create-portal", { method: "POST", body: "{}" });
-      const data = (await res.json()) as { url?: string };
+      const data = (await res.json()) as { url?: string; error?: string };
       if (data.url && typeof window !== "undefined") {
         window.location.href = data.url;
+        return;
       }
+      setActionError(data.error ?? "Unable to open billing portal.");
     } catch {
-      /* Portal requires Stripe + Netlify functions. */
+      setActionError("Unable to open billing portal.");
     }
   }
 
@@ -87,15 +111,28 @@ export default function AccountScreen() {
       <Text style={[styles.eyebrow, { color: colors.accent }]}>Account</Text>
       <Text style={[styles.title, { color: colors.text }]}>Welcome back</Text>
       <Text style={[styles.p, { color: colors.textMuted }]}>{user.email}</Text>
-      {plan ? (
-        <Text style={[styles.p, { color: colors.text }]}>Plan: {plan}</Text>
+      {planLabel ? (
+        <Text style={[styles.p, { color: colors.text }]}>Plan: {planLabel}</Text>
       ) : (
         <Text style={[styles.p, { color: colors.textSubtle }]}>
-          Plan status appears when Stripe is connected.
+          No active plan —{" "}
+          <Link href="/pricing">
+            <Text style={{ color: colors.accent }}>view membership</Text>
+          </Link>
+          .
         </Text>
       )}
+      {actionError ? (
+        <Text style={[styles.p, { color: colors.accent }]}>{actionError}</Text>
+      ) : null}
       <View style={styles.actions}>
-        <PrimaryButton label="Manage billing" onPress={openPortal} />
+        {active ? (
+          <PrimaryButton label="Manage billing" onPress={openPortal} />
+        ) : (
+          <Link href="/pricing" asChild>
+            <PrimaryButton label="Start free trial" />
+          </Link>
+        )}
         <PrimaryButton
           label="Sign out"
           style={styles.secondary}

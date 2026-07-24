@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * Sync locked podcast transcripts into Supabase member_episodes.
- * Requires: PUBLIC_SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY in env or .env
+ * Requires: EXPO_PUBLIC_SUPABASE_URL (or PUBLIC_SUPABASE_URL) + SUPABASE_SERVICE_ROLE_KEY
  *
  * Usage: npm run sync:episodes
  */
@@ -65,11 +65,14 @@ function markdownToHtml(markdown) {
 
 loadEnvFile();
 
-const url = process.env.PUBLIC_SUPABASE_URL;
+const url =
+  process.env.EXPO_PUBLIC_SUPABASE_URL || process.env.PUBLIC_SUPABASE_URL;
 const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
 if (!url || !serviceKey) {
-  console.error("Missing PUBLIC_SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY");
+  console.error(
+    "Missing EXPO_PUBLIC_SUPABASE_URL (or PUBLIC_SUPABASE_URL) or SUPABASE_SERVICE_ROLE_KEY",
+  );
   process.exit(1);
 }
 

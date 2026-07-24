@@ -63,8 +63,8 @@ npm run sync:episodes   # after podcasts are locked
 
 | Step | Action |
 |------|--------|
-| 1 | Products: Listener / Engager / Collaborator monthly prices |
-| 2 | Env: `STRIPE_SECRET_KEY`, three `STRIPE_PRICE_*`, webhook secret |
+| 1 | Products: Monthly ($4.99) + Annual ($19.99) recurring prices |
+| 2 | Env: `STRIPE_SECRET_KEY`, `STRIPE_PRICE_MONTHLY`, `STRIPE_PRICE_ANNUAL`, webhook secret |
 | 3 | Webhook → `https://artometrics.com/.netlify/functions/stripe-webhook` |
 | 4 | Events: `checkout.session.completed`, `customer.subscription.updated`, `customer.subscription.deleted` |
 | 5 | Local: `stripe listen --forward-to localhost:8888/.netlify/functions/stripe-webhook` |
@@ -114,7 +114,7 @@ Do **not** invent a parallel stack. Extend Content OS + Higgsfield + existing do
 
 | Package | Why |
 |---------|-----|
-| `expo-av` | Podcast / article audio player |
+| `expo-audio` | Podcast / article audio player |
 | `expo-sharing` | Native share sheet for charts/exports |
 | `expo-file-system` | Cache downloads on device |
 | `expo-clipboard` | Copy citation / share link |

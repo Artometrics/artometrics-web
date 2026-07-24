@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Text, View, StyleSheet } from "react-native";
 import { Link } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
@@ -12,9 +13,31 @@ import { useAuth } from "@/lib/auth";
 export default function PricingScreen() {
   const { user } = useAuth();
   const { colors } = useTheme();
+  const [error, setError] = useState<string | null>(null);
+  const [busyTier, setBusyTier] = useState<string | null>(null);
+  const [alreadyActive, setAlreadyActive] = useState(false);
+
+  useEffect(() => {
+    if (!user) {
+      setAlreadyActive(false);
+      return;
+    }
+    (async () => {
+      try {
+        const res = await apiFetch("subscription-status");
+        if (!res.ok) return;
+        const data = (await res.json()) as { active?: boolean };
+        setAlreadyActive(Boolean(data.active));
+      } catch {
+        /* soft */
+      }
+    })();
+  }, [user]);
 
   async function checkout(tier: string) {
     if (!user) return;
+    setError(null);
+    setBusyTier(tier);
     try {
       const res = await apiFetch("create-checkout", {
         method: "POST",
@@ -23,9 +46,13 @@ export default function PricingScreen() {
       const data = (await res.json()) as { url?: string; error?: string };
       if (data.url && typeof window !== "undefined") {
         window.location.href = data.url;
+        return;
       }
+      setError(data.error ?? "Unable to start checkout.");
     } catch {
-      // Checkout requires Netlify functions + Stripe env in production.
+      setError("Unable to start checkout. Try again in a moment.");
+    } finally {
+      setBusyTier(null);
     }
   }
 
@@ -43,6 +70,18 @@ export default function PricingScreen() {
       <Text style={[styles.deck, { color: colors.textMuted }]}>
         Your first week is free. Then pick monthly or annual — cancel anytime.
       </Text>
+      {alreadyActive ? (
+        <Text style={[styles.deck, { color: colors.text }]}>
+          You already have an active membership.{" "}
+          <Link href="/account">
+            <Text style={{ color: colors.accent }}>Manage billing</Text>
+          </Link>
+          .
+        </Text>
+      ) : null}
+      {error ? (
+        <Text style={[styles.error, { color: colors.accent }]}>{error}</Text>
+      ) : null}
       <View style={styles.grid}>
         {PLANS.map((plan) => (
           <View
@@ -75,8 +114,15 @@ export default function PricingScreen() {
                 </Text>
               ))}
             </View>
-            {user ? (
-              <PrimaryButton label="Start free trial" onPress={() => checkout(plan.tier)} />
+            {alreadyActive ? (
+              <Link href="/account" asChild>
+                <PrimaryButton label="Manage billing" />
+              </Link>
+            ) : user ? (
+              <PrimaryButton
+                label={busyTier === plan.tier ? "Starting…" : "Start free trial"}
+                onPress={() => checkout(plan.tier)}
+              />
             ) : (
               <Link href="/signup" asChild>
                 <PrimaryButton label="Start free trial" />
@@ -99,6 +145,7 @@ const styles = StyleSheet.create({
   },
   title: { fontSize: 36, fontWeight: "300", fontFamily: Fonts.serif },
   deck: { fontSize: 16, maxWidth: 560, marginBottom: 12, lineHeight: 24 },
+  error: { fontSize: 14, lineHeight: 22, maxWidth: 560 },
   grid: { gap: 16, flexDirection: "row", flexWrap: "wrap" },
   card: {
     flexGrow: 1,

@@ -10,8 +10,6 @@ import {
 type ChromeContextValue = {
   scrollY: number;
   setScrollY: (y: number) => void;
-  /** 0 = full wordmark, 1 = solid Chomsky A */
-  logoCompact: number;
   isArticle: boolean;
   setIsArticle: (value: boolean) => void;
   menuOpen: boolean;
@@ -21,7 +19,6 @@ type ChromeContextValue = {
 const defaultChrome: ChromeContextValue = {
   scrollY: 0,
   setScrollY: () => {},
-  logoCompact: 0,
   isArticle: false,
   setIsArticle: () => {},
   menuOpen: false,
@@ -39,20 +36,16 @@ export function ChromeProvider({ children }: { children: ReactNode }) {
     setScrollYState((prev) => (Math.abs(prev - y) < 8 ? prev : y));
   }, []);
 
-  // Complex chrome keeps a stable centered wordmark — no scroll morph.
-  const logoCompact = 0;
-
   const value = useMemo(
     () => ({
       scrollY,
       setScrollY,
-      logoCompact,
       isArticle,
       setIsArticle,
       menuOpen,
       setMenuOpen,
     }),
-    [scrollY, setScrollY, logoCompact, isArticle, menuOpen],
+    [scrollY, setScrollY, isArticle, menuOpen],
   );
 
   return (

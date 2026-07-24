@@ -16,7 +16,7 @@ Companion docs: `BACKEND_HOOKUP_SESSION.md` · `PRODUCT_SETUP.md` · `MEDIA_EMPI
 | Reports archive (~90) | `/blog`, `/<slug>` | Live; dual-mode charts |
 | Topics / desks / search | `/topics`, `/desks`, `/search` | Live |
 | Resources + datasets hubs | `/resources`, `/datasets` | Live |
-| Library (member saves UI) | `/library` | Needs Supabase auth |
+| Library (member saves UI) | `/library` | Hub; saved reports live on `/account` |
 | Podcast + RSS | `/podcast`, `podcast.xml` | Live; locked eps need Supabase |
 | Membership | `/pricing`, `/login`, `/signup`, `/account` | Needs Stripe + Supabase |
 | Newsletter page | `/newsletter` | Needs form/email provider |
@@ -25,9 +25,9 @@ Companion docs: `BACKEND_HOOKUP_SESSION.md` · `PRODUCT_SETUP.md` · `MEDIA_EMPI
 | AEO | `llms.txt`, sitemap, RSS | Live |
 
 **Membership tiers (already in `lib/product/plans.ts`):**
-- **Listener** — $8/mo  
-- **Engager** — $20/mo (popular)  
-- **Collaborator** — $40/mo  
+- **Monthly** — $4.99/mo  
+- **Annual** — $19.99/yr (Save 67%, popular)  
+- Checkout includes a **7-day free trial**
 
 ---
 
@@ -103,9 +103,8 @@ EXPO_PUBLIC_GA_ID=
 SUPABASE_SERVICE_ROLE_KEY=
 STRIPE_SECRET_KEY=
 STRIPE_WEBHOOK_SECRET=
-STRIPE_PRICE_LISTENER=
-STRIPE_PRICE_ENGAGER=
-STRIPE_PRICE_COLLABORATOR=
+STRIPE_PRICE_MONTHLY=
+STRIPE_PRICE_ANNUAL=
 
 # Media factory
 ELEVENLABS_API_KEY=

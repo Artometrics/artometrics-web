@@ -65,10 +65,6 @@ export function priceIdForTier(tier: string): string | null {
   const map: Record<string, string | undefined> = {
     monthly: process.env.STRIPE_PRICE_MONTHLY,
     annual: process.env.STRIPE_PRICE_ANNUAL,
-    // Legacy aliases (older env / docs)
-    listener: process.env.STRIPE_PRICE_MONTHLY ?? process.env.STRIPE_PRICE_LISTENER,
-    engager: process.env.STRIPE_PRICE_ANNUAL ?? process.env.STRIPE_PRICE_ENGAGER,
-    collaborator: process.env.STRIPE_PRICE_ANNUAL ?? process.env.STRIPE_PRICE_COLLABORATOR,
   };
   return map[tier] ?? null;
 }

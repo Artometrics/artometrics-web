@@ -2,12 +2,16 @@ import {
   adminSupabase,
   corsPreflight,
   getSubscriptionForUser,
+  isActiveSubscription,
   json,
   priceIdForTier,
   requirePublicEnv,
   stripeClient,
   userFromAuthHeader,
 } from "../lib/shared";
+
+/** Keep in sync with STRIPE_TRIAL_DAYS in lib/product/plans.ts */
+const STRIPE_TRIAL_DAYS = 7;
 
 export default async (request: Request) => {
   if (request.method === "OPTIONS") return corsPreflight();
@@ -38,6 +42,13 @@ export default async (request: Request) => {
 
   try {
     let subscription = await getSubscriptionForUser(user.id);
+    if (isActiveSubscription(subscription?.status)) {
+      return json(
+        { error: "You already have an active membership. Manage it from Account." },
+        409,
+      );
+    }
+
     let customerId = subscription?.stripe_customer_id ?? null;
 
     if (!customerId) {
@@ -58,6 +69,9 @@ export default async (request: Request) => {
         );
     }
 
+    // One free trial per customer — skip if they already started a Stripe sub.
+    const offerTrial = !subscription?.stripe_subscription_id;
+
     const session = await stripe.checkout.sessions.create({
       mode: "subscription",
       customer: customerId,
@@ -67,7 +81,7 @@ export default async (request: Request) => {
       client_reference_id: user.id,
       metadata: { supabase_user_id: user.id, plan_tier: tier },
       subscription_data: {
-        trial_period_days: 7,
+        ...(offerTrial ? { trial_period_days: STRIPE_TRIAL_DAYS } : {}),
         metadata: { supabase_user_id: user.id, plan_tier: tier },
       },
     });
