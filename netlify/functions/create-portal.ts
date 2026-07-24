@@ -2,7 +2,7 @@ import {
   corsPreflight,
   getSubscriptionForUser,
   json,
-  requireEnv,
+  requirePublicEnv,
   stripeClient,
   userFromAuthHeader,
 } from "../lib/shared";
@@ -14,7 +14,10 @@ export default async (request: Request) => {
   const user = await userFromAuthHeader(request);
   if (!user) return json({ error: "Unauthorized" }, 401);
 
-  const siteUrl = requireEnv("PUBLIC_SITE_URL").replace(/\/$/, "");
+  const siteUrl = requirePublicEnv(
+    "EXPO_PUBLIC_SITE_URL",
+    "PUBLIC_SITE_URL",
+  ).replace(/\/$/, "");
   const stripe = stripeClient();
 
   try {
