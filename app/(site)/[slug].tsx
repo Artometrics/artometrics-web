@@ -127,12 +127,13 @@ export default function ReportScreen() {
           {` · ${minutes} min read`}
         </Text>
         <TldrBox tldr={tldr ?? post.description} keyPoints={keyPoints} />
-      </Wrapper>
-      <Wrapper variant="prose">
-        <ArticleActions slug={post.slug} title={post.title} />
+        <ArticleActions slug={post.slug} title={post.title} placement="top" />
       </Wrapper>
       <Wrapper variant="prose" style={styles.article}>
         <ArticleBody html={post.body} />
+      </Wrapper>
+      <Wrapper variant="prose">
+        <ArticleActions slug={post.slug} title={post.title} placement="bottom" />
       </Wrapper>
       {faq.length ? (
         <Wrapper variant="prose" style={styles.faq}>

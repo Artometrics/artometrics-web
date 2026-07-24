@@ -68,6 +68,9 @@ faq:
 <main class="art-article-main">
 <p class="art-p">The Hospital Readmissions Reduction Program is a Medicare penalty system that has been running since 2012. The premise is simple: if your patients come back to the hospital within 30 days of discharge at a higher rate than expected given their medical profile, CMS docks your Medicare reimbursements. The penalty caps at 3% of all Medicare payments — not just payments for the specific condition being measured. A hospital with too many heart failure readmissions doesn’t just lose heart failure revenue. It loses 3% of everything.</p>
 <p class="art-p">The core metric is the Excess Readmission Ratio, or ERR. It is a ratio of predicted readmissions to expected readmissions — where “expected” is risk-adjusted for each patient’s age, comorbidities, and discharge history. An ERR of exactly 1.0 means you readmitted exactly as many patients as a hospital of your type and patient mix should. Above 1.0 means more readmissions than expected. Below 1.0 means fewer. What this analysis found: nearly every condition’s national average ERR is above 1.0. HRRP has been running for over a decade, and the average American hospital is still readmitting more patients than CMS expects. The penalty hasn’t eliminated the problem. It has clarified it.</p>
+<h2 id="research-question" class="anchored">Research question</h2>
+<p class="art-p">Where do CMS Hospital Readmissions Reduction Program penalties still concentrate — by state, clinical condition, and hospital ownership — in the FY2025 supplemental extract, and what does that geography imply for the 742 hospitals entering CMS’s Transforming Episode Accountability Model (TEAM) on January 1, 2026?</p>
+<p class="art-p">This is an observational audit of published CMS ratios, not a causal trial. We do not estimate a formal null hypothesis. We ask a sharper operational question: after more than a decade of HRRP, which named markets (New Jersey, Massachusetts, Mississippi), conditions (Hip/Knee arthroplasty), and ownership types (for-profit systems such as HCA and Tenet) still sit farthest above CMS’s expected readmission line?</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>
 <p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
@@ -133,6 +136,26 @@ faq:
 <p class="art-p">The gap is real — on the order of 8 to 10 percentage points more penalized pairs than non-profits — but it is a difference of degree, not kind. All three ownership types are playing the same game. For-profits lose it slightly more often.</p>
 <p class="art-p">Government-owned facilities land between non-profit and for-profit. Neither the safety-net excuse nor the public-accountability story fits cleanly. County systems operate under political oversight that can slow discharge innovation; middle-of-pack performance is its own finding.</p>
 
+<h2 id="intensity-not-just-share" class="anchored">Intensity, Not Just Share</h2>
+<h3 id="intensity-not-just-share-look" class="anchored">Average excess readmission ratio by state — Massachusetts leads the top 15</h3>
+<figure class="art-chart">
+  <div class="art-chart-live" data-chart="/data/articles/readmitted/charts/chart4_state_avg_err.plotly.json" data-source="Data: CMS HRRP FY2025 supplemental (9n3s-kdb3) — ARTOMETRICS" data-fallback="/images/content/articles/readmitted/charts/chart4_state_avg_err.png" role="img" aria-label="Average excess readmission ratio by state — Massachusetts leads the top 15"></div>
+  <figcaption class="art-chart-caption">Penalty share and average ERR are related but not identical — Massachusetts leads on intensity even where New Jersey leads on breadth</figcaption>
+</figure>
+<p class="art-p">Chart 1 measured how widely penalties spread across hospital–condition pairs. Chart 4 measures how far above the CMS expected line those pairs sit on average. Massachusetts posts the highest average ERR in the working extract at <strong>1.0344</strong>, ahead of New Jersey’s breadth-first pattern at <strong>65.4%</strong> of pairs penalized.</p>
+<p class="art-p">That distinction matters for systems such as Mass General Brigham, Beth Israel Deaconess Medical Center, and the Boston academic corridor: a market can look merely “above average” on share and still run hotter on intensity. Mississippi, Illinois, and several Mid-Atlantic states also appear in the top-15 intensity list — the same mixed geography of high-resource and high-poverty markets seen in Chart 1.</p>
+<p class="art-p">The dotted reference at ERR = 1.0 is the CMS expected line. Every state in this top-15 panel sits above it. The national mean ERR of <strong>1.0018</strong> looks small in isolation; stacked across thousands of pairs and roughly 1.3 million U.S. joint replacements a year, fourth-decimal gaps become budget lines.</p>
+
+<h2 id="high-tier-concentration" class="anchored">Where the High Tier Concentrates</h2>
+<h3 id="high-tier-concentration-look" class="anchored">High-tier penalty share by ownership — for-profits at 39.5%</h3>
+<figure class="art-chart">
+  <div class="art-chart-live" data-chart="/data/articles/readmitted/charts/chart5_high_penalty_by_ownership.plotly.json" data-source="Data: CMS HRRP + Hospital General Information (xubh-q36u) — ARTOMETRICS" data-fallback="/images/content/articles/readmitted/charts/chart5_high_penalty_by_ownership.png" role="img" aria-label="High-tier penalty share by ownership — for-profits at 39.5%"></div>
+  <figcaption class="art-chart-caption">For-profit hospitals place 39.5% of pairs in the High penalty tier, versus about 32% for non-profit and government peers</figcaption>
+</figure>
+<p class="art-p">Chart 3 showed the full tier mix. Chart 5 isolates the High tier — the pairs farthest above CMS’s expected readmission rate. For-profit ownership places <strong>39.5%</strong> of hospital–condition pairs in High, compared with roughly <strong>32.1%</strong> for non-profits and <strong>32.0%</strong> for government facilities.</p>
+<p class="art-p">Named for-profit operators in the CMS Hospital General Information join — including campuses associated with HCA Healthcare, Tenet Healthcare, and historically Steward Health Care — sit inside that column. The chart does not prove that for-profit status causes excess readmissions. It shows that when CMS’s published ratios are stacked by ownership, the High-tier mass sits heavier on the for-profit side.</p>
+<p class="art-p">For TEAM’s 742 mandatory hospitals in 2026, that concentration is the practical signal: episode-level accountability will land hardest where High-tier HRRP exposure already clusters, not where the “no penalty” majority still holds.</p>
+
 <h2 id="what-this-file-cannot-tell-you" class="anchored">What this file cannot tell you</h2>
 <p class="art-p">CMS suppresses readmission data for hospitals that fall below 25 discharges per condition per measurement period. That threshold protects statistical reliability, but the effect is systematic — small rural hospitals disappear from this analysis. The hospitals remaining skew toward larger, busier facilities.</p>
 <p class="art-p">Ownership classification for Chart 3 comes from CMS Hospital General Information, which uses inconsistent labeling across hospital types. Physician-owned facilities, tribal hospitals, and church-affiliated systems do not always map cleanly into three buckets. The Government, Non-Profit, and For-Profit groupings are reasonable approximations — not clean legal categories.</p>
@@ -143,6 +166,9 @@ faq:
 <p class="art-p">CMS’s TEAM model, mandatory for 742 hospitals starting January 1, 2026, goes further by tying entire episodes of care to reimbursement. The hospitals that struggled under HRRP are the ones most likely to feel TEAM. This report describes the problem TEAM is designed to address. Whether bundled payments succeed where readmission penalties have not is the next question.</p>
 <h2 id="sources" class="anchored">Sources</h2>
 
+<p class="art-p">
+Joynt, K.E., &amp; Jha, A.K. (2013). Characteristics of hospitals receiving penalties under the Hospital Readmissions Reduction Program. <em>JAMA</em>, 309(4), 342–343. Context on which hospitals were first exposed to HRRP penalties.
+</p>
 <p class="art-p">
 Centers for Medicare &amp; Medicaid Services. <em>Hospital Readmissions Reduction Program (HRRP) — FY2025 Supplemental Data</em>. CMS Provider Data Catalog, Dataset ID: 9n3s-kdb3. <a href="https://data.cms.gov/provider-data/dataset/9n3s-kdb3" target="_blank" rel="noopener noreferrer">https://data.cms.gov/provider-data/dataset/9n3s-kdb3</a>
 </p>
@@ -177,12 +203,16 @@ Krumholz, H.M., et al. (2017). Relationship between hospital readmission and mor
     <li><a class="art-files__link" download href="/images/content/articles/readmitted/charts/chart1_states_penalized.png">chart1_states_penalized.png</a></li>
     <li><a class="art-files__link" download href="/images/content/articles/readmitted/charts/chart2_err_by_condition.png">chart2_err_by_condition.png</a></li>
     <li><a class="art-files__link" download href="/images/content/articles/readmitted/charts/chart3_penalty_by_ownership.png">chart3_penalty_by_ownership.png</a></li>
+    <li><a class="art-files__link" download href="/images/content/articles/readmitted/charts/chart4_state_avg_err.png">chart4_state_avg_err.png</a></li>
+    <li><a class="art-files__link" download href="/images/content/articles/readmitted/charts/chart5_high_penalty_by_ownership.png">chart5_high_penalty_by_ownership.png</a></li>
   </ul>
   <h3 class="art-files__heading">Charts (Plotly JSON)</h3>
   <ul class="art-files__list">
     <li><a class="art-files__link" download href="/data/articles/readmitted/charts/chart1_states_penalized.plotly.json">chart1_states_penalized.plotly.json</a></li>
     <li><a class="art-files__link" download href="/data/articles/readmitted/charts/chart2_err_by_condition.plotly.json">chart2_err_by_condition.plotly.json</a></li>
     <li><a class="art-files__link" download href="/data/articles/readmitted/charts/chart3_penalty_by_ownership.plotly.json">chart3_penalty_by_ownership.plotly.json</a></li>
+    <li><a class="art-files__link" download href="/data/articles/readmitted/charts/chart4_state_avg_err.plotly.json">chart4_state_avg_err.plotly.json</a></li>
+    <li><a class="art-files__link" download href="/data/articles/readmitted/charts/chart5_high_penalty_by_ownership.plotly.json">chart5_high_penalty_by_ownership.plotly.json</a></li>
   </ul>
 </div>
 

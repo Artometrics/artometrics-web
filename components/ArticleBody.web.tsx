@@ -150,39 +150,113 @@ async function renderInteractive(live: HTMLElement, Plotly: PlotlyLike) {
     typeof document !== "undefined" &&
     document.documentElement.dataset.theme === "dark";
   const margin = payload.layout?.margin ?? {};
+  const rawLayout = { ...(payload.layout ?? {}) } as Record<string, unknown>;
+  const rawTitle = rawLayout.title;
+  // Cap oversized Plotly titles that blow out magazine column width.
+  if (rawTitle && typeof rawTitle === "object") {
+    const titleObj = { ...(rawTitle as Record<string, unknown>) };
+    const font = {
+      ...((titleObj.font as Record<string, unknown> | undefined) ?? {}),
+      size: Math.min(Number((titleObj.font as { size?: number } | undefined)?.size ?? 15), 15),
+      family: "Georgia, 'Times New Roman', serif",
+      color: dark ? "#FAFAFA" : Colors.chartDark,
+    };
+    titleObj.font = font;
+    rawLayout.title = titleObj;
+  }
 
   // Clear prior plot nodes but keep mode switch outside the live node.
   live.innerHTML = "";
+
+  const hostWidth = Math.max(live.clientWidth || live.parentElement?.clientWidth || 640, 280);
+  const hostHeight = Math.min(Math.max(Math.round(hostWidth * 0.58), 300), 460);
+
+  const axisLocks: Record<string, unknown> = {};
+  for (const [key, value] of Object.entries(rawLayout)) {
+    if (!/^xaxis|^yaxis/.test(key)) continue;
+    const axis = (value && typeof value === "object" ? value : {}) as Record<string, unknown>;
+    axisLocks[key] = {
+      ...axis,
+      fixedrange: true,
+      showgrid: axis.showgrid ?? true,
+      gridcolor: axis.gridcolor ?? (dark ? "#2A2A2A" : "#E8E6E1"),
+      zeroline: axis.zeroline ?? false,
+      automargin: true,
+    };
+  }
+  if (!axisLocks.xaxis) {
+    axisLocks.xaxis = {
+      fixedrange: true,
+      showgrid: true,
+      gridcolor: dark ? "#2A2A2A" : "#E8E6E1",
+      zeroline: false,
+      automargin: true,
+    };
+  }
+  if (!axisLocks.yaxis) {
+    axisLocks.yaxis = {
+      fixedrange: true,
+      showgrid: true,
+      gridcolor: dark ? "#2A2A2A" : "#E8E6E1",
+      zeroline: false,
+      automargin: true,
+    };
+  }
 
   await Plotly.newPlot(
     live,
     payload.data ?? [],
     {
-      ...(payload.layout ?? {}),
+      ...rawLayout,
+      ...axisLocks,
       paper_bgcolor: dark ? "#171717" : Colors.cream,
       plot_bgcolor: dark ? "#171717" : Colors.cream,
       font: {
-        family: "Georgia, serif",
+        family: "Georgia, 'Times New Roman', serif",
+        size: 12,
         color: dark ? "#FAFAFA" : Colors.chartDark,
       },
       colorway: [
         Colors.chartHighlight,
         dark ? "#E5E5E5" : Colors.chartDark,
         Colors.chartMid,
+        "#8B3228",
+        "#6B6B6B",
       ],
       autosize: true,
+      height: hostHeight,
+      dragmode: false,
+      hovermode: "closest",
+      clickmode: "event",
+      spikedistance: -1,
+      hoverlabel: {
+        bgcolor: dark ? "#1C1C1E" : "#FAFAF8",
+        bordercolor: Colors.chartHighlight,
+        font: {
+          family: "Georgia, 'Times New Roman', serif",
+          size: 12,
+          color: dark ? "#FAFAFA" : Colors.chartDark,
+        },
+      },
       margin: {
         ...margin,
-        l: Math.max(Number(margin.l ?? 48), 40),
-        r: Math.max(Number(margin.r ?? 24), 16),
-        t: Math.max(Number(margin.t ?? 48), 32),
-        b: Math.max(Number(margin.b ?? 48), 40),
+        l: Math.min(Math.max(Number(margin.l ?? 56), 44), 96),
+        r: Math.min(Math.max(Number(margin.r ?? 28), 16), 48),
+        t: Math.min(Math.max(Number(margin.t ?? 56), 36), 88),
+        b: Math.min(Math.max(Number(margin.b ?? 52), 40), 84),
       },
     },
     {
       ...(payload.config ?? {}),
       responsive: true,
       displayModeBar: false,
+      displaylogo: false,
+      scrollZoom: false,
+      doubleClick: false,
+      showTips: false,
+      staticPlot: false,
+      editable: false,
+      toImageButtonOptions: undefined,
     },
   );
 

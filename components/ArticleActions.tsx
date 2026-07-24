@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { Linking, Pressable, Text, View, StyleSheet } from "react-native";
+import { useEffect, useMemo, useState } from "react";
+import { Linking, Pressable, Text, View, StyleSheet, Platform } from "react-native";
 import { Link } from "expo-router";
 import { Fonts } from "@/constants/Colors";
 import { useTheme } from "@/lib/theme";
@@ -18,13 +18,36 @@ type Pack = {
   github?: string | null;
 };
 
-type Props = { slug: string; title: string };
+type Props = {
+  slug: string;
+  title: string;
+  /** Top: share + save. Bottom: download menu (data / code / all). */
+  placement?: "top" | "bottom" | "all";
+};
 
-export function ArticleActions({ slug, title }: Props) {
+type DownloadItem = { key: string; label: string; href: string };
+
+function openUrl(url: string) {
+  if (Platform.OS === "web" && typeof window !== "undefined") {
+    window.open(url, "_blank", "noopener,noreferrer");
+    return;
+  }
+  void Linking.openURL(url);
+}
+
+async function downloadAll(items: DownloadItem[]) {
+  for (const item of items) {
+    openUrl(item.href);
+    await new Promise((r) => setTimeout(r, 350));
+  }
+}
+
+export function ArticleActions({ slug, title, placement = "all" }: Props) {
   const { colors } = useTheme();
   const { user } = useAuth();
   const [saved, setSaved] = useState(false);
   const [busy, setBusy] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const pack = (downloadsManifest as Record<string, Pack>)[slug] ?? { slug };
 
   useEffect(() => {
@@ -73,63 +96,150 @@ export function ArticleActions({ slug, title }: Props) {
     }
   }
 
-  const files: { label: string; href?: string | null }[] = [
-    { label: "Dataset (CSV)", href: pack.dataset },
-    { label: "Quarto / source", href: pack.quarto ?? pack.github },
-    { label: "Article HTML", href: pack.html },
-    { label: "PDF", href: pack.pdf },
-    { label: "Ebook (EPUB)", href: pack.epub },
-    { label: "Narration (MP3)", href: pack.audio },
-  ];
+  function share() {
+    const url = `https://artometrics.com/${slug}`;
+    if (typeof navigator !== "undefined" && typeof navigator.share === "function") {
+      navigator.share({ title, url }).catch(() => openUrl(url));
+      return;
+    }
+    if (
+      typeof navigator !== "undefined" &&
+      navigator.clipboard &&
+      typeof navigator.clipboard.writeText === "function"
+    ) {
+      void navigator.clipboard.writeText(url).catch(() => openUrl(url));
+      return;
+    }
+    openUrl(url);
+  }
 
-  const available = files.filter((f) => f.href);
+  const downloads = useMemo(() => {
+    const items: DownloadItem[] = [];
+    if (pack.dataset) items.push({ key: "data", label: "Dataset (CSV)", href: pack.dataset });
+    const code = pack.quarto ?? pack.github;
+    if (code) {
+      items.push({
+        key: "code",
+        label: pack.quarto ? "Quarto / source" : "Code (GitHub)",
+        href: code,
+      });
+    }
+    if (pack.html) items.push({ key: "html", label: "Article HTML", href: pack.html });
+    if (pack.pdf) items.push({ key: "pdf", label: "PDF", href: pack.pdf });
+    if (pack.epub) items.push({ key: "epub", label: "Ebook (EPUB)", href: pack.epub });
+    if (pack.audio) items.push({ key: "audio", label: "Narration (MP3)", href: pack.audio });
+    return items;
+  }, [pack]);
+
+  const primaryDownloads = downloads.filter((d) => d.key === "data" || d.key === "code");
+  const showTop = placement === "top" || placement === "all";
+  const showBottom = placement === "bottom" || placement === "all";
 
   return (
-    <View style={[styles.wrap, { borderColor: colors.border }]}>
-      <View style={styles.row}>
-        {user ? (
+    <View
+      style={[
+        styles.wrap,
+        placement === "top" && styles.wrapTop,
+        placement === "bottom" && styles.wrapBottom,
+        { borderColor: colors.border },
+      ]}
+    >
+      {showTop ? (
+        <View style={styles.row}>
           <Pressable
-            onPress={toggleSave}
-            disabled={busy}
-            style={[styles.btn, { borderColor: colors.text }]}
+            onPress={share}
+            accessibilityRole="button"
+            accessibilityLabel="Share this report"
+            style={[styles.btnPrimary, { backgroundColor: colors.text, borderColor: colors.text }]}
           >
-            <Text style={[styles.btnText, { color: colors.text }]}>
-              {saved ? "Saved" : "Save"}
-            </Text>
+            <Text style={[styles.btnText, { color: colors.bg }]}>Share</Text>
           </Pressable>
-        ) : (
-          <Link href="/login" asChild>
-            <Pressable style={StyleSheet.flatten([styles.btn, { borderColor: colors.text }])}>
-              <Text style={[styles.btnText, { color: colors.text }]}>Sign in to save</Text>
+          {user ? (
+            <Pressable
+              onPress={toggleSave}
+              disabled={busy}
+              accessibilityRole="button"
+              style={[styles.btn, { borderColor: colors.border }]}
+            >
+              <Text style={[styles.btnText, { color: colors.text }]}>
+                {saved ? "Saved" : "Save"}
+              </Text>
             </Pressable>
-          </Link>
-        )}
-        <Pressable
-          onPress={() => {
-            const url = `https://artometrics.com/${slug}`;
-            if (typeof navigator !== "undefined" && navigator.share) {
-              navigator.share({ title, url }).catch(() => Linking.openURL(url));
-            } else {
-              Linking.openURL(url);
-            }
-          }}
-          style={[styles.btn, { borderColor: colors.border }]}
-        >
-          <Text style={[styles.btnText, { color: colors.textMuted }]}>Share</Text>
-        </Pressable>
-      </View>
+          ) : (
+            <Link href="/login" asChild>
+              <Pressable style={StyleSheet.flatten([styles.btn, { borderColor: colors.border }])}>
+                <Text style={[styles.btnText, { color: colors.textMuted }]}>Sign in to save</Text>
+              </Pressable>
+            </Link>
+          )}
+        </View>
+      ) : null}
 
-      {available.length ? (
-        <>
+      {showBottom && downloads.length ? (
+        <View style={styles.downloadBlock}>
           <Text style={[styles.head, { color: colors.accent }]}>Downloads</Text>
-          <View style={styles.files}>
-            {available.map((f) => (
-              <Pressable key={f.label} onPress={() => Linking.openURL(f.href!)}>
-                <Text style={[styles.fileLink, { color: colors.text }]}>{f.label}</Text>
+          <View style={styles.row}>
+            <Pressable
+              onPress={() => setMenuOpen((v) => !v)}
+              accessibilityRole="button"
+              accessibilityState={{ expanded: menuOpen }}
+              style={[styles.btnPrimary, { backgroundColor: colors.accent, borderColor: colors.accent }]}
+            >
+              <Text style={[styles.btnText, { color: "#FAFAF8" }]}>
+                {menuOpen ? "Close" : "Download"}
+              </Text>
+            </Pressable>
+            {primaryDownloads.map((item) => (
+              <Pressable
+                key={item.key}
+                onPress={() => openUrl(item.href)}
+                style={[styles.btn, { borderColor: colors.border }]}
+              >
+                <Text style={[styles.btnText, { color: colors.text }]}>
+                  {item.key === "data" ? "Data" : "Code"}
+                </Text>
               </Pressable>
             ))}
+            {downloads.length > 1 ? (
+              <Pressable
+                onPress={() => void downloadAll(downloads)}
+                style={[styles.btn, { borderColor: colors.text }]}
+              >
+                <Text style={[styles.btnText, { color: colors.text }]}>Download all</Text>
+              </Pressable>
+            ) : null}
           </View>
-        </>
+
+          {menuOpen ? (
+            <View style={[styles.menu, { borderColor: colors.border, backgroundColor: colors.bg }]}>
+              {downloads.map((item) => (
+                <Pressable
+                  key={item.key}
+                  onPress={() => {
+                    openUrl(item.href);
+                    setMenuOpen(false);
+                  }}
+                  style={styles.menuItem}
+                >
+                  <Text style={[styles.menuLabel, { color: colors.text }]}>{item.label}</Text>
+                </Pressable>
+              ))}
+              {downloads.length > 1 ? (
+                <Pressable
+                  onPress={() => {
+                    void downloadAll(downloads);
+                    setMenuOpen(false);
+                  }}
+                  style={styles.menuItem}
+                >
+                  <Text style={[styles.menuLabel, { color: colors.accent }]}>
+                    Download all ({downloads.length} files)
+                  </Text>
+                </Pressable>
+              ) : null}
+            </View>
+          ) : null}
+        </View>
       ) : null}
     </View>
   );
@@ -139,28 +249,56 @@ const styles = StyleSheet.create({
   wrap: {
     borderTopWidth: 1,
     borderBottomWidth: 1,
-    paddingVertical: 20,
+    paddingVertical: 18,
     gap: 14,
-    marginVertical: 16,
+    marginVertical: 12,
   },
-  row: { flexDirection: "row", flexWrap: "wrap", gap: 10 },
+  wrapTop: {
+    borderBottomWidth: 0,
+    marginBottom: 0,
+    paddingBottom: 12,
+  },
+  wrapBottom: {
+    borderTopWidth: 1,
+    marginTop: 8,
+    paddingTop: 20,
+  },
+  row: { flexDirection: "row", flexWrap: "wrap", gap: 10, alignItems: "center" },
+  btnPrimary: {
+    borderWidth: 1,
+    paddingHorizontal: 16,
+    paddingVertical: 10,
+  },
   btn: {
     borderWidth: 1,
     paddingHorizontal: 14,
     paddingVertical: 10,
   },
-  btnText: { fontSize: 12, fontWeight: "700", letterSpacing: 0.6 },
+  btnText: {
+    fontSize: 12,
+    fontWeight: "700",
+    letterSpacing: 0.6,
+    textTransform: "uppercase",
+  },
+  downloadBlock: { gap: 12 },
   head: {
     fontSize: 11,
     letterSpacing: 1.6,
     textTransform: "uppercase",
     fontWeight: "700",
   },
-  files: { gap: 8 },
-  fileLink: {
+  menu: {
+    borderWidth: 1,
+    paddingVertical: 4,
+    gap: 0,
+  },
+  menuItem: {
+    paddingHorizontal: 14,
+    paddingVertical: 12,
+  },
+  menuLabel: {
     fontFamily: Fonts.serif,
     fontSize: 16,
-    textDecorationLine: "underline",
+    lineHeight: 22,
   },
-  fileSoon: { fontFamily: Fonts.serif, fontSize: 15 },
 });
