@@ -1,15 +1,16 @@
 import { useState } from "react";
-import { Text, TextInput, View, StyleSheet } from "react-native";
+import { Platform, Text, TextInput, View, StyleSheet } from "react-native";
 import { Link, router } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { PrimaryButton } from "@/components/PrimaryButton";
+import { GoogleSignInButton } from "@/components/GoogleSignInButton";
 import { PageSeo } from "@/components/PageSeo";
 import { Fonts } from "@/constants/Colors";
 import { useAuth } from "@/lib/auth";
 import { useTheme } from "@/lib/theme";
 
 export default function SignupScreen() {
-  const { signUp } = useAuth();
+  const { signUp, signInWithGoogle } = useAuth();
   const { colors } = useTheme();
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
@@ -29,6 +30,21 @@ export default function SignupScreen() {
     router.replace("/account");
   }
 
+  async function onGoogle() {
+    setBusy(true);
+    setError(null);
+    const result = await signInWithGoogle();
+    if (result.error) {
+      setBusy(false);
+      setError(result.error);
+      return;
+    }
+    if (Platform.OS !== "web") {
+      setBusy(false);
+      router.replace("/account");
+    }
+  }
+
   const inputStyle = [
     styles.input,
     { borderColor: colors.border, color: colors.text, backgroundColor: colors.bgElevated },
@@ -40,6 +56,12 @@ export default function SignupScreen() {
       <Text style={[styles.eyebrow, { color: colors.accent }]}>Members</Text>
       <Text style={[styles.title, { color: colors.text }]}>Create account</Text>
       <View style={styles.form}>
+        <GoogleSignInButton
+          label="Continue with Google"
+          onPress={onGoogle}
+          disabled={busy}
+        />
+        <Text style={[styles.or, { color: colors.textSubtle }]}>or use email</Text>
         <TextInput
           placeholder="Full name"
           value={fullName}
@@ -84,6 +106,13 @@ const styles = StyleSheet.create({
   },
   title: { fontSize: 36, fontWeight: "300", fontFamily: Fonts.serif },
   form: { gap: 12, marginTop: 8 },
+  or: {
+    fontSize: 12,
+    letterSpacing: 1.2,
+    textTransform: "uppercase",
+    textAlign: "center",
+    marginVertical: 4,
+  },
   input: {
     borderWidth: 1,
     paddingHorizontal: 14,
