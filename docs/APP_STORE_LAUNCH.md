@@ -79,31 +79,29 @@ eas build:configure      # already have eas.json — confirm
 Set the same public env the web uses (no service-role key on device). From the repo root after `eas login`:
 
 ```bash
-# Prefer env:push if you keep a local .env (skips secrets):
-# eas env:push --environment production --path .env
+# Easiest: reads EXPO_PUBLIC_* from local .env
+bash scripts/set-eas-secrets.sh
 
-npx eas-cli secret:create --name EXPO_PUBLIC_SITE_URL --value https://artometrics.com --scope project --force
-npx eas-cli secret:create --name EXPO_PUBLIC_SUPABASE_URL --value "https://lswrpofrvfgrqrivdcyz.supabase.co" --scope project --force
-npx eas-cli secret:create --name EXPO_PUBLIC_SUPABASE_ANON_KEY --value "YOUR_ANON_KEY" --scope project --force
-# optional:
-# npx eas-cli secret:create --name EXPO_PUBLIC_GA_ID --value "G-…" --scope project --force
+# Or manually:
+# npx eas-cli secret:create --name EXPO_PUBLIC_SITE_URL --value https://artometrics.com --scope project --force
+# npx eas-cli secret:create --name EXPO_PUBLIC_SUPABASE_URL --value "https://….supabase.co" --scope project --force
+# npx eas-cli secret:create --name EXPO_PUBLIC_SUPABASE_ANON_KEY --value "…" --scope project --force
 ```
 
 Then rebuild so native picks up env (`app.config.js` copies these into `extra`).
 
-### Build + TestFlight
+### Build + TestFlight (build 7+ — Google login + article crash fix)
 
 ```bash
-# Production IPA (auto-increments buildNumber via eas.json)
-# Use npx if `eas` is not installed globally:
+cd ~/Desktop/artometrics-web   # or your clone path
+git pull origin main
+npm install
+bash scripts/set-eas-secrets.sh
 npx eas-cli build -p ios --profile production
-# or: npm run eas:build:ios
-
-# After first successful build + App Store Connect app exists:
 npx eas-cli submit -p ios --profile production --latest
 ```
 
-TestFlight: App Store Connect → TestFlight → add **Internal** testers (your Apple ID) → install on iPhone → smoke magazine, login, charts (PNG), podcast.
+TestFlight: install the new build → open a long report (e.g. READMITTED) → Google / email login → save a report.
 
 ---
 
