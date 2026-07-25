@@ -49,6 +49,9 @@ faq:
 <main class="art-article-main">
 <p class="art-p">Pokémon is the highest-grossing media franchise in history — more than $150 billion in lifetime revenue across games, cards, merchandise, and film. That number gets cited constantly. What gets cited less is the design infrastructure underneath it: the 18-type system, the base stat framework, the generation-by-generation release cadence that has added roughly 100 new Pokémon every few years since 1996. The franchise looks like a cultural phenomenon. The data shows it&#39;s also an engineering project.</p>
 <p class="art-p">The TidyTuesday 2025-04-01 Pokémon dataset — sourced from PokéAPI and covering every Pokémon through Generation IX — lets three questions land cleanly. Do different types actually play differently, or is that a perception? Has Game Freak been inflating Pokémon power over time? And what does physical size reveal about how Pokémon are designed?</p>
+<h2 id="research-question" class="anchored">Research question</h2>
+<p class="art-p">Can Pokémon’s creature design be measured as a system rather than described only as franchise lore? This report asks whether primary type, generation, base experience, height, and weight reveal consistent design rules across the PokéAPI-derived TidyTuesday dataset.</p>
+<p class="art-p">The observational question is practical: do Dragon, Steel, Fighting, Bug, Water, and other types carry statistically distinct stat identities; does the upper tail of base experience creep across generations; and do physical dimensions follow a coherent size grammar with deliberate exceptions such as Cosmoem and Wailord?</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>
 <p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
@@ -118,6 +121,8 @@ faq:
 <p class="art-p">The size scatter is the most human chart of the three. It shows that somewhere inside Game Freak, someone made a decision to create a whale that weighs less than a car and a cosmic dust mote that weighs more than a horse. Those aren&#39;t statistical accidents — they&#39;re creative decisions that left a data signature. That&#39;s the throughline of this entire report: the Pokémon franchise is enormous and commercially optimized and thoroughly analyzed by millions of fans, but underneath all of it is a set of design choices made by people, and the numbers are how you read them.</p>
 <h2 id="sources" class="anchored">Sources</h2>
 
+<p class="art-p">The PokéAPI/TidyTuesday file is useful because it exposes the game-design schema behind the franchise: types, stats, generation IDs, dimensions, and battle-related mechanics in a machine-readable form. It is less useful for competitive outcomes because abilities, movesets, items, effort values, individual values, metagame bans, and format-specific rules sit outside the columns plotted here. The report therefore treats the data as design infrastructure, not as a live Smogon, VGC, or Pokémon Showdown viability model.</p>
+<p class="art-p">The historical anchors are Satoshi Tajiri, Game Freak, Nintendo, Creatures, and The Pokémon Company because the numbers emerge from a designed commercial system that began with <em>Pocket Monsters Red and Green</em> in 1996. Bulbapedia and PokéAPI provide community and API documentation for mechanics such as base experience, but the interpretation remains tied to the official games’ release cadence and the dataset snapshot rather than to fan speculation about future balance changes.</p>
 <p class="art-p">
 Data Science Learning Community. (2025). <em>TidyTuesday: A weekly
 social data project.</em> Week 13, 2025 — Pokémon.

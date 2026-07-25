@@ -126,10 +126,10 @@
 }
 .artometrics-article-body .fact-number{
   display: block;
-  font-size: 1.75rem;
+  font-size: 1.35rem;
   font-weight: 700;
   color: #C0392B;
-  line-height: 1.1;
+  line-height: 1.15;
   margin-bottom: 6px;
   font-family: Helvetica, sans-serif;
   text-align: left;
@@ -270,8 +270,8 @@ html[data-theme="dark"] .artometrics-article-body{
 .artometrics-article-body .title{
   font-family: 'Playfair Display', serif;
   font-weight: 900;
-  font-size: clamp(2.4rem, 5vw, 4rem);
-  line-height: 1.1;
+  font-size: clamp(1.85rem, 3.6vw, 2.75rem);
+  line-height: 1.15;
   color: var(--art-white);
   letter-spacing: -0.5px;
   margin-bottom: 0.5rem;
@@ -305,11 +305,11 @@ html[data-theme="dark"] .artometrics-article-body{
 .artometrics-article-body h2{
   font-family: 'Playfair Display', serif;
   font-weight: 700;
-  font-size: 1.9rem;
+  font-size: clamp(1.25rem, 2.2vw, 1.55rem);
   color: var(--art-dark);
   border-top: 3px solid var(--art-highlight);
-  padding-top: 1rem;
-  margin-top: 3.5rem;
+  padding-top: 0.85rem;
+  margin-top: 2.75rem;
   margin-bottom: 0.3rem;
   letter-spacing: -0.3px;
   text-align: center;
@@ -767,13 +767,13 @@ pre:has(> code.sourceCode.sql),
   text-align: left !important;
 }
 .artometrics-article-body .fact-number{
-  font-size: 1.55rem !important;
-  line-height: 1.15 !important;
+  font-size: 1.28rem !important;
+  line-height: 1.2 !important;
   text-align: left !important;
 }
 .artometrics-article-body .fact-label{
-  font-size: 0.95rem !important;
-  line-height: 1.5 !important;
+  font-size: 0.82rem !important;
+  line-height: 1.45 !important;
   color: #1C1C1E !important;
   text-align: left !important;
 }
@@ -1345,14 +1345,15 @@ pre:has(> code.sourceCode.sql),
 }
 .artometrics-article-body .art-chart-live{
   width: 100%;
-  min-height: 280px;
+  min-height: 240px;
+  max-height: 480px;
   opacity: 1;
   transition: opacity 0.35s ease;
   border-radius: 2px;
   background: var(--art-cream, #F2F0EB);
-  touch-action: manipulation;
+  touch-action: pan-y;
   position: relative;
-  overflow: visible;
+  overflow: hidden;
 }
 .artometrics-article-body .art-chart-fallback{
   display: block;
@@ -1367,10 +1368,13 @@ pre:has(> code.sourceCode.sql),
   opacity: 1;
 }
 .artometrics-article-body .art-chart-live--ready:not(.art-chart-live--static){
-  min-height: 280px !important;
+  min-height: 240px !important;
+  max-height: 480px !important;
 }
 .artometrics-article-body .art-chart-live--static{
   min-height: 0 !important;
+  max-height: none !important;
+  overflow: visible !important;
 }
 .artometrics-article-body .art-chart-live--static .art-chart-fallback{
   opacity: 1 !important;
@@ -1484,10 +1488,10 @@ pre:has(> code.sourceCode.sql),
   background: #FFFFFF !important;
 }
 .artometrics-article-body .art-chart-mode-switch__btn{
-  min-height: 34px !important;
-  padding: 0.45rem 0.85rem !important;
+  min-height: 28px !important;
+  padding: 0.35rem 0.7rem !important;
   font-family: 'DM Sans', sans-serif !important;
-  font-size: 0.62rem !important;
+  font-size: 0.58rem !important;
   font-weight: 600 !important;
   letter-spacing: 0.1em !important;
   text-transform: uppercase !important;

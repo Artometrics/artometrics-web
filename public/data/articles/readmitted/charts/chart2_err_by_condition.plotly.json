@@ -1,8 +1,22 @@
 {
   "data": [
     {
-      "x": [1.0019, 1.002, 1.0021, 1.0025, 1.0027, 1.0049],
-      "y": ["CABG", "Pneumonia", "AMI", "Heart Failure", "COPD", "Hip/Knee"],
+      "x": [
+        1.0019,
+        1.002,
+        1.0021,
+        1.0025,
+        1.0027,
+        1.0049
+      ],
+      "y": [
+        "CABG",
+        "Pneumonia",
+        "AMI",
+        "Heart Failure",
+        "COPD",
+        "Hip/Knee"
+      ],
       "mode": "markers",
       "marker": {
         "color": "#C0392B",
@@ -11,8 +25,22 @@
           "color": "rgba(31,119,180,1)"
         }
       },
-      "text": ["1.00187", "1.00198", "1.00212", "1.00254", "1.00271", "1.00485"],
-      "hovertemplate": ["<b>%{y}<\/b><br>ERR %{x:.5f}<extra><\/extra>", "<b>%{y}<\/b><br>ERR %{x:.5f}<extra><\/extra>", "<b>%{y}<\/b><br>ERR %{x:.5f}<extra><\/extra>", "<b>%{y}<\/b><br>ERR %{x:.5f}<extra><\/extra>", "<b>%{y}<\/b><br>ERR %{x:.5f}<extra><\/extra>", "<b>%{y}<\/b><br>ERR %{x:.5f}<extra><\/extra>"],
+      "text": [
+        "1.00187",
+        "1.00198",
+        "1.00212",
+        "1.00254",
+        "1.00271",
+        "1.00485"
+      ],
+      "hovertemplate": [
+        "<b>%{y}</b><br>ERR %{x:.5f}<extra></extra>",
+        "<b>%{y}</b><br>ERR %{x:.5f}<extra></extra>",
+        "<b>%{y}</b><br>ERR %{x:.5f}<extra></extra>",
+        "<b>%{y}</b><br>ERR %{x:.5f}<extra></extra>",
+        "<b>%{y}</b><br>ERR %{x:.5f}<extra></extra>",
+        "<b>%{y}</b><br>ERR %{x:.5f}<extra></extra>"
+      ],
       "type": "scatter",
       "error_y": {
         "color": "rgba(31,119,180,1)"
@@ -28,8 +56,44 @@
       "frame": null
     },
     {
-      "x": [1, 1.0019, null, 1, 1.002, null, 1, 1.0021, null, 1, 1.0025, null, 1, 1.0027, null, 1, 1.0049],
-      "y": ["CABG", "CABG", null, "Pneumonia", "Pneumonia", null, "AMI", "AMI", null, "Heart Failure", "Heart Failure", null, "COPD", "COPD", null, "Hip/Knee", "Hip/Knee"],
+      "x": [
+        1,
+        1.0019,
+        null,
+        1,
+        1.002,
+        null,
+        1,
+        1.0021,
+        null,
+        1,
+        1.0025,
+        null,
+        1,
+        1.0027,
+        null,
+        1,
+        1.0049
+      ],
+      "y": [
+        "CABG",
+        "CABG",
+        null,
+        "Pneumonia",
+        "Pneumonia",
+        null,
+        "AMI",
+        "AMI",
+        null,
+        "Heart Failure",
+        "Heart Failure",
+        null,
+        "COPD",
+        "COPD",
+        null,
+        "Hip/Knee",
+        "Hip/Knee"
+      ],
       "mode": "lines+markers",
       "marker": {
         "color": "#C0392B",
@@ -38,15 +102,69 @@
           "color": "rgba(255,127,14,1)"
         }
       },
-      "text": ["1.00187", "1.00187", null, "1.00198", "1.00198", null, "1.00212", "1.00212", null, "1.00254", "1.00254", null, "1.00271", "1.00271", null, "1.00485", "1.00485"],
-      "hovertemplate": ["<b>%{y}<\/b><br>ERR %{x:.5f}<extra><\/extra>", "<b>%{y}<\/b><br>ERR %{x:.5f}<extra><\/extra>", null, "<b>%{y}<\/b><br>ERR %{x:.5f}<extra><\/extra>", "<b>%{y}<\/b><br>ERR %{x:.5f}<extra><\/extra>", null, "<b>%{y}<\/b><br>ERR %{x:.5f}<extra><\/extra>", "<b>%{y}<\/b><br>ERR %{x:.5f}<extra><\/extra>", null, "<b>%{y}<\/b><br>ERR %{x:.5f}<extra><\/extra>", "<b>%{y}<\/b><br>ERR %{x:.5f}<extra><\/extra>", null, "<b>%{y}<\/b><br>ERR %{x:.5f}<extra><\/extra>", "<b>%{y}<\/b><br>ERR %{x:.5f}<extra><\/extra>", null, "<b>%{y}<\/b><br>ERR %{x:.5f}<extra><\/extra>", "<b>%{y}<\/b><br>ERR %{x:.5f}<extra><\/extra>"],
+      "text": [
+        "1.00187",
+        "1.00187",
+        null,
+        "1.00198",
+        "1.00198",
+        null,
+        "1.00212",
+        "1.00212",
+        null,
+        "1.00254",
+        "1.00254",
+        null,
+        "1.00271",
+        "1.00271",
+        null,
+        "1.00485",
+        "1.00485"
+      ],
+      "hovertemplate": [
+        "<b>%{y}</b><br>ERR %{x:.5f}<extra></extra>",
+        "<b>%{y}</b><br>ERR %{x:.5f}<extra></extra>",
+        null,
+        "<b>%{y}</b><br>ERR %{x:.5f}<extra></extra>",
+        "<b>%{y}</b><br>ERR %{x:.5f}<extra></extra>",
+        null,
+        "<b>%{y}</b><br>ERR %{x:.5f}<extra></extra>",
+        "<b>%{y}</b><br>ERR %{x:.5f}<extra></extra>",
+        null,
+        "<b>%{y}</b><br>ERR %{x:.5f}<extra></extra>",
+        "<b>%{y}</b><br>ERR %{x:.5f}<extra></extra>",
+        null,
+        "<b>%{y}</b><br>ERR %{x:.5f}<extra></extra>",
+        "<b>%{y}</b><br>ERR %{x:.5f}<extra></extra>",
+        null,
+        "<b>%{y}</b><br>ERR %{x:.5f}<extra></extra>",
+        "<b>%{y}</b><br>ERR %{x:.5f}<extra></extra>"
+      ],
       "type": "scatter",
       "line": {
         "color": "#D5D5D5",
         "width": 2
       },
       "showlegend": false,
-      "hoverinfo": ["skip", "skip", null, "skip", "skip", null, "skip", "skip", null, "skip", "skip", null, "skip", "skip", null, "skip", "skip"],
+      "hoverinfo": [
+        "skip",
+        "skip",
+        null,
+        "skip",
+        "skip",
+        null,
+        "skip",
+        "skip",
+        null,
+        "skip",
+        "skip",
+        null,
+        "skip",
+        "skip",
+        null,
+        "skip",
+        "skip"
+      ],
       "error_y": {
         "color": "rgba(255,127,14,1)"
       },
@@ -66,7 +184,7 @@
       "r": 40
     },
     "title": {
-      "text": "<b>The <span style='color:#C0392B;'>Hip/Knee<\/span> Problem: ERR by Condition<\/b><br><span style='font-size:12px;color:#6B6B6B'>All six HRRP conditions exceed 1.0 — but the spread is measured in thousandths<\/span>",
+      "text": "<b>The <span style='color:#C0392B;'>Hip/Knee</span> Problem: ERR by Condition</b><br><span style='font-size:12px;color:#6B6B6B'>All six HRRP conditions exceed 1.0 \u2014 but the spread is measured in thousandths</span>",
       "x": 0,
       "xanchor": "left"
     },
@@ -78,18 +196,33 @@
       "size": 12
     },
     "xaxis": {
-      "domain": [0, 1],
+      "domain": [
+        0,
+        1
+      ],
       "automargin": true,
       "title": "Average Excess Readmission Ratio (ERR)",
-      "gridcolor": "#D5D5D5"
+      "gridcolor": "#D5D5D5",
+      "fixedrange": true
     },
     "yaxis": {
-      "domain": [0, 1],
+      "domain": [
+        0,
+        1
+      ],
       "automargin": true,
       "title": "",
       "categoryorder": "array",
-      "categoryarray": ["CABG", "Pneumonia", "AMI", "Heart Failure", "COPD", "Hip/Knee"],
-      "type": "category"
+      "categoryarray": [
+        "CABG",
+        "Pneumonia",
+        "AMI",
+        "Heart Failure",
+        "COPD",
+        "Hip/Knee"
+      ],
+      "type": "category",
+      "fixedrange": true
     },
     "shapes": [
       {
@@ -123,11 +256,17 @@
       }
     ],
     "showlegend": false,
-    "hovermode": "closest"
+    "hovermode": "closest",
+    "dragmode": false
   },
   "config": {
     "displayModeBar": false,
     "displaylogo": false,
-    "responsive": true
+    "responsive": true,
+    "scrollZoom": false,
+    "doubleClick": false,
+    "staticPlot": false,
+    "editable": false,
+    "showTips": false
   }
 }

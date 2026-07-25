@@ -64,7 +64,9 @@ for (const post of blog) {
     `/data/articles/${slug}/narration.mp3`,
   ]);
   const quarto = firstExisting([
+    `/data/articles/${slug}/source.qmd`,
     `/data/articles/${slug}/source.zip`,
+    `/exports/${slug}.qmd`,
     `/exports/${slug}-source.zip`,
   ]);
   manifest[slug] = {

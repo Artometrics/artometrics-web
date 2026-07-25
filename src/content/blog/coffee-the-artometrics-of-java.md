@@ -54,6 +54,9 @@ faq:
 <main class="art-article-main">
 <p class="art-p">Coffee is the world’s second-largest traded commodity by value, behind only crude oil. More than 125 million people depend on it for their livelihoods. Around 2.25 billion cups are consumed every day. And yet the country that produces the highest-quality coffee on earth — by a significant margin, according to the Coffee Quality Institute’s own grading data — has exactly zero Starbucks locations. That country is Ethiopia.</p>
 <p class="art-p">What follows uses CQI cupping scores and country-level samples to ask a simple question: where does quality concentrate, and how little that map resembles the retail geography of coffee brands.</p>
+<h2 id="research-question" class="anchored">Research question</h2>
+<p class="art-p">Does the geography of high-scoring coffee match the geography of retail coffee power? This report asks whether Coffee Quality Institute cupping scores and Starbucks store counts describe the same global map or two different positions in the commodity chain.</p>
+<p class="art-p">The observational question is where Arabica quality concentrates once country medians and sensory sub-metrics are plotted, and whether that origin map aligns with the markets where a dominant branded retailer operates stores. The answer matters because origin value, sensory quality, and retail capture are often discussed as if they naturally reinforce one another.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>
 <p class="art-p">Keep these markers in view as the story unfolds.</p>
 <div class="facts-grid">
@@ -122,6 +125,8 @@ faq:
 <p class="art-p">Brazil dominates volume while scoring in the lower half of this quality ranking. The countries that grow the best-scoring coffee are not automatically the countries that capture the most retail value from coffee’s global brand.</p>
 <h2 id="sources" class="anchored">Sources</h2>
 
+<p class="art-p">The Coffee Quality Institute data should be interpreted as a specialty-coffee evaluation archive, not a random sample of all coffee production. CQI Q Graders score submitted samples under standardized protocols, which means the file is strongest for comparing evaluated specialty lots and weaker for estimating national production averages. The Starbucks file adds a retail-chain geography from 2018, useful as a branded-store proxy but not as a full measure of cafe, grocery, roaster, or export-market value.</p>
+<p class="art-p">The broader citation frame comes from coffee-development and value-chain research by Daviron, Ponte, Samper, Quiñones-Ruiz, and the International Coffee Organization. Those sources matter because the charts show a classic commodity-chain split: Ethiopia, Kenya, Uganda, Colombia, Brazil, and other origins can produce sensory value, while roasting, branding, retail real estate, and consumer pricing often capture value elsewhere.</p>
 <div class="art-references">
   <div class="art-ref-item">
     TidyTuesday (2020-07-07). <em>Coffee Ratings</em>.

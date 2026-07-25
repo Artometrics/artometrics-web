@@ -4,15 +4,27 @@
       "type": "bar",
       "orientation": "h",
       "name": "No Penalty",
-      "x": [0.5383, 0.5007, 0.4581],
-      "y": ["Non-Profit", "Government", "For-Profit"],
+      "x": [
+        0.5383,
+        0.5007,
+        0.4581
+      ],
+      "y": [
+        "Non-Profit",
+        "Government",
+        "For-Profit"
+      ],
       "marker": {
         "color": "#1C1C1E",
         "line": {
           "color": "rgba(31,119,180,1)"
         }
       },
-      "hovertemplate": ["<b>%{y}<\/b><br>No Penalty: %{x:.1%}<extra><\/extra>", "<b>%{y}<\/b><br>No Penalty: %{x:.1%}<extra><\/extra>", "<b>%{y}<\/b><br>No Penalty: %{x:.1%}<extra><\/extra>"],
+      "hovertemplate": [
+        "<b>%{y}</b><br>No Penalty: %{x:.1%}<extra></extra>",
+        "<b>%{y}</b><br>No Penalty: %{x:.1%}<extra></extra>",
+        "<b>%{y}</b><br>No Penalty: %{x:.1%}<extra></extra>"
+      ],
       "error_y": {
         "color": "rgba(31,119,180,1)"
       },
@@ -27,15 +39,27 @@
       "type": "bar",
       "orientation": "h",
       "name": "Low",
-      "x": [0.0611, 0.0741, 0.0573],
-      "y": ["Non-Profit", "Government", "For-Profit"],
+      "x": [
+        0.0611,
+        0.0741,
+        0.0573
+      ],
+      "y": [
+        "Non-Profit",
+        "Government",
+        "For-Profit"
+      ],
       "marker": {
         "color": "#6B6B6B",
         "line": {
           "color": "rgba(255,127,14,1)"
         }
       },
-      "hovertemplate": ["<b>%{y}<\/b><br>Low: %{x:.1%}<extra><\/extra>", "<b>%{y}<\/b><br>Low: %{x:.1%}<extra><\/extra>", "<b>%{y}<\/b><br>Low: %{x:.1%}<extra><\/extra>"],
+      "hovertemplate": [
+        "<b>%{y}</b><br>Low: %{x:.1%}<extra></extra>",
+        "<b>%{y}</b><br>Low: %{x:.1%}<extra></extra>",
+        "<b>%{y}</b><br>Low: %{x:.1%}<extra></extra>"
+      ],
       "error_y": {
         "color": "rgba(255,127,14,1)"
       },
@@ -50,15 +74,27 @@
       "type": "bar",
       "orientation": "h",
       "name": "Medium",
-      "x": [0.0797, 0.1054, 0.0892],
-      "y": ["Non-Profit", "Government", "For-Profit"],
+      "x": [
+        0.0797,
+        0.1054,
+        0.0892
+      ],
+      "y": [
+        "Non-Profit",
+        "Government",
+        "For-Profit"
+      ],
       "marker": {
         "color": "#B03A2E",
         "line": {
           "color": "rgba(44,160,44,1)"
         }
       },
-      "hovertemplate": ["<b>%{y}<\/b><br>Medium: %{x:.1%}<extra><\/extra>", "<b>%{y}<\/b><br>Medium: %{x:.1%}<extra><\/extra>", "<b>%{y}<\/b><br>Medium: %{x:.1%}<extra><\/extra>"],
+      "hovertemplate": [
+        "<b>%{y}</b><br>Medium: %{x:.1%}<extra></extra>",
+        "<b>%{y}</b><br>Medium: %{x:.1%}<extra></extra>",
+        "<b>%{y}</b><br>Medium: %{x:.1%}<extra></extra>"
+      ],
       "error_y": {
         "color": "rgba(44,160,44,1)"
       },
@@ -73,15 +109,27 @@
       "type": "bar",
       "orientation": "h",
       "name": "High",
-      "x": [0.3209, 0.3197, 0.3954],
-      "y": ["Non-Profit", "Government", "For-Profit"],
+      "x": [
+        0.3209,
+        0.3197,
+        0.3954
+      ],
+      "y": [
+        "Non-Profit",
+        "Government",
+        "For-Profit"
+      ],
       "marker": {
         "color": "#C0392B",
         "line": {
           "color": "rgba(214,39,40,1)"
         }
       },
-      "hovertemplate": ["<b>%{y}<\/b><br>High: %{x:.1%}<extra><\/extra>", "<b>%{y}<\/b><br>High: %{x:.1%}<extra><\/extra>", "<b>%{y}<\/b><br>High: %{x:.1%}<extra><\/extra>"],
+      "hovertemplate": [
+        "<b>%{y}</b><br>High: %{x:.1%}<extra></extra>",
+        "<b>%{y}</b><br>High: %{x:.1%}<extra></extra>",
+        "<b>%{y}</b><br>High: %{x:.1%}<extra></extra>"
+      ],
       "error_y": {
         "color": "rgba(214,39,40,1)"
       },
@@ -102,7 +150,7 @@
     },
     "barmode": "stack",
     "title": {
-      "text": "<b><span style='color:#C0392B;'>For-Profit<\/span> Hospitals Carry More Penalty Weight<\/b><br><span style='font-size:12px;color:#6B6B6B'>Penalty tier distribution by ownership<\/span>",
+      "text": "<b><span style='color:#C0392B;'>For-Profit</span> Hospitals Carry More Penalty Weight</b><br><span style='font-size:12px;color:#6B6B6B'>Penalty tier distribution by ownership</span>",
       "x": 0,
       "xanchor": "left"
     },
@@ -114,19 +162,31 @@
       "size": 12
     },
     "xaxis": {
-      "domain": [0, 1],
+      "domain": [
+        0,
+        1
+      ],
       "automargin": true,
       "title": "Share of Hospital-Condition Pairs",
       "tickformat": ".0%",
-      "gridcolor": "#D5D5D5"
+      "gridcolor": "#D5D5D5",
+      "fixedrange": true
     },
     "yaxis": {
-      "domain": [0, 1],
+      "domain": [
+        0,
+        1
+      ],
       "automargin": true,
       "title": "",
       "categoryorder": "array",
-      "categoryarray": ["Non-Profit", "Government", "For-Profit"],
-      "type": "category"
+      "categoryarray": [
+        "Non-Profit",
+        "Government",
+        "For-Profit"
+      ],
+      "type": "category",
+      "fixedrange": true
     },
     "legend": {
       "orientation": "h",
@@ -152,11 +212,17 @@
       }
     ],
     "hovermode": "closest",
-    "showlegend": true
+    "showlegend": true,
+    "dragmode": false
   },
   "config": {
     "displayModeBar": false,
     "displaylogo": false,
-    "responsive": true
+    "responsive": true,
+    "scrollZoom": false,
+    "doubleClick": false,
+    "staticPlot": false,
+    "editable": false,
+    "showTips": false
   }
 }

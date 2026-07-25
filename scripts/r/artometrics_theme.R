@@ -66,18 +66,40 @@ theme_artometrics <- function(base_size = 11) {
     theme(
       plot.background = element_rect(fill = ART_CREAM, color = NA),
       panel.background = element_rect(fill = ART_CREAM, color = NA),
-      panel.grid.major = element_line(color = "#E8E6E1", linewidth = 0.35),
+      panel.grid.major.y = element_line(color = "#E8E6E1", linewidth = 0.32),
+      panel.grid.major.x = element_line(color = "#EFEDE8", linewidth = 0.22),
       panel.grid.minor = element_blank(),
-      axis.title = element_text(color = ART_MID, size = rel(0.85)),
-      axis.text = element_text(color = ART_DARK, size = rel(0.8)),
+      axis.line.x = element_line(color = "#D5D5D5", linewidth = 0.35),
+      axis.ticks = element_line(color = "#D5D5D5", linewidth = 0.3),
+      axis.ticks.length = unit(3, "pt"),
+      axis.title = element_text(color = ART_MID, size = rel(0.82), margin = margin(t = 6, r = 6)),
+      axis.text = element_text(color = ART_DARK, size = rel(0.78)),
       plot.title = art_title_theme(),
-      plot.subtitle = element_text(color = ART_MID, size = rel(0.9), margin = margin(b = 10)),
-      plot.caption = element_text(color = ART_MID, size = rel(0.72), hjust = 0, margin = margin(t = 12)),
-      legend.title = element_text(color = ART_DARK, face = "bold", size = rel(0.78)),
-      legend.text = element_text(color = ART_MID, size = rel(0.75)),
+      plot.subtitle = element_text(color = ART_MID, size = rel(0.88), margin = margin(b = 12)),
+      plot.caption = element_text(color = ART_MID, size = rel(0.7), hjust = 0, margin = margin(t = 14)),
+      legend.title = element_text(color = ART_DARK, face = "bold", size = rel(0.74)),
+      legend.text = element_text(color = ART_MID, size = rel(0.72)),
       legend.position = "bottom",
-      strip.text = element_text(face = "bold", color = ART_DARK)
+      legend.key.height = unit(10, "pt"),
+      legend.key.width = unit(14, "pt"),
+      strip.text = element_text(face = "bold", color = ART_DARK, size = rel(0.8)),
+      strip.background = element_rect(fill = "#F7F5F1", color = NA),
+      plot.margin = margin(t = 14, r = 18, b = 16, l = 14)
     )
+}
+
+#' Canonical Plotly config for magazine embeds (hover only — no zoom/pan)
+art_plotly_config <- function() {
+  list(
+    displayModeBar = FALSE,
+    displaylogo = FALSE,
+    responsive = TRUE,
+    scrollZoom = FALSE,
+    doubleClick = FALSE,
+    staticPlot = FALSE,
+    editable = FALSE,
+    showTips = FALSE
+  )
 }
 
 #' Chomsky wordmark bottom-right
@@ -221,11 +243,7 @@ save_art_chart <- function(
     payload <- list(
       data = built$x$data,
       layout = built$x$layout,
-      config = list(
-        displayModeBar = FALSE,
-        displaylogo = FALSE,
-        responsive = TRUE
-      )
+      config = art_plotly_config()
     )
     json_path <- file.path(charts_dir, paste0(filename, ".plotly.json"))
     jsonlite::write_json(payload, json_path, auto_unbox = TRUE, pretty = TRUE)
