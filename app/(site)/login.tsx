@@ -1,15 +1,16 @@
 import { useState } from "react";
-import { Text, TextInput, View, StyleSheet, Pressable } from "react-native";
+import { Platform, Text, TextInput, View, StyleSheet, Pressable } from "react-native";
 import { Link, router } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { PrimaryButton } from "@/components/PrimaryButton";
+import { GoogleSignInButton } from "@/components/GoogleSignInButton";
 import { PageSeo } from "@/components/PageSeo";
 import { Fonts } from "@/constants/Colors";
 import { useAuth } from "@/lib/auth";
 import { useTheme } from "@/lib/theme";
 
 export default function LoginScreen() {
-  const { signIn } = useAuth();
+  const { signIn, signInWithGoogle } = useAuth();
   const { colors } = useTheme();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -28,12 +29,30 @@ export default function LoginScreen() {
     router.replace("/account");
   }
 
+  async function onGoogle() {
+    setBusy(true);
+    setError(null);
+    const result = await signInWithGoogle();
+    if (result.error) {
+      setBusy(false);
+      setError(result.error);
+      return;
+    }
+    // Web leaves the page for Google; native finishes in-app.
+    if (Platform.OS !== "web") {
+      setBusy(false);
+      router.replace("/account");
+    }
+  }
+
   return (
     <Wrapper variant="narrow" style={styles.wrap}>
       <PageSeo title="Log in" description="Sign in to Artometrics." path="/login" />
       <Text style={[styles.eyebrow, { color: colors.accent }]}>Members</Text>
       <Text style={[styles.title, { color: colors.text }]}>Log in</Text>
       <View style={styles.form}>
+        <GoogleSignInButton onPress={onGoogle} disabled={busy} />
+        <Text style={[styles.or, { color: colors.textSubtle }]}>or use email</Text>
         <TextInput
           autoCapitalize="none"
           keyboardType="email-address"
@@ -79,6 +98,13 @@ const styles = StyleSheet.create({
   },
   title: { fontSize: 36, fontWeight: "300", fontFamily: Fonts.serif },
   form: { gap: 12, marginTop: 8 },
+  or: {
+    fontSize: 12,
+    letterSpacing: 1.2,
+    textTransform: "uppercase",
+    textAlign: "center",
+    marginVertical: 4,
+  },
   input: {
     borderWidth: 1,
     paddingHorizontal: 14,

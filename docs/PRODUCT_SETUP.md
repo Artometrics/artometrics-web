@@ -26,9 +26,25 @@ Client calls use `/api/*` (rewritten to Netlify Functions in `netlify.toml`).
    - `anon` key → `EXPO_PUBLIC_SUPABASE_ANON_KEY` (and optional alias `PUBLIC_SUPABASE_ANON_KEY`)
    - `service_role` key → `SUPABASE_SERVICE_ROLE_KEY` (Netlify only, never in the browser)
 
-4. **Authentication → URL configuration**: add `https://artometrics.com`, `https://artometrics.netlify.app`, and local `http://localhost:8081` / `http://localhost:8888` to the redirect allow list.
+4. **Authentication → URL configuration** — Redirect URLs allow list must include:
+   - `https://artometrics.com/**`
+   - `https://artometrics.com/auth/callback`
+   - `https://*.netlify.app/**` (preview deploys)
+   - `http://localhost:8081/**` and `http://localhost:8888/**`
+   - Native: `artometrics://auth/callback`
+   - Site URL: `https://artometrics.com`
 
-5. Optional: disable email confirmation in development (**Auth → Providers → Email**) for faster testing.
+5. **Google login (optional but recommended)**  
+   1. [Google Cloud Console](https://console.cloud.google.com/) → create/select project → **APIs & Services → Credentials**  
+   2. **OAuth consent screen** → External → app name Artometrics → add your email as test user while in Testing  
+   3. **Create credentials → OAuth client ID → Web application**  
+      - Authorized JavaScript origins: `https://artometrics.com`, `https://lswrpofrvfgrqrivdcyz.supabase.co`  
+      - Authorized redirect URIs: `https://lswrpofrvfgrqrivdcyz.supabase.co/auth/v1/callback`  
+   4. Copy **Client ID** + **Client Secret**  
+   5. Supabase → **Authentication → Providers → Google** → Enable → paste Client ID/Secret → Save  
+   6. Smoke: `/login` → **Continue with Google** → land on `/account`
+
+6. Optional: disable email confirmation in development (**Auth → Providers → Email**) for faster testing.
 
 ## 2. Stripe
 

@@ -7,8 +7,15 @@ import {
   useState,
   type ReactNode,
 } from "react";
+import { Platform } from "react-native";
 import type { Session, User } from "@supabase/supabase-js";
+import * as Linking from "expo-linking";
+import * as WebBrowser from "expo-web-browser";
+import { makeRedirectUri } from "expo-auth-session";
+import * as QueryParams from "expo-auth-session/build/QueryParams";
 import { getSupabase } from "@/lib/supabase/client";
+
+WebBrowser.maybeCompleteAuthSession();
 
 type AuthContextValue = {
   session: Session | null;
@@ -20,10 +27,44 @@ type AuthContextValue = {
     password: string,
     fullName?: string,
   ) => Promise<{ error?: string }>;
+  signInWithGoogle: () => Promise<{ error?: string }>;
   signOut: () => Promise<void>;
 };
 
 const AuthContext = createContext<AuthContextValue | null>(null);
+
+function oauthRedirectTo(): string {
+  if (Platform.OS === "web" && typeof window !== "undefined") {
+    return `${window.location.origin}/auth/callback`;
+  }
+  return makeRedirectUri({
+    scheme: "artometrics",
+    path: "auth/callback",
+  });
+}
+
+async function createSessionFromUrl(url: string): Promise<{ error?: string }> {
+  const supabase = getSupabase();
+  if (!supabase) return { error: "Auth is not configured." };
+
+  const { params, errorCode } = QueryParams.getQueryParams(url);
+  if (errorCode) return { error: errorCode };
+
+  if (params.code) {
+    const { error } = await supabase.auth.exchangeCodeForSession(params.code);
+    return error ? { error: error.message } : {};
+  }
+
+  const access_token = params.access_token;
+  const refresh_token = params.refresh_token;
+  if (!access_token || !refresh_token) return {};
+
+  const { error } = await supabase.auth.setSession({
+    access_token,
+    refresh_token,
+  });
+  return error ? { error: error.message } : {};
+}
 
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [session, setSession] = useState<Session | null>(null);
@@ -47,10 +88,32 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     return () => sub.subscription.unsubscribe();
   }, []);
 
+  // Native / deep-link return from Google OAuth
+  useEffect(() => {
+    const handleUrl = (url: string | null) => {
+      if (!url) return;
+      if (
+        !url.includes("access_token") &&
+        !url.includes("refresh_token") &&
+        !url.includes("code=")
+      ) {
+        return;
+      }
+      void createSessionFromUrl(url);
+    };
+
+    void Linking.getInitialURL().then(handleUrl);
+    const sub = Linking.addEventListener("url", ({ url }) => handleUrl(url));
+    return () => sub.remove();
+  }, []);
+
   const signIn = useCallback(async (email: string, password: string) => {
     const supabase = getSupabase();
     if (!supabase) return { error: "Auth is not configured." };
-    const { error } = await supabase.auth.signInWithPassword({ email, password });
+    const { error } = await supabase.auth.signInWithPassword({
+      email,
+      password,
+    });
     return error ? { error: error.message } : {};
   }, []);
 
@@ -68,6 +131,43 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     [],
   );
 
+  const signInWithGoogle = useCallback(async () => {
+    const supabase = getSupabase();
+    if (!supabase) return { error: "Auth is not configured." };
+
+    const redirectTo = oauthRedirectTo();
+
+    if (Platform.OS === "web") {
+      const { error } = await supabase.auth.signInWithOAuth({
+        provider: "google",
+        options: {
+          redirectTo,
+          queryParams: { prompt: "select_account" },
+        },
+      });
+      return error ? { error: error.message } : {};
+    }
+
+    const { data, error } = await supabase.auth.signInWithOAuth({
+      provider: "google",
+      options: {
+        redirectTo,
+        skipBrowserRedirect: true,
+        queryParams: { prompt: "select_account" },
+      },
+    });
+    if (error) return { error: error.message };
+    if (!data.url) return { error: "Unable to start Google sign-in." };
+
+    const result = await WebBrowser.openAuthSessionAsync(data.url, redirectTo);
+    if (result.type !== "success" || !result.url) {
+      return result.type === "cancel" || result.type === "dismiss"
+        ? {}
+        : { error: "Google sign-in was interrupted." };
+    }
+    return createSessionFromUrl(result.url);
+  }, []);
+
   const signOut = useCallback(async () => {
     const supabase = getSupabase();
     if (supabase) await supabase.auth.signOut();
@@ -81,9 +181,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       loading: mounted ? loading : true,
       signIn,
       signUp,
+      signInWithGoogle,
       signOut,
     }),
-    [session, loading, mounted, signIn, signUp, signOut],
+    [session, loading, mounted, signIn, signUp, signInWithGoogle, signOut],
   );
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;

@@ -76,14 +76,20 @@ eas build:configure      # already have eas.json — confirm
 ```
 
 ### EAS secrets (production)
-Set the same public env the web uses (no service-role key on device):
+Set the same public env the web uses (no service-role key on device). From the repo root after `eas login`:
 
 ```bash
-eas secret:create --name EXPO_PUBLIC_SITE_URL --value https://artometrics.com --scope project
-eas secret:create --name EXPO_PUBLIC_SUPABASE_URL --value "https://….supabase.co" --scope project
-eas secret:create --name EXPO_PUBLIC_SUPABASE_ANON_KEY --value "…" --scope project
-eas secret:create --name EXPO_PUBLIC_GA_ID --value "G-…" --scope project
+# Prefer env:push if you keep a local .env (skips secrets):
+# eas env:push --environment production --path .env
+
+npx eas-cli secret:create --name EXPO_PUBLIC_SITE_URL --value https://artometrics.com --scope project --force
+npx eas-cli secret:create --name EXPO_PUBLIC_SUPABASE_URL --value "https://lswrpofrvfgrqrivdcyz.supabase.co" --scope project --force
+npx eas-cli secret:create --name EXPO_PUBLIC_SUPABASE_ANON_KEY --value "YOUR_ANON_KEY" --scope project --force
+# optional:
+# npx eas-cli secret:create --name EXPO_PUBLIC_GA_ID --value "G-…" --scope project --force
 ```
+
+Then rebuild so native picks up env (`app.config.js` copies these into `extra`).
 
 ### Build + TestFlight
 
