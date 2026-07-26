@@ -120,11 +120,20 @@ export default function TwildaJournalEntryScreen() {
         placeholderTextColor={colors.textSubtle}
         style={[styles.bodyInput, { color: colors.text, borderColor: colors.border }]}
       />
-      <View style={{ flexDirection: "row", gap: 12 }}>
+      <View style={{ flexDirection: "row", flexWrap: "wrap", gap: 12 }}>
         <PrimaryButton
           label="Back"
           style={{ backgroundColor: colors.text }}
           onPress={() => router.push("/tools/twilda/journal")}
+        />
+        <PrimaryButton
+          label="Publish…"
+          style={{ backgroundColor: colors.textMuted }}
+          onPress={() =>
+            router.push(
+              `/studio/publish?title=${encodeURIComponent(title)}&body=${encodeURIComponent(body.slice(0, 4000))}&source=twilda_journal&sourceId=${id}`,
+            )
+          }
         />
         <PrimaryButton
           label="Delete"

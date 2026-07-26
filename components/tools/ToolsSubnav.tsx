@@ -11,9 +11,9 @@ export function ToolsSubnav({ links }: { links: LinkItem[] }) {
 
   return (
     <View style={[styles.row, { borderBottomColor: colors.border }]}>
-      <Link href="/tools" asChild>
+      <Link href="/studio" asChild>
         <Pressable style={styles.link}>
-          <Text style={[styles.meta, { color: colors.textMuted }]}>Tools</Text>
+          <Text style={[styles.meta, { color: colors.textMuted }]}>Studio</Text>
         </Pressable>
       </Link>
       {links.map((l) => {

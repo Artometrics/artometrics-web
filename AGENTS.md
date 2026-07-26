@@ -4,9 +4,11 @@ This file describes **this repo only** — the Artometrics magazine product at [
 
 ## What this project is
 
-Artometrics is an independent **data-science magazine for the creative industries and culture**. It publishes editorial data reports (with reproducible charts and public datasets), a podcast, author profiles, legal/ethics pages, membership flows (login, signup, pricing, account), and member tools (**Twilda** story workspace + **Aftercare** identity/ritual tools) on one Supabase profile.
+Artometrics is an independent **data-science magazine and creative platform** for the creative industries and culture. It publishes editorial data reports (with reproducible charts and public datasets), a podcast, author profiles, legal/ethics pages, membership flows, **Studio** (Twilda + Aftercare on one Supabase profile), public member profiles, and a publish/social layer.
 
-Primary use case: long-form investigative reports organized by editorial desk, plus subscriber-only podcast episodes, saved-report features, and signed-in creative tools — on **web and native** from one Expo codebase.
+Primary use case: long-form investigative reports by editorial desk, plus subscriber podcast episodes, Studio creative tools, member profiles, and published writing — on **web and native** from one Expo codebase.
+
+Platform UX plan: `docs/PLATFORM_UX_PLAN.md`.
 
 ## Tech stack
 
@@ -14,9 +16,9 @@ From `package.json` and `app.json`:
 
 - **Expo** `~57` + **Expo Router** (file-based routes in `app/`)
 - **React Native** / **React Native Web** (static web export via `expo export -p web`)
-- **Content:** markdown in `src/content/*` → `scripts/build-content.mjs` → `src/generated/*.json`
+- **Content:** markdown in `src/content/*` → `scripts/build-content.mjs` → `src/generated/*.json` (Sanity is the target editorial CMS — see `sanity/` + `docs/SANITY_SETUP.md`)
 - **Charts:** Plotly on web (`components/ArticleBody.web.tsx`); PNG fallbacks on native WebView
-- **Membership:** `@supabase/supabase-js`, Stripe via Netlify functions
+- **Membership / social:** `@supabase/supabase-js`, Stripe via Netlify functions; private tools + member posts + comments/follows in Supabase
 - **Site URL:** `https://artometrics.com` (`EXPO_PUBLIC_SITE_URL`)
 
 ## Folder map
@@ -36,8 +38,10 @@ From `package.json` and `app.json`:
 | Native assets | `assets/` | Icons, splash, Chomsky font |
 | Brand SVG kit | `brand/svg/` | Monogram, wordmark, lockups (mirrored to `public/images/brand/svg/`) |
 | Reference catalogs | `public/data/reference/` | Gutenberg / WikiArt / Wikipedia JSON |
-| Twilda / Aftercare | `lib/twilda/`, `lib/aftercare/`, `app/(site)/tools/` | Member tools |
-| Netlify | `netlify/` + `netlify.toml` | Functions + redirects (incl. `/api/aftercare/*`) |
+| Studio / tools | `app/(site)/studio/`, `app/(site)/tools/`, `lib/twilda/`, `lib/aftercare/`, `lib/platform/` | Studio home + deep Twilda/Aftercare |
+| Profiles / social | `app/(site)/u/`, `app/(site)/me.tsx`, `app/(site)/following.tsx` | Public profiles, hub, following feed |
+| Sanity | `sanity/` | Editorial CMS schemas + Studio (optional package) |
+| Netlify | `netlify/` + `netlify.toml` | Functions + redirects (incl. `/api/aftercare/*`, platform APIs) |
 
 Path alias: `@/*` → project root (`tsconfig.json`).
 
@@ -79,13 +83,15 @@ Schemas are enforced by `scripts/build-content.mjs` (not Astro Zod).
 - **Podcast:** `/podcast`, episodes at `/podcast/interviews/<id>`
 - **Authors:** `/authors`, `/authors/<id>`
 - **Legal:** `/legal/<id>`
-- **Membership:** `/login`, `/signup`, `/pricing`, `/account`
-- **Tools (signed-in):** `/tools`, `/tools/twilda/*`, `/tools/aftercare/*`
+- **Membership:** `/login`, `/signup`, `/pricing`, `/account` (hub), `/settings`
+- **Studio (signed-in):** `/studio` (hub); deep routes `/tools/twilda/*`, `/tools/aftercare/*` (`/tools` redirects to `/studio`)
+- **Profiles:** `/u/<handle>` (public), `/me` (private hub)
+- **Social:** `/following`
 - **Library / reference:** `/library`, `/library/reference`
 - **About / contact:** `/about`, `/contact`
 - **RSS / AEO:** `/rss.xml`, `/llms.txt`, `/sitemap.xml`
 
-Vision / phases: `docs/00_ARTOMETRICS_MASTER_VISION.md`, `docs/01_BUILD_PHASES_AND_CHECKLIST.md`. Tools DB: `docs/TOOLS_SETUP.md`.
+Vision / phases: `docs/00_ARTOMETRICS_MASTER_VISION.md`, `docs/01_BUILD_PHASES_AND_CHECKLIST.md`, `docs/PLATFORM_UX_PLAN.md`. Tools DB: `docs/TOOLS_SETUP.md`. Sanity: `docs/SANITY_SETUP.md`.
 
 ## Commands
 

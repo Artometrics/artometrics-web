@@ -1,0 +1,197 @@
+import { useEffect, useState } from "react";
+import { Text, TextInput, View, StyleSheet } from "react-native";
+import { router, useLocalSearchParams } from "expo-router";
+import { Wrapper } from "@/components/Wrapper";
+import { PageSeo } from "@/components/PageSeo";
+import { PrimaryButton } from "@/components/PrimaryButton";
+import { Fonts } from "@/constants/Colors";
+import { useTheme } from "@/lib/theme";
+import { useAuth } from "@/lib/auth";
+import {
+  createOrUpdateDraft,
+  publishToProfile,
+  submitToMagazine,
+} from "@/lib/platform/posts";
+import { getProfile } from "@/lib/profile/service";
+import { apiFetch } from "@/lib/supabase/client";
+import { paramString } from "@/lib/params";
+
+export default function StudioPublishScreen() {
+  const { colors } = useTheme();
+  const { user, loading } = useAuth();
+  const params = useLocalSearchParams<{
+    title?: string | string[];
+    body?: string | string[];
+    source?: string | string[];
+    sourceId?: string | string[];
+  }>();
+  const [title, setTitle] = useState("");
+  const [body, setBody] = useState("");
+  const [sourceKind, setSourceKind] = useState<string>("freeform");
+  const [sourceId, setSourceId] = useState<string | null>(null);
+  const [msg, setMsg] = useState<string | null>(null);
+  const [busy, setBusy] = useState(false);
+
+  useEffect(() => {
+    const t = paramString(params.title);
+    const b = paramString(params.body);
+    const s = paramString(params.source);
+    const sid = paramString(params.sourceId);
+    if (t) setTitle(t);
+    if (b) setBody(b);
+    if (s) setSourceKind(s);
+    if (sid) setSourceId(sid);
+  }, [params.title, params.body, params.source, params.sourceId]);
+
+  if (loading || !user) {
+    if (!loading && !user) router.replace("/login?next=%2Fstudio%2Fpublish");
+    return (
+      <Wrapper style={styles.wrap}>
+        <Text style={{ color: colors.textMuted }}>Loading…</Text>
+      </Wrapper>
+    );
+  }
+
+  async function saveDraft() {
+    setBusy(true);
+    setMsg(null);
+    try {
+      const post = await createOrUpdateDraft(user!.id, {
+        title,
+        body,
+        source_kind: sourceKind as "freeform" | "twilda_journal" | "aftercare_journal" | "novel",
+        source_id: sourceId,
+      });
+      setMsg(`Draft saved (${post.id.slice(0, 8)}…).`);
+      return post.id;
+    } catch (e) {
+      setMsg(e instanceof Error ? e.message : "Could not save draft");
+      return null;
+    } finally {
+      setBusy(false);
+    }
+  }
+
+  return (
+    <Wrapper variant="narrow" style={styles.wrap}>
+      <PageSeo
+        title="Publish"
+        description="Publish writing to your Artometrics profile or submit to the magazine."
+        path="/studio/publish"
+      />
+      <Text style={[styles.eyebrow, { color: colors.accent }]}>Studio</Text>
+      <Text style={[styles.title, { color: colors.text }]}>Publish</Text>
+      <Text style={[styles.deck, { color: colors.textMuted }]}>
+        Profile posts go live on your public page. Magazine submissions need editorial review (and can
+        sync into Sanity when configured).
+      </Text>
+
+      <Text style={[styles.label, { color: colors.textMuted }]}>Title</Text>
+      <TextInput
+        value={title}
+        onChangeText={setTitle}
+        placeholder="Title"
+        placeholderTextColor={colors.textSubtle}
+        style={[styles.input, { borderColor: colors.border, color: colors.text }]}
+      />
+      <Text style={[styles.label, { color: colors.textMuted }]}>Body</Text>
+      <TextInput
+        value={body}
+        onChangeText={setBody}
+        placeholder="Write freely…"
+        placeholderTextColor={colors.textSubtle}
+        multiline
+        style={[
+          styles.input,
+          styles.body,
+          { borderColor: colors.border, color: colors.text, backgroundColor: colors.bgElevated },
+        ]}
+      />
+
+      {msg ? <Text style={[styles.deck, { color: colors.accent }]}>{msg}</Text> : null}
+
+      <View style={styles.actions}>
+        <PrimaryButton label="Save draft" onPress={() => void saveDraft()} disabled={busy} />
+        <PrimaryButton
+          label="Publish to profile"
+          disabled={busy}
+          onPress={async () => {
+            setBusy(true);
+            setMsg(null);
+            try {
+              const profile = await getProfile(user.id);
+              if (!profile?.handle) {
+                setMsg("Claim a handle in Settings before publishing to your profile.");
+                return;
+              }
+              const id = await saveDraft();
+              if (!id) return;
+              await publishToProfile(user.id, id);
+              setMsg("Published to your profile.");
+              router.push(`/u/${profile.handle}`);
+            } catch (e) {
+              setMsg(e instanceof Error ? e.message : "Publish failed");
+            } finally {
+              setBusy(false);
+            }
+          }}
+        />
+        <PrimaryButton
+          label="Submit to magazine"
+          disabled={busy}
+          style={{ backgroundColor: colors.textMuted }}
+          onPress={async () => {
+            setBusy(true);
+            setMsg(null);
+            try {
+              const id = await saveDraft();
+              if (!id) return;
+              const post = await submitToMagazine(user.id, id);
+              try {
+                await apiFetch("sanity-sync", {
+                  method: "POST",
+                  body: JSON.stringify({ postId: post.id }),
+                });
+              } catch {
+                /* Sanity optional until credentials exist */
+              }
+              setMsg("Submitted for magazine review.");
+            } catch (e) {
+              setMsg(e instanceof Error ? e.message : "Submit failed");
+            } finally {
+              setBusy(false);
+            }
+          }}
+        />
+      </View>
+    </Wrapper>
+  );
+}
+
+const styles = StyleSheet.create({
+  wrap: { paddingVertical: 40, gap: 10 },
+  eyebrow: {
+    fontSize: 12,
+    letterSpacing: 1.8,
+    textTransform: "uppercase",
+    fontWeight: "700",
+  },
+  title: { fontFamily: Fonts.serif, fontSize: 36, fontWeight: "700" },
+  deck: { fontFamily: Fonts.serif, fontSize: 16, lineHeight: 26 },
+  label: {
+    fontSize: 11,
+    letterSpacing: 1.2,
+    textTransform: "uppercase",
+    fontWeight: "700",
+    marginTop: 8,
+  },
+  input: {
+    borderWidth: StyleSheet.hairlineWidth,
+    paddingHorizontal: 12,
+    paddingVertical: 10,
+    fontSize: 16,
+    fontFamily: Fonts.serif,
+  },
+  body: { minHeight: 200, textAlignVertical: "top" },
+  actions: { gap: 10, marginTop: 12 },
+});

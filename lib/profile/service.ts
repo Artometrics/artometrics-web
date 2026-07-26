@@ -12,10 +12,24 @@ export type UserProfile = {
   birth_time: string | null;
   birth_place: string | null;
   timezone: string | null;
+  handle: string | null;
+  bio: string | null;
+  avatar_url: string | null;
+  profile_visibility: string;
+  desks_interest: string[];
 };
 
 const PROFILE_COLS =
-  "id, email, full_name, display_name, pen_name, onboarding_completed, birth_date, birth_time, birth_place, timezone";
+  "id, email, full_name, display_name, pen_name, onboarding_completed, birth_date, birth_time, birth_place, timezone, handle, bio, avatar_url, profile_visibility, desks_interest";
+
+function normalizeHandle(raw: string): string {
+  return raw
+    .trim()
+    .toLowerCase()
+    .replace(/^@/, "")
+    .replace(/[^a-z0-9_]/g, "")
+    .slice(0, 32);
+}
 
 export async function getProfile(
   userId: string,
@@ -32,6 +46,23 @@ export async function getProfile(
   return data as UserProfile | null;
 }
 
+export async function getProfileByHandle(
+  handle: string,
+  client?: SupabaseClient | null,
+): Promise<UserProfile | null> {
+  const supabase = client ?? getSupabase();
+  if (!supabase) return null;
+  const normalized = normalizeHandle(handle);
+  if (!normalized) return null;
+  const { data, error } = await supabase
+    .from("profiles")
+    .select(PROFILE_COLS)
+    .ilike("handle", normalized)
+    .maybeSingle();
+  if (error) throw error;
+  return data as UserProfile | null;
+}
+
 export async function upsertProfile(
   userId: string,
   patch: Partial<
@@ -43,12 +74,17 @@ export async function upsertProfile(
 ): Promise<UserProfile> {
   const supabase = client ?? getSupabase();
   if (!supabase) throw new Error("Supabase is not configured");
+  const next = { ...patch };
+  if (typeof next.handle === "string") {
+    const h = normalizeHandle(next.handle);
+    next.handle = h.length >= 3 ? h : null;
+  }
   const { data, error } = await supabase
     .from("profiles")
     .upsert(
       {
         id: userId,
-        ...patch,
+        ...next,
         updated_at: new Date().toISOString(),
       },
       { onConflict: "id" },
@@ -79,3 +115,5 @@ export async function ensureProfileRow(
     supabase,
   );
 }
+
+export { normalizeHandle };

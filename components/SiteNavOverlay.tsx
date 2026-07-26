@@ -97,18 +97,18 @@ export function SiteNavOverlay() {
               <Text style={[styles.utilText, { color: colors.text }]}>Newsletters</Text>
             </Pressable>
           </Link>
-          <Link href={user ? "/account" : "/login"} asChild>
+          <Link href={user ? "/me" : "/login"} asChild>
             <Pressable onPress={() => setMenuOpen(false)} style={styles.utilItem}>
               <Ionicons name="person-outline" size={18} color={colors.text} />
               <Text style={[styles.utilText, { color: colors.text }]}>
-                {user ? "Account" : "Sign in"}
+                {user ? "Profile" : "Sign in"}
               </Text>
             </Pressable>
           </Link>
-          <Link href={user ? "/tools" : "/login?next=%2Ftools"} asChild>
+          <Link href={user ? "/studio" : "/login?next=%2Fstudio"} asChild>
             <Pressable onPress={() => setMenuOpen(false)} style={styles.utilItem}>
-              <Ionicons name="construct-outline" size={18} color={colors.text} />
-              <Text style={[styles.utilText, { color: colors.text }]}>Tools</Text>
+              <Ionicons name="create-outline" size={18} color={colors.text} />
+              <Text style={[styles.utilText, { color: colors.text }]}>Studio</Text>
             </Pressable>
           </Link>
           <Pressable onPress={toggle} style={styles.utilItem}>
@@ -158,7 +158,8 @@ export function SiteNavOverlay() {
             { href: "/podcast", label: "Podcasts" },
             { href: "/library", label: "Library" },
             { href: "/library/reference", label: "Reference" },
-            { href: "/tools", label: "Tools" },
+            { href: "/studio", label: "Studio" },
+            { href: "/following", label: "Following" },
             { href: "/about", label: "About" },
             { href: "/authors", label: "Authors" },
             { href: "/contact", label: "Contact" },

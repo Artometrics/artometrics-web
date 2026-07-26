@@ -3,6 +3,8 @@ import { useLocalSearchParams, Link } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { ArticleBody } from "@/components/ArticleBody";
 import { ArticleActions } from "@/components/ArticleActions";
+import { CommentThread } from "@/components/platform/CommentThread";
+import { ClapButton } from "@/components/platform/ClapButton";
 import { TldrBox } from "@/components/TldrBox";
 import { MagazineCard } from "@/components/MagazineCard";
 import { CarouselRail } from "@/components/CarouselRail";
@@ -153,6 +155,10 @@ export default function ReportScreen() {
       </Wrapper>
       <Wrapper variant="wide">
         <ArticleActions slug={post.slug} title={post.title} placement="bottom" />
+        <View style={{ marginTop: 16 }}>
+          <ClapButton targetKind="report" targetId={post.slug} />
+        </View>
+        <CommentThread targetKind="report" targetId={post.slug} />
       </Wrapper>
       {faq.length ? (
         <Wrapper variant="wide" style={styles.faq}>

@@ -25,11 +25,13 @@ import {
   sectionLabel,
 } from "@/lib/content";
 import { SECTION_META, SECTION_SLUGS, type SectionSlug } from "@/data/sections";
+import { useAuth } from "@/lib/auth";
 
 const RAIL_SECTIONS: SectionSlug[] = [...SECTION_SLUGS];
 
 export default function HomeScreen() {
   const { colors } = useTheme();
+  const { user } = useAuth();
   const { width } = useWindowDimensions();
   const posts = getBlogPosts();
   const featured = posts[0];
@@ -54,6 +56,29 @@ export default function HomeScreen() {
         description="Data reporting on culture, sports, film, music, and cities — clear, citable, easy to read."
         path="/"
       />
+
+      {user ? (
+        <Wrapper variant="magazine" style={styles.studioStrip}>
+          <Text style={StyleSheet.flatten([styles.studioEyebrow, { color: colors.accent }])}>
+            Studio
+          </Text>
+          <Text style={StyleSheet.flatten([styles.studioLine, { color: colors.textMuted }])}>
+            Continue writing, check in, or publish — without leaving Artometrics.
+          </Text>
+          <Link href="/studio" asChild>
+            <Pressable
+              style={StyleSheet.flatten([
+                styles.studioCta,
+                { borderColor: colors.accent, backgroundColor: colors.accentSoft },
+              ])}
+            >
+              <Text style={StyleSheet.flatten([styles.studioCtaText, { color: colors.text }])}>
+                Open Studio →
+              </Text>
+            </Pressable>
+          </Link>
+        </Wrapper>
+      ) : null}
 
       {/* Top image carousel */}
       <CarouselRail title="Top stories" href="/blog">
@@ -203,6 +228,31 @@ export default function HomeScreen() {
 }
 
 const styles = StyleSheet.create({
+  studioStrip: {
+    paddingTop: 20,
+    paddingBottom: 8,
+    gap: 8,
+  },
+  studioEyebrow: {
+    fontSize: 11,
+    letterSpacing: 1.6,
+    textTransform: "uppercase",
+    fontWeight: "700",
+  },
+  studioLine: {
+    fontFamily: Fonts.serif,
+    fontSize: 16,
+    lineHeight: 24,
+    maxWidth: 520,
+  },
+  studioCta: {
+    alignSelf: "flex-start",
+    borderWidth: 1.5,
+    paddingHorizontal: 14,
+    paddingVertical: 10,
+    borderRadius: 2,
+  },
+  studioCtaText: { fontWeight: "700", fontSize: 14 },
   heroBlock: { paddingTop: 8, paddingBottom: 40 },
   heroRow: {
     flexDirection: "row",
