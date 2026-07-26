@@ -1,6 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
 import {
-  Linking,
   Pressable,
   Share,
   Text,
@@ -14,6 +13,7 @@ import { useTheme } from "@/lib/theme";
 import { useAuth } from "@/lib/auth";
 import { apiFetch } from "@/lib/supabase/client";
 import { assetUrl } from "@/lib/assets";
+import { openExternalUrl } from "@/lib/openExternal";
 import downloadsManifest from "@/src/generated/downloads.json";
 
 type Pack = {
@@ -42,10 +42,27 @@ function openUrl(url: string) {
     window.open(absolute, "_blank", "noopener,noreferrer");
     return;
   }
-  void Linking.openURL(absolute);
+  void openExternalUrl(absolute);
 }
 
 async function downloadAll(items: DownloadItem[]) {
+  if (!items.length) return;
+  // iOS often ignores/fails rapid successive openURL calls — share a list instead.
+  if (Platform.OS !== "web") {
+    const lines = items.map((i) => {
+      const href = assetUrl(i.href) ?? i.href;
+      return `${i.label}\n${href}`;
+    });
+    try {
+      await Share.share({
+        message: lines.join("\n\n"),
+        title: "Artometrics downloads",
+      });
+    } catch {
+      openUrl(items[0].href);
+    }
+    return;
+  }
   for (const item of items) {
     openUrl(item.href);
     await new Promise((r) => setTimeout(r, 350));
@@ -223,7 +240,9 @@ export function ArticleActions({ slug, title, placement = "all" }: Props) {
                 onPress={() => void downloadAll(downloads)}
                 style={[styles.btn, { borderColor: colors.text }]}
               >
-                <Text style={[styles.btnText, { color: colors.text }]}>Download all</Text>
+                <Text style={[styles.btnText, { color: colors.text }]}>
+                  {Platform.OS === "web" ? "Download all" : "Share all links"}
+                </Text>
               </Pressable>
             ) : null}
           </View>
@@ -251,7 +270,9 @@ export function ArticleActions({ slug, title, placement = "all" }: Props) {
                   style={styles.menuItem}
                 >
                   <Text style={[styles.menuLabel, { color: colors.accent }]}>
-                    Download all ({downloads.length} files)
+                    {Platform.OS === "web"
+                      ? `Download all (${downloads.length} files)`
+                      : `Share all links (${downloads.length})`}
                   </Text>
                 </Pressable>
               ) : null}

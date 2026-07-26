@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { Slot, usePathname } from "expo-router";
+import { StatusBar } from "expo-status-bar";
 import { NativeScrollEvent, NativeSyntheticEvent, ScrollView, View, StyleSheet } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import { SiteHeader } from "@/components/SiteHeader";
@@ -13,7 +14,7 @@ import { getBlogPost } from "@/lib/content";
 function SiteChrome() {
   const pathname = usePathname();
   const { setScrollY, setIsArticle } = useChrome();
-  const { colors } = useTheme();
+  const { colors, mode } = useTheme();
 
   useEffect(() => {
     const slug = pathname.replace(/^\//, "").replace(/\/$/, "");
@@ -28,6 +29,7 @@ function SiteChrome() {
 
   return (
     <SafeAreaView style={[styles.safe, { backgroundColor: colors.bg }]} edges={["top"]}>
+      <StatusBar style={mode === "dark" ? "light" : "dark"} />
       <View style={[styles.root, { backgroundColor: colors.bg }]}>
         <SiteHeader />
         <ScrollView
@@ -35,6 +37,8 @@ function SiteChrome() {
           contentContainerStyle={styles.content}
           onScroll={onScroll}
           scrollEventThrottle={32}
+          keyboardShouldPersistTaps="handled"
+          keyboardDismissMode="on-drag"
         >
           <Slot />
           <SiteFooter />

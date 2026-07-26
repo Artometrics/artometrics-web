@@ -25,7 +25,7 @@ type AuthContextValue = {
     email: string,
     password: string,
     fullName?: string,
-  ) => Promise<{ error?: string }>;
+  ) => Promise<{ error?: string; needsConfirmation?: boolean }>;
   signInWithGoogle: () => Promise<{ error?: string; ok?: boolean; cancelled?: boolean }>;
   signOut: () => Promise<void>;
 };
@@ -151,12 +151,15 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     async (email: string, password: string, fullName?: string) => {
       const supabase = getSupabase();
       if (!supabase) return { error: "Auth is not configured." };
-      const { error } = await supabase.auth.signUp({
+      const { data, error } = await supabase.auth.signUp({
         email,
         password,
         options: { data: { full_name: fullName } },
       });
-      return error ? { error: error.message } : {};
+      if (error) return { error: error.message };
+      // Email confirmation on → no session until the user clicks the link.
+      if (!data.session) return { needsConfirmation: true };
+      return {};
     },
     [],
   );

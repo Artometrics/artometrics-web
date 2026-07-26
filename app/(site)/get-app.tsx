@@ -1,8 +1,9 @@
-import { Linking, Pressable, Text, View, StyleSheet } from "react-native";
+import { Pressable, Text, View, StyleSheet } from "react-native";
 import { Wrapper } from "@/components/Wrapper";
 import { PageSeo } from "@/components/PageSeo";
 import { Fonts } from "@/constants/Colors";
 import { useTheme } from "@/lib/theme";
+import { openExternalUrl } from "@/lib/openExternal";
 
 const IOS_URL =
   process.env.EXPO_PUBLIC_IOS_STORE_URL?.trim() ||
@@ -35,7 +36,9 @@ export default function GetAppScreen() {
       <View style={styles.actions}>
         <Pressable
           style={[styles.btn, { backgroundColor: colors.text, opacity: iosReady ? 1 : 0.55 }]}
-          onPress={() => Linking.openURL(iosReady ? IOS_URL : "https://artometrics.com/contact")}
+          onPress={() =>
+            void openExternalUrl(iosReady ? IOS_URL : "https://artometrics.com/contact")
+          }
         >
           <Text style={[styles.btnText, { color: colors.inverse }]}>
             {iosReady ? "Download on the App Store" : "App Store — launching soon"}
@@ -44,7 +47,7 @@ export default function GetAppScreen() {
         {TESTFLIGHT_URL ? (
           <Pressable
             style={[styles.btnOutline, { borderColor: colors.border }]}
-            onPress={() => Linking.openURL(TESTFLIGHT_URL)}
+            onPress={() => void openExternalUrl(TESTFLIGHT_URL)}
           >
             <Text style={[styles.btnOutlineText, { color: colors.text }]}>Join TestFlight</Text>
           </Pressable>
@@ -52,7 +55,9 @@ export default function GetAppScreen() {
         <Pressable
           style={[styles.btnOutline, { borderColor: colors.border, opacity: androidReady ? 1 : 0.55 }]}
           onPress={() =>
-            Linking.openURL(androidReady ? ANDROID_URL : "https://artometrics.com/contact")
+            void openExternalUrl(
+              androidReady ? ANDROID_URL : "https://artometrics.com/contact",
+            )
           }
         >
           <Text style={[styles.btnOutlineText, { color: colors.text }]}>

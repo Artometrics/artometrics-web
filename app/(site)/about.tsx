@@ -54,7 +54,7 @@ export default function AboutScreen() {
           <PrimaryButton label="Browse reports" />
         </Link>
         <Link href="/contact" asChild>
-          <PrimaryButton label="Contact" style={styles.secondary} />
+          <PrimaryButton label="Contact" style={{ backgroundColor: colors.textMuted }} />
         </Link>
       </View>
     </Wrapper>
@@ -79,5 +79,4 @@ const styles = StyleSheet.create({
   h: { fontFamily: Fonts.serif, fontSize: 22, fontWeight: "700", marginTop: 8 },
   p: { fontFamily: Fonts.serif, fontSize: 16, lineHeight: 28 },
   actions: { flexDirection: "row", flexWrap: "wrap", gap: 12, marginTop: 20 },
-  secondary: { backgroundColor: "#404040" },
 });

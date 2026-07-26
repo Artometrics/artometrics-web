@@ -16,15 +16,21 @@ export default function SignupScreen() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState<string | null>(null);
+  const [notice, setNotice] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
 
   async function onSubmit() {
     setBusy(true);
     setError(null);
+    setNotice(null);
     const result = await signUp(email.trim(), password, fullName.trim());
     setBusy(false);
     if (result.error) {
       setError(result.error);
+      return;
+    }
+    if (result.needsConfirmation) {
+      setNotice("Check your email to confirm your account, then log in.");
       return;
     }
     router.replace("/account");
@@ -91,6 +97,7 @@ export default function SignupScreen() {
           placeholderTextColor={colors.textSubtle}
         />
         {error ? <Text style={{ color: colors.accent, fontSize: 14 }}>{error}</Text> : null}
+        {notice ? <Text style={{ color: colors.textMuted, fontSize: 14 }}>{notice}</Text> : null}
         <PrimaryButton label={busy ? "Creating…" : "Sign up"} onPress={onSubmit} disabled={busy} />
       </View>
       <Link href="/login">

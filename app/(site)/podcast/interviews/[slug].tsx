@@ -8,7 +8,6 @@ import {
 import { Link, useLocalSearchParams } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { ArticleBody } from "@/components/ArticleBody";
-import { Colors } from "@/constants/Colors";
 import { assetUrl } from "@/lib/assets";
 import {
   formatAuthorName,
@@ -19,6 +18,7 @@ import {
 import { useAuth } from "@/lib/auth";
 import { apiFetch } from "@/lib/supabase/client";
 import { paramString } from "@/lib/params";
+import { useTheme } from "@/lib/theme";
 
 export async function generateStaticParams() {
   return getPodcastEpisodes().map((ep) => ({ slug: ep.id }));
@@ -28,9 +28,11 @@ export default function PodcastEpisodeScreen() {
   const params = useLocalSearchParams<{ slug: string | string[] }>();
   const slug = paramString(params.slug);
   const episode = getPodcastEpisode(slug);
+  const { colors } = useTheme();
   const { user, loading: authLoading } = useAuth();
   const [subActive, setSubActive] = useState(false);
   const [memberHtml, setMemberHtml] = useState<string | null>(null);
+  const [memberError, setMemberError] = useState<string | null>(null);
   const [gateLoading, setGateLoading] = useState(Boolean(episode?.isLocked));
 
   useEffect(() => {
@@ -45,11 +47,13 @@ export default function PodcastEpisodeScreen() {
         if (!cancelled) {
           setSubActive(false);
           setMemberHtml(null);
+          setMemberError(null);
           setGateLoading(false);
         }
         return;
       }
       setGateLoading(true);
+      setMemberError(null);
       try {
         const statusRes = await apiFetch("subscription-status");
         if (!statusRes.ok) {
@@ -68,9 +72,15 @@ export default function PodcastEpisodeScreen() {
         if (epRes.ok) {
           const data = (await epRes.json()) as { html?: string };
           if (!cancelled) setMemberHtml(data.html ?? "");
+        } else if (!cancelled) {
+          setMemberHtml(null);
+          setMemberError("Could not load the member transcript. Pull to refresh or try again.");
         }
       } catch {
-        if (!cancelled) setSubActive(false);
+        if (!cancelled) {
+          setSubActive(false);
+          setMemberError(null);
+        }
       } finally {
         if (!cancelled) setGateLoading(false);
       }
@@ -90,9 +100,9 @@ export default function PodcastEpisodeScreen() {
   if (!episode) {
     return (
       <Wrapper style={styles.wrap}>
-        <Text style={styles.title}>Episode not found</Text>
+        <Text style={[styles.title, { color: colors.text }]}>Episode not found</Text>
         <Link href="/podcast">
-          <Text style={styles.link}>Back to podcast</Text>
+          <Text style={[styles.link, { color: colors.accent }]}>Back to podcast</Text>
         </Link>
       </Wrapper>
     );
@@ -101,7 +111,11 @@ export default function PodcastEpisodeScreen() {
   async function toggleAudio() {
     if (!audioUri) return;
     if (status.playing) {
-      player.pause();
+      try {
+        player.pause();
+      } catch {
+        /* ignore */
+      }
       return;
     }
     try {
@@ -112,50 +126,70 @@ export default function PodcastEpisodeScreen() {
     } catch {
       /* mode setup is best-effort */
     }
-    player.play();
+    try {
+      player.play();
+    } catch {
+      /* invalid URI / not loaded yet */
+    }
   }
 
   return (
     <>
       <Wrapper style={styles.wrap} variant="narrow">
-        <Text style={styles.eyebrow}>
+        <Text style={[styles.eyebrow, { color: colors.accent }]}>
           Episode {episode.episodeNumber ?? episode.id}
         </Text>
-        <Text style={styles.title}>{episode.title}</Text>
-        <Text style={styles.meta}>
+        <Text style={[styles.title, { color: colors.text }]}>{episode.title}</Text>
+        <Text style={[styles.meta, { color: colors.textSubtle }]}>
           {formatDate(episode.pubDate)}
           {episode.duration ? ` · ${episode.duration}` : ""}
           {" · "}
           {formatAuthorName(episode.author)}
         </Text>
-        <Text style={styles.description}>{episode.description}</Text>
+        <Text style={[styles.description, { color: colors.textMuted }]}>
+          {episode.description}
+        </Text>
         {assetUrl(episode.image?.url) ? (
           <Image
             source={{ uri: assetUrl(episode.image?.url)! }}
-            style={styles.hero}
+            style={[styles.hero, { borderColor: colors.border }]}
             resizeMode="cover"
             accessibilityLabel={episode.image?.alt || episode.title}
           />
         ) : null}
 
         {gateLoading ? (
-          <Text style={styles.gateCopy}>Checking membership…</Text>
+          <Text style={[styles.gateCopy, { color: colors.textMuted }]}>
+            Checking membership…
+          </Text>
         ) : locked ? (
-          <View style={styles.gate}>
-            <Text style={styles.gateTitle}>Members episode</Text>
-            <Text style={styles.gateCopy}>
+          <View
+            style={[
+              styles.gate,
+              { borderColor: colors.border, backgroundColor: colors.bgElevated },
+            ]}
+          >
+            <Text style={[styles.gateTitle, { color: colors.text }]}>Members episode</Text>
+            <Text style={[styles.gateCopy, { color: colors.textMuted }]}>
               Subscribe to unlock the full interview audio and transcript.
             </Text>
             <Link href="/pricing">
-              <Text style={styles.link}>View membership plans</Text>
+              <Text style={[styles.link, { color: colors.accent }]}>View membership plans</Text>
             </Link>
           </View>
         ) : audioUri ? (
-          <Pressable style={styles.playBtn} onPress={toggleAudio}>
-            <Text style={styles.playLabel}>
+          <Pressable
+            style={[styles.playBtn, { backgroundColor: colors.text }]}
+            onPress={toggleAudio}
+          >
+            <Text style={[styles.playLabel, { color: colors.bg }]}>
               {status.playing ? "Pause" : "Play episode"}
             </Text>
           </Pressable>
+        ) : null}
+
+        {!locked && memberError ? (
+          <Text style={[styles.gateCopy, { color: colors.accent }]}>{memberError}</Text>
         ) : null}
 
         {!locked && bodyHtml ? <ArticleBody html={bodyHtml} /> : null}
@@ -170,29 +204,25 @@ const styles = StyleSheet.create({
     fontSize: 11,
     letterSpacing: 2.5,
     textTransform: "uppercase",
-    color: Colors.accent700,
     fontWeight: "600",
   },
-  title: { fontSize: 34, lineHeight: 40, fontWeight: "300", color: Colors.base900 },
-  meta: { fontSize: 13, color: Colors.base500 },
-  description: { fontSize: 17, lineHeight: 28, color: Colors.base600 },
+  title: { fontSize: 34, lineHeight: 40, fontWeight: "300" },
+  meta: { fontSize: 13 },
+  description: { fontSize: 17, lineHeight: 28 },
   hero: {
     width: "100%",
     aspectRatio: 16 / 9,
     borderWidth: 1,
-    borderColor: Colors.base200,
     marginVertical: 8,
   },
   playBtn: {
     alignSelf: "flex-start",
-    backgroundColor: Colors.base900,
     paddingHorizontal: 18,
     paddingVertical: 12,
     borderRadius: 2,
     marginVertical: 8,
   },
   playLabel: {
-    color: Colors.white,
     fontSize: 12,
     fontWeight: "700",
     letterSpacing: 1.5,
@@ -200,13 +230,11 @@ const styles = StyleSheet.create({
   },
   gate: {
     borderWidth: 1,
-    borderColor: Colors.base200,
     padding: 20,
     gap: 8,
-    backgroundColor: Colors.base50,
     marginVertical: 12,
   },
-  gateTitle: { fontSize: 18, color: Colors.base900 },
-  gateCopy: { fontSize: 14, color: Colors.base600, lineHeight: 22 },
-  link: { color: Colors.accent700, fontWeight: "600" },
+  gateTitle: { fontSize: 18 },
+  gateCopy: { fontSize: 14, lineHeight: 22 },
+  link: { fontWeight: "600" },
 });

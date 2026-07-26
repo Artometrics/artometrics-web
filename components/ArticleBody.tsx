@@ -4,7 +4,7 @@ import RenderHtml, {
   defaultSystemFonts,
   type MixedStyleRecord,
 } from "react-native-render-html";
-import { Colors } from "@/constants/Colors";
+import { useTheme } from "@/lib/theme";
 
 const SITE = "https://artometrics.com";
 const BODY_FONT = "Georgia";
@@ -29,47 +29,6 @@ function withChartFallbacks(html: string): string {
   );
 }
 
-const tagsStyles: MixedStyleRecord = {
-  body: {
-    color: Colors.base900,
-    fontSize: 17,
-    lineHeight: 28,
-    fontFamily: BODY_FONT,
-  },
-  p: { marginTop: 0, marginBottom: 14, fontFamily: BODY_FONT },
-  h1: {
-    fontSize: 28,
-    lineHeight: 34,
-    marginBottom: 12,
-    fontWeight: "600",
-    fontFamily: BODY_FONT,
-  },
-  h2: {
-    fontSize: 24,
-    lineHeight: 30,
-    marginBottom: 10,
-    fontWeight: "600",
-    fontFamily: BODY_FONT,
-  },
-  h3: {
-    fontSize: 20,
-    lineHeight: 26,
-    marginBottom: 8,
-    fontWeight: "600",
-    fontFamily: BODY_FONT,
-  },
-  a: { color: Colors.accent700 },
-  img: { marginVertical: 12 },
-  blockquote: {
-    borderLeftWidth: 3,
-    borderLeftColor: Colors.base200,
-    paddingLeft: 12,
-    marginVertical: 12,
-    color: Colors.base600,
-  },
-  li: { marginBottom: 6 },
-};
-
 const systemFonts = [...defaultSystemFonts, BODY_FONT, "Chomsky"];
 
 /**
@@ -78,9 +37,56 @@ const systemFonts = [...defaultSystemFonts, BODY_FONT, "Chomsky"];
  */
 export function ArticleBody({ html }: { html: string }) {
   const { width } = useWindowDimensions();
+  const { colors } = useTheme();
   const source = useMemo(
     () => ({ html: withChartFallbacks(html), baseUrl: SITE }),
     [html],
+  );
+  const tagsStyles = useMemo<MixedStyleRecord>(
+    () => ({
+      body: {
+        color: colors.text,
+        fontSize: 17,
+        lineHeight: 28,
+        fontFamily: BODY_FONT,
+      },
+      p: { marginTop: 0, marginBottom: 14, fontFamily: BODY_FONT },
+      h1: {
+        fontSize: 28,
+        lineHeight: 34,
+        marginBottom: 12,
+        fontWeight: "600",
+        fontFamily: BODY_FONT,
+        color: colors.text,
+      },
+      h2: {
+        fontSize: 24,
+        lineHeight: 30,
+        marginBottom: 10,
+        fontWeight: "600",
+        fontFamily: BODY_FONT,
+        color: colors.text,
+      },
+      h3: {
+        fontSize: 20,
+        lineHeight: 26,
+        marginBottom: 8,
+        fontWeight: "600",
+        fontFamily: BODY_FONT,
+        color: colors.text,
+      },
+      a: { color: colors.accent },
+      img: { marginVertical: 12 },
+      blockquote: {
+        borderLeftWidth: 3,
+        borderLeftColor: colors.border,
+        paddingLeft: 12,
+        marginVertical: 12,
+        color: colors.textMuted,
+      },
+      li: { marginBottom: 6, color: colors.text },
+    }),
+    [colors],
   );
   const contentWidth = Math.max(280, width - 40);
 

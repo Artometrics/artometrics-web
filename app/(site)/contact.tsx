@@ -1,9 +1,10 @@
-import { Linking, Text, StyleSheet } from "react-native";
+import { Text, StyleSheet } from "react-native";
 import { Wrapper } from "@/components/Wrapper";
 import { PrimaryButton } from "@/components/PrimaryButton";
 import { PageSeo } from "@/components/PageSeo";
 import { Fonts } from "@/constants/Colors";
 import { useTheme } from "@/lib/theme";
+import { openExternalUrl } from "@/lib/openExternal";
 
 export default function ContactScreen() {
   const { colors } = useTheme();
@@ -21,7 +22,7 @@ export default function ContactScreen() {
       </Text>
       <PrimaryButton
         label="Email Artometrics"
-        onPress={() => Linking.openURL("mailto:hello@artometrics.com")}
+        onPress={() => void openExternalUrl("mailto:hello@artometrics.com")}
       />
     </Wrapper>
   );

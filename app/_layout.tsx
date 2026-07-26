@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { Stack } from "expo-router";
 import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
-import { StatusBar } from "expo-status-bar";
 import { AuthProvider } from "@/lib/auth";
 
 export { ErrorBoundary } from "expo-router";
@@ -15,22 +14,20 @@ export default function RootLayout() {
   });
 
   useEffect(() => {
-    if (error) throw error;
-  }, [error]);
+    // Soft-fail: missing Chomsky must not crash the app boot.
+    if (loaded || error) {
+      void SplashScreen.hideAsync();
+    }
+  }, [loaded, error]);
 
-  useEffect(() => {
-    if (loaded) SplashScreen.hideAsync();
-  }, [loaded]);
-
-  if (!loaded) return null;
+  if (!loaded && !error) return null;
 
   return (
     <AuthProvider>
-      <StatusBar style="dark" />
       <Stack
         screenOptions={{
           headerShown: false,
-          contentStyle: { backgroundColor: "#ffffff" },
+          contentStyle: { backgroundColor: "transparent" },
           animation: "none",
         }}
       >

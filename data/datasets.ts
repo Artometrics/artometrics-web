@@ -63,6 +63,7 @@ export const DATASET_PACKS: DatasetPack[] = [
   },
 ];
 
-export function getDatasetPack(id: string) {
+export function getDatasetPack(id: string | undefined) {
+  if (!id) return undefined;
   return DATASET_PACKS.find((p) => p.id === id);
 }

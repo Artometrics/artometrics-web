@@ -8,6 +8,7 @@ import {
   type ReactNode,
 } from "react";
 import { Appearance, Platform } from "react-native";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import { Themes, type ThemeColors, type ThemeMode } from "@/constants/Colors";
 
 type Preference = ThemeMode | "system";
@@ -32,6 +33,33 @@ function systemMode(): ThemeMode {
   return Appearance.getColorScheme() === "dark" ? "dark" : "light";
 }
 
+async function readStoredPreference(): Promise<Preference | null> {
+  try {
+    if (Platform.OS === "web" && typeof localStorage !== "undefined") {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (saved === "light" || saved === "dark" || saved === "system") return saved;
+      return null;
+    }
+    const saved = await AsyncStorage.getItem(STORAGE_KEY);
+    if (saved === "light" || saved === "dark" || saved === "system") return saved;
+  } catch {
+    /* ignore */
+  }
+  return null;
+}
+
+async function writeStoredPreference(p: Preference): Promise<void> {
+  try {
+    if (Platform.OS === "web" && typeof localStorage !== "undefined") {
+      localStorage.setItem(STORAGE_KEY, p);
+      return;
+    }
+    await AsyncStorage.setItem(STORAGE_KEY, p);
+  } catch {
+    /* ignore */
+  }
+}
+
 export function ThemeProvider({ children }: { children: ReactNode }) {
   const [preference, setPreferenceState] = useState<Preference>("system");
   const [system, setSystem] = useState<ThemeMode>(() => systemMode());
@@ -39,41 +67,34 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     setSystem(systemMode());
-    try {
-      const saved =
-        Platform.OS === "web" && typeof localStorage !== "undefined"
-          ? localStorage.getItem(STORAGE_KEY)
-          : null;
-      if (saved === "light" || saved === "dark" || saved === "system") {
-        setPreferenceState(saved);
-      }
-    } catch {
-      /* ignore */
-    }
-    setReady(true);
+    let cancelled = false;
+    void readStoredPreference().then((saved) => {
+      if (!cancelled && saved) setPreferenceState(saved);
+      if (!cancelled) setReady(true);
+    });
 
     if (Platform.OS === "web" && typeof window !== "undefined") {
       const mq = window.matchMedia("(prefers-color-scheme: dark)");
       const onChange = () => setSystem(mq.matches ? "dark" : "light");
       mq.addEventListener?.("change", onChange);
-      return () => mq.removeEventListener?.("change", onChange);
+      return () => {
+        cancelled = true;
+        mq.removeEventListener?.("change", onChange);
+      };
     }
 
     const sub = Appearance.addChangeListener(({ colorScheme }) => {
       setSystem(colorScheme === "dark" ? "dark" : "light");
     });
-    return () => sub.remove();
+    return () => {
+      cancelled = true;
+      sub.remove();
+    };
   }, []);
 
   const setPreference = useCallback((p: Preference) => {
     setPreferenceState(p);
-    try {
-      if (Platform.OS === "web" && typeof localStorage !== "undefined") {
-        localStorage.setItem(STORAGE_KEY, p);
-      }
-    } catch {
-      /* ignore */
-    }
+    void writeStoredPreference(p);
   }, []);
 
   const mode: ThemeMode = preference === "system" ? system : preference;

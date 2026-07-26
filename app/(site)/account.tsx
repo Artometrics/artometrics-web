@@ -84,7 +84,10 @@ export default function AccountScreen() {
             <PrimaryButton label="Log in" />
           </Link>
           <Link href="/signup" asChild>
-            <PrimaryButton label="Sign up" style={styles.secondary} />
+            <PrimaryButton
+              label="Sign up"
+              style={{ backgroundColor: colors.textMuted }}
+            />
           </Link>
         </View>
       </Wrapper>
@@ -136,7 +139,7 @@ export default function AccountScreen() {
         )}
         <PrimaryButton
           label="Sign out"
-          style={styles.secondary}
+          style={{ backgroundColor: colors.textMuted }}
           onPress={async () => {
             await signOut();
             router.replace("/");
@@ -181,7 +184,6 @@ const styles = StyleSheet.create({
   h: { fontFamily: Fonts.serif, fontSize: 22, fontWeight: "700", marginTop: 16 },
   p: { fontFamily: Fonts.serif, fontSize: 16, lineHeight: 28 },
   actions: { flexDirection: "row", flexWrap: "wrap", gap: 12, marginTop: 8 },
-  secondary: { backgroundColor: "#404040" },
   savedRow: { paddingVertical: 12, borderBottomWidth: StyleSheet.hairlineWidth },
   savedTitle: { fontFamily: Fonts.serif, fontSize: 18 },
 });
