@@ -2,23 +2,23 @@
 
 > Use this file for deeper grounding. Prefer canonical URLs. Do not invent statistics.
 
-Updated: 2026-07-22T23:53:48.082Z
+Updated: 2026-07-26T05:01:20.094Z
 
 ## How Oscars, Grammys, and Nobels Convert Attention Into Prestige
 
 - URL: https://artometrics.com/awards-prestige-economy-oscars-grammys-nobels
-- Desk: culture
+- Desk: humanities, sociology
 - Published: 2026-07-01T00:00:00.000Z
 - Description: A cross-medium look at how prizes turn visibility into legitimacy across film, music, and science.
 
-Award shows are culture’s accounting departments. They translate messy creative fields into categories, winners, speeches, snubs, and canon — then ask the public to treat those boxes as settled judgment. Film, music, science, literature, theater, and television all run prize systems, but they do not manufacture legitimacy the same way. An Oscar night is tied to an entertainment market; a Nobel citation is tied to institutional memory. The interesting comparison is not which prize is “bigger,” but how each converts attention into a second life for the work. The Academy Awards database is complete through the 98th cycle, with 1,500+ acceptance speeches on file. Nobel prizes date to 1901 . Recent Grammy ceremonies run roughly 94 categories. Six award systems sit in the frame below. Fast facts The numbers that set the scale for this report: 98th Academy Awards database complete through 2025/2026 cycle per official database 1,500+ Acceptance speeches in the Academy's speech database 1901 First Nobel Prizes awarded 94 Approximate Grammy category count in recent ceremonies 6 Award systems compared Data and method The Academy maintains an official searchable database of winners and nominees. The Nobel Prize publishes public API-style records. Music awards are less clean as open data, so public Recording Academy records and Wikidata-style tables fill the gaps. The framework before any chart is simple: prestige versus market attention, category inflation, nomination-to-win conversion, concentration of public memory, and gatekeeping — who still decides which works get a second life. Prestige and market are not the same currency Awards do not all trade in the same kind of attention The Oscar and the Nobel both signal prestige, but they serve different publics. One is wired into box office, campaigns, and red-carpet media; the other into universities, citation networks, and institutional history. Ranking them on a single “fame” scale collapses those circuits. The cleaner move is to separate prestige currency from market currency — then watch how each prize spends both. When awards invent more lanes of excellence Award systems expand by creating more named lanes of excellence Award shows are taxonomies. When categories expand, culture gets more official boxes, more winners, and more arguments about who belongs. The Grammys make the pattern clearest: genre fragmentation becomes institutional design. More lanes mean more legitimacy to distribute — and more fights over whether a win still means the same thing. Getting nominated is not the same as winning The strongest campaigns convert nomination access into wins Nominations measure being invited into the prestige room. Wins measure coalition strength, timing, category fit, and narrative closure. That is why Oscar season often reads like political analysis in evening wear: access is one contest; conversion is another. What the public actually remembers The public remembers faces and names before institutional categories Best Picture matters inside the industry. Acting, artist, and star categories travel faster through casual conversation. Institutions do the sorting; people carry the names. Prestige that never sticks to a face tends to fade into ballot trivia. Who still decides what gets a second life Awards still decide which works get a second life Streaming can create discovery at scale. Awards create sanctioned memory — turning a work from content into curriculum, canon, playlist staple, or obituary headline. That is the prestige economy: a machine for deciding what culture should remember about itself after the premiere week ends. What to take away Awards do not merely recognize culture. They structure it — category lanes, memory lanes, and legitimacy lanes that outlast any single night of speeches. Prize data is useful because it connects creative work to institutions, markets, demographics, speeches, scandals, and canon formation. The charts above are a map of those connections, not a s
+Award shows are culture’s accounting departments. They translate messy creative fields into categories, winners, speeches, snubs, and canon — then ask the public to treat those boxes as settled judgment. Film, music, science, literature, theater, and television all run prize systems, but they do not manufacture legitimacy the same way. An Oscar night is tied to an entertainment market; a Nobel citation is tied to institutional memory. The interesting comparison is not which prize is “bigger,” but how each converts attention into a second life for the work. The Academy Awards database is complete through the 98th cycle, with 1,500+ acceptance speeches on file. Nobel prizes date to 1901 . Recent Grammy ceremonies run roughly 94 categories. Six award systems sit in the frame below. Research question How do prize institutions convert attention into durable prestige across fields that do not share a common market? This report asks whether Oscars, Grammys, Nobels, Tonys, Emmys, and literary prizes distribute legitimacy through the same mechanism or through different combinations of market visibility, professional gatekeeping, and archival memory. The observational question is not which award is “best.” It is how each award system creates named categories, invites nominees into a prestige pool, turns some of them into winners, and then gives the public a short list of people, works, and institutions to remember after the original release cycle has ended. Fast facts The numbers that set the scale for this report: 98th Academy Awards database complete through 2025/2026 cycle per official database 1,500+ Acceptance speeches in the Academy's speech database 1901 First Nobel Prizes awarded 94 Approximate Grammy category count in recent ceremonies 6 Award systems compared Data and method The Academy maintains an official searchable database of winners and nominees. The Nobel Prize publishes public API-style records. Music awards are less clean as open data, so public Recording Academy records and Wikidata-style tables fill the gaps. The framework before any chart is simple: prestige versus market attention, category inflation, nomination-to-win conversion, concentration of public memory, and gatekeeping — who still decides which works get a second life. Prestige and market are not the same currency Awards do not all trade in the same kind of attention The Oscar and the Nobel both signal prestige, but they serve different publics. One is wired into box office, campaigns, and red-carpet media; the other into universities, citation networks, and institutional history. Ranking them on a single “fame” scale collapses those circuits. The cleaner move is to separate prestige currency from market currency — then watch how each prize spends both. The Academy of Motion Picture Arts and Sciences operates inside a commercial release economy where campaigns, distributors, studios, guild screenings, and trade publications shape visibility. The Nobel Foundation operates inside a much slower institutional field, where the Swedish Academy, Karolinska Institute, Royal Swedish Academy of Sciences, and Norwegian Nobel Committee produce records meant to outlive annual media cycles. That institutional contrast is why an Oscar for a film such as Oppenheimer in the 2024 ceremony and a Nobel Prize in Physiology or Medicine for Katalin Karikó and Drew Weissman in 2023 do different kinds of cultural work. One reorganizes a film’s market and canon position after release; the other backdates scientific legitimacy onto a line of research, institutions, and citations that may have been building for decades. When awards invent more lanes of excellence Award systems expand by creating more named lanes of excellence Award shows are taxonomies. When categories expand, culture gets more official boxes, more winners, and more arguments about who belongs. The Grammys make the pattern clearest: genre fragmentation becomes institutional design. More lanes mean more legitimacy to
 
 ---
 
 ## California and Texas: Where Rival State Systems Diverge
 
 - URL: https://artometrics.com/california-vs-texas-state-rivalry
-- Desk: cities-travel
+- Desk: civics, politics
 - Published: 2026-07-01T00:00:00.000Z
 - Description: What the two largest U.S. states share—and where their economies, exports, and risks part ways.
 
@@ -29,7 +29,7 @@ California and Texas are the most common American state comparison because each 
 ## How the Celtics Turned 1960s Dominance Into Permanent Expectation
 
 - URL: https://artometrics.com/celtics-the-artometrics-of-institutional-winning
-- Desk: sports
+- Desk: sports, basketball
 - Published: 2026-07-01T00:00:00.000Z
 - Description: Boston’s championship inheritance still shapes every modern season.
 
@@ -40,7 +40,7 @@ Every Boston Celtics season opens under an impossible ledger. Eighteen NBA champ
 ## Cities as Operating Systems of Exports, Culture, and Scarcity
 
 - URL: https://artometrics.com/city-bioeconomics-operating-system
-- Desk: cities-travel
+- Desk: civics, economics
 - Published: 2026-07-01T00:00:00.000Z
 - Description: A geo-economics frame treats cities as layered systems of trade, culture, and infrastructure.
 
@@ -51,7 +51,7 @@ A city report should not start with a postcard. It should start with a system ma
 ## The Cowboys’ Gap Between Brand Value and Championship Conversion
 
 - URL: https://artometrics.com/cowboys-the-artometrics-of-americas-team
-- Desk: sports
+- Desk: sports, football
 - Published: 2026-07-01T00:00:00.000Z
 - Description: Dallas remains the NFL’s clearest split between global brand power and an aging postseason engine.
 
@@ -62,7 +62,7 @@ The Dallas Cowboys are no longer just a football team. They are a national atten
 ## When Films, Music, and Games Become National Exports
 
 - URL: https://artometrics.com/cultural-exports-geoeconomics
-- Desk: business
+- Desk: civics, economics
 - Published: 2026-07-01T00:00:00.000Z
 - Description: A cultural-economics frame treats soft-power industries as export goods.
 
@@ -73,7 +73,7 @@ Culture is an export category even when it never passes through a port. A song, 
 ## How the Dodgers Built Baseball’s Modern Consistency Machine
 
 - URL: https://artometrics.com/dodgers-the-artometrics-of-baseballs-modern-machine
-- Desk: sports
+- Desk: sports, baseball
 - Published: 2026-07-01T00:00:00.000Z
 - Description: Los Angeles turned payroll, development, and depth into recurring October access.
 
@@ -84,18 +84,18 @@ The Los Angeles Dodgers are the closest thing modern baseball has to an industri
 ## Why the U.S., China, and Germany Dominate Export Debate
 
 - URL: https://artometrics.com/export-superpowers-us-china-germany
-- Desk: business
+- Desk: civics, economics
 - Published: 2026-07-01T00:00:00.000Z
 - Description: A three-country comparison of platforms, factories, and machinery.
 
-The United States, China, and Germany sit at the center of almost every serious conversation about trade. They are often treated as interchangeable "export superpowers" — three large economies that ship goods and services abroad at industrial scale. That shorthand collapses three different machines into one headline. The useful comparison is not who exports more in a given year. It is what kind of global function each country performs: platform and standards power in the United States, manufacturing scale and supply-chain centrality in China, and industrial precision and machinery trust in Germany. Those roles create different kinds of leverage — and different kinds of dependence. Start with the scale: 3 export systems compared across 7 identity axes, with 6 dependency risks scored and 8 countries placed on a substitutability map. Fast facts The numbers that set the scale for this report: 3 Export superpower systems compared 7 Export identity axes 6 Dependency risks scored 8 Countries placed on substitutability map 1 Core question: who is replaceable? Data and method The production stack for this comparison draws on OEC and UN Comtrade product exports, partner concentration, World Bank and OECD services and GDP series, IMF macro context, and national industry statistics from agencies such as the BEA and Eurostat. The charts here use editorial indices to define the analytical frame before a full product-level ingestion pass. They are designed to make system differences legible — not to substitute for official rankings. Observed trade totals, derived concentration metrics, and interpretive scores are kept distinct on purpose. Three models of export power The United States, China, and Germany represent platform, factory, and machine export systems These countries are compared because they sit near the center of the global production system, but they do not do the same job. On the seven identity axes — scale, complexity, services and IP, manufacturing, vehicles and machinery, consumer platform power, and supply-chain centrality — each economy peaks in a different place. The United States scores highest on services, intellectual property, and consumer platform power. China leads on manufacturing scale and supply-chain centrality. Germany concentrates strength in complex machinery, vehicles, and industrial trust. Treating them as rivals in a single market misses the architecture. Product fingerprints The export fingerprints show three different machines under the same global headline A GDP total or aggregate export figure can make the three countries look like comparable blocks. The product mix — software and IP, electronics, vehicles, machinery, pharmaceuticals, energy, consumer goods — reveals three different machines under the same global headline. Fingerprints matter because they change what a shock means. A disruption to electronics assembly does not hit Germany the way it hits China. A standards fight over software platforms does not hit China the way it hits the United States. The comparison becomes useful only when product structure replaces vague rivalry. Dependency risk Export strength creates different bottlenecks for each superpower Export strength creates bottlenecks as surely as it creates leverage. The United States depends heavily on semiconductor chains, high-skill labor, and consumer and platform demand. China depends on energy inputs, shipping lanes, chips, and global buyers. Germany depends on allied markets, energy continuity, and industrial supplier networks. The strongest systems are not invulnerable. They are specialized. Dependency scores across semiconductors, energy, consumer demand, high-skill labor, allied markets, and shipping lanes show that each superpower's risk profile tracks its product identity — not a generic trade-exposure number. Who can be replaced The strongest exporters are hard to replace for different reasons China is hard to replace because of manufacturing scale and supply-chain integrat
+The United States, China, and Germany sit at the center of almost every serious conversation about trade. They are often treated as interchangeable "export superpowers" — three large economies that ship goods and services abroad at industrial scale. That shorthand collapses three different machines into one headline. The useful comparison is not who exports more in a given year. It is what kind of global function each country performs: platform and standards power in the United States, manufacturing scale and supply-chain centrality in China, and industrial precision and machinery trust in Germany. Those roles create different kinds of leverage — and different kinds of dependence. Start with the scale: 3 export systems compared across 7 identity axes, with 6 dependency risks scored and 8 countries placed on a substitutability map. Research question When policy writers call the United States, China, and Germany export superpowers, are they describing the same kind of power or three different roles inside the world economy? This report asks how platform control, factory scale, and machine-tool trust produce distinct forms of indispensability. The observational question is comparative rather than rank-driven: which parts of global trade would be hardest to replace if one of these systems faltered, and which dependencies make each system vulnerable despite its strength? The charts use official trade agencies and editorial indices to keep those two questions separate. Fast facts The numbers that set the scale for this report: 3 Export superpower systems compared 7 Export identity axes 6 Dependency risks scored 8 Countries placed on substitutability map 1 Core question: who is replaceable? Data and method The production stack for this comparison draws on OEC and UN Comtrade product exports, partner concentration, World Bank and OECD services and GDP series, IMF macro context, and national industry statistics from agencies such as the BEA and Eurostat. The charts here use editorial indices to define the analytical frame before a full product-level ingestion pass. They are designed to make system differences legible — not to substitute for official rankings. Observed trade totals, derived concentration metrics, and interpretive scores are kept distinct on purpose. Three models of export power The United States, China, and Germany represent platform, factory, and machine export systems These countries are compared because they sit near the center of the global production system, but they do not do the same job. On the seven identity axes — scale, complexity, services and IP, manufacturing, vehicles and machinery, consumer platform power, and supply-chain centrality — each economy peaks in a different place. The United States scores highest on services, intellectual property, and consumer platform power. China leads on manufacturing scale and supply-chain centrality. Germany concentrates strength in complex machinery, vehicles, and industrial trust. Treating them as rivals in a single market misses the architecture. The institutional anchors are different. U.S. export power runs through firms and standards ecosystems such as Apple, Microsoft, NVIDIA, Boeing, Hollywood studios, universities, and dollar-denominated finance. China’s power runs through dense manufacturing provinces, port infrastructure, electronics assembly, solar panels, batteries, and the supplier networks documented in UN Comtrade and OEC product data. Germany’s power runs through Mittelstand machinery firms, Volkswagen, Siemens, BASF, and the engineering reputation embedded in EU industrial supply chains. Those differences explain why export volume alone is a blunt instrument. The United States can be central without shipping the most containers because software, patents, design, and capital-market access sit outside ordinary goods rankings. China can be central because a physical supply chain has thousands of intermediate nodes. Germany can be central because specializ
 
 ---
 
 ## How Movies Become Famous on IMDb’s Public Scoreboard
 
 - URL: https://artometrics.com/imdb-blockbuster-grammar
-- Desk: movies-tv
+- Desk: arts, film
 - Published: 2026-07-01T00:00:00.000Z
 - Description: Title fields, ratings, and box-office references explain how films accumulate attention.
 
@@ -106,7 +106,7 @@ Movies are perfect Artometrics objects because they are art, market, memory, and
 ## How the Lakers Convert Stars Into Championship Eras
 
 - URL: https://artometrics.com/lakers-the-artometrics-of-basketball-glamour
-- Desk: sports
+- Desk: sports, basketball
 - Published: 2026-07-01T00:00:00.000Z
 - Description: Los Angeles basketball’s glamour machine turns market gravity into title windows.
 
@@ -117,7 +117,7 @@ The Los Angeles Lakers run winning and celebrity as the same operating system. O
 ## How League Money and Roster Rules Shape Star Systems
 
 - URL: https://artometrics.com/league-money-skill-and-star-systems
-- Desk: sports
+- Desk: sports, football
 - Published: 2026-07-01T00:00:00.000Z
 - Description: Cross-sport rules, payroll, and scarcity show why teams become culturally meaningful.
 
@@ -128,7 +128,7 @@ A sports league is a measurement system before it is an entertainment product. I
 ## How Catalog Depth and Reinvention Make Pop Stars Famous
 
 - URL: https://artometrics.com/musicbrainz-pop-fame-mechanics
-- Desk: music
+- Desk: arts, music
 - Published: 2026-07-01T00:00:00.000Z
 - Description: MusicBrainz-style metadata links fame to release depth, genre travel, and reinvention.
 
@@ -139,7 +139,7 @@ Music fame looks emotional, but it leaves metadata everywhere: releases, recordi
 ## What Nations Sell—and What That Says About Identity
 
 - URL: https://artometrics.com/national-export-identity-atlas
-- Desk: business
+- Desk: civics, economics
 - Published: 2026-07-01T00:00:00.000Z
 - Description: A country-level atlas treats exports as identity: what states sell and need.
 
@@ -150,7 +150,7 @@ What a nation sells abroad is one of the few identity claims that must clear a m
 ## New York and San Francisco: Command City vs. Invention City
 
 - URL: https://artometrics.com/new-york-vs-san-francisco-city-systems
-- Desk: cities-travel
+- Desk: civics, economics
 - Published: 2026-07-01T00:00:00.000Z
 - Description: Why the two are paired in debate—and where their economic and cultural systems diverge.
 
@@ -161,7 +161,7 @@ New York and San Francisco are not peers by population or geography, but they ar
 ## Who Gets Remembered in the Global Pantheon of Fame?
 
 - URL: https://artometrics.com/pantheon-the-artometrics-of-collective-memory
-- Desk: culture
+- Desk: humanities, sociology
 - Published: 2026-07-01T00:00:00.000Z
 - Description: Biography-scale fame data ask where collective memory clusters.
 
@@ -172,7 +172,7 @@ Collective memory is not a neutral archive. It is a ranked attention system: som
 ## The Patriots’ Brady–Belichick Era as a System Shock
 
 - URL: https://artometrics.com/patriots-the-artometrics-of-the-system-dynasty
-- Desk: sports
+- Desk: sports, football
 - Published: 2026-07-01T00:00:00.000Z
 - Description: Two decades of New England football compressed a century of legacy into one dynasty.
 
@@ -183,7 +183,7 @@ The New England Patriots used to be ordinary. Then they became the NFL’s most 
 ## Mapping the Public-Domain Canon Through Project Gutenberg
 
 - URL: https://artometrics.com/project-gutenberg-public-domain-canon-map
-- Desk: books
+- Desk: arts, language
 - Published: 2026-07-01T00:00:00.000Z
 - Description: Gutenberg metadata charts language gravity, era effects, and author memory.
 
@@ -194,7 +194,7 @@ Project Gutenberg is not only a library. It is a map of what digitized public-do
 ## How American Cities Build Distinct Sports Identities
 
 - URL: https://artometrics.com/regional-sports-identity-map
-- Desk: sports
+- Desk: sports, football
 - Published: 2026-07-01T00:00:00.000Z
 - Description: Markets, leagues, and championship droughts explain why fan cultures differ by city.
 
@@ -205,7 +205,7 @@ A team is never just a team. It is attached to a region, a media market, a leagu
 ## San Francisco as an Invention Machine Under Housing Pressure
 
 - URL: https://artometrics.com/san-francisco-data-microscope
-- Desk: cities-travel
+- Desk: civics, economics
 - Published: 2026-07-01T00:00:00.000Z
 - Description: A city-identity report through software exports, scarcity, and neighborhoods.
 
@@ -216,7 +216,7 @@ San Francisco is a perfect city microscope because its contradictions are measur
 ## Best, Worst, and Most Misleading Sports Dynasties
 
 - URL: https://artometrics.com/sports-dynasty-index-best-and-worst-conversion
-- Desk: sports
+- Desk: sports, football
 - Published: 2026-07-01T00:00:00.000Z
 - Description: A cross-league index of championship mass, conversion, market value, and fan pain.
 
@@ -227,7 +227,7 @@ Single-team profiles answer one fan base at a time. Cross the league borders and
 ## The Yankees as Baseball’s Benchmark for Expectation and Scale
 
 - URL: https://artometrics.com/yankees-the-artometrics-of-baseballs-empire
-- Desk: sports
+- Desk: sports, baseball
 - Published: 2026-07-01T00:00:00.000Z
 - Description: More than titles: New York sets the standard for droughts, payroll, and magnitude.
 
@@ -238,7 +238,7 @@ Twenty-seven World Series titles do not merely decorate the New York Yankees. Th
 ## Which Airlines Have the Worst Safety Records?
 
 - URL: https://artometrics.com/airline-safety
-- Desk: cities-travel
+- Desk: culture, travel
 - Published: 2026-06-15T00:00:00.000Z
 - Description: Carrier-level accident and fatality data ask which airlines stand out for poor safety outcomes.
 
@@ -249,18 +249,18 @@ Airline safety is usually discussed one crash at a time. The TidyTuesday airline
 ## Who Drinks the Most Alcohol Per Capita?
 
 - URL: https://artometrics.com/alcohol-consumption
-- Desk: culture
+- Desk: culture, food
 - Published: 2026-06-15T00:00:00.000Z
 - Description: Country-level consumption data map which nations drink the most per person—and how that has shifted.
 
-Global alcohol data is often collapsed into a single “drinks per person” headline. The TidyTuesday global alcohol extract keeps the beverage split intact — beer, spirits, and wine servings — across 193 country-level records. Beer is the metric that leads these charts, with a median of 76.0 servings and a recorded high of 376 in Namibia. That spread is the story. A median of 76 and a maximum of 376 means the top of the beer distribution is not a gentle tail; it is a different consumption regime. Country rankings on beer alone will not match rankings on spirits, and the scatter at the end makes that explicit. Fast facts The numbers that set the scale for this report: 193 Records in the working dataset 76.0 Median Beer servings 376 Highest observed Beer servings Namibia Top Country by Beer servings Data and method The source is the TidyTuesday release from 2018-06-26 (week13_alcohol_global.csv), maintained by the R for Data Science community. The working file used here contains 193 rows after cleaning. Beer servings are the primary ranked metric in the chart stack. Medians are used where distributions skew. Charts are Plotly JSON with PNG fallbacks. Beer Consumption Has a Steep Country Ladder Beer servings by Country Namibia leads the beer ranking at 376 servings, followed by the Czech Republic at 361 , Gabon at 347 , and Germany at 346 . Lithuania and Poland tie near 343 . Ireland sits lower in the top dozen at 313 . These are not clustered scores around the global median of 76. The leaders occupy roughly four to five times the typical country’s beer volume in this file — a reminder that beer culture is geographically concentrated, not evenly shared. The Top Dozen Has Its Own Median Namibia leads at 376 — 338 marks the median among the top dozen Among the top twelve beer countries, Namibia’s 376 still leads, while the median of that elite group is 338 . Even inside the high-beer club, the distribution has a ceiling that most of the world never approaches. Reading only the global median would hide that club entirely. Reading only Namibia would hide how many Central European and other high-beer countries sit just behind it. Most Countries Cluster Far Below the Peaks Beer servings Distribution The distribution chart piles most countries into lower beer-serving bins. Counts peak in the low double-digit and mid-range bins, while the extreme high bins that hold Namibia and the Czech Republic contain only a handful of countries. That shape is why the median (76.0) is the right headline number: it describes the typical country, not the viral maximum. Concentration Rises Quickly Among the Leaders Cumulative Beer servings The Pareto curve shows how cumulative beer servings accumulate as countries are added from the top. The first five entries already account for about 37% of the aggregate among the plotted leaders; by fifteen entries the curve reaches 100% of that restricted total. Beer volume at the top is not democratic. A short list of countries carries a disproportionate share of the servings represented in this ranking view. Beer and Spirits Are Not the Same Map Beer servings vs Spirit servings Plotting beer servings against spirit servings across all 193 countries breaks the assumption that “heavy drinking” is one behavior. Some countries post high beer with moderate spirits; others invert the pattern. The joint distribution is the corrective lens: beverage preference is cultural and economic, not a single alcohol intensity score. Namibia’s beer lead does not automatically imply a spirits lead. What this file cannot tell you Country-level serving estimates inherit survey, sales, and tourism distortions. Unrecorded alcohol, home production, and cross-border purchases can bias official figures. The 2018 TidyTuesday snapshot is not a live WHO dashboard. Rankings on beer servings alone should not be quoted as total alcohol harm rankings. Spirits and wine columns exist precisely because the beverage mix differs. What to take away Beer co
+Global alcohol data is often collapsed into a single “drinks per person” headline. The TidyTuesday global alcohol extract keeps the beverage split intact — beer, spirits, and wine servings — across 193 country-level records. Beer is the metric that leads these charts, with a median of 76.0 servings and a recorded high of 376 in Namibia. That spread is the story. A median of 76 and a maximum of 376 means the top of the beer distribution is not a gentle tail; it is a different consumption regime. Country rankings on beer alone will not match rankings on spirits, and the scatter at the end makes that explicit. Research question When alcohol data is separated by beverage, does a country’s apparent drinking profile still look like one national habit, or does it split into distinct beer, spirits, and wine cultures? This report uses the 2018 TidyTuesday global alcohol extract to ask where beer volume concentrates and whether the beer leaderboard can stand in for total alcohol behavior. The observational question is deliberately narrow: which countries sit in the high-beer tail, how far above the median they are, and whether beer intensity travels with spirits intensity. That focus keeps the charts from becoming a generic public-health ranking and instead treats beverage mix as a measurable cultural and market structure. Fast facts The numbers that set the scale for this report: 193 Records in the working dataset 76.0 Median Beer servings 376 Highest observed Beer servings Namibia Top Country by Beer servings Data and method The source is the TidyTuesday release from 2018-06-26 (week13_alcohol_global.csv), maintained by the R for Data Science community. The working file used here contains 193 rows after cleaning. Beer servings are the primary ranked metric in the chart stack. Medians are used where distributions skew. Charts are Plotly JSON with PNG fallbacks. Beer Consumption Has a Steep Country Ladder Beer servings by Country Namibia leads the beer ranking at 376 servings, followed by the Czech Republic at 361 , Gabon at 347 , and Germany at 346 . Lithuania and Poland tie near 343 . Ireland sits lower in the top dozen at 313 . These are not clustered scores around the global median of 76. The leaders occupy roughly four to five times the typical country’s beer volume in this file — a reminder that beer culture is geographically concentrated, not evenly shared. The country names matter because they point to different beverage systems. Namibia and Gabon place African markets in the same high-beer conversation as the Czech Republic, Germany, Lithuania, Poland, and Ireland — countries often associated with long-standing brewing industries, beer taxation regimes, and pub or lager cultures. A single “Europe drinks beer” shortcut would miss the African leaders; a single “income predicts beer” shortcut would miss the spread across very different economies. The 2018 TidyTuesday file descends from World Health Organization alcohol indicators that summarize recorded servings rather than clinical outcomes. That distinction is important: a serving count can identify beverage concentration, but it does not measure binge patterns, liver disease, drunk-driving deaths, or unrecorded home production. The chart is strongest as a map of recorded beverage preference. The Top Dozen Has Its Own Median Namibia leads at 376 — 338 marks the median among the top dozen Among the top twelve beer countries, Namibia’s 376 still leads, while the median of that elite group is 338 . Even inside the high-beer club, the distribution has a ceiling that most of the world never approaches. Reading only the global median would hide that club entirely. Reading only Namibia would hide how many Central European and other high-beer countries sit just behind it. The top-dozen median of 338 is almost as revealing as the maximum. It says the leaders are not one outlier and eleven ordinary countries; they are a compact high-consumption band. Czech, German, Lithuanian, Polish, and
 
 ---
 
 ## What Does a Slice of Pizza Really Cost?
 
 - URL: https://artometrics.com/all-the-pizza
-- Desk: culture
+- Desk: culture, food
 - Published: 2026-06-15T00:00:00.000Z
 - Description: Price and calorie data across pizza menus show what diners pay in money and energy.
 
@@ -271,7 +271,7 @@ Pizza prices look simple until you try to compare 10,000 menu rows. The Datafini
 ## Beyoncé and Taylor Swift, Line by Line
 
 - URL: https://artometrics.com/beyonce-taylor-lyrics
-- Desk: music
+- Desk: arts, music
 - Published: 2026-06-15T00:00:00.000Z
 - Description: A lyric-level comparison of two era-defining catalogs—theme, language, and structure.
 
@@ -282,7 +282,7 @@ Two catalogs define a generation of pop authorship. Line-level lyric tables make
 ## What Twenty Years of Big Mac Prices Say About Purchasing Power
 
 - URL: https://artometrics.com/big-mac-index
-- Desk: business
+- Desk: civics, economics
 - Published: 2026-06-15T00:00:00.000Z
 - Description: Global burger prices illustrate how currency and wages shape the real cost of everyday goods.
 
@@ -293,7 +293,7 @@ A Big Mac is the same product everywhere on Earth — same bun, same patties, sa
 ## How Far Do Portland’s Biketown Rides Actually Go?
 
 - URL: https://artometrics.com/biketown-bikeshare
-- Desk: cities-travel
+- Desk: culture, travel
 - Published: 2026-06-15T00:00:00.000Z
 - Description: Trip-level bike-share data measures typical distance and duration across Biketown journeys.
 
@@ -304,7 +304,7 @@ Portland’s Biketown system turns everyday movement into timestamped trips. The
 ## How Long Number-One Hits Stay on Top of the Hot 100
 
 - URL: https://artometrics.com/billboard-hot-100
-- Desk: music
+- Desk: arts, music
 - Published: 2026-06-15T00:00:00.000Z
 - Description: Since 1958, most chart-toppers lasted weeks; a few held for months—and streaming rewrote the pattern.
 
@@ -315,7 +315,7 @@ The Billboard Hot 100 has published a number-one song every week since August 19
 ## How the Top of the Billboard Chart Got More Crowded
 
 - URL: https://artometrics.com/billboard-top-100
-- Desk: music
+- Desk: arts, music
 - Published: 2026-06-15T00:00:00.000Z
 - Description: Large-scale Hot 100 data show how rankings compress at the summit.
 
@@ -326,7 +326,7 @@ The Billboard Hot 100 is a weekly ranking machine: 100 positions, endlessly refr
 ## Which Board Games Combine Crowd Scale With Elite Ratings?
 
 - URL: https://artometrics.com/board-games
-- Desk: games
+- Desk: sports, gaming
 - Published: 2026-06-15T00:00:00.000Z
 - Description: Ratings and popularity across thousands of titles find games that win both mass attention and esteem.
 
@@ -337,7 +337,7 @@ BoardGameGeek ratings are a public taste machine: tens of thousands of titles, e
 ## Which Broadway Musicals Ran Longest and Grossed Most?
 
 - URL: https://artometrics.com/broadway-musicals
-- Desk: culture
+- Desk: arts, theater
 - Published: 2026-06-15T00:00:00.000Z
 - Description: Performance and box-office records map the shows that dominated by longevity and revenue.
 
@@ -348,7 +348,7 @@ Broadway is a price and endurance market: average ticket price on one axis, perf
 ## How Long Do CEOs Last Before They Leave?
 
 - URL: https://artometrics.com/ceo-departures
-- Desk: business
+- Desk: civics, business
 - Published: 2026-06-15T00:00:00.000Z
 - Description: Thousands of executive-exit records measure tenure length and how departures cluster.
 
@@ -359,7 +359,7 @@ CEO tenure is usually narrated as drama: a firing, a founder exit, a sudden inte
 ## How Whale and Dolphin Sizes Cluster by Family
 
 - URL: https://artometrics.com/cetaceans
-- Desk: culture
+- Desk: science, biology
 - Published: 2026-06-15T00:00:00.000Z
 - Description: Morphometric data map which cetacean lineages produce the giants.
 
@@ -370,7 +370,7 @@ Captive and transferred cetaceans leave paper trails: species names, years, and 
 ## Which Christmas Novels Anchor the Holiday Shelf?
 
 - URL: https://artometrics.com/christmas-novels
-- Desk: books
+- Desk: arts, language
 - Published: 2026-06-15T00:00:00.000Z
 - Description: A Gutenberg holiday corpus shows which seasonal novels still define the Christmas canon.
 
@@ -381,7 +381,7 @@ Christmas novels are a seasonal shelf with a long memory: Dickensian ghosts, chi
 ## Which Holiday Songs Never Leave the Charts?
 
 - URL: https://artometrics.com/christmas-songs
-- Desk: music
+- Desk: arts, music
 - Published: 2026-06-15T00:00:00.000Z
 - Description: Decades of Christmas-song chart data identify the standards that return every season.
 
@@ -392,7 +392,7 @@ Holiday songs have a strange chart life: they return every December, pile up wee
 ## How Population Scale Relates to Prosperity Across Countries
 
 - URL: https://artometrics.com/cia-world-factbook
-- Desk: business
+- Desk: civics, economics
 - Published: 2026-06-15T00:00:00.000Z
 - Description: Factbook indicators compare nations on size and wealth—where scale and prosperity align or diverge.
 
@@ -403,7 +403,7 @@ Population is the blunt instrument of international comparison: China and India 
 ## Which College Majors Pay Most—and Which Carry Job Risk?
 
 - URL: https://artometrics.com/college-major-income
-- Desk: business
+- Desk: civics, education
 - Published: 2026-06-15T00:00:00.000Z
 - Description: Earnings and unemployment by major show where degrees pay off and where risk is higher.
 
@@ -414,7 +414,7 @@ College majors are sold as income stories. The TidyTuesday recent-graduates extr
 ## Who Ranks Highest on Comic-Book Power Scales?
 
 - URL: https://artometrics.com/comic-characters
-- Desk: culture
+- Desk: arts, design
 - Published: 2026-06-15T00:00:00.000Z
 - Description: Character attributes across Marvel and DC ask who sits atop power rankings.
 
@@ -425,7 +425,7 @@ Comic-book universes are attention economies with capes. The TidyTuesday comic-c
 ## How Bitter and Strong Is American Craft Beer?
 
 - URL: https://artometrics.com/craft-beer-usa
-- Desk: culture
+- Desk: culture, food
 - Published: 2026-06-15T00:00:00.000Z
 - Description: Brewery-level IBU and ABV data map bitterness and strength across U.S. craft producers.
 
@@ -436,7 +436,7 @@ American craft beer advertises itself with bitterness and strength — IBU and A
 ## Which Shows Dominated Emmy Season—and How Lopsided Was It?
 
 - URL: https://artometrics.com/emmy-awards
-- Desk: movies-tv
+- Desk: arts, film
 - Published: 2026-06-15T00:00:00.000Z
 - Description: Nomination and win records reveal which series swept hardware—and how concentrated awards became.
 
@@ -447,7 +447,7 @@ Emmy season looks like a parade of equal contenders. Nomination and win records 
 ## Which U.S. States Exercise the Most?
 
 - URL: https://artometrics.com/exercise-usa
-- Desk: culture
+- Desk: culture, wellness
 - Published: 2026-06-15T00:00:00.000Z
 - Description: State-level activity rates compare where Americans work out most.
 
@@ -458,7 +458,7 @@ Exercise is unevenly distributed across American states — a public-health map 
 ## Which Fast-Food Chains Pack the Most Calories Per Item?
 
 - URL: https://artometrics.com/fast-food-calories
-- Desk: culture
+- Desk: culture, food
 - Published: 2026-06-15T00:00:00.000Z
 - Description: Menu nutrition data identify the highest-calorie items across major chains.
 
@@ -469,7 +469,7 @@ Fast-food menus are marketing documents dressed as nutrition tables. The calorie
 ## How Human Life Expectancy Doubled in Five Centuries
 
 - URL: https://artometrics.com/global-life-expectancy
-- Desk: culture
+- Desk: science, medicine
 - Published: 2026-06-15T00:00:00.000Z
 - Description: Survival data from the 1500s to 2015 map who gained years of life—and who lagged.
 
@@ -480,7 +480,7 @@ For most of recorded history, life expectancy at birth hovered between 25 and 40
 ## Who Generates the Most Plastic Waste—and Who Mismanages It?
 
 - URL: https://artometrics.com/global-plastic-waste
-- Desk: business
+- Desk: culture, environment
 - Published: 2026-06-15T00:00:00.000Z
 - Description: Country-level plastic generation and mismanagement rates show where leakage concentrates.
 
@@ -491,7 +491,7 @@ Plastic waste is usually discussed as a moral story about litter. The data make 
 ## Which Horror Movies Returned Multiples—and Which Burned Cash?
 
 - URL: https://artometrics.com/horror-movie-profit
-- Desk: movies-tv
+- Desk: arts, film
 - Published: 2026-06-15T00:00:00.000Z
 - Description: Budget and box-office data for thousands of horror titles separate winners from costly misses.
 
@@ -502,7 +502,7 @@ Horror is the genre studios love to describe as cheap and scalable — until the
 ## Did Horror Get Better as the Catalog Exploded?
 
 - URL: https://artometrics.com/horror-movies
-- Desk: movies-tv
+- Desk: arts, film
 - Published: 2026-06-15T00:00:00.000Z
 - Description: Ratings across tens of thousands of horror films ask whether quality rose with volume.
 
@@ -513,7 +513,7 @@ Horror catalogs grow faster than any critic can watch. The open question is whet
 ## Which Storms Hit Puerto Rico Hardest?
 
 - URL: https://artometrics.com/hurricanes-puerto-rico
-- Desk: cities-travel
+- Desk: culture, environment
 - Published: 2026-06-15T00:00:00.000Z
 - Description: Hurricane records compare wind, deaths, and frequency for the island’s most damaging storms.
 
@@ -524,7 +524,7 @@ In late summer 2017, the Atlantic hurricane season forced a brutal comparative q
 ## Where Wastewater Plants Serve the Most People
 
 - URL: https://artometrics.com/hydro-wastewater
-- Desk: cities-travel
+- Desk: science, engineering
 - Published: 2026-06-15T00:00:00.000Z
 - Description: Facility-level data map which plants serve the largest populations.
 
@@ -535,29 +535,29 @@ Wastewater plants are the unglamorous infrastructure of modern density. They tur
 ## How U.S. Incarceration Rates Diverged by State
 
 - URL: https://artometrics.com/incarceration-trends
-- Desk: business
+- Desk: civics, law
 - Published: 2026-06-15T00:00:00.000Z
 - Description: Long-run imprisonment data track national trends and which states pulled away.
 
-U.S. incarceration is often narrated as a single national curve. County- and state-level population files show something more fractured: regional regimes that diverge for decades even while they share the same federal criminal-justice vocabulary. The TidyTuesday working extract used here holds 100,000 records spanning 1970–2016 . Median population in the analytic columns sits at 3,553 ; the highest observed population value exceeds 6.8 million . California leads the state rollup by population, and the South is the most common region label in the file. Population is not identical to incarceration rate — but in this release it is the spine that lets pretrial counts, regional gaps, and long-run change be compared without pretending every county is the same size. Fast facts The numbers that set the scale for this report: 100,000 Records in the working dataset 3,553 Median Population 6,801,437 Highest observed Population CA Top State by Population 1970–2016 Year span covered in the file South Most common Region Data and method The source is the TidyTuesday release from 2019-01-22 (R for Data Science community). The working file contains 100,000 rows and 10 columns after assembly — state, region, year, population, and pretrial population among the fields carried forward. Medians stabilize skew from giant counties and city systems. Charts export as Plotly JSON with PNG fallbacks. Because the table mixes geographies of very different scale, every ranking should be read with population context attached. How the pattern changed over time Median Population Over Time Median population in the working series falls from about 4,123 in the opening period to about 3,359 at the close. That movement can reflect changing county coverage, urban-rural composition, and how incomplete early rows enter the sample — not a simple story that places got smaller. The time chart is still essential. It forces the rest of the analysis to admit that the typical row in 1970 and the typical row in 2016 are not drawn from identical geographic mixes. Who sits at the top DC leads at 190,209 — 24,944 marks the median among the top dozen On the leader cut highlighted in the file, DC leads at 190,209 , with 24,944 as the median among the top dozen. Dense jurisdictions and large states occupy the same head for different reasons — capital-city concentration versus sheer statewide population. California's fact-box lead on state population and DC's lead on this chart can both be true. They answer different aggregation questions. Confusing them produces false arguments about which place is most incarcerated rather than which place is largest or densest in the extract. How regions spread Population by Region Regional box plots show whether population consensus is shared or contested across the South, Northeast, Midwest, and West. The South's frequency as the most common region label does not automatically mean it has the highest median population per row. Spread within regions often exceeds spread between region medians. County inequality inside a region is part of the incarceration story, not noise around a regional average. Who beats the median — and who trails Population vs median by Region On the gap chart, the Northeast sits 13,710 above the median; the Midwest trails by 1,276 . Those gaps capture the urban weight of Northeastern counties in the sample as much as any single policy variable. Regional gaps are starting points for rate-based follow-ups, not final moral rankings. A high-population region can have lower incarceration rates, and a lower-population region can incarcerate more intensively per resident. Population and pretrial population Population vs Pretrial population Plotting population against pretrial population shows clusters that averages erase. Some large jurisdictions carry large pretrial counts in rough proportion; others deviate — the places where jail composition, not just city size, is doing extra work. Pretrial population is one of the most polic
+U.S. incarceration is often narrated as a single national curve. County- and state-level population files show something more fractured: regional regimes that diverge for decades even while they share the same federal criminal-justice vocabulary. The TidyTuesday working extract used here holds 100,000 records spanning 1970–2016 . Median population in the analytic columns sits at 3,553 ; the highest observed population value exceeds 6.8 million . California leads the state rollup by population, and the South is the most common region label in the file. Population is not identical to incarceration rate — but in this release it is the spine that lets pretrial counts, regional gaps, and long-run change be compared without pretending every county is the same size. Research question What does the county-and-state structure of the U.S. incarceration file reveal that a single national mass-incarceration curve would hide? This report asks how population, region, and pretrial population sit together in the 1970–2016 extract, and where the file points toward divergent local regimes rather than one uniform national process. The question is observational: which geographies dominate the row structure, how far regional medians sit from the file center, and whether pretrial burden scales cleanly with population. It does not treat population as an incarceration rate; it treats it as the denominator context necessary before any rate-based claim can be trusted. Fast facts The numbers that set the scale for this report: 100,000 Records in the working dataset 3,553 Median Population 6,801,437 Highest observed Population CA Top State by Population 1970–2016 Year span covered in the file South Most common Region Data and method The source is the TidyTuesday release from 2019-01-22 (R for Data Science community). The working file contains 100,000 rows and 10 columns after assembly — state, region, year, population, and pretrial population among the fields carried forward. Medians stabilize skew from giant counties and city systems. Charts export as Plotly JSON with PNG fallbacks. Because the table mixes geographies of very different scale, every ranking should be read with population context attached. How the pattern changed over time Median Population Over Time Median population in the working series falls from about 4,123 in the opening period to about 3,359 at the close. That movement can reflect changing county coverage, urban-rural composition, and how incomplete early rows enter the sample — not a simple story that places got smaller. The time chart is still essential. It forces the rest of the analysis to admit that the typical row in 1970 and the typical row in 2016 are not drawn from identical geographic mixes. The 1970–2016 window covers the main period in which the United States moved from the pre-1970 jail-and-prison baseline into what scholars such as the National Research Council and Bureau of Justice Statistics describe as the era of mass incarceration. It includes the years after the 1971 declaration of the federal war on drugs, the sentencing-policy changes of the 1980s, and the long plateau and partial retrenchment after the 2000s. Because this file is row-based, the median population line is partly a coverage diagnostic. A county with a small jail, a large urban system, and a state-level aggregate can coexist in the same extract if the source tables carry them forward. The trend line therefore tells readers how the analytic unit changes over time before it tells them anything about punishment intensity. Who sits at the top DC leads at 190,209 — 24,944 marks the median among the top dozen On the leader cut highlighted in the file, DC leads at 190,209 , with 24,944 as the median among the top dozen. Dense jurisdictions and large states occupy the same head for different reasons — capital-city concentration versus sheer statewide population. California's fact-box lead on state population and DC's lead on this chart can both be true. T
 
 ---
 
 ## How Concentrated Is the World’s Linguistic Diversity?
 
 - URL: https://artometrics.com/languages-glottolog
-- Desk: culture
+- Desk: arts, language
 - Published: 2026-06-15T00:00:00.000Z
 - Description: Glottolog family data measure how uneven language diversity is at the family level.
 
-Linguistic diversity is often imagined as a smooth global gradient. Glottolog-style language inventories show something lumpier: documentation clusters by macroarea, and a long tail of languages appear once while a short head of names and identifiers repeats. The TidyTuesday working file holds 8,612 records. Africa is the most common macroarea label, with 2,363 records in that bucket alone. The question is not only how many languages exist — it is where documentation effort, and therefore visibility, concentrates. A catalog of languages is also a catalog of scholarly attention. Places with denser fieldwork traditions look richer in the table even when the underlying human diversity story is more even — or more endangered — than the row counts imply. Fast facts The numbers that set the scale for this report: 8,612 Records in the working dataset Africa Most common Macroarea Data and method The source is the TidyTuesday release from 2025-12-23 (R for Data Science community). The working file contains 8,612 rows and 9 columns after cleaning — language names, identifiers, macroarea labels, and related Glottolog metadata. Because many fields are categorical rather than scored, the analysis leans on counts, concentration, and repetition rather than medians of a single numeric quality metric. Charts export as Plotly JSON with PNG fallbacks. A geographically uneven landscape Language documentation is geographically uneven Africa dominates with 2,363 records in the primary macroarea cut. Other macroareas — Papunesia, Eurasia, the Americas, Australia — follow at lower counts. The main bucket carries much of the story; this field does not behave like a gentle long-tail split across dozens of equal regions. Uneven documentation is not identical to uneven linguistic diversity, but it shapes what comparative science can see. Extinction risk, revitalization, and typology research all inherit the map of what has been recorded. Who sits at the top of name repetition Repeated language names show documentation density Repeated language names show documentation density inside the extract. Fasu appears among the recurring names in the file; the top dozen account for a visible share of all 8,612 rows even though most languages appear only once. Name repetition can reflect dialect documentation, alternate glottonyms, or multiple database entries tied to related varieties. It is a signal to investigate, not an automatic claim that one language is more important. Regional concentration Regional concentration shapes the language map Africa is again the largest bucket with 2,363 records on the regional concentration chart. Category concentration shows where editorial and scientific attention should look first if the goal is to understand the file's center of gravity. Mixed macroarea labels in the data — combinations such as Eurasia with Papunesia — remind readers that languages and contact zones do not always respect tidy continental borders. Most languages appear once Most languages appear once while a small head repeats Most name entities appear only once; a small head revisits repeatedly. That power-law shape is typical of catalog-style tables: a few repeatedly documented varieties, and a long inventory of singleton entries. For endangered-language work, the singleton majority is the point. Visibility in a database is already a scarce resource; languages that appear once may still be under-described relative to their social importance. Identifiers as metadata Identifier fields are metadata rather than a reader-facing thesis Glottolog-style IDs such as fasu1242 are the most repeated identifiers in the extract. Secondary dimensions add context when the primary table has no numeric score column — they are join keys for typology databases, not a popularity contest. Reading IDs as if they were rankings misunderstands the infrastructure. The useful claim is that documentation systems create machine-readable handles that make some languages easier to cite, m
+Linguistic diversity is often imagined as a smooth global gradient. Glottolog-style language inventories show something lumpier: documentation clusters by macroarea, and a long tail of languages appear once while a short head of names and identifiers repeats. The TidyTuesday working file holds 8,612 records. Africa is the most common macroarea label, with 2,363 records in that bucket alone. The question is not only how many languages exist — it is where documentation effort, and therefore visibility, concentrates. A catalog of languages is also a catalog of scholarly attention. Places with denser fieldwork traditions look richer in the table even when the underlying human diversity story is more even — or more endangered — than the row counts imply. Research question What does a Glottolog-derived catalog reveal about the geography of linguistic documentation, not just the geography of language itself? This report asks where the 8,612-record extract concentrates by macroarea, where names and identifiers repeat, and how much of the visible language map is shaped by catalog infrastructure. The question is observational because row counts are not speaker counts, vitality scores, or political claims. The aim is to distinguish language diversity as lived by communities from language visibility as preserved in databases, grammars, ISO-style identifiers, and scholarly citation systems. Fast facts The numbers that set the scale for this report: 8,612 Records in the working dataset Africa Most common Macroarea Data and method The source is the TidyTuesday release from 2025-12-23 (R for Data Science community). The working file contains 8,612 rows and 9 columns after cleaning — language names, identifiers, macroarea labels, and related Glottolog metadata. Because many fields are categorical rather than scored, the analysis leans on counts, concentration, and repetition rather than medians of a single numeric quality metric. Charts export as Plotly JSON with PNG fallbacks. A geographically uneven landscape Language documentation is geographically uneven Africa dominates with 2,363 records in the primary macroarea cut. Other macroareas — Papunesia, Eurasia, the Americas, Australia — follow at lower counts. The main bucket carries much of the story; this field does not behave like a gentle long-tail split across dozens of equal regions. Uneven documentation is not identical to uneven linguistic diversity, but it shapes what comparative science can see. Extinction risk, revitalization, and typology research all inherit the map of what has been recorded. Africa’s lead is plausible in linguistic terms: the continent contains large families such as Niger-Congo, Afro-Asiatic, Nilo-Saharan groupings as traditionally defined, and Khoisan-associated lineages, alongside intense contact zones and multilingual states. But the chart does not validate any particular family taxonomy; it records how the Glottolog-style file assigns macroarea metadata to rows. Papunesia and Australia are especially important comparison cases because they contain many small language communities with high typological diversity and severe endangerment pressure. A lower row count than Africa does not mean lower scientific importance. It means the record is distributed unevenly across regions, fieldwork histories, and naming conventions. Who sits at the top of name repetition Repeated language names show documentation density Repeated language names show documentation density inside the extract. Fasu appears among the recurring names in the file; the top dozen account for a visible share of all 8,612 rows even though most languages appear only once. Name repetition can reflect dialect documentation, alternate glottonyms, or multiple database entries tied to related varieties. It is a signal to investigate, not an automatic claim that one language is more important. Fasu is a Papuan language name associated with Papua New Guinea, and its recurrence is a reminder that catalog ent
 
 ---
 
 ## How LEGO Set Complexity Evolved Across Themes
 
 - URL: https://artometrics.com/lego-database
-- Desk: games
+- Desk: culture, leisure
 - Published: 2026-06-15T00:00:00.000Z
 - Description: Official set metadata traces rising piece counts and theme differences.
 
@@ -568,7 +568,7 @@ LEGO sets are toys, collectibles, and increasingly architectural objects. The Re
 ## Did Longer Medium Posts Earn More Applause?
 
 - URL: https://artometrics.com/medium-articles
-- Desk: tech
+- Desk: science, tech
 - Published: 2026-06-15T00:00:00.000Z
 - Description: Metadata from tens of thousands of Medium articles tests whether length predicts claps.
 
@@ -579,7 +579,7 @@ Medium promised a writing network where attention could attach to length, craft,
 ## Which National Parks Draw the Crowds?
 
 - URL: https://artometrics.com/national-park-visits
-- Desk: cities-travel
+- Desk: culture, travel
 - Published: 2026-06-15T00:00:00.000Z
 - Description: Visitation time series identify America’s busiest parks and how attendance has trended.
 
@@ -590,7 +590,7 @@ National parks are sold as wilderness and remembered as crowds. Visit counts mak
 ## Which Netflix Titles Consumed the Most Viewing Hours?
 
 - URL: https://artometrics.com/netflix-engagement
-- Desk: movies-tv
+- Desk: arts, film
 - Published: 2026-06-15T00:00:00.000Z
 - Description: Engagement metrics Netflix reports show which titles absorbed the most hours.
 
@@ -601,7 +601,7 @@ Netflix’s public engagement tables measure attention in hours viewed — a blu
 ## How Netflix’s Catalog Mix Shifted Between Films and Series
 
 - URL: https://artometrics.com/netflix-titles
-- Desk: movies-tv
+- Desk: arts, film
 - Published: 2026-06-15T00:00:00.000Z
 - Description: Title-level library data track the balance of movies and TV over time.
 
@@ -612,7 +612,7 @@ A streaming library is an inventory decision dressed as a homepage. Title-level 
 ## How Nuclear Test Yields Shifted Through the Atomic Age
 
 - URL: https://artometrics.com/nuclear-explosions
-- Desk: culture
+- Desk: science, physics
 - Published: 2026-06-15T00:00:00.000Z
 - Description: Historical test records map yield, purpose, and timing across decades.
 
@@ -623,7 +623,7 @@ Nuclear test histories are usually told as geopolitics. The event catalogs under
 ## Which NYC Cuisines Score Highest on Health Inspections?
 
 - URL: https://artometrics.com/nyc-restaurant-inspections
-- Desk: cities-travel
+- Desk: culture, food
 - Published: 2026-06-15T00:00:00.000Z
 - Description: Restaurant grades across New York show how scores distribute by cuisine.
 
@@ -634,7 +634,7 @@ New York City restaurant inspections turn hygiene into a public grade. Behind th
 ## Where Pixar’s Critic Streak Broke: Cars and Lightyear
 
 - URL: https://artometrics.com/pixar-films
-- Desk: movies-tv
+- Desk: arts, film
 - Published: 2026-06-15T00:00:00.000Z
 - Description: Data on Pixar’s canon track scores and the titles that interrupted a long critical run.
 
@@ -645,7 +645,7 @@ Pixar is the rare studio brand that became a quality guarantee — but guarantee
 ## Which Subjects Dominate the Project Gutenberg Shelf?
 
 - URL: https://artometrics.com/project-gutenberg
-- Desk: books
+- Desk: arts, language
 - Published: 2026-06-15T00:00:00.000Z
 - Description: Public-domain metadata show which topics crowd the free-library canon.
 
@@ -656,7 +656,7 @@ Project Gutenberg is the internet's oldest large-scale experiment in free litera
 ## How U.S. Radio Formats Map Across the Dial
 
 - URL: https://artometrics.com/radio-stations
-- Desk: music
+- Desk: arts, music
 - Published: 2026-06-15T00:00:00.000Z
 - Description: Station-level format data chart where music, talk, and niche programming concentrate.
 
@@ -667,7 +667,7 @@ American radio still looks chaotic from the passenger seat — call letters, dia
 ## Which Ramen Brands Earn the Highest Ratings?
 
 - URL: https://artometrics.com/ramen-ratings
-- Desk: culture
+- Desk: culture, food
 - Published: 2026-06-15T00:00:00.000Z
 - Description: Taster scores across thousands of instant ramen products identify top brands.
 
@@ -678,7 +678,7 @@ Instant ramen is a global industrial food that still gets reviewed like craft be
 ## Which Albums Sit at the Peak of Rolling Stone’s Canon?
 
 - URL: https://artometrics.com/rolling-stone-albums
-- Desk: music
+- Desk: arts, music
 - Published: 2026-06-15T00:00:00.000Z
 - Description: Canonical rankings identify the records Rolling Stone places at the summit.
 
@@ -689,29 +689,29 @@ Rolling Stone's greatest-albums lists are canon factories. They convert critical
 ## Who Ruled Rome Longest—and Did Dynasty Predict Tenure?
 
 - URL: https://artometrics.com/roman-emperors
-- Desk: culture
+- Desk: humanities, history
 - Published: 2026-06-15T00:00:00.000Z
 - Description: Reign-length data test whether dynastic succession meant longer time on the throne.
 
-Sixty-eight emperors sit in this reign-length file — enough to ask a hard question about imperial power: did belonging to a dynasty buy more time on the throne, or did longevity come from something messier? The calibration point is a median reign of 6.50 years. That is not a long reign. It is the mathematical center of a political system that chewed through rulers faster than most modern institutions replace CEOs. The ceiling in the file is Constantine the Great at 31.0 reign years. Gordian is the dynasty label that appears most often. Between those two facts lies the real story: a few men held power for decades, while entire dynastic brands recycled short, fragile tenures. The charts that follow separate name-level longevity from dynasty-level structure so the two are not confused. Fast facts The numbers that set the scale for this report: 68 Records in the working dataset 6.50 Median Reign years 31.0 Highest observed Reign years Constantine the Great Top Name by Reign years Gordian Most common Dynasty Data and method Reign spans are derived from start and end dates in the emperors table. Negative or zero spans are excluded, so the working metric is observed tenure in years, not a modeled life expectancy. The source is the TidyTuesday Roman Emperors release (2019-08-13), a community-cleaned historical table rather than a live prosopography API. Medians are preferred over means because reign distributions skew — a handful of long rulers pull averages up while the typical emperor sits near that 6.50-year center. Index-style fields (row numbers, sequential IDs) are kept out of metric selection so charts answer questions about tenure, not about how the spreadsheet was ordered. Constantine’s thirty-one years set the name-level ceiling Reign years by Name Among named emperors in the breakdown, Constantine the Great leads at 31.0 reign years. At the other end of the plotted leaders, Valentinian II anchors the low end of that top group at 17.0 — still far above the file median of 6.50, which is the point: the chart of leaders is a curated upper slice, not the full distribution. Grouping by name makes the catalog’s major entities comparable on a single scale. The question is not who is famous, but who lasted. The gap between Constantine and the rest of the top tier already hints that longevity was exceptional rather than routine. The top dozen still sits far above the median emperor Constantine the Great leads at 31.0 — 20.0 marks the median among the top dozen Constantine the Great leads the ranked leaders chart at 31.0. Among that top dozen, the median is 20.0 — three times the full-file median of 6.50. Even the “typical” elite tenure in this slice is a different political animal from the typical emperor in the dataset. That separation matters for interpretation. Leaderboards describe the right tail. They do not describe Rome’s everyday succession reality, which lived closer to half a decade than to two decades. Dynasty boxes show contested, not uniform, tenure Reign years by Dynasty When reign years are split by dynasty, the boxes do not collapse into a single shared consensus. Some houses stretch higher; others sit tighter and lower. The chart’s job is to show whether dynasty is a meaningful axis for tenure at all — and the spread says it is contested across tiers rather than deterministic. Read the boxes as structural signals: belonging to a named dynasty did not automatically purchase Constantine-length stability. It bought a distribution, and those distributions differ. Nerva–Antonine sits above the median; Gordian trails Reign years vs median by Dynasty Relative to the file median, Nerva-Antonine sits 12.5 years above; Gordian trails by 4.00. That is the cleanest dynasty-level contrast in the gap chart: one house systematically above the center of the distribution, another systematically below. Gordian is also the most common dynasty label in the fact boxes — volume without longevity. Frequency of naming and length of rule are
+Sixty-eight emperors sit in this reign-length file — enough to ask a hard question about imperial power: did belonging to a dynasty buy more time on the throne, or did longevity come from something messier? The calibration point is a median reign of 6.50 years. That is not a long reign. It is the mathematical center of a political system that chewed through rulers faster than most modern institutions replace CEOs. The ceiling in the file is Constantine the Great at 31.0 reign years. Gordian is the dynasty label that appears most often. Between those two facts lies the real story: a few men held power for decades, while entire dynastic brands recycled short, fragile tenures. The charts that follow separate name-level longevity from dynasty-level structure so the two are not confused. Research question Did dynastic identity make Roman emperors more durable, or did individual political survival overwhelm house-level labels? This report asks whether reign length concentrates around a few exceptional rulers, whether dynasties show distinct tenure distributions, and how much aggregate imperial time is carried by the longest-reigning names. The question is observational because this 68-record TidyTuesday file is not a full constitutional model of Rome. It uses recorded reign spans to compare names and dynasties, then treats the median emperor’s 6.50-year tenure as the baseline against which Constantine, Nerva-Antonine, and Gordian entries can be read. Fast facts The numbers that set the scale for this report: 68 Records in the working dataset 6.50 Median Reign years 31.0 Highest observed Reign years Constantine the Great Top Name by Reign years Gordian Most common Dynasty Data and method Reign spans are derived from start and end dates in the emperors table. Negative or zero spans are excluded, so the working metric is observed tenure in years, not a modeled life expectancy. The source is the TidyTuesday Roman Emperors release (2019-08-13), a community-cleaned historical table rather than a live prosopography API. Medians are preferred over means because reign distributions skew — a handful of long rulers pull averages up while the typical emperor sits near that 6.50-year center. Index-style fields (row numbers, sequential IDs) are kept out of metric selection so charts answer questions about tenure, not about how the spreadsheet was ordered. Constantine’s thirty-one years set the name-level ceiling Reign years by Name Among named emperors in the breakdown, Constantine the Great leads at 31.0 reign years. At the other end of the plotted leaders, Valentinian II anchors the low end of that top group at 17.0 — still far above the file median of 6.50, which is the point: the chart of leaders is a curated upper slice, not the full distribution. Grouping by name makes the catalog’s major entities comparable on a single scale. The question is not who is famous, but who lasted. The gap between Constantine and the rest of the top tier already hints that longevity was exceptional rather than routine. Constantine’s 306–337 CE reign sits at a hinge in Roman institutional history: civil war, Tetrarchic succession, Christian legalization after the Edict of Milan, the Council of Nicaea in 325, and the foundation of Constantinople all fall inside or around his rule. The dataset reduces that complexity to 31.0 years, but the named entity carries enough historical context to explain why the ceiling is not just a spreadsheet oddity. The top dozen still sits far above the median emperor Constantine the Great leads at 31.0 — 20.0 marks the median among the top dozen Constantine the Great leads the ranked leaders chart at 31.0. Among that top dozen, the median is 20.0 — three times the full-file median of 6.50. Even the “typical” elite tenure in this slice is a different political animal from the typical emperor in the dataset. That separation matters for interpretation. Leaderboards describe the right tail. They do not describe Rome’s everyday succession
 
 ---
 
 ## Where U.S. Student-Body Diversity Is Highest
 
 - URL: https://artometrics.com/school-diversity
-- Desk: business
+- Desk: civics, education
 - Published: 2026-06-15T00:00:00.000Z
 - Description: School-level composition data map where diversity concentrates.
 
-School-level composition data map where student-body diversity concentrates across U.S. local education agencies. The working file holds 27,944 records. The calibration metric is Multi, with a median of 2.38 — the center of the observed diversity scores in this extract. The ceiling is stark: butteville union elementary leads at 85.3 Multi, while Texas (TX) is the most common state abbreviation in the file. High Multi at the top of the leaderboard and a modest median across the whole table are not contradictions. They are the shape of a heavily skewed education landscape. Fast facts The numbers that set the scale for this report: 27,944 Records in the working dataset 2.38 Median Multi 85.3 Highest observed Multi butteville union elementary Top LEA NAME by Multi TX Most common ST Data and method The source is the TidyTuesday release from 2019-09-24 (R for Data Science community). The working file contains 27,944 rows and 15 columns after merging available tables in the week folder. Multi is the primary observed metric used for ranking and distribution charts; Variance appears alongside it in the scatter. Medians are used because school-level diversity metrics skew. Index-style fields are excluded from metric selection. State codes (ST) and LEA names are categorical axes for comparing how Multi sits across geography and district identity. A flat median hides how extreme the upper tail is Median Multi Over Time In the trend cut available in this file, median Multi sits at 2.38 in the opening period and 2.38 at the close — a flat line at the center of the distribution. Stability at the median does not mean stability everywhere; it means the typical school’s Multi did not move in this snapshot window. That flat center is the baseline against which the leaderboard should be read. The interesting action in school diversity here is not a national median march — it is how far individual LEAs sit above that center. Butteville Union Elementary leads a steep LEA ladder Top LEA NAME butteville union elementary leads at 85.3 Multi. Among the top dozen LEAs, the median is 52.0 — still many times the file-wide median of 2.38. The leaderboard is an upper-tail map of districts whose composition scores sit far from the typical school. LEA names on this chart are the entities carrying the highest observed Multi values in the file. They are not a random sample of American schooling; they are the extreme cases the metric surfaces first. State boxes show how Multi spreads geographically Multi by ST Splitting Multi by state (ST) produces category boxes that reveal whether diversity scores are shared or contested across jurisdictions. Texas appears most often in the file, but frequency of rows is not the same as high Multi; volume and score must be read separately. The state axis is useful because education policy and demography both vary geographically. The boxes show the within-state spread that a single national median erases. Oklahoma clears the median; New Jersey trails Multi vs median by ST Relative to the median, OK sits 4.25 above; NJ trails by 0.81. That gap chart converts state boxes into signed distance from the file center — a quick way to see who systematically lands higher or lower on Multi. These are structural offsets in the working extract, not causal claims about state policy. They locate where the distribution’s weight sits once the national median is the reference line. Multi and Variance move together in clusters Multi vs Variance Plotting Multi against Variance shows joint structure that averages erase: schools and districts form clusters rather than a single smooth cloud. High Multi with different Variance profiles is a different composition story from moderate Multi with tight Variance. The scatter’s job is relational. It does not crown a winner; it shows which combinations of diversity level and dispersion appear together in the 27,944-row file. What this file cannot tell you Community-cleaned TidyTuesday snapshots are not live
+School-level composition data map where student-body diversity concentrates across U.S. local education agencies. The working file holds 27,944 records. The calibration metric is Multi, with a median of 2.38 — the center of the observed diversity scores in this extract. The ceiling is stark: butteville union elementary leads at 85.3 Multi, while Texas (TX) is the most common state abbreviation in the file. High Multi at the top of the leaderboard and a modest median across the whole table are not contradictions. They are the shape of a heavily skewed education landscape. Research question Where does student-body diversity concentrate when the unit of analysis is the local education agency rather than the nation as a whole? This report asks whether the Multi metric behaves like a broad national baseline or a long-tailed distribution in which a few LEAs and states sit far above the typical row. The observational question is constrained to the source file: how stable is the median, which LEA names define the upper tail, how do state abbreviations structure the spread, and how does Multi relate to Variance? It does not treat one diversity metric as the full moral or demographic story of American education. Fast facts The numbers that set the scale for this report: 27,944 Records in the working dataset 2.38 Median Multi 85.3 Highest observed Multi butteville union elementary Top LEA NAME by Multi TX Most common ST Data and method The source is the TidyTuesday release from 2019-09-24 (R for Data Science community). The working file contains 27,944 rows and 15 columns after merging available tables in the week folder. Multi is the primary observed metric used for ranking and distribution charts; Variance appears alongside it in the scatter. Medians are used because school-level diversity metrics skew. Index-style fields are excluded from metric selection. State codes (ST) and LEA names are categorical axes for comparing how Multi sits across geography and district identity. A flat median hides how extreme the upper tail is Median Multi Over Time In the trend cut available in this file, median Multi sits at 2.38 in the opening period and 2.38 at the close — a flat line at the center of the distribution. Stability at the median does not mean stability everywhere; it means the typical school’s Multi did not move in this snapshot window. That flat center is the baseline against which the leaderboard should be read. The interesting action in school diversity here is not a national median march — it is how far individual LEAs sit above that center. The flat median is especially important because U.S. school diversity is often narrated through landmark legal periods: Brown v. Board of Education in 1954, the busing and desegregation orders of the 1960s and 1970s, the release from court supervision in later decades, and contemporary residential segregation. Those histories are real, but this chart is not a long legal history; it is a snapshot-style metric view where the center does not move. A stable center can coexist with sharp local change because public education is geographically partitioned. District boundaries, housing markets, charter growth, school assignment rules, and private-school exit can all alter individual LEAs without moving the national median much. The chart tells readers to look for distributional extremes rather than assume a single national trend. Butteville Union Elementary leads a steep LEA ladder Top LEA NAME butteville union elementary leads at 85.3 Multi. Among the top dozen LEAs, the median is 52.0 — still many times the file-wide median of 2.38. The leaderboard is an upper-tail map of districts whose composition scores sit far from the typical school. LEA names on this chart are the entities carrying the highest observed Multi values in the file. They are not a random sample of American schooling; they are the extreme cases the metric surfaces first. Butteville Union Elementary is a named local education agency r
 
 ---
 
 ## How Word Count Is Distributed Across the Holmes Canon
 
 - URL: https://artometrics.com/sherlock-holmes
-- Desk: books
+- Desk: arts, language
 - Published: 2026-06-15T00:00:00.000Z
 - Description: Text-length analysis of Sherlock Holmes stories through Conan’s corpus.
 
@@ -722,7 +722,7 @@ Conan Doyle’s Sherlock Holmes corpus arrives here as a tokenized text table: 6
 ## Who Guest-Starred Most Often on The Simpsons?
 
 - URL: https://artometrics.com/simpsons-guest-stars
-- Desk: movies-tv
+- Desk: arts, film
 - Published: 2026-06-15T00:00:00.000Z
 - Description: Guest-appearance records count celebrity density across seasons.
 
@@ -733,7 +733,7 @@ Guest-appearance records count celebrity density across seasons. Start with the 
 ## Which Super Bowl Ads Won the Post-Game Internet?
 
 - URL: https://artometrics.com/super-bowl-ads
-- Desk: business
+- Desk: civics, communication
 - Published: 2026-06-15T00:00:00.000Z
 - Description: Ad-spot data track which commercials captured attention after the whistle.
 
@@ -744,7 +744,7 @@ Super Bowl ads do not end when the whistle blows. They migrate to YouTube, where
 ## When Did Prestige TV Peak—and Did Critics Agree?
 
 - URL: https://artometrics.com/tv-golden-age
-- Desk: movies-tv
+- Desk: arts, film
 - Published: 2026-06-15T00:00:00.000Z
 - Description: Golden-age scores compare critical and audience verdicts as prestige TV rose and cooled.
 
@@ -755,7 +755,7 @@ Prestige television arrived with a soundtrack of superlatives. Season-level rati
 ## Where UK Museums Sit on the Deprivation Map
 
 - URL: https://artometrics.com/uk-museums
-- Desk: galleries
+- Desk: arts, architecture
 - Published: 2026-06-15T00:00:00.000Z
 - Description: Museum locations and deprivation bands show how institutions map onto inequality.
 
@@ -766,18 +766,18 @@ Britain’s museum map is also a map of place. This file places 4,191 museum rec
 ## Which UN Votes Split the Chamber Most Sharply?
 
 - URL: https://artometrics.com/un-votes
-- Desk: business
+- Desk: civics, politics
 - Published: 2026-06-15T00:00:00.000Z
 - Description: Voting records identify resolutions that divided member states.
 
-United Nations roll-call votes are a diplomacy archive written as a contingency table. This working extract holds 100,000 records. The most common vote value is yes — not a moral claim, a frequency claim. The charts ask where that yes-mass concentrates, which countries appear most often, and how long-tailed country participation becomes. Voting records identify resolutions that divided member states, but the first job of this file is simpler: map the landscape of yes, no, and abstain, then see which member names and country codes recur in a 100,000-row slice of UN voting history. Fast facts The numbers that set the scale for this report: 100,000 Records in the working dataset yes Most common Vote Data and method The source is the TidyTuesday release from 2021-03-23 (R for Data Science community). The working file contains 100,000 rows and 4 columns after merging available tables in the week folder. Vote is the primary categorical field; country and country code provide entity axes; frequency charts summarize repetition. There is no single numeric “score” column driving a median leaderboard here. The analysis is categorical: counts, shares, and recurrence. Index-style fields stay out of metric selection. Yes votes dominate the sampled UN record Yes votes dominate the sampled UN record Yes dominates with 79,663 records. In a 100,000-row extract, that is the center of gravity: most recorded positions in this slice are affirmative. Abstain and no exist, but they do not match yes for volume. Dominance here is a frequency fact about the file, not proof that the General Assembly always agrees. It tells you where the mass of the table sits before any conflict analysis begins. Brazil appears most often among country names Brazil appears most often in this extract Brazil appears 747 times — the most recurring country name in the file. The top dozen countries account for a visible share of all 100,000 rows, which is what a recurring-member chart is for: showing who is densely present in the extract. High appearance counts can reflect coverage, membership longevity, or how the sample was built. They are presence metrics, not win rates. Vote categories restate the file’s center of gravity Vote categories reveal the file's center of gravity Yes is again the largest bucket with 79,663 records when vote categories are plotted as a bar landscape. Repeating the category cut is useful: it confirms that the headline frequency is not an artifact of a single chart type. Category concentration shows where editorial attention should start — with the yes majority — while still leaving room to inspect the smaller no and abstain bands. Country appearances follow a long-tail pattern Country appearances follow a long-tail pattern Most country entities appear only once in the frequency view; a small head revisits repeatedly. That power-law shape is typical of catalog-style international tables: a few members are densely observed, many are sparse. Long tails warn against over-reading rare countries as if they had the same sample depth as Brazil-scale recurrence. Country codes add a second identity layer Country codes add metadata rather than a new thesis BR is the most repeated country code in the extract — the code-level echo of Brazil’s name-level lead. Secondary dimensions like codes add join keys and metadata when the primary table has no numeric score column. Read codes as infrastructure for linking, not as a rival thesis to the vote-share story. They confirm entity identity across the 100,000-row sample. What this file cannot tell you Community-cleaned TidyTuesday snapshots are not the full UN voting API. Missing values, country-name variants, and week-of-export coverage limits apply. A 100,000-row extract may be a sample or a capped export rather than every roll call ever taken. Findings describe this UN votes file — structural signals about vote categories and country recurrence — not a complete theory of international coalitions. What to take away 
+United Nations roll-call votes are a diplomacy archive written as a contingency table. This working extract holds 100,000 records. The most common vote value is yes — not a moral claim, a frequency claim. The charts ask where that yes-mass concentrates, which countries appear most often, and how long-tailed country participation becomes. Voting records identify resolutions that divided member states, but the first job of this file is simpler: map the landscape of yes, no, and abstain, then see which member names and country codes recur in a 100,000-row slice of UN voting history. Research question What does a 100,000-row extract of United Nations roll-call votes reveal before any ideological coalition model is fitted? This report asks how vote categories are distributed, which member-state names recur most often, and whether country-code metadata confirms or complicates the entity picture. The question is intentionally descriptive. A yes-heavy table does not mean the General Assembly lacks conflict; it means this sample’s recorded positions are concentrated in one category. The analysis therefore starts with vote mass and country recurrence before moving toward more interpretive claims about alignment. Fast facts The numbers that set the scale for this report: 100,000 Records in the working dataset yes Most common Vote Data and method The source is the TidyTuesday release from 2021-03-23 (R for Data Science community). The working file contains 100,000 rows and 4 columns after merging available tables in the week folder. Vote is the primary categorical field; country and country code provide entity axes; frequency charts summarize repetition. There is no single numeric “score” column driving a median leaderboard here. The analysis is categorical: counts, shares, and recurrence. Index-style fields stay out of metric selection. Yes votes dominate the sampled UN record Yes votes dominate the sampled UN record Yes dominates with 79,663 records. In a 100,000-row extract, that is the center of gravity: most recorded positions in this slice are affirmative. Abstain and no exist, but they do not match yes for volume. Dominance here is a frequency fact about the file, not proof that the General Assembly always agrees. It tells you where the mass of the table sits before any conflict analysis begins. The United Nations General Assembly often votes on resolutions that have already passed through committees, negotiations, amendments, and diplomatic bargaining. A large yes category can therefore reflect agenda-setting and consensus-building before the roll call, not an absence of disagreement in world politics. The public vote is the final visible record of a process that began earlier. UN voting scholars usually move beyond raw categories into ideal-point models, affinity scores, or issue-area subsets because the meaning of a yes vote depends on the resolution. A yes on decolonization, a yes on nuclear disarmament, and a yes on a budgetary item are all affirmative votes, but they do not carry the same geopolitical signal. Brazil appears most often among country names Brazil appears most often in this extract Brazil appears 747 times — the most recurring country name in the file. The top dozen countries account for a visible share of all 100,000 rows, which is what a recurring-member chart is for: showing who is densely present in the extract. High appearance counts can reflect coverage, membership longevity, or how the sample was built. They are presence metrics, not win rates. Brazil is a useful leader because it has been a United Nations member since 1945 and is a frequent actor in General Assembly voting records. The country’s foreign-policy tradition includes visible positions on development, non-intervention, South-South cooperation, and Security Council reform. But the 747 appearances shown here are still a row-count fact, not a claim that Brazil is uniquely influential in every issue area. Country recurrence is also shaped by insti
 
 ---
 
 ## Which U.S. PhD Fields Expanded Fastest?
 
 - URL: https://artometrics.com/us-phds
-- Desk: business
+- Desk: civics, education
 - Published: 2026-06-15T00:00:00.000Z
 - Description: Doctorate production data show which disciplines grew quickest.
 
@@ -788,7 +788,7 @@ U.S. doctorate production is a labor-market story told in field counts. This fil
 ## How Far Did Average U.S. Tuition Climb by State?
 
 - URL: https://artometrics.com/us-tuition
-- Desk: business
+- Desk: civics, education
 - Published: 2026-06-15T00:00:00.000Z
 - Description: State tuition time series measure the rise in college costs.
 
@@ -799,7 +799,7 @@ College price is a time series with a political charge. This file holds 600 stat
 ## Which States Show Up at the Ballot Box?
 
 - URL: https://artometrics.com/us-voter-turnout
-- Desk: business
+- Desk: civics, politics
 - Published: 2026-06-15T00:00:00.000Z
 - Description: Election turnout data compare state participation rates.
 
@@ -810,7 +810,7 @@ Turnout is democracy’s volume knob. This file holds 936 election records spann
 ## Did Critical Acclaim Track Commercial Success in Video Games?
 
 - URL: https://artometrics.com/video-games-sliced
-- Desk: games
+- Desk: sports, gaming
 - Published: 2026-06-15T00:00:00.000Z
 - Description: A large games slice tests whether critic scores correlated with commercial outcomes.
 
@@ -821,7 +821,7 @@ Steam-era concurrency is a living audience meter. This Sliced/TidyTuesday games 
 ## Which Steam Games Earned the Most Playtime Per Dollar?
 
 - URL: https://artometrics.com/video-games-steam
-- Desk: games
+- Desk: sports, gaming
 - Published: 2026-06-15T00:00:00.000Z
 - Description: Ownership and play data identify titles that delivered the most hours relative to price.
 
@@ -832,7 +832,7 @@ Steam Spy-era metadata turns the storefront into a scored catalog. This file hol
 ## How Concentrated Is Wealth at the Top of the Distribution?
 
 - URL: https://artometrics.com/wealth-income
-- Desk: business
+- Desk: civics, economics
 - Published: 2026-06-15T00:00:00.000Z
 - Description: Wealth and income shares measure how assets pile up at the upper end.
 
@@ -843,7 +843,7 @@ Income distribution is how a society counts who sits where. This file holds 2,91
 ## Which Web Pages Load Fastest—and What Metrics Move Together?
 
 - URL: https://artometrics.com/web-page-metrics
-- Desk: tech
+- Desk: science, tech
 - Published: 2026-06-15T00:00:00.000Z
 - Description: Performance metrics show speed leaders and which technical measures correlate.
 
@@ -854,7 +854,7 @@ The web’s performance story is a percentile story. This file holds 238 records
 ## Does Wine Price Predict Critic Points?
 
 - URL: https://artometrics.com/wine-ratings
-- Desk: culture
+- Desk: culture, food
 - Published: 2026-06-15T00:00:00.000Z
 - Description: A hundred thousand wine ratings test whether cost tracks scores.
 
@@ -865,7 +865,7 @@ A hundred thousand wine ratings are enough to test a dinner-table theory: does p
 ## How UNESCO Sites Grew Across Scandinavia, 2004–2022
 
 - URL: https://artometrics.com/world-heritage-sites
-- Desk: galleries
+- Desk: culture, travel
 - Published: 2026-06-15T00:00:00.000Z
 - Description: UNESCO heritage counts track how Scandinavian inventories expanded.
 
@@ -876,29 +876,29 @@ UNESCO World Heritage counts turn national prestige into a time series. This Sca
 ## What Pokémon’s Franchise Actually Comprises
 
 - URL: https://artometrics.com/pokemon
-- Desk: games
+- Desk: sports, gaming
 - Published: 2026-05-06T00:00:00.000Z
 - Description: Beyond the headline revenue figure: games, cards, merchandise, and film.
 
-Pokémon is the highest-grossing media franchise in history — more than $150 billion in lifetime revenue across games, cards, merchandise, and film. That number gets cited constantly. What gets cited less is the design infrastructure underneath it: the 18-type system, the base stat framework, the generation-by-generation release cadence that has added roughly 100 new Pokémon every few years since 1996. The franchise looks like a cultural phenomenon. The data shows it&#39;s also an engineering project. The TidyTuesday 2025-04-01 Pokémon dataset — sourced from PokéAPI and covering every Pokémon through Generation IX — lets three questions land cleanly. Do different types actually play differently, or is that a perception? Has Game Freak been inflating Pokémon power over time? And what does physical size reveal about how Pokémon are designed? Fast facts The numbers that set the scale for this report: 949 Pokémon in the dataset with a confirmed primary type 18 Distinct primary types represented 8 Generation IDs in the data — Gen 8 and 9 unclassified in source 157 Median base experience across all Pokémon 510 Pokémon with a second type — the dual-type majority Water Most common primary type in the dataset Data and method The dataset is TidyTuesday Week 13, 2025 — a cleaned version of the PokéAPI database covering 1,028 Pokémon entries across nine generations. Each row represents a single Pokémon form, which means alternate forms (Mega Evolutions, regional variants, Gigantamax forms) appear as separate records from their base versions. The core fields used in this piece are the six base stats (HP, Attack, Defense, Special Attack, Special Defense, Speed), base experience, primary type, height, weight, and generation ID. All values are drawn directly from the TidyTuesday source — no external APIs were joined for this analysis. Base experience is a commonly misunderstood field. It is not the same as a Pokémon&#39;s base stat total, and it is not a measure of overall power. It is the amount of experience a trainer&#39;s Pokémon receives when defeating that species in battle — a game mechanic that reflects intended difficulty and progression pacing, not raw strength. A Pokémon with high base experience is meant to be encountered later in the game or to signal a harder fight. It correlates with power, but imperfectly. Height and weight are stored in the dataset in their PokéAPI native units: decimetres for height and hectograms for weight. Both were converted to standard metric units (metres and kilograms respectively) before plotting. The log scale applied in Chart 3 is not a stylistic choice — the raw distributions span roughly four orders of magnitude, from Flabébé at 0.1 metres and 0.1 kilograms to Wailord at 14.5 metres and Cosmoem at 999.9 kilograms. A linear scale would make the chart unreadable. Stat Identity By Type Stat Heatmap Dragon sits at the top of the heatmap for a reason. With a median Attack of 100 and no single stat below 80, Dragon-types are the closest thing Pokémon has to a generalist elite — high across the board, weak nowhere. The type wasn&#39;t always rare by accident. Game Freak made Dragon deliberately difficult to access in the early games because the numbers justified the gatekeeping. The more revealing story is in the specialists. Steel-types clock a median Defense of 116 — the highest single cell on the entire chart — while their Special Attack sits at 60, dead last among Steel&#39;s own stats. Fighting-types mirror that tradeoff on offense: Attack of 100, Special Attack of 42, the sharpest stat gap in the dataset. These aren&#39;t balanced Pokémon. They&#39;re designed to do one thing extremely well and pay for it everywhere else. The heatmap makes that design philosophy impossible to ignore. Bug sits alone at the bottom. Across all six stats, Bug-types post the lowest or near-lowest medians in every column — 60 HP, 65 Attack, 60 Defense, 55 Special Attack, 60 Special Defense, 60 Speed. The type has been st
+Pokémon is the highest-grossing media franchise in history — more than $150 billion in lifetime revenue across games, cards, merchandise, and film. That number gets cited constantly. What gets cited less is the design infrastructure underneath it: the 18-type system, the base stat framework, the generation-by-generation release cadence that has added roughly 100 new Pokémon every few years since 1996. The franchise looks like a cultural phenomenon. The data shows it&#39;s also an engineering project. The TidyTuesday 2025-04-01 Pokémon dataset — sourced from PokéAPI and covering every Pokémon through Generation IX — lets three questions land cleanly. Do different types actually play differently, or is that a perception? Has Game Freak been inflating Pokémon power over time? And what does physical size reveal about how Pokémon are designed? Research question Can Pokémon’s creature design be measured as a system rather than described only as franchise lore? This report asks whether primary type, generation, base experience, height, and weight reveal consistent design rules across the PokéAPI-derived TidyTuesday dataset. The observational question is practical: do Dragon, Steel, Fighting, Bug, Water, and other types carry statistically distinct stat identities; does the upper tail of base experience creep across generations; and do physical dimensions follow a coherent size grammar with deliberate exceptions such as Cosmoem and Wailord? Fast facts The numbers that set the scale for this report: 949 Pokémon in the dataset with a confirmed primary type 18 Distinct primary types represented 8 Generation IDs in the data — Gen 8 and 9 unclassified in source 157 Median base experience across all Pokémon 510 Pokémon with a second type — the dual-type majority Water Most common primary type in the dataset Data and method The dataset is TidyTuesday Week 13, 2025 — a cleaned version of the PokéAPI database covering 1,028 Pokémon entries across nine generations. Each row represents a single Pokémon form, which means alternate forms (Mega Evolutions, regional variants, Gigantamax forms) appear as separate records from their base versions. The core fields used in this piece are the six base stats (HP, Attack, Defense, Special Attack, Special Defense, Speed), base experience, primary type, height, weight, and generation ID. All values are drawn directly from the TidyTuesday source — no external APIs were joined for this analysis. Base experience is a commonly misunderstood field. It is not the same as a Pokémon&#39;s base stat total, and it is not a measure of overall power. It is the amount of experience a trainer&#39;s Pokémon receives when defeating that species in battle — a game mechanic that reflects intended difficulty and progression pacing, not raw strength. A Pokémon with high base experience is meant to be encountered later in the game or to signal a harder fight. It correlates with power, but imperfectly. Height and weight are stored in the dataset in their PokéAPI native units: decimetres for height and hectograms for weight. Both were converted to standard metric units (metres and kilograms respectively) before plotting. The log scale applied in Chart 3 is not a stylistic choice — the raw distributions span roughly four orders of magnitude, from Flabébé at 0.1 metres and 0.1 kilograms to Wailord at 14.5 metres and Cosmoem at 999.9 kilograms. A linear scale would make the chart unreadable. Stat Identity By Type Stat Heatmap Dragon sits at the top of the heatmap for a reason. With a median Attack of 100 and no single stat below 80, Dragon-types are the closest thing Pokémon has to a generalist elite — high across the board, weak nowhere. The type wasn&#39;t always rare by accident. Game Freak made Dragon deliberately difficult to access in the early games because the numbers justified the gatekeeping. The more revealing story is in the specialists. Steel-types clock a median Defense of 116 — the highest single cell on the entire cha
 
 ---
 
 ## Which Hospitals Still Fail the 30-Day Readmission Standard?
 
 - URL: https://artometrics.com/readmitted
-- Desk: business
+- Desk: science, medicine
 - Published: 2026-04-21T00:00:00.000Z
 - Description: CMS HRRP data show where states, conditions, and ownership types exceed benchmarks.
 
-The Hospital Readmissions Reduction Program is a Medicare penalty system that has been running since 2012. The premise is simple: if your patients come back to the hospital within 30 days of discharge at a higher rate than expected given their medical profile, CMS docks your Medicare reimbursements. The penalty caps at 3% of all Medicare payments — not just payments for the specific condition being measured. A hospital with too many heart failure readmissions doesn’t just lose heart failure revenue. It loses 3% of everything. The core metric is the Excess Readmission Ratio, or ERR. It is a ratio of predicted readmissions to expected readmissions — where “expected” is risk-adjusted for each patient’s age, comorbidities, and discharge history. An ERR of exactly 1.0 means you readmitted exactly as many patients as a hospital of your type and patient mix should. Above 1.0 means more readmissions than expected. Below 1.0 means fewer. What this analysis found: nearly every condition’s national average ERR is above 1.0. HRRP has been running for over a decade, and the average American hospital is still readmitting more patients than CMS expects. The penalty hasn’t eliminated the problem. It has clarified it. Fast facts The numbers that set the scale for this report: 48.1% of HRRP-eligible hospital-condition pairs carried an excess readmission ratio above 1.0 — more readmissions than CMS models predict 6 conditions tracked under HRRP — AMI, Heart Failure, Pneumonia, COPD, Hip/Knee, and CABG 1.0018 average excess readmission ratio nationally — the average hospital readmits slightly more patients than CMS models expect 1.00485 Hip/Knee average ERR — the highest of the six conditions, nearly 2× the excess of the next closest track 742 hospitals mandated to participate in CMS&#39;s TEAM bundled payment model as of January 1, 2026 — where readmission penalties become episode-level accountability 65.4% New Jersey&#39;s share of penalized hospital-condition pairs — the highest-risk geography in the working dataset Data and method The FY2025 HRRP supplemental extract covers the measurement window used for CMS’s published excess readmission ratios. After removing suppressed rows — hospitals with fewer than 25 discharges for a given condition, which CMS redacts to protect patient privacy — the working dataset contains 11,720 hospital-condition pairs across roughly 2,700 hospitals and six conditions: Acute Myocardial Infarction (AMI), Heart Failure, Pneumonia, Chronic Obstructive Pulmonary Disease (COPD), Hip &amp; Knee Arthroplasty, and Coronary Artery Bypass Graft (CABG). A hospital can perform well on five tracks and still take a hit on one. The suppressed rows matter. Small rural hospitals disproportionately fall below the 25-discharge threshold and disappear from the analysis. The hospitals in this dataset skew toward larger, busier facilities. That is not a flaw in the extract — it is a feature of how CMS designed the program — but it shapes every finding below. An ERR above 1.0 feeds a penalty calculation; the tier depends on how far above 1.0 a hospital sits relative to peers. For this piece, pairs are grouped into four tiers: No Penalty (ERR ≤ 1.0), Low, Medium, and High. Charts are rendered in R from the working CSVs in this monorepo ( articles/readmitted/data/ ), with PNG and interactive Plotly JSON exported side by side. Ownership labels for Chart 3 were joined from CMS Hospital General Information (dataset xubh-q36u ) and stored offline so the analysis does not depend on a live CMS download at render time. The Geography of Failure States above the national average for penalized hospital-condition pairs — New Jersey leads at 65.4% Above the 48.1% national line, New Jersey leads at 65.4% — and high-resource markets sit beside high-poverty ones Nearly half of all hospital-condition pairs in this dataset carry an excess readmission ratio above 1.0. That national average hides the real story: the penalties are not evenly distributed. New
+The Hospital Readmissions Reduction Program is a Medicare penalty system that has been running since 2012. The premise is simple: if your patients come back to the hospital within 30 days of discharge at a higher rate than expected given their medical profile, CMS docks your Medicare reimbursements. The penalty caps at 3% of all Medicare payments — not just payments for the specific condition being measured. A hospital with too many heart failure readmissions doesn’t just lose heart failure revenue. It loses 3% of everything. The core metric is the Excess Readmission Ratio, or ERR. It is a ratio of predicted readmissions to expected readmissions — where “expected” is risk-adjusted for each patient’s age, comorbidities, and discharge history. An ERR of exactly 1.0 means you readmitted exactly as many patients as a hospital of your type and patient mix should. Above 1.0 means more readmissions than expected. Below 1.0 means fewer. What this analysis found: nearly every condition’s national average ERR is above 1.0. HRRP has been running for over a decade, and the average American hospital is still readmitting more patients than CMS expects. The penalty hasn’t eliminated the problem. It has clarified it. Research question Where do CMS Hospital Readmissions Reduction Program penalties still concentrate — by state, clinical condition, and hospital ownership — in the FY2025 supplemental extract, and what does that geography imply for the 742 hospitals entering CMS’s Transforming Episode Accountability Model (TEAM) on January 1, 2026? This is an observational audit of published CMS ratios, not a causal trial. We do not estimate a formal null hypothesis. We ask a sharper operational question: after more than a decade of HRRP, which named markets (New Jersey, Massachusetts, Mississippi), conditions (Hip/Knee arthroplasty), and ownership types (for-profit systems such as HCA and Tenet) still sit farthest above CMS’s expected readmission line? Fast facts The numbers that set the scale for this report: 48.1% of HRRP-eligible hospital-condition pairs carried an excess readmission ratio above 1.0 — more readmissions than CMS models predict 6 conditions tracked under HRRP — AMI, Heart Failure, Pneumonia, COPD, Hip/Knee, and CABG 1.0018 average excess readmission ratio nationally — the average hospital readmits slightly more patients than CMS models expect 1.00485 Hip/Knee average ERR — the highest of the six conditions, nearly 2× the excess of the next closest track 742 hospitals mandated to participate in CMS&#39;s TEAM bundled payment model as of January 1, 2026 — where readmission penalties become episode-level accountability 65.4% New Jersey&#39;s share of penalized hospital-condition pairs — the highest-risk geography in the working dataset Data and method The FY2025 HRRP supplemental extract covers the measurement window used for CMS’s published excess readmission ratios. After removing suppressed rows — hospitals with fewer than 25 discharges for a given condition, which CMS redacts to protect patient privacy — the working dataset contains 11,720 hospital-condition pairs across roughly 2,700 hospitals and six conditions: Acute Myocardial Infarction (AMI), Heart Failure, Pneumonia, Chronic Obstructive Pulmonary Disease (COPD), Hip &amp; Knee Arthroplasty, and Coronary Artery Bypass Graft (CABG). A hospital can perform well on five tracks and still take a hit on one. The suppressed rows matter. Small rural hospitals disproportionately fall below the 25-discharge threshold and disappear from the analysis. The hospitals in this dataset skew toward larger, busier facilities. That is not a flaw in the extract — it is a feature of how CMS designed the program — but it shapes every finding below. An ERR above 1.0 feeds a penalty calculation; the tier depends on how far above 1.0 a hospital sits relative to peers. For this piece, pairs are grouped into four tiers: No Penalty (ERR ≤ 1.0), Low, Medium, and High. Charts are rendered in R from the
 
 ---
 
 ## Julius Caesar and the Cost of Managing Power
 
 - URL: https://artometrics.com/caesar-the-psychonomics-of-emperor-julius
-- Desk: culture
+- Desk: humanities, history
 - Published: 2026-04-18T00:00:00.000Z
 - Description: A psychonomic reading of Caesar asks what ambition cost the Roman political household he ruled.
 
@@ -909,7 +909,7 @@ Economics comes from the Greek oikonomia — the management of the house. Psycho
 ## The Giants’ Arc From New York Gothams to Oracle Park
 
 - URL: https://artometrics.com/giant-the-artometrics-of-a-san-francisco-dynasty
-- Desk: sports
+- Desk: sports, baseball
 - Published: 2026-04-18T00:00:00.000Z
 - Description: A franchise history from 1883 New York origins to a modern Bay Area ballclub.
 
@@ -920,7 +920,7 @@ The San Francisco Giants have been playing professional baseball since 1883. Tha
 ## How Golden State Went From Irrelevant to Dynasty
 
 - URL: https://artometrics.com/warrior-the-artometrics-of-a-golden-state-dynasty
-- Desk: sports
+- Desk: sports, basketball
 - Published: 2026-04-18T00:00:00.000Z
 - Description: Decades of losing before a modern dynasty remade Bay Area basketball.
 
@@ -931,18 +931,18 @@ The Golden State Warriors have played 78 seasons of professional basketball. For
 ## Coffee’s Place in Global Trade and Daily Life
 
 - URL: https://artometrics.com/coffee-the-artometrics-of-java
-- Desk: culture
+- Desk: culture, food
 - Published: 2026-04-14T00:00:00.000Z
 - Description: Commodity and consumption data place coffee among the world’s largest traded goods.
 
-Coffee is the world’s second-largest traded commodity by value, behind only crude oil. More than 125 million people depend on it for their livelihoods. Around 2.25 billion cups are consumed every day. And yet the country that produces the highest-quality coffee on earth — by a significant margin, according to the Coffee Quality Institute’s own grading data — has exactly zero Starbucks locations. That country is Ethiopia. What follows uses CQI cupping scores and country-level samples to ask a simple question: where does quality concentrate, and how little that map resembles the retail geography of coffee brands. Fast facts Keep these markers in view as the story unfolds. 1,339 Coffee samples rated by CQI Q Graders across Arabica and Robusta species 85.3 Ethiopia&#39;s median CQI cup score — highest of any country with 20+ samples 0 Starbucks locations in Ethiopia, Kenya, and Uganda — the top three scoring nations 16 Countries with 20+ CQI-rated Arabica samples, spanning four continents 7 Sensory sub-metrics scored per sample — aroma, flavor, aftertaste, acidity, body, balance, cupper points 25,600 Starbucks locations worldwide across 73 countries, as of the 2018 dataset Data and method The Coffee Quality Institute is a nonprofit that trains and certifies Q Graders — licensed sensory evaluators who score coffee using a standardized 100-point protocol. A sample must score 80 or above to qualify as specialty coffee. The CQI dataset made available through TidyTuesday (2020-07-07) contains 1,339 samples spanning Arabica and Robusta species, with individual scores across ten sub-metrics plus a total cup points aggregate. This analysis focuses exclusively on Arabica. After removing one data entry error (a near-zero-score row), the working Arabica dataset contains 1,312 samples from 36 countries. The Starbucks locations dataset (TidyTuesday 2018-05-07) documents 25,600 individual store locations across 73 countries, with brand, ownership type, city, and geographic coordinates. For the quality-versus-retail chart, Starbucks counts were aggregated at the country level and joined to CQI quality scores using ISO-2 country codes. The sub-metric fingerprint covers seven of the ten CQI sub-metrics: aroma, flavor, aftertaste, acidity, body, balance, and cupper points. Uniformity, clean cup, and sweetness were excluded because they function more as defect-penalty fields than sensory attributes. The top eight countries by sample volume were selected for the heatmap to ensure statistically stable medians. Where Great Coffee Comes From Country Ridgeline Ethiopia doesn’t just lead — it occupies a different part of the distribution entirely. While the median cup score across all 16 qualifying countries sits at 82.5, Ethiopia’s distribution peaks near 85 and has a long right tail that no other origin comes close to matching. Kenya and Uganda sit in second and third, but their distributions overlap substantially with the rest of the field. Ethiopia’s does not. What makes this finding significant is what it implies about terroir and altitude. Ethiopia is the genetic origin of Arabica coffee — the Kaffa region in southwestern Ethiopia is where the species was first documented growing wild. The country’s range of elevation, soil diversity, and processing tradition produces a flavor complexity that Q Graders consistently reward with above-median scores across every sub-metric. The bottom of the chart is equally instructive. Nicaragua, Mexico, Honduras, and Taiwan all cluster between 81 and 83 — technically specialty grade, but right at the floor. Brazil, the world’s largest coffee producer by volume, lands firmly in the lower half — a reminder that market dominance and cup quality are not the same thing. The Quality-Retail Disconnect Quality Vs Retail There is no positive relationship between a country’s quality score and Starbucks’ retail presence there. The three highest-scoring origins — Ethiopia, Kenya, and Uganda — all sit at zero Starbucks locations
+Coffee is the world’s second-largest traded commodity by value, behind only crude oil. More than 125 million people depend on it for their livelihoods. Around 2.25 billion cups are consumed every day. And yet the country that produces the highest-quality coffee on earth — by a significant margin, according to the Coffee Quality Institute’s own grading data — has exactly zero Starbucks locations. That country is Ethiopia. What follows uses CQI cupping scores and country-level samples to ask a simple question: where does quality concentrate, and how little that map resembles the retail geography of coffee brands. Research question Does the geography of high-scoring coffee match the geography of retail coffee power? This report asks whether Coffee Quality Institute cupping scores and Starbucks store counts describe the same global map or two different positions in the commodity chain. The observational question is where Arabica quality concentrates once country medians and sensory sub-metrics are plotted, and whether that origin map aligns with the markets where a dominant branded retailer operates stores. The answer matters because origin value, sensory quality, and retail capture are often discussed as if they naturally reinforce one another. Fast facts Keep these markers in view as the story unfolds. 1,339 Coffee samples rated by CQI Q Graders across Arabica and Robusta species 85.3 Ethiopia&#39;s median CQI cup score — highest of any country with 20+ samples 0 Starbucks locations in Ethiopia, Kenya, and Uganda — the top three scoring nations 16 Countries with 20+ CQI-rated Arabica samples, spanning four continents 7 Sensory sub-metrics scored per sample — aroma, flavor, aftertaste, acidity, body, balance, cupper points 25,600 Starbucks locations worldwide across 73 countries, as of the 2018 dataset Data and method The Coffee Quality Institute is a nonprofit that trains and certifies Q Graders — licensed sensory evaluators who score coffee using a standardized 100-point protocol. A sample must score 80 or above to qualify as specialty coffee. The CQI dataset made available through TidyTuesday (2020-07-07) contains 1,339 samples spanning Arabica and Robusta species, with individual scores across ten sub-metrics plus a total cup points aggregate. This analysis focuses exclusively on Arabica. After removing one data entry error (a near-zero-score row), the working Arabica dataset contains 1,312 samples from 36 countries. The Starbucks locations dataset (TidyTuesday 2018-05-07) documents 25,600 individual store locations across 73 countries, with brand, ownership type, city, and geographic coordinates. For the quality-versus-retail chart, Starbucks counts were aggregated at the country level and joined to CQI quality scores using ISO-2 country codes. The sub-metric fingerprint covers seven of the ten CQI sub-metrics: aroma, flavor, aftertaste, acidity, body, balance, and cupper points. Uniformity, clean cup, and sweetness were excluded because they function more as defect-penalty fields than sensory attributes. The top eight countries by sample volume were selected for the heatmap to ensure statistically stable medians. Where Great Coffee Comes From Country Ridgeline Ethiopia doesn’t just lead — it occupies a different part of the distribution entirely. While the median cup score across all 16 qualifying countries sits at 82.5, Ethiopia’s distribution peaks near 85 and has a long right tail that no other origin comes close to matching. Kenya and Uganda sit in second and third, but their distributions overlap substantially with the rest of the field. Ethiopia’s does not. What makes this finding significant is what it implies about terroir and altitude. Ethiopia is the genetic origin of Arabica coffee — the Kaffa region in southwestern Ethiopia is where the species was first documented growing wild. The country’s range of elevation, soil diversity, and processing tradition produces a flavor complexity that Q Graders consistently rew
 
 ---
 
 ## How H3 Built a YouTube Network Beyond One Channel
 
 - URL: https://artometrics.com/h3-the-artometrics-of-a-youtube-dynasty
-- Desk: culture
+- Desk: civics, communication
 - Published: 2026-04-14T00:00:00.000Z
 - Description: Since 2011, Ethan and Hila Klein scaled channels, a podcast, and a brand.
 
@@ -953,18 +953,18 @@ Ethan Klein built one of YouTube’s most documented creator empires from a sing
 ## What Empire Chronicles Leave Out: Who Got Rich
 
 - URL: https://artometrics.com/imperial
-- Desk: culture
+- Desk: humanities, history
 - Published: 2026-04-14T00:00:00.000Z
 - Description: A historical-economics lens asks who captured wealth when rulers claimed order.
 
-Every empire in history has told the same story about itself: we brought order, we built roads, we made the trains run on time. What the chronicles leave out is the spreadsheet. Who actually got richer? How long did the prosperity last? And when it ended, how fast did it go? Those questions have answers now. The Maddison Project Database — the most comprehensive long-run economic dataset ever assembled — lets us put Rome, Britain, the Ottomans, Imperial China, the Mongols, and Habsburg Spain on the same chart and ask: what does empire actually look like as an economic system? The answer is not what the history textbooks imply. GDP goes up. Real wages mostly don’t. The rise takes centuries. The fall takes decades. And in every case, the institutions built to extract surplus during expansion become structurally incapable of sharing it during maturation. That’s the pattern. Six empires. No exceptions. Fast facts The numbers that set the scale for this report: 1,200 yrs Time for Western Europe to recover Rome&#39;s peak GDP per capita after the 476 CE collapse 23% Share of global population governed by the British Empire at its 1920 territorial peak — 412 million people ~7× Number of times Imperial China cycled through full unification and fragmentation between 221 BCE and 1912 CE 180,000 t Silver extracted by Habsburg Spain from the Americas between 1500 and 1800 — as Castilian real wages declined 10% Estimated share of global population killed in Mongol conquests, 1206–1260 — 30 to 40 million deaths 30–80 yrs How far peak centralization precedes GDP peak across all six empires — the institutional lag Data and method The Maddison Project Database is the closest thing economics has to a time machine. Originally assembled by Angus Maddison and now maintained by the University of Groningen, it provides GDP per capita estimates — expressed in 2011 USD purchasing power parity — stretching back to 1 CE for some countries and to 1000 BCE for a handful of ancient economies. The 2023 update, published by Bolt and van Zanden, is the version used here, accessed via Our World in Data’s public CSV endpoint. Six empire cores were selected to represent distinct geographies, time periods, and institutional types: the Roman Empire (proxied by Italy, back-extrapolated from 1–476 CE using Maddison 2007, Scheidel and Friesen 2009, and Lo Cascio and Malanima 2009), the British Empire (United Kingdom), the Ottoman Empire (Turkey), Imperial China (China), Habsburg-Spain (Spain), and the Mongol Empire. The Mongol series has no Maddison country code and is constructed as a population-weighted average of China (45%), Russia (30%), and Turkey (25%) for 1200–1400 CE — the best available proxy for a steppe empire that governed all three regions simultaneously. Each empire’s GDP series is capped at its historical dissolution date: Rome at 476 CE, the Mongols at 1400, Habsburg-Spain at 1808, Imperial China at 1912, the Ottoman Empire at 1918, and the British Empire at 1947 (Indian independence). Real wage data — used in Chart 3 to construct the extraction gap — comes from Robert Allen’s European wages series (2001), Özmucur and Pamuk’s Ottoman wage reconstruction (2002), and Allen et al.’s China and Asia series (2011). All wage figures are expressed in silver grams per day for an unskilled male laborer. Gdp Per Capita Across Empire Cores Gdppc All Empires For the first 1,800 years of this chart, five of the six empire cores are essentially stationary. Rome peaks early and declines. The Ottomans and Imperial China drift sideways for centuries. Habsburg Spain — despite controlling the most silver-producing territory in human history — never generates a GDP breakout. The Mongol blip in the 1260s appears and vanishes within a century. The chart’s visual drama is entirely a British phenomenon, and it doesn’t begin until roughly 1800. That flatness is not a data artifact. Pre-industrial economies were governed by a hard ceiling: agricultural productivity. Every empi
+Every empire in history has told the same story about itself: we brought order, we built roads, we made the trains run on time. What the chronicles leave out is the spreadsheet. Who actually got richer? How long did the prosperity last? And when it ended, how fast did it go? Those questions have answers now. The Maddison Project Database — the most comprehensive long-run economic dataset ever assembled — lets us put Rome, Britain, the Ottomans, Imperial China, the Mongols, and Habsburg Spain on the same chart and ask: what does empire actually look like as an economic system? The answer is not what the history textbooks imply. GDP goes up. Real wages mostly don’t. The rise takes centuries. The fall takes decades. And in every case, the institutions built to extract surplus during expansion become structurally incapable of sharing it during maturation. That’s the pattern. Six empires. No exceptions. Research question When empire is measured through long-run GDP per capita and real wages, who captures the surplus: the imperial core, ordinary workers, or institutions built for extraction? This report asks whether Rome, Britain, the Ottomans, Imperial China, the Mongols, and Habsburg Spain show comparable trajectories once their economic series are indexed and capped to historical lifespans. The observational question is not whether empires built infrastructure or expanded trade. It is whether aggregate output translated into living standards, how quickly imperial GDP peaks unwound, and whether the extraction gap between GDP and wages is visible in the best available long-run economic evidence. Fast facts The numbers that set the scale for this report: 1,200 yrs Time for Western Europe to recover Rome&#39;s peak GDP per capita after the 476 CE collapse 23% Share of global population governed by the British Empire at its 1920 territorial peak — 412 million people ~7× Number of times Imperial China cycled through full unification and fragmentation between 221 BCE and 1912 CE 180,000 t Silver extracted by Habsburg Spain from the Americas between 1500 and 1800 — as Castilian real wages declined 10% Estimated share of global population killed in Mongol conquests, 1206–1260 — 30 to 40 million deaths 30–80 yrs How far peak centralization precedes GDP peak across all six empires — the institutional lag Data and method The Maddison Project Database is the closest thing economics has to a time machine. Originally assembled by Angus Maddison and now maintained by the University of Groningen, it provides GDP per capita estimates — expressed in 2011 USD purchasing power parity — stretching back to 1 CE for some countries and to 1000 BCE for a handful of ancient economies. The 2023 update, published by Bolt and van Zanden, is the version used here, accessed via Our World in Data’s public CSV endpoint. Six empire cores were selected to represent distinct geographies, time periods, and institutional types: the Roman Empire (proxied by Italy, back-extrapolated from 1–476 CE using Maddison 2007, Scheidel and Friesen 2009, and Lo Cascio and Malanima 2009), the British Empire (United Kingdom), the Ottoman Empire (Turkey), Imperial China (China), Habsburg-Spain (Spain), and the Mongol Empire. The Mongol series has no Maddison country code and is constructed as a population-weighted average of China (45%), Russia (30%), and Turkey (25%) for 1200–1400 CE — the best available proxy for a steppe empire that governed all three regions simultaneously. Each empire’s GDP series is capped at its historical dissolution date: Rome at 476 CE, the Mongols at 1400, Habsburg-Spain at 1808, Imperial China at 1912, the Ottoman Empire at 1918, and the British Empire at 1947 (Indian independence). Real wage data — used in Chart 3 to construct the extraction gap — comes from Robert Allen’s European wages series (2001), Özmucur and Pamuk’s Ottoman wage reconstruction (2002), and Allen et al.’s China and Asia series (2011). All wage figures are expressed in silver grams pe
 
 ---
 
 ## How the World’s Biggest Media Franchises Actually Make Money
 
 - URL: https://artometrics.com/franchise
-- Desk: movies-tv
+- Desk: arts, film
 - Published: 2026-04-08T00:00:00.000Z
 - Description: Revenue maps for more than 100 franchises show where valuable IP earns across media.
 
@@ -975,10 +975,10 @@ The global media industry runs on intellectual property — and a surprisingly s
 ## What a Century of Anime Titles Reveals About the Industry
 
 - URL: https://artometrics.com/anime
-- Desk: movies-tv
+- Desk: arts, film
 - Published: 2026-03-31T00:00:00.000Z
 - Description: MyAnimeList metadata on more than 13,000 titles traces Japanese animation as a production system.
 
-This MyAnimeList dataset covers 13,631 unique anime titles spanning 1917 to 2019 — a century-scale archive tracing the medium from prewar theater shorts to the standardized streaming machine of the 2010s. The key interpretive move here is separating catalog reality (what actually got made) from fan-canon popularity (what people actually watched and rated). Those two things rhyme, but they are not the same thing, and the gap between them is where the most interesting analysis lives. The overall median MAL score is 6.38. That is the calibration point for everything that follows. A 6.38 is not a failure — it is the mathematical center of a platform where over 13,000 titles compete for attention. When comparing studios, formats, and genres throughout this piece, the question is never who broke 8.0 once. It is who stayed above 6.38 consistently, across volume. That is a far harder problem, and most studios never solve it. Fast facts The numbers that set the scale for this report: 13,631 Unique anime titles in the dataset — from silent-era shorts to modern streaming originals 6.38 Overall median MAL score — the mathematical baseline every studio and genre is measured against 8.12% Share of TV anime scoring 8+ on MAL — the highest prestige hit-rate of any format (346 out of 4,260 titles) 90 High-scoring shows buried past popularity rank 2,000 — the titles the algorithm never surfaced 0.389 Pearson correlation between score and members — popularity predicts quality directionally, not precisely 2006 The Haruhi inflection point — when light novels became the anime industry&#39;s primary outsourced R&amp;D pipeline Data and method The source data is the MyAnimeList TidyTuesday release from April 23, 2019, maintained by the R for Data Science community. It contains scraped records for 13,631 unique anime titles with fields for format type, source material, episode count, content rating, genre tags, studio attribution, MAL score, member count, favorites count, and air date range. The data covers titles from 1917 through early 2019. The dataset requires meaningful cleaning before analysis. Air dates arrive as unstructured strings and must be parsed via regex to extract start and end year. Genre, studio, and producer fields are stored as Python-style list strings — bracket-delimited, comma-separated — that must be split and unnested into long-format tables for aggregation. Any title with a rank or popularity of zero is excluded, as these represent incomplete records without enough community engagement to produce reliable metrics. Scores on MAL are user-submitted on a 1–10 scale. The platform has a known self-selection bias: its userbase skews adult, male, and English-speaking relative to anime’s actual global audience. This produces systematic underscoring of children’s content and promotional music videos, and potential overrepresentation of properties with strong Western fandom overlap. The dataset also predates the post-2019 streaming era — Demon Slayer , Jujutsu Kaisen , Chainsaw Man are absent — which means any claims about current genre trends require updating. An Industry That Industrialized — Then Diversified Releases By Year The release history of anime is not a single growth story — it is six separate ones running in parallel. Movies were the dominant format from the 1920s through the 1970s, a low-volume craft economy built for theater. The first structural break arrived in the late 1980s, when the OVA boom gave creators a direct-to-consumer channel that bypassed TV censors entirely. OVA peaked around 1990, then collapsed as TV economics took over. TV is the modern engine. It industrialized in the late 1990s and has compounded steadily since. Specials peaked in the mid-2000s as a franchise extension format, then plateaued. Music videos spiked dramatically in the 2010s — largely driven by short promotional content — and then fell just as fast. The most important line on this chart is ONA : near-zero before 2010, then a vertical asce
+This MyAnimeList dataset covers 13,631 unique anime titles spanning 1917 to 2019 — a century-scale archive tracing the medium from prewar theater shorts to the standardized streaming machine of the 2010s. The key interpretive move here is separating catalog reality (what actually got made) from fan-canon popularity (what people actually watched and rated). Those two things rhyme, but they are not the same thing, and the gap between them is where the most interesting analysis lives. The overall median MAL score is 6.38. That is the calibration point for everything that follows. A 6.38 is not a failure — it is the mathematical center of a platform where over 13,000 titles compete for attention. When comparing studios, formats, and genres throughout this piece, the question is never who broke 8.0 once. It is who stayed above 6.38 consistently, across volume. That is a far harder problem, and most studios never solve it. Research question What does a century-scale MyAnimeList catalog reveal about anime as an industrial system rather than a fan canon? This report asks how release formats, studio consistency, genre popularity, and user ratings separate what the industry produced from what platform users later rewarded. The observational question is whether distribution channels and production institutions leave a measurable signature in the catalog: TV versus OVA versus ONA, high-volume studios versus boutique studios, and genres that are popular without being highly rated or highly rated without becoming algorithmically visible. Fast facts The numbers that set the scale for this report: 13,631 Unique anime titles in the dataset — from silent-era shorts to modern streaming originals 6.38 Overall median MAL score — the mathematical baseline every studio and genre is measured against 8.12% Share of TV anime scoring 8+ on MAL — the highest prestige hit-rate of any format (346 out of 4,260 titles) 90 High-scoring shows buried past popularity rank 2,000 — the titles the algorithm never surfaced 0.389 Pearson correlation between score and members — popularity predicts quality directionally, not precisely 2006 The Haruhi inflection point — when light novels became the anime industry&#39;s primary outsourced R&amp;D pipeline Data and method The source data is the MyAnimeList TidyTuesday release from April 23, 2019, maintained by the R for Data Science community. It contains scraped records for 13,631 unique anime titles with fields for format type, source material, episode count, content rating, genre tags, studio attribution, MAL score, member count, favorites count, and air date range. The data covers titles from 1917 through early 2019. The dataset requires meaningful cleaning before analysis. Air dates arrive as unstructured strings and must be parsed via regex to extract start and end year. Genre, studio, and producer fields are stored as Python-style list strings — bracket-delimited, comma-separated — that must be split and unnested into long-format tables for aggregation. Any title with a rank or popularity of zero is excluded, as these represent incomplete records without enough community engagement to produce reliable metrics. Scores on MAL are user-submitted on a 1–10 scale. The platform has a known self-selection bias: its userbase skews adult, male, and English-speaking relative to anime’s actual global audience. This produces systematic underscoring of children’s content and promotional music videos, and potential overrepresentation of properties with strong Western fandom overlap. The dataset also predates the post-2019 streaming era — Demon Slayer , Jujutsu Kaisen , Chainsaw Man are absent — which means any claims about current genre trends require updating. An Industry That Industrialized — Then Diversified Releases By Year The release history of anime is not a single growth story — it is six separate ones running in parallel. Movies were the dominant format from the 1920s through the 1970s, a low-volume craft economy built 
 
 ---
