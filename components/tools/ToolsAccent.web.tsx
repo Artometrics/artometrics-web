@@ -24,7 +24,7 @@ export function ToolsAccent() {
   return (
     <View
       ref={ref}
-      style={[styles.beam, { backgroundColor: colors.accent }]}
+      style={StyleSheet.flatten([styles.beam, { backgroundColor: colors.accent }])}
       accessibilityElementsHidden
       importantForAccessibility="no"
     />

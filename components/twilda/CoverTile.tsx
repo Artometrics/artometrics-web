@@ -32,8 +32,18 @@ export function CoverTile({
 }) {
   const { colors } = useTheme();
   return (
-    <Pressable onPress={onPress} style={({ pressed }) => [styles.wrap, pressed && { opacity: 0.9 }]}>
-      <View style={[styles.cover, { backgroundColor: COVER_BG[coverKind] ?? COVER_BG.plain }]}>
+    <Pressable
+      onPress={onPress}
+      style={({ pressed }) =>
+        StyleSheet.flatten([styles.wrap, pressed ? { opacity: 0.9 } : null])
+      }
+    >
+      <View
+        style={StyleSheet.flatten([
+          styles.cover,
+          { backgroundColor: COVER_BG[coverKind] ?? COVER_BG.plain },
+        ])}
+      >
         <Text style={styles.coverEyebrow}>{COVER_LABEL[coverKind] ?? "Novel"}</Text>
         <Text style={styles.coverTitle} numberOfLines={3}>
           {title}

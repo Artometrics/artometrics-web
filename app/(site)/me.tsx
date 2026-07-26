@@ -124,7 +124,7 @@ export default function MeHubScreen() {
             )}
           </View>
 
-          <View style={[styles.block, { borderTopColor: colors.border }]} nativeID="saved">
+          <View style={[styles.block, { borderTopColor: colors.border }]}>
             <Text style={[styles.h, { color: colors.text }]}>Saved reports</Text>
             {saved.length === 0 ? (
               <Text style={[styles.deck, { color: colors.textMuted }]}>
