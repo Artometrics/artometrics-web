@@ -13,13 +13,14 @@ export function SiteFooter() {
   const mid = Math.ceil(SECTION_SLUGS.length / 2);
   const colA = SECTION_SLUGS.slice(0, mid);
   const colB = SECTION_SLUGS.slice(mid);
+  const path = (pathname ?? "").replace(/\/$/, "") || "/";
   const hideCtaBand =
-    pathname === "/account" ||
-    pathname === "/login" ||
-    pathname === "/signup" ||
-    pathname === "/pricing" ||
-    pathname === "/newsletter" ||
-    pathname?.startsWith("/auth/");
+    path === "/account" ||
+    path === "/login" ||
+    path === "/signup" ||
+    path === "/pricing" ||
+    path === "/newsletter" ||
+    path.startsWith("/auth/");
 
   return (
     <View style={styles.shell}>

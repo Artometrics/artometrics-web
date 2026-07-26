@@ -25,12 +25,13 @@ export function SiteHeader() {
   const pathname = usePathname();
   const [q, setQ] = useState("");
   const [searchOpen, setSearchOpen] = useState(false);
+  const path = (pathname ?? "").replace(/\/$/, "") || "/";
   const hideSectionBar =
-    pathname === "/account" ||
-    pathname === "/login" ||
-    pathname === "/signup" ||
-    pathname === "/pricing" ||
-    pathname?.startsWith("/auth/");
+    path === "/account" ||
+    path === "/login" ||
+    path === "/signup" ||
+    path === "/pricing" ||
+    path.startsWith("/auth/");
 
   function submitSearch() {
     const query = q.trim();

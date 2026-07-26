@@ -719,7 +719,7 @@ pre:has(> code.sourceCode.sql),
   font-family: 'DM Sans', sans-serif !important;
   font-size: 1.05rem !important;
   line-height: 1.85 !important;
-  color: #1C1C1E !important;
+  color: var(--art-dark) !important;
   text-align: center !important;
   max-width: 42rem !important;
   margin: 0 auto 1.35rem !important;
@@ -795,7 +795,7 @@ pre:has(> code.sourceCode.sql),
 .artometrics-article-body main.art-article-main > p.art-p:nth-of-type(2){
   font-size: 1.14rem !important;
   line-height: 1.92 !important;
-  color: #1C1C1E !important;
+  color: var(--art-dark) !important;
 }
 .artometrics-article-body main.art-article-main > h2{
   font-family: 'DM Sans', sans-serif !important;
@@ -804,7 +804,7 @@ pre:has(> code.sourceCode.sql),
   letter-spacing: 0.16em !important;
   text-transform: uppercase !important;
   text-align: center !important;
-  color: #1C1C1E !important;
+  color: var(--art-dark) !important;
   border: none !important;
   padding: 0 !important;
   margin: 3.5rem auto 1.35rem !important;
