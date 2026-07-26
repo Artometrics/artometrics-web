@@ -253,7 +253,7 @@ export default function TwildaNovelWorkspace() {
               placeholderTextColor={colors.textSubtle}
               style={[
                 styles.editor,
-                { borderColor: colors.border, color: colors.text, backgroundColor: colors.elevated },
+                { borderColor: colors.border, color: colors.text, backgroundColor: colors.bgElevated },
               ]}
             />
           </View>
