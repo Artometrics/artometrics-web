@@ -47,6 +47,15 @@ assert(expressionNumber("Juliet Ramos") != null, "expression computes");
 assert(existsSync(join(ROOT, "lib/aftercare/planets.ts")), "planets.ts present");
 assert(existsSync(join(ROOT, "lib/aftercare/readings.ts")), "readings.ts present");
 assert(existsSync(join(ROOT, "netlify/functions/places-search.ts")), "places-search present");
+assert(existsSync(join(ROOT, "netlify/functions/sanity-sync.ts")), "sanity-sync present");
+assert(existsSync(join(ROOT, "lib/sanity/client.ts")), "sanity client present");
+assert(existsSync(join(ROOT, "sanity/sanity.config.ts")), "sanity studio config present");
+assert(existsSync(join(ROOT, "sanity/sanity.cli.ts")), "sanity cli config present");
+assert(existsSync(join(ROOT, "sanity/schemas/memberContribution.ts")), "memberContribution schema");
+
+const contentLib = readFileSync(join(ROOT, "lib/content.ts"), "utf8");
+assert(contentLib.includes('@/src/generated/blog.json'), "Expo content bridge uses src/generated");
+assert(!contentLib.includes("sanity.io"), "Expo content bridge does not call Sanity CDN");
 
 const planets = readFileSync(join(ROOT, "lib/aftercare/planets.ts"), "utf8");
 assert(planets.includes("SAGITTARIUS SEASON"), "season titles present");

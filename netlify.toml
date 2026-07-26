@@ -4,6 +4,8 @@
 
 [build.environment]
   NODE_VERSION = "20"
+  # Dataset/project id are public CMS identifiers; omit from secret scan if marked secret by mistake.
+  SECRETS_SCAN_OMIT_KEYS = "SANITY_DATASET,SANITY_PROJECT_ID"
 
 [functions]
   directory = "netlify/functions"

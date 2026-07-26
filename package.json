@@ -28,6 +28,8 @@
     "setup:pipeline": "bash scripts/setup-pipeline.sh",
     "setup:clis": "bash scripts/setup-product-clis.sh",
     "doctor": "bash scripts/doctor-env.sh",
+    "sanity:dev": "npm --prefix sanity run dev",
+    "sanity:deploy": "npm --prefix sanity run deploy",
     "cos:brief": "node scripts/content-os/new-brief.mjs",
     "cos:scaffold": "node scripts/content-os/scaffold-from-brief.mjs",
     "cos:banner-prompt": "node scripts/content-os/banner-prompt.mjs",
