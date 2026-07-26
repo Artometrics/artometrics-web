@@ -14,6 +14,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteNavOverlay } from "@/components/SiteNavOverlay";
 import { CookieBanner } from "@/components/CookieBanner";
+import { Analytics } from "@/components/Analytics";
 import { ChromeProvider, useChrome } from "@/lib/chrome";
 import { ThemeProvider, useTheme } from "@/lib/theme";
 import { getBlogPost } from "@/lib/content";
@@ -60,6 +61,7 @@ function SiteChrome() {
         </ScrollView>
         <SiteNavOverlay />
         <CookieBanner />
+        <Analytics />
       </View>
     </SafeAreaView>
   );

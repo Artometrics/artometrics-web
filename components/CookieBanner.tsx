@@ -3,6 +3,7 @@ import { Platform, Pressable, Text, View, StyleSheet } from "react-native";
 import { Link } from "expo-router";
 import { useTheme } from "@/lib/theme";
 import { Fonts } from "@/constants/Colors";
+import { loadGoogleAnalytics } from "@/lib/analytics/ga";
 
 const KEY = "artometrics-cookie-pref";
 
@@ -24,6 +25,10 @@ export function CookieBanner() {
       /* ignore */
     }
     setVisible(false);
+    loadGoogleAnalytics();
+    if (Platform.OS === "web" && typeof window !== "undefined") {
+      window.dispatchEvent(new Event("artometrics-consent"));
+    }
   }
 
   return (

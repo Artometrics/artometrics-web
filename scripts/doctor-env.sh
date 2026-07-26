@@ -94,14 +94,21 @@ else
 fi
 
 echo
-echo "MCP / integrations (manual auth in Cursor)"
-warn "Higgsfield — Cursor MCP (banners, reels, explainers, voice)"
-warn "Supabase — env keys + migrations (auth, media)"
-warn "Netlify — site link + env + functions"
-warn "Stripe — prices + webhook (membership)"
-warn "ElevenLabs — API key or Higgsfield voice tools"
-warn "Notion / Figma — Cursor MCP when you add those servers"
-warn "Buffer — social schedule after account exists"
+echo "Ops env (Content OS scripts)"
+[[ -n "${EXPO_PUBLIC_GA_ID:-}" ]] && ok "EXPO_PUBLIC_GA_ID set" || warn "EXPO_PUBLIC_GA_ID — GA4 web stream"
+[[ -n "${ELEVENLABS_API_KEY:-}" ]] && ok "ELEVENLABS_API_KEY set" || warn "ELEVENLABS_API_KEY — cos:narrate"
+[[ -n "${BUFFER_ACCESS_TOKEN:-}" ]] && ok "BUFFER_ACCESS_TOKEN set" || warn "BUFFER_ACCESS_TOKEN — cos:buffer-schedule (or Buffer MCP)"
+[[ -n "${NOTION_API_KEY:-}" && -n "${NOTION_BRIEF_DATABASE_ID:-}" ]] && ok "Notion brief DB env set" || warn "NOTION_* — cos:notion-sync (or Notion MCP)"
+[[ -n "${SLACK_WEBHOOK_URL:-}" ]] && ok "SLACK_WEBHOOK_URL set" || warn "SLACK_WEBHOOK_URL — cos:slack-notify (or Slack MCP)"
+[[ -n "${SANITY_PROJECT_ID:-}" && -n "${SANITY_API_WRITE_TOKEN:-}" ]] && ok "Sanity write env set" || warn "SANITY_* — optional magazine sync"
 
 echo
-echo "Done. Fix ✗ rows first, then open docs/BACKEND_HOOKUP_SESSION.md"
+echo "MCP / integrations (manual auth in Cursor)"
+warn "Higgsfield — banners, reels, explainers"
+warn "analytics-mcp / gscServer — traffic + indexing"
+warn "buffer / notion / slack / elevenlabs / github — Content OS loop"
+warn "transistor — skip while Error; use podcast.xml"
+warn "canva — deferred; use cos:zine"
+
+echo
+echo "Done. Fix ✗ rows first, then open docs/OWNER_PLAYBOOK.md (Startup runbook)"

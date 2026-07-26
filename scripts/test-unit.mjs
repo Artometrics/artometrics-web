@@ -1,0 +1,55 @@
+#!/usr/bin/env node
+/**
+ * Lightweight unit checks (no Jest) for Aftercare calculators / planets.
+ */
+import { existsSync, readFileSync } from "node:fs";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
+
+const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
+
+function assert(cond, msg) {
+  if (!cond) {
+    console.error("FAIL:", msg);
+    process.exit(1);
+  }
+}
+
+function reduceNumerology(sum) {
+  let n = sum;
+  while (n > 9 && n !== 11 && n !== 22 && n !== 33) {
+    n = [...String(n)].reduce((a, c) => a + Number(c), 0);
+  }
+  return n;
+}
+
+function lifePathNumber(isoDate) {
+  const digits = isoDate.replace(/\D/g, "");
+  if (digits.length < 8) return null;
+  const sum = [...digits].reduce((a, c) => a + Number(c), 0);
+  return reduceNumerology(sum);
+}
+
+const LETTER = {
+  a: 1, b: 2, c: 3, d: 4, e: 5, f: 6, g: 7, h: 8, i: 9,
+  j: 1, k: 2, l: 3, m: 4, n: 5, o: 6, p: 7, q: 8, r: 9,
+  s: 1, t: 2, u: 3, v: 4, w: 5, x: 6, y: 7, z: 8,
+};
+
+function expressionNumber(name) {
+  const letters = [...name.toLowerCase()].filter((ch) => LETTER[ch] != null);
+  if (!letters.length) return null;
+  return reduceNumerology(letters.reduce((a, ch) => a + LETTER[ch], 0));
+}
+
+assert(lifePathNumber("1990-06-15") != null, "life path computes");
+assert(expressionNumber("Juliet Ramos") != null, "expression computes");
+assert(existsSync(join(ROOT, "lib/aftercare/planets.ts")), "planets.ts present");
+assert(existsSync(join(ROOT, "lib/aftercare/readings.ts")), "readings.ts present");
+assert(existsSync(join(ROOT, "netlify/functions/places-search.ts")), "places-search present");
+
+const planets = readFileSync(join(ROOT, "lib/aftercare/planets.ts"), "utf8");
+assert(planets.includes("SAGITTARIUS SEASON"), "season titles present");
+assert(planets.includes("celestialForSign"), "celestialForSign export");
+
+console.log("unit OK");

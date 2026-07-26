@@ -34,3 +34,13 @@ Env (Netlify + local):
 3. Publish in Sanity → magazine surface (future build-content sync from Sanity)
 
 Until the markdown bridge is retired, Expo continues to read `src/generated/*`.
+
+## Go-live checklist
+
+1. Create Sanity project; set `SANITY_PROJECT_ID`, `SANITY_DATASET`, `SANITY_API_WRITE_TOKEN` on Netlify.
+2. Deploy Sanity Studio (`cd sanity && npm run deploy` or host separately).
+3. Confirm `POST /api/sanity-sync` returns 200 for a submitted `member_posts` id (not 503).
+4. Studio Publish → “Submit to magazine” should mention Sanity queue success.
+5. Keep markdown/`npm run content` as source of truth for staff reports until a migration pass copies them into Sanity schemas.
+
+Without credentials, magazine submit still works via Supabase; Sanity sync is optional and surfaces a clear message in the Publish UI.

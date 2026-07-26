@@ -36,7 +36,15 @@
   "distribution": {
     "linkedinHook": "One concrete number from the archive, then the interpretive move.",
     "shortFact": "Replace with the calibration statistic.",
-    "youtubeTitle": "What the data actually says about example topic"
+    "youtubeTitle": "What the data actually says about example topic",
+    "buffer": true,
+    "slackNotify": true,
+    "slackChannel": "#editorial"
+  },
+  "channels": {
+    "buffer": true,
+    "slack": true,
+    "newsletter": true
   },
   "relatedSlugs": [],
   "status": "brief",

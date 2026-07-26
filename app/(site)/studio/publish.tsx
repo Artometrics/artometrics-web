@@ -147,15 +147,26 @@ export default function StudioPublishScreen() {
               const id = await saveDraft();
               if (!id) return;
               const post = await submitToMagazine(user.id, id);
+              let sanityNote = "";
               try {
-                await apiFetch("sanity-sync", {
+                const syncRes = await apiFetch("sanity-sync", {
                   method: "POST",
                   body: JSON.stringify({ postId: post.id }),
                 });
+                if (syncRes.status === 503) {
+                  sanityNote =
+                    " Sanity CMS is not configured yet — submission is saved in Supabase for editorial review.";
+                } else if (!syncRes.ok) {
+                  sanityNote =
+                    " Sanity sync failed — submission is still saved for review.";
+                } else {
+                  sanityNote = " Draft also queued in Sanity.";
+                }
               } catch {
-                /* Sanity optional until credentials exist */
+                sanityNote =
+                  " Sanity unreachable — submission is saved in Supabase for review.";
               }
-              setMsg("Submitted for magazine review.");
+              setMsg(`Submitted for magazine review.${sanityNote}`);
             } catch (e) {
               setMsg(e instanceof Error ? e.message : "Submit failed");
             } finally {

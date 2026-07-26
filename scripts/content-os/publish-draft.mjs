@@ -63,4 +63,18 @@ execSync("node scripts/content-os/aeo-pack.mjs", {
   stdio: "inherit",
 });
 
+if (undraft && process.env.SLACK_WEBHOOK_URL) {
+  try {
+    execSync(
+      `node scripts/content-os/slack-notify.mjs --slug ${slug} --event published`,
+      { cwd: ROOT, stdio: "inherit" },
+    );
+  } catch {
+    console.warn("Slack notify failed (non-fatal)");
+  }
+}
+
 console.log(`Published ${out}${undraft ? " (live)" : " (draft:true)"}`);
+console.log("Next: npm run cos:zine -- --slug", slug);
+console.log("Then:  npm run cos:buffer-schedule -- --slug", slug);
+console.log("Then:  npm run cos:gsc-check");
