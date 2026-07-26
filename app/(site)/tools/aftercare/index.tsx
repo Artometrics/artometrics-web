@@ -211,7 +211,10 @@ export default function AftercareHomeScreen() {
             {SHORTCUTS.map((item) => (
               <Link key={item.href} href={item.href} asChild>
                 <Pressable
-                  style={[styles.shortcut, { borderColor: colors.border }]}
+                  style={StyleSheet.flatten([
+                    styles.shortcut,
+                    { borderColor: colors.border },
+                  ])}
                 >
                   <Text style={[styles.shortcutTitle, { color: colors.text }]}>
                     {item.label}

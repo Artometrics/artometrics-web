@@ -59,30 +59,31 @@ export default function ToolsHubScreen() {
 
       <View style={styles.list}>
         {TOOLS.map((tool, i) => {
-          const Card = (
-            <Pressable
-              style={StyleSheet.flatten([
-                styles.card,
-                { borderColor: colors.border, backgroundColor: colors.elevated },
-              ])}
-            >
-              <Text style={[styles.cardEyebrow, { color: colors.accent }]}>{tool.eyebrow}</Text>
-              <Text style={[styles.cardTitle, { color: colors.text }]}>{tool.title}</Text>
-              <Text style={[styles.cardBody, { color: colors.textMuted }]}>{tool.body}</Text>
-              <Text style={[styles.cta, { color: colors.accent }]}>Open →</Text>
-            </Pressable>
-          );
-          return (
-            <Link key={tool.href} href={tool.href} asChild>
-              {Platform.OS === "web" ? (
-                <Animated.View entering={FadeInDown.delay(i * 80).duration(420)}>
-                  {Card}
-                </Animated.View>
-              ) : (
-                Card
-              )}
+          // Link asChild must wrap Pressable only — never Animated.View.
+          // Reanimated + Slot passes style arrays into CSSStyleDeclaration and crashes web.
+          const card = (
+            <Link href={tool.href} asChild>
+              <Pressable
+                style={StyleSheet.flatten([
+                  styles.card,
+                  { borderColor: colors.border, backgroundColor: colors.bgElevated },
+                ])}
+              >
+                <Text style={[styles.cardEyebrow, { color: colors.accent }]}>{tool.eyebrow}</Text>
+                <Text style={[styles.cardTitle, { color: colors.text }]}>{tool.title}</Text>
+                <Text style={[styles.cardBody, { color: colors.textMuted }]}>{tool.body}</Text>
+                <Text style={[styles.cta, { color: colors.accent }]}>Open →</Text>
+              </Pressable>
             </Link>
           );
+          if (Platform.OS === "web") {
+            return (
+              <Animated.View key={tool.href} entering={FadeInDown.delay(i * 80).duration(420)}>
+                {card}
+              </Animated.View>
+            );
+          }
+          return <View key={tool.href}>{card}</View>;
         })}
       </View>
 
