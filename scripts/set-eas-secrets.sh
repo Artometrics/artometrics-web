@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Set EAS project secrets from local .env (public vars only).
+# Set EAS production env from local .env (public client vars only).
 set -euo pipefail
 cd "$(dirname "$0")/.."
 if [[ ! -f .env ]]; then
@@ -16,11 +16,11 @@ require EXPO_PUBLIC_SITE_URL
 require EXPO_PUBLIC_SUPABASE_URL
 require EXPO_PUBLIC_SUPABASE_ANON_KEY
 
-echo "Setting EAS secrets for $(npx eas-cli whoami)…"
-npx eas-cli secret:create --name EXPO_PUBLIC_SITE_URL --value "$EXPO_PUBLIC_SITE_URL" --scope project --force
-npx eas-cli secret:create --name EXPO_PUBLIC_SUPABASE_URL --value "$EXPO_PUBLIC_SUPABASE_URL" --scope project --force
-npx eas-cli secret:create --name EXPO_PUBLIC_SUPABASE_ANON_KEY --value "$EXPO_PUBLIC_SUPABASE_ANON_KEY" --scope project --force
-if [[ -n "${EXPO_PUBLIC_GA_ID:-}" ]]; then
-  npx eas-cli secret:create --name EXPO_PUBLIC_GA_ID --value "$EXPO_PUBLIC_GA_ID" --scope project --force
-fi
+echo "Setting EAS production env for $(npx eas-cli whoami 2>/dev/null || echo 'unknown')…"
+npx eas-cli env:set EXPO_PUBLIC_SITE_URL --value "$EXPO_PUBLIC_SITE_URL" --environment production --visibility secret --non-interactive || \
+  npx eas-cli env:set EXPO_PUBLIC_SITE_URL --value "$EXPO_PUBLIC_SITE_URL" --environment production --visibility secret
+npx eas-cli env:set EXPO_PUBLIC_SUPABASE_URL --value "$EXPO_PUBLIC_SUPABASE_URL" --environment production --visibility secret --non-interactive || \
+  npx eas-cli env:set EXPO_PUBLIC_SUPABASE_URL --value "$EXPO_PUBLIC_SUPABASE_URL" --environment production --visibility secret
+npx eas-cli env:set EXPO_PUBLIC_SUPABASE_ANON_KEY --value "$EXPO_PUBLIC_SUPABASE_ANON_KEY" --environment production --visibility secret --non-interactive || \
+  npx eas-cli env:set EXPO_PUBLIC_SUPABASE_ANON_KEY --value "$EXPO_PUBLIC_SUPABASE_ANON_KEY" --environment production --visibility secret
 echo "Done. Next: npx eas-cli build -p ios --profile production"

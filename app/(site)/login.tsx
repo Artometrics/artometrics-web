@@ -38,8 +38,12 @@ export default function LoginScreen() {
       setError(result.error);
       return;
     }
+    if (result.cancelled) {
+      setBusy(false);
+      return;
+    }
     // Web leaves the page for Google; native finishes in-app.
-    if (Platform.OS !== "web") {
+    if (Platform.OS !== "web" && result.ok) {
       setBusy(false);
       router.replace("/account");
     }

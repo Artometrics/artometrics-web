@@ -10,6 +10,7 @@ import { useAuth } from "@/lib/auth";
 import { apiFetch } from "@/lib/supabase/client";
 import { getBlogPost } from "@/lib/content";
 import { PLANS, type PlanTier } from "@/lib/product/plans";
+import { openExternalUrl } from "@/lib/openExternal";
 
 function formatPlanLabel(planTier: string | null, status: string | null) {
   if (planTier) {
@@ -95,9 +96,9 @@ export default function AccountScreen() {
     try {
       const res = await apiFetch("create-portal", { method: "POST", body: "{}" });
       const data = (await res.json()) as { url?: string; error?: string };
-      if (data.url && typeof window !== "undefined") {
-        window.location.href = data.url;
-        return;
+      if (data.url) {
+        const opened = await openExternalUrl(data.url);
+        if (opened) return;
       }
       setActionError(data.error ?? "Unable to open billing portal.");
     } catch {

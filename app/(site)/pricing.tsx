@@ -9,6 +9,7 @@ import { useTheme } from "@/lib/theme";
 import { PLANS } from "@/lib/product/plans";
 import { apiFetch } from "@/lib/supabase/client";
 import { useAuth } from "@/lib/auth";
+import { openExternalUrl } from "@/lib/openExternal";
 
 export default function PricingScreen() {
   const { user } = useAuth();
@@ -44,9 +45,9 @@ export default function PricingScreen() {
         body: JSON.stringify({ tier }),
       });
       const data = (await res.json()) as { url?: string; error?: string };
-      if (data.url && typeof window !== "undefined") {
-        window.location.href = data.url;
-        return;
+      if (data.url) {
+        const opened = await openExternalUrl(data.url);
+        if (opened) return;
       }
       setError(data.error ?? "Unable to start checkout.");
     } catch {

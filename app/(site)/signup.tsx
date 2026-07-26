@@ -39,7 +39,11 @@ export default function SignupScreen() {
       setError(result.error);
       return;
     }
-    if (Platform.OS !== "web") {
+    if (result.cancelled) {
+      setBusy(false);
+      return;
+    }
+    if (Platform.OS !== "web" && result.ok) {
       setBusy(false);
       router.replace("/account");
     }

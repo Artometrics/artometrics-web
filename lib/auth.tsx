@@ -26,7 +26,7 @@ type AuthContextValue = {
     password: string,
     fullName?: string,
   ) => Promise<{ error?: string }>;
-  signInWithGoogle: () => Promise<{ error?: string }>;
+  signInWithGoogle: () => Promise<{ error?: string; ok?: boolean; cancelled?: boolean }>;
   signOut: () => Promise<void>;
 };
 
@@ -53,9 +53,13 @@ function parseAuthParams(url: string): Record<string, string> {
     if (!part) continue;
     const eq = part.indexOf("=");
     if (eq === -1) continue;
-    const key = decodeURIComponent(part.slice(0, eq));
-    const value = decodeURIComponent(part.slice(eq + 1));
-    if (key) params[key] = value;
+    try {
+      const key = decodeURIComponent(part.slice(0, eq));
+      const value = decodeURIComponent(part.slice(eq + 1));
+      if (key) params[key] = value;
+    } catch {
+      /* ignore malformed OAuth fragments */
+    }
   }
   return params;
 }
@@ -97,10 +101,15 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       setLoading(false);
       return;
     }
-    supabase.auth.getSession().then(({ data }) => {
-      setSession(data.session);
-      setLoading(false);
-    });
+    supabase.auth
+      .getSession()
+      .then(({ data }) => {
+        setSession(data.session);
+        setLoading(false);
+      })
+      .catch(() => {
+        setLoading(false);
+      });
     const { data: sub } = supabase.auth.onAuthStateChange((_event, next) => {
       setSession(next);
     });
@@ -118,7 +127,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       ) {
         return;
       }
-      void createSessionFromUrl(url);
+      void createSessionFromUrl(url).catch(() => {
+        /* soft — bad deep links should not crash the app */
+      });
     };
 
     void Linking.getInitialURL().then(handleUrl);
@@ -164,7 +175,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
           queryParams: { prompt: "select_account" },
         },
       });
-      return error ? { error: error.message } : {};
+      // Browser navigates away on success.
+      return error ? { error: error.message } : { ok: true };
     }
 
     const { data, error } = await supabase.auth.signInWithOAuth({
@@ -181,10 +193,12 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     const result = await WebBrowser.openAuthSessionAsync(data.url, redirectTo);
     if (result.type !== "success" || !result.url) {
       return result.type === "cancel" || result.type === "dismiss"
-        ? {}
+        ? { cancelled: true }
         : { error: "Google sign-in was interrupted." };
     }
-    return createSessionFromUrl(result.url);
+    const sessionResult = await createSessionFromUrl(result.url);
+    if (sessionResult.error) return sessionResult;
+    return { ok: true };
   }, []);
 
   const signOut = useCallback(async () => {
