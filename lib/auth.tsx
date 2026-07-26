@@ -12,7 +12,6 @@ import type { Session, User } from "@supabase/supabase-js";
 import * as Linking from "expo-linking";
 import * as WebBrowser from "expo-web-browser";
 import { makeRedirectUri } from "expo-auth-session";
-import * as QueryParams from "expo-auth-session/build/QueryParams";
 import { getSupabase } from "@/lib/supabase/client";
 
 WebBrowser.maybeCompleteAuthSession();
@@ -43,12 +42,32 @@ function oauthRedirectTo(): string {
   });
 }
 
+/** Parse OAuth return URL without relying on expo-auth-session deep imports / URL polyfills. */
+function parseAuthParams(url: string): Record<string, string> {
+  const params: Record<string, string> = {};
+  const hash = url.includes("#") ? url.split("#")[1] ?? "" : "";
+  const query = url.includes("?")
+    ? (url.split("?")[1] ?? "").split("#")[0] ?? ""
+    : "";
+  for (const part of `${query}&${hash}`.split("&")) {
+    if (!part) continue;
+    const eq = part.indexOf("=");
+    if (eq === -1) continue;
+    const key = decodeURIComponent(part.slice(0, eq));
+    const value = decodeURIComponent(part.slice(eq + 1));
+    if (key) params[key] = value;
+  }
+  return params;
+}
+
 async function createSessionFromUrl(url: string): Promise<{ error?: string }> {
   const supabase = getSupabase();
   if (!supabase) return { error: "Auth is not configured." };
 
-  const { params, errorCode } = QueryParams.getQueryParams(url);
-  if (errorCode) return { error: errorCode };
+  const params = parseAuthParams(url);
+  if (params.error || params.errorCode) {
+    return { error: params.error_description || params.error || params.errorCode };
+  }
 
   if (params.code) {
     const { error } = await supabase.auth.exchangeCodeForSession(params.code);
