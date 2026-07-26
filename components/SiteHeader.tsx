@@ -1,9 +1,13 @@
+import { useEffect, useMemo, useRef, useState } from "react";
 import {
+  Animated,
   Platform,
   Pressable,
+  Text,
   TextInput,
   View,
   StyleSheet,
+  type View as RNView,
 } from "react-native";
 import { Link, router } from "expo-router";
 import Ionicons from "@expo/vector-icons/Ionicons";
@@ -13,27 +17,125 @@ import { Fonts } from "@/constants/Colors";
 import { useAuth } from "@/lib/auth";
 import { useChrome } from "@/lib/chrome";
 import { useTheme } from "@/lib/theme";
-import { useState } from "react";
+import { searchSite, type SearchHit } from "@/lib/search";
+
+const PLACEHOLDERS = [
+  "Search reports…",
+  "Try a desk or topic…",
+  "Find a podcast…",
+  "Look up an author…",
+];
 
 export function SiteHeader() {
   const { user } = useAuth();
   const { setMenuOpen } = useChrome();
-  const { colors, toggle, mode } = useTheme();
+  const { colors } = useTheme();
   const [q, setQ] = useState("");
   const [searchOpen, setSearchOpen] = useState(false);
+  const [placeholderIdx, setPlaceholderIdx] = useState(0);
+  const [focused, setFocused] = useState(false);
+  const searchRootRef = useRef<RNView | null>(null);
+  const inputRef = useRef<TextInput | null>(null);
+  const expand = useRef(new Animated.Value(0)).current;
+
+  const suggestions = useMemo(() => searchSite(q, 6), [q]);
+
+  function closeSearch() {
+    setSearchOpen(false);
+    setFocused(false);
+    setQ("");
+    inputRef.current?.blur();
+  }
+
+  function openSearch() {
+    setSearchOpen(true);
+  }
 
   function submitSearch() {
     const query = q.trim();
     if (!query) {
       router.push("/search");
+      closeSearch();
       return;
     }
     router.push(`/search?q=${encodeURIComponent(query)}`);
-    setSearchOpen(false);
+    closeSearch();
   }
 
+  function goHit(hit: SearchHit) {
+    router.push(hit.href as `/`);
+    closeSearch();
+  }
+
+  useEffect(() => {
+    Animated.spring(expand, {
+      toValue: searchOpen ? 1 : 0,
+      useNativeDriver: false,
+      friction: 8,
+      tension: 80,
+    }).start();
+    if (searchOpen) {
+      const t = setTimeout(() => inputRef.current?.focus(), 40);
+      return () => clearTimeout(t);
+    }
+  }, [searchOpen, expand]);
+
+  useEffect(() => {
+    if (!searchOpen || q.trim().length > 0) return;
+    const id = setInterval(() => {
+      setPlaceholderIdx((i) => (i + 1) % PLACEHOLDERS.length);
+    }, 2800);
+    return () => clearInterval(id);
+  }, [searchOpen, q]);
+
+  // Click / tap away + Escape close the expanded search.
+  useEffect(() => {
+    if (!searchOpen) return;
+
+    if (Platform.OS === "web" && typeof document !== "undefined") {
+      const onKey = (e: KeyboardEvent) => {
+        if (e.key === "Escape") closeSearch();
+      };
+      const onPointer = (e: MouseEvent) => {
+        const node = searchRootRef.current as unknown as HTMLElement | null;
+        if (node && e.target instanceof Node && !node.contains(e.target)) {
+          closeSearch();
+        }
+      };
+      document.addEventListener("keydown", onKey);
+      document.addEventListener("mousedown", onPointer);
+      return () => {
+        document.removeEventListener("keydown", onKey);
+        document.removeEventListener("mousedown", onPointer);
+      };
+    }
+  }, [searchOpen]);
+
+  const panelWidth = expand.interpolate({
+    inputRange: [0, 1],
+    outputRange: [40, Platform.OS === "web" ? 320 : 220],
+  });
+  const panelOpacity = expand.interpolate({
+    inputRange: [0, 0.4, 1],
+    outputRange: [0, 0.6, 1],
+  });
+  const showSuggestions = searchOpen && q.trim().length >= 2 && suggestions.length > 0;
+
   return (
-    <View style={[styles.shell, { backgroundColor: colors.headerBg, borderBottomColor: colors.border }]}>
+    <View
+      style={[
+        styles.shell,
+        { backgroundColor: colors.headerBg, borderBottomColor: colors.border },
+      ]}
+    >
+      {searchOpen ? (
+        <Pressable
+          accessibilityLabel="Dismiss search"
+          onPress={closeSearch}
+          style={styles.dismissScrim}
+        />
+      ) : null}
+
       <Wrapper variant="magazine">
         <View style={styles.topRow}>
           <Pressable
@@ -65,62 +167,147 @@ export function SiteHeader() {
           </Link>
 
           <View style={styles.actions}>
-            {searchOpen ? (
-              <View
-                style={[
-                  styles.searchBox,
-                  { borderColor: colors.border, backgroundColor: colors.bgElevated },
-                ]}
-              >
-                <TextInput
-                  value={q}
-                  onChangeText={setQ}
-                  placeholder="Search"
-                  placeholderTextColor={colors.textSubtle}
-                  style={[styles.searchInput, { color: colors.text }]}
-                  onSubmitEditing={submitSearch}
-                  autoFocus
-                  returnKeyType="search"
-                  accessibilityLabel="Search"
-                />
-              </View>
-            ) : (
-              <Pressable
-                onPress={() => setSearchOpen(true)}
-                accessibilityLabel="Open search"
-                hitSlop={10}
-                style={styles.iconBtn}
-              >
-                <Ionicons
-                  name="search-outline"
-                  size={22}
-                  color={colors.text}
-                  style={{ color: colors.text }}
-                />
-              </Pressable>
-            )}
+            <View ref={searchRootRef} style={styles.searchRoot} collapsable={false}>
+              {!searchOpen ? (
+                <Pressable
+                  onPress={openSearch}
+                  accessibilityLabel="Open search"
+                  accessibilityRole="button"
+                  hitSlop={10}
+                  style={StyleSheet.flatten([
+                    styles.iconBtn,
+                    styles.searchTrigger,
+                    {
+                      borderColor: colors.border,
+                      backgroundColor: colors.bgElevated,
+                    },
+                  ])}
+                >
+                  <Ionicons
+                    name="search-outline"
+                    size={20}
+                    color={colors.text}
+                    style={{ color: colors.text }}
+                  />
+                </Pressable>
+              ) : (
+                <Animated.View
+                  style={StyleSheet.flatten([
+                    styles.searchPanel,
+                    {
+                      width: panelWidth,
+                      opacity: panelOpacity,
+                      borderColor: focused ? colors.accent : colors.border,
+                      backgroundColor: colors.bgElevated,
+                      shadowColor: colors.text,
+                    },
+                  ])}
+                >
+                  <View style={styles.searchFieldRow}>
+                    <Ionicons
+                      name="search"
+                      size={18}
+                      color={focused ? colors.accent : colors.textMuted}
+                      style={{ color: focused ? colors.accent : colors.textMuted }}
+                    />
+                    <TextInput
+                      ref={inputRef}
+                      value={q}
+                      onChangeText={setQ}
+                      placeholder={PLACEHOLDERS[placeholderIdx]}
+                      placeholderTextColor={colors.textSubtle}
+                      style={StyleSheet.flatten([styles.searchInput, { color: colors.text }])}
+                      onSubmitEditing={submitSearch}
+                      onFocus={() => setFocused(true)}
+                      onBlur={() => setFocused(false)}
+                      returnKeyType="search"
+                      accessibilityLabel="Search Artometrics"
+                      autoCorrect={false}
+                      autoCapitalize="none"
+                    />
+                    {q.length > 0 ? (
+                      <Pressable
+                        onPress={() => setQ("")}
+                        hitSlop={8}
+                        accessibilityLabel="Clear search"
+                        style={styles.clearBtn}
+                      >
+                        <Ionicons
+                          name="close-circle"
+                          size={18}
+                          color={colors.textSubtle}
+                          style={{ color: colors.textSubtle }}
+                        />
+                      </Pressable>
+                    ) : null}
+                    <Pressable
+                      onPress={submitSearch}
+                      hitSlop={8}
+                      accessibilityLabel="Submit search"
+                      style={StyleSheet.flatten([
+                        styles.goBtn,
+                        { backgroundColor: colors.text },
+                      ])}
+                    >
+                      <Ionicons
+                        name="arrow-forward"
+                        size={16}
+                        color={colors.inverse}
+                        style={{ color: colors.inverse }}
+                      />
+                    </Pressable>
+                  </View>
 
-            <Pressable
-              onPress={toggle}
-              accessibilityRole="button"
-              accessibilityLabel={mode === "dark" ? "Switch to light mode" : "Switch to dark mode"}
-              hitSlop={8}
-              style={StyleSheet.flatten([
-                styles.iconBtn,
-                styles.themeBtn,
-                {
-                  borderColor: colors.accent,
-                  backgroundColor: colors.accentSoft,
-                },
-              ])}
-            >
-              <Ionicons
-                name={mode === "dark" ? "sunny-outline" : "moon-outline"}
-                size={22}
-                color={colors.text}
-                style={{ color: colors.text }}
-              />
-            </Pressable>
+                  {showSuggestions ? (
+                    <View
+                      style={StyleSheet.flatten([
+                        styles.suggestPanel,
+                        {
+                          borderTopColor: colors.border,
+                          backgroundColor: colors.headerBg,
+                        },
+                      ])}
+                    >
+                      {suggestions.map((hit) => (
+                        <Pressable
+                          key={`${hit.type}-${hit.id}`}
+                          onPress={() => goHit(hit)}
+                          style={({ pressed }) =>
+                            StyleSheet.flatten([
+                              styles.suggestRow,
+                              {
+                                backgroundColor: pressed ? colors.accentSoft : "transparent",
+                              },
+                            ])
+                          }
+                        >
+                          <Text style={[styles.suggestMeta, { color: colors.accent }]}>
+                            {hit.meta ?? hit.type}
+                          </Text>
+                          <Text
+                            style={[styles.suggestTitle, { color: colors.text }]}
+                            numberOfLines={1}
+                          >
+                            {hit.title}
+                          </Text>
+                        </Pressable>
+                      ))}
+                      <Pressable
+                        onPress={submitSearch}
+                        style={StyleSheet.flatten([
+                          styles.suggestAll,
+                          { borderTopColor: colors.border },
+                        ])}
+                      >
+                        <Text style={[styles.suggestAllText, { color: colors.textMuted }]}>
+                          View all results for “{q.trim()}”
+                        </Text>
+                      </Pressable>
+                    </View>
+                  ) : null}
+                </Animated.View>
+              )}
+            </View>
 
             <Link href={user ? "/account" : "/login"} asChild>
               <Pressable
@@ -151,6 +338,14 @@ const styles = StyleSheet.create({
   shell: {
     borderBottomWidth: StyleSheet.hairlineWidth,
     zIndex: 40,
+    position: "relative",
+  },
+  dismissScrim: {
+    ...StyleSheet.absoluteFill,
+    // Tall enough to catch taps below the header on the page.
+    top: 0,
+    bottom: -4000,
+    zIndex: 1,
   },
   topRow: {
     flexDirection: "row",
@@ -159,6 +354,7 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     minHeight: 56,
     gap: 8,
+    zIndex: 2,
   },
   sideBtn: {
     width: 44,
@@ -170,7 +366,7 @@ const styles = StyleSheet.create({
   logoWrap: {
     position: "absolute",
     left: 56,
-    right: 140,
+    right: 100,
     alignItems: "center",
     justifyContent: "center",
     zIndex: 3,
@@ -179,9 +375,13 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "flex-end",
-    gap: 2,
-    zIndex: 2,
+    gap: 8,
+    zIndex: 4,
     marginLeft: "auto",
+  },
+  searchRoot: {
+    position: "relative",
+    zIndex: 5,
   },
   iconBtn: {
     width: 40,
@@ -189,28 +389,82 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
+  searchTrigger: {
+    borderWidth: StyleSheet.hairlineWidth,
+    borderRadius: 2,
+  },
   iconBtnBordered: {
     borderWidth: StyleSheet.hairlineWidth,
     borderRadius: 2,
   },
-  themeBtn: {
-    width: 44,
-    height: 44,
+  searchPanel: {
     borderWidth: 1.5,
     borderRadius: 2,
+    overflow: "hidden",
+    minHeight: 40,
+    // Soft lift when open — magazine, not glassy/glow.
+    ...(Platform.OS === "web"
+      ? ({
+          boxShadow: "0 10px 28px rgba(23, 23, 23, 0.08)",
+        } as object)
+      : {
+          shadowOffset: { width: 0, height: 8 },
+          shadowOpacity: 0.12,
+          shadowRadius: 16,
+          elevation: 6,
+        }),
   },
-  searchBox: {
-    borderWidth: StyleSheet.hairlineWidth,
-    borderRadius: 2,
-    paddingHorizontal: 10,
-    minWidth: Platform.OS === "web" ? 140 : 110,
-    maxWidth: 200,
-    height: 34,
-    justifyContent: "center",
+  searchFieldRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 8,
+    paddingLeft: 10,
+    paddingRight: 6,
+    height: 40,
   },
   searchInput: {
+    flex: 1,
     fontSize: 14,
     fontFamily: Fonts.sans,
+    minWidth: 0,
     ...(Platform.OS === "web" ? ({ outlineStyle: "none" } as object) : null),
+  },
+  clearBtn: {
+    padding: 2,
+  },
+  goBtn: {
+    width: 28,
+    height: 28,
+    borderRadius: 2,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  suggestPanel: {
+    borderTopWidth: StyleSheet.hairlineWidth,
+  },
+  suggestRow: {
+    paddingHorizontal: 12,
+    paddingVertical: 10,
+    gap: 2,
+  },
+  suggestMeta: {
+    fontSize: 10,
+    letterSpacing: 1.2,
+    textTransform: "uppercase",
+    fontWeight: "700",
+  },
+  suggestTitle: {
+    fontFamily: Fonts.serif,
+    fontSize: 15,
+    lineHeight: 20,
+  },
+  suggestAll: {
+    borderTopWidth: StyleSheet.hairlineWidth,
+    paddingHorizontal: 12,
+    paddingVertical: 10,
+  },
+  suggestAllText: {
+    fontSize: 13,
+    fontFamily: Fonts.sans,
   },
 });
