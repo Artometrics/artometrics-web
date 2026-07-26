@@ -36,15 +36,22 @@ Client calls use `/api/*` (rewritten to Netlify Functions in `netlify.toml`).
 
 5. **Google login (optional but recommended)**  
    1. [Google Cloud Console](https://console.cloud.google.com/) → create/select project → **APIs & Services → Credentials**  
-   2. **OAuth consent screen** → External → app name Artometrics → add your email as test user while in Testing  
+   2. **OAuth consent screen** → External → **App name: Artometrics** (not the Supabase host) → add your email as test user while in Testing → save branding/logo if you have them  
    3. **Create credentials → OAuth client ID → Web application**  
-      - Authorized JavaScript origins: `https://artometrics.com`, `https://lswrpofrvfgrqrivdcyz.supabase.co`  
-      - Authorized redirect URIs: `https://lswrpofrvfgrqrivdcyz.supabase.co/auth/v1/callback`  
+      - Authorized JavaScript origins: `https://artometrics.com`, `https://lswrpofryfgrqrivdcyz.supabase.co`  
+      - Authorized redirect URIs: `https://lswrpofryfgrqrivdcyz.supabase.co/auth/v1/callback`  
    4. Copy **Client ID** + **Client Secret**  
    5. Supabase → **Authentication → Providers → Google** → Enable → paste Client ID/Secret → Save  
    6. Smoke: `/login` → **Continue with Google** → land on `/account`
 
-6. Optional: disable email confirmation in development (**Auth → Providers → Email**) for faster testing.
+6. **Google consent screen still says `*.supabase.co`?**  
+   Google shows the **OAuth redirect host**, not only the consent-screen app name. With the default Supabase Auth URL that host is `lswrpofryfgrqrivdcyz.supabase.co`. To show **Artometrics** / `artometrics.com`:
+   1. Supabase → **Authentication → URL configuration → Custom Domains** (or **Auth Hooks / Custom domain** depending on plan) → add e.g. `auth.artometrics.com` and complete DNS  
+   2. Google Cloud → OAuth client → add the custom-domain **Authorized JavaScript origin** and **redirect URI** (`https://auth.artometrics.com/auth/v1/callback`)  
+   3. Keep consent screen **App name = Artometrics**  
+   Until a custom Auth domain is live, users will keep seeing the Supabase project host on Google’s “Sign in to …” line even when the app name is correct.
+
+7. Optional: disable email confirmation in development (**Auth → Providers → Email**) for faster testing.
 
 ## 2. Stripe
 

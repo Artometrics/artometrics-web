@@ -25,6 +25,12 @@ export function SiteHeader() {
   const pathname = usePathname();
   const [q, setQ] = useState("");
   const [searchOpen, setSearchOpen] = useState(false);
+  const hideSectionBar =
+    pathname === "/account" ||
+    pathname === "/login" ||
+    pathname === "/signup" ||
+    pathname === "/pricing" ||
+    pathname?.startsWith("/auth/");
 
   function submitSearch() {
     const query = q.trim();
@@ -110,36 +116,38 @@ export function SiteHeader() {
         </View>
       </Wrapper>
 
-      <View style={[styles.sectionBar, { borderTopColor: colors.border }]}>
-        <ScrollView
-          horizontal
-          showsHorizontalScrollIndicator={false}
-          contentContainerStyle={styles.sectionTrack}
-        >
-          {SECTION_SLUGS.map((slug) => {
-            const active =
-              pathname === `/topics/${slug}` || pathname?.startsWith(`/topics/${slug}/`);
-            return (
-              <Link key={slug} href={`/topics/${slug}` as `/topics/${string}`} asChild>
-                <Pressable style={styles.sectionItem} hitSlop={6}>
-                  <Text
-                    style={[
-                      styles.sectionLabel,
-                      { color: active ? colors.text : colors.textMuted },
-                      active ? styles.sectionActive : null,
-                    ]}
-                  >
-                    {SECTION_META[slug].title}
-                  </Text>
-                  {active ? (
-                    <View style={[styles.sectionUnderline, { backgroundColor: colors.text }]} />
-                  ) : null}
-                </Pressable>
-              </Link>
-            );
-          })}
-        </ScrollView>
-      </View>
+      {hideSectionBar ? null : (
+        <View style={[styles.sectionBar, { borderTopColor: colors.border }]}>
+          <ScrollView
+            horizontal
+            showsHorizontalScrollIndicator={false}
+            contentContainerStyle={styles.sectionTrack}
+          >
+            {SECTION_SLUGS.map((slug) => {
+              const active =
+                pathname === `/topics/${slug}` || pathname?.startsWith(`/topics/${slug}/`);
+              return (
+                <Link key={slug} href={`/topics/${slug}` as `/topics/${string}`} asChild>
+                  <Pressable style={styles.sectionItem} hitSlop={6}>
+                    <Text
+                      style={[
+                        styles.sectionLabel,
+                        { color: active ? colors.text : colors.textMuted },
+                        active ? styles.sectionActive : null,
+                      ]}
+                    >
+                      {SECTION_META[slug].title}
+                    </Text>
+                    {active ? (
+                      <View style={[styles.sectionUnderline, { backgroundColor: colors.text }]} />
+                    ) : null}
+                  </Pressable>
+                </Link>
+              );
+            })}
+          </ScrollView>
+        </View>
+      )}
     </View>
   );
 }

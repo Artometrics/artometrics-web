@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Pressable, Text, View, StyleSheet } from "react-native";
-import { Link, router } from "expo-router";
+import { Link, router, useLocalSearchParams } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { PrimaryButton } from "@/components/PrimaryButton";
 import { PageSeo } from "@/components/PageSeo";
@@ -11,6 +11,7 @@ import { apiFetch } from "@/lib/supabase/client";
 import { getBlogPost } from "@/lib/content";
 import { PLANS, type PlanTier } from "@/lib/product/plans";
 import { openExternalUrl } from "@/lib/openExternal";
+import { paramString } from "@/lib/params";
 
 function formatPlanLabel(planTier: string | null, status: string | null) {
   if (planTier) {
@@ -28,6 +29,8 @@ function formatPlanLabel(planTier: string | null, status: string | null) {
 export default function AccountScreen() {
   const { colors } = useTheme();
   const { user, loading, signOut } = useAuth();
+  const params = useLocalSearchParams<{ checkout?: string | string[] }>();
+  const checkoutSuccess = paramString(params.checkout) === "success";
   const [saved, setSaved] = useState<{ article_slug: string; saved_at?: string }[]>([]);
   const [planLabel, setPlanLabel] = useState<string | null>(null);
   const [active, setActive] = useState(false);
@@ -74,6 +77,14 @@ export default function AccountScreen() {
     return (
       <Wrapper variant="narrow" style={styles.wrap}>
         <PageSeo title="Account" description="Artometrics members area." path="/account" />
+        {checkoutSuccess ? (
+          <View style={[styles.successBanner, { backgroundColor: colors.accentSoft, borderColor: colors.accent }]}>
+            <Text style={[styles.successTitle, { color: colors.accent }]}>Checkout complete</Text>
+            <Text style={[styles.p, { color: colors.text }]}>
+              Log in with the same email you used at checkout to open your membership.
+            </Text>
+          </View>
+        ) : null}
         <Text style={[styles.eyebrow, { color: colors.accent }]}>Account</Text>
         <Text style={[styles.title, { color: colors.text }]}>Members area</Text>
         <Text style={[styles.p, { color: colors.textMuted }]}>
@@ -112,6 +123,14 @@ export default function AccountScreen() {
   return (
     <Wrapper variant="narrow" style={styles.wrap}>
       <PageSeo title="Account" description="Your Artometrics membership." path="/account" />
+      {checkoutSuccess ? (
+        <View style={[styles.successBanner, { backgroundColor: colors.accentSoft, borderColor: colors.accent }]}>
+          <Text style={[styles.successTitle, { color: colors.accent }]}>You are subscribed</Text>
+          <Text style={[styles.p, { color: colors.text }]}>
+            Welcome to Artometrics. Your trial is active — manage billing anytime below.
+          </Text>
+        </View>
+      ) : null}
       <Text style={[styles.eyebrow, { color: colors.accent }]}>Account</Text>
       <Text style={[styles.title, { color: colors.text }]}>Welcome back</Text>
       <Text style={[styles.p, { color: colors.textMuted }]}>{user.email}</Text>
@@ -174,6 +193,19 @@ export default function AccountScreen() {
 
 const styles = StyleSheet.create({
   wrap: { paddingVertical: 48, gap: 14 },
+  successBanner: {
+    borderWidth: 1,
+    paddingHorizontal: 16,
+    paddingVertical: 14,
+    gap: 6,
+    marginBottom: 4,
+  },
+  successTitle: {
+    fontSize: 12,
+    letterSpacing: 1.6,
+    textTransform: "uppercase",
+    fontWeight: "700",
+  },
   eyebrow: {
     fontSize: 12,
     letterSpacing: 1.8,

@@ -1,5 +1,5 @@
 import { Pressable, Text, View, StyleSheet } from "react-native";
-import { Link } from "expo-router";
+import { Link, usePathname } from "expo-router";
 import { Logo } from "@/components/Logo";
 import { Wrapper } from "@/components/Wrapper";
 import { Fonts } from "@/constants/Colors";
@@ -9,32 +9,42 @@ import { SECTION_META, SECTION_SLUGS } from "@/data/sections";
 export function SiteFooter() {
   const year = new Date().getFullYear();
   const { colors } = useTheme();
+  const pathname = usePathname();
   const mid = Math.ceil(SECTION_SLUGS.length / 2);
   const colA = SECTION_SLUGS.slice(0, mid);
   const colB = SECTION_SLUGS.slice(mid);
+  const hideCtaBand =
+    pathname === "/account" ||
+    pathname === "/login" ||
+    pathname === "/signup" ||
+    pathname === "/pricing" ||
+    pathname === "/newsletter" ||
+    pathname?.startsWith("/auth/");
 
   return (
     <View style={styles.shell}>
-      <Wrapper style={[styles.ctaBand, { borderTopColor: colors.text }]}>
-        <Text style={[styles.ctaTitle, { color: colors.text }]}>Stories you can cite</Text>
-        <Text style={[styles.ctaDek, { color: colors.textMuted }]}>
-          Clear data reporting on sports, film, music, culture, and cities.
-        </Text>
-        <View style={styles.ctaRow}>
-          <Link href="/pricing" asChild>
-            <Pressable
-              style={StyleSheet.flatten([styles.subscribe, { backgroundColor: colors.text }])}
-            >
-              <Text style={[styles.subscribeText, { color: colors.inverse }]}>Subscribe</Text>
-            </Pressable>
-          </Link>
-          <Link href="/newsletter" asChild>
-            <Pressable>
-              <Text style={[styles.newsletter, { color: colors.accent }]}>Newsletter</Text>
-            </Pressable>
-          </Link>
-        </View>
-      </Wrapper>
+      {hideCtaBand ? null : (
+        <Wrapper style={[styles.ctaBand, { borderTopColor: colors.text }]}>
+          <Text style={[styles.ctaTitle, { color: colors.text }]}>Stories you can cite</Text>
+          <Text style={[styles.ctaDek, { color: colors.textMuted }]}>
+            Clear data reporting on sports, film, music, culture, and cities.
+          </Text>
+          <View style={styles.ctaRow}>
+            <Link href="/pricing" asChild>
+              <Pressable
+                style={StyleSheet.flatten([styles.subscribe, { backgroundColor: colors.text }])}
+              >
+                <Text style={[styles.subscribeText, { color: colors.inverse }]}>Subscribe</Text>
+              </Pressable>
+            </Link>
+            <Link href="/newsletter" asChild>
+              <Pressable>
+                <Text style={[styles.newsletter, { color: colors.accent }]}>Newsletter</Text>
+              </Pressable>
+            </Link>
+          </View>
+        </Wrapper>
+      )}
 
       <View style={[styles.dark, { backgroundColor: colors.mode === "dark" ? "#000" : "#0A0A0A" }]}>
         <Wrapper style={styles.inner}>
@@ -78,10 +88,12 @@ export function SiteFooter() {
             </View>
           </View>
 
-          <View style={styles.brandBlock}>
-            <Logo size={36} compact={1} align="center" markVariant="light" showWordmark={false} />
-            <Text style={styles.wordmark}>Artometrics</Text>
-          </View>
+          <Link href="/" asChild>
+            <Pressable style={styles.brandBlock} accessibilityLabel="Artometrics home">
+              <Logo size={36} compact={1} align="center" markVariant="light" showWordmark={false} />
+              <Text style={styles.wordmark}>Artometrics</Text>
+            </Pressable>
+          </Link>
 
           <View style={styles.legalRow}>
             {[

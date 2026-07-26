@@ -1745,6 +1745,44 @@ html[data-theme="dark"] .artometrics-article-body .art-chart-mode-switch__btn:fo
   }
 }
 
+/* Dark mode — override hard-coded light-theme prose/chrome colors */
+html[data-theme="dark"] .artometrics-article-body .art-p,
+html[data-theme="dark"] .artometrics-article-body main.art-article-main p,
+html[data-theme="dark"] .artometrics-article-body .art-editorial-note p,
+html[data-theme="dark"] .artometrics-article-body .art-lede,
+html[data-theme="dark"] .artometrics-article-body .art-section-title,
+html[data-theme="dark"] .artometrics-article-body .art-chart-heading,
+html[data-theme="dark"] .artometrics-article-body .art-chart-heading__title,
+html[data-theme="dark"] .artometrics-article-body .art-myth-card__claim,
+html[data-theme="dark"] .artometrics-article-body .art-ref-item,
+html[data-theme="dark"] .artometrics-article-body h2,
+html[data-theme="dark"] .artometrics-article-body h3,
+html[data-theme="dark"] .artometrics-article-body h4,
+html[data-theme="dark"] .artometrics-article-body li {
+  color: #FAFAFA !important;
+}
+html[data-theme="dark"] .artometrics-article-body .subtitle,
+html[data-theme="dark"] .artometrics-article-body .description,
+html[data-theme="dark"] .artometrics-article-body .art-chart-heading__subtitle,
+html[data-theme="dark"] .artometrics-article-body .art-myth-card__reality,
+html[data-theme="dark"] .artometrics-article-body .fact-label,
+html[data-theme="dark"] .artometrics-article-body .art-meta,
+html[data-theme="dark"] .artometrics-article-body .art-code-summary,
+html[data-theme="dark"] .artometrics-article-body .art-copy-btn,
+html[data-theme="dark"] .artometrics-article-body #art-sidebar-btn {
+  color: #A3A3A3 !important;
+}
+html[data-theme="dark"] .artometrics-article-body .art-myth-card,
+html[data-theme="dark"] .artometrics-article-body .art-editorial-note,
+html[data-theme="dark"] .artometrics-article-body .art-chart-live,
+html[data-theme="dark"] .artometrics-article-body .art-code-pre,
+html[data-theme="dark"] .artometrics-article-body main.art-article-main pre,
+html[data-theme="dark"] .artometrics-article-body .fact-box {
+  background: #171717 !important;
+  color: #FAFAFA !important;
+  border-color: #404040 !important;
+}
+
 /* Traditional magazine: hide TOC chrome — articles should read as articles */
 nav#TOC, #TOC, .sidebar-navigation { display: none !important; }
 .artometrics-article-body nav#TOC { display: none !important; }
