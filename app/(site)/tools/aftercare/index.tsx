@@ -379,7 +379,7 @@ const styles = StyleSheet.create({
           elevation: 12,
         }),
   },
-  bgStack: { ...StyleSheet.absoluteFillObject },
+  bgStack: { ...StyleSheet.absoluteFill },
   blob: {
     position: "absolute",
     width: 280,
@@ -399,7 +399,7 @@ const styles = StyleSheet.create({
     opacity: 0.06,
   },
   vignette: {
-    ...StyleSheet.absoluteFillObject,
+    ...StyleSheet.absoluteFill,
     backgroundColor: "rgba(0,0,0,0.35)",
   },
   chrome: {
@@ -443,7 +443,7 @@ const styles = StyleSheet.create({
     fontSize: 11,
   },
   tapRow: {
-    ...StyleSheet.absoluteFillObject,
+    ...StyleSheet.absoluteFill,
     flexDirection: "row",
     zIndex: 2,
   },
