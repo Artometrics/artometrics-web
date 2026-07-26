@@ -17,10 +17,15 @@ import { ToolsSubnav } from "@/components/tools/ToolsSubnav";
 import { StoryProgress } from "@/components/aftercare/StoryProgress";
 import { StrategyMap } from "@/components/aftercare/StrategyMap";
 import { Fonts } from "@/constants/Colors";
-import { useRequireAuth } from "@/lib/tools/requireAuth";
+import { useAuth } from "@/lib/auth";
 import { apiFetch } from "@/lib/supabase/client";
 import { assetUrl } from "@/lib/assets";
 import { getBlogPosts } from "@/lib/content";
+
+/** Auth without forcing redirect — Stories home is browsable as a guest preview. */
+function useAuthGate() {
+  return useAuth();
+}
 
 const NAV = [
   { href: "/tools/aftercare", label: "Home" },
@@ -49,7 +54,7 @@ const SLIDES: SlideId[] = ["open", "articles", "strategies", "checkin"];
 
 export default function AftercareHomeScreen() {
   const { width } = useWindowDimensions();
-  const { user, ready } = useRequireAuth();
+  const { user, loading: authLoading } = useAuthGate();
   const [skyNote, setSkyNote] = useState<string | null>(null);
   const [moonLabel, setMoonLabel] = useState<string | null>(null);
   const [displayName, setDisplayName] = useState<string | null>(null);
@@ -62,9 +67,17 @@ export default function AftercareHomeScreen() {
   const reportCount = getBlogPosts().length;
   const storyW = Math.min(420, width - 32);
   const storyH = Math.min(720, Math.max(560, width * 1.55));
+  const guest = !authLoading && !user;
 
   const load = useCallback(async () => {
-    if (!user) return;
+    if (!user) {
+      setSkyNote(
+        "A soft check-in day. Notice what wants tending — then pick one small ritual.",
+      );
+      setMoonLabel("Waxing Crescent");
+      setLoading(false);
+      return;
+    }
     setError(null);
     try {
       const [profileRes, skyRes] = await Promise.all([
@@ -106,7 +119,7 @@ export default function AftercareHomeScreen() {
 
   useFocusEffect(
     useCallback(() => {
-      if (!ready || !user) return;
+      if (authLoading) return;
       let active = true;
       (async () => {
         try {
@@ -119,14 +132,22 @@ export default function AftercareHomeScreen() {
       return () => {
         active = false;
       };
-    }, [load, ready, user]),
+    }, [load, authLoading]),
   );
 
   function go(delta: number) {
     setIndex((i) => Math.max(0, Math.min(SLIDES.length - 1, i + delta)));
   }
 
-  if (!ready) {
+  function goTool(href: string) {
+    if (guest) {
+      router.push(`/login?next=${encodeURIComponent(href)}`);
+      return;
+    }
+    router.push(href as `/`);
+  }
+
+  if (authLoading) {
     return (
       <Wrapper style={styles.wrap}>
         <Text style={{ color: "#888" }}>Loading…</Text>
@@ -222,7 +243,7 @@ export default function AftercareHomeScreen() {
                 </Text>
                 <Text style={styles.display}>CHECK{"\n"}IN</Text>
                 <View style={styles.footerRow}>
-                  <Text style={styles.footerTitle}>Today&apos;s sky</Text>
+                  <Text style={styles.footerTitle}>{"Today's sky"}</Text>
                   <Text style={styles.footerBody} numberOfLines={4}>
                     {skyNote ||
                       "Add a birth date in Birth tools for a more personal note."}
@@ -276,7 +297,11 @@ export default function AftercareHomeScreen() {
 
             {slide === "checkin" ? (
               <>
-                <Text style={styles.lede}>Pick a door. Stay as long as you need.</Text>
+                <Text style={styles.lede}>
+                  {guest
+                    ? "Sign in to save rituals. Preview the doors below."
+                    : "Pick a door. Stay as long as you need."}
+                </Text>
                 <Text style={styles.display}>BEGIN</Text>
                 <View style={styles.ctaStack} pointerEvents="auto">
                   {[
@@ -286,7 +311,7 @@ export default function AftercareHomeScreen() {
                   ].map(([href, label]) => (
                     <Pressable
                       key={href}
-                      onPress={() => router.push(href as `/`)}
+                      onPress={() => goTool(href)}
                       style={styles.ctaBtn}
                     >
                       <Text style={styles.ctaBtnText}>{label}</Text>

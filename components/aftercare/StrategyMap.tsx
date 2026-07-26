@@ -1,5 +1,6 @@
 import { Pressable, Text, View, StyleSheet, Platform } from "react-native";
 import { router } from "expo-router";
+import { useAuth } from "@/lib/auth";
 
 type Node = {
   id: string;
@@ -20,6 +21,7 @@ const NODES: Node[] = [
 
 /** Soft “mind map” of Aftercare strategies — pressable nodes. */
 export function StrategyMap() {
+  const { user } = useAuth();
   return (
     <View style={styles.wrap}>
       {/* Decorative connectors */}
@@ -31,7 +33,13 @@ export function StrategyMap() {
       {NODES.map((n) => (
         <Pressable
           key={n.id}
-          onPress={() => router.push(n.href as `/`)}
+          onPress={() => {
+            if (!user && n.href !== "/tools/aftercare" && n.href !== "/studio") {
+              router.push(`/login?next=${encodeURIComponent(n.href)}`);
+              return;
+            }
+            router.push(n.href as `/`);
+          }}
           style={StyleSheet.flatten([
             styles.node,
             { top: n.top, left: n.left },
