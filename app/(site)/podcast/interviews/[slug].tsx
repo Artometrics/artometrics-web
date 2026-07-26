@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
 import { Image, Text, View, StyleSheet, Pressable } from "react-native";
-import { useAudioPlayer, useAudioPlayerStatus } from "expo-audio";
+import {
+  setAudioModeAsync,
+  useAudioPlayer,
+  useAudioPlayerStatus,
+} from "expo-audio";
 import { Link, useLocalSearchParams } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { ArticleBody } from "@/components/ArticleBody";
@@ -20,7 +24,8 @@ export async function generateStaticParams() {
 }
 
 export default function PodcastEpisodeScreen() {
-  const { slug } = useLocalSearchParams<{ slug: string }>();
+  const params = useLocalSearchParams<{ slug: string | string[] }>();
+  const slug = Array.isArray(params.slug) ? params.slug[0] : params.slug;
   const episode = getPodcastEpisode(slug);
   const { user, loading: authLoading } = useAuth();
   const [subActive, setSubActive] = useState(false);
@@ -92,13 +97,21 @@ export default function PodcastEpisodeScreen() {
     );
   }
 
-  function toggleAudio() {
+  async function toggleAudio() {
     if (!audioUri) return;
     if (status.playing) {
       player.pause();
-    } else {
-      player.play();
+      return;
     }
+    try {
+      await setAudioModeAsync({
+        playsInSilentMode: true,
+        shouldPlayInBackground: false,
+      });
+    } catch {
+      /* mode setup is best-effort */
+    }
+    player.play();
   }
 
   return (

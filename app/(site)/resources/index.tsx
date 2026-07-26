@@ -50,12 +50,16 @@ export default function ResourcesScreen() {
 
       <View style={styles.actions}>
         <Link href="/datasets" asChild>
-          <Pressable style={[styles.btn, { backgroundColor: colors.text }]}>
+          <Pressable
+            style={StyleSheet.flatten([styles.btn, { backgroundColor: colors.text }])}
+          >
             <Text style={[styles.btnText, { color: colors.inverse }]}>Browse datasets</Text>
           </Pressable>
         </Link>
         <Link href="/blog" asChild>
-          <Pressable style={[styles.btnGhost, { borderColor: colors.border }]}>
+          <Pressable
+            style={StyleSheet.flatten([styles.btnGhost, { borderColor: colors.border }])}
+          >
             <Text style={[styles.btnGhostText, { color: colors.text }]}>All reports</Text>
           </Pressable>
         </Link>
