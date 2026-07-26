@@ -16,11 +16,14 @@ import { PageSeo } from "@/components/PageSeo";
 import { ToolsSubnav } from "@/components/tools/ToolsSubnav";
 import { StoryProgress } from "@/components/aftercare/StoryProgress";
 import { StrategyMap } from "@/components/aftercare/StrategyMap";
+import { PlanetPoster } from "@/components/aftercare/PlanetPoster";
+import { CosmicChartCard } from "@/components/aftercare/CosmicChartCard";
 import { Fonts } from "@/constants/Colors";
 import { useAuth } from "@/lib/auth";
 import { apiFetch } from "@/lib/supabase/client";
 import { assetUrl } from "@/lib/assets";
-import { getBlogPosts } from "@/lib/content";
+import { celestialForSign } from "@/lib/aftercare/planets";
+import { sunSignFromDate } from "@/lib/aftercare/calculators";
 
 /** Auth without forcing redirect — Stories home is browsable as a guest preview. */
 function useAuthGate() {
@@ -48,9 +51,9 @@ type ProfilePayload = {
   error?: string;
 };
 
-type SlideId = "open" | "articles" | "strategies" | "checkin";
+type SlideId = "open" | "poster" | "chart" | "strategies" | "checkin";
 
-const SLIDES: SlideId[] = ["open", "articles", "strategies", "checkin"];
+const SLIDES: SlideId[] = ["open", "poster", "chart", "strategies", "checkin"];
 
 export default function AftercareHomeScreen() {
   const { width } = useWindowDimensions();
@@ -58,16 +61,17 @@ export default function AftercareHomeScreen() {
   const [skyNote, setSkyNote] = useState<string | null>(null);
   const [moonLabel, setMoonLabel] = useState<string | null>(null);
   const [displayName, setDisplayName] = useState<string | null>(null);
+  const [sunSign, setSunSign] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [index, setIndex] = useState(0);
 
   const greetingName =
     displayName || user?.email?.split("@")[0] || user?.email || "friend";
-  const reportCount = getBlogPosts().length;
   const storyW = Math.min(420, width - 32);
-  const storyH = Math.min(720, Math.max(560, width * 1.55));
+  const storyH = Math.min(740, Math.max(580, width * 1.6));
   const guest = !authLoading && !user;
+  const celestial = celestialForSign(sunSign);
 
   const load = useCallback(async () => {
     if (!user) {
@@ -75,6 +79,7 @@ export default function AftercareHomeScreen() {
         "A soft check-in day. Notice what wants tending — then pick one small ritual.",
       );
       setMoonLabel("Waxing Crescent");
+      setSunSign("Sagittarius");
       setLoading(false);
       return;
     }
@@ -86,13 +91,18 @@ export default function AftercareHomeScreen() {
       ]);
 
       if (profileRes.ok) {
-        const data = (await profileRes.json()) as ProfilePayload;
+        const data = (await profileRes.json()) as ProfilePayload & {
+          profile?: { birth_date?: string | null };
+        };
         setDisplayName(
           data.profile?.display_name?.trim() ||
             data.email?.split("@")[0] ||
             data.profile?.email?.split("@")[0] ||
             null,
         );
+        if (data.profile?.birth_date) {
+          setSunSign(sunSignFromDate(data.profile.birth_date));
+        }
       } else {
         const data = (await profileRes.json().catch(() => ({}))) as ProfilePayload;
         setError(data.error || "Could not load profile.");
@@ -101,6 +111,7 @@ export default function AftercareHomeScreen() {
       if (skyRes.ok) {
         const data = (await skyRes.json()) as SkyPayload;
         setSkyNote(data.skyNote ?? null);
+        if (data.sunSign) setSunSign(data.sunSign);
         if (data.moon?.name) {
           const illum =
             typeof data.moon.illumination === "number"
@@ -252,21 +263,30 @@ export default function AftercareHomeScreen() {
               </>
             ) : null}
 
-            {slide === "articles" ? (
-              <>
-                <Text style={styles.lede}>
-                  Dive into data reports on culture, mood, and meaning.
-                </Text>
-                <Pressable onPress={() => router.push("/blog")}>
-                  <Text style={styles.display}>ARTICLES</Text>
-                </Pressable>
-                <View style={styles.footerRow}>
-                  <Text style={styles.footerTitle}>Scientific texts</Text>
-                  <Text style={styles.footerBody}>
-                    {reportCount} Artometrics reports — clear, citable, easy to read — in one place.
-                  </Text>
-                </View>
-              </>
+            {slide === "poster" ? (
+              <View style={styles.posterSlide} pointerEvents="none">
+                <PlanetPoster
+                  seasonTitle={celestial.seasonTitle}
+                  seasonLine={celestial.seasonLine}
+                  planet={celestial.planet}
+                  dateLabel={moonLabel || "Tonight"}
+                  compact
+                />
+              </View>
+            ) : null}
+
+            {slide === "chart" ? (
+              <View style={styles.chartSlide} pointerEvents="box-none">
+                <CosmicChartCard
+                  eyebrow={
+                    skyNote ||
+                    `${celestial.planet.id} frames this check-in — reflective, not predictive.`
+                  }
+                  planet={celestial.planet}
+                  profileLabel={greetingName}
+                  onContinue={() => go(1)}
+                />
+              </View>
             ) : null}
 
             {slide === "strategies" ? (
@@ -540,5 +560,13 @@ const styles = StyleSheet.create({
     color: "#FFB3AD",
     fontSize: 13,
     marginBottom: 8,
+  },
+  posterSlide: {
+    flex: 1,
+    justifyContent: "center",
+  },
+  chartSlide: {
+    flex: 1,
+    justifyContent: "center",
   },
 });

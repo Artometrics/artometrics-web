@@ -1,10 +1,26 @@
 import { Text, View, StyleSheet, Pressable } from "react-native";
-import { Link } from "expo-router";
+import { Link, router } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { Fonts } from "@/constants/Colors";
 import { useTheme } from "@/lib/theme";
 import { PageSeo } from "@/components/PageSeo";
+import { GenreSpecimenCard } from "@/components/library/SpecimenCard";
 import { SECTION_META, SECTION_SLUGS } from "@/data/sections";
+
+const HUB = [
+  {
+    href: "/datasets",
+    title: "Datasets",
+    body: "CSV packs from published stories.",
+  },
+  {
+    href: "/library/reference",
+    title: "Reference",
+    body: "Gutenberg, WikiArt, Wikipedia specimen cards.",
+  },
+  { href: "/blog", title: "Archive", body: "Every published article." },
+  { href: "/podcast", title: "Podcasts", body: "Interviews and conversations." },
+] as const;
 
 export default function LibraryScreen() {
   const { colors } = useTheme();
@@ -17,54 +33,81 @@ export default function LibraryScreen() {
       />
       <Text style={[styles.title, { color: colors.text }]}>Library</Text>
       <Text style={[styles.deck, { color: colors.textMuted }]}>
-        Datasets and archives tied to published stories.
+        Genres, desks, and open-reference specimens for research and remix.
       </Text>
 
+      <Text style={[styles.sub, { color: colors.text }]}>Collections</Text>
       <View style={styles.grid}>
-        {[
-          { href: "/datasets", title: "Datasets", body: "CSV packs from published stories." },
-          {
-            href: "/library/reference",
-            title: "Reference",
-            body: "Gutenberg, WikiArt, and Wikipedia catalogs for research.",
-          },
-          { href: "/blog", title: "Archive", body: "Every published article." },
-          { href: "/topics", title: "Sections", body: "Sports, movies & TV, music, and more." },
-          { href: "/podcast", title: "Podcasts", body: "Interviews and conversations." },
-          { href: "/tools", title: "Tools", body: "Twilda and Aftercare on your Artometrics account." },
-        ].map((card) => (
-          <Link key={card.href} href={card.href as `/datasets`} asChild>
-            <Pressable style={StyleSheet.flatten([styles.card, { borderColor: colors.border }])}>
-              <Text style={[styles.cardTitle, { color: colors.text }]}>{card.title}</Text>
-              <Text style={[styles.cardBody, { color: colors.textMuted }]}>{card.body}</Text>
-            </Pressable>
-          </Link>
+        {HUB.map((card, i) => (
+          <GenreSpecimenCard
+            key={card.href}
+            title={card.title}
+            subtitle={card.body}
+            href={card.href}
+            index={i}
+            onPress={() => router.push(card.href as `/`)}
+          />
         ))}
       </View>
 
-      <Text style={[styles.sub, { color: colors.text }]}>Browse by section</Text>
-      <View style={styles.chips}>
-        {SECTION_SLUGS.map((s) => (
-          <Link key={s} href={`/topics/${s}` as `/topics/${string}`} asChild>
-            <Pressable style={StyleSheet.flatten([styles.chip, { borderColor: colors.border }])}>
-              <Text style={{ color: colors.text, fontWeight: "600" }}>{SECTION_META[s].title}</Text>
-            </Pressable>
-          </Link>
+      <Text style={[styles.sub, { color: colors.text }]}>Browse by desk</Text>
+      <View style={styles.grid}>
+        {SECTION_SLUGS.map((s, i) => (
+          <GenreSpecimenCard
+            key={s}
+            title={SECTION_META[s].title}
+            subtitle={SECTION_META[s].description || "Editorial desk"}
+            href={`/topics/${s}`}
+            index={i + 4}
+            onPress={() => router.push(`/topics/${s}` as `/`)}
+          />
         ))}
       </View>
+
+      <Link href="/tools" asChild>
+        <Pressable style={StyleSheet.flatten([styles.toolsLink, { borderColor: colors.border }])}>
+          <Text style={[styles.toolsText, { color: colors.text }]}>Studio tools →</Text>
+        </Pressable>
+      </Link>
     </Wrapper>
   );
 }
 
 const styles = StyleSheet.create({
   wrap: { paddingVertical: 40, gap: 14 },
-  title: { fontFamily: Fonts.serif, fontSize: 40, fontWeight: "700" },
-  deck: { fontFamily: Fonts.serif, fontSize: 17, lineHeight: 26, maxWidth: 560 },
-  grid: { flexDirection: "row", flexWrap: "wrap", gap: 16, marginTop: 12 },
-  card: { flexBasis: 240, flexGrow: 1, borderWidth: StyleSheet.hairlineWidth, padding: 16, gap: 8 },
-  cardTitle: { fontFamily: Fonts.serif, fontSize: 22, fontWeight: "700" },
-  cardBody: { fontSize: 14, lineHeight: 22 },
-  sub: { fontFamily: Fonts.serif, fontSize: 22, fontWeight: "700", marginTop: 20 },
-  chips: { flexDirection: "row", flexWrap: "wrap", gap: 8 },
-  chip: { borderWidth: StyleSheet.hairlineWidth, paddingHorizontal: 12, paddingVertical: 8 },
+  title: {
+    fontFamily: Fonts.display,
+    fontSize: 44,
+    fontWeight: "400",
+    textTransform: "uppercase",
+    letterSpacing: 1,
+  },
+  deck: { fontFamily: Fonts.sans, fontSize: 16, lineHeight: 24, maxWidth: 560 },
+  sub: {
+    fontFamily: Fonts.display,
+    fontSize: 26,
+    fontWeight: "400",
+    marginTop: 16,
+    textTransform: "uppercase",
+    letterSpacing: 0.5,
+  },
+  grid: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    gap: 16,
+    marginTop: 4,
+  },
+  toolsLink: {
+    marginTop: 12,
+    borderWidth: 2,
+    paddingHorizontal: 14,
+    paddingVertical: 12,
+    alignSelf: "flex-start",
+  },
+  toolsText: {
+    fontSize: 12,
+    fontWeight: "800",
+    letterSpacing: 1.2,
+    textTransform: "uppercase",
+  },
 });
