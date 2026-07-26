@@ -4,6 +4,7 @@ import {
   json,
   userFromAuthHeader,
 } from "../lib/shared";
+import { getSanityEnv, sanityMutate } from "../../lib/sanity/client";
 
 /**
  * Create/update a Sanity memberContribution draft from a submitted member_post.
@@ -16,12 +17,7 @@ export default async (request: Request) => {
   const user = await userFromAuthHeader(request);
   if (!user) return json({ error: "Unauthorized" }, 401);
 
-  const projectId = process.env.SANITY_PROJECT_ID || process.env.SANITY_STUDIO_PROJECT_ID;
-  const dataset = process.env.SANITY_DATASET || process.env.SANITY_STUDIO_DATASET || "production";
-  const token = process.env.SANITY_API_WRITE_TOKEN;
-  const apiVersion = process.env.SANITY_API_VERSION || "2024-01-01";
-
-  if (!projectId || !token || projectId === "yourProjectId") {
+  if (!getSanityEnv(true)) {
     return json(
       {
         ok: false,
@@ -57,36 +53,26 @@ export default async (request: Request) => {
     .maybeSingle();
 
   const docId = post.sanity_id || `memberPost-${post.id}`;
-  const mutations = [
-    {
-      createOrReplace: {
-        _id: docId,
-        _type: "memberContribution",
-        title: post.title,
-        slug: { _type: "slug", current: post.slug || post.id },
-        excerpt: post.excerpt,
-        body: post.body,
-        memberHandle: profile?.handle || null,
-        supabasePostId: post.id,
-        status: "draft",
-        publishedAt: null,
+  try {
+    await sanityMutate([
+      {
+        createOrReplace: {
+          _id: docId,
+          _type: "memberContribution",
+          title: post.title,
+          slug: { _type: "slug", current: post.slug || post.id },
+          excerpt: post.excerpt,
+          body: post.body,
+          memberHandle: profile?.handle || null,
+          supabasePostId: post.id,
+          status: "draft",
+          publishedAt: null,
+        },
       },
-    },
-  ];
-
-  const url = `https://${projectId}.api.sanity.io/v${apiVersion}/data/mutate/${dataset}`;
-  const res = await fetch(url, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${token}`,
-    },
-    body: JSON.stringify({ mutations }),
-  });
-
-  if (!res.ok) {
-    const text = await res.text();
-    return json({ error: `Sanity mutate failed: ${text}` }, 502);
+    ]);
+  } catch (e) {
+    const message = e instanceof Error ? e.message : "Sanity mutate failed";
+    return json({ error: message }, 502);
   }
 
   await supabase
