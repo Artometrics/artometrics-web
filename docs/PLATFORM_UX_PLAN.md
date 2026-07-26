@@ -75,3 +75,11 @@ Remaining platform ops — docs only until scheduled:
 - Preference mirror (taste panel from reading history / saves)
 - Generators / Atlas / Instagram-depth social surfaces
 - Full rewrite of remaining Aftercare journal/tarot screens (they inherit Studio subnav only for now)
+
+## Full startup ship (shipped)
+
+- GA4 loader after cookie consent (`EXPO_PUBLIC_GA_ID`)
+- Newsletter → Netlify Forms (`artometrics-newsletter`)
+- Content OS ops: `cos:buffer-schedule`, `cos:notion-sync`, `cos:slack-notify`, `cos:gsc-check`
+- Tests: `test:smoke`, `test:ops-scripts`, `test:unit`
+- Celestial Aftercare + library specimen cards + Studio Birth tools depth merged

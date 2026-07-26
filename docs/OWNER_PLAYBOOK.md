@@ -72,5 +72,45 @@ npm run content && npm run cos:downloads && npm run cos:aeo
 npm run cos:brief -- --slug … --desk culture --title "…"
 npm run cos:publish -- --slug … --undraft
 npm run cos:zine -- --slug anime
+npm run cos:buffer-schedule -- --slug anime
+npm run cos:gsc-check
 npm run build
+npm run test:unit && npm run test:ops-scripts
+PREVIEW_URL=https://artometrics.com npm run test:smoke
+```
+
+## Startup runbook
+
+### Env matrix (Netlify + local `.env`)
+
+| Var | Required for |
+|-----|----------------|
+| `EXPO_PUBLIC_SITE_URL` | Canonical URLs |
+| `EXPO_PUBLIC_SUPABASE_*` + `SUPABASE_SERVICE_ROLE_KEY` | Auth / Studio / Aftercare |
+| `STRIPE_*` | Membership |
+| `EXPO_PUBLIC_GA_ID` | GA4 (loads after cookie consent) |
+| `ELEVENLABS_API_KEY` | `cos:narrate` |
+| `BUFFER_ACCESS_TOKEN` (+ optional `BUFFER_PROFILE_IDS`) | `cos:buffer-schedule` |
+| `NOTION_API_KEY` + `NOTION_BRIEF_DATABASE_ID` | `cos:notion-sync` |
+| `SLACK_WEBHOOK_URL` | Publish alerts |
+| `SANITY_*` | Optional magazine CMS sync |
+
+### Cursor MCP auth
+
+Confirm connected: Buffer, Notion, Slack, ElevenLabs, GitHub, analytics-mcp, gscServer, Figma (print).  
+Skip Transistor while Error. Skip Canva (use `cos:zine`).
+
+### First publish day
+
+1. `npm run cos:notion-sync` or `cos:brief`  
+2. Write + charts → `cos:publish -- --slug … --undraft`  
+3. `cos:zine` → `cos:buffer-schedule` → `cos:gsc-check`  
+4. Checklist: `docs/content-os/templates/ops-publish-checklist.md`
+
+### Deploy
+
+```bash
+npm run build
+npx netlify deploy --prod --dir=dist
+# or: git push origin main (if Git-linked auto-deploy)
 ```

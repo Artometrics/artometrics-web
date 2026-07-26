@@ -12,6 +12,7 @@ module.exports = ({ config }) => {
     process.env.EXPO_PUBLIC_SITE_URL ||
     process.env.PUBLIC_SITE_URL ||
     "https://artometrics.com";
+  const gaId = process.env.EXPO_PUBLIC_GA_ID || "";
 
   return {
     ...config,
@@ -26,6 +27,7 @@ module.exports = ({ config }) => {
       EXPO_PUBLIC_SITE_URL: siteUrl,
       EXPO_PUBLIC_SUPABASE_URL: supabaseUrl,
       EXPO_PUBLIC_SUPABASE_ANON_KEY: supabaseAnon,
+      EXPO_PUBLIC_GA_ID: gaId,
       PUBLIC_SITE_URL: siteUrl,
       PUBLIC_SUPABASE_URL: supabaseUrl,
       PUBLIC_SUPABASE_ANON_KEY: supabaseAnon,

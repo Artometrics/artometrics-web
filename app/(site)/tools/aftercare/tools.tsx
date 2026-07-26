@@ -39,6 +39,9 @@ import {
   type NumberReading,
   type SunReading,
 } from "@/lib/aftercare/readings";
+import { celestialForSign } from "@/lib/aftercare/planets";
+import { PlanetPoster } from "@/components/aftercare/PlanetPoster";
+import { CosmicChartCard } from "@/components/aftercare/CosmicChartCard";
 
 const NAV = [
   { href: "/tools/aftercare", label: "Home" },
@@ -360,6 +363,37 @@ export default function AftercareBirthToolsScreen() {
                   {insight?.note ? ` · ${sunSign ?? "—"} season` : ""}
                 </Text>
               </View>
+
+              {validDate ? (
+                <View style={{ gap: 14 }}>
+                  {(() => {
+                    const c = celestialForSign(sunSign);
+                    return (
+                      <>
+                        <PlanetPoster
+                          seasonTitle={c.seasonTitle}
+                          seasonLine={c.seasonLine}
+                          planet={c.planet}
+                          dateLabel={
+                            nextBday
+                              ? `Next birthday · ${nextBday.daysUntil}d`
+                              : undefined
+                          }
+                          compact
+                        />
+                        <CosmicChartCard
+                          eyebrow={
+                            insight?.note ||
+                            `Life path ${lifePath ?? "—"} · reflective chart card`
+                          }
+                          planet={c.planet}
+                          profileLabel={displayName || "You"}
+                        />
+                      </>
+                    );
+                  })()}
+                </View>
+              ) : null}
 
               <Text style={[styles.sectionLabel, { color: colors.textMuted }]}>
                 Reading deck
