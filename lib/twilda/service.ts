@@ -234,7 +234,13 @@ export async function updateNovelMetadata(
   supabase: Client,
   userId: string,
   novelId: string,
-  patch: Partial<{ title: string; author: string; synopsis: string; series_name: string | null }>,
+  patch: Partial<{
+    title: string;
+    author: string;
+    synopsis: string;
+    series_name: string | null;
+    cover_kind: CoverKind;
+  }>,
 ) {
   const { error } = await supabase
     .from("novels")

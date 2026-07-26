@@ -13,6 +13,8 @@ import { router, useLocalSearchParams } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { PageSeo } from "@/components/PageSeo";
 import { ToolsSubnav } from "@/components/tools/ToolsSubnav";
+import { StudioBreadcrumb } from "@/components/studio/StudioBreadcrumb";
+import { StudioSelect } from "@/components/studio/StudioSelect";
 import { PrimaryButton } from "@/components/PrimaryButton";
 import { Fonts } from "@/constants/Colors";
 import { useTheme } from "@/lib/theme";
@@ -34,6 +36,7 @@ import {
   listStoryboardPanels,
   type StoryboardPanel,
 } from "@/lib/twilda/storyboard";
+import type { CoverKind } from "@/lib/twilda/novelcrafter/data";
 
 /** Client-only workspace — no pre-rendered novel IDs at export time. */
 export function generateStaticParams() {
@@ -48,6 +51,13 @@ const MODES: { id: Mode; label: string }[] = [
   { id: "board", label: "Board" },
   { id: "codex", label: "Codex" },
   { id: "settings", label: "Settings" },
+];
+
+const COVER_OPTIONS: { value: CoverKind; label: string }[] = [
+  { value: "gatsby", label: "Gatsby" },
+  { value: "trinity", label: "Trinity" },
+  { value: "cardinal", label: "Cardinal" },
+  { value: "plain", label: "Plain" },
 ];
 
 const NAV = [
@@ -95,6 +105,7 @@ export default function TwildaNovelWorkspace() {
   const [author, setAuthor] = useState("");
   const [synopsis, setSynopsis] = useState("");
   const [series, setSeries] = useState("");
+  const [coverKind, setCoverKind] = useState<CoverKind>("plain");
   const saveTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const load = useCallback(async () => {
@@ -106,6 +117,7 @@ export default function TwildaNovelWorkspace() {
       setAuthor(data.author);
       setSynopsis(data.synopsis);
       setSeries(data.series_name ?? "");
+      setCoverKind(data.cover_kind);
       const firstScene = data.chapters[0]?.scenes[0];
       if (firstScene && !activeSceneId) {
         setActiveSceneId(firstScene.id);
@@ -144,6 +156,58 @@ export default function TwildaNovelWorkspace() {
     return null;
   }, [novel, activeSceneId]);
 
+  const chapterOptions = useMemo(() => {
+    if (!novel) return [];
+    return novel.chapters.map((ch, i) => ({
+      value: ch.id,
+      label: ch.title || `Chapter ${i + 1}`,
+    }));
+  }, [novel]);
+
+  const activeChapterId = activeScene?.chapter.id ?? chapterOptions[0]?.value ?? "";
+
+  const sceneOptions = useMemo(() => {
+    if (!novel || !activeChapterId) return [];
+    const ch = novel.chapters.find((c) => c.id === activeChapterId);
+    if (!ch) return [];
+    return ch.scenes.map((sc, i) => ({
+      value: sc.id,
+      label: sc.title || `Scene ${i + 1}`,
+    }));
+  }, [novel, activeChapterId]);
+
+  const chapterIndex = useMemo(() => {
+    if (!novel || !activeScene) return 0;
+    return novel.chapters.findIndex((c) => c.id === activeScene.chapter.id) + 1;
+  }, [novel, activeScene]);
+
+  const sceneIndex = useMemo(() => {
+    if (!activeScene) return 0;
+    return activeScene.chapter.scenes.findIndex((s) => s.id === activeScene.scene.id) + 1;
+  }, [activeScene]);
+
+  function selectChapter(chapterId: string) {
+    if (!novel) return;
+    const ch = novel.chapters.find((c) => c.id === chapterId);
+    const first = ch?.scenes[0];
+    if (first) {
+      setActiveSceneId(first.id);
+      setSceneText(stripHtml(first.content || ""));
+    }
+  }
+
+  function selectScene(sceneId: string) {
+    if (!novel) return;
+    for (const ch of novel.chapters) {
+      const scene = ch.scenes.find((s) => s.id === sceneId);
+      if (scene) {
+        setActiveSceneId(scene.id);
+        setSceneText(stripHtml(scene.content || ""));
+        return;
+      }
+    }
+  }
+
   function onSceneChange(text: string) {
     setSceneText(text);
     setSaveState("saving");
@@ -158,6 +222,8 @@ export default function TwildaNovelWorkspace() {
       }
     }, 700);
   }
+
+  const modeLabel = MODES.find((m) => m.id === mode)?.label ?? "Write";
 
   if (!ready || loading) {
     return (
@@ -176,39 +242,70 @@ export default function TwildaNovelWorkspace() {
     );
   }
 
+  const panelStyle = StyleSheet.flatten([
+    styles.panel,
+    { borderColor: colors.border, backgroundColor: colors.bgElevated },
+  ]);
+
   return (
     <Wrapper style={styles.wrap}>
       <PageSeo title={novel.title} description="Twilda workspace" path={`/tools/twilda/novels/${id}`} />
       <ToolsSubnav links={NAV} />
-      <Text style={[styles.eyebrow, { color: colors.accent }]}>Twilda workspace</Text>
-      <Text style={[styles.title, { color: colors.text }]}>{novel.title}</Text>
-      <Text style={[styles.save, { color: colors.textMuted }]}>
-        {saveState === "saving" ? "Saving…" : saveState === "saved" ? "Saved" : " "}
-      </Text>
+      <StudioBreadcrumb
+        items={[
+          { label: "Studio", href: "/studio" },
+          { label: "Twilda", href: "/tools/twilda" },
+          { label: novel.title, href: `/tools/twilda/novels/${id}` },
+          { label: modeLabel },
+          ...(mode === "write" && activeScene
+            ? [{ label: `Chapter ${chapterIndex} · Scene ${sceneIndex}` }]
+            : []),
+        ]}
+      />
+      <View style={styles.titleRow}>
+        <Text style={[styles.title, { color: colors.text }]}>{novel.title}</Text>
+        <Text style={[styles.save, { color: colors.textMuted }]}>
+          {saveState === "saving" ? "Saving…" : saveState === "saved" ? "Saved" : " "}
+        </Text>
+      </View>
 
-      <View style={styles.modes}>
-        {MODES.map((m) => (
-          <Pressable
-            key={m.id}
-            onPress={() => setMode(m.id)}
-            style={[
-              styles.modeChip,
-              {
-                borderColor: colors.border,
-                backgroundColor: mode === m.id ? colors.text : "transparent",
-              },
-            ]}
-          >
-            <Text style={{ color: mode === m.id ? colors.inverse : colors.text, fontSize: 13 }}>
-              {m.label}
-            </Text>
-          </Pressable>
-        ))}
+      <View
+        style={StyleSheet.flatten([
+          styles.segment,
+          { borderColor: colors.border, backgroundColor: colors.bg },
+        ])}
+      >
+        {MODES.map((m) => {
+          const active = mode === m.id;
+          return (
+            <Pressable
+              key={m.id}
+              onPress={() => setMode(m.id)}
+              style={StyleSheet.flatten([
+                styles.segmentItem,
+                active
+                  ? { backgroundColor: colors.text }
+                  : { backgroundColor: "transparent" },
+              ])}
+            >
+              <Text
+                style={{
+                  color: active ? colors.inverse : colors.textMuted,
+                  fontSize: 13,
+                  fontWeight: active ? "700" : "500",
+                  letterSpacing: 0.2,
+                }}
+              >
+                {m.label}
+              </Text>
+            </Pressable>
+          );
+        })}
       </View>
 
       <ScrollView contentContainerStyle={{ gap: 12, paddingBottom: 48 }}>
         {mode === "plan" ? (
-          <View style={{ gap: 12 }}>
+          <View style={[panelStyle, { gap: 12 }]}>
             {novel.chapters.map((ch) => (
               <View key={ch.id} style={[styles.block, { borderColor: colors.border }]}>
                 <Text style={[styles.h, { color: colors.text }]}>{ch.title}</Text>
@@ -239,28 +336,47 @@ export default function TwildaNovelWorkspace() {
         ) : null}
 
         {mode === "write" ? (
-          <View style={{ gap: 10 }}>
-            <Text style={[styles.meta, { color: colors.textMuted }]}>
-              {activeScene
-                ? `${activeScene.chapter.title} · ${activeScene.scene.title}`
-                : "Select a scene from Plan"}
-            </Text>
+          <View style={[panelStyle, { gap: 12, zIndex: 8 }]}>
+            <View style={styles.selectors}>
+              <View style={{ flex: 1, minWidth: 140, zIndex: 12 }}>
+                <StudioSelect
+                  label="Chapter"
+                  value={activeChapterId}
+                  options={chapterOptions}
+                  onChange={selectChapter}
+                  placeholder="Chapter…"
+                />
+              </View>
+              <View style={{ flex: 1, minWidth: 140, zIndex: 11 }}>
+                <StudioSelect
+                  label="Scene"
+                  value={activeSceneId ?? ""}
+                  options={sceneOptions}
+                  onChange={selectScene}
+                  placeholder="Scene…"
+                />
+              </View>
+            </View>
             <TextInput
               multiline
               value={sceneText}
               onChangeText={onSceneChange}
               placeholder="Write this scene…"
               placeholderTextColor={colors.textSubtle}
-              style={[
+              style={StyleSheet.flatten([
                 styles.editor,
-                { borderColor: colors.border, color: colors.text, backgroundColor: colors.bgElevated },
-              ]}
+                {
+                  borderColor: colors.border,
+                  color: colors.text,
+                  backgroundColor: colors.bg,
+                },
+              ])}
             />
           </View>
         ) : null}
 
         {mode === "board" ? (
-          <View style={{ gap: 12 }}>
+          <View style={[panelStyle, { gap: 12 }]}>
             {panels.map((p) => (
               <View key={p.id} style={[styles.block, { borderColor: colors.border }]}>
                 <Text style={[styles.h, { color: colors.text }]}>
@@ -281,7 +397,7 @@ export default function TwildaNovelWorkspace() {
         ) : null}
 
         {mode === "codex" ? (
-          <View style={{ gap: 12 }}>
+          <View style={[panelStyle, { gap: 12 }]}>
             {novel.codex.map((entry) => (
               <View key={entry.id} style={[styles.block, { borderColor: colors.border }]}>
                 <Text style={[styles.source, { color: colors.accent }]}>{entry.type}</Text>
@@ -304,7 +420,7 @@ export default function TwildaNovelWorkspace() {
         ) : null}
 
         {mode === "settings" ? (
-          <View style={{ gap: 10 }}>
+          <View style={[panelStyle, { gap: 12, zIndex: 8 }]}>
             {(
               [
                 ["Title", title, setTitle],
@@ -312,22 +428,45 @@ export default function TwildaNovelWorkspace() {
                 ["Series", series, setSeries],
               ] as const
             ).map(([label, value, set]) => (
-              <View key={label} style={{ gap: 4 }}>
-                <Text style={[styles.meta, { color: colors.textMuted }]}>{label}</Text>
+              <View key={label} style={{ gap: 6 }}>
+                <Text style={[styles.fieldLabel, { color: colors.textMuted }]}>{label}</Text>
                 <TextInput
                   value={value}
                   onChangeText={set}
-                  style={[styles.input, { borderColor: colors.border, color: colors.text }]}
+                  style={StyleSheet.flatten([
+                    styles.input,
+                    {
+                      borderColor: colors.border,
+                      color: colors.text,
+                      backgroundColor: colors.bg,
+                    },
+                  ])}
                 />
               </View>
             ))}
-            <Text style={[styles.meta, { color: colors.textMuted }]}>Synopsis</Text>
-            <TextInput
-              multiline
-              value={synopsis}
-              onChangeText={setSynopsis}
-              style={[styles.editor, { borderColor: colors.border, color: colors.text, minHeight: 120 }]}
+            <StudioSelect
+              label="Cover"
+              value={coverKind}
+              options={COVER_OPTIONS}
+              onChange={(v) => setCoverKind(v as CoverKind)}
             />
+            <View style={{ gap: 6 }}>
+              <Text style={[styles.fieldLabel, { color: colors.textMuted }]}>Synopsis</Text>
+              <TextInput
+                multiline
+                value={synopsis}
+                onChangeText={setSynopsis}
+                style={StyleSheet.flatten([
+                  styles.editor,
+                  {
+                    borderColor: colors.border,
+                    color: colors.text,
+                    backgroundColor: colors.bg,
+                    minHeight: 120,
+                  },
+                ])}
+              />
+            </View>
             <PrimaryButton
               label="Save settings"
               onPress={async () => {
@@ -336,28 +475,37 @@ export default function TwildaNovelWorkspace() {
                   author,
                   synopsis,
                   series_name: series.trim() || null,
+                  cover_kind: coverKind,
                 });
                 await load();
                 Alert.alert("Saved", "Novel settings updated.");
               }}
             />
-            <PrimaryButton
-              label="Delete novel"
-              style={{ backgroundColor: colors.textMuted }}
-              onPress={() =>
-                Alert.alert("Delete novel?", "This cannot be undone.", [
-                  { text: "Cancel", style: "cancel" },
-                  {
-                    text: "Delete",
-                    style: "destructive",
-                    onPress: async () => {
-                      await deleteNovel(sb(), user!.id, id!);
-                      router.replace("/tools/twilda");
+            <View
+              style={StyleSheet.flatten([
+                styles.dangerZone,
+                { borderColor: colors.border },
+              ])}
+            >
+              <Text style={[styles.fieldLabel, { color: colors.textMuted }]}>Danger zone</Text>
+              <PrimaryButton
+                label="Delete novel"
+                style={{ backgroundColor: colors.textMuted }}
+                onPress={() =>
+                  Alert.alert("Delete novel?", "This cannot be undone.", [
+                    { text: "Cancel", style: "cancel" },
+                    {
+                      text: "Delete",
+                      style: "destructive",
+                      onPress: async () => {
+                        await deleteNovel(sb(), user!.id, id!);
+                        router.replace("/tools/twilda");
+                      },
                     },
-                  },
-                ])
-              }
-            />
+                  ])
+                }
+              />
+            </View>
           </View>
         ) : null}
       </ScrollView>
@@ -367,23 +515,72 @@ export default function TwildaNovelWorkspace() {
 
 const styles = StyleSheet.create({
   wrap: { paddingVertical: 28, gap: 8, flex: 1 },
-  eyebrow: { fontSize: 12, letterSpacing: 1.8, textTransform: "uppercase", fontWeight: "700" },
-  title: { fontFamily: Fonts.serif, fontSize: 32, fontWeight: "700" },
+  titleRow: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    alignItems: "baseline",
+    justifyContent: "space-between",
+    gap: 8,
+  },
+  title: { fontFamily: Fonts.serif, fontSize: 32, fontWeight: "700", flexShrink: 1 },
   save: { fontSize: 12, minHeight: 16 },
-  modes: { flexDirection: "row", flexWrap: "wrap", gap: 8, marginVertical: 8 },
-  modeChip: { borderWidth: StyleSheet.hairlineWidth, paddingHorizontal: 12, paddingVertical: 8 },
+  segment: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    borderWidth: StyleSheet.hairlineWidth,
+    borderRadius: 2,
+    padding: 3,
+    gap: 2,
+    marginVertical: 6,
+    alignSelf: "flex-start",
+  },
+  segmentItem: {
+    paddingHorizontal: 14,
+    paddingVertical: 8,
+    borderRadius: 1,
+  },
+  panel: {
+    borderWidth: StyleSheet.hairlineWidth,
+    borderRadius: 2,
+    padding: 16,
+  },
+  selectors: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    gap: 12,
+  },
   block: { borderWidth: StyleSheet.hairlineWidth, padding: 14, gap: 6 },
   h: { fontFamily: Fonts.serif, fontSize: 18, fontWeight: "700" },
-  meta: { fontSize: 13 },
+  fieldLabel: {
+    fontSize: 12,
+    letterSpacing: 0.8,
+    textTransform: "uppercase",
+    fontWeight: "700",
+  },
   source: { fontSize: 11, letterSpacing: 1.2, textTransform: "uppercase", fontWeight: "700" },
-  input: { borderWidth: StyleSheet.hairlineWidth, paddingHorizontal: 12, paddingVertical: 10 },
+  input: {
+    borderWidth: StyleSheet.hairlineWidth,
+    borderRadius: 2,
+    paddingHorizontal: 12,
+    paddingVertical: 10,
+    minHeight: 44,
+    fontFamily: Fonts.serif,
+    fontSize: 16,
+  },
   editor: {
     borderWidth: StyleSheet.hairlineWidth,
+    borderRadius: 2,
     padding: 14,
     minHeight: 280,
     textAlignVertical: "top",
     fontFamily: Fonts.serif,
     fontSize: 17,
     lineHeight: 28,
+  },
+  dangerZone: {
+    marginTop: 12,
+    paddingTop: 16,
+    borderTopWidth: StyleSheet.hairlineWidth,
+    gap: 10,
   },
 });

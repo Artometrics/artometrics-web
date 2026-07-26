@@ -57,3 +57,21 @@ Living product source for the magazine → platform upgrade. Companion to `00_AR
 - Never put `Link asChild` around Reanimated views (RN Web CSSStyleDeclaration crash).
 - Flatten style arrays under `asChild`.
 - Netlify `/api/*` redirects stay above SPA fallback.
+
+## Studio tools depth (shipped)
+
+Aftercare Birth tools and Twilda novel workspace now use Studio chrome:
+
+- Shared primitives: `StudioBreadcrumb`, `StudioSelect`, date/time/place fields
+- Birth tools: Nominatim place search (`/api/places-search`), IANA timezone select, name numerology (Expression / Soul Urge / Personality) + Life Path / sun reading essays
+- Twilda Write/Settings: breadcrumb path, chapter/scene dropdowns, cover kind select, elevated panels
+
+## Follow-up (not in this slice)
+
+Remaining platform ops — docs only until scheduled:
+
+- Sanity live env + editorial bridge go-live
+- Google Auth custom domain
+- Preference mirror (taste panel from reading history / saves)
+- Generators / Atlas / Instagram-depth social surfaces
+- Full rewrite of remaining Aftercare journal/tarot screens (they inherit Studio subnav only for now)

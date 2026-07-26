@@ -12,21 +12,23 @@ export function ToolsSubnav({ links }: { links: LinkItem[] }) {
   return (
     <View style={[styles.row, { borderBottomColor: colors.border }]}>
       <Link href="/studio" asChild>
-        <Pressable style={styles.link}>
-          <Text style={[styles.meta, { color: colors.textMuted }]}>Studio</Text>
+        <Pressable style={StyleSheet.flatten([styles.link])}>
+          <Text style={StyleSheet.flatten([styles.meta, { color: colors.textMuted }])}>
+            Studio
+          </Text>
         </Pressable>
       </Link>
       {links.map((l) => {
         const active = pathname === l.href || pathname?.startsWith(`${l.href}/`);
         return (
           <Link key={l.href} href={l.href as `/tools`} asChild>
-            <Pressable style={styles.link}>
+            <Pressable style={StyleSheet.flatten([styles.link])}>
               <Text
-                style={[
+                style={StyleSheet.flatten([
                   styles.label,
                   { color: active ? colors.accent : colors.text },
-                  active && styles.active,
-                ]}
+                  active ? styles.active : null,
+                ])}
               >
                 {l.label}
               </Text>
@@ -42,9 +44,9 @@ const styles = StyleSheet.create({
   row: {
     flexDirection: "row",
     flexWrap: "wrap",
-    gap: 16,
-    paddingBottom: 12,
-    marginBottom: 16,
+    gap: 14,
+    paddingBottom: 10,
+    marginBottom: 12,
     borderBottomWidth: StyleSheet.hairlineWidth,
   },
   link: { paddingVertical: 4 },

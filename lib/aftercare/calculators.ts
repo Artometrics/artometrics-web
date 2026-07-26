@@ -51,15 +51,75 @@ export function nextBirthday(isoDate: string, now = new Date()) {
   return { date: next.toISOString().slice(0, 10), daysUntil: days }
 }
 
+/** Reduce to a single digit, preserving master numbers 11 / 22 / 33. */
+export function reduceNumerology(sum: number) {
+  let n = sum
+  while (n > 9 && n !== 11 && n !== 22 && n !== 33) {
+    n = [...String(n)].reduce((a, c) => a + Number(c), 0)
+  }
+  return n
+}
+
 /** Pythagorean life-path style number from birth date. Reflective, not scientific. */
 export function lifePathNumber(isoDate: string) {
   const digits = isoDate.replace(/\D/g, '')
   if (digits.length < 8) return null
-  let sum = [...digits].reduce((a, c) => a + Number(c), 0)
-  while (sum > 9 && sum !== 11 && sum !== 22 && sum !== 33) {
-    sum = [...String(sum)].reduce((a, c) => a + Number(c), 0)
+  const sum = [...digits].reduce((a, c) => a + Number(c), 0)
+  return reduceNumerology(sum)
+}
+
+/** Pythagorean letter values A=1 … I=9, J=1 … R=9, S=1 … Z=8. */
+const LETTER_VALUE: Record<string, number> = {
+  a: 1, b: 2, c: 3, d: 4, e: 5, f: 6, g: 7, h: 8, i: 9,
+  j: 1, k: 2, l: 3, m: 4, n: 5, o: 6, p: 7, q: 8, r: 9,
+  s: 1, t: 2, u: 3, v: 4, w: 5, x: 6, y: 7, z: 8,
+}
+
+const VOWELS = new Set(['a', 'e', 'i', 'o', 'u'])
+
+function lettersOf(name: string) {
+  return [...name.toLowerCase()].filter((ch) => LETTER_VALUE[ch] != null)
+}
+
+function sumLetters(chars: string[]) {
+  return chars.reduce((a, ch) => a + (LETTER_VALUE[ch] ?? 0), 0)
+}
+
+/** Expression / Destiny — all letters of the display name. */
+export function expressionNumber(name: string) {
+  const letters = lettersOf(name)
+  if (!letters.length) return null
+  return reduceNumerology(sumLetters(letters))
+}
+
+/** Soul Urge — vowels only (A E I O U). */
+export function soulUrgeNumber(name: string) {
+  const vowels = lettersOf(name).filter((ch) => VOWELS.has(ch))
+  if (!vowels.length) return null
+  return reduceNumerology(sumLetters(vowels))
+}
+
+/** Personality — consonants only. */
+export function personalityNumber(name: string) {
+  const consonants = lettersOf(name).filter((ch) => !VOWELS.has(ch))
+  if (!consonants.length) return null
+  return reduceNumerology(sumLetters(consonants))
+}
+
+export type NameNumbers = {
+  expression: number | null
+  soulUrge: number | null
+  personality: number | null
+}
+
+export function nameNumbers(name: string): NameNumbers {
+  const trimmed = name.trim()
+  if (!trimmed) return { expression: null, soulUrge: null, personality: null }
+  return {
+    expression: expressionNumber(trimmed),
+    soulUrge: soulUrgeNumber(trimmed),
+    personality: personalityNumber(trimmed),
   }
-  return sum
 }
 
 export function moonPhaseApprox(date = new Date()) {
