@@ -6,11 +6,12 @@ import { Fonts } from "@/constants/Colors";
 import { useTheme } from "@/lib/theme";
 import { searchSite } from "@/lib/search";
 import { PageSeo } from "@/components/PageSeo";
+import { paramString } from "@/lib/params";
 
 export default function SearchScreen() {
   const { colors } = useTheme();
-  const params = useLocalSearchParams<{ q?: string }>();
-  const initial = typeof params.q === "string" ? params.q : "";
+  const params = useLocalSearchParams<{ q?: string | string[] }>();
+  const initial = paramString(params.q) ?? "";
   const [q, setQ] = useState(initial);
   const hits = useMemo(() => searchSite(q), [q]);
 

@@ -6,6 +6,7 @@ import {
   SECTION_SLUGS,
   type SectionSlug,
 } from "@/data/sections";
+import { paramString } from "@/lib/params";
 
 function resolveDomain(raw: string | undefined): SectionSlug | null {
   if (!raw) return null;
@@ -30,7 +31,7 @@ export async function generateStaticParams() {
 
 /** Legacy /desks/* → canonical /topics/:domain */
 export default function DeskPage() {
-  const { desk: raw } = useLocalSearchParams<{ desk: string }>();
-  const section = resolveDomain(raw) ?? "culture";
+  const params = useLocalSearchParams<{ desk: string | string[] }>();
+  const section = resolveDomain(paramString(params.desk)) ?? "culture";
   return <Redirect href={`/topics/${section}` as `/topics/${string}`} />;
 }

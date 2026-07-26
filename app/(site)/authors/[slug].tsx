@@ -4,13 +4,15 @@ import { Wrapper } from "@/components/Wrapper";
 import { Colors } from "@/constants/Colors";
 import { assetUrl } from "@/lib/assets";
 import { getAuthor, getAuthors } from "@/lib/content";
+import { paramString } from "@/lib/params";
 
 export async function generateStaticParams() {
   return getAuthors().map((author) => ({ slug: author.id }));
 }
 
 export default function AuthorScreen() {
-  const { slug } = useLocalSearchParams<{ slug: string }>();
+  const params = useLocalSearchParams<{ slug: string | string[] }>();
+  const slug = paramString(params.slug);
   const author = getAuthor(slug);
 
   if (!author) {

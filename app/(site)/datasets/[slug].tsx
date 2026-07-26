@@ -6,6 +6,7 @@ import { Fonts } from "@/constants/Colors";
 import { useTheme } from "@/lib/theme";
 import { DATASET_PACKS, getDatasetPack } from "@/data/datasets";
 import { SECTION_META } from "@/data/sections";
+import { paramString } from "@/lib/params";
 
 export async function generateStaticParams() {
   return DATASET_PACKS.map((p) => ({ slug: p.id }));
@@ -13,7 +14,8 @@ export async function generateStaticParams() {
 
 export default function DatasetPackScreen() {
   const { colors } = useTheme();
-  const { slug } = useLocalSearchParams<{ slug: string }>();
+  const params = useLocalSearchParams<{ slug: string | string[] }>();
+  const slug = paramString(params.slug);
   const pack = getDatasetPack(slug);
 
   if (!pack) {

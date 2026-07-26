@@ -36,8 +36,12 @@ export function getSupabase(): SupabaseClient | null {
 export async function getAccessToken(): Promise<string | null> {
   const supabase = getSupabase();
   if (!supabase) return null;
-  const { data } = await supabase.auth.getSession();
-  return data.session?.access_token ?? null;
+  try {
+    const { data } = await supabase.auth.getSession();
+    return data.session?.access_token ?? null;
+  } catch {
+    return null;
+  }
 }
 
 export async function apiFetch(path: string, init: RequestInit = {}) {
