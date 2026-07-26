@@ -1,6 +1,7 @@
 ---
 title: How Whale and Dolphin Sizes Cluster by Family
 slug: cetaceans
+author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
 description: Morphometric data map which cetacean lineages produce the giants.
 heroImage: /images/content/articles/cetaceans/hero.png

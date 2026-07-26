@@ -1,6 +1,7 @@
 ---
 title: How Population Scale Relates to Prosperity Across Countries
 slug: cia-world-factbook
+author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
 description: >-
   Factbook indicators compare nations on size and wealth—where scale and

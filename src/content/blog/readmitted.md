@@ -1,6 +1,7 @@
 ---
 title: Which Hospitals Still Fail the 30-Day Readmission Standard?
 slug: readmitted
+author: kyle-mcauliffe
 pubDate: 2026-04-21T00:00:00.000Z
 description: >-
   CMS HRRP data show where states, conditions, and ownership types exceed

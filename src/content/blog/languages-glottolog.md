@@ -1,6 +1,7 @@
 ---
 title: How Concentrated Is the World’s Linguistic Diversity?
 slug: languages-glottolog
+author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
 description: >-
   Glottolog family data measure how uneven language diversity is at the family

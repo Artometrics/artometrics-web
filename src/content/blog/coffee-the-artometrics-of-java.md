@@ -1,6 +1,7 @@
 ---
 title: Coffee’s Place in Global Trade and Daily Life
 slug: coffee-the-artometrics-of-java
+author: kyle-mcauliffe
 pubDate: 2026-04-14T00:00:00.000Z
 description: >-
   Commodity and consumption data place coffee among the world’s largest traded

@@ -1,6 +1,7 @@
 ---
 title: Which Shows Dominated Emmy Season—and How Lopsided Was It?
 slug: emmy-awards
+author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
 description: >-
   Nomination and win records reveal which series swept hardware—and how

@@ -1,6 +1,7 @@
 ---
 title: How U.S. Radio Formats Map Across the Dial
 slug: radio-stations
+author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
 description: >-
   Station-level format data chart where music, talk, and niche programming

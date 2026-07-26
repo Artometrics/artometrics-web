@@ -1,6 +1,7 @@
 ---
 title: Which Storms Hit Puerto Rico Hardest?
 slug: hurricanes-puerto-rico
+author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
 description: >-
   Hurricane records compare wind, deaths, and frequency for the island’s most

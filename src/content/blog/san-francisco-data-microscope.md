@@ -1,6 +1,7 @@
 ---
 title: San Francisco as an Invention Machine Under Housing Pressure
 slug: san-francisco-data-microscope
+author: kyle-mcauliffe
 pubDate: 2026-07-01T00:00:00.000Z
 description: 'A city-identity report through software exports, scarcity, and neighborhoods.'
 heroImage: /images/content/articles/san-francisco-data-microscope/hero.png

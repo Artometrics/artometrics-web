@@ -1,6 +1,7 @@
 ---
 title: How the World’s Biggest Media Franchises Actually Make Money
 slug: franchise
+author: kyle-mcauliffe
 pubDate: 2026-04-08T00:00:00.000Z
 description: >-
   Revenue maps for more than 100 franchises show where valuable IP earns across

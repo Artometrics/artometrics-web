@@ -1,6 +1,7 @@
 ---
 title: When Did Prestige TV Peak—and Did Critics Agree?
 slug: tv-golden-age
+author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
 description: >-
   Golden-age scores compare critical and audience verdicts as prestige TV rose

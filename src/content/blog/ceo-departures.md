@@ -1,6 +1,7 @@
 ---
 title: How Long Do CEOs Last Before They Leave?
 slug: ceo-departures
+author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
 description: >-
   Thousands of executive-exit records measure tenure length and how departures

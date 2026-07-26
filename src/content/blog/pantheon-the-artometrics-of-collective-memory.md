@@ -1,6 +1,7 @@
 ---
 title: Who Gets Remembered in the Global Pantheon of Fame?
 slug: pantheon-the-artometrics-of-collective-memory
+author: kyle-mcauliffe
 pubDate: 2026-07-01T00:00:00.000Z
 description: Biography-scale fame data ask where collective memory clusters.
 heroImage: >-

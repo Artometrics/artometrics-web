@@ -1,6 +1,7 @@
 ---
 title: How Word Count Is Distributed Across the Holmes Canon
 slug: sherlock-holmes
+author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
 description: Text-length analysis of Sherlock Holmes stories through Conan’s corpus.
 heroImage: /images/content/articles/sherlock-holmes/hero.png

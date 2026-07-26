@@ -1,6 +1,7 @@
 ---
 title: What Streaming Platforms Actually Keep in Their Libraries
 slug: streaming-catalog-power
+author: kyle-mcauliffe
 pubDate: 2026-07-21T00:00:00.000Z
 description: >-
   Public catalog data reveal library size and the gap between hype and retained

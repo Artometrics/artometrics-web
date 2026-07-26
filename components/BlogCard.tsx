@@ -21,7 +21,7 @@ export function BlogCard({
   const { colors } = useTheme();
   const label = sectionLabel(post.tags);
   const hero = assetUrl(post.heroImage);
-  const author = post.author ? formatAuthorName(String(post.author)) : "Artometrics";
+  const author = post.author ? formatAuthorName(String(post.author)) : "Kyle McAuliffe";
 
   if (variant === "stack") {
     return (

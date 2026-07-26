@@ -1,6 +1,7 @@
 ---
 title: 'Cities as Operating Systems of Exports, Culture, and Scarcity'
 slug: city-bioeconomics-operating-system
+author: kyle-mcauliffe
 pubDate: 2026-07-01T00:00:00.000Z
 description: >-
   A geo-economics frame treats cities as layered systems of trade, culture, and

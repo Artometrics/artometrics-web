@@ -1,6 +1,7 @@
 ---
 title: How Concentrated Is Wealth at the Top of the Distribution?
 slug: wealth-income
+author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
 description: Wealth and income shares measure how assets pile up at the upper end.
 heroImage: /images/content/articles/wealth-income/hero.png

@@ -1,6 +1,7 @@
 ---
 title: Where Wastewater Plants Serve the Most People
 slug: hydro-wastewater
+author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
 description: Facility-level data map which plants serve the largest populations.
 heroImage: /images/content/articles/hydro-wastewater/hero.png

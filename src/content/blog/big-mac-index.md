@@ -1,6 +1,7 @@
 ---
 title: What Twenty Years of Big Mac Prices Say About Purchasing Power
 slug: big-mac-index
+author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
 description: >-
   Global burger prices illustrate how currency and wages shape the real cost of

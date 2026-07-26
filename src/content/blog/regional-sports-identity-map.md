@@ -1,6 +1,7 @@
 ---
 title: How American Cities Build Distinct Sports Identities
 slug: regional-sports-identity-map
+author: kyle-mcauliffe
 pubDate: 2026-07-01T00:00:00.000Z
 description: >-
   Markets, leagues, and championship droughts explain why fan cultures differ by

@@ -1,6 +1,7 @@
 ---
 title: Which U.S. PhD Fields Expanded Fastest?
 slug: us-phds
+author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
 description: Doctorate production data show which disciplines grew quickest.
 heroImage: /images/content/articles/us-phds/hero.png

@@ -166,13 +166,14 @@ export default function AccountScreen() {
         />
       </View>
 
-      <Text style={[styles.h, { color: colors.text }]}>Saved reports</Text>
-      {saved.length === 0 ? (
-        <Text style={[styles.p, { color: colors.textMuted }]}>
-          No saved reports yet. Open any article and tap Save.
+      <View style={[styles.savedBlock, { borderTopColor: colors.border }]}>
+        <Text style={[styles.h, { color: colors.text }]}>Saved reports</Text>
+        <Text style={[styles.savedCount, { color: colors.textMuted }]}>
+          {saved.length === 0
+            ? "No saved reports yet. Open any article and tap Save."
+            : `${saved.length} saved ${saved.length === 1 ? "report" : "reports"}`}
         </Text>
-      ) : (
-        saved.map((item) => {
+        {saved.map((item) => {
           const post = getBlogPost(item.article_slug);
           return (
             <Link key={item.article_slug} href={`/${item.article_slug}` as `/`} asChild>
@@ -182,11 +183,16 @@ export default function AccountScreen() {
                 <Text style={[styles.savedTitle, { color: colors.text }]}>
                   {post?.title ?? item.article_slug}
                 </Text>
+                {post?.tags?.length ? (
+                  <Text style={[styles.savedMeta, { color: colors.accent }]}>
+                    {post.tags.slice(0, 2).join(" · ")}
+                  </Text>
+                ) : null}
               </Pressable>
             </Link>
           );
-        })
-      )}
+        })}
+      </View>
     </Wrapper>
   );
 }
@@ -213,9 +219,22 @@ const styles = StyleSheet.create({
     fontWeight: "700",
   },
   title: { fontFamily: Fonts.serif, fontSize: 36, fontWeight: "700" },
-  h: { fontFamily: Fonts.serif, fontSize: 22, fontWeight: "700", marginTop: 16 },
+  h: { fontFamily: Fonts.serif, fontSize: 22, fontWeight: "700" },
   p: { fontFamily: Fonts.serif, fontSize: 16, lineHeight: 28 },
   actions: { flexDirection: "row", flexWrap: "wrap", gap: 12, marginTop: 8 },
-  savedRow: { paddingVertical: 12, borderBottomWidth: StyleSheet.hairlineWidth },
+  savedBlock: {
+    marginTop: 24,
+    paddingTop: 20,
+    borderTopWidth: StyleSheet.hairlineWidth,
+    gap: 10,
+  },
+  savedCount: { fontFamily: Fonts.sans, fontSize: 14, marginBottom: 4 },
+  savedRow: { paddingVertical: 14, borderBottomWidth: StyleSheet.hairlineWidth, gap: 4 },
   savedTitle: { fontFamily: Fonts.serif, fontSize: 18 },
+  savedMeta: {
+    fontSize: 11,
+    letterSpacing: 1.2,
+    textTransform: "uppercase",
+    fontWeight: "700",
+  },
 });

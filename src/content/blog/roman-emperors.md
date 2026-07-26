@@ -1,6 +1,7 @@
 ---
 title: Who Ruled Rome Longest—and Did Dynasty Predict Tenure?
 slug: roman-emperors
+author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
 description: >-
   Reign-length data test whether dynastic succession meant longer time on the

@@ -1,6 +1,7 @@
 ---
 title: Which Ramen Brands Earn the Highest Ratings?
 slug: ramen-ratings
+author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
 description: Taster scores across thousands of instant ramen products identify top brands.
 heroImage: /images/content/articles/ramen-ratings/hero.png

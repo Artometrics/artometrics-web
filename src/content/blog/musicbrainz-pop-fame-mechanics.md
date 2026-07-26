@@ -1,6 +1,7 @@
 ---
 title: How Catalog Depth and Reinvention Make Pop Stars Famous
 slug: musicbrainz-pop-fame-mechanics
+author: kyle-mcauliffe
 pubDate: 2026-07-01T00:00:00.000Z
 description: >-
   MusicBrainz-style metadata links fame to release depth, genre travel, and

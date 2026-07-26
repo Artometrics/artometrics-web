@@ -1,6 +1,7 @@
 ---
 title: Where U.S. Student-Body Diversity Is Highest
 slug: school-diversity
+author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
 description: School-level composition data map where diversity concentrates.
 heroImage: /images/content/articles/school-diversity/hero.png

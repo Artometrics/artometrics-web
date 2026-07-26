@@ -1,6 +1,7 @@
 ---
 title: Which Christmas Novels Anchor the Holiday Shelf?
 slug: christmas-novels
+author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
 description: >-
   A Gutenberg holiday corpus shows which seasonal novels still define the

@@ -1,6 +1,7 @@
 ---
 title: Did Longer Medium Posts Earn More Applause?
 slug: medium-articles
+author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
 description: >-
   Metadata from tens of thousands of Medium articles tests whether length

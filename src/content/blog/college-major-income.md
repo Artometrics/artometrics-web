@@ -1,6 +1,7 @@
 ---
 title: Which College Majors Pay Most—and Which Carry Job Risk?
 slug: college-major-income
+author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
 description: >-
   Earnings and unemployment by major show where degrees pay off and where risk

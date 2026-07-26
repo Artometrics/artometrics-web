@@ -1,6 +1,7 @@
 ---
 title: Who Drinks the Most Alcohol Per Capita?
 slug: alcohol-consumption
+author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
 description: >-
   Country-level consumption data map which nations drink the most per person—and

@@ -1,6 +1,7 @@
 ---
 title: The Cowboys’ Gap Between Brand Value and Championship Conversion
 slug: cowboys-the-artometrics-of-americas-team
+author: kyle-mcauliffe
 pubDate: 2026-07-01T00:00:00.000Z
 description: >-
   Dallas remains the NFL’s clearest split between global brand power and an

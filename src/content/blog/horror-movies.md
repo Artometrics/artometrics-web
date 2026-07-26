@@ -1,6 +1,7 @@
 ---
 title: Did Horror Get Better as the Catalog Exploded?
 slug: horror-movies
+author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
 description: >-
   Ratings across tens of thousands of horror films ask whether quality rose with

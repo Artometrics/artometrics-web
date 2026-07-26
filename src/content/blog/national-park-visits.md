@@ -1,6 +1,7 @@
 ---
 title: Which National Parks Draw the Crowds?
 slug: national-park-visits
+author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
 description: >-
   Visitation time series identify America’s busiest parks and how attendance has

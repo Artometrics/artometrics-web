@@ -1,6 +1,7 @@
 ---
 title: How Bitter and Strong Is American Craft Beer?
 slug: craft-beer-usa
+author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
 description: >-
   Brewery-level IBU and ABV data map bitterness and strength across U.S. craft

@@ -1,6 +1,7 @@
 ---
 title: Which Web Pages Load Fastest—and What Metrics Move Together?
 slug: web-page-metrics
+author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
 description: Performance metrics show speed leaders and which technical measures correlate.
 heroImage: /images/content/articles/web-page-metrics/hero.png

@@ -1,6 +1,7 @@
 ---
 title: Which Horror Movies Returned Multiples—and Which Burned Cash?
 slug: horror-movie-profit
+author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
 description: >-
   Budget and box-office data for thousands of horror titles separate winners

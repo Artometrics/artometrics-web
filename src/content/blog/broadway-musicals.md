@@ -1,6 +1,7 @@
 ---
 title: Which Broadway Musicals Ran Longest and Grossed Most?
 slug: broadway-musicals
+author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
 description: >-
   Performance and box-office records map the shows that dominated by longevity

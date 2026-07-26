@@ -1,6 +1,7 @@
 ---
 title: Mapping the Public-Domain Canon Through Project Gutenberg
 slug: project-gutenberg-public-domain-canon-map
+author: kyle-mcauliffe
 pubDate: 2026-07-01T00:00:00.000Z
 description: 'Gutenberg metadata charts language gravity, era effects, and author memory.'
 heroImage: /images/content/articles/project-gutenberg-public-domain-canon-map/hero.png

@@ -1,6 +1,7 @@
 ---
 title: How League Money and Roster Rules Shape Star Systems
 slug: league-money-skill-and-star-systems
+author: kyle-mcauliffe
 pubDate: 2026-07-01T00:00:00.000Z
 description: >-
   Cross-sport rules, payroll, and scarcity show why teams become culturally

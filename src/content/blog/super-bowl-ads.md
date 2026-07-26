@@ -1,6 +1,7 @@
 ---
 title: Which Super Bowl Ads Won the Post-Game Internet?
 slug: super-bowl-ads
+author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
 description: Ad-spot data track which commercials captured attention after the whistle.
 heroImage: /images/content/articles/super-bowl-ads/hero.png

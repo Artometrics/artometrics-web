@@ -1,6 +1,7 @@
 ---
 title: Did Critical Acclaim Track Commercial Success in Video Games?
 slug: video-games-sliced
+author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
 description: >-
   A large games slice tests whether critic scores correlated with commercial

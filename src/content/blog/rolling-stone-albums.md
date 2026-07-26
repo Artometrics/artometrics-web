@@ -1,6 +1,7 @@
 ---
 title: Which Albums Sit at the Peak of Rolling Stone’s Canon?
 slug: rolling-stone-albums
+author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
 description: Canonical rankings identify the records Rolling Stone places at the summit.
 heroImage: /images/content/articles/rolling-stone-albums/hero.png

@@ -1,6 +1,7 @@
 ---
 title: Which UN Votes Split the Chamber Most Sharply?
 slug: un-votes
+author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
 description: Voting records identify resolutions that divided member states.
 heroImage: /images/content/articles/un-votes/hero.png

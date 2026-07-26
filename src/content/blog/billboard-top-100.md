@@ -1,6 +1,7 @@
 ---
 title: How the Top of the Billboard Chart Got More Crowded
 slug: billboard-top-100
+author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
 description: Large-scale Hot 100 data show how rankings compress at the summit.
 heroImage: /images/content/articles/billboard-top-100/hero.png

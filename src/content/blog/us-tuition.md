@@ -1,6 +1,7 @@
 ---
 title: How Far Did Average U.S. Tuition Climb by State?
 slug: us-tuition
+author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
 description: State tuition time series measure the rise in college costs.
 heroImage: /images/content/articles/us-tuition/hero.png

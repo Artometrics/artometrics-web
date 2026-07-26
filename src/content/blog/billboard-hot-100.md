@@ -1,6 +1,7 @@
 ---
 title: How Long Number-One Hits Stay on Top of the Hot 100
 slug: billboard-hot-100
+author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
 description: >-
   Since 1958, most chart-toppers lasted weeks; a few held for months—and

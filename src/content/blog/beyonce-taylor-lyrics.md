@@ -1,6 +1,7 @@
 ---
 title: 'Beyoncé and Taylor Swift, Line by Line'
 slug: beyonce-taylor-lyrics
+author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
 description: >-
   A lyric-level comparison of two era-defining catalogs—theme, language, and

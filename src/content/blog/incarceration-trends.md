@@ -1,6 +1,7 @@
 ---
 title: How U.S. Incarceration Rates Diverged by State
 slug: incarceration-trends
+author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
 description: Long-run imprisonment data track national trends and which states pulled away.
 heroImage: /images/content/articles/incarceration-trends/hero.png

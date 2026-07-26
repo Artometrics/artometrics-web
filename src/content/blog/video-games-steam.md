@@ -1,6 +1,7 @@
 ---
 title: Which Steam Games Earned the Most Playtime Per Dollar?
 slug: video-games-steam
+author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
 description: >-
   Ownership and play data identify titles that delivered the most hours relative

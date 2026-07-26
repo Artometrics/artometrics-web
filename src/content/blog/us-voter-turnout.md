@@ -1,6 +1,7 @@
 ---
 title: Which States Show Up at the Ballot Box?
 slug: us-voter-turnout
+author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
 description: Election turnout data compare state participation rates.
 heroImage: /images/content/articles/us-voter-turnout/hero.png

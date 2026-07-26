@@ -1,6 +1,7 @@
 ---
 title: How Movies Become Famous on IMDb’s Public Scoreboard
 slug: imdb-blockbuster-grammar
+author: kyle-mcauliffe
 pubDate: 2026-07-01T00:00:00.000Z
 description: >-
   Title fields, ratings, and box-office references explain how films accumulate

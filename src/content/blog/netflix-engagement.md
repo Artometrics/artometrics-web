@@ -1,6 +1,7 @@
 ---
 title: Which Netflix Titles Consumed the Most Viewing Hours?
 slug: netflix-engagement
+author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
 description: Engagement metrics Netflix reports show which titles absorbed the most hours.
 heroImage: /images/content/articles/netflix-engagement/hero.png

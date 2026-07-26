@@ -1,6 +1,7 @@
 ---
 title: 'Where Pixar’s Critic Streak Broke: Cars and Lightyear'
 slug: pixar-films
+author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
 description: >-
   Data on Pixar’s canon track scores and the titles that interrupted a long

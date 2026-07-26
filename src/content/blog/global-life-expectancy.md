@@ -1,6 +1,7 @@
 ---
 title: How Human Life Expectancy Doubled in Five Centuries
 slug: global-life-expectancy
+author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
 description: >-
   Survival data from the 1500s to 2015 map who gained years of life—and who

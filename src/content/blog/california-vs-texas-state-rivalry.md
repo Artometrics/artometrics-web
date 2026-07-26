@@ -1,6 +1,7 @@
 ---
 title: 'California and Texas: Where Rival State Systems Diverge'
 slug: california-vs-texas-state-rivalry
+author: kyle-mcauliffe
 pubDate: 2026-07-01T00:00:00.000Z
 description: >-
   What the two largest U.S. states share—and where their economies, exports, and

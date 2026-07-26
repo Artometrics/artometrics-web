@@ -1,6 +1,7 @@
 ---
 title: How the Celtics Turned 1960s Dominance Into Permanent Expectation
 slug: celtics-the-artometrics-of-institutional-winning
+author: kyle-mcauliffe
 pubDate: 2026-07-01T00:00:00.000Z
 description: Boston’s championship inheritance still shapes every modern season.
 heroImage: >-

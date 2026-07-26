@@ -1,6 +1,7 @@
 ---
 title: Which U.S. States Exercise the Most?
 slug: exercise-usa
+author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
 description: State-level activity rates compare where Americans work out most.
 heroImage: /images/content/articles/exercise-usa/hero.png

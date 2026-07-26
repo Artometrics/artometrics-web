@@ -1,6 +1,7 @@
 ---
 title: Which Subjects Dominate the Project Gutenberg Shelf?
 slug: project-gutenberg
+author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
 description: Public-domain metadata show which topics crowd the free-library canon.
 heroImage: /images/content/articles/project-gutenberg/hero.png

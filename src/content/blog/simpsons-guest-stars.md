@@ -1,6 +1,7 @@
 ---
 title: Who Guest-Starred Most Often on The Simpsons?
 slug: simpsons-guest-stars
+author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
 description: Guest-appearance records count celebrity density across seasons.
 heroImage: /images/content/articles/simpsons-guest-stars/hero.png

@@ -1,6 +1,7 @@
 ---
 title: Who Generates the Most Plastic Waste—and Who Mismanages It?
 slug: global-plastic-waste
+author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
 description: >-
   Country-level plastic generation and mismanagement rates show where leakage

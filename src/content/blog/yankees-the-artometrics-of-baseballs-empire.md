@@ -1,6 +1,7 @@
 ---
 title: The Yankees as Baseball’s Benchmark for Expectation and Scale
 slug: yankees-the-artometrics-of-baseballs-empire
+author: kyle-mcauliffe
 pubDate: 2026-07-01T00:00:00.000Z
 description: >-
   More than titles: New York sets the standard for droughts, payroll, and

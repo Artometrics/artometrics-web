@@ -25,7 +25,7 @@ export function MagazineCard({
   const { colors, mode } = useTheme();
   const label = sectionLabel(post.tags);
   const hero = assetUrl(post.heroImage);
-  const author = post.author ? formatAuthorName(String(post.author)) : "Artometrics";
+  const author = post.author ? formatAuthorName(String(post.author)) : "Kyle McAuliffe";
   const aspect = variant === "portrait" ? 4 / 5 : 16 / 10;
   const fallbackMark = assetUrl(
     mode === "dark" ? "/images/brand/chomsky-a-white.png" : "/images/brand/chomsky-a-black.png"

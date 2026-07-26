@@ -1,6 +1,7 @@
 ---
 title: Julius Caesar and the Cost of Managing Power
 slug: caesar-the-psychonomics-of-emperor-julius
+author: kyle-mcauliffe
 pubDate: 2026-04-18T00:00:00.000Z
 description: >-
   A psychonomic reading of Caesar asks what ambition cost the Roman political

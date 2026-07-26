@@ -1,6 +1,7 @@
 ---
 title: How the Dodgers Built Baseball’s Modern Consistency Machine
 slug: dodgers-the-artometrics-of-baseballs-modern-machine
+author: kyle-mcauliffe
 pubDate: 2026-07-01T00:00:00.000Z
 description: >-
   Los Angeles turned payroll, development, and depth into recurring October

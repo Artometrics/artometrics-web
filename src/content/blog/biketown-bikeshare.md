@@ -1,6 +1,7 @@
 ---
 title: How Far Do Portland’s Biketown Rides Actually Go?
 slug: biketown-bikeshare
+author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
 description: >-
   Trip-level bike-share data measures typical distance and duration across

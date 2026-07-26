@@ -1,6 +1,7 @@
 ---
 title: Who Ranks Highest on Comic-Book Power Scales?
 slug: comic-characters
+author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
 description: Character attributes across Marvel and DC ask who sits atop power rankings.
 heroImage: /images/content/articles/comic-characters/hero.png

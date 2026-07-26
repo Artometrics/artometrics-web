@@ -1,6 +1,7 @@
 ---
 title: 'What Empire Chronicles Leave Out: Who Got Rich'
 slug: imperial
+author: kyle-mcauliffe
 pubDate: 2026-04-14T00:00:00.000Z
 description: >-
   A historical-economics lens asks who captured wealth when rulers claimed

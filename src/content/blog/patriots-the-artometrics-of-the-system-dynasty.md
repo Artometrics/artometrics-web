@@ -1,6 +1,7 @@
 ---
 title: The Patriots’ Brady–Belichick Era as a System Shock
 slug: patriots-the-artometrics-of-the-system-dynasty
+author: kyle-mcauliffe
 pubDate: 2026-07-01T00:00:00.000Z
 description: >-
   Two decades of New England football compressed a century of legacy into one

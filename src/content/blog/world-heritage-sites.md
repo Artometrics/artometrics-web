@@ -1,6 +1,7 @@
 ---
 title: 'How UNESCO Sites Grew Across Scandinavia, 2004–2022'
 slug: world-heritage-sites
+author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
 description: UNESCO heritage counts track how Scandinavian inventories expanded.
 heroImage: /images/content/articles/world-heritage-sites/hero.png

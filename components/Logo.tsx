@@ -87,12 +87,22 @@ export function Logo({
     <View
       style={[
         styles.wrap,
+        styles.wordmarkRow,
         isLeft ? styles.wrapLeft : styles.wrapCenter,
-        { height: size + 2 },
+        { height: Math.max(size + 2, markSize + 2) },
         containerStyle,
       ]}
       accessibilityLabel="Artometrics"
     >
+      {mark ? (
+        <Image
+          source={{ uri: mark }}
+          style={{ width: Math.round(size * 0.9), height: Math.round(size * 0.9) }}
+          resizeMode="contain"
+          accessibilityElementsHidden
+          importantForAccessibility="no"
+        />
+      ) : null}
       {showWordmark ? (
         <Text
           style={[
@@ -118,6 +128,11 @@ const styles = StyleSheet.create({
   wrap: {
     minWidth: 40,
     justifyContent: "center",
+  },
+  wordmarkRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 8,
   },
   wrapLeft: {
     alignItems: "flex-start",

@@ -71,7 +71,7 @@
 /* ── Code exhibit dropdowns ────────────────────────────────────────── */
 .artometrics-article-body .art-code-block{
   margin: 0.8rem auto 1rem;
-  max-width: 860px;
+  max-width: min(1100px, 100%);
   text-align: center;
 }
 .artometrics-article-body .art-code-block details{ text-align: left; }
@@ -149,7 +149,7 @@
 }
 
 /* ── References ────────────────────────────────────────────────────── */
-.artometrics-article-body .art-references{ max-width: 700px; margin: 0 auto; text-align: left; }
+.artometrics-article-body .art-references{ max-width: min(920px, 100%); margin: 0 auto; text-align: left; }
 .artometrics-article-body .art-ref-item{
   padding: 0.7rem 0;
   border-bottom: 1px solid #D5D5D5;
@@ -190,7 +190,7 @@ html[data-theme="dark"] .artometrics-article-body{
   --art-mid:       #A3A3A3;
   --art-highlight: #E05C5C;
   --art-secondary: #8BA3D9;
-  --art-muted:     #404040;
+  --art-muted:     #A3A3A3;
   --art-white:     #171717;
   --art-cream:     #171717;
   color: var(--art-dark);
@@ -238,7 +238,7 @@ html[data-theme="dark"] .artometrics-article-body{
 .artometrics-article-body main.content{
   flex: 1 1 auto !important;
   min-width: 0 !important;
-  max-width: 860px;
+  max-width: min(1100px, 100%);
   margin: 0 auto;
   padding: 0 2rem 4rem;
 }
@@ -275,7 +275,7 @@ html[data-theme="dark"] .artometrics-article-body{
   color: var(--art-white);
   letter-spacing: -0.5px;
   margin-bottom: 0.5rem;
-  max-width: 860px;
+  max-width: min(1100px, 100%);
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -286,7 +286,7 @@ html[data-theme="dark"] .artometrics-article-body{
   font-weight: 300;
   font-size: 1.1rem;
   color: var(--art-muted);
-  max-width: 860px;
+  max-width: min(1100px, 100%);
   margin: 0.5rem auto 0;
   text-align: center;
 }
@@ -342,7 +342,7 @@ html[data-theme="dark"] .artometrics-article-body{
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  max-width: 700px;
+  max-width: min(920px, 100%);
 }
 
 .artometrics-article-body strong{
@@ -411,7 +411,7 @@ img,
   font-style: italic;
   color: var(--art-dark);
   border-radius: 0 4px 4px 0;
-  max-width: 700px;
+  max-width: min(920px, 100%);
 }
 
 /* ── Callout boxes ────────────────────────────────────────── */
@@ -419,7 +419,7 @@ img,
   border-radius: 4px;
   border-left: 5px solid var(--art-secondary);
   margin: 0 auto;
-  max-width: 700px;
+  max-width: min(920px, 100%);
 }
 
 /* ── Footer / caption text ────────────────────────────────── */
@@ -721,7 +721,7 @@ pre:has(> code.sourceCode.sql),
   line-height: 1.85 !important;
   color: var(--art-dark) !important;
   text-align: center !important;
-  max-width: 42rem !important;
+  max-width: min(56rem, 100%) !important;
   margin: 0 auto 1.35rem !important;
 }
 .artometrics-article-body main.art-article-main > ul,
@@ -734,7 +734,7 @@ pre:has(> code.sourceCode.sql),
 .artometrics-article-body main.art-article-main > ol{
   margin: 0 auto 1.35rem !important;
   padding-left: 0 !important;
-  max-width: 38rem !important;
+  max-width: min(52rem, 100%) !important;
 }
 .artometrics-article-body .facts-grid{
   display: grid !important;
@@ -813,7 +813,7 @@ pre:has(> code.sourceCode.sql),
   align-items: center !important;
   gap: 0.7rem !important;
   line-height: 1.35 !important;
-  max-width: 36rem !important;
+  max-width: min(48rem, 100%) !important;
 }
 .artometrics-article-body main.art-article-main > h2::before{
   content: '' !important;

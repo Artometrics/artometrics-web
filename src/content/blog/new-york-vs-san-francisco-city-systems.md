@@ -1,6 +1,7 @@
 ---
 title: 'New York and San Francisco: Command City vs. Invention City'
 slug: new-york-vs-san-francisco-city-systems
+author: kyle-mcauliffe
 pubDate: 2026-07-01T00:00:00.000Z
 description: >-
   Why the two are paired in debate—and where their economic and cultural systems

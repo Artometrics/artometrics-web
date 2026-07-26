@@ -1,13 +1,11 @@
 import {
   Platform,
   Pressable,
-  ScrollView,
-  Text,
   TextInput,
   View,
   StyleSheet,
 } from "react-native";
-import { Link, router, usePathname } from "expo-router";
+import { Link, router } from "expo-router";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { Logo } from "@/components/Logo";
 import { Wrapper } from "@/components/Wrapper";
@@ -15,23 +13,14 @@ import { Fonts } from "@/constants/Colors";
 import { useAuth } from "@/lib/auth";
 import { useChrome } from "@/lib/chrome";
 import { useTheme } from "@/lib/theme";
-import { SECTION_META, SECTION_SLUGS } from "@/data/sections";
 import { useState } from "react";
 
 export function SiteHeader() {
   const { user } = useAuth();
   const { setMenuOpen } = useChrome();
   const { colors, toggle, mode } = useTheme();
-  const pathname = usePathname();
   const [q, setQ] = useState("");
   const [searchOpen, setSearchOpen] = useState(false);
-  const path = (pathname ?? "").replace(/\/$/, "") || "/";
-  const hideSectionBar =
-    path === "/account" ||
-    path === "/login" ||
-    path === "/signup" ||
-    path === "/pricing" ||
-    path.startsWith("/auth/");
 
   function submitSearch() {
     const query = q.trim();
@@ -60,7 +49,13 @@ export function SiteHeader() {
 
           <Link href="/" asChild>
             <Pressable style={styles.logoWrap} accessibilityLabel="Artometrics home">
-              <Logo size={30} align="center" compact={0} style={{ color: colors.text }} />
+              <Logo
+                size={32}
+                align="center"
+                compact={0}
+                style={{ color: colors.text }}
+                markVariant="auto"
+              />
             </Pressable>
           </Link>
 
@@ -116,39 +111,6 @@ export function SiteHeader() {
           </View>
         </View>
       </Wrapper>
-
-      {hideSectionBar ? null : (
-        <View style={[styles.sectionBar, { borderTopColor: colors.border }]}>
-          <ScrollView
-            horizontal
-            showsHorizontalScrollIndicator={false}
-            contentContainerStyle={styles.sectionTrack}
-          >
-            {SECTION_SLUGS.map((slug) => {
-              const active =
-                pathname === `/topics/${slug}` || pathname?.startsWith(`/topics/${slug}/`);
-              return (
-                <Link key={slug} href={`/topics/${slug}` as `/topics/${string}`} asChild>
-                  <Pressable style={styles.sectionItem} hitSlop={6}>
-                    <Text
-                      style={[
-                        styles.sectionLabel,
-                        { color: active ? colors.text : colors.textMuted },
-                        active ? styles.sectionActive : null,
-                      ]}
-                    >
-                      {SECTION_META[slug].title}
-                    </Text>
-                    {active ? (
-                      <View style={[styles.sectionUnderline, { backgroundColor: colors.text }]} />
-                    ) : null}
-                  </Pressable>
-                </Link>
-              );
-            })}
-          </ScrollView>
-        </View>
-      )}
     </View>
   );
 }
@@ -175,11 +137,11 @@ const styles = StyleSheet.create({
   },
   logoWrap: {
     position: "absolute",
-    left: 0,
-    right: 0,
+    left: 56,
+    right: 140,
     alignItems: "center",
     justifyContent: "center",
-    zIndex: 1,
+    zIndex: 3,
   },
   actions: {
     flexDirection: "row",
@@ -208,34 +170,5 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontFamily: Fonts.sans,
     ...(Platform.OS === "web" ? ({ outlineStyle: "none" } as object) : null),
-  },
-  sectionBar: {
-    borderTopWidth: StyleSheet.hairlineWidth,
-  },
-  sectionTrack: {
-    paddingHorizontal: 16,
-    gap: 4,
-    alignItems: "center",
-    minHeight: 40,
-  },
-  sectionItem: {
-    paddingHorizontal: 10,
-    paddingVertical: 10,
-    alignItems: "center",
-  },
-  sectionLabel: {
-    fontSize: 11,
-    fontWeight: "700",
-    letterSpacing: 1.1,
-    textTransform: "uppercase",
-    fontFamily: Fonts.sans,
-  },
-  sectionActive: {
-    fontWeight: "800",
-  },
-  sectionUnderline: {
-    marginTop: 4,
-    height: 2,
-    alignSelf: "stretch",
   },
 });

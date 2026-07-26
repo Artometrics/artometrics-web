@@ -1,6 +1,7 @@
 ---
 title: How the Lakers Convert Stars Into Championship Eras
 slug: lakers-the-artometrics-of-basketball-glamour
+author: kyle-mcauliffe
 pubDate: 2026-07-01T00:00:00.000Z
 description: >-
   Los Angeles basketball’s glamour machine turns market gravity into title

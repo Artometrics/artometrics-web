@@ -1,6 +1,7 @@
 ---
 title: Does Wine Price Predict Critic Points?
 slug: wine-ratings
+author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
 description: A hundred thousand wine ratings test whether cost tracks scores.
 heroImage: /images/content/articles/wine-ratings/hero.png

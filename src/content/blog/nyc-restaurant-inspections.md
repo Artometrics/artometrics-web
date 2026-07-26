@@ -1,6 +1,7 @@
 ---
 title: Which NYC Cuisines Score Highest on Health Inspections?
 slug: nyc-restaurant-inspections
+author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
 description: Restaurant grades across New York show how scores distribute by cuisine.
 heroImage: /images/content/articles/nyc-restaurant-inspections/hero.png

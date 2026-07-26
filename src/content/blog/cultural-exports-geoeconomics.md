@@ -1,6 +1,7 @@
 ---
 title: 'When Films, Music, and Games Become National Exports'
 slug: cultural-exports-geoeconomics
+author: kyle-mcauliffe
 pubDate: 2026-07-01T00:00:00.000Z
 description: A cultural-economics frame treats soft-power industries as export goods.
 heroImage: /images/content/articles/cultural-exports-geoeconomics/hero.png

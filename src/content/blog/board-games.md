@@ -1,6 +1,7 @@
 ---
 title: Which Board Games Combine Crowd Scale With Elite Ratings?
 slug: board-games
+author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
 description: >-
   Ratings and popularity across thousands of titles find games that win both

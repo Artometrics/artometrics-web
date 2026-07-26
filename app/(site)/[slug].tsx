@@ -30,6 +30,20 @@ function estimateMinutes(html: string) {
   return Math.max(1, Math.round(words / 200));
 }
 
+/** Ensure every report TL;DR includes a third bullet for topic · subcategory. */
+function withTopicKeyPoint(keyPoints: string[] | undefined, label: string | null): string[] {
+  const points = [...(keyPoints ?? [])];
+  if (!label) return points;
+  const topicLine = `Topic — ${label}`;
+  if (points.some((p) => /^topic\b/i.test(p) || p.includes(label))) return points;
+  if (points.length >= 2) {
+    points.splice(2, 0, topicLine);
+  } else {
+    points.push(topicLine);
+  }
+  return points;
+}
+
 export async function generateStaticParams() {
   return getBlogPosts().map((post) => ({ slug: post.slug }));
 }
@@ -57,7 +71,7 @@ export default function ReportScreen() {
   const adjacent = getAdjacentPosts(post.slug);
   const minutes = estimateMinutes(post.body);
   const hero = assetUrl(post.heroImage);
-  const authorLabel = post.author ? formatAuthorName(String(post.author)) : "Artometrics";
+  const authorLabel = post.author ? formatAuthorName(String(post.author)) : "Kyle McAuliffe";
 
   const tldr = (post as { tldr?: string | null }).tldr ?? null;
   const keyPoints = (post as { keyPoints?: string[] }).keyPoints ?? [];
@@ -73,7 +87,7 @@ export default function ReportScreen() {
       description: post.description,
       datePublished: post.pubDate,
       image: hero ? [`https://artometrics.com${post.heroImage}`] : undefined,
-      author: { "@type": "Organization", name: authorLabel },
+      author: { "@type": "Person", name: authorLabel },
       publisher: {
         "@type": "Organization",
         name: "Artometrics",
@@ -117,7 +131,7 @@ export default function ReportScreen() {
           />
         </Wrapper>
       ) : null}
-      <Wrapper style={styles.front} variant="prose">
+      <Wrapper style={styles.front} variant="wide">
         {label ? (
           <Text style={[styles.eyebrow, { color: colors.accent }]}>{label}</Text>
         ) : null}
@@ -128,17 +142,20 @@ export default function ReportScreen() {
           {post.pubDate ? ` · ${formatDate(post.pubDate)}` : ""}
           {` · ${minutes} min read`}
         </Text>
-        <TldrBox tldr={tldr ?? post.description} keyPoints={keyPoints} />
+        <TldrBox
+          tldr={tldr ?? post.description}
+          keyPoints={withTopicKeyPoint(keyPoints, label)}
+        />
         <ArticleActions slug={post.slug} title={post.title} placement="top" />
       </Wrapper>
-      <Wrapper variant="prose" style={styles.article}>
+      <Wrapper variant="wide" style={styles.article}>
         <ArticleBody html={post.body} />
       </Wrapper>
-      <Wrapper variant="prose">
+      <Wrapper variant="wide">
         <ArticleActions slug={post.slug} title={post.title} placement="bottom" />
       </Wrapper>
       {faq.length ? (
-        <Wrapper variant="prose" style={styles.faq}>
+        <Wrapper variant="wide" style={styles.faq}>
           <Text style={[styles.faqTitle, { color: colors.text }]}>Frequently asked questions</Text>
           {faq.map((item) => (
             <View key={item.question} style={[styles.faqItem, { borderBottomColor: colors.border }]}>

@@ -1,6 +1,7 @@
 ---
 title: Where UK Museums Sit on the Deprivation Map
 slug: uk-museums
+author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
 description: >-
   Museum locations and deprivation bands show how institutions map onto

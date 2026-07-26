@@ -1,6 +1,7 @@
 ---
 title: How Netflix’s Catalog Mix Shifted Between Films and Series
 slug: netflix-titles
+author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
 description: Title-level library data track the balance of movies and TV over time.
 heroImage: /images/content/articles/netflix-titles/hero.png

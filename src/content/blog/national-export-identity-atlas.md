@@ -1,6 +1,7 @@
 ---
 title: What Nations Sell—and What That Says About Identity
 slug: national-export-identity-atlas
+author: kyle-mcauliffe
 pubDate: 2026-07-01T00:00:00.000Z
 description: 'A country-level atlas treats exports as identity: what states sell and need.'
 heroImage: /images/content/articles/national-export-identity-atlas/hero.png

@@ -1,6 +1,7 @@
 ---
 title: How LEGO Set Complexity Evolved Across Themes
 slug: lego-database
+author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
 description: Official set metadata traces rising piece counts and theme differences.
 heroImage: /images/content/articles/lego-database/hero.png

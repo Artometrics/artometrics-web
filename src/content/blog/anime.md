@@ -1,6 +1,7 @@
 ---
 title: What a Century of Anime Titles Reveals About the Industry
 slug: anime
+author: kyle-mcauliffe
 pubDate: 2026-03-31T00:00:00.000Z
 description: >-
   MyAnimeList metadata on more than 13,000 titles traces Japanese animation as a

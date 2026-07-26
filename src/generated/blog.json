@@ -15,7 +15,7 @@
     "channels": [
       "culture"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "Airline safety is usually discussed one crash at a time. The TidyTuesday airline-safety extract does something different: it lines carriers up by available seat kilometers per week — a capacity metric — and then asks how incidents, fatal accidents, and fatalities sit against that scale. The working file holds 336 cleaned records after the week’s tables are merged.",
     "keyPoints": [
@@ -63,7 +63,7 @@
     "channels": [
       "culture"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "Global alcohol data is often collapsed into a single “drinks per person” headline. The TidyTuesday global alcohol extract keeps the beverage split intact — beer, spirits, and wine servings — across 193 country-level records. Beer is the metric that leads these charts, with a median of 76.0 servings and a recorded high of 376 in Namibia. That spread is the story.",
     "keyPoints": [
@@ -110,7 +110,7 @@
     "channels": [
       "culture"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "Pizza prices look simple until you try to compare 10,000 menu rows. The Datafiniti pizza extract in TidyTuesday does exactly that: restaurant-level records with price-range fields that reveal how “a slice” and “a specialty pie” live in different economic brackets. The working file holds 10,000 rows.",
     "keyPoints": [
@@ -157,7 +157,7 @@
     "channels": [
       "arts"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "This MyAnimeList dataset covers 13,631 unique anime titles spanning 1917 to 2019 — a century-scale archive tracing the medium from prewar theater shorts to the standardized streaming machine of the 2010s. The key interpretive move here is separating catalog reality (what actually got made) from fan-canon popularity (what people actually watched and rated).",
     "keyPoints": [
@@ -206,7 +206,7 @@
     "channels": [
       "humanities"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "Award shows are culture’s accounting departments. They translate messy creative fields into categories, winners, speeches, snubs, and canon — then ask the public to treat those boxes as settled judgment. Film, music, science, literature, theater, and television all run prize systems, but they do not manufacture legitimacy the same way.",
     "keyPoints": [
@@ -254,7 +254,7 @@
     "channels": [
       "arts"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "Two catalogs define a generation of pop authorship. Line-level lyric tables make it possible to compare them the way a critic compares albums — by recurring titles, repeated lines, and how densely each artist’s words fill the extract. The working file holds 22,616 records.",
     "keyPoints": [
@@ -299,7 +299,7 @@
     "channels": [
       "civics"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "A Big Mac is the same product everywhere on Earth — same bun, same patties, same sauce. That sameness is exactly what makes its price interesting. The Economist’s Big Mac Index, running since 1986, converts local burger prices into US dollars to reveal how far currencies stray from purchasing power parity.",
     "keyPoints": [
@@ -347,7 +347,7 @@
     "channels": [
       "culture"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "Portland’s Biketown system turns everyday movement into timestamped trips. The TidyTuesday extract used here holds 100,000 ride records spanning 2016–2018 , with a median duration of 14.5 minutes and a recorded high of 1,392 minutes — multi-hour outliers that sit far from the commute core. Recreation is the most common trip type in the file.",
     "keyPoints": [
@@ -396,7 +396,7 @@
     "channels": [
       "arts"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "The Billboard Hot 100 has published a number-one song every week since August 1958. In that time it has absorbed the British Invasion, the disco era, the rise of hip-hop, the collapse of the album format, and the complete restructuring of the music industry by streaming platforms.",
     "keyPoints": [
@@ -445,7 +445,7 @@
     "channels": [
       "arts"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "The Billboard Hot 100 is a weekly ranking machine: 100 positions, endlessly refreshed. The TidyTuesday billboard extract used here holds 100,000 song-week rows, with a median week position of 50.0 — exactly mid-chart — and a highest observed week position of 100 (the bottom rung).",
     "keyPoints": [
@@ -492,7 +492,7 @@
     "channels": [
       "sports"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "BoardGameGeek ratings are a public taste machine: tens of thousands of titles, each scored by the people willing to log plays. The TidyTuesday board-games extract used here holds 10,532 records with a median average rating of 6.39 and a high of 9.00 for Small World Designer Edition. Wargame, World War II is the most common category label in the file.",
     "keyPoints": [
@@ -541,7 +541,7 @@
     "channels": [
       "arts"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "Broadway is a price and endurance market: average ticket price on one axis, performances on the other. The TidyTuesday grosses extract used here holds 47,524 rows with a median average ticket price of $60.2 and a recorded high of $512 . Springsteen On Broadway tops the show-level price ranking; Broadhurst Theatre is the most common theatre label in the file.",
     "keyPoints": [
@@ -589,7 +589,7 @@
     "channels": [
       "humanities"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "Economics comes from the Greek oikonomia — the management of the house. Psychonomics asks the prior question: who is managing the soul of the house, and what does their inner architecture cost everyone living inside it? Julius Caesar is the founding case study. His policies were not abstract theories. They were his biography, scaled.",
     "keyPoints": [
@@ -638,7 +638,7 @@
     "channels": [
       "civics"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "California and Texas are the most common American state comparison because each is large enough to stand in for a theory of the country. One is cast as the expensive knowledge-and-culture machine; the other as the growth-and-capacity machine. The framing here scores 2 state systems across 7 rivalry dimensions and 7 export/industry families.",
     "keyPoints": [
@@ -686,7 +686,7 @@
     "channels": [
       "sports"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "Every Boston Celtics season opens under an impossible ledger. Eighteen NBA championships—the league record entering 2025—mean that a good year is never only compared with Miami or Milwaukee. It is compared with Bill Russell’s ghosts, with Bird’s mid-1980s certainty, and with the institutional claim that banners are the franchise’s normal weather. That claim was built early.",
     "keyPoints": [
@@ -735,7 +735,7 @@
     "channels": [
       "civics"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "CEO tenure is usually narrated as drama: a firing, a founder exit, a sudden interim. The TidyTuesday departures extract used here holds 9,423 records with a median max tenure (ceodb) of 1.00 and a high of 4.00 . Interim is the most common co-CEO/interim label in the file. That median of 1.00 is the calibration point: in this coding, many departure spells are short.",
     "keyPoints": [
@@ -783,7 +783,7 @@
     "channels": [
       "science"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "Captive and transferred cetaceans leave paper trails: species names, years, and transfer geographies. The TidyTuesday cetacean extract used here holds 2,194 records spanning 1946–2017 , with the United States labeled as the dominant transfer geography. Bottlenose animals dominate the name counts.",
     "keyPoints": [
@@ -829,7 +829,7 @@
     "channels": [
       "arts"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "Christmas novels are a seasonal shelf with a long memory: Dickensian ghosts, children’s mysteries, parlor sentimentalism. The TidyTuesday christmas-novels extract used here is small — 35 records — with a median author birthdate of 1,859 and a latest birthdate of 1,891 . Charles Dickens is the most common author label in the file.",
     "keyPoints": [
@@ -878,7 +878,7 @@
     "channels": [
       "arts"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "Holiday songs have a strange chart life: they return every December, pile up weeks, then vanish until the next season. The TidyTuesday christmas-songs extract used here holds 387 records spanning 1958–2017 , with a median of 8.00 weeks on chart and a high of 20.0 . Better Days and Believe sit among the weeks-on-chart leaders.",
     "keyPoints": [
@@ -926,7 +926,7 @@
     "channels": [
       "civics"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "Population is the blunt instrument of international comparison: China and India alone redraw every map. The TidyTuesday CIA World Factbook extract used here holds 259 records with a median population of 5,220,371 and a maximum of 1,355,692,576 for China.",
     "keyPoints": [
@@ -973,7 +973,7 @@
     "channels": [
       "civics"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "A city report should not start with a postcard. It should start with a system map: what the city makes, what it imports, who it serves, what it prices out, what it remembers, and what it cannot replace. this piece creates the frame for the next geo-economics layer of Artometrics. Comparisons can come later; first the site needs a way to ask the right questions of a place.",
     "keyPoints": [
@@ -1021,7 +1021,7 @@
     "channels": [
       "culture"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "Coffee is the world’s second-largest traded commodity by value, behind only crude oil. More than 125 million people depend on it for their livelihoods. Around 2.25 billion cups are consumed every day.",
     "keyPoints": [
@@ -1070,7 +1070,7 @@
     "channels": [
       "civics"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "College majors are sold as income stories. The TidyTuesday recent-graduates extract used here also tracks how many alumni land in low-wage jobs. Across 173 majors, the median low-wage-job count is 1,231 , with a high of 48,207 in Psychology. Engineering is the most common major category label in the file.",
     "keyPoints": [
@@ -1118,7 +1118,7 @@
     "channels": [
       "arts"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "Comic-book universes are attention economies with capes. The TidyTuesday comic-characters extract used here holds 23,272 records spanning 1935–2013 , with a median of 4.00 appearances and a high of 4,043 for Spider-Man (Peter Parker). Marvel is the most common publisher label.",
     "keyPoints": [
@@ -1167,7 +1167,7 @@
     "channels": [
       "sports"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "The Dallas Cowboys are no longer just a football team. They are a national attention market. Every season begins with disproportionate coverage, disproportionate expectation, and the same unresolved question: when does brand gravity become football gravity again? Five Super Bowl titles built the mythology. The last one arrived in the 1995 season.",
     "keyPoints": [
@@ -1216,7 +1216,7 @@
     "channels": [
       "culture"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "American craft beer advertises itself with bitterness and strength — IBU and ABV on the tap list. The TidyTuesday beers extract used here holds 2,410 records with a median ABV of 0.06 (6%) and a high of 0.13 (13%) for Lee Hill Series Vol. 5 - Belgian Style Quadrupel Ale. Most craft beers in this file are not barrel-aged monsters.",
     "keyPoints": [
@@ -1263,7 +1263,7 @@
     "channels": [
       "civics"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "Culture is an export category even when it never passes through a port. A song, show, game, cuisine, fashion house, or sports star can change what a country means in the global imagination.",
     "keyPoints": [
@@ -1311,7 +1311,7 @@
     "channels": [
       "sports"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "The Los Angeles Dodgers are the closest thing modern baseball has to an industrial contender. Rosters change, stars change, and October heartbreak changes shape, but the regular-season floor keeps reappearing. Eight World Series titles and roughly twenty-five National League pennants place the franchise among the sport’s historic elite—without Yankee-scale monopoly.",
     "keyPoints": [
@@ -1360,7 +1360,7 @@
     "channels": [
       "arts"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "Emmy season looks like a parade of equal contenders. Nomination and win records look more like a concentration map — a few names return year after year while most titles appear once and vanish. The working file holds 29,678 records from 1957–2021 . Nominee is the most common type label — as expected in a nominations-heavy extract.",
     "keyPoints": [
@@ -1406,7 +1406,7 @@
     "channels": [
       "culture"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "Exercise is unevenly distributed across American states — a public-health map disguised as lifestyle branding. The TidyTuesday exercise extract used here holds 52 records (states plus D.C.) with a median of 23.0 on the adults metric and a high of 32.0 in Colorado. Mountain and New England states dominate the leaders.",
     "keyPoints": [
@@ -1453,7 +1453,7 @@
     "channels": [
       "civics"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "The United States, China, and Germany sit at the center of almost every serious conversation about trade. They are often treated as interchangeable \"export superpowers\" — three large economies that ship goods and services abroad at industrial scale. That shorthand collapses three different machines into one headline.",
     "keyPoints": [
@@ -1501,7 +1501,7 @@
     "channels": [
       "culture"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "Fast-food menus are marketing documents dressed as nutrition tables. The calorie counts attached to each item are among the few numbers that cut through the branding — and they vary wildly across chains that sell roughly the same categories of food. A TidyTuesday snapshot of major U.S. chain menus puts 515 item records on the same footing. The median item sits at 490 calories.",
     "keyPoints": [
@@ -1549,7 +1549,7 @@
     "channels": [
       "arts"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "The global media industry runs on intellectual property — and a surprisingly small number of franchises account for most of the money. The TidyTuesday 2019 media franchises dataset covers 107 properties, each with at least $4 billion in estimated lifetime revenue as of mid-2019. Every franchise here has already cleared a threshold that most IP never approaches.",
     "keyPoints": [
@@ -1598,7 +1598,7 @@
     "channels": [
       "sports"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "The San Francisco Giants have been playing professional baseball since 1883. That is not a typo. The franchise that now calls Oracle Park home started as the New York Gothams—a club that predates the automobile, commercial electric light, and the modern World Series by twenty years.",
     "keyPoints": [
@@ -1647,7 +1647,7 @@
     "channels": [
       "science"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "For most of recorded history, life expectancy at birth hovered between 25 and 40 years — not because adults aged quickly, but because childhood death was common enough to pull the average down. The long arc from that world to the present is one of the few demographic stories that can be told with a single curve and still remain true.",
     "keyPoints": [
@@ -1695,7 +1695,7 @@
     "channels": [
       "culture"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "Plastic waste is usually discussed as a moral story about litter. The data make it an economic geography story: who generates waste, who mismanages it, and how those patterns sit against income. A TidyTuesday compilation spanning country-year records puts 22,204 rows on the table. Median GDP per capita in the working file is 8,447 (PPP, constant 2011 international dollars).",
     "keyPoints": [
@@ -1743,7 +1743,7 @@
     "channels": [
       "civics"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "Ethan Klein built one of YouTube’s most documented creator empires from a single channel and a lawsuit. H3h3Productions launched in 2011 as a reaction-commentary format, spent years as a meme factory, and then pivoted — twice — into something far more complicated. The H3 Podcast debuted in 2017.",
     "keyPoints": [
@@ -1792,7 +1792,7 @@
     "channels": [
       "arts"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "Horror is the genre studios love to describe as cheap and scalable — until the ledger says otherwise. Budget and domestic-gross figures for thousands of titles show which films returned capital and which simply burned it. The working file holds 3,401 records spanning 1936–2019 . Median domestic gross sits at 25,533,818 ; the highest observed domestic gross is 474,544,677 .",
     "keyPoints": [
@@ -1841,7 +1841,7 @@
     "channels": [
       "arts"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "Horror catalogs grow faster than any critic can watch. The open question is whether vote averages rose with that volume — or whether more titles simply filled the shelf with middling scores. TMDB-style metadata for horror-tagged films yields 32,540 records from 1950–2022 . The median vote average is 4.00 ; the highest observed average is 10.0 .",
     "keyPoints": [
@@ -1890,7 +1890,7 @@
     "channels": [
       "culture"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "In late summer 2017, the Atlantic hurricane season forced a brutal comparative question into public view: which places absorbed the worst of the storm window, and how did Puerto Rico's readings sit beside Florida and Texas? A compact TidyTuesday file of 153 records tracks values across that season's geography. The median reading is 703 ; the highest observed value hits 5,072 .",
     "keyPoints": [
@@ -1938,7 +1938,7 @@
     "channels": [
       "science"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "Wastewater plants are the unglamorous infrastructure of modern density. They turn the output of cities into something rivers and coasts can sometimes absorb — and the HydroWASTE-style plant register makes that system countable. The working TidyTuesday extract holds 58,502 records. Median waste discharge ( WASTE DIS ) sits at 1,079 ;",
     "keyPoints": [
@@ -1986,7 +1986,7 @@
     "channels": [
       "arts"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "Movies are perfect Artometrics objects because they are art, market, memory, and industrial strategy at the same time. A title page on IMDb is where those forces leave public footprints: genres, runtimes, ratings, and vote counts.",
     "keyPoints": [
@@ -2034,7 +2034,7 @@
     "channels": [
       "humanities"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "Every empire in history has told the same story about itself: we brought order, we built roads, we made the trains run on time. What the chronicles leave out is the spreadsheet. Who actually got richer? How long did the prosperity last? And when it ended, how fast did it go? Those questions have answers now.",
     "keyPoints": [
@@ -2083,7 +2083,7 @@
     "channels": [
       "civics"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "U.S. incarceration is often narrated as a single national curve. County- and state-level population files show something more fractured: regional regimes that diverge for decades even while they share the same federal criminal-justice vocabulary. The TidyTuesday working extract used here holds 100,000 records spanning 1970–2016 .",
     "keyPoints": [
@@ -2132,7 +2132,7 @@
     "channels": [
       "sports"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "The Los Angeles Lakers run winning and celebrity as the same operating system. Other franchises develop stars; the Lakers absorb them, frame them, and convert them into eras. Seventeen championships and roughly thirty-two Finals appearances make that claim more than folklore. It is the deepest final-round archive in the league. Glamour does not guarantee rings.",
     "keyPoints": [
@@ -2181,7 +2181,7 @@
     "channels": [
       "arts"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "Linguistic diversity is often imagined as a smooth global gradient. Glottolog-style language inventories show something lumpier: documentation clusters by macroarea, and a long tail of languages appear once while a short head of names and identifiers repeats. The TidyTuesday working file holds 8,612 records.",
     "keyPoints": [
@@ -2226,7 +2226,7 @@
     "channels": [
       "sports"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "A sports league is a measurement system before it is an entertainment product. It decides how much money can matter, how much one player can matter, how often fans get to reset emotionally, and how widely a story can travel. Compare six leagues on those axes and franchise identity stops looking interchangeable.",
     "keyPoints": [
@@ -2274,7 +2274,7 @@
     "channels": [
       "culture"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "LEGO sets are toys, collectibles, and increasingly architectural objects. The Rebrickable-style database that feeds this TidyTuesday release turns that catalog into something measurable: parts counts, set names, and how complexity has shifted across decades.",
     "keyPoints": [
@@ -2322,7 +2322,7 @@
     "channels": [
       "science"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "Medium promised a writing network where attention could attach to length, craft, and niche expertise. The metadata trail — reading time, claps, publication tags — lets that promise be tested without reading every essay. A TidyTuesday extract of 78,388 article rows from 2017–2018 puts median reading time at 4.00 minutes.",
     "keyPoints": [
@@ -2371,7 +2371,7 @@
     "channels": [
       "arts"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "Music fame looks emotional, but it leaves metadata everywhere: releases, recordings, aliases, collaborations, labels, genres, works, tours, awards, and chart traces. MusicBrainz supplies the open-data spine for a bigger question: why do some artists become eras while others become moments? Catalog depth, format, genre travel, fame-path durability, and reinvention are five ways that question becomes countable.",
     "keyPoints": [
@@ -2419,7 +2419,7 @@
     "channels": [
       "civics"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "What a nation sells abroad is one of the few identity claims that must clear a market test. Tourism slogans can invent a self-image; export ledgers record what other countries will actually pay for. Trade systems in the UN Comtrade and OEC style cover 200+ countries and zones and 5,000+ products under Harmonized System codes.",
     "keyPoints": [
@@ -2467,7 +2467,7 @@
     "channels": [
       "culture"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "National parks are sold as wilderness and remembered as crowds. Visit counts make that tension measurable: which named units absorb America's outdoor attention, and how that attention has compounded since the early twentieth century. A TidyTuesday working file of 21,560 records spans 1904–2016 . Median visitors sit near 155,219 ;",
     "keyPoints": [
@@ -2516,7 +2516,7 @@
     "channels": [
       "arts"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "Netflix’s public engagement tables measure attention in hours viewed — a blunt but useful currency for which titles absorbed the most time on the service. The working file covers 27,803 records from 2010–2025 . Median hours viewed sit at 2,500,000 ; the highest observed value is 840,300,000 . Squid Game: Season 2 tops the title ranking in the extract.",
     "keyPoints": [
@@ -2565,7 +2565,7 @@
     "channels": [
       "arts"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "A streaming library is an inventory decision dressed as a homepage. Title-level Netflix catalog data show how the mix of movies and TV — and the duration field attached to each row — shifted between 2008 and 2021. The working file holds 7,787 records. Median duration is 88.0 ; the highest observed duration is 312 , led by Black Mirror: Bandersnatch. Movie is the most common type label.",
     "keyPoints": [
@@ -2614,7 +2614,7 @@
     "channels": [
       "civics"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "New York and San Francisco are not peers by population or geography, but they are peers in the market for invisible power. They both export coordination, talent, symbols, and future-facing industries. The question is why they belong in the same conversation and what people miss when they compare them only by rent, taxes, or office vacancy.",
     "keyPoints": [
@@ -2662,7 +2662,7 @@
     "channels": [
       "science"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "Nuclear test histories are usually told as geopolitics. The event catalogs underneath — body-wave magnitudes, dates, purposes, and depths — also form a quantitative archive of how intensely states practiced the bomb. A TidyTuesday working extract of 2,051 records puts median body-wave magnitude at 0.00 and the highest observed magnitude at 7.40 .",
     "keyPoints": [
@@ -2711,7 +2711,7 @@
     "channels": [
       "culture"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "New York City restaurant inspections turn hygiene into a public grade. Behind the A/B/C stickers is a numeric score distribution that is far more skewed than the cheerful window cards suggest. A TidyTuesday working extract of 100,000 records puts median score at 15.0 and the highest observed score at 156 .",
     "keyPoints": [
@@ -2760,7 +2760,7 @@
     "channels": [
       "humanities"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "Collective memory is not a neutral archive. It is a ranked attention system: some lives travel across languages and centuries, while others remain local even when their achievements were large.",
     "keyPoints": [
@@ -2808,7 +2808,7 @@
     "channels": [
       "sports"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "The New England Patriots used to be ordinary. Then they became the NFL’s most efficient argument about systems, quarterbacks, coaching, and institutional compounding. Six Super Bowl championships and nine Super Bowl appearances during the Brady–Belichick era did not accumulate like a normal franchise resume. They arrived as a discontinuity.",
     "keyPoints": [
@@ -2857,7 +2857,7 @@
     "channels": [
       "arts"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "Pixar is the rare studio brand that became a quality guarantee — but guarantees are measurable. The TidyTuesday 2025-03-11 Pixar films release joins with its public_response companion file: 27 theatrical features, 24 with critic and audience scores attached.",
     "keyPoints": [
@@ -2906,7 +2906,7 @@
     "channels": [
       "sports"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "Pokémon is the highest-grossing media franchise in history — more than $150 billion in lifetime revenue across games, cards, merchandise, and film. That number gets cited constantly.",
     "keyPoints": [
@@ -2955,7 +2955,7 @@
     "channels": [
       "arts"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "Project Gutenberg is not only a library. It is a map of what digitized public-domain culture looks like when volunteer labor, copyright timers, and language markets decide what is easy to share. Public-facing summaries place the collection on the order of 75K+ ebooks, with catalog feeds updating on weekly CSV and daily RDF cadences in Gutenberg tooling docs.",
     "keyPoints": [
@@ -3003,7 +3003,7 @@
     "channels": [
       "arts"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "Project Gutenberg is the internet's oldest large-scale experiment in free literature. Its subject catalog — Library of Congress headings and related labels — is a map of which public-domain books volunteers could digitize and classify at scale.",
     "keyPoints": [
@@ -3048,7 +3048,7 @@
     "channels": [
       "arts"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "American radio still looks chaotic from the passenger seat — call letters, dial numbers, format slogans. The station license table underneath is more orderly: tens of thousands of rows that map frequency, format, and status across the dial. A TidyTuesday working file of 17,186 records puts median frequency at 101 and the highest observed frequency at 1,700 .",
     "keyPoints": [
@@ -3096,7 +3096,7 @@
     "channels": [
       "culture"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "Instant ramen is a global industrial food that still gets reviewed like craft beer. Star ratings compress broth, noodle texture, spice, and packaging nostalgia into a single number that traveling eaters argue about for years. A TidyTuesday working file of 3,180 records puts median stars at 3.75 and the highest observed stars at 5.00 .",
     "keyPoints": [
@@ -3144,7 +3144,7 @@
     "channels": [
       "science"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "The Hospital Readmissions Reduction Program is a Medicare penalty system that has been running since 2012. The premise is simple: if your patients come back to the hospital within 30 days of discharge at a higher rate than expected given their medical profile, CMS docks your Medicare reimbursements.",
     "keyPoints": [
@@ -3193,7 +3193,7 @@
     "channels": [
       "sports"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "A team is never just a team. It is attached to a region, a media market, a league structure, and a local memory system. That context changes what the same number means. this piece turns the sports canon toward geography. The goal is to show how regions become recognizable under the data microscope.",
     "keyPoints": [
@@ -3241,7 +3241,7 @@
     "channels": [
       "arts"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "Rolling Stone's greatest-albums lists are canon factories. They convert critical memory into ranked cultural infrastructure — and the 2003 ranking spine in this TidyTuesday extract is one of the most cited versions of that factory. A working file of 691 records puts median 2003 rank at 250 and the highest observed rank number at 500 .",
     "keyPoints": [
@@ -3290,7 +3290,7 @@
     "channels": [
       "humanities"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "Sixty-eight emperors sit in this reign-length file — enough to ask a hard question about imperial power: did belonging to a dynasty buy more time on the throne, or did longevity come from something messier? The calibration point is a median reign of 6.50 years. That is not a long reign.",
     "keyPoints": [
@@ -3338,7 +3338,7 @@
     "channels": [
       "civics"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "San Francisco is a perfect city microscope because its contradictions are measurable: a small city with enormous software output, extreme housing pressure, intense cultural mythology, and a regional economy larger than its municipal boundary. this piece does not try to finish the comparison yet. It defines the questions a serious SF data portrait has to ask.",
     "keyPoints": [
@@ -3386,7 +3386,7 @@
     "channels": [
       "civics"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "School-level composition data map where student-body diversity concentrates across U.S. local education agencies. The working file holds 27,944 records. The calibration metric is Multi, with a median of 2.38 — the center of the observed diversity scores in this extract.",
     "keyPoints": [
@@ -3434,7 +3434,7 @@
     "channels": [
       "arts"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "Conan Doyle’s Sherlock Holmes corpus arrives here as a tokenized text table: 65,958 records and a median word count of 12.0. That median is the calibration point for everything that follows — not novel length in the bookstore sense, but the word-count field as stored in this working extract.",
     "keyPoints": [
@@ -3481,7 +3481,7 @@
     "channels": [
       "arts"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "Guest-appearance records count celebrity density across seasons. Start with the scale: 1,381 — Records in the working dataset; and 1–30 — Year span covered in the file.",
     "keyPoints": [
@@ -3526,7 +3526,7 @@
     "channels": [
       "sports"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "Single-team profiles answer one fan base at a time. Cross the league borders and greatness stops looking like one ranking. Archive mass, conversion efficiency, and attention pull apart: a franchise can dominate one category and fail the broader identity test. The Yankees’ 27 titles remain baseball’s largest archive.",
     "keyPoints": [
@@ -3574,7 +3574,7 @@
     "channels": [
       "arts"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": true,
     "tldr": "Streaming marketing sells the hit. The library keeps the inventory. Those are different objects: one is a campaign; the other is what remains available after the campaign ends. Until a working catalog export is attached, every numeric cell below stays marked TBD.",
     "keyPoints": [
@@ -3620,7 +3620,7 @@
     "channels": [
       "civics"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "Super Bowl ads do not end when the whistle blows. They migrate to YouTube, where view counts become a second scoreboard. This working file covers 247 ad records spanning 2006–2021, with a median view count of 41,379 and a ceiling of 176,373,378. Doritos is the top brand by view count in the fact boxes; youtube#video is the dominant media kind.",
     "keyPoints": [
@@ -3669,7 +3669,7 @@
     "channels": [
       "arts"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "Prestige television arrived with a soundtrack of superlatives. Season-level ratings ask a quieter question: when did the golden-age scores actually peak — and did the middle of the field rise with the mythology? The working file holds 2,266 records from 1990–2018 . Median average rating is 8.11 ; the highest observed average is 9.68 . Parenthood leads the title ranking in the extract.",
     "keyPoints": [
@@ -3717,7 +3717,7 @@
     "channels": [
       "arts"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "Britain’s museum map is also a map of place. This file places 4,191 museum records against an area deprivation index whose median is 5.00 and whose observed high is 10.0. Blenheim Palace appears among the fact-box notables; the South West of England shows up in the geographic gap analysis.",
     "keyPoints": [
@@ -3765,7 +3765,7 @@
     "channels": [
       "civics"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "United Nations roll-call votes are a diplomacy archive written as a contingency table. This working extract holds 100,000 records. The most common vote value is yes — not a moral claim, a frequency claim. The charts ask where that yes-mass concentrates, which countries appear most often, and how long-tailed country participation becomes.",
     "keyPoints": [
@@ -3810,7 +3810,7 @@
     "channels": [
       "civics"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "U.S. doctorate production is a labor-market story told in field counts. This file holds 3,370 records spanning 2008–2017, with a median of 85.0 PhDs and a high of 5,302. Social sciences lead the fact-box field ranking; life sciences appear among the notable broad fields.",
     "keyPoints": [
@@ -3859,7 +3859,7 @@
     "channels": [
       "civics"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "College price is a time series with a political charge. This file holds 600 state-level tuition records spanning 2004–2015, with a median value of 7,607 and a high of 15,224. New Hampshire appears in the fact-box state ranking; the charts track how the typical state price moved and which states sat at the top of the ladder. The calibration point is that 7,607 median.",
     "keyPoints": [
@@ -3907,7 +3907,7 @@
     "channels": [
       "civics"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "Turnout is democracy’s volume knob. This file holds 936 election records spanning 1980–2014, with a median of 1,170,867 votes and a high of 132,609,063. United States appears as the top entity by votes in the fact boxes — a national aggregate sitting above the state ladder.",
     "keyPoints": [
@@ -3955,7 +3955,7 @@
     "channels": [
       "sports"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "Steam-era concurrency is a living audience meter. This Sliced/TidyTuesday games extract holds 83,631 records spanning 2012–2021, with a median average player count (Avg) of 203 and a high of 1,584,887. PLAYERUNKNOWN'S BATTLEGROUNDS appears among the fact-box peaks; February is the most common month label in the file.",
     "keyPoints": [
@@ -4004,7 +4004,7 @@
     "channels": [
       "sports"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "Steam Spy-era metadata turns the storefront into a scored catalog. This file holds 26,688 games spanning 2004–2018, with a median Metascore of 73.0 and a high of 98.0. DEEP SPACE WAIFU: NEKOMIMI appears in the fact-box extremes; the 0 .. 20,000 owners band is the most common ownership bucket.",
     "keyPoints": [
@@ -4053,7 +4053,7 @@
     "channels": [
       "sports"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "The Golden State Warriors have played 78 seasons of professional basketball. For roughly 35 of them, they were irrelevant—not rebuilding, not transitioning, just losing, year after year, in a market that had better things to think about.",
     "keyPoints": [
@@ -4102,7 +4102,7 @@
     "channels": [
       "civics"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "Income distribution is how a society counts who sits where. This file holds 2,916 records spanning 1967–2019, with a median income-distribution value of 10.9 and a high of 27.2. Black Alone appears in the fact-box race ranking; Under $15,000 is the most common income bracket label.",
     "keyPoints": [
@@ -4151,7 +4151,7 @@
     "channels": [
       "science"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "The web’s performance story is a percentile story. This file holds 238 records spanning 2016–2022, with a median P50 of 5.97 and a high of 9.80. SpeedIndex leads the fact-box measure ranking; desktop is the most common client. The charts track how median P50 moved, how desktop and mobile differ, how P50 relates to P90, and how client–year heatmaps reveal drift.",
     "keyPoints": [
@@ -4200,7 +4200,7 @@
     "channels": [
       "culture"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "A hundred thousand wine ratings are enough to test a dinner-table theory: does price predict critic points? This file’s median score is 88.0; the observed high is 100. Charles Smith 2006 Royal City appears in the fact-box title ranking; the United States is the most common country. The charts move from title leaders to country spreads to the points-versus-price scatter.",
     "keyPoints": [
@@ -4248,7 +4248,7 @@
     "channels": [
       "culture"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "UNESCO World Heritage counts turn national prestige into a time series. This Scandinavian extract holds 6 records spanning 2004–2022, with a median value of 9.00 and a high of 15.0. Sweden leads the fact-box country ranking.",
     "keyPoints": [
@@ -4296,7 +4296,7 @@
     "channels": [
       "sports"
     ],
-    "author": null,
+    "author": "kyle-mcauliffe",
     "draft": false,
     "tldr": "Twenty-seven World Series titles do not merely decorate the New York Yankees. They distort the measurement system around the franchise. Winning stopped being an achievement and became an operating requirement—the standard against which every other October is judged. Yankee exceptionalism is not only the championship count.",
     "keyPoints": [

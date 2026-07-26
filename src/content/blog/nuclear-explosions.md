@@ -1,6 +1,7 @@
 ---
 title: How Nuclear Test Yields Shifted Through the Atomic Age
 slug: nuclear-explosions
+author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
 description: 'Historical test records map yield, purpose, and timing across decades.'
 heroImage: /images/content/articles/nuclear-explosions/hero.png

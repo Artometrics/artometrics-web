@@ -1,6 +1,7 @@
 ---
 title: What Does a Slice of Pizza Really Cost?
 slug: all-the-pizza
+author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
 description: >-
   Price and calorie data across pizza menus show what diners pay in money and

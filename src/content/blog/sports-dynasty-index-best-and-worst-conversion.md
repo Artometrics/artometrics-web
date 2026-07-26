@@ -1,6 +1,7 @@
 ---
 title: 'Best, Worst, and Most Misleading Sports Dynasties'
 slug: sports-dynasty-index-best-and-worst-conversion
+author: kyle-mcauliffe
 pubDate: 2026-07-01T00:00:00.000Z
 description: >-
   A cross-league index of championship mass, conversion, market value, and fan

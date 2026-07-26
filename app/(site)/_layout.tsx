@@ -1,7 +1,14 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { Slot, usePathname } from "expo-router";
 import { StatusBar } from "expo-status-bar";
-import { NativeScrollEvent, NativeSyntheticEvent, ScrollView, View, StyleSheet } from "react-native";
+import {
+  NativeScrollEvent,
+  NativeSyntheticEvent,
+  Platform,
+  ScrollView,
+  View,
+  StyleSheet,
+} from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -15,12 +22,19 @@ function SiteChrome() {
   const pathname = usePathname();
   const { setScrollY, setIsArticle } = useChrome();
   const { colors, mode } = useTheme();
+  const scrollRef = useRef<ScrollView>(null);
 
   useEffect(() => {
     const slug = pathname.replace(/^\//, "").replace(/\/$/, "");
     const onArticle = Boolean(slug && !slug.includes("/") && getBlogPost(slug));
     setIsArticle(onArticle);
     setScrollY(0);
+    scrollRef.current?.scrollTo({ y: 0, animated: false });
+    if (Platform.OS === "web" && typeof window !== "undefined") {
+      window.scrollTo(0, 0);
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+    }
   }, [pathname, setIsArticle, setScrollY]);
 
   const onScroll = (e: NativeSyntheticEvent<NativeScrollEvent>) => {
@@ -33,6 +47,7 @@ function SiteChrome() {
       <View style={[styles.root, { backgroundColor: colors.bg }]}>
         <SiteHeader />
         <ScrollView
+          ref={scrollRef}
           style={styles.scroll}
           contentContainerStyle={styles.content}
           onScroll={onScroll}

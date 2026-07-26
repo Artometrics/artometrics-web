@@ -1,5 +1,5 @@
 import { Pressable, Text, View, StyleSheet } from "react-native";
-import { Link, usePathname } from "expo-router";
+import { Link } from "expo-router";
 import { Logo } from "@/components/Logo";
 import { Wrapper } from "@/components/Wrapper";
 import { Fonts } from "@/constants/Colors";
@@ -9,44 +9,12 @@ import { SECTION_META, SECTION_SLUGS } from "@/data/sections";
 export function SiteFooter() {
   const year = new Date().getFullYear();
   const { colors } = useTheme();
-  const pathname = usePathname();
   const mid = Math.ceil(SECTION_SLUGS.length / 2);
   const colA = SECTION_SLUGS.slice(0, mid);
   const colB = SECTION_SLUGS.slice(mid);
-  const path = (pathname ?? "").replace(/\/$/, "") || "/";
-  const hideCtaBand =
-    path === "/account" ||
-    path === "/login" ||
-    path === "/signup" ||
-    path === "/pricing" ||
-    path === "/newsletter" ||
-    path.startsWith("/auth/");
 
   return (
     <View style={styles.shell}>
-      {hideCtaBand ? null : (
-        <Wrapper style={[styles.ctaBand, { borderTopColor: colors.text }]}>
-          <Text style={[styles.ctaTitle, { color: colors.text }]}>Stories you can cite</Text>
-          <Text style={[styles.ctaDek, { color: colors.textMuted }]}>
-            Clear data reporting on sports, film, music, culture, and cities.
-          </Text>
-          <View style={styles.ctaRow}>
-            <Link href="/pricing" asChild>
-              <Pressable
-                style={StyleSheet.flatten([styles.subscribe, { backgroundColor: colors.text }])}
-              >
-                <Text style={[styles.subscribeText, { color: colors.inverse }]}>Subscribe</Text>
-              </Pressable>
-            </Link>
-            <Link href="/newsletter" asChild>
-              <Pressable>
-                <Text style={[styles.newsletter, { color: colors.accent }]}>Newsletter</Text>
-              </Pressable>
-            </Link>
-          </View>
-        </Wrapper>
-      )}
-
       <View style={[styles.dark, { backgroundColor: colors.mode === "dark" ? "#000" : "#0A0A0A" }]}>
         <Wrapper style={styles.inner}>
           <View style={styles.cols}>
@@ -91,8 +59,7 @@ export function SiteFooter() {
 
           <Link href="/" asChild>
             <Pressable style={styles.brandBlock} accessibilityLabel="Artometrics home">
-              <Logo size={36} compact={1} align="center" markVariant="light" showWordmark={false} />
-              <Text style={styles.wordmark}>Artometrics</Text>
+              <Logo size={44} compact={1} align="center" markVariant="light" showWordmark={false} />
             </Pressable>
           </Link>
 
@@ -124,33 +91,6 @@ export function SiteFooter() {
 
 const styles = StyleSheet.create({
   shell: { marginTop: 24 },
-  ctaBand: {
-    paddingVertical: 40,
-    gap: 12,
-    borderTopWidth: 2,
-  },
-  ctaTitle: {
-    fontFamily: Fonts.serif,
-    fontSize: 28,
-    fontWeight: "700",
-  },
-  ctaDek: {
-    fontFamily: Fonts.serif,
-    fontSize: 16,
-    lineHeight: 26,
-    maxWidth: 520,
-  },
-  ctaRow: { flexDirection: "row", alignItems: "center", gap: 20, marginTop: 8 },
-  subscribe: {
-    paddingHorizontal: 28,
-    paddingVertical: 14,
-  },
-  subscribeText: {
-    fontSize: 14,
-    fontWeight: "700",
-    letterSpacing: 0.4,
-  },
-  newsletter: { fontSize: 14, fontWeight: "700" },
   dark: { paddingVertical: 36 },
   inner: { gap: 28 },
   cols: { flexDirection: "row", flexWrap: "wrap", gap: 28 },
@@ -163,7 +103,6 @@ const styles = StyleSheet.create({
   },
   groupLink: { color: "rgba(255,255,255,0.75)", fontSize: 14, paddingVertical: 2 },
   brandBlock: { alignItems: "center", gap: 10, paddingTop: 8 },
-  wordmark: { fontFamily: "Chomsky", fontSize: 28, color: "#fff" },
   legalRow: {
     flexDirection: "row",
     flexWrap: "wrap",
