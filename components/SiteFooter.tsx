@@ -15,7 +15,19 @@ export function SiteFooter() {
 
   return (
     <View style={styles.shell}>
-      <View style={[styles.dark, { backgroundColor: colors.mode === "dark" ? "#000" : "#0A0A0A" }]}>
+      <Wrapper style={styles.ctaWrap}>
+        <View style={[styles.cta, { backgroundColor: colors.accent }]}>
+          <Text style={styles.ctaTitle}>
+            LET&apos;S CREATE{"\n"}SOMETHING GREAT{"\n"}TOGETHER.
+          </Text>
+          <Link href="/contact" asChild>
+            <Pressable style={styles.ctaCircle} accessibilityLabel="Contact Artometrics">
+              <Text style={styles.ctaArrow}>↗</Text>
+            </Pressable>
+          </Link>
+        </View>
+      </Wrapper>
+      <View style={[styles.dark, { backgroundColor: "#000000" }]}>
         <Wrapper style={styles.inner}>
           <View style={styles.cols}>
             <View style={styles.col}>
@@ -91,17 +103,55 @@ export function SiteFooter() {
 
 const styles = StyleSheet.create({
   shell: { marginTop: 24 },
+  ctaWrap: { marginBottom: 0 },
+  cta: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    alignItems: "center",
+    justifyContent: "space-between",
+    gap: 20,
+    paddingVertical: 32,
+    paddingHorizontal: 8,
+  },
+  ctaTitle: {
+    flex: 1,
+    minWidth: 220,
+    color: "#FFFFFF",
+    fontFamily: Fonts.display,
+    fontSize: 36,
+    lineHeight: 40,
+    letterSpacing: 0.5,
+  },
+  ctaCircle: {
+    width: 72,
+    height: 72,
+    borderRadius: 36,
+    backgroundColor: "#FFFFFF",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  ctaArrow: { color: "#000000", fontSize: 28, fontWeight: "700" },
   dark: { paddingVertical: 36 },
   inner: { gap: 28 },
   cols: { flexDirection: "row", flexWrap: "wrap", gap: 28 },
   col: { minWidth: 140, gap: 8, flexGrow: 1 },
   groupTitle: {
-    fontFamily: Fonts.mono,
-    fontSize: 14,
-    color: "#fff",
+    fontFamily: Fonts.sans,
+    fontSize: 11,
+    fontWeight: "800",
+    letterSpacing: 1.6,
+    textTransform: "uppercase",
+    color: "#D9251B",
     marginBottom: 6,
   },
-  groupLink: { color: "rgba(255,255,255,0.75)", fontSize: 14, paddingVertical: 2 },
+  groupLink: {
+    color: "rgba(255,255,255,0.8)",
+    fontSize: 13,
+    paddingVertical: 2,
+    letterSpacing: 0.4,
+    textTransform: "uppercase",
+    fontWeight: "600",
+  },
   brandBlock: { alignItems: "center", gap: 10, paddingTop: 8 },
   legalRow: {
     flexDirection: "row",
@@ -116,5 +166,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
     color: "rgba(255,255,255,0.45)",
     fontSize: 12,
+    letterSpacing: 1,
+    textTransform: "uppercase",
   },
 });

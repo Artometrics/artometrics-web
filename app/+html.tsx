@@ -48,10 +48,10 @@ export default function Root({ children }: PropsWithChildren) {
         />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <link rel="mask-icon" href="/favicon.svg" color="#C0392B" />
+        <link rel="mask-icon" href="/favicon.svg" color="#D9251B" />
         <link rel="manifest" href="/manifest.webmanifest" />
-        <meta name="theme-color" content="#FAFAF8" media="(prefers-color-scheme: light)" />
-        <meta name="theme-color" content="#0A0A0A" media="(prefers-color-scheme: dark)" />
+        <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)" />
+        <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
         <meta name="color-scheme" content="light" />
         <ScrollViewStyleReset />
         <link rel="stylesheet" href="/css/artometrics-article.css" />
@@ -65,14 +65,21 @@ export default function Root({ children }: PropsWithChildren) {
                 font-style: normal;
                 font-display: block;
               }
+              @font-face {
+                font-family: "Anton";
+                src: url("/fonts/Anton-Regular.ttf") format("truetype");
+                font-weight: 400;
+                font-style: normal;
+                font-display: swap;
+              }
               html, body, #root {
                 min-height: 100%;
               }
               body {
                 margin: 0;
                 background: #FFFFFF;
-                font-family: Georgia, "Times New Roman", Times, serif;
-                color: #171717;
+                font-family: "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
+                color: #000000;
               }
               /* Prefer explicit site theme over OS preference alone */
               html[data-theme="light"] {
