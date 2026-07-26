@@ -19,9 +19,9 @@ Staff reports still ship from markdown → `npm run content` → `src/generated/
 
 | Variable | Scope | Required | Notes |
 |----------|--------|----------|--------|
-| `SANITY_PROJECT_ID` | Functions / Builds | **Yes** for sync | Project id from manage.sanity.io |
-| `SANITY_DATASET` | Functions / Builds | **Yes** | Use `production` |
-| `SANITY_API_WRITE_TOKEN` | **Functions only** (never public) | **Yes** for sync | Editor token with create/mutate |
+| `SANITY_PROJECT_ID` | Functions / Builds | **Yes** for sync | Project id from manage.sanity.io — **not** a secret |
+| `SANITY_DATASET` | Functions / Builds | **Yes** | Use `production` — **not** a secret (Netlify secret-scan will fail if you mark it; `production` appears in public files) |
+| `SANITY_API_WRITE_TOKEN` | **Functions only** (never public) | **Yes** for sync | Editor token with create/mutate — **only this one** should be marked “Contains secret values” |
 | `SANITY_API_VERSION` | Functions | No | Defaults to `2024-01-01` |
 | `EXPO_PUBLIC_SANITY_PROJECT_ID` | Builds (optional) | No | Only if a future client read path is added |
 | `EXPO_PUBLIC_SANITY_DATASET` | Builds (optional) | No | Defaults unused while Expo reads `src/generated/*` |
