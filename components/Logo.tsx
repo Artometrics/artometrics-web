@@ -1,6 +1,5 @@
 import {
   Image,
-  Platform,
   Text,
   View,
   type StyleProp,

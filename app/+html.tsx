@@ -83,12 +83,6 @@ export default function Root({ children }: PropsWithChildren) {
                 background: #FFFFFF !important;
                 color: #171717 !important;
               }
-              /* RN Web can inherit washed-out text under OS dark; pin contrast */
-              html[data-theme="light"] body,
-              html[data-theme="light"] #root,
-              html[data-theme="light"] #root * {
-                -webkit-text-fill-color: inherit;
-              }
               html[data-theme="dark"] {
                 color-scheme: dark;
               }
