@@ -70,7 +70,8 @@ export function getBlogPosts(): BlogPost[] {
     .sort((a, b) => new Date(b.pubDate!).getTime() - new Date(a.pubDate!).getTime());
 }
 
-export function getBlogPost(slug: string): BlogPost | undefined {
+export function getBlogPost(slug: string | undefined): BlogPost | undefined {
+  if (!slug) return undefined;
   return getBlogPosts().find((p) => p.slug === slug);
 }
 
@@ -80,7 +81,8 @@ export function getPodcastEpisodes(): PodcastEpisode[] {
     .sort((a, b) => new Date(b.pubDate!).getTime() - new Date(a.pubDate!).getTime());
 }
 
-export function getPodcastEpisode(id: string): PodcastEpisode | undefined {
+export function getPodcastEpisode(id: string | undefined): PodcastEpisode | undefined {
+  if (!id) return undefined;
   return (podcastData as PodcastEpisode[]).find((ep) => ep.id === id);
 }
 
@@ -88,7 +90,8 @@ export function getAuthors(): Author[] {
   return authorsData as Author[];
 }
 
-export function getAuthor(id: string): Author | undefined {
+export function getAuthor(id: string | undefined): Author | undefined {
+  if (!id) return undefined;
   return (authorsData as Author[]).find((a) => a.id === id);
 }
 
@@ -96,7 +99,8 @@ export function getLegalPages(): LegalPage[] {
   return legalData as LegalPage[];
 }
 
-export function getLegalPage(id: string): LegalPage | undefined {
+export function getLegalPage(id: string | undefined): LegalPage | undefined {
+  if (!id) return undefined;
   return (legalData as LegalPage[]).find((p) => p.id === id);
 }
 

@@ -7,14 +7,15 @@ import { Fonts } from "@/constants/Colors";
 import { getBlogPosts, primarySection } from "@/lib/content";
 import { SECTION_META, SECTION_SLUGS, type SectionSlug } from "@/data/sections";
 import { PageSeo } from "@/components/PageSeo";
+import { paramString } from "@/lib/params";
 
 export default function BlogIndex() {
   const { colors } = useTheme();
-  const { desk, section: sectionParam } = useLocalSearchParams<{
-    desk?: string;
-    section?: string;
+  const params = useLocalSearchParams<{
+    desk?: string | string[];
+    section?: string | string[];
   }>();
-  const raw = sectionParam || desk;
+  const raw = paramString(params.section) || paramString(params.desk);
   const sectionFilter =
     raw && SECTION_SLUGS.includes(raw as SectionSlug) ? (raw as SectionSlug) : null;
   const posts = getBlogPosts().filter((post) =>

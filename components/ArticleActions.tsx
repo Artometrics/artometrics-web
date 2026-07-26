@@ -1,10 +1,19 @@
 import { useEffect, useMemo, useState } from "react";
-import { Linking, Pressable, Text, View, StyleSheet, Platform } from "react-native";
+import {
+  Linking,
+  Pressable,
+  Share,
+  Text,
+  View,
+  StyleSheet,
+  Platform,
+} from "react-native";
 import { Link } from "expo-router";
 import { Fonts } from "@/constants/Colors";
 import { useTheme } from "@/lib/theme";
 import { useAuth } from "@/lib/auth";
 import { apiFetch } from "@/lib/supabase/client";
+import { assetUrl } from "@/lib/assets";
 import downloadsManifest from "@/src/generated/downloads.json";
 
 type Pack = {
@@ -28,11 +37,12 @@ type Props = {
 type DownloadItem = { key: string; label: string; href: string };
 
 function openUrl(url: string) {
+  const absolute = assetUrl(url) ?? url;
   if (Platform.OS === "web" && typeof window !== "undefined") {
-    window.open(url, "_blank", "noopener,noreferrer");
+    window.open(absolute, "_blank", "noopener,noreferrer");
     return;
   }
-  void Linking.openURL(url);
+  void Linking.openURL(absolute);
 }
 
 async function downloadAll(items: DownloadItem[]) {
@@ -96,8 +106,16 @@ export function ArticleActions({ slug, title, placement = "all" }: Props) {
     }
   }
 
-  function share() {
+  async function share() {
     const url = `https://artometrics.com/${slug}`;
+    if (Platform.OS !== "web") {
+      try {
+        await Share.share({ message: `${title}\n${url}`, url, title });
+      } catch {
+        openUrl(url);
+      }
+      return;
+    }
     if (typeof navigator !== "undefined" && typeof navigator.share === "function") {
       navigator.share({ title, url }).catch(() => openUrl(url));
       return;

@@ -7,7 +7,7 @@ import {
   useState,
   type ReactNode,
 } from "react";
-import { Platform } from "react-native";
+import { Appearance, Platform } from "react-native";
 import { Themes, type ThemeColors, type ThemeMode } from "@/constants/Colors";
 
 type Preference = ThemeMode | "system";
@@ -29,12 +29,12 @@ function systemMode(): ThemeMode {
       ? "dark"
       : "light";
   }
-  return "light";
+  return Appearance.getColorScheme() === "dark" ? "dark" : "light";
 }
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
   const [preference, setPreferenceState] = useState<Preference>("system");
-  const [system, setSystem] = useState<ThemeMode>("light");
+  const [system, setSystem] = useState<ThemeMode>(() => systemMode());
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
@@ -52,11 +52,17 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     }
     setReady(true);
 
-    if (Platform.OS !== "web" || typeof window === "undefined") return;
-    const mq = window.matchMedia("(prefers-color-scheme: dark)");
-    const onChange = () => setSystem(mq.matches ? "dark" : "light");
-    mq.addEventListener?.("change", onChange);
-    return () => mq.removeEventListener?.("change", onChange);
+    if (Platform.OS === "web" && typeof window !== "undefined") {
+      const mq = window.matchMedia("(prefers-color-scheme: dark)");
+      const onChange = () => setSystem(mq.matches ? "dark" : "light");
+      mq.addEventListener?.("change", onChange);
+      return () => mq.removeEventListener?.("change", onChange);
+    }
+
+    const sub = Appearance.addChangeListener(({ colorScheme }) => {
+      setSystem(colorScheme === "dark" ? "dark" : "light");
+    });
+    return () => sub.remove();
   }, []);
 
   const setPreference = useCallback((p: Preference) => {
@@ -70,8 +76,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     }
   }, []);
 
-  const mode: ThemeMode =
-    preference === "system" ? system : preference;
+  const mode: ThemeMode = preference === "system" ? system : preference;
 
   const toggle = useCallback(() => {
     setPreference(mode === "dark" ? "light" : "dark");

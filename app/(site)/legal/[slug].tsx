@@ -4,13 +4,15 @@ import { Wrapper } from "@/components/Wrapper";
 import { ArticleBody } from "@/components/ArticleBody";
 import { Colors } from "@/constants/Colors";
 import { formatDate, getLegalPage, getLegalPages } from "@/lib/content";
+import { paramString } from "@/lib/params";
 
 export async function generateStaticParams() {
   return getLegalPages().map((page) => ({ slug: page.id }));
 }
 
 export default function LegalScreen() {
-  const { slug } = useLocalSearchParams<{ slug: string }>();
+  const params = useLocalSearchParams<{ slug: string | string[] }>();
+  const slug = paramString(params.slug);
   const page = getLegalPage(slug);
 
   if (!page) {

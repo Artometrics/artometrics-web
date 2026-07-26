@@ -14,6 +14,7 @@ import {
   type SectionSlug,
 } from "@/data/sections";
 import { getBlogPosts, primarySection } from "@/lib/content";
+import { paramString } from "@/lib/params";
 
 function resolveDomain(raw: string | undefined): SectionSlug | null {
   if (!raw) return null;
@@ -37,7 +38,8 @@ export async function generateStaticParams() {
 }
 
 export default function TopicChannelPage() {
-  const { channel: raw } = useLocalSearchParams<{ channel: string }>();
+  const params = useLocalSearchParams<{ channel: string | string[] }>();
+  const raw = paramString(params.channel);
   const { colors } = useTheme();
   const mapped = resolveDomain(raw);
   const meta = mapped ? DOMAIN_META[mapped] : null;

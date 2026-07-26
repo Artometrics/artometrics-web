@@ -18,6 +18,7 @@ import {
 } from "@/lib/content";
 import { useAuth } from "@/lib/auth";
 import { apiFetch } from "@/lib/supabase/client";
+import { paramString } from "@/lib/params";
 
 export async function generateStaticParams() {
   return getPodcastEpisodes().map((ep) => ({ slug: ep.id }));
@@ -25,7 +26,7 @@ export async function generateStaticParams() {
 
 export default function PodcastEpisodeScreen() {
   const params = useLocalSearchParams<{ slug: string | string[] }>();
-  const slug = Array.isArray(params.slug) ? params.slug[0] : params.slug;
+  const slug = paramString(params.slug);
   const episode = getPodcastEpisode(slug);
   const { user, loading: authLoading } = useAuth();
   const [subActive, setSubActive] = useState(false);

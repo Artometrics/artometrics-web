@@ -4,7 +4,6 @@ import {
   View,
   StyleSheet,
   Image,
-  ScrollView,
   useWindowDimensions,
 } from "react-native";
 import { Link } from "expo-router";

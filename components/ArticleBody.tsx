@@ -79,7 +79,7 @@ const systemFonts = [...defaultSystemFonts, BODY_FONT, "Chomsky"];
 export function ArticleBody({ html }: { html: string }) {
   const { width } = useWindowDimensions();
   const source = useMemo(
-    () => ({ html: withChartFallbacks(html) }),
+    () => ({ html: withChartFallbacks(html), baseUrl: SITE }),
     [html],
   );
   const contentWidth = Math.max(280, width - 40);
@@ -89,7 +89,6 @@ export function ArticleBody({ html }: { html: string }) {
       <RenderHtml
         contentWidth={contentWidth}
         source={source}
-        baseUrl={SITE}
         tagsStyles={tagsStyles}
         systemFonts={systemFonts}
         enableExperimentalMarginCollapsing

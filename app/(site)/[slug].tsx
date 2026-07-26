@@ -22,6 +22,7 @@ import {
 } from "@/lib/content";
 import { SECTION_META } from "@/data/sections";
 import { SeoJsonLd } from "@/components/SeoJsonLd";
+import { paramString } from "@/lib/params";
 
 function estimateMinutes(html: string) {
   const text = html.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
@@ -37,7 +38,8 @@ export default function ReportScreen() {
   const { colors } = useTheme();
   const { width } = useWindowDimensions();
   const bleed = width < 900;
-  const { slug } = useLocalSearchParams<{ slug: string }>();
+  const params = useLocalSearchParams<{ slug: string | string[] }>();
+  const slug = paramString(params.slug);
   const post = getBlogPost(slug);
   if (!post) {
     return (
