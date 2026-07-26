@@ -37,6 +37,7 @@ export function SiteHeader() {
   const searchRootRef = useRef<RNView | null>(null);
   const inputRef = useRef<TextInput | null>(null);
   const expand = useRef(new Animated.Value(0)).current;
+  const closeSearchRef = useRef(() => {});
 
   const suggestions = useMemo(() => searchSite(q, 6), [q]);
 
@@ -46,6 +47,7 @@ export function SiteHeader() {
     setQ("");
     inputRef.current?.blur();
   }
+  closeSearchRef.current = closeSearch;
 
   function openSearch() {
     setSearchOpen(true);
@@ -91,24 +93,27 @@ export function SiteHeader() {
   // Click / tap away + Escape close the expanded search.
   useEffect(() => {
     if (!searchOpen) return;
+    if (Platform.OS !== "web" || typeof document === "undefined") return;
 
-    if (Platform.OS === "web" && typeof document !== "undefined") {
-      const onKey = (e: KeyboardEvent) => {
-        if (e.key === "Escape") closeSearch();
-      };
-      const onPointer = (e: MouseEvent) => {
-        const node = searchRootRef.current as unknown as HTMLElement | null;
-        if (node && e.target instanceof Node && !node.contains(e.target)) {
-          closeSearch();
-        }
-      };
-      document.addEventListener("keydown", onKey);
-      document.addEventListener("mousedown", onPointer);
-      return () => {
-        document.removeEventListener("keydown", onKey);
-        document.removeEventListener("mousedown", onPointer);
-      };
-    }
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape" || e.key === "Esc") {
+        e.preventDefault();
+        closeSearchRef.current();
+      }
+    };
+    const onPointer = (e: MouseEvent) => {
+      const node = searchRootRef.current as unknown as HTMLElement | null;
+      if (node && e.target instanceof Node && !node.contains(e.target)) {
+        closeSearchRef.current();
+      }
+    };
+    // Capture phase so Escape still wins while the input is focused.
+    document.addEventListener("keydown", onKey, true);
+    document.addEventListener("mousedown", onPointer, true);
+    return () => {
+      document.removeEventListener("keydown", onKey, true);
+      document.removeEventListener("mousedown", onPointer, true);
+    };
   }, [searchOpen]);
 
   const panelWidth = expand.interpolate({
@@ -220,6 +225,18 @@ export function SiteHeader() {
                       onSubmitEditing={submitSearch}
                       onFocus={() => setFocused(true)}
                       onBlur={() => setFocused(false)}
+                      onKeyPress={(e) => {
+                        if (e.nativeEvent.key === "Escape") closeSearch();
+                      }}
+                      // RN Web: Escape often arrives as DOM keydown, not onKeyPress.
+                      {...(Platform.OS === "web"
+                        ? ({
+                            onKeyDown: (e: { key?: string; nativeEvent?: { key?: string } }) => {
+                              const key = e.key ?? e.nativeEvent?.key;
+                              if (key === "Escape" || key === "Esc") closeSearch();
+                            },
+                          } as object)
+                        : null)}
                       returnKeyType="search"
                       accessibilityLabel="Search Artometrics"
                       autoCorrect={false}
