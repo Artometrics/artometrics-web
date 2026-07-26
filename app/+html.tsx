@@ -70,14 +70,62 @@ export default function Root({ children }: PropsWithChildren) {
               }
               body {
                 margin: 0;
-                background: #FAFAF8;
+                background: #FFFFFF;
                 font-family: Georgia, "Times New Roman", Times, serif;
                 color: #171717;
               }
+              /* Prefer explicit site theme over OS preference alone */
+              html[data-theme="light"] body,
+              html[data-theme="light"] #root {
+                background: #FFFFFF !important;
+                color: #171717 !important;
+              }
+              html[data-theme="dark"] body,
+              html[data-theme="dark"] #root {
+                background: #0A0A0A !important;
+                color: #FAFAF8 !important;
+              }
               @media (prefers-color-scheme: dark) {
-                body { background: #0A0A0A; color: #FAFAF8; }
+                html:not([data-theme="light"]) body,
+                html:not([data-theme="light"]) #root {
+                  background: #0A0A0A;
+                  color: #FAFAF8;
+                }
               }
               a { color: inherit; text-decoration: none; }
+            `,
+          }}
+        />
+        {/* Apply saved theme before paint to avoid white-on-white flash */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function () {
+                try {
+                  var key = "artometrics-theme";
+                  var saved = localStorage.getItem(key);
+                  var mode = (saved === "light" || saved === "dark")
+                    ? saved
+                    : (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches
+                        ? "dark"
+                        : "light");
+                  var bg = mode === "dark" ? "#0A0A0A" : "#FFFFFF";
+                  var fg = mode === "dark" ? "#FAFAF8" : "#171717";
+                  var root = document.documentElement;
+                  root.setAttribute("data-theme", mode);
+                  root.style.colorScheme = mode;
+                  root.style.backgroundColor = bg;
+                  document.addEventListener("DOMContentLoaded", function () {
+                    document.body.style.backgroundColor = bg;
+                    document.body.style.color = fg;
+                    var app = document.getElementById("root");
+                    if (app) {
+                      app.style.backgroundColor = bg;
+                      app.style.color = fg;
+                    }
+                  });
+                } catch (e) {}
+              })();
             `,
           }}
         />

@@ -94,7 +94,11 @@ export function SiteHeader() {
               onPress={toggle}
               accessibilityLabel={mode === "dark" ? "Switch to light mode" : "Switch to dark mode"}
               hitSlop={10}
-              style={styles.iconBtn}
+              style={StyleSheet.flatten([
+                styles.iconBtn,
+                styles.iconBtnBordered,
+                { borderColor: colors.text, backgroundColor: colors.bgElevated },
+              ])}
             >
               <Ionicons
                 name={mode === "dark" ? "sunny-outline" : "moon-outline"}
@@ -104,7 +108,15 @@ export function SiteHeader() {
             </Pressable>
 
             <Link href={user ? "/account" : "/login"} asChild>
-              <Pressable hitSlop={8} accessibilityLabel={user ? "Account" : "Sign in"} style={styles.iconBtn}>
+              <Pressable
+                hitSlop={8}
+                accessibilityLabel={user ? "Account" : "Sign in"}
+                style={StyleSheet.flatten([
+                  styles.iconBtn,
+                  styles.iconBtnBordered,
+                  { borderColor: colors.text, backgroundColor: colors.bgElevated },
+                ])}
+              >
                 <Ionicons name="person-outline" size={20} color={colors.text} />
               </Pressable>
             </Link>
@@ -156,6 +168,10 @@ const styles = StyleSheet.create({
     height: 40,
     alignItems: "center",
     justifyContent: "center",
+  },
+  iconBtnBordered: {
+    borderWidth: StyleSheet.hairlineWidth,
+    borderRadius: 2,
   },
   searchBox: {
     borderWidth: StyleSheet.hairlineWidth,

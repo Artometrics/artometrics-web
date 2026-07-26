@@ -33,13 +33,23 @@ function systemMode(): ThemeMode {
   return Appearance.getColorScheme() === "dark" ? "dark" : "light";
 }
 
-async function readStoredPreference(): Promise<Preference | null> {
+function readStoredPreferenceSync(): Preference | null {
   try {
     if (Platform.OS === "web" && typeof localStorage !== "undefined") {
       const saved = localStorage.getItem(STORAGE_KEY);
       if (saved === "light" || saved === "dark" || saved === "system") return saved;
-      return null;
     }
+  } catch {
+    /* ignore */
+  }
+  return null;
+}
+
+async function readStoredPreference(): Promise<Preference | null> {
+  const sync = readStoredPreferenceSync();
+  if (sync) return sync;
+  try {
+    if (Platform.OS === "web") return null;
     const saved = await AsyncStorage.getItem(STORAGE_KEY);
     if (saved === "light" || saved === "dark" || saved === "system") return saved;
   } catch {
@@ -60,18 +70,39 @@ async function writeStoredPreference(p: Preference): Promise<void> {
   }
 }
 
+/** Keep html/body/#root in lockstep with the active mode (fixes light text on white). */
+function applyDomTheme(mode: ThemeMode) {
+  if (Platform.OS !== "web" || typeof document === "undefined") return;
+  const bg = Themes[mode].bg;
+  const fg = Themes[mode].text;
+  const root = document.documentElement;
+  root.dataset.theme = mode;
+  root.style.colorScheme = mode;
+  root.style.backgroundColor = bg;
+  document.body.style.backgroundColor = bg;
+  document.body.style.color = fg;
+  const appRoot = document.getElementById("root");
+  if (appRoot) {
+    appRoot.style.backgroundColor = bg;
+    appRoot.style.color = fg;
+  }
+}
+
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [preference, setPreferenceState] = useState<Preference>("system");
+  const [preference, setPreferenceState] = useState<Preference>(
+    () => readStoredPreferenceSync() ?? "system",
+  );
   const [system, setSystem] = useState<ThemeMode>(() => systemMode());
-  const [ready, setReady] = useState(false);
 
   useEffect(() => {
     setSystem(systemMode());
     let cancelled = false;
-    void readStoredPreference().then((saved) => {
-      if (!cancelled && saved) setPreferenceState(saved);
-      if (!cancelled) setReady(true);
-    });
+    // Native: hydrate from AsyncStorage. Web already read sync from localStorage.
+    if (Platform.OS !== "web") {
+      void readStoredPreference().then((saved) => {
+        if (!cancelled && saved) setPreferenceState(saved);
+      });
+    }
 
     if (Platform.OS === "web" && typeof window !== "undefined") {
       const mq = window.matchMedia("(prefers-color-scheme: dark)");
@@ -104,12 +135,8 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   }, [mode, setPreference]);
 
   useEffect(() => {
-    if (Platform.OS !== "web" || typeof document === "undefined" || !ready) return;
-    document.documentElement.dataset.theme = mode;
-    document.documentElement.style.colorScheme = mode;
-    document.body.style.backgroundColor = Themes[mode].bg;
-    document.body.style.color = Themes[mode].text;
-  }, [mode, ready]);
+    applyDomTheme(mode);
+  }, [mode]);
 
   const value = useMemo(
     () => ({
