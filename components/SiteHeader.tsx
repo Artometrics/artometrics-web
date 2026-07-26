@@ -44,7 +44,12 @@ export function SiteHeader() {
             hitSlop={12}
             testID="site-menu-button"
           >
-            <Ionicons name="menu-outline" size={26} color={colors.text} />
+            <Ionicons
+              name="menu-outline"
+              size={26}
+              color={colors.text}
+              style={{ color: colors.text }}
+            />
           </Pressable>
 
           <Link href="/" asChild>
@@ -86,7 +91,12 @@ export function SiteHeader() {
                 hitSlop={10}
                 style={styles.iconBtn}
               >
-                <Ionicons name="search-outline" size={22} color={colors.text} />
+                <Ionicons
+                  name="search-outline"
+                  size={22}
+                  color={colors.text}
+                  style={{ color: colors.text }}
+                />
               </Pressable>
             )}
 
@@ -104,6 +114,7 @@ export function SiteHeader() {
                 name={mode === "dark" ? "sunny-outline" : "moon-outline"}
                 size={20}
                 color={colors.text}
+                style={{ color: colors.text }}
               />
             </Pressable>
 
@@ -117,7 +128,12 @@ export function SiteHeader() {
                   { borderColor: colors.text, backgroundColor: colors.bgElevated },
                 ])}
               >
-                <Ionicons name="person-outline" size={20} color={colors.text} />
+                <Ionicons
+                  name="person-outline"
+                  size={20}
+                  color={colors.text}
+                  style={{ color: colors.text }}
+                />
               </Pressable>
             </Link>
           </View>

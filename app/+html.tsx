@@ -52,7 +52,7 @@ export default function Root({ children }: PropsWithChildren) {
         <link rel="manifest" href="/manifest.webmanifest" />
         <meta name="theme-color" content="#FAFAF8" media="(prefers-color-scheme: light)" />
         <meta name="theme-color" content="#0A0A0A" media="(prefers-color-scheme: dark)" />
-        <meta name="color-scheme" content="light dark" />
+        <meta name="color-scheme" content="light" />
         <ScrollViewStyleReset />
         <link rel="stylesheet" href="/css/artometrics-article.css" />
         <style
@@ -75,10 +75,22 @@ export default function Root({ children }: PropsWithChildren) {
                 color: #171717;
               }
               /* Prefer explicit site theme over OS preference alone */
+              html[data-theme="light"] {
+                color-scheme: light only;
+              }
               html[data-theme="light"] body,
               html[data-theme="light"] #root {
                 background: #FFFFFF !important;
                 color: #171717 !important;
+              }
+              /* RN Web can inherit washed-out text under OS dark; pin contrast */
+              html[data-theme="light"] body,
+              html[data-theme="light"] #root,
+              html[data-theme="light"] #root * {
+                -webkit-text-fill-color: inherit;
+              }
+              html[data-theme="dark"] {
+                color-scheme: dark;
               }
               html[data-theme="dark"] body,
               html[data-theme="dark"] #root {
@@ -86,10 +98,18 @@ export default function Root({ children }: PropsWithChildren) {
                 color: #FAFAF8 !important;
               }
               @media (prefers-color-scheme: dark) {
-                html:not([data-theme="light"]) body,
-                html:not([data-theme="light"]) #root {
+                html:not([data-theme]) body,
+                html:not([data-theme]) #root,
+                html[data-theme="dark"] body,
+                html[data-theme="dark"] #root {
                   background: #0A0A0A;
                   color: #FAFAF8;
+                }
+                /* Never let OS dark override an explicit light site theme */
+                html[data-theme="light"] body,
+                html[data-theme="light"] #root {
+                  background: #FFFFFF !important;
+                  color: #171717 !important;
                 }
               }
               a { color: inherit; text-decoration: none; }
@@ -104,15 +124,19 @@ export default function Root({ children }: PropsWithChildren) {
                 try {
                   var key = "artometrics-theme";
                   var saved = localStorage.getItem(key);
-                  var mode = (saved === "light" || saved === "dark")
-                    ? saved
-                    : (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches
-                        ? "dark"
-                        : "light");
+                  // Default light unless user saved dark/system-resolved preference.
+                  var mode = "light";
+                  if (saved === "dark") mode = "dark";
+                  else if (saved === "system") {
+                    mode = (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches)
+                      ? "dark"
+                      : "light";
+                  } else if (saved === "light") mode = "light";
                   var bg = mode === "dark" ? "#0A0A0A" : "#FFFFFF";
                   var fg = mode === "dark" ? "#FAFAF8" : "#171717";
                   var root = document.documentElement;
                   root.setAttribute("data-theme", mode);
+                  root.style.setProperty("color-scheme", mode === "dark" ? "dark" : "light only");
                   root.style.colorScheme = mode;
                   root.style.backgroundColor = bg;
                   document.addEventListener("DOMContentLoaded", function () {
