@@ -1,6 +1,5 @@
 import {
   Image,
-  Platform,
   Text,
   View,
   type StyleProp,
@@ -45,19 +44,12 @@ export function Logo({
   const markMode =
     markVariant === "auto" ? mode : markVariant === "light" ? "dark" : "light";
   // markVariant "light" → white A (for dark surfaces); "dark" → black A
-  // Prefer SVG monogram on web; PNG fallback for native.
+  // PNG marks are reliable across RN Web + color-scheme; SVG stays in brand/svg for export.
   const mark =
     markMode === "dark"
-      ? assetUrl(
-          Platform.OS === "web"
-            ? "/images/brand/svg/monogram-a-white.svg"
-            : "/images/brand/chomsky-a-white.png",
-        )
-      : assetUrl(
-          Platform.OS === "web"
-            ? "/images/brand/svg/monogram-a-black.svg"
-            : "/images/brand/chomsky-a-black.png",
-        );
+      ? assetUrl("/images/brand/chomsky-a-white.png")
+      : assetUrl("/images/brand/chomsky-a-black.png");
+  const markColor = markMode === "dark" ? Colors.base50 : Colors.base900;
   const isLeft = align === "left";
 
   if (useMark) {
@@ -83,7 +75,7 @@ export function Logo({
               fontFamily: "Chomsky",
               fontSize: markSize,
               lineHeight: markSize * 1.05,
-              color: Colors.accent600,
+              color: markColor,
             }}
           >
             A
@@ -119,7 +111,8 @@ export function Logo({
             {
               fontFamily: "Chomsky",
               fontSize: size,
-              color: colors.text,
+              // Prefer resolved mark contrast over inherited currentColor from parents.
+              color: markVariant === "auto" ? colors.text : markColor,
               letterSpacing: 0.5,
               textAlign: isLeft ? "left" : "center",
             },

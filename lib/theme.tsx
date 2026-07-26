@@ -70,13 +70,21 @@ async function writeStoredPreference(p: Preference): Promise<void> {
   }
 }
 
-/** Keep html/body/#root in lockstep with the active mode (fixes light text on white). */
+/** Keep html/body/#root + RN Appearance in lockstep (fixes light text on white). */
 function applyDomTheme(mode: ThemeMode) {
+  // RN Web inherits OS dark styling for icons/text unless Appearance matches site theme.
+  try {
+    Appearance.setColorScheme?.(mode);
+  } catch {
+    /* older runtimes */
+  }
+
   if (Platform.OS !== "web" || typeof document === "undefined") return;
   const bg = Themes[mode].bg;
   const fg = Themes[mode].text;
   const root = document.documentElement;
   root.dataset.theme = mode;
+  root.style.setProperty("color-scheme", mode);
   root.style.colorScheme = mode;
   root.style.backgroundColor = bg;
   document.body.style.backgroundColor = bg;
@@ -86,11 +94,17 @@ function applyDomTheme(mode: ThemeMode) {
     appRoot.style.backgroundColor = bg;
     appRoot.style.color = fg;
   }
+  const meta = document.querySelector('meta[name="color-scheme"]');
+  if (meta) meta.setAttribute("content", mode);
+  const themeColor = document.querySelector('meta[name="theme-color"]');
+  if (themeColor) themeColor.setAttribute("content", bg);
 }
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
+  // Default to explicit light (magazine) so OS dark mode cannot wash out text
+  // before the user opts into dark / system.
   const [preference, setPreferenceState] = useState<Preference>(
-    () => readStoredPreferenceSync() ?? "system",
+    () => readStoredPreferenceSync() ?? "light",
   );
   const [system, setSystem] = useState<ThemeMode>(() => systemMode());
 
@@ -131,6 +145,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   const mode: ThemeMode = preference === "system" ? system : preference;
 
   const toggle = useCallback(() => {
+    // Explicit light/dark — never leave "system" after a manual toggle.
     setPreference(mode === "dark" ? "light" : "dark");
   }, [mode, setPreference]);
 
