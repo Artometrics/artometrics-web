@@ -25,10 +25,19 @@ export function deckLine(description: string, maxWords = 18): string {
 }
 
 export function formatAuthorName(slug: string) {
+  const special: Record<string, string> = {
+    "kyle-mcauliffe": "Kyle McAuliffe",
+  };
+  if (special[slug]) return special[slug];
   return slug
     .replace(/-/g, " ")
     .split(" ")
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .map((word) => {
+      if (/^mc[a-z]/i.test(word)) {
+        return `Mc${word.slice(2, 3).toUpperCase()}${word.slice(3)}`;
+      }
+      return word.charAt(0).toUpperCase() + word.slice(1);
+    })
     .join(" ");
 }
 
