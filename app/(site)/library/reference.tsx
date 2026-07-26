@@ -3,6 +3,7 @@ import { Pressable, Text, TextInput, View, StyleSheet } from "react-native";
 import { Link } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { PageSeo } from "@/components/PageSeo";
+import { SpecimenCard } from "@/components/library/SpecimenCard";
 import { Fonts } from "@/constants/Colors";
 import { useTheme } from "@/lib/theme";
 import { useAuth } from "@/lib/auth";
@@ -23,7 +24,7 @@ export default function LibraryReferenceScreen() {
   const { user } = useAuth();
   const [source, setSource] = useState<ReferenceSource | "all">("all");
   const [q, setQ] = useState("");
-  const items = useMemo(() => searchReference(q, source).slice(0, 80), [q, source]);
+  const items = useMemo(() => searchReference(q, source).slice(0, 48), [q, source]);
 
   return (
     <Wrapper style={styles.wrap}>
@@ -35,28 +36,38 @@ export default function LibraryReferenceScreen() {
       <Text style={[styles.eyebrow, { color: colors.accent }]}>Library</Text>
       <Text style={[styles.title, { color: colors.text }]}>Reference</Text>
       <Text style={[styles.deck, { color: colors.textMuted }]}>
-        Curated Project Gutenberg, WikiArt/Wikimedia, and Wikipedia entries. Sign in to pin
-        into Twilda.
+        Specimen cards for Gutenberg, WikiArt, and Wikipedia — open sources with attribution.
       </Text>
 
       <View style={styles.filters}>
-        {FILTERS.map((f) => (
-          <Pressable
-            key={f.id}
-            onPress={() => setSource(f.id)}
-            style={[
-              styles.chip,
-              {
-                borderColor: colors.border,
-                backgroundColor: source === f.id ? colors.text : "transparent",
-              },
-            ]}
-          >
-            <Text style={{ color: source === f.id ? colors.inverse : colors.text, fontSize: 13 }}>
-              {f.label}
-            </Text>
-          </Pressable>
-        ))}
+        {FILTERS.map((f) => {
+          const active = source === f.id;
+          return (
+            <Pressable
+              key={f.id}
+              onPress={() => setSource(f.id)}
+              style={StyleSheet.flatten([
+                styles.chip,
+                {
+                  borderColor: colors.border,
+                  backgroundColor: active ? colors.text : "transparent",
+                },
+              ])}
+            >
+              <Text
+                style={{
+                  color: active ? colors.inverse : colors.text,
+                  fontSize: 11,
+                  fontWeight: "800",
+                  letterSpacing: 1,
+                  textTransform: "uppercase",
+                }}
+              >
+                {f.label}
+              </Text>
+            </Pressable>
+          );
+        })}
       </View>
 
       <TextInput
@@ -64,7 +75,10 @@ export default function LibraryReferenceScreen() {
         onChangeText={setQ}
         placeholder="Search titles, artists, subjects…"
         placeholderTextColor={colors.textSubtle}
-        style={[styles.input, { borderColor: colors.border, color: colors.text }]}
+        style={StyleSheet.flatten([
+          styles.input,
+          { borderColor: colors.border, color: colors.text },
+        ])}
       />
 
       {!user ? (
@@ -80,27 +94,9 @@ export default function LibraryReferenceScreen() {
         </Link>
       )}
 
-      <View style={styles.list}>
+      <View style={styles.grid}>
         {items.map((item) => (
-          <View
-            key={`${item.source}-${item.id}`}
-            style={[styles.row, { borderBottomColor: colors.border }]}
-          >
-            <Text style={[styles.source, { color: colors.accent }]}>{item.source}</Text>
-            <Text style={[styles.itemTitle, { color: colors.text }]}>
-              {item.title || item.label}
-            </Text>
-            <Text style={[styles.meta, { color: colors.textMuted }]} numberOfLines={2}>
-              {[
-                item.authors?.join(", "),
-                item.artist,
-                item.description,
-                item.style,
-              ]
-                .filter(Boolean)
-                .join(" · ")}
-            </Text>
-          </View>
+          <SpecimenCard key={`${item.source}-${item.id}`} item={item} />
         ))}
       </View>
     </Wrapper>
@@ -109,21 +105,37 @@ export default function LibraryReferenceScreen() {
 
 const styles = StyleSheet.create({
   wrap: { paddingVertical: 40, gap: 12 },
-  eyebrow: { fontSize: 12, letterSpacing: 1.8, textTransform: "uppercase", fontWeight: "700" },
-  title: { fontFamily: Fonts.serif, fontSize: 40, fontWeight: "700" },
-  deck: { fontFamily: Fonts.serif, fontSize: 17, lineHeight: 26, maxWidth: 640 },
+  eyebrow: {
+    fontSize: 12,
+    letterSpacing: 1.8,
+    textTransform: "uppercase",
+    fontWeight: "700",
+  },
+  title: {
+    fontFamily: Fonts.display,
+    fontSize: 40,
+    fontWeight: "400",
+    textTransform: "uppercase",
+    letterSpacing: 1,
+  },
+  deck: { fontFamily: Fonts.sans, fontSize: 16, lineHeight: 24, maxWidth: 640 },
   filters: { flexDirection: "row", flexWrap: "wrap", gap: 8, marginTop: 8 },
-  chip: { borderWidth: StyleSheet.hairlineWidth, paddingHorizontal: 12, paddingVertical: 8 },
+  chip: {
+    borderWidth: 2,
+    paddingHorizontal: 12,
+    paddingVertical: 8,
+  },
   input: {
-    borderWidth: StyleSheet.hairlineWidth,
+    borderWidth: 2,
     paddingHorizontal: 12,
     paddingVertical: 10,
-    fontSize: 16,
+    fontFamily: Fonts.sans,
   },
   note: { fontSize: 14 },
-  list: { marginTop: 8 },
-  row: { paddingVertical: 14, borderBottomWidth: StyleSheet.hairlineWidth, gap: 4 },
-  source: { fontSize: 11, letterSpacing: 1.2, textTransform: "uppercase", fontWeight: "700" },
-  itemTitle: { fontFamily: Fonts.serif, fontSize: 18 },
-  meta: { fontSize: 14, lineHeight: 20 },
+  grid: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    gap: 16,
+    marginTop: 8,
+  },
 });

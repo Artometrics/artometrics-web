@@ -20,12 +20,12 @@ export const PrimaryButton = forwardRef<React.ElementRef<typeof Pressable>, Prop
         // Flatten: Link asChild + array styles crash RN Web (Safari).
         style={StyleSheet.flatten([
           styles.btn,
-          { backgroundColor: colors.text },
+          { backgroundColor: colors.accent },
           disabled && styles.disabled,
           style,
         ])}
       >
-        <Text style={[styles.label, { color: colors.inverse }]}>{label}</Text>
+        <Text style={[styles.label, { color: "#FFFFFF" }]}>{label}</Text>
       </Pressable>
     );
   },

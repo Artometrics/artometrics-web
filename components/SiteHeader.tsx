@@ -330,19 +330,16 @@ export function SiteHeader() {
               accessibilityRole="button"
               hitSlop={8}
               style={StyleSheet.flatten([
-                styles.iconBtn,
-                styles.studioBtn,
-                {
-                  borderColor: colors.accent,
-                  backgroundColor: colors.accentSoft,
-                },
+                styles.studioCta,
+                { backgroundColor: colors.accent },
               ])}
             >
+              <Text style={styles.studioCtaText}>Studio</Text>
               <Ionicons
-                name="create-outline"
-                size={20}
-                color={colors.text}
-                style={{ color: colors.text }}
+                name="arrow-forward"
+                size={14}
+                color="#FFFFFF"
+                style={{ color: "#FFFFFF" }}
               />
             </Pressable>
 
@@ -356,9 +353,24 @@ export function SiteHeader() {
 
 const styles = StyleSheet.create({
   shell: {
-    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderBottomWidth: 2,
     zIndex: 40,
     position: "relative",
+  },
+  studioCta: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 6,
+    paddingHorizontal: 12,
+    paddingVertical: 10,
+    minHeight: 40,
+  },
+  studioCtaText: {
+    color: "#FFFFFF",
+    fontSize: 11,
+    fontWeight: "800",
+    letterSpacing: 1.4,
+    textTransform: "uppercase",
   },
   dismissScrim: {
     ...StyleSheet.absoluteFill,
@@ -385,7 +397,7 @@ const styles = StyleSheet.create({
   logoWrap: {
     position: "absolute",
     left: 56,
-    right: 148,
+    right: 200,
     alignItems: "center",
     justifyContent: "center",
     zIndex: 3,
@@ -410,10 +422,6 @@ const styles = StyleSheet.create({
   },
   searchTrigger: {
     borderWidth: StyleSheet.hairlineWidth,
-    borderRadius: 2,
-  },
-  studioBtn: {
-    borderWidth: 1.5,
     borderRadius: 2,
   },
   searchPanel: {

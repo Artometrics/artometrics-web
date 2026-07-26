@@ -7,14 +7,14 @@ import {
   type ViewStyle,
   StyleSheet,
 } from "react-native";
-import { Colors } from "@/constants/Colors";
+import { Colors, Fonts } from "@/constants/Colors";
 import { assetUrl } from "@/lib/assets";
 import { useTheme } from "@/lib/theme";
 
 type Props = {
   style?: StyleProp<TextStyle>;
   size?: number;
-  /** Force compact Chomsky A (0–1). Omit to always show full wordmark. */
+  /** Force compact A mark (0–1). Omit to always show full wordmark. */
   compact?: number;
   containerStyle?: StyleProp<ViewStyle>;
   align?: "left" | "center";
@@ -25,8 +25,7 @@ type Props = {
 };
 
 /**
- * Artometrics brand mark. Scroll morph is opt-in via `compact`;
- * Complex chrome uses the full wordmark (no morph) to avoid layout jumps.
+ * Artometrics Swiss wordmark — condensed display + signal-red period.
  */
 export function Logo({
   style,
@@ -43,13 +42,12 @@ export function Logo({
   const useMark = progress > 0.5;
   const markMode =
     markVariant === "auto" ? mode : markVariant === "light" ? "dark" : "light";
-  // markVariant "light" → white A (for dark surfaces); "dark" → black A
-  // PNG marks are reliable across RN Web + color-scheme; SVG stays in brand/svg for export.
   const mark =
     markMode === "dark"
       ? assetUrl("/images/brand/chomsky-a-white.png")
       : assetUrl("/images/brand/chomsky-a-black.png");
-  const markColor = markMode === "dark" ? Colors.base50 : Colors.base900;
+  const markColor = markMode === "dark" ? Colors.white : Colors.black;
+  const wordColor = markVariant === "auto" ? colors.text : markColor;
   const isLeft = align === "left";
 
   if (useMark) {
@@ -72,20 +70,19 @@ export function Logo({
         ) : (
           <Text
             style={{
-              fontFamily: "Chomsky",
+              fontFamily: Fonts.display,
               fontSize: markSize,
               lineHeight: markSize * 1.05,
-              color: markColor,
+              color: Colors.accent500,
             }}
           >
-            A
+            A.
           </Text>
         )}
       </View>
     );
   }
 
-  // Full wordmark only — no leading monogram A (avoids "A Artometrics").
   return (
     <View
       style={[
@@ -101,11 +98,11 @@ export function Logo({
         <Text
           style={[
             {
-              fontFamily: "Chomsky",
-              fontSize: size,
-              // Prefer resolved mark contrast over inherited currentColor from parents.
-              color: markVariant === "auto" ? colors.text : markColor,
-              letterSpacing: 0.5,
+              fontFamily: Fonts.display,
+              fontSize: size * 0.92,
+              color: wordColor,
+              letterSpacing: 1.2,
+              textTransform: "uppercase",
               textAlign: isLeft ? "left" : "center",
             },
             style,
@@ -113,6 +110,7 @@ export function Logo({
           numberOfLines={1}
         >
           Artometrics
+          <Text style={{ color: Colors.accent500 }}>.</Text>
         </Text>
       ) : null}
     </View>

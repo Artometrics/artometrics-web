@@ -21,6 +21,9 @@ import {
   nextBirthday,
   sunSignFromDate,
 } from "@/lib/aftercare/calculators";
+import { celestialForSign } from "@/lib/aftercare/planets";
+import { PlanetPoster } from "@/components/aftercare/PlanetPoster";
+import { CosmicChartCard } from "@/components/aftercare/CosmicChartCard";
 
 const NAV = [
   { href: "/tools/aftercare", label: "Home" },
@@ -243,34 +246,40 @@ export default function AftercareBirthToolsScreen() {
 
           <View style={[styles.insight, { borderColor: colors.border }]}>
             <Text style={[styles.sectionLabel, { color: colors.textMuted }]}>
-              Insights
+              Celestial deck
             </Text>
             {sunSign || lifePath || nextBday ? (
               <>
-                <InsightRow
-                  colors={colors}
-                  label="Sun sign"
-                  value={sunSign ?? "—"}
-                />
+                {(() => {
+                  const c = celestialForSign(sunSign);
+                  return (
+                    <View style={{ gap: 14 }}>
+                      <PlanetPoster
+                        seasonTitle={c.seasonTitle}
+                        seasonLine={c.seasonLine}
+                        planet={c.planet}
+                        dateLabel={
+                          nextBday
+                            ? `Next birthday · ${nextBday.daysUntil}d`
+                            : undefined
+                        }
+                      />
+                      <CosmicChartCard
+                        eyebrow={
+                          insight?.note ||
+                          `Life path ${lifePath ?? "—"} · reflective chart card`
+                        }
+                        planet={c.planet}
+                        profileLabel={displayName || "You"}
+                      />
+                    </View>
+                  );
+                })()}
                 <InsightRow
                   colors={colors}
                   label="Life path"
                   value={lifePath != null ? String(lifePath) : "—"}
                 />
-                <InsightRow
-                  colors={colors}
-                  label="Next birthday"
-                  value={
-                    nextBday
-                      ? `${nextBday.date} (${nextBday.daysUntil} day${nextBday.daysUntil === 1 ? "" : "s"})`
-                      : "—"
-                  }
-                />
-                {insight?.note ? (
-                  <Text style={[styles.note, { color: colors.textMuted }]}>
-                    {insight.note}
-                  </Text>
-                ) : null}
                 {insight?.moonToday?.name ? (
                   <Text style={[styles.meta, { color: colors.textSubtle }]}>
                     Moon today: {insight.moonToday.name}
@@ -279,10 +288,13 @@ export default function AftercareBirthToolsScreen() {
                       : ""}
                   </Text>
                 ) : null}
+                <Text style={[styles.meta, { color: colors.textSubtle }]}>
+                  Reflective tools — not science, medical, or financial advice.
+                </Text>
               </>
             ) : (
               <Text style={[styles.note, { color: colors.textMuted }]}>
-                Enter a birth date (YYYY-MM-DD) to see sun sign, life path, and next birthday.
+                Enter a birth date (YYYY-MM-DD) to unlock your planet poster and chart card.
               </Text>
             )}
           </View>

@@ -11,10 +11,11 @@ SplashScreen.preventAutoHideAsync();
 export default function RootLayout() {
   const [loaded, error] = useFonts({
     Chomsky: require("../assets/fonts/Chomsky.otf"),
+    Anton: require("../assets/fonts/Anton-Regular.ttf"),
   });
 
   useEffect(() => {
-    // Soft-fail: missing Chomsky must not crash the app boot.
+    // Soft-fail: missing fonts must not crash the app boot.
     if (loaded || error) {
       void SplashScreen.hideAsync();
     }

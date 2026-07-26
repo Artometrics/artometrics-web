@@ -54,10 +54,11 @@ const styles = StyleSheet.create({
     gap: 12,
   },
   title: {
-    fontFamily: Fonts.sans,
-    fontSize: 22,
-    fontWeight: "800",
-    letterSpacing: -0.3,
+    fontFamily: Fonts.display,
+    fontSize: 28,
+    fontWeight: "400",
+    letterSpacing: 0.5,
+    textTransform: "uppercase",
   },
   more: {
     fontSize: 12,
