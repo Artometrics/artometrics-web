@@ -16,52 +16,32 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://artometrics.com/topics/arts</loc>
+    
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://artometrics.com/topics/sports</loc>
     
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://artometrics.com/topics/movies-tv</loc>
+    <loc>https://artometrics.com/topics/science</loc>
     
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://artometrics.com/topics/music</loc>
+    <loc>https://artometrics.com/topics/humanities</loc>
+    
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artometrics.com/topics/civics</loc>
     
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://artometrics.com/topics/culture</loc>
-    
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://artometrics.com/topics/galleries</loc>
-    
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://artometrics.com/topics/cities-travel</loc>
-    
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://artometrics.com/topics/games</loc>
-    
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://artometrics.com/topics/business</loc>
-    
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://artometrics.com/topics/books</loc>
-    
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://artometrics.com/topics/tech</loc>
     
     <priority>0.7</priority>
   </url>
@@ -617,6 +597,11 @@
   </url>
   <url>
     <loc>https://artometrics.com/authors/juliet-ramos</loc>
+    
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://artometrics.com/authors/kyle-mcauliffe</loc>
     
     <priority>0.4</priority>
   </url>

@@ -61,6 +61,41 @@ export const DATASET_PACKS: DatasetPack[] = [
     relatedReports: ["cultural-exports-geoeconomics", "national-export-identity-atlas"],
     sources: [{ name: "Civics reports", url: "/topics/civics" }],
   },
+  {
+    id: "gutenberg-reference",
+    title: "Project Gutenberg reference pack",
+    section: "humanities",
+    status: "published",
+    summary:
+      "Open-reference catalog of ~250 English-language classics (title, authors, subjects, Gutenberg URLs). Built from Gutendex or the official Gutenberg CSV feed.",
+    primaryKeyword: "project gutenberg catalog",
+    relatedReports: [
+      "project-gutenberg",
+      "project-gutenberg-public-domain-canon-map",
+    ],
+    sources: [
+      { name: "Project Gutenberg", url: "https://www.gutenberg.org/" },
+      { name: "Gutendex", url: "https://gutendex.com/" },
+    ],
+    downloadPath: "/data/reference/gutenberg/catalog.json",
+  },
+  {
+    id: "wikiart-reference",
+    title: "WikiArt / Wikimedia reference pack",
+    section: "arts",
+    status: "published",
+    summary:
+      "Curated public-domain painting references with artist, title, year, style, and Wikimedia Commons image URLs. License notes per item — verify Commons file pages before reuse.",
+    primaryKeyword: "public domain art catalog",
+    relatedReports: [],
+    sources: [
+      {
+        name: "Wikimedia Commons",
+        url: "https://commons.wikimedia.org/",
+      },
+    ],
+    downloadPath: "/data/reference/wikiart/catalog.json",
+  },
 ];
 
 export function getDatasetPack(id: string | undefined) {

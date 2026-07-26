@@ -1,0 +1,367 @@
+{
+  "generatedAt": "2026-07-26T04:55:01.827Z",
+  "source": "Wikimedia Commons (curated public-domain painting references)",
+  "license": "Predominantly public domain via Wikimedia Commons; individual files may carry CC or jurisdiction-specific notes — see each item.license and Commons file pages.",
+  "items": [
+    {
+      "id": "mona-lisa",
+      "artist": "Leonardo da Vinci",
+      "title": "Mona Lisa",
+      "year": "c. 1503–1506",
+      "style": "High Renaissance",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Mona_Lisa.jpg",
+      "license": "Public domain"
+    },
+    {
+      "id": "last-supper",
+      "artist": "Leonardo da Vinci",
+      "title": "The Last Supper",
+      "year": "1495–1498",
+      "style": "High Renaissance",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/48/The_Last_Supper_-_Leonardo_Da_Vinci_-_High_Resolution_32x16.jpg",
+      "license": "Public domain"
+    },
+    {
+      "id": "birth-of-venus",
+      "artist": "Sandro Botticelli",
+      "title": "The Birth of Venus",
+      "year": "c. 1484–1486",
+      "style": "Early Renaissance",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Sandro_Botticelli_-_La_nascita_di_Venere_-_Google_Art_Project_-_edited.jpg",
+      "license": "Public domain"
+    },
+    {
+      "id": "school-of-athens",
+      "artist": "Raphael",
+      "title": "The School of Athens",
+      "year": "1509–1511",
+      "style": "High Renaissance",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/49/%22The_School_of_Athens%22_by_Raffaello_Sanzio_da_Urbino.jpg",
+      "license": "Public domain"
+    },
+    {
+      "id": "sistine-creation-of-adam",
+      "artist": "Michelangelo",
+      "title": "The Creation of Adam",
+      "year": "c. 1512",
+      "style": "High Renaissance",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Michelangelo_-_Creation_of_Adam_%28cropped%29.jpg",
+      "license": "Public domain"
+    },
+    {
+      "id": "girl-with-a-pearl-earring",
+      "artist": "Johannes Vermeer",
+      "title": "Girl with a Pearl Earring",
+      "year": "c. 1665",
+      "style": "Dutch Golden Age",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0f/1665_Girl_with_a_Pearl_Earring.jpg",
+      "license": "Public domain"
+    },
+    {
+      "id": "night-watch",
+      "artist": "Rembrandt",
+      "title": "The Night Watch",
+      "year": "1642",
+      "style": "Dutch Golden Age",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5a/The_Night_Watch_-_HD.jpg",
+      "license": "Public domain"
+    },
+    {
+      "id": "arnolfini-portrait",
+      "artist": "Jan van Eyck",
+      "title": "The Arnolfini Portrait",
+      "year": "1434",
+      "style": "Northern Renaissance",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/33/Van_Eyck_-_Arnolfini_Portrait.jpg",
+      "license": "Public domain"
+    },
+    {
+      "id": "garden-of-earthly-delights",
+      "artist": "Hieronymus Bosch",
+      "title": "The Garden of Earthly Delights",
+      "year": "c. 1490–1510",
+      "style": "Northern Renaissance",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Hieronymus_Bosch_-_The_Garden_of_Earthly_Delights_-_Garden_of_Earthly_Delights_%28Ecclesia%27s_Paradise%29.jpg",
+      "license": "Public domain"
+    },
+    {
+      "id": "las-meninas",
+      "artist": "Diego Velázquez",
+      "title": "Las Meninas",
+      "year": "1656",
+      "style": "Baroque",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/31/Las_Meninas%2C_by_Diego_Vel%C3%A1zquez%2C_from_Prado_in_Google_Earth.jpg",
+      "license": "Public domain"
+    },
+    {
+      "id": "starry-night",
+      "artist": "Vincent van Gogh",
+      "title": "The Starry Night",
+      "year": "1889",
+      "style": "Post-Impressionism",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg",
+      "license": "Public domain"
+    },
+    {
+      "id": "sunflowers",
+      "artist": "Vincent van Gogh",
+      "title": "Sunflowers",
+      "year": "1888",
+      "style": "Post-Impressionism",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/46/Vincent_Willem_van_Gogh_127.jpg",
+      "license": "Public domain"
+    },
+    {
+      "id": "cafe-terrace-at-night",
+      "artist": "Vincent van Gogh",
+      "title": "Café Terrace at Night",
+      "year": "1888",
+      "style": "Post-Impressionism",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/09/Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg",
+      "license": "Public domain"
+    },
+    {
+      "id": "water-lilies",
+      "artist": "Claude Monet",
+      "title": "Water Lilies",
+      "year": "c. 1915–1926",
+      "style": "Impressionism",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Claude_Monet_-_Water_Lilies_-_1906%2C_Ryerson.jpg",
+      "license": "Public domain"
+    },
+    {
+      "id": "impression-sunrise",
+      "artist": "Claude Monet",
+      "title": "Impression, Sunrise",
+      "year": "1872",
+      "style": "Impressionism",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/59/Monet_-_Impression%2C_Sunrise.jpg",
+      "license": "Public domain"
+    },
+    {
+      "id": "luncheon-of-the-boating-party",
+      "artist": "Pierre-Auguste Renoir",
+      "title": "Luncheon of the Boating Party",
+      "year": "1880–1881",
+      "style": "Impressionism",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Pierre-Auguste_Renoir_-_Luncheon_of_the_Boating_Party_-_Google_Art_Project.jpg",
+      "license": "Public domain"
+    },
+    {
+      "id": "a-sunday-on-la-grande-jatte",
+      "artist": "Georges Seurat",
+      "title": "A Sunday Afternoon on the Island of La Grande Jatte",
+      "year": "1884–1886",
+      "style": "Pointillism",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7d/A_Sunday_on_La_Grande_Jatte%2C_Georges_Seurat%2C_1884.png",
+      "license": "Public domain"
+    },
+    {
+      "id": "the-scream",
+      "artist": "Edvard Munch",
+      "title": "The Scream",
+      "year": "1893",
+      "style": "Expressionism",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Edvard_Munch%2C_1893%2C_The_Scream%2C_oil%2C_tempera_and_pastel_on_cardboard%2C_91_x_73_cm%2C_National_Gallery_of_Norway.jpg",
+      "license": "Public domain"
+    },
+    {
+      "id": "whistlers-mother",
+      "artist": "James McNeill Whistler",
+      "title": "Arrangement in Grey and Black No. 1 (Whistler's Mother)",
+      "year": "1871",
+      "style": "Tonalism",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Whistlers_Mother_high_res.jpg",
+      "license": "Public domain"
+    },
+    {
+      "id": "american-gothic",
+      "artist": "Grant Wood",
+      "title": "American Gothic",
+      "year": "1930",
+      "style": "Regionalism",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Grant_Wood_-_American_Gothic_-_Google_Art_Project.jpg",
+      "license": "Public domain (US; published 1930)"
+    },
+    {
+      "id": "arrangement-in-grey-and-black",
+      "artist": "James Abbott McNeill Whistler",
+      "title": "Nocturne in Black and Gold – The Falling Rocket",
+      "year": "1875",
+      "style": "Tonalism",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/66/Whistler-Nocturne_in_black_and_gold.jpg",
+      "license": "Public domain"
+    },
+    {
+      "id": "olympia",
+      "artist": "Édouard Manet",
+      "title": "Olympia",
+      "year": "1863",
+      "style": "Realism / Impressionism",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5c/%C3%89douard_Manet_-_Olympia_-_Google_Art_Project.jpg",
+      "license": "Public domain"
+    },
+    {
+      "id": "bar-at-the-folies-bergere",
+      "artist": "Édouard Manet",
+      "title": "A Bar at the Folies-Bergère",
+      "year": "1882",
+      "style": "Impressionism",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0d/%C3%89douard_Manet_-_A_Bar_at_the_Folies-Berg%C3%A8re_-_Google_Art_Project_2.jpg",
+      "license": "Public domain"
+    },
+    {
+      "id": "the-kiss-klimt",
+      "artist": "Gustav Klimt",
+      "title": "The Kiss",
+      "year": "1907–1908",
+      "style": "Art Nouveau / Symbolism",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/40/The_Kiss_-_Gustav_Klimt_-_Google_Cultural_Institute.jpg",
+      "license": "Public domain"
+    },
+    {
+      "id": "great-wave",
+      "artist": "Katsushika Hokusai",
+      "title": "The Great Wave off Kanagawa",
+      "year": "c. 1831",
+      "style": "Ukiyo-e",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Great_Wave_off_Kanagawa2.jpg",
+      "license": "Public domain"
+    },
+    {
+      "id": "liberty-leading-the-people",
+      "artist": "Eugène Delacroix",
+      "title": "Liberty Leading the People",
+      "year": "1830",
+      "style": "Romanticism",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Eug%C3%A8ne_Delacroix_-_La_libert%C3%A9_guidant_le_peuple.jpg",
+      "license": "Public domain"
+    },
+    {
+      "id": "raft-of-the-medusa",
+      "artist": "Théodore Géricault",
+      "title": "The Raft of the Medusa",
+      "year": "1818–1819",
+      "style": "Romanticism",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/15/JEAN_LOUIS_TH%C3%89ODORE_G%C3%89RICAULT_-_La_Balsa_de_la_Medusa_%28Museo_del_Louvre%2C_1818-19%29.jpg",
+      "license": "Public domain"
+    },
+    {
+      "id": "wanderer-above-the-sea-of-fog",
+      "artist": "Caspar David Friedrich",
+      "title": "Wanderer above the Sea of Fog",
+      "year": "c. 1818",
+      "style": "Romanticism",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Caspar_David_Friedrich_-_Wanderer_above_the_sea_of_fog.jpg",
+      "license": "Public domain"
+    },
+    {
+      "id": "oath-of-the-horatii",
+      "artist": "Jacques-Louis David",
+      "title": "Oath of the Horatii",
+      "year": "1784",
+      "style": "Neoclassicism",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/12/Jacques-Louis_David_-_Oath_of_the_Horatii_-_Google_Art_Project.jpg",
+      "license": "Public domain"
+    },
+    {
+      "id": "saturn-devouring-his-son",
+      "artist": "Francisco Goya",
+      "title": "Saturn Devouring His Son",
+      "year": "c. 1820–1823",
+      "style": "Romanticism",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/87/Francisco_de_Goya%2C_Saturno_devorando_a_su_hijo_%281819-1823%29.jpg",
+      "license": "Public domain"
+    },
+    {
+      "id": "third-of-may-1808",
+      "artist": "Francisco Goya",
+      "title": "The Third of May 1808",
+      "year": "1814",
+      "style": "Romanticism",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fd/El_Tres_de_Mayo%2C_by_Francisco_de_Goya%2C_from_Prado_in_Google_Earth.jpg",
+      "license": "Public domain"
+    },
+    {
+      "id": "blue-nudes",
+      "artist": "Henri Matisse",
+      "title": "Luxe, Calme et Volupté",
+      "year": "1904",
+      "style": "Fauvism / Neo-Impressionism",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Matisse-Luxe.jpg",
+      "license": "Public domain"
+    },
+    {
+      "id": "composition-vii",
+      "artist": "Wassily Kandinsky",
+      "title": "Composition VII",
+      "year": "1913",
+      "style": "Abstract",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Vasily_Kandinsky%2C_1913_-_Composition_7.jpg",
+      "license": "Public domain"
+    },
+    {
+      "id": "self-portrait-van-gogh",
+      "artist": "Vincent van Gogh",
+      "title": "Self-Portrait with Bandaged Ear",
+      "year": "1889",
+      "style": "Post-Impressionism",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/68/Vincent_van_Gogh_-_Self-Portrait_with_Bandaged_Ear_-_Google_Art_Project.jpg",
+      "license": "Public domain"
+    },
+    {
+      "id": "sunday-afternoon-caillebotte",
+      "artist": "Gustave Caillebotte",
+      "title": "Paris Street; Rainy Day",
+      "year": "1877",
+      "style": "Impressionism",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/95/Gustave_Caillebotte_-_Paris_Street%3B_Rainy_Day_-_Google_Art_Project.jpg",
+      "license": "Public domain"
+    },
+    {
+      "id": "dance-at-le-moulin",
+      "artist": "Pierre-Auguste Renoir",
+      "title": "Bal du moulin de la Galette",
+      "year": "1876",
+      "style": "Impressionism",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/21/Pierre-Auguste_Renoir%2C_Le_Moulin_de_la_Galette.jpg",
+      "license": "Public domain"
+    },
+    {
+      "id": "bathers-at-asnieres",
+      "artist": "Georges Seurat",
+      "title": "Bathers at Asnières",
+      "year": "1884",
+      "style": "Pointillism",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/74/Bathers_at_Asni%C3%A8res.jpg",
+      "license": "Public domain"
+    },
+    {
+      "id": "ophelia-millais",
+      "artist": "John Everett Millais",
+      "title": "Ophelia",
+      "year": "1851–1852",
+      "style": "Pre-Raphaelite",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/94/John_Everett_Millais_-_Ophelia_-_Google_Art_Project.jpg",
+      "license": "Public domain"
+    },
+    {
+      "id": "lady-of-shalott",
+      "artist": "John William Waterhouse",
+      "title": "The Lady of Shalott",
+      "year": "1888",
+      "style": "Pre-Raphaelite",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1e/John_William_Waterhouse_The_Lady_of_Shalott.jpg",
+      "license": "Public domain"
+    },
+    {
+      "id": "napoleon-in-his-study",
+      "artist": "Jacques-Louis David",
+      "title": "The Emperor Napoleon in His Study at the Tuileries",
+      "year": "1812",
+      "style": "Neoclassicism",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/32/Jacques-Louis_David_-_The_Emperor_Napoleon_in_His_Study_at_the_Tuileries_-_Google_Art_Project.jpg",
+      "license": "Public domain"
+    }
+  ]
+}

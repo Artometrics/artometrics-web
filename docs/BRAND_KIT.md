@@ -8,10 +8,22 @@
   - Dark UI / dark browser chrome → **white A** on transparent/black.
   - Accent mark (marketing) → **red A** (`#C0392B`) on black or white.
 
-Source assets:
+### SVG kit (source of truth)
+
+See [`brand/svg/`](../brand/svg/) and [`brand/README.md`](../brand/README.md). Mirrored for the web at `public/images/brand/svg/`.
+
+| File | Notes |
+|------|--------|
+| `monogram-a-black.svg` / `white` / `red` / `currentColor` | Monogram A |
+| `wordmark-*.svg` | Wordmark (loads Chomsky from `/fonts/Chomsky.otf`) |
+| `lockup-horizontal-*.svg` / `lockup-stacked-*.svg` | A + wordmark |
+| `favicon.svg`, `app-icon-1024.svg`, `app-icon-light.svg`, `og-mark.svg` | Icons / social |
+
+### Raster (native / fallback)
 
 - `public/images/brand/chomsky-a-mark.png` (red A, transparent)
-- `public/images/brand/favicon-light.png` / `favicon-dark.png` (generated)
+- `public/images/brand/chomsky-a-black.png` / `chomsky-a-white.png`
+- `public/images/brand/favicon-light-*.png` / `favicon-dark-*.png`
 - `assets/fonts/Chomsky.otf` / `public/fonts/Chomsky.otf`
 
 ## Color tokens
@@ -34,9 +46,9 @@ Fonts: Georgia / Times for editorial; Chomsky for brand; system sans for UI chro
 
 ## Export checklist (owner)
 
-- [ ] SVG black A + white A + red A  
-- [ ] 1024 app icon, 512 maskable, 32/16 favicons  
-- [ ] OG default `1200×630`  
-- [ ] Press PDF one-pager (mission + desks + contact)  
+- [x] SVG black A + white A + red A (`brand/svg/monogram-a-*.svg`)
+- [x] 1024 app icon SVG + favicon SVG
+- [x] OG mark SVG (`brand/svg/og-mark.svg`) — composite to `1200×630` PNG when needed
+- [ ] Press PDF one-pager (mission + desks + contact)
 
 See also: `docs/OWNER_PLAYBOOK.md`, `constants/Colors.ts`.

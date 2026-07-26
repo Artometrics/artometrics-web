@@ -1,0 +1,287 @@
+{
+  "generatedAt": "2026-07-26T04:55:02.352Z",
+  "source": "Wikidata SPARQL + English Wikipedia REST summaries (curated entity set)",
+  "license": "Wikipedia and Wikidata content: CC BY-SA 4.0 (text); media may have separate licenses. See https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use",
+  "items": [
+    {
+      "id": "Q692",
+      "label": "William Shakespeare",
+      "description": "English playwright and poet (1564–1616)",
+      "url": "https://en.wikipedia.org/wiki/William_Shakespeare",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/William_Shakespeare_by_John_Taylor%2C_edited.jpg/330px-William_Shakespeare_by_John_Taylor%2C_edited.jpg"
+    },
+    {
+      "id": "Q5686",
+      "label": "Charles Dickens",
+      "description": "English writer and journalist (1812–1870)",
+      "url": "https://en.wikipedia.org/wiki/Charles_Dickens",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Dickens_Gurney_head.jpg/330px-Dickens_Gurney_head.jpg"
+    },
+    {
+      "id": "Q36322",
+      "label": "Jane Austen",
+      "description": "English novelist (1775–1817)",
+      "url": "https://en.wikipedia.org/wiki/Jane_Austen",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/CassandraAusten-JaneAusten%28c.1810%29_hires.jpg/330px-CassandraAusten-JaneAusten%28c.1810%29_hires.jpg"
+    },
+    {
+      "id": "Q7243",
+      "label": "Leo Tolstoy",
+      "description": "Russian writer (1828–1910)",
+      "url": "https://en.wikipedia.org/wiki/Leo_Tolstoy",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Leo_Tolstoy_1908_Portrait_%283x4_cropped%29.jpg/330px-Leo_Tolstoy_1908_Portrait_%283x4_cropped%29.jpg"
+    },
+    {
+      "id": "Q991",
+      "label": "Fyodor Dostoevsky",
+      "description": "Russian novelist (1821–1881)",
+      "url": "https://en.wikipedia.org/wiki/Fyodor_Dostoevsky",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Vasily_Perov_-_%D0%9F%D0%BE%D1%80%D1%82%D1%80%D0%B5%D1%82_%D0%A4.%D0%9C.%D0%94%D0%BE%D1%81%D1%82%D0%BE%D0%B5%D0%B2%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_-_Google_Art_Project.jpg/330px-Vasily_Perov_-_%D0%9F%D0%BE%D1%80%D1%82%D1%80%D0%B5%D1%82_%D0%A4.%D0%9C.%D0%94%D0%BE%D1%81%D1%82%D0%BE%D0%B5%D0%B2%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_-_Google_Art_Project.jpg"
+    },
+    {
+      "id": "Q6691",
+      "label": "Homer",
+      "description": "Ancient Greek poet",
+      "url": "https://en.wikipedia.org/wiki/Homer",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Homer_At_the_British_Museum_2024_%283x4_cropped%29.jpg/330px-Homer_At_the_British_Museum_2024_%283x4_cropped%29.jpg"
+    },
+    {
+      "id": "Q859",
+      "label": "Plato",
+      "description": "Ancient Greek philosopher (c. 428-347 BC)",
+      "url": "https://en.wikipedia.org/wiki/Plato",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Plato_Silanion_Musei_Capitolini_MC1377.png/330px-Plato_Silanion_Musei_Capitolini_MC1377.png"
+    },
+    {
+      "id": "Q868",
+      "label": "Aristotle",
+      "description": "Ancient Greek philosopher and polymath (384–322 BC)",
+      "url": "https://en.wikipedia.org/wiki/Aristotle",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Aristotle_Altemps_Inv8575.jpg/330px-Aristotle_Altemps_Inv8575.jpg"
+    },
+    {
+      "id": "Q1399",
+      "label": "Niccolò Machiavelli",
+      "description": "Florentine statesman, diplomat, and political theorist (1469–1527)",
+      "url": "https://en.wikipedia.org/wiki/Niccol%C3%B2_Machiavelli",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Portrait_of_Niccol%C3%B2_Machiavelli_by_Santi_di_Tito.jpg/330px-Portrait_of_Niccol%C3%B2_Machiavelli_by_Santi_di_Tito.jpg"
+    },
+    {
+      "id": "Q307",
+      "label": "Galileo Galilei",
+      "description": "Italian physicist and astronomer (1564–1642)",
+      "url": "https://en.wikipedia.org/wiki/Galileo_Galilei",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Galileo_Galilei_%281564-1642%29_RMG_BHC2700.tiff/lossy-page1-330px-Galileo_Galilei_%281564-1642%29_RMG_BHC2700.tiff.jpg"
+    },
+    {
+      "id": "Q935",
+      "label": "Isaac Newton",
+      "description": "English polymath (1642–1727)",
+      "url": "https://en.wikipedia.org/wiki/Isaac_Newton",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Portrait_of_Sir_Isaac_Newton%2C_1689_%28brightened%29.jpg/330px-Portrait_of_Sir_Isaac_Newton%2C_1689_%28brightened%29.jpg"
+    },
+    {
+      "id": "Q937",
+      "label": "Albert Einstein",
+      "description": "German-born theoretical physicist (1879–1955)",
+      "url": "https://en.wikipedia.org/wiki/Albert_Einstein",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Albert_Einstein_Head_cleaned.jpg/330px-Albert_Einstein_Head_cleaned.jpg"
+    },
+    {
+      "id": "Q7198",
+      "label": "Cleopatra",
+      "description": "Pharaoh of Egypt from 51 to 30 BC",
+      "url": "https://en.wikipedia.org/wiki/Cleopatra",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Kleopatra-VII.-Altes-Museum-Berlin1.jpg/330px-Kleopatra-VII.-Altes-Museum-Berlin1.jpg"
+    },
+    {
+      "id": "Q1001",
+      "label": "Mahatma Gandhi",
+      "description": "Indian independence activist (1869–1948)",
+      "url": "https://en.wikipedia.org/wiki/Mahatma_Gandhi",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Mahatma-Gandhi%2C_studio%2C_1931.jpg/330px-Mahatma-Gandhi%2C_studio%2C_1931.jpg"
+    },
+    {
+      "id": "Q8023",
+      "label": "Nelson Mandela",
+      "description": "President of South Africa from 1994 to 1999",
+      "url": "https://en.wikipedia.org/wiki/Nelson_Mandela",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Nelson_Mandela_1994.jpg/330px-Nelson_Mandela_1994.jpg"
+    },
+    {
+      "id": "Q22686",
+      "label": "Abraham Lincoln",
+      "description": "President of the United States from 1861 to 1865",
+      "url": "https://en.wikipedia.org/wiki/Abraham_Lincoln",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Abraham_Lincoln_1863_Portrait_%283x4_cropped%29.jpg/330px-Abraham_Lincoln_1863_Portrait_%283x4_cropped%29.jpg"
+    },
+    {
+      "id": "Q8016",
+      "label": "Winston Churchill",
+      "description": "British statesman and writer (1874–1965)",
+      "url": "https://en.wikipedia.org/wiki/Winston_Churchill",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Sir_Winston_Churchill_-_19086236948_%28restored%29.jpg/330px-Sir_Winston_Churchill_-_19086236948_%28restored%29.jpg"
+    },
+    {
+      "id": "Q7186",
+      "label": "Marie Curie",
+      "description": "Polish-French physicist and chemist (1867–1934)",
+      "url": "https://en.wikipedia.org/wiki/Marie_Curie",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Marie_Curie_c._1920s.jpg/330px-Marie_Curie_c._1920s.jpg"
+    },
+    {
+      "id": "Q7251",
+      "label": "Ada Lovelace",
+      "description": "English mathematician (1815–1852)",
+      "url": "https://en.wikipedia.org/wiki/Ada_Lovelace",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Ada_Lovelace_daguerreotype_by_Antoine_Claudet_1843_-_cropped.png/330px-Ada_Lovelace_daguerreotype_by_Antoine_Claudet_1843_-_cropped.png"
+    },
+    {
+      "id": "Q34981",
+      "label": "Isaac Asimov",
+      "description": "American writer and biochemist (1920–1992)",
+      "url": "https://en.wikipedia.org/wiki/Isaac_Asimov",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Isaac.Asimov01.jpg/330px-Isaac.Asimov01.jpg"
+    },
+    {
+      "id": "Q1401",
+      "label": "Petrarch",
+      "description": "Italian scholar and poet (1304–1374)",
+      "url": "https://en.wikipedia.org/wiki/Petrarch",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Portrait_of_Francesco_Petrarca_%28called_Petrarch%29_-_French_school%2C_17th_century.jpg/330px-Portrait_of_Francesco_Petrarca_%28called_Petrarch%29_-_French_school%2C_17th_century.jpg"
+    },
+    {
+      "id": "Q1067",
+      "label": "Dante Alighieri",
+      "description": "Italian writer and philosopher (1265–1321)",
+      "url": "https://en.wikipedia.org/wiki/Dante_Alighieri",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Bargello_-_Kapelle_Fresko_2a.jpg/330px-Bargello_-_Kapelle_Fresko_2a.jpg"
+    },
+    {
+      "id": "Q535",
+      "label": "Victor Hugo",
+      "description": "French writer and politician (1802–1885)",
+      "url": "https://en.wikipedia.org/wiki/Victor_Hugo",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Victor_Hugo_by_%C3%89tienne_Carjat_1876_-_full.jpg/330px-Victor_Hugo_by_%C3%89tienne_Carjat_1876_-_full.jpg"
+    },
+    {
+      "id": "Q7200",
+      "label": "Virginia Woolf",
+      "description": "English modernist writer (1882–1941)",
+      "url": "https://en.wikipedia.org/wiki/Virginia_Woolf",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/George_Charles_Beresford_-_Virginia_Woolf_in_1902_-_Restoration.jpg/330px-George_Charles_Beresford_-_Virginia_Woolf_in_1902_-_Restoration.jpg"
+    },
+    {
+      "id": "Q131333",
+      "label": "Emily Dickinson",
+      "description": "American poet (1830–1886)",
+      "url": "https://en.wikipedia.org/wiki/Emily_Dickinson",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Black-white_photograph_of_Emily_Dickinson2.png/330px-Black-white_photograph_of_Emily_Dickinson2.png"
+    },
+    {
+      "id": "Q42402",
+      "label": "Walt Whitman",
+      "description": "American poet, essayist and journalist (1819–1892)",
+      "url": "https://en.wikipedia.org/wiki/Walt_Whitman",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Walt_Whitman_-_George_Collins_Cox.jpg/330px-Walt_Whitman_-_George_Collins_Cox.jpg"
+    },
+    {
+      "id": "Q131149",
+      "label": "Langston Hughes",
+      "description": "American writer and social activist (1901–1967)",
+      "url": "https://en.wikipedia.org/wiki/Langston_Hughes",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Langston_Hughes_by_Carl_Van_Vechten_Trim.jpg/330px-Langston_Hughes_by_Carl_Van_Vechten_Trim.jpg"
+    },
+    {
+      "id": "Q90",
+      "label": "Paris",
+      "description": "Capital of France",
+      "url": "https://en.wikipedia.org/wiki/Paris",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg/330px-La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg"
+    },
+    {
+      "id": "Q84",
+      "label": "London",
+      "description": "Capital of England and the United Kingdom",
+      "url": "https://en.wikipedia.org/wiki/London",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/London_Skyline_%28125508655%29.jpeg/330px-London_Skyline_%28125508655%29.jpeg"
+    },
+    {
+      "id": "Q60",
+      "label": "New York City",
+      "description": "Most populous city in the United States",
+      "url": "https://en.wikipedia.org/wiki/New_York_City",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/View_of_Empire_State_Building_from_Rockefeller_Center_New_York_City_dllu_%28cropped%29.jpg/330px-View_of_Empire_State_Building_from_Rockefeller_Center_New_York_City_dllu_%28cropped%29.jpg"
+    },
+    {
+      "id": "Q220",
+      "label": "Rome",
+      "description": "Capital and largest city of Italy",
+      "url": "https://en.wikipedia.org/wiki/Rome",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Trevi_Fountain%2C_Rome%2C_Italy_2_-_May_2007.jpg/330px-Trevi_Fountain%2C_Rome%2C_Italy_2_-_May_2007.jpg"
+    },
+    {
+      "id": "Q1726",
+      "label": "Athens",
+      "description": "Capital and largest city of Greece",
+      "url": "https://en.wikipedia.org/wiki/Athens",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Monastiraki_Square_and_Acropolis_in_Athens_%2844149181684%29.jpg/330px-Monastiraki_Square_and_Acropolis_in_Athens_%2844149181684%29.jpg"
+    },
+    {
+      "id": "Q1490",
+      "label": "Tokyo",
+      "description": "Capital and most populous city in Japan",
+      "url": "https://en.wikipedia.org/wiki/Tokyo",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Skyscrapers_of_Shinjuku_2009_January.jpg/330px-Skyscrapers_of_Shinjuku_2009_January.jpg"
+    },
+    {
+      "id": "Q61",
+      "label": "Washington, D.C.",
+      "description": "Federal capital district of the United States",
+      "url": "https://en.wikipedia.org/wiki/Washington%2C_D.C.",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/12-07-13-washington-by-RalfR-08.jpg/330px-12-07-13-washington-by-RalfR-08.jpg"
+    },
+    {
+      "id": "Q64",
+      "label": "Berlin",
+      "description": "Capital and largest city of Germany",
+      "url": "https://en.wikipedia.org/wiki/Berlin",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Museumsinsel_Berlin_Juli_2021_1_%28cropped%29_b.jpg/330px-Museumsinsel_Berlin_Juli_2021_1_%28cropped%29_b.jpg"
+    },
+    {
+      "id": "Q1741",
+      "label": "Vienna",
+      "description": "Capital and largest city of Austria",
+      "url": "https://en.wikipedia.org/wiki/Vienna",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Schoenbrunn_philharmoniker_2012.jpg/330px-Schoenbrunn_philharmoniker_2012.jpg"
+    },
+    {
+      "id": "Q243",
+      "label": "Louvre",
+      "description": "Art museum in Paris, France",
+      "url": "https://en.wikipedia.org/wiki/Louvre",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Louvre_Museum_Wikimedia_Commons.jpg/330px-Louvre_Museum_Wikimedia_Commons.jpg"
+    },
+    {
+      "id": "Q6373",
+      "label": "British Museum",
+      "description": "National museum in London, England",
+      "url": "https://en.wikipedia.org/wiki/British_Museum",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/British_Museum_%28aerial%29.jpg/330px-British_Museum_%28aerial%29.jpg"
+    },
+    {
+      "id": "Q160236",
+      "label": "Metropolitan Museum of Art",
+      "description": "Art museum in New York City",
+      "url": "https://en.wikipedia.org/wiki/Metropolitan_Museum_of_Art",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Metropolitan_Museum_of_Art_%28The_Met%29_-_Central_Park%2C_NYC.jpg/330px-Metropolitan_Museum_of_Art_%28The_Met%29_-_Central_Park%2C_NYC.jpg"
+    },
+    {
+      "id": "Q49133",
+      "label": "Harvard University",
+      "description": "Private university in Cambridge, Massachusetts, US",
+      "url": "https://en.wikipedia.org/wiki/Harvard_University",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Harvard_University_coat_of_arms.svg/330px-Harvard_University_coat_of_arms.svg.png"
+    }
+  ]
+}

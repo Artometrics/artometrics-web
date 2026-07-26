@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Pressable, Text, View, StyleSheet } from "react-native";
+import { Pressable, Text, TextInput, View, StyleSheet } from "react-native";
 import { Link, router, useLocalSearchParams } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { PrimaryButton } from "@/components/PrimaryButton";
@@ -12,6 +12,7 @@ import { getBlogPost } from "@/lib/content";
 import { PLANS, type PlanTier } from "@/lib/product/plans";
 import { openExternalUrl } from "@/lib/openExternal";
 import { paramString } from "@/lib/params";
+import { ensureProfileRow, getProfile, upsertProfile } from "@/lib/profile/service";
 
 function formatPlanLabel(planTier: string | null, status: string | null) {
   if (planTier) {
@@ -35,10 +36,29 @@ export default function AccountScreen() {
   const [planLabel, setPlanLabel] = useState<string | null>(null);
   const [active, setActive] = useState(false);
   const [actionError, setActionError] = useState<string | null>(null);
+  const [displayName, setDisplayName] = useState("");
+  const [penName, setPenName] = useState("");
+  const [fullName, setFullName] = useState("");
+  const [birthDate, setBirthDate] = useState("");
+  const [birthPlace, setBirthPlace] = useState("");
+  const [profileMsg, setProfileMsg] = useState<string | null>(null);
 
   useEffect(() => {
     if (!user) return;
     (async () => {
+      try {
+        await ensureProfileRow(user.id, user.email, user.user_metadata?.full_name);
+        const profile = await getProfile(user.id);
+        if (profile) {
+          setDisplayName(profile.display_name ?? "");
+          setPenName(profile.pen_name ?? "");
+          setFullName(profile.full_name ?? "");
+          setBirthDate(profile.birth_date ?? "");
+          setBirthPlace(profile.birth_place ?? "");
+        }
+      } catch {
+        /* soft — migration may not be applied yet */
+      }
       try {
         const res = await apiFetch("saved-articles");
         if (res.ok) {
@@ -149,11 +169,14 @@ export default function AccountScreen() {
         <Text style={[styles.p, { color: colors.accent }]}>{actionError}</Text>
       ) : null}
       <View style={styles.actions}>
+        <Link href="/tools" asChild>
+          <PrimaryButton label="Open tools" />
+        </Link>
         {active ? (
           <PrimaryButton label="Manage billing" onPress={openPortal} />
         ) : (
           <Link href="/pricing" asChild>
-            <PrimaryButton label="Start free trial" />
+            <PrimaryButton label="Start free trial" style={{ backgroundColor: colors.textMuted }} />
           </Link>
         )}
         <PrimaryButton
@@ -164,6 +187,64 @@ export default function AccountScreen() {
             router.replace("/");
           }}
         />
+      </View>
+
+      <View style={[styles.savedBlock, { borderTopColor: colors.border }]}>
+        <Text style={[styles.h, { color: colors.text }]}>Profile</Text>
+        <Text style={[styles.savedCount, { color: colors.textMuted }]}>
+          Shared across Twilda, Aftercare, and membership.
+        </Text>
+        {(
+          [
+            ["Display name", displayName, setDisplayName],
+            ["Pen name", penName, setPenName],
+            ["Full name", fullName, setFullName],
+            ["Birth date (YYYY-MM-DD)", birthDate, setBirthDate],
+            ["Birth place", birthPlace, setBirthPlace],
+          ] as const
+        ).map(([label, value, set]) => (
+          <View key={label} style={{ gap: 4 }}>
+            <Text style={[styles.savedMeta, { color: colors.textMuted }]}>{label}</Text>
+            <TextInput
+              value={value}
+              onChangeText={set}
+              placeholderTextColor={colors.textSubtle}
+              style={[styles.profileInput, { borderColor: colors.border, color: colors.text }]}
+            />
+          </View>
+        ))}
+        {profileMsg ? (
+          <Text style={[styles.p, { color: colors.accent }]}>{profileMsg}</Text>
+        ) : null}
+        <PrimaryButton
+          label="Save profile"
+          onPress={async () => {
+            setProfileMsg(null);
+            try {
+              await upsertProfile(user.id, {
+                display_name: displayName.trim() || null,
+                pen_name: penName.trim() || null,
+                full_name: fullName.trim() || null,
+                birth_date: birthDate.trim() || null,
+                birth_place: birthPlace.trim() || null,
+              });
+              setProfileMsg("Profile saved.");
+            } catch (e) {
+              setProfileMsg(e instanceof Error ? e.message : "Could not save profile.");
+            }
+          }}
+        />
+        <View style={styles.toolLinks}>
+          <Link href="/tools/twilda">
+            <Text style={{ color: colors.accent, fontWeight: "700" }}>Twilda →</Text>
+          </Link>
+          <Link href="/tools/aftercare">
+            <Text style={{ color: colors.accent, fontWeight: "700" }}>Aftercare →</Text>
+          </Link>
+          <Link href="/library/reference">
+            <Text style={{ color: colors.accent, fontWeight: "700" }}>Reference →</Text>
+          </Link>
+        </View>
       </View>
 
       <View style={[styles.savedBlock, { borderTopColor: colors.border }]}>
@@ -237,4 +318,11 @@ const styles = StyleSheet.create({
     textTransform: "uppercase",
     fontWeight: "700",
   },
+  profileInput: {
+    borderWidth: StyleSheet.hairlineWidth,
+    paddingHorizontal: 12,
+    paddingVertical: 10,
+    fontSize: 16,
+  },
+  toolLinks: { flexDirection: "row", flexWrap: "wrap", gap: 16, marginTop: 8 },
 });

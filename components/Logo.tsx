@@ -1,5 +1,6 @@
 import {
   Image,
+  Platform,
   Text,
   View,
   type StyleProp,
@@ -44,10 +45,19 @@ export function Logo({
   const markMode =
     markVariant === "auto" ? mode : markVariant === "light" ? "dark" : "light";
   // markVariant "light" → white A (for dark surfaces); "dark" → black A
+  // Prefer SVG monogram on web; PNG fallback for native.
   const mark =
     markMode === "dark"
-      ? assetUrl("/images/brand/chomsky-a-white.png")
-      : assetUrl("/images/brand/chomsky-a-black.png");
+      ? assetUrl(
+          Platform.OS === "web"
+            ? "/images/brand/svg/monogram-a-white.svg"
+            : "/images/brand/chomsky-a-white.png",
+        )
+      : assetUrl(
+          Platform.OS === "web"
+            ? "/images/brand/svg/monogram-a-black.svg"
+            : "/images/brand/chomsky-a-black.png",
+        );
   const isLeft = align === "left";
 
   if (useMark) {
