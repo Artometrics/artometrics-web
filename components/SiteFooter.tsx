@@ -18,7 +18,7 @@ export function SiteFooter() {
       <Wrapper style={styles.ctaWrap}>
         <View style={[styles.cta, { backgroundColor: colors.accent }]}>
           <Text style={styles.ctaTitle}>
-            LET&apos;S CREATE{"\n"}SOMETHING GREAT{"\n"}TOGETHER.
+            {"LET'S CREATE\nSOMETHING GREAT\nTOGETHER."}
           </Text>
           <Link href="/contact" asChild>
             <Pressable style={styles.ctaCircle} accessibilityLabel="Contact Artometrics">

@@ -354,7 +354,7 @@ export default function HomeScreen() {
       <Wrapper variant="magazine" style={styles.ctaBandWrap}>
         <View style={[styles.ctaBand, { backgroundColor: colors.accent }]}>
           <Text style={styles.ctaBandTitle}>
-            LET&apos;S READ SOMETHING{"\n"}THAT PERFORMS.
+            {"LET'S READ SOMETHING\nTHAT PERFORMS."}
           </Text>
           <Link href="/blog" asChild>
             <Pressable style={styles.ctaBandBtn} accessibilityLabel="Browse reports">
