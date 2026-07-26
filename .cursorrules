@@ -1,0 +1,22 @@
+# Artometrics — Project Context (for Cursor)
+This is reference context, not a rulebook. Nothing here should block a real idea — it's here so Cursor's AI understands what's already been decided and what phase things are currently in, so it doesn't have to guess or re-litigate the whole vision every session.
+
+Full detail lives in `00_ARTOMETRICS_MASTER_VISION.md` and `01_BUILD_PHASES_AND_CHECKLIST.md` in the project root. Read those for the "why." This file is just a quick-reference summary.
+
+## What this project is, in one paragraph
+Artometrics is one unified ecosystem — a publication, a user preference profile, a set of creative tools (Twilda, Aftercare, the style library, generative sample/asset makers), building toward an "idea-to-asset" pipeline that turns any creative or entrepreneurial idea into the real professional-grade artifact needed to make it happen. Long-term ambition: be the default reflex for any creative idea, the way Adobe is the default reflex for making things on a computer.
+
+## Where things stand right now (check the checklist doc for the current state)
+- The publication (articles, sections) is live and the main asset today
+- Twilda and Aftercare exist as separate pieces and are being merged into one shared user profile — this is the current focus
+- Everything past that (external data pulls, generative tools, the bigger idea-to-asset pipeline) comes later, once the profile merge is solid and actually in daily use
+
+## A few things worth keeping in mind (not rules — just context)
+- One user profile is the intended backbone — new features generally should hang off it rather than getting their own separate account system, unless there's a good reason to do otherwise
+- The generative tools are meant to work from the user's own input (their recording, their prompt, their upload) rather than reprocessing someone else's copyrighted work — this is both a legal preference and part of the actual brand thesis, worth keeping in mind when scoping a generator
+- Output from any tool is more useful if it's editable/exportable into standard professional formats rather than locked in
+- The maker-space café and any hardware devices are long-term ideas, not near-term build targets — good to know so they don't accidentally shape near-term architecture, not a restriction on ever discussing them
+
+## Working style
+- Small working versions over one-shotting big features
+- If something seems like it belongs to a later phase, it's fine to just ask — "is this a now thing or a later thing?" — rather than assuming either way

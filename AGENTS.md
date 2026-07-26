@@ -4,9 +4,9 @@ This file describes **this repo only** — the Artometrics magazine product at [
 
 ## What this project is
 
-Artometrics is an independent **data-science magazine for the creative industries and culture**. It publishes editorial data reports (with reproducible charts and public datasets), a podcast, author profiles, legal/ethics pages, and membership flows (login, signup, pricing, account).
+Artometrics is an independent **data-science magazine for the creative industries and culture**. It publishes editorial data reports (with reproducible charts and public datasets), a podcast, author profiles, legal/ethics pages, membership flows (login, signup, pricing, account), and member tools (**Twilda** story workspace + **Aftercare** identity/ritual tools) on one Supabase profile.
 
-Primary use case: long-form investigative reports organized by editorial desk, plus subscriber-only podcast episodes and saved-report features — on **web and native** from one Expo codebase.
+Primary use case: long-form investigative reports organized by editorial desk, plus subscriber-only podcast episodes, saved-report features, and signed-in creative tools — on **web and native** from one Expo codebase.
 
 ## Tech stack
 
@@ -34,7 +34,10 @@ From `package.json` and `app.json`:
 | Styles (articles) | `public/css/artometrics-article.css` | Quarto/article chrome |
 | Public assets | `public/` | Images, audios, chart JSON, fonts |
 | Native assets | `assets/` | Icons, splash, Chomsky font |
-| Netlify | `netlify/` + `netlify.toml` | Functions + redirects |
+| Brand SVG kit | `brand/svg/` | Monogram, wordmark, lockups (mirrored to `public/images/brand/svg/`) |
+| Reference catalogs | `public/data/reference/` | Gutenberg / WikiArt / Wikipedia JSON |
+| Twilda / Aftercare | `lib/twilda/`, `lib/aftercare/`, `app/(site)/tools/` | Member tools |
+| Netlify | `netlify/` + `netlify.toml` | Functions + redirects (incl. `/api/aftercare/*`) |
 
 Path alias: `@/*` → project root (`tsconfig.json`).
 
@@ -77,8 +80,12 @@ Schemas are enforced by `scripts/build-content.mjs` (not Astro Zod).
 - **Authors:** `/authors`, `/authors/<id>`
 - **Legal:** `/legal/<id>`
 - **Membership:** `/login`, `/signup`, `/pricing`, `/account`
+- **Tools (signed-in):** `/tools`, `/tools/twilda/*`, `/tools/aftercare/*`
+- **Library / reference:** `/library`, `/library/reference`
 - **About / contact:** `/about`, `/contact`
 - **RSS / AEO:** `/rss.xml`, `/llms.txt`, `/sitemap.xml`
+
+Vision / phases: `docs/00_ARTOMETRICS_MASTER_VISION.md`, `docs/01_BUILD_PHASES_AND_CHECKLIST.md`. Tools DB: `docs/TOOLS_SETUP.md`.
 
 ## Commands
 

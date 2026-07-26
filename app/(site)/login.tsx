@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Platform, Text, TextInput, View, StyleSheet, Pressable } from "react-native";
-import { Link, router } from "expo-router";
+import { Link, router, useLocalSearchParams } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { PrimaryButton } from "@/components/PrimaryButton";
 import { GoogleSignInButton } from "@/components/GoogleSignInButton";
@@ -8,10 +8,24 @@ import { PageSeo } from "@/components/PageSeo";
 import { Fonts } from "@/constants/Colors";
 import { useAuth } from "@/lib/auth";
 import { useTheme } from "@/lib/theme";
+import { paramString } from "@/lib/params";
+
+function safeNext(raw: string | undefined): string {
+  if (!raw) return "/account";
+  try {
+    const decoded = decodeURIComponent(raw);
+    if (decoded.startsWith("/") && !decoded.startsWith("//")) return decoded;
+  } catch {
+    /* ignore */
+  }
+  return "/account";
+}
 
 export default function LoginScreen() {
   const { signIn, signInWithGoogle } = useAuth();
   const { colors } = useTheme();
+  const params = useLocalSearchParams<{ next?: string | string[] }>();
+  const nextPath = safeNext(paramString(params.next));
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState<string | null>(null);
@@ -26,7 +40,7 @@ export default function LoginScreen() {
       setError(result.error);
       return;
     }
-    router.replace("/account");
+    router.replace(nextPath as `/account`);
   }
 
   async function onGoogle() {
@@ -45,7 +59,7 @@ export default function LoginScreen() {
     // Web leaves the page for Google; native finishes in-app.
     if (Platform.OS !== "web" && result.ok) {
       setBusy(false);
-      router.replace("/account");
+      router.replace(nextPath as `/account`);
     }
   }
 

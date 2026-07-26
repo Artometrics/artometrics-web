@@ -23,9 +23,15 @@ export default function LibraryScreen() {
       <View style={styles.grid}>
         {[
           { href: "/datasets", title: "Datasets", body: "CSV packs from published stories." },
+          {
+            href: "/library/reference",
+            title: "Reference",
+            body: "Gutenberg, WikiArt, and Wikipedia catalogs for research.",
+          },
           { href: "/blog", title: "Archive", body: "Every published article." },
           { href: "/topics", title: "Sections", body: "Sports, movies & TV, music, and more." },
           { href: "/podcast", title: "Podcasts", body: "Interviews and conversations." },
+          { href: "/tools", title: "Tools", body: "Twilda and Aftercare on your Artometrics account." },
         ].map((card) => (
           <Link key={card.href} href={card.href as `/datasets`} asChild>
             <Pressable style={StyleSheet.flatten([styles.card, { borderColor: colors.border }])}>

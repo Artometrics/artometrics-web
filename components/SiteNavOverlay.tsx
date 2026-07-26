@@ -105,6 +105,12 @@ export function SiteNavOverlay() {
               </Text>
             </Pressable>
           </Link>
+          <Link href={user ? "/tools" : "/login?next=%2Ftools"} asChild>
+            <Pressable onPress={() => setMenuOpen(false)} style={styles.utilItem}>
+              <Ionicons name="construct-outline" size={18} color={colors.text} />
+              <Text style={[styles.utilText, { color: colors.text }]}>Tools</Text>
+            </Pressable>
+          </Link>
           <Pressable onPress={toggle} style={styles.utilItem}>
             <Ionicons
               name={mode === "dark" ? "sunny-outline" : "moon-outline"}
@@ -150,6 +156,9 @@ export function SiteNavOverlay() {
           {[
             { href: "/blog", label: "Latest" },
             { href: "/podcast", label: "Podcasts" },
+            { href: "/library", label: "Library" },
+            { href: "/library/reference", label: "Reference" },
+            { href: "/tools", label: "Tools" },
             { href: "/about", label: "About" },
             { href: "/authors", label: "Authors" },
             { href: "/contact", label: "Contact" },
