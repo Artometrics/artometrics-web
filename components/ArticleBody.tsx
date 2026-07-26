@@ -1,4 +1,5 @@
-import { useMemo, useWindowDimensions, View, StyleSheet } from "react-native";
+import { useMemo } from "react";
+import { useWindowDimensions, View, StyleSheet } from "react-native";
 import RenderHtml, {
   defaultSystemFonts,
   type MixedStyleRecord,
