@@ -102,17 +102,21 @@ export function SiteHeader() {
 
             <Pressable
               onPress={toggle}
+              accessibilityRole="button"
               accessibilityLabel={mode === "dark" ? "Switch to light mode" : "Switch to dark mode"}
-              hitSlop={10}
+              hitSlop={8}
               style={StyleSheet.flatten([
                 styles.iconBtn,
-                styles.iconBtnBordered,
-                { borderColor: colors.text, backgroundColor: colors.bgElevated },
+                styles.themeBtn,
+                {
+                  borderColor: colors.accent,
+                  backgroundColor: colors.accentSoft,
+                },
               ])}
             >
               <Ionicons
                 name={mode === "dark" ? "sunny-outline" : "moon-outline"}
-                size={20}
+                size={22}
                 color={colors.text}
                 style={{ color: colors.text }}
               />
@@ -187,6 +191,12 @@ const styles = StyleSheet.create({
   },
   iconBtnBordered: {
     borderWidth: StyleSheet.hairlineWidth,
+    borderRadius: 2,
+  },
+  themeBtn: {
+    width: 44,
+    height: 44,
+    borderWidth: 1.5,
     borderRadius: 2,
   },
   searchBox: {

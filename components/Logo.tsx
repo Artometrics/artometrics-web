@@ -85,6 +85,7 @@ export function Logo({
     );
   }
 
+  // Full wordmark only — no leading monogram A (avoids "A Artometrics").
   return (
     <View
       style={[
@@ -96,15 +97,6 @@ export function Logo({
       ]}
       accessibilityLabel="Artometrics"
     >
-      {mark ? (
-        <Image
-          source={{ uri: mark }}
-          style={{ width: Math.round(size * 0.9), height: Math.round(size * 0.9) }}
-          resizeMode="contain"
-          accessibilityElementsHidden
-          importantForAccessibility="no"
-        />
-      ) : null}
       {showWordmark ? (
         <Text
           style={[
