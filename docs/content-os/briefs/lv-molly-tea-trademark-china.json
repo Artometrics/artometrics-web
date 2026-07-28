@@ -1,0 +1,98 @@
+{
+  "slug": "lv-molly-tea-trademark-china",
+  "desk": "arts",
+  "title": "When Louis Vuitton Beat Molly Tea in Court — and Lost the Chinese Internet",
+  "workingTitle": "LV vs Molly Tea",
+  "primaryKeyword": "Louis Vuitton Molly Tea trademark China",
+  "secondaryKeywords": [
+    "Molly Tea LV lawsuit",
+    "Louis Vuitton four-petal flower trademark",
+    "baoxiang monogram China backlash",
+    "Suzhou Intermediate People’s Court LV",
+    "luxury brand trademark enforcement China"
+  ],
+  "searchIntent": "informational",
+  "audience": "Readers who saw the viral Short and want court facts, cultural context, and measurable market signals — not meme law.",
+  "metaDescription": "Suzhou court awarded Louis Vuitton ¥10.3M against Molly Tea. The law was routine; the backlash was not. Filings, similar cases, and what the Shorts missed.",
+  "angle": "Separate the first-instance trademark judgment from the cultural-heritage frame and the secondary-market noise. One claim per chart.",
+  "dataSources": [
+    {
+      "name": "Suzhou Intermediate People’s Court first-instance judgment (2025)苏05民初617号",
+      "url": "https://www.chinaiplawupdate.com/2026/07/louis-vuitton-scores-10-million-rmb-in-trademark-infringement-dispute-against-molly-tea/",
+      "notes": "First instance only; Molly Tea announced appeal. Full official reporter text not fully public; damages page circulated in Chinese media."
+    },
+    {
+      "name": "AP News — LV court victory stirs copyright debate",
+      "url": "https://apnews.com/article/china-louis-ipr-fashion-trademark-6b579f6cd9ec5b5b4aae2412f8fb5348",
+      "notes": "Independent wire confirmation of award scale and cultural-motif debate."
+    },
+    {
+      "name": "China Briefing / Qichacha-linked enforcement volume",
+      "url": "https://www.china-briefing.com/news/trademark-protection-in-china-legal-victory-only-part-strategy/",
+      "notes": "~1,691 LV trademark infringement records over five years; 56 filings H1 2026 — media-cited company search figures."
+    },
+    {
+      "name": "LVMH monogram origin (Japonism / neo-gothic)",
+      "url": "https://apnews.com/article/china-louis-ipr-fashion-trademark-6b579f6cd9ec5b5b4aae2412f8fb5348",
+      "notes": "Brand origin story for 1896 Monogram as reported via LVMH materials."
+    }
+  ],
+  "sectionPlan": [
+    {
+      "id": "judgment",
+      "title": "WHAT THE COURT ACTUALLY ORDERED",
+      "question": "What did the Suzhou first-instance judgment require, and what is still unsettled?",
+      "keyword": "Molly Tea LV lawsuit"
+    },
+    {
+      "id": "enforcement",
+      "title": "THIS CASE SITS INSIDE A LARGER LITIGATION MACHINE",
+      "question": "How unusual is one tea-chain suit against LV’s China enforcement volume?",
+      "keyword": "luxury brand trademark enforcement China"
+    },
+    {
+      "id": "motif",
+      "title": "RESEMBLANCE IS NOT PROVENANCE",
+      "question": "What do Tang baoxiang / pipa comparisons prove — and what don’t they?",
+      "keyword": "baoxiang monogram China backlash"
+    },
+    {
+      "id": "market",
+      "title": "SECONDARY-MARKET SIGNAL, NOT A BALANCE SHEET",
+      "question": "What can listed resale prices tell us after the ruling — and what confounds them?",
+      "keyword": "Louis Vuitton China resale"
+    },
+    {
+      "id": "frames",
+      "title": "TWO FRAMES, SAME FACTS",
+      "question": "Why did a routine IP win become a reputation event?",
+      "keyword": "Louis Vuitton four-petal flower trademark"
+    }
+  ],
+  "banner": {
+    "mood": "Documentary magazine still, cream paper, spare red accent",
+    "subjects": "Jasmine tea cup beside soft-focus Suzhou quatrefoil lattice — no logos",
+    "avoid": "LV monogram, logos, charts-in-image, purple gradients, collage stickers"
+  },
+  "distribution": {
+    "linkedinHook": "¥10.3M first-instance award. ~1,700 China trademark cases in five years. The court frame and the internet frame are not the same argument.",
+    "shortFact": "Molly Tea was ordered to pay Louis Vuitton ¥10.3M — and to apologize on six platforms.",
+    "youtubeTitle": "LV beat Molly Tea in court. Did it lose China?",
+    "buffer": true,
+    "slackNotify": true,
+    "slackChannel": "#editorial"
+  },
+  "channels": {
+    "buffer": true,
+    "slack": true,
+    "newsletter": true
+  },
+  "relatedSlugs": [],
+  "status": "draft",
+  "createdAt": "2026-07-28",
+  "updatedAt": "2026-07-28",
+  "credit": {
+    "viralSource": "YouTube Short by @urchineseuncle (Shushu) — LV sued Molly Tea framing",
+    "note": "Report expands with court identifiers, CNIPA history, enforcement volume, and market caveats."
+  }
+}
