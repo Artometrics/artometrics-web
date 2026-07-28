@@ -1,0 +1,7 @@
+era,start_year,end_year,label,rs2020_rank,billboard_peak,weeks_on_billboard,spotify_popularity,source
+Destiny's Child / formation,1997,2001,Group apprenticeship,,,,,career timeline (public)
+Solo launch (Dangerously in Love era),2003,2006,Solo breakout,,1,,,debut_album_release_year from RS file = 2003
+Self-titled surprise drop,2013,2015,Visual-album control,81,1,186,75,rolling-stone-albums dataset
+Lemonade,2016,2017,Canon peak / authorship claim,32,1,87,73,rolling-stone-albums dataset
+Homecoming / Coachella film,2018,2019,Stage-to-auteur bridge,,,,,netflix-titles + emmy-awards datasets
+Renaissance → Cowboy Carter,2022,2024,Genre reinvention eras,,,,,public release timeline; not yet in RS500 extract

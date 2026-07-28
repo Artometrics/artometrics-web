@@ -1,0 +1,94 @@
+{
+  "slug": "beyonce-the-psychonomics-of-control",
+  "desk": "humanities",
+  "title": "Beyoncé and the Cost of Controlling the House",
+  "workingTitle": "Beyoncé Psychonomics",
+  "primaryKeyword": "Beyoncé psychonomics leadership profile",
+  "secondaryKeywords": [
+    "Beyoncé Leadership Trait Analysis",
+    "Parkwood Entertainment control",
+    "Beyoncé Lemonade canon rank",
+    "Beyoncé lyric affiliation lexicon",
+    "Psychonomics celebrity profile"
+  ],
+  "searchIntent": "informational",
+  "audience": "Readers who want a citable, data-framed psychological-economic profile of Beyoncé — not fan biography.",
+  "metaDescription": "A Psychonomics profile of Beyoncé: Hermann LTA scores, Parkwood as institutionalized self, Lemonade’s canon economics, and an 8,000-line lyric machine.",
+  "angle": "Unlike Caesar (self as institution via patronage), Beyoncé externalizes the self into a firm she owns — control of authorship as the load-bearing wall.",
+  "dataSources": [
+    {
+      "name": "Artometrics Beyoncé lyric extract",
+      "url": "/data/articles/beyonce-taylor-lyrics/dataset.csv",
+      "notes": "8,000 line rows, 139 song entities"
+    },
+    {
+      "name": "Rolling Stone albums dataset (Artometrics)",
+      "url": "/data/articles/rolling-stone-albums/dataset.csv",
+      "notes": "Lemonade #32 and Beyoncé #81 on 2020 RS500 list"
+    },
+    {
+      "name": "Emmy awards + Netflix titles (Artometrics)",
+      "url": "/data/articles/emmy-awards/dataset.csv",
+      "notes": "HOMECOMING credits and catalog presence"
+    },
+    {
+      "name": "Hermann (1999) Leadership Trait Analysis",
+      "url": "https://socialscience.net/",
+      "notes": "Seven-trait rubric; Beyoncé scores are expert-coded for Psychonomics series"
+    }
+  ],
+  "sectionPlan": [
+    {
+      "id": "lta",
+      "title": "LEADERSHIP TRAIT ANALYSIS",
+      "question": "What asymmetric LTA shape does Beyoncé’s public corpus project?",
+      "keyword": "Beyoncé Leadership Trait Analysis"
+    },
+    {
+      "id": "economic",
+      "title": "THE ECONOMIC FINGERPRINT",
+      "question": "How do Billboard longevity and RS canon rank diverge across peak albums?",
+      "keyword": "Beyoncé Lemonade canon rank"
+    },
+    {
+      "id": "network",
+      "title": "THE CONTROL NETWORK",
+      "question": "Where does Parkwood sit relative to family, label, and fandom?",
+      "keyword": "Parkwood Entertainment control"
+    },
+    {
+      "id": "lexicon",
+      "title": "THE AFFILIATION MACHINE",
+      "question": "What does the lyric token distribution say about need for affiliation vs power language?",
+      "keyword": "Beyoncé lyric affiliation lexicon"
+    },
+    {
+      "id": "catalog",
+      "title": "SPECTACLE DENSITY",
+      "question": "How remix/live/feature-heavy is the measurable catalog extract?",
+      "keyword": "Beyoncé psychonomics leadership profile"
+    }
+  ],
+  "banner": {
+    "mood": "Documentary magazine still, cream paper, spare red accent",
+    "subjects": "Abstract stage arc / control ring — no likeness, no logos",
+    "avoid": "Celebrity likeness, logos, charts-in-image, purple gradients"
+  },
+  "distribution": {
+    "linkedinHook": "Psychonomics asks who manages the soul of the house. For Beyoncé, the load-bearing wall is Parkwood — the self as a firm.",
+    "shortFact": "Lemonade: RS500 #32. Self-titled: 186 Billboard weeks. LTA task orientation coded at 0.91.",
+    "youtubeTitle": "Beyoncé as a Psychonomics profile",
+    "buffer": true,
+    "slackNotify": true,
+    "slackChannel": "#editorial"
+  },
+  "channels": { "buffer": true, "slack": true, "newsletter": true },
+  "relatedSlugs": [
+    "caesar-the-psychonomics-of-emperor-julius",
+    "beyonce-taylor-lyrics",
+    "musicbrainz-pop-fame-mechanics"
+  ],
+  "status": "draft",
+  "createdAt": "2026-07-28",
+  "updatedAt": "2026-07-28"
+}

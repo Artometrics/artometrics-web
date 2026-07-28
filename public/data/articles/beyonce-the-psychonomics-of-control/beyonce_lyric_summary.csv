@@ -1,0 +1,15 @@
+metric,value,unit,notes
+lyric_rows,8000,rows,Artometrics beyonce-taylor-lyrics packaged extract (Beyoncé-only)
+song_entities,139,entities,
+tokens,61830,tokens,
+unique_words,3150,types,
+word_love,543,count,
+word_baby,457,count,
+word_boy,283,count,
+word_girl,239,count,
+word_black,59,count,
+word_money,57,count,
+word_power,5,count,
+entities_with_ft,35,songs,
+entities_live_or_awards,35,songs,
+entities_remix,19,songs,
