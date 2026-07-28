@@ -4,7 +4,7 @@ import { Link, router } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { PrimaryButton } from "@/components/PrimaryButton";
 import { PageSeo } from "@/components/PageSeo";
-import { Fonts } from "@/constants/Colors";
+import { BRAND_STYLE_LABELS, Fonts, type BrandStyle } from "@/constants/Colors";
 import { useTheme } from "@/lib/theme";
 import { useAuth } from "@/lib/auth";
 import { apiFetch } from "@/lib/supabase/client";
@@ -26,7 +26,8 @@ function formatPlanLabel(planTier: string | null, status: string | null) {
 }
 
 export default function SettingsScreen() {
-  const { colors, mode, toggle, setPreference } = useTheme();
+  const { colors, mode, toggle, setPreference, brandStyle, setBrandStyle, fonts } =
+    useTheme();
   const { user, loading, signOut } = useAuth();
   const [planLabel, setPlanLabel] = useState<string | null>(null);
   const [active, setActive] = useState(false);
@@ -131,7 +132,9 @@ export default function SettingsScreen() {
       {actionError ? <Text style={[styles.p, { color: colors.accent }]}>{actionError}</Text> : null}
 
       <View style={styles.block}>
-        <Text style={[styles.h, { color: colors.text }]}>Appearance</Text>
+        <Text style={[styles.h, { color: colors.text, fontFamily: fonts.serif }]}>
+          Appearance
+        </Text>
         <Pressable
           onPress={toggle}
           style={StyleSheet.flatten([styles.themeRow, { borderColor: colors.border }])}
@@ -144,6 +147,37 @@ export default function SettingsScreen() {
         <Pressable onPress={() => setPreference("system")} style={{ marginTop: 8 }}>
           <Text style={{ color: colors.textMuted, fontSize: 14 }}>Use system setting</Text>
         </Pressable>
+
+        <Text style={[styles.h, { color: colors.text, marginTop: 20, fontFamily: fonts.serif }]}>
+          Brand style
+        </Text>
+        <Text style={[styles.p, { color: colors.textMuted, marginBottom: 8 }]}>
+          Swiss is the current chrome. Magazine restores the Chomsky / paper look.
+        </Text>
+        {(["swiss", "magazine"] as BrandStyle[]).map((style) => {
+          const active = brandStyle === style;
+          return (
+            <Pressable
+              key={style}
+              onPress={() => setBrandStyle(style)}
+              style={StyleSheet.flatten([
+                styles.themeRow,
+                {
+                  borderColor: active ? colors.accent : colors.border,
+                  marginTop: 8,
+                  backgroundColor: active ? colors.accentSoft : "transparent",
+                },
+              ])}
+            >
+              <Text style={[styles.p, { color: colors.text }]}>
+                {BRAND_STYLE_LABELS[style]}
+              </Text>
+              <Text style={{ color: colors.accent, fontWeight: "700" }}>
+                {active ? "Selected" : "Use"}
+              </Text>
+            </Pressable>
+          );
+        })}
       </View>
 
       <View style={styles.block}>

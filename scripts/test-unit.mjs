@@ -61,4 +61,18 @@ const planets = readFileSync(join(ROOT, "lib/aftercare/planets.ts"), "utf8");
 assert(planets.includes("SAGITTARIUS SEASON"), "season titles present");
 assert(planets.includes("celestialForSign"), "celestialForSign export");
 
+assert(existsSync(join(ROOT, "lib/samples/types.ts")), "sample maker types present");
+assert(existsSync(join(ROOT, "lib/palette/recommend.ts")), "palette recommend present");
+assert(existsSync(join(ROOT, "app/(site)/tools/samples/index.tsx")), "samples route present");
+assert(existsSync(join(ROOT, "app/(site)/tools/palette/analyze.tsx")), "palette analyze route present");
+assert(existsSync(join(ROOT, "supabase/migrations/004_studio_generators.sql")), "generators migration present");
+
+const colorsTs = readFileSync(join(ROOT, "constants/Colors.ts"), "utf8");
+assert(colorsTs.includes('BrandStyle'), "brand style type present");
+assert(colorsTs.includes("magazine"), "magazine brand tokens present");
+
+const themeTs = readFileSync(join(ROOT, "lib/theme.tsx"), "utf8");
+assert(themeTs.includes("artometrics-brand-style"), "brand style persistence key");
+assert(themeTs.includes("toggleBrandStyle"), "brand style toggle");
+
 console.log("unit OK");

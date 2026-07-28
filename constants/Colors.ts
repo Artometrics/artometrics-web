@@ -1,6 +1,9 @@
 /**
- * Artometrics brand tokens — Swiss Modern (black / white / signal red).
+ * Artometrics brand tokens — Swiss Modern (default) + Magazine / Chomsky era.
  */
+
+export type BrandStyle = "swiss" | "magazine";
+
 export const Colors = {
   accent50: "#FFF1F0",
   accent100: "#FFD9D6",
@@ -32,18 +35,42 @@ export const Colors = {
   chartHighlight: "#D9251B",
   chartDark: "#000000",
   chartMid: "#525252",
+
+  /** Magazine-era paper / Atlantic cream */
+  paper: "#FAFAF8",
+  paperElevated: "#F2F0EB",
+  magazineAccent: "#C0392B",
+  magazineAccentSoft: "#F9E8E6",
 } as const;
 
-export const Fonts = {
-  /** Condensed display — Swiss poster titles */
+export type BrandFonts = {
+  display: string;
+  sans: string;
+  serif: string;
+  wordmark: string;
+  mono: string;
+};
+
+/** Swiss Modern — condensed display + system sans (current chrome). */
+export const SwissFonts: BrandFonts = {
   display: "Anton",
-  /** Body / UI sans */
   sans: "Helvetica Neue, Helvetica, Arial, system-ui, sans-serif",
-  /** Longform / UI titles that previously used magazine serif */
   serif: "Helvetica Neue, Helvetica, Arial, system-ui, sans-serif",
   wordmark: "Anton",
   mono: "'Courier New', Courier, monospace",
-} as const;
+};
+
+/** Magazine / Chomsky — editorial serif + Chomsky wordmark (first web style). */
+export const MagazineFonts: BrandFonts = {
+  display: "Chomsky",
+  sans: "Helvetica Neue, Helvetica, Arial, system-ui, sans-serif",
+  serif: "Georgia, 'Times New Roman', Times, serif",
+  wordmark: "Chomsky",
+  mono: "'Courier New', Courier, monospace",
+};
+
+/** Default export kept for static StyleSheets — Swiss. Prefer useTheme().fonts when brand-aware. */
+export const Fonts = SwissFonts;
 
 export type ThemeMode = "light" | "dark";
 
@@ -63,7 +90,7 @@ export type ThemeColors = {
   rule: string;
 };
 
-export const Themes: Record<ThemeMode, ThemeColors> = {
+const SwissThemes: Record<ThemeMode, ThemeColors> = {
   light: {
     mode: "light",
     bg: Colors.white,
@@ -94,4 +121,52 @@ export const Themes: Record<ThemeMode, ThemeColors> = {
     overlayBg: Colors.black,
     rule: Colors.white,
   },
+};
+
+const MagazineThemes: Record<ThemeMode, ThemeColors> = {
+  light: {
+    mode: "light",
+    bg: Colors.paper,
+    bgElevated: Colors.white,
+    text: "#171717",
+    textMuted: Colors.base600,
+    textSubtle: Colors.base500,
+    border: Colors.base200,
+    accent: Colors.magazineAccent,
+    accentSoft: Colors.magazineAccentSoft,
+    inverse: Colors.white,
+    headerBg: Colors.paper,
+    overlayBg: Colors.paper,
+    rule: Colors.base200,
+  },
+  dark: {
+    mode: "dark",
+    bg: Colors.base900,
+    bgElevated: Colors.base800,
+    text: "#FAFAFA",
+    textMuted: Colors.base400,
+    textSubtle: Colors.base500,
+    border: Colors.base700,
+    accent: "#E05C5C",
+    accentSoft: Colors.accent950,
+    inverse: Colors.black,
+    headerBg: Colors.base900,
+    overlayBg: Colors.base900,
+    rule: Colors.base700,
+  },
+};
+
+export const Themes = SwissThemes;
+
+export function resolveThemeColors(mode: ThemeMode, brand: BrandStyle): ThemeColors {
+  return brand === "magazine" ? MagazineThemes[mode] : SwissThemes[mode];
+}
+
+export function resolveBrandFonts(brand: BrandStyle): BrandFonts {
+  return brand === "magazine" ? MagazineFonts : SwissFonts;
+}
+
+export const BRAND_STYLE_LABELS: Record<BrandStyle, string> = {
+  swiss: "Swiss (current)",
+  magazine: "Magazine (Chomsky)",
 };

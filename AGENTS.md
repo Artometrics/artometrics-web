@@ -38,7 +38,7 @@ From `package.json` and `app.json`:
 | Native assets | `assets/` | Icons, splash, Chomsky font |
 | Brand SVG kit | `brand/svg/` | Monogram, wordmark, lockups (mirrored to `public/images/brand/svg/`) |
 | Reference catalogs | `public/data/reference/` | Gutenberg / WikiArt / Wikipedia JSON |
-| Studio / tools | `app/(site)/studio/`, `app/(site)/tools/`, `lib/twilda/`, `lib/aftercare/`, `lib/platform/` | Studio home + deep Twilda/Aftercare |
+| Studio / tools | `app/(site)/studio/`, `app/(site)/tools/`, `lib/twilda/`, `lib/aftercare/`, `lib/samples/`, `lib/palette/`, `lib/platform/` | Studio home + Twilda/Aftercare/Sample Maker/Color Kit |
 | Profiles / social | `app/(site)/u/`, `app/(site)/me.tsx`, `app/(site)/following.tsx` | Public profiles, hub, following feed |
 | Sanity | `sanity/` | Editorial CMS schemas + Studio (optional package) |
 | Netlify | `netlify/` + `netlify.toml` | Functions + redirects (incl. `/api/aftercare/*`, platform APIs) |
@@ -84,7 +84,7 @@ Schemas are enforced by `scripts/build-content.mjs` (not Astro Zod).
 - **Authors:** `/authors`, `/authors/<id>`
 - **Legal:** `/legal/<id>`
 - **Membership:** `/login`, `/signup`, `/pricing`, `/account` (hub), `/settings`
-- **Studio (signed-in):** `/studio` (hub); deep routes `/tools/twilda/*`, `/tools/aftercare/*` (`/tools` redirects to `/studio`)
+- **Studio (signed-in):** `/studio` (hub); deep routes `/tools/twilda/*`, `/tools/aftercare/*`, `/tools/samples/*`, `/tools/palette/*` (`/tools` redirects to `/studio`)
 - **Profiles:** `/u/<handle>` (public), `/me` (private hub)
 - **Social:** `/following`
 - **Library / reference:** `/library`, `/library/reference`

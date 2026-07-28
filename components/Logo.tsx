@@ -7,7 +7,7 @@ import {
   type ViewStyle,
   StyleSheet,
 } from "react-native";
-import { Colors, Fonts } from "@/constants/Colors";
+import { Colors } from "@/constants/Colors";
 import { assetUrl } from "@/lib/assets";
 import { useTheme } from "@/lib/theme";
 
@@ -25,7 +25,7 @@ type Props = {
 };
 
 /**
- * Artometrics Swiss wordmark — condensed display + signal-red period.
+ * Artometrics wordmark — Swiss (Anton) or Magazine (Chomsky) via brand style.
  */
 export function Logo({
   style,
@@ -36,7 +36,7 @@ export function Logo({
   markVariant = "auto",
   showWordmark = true,
 }: Props) {
-  const { mode, colors } = useTheme();
+  const { mode, colors, brandStyle, fonts } = useTheme();
   const progress = Math.max(0, Math.min(1, compact));
   const markSize = Math.round(size * (0.95 + progress * 0.15));
   const useMark = progress > 0.5;
@@ -49,6 +49,8 @@ export function Logo({
   const markColor = markMode === "dark" ? Colors.white : Colors.black;
   const wordColor = markVariant === "auto" ? colors.text : markColor;
   const isLeft = align === "left";
+  const isMagazine = brandStyle === "magazine";
+  const accentDot = colors.accent;
 
   if (useMark) {
     return (
@@ -70,10 +72,10 @@ export function Logo({
         ) : (
           <Text
             style={{
-              fontFamily: Fonts.display,
+              fontFamily: fonts.wordmark,
               fontSize: markSize,
               lineHeight: markSize * 1.05,
-              color: Colors.accent500,
+              color: accentDot,
             }}
           >
             A.
@@ -98,11 +100,11 @@ export function Logo({
         <Text
           style={[
             {
-              fontFamily: Fonts.display,
-              fontSize: size * 0.92,
+              fontFamily: fonts.wordmark,
+              fontSize: size * (isMagazine ? 0.88 : 0.92),
               color: wordColor,
-              letterSpacing: 1.2,
-              textTransform: "uppercase",
+              letterSpacing: isMagazine ? 0.4 : 1.2,
+              textTransform: isMagazine ? "none" : "uppercase",
               textAlign: isLeft ? "left" : "center",
             },
             style,
@@ -110,7 +112,7 @@ export function Logo({
           numberOfLines={1}
         >
           Artometrics
-          <Text style={{ color: Colors.accent500 }}>.</Text>
+          {!isMagazine ? <Text style={{ color: accentDot }}>.</Text> : null}
         </Text>
       ) : null}
     </View>

@@ -54,7 +54,7 @@ export default function StudioHomeScreen() {
     <Wrapper style={styles.wrap}>
       <PageSeo
         title="Studio"
-        description="Write, plan, and reflect in Twilda and Aftercare — your Artometrics workspace."
+        description="Write, plan, record samples, and build color kits — your Artometrics workspace."
         path="/studio"
       />
       <Text style={[styles.eyebrow, { color: colors.accent }]}>Your workspace</Text>
@@ -149,6 +149,16 @@ export default function StudioHomeScreen() {
               href: "/tools/aftercare",
               title: "Aftercare",
               body: "Journal, tarot, mood, birth tools.",
+            },
+            {
+              href: "/tools/samples",
+              title: "Sample Maker",
+              body: "Record, synth settings, favorite clips, export.",
+            },
+            {
+              href: "/tools/palette",
+              title: "Color Kit",
+              body: "Save palettes or get season picks from a photo.",
             },
             {
               href: "/library/reference",

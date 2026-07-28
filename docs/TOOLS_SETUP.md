@@ -1,10 +1,12 @@
-# Tools setup (Twilda + Aftercare)
+# Tools setup (Twilda + Aftercare + Studio generators)
 
 ## Apply Supabase migration
 
 Run [`supabase/migrations/002_tools.sql`](../supabase/migrations/002_tools.sql) in the Artometrics Supabase SQL editor **after** `001_product.sql`.
 
 It extends `profiles`, adds Twilda novel/journal/storyboard tables, Aftercare journal/tarot/tracking tables, `reference_pins`, and (when Storage exists) the `storyboard` bucket.
+
+Then apply [`003_platform.sql`](../supabase/migrations/003_platform.sql) for profiles/publish, and optionally [`004_studio_generators.sql`](../supabase/migrations/004_studio_generators.sql) for Sample Maker + Color Kit cloud tables (MVP clients still persist locally via AsyncStorage until sync is wired).
 
 ## Environment
 
@@ -22,11 +24,18 @@ Aftercare AI (Netlify AI Gateway — no provider keys required on Netlify):
 
 | Path | Access |
 |------|--------|
-| `/tools` | Signed-in |
+| `/tools` | Redirects to `/studio` |
+| `/studio` | Signed-in hub |
 | `/tools/twilda/*` | Signed-in |
 | `/tools/aftercare/*` | Signed-in |
+| `/tools/samples/*` | Signed-in — Sample Maker (record / synth / clips) |
+| `/tools/palette/*` | Signed-in — Color Kit (photo season + saved palettes) |
 | `/library/reference` | Public browse; pin requires login |
 | `/api/aftercare/*` | Bearer Supabase JWT |
+
+## Brand style
+
+Light/dark plus **Swiss** vs **Magazine (Chomsky)** brand style live in Settings and the site menu (`lib/theme.tsx`, `artometrics-brand-style` storage key).
 
 ## Catalogs
 

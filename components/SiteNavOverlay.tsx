@@ -21,7 +21,7 @@ export function SiteNavOverlay() {
   const pathname = usePathname();
   const { menuOpen, setMenuOpen } = useChrome();
   const { user } = useAuth();
-  const { colors, toggle, mode } = useTheme();
+  const { colors, toggle, mode, brandStyle, toggleBrandStyle } = useTheme();
   const [q, setQ] = useState("");
 
   useEffect(() => {
@@ -119,6 +119,12 @@ export function SiteNavOverlay() {
             />
             <Text style={[styles.utilText, { color: colors.text }]}>
               {mode === "dark" ? "Light mode" : "Dark mode"}
+            </Text>
+          </Pressable>
+          <Pressable onPress={toggleBrandStyle} style={styles.utilItem}>
+            <Ionicons name="color-palette-outline" size={18} color={colors.text} />
+            <Text style={[styles.utilText, { color: colors.text }]}>
+              {brandStyle === "swiss" ? "Magazine style" : "Swiss style"}
             </Text>
           </Pressable>
         </View>

@@ -9,7 +9,14 @@ import {
 } from "react";
 import { Appearance, Platform } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { Themes, type ThemeColors, type ThemeMode } from "@/constants/Colors";
+import {
+  resolveBrandFonts,
+  resolveThemeColors,
+  type BrandFonts,
+  type BrandStyle,
+  type ThemeColors,
+  type ThemeMode,
+} from "@/constants/Colors";
 
 type Preference = ThemeMode | "system";
 
@@ -17,12 +24,17 @@ type ThemeContextValue = {
   preference: Preference;
   mode: ThemeMode;
   colors: ThemeColors;
+  brandStyle: BrandStyle;
+  fonts: BrandFonts;
   setPreference: (p: Preference) => void;
+  setBrandStyle: (b: BrandStyle) => void;
   toggle: () => void;
+  toggleBrandStyle: () => void;
 };
 
 const ThemeContext = createContext<ThemeContextValue | null>(null);
 const STORAGE_KEY = "artometrics-theme";
+const BRAND_KEY = "artometrics-brand-style";
 
 function systemMode(): ThemeMode {
   if (Platform.OS === "web" && typeof window !== "undefined") {
@@ -45,6 +57,18 @@ function readStoredPreferenceSync(): Preference | null {
   return null;
 }
 
+function readStoredBrandSync(): BrandStyle | null {
+  try {
+    if (Platform.OS === "web" && typeof localStorage !== "undefined") {
+      const saved = localStorage.getItem(BRAND_KEY);
+      if (saved === "swiss" || saved === "magazine") return saved;
+    }
+  } catch {
+    /* ignore */
+  }
+  return null;
+}
+
 async function readStoredPreference(): Promise<Preference | null> {
   const sync = readStoredPreferenceSync();
   if (sync) return sync;
@@ -52,6 +76,19 @@ async function readStoredPreference(): Promise<Preference | null> {
     if (Platform.OS === "web") return null;
     const saved = await AsyncStorage.getItem(STORAGE_KEY);
     if (saved === "light" || saved === "dark" || saved === "system") return saved;
+  } catch {
+    /* ignore */
+  }
+  return null;
+}
+
+async function readStoredBrand(): Promise<BrandStyle | null> {
+  const sync = readStoredBrandSync();
+  if (sync) return sync;
+  try {
+    if (Platform.OS === "web") return null;
+    const saved = await AsyncStorage.getItem(BRAND_KEY);
+    if (saved === "swiss" || saved === "magazine") return saved;
   } catch {
     /* ignore */
   }
@@ -70,9 +107,20 @@ async function writeStoredPreference(p: Preference): Promise<void> {
   }
 }
 
+async function writeStoredBrand(b: BrandStyle): Promise<void> {
+  try {
+    if (Platform.OS === "web" && typeof localStorage !== "undefined") {
+      localStorage.setItem(BRAND_KEY, b);
+      return;
+    }
+    await AsyncStorage.setItem(BRAND_KEY, b);
+  } catch {
+    /* ignore */
+  }
+}
+
 /** Keep html/body/#root + RN Appearance in lockstep (fixes light text on white). */
-function applyDomTheme(mode: ThemeMode) {
-  // RN Web inherits OS dark styling for icons/text unless Appearance matches site theme.
+function applyDomTheme(mode: ThemeMode, brand: BrandStyle, colors: ThemeColors) {
   try {
     Appearance.setColorScheme?.(mode);
   } catch {
@@ -80,10 +128,11 @@ function applyDomTheme(mode: ThemeMode) {
   }
 
   if (Platform.OS !== "web" || typeof document === "undefined") return;
-  const bg = Themes[mode].bg;
-  const fg = Themes[mode].text;
+  const bg = colors.bg;
+  const fg = colors.text;
   const root = document.documentElement;
   root.dataset.theme = mode;
+  root.dataset.brand = brand;
   root.style.setProperty("color-scheme", mode);
   root.style.colorScheme = mode;
   root.style.backgroundColor = bg;
@@ -101,20 +150,23 @@ function applyDomTheme(mode: ThemeMode) {
 }
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  // Default to explicit light (magazine) so OS dark mode cannot wash out text
-  // before the user opts into dark / system.
   const [preference, setPreferenceState] = useState<Preference>(
     () => readStoredPreferenceSync() ?? "light",
+  );
+  const [brandStyle, setBrandStyleState] = useState<BrandStyle>(
+    () => readStoredBrandSync() ?? "swiss",
   );
   const [system, setSystem] = useState<ThemeMode>(() => systemMode());
 
   useEffect(() => {
     setSystem(systemMode());
     let cancelled = false;
-    // Native: hydrate from AsyncStorage. Web already read sync from localStorage.
     if (Platform.OS !== "web") {
       void readStoredPreference().then((saved) => {
         if (!cancelled && saved) setPreferenceState(saved);
+      });
+      void readStoredBrand().then((saved) => {
+        if (!cancelled && saved) setBrandStyleState(saved);
       });
     }
 
@@ -142,26 +194,54 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     void writeStoredPreference(p);
   }, []);
 
+  const setBrandStyle = useCallback((b: BrandStyle) => {
+    setBrandStyleState(b);
+    void writeStoredBrand(b);
+  }, []);
+
   const mode: ThemeMode = preference === "system" ? system : preference;
 
   const toggle = useCallback(() => {
-    // Explicit light/dark — never leave "system" after a manual toggle.
     setPreference(mode === "dark" ? "light" : "dark");
   }, [mode, setPreference]);
 
+  const toggleBrandStyle = useCallback(() => {
+    setBrandStyle(brandStyle === "swiss" ? "magazine" : "swiss");
+  }, [brandStyle, setBrandStyle]);
+
+  const colors = useMemo(
+    () => resolveThemeColors(mode, brandStyle),
+    [mode, brandStyle],
+  );
+  const fonts = useMemo(() => resolveBrandFonts(brandStyle), [brandStyle]);
+
   useEffect(() => {
-    applyDomTheme(mode);
-  }, [mode]);
+    applyDomTheme(mode, brandStyle, colors);
+  }, [mode, brandStyle, colors]);
 
   const value = useMemo(
     () => ({
       preference,
       mode,
-      colors: Themes[mode],
+      colors,
+      brandStyle,
+      fonts,
       setPreference,
+      setBrandStyle,
       toggle,
+      toggleBrandStyle,
     }),
-    [preference, mode, setPreference, toggle],
+    [
+      preference,
+      mode,
+      colors,
+      brandStyle,
+      fonts,
+      setPreference,
+      setBrandStyle,
+      toggle,
+      toggleBrandStyle,
+    ],
   );
 
   return (
@@ -175,9 +255,13 @@ export function useTheme() {
     return {
       preference: "system" as Preference,
       mode: "light" as ThemeMode,
-      colors: Themes.light,
+      colors: resolveThemeColors("light", "swiss"),
+      brandStyle: "swiss" as BrandStyle,
+      fonts: resolveBrandFonts("swiss"),
       setPreference: () => {},
+      setBrandStyle: () => {},
       toggle: () => {},
+      toggleBrandStyle: () => {},
     };
   }
   return ctx;
