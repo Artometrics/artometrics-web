@@ -6,14 +6,16 @@
   "description": "Artometrics — data reports on culture, power, and the creative economy (Expo for app + web)",
   "scripts": {
     "content": "node scripts/build-content.mjs",
-    "prestart": "npm run content && npm run cos:downloads",
-    "preweb": "npm run content && npm run cos:downloads",
+    "content:ensure": "node scripts/ensure-generated-content.mjs",
+    "prestart": "npm run content:ensure",
+    "preweb": "npm run content:ensure",
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
     "dev": "expo start --web",
-    "build": "npm run content && npm run cos:downloads && npm run cos:aeo && expo export -p web",
+    "build": "npm run content:ensure && npm run cos:aeo && expo export -p web",
+    "eas-build-post-install": "npm run content:ensure",
     "sync:episodes": "node scripts/sync-member-episodes.mjs",
     "sync:articles": "node scripts/sync-github-articles.mjs",
     "sync:readmitted": "node scripts/sync-readmitted.mjs",
@@ -56,9 +58,9 @@
     "test:smoke": "node scripts/test-site-smoke.mjs",
     "test:ops-scripts": "node scripts/test-ops-scripts.mjs",
     "test:unit": "node scripts/test-unit.mjs",
-    "eas:build:ios": "npx eas-cli build -p ios --profile production",
+    "eas:build:ios": "node scripts/run-eas-build.mjs",
     "eas:build:preview": "npx eas-cli build -p ios --profile preview",
-    "eas:submit:ios": "npx eas-cli submit -p ios --profile production --latest"
+    "eas:submit:ios": "node scripts/run-eas-submit.mjs"
   },
   "engines": {
     "node": ">=20.0.0"

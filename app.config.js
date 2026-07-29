@@ -1,7 +1,16 @@
 /**
  * Dynamic Expo config so EXPO_PUBLIC_* from Netlify / EAS / .env
  * land in Constants.expoConfig.extra (required for static web export).
+ *
+ * On EAS Build, regenerate src/generated/* before Metro bundles reports
+ * (same step Netlify runs via `npm run build`).
  */
+const { execSync } = require("node:child_process");
+
+if (process.env.EAS_BUILD === "true") {
+  execSync("npm run content:ensure", { stdio: "inherit" });
+}
+
 module.exports = ({ config }) => {
   const supabaseUrl =
     process.env.EXPO_PUBLIC_SUPABASE_URL || process.env.PUBLIC_SUPABASE_URL;

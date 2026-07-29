@@ -59,6 +59,16 @@
     "audio": null,
     "github": "https://github.com/Artometrics/beyonce-taylor-lyrics"
   },
+  "beyonce-the-psychonomics-of-control": {
+    "slug": "beyonce-the-psychonomics-of-control",
+    "dataset": "/data/articles/beyonce-the-psychonomics-of-control/beyonce_eras.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "epub": null,
+    "audio": null,
+    "github": "https://github.com/Artometrics/beyonce-the-psychonomics-of-control"
+  },
   "big-mac-index": {
     "slug": "big-mac-index",
     "dataset": "/data/articles/big-mac-index/dataset.csv",
@@ -478,6 +488,16 @@
     "epub": null,
     "audio": null,
     "github": "https://github.com/Artometrics/lego-database"
+  },
+  "lv-molly-tea-trademark-china": {
+    "slug": "lv-molly-tea-trademark-china",
+    "dataset": null,
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "epub": null,
+    "audio": null,
+    "github": "https://github.com/Artometrics/lv-molly-tea-trademark-china"
   },
   "medium-articles": {
     "slug": "medium-articles",

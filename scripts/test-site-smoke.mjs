@@ -17,6 +17,11 @@ const paths = [
   "/studio",
   "/llms.txt",
   "/sitemap.xml",
+  "/blog",
+  "/beyonce-the-psychonomics-of-control",
+  "/lv-molly-tea-trademark-china",
+  "/beyonce-taylor-lyrics",
+  "/caesar-the-psychonomics-of-emperor-julius",
 ];
 
 let failed = 0;
