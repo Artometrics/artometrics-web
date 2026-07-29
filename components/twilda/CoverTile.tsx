@@ -7,6 +7,7 @@ const COVER_LABEL: Record<CoverKind, string> = {
   gatsby: "Gatsby",
   trinity: "Trinity",
   cardinal: "Cardinal",
+  apocrypha: "Apocrypha",
   plain: "Novel",
 };
 
@@ -14,6 +15,7 @@ const COVER_BG: Record<CoverKind, string> = {
   gatsby: Colors.accent800,
   trinity: "#1e3a5f",
   cardinal: "#3d2b1f",
+  apocrypha: "#2c1810",
   plain: "#2a2a2a",
 };
 

@@ -1,8 +1,9 @@
 // Novelcrafter-style data layer.
-// Gatsby is a fully populated example; Trinity and Cardinal are seeded templates.
+// Gatsby is a fully populated example; Trinity, Cardinal, and Apocrypha are seeded templates.
 
 import { trinitySeed as trinity } from "@/lib/twilda/trinity-seed";
 import { cardinalSeed } from "@/lib/twilda/cardinal-seed";
+import { apocryphaSeed } from "@/lib/twilda/apocrypha-seed";
 
 export type CodexType = "character" | "location" | "lore" | "other";
 
@@ -51,7 +52,7 @@ export interface Novel {
   chapters: Chapter[];
 }
 
-export type CoverKind = "gatsby" | "cardinal" | "trinity" | "plain";
+export type CoverKind = "gatsby" | "cardinal" | "trinity" | "apocrypha" | "plain";
 
 export function wordCount(text: string): number {
   const t = text.trim();
@@ -365,8 +366,9 @@ export { gatsby };
 export { trinitySeed as trinity } from "@/lib/twilda/trinity-seed";
 
 const cardinal: Novel = cardinalSeed;
+const apocrypha: Novel = apocryphaSeed;
 
-export const novels: Novel[] = [gatsby, trinity, cardinal];
+export const novels: Novel[] = [gatsby, trinity, cardinal, apocrypha];
 
 export function getNovel(id: string): Novel | undefined {
   return novels.find((n) => n.id === id);

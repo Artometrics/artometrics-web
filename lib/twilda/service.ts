@@ -78,7 +78,7 @@ export async function listNovels(supabase: Client, userId: string): Promise<DbNo
 
 /**
  * Classic starter badge: prefer `is_template`.
- * Starters are seeded with cover_kind in (gatsby, trinity, cardinal) and is_template=true —
+ * Starters are seeded with cover_kind in (gatsby, trinity, cardinal, apocrypha) and is_template=true —
  * cover_kind alone cannot be used because user novels also use those covers.
  */
 export function isClassicTemplate(novel: {
