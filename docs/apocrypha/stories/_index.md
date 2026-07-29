@@ -4,8 +4,11 @@ Track the collection here. One line per idea is enough until a brief exists.
 
 **Target mix (flexible):** 8–12 pieces · mostly cover stories · 2–3 dispatches
 
-| # | Slug | Working title | Tier | Status | Brief |
-|---|------|---------------|------|--------|-------|
+Status: `idea` → `briefed` → `drafted` → `revise` | `keep` | `kill`  
+(see `../WORKFLOW.md`)
+
+| # | Slug | Working title | Tier | Status | File |
+|---|------|---------------|------|--------|------|
 | 1 | _tbd-01_ | — | — | empty | — |
 | 2 | _tbd-02_ | — | — | empty | — |
 | 3 | _tbd-03_ | — | — | empty | — |

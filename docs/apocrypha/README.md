@@ -39,13 +39,15 @@ Do **not** publish Apocrypha pieces into `src/content/blog/` as live reports. Ke
 | File | Purpose |
 |------|---------|
 | `FORM.md` | How an Apocrypha story is built (structure, voice, honesty rules) |
+| `WORKFLOW.md` | Daily AI loop — use current tools, when (not) to build more |
 | `templates/STORY_BRIEF.md` | One brief per story before drafting |
-| `stories/_index.md` | Slot list + status for the collection |
-| `stories/<slug>.md` | Per-story brief + draft notes |
+| `stories/_index.md` | Slot list + keep/revise/kill status |
+| `stories/<slug>.md` | Per-story brief + draft |
 
 ## Next moves (when ready)
 
-1. Dump raw story ideas into `stories/_index.md` (one line each is enough)
-2. Promote the strongest into full briefs via `templates/STORY_BRIEF.md`
-3. Draft inside Twilda → *Apocrypha* (one chapter = one story)
-4. Later: print/ebook pack that preserves the magazine chrome without shipping to the live Reports feed
+1. Read `WORKFLOW.md` — default is Cursor + these docs + Twilda, not a new product
+2. Dump raw story ideas into `stories/_index.md` (one line each is enough)
+3. Run the loop: concept → agent brief+draft → you mark keep/revise/kill
+4. Promote **keep** pieces into Twilda → *Apocrypha* (one chapter = one story)
+5. Later, only if friction demands it: thin `apo:brief` CLI or PDF pack for the book object — still never live blog
