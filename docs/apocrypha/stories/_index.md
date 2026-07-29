@@ -9,7 +9,7 @@ Status: `idea` → `briefed` → `drafted` → `revise` | `keep` | `kill`
 
 | # | Slug | Working title | Tier | Status | File |
 |---|------|---------------|------|--------|------|
-| 1 | _tbd-01_ | — | — | empty | — |
+| 1 | the-kiln | THE KILN: Inside the $10,000 confession vault that remade creator power | cover-story | drafted | [the-kiln.md](./the-kiln.md) |
 | 2 | _tbd-02_ | — | — | empty | — |
 | 3 | _tbd-03_ | — | — | empty | — |
 | 4 | _tbd-04_ | — | — | empty | — |
@@ -22,13 +22,7 @@ Status: `idea` → `briefed` → `drafted` → `revise` | `keep` | `kill`
 
 ## Idea dump (unsorted)
 
-Paste raw premises below whenever they show up. Promote into the table when a slug sticks.
-
--
-
--
-
--
+- Secret collector pays top YouTubers for videos that never release → reveal: Beck archetype’s invite-only lodge; $10k content sacrifice; Submission Zero turns it Bohemian Grove / oligarchic. → promoted: `the-kiln`
 
 ## Collection notes
 
