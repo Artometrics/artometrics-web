@@ -1,9 +1,10 @@
 #!/usr/bin/env node
 /**
- * Build a print-oriented PDF for one blog slug.
- * Prefers pandoc; falls back to weasyprint when pandoc/pdf engine missing.
+ * Build a print-oriented PDF for one blog slug OR a special edition.
  *
- * Usage: npm run cos:pdf -- --slug readmitted
+ * Usage:
+ *   npm run cos:pdf -- --slug readmitted
+ *   npm run cos:pdf -- --edition music
  */
 import { spawnSync } from "node:child_process";
 import fs from "node:fs";
@@ -13,26 +14,82 @@ import matter from "gray-matter";
 const ROOT = process.cwd();
 const args = process.argv.slice(2);
 const slugIdx = args.indexOf("--slug");
+const editionIdx = args.indexOf("--edition");
 const slug = slugIdx >= 0 ? args[slugIdx + 1] : null;
+const editionId = editionIdx >= 0 ? args[editionIdx + 1] : null;
 
-if (!slug) {
-  console.error("Usage: npm run cos:pdf -- --slug <slug>");
+if (!slug && !editionId) {
+  console.error("Usage: npm run cos:pdf -- --slug <slug> | --edition <id>");
   process.exit(1);
 }
 
-const mdPath = path.join(ROOT, "src/content/blog", `${slug}.md`);
-if (!fs.existsSync(mdPath)) {
-  console.error(`Missing ${mdPath}`);
-  process.exit(1);
+function escapeHtml(s) {
+  return String(s)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
 }
 
-const raw = fs.readFileSync(mdPath, "utf8");
-const { data, content } = matter(raw);
-const title = data.title || slug;
+function which(bin) {
+  const r = spawnSync("bash", ["-lc", `command -v ${bin}`], { encoding: "utf8" });
+  return r.status === 0 ? r.stdout.trim() : "";
+}
+
+function chapterHtml(s) {
+  const mdPath = path.join(ROOT, "src/content/blog", `${s}.md`);
+  if (!fs.existsSync(mdPath)) return null;
+  const raw = fs.readFileSync(mdPath, "utf8");
+  const { data, content } = matter(raw);
+  if (data.draft) return null;
+  return `<article class="edition-chapter"><h1>${escapeHtml(data.title || s)}</h1>${content}</article>`;
+}
+
+let title;
+let outRel;
+let bodyHtml;
+
+if (slug) {
+  const mdPath = path.join(ROOT, "src/content/blog", `${slug}.md`);
+  if (!fs.existsSync(mdPath)) {
+    console.error(`Missing ${mdPath}`);
+    process.exit(1);
+  }
+  const raw = fs.readFileSync(mdPath, "utf8");
+  const { data, content } = matter(raw);
+  title = data.title || slug;
+  outRel = `${slug}.pdf`;
+  bodyHtml = content;
+} else {
+  const editionsPath = path.join(ROOT, "public/data/meta/editions.json");
+  if (!fs.existsSync(editionsPath)) {
+    console.error(`Missing ${editionsPath} — run npm run meta:editions`);
+    process.exit(1);
+  }
+  const editions = JSON.parse(fs.readFileSync(editionsPath, "utf8"));
+  const ed = editions.find((e) => e.id === editionId);
+  if (!ed) {
+    console.error(`Unknown edition: ${editionId}`);
+    process.exit(1);
+  }
+  title = ed.title;
+  outRel = path.join("editions", `${editionId}.pdf`);
+  const parts = [];
+  for (const s of ed.articleSlugs) {
+    const html = chapterHtml(s);
+    if (html) parts.push(html);
+  }
+  if (!parts.length) {
+    console.error(`Edition ${editionId} has no live chapters`);
+    process.exit(1);
+  }
+  bodyHtml = `<p class="edition-dek">${escapeHtml(ed.dek)}</p>` + parts.join("\n<hr/>\n");
+}
+
 const outDir = path.join(ROOT, "public/exports");
-const outPdf = path.join(outDir, `${slug}.pdf`);
-const tmpHtml = path.join("/tmp", `artometrics-${slug}.html`);
-fs.mkdirSync(outDir, { recursive: true });
+const outPdf = path.join(outDir, outRel);
+const tmpHtml = path.join("/tmp", `artometrics-${editionId || slug}.html`);
+fs.mkdirSync(path.dirname(outPdf), { recursive: true });
 
 const html = `<!DOCTYPE html>
 <html lang="en">
@@ -44,58 +101,36 @@ const html = `<!DOCTYPE html>
   body { max-width: 720px; margin: 2rem auto; padding: 0 1.25rem; }
   img, .art-chart-fallback { max-width: 100%; height: auto; }
   .art-chart-mode-switch, .art-chart-toolbar { display: none !important; }
+  .edition-chapter { page-break-before: always; }
+  .edition-chapter:first-of-type { page-break-before: auto; }
   @page { margin: 18mm 14mm; }
 </style>
 </head>
 <body class="artometrics-article-body">
   <h1>${escapeHtml(title)}</h1>
-  ${content}
+  ${bodyHtml}
 </body>
 </html>`;
 
 fs.writeFileSync(tmpHtml, html, "utf8");
 
-function which(bin) {
-  const r = spawnSync("bash", ["-lc", `command -v ${bin}`], { encoding: "utf8" });
-  return r.status === 0 ? r.stdout.trim() : "";
-}
-
-function escapeHtml(s) {
-  return String(s)
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;");
-}
-
 let ok = false;
-
-if (which("pandoc") && (which("weasyprint") || which("wkhtmltopdf") || which("prince"))) {
-  const engine = which("weasyprint")
-    ? "weasyprint"
-    : which("wkhtmltopdf")
-      ? "wkhtmltopdf"
-      : "prince";
+const pandoc = which("pandoc");
+if (pandoc) {
   const r = spawnSync(
-    "pandoc",
-    [tmpHtml, "-f", "html", "-t", "pdf", `--pdf-engine=${engine}`, "-o", outPdf],
-    { stdio: "inherit" },
+    pandoc,
+    [tmpHtml, "-o", outPdf, "--pdf-engine=weasyprint"],
+    { encoding: "utf8" },
   );
-  ok = r.status === 0 && fs.existsSync(outPdf);
+  if (r.status === 0 && fs.existsSync(outPdf)) ok = true;
 }
 
-if (!ok && which("python3")) {
-  const py = `
-from pathlib import Path
-try:
-  from weasyprint import HTML
-except Exception as e:
-  raise SystemExit(f"weasyprint unavailable: {e}")
-HTML(filename=${JSON.stringify(tmpHtml)}).write_pdf(${JSON.stringify(outPdf)})
-print("wrote", ${JSON.stringify(outPdf)})
-`;
-  const r = spawnSync("python3", ["-c", py], { stdio: "inherit" });
-  ok = r.status === 0 && fs.existsSync(outPdf);
+if (!ok) {
+  const weasy = which("weasyprint");
+  if (weasy) {
+    const r = spawnSync(weasy, [tmpHtml, outPdf], { encoding: "utf8" });
+    if (r.status === 0 && fs.existsSync(outPdf)) ok = true;
+  }
 }
 
 if (!ok) {

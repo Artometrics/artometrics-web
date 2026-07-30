@@ -1,0 +1,71 @@
+{
+  "slug": "how-art-made-science",
+  "desk": "science",
+  "title": "How Art Made Science",
+  "workingTitle": "How Art Made Science",
+  "primaryKeyword": "how art made science history",
+  "secondaryKeywords": [
+    "artometrics meta analysis",
+    "cross report framework",
+    "culture quantified"
+  ],
+  "searchIntent": "informational",
+  "audience": "Readers who want frameworks that cite multiple Artometrics reports.",
+  "metaDescription": "Notation, perspective, ateliers \u2014 the subliminal history of artistic practices that became scientific method.",
+  "angle": "art-science-bridge dataset + Pantheon/museums/Gutenberg as instruments.",
+  "dataSources": [
+    {
+      "name": "Artometrics sibling reports",
+      "url": "/editions",
+      "notes": "Cross-cite live slugs"
+    }
+  ],
+  "sectionPlan": [
+    {
+      "id": "claim",
+      "title": "NEW CLAIM",
+      "question": "What claim do the sources jointly unlock?",
+      "keyword": "how art made science history"
+    },
+    {
+      "id": "sources",
+      "title": "SOURCE REPORTS",
+      "question": "What does each sibling contribute?",
+      "keyword": "how art made science history"
+    },
+    {
+      "id": "framework",
+      "title": "FRAMEWORK",
+      "question": "What reusable model emerges?",
+      "keyword": "how art made science history"
+    }
+  ],
+  "banner": {
+    "mood": "Documentary cream paper, spare red",
+    "subjects": "Empty desk instruments",
+    "avoid": "Purple gradients, collage"
+  },
+  "distribution": {
+    "linkedinHook": "Notation, perspective, ateliers \u2014 the subliminal history of artistic practices that became scientific method.",
+    "shortFact": "art-science-bridge dataset + Pantheon/museums/Gutenberg as instruments.",
+    "youtubeTitle": "How Art Made Science",
+    "buffer": true,
+    "slackNotify": true,
+    "slackChannel": "#editorial"
+  },
+  "channels": {
+    "buffer": true,
+    "slack": true,
+    "newsletter": true
+  },
+  "relatedSlugs": [],
+  "status": "brief",
+  "createdAt": "2026-07-30",
+  "updatedAt": "2026-07-30",
+  "kind": "meta",
+  "sourceSlugs": [
+    "pantheon-the-artometrics-of-collective-memory",
+    "project-gutenberg",
+    "uk-museums"
+  ]
+}

@@ -54,6 +54,7 @@ export function SiteFooter() {
               <Text style={styles.groupTitle}>More</Text>
               {[
                 ["/blog", "Latest"],
+                ["/editions", "Editions"],
                 ["/podcast", "Podcasts"],
                 ["/about", "About"],
                 ["/authors", "Authors"],

@@ -1,0 +1,70 @@
+{
+  "slug": "access-mythologies",
+  "desk": "arts",
+  "title": "Access Mythologies: Brands That Sell Proximity",
+  "workingTitle": "Access Mythologies: Brands That Sell Pro",
+  "primaryKeyword": "access economy celebrity brands",
+  "secondaryKeywords": [
+    "artometrics meta analysis",
+    "cross report framework",
+    "culture quantified"
+  ],
+  "searchIntent": "informational",
+  "audience": "Readers who want frameworks that cite multiple Artometrics reports.",
+  "metaDescription": "Playboy, VIP pipelines, and age-gap markets \u2014 how institutions sell proximity as lifestyle.",
+  "angle": "Playboy autopsy \u00d7 age-gap market \u00d7 access-brand-index.",
+  "dataSources": [
+    {
+      "name": "Artometrics sibling reports",
+      "url": "/editions",
+      "notes": "Cross-cite live slugs"
+    }
+  ],
+  "sectionPlan": [
+    {
+      "id": "claim",
+      "title": "NEW CLAIM",
+      "question": "What claim do the sources jointly unlock?",
+      "keyword": "access economy celebrity brands"
+    },
+    {
+      "id": "sources",
+      "title": "SOURCE REPORTS",
+      "question": "What does each sibling contribute?",
+      "keyword": "access economy celebrity brands"
+    },
+    {
+      "id": "framework",
+      "title": "FRAMEWORK",
+      "question": "What reusable model emerges?",
+      "keyword": "access economy celebrity brands"
+    }
+  ],
+  "banner": {
+    "mood": "Documentary cream paper, spare red",
+    "subjects": "Empty desk instruments",
+    "avoid": "Purple gradients, collage"
+  },
+  "distribution": {
+    "linkedinHook": "Playboy, VIP pipelines, and age-gap markets \u2014 how institutions sell proximity as lifestyle.",
+    "shortFact": "Playboy autopsy \u00d7 age-gap market \u00d7 access-brand-index.",
+    "youtubeTitle": "Access Mythologies: Brands That Sell Proximity",
+    "buffer": true,
+    "slackNotify": true,
+    "slackChannel": "#editorial"
+  },
+  "channels": {
+    "buffer": true,
+    "slack": true,
+    "newsletter": true
+  },
+  "relatedSlugs": [],
+  "status": "brief",
+  "createdAt": "2026-07-30",
+  "updatedAt": "2026-07-30",
+  "kind": "meta",
+  "sourceSlugs": [
+    "playboy-after-hef",
+    "age-gap-hollywood-market"
+  ]
+}

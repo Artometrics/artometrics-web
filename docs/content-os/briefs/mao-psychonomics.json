@@ -1,0 +1,67 @@
+{
+  "slug": "mao-psychonomics",
+  "desk": "humanities",
+  "title": "Mao: Ideology as Operating System",
+  "workingTitle": "Mao: Ideology as Operating System",
+  "primaryKeyword": "Mao Zedong psychonomics profile",
+  "secondaryKeywords": [
+    "artometrics meta analysis",
+    "cross report framework",
+    "culture quantified"
+  ],
+  "searchIntent": "informational",
+  "audience": "Readers who want frameworks that cite multiple Artometrics reports.",
+  "metaDescription": "Psychonomics profile of Mao \u2014 ideology as OS for a party-state. Historical sourcing only.",
+  "angle": "Leader-as-system; careful secondary literature.",
+  "dataSources": [
+    {
+      "name": "Artometrics sibling reports",
+      "url": "/editions",
+      "notes": "Cross-cite live slugs"
+    }
+  ],
+  "sectionPlan": [
+    {
+      "id": "claim",
+      "title": "NEW CLAIM",
+      "question": "What claim do the sources jointly unlock?",
+      "keyword": "Mao Zedong psychonomics profile"
+    },
+    {
+      "id": "sources",
+      "title": "SOURCE REPORTS",
+      "question": "What does each sibling contribute?",
+      "keyword": "Mao Zedong psychonomics profile"
+    },
+    {
+      "id": "framework",
+      "title": "FRAMEWORK",
+      "question": "What reusable model emerges?",
+      "keyword": "Mao Zedong psychonomics profile"
+    }
+  ],
+  "banner": {
+    "mood": "Documentary cream paper, spare red",
+    "subjects": "Empty desk instruments",
+    "avoid": "Purple gradients, collage"
+  },
+  "distribution": {
+    "linkedinHook": "Psychonomics profile of Mao \u2014 ideology as OS for a party-state. Historical sourcing only.",
+    "shortFact": "Leader-as-system; careful secondary literature.",
+    "youtubeTitle": "Mao: Ideology as Operating System",
+    "buffer": true,
+    "slackNotify": true,
+    "slackChannel": "#editorial"
+  },
+  "channels": {
+    "buffer": true,
+    "slack": true,
+    "newsletter": true
+  },
+  "relatedSlugs": [],
+  "status": "brief",
+  "createdAt": "2026-07-30",
+  "updatedAt": "2026-07-30",
+  "kind": "psychonomics-profile",
+  "sourceSlugs": []
+}

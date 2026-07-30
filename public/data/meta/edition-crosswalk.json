@@ -1,0 +1,340 @@
+{
+  "billboard-hot-100": [
+    "music"
+  ],
+  "billboard-top-100": [
+    "music"
+  ],
+  "musicbrainz-pop-fame-mechanics": [
+    "music"
+  ],
+  "rolling-stone-albums": [
+    "music",
+    "canon"
+  ],
+  "beyonce-the-psychonomics-of-control": [
+    "music",
+    "power",
+    "psychonomics"
+  ],
+  "beyonce-taylor-lyrics": [
+    "music"
+  ],
+  "broadway-musicals": [
+    "music"
+  ],
+  "christmas-songs": [
+    "music"
+  ],
+  "radio-stations": [
+    "music"
+  ],
+  "h3-the-artometrics-of-a-youtube-dynasty": [
+    "music",
+    "platforms"
+  ],
+  "narrative-economics-of-hits": [
+    "music"
+  ],
+  "dual-books-of-fame": [
+    "music"
+  ],
+  "horror-movie-profit": [
+    "movies"
+  ],
+  "horror-movies": [
+    "movies"
+  ],
+  "pixar-films": [
+    "movies"
+  ],
+  "franchise": [
+    "movies"
+  ],
+  "imdb-blockbuster-grammar": [
+    "movies"
+  ],
+  "streaming-catalog-power": [
+    "movies",
+    "platforms"
+  ],
+  "netflix-engagement": [
+    "movies",
+    "platforms"
+  ],
+  "netflix-titles": [
+    "movies",
+    "platforms"
+  ],
+  "emmy-awards": [
+    "movies"
+  ],
+  "awards-prestige-economy-oscars-grammys-nobels": [
+    "movies"
+  ],
+  "simpsons-guest-stars": [
+    "movies"
+  ],
+  "tv-golden-age": [
+    "movies"
+  ],
+  "franchise-poison-star-vs-ip": [
+    "movies"
+  ],
+  "protection-threshold": [
+    "movies",
+    "power",
+    "psychonomics"
+  ],
+  "video-games-steam": [
+    "games",
+    "platforms"
+  ],
+  "video-games-sliced": [
+    "games"
+  ],
+  "pokemon": [
+    "games"
+  ],
+  "board-games": [
+    "games"
+  ],
+  "anime": [
+    "games"
+  ],
+  "lego-database": [
+    "games"
+  ],
+  "comic-characters": [
+    "games"
+  ],
+  "preference-infrastructure-fandom": [
+    "games"
+  ],
+  "coffee-the-artometrics-of-java": [
+    "food"
+  ],
+  "craft-beer-usa": [
+    "food"
+  ],
+  "wine-ratings": [
+    "food"
+  ],
+  "all-the-pizza": [
+    "food"
+  ],
+  "ramen-ratings": [
+    "food"
+  ],
+  "alcohol-consumption": [
+    "food"
+  ],
+  "fast-food-calories": [
+    "food"
+  ],
+  "nyc-restaurant-inspections": [
+    "food"
+  ],
+  "culinary-prestige-economics": [
+    "food"
+  ],
+  "sports-dynasty-index-best-and-worst-conversion": [
+    "sports"
+  ],
+  "yankees-the-artometrics-of-baseballs-empire": [
+    "sports"
+  ],
+  "dodgers-the-artometrics-of-baseballs-modern-machine": [
+    "sports"
+  ],
+  "celtics-the-artometrics-of-institutional-winning": [
+    "sports"
+  ],
+  "lakers-the-artometrics-of-basketball-glamour": [
+    "sports"
+  ],
+  "patriots-the-artometrics-of-the-system-dynasty": [
+    "sports"
+  ],
+  "warrior-the-artometrics-of-a-golden-state-dynasty": [
+    "sports"
+  ],
+  "cowboys-the-artometrics-of-americas-team": [
+    "sports"
+  ],
+  "giant-the-artometrics-of-a-san-francisco-dynasty": [
+    "sports"
+  ],
+  "super-bowl-ads": [
+    "sports"
+  ],
+  "league-money-skill-and-star-systems": [
+    "sports",
+    "money"
+  ],
+  "regional-sports-identity-map": [
+    "sports",
+    "identity"
+  ],
+  "institutional-winning-meta": [
+    "sports"
+  ],
+  "caesar-the-psychonomics-of-emperor-julius": [
+    "power",
+    "psychonomics"
+  ],
+  "ceo-departures": [
+    "power",
+    "money",
+    "psychonomics"
+  ],
+  "wealth-income": [
+    "power",
+    "money"
+  ],
+  "lv-molly-tea-trademark-china": [
+    "power"
+  ],
+  "incarceration-trends": [
+    "power"
+  ],
+  "us-voter-turnout": [
+    "power"
+  ],
+  "roman-emperors": [
+    "power",
+    "psychonomics"
+  ],
+  "playboy-after-hef": [
+    "power"
+  ],
+  "preference-falsification-explained": [
+    "power"
+  ],
+  "silence-cascades": [
+    "power"
+  ],
+  "access-mythologies": [
+    "power"
+  ],
+  "pantheon-the-artometrics-of-collective-memory": [
+    "science-art",
+    "canon"
+  ],
+  "uk-museums": [
+    "science-art"
+  ],
+  "world-heritage-sites": [
+    "science-art"
+  ],
+  "project-gutenberg": [
+    "science-art",
+    "canon"
+  ],
+  "project-gutenberg-public-domain-canon-map": [
+    "science-art",
+    "canon"
+  ],
+  "languages-glottolog": [
+    "science-art",
+    "identity"
+  ],
+  "us-phds": [
+    "science-art",
+    "money"
+  ],
+  "how-art-made-science": [
+    "science-art"
+  ],
+  "sherlock-holmes": [
+    "canon"
+  ],
+  "christmas-novels": [
+    "canon"
+  ],
+  "medium-articles": [
+    "canon",
+    "platforms"
+  ],
+  "canon-formation-mechanics": [
+    "canon"
+  ],
+  "cultural-exports-geoeconomics": [
+    "geo"
+  ],
+  "export-superpowers-us-china-germany": [
+    "geo"
+  ],
+  "national-export-identity-atlas": [
+    "geo"
+  ],
+  "new-york-vs-san-francisco-city-systems": [
+    "geo"
+  ],
+  "california-vs-texas-state-rivalry": [
+    "geo"
+  ],
+  "city-bioeconomics-operating-system": [
+    "geo"
+  ],
+  "national-park-visits": [
+    "geo"
+  ],
+  "san-francisco-data-microscope": [
+    "geo"
+  ],
+  "web-page-metrics": [
+    "platforms"
+  ],
+  "attention-as-factor-market": [
+    "platforms"
+  ],
+  "school-diversity": [
+    "identity"
+  ],
+  "cia-world-factbook": [
+    "identity"
+  ],
+  "un-votes": [
+    "identity"
+  ],
+  "college-major-income": [
+    "money"
+  ],
+  "us-tuition": [
+    "money"
+  ],
+  "big-mac-index": [
+    "money"
+  ],
+  "airline-safety": [
+    "risk"
+  ],
+  "hurricanes-puerto-rico": [
+    "risk"
+  ],
+  "nuclear-explosions": [
+    "risk"
+  ],
+  "global-plastic-waste": [
+    "risk"
+  ],
+  "hydro-wastewater": [
+    "risk"
+  ],
+  "readmitted": [
+    "risk"
+  ],
+  "global-life-expectancy": [
+    "risk"
+  ],
+  "exercise-usa": [
+    "risk"
+  ],
+  "comparative-psychonomics-panel": [
+    "psychonomics"
+  ],
+  "michael-jackson-psychonomics": [
+    "psychonomics"
+  ]
+}

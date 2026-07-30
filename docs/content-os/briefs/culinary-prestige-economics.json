@@ -1,0 +1,71 @@
+{
+  "slug": "culinary-prestige-economics",
+  "desk": "culture",
+  "title": "Culinary Prestige Economics",
+  "workingTitle": "Culinary Prestige Economics",
+  "primaryKeyword": "culinary prestige economics ratings",
+  "secondaryKeywords": [
+    "artometrics meta analysis",
+    "cross report framework",
+    "culture quantified"
+  ],
+  "searchIntent": "informational",
+  "audience": "Readers who want frameworks that cite multiple Artometrics reports.",
+  "metaDescription": "Wine scores, ramen ranks, coffee \u2014 prestige vs volume in food culture.",
+  "angle": "Culinary Issue glue.",
+  "dataSources": [
+    {
+      "name": "Artometrics sibling reports",
+      "url": "/editions",
+      "notes": "Cross-cite live slugs"
+    }
+  ],
+  "sectionPlan": [
+    {
+      "id": "claim",
+      "title": "NEW CLAIM",
+      "question": "What claim do the sources jointly unlock?",
+      "keyword": "culinary prestige economics ratings"
+    },
+    {
+      "id": "sources",
+      "title": "SOURCE REPORTS",
+      "question": "What does each sibling contribute?",
+      "keyword": "culinary prestige economics ratings"
+    },
+    {
+      "id": "framework",
+      "title": "FRAMEWORK",
+      "question": "What reusable model emerges?",
+      "keyword": "culinary prestige economics ratings"
+    }
+  ],
+  "banner": {
+    "mood": "Documentary cream paper, spare red",
+    "subjects": "Empty desk instruments",
+    "avoid": "Purple gradients, collage"
+  },
+  "distribution": {
+    "linkedinHook": "Wine scores, ramen ranks, coffee \u2014 prestige vs volume in food culture.",
+    "shortFact": "Culinary Issue glue.",
+    "youtubeTitle": "Culinary Prestige Economics",
+    "buffer": true,
+    "slackNotify": true,
+    "slackChannel": "#editorial"
+  },
+  "channels": {
+    "buffer": true,
+    "slack": true,
+    "newsletter": true
+  },
+  "relatedSlugs": [],
+  "status": "brief",
+  "createdAt": "2026-07-30",
+  "updatedAt": "2026-07-30",
+  "kind": "meta",
+  "sourceSlugs": [
+    "wine-ratings",
+    "ramen-ratings",
+    "coffee-the-artometrics-of-java"
+  ]
+}

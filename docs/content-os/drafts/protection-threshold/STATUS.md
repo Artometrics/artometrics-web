@@ -1,8 +1,7 @@
 # STATUS — protection-threshold
 
-- **Phase:** brief + plan locked  
-- **Peg:** BBC *Jared Leto: Hollywood's Dark Secret* (Jul 2026)  
-- **Next:** source pack + Leto film CSV (Box Office Mojo / The Numbers)  
-- **Do not:** draft full HTML until dataset v0 exists  
-- **Control doc:** `PLAN.md` in this folder  
-- **Brief:** `docs/content-os/briefs/protection-threshold.json`
+- **Phase:** drafting (`DRAFT.md`) + sources + Leto CSV  
+- **Brief:** `docs/content-os/briefs/protection-threshold.json`  
+- **Sources:** `SOURCES.md`  
+- **Data:** `leto-film-book.csv` (+ `public/data/meta/leto-film-book.csv`)  
+- **Next:** charts + full HTML scaffold; ethics pass before publish

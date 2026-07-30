@@ -1,0 +1,8 @@
+leader_id,display_name,domain,era_start,era_end,scale_note,lta_power,lta_task,lta_belief_control,lta_affiliation,fingerprint_note,status,primary_report_slug,sources
+caesar,Julius Caesar,politics/military,-49,-44,Roman dictatorship / client armies,,,,,,,live,caesar-the-psychonomics-of-emperor-julius,Artometrics Caesar report
+augustus,Augustus,politics,-27,14,Principate institutionalization,,,,,,,briefed,,Suetonius / Res Gestae secondary
+mao,Mao Zedong,politics,1949,1976,PRC party-state,,,,,,,briefed,,standard historical sources
+trump,Donald Trump,politics/media,2015,2026,Media-native preference cascades,,,,,,,briefed,,public speeches / filings only
+beyonce,Beyoncé,entertainment,2003,2026,Self as firm / Parkwood,,,,,,,live,beyonce-the-psychonomics-of-control,Artometrics Beyoncé Psychonomics
+mj,Michael Jackson,entertainment,1979,2009,Self as product / catalog,,,,,,,briefed,michael-jackson-psychonomics,catalog + court outcomes language
+hefner,Hugh Hefner,media/lifestyle,1953,2017,Access household / Playboy,,,,,,,briefed,playboy-after-hef,PLBY filings + biographies

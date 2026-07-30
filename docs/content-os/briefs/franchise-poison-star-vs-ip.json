@@ -1,0 +1,71 @@
+{
+  "slug": "franchise-poison-star-vs-ip",
+  "desk": "arts",
+  "title": "Franchise Poison: Star vs IP",
+  "workingTitle": "Franchise Poison: Star vs IP",
+  "primaryKeyword": "box office star vs franchise IP",
+  "secondaryKeywords": [
+    "artometrics meta analysis",
+    "cross report framework",
+    "culture quantified"
+  ],
+  "searchIntent": "informational",
+  "audience": "Readers who want frameworks that cite multiple Artometrics reports.",
+  "metaDescription": "When a lead becomes expensive and the IP still wants to live \u2014 Leto tentpoles as calibration.",
+  "angle": "Movies Issue glue from franchise + horror + streaming + protection threshold.",
+  "dataSources": [
+    {
+      "name": "Artometrics sibling reports",
+      "url": "/editions",
+      "notes": "Cross-cite live slugs"
+    }
+  ],
+  "sectionPlan": [
+    {
+      "id": "claim",
+      "title": "NEW CLAIM",
+      "question": "What claim do the sources jointly unlock?",
+      "keyword": "box office star vs franchise IP"
+    },
+    {
+      "id": "sources",
+      "title": "SOURCE REPORTS",
+      "question": "What does each sibling contribute?",
+      "keyword": "box office star vs franchise IP"
+    },
+    {
+      "id": "framework",
+      "title": "FRAMEWORK",
+      "question": "What reusable model emerges?",
+      "keyword": "box office star vs franchise IP"
+    }
+  ],
+  "banner": {
+    "mood": "Documentary cream paper, spare red",
+    "subjects": "Empty desk instruments",
+    "avoid": "Purple gradients, collage"
+  },
+  "distribution": {
+    "linkedinHook": "When a lead becomes expensive and the IP still wants to live \u2014 Leto tentpoles as calibration.",
+    "shortFact": "Movies Issue glue from franchise + horror + streaming + protection threshold.",
+    "youtubeTitle": "Franchise Poison: Star vs IP",
+    "buffer": true,
+    "slackNotify": true,
+    "slackChannel": "#editorial"
+  },
+  "channels": {
+    "buffer": true,
+    "slack": true,
+    "newsletter": true
+  },
+  "relatedSlugs": [],
+  "status": "brief",
+  "createdAt": "2026-07-30",
+  "updatedAt": "2026-07-30",
+  "kind": "meta",
+  "sourceSlugs": [
+    "franchise",
+    "horror-movie-profit",
+    "protection-threshold"
+  ]
+}

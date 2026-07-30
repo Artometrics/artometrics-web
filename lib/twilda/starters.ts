@@ -5,6 +5,16 @@ import { gatsbySeed } from "@/lib/twilda/seed";
 import { cardinalSeed, cardinalDraftMeta } from "@/lib/twilda/cardinal-seed";
 import { apocryphaSeed, apocryphaSnippets, apocryphaDraftMeta } from "@/lib/twilda/apocrypha-seed";
 import {
+  artometricsBookSeed,
+  artometricsBookSnippets,
+  artometricsBookDraftMeta,
+} from "@/lib/twilda/artometrics-book-seed";
+import {
+  psychonomicsBookSeed,
+  psychonomicsBookSnippets,
+  psychonomicsBookDraftMeta,
+} from "@/lib/twilda/psychonomics-book-seed";
+import {
   trinityV2Seed,
   trinityV2Snippets,
   trinityV2DraftMeta,
@@ -261,6 +271,22 @@ export async function ensureStarterNovels(supabase: Client, userId: string) {
       withCodex: true,
       withChapters: true,
       snippets: apocryphaSnippets,
+    });
+  }
+
+  if (!covers.has("artometrics")) {
+    await seedNovelShell(supabase, userId, artometricsBookSeed, artometricsBookDraftMeta, {
+      withCodex: true,
+      withChapters: true,
+      snippets: artometricsBookSnippets,
+    });
+  }
+
+  if (!covers.has("psychonomics")) {
+    await seedNovelShell(supabase, userId, psychonomicsBookSeed, psychonomicsBookDraftMeta, {
+      withCodex: true,
+      withChapters: true,
+      snippets: psychonomicsBookSnippets,
     });
   }
 }
