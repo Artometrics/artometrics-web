@@ -1,0 +1,84 @@
+{
+  "slug": "michael-jackson-psychonomics",
+  "desk": "humanities",
+  "title": "Michael Jackson and the Cost of Being the Product",
+  "workingTitle": "MJ Psychonomics",
+  "primaryKeyword": "Michael Jackson psychonomics profile",
+  "secondaryKeywords": [
+    "Michael Jackson catalog economics",
+    "Neverland Ranch household",
+    "Thriller sales longevity",
+    "Jackson estate posthumous revenue",
+    "Michael Jackson Leadership Trait Analysis"
+  ],
+  "searchIntent": "informational",
+  "audience": "Readers who want a citable Psychonomics profile — catalog power, household as institution, and the dual ledger of genius and harm — not fan war.",
+  "metaDescription": "A Psychonomics reading of Michael Jackson: Thriller-scale catalog economics, Neverland as household, and the cost of a self that became the entire product.",
+  "angle": "Caesar = self as state. Beyoncé = self as firm. Jackson = self as product line — the person dissolves into catalog, spectacle, and a private household (Neverland) that the public was invited to mythologize. Quantify the catalog; map control; handle allegations with published legal outcomes and careful language.",
+  "dataSources": [
+    {
+      "name": "RIAA / Billboard / chart archives",
+      "url": "https://www.billboard.com/",
+      "notes": "Album certifications, Hot 100 longevity — observed"
+    },
+    {
+      "name": "Jackson estate / Sony catalog deal reporting",
+      "url": "https://www.nytimes.com/",
+      "notes": "Posthumous valuations from major outlets only"
+    },
+    {
+      "name": "Court records / major investigative timelines (Leaving Neverland era + earlier cases)",
+      "url": "https://www.bbc.com/",
+      "notes": "Allegation/denial/outcome language; no graphic detail"
+    },
+    {
+      "name": "Hermann (1999) LTA rubric",
+      "url": "https://socialscience.net/",
+      "notes": "Expert-coded traits for Psychonomics series consistency"
+    }
+  ],
+  "sectionPlan": [
+    {
+      "id": "lta",
+      "title": "LEADERSHIP TRAIT ANALYSIS",
+      "question": "What asymmetric LTA shape does Jackson’s public career project?",
+      "keyword": "Michael Jackson Leadership Trait Analysis"
+    },
+    {
+      "id": "catalog",
+      "title": "THE CATALOG AS BODY",
+      "question": "How does Thriller-to-estate revenue redefine ‘being the product’?",
+      "keyword": "Michael Jackson catalog economics"
+    },
+    {
+      "id": "household",
+      "title": "NEVERLAND AS HOUSEHOLD",
+      "question": "What did the ranch institutionalize about access, childhood, and control?",
+      "keyword": "Neverland Ranch household"
+    },
+    {
+      "id": "dual-ledger",
+      "title": "THE DUAL LEDGER",
+      "question": "How do commercial immortality and published harm claims coexist in one balance sheet of culture?",
+      "keyword": "Jackson estate posthumous revenue"
+    }
+  ],
+  "banner": {
+    "mood": "Empty sequined glove under archival light, cream paper, spare red — no face",
+    "subjects": "Studio headphones, vinyl stack, empty carnival gate",
+    "avoid": "Likeness deepfakes, tabloid collage, purple gradients"
+  },
+  "distribution": {
+    "linkedinHook": "Psychonomics asks who manages the soul of the house. Michael Jackson became the house — and the product.",
+    "shortFact": "Catalog immortality vs household myth: the dual ledger every Jackson conversation avoids quantifying together.",
+    "youtubeTitle": "Michael Jackson Psychonomics: The Cost of Being the Product",
+    "buffer": true,
+    "slackNotify": true,
+    "slackChannel": "#editorial"
+  },
+  "channels": { "buffer": true, "slack": true, "newsletter": true },
+  "relatedSlugs": ["beyonce-the-psychonomics-of-control", "caesar-the-psychonomics-of-emperor-julius"],
+  "status": "brief",
+  "createdAt": "2026-07-30",
+  "updatedAt": "2026-07-30"
+}
