@@ -1,7 +1,8 @@
 # STATUS — protection-threshold
 
-- **Phase:** drafting (`DRAFT.md`) + sources + Leto CSV  
+- **Phase:** HTML scaffolded (`article.md`) — not published  
 - **Brief:** `docs/content-os/briefs/protection-threshold.json`  
 - **Sources:** `SOURCES.md`  
 - **Data:** `leto-film-book.csv` (+ `public/data/meta/leto-film-book.csv`)  
-- **Next:** charts + full HTML scaffold; ethics pass before publish
+- **Feedstock:** `DRAFT.md` + `PLAN.md`  
+- **Next:** attach charts from Leto/silence datasets; ethics pass; then `cos:publish` (draft:true first)
