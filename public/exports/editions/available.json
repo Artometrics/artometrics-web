@@ -1,10 +1,10 @@
 {
   "music": {
     "epub": true,
-    "pdf": false
+    "pdf": true
   },
   "psychonomics": {
     "epub": true,
-    "pdf": false
+    "pdf": true
   }
 }
