@@ -1,0 +1,111 @@
+{
+  "slug": "protection-threshold",
+  "desk": "arts",
+  "title": "The Protection Threshold: When Flops End Hollywood’s Silence",
+  "workingTitle": "Protection Threshold",
+  "primaryKeyword": "Hollywood protection economics sexual misconduct",
+  "secondaryKeywords": [
+    "Jared Leto box office flops",
+    "Weinstein Company decline before MeToo",
+    "Bryan Singer Bohemian Rhapsody credit",
+    "Jimmy Savile BBC institutional failure",
+    "celebrity accountability commercial value",
+    "why not sooner Hollywood"
+  ],
+  "searchIntent": "informational",
+  "audience": "Readers who want a citable, data-framed answer to “why not sooner?” — commercial value, institutional risk, and timelines — not true-crime spectacle.",
+  "metaDescription": "BBC’s Jared Leto exposé raises “why not sooner?” We test whether box-office decline, dual film/music books, and institutional risk mark a protection threshold.",
+  "angle": "News peg is the BBC Leto documentary; the Artometrics move is economic — measure film ROI, music durability, pre-exposé studio health (Weinstein), and false rehab signals (Singer / Bohemian Rhapsody), with Savile and Brand as broadcaster counterexamples.",
+  "dataSources": [
+    {
+      "name": "BBC News — Jared Leto criminal sexual conduct allegations",
+      "url": "https://www.bbc.com/news/articles/cd7lg2nz2x2o",
+      "notes": "Primary secondary source for Jul 2026 documentary claims + Leto denial; allegation language only"
+    },
+    {
+      "name": "BBC Three — Jared Leto: Hollywood's Dark Secret",
+      "url": "https://www.bbc.co.uk/programmes/m002zl1y",
+      "notes": "Documentary programme page"
+    },
+    {
+      "name": "Box Office Mojo / The Numbers film grosses",
+      "url": "https://www.boxofficemojo.com/",
+      "notes": "Observed WW gross + reported budgets for Leto 2020s slate and Singer titles"
+    },
+    {
+      "name": "MarketWatch — TWC struggled before allegations (2017)",
+      "url": "https://www.marketwatch.com/story/the-weinstein-company-struggled-financially-even-before-harvey-weinsteins-sexual-misconduct-allegations-2017-10-12",
+      "notes": "Contemporaneous chart of TWC top earner decline"
+    },
+    {
+      "name": "The Atlantic — Bryan Singer accusers (2019)",
+      "url": "https://www.theatlantic.com/magazine/archive/2019/03/bryan-singers-accusers-speak-out/580462/",
+      "notes": "Inflection after which mainstream attachments collapsed"
+    },
+    {
+      "name": "Variety — Singer quiet return / Voight film (2025)",
+      "url": "https://variety.com/2025/film/news/bryan-singer-secret-movie-jon-voight-israel-lebanon-1236499696/",
+      "notes": "Fringe return ≠ studio rehab; contrasts with Bohemian Rhapsody success"
+    }
+  ],
+  "sectionPlan": [
+    {
+      "id": "peg",
+      "title": "THE LETO PEG",
+      "question": "What did the BBC document, and what commercial questions does it reopen?",
+      "keyword": "Jared Leto box office flops"
+    },
+    {
+      "id": "dual-book",
+      "title": "TWO BOOKS: FILM VS MUSIC",
+      "question": "Did Leto’s film tentpoles collapse while Thirty Seconds to Mars remained commercially alive?",
+      "keyword": "Jared Leto box office flops"
+    },
+    {
+      "id": "weinstein",
+      "title": "WAS WEINSTEIN ALREADY CHEAP?",
+      "question": "What did TWC’s pre-2017 box-office and debt picture look like before the Times story?",
+      "keyword": "Weinstein Company decline before MeToo"
+    },
+    {
+      "id": "singer",
+      "title": "A HIT IS NOT REHAB",
+      "question": "Does Bohemian Rhapsody’s success mean Bryan Singer was back — or only that DGA credit outlived a firing?",
+      "keyword": "Bryan Singer Bohemian Rhapsody credit"
+    },
+    {
+      "id": "broadcasters",
+      "title": "WHEN THE FIRM SELLS TRUST",
+      "question": "What do Savile and Brand show when the institution is a public broadcaster, not a studio P&L?",
+      "keyword": "Jimmy Savile BBC institutional failure"
+    },
+    {
+      "id": "threshold",
+      "title": "TOWARD A PROTECTION THRESHOLD",
+      "question": "Can we propose one honest index of forward commercial value at the moment of institutional severance?",
+      "keyword": "celebrity accountability commercial value"
+    }
+  ],
+  "banner": {
+    "mood": "Documentary still, empty soundstage or darkened cinema seats, cream paper, spare Artometrics red",
+    "subjects": "Empty theater, clapperboard without names, institutional architecture — no celebrity likenesses",
+    "avoid": "Logos, mugshot energy, purple gradients, collage of accused faces, chart-in-image"
+  },
+  "distribution": {
+    "linkedinHook": "The question after the BBC’s Jared Leto film isn’t only moral — it’s economic: how cheap does someone have to become before institutions stop protecting them?",
+    "shortFact": "Test case: Leto’s 2020s tentpoles vs music touring; Weinstein’s pre-2017 slump; Singer’s Bohemian Rhapsody credit without rehab.",
+    "youtubeTitle": "The Protection Threshold: When Hollywood Stops Protecting",
+    "buffer": true,
+    "slackNotify": true,
+    "slackChannel": "#editorial"
+  },
+  "channels": {
+    "buffer": true,
+    "slack": true,
+    "newsletter": true
+  },
+  "relatedSlugs": [],
+  "status": "brief",
+  "createdAt": "2026-07-30",
+  "updatedAt": "2026-07-30"
+}
