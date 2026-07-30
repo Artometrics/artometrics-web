@@ -119,7 +119,7 @@ faq:
 <p>Lahman, S. <em>Lahman Baseball Database</em>.</p>
 <p>Forbes and public payroll-rank summaries.</p>
 <p>Retrosheet and Baseball Almanac pennant/title records.</p>
-<p>Related Artometrics reports: <a href="/dodgers-the-artometrics-of-baseballs-modern-machine">Dodgers</a> · <a href="/giant-the-artometrics-of-a-san-francisco-dynasty">Giants</a> · <a href="/sports-dynasty-index-best-and-worst-conversion">Sports Dynasty Index</a> · <a href="/yankees-the-artometrics-of-baseballs-empire">Yankees</a>.</p>
+<p>Related Artometrics reports: <a href="/padres-world-series-ownership-blueprint">Ownership Blueprint</a> · <a href="/dodgers-the-artometrics-of-baseballs-modern-machine">Dodgers</a> · <a href="/giant-the-artometrics-of-a-san-francisco-dynasty">Giants</a> · <a href="/sports-dynasty-index-best-and-worst-conversion">Sports Dynasty Index</a> · <a href="/yankees-the-artometrics-of-baseballs-empire">Yankees</a>.</p>
 <h2 id="editors-note" class="anchored">Editor's note</h2>
 <div class="art-editorial-note"><p><em>Recent win totals and payroll ranks are rounded public-reference summaries. The 2020 shortened season is left unadjusted and interpreted separately in the prose. Pennant-gap years are counted from the prior pennant season through the active wait entering 2025.</em></p></div>
 </main>

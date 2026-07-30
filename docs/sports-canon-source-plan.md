@@ -57,6 +57,10 @@ Each report receives:
    - Theme: star payroll without ring conversion; expansion scarcity; pennant drought.
    - Sources: Baseball Reference, Lahman, payroll-rank summaries, Retrosheet/Baseball Almanac.
    - Cross-refs: Dodgers machine, Giants arc, sports dynasty index.
+5c. `padres-world-series-ownership-blueprint`
+   - Theme: buyer memo — franchise capital, player assets, peer gaps, first-title operating plan.
+   - Sources: Forbes valuations, Baseball Reference WAR, payroll markers, farm context.
+   - Cross-refs: Padres paying-for-October, Dodgers machine, dynasty index, league money.
 
 ### Batch 3 - league pillars
 - NBA: Knicks, Spurs, Bulls.
