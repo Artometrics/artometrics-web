@@ -57,7 +57,24 @@ async function main() {
     path.join(outDir, "edition-crosswalk.json"),
     JSON.stringify(crosswalk, null, 2) + "\n",
   );
+
+  // Available pack files for edition download rails (build-time; not guessed in the browser).
+  const exportsDir = path.join(ROOT, "public/exports/editions");
+  const available = {};
+  if (fs.existsSync(exportsDir)) {
+    for (const ed of slim) {
+      const epub = fs.existsSync(path.join(exportsDir, `${ed.id}.epub`));
+      const pdf = fs.existsSync(path.join(exportsDir, `${ed.id}.pdf`));
+      if (epub || pdf) available[ed.id] = { epub, pdf };
+    }
+  }
+  fs.mkdirSync(exportsDir, { recursive: true });
+  fs.writeFileSync(
+    path.join(exportsDir, "available.json"),
+    JSON.stringify(available, null, 2) + "\n",
+  );
   console.log(`Wrote ${slim.length} editions → public/data/meta/editions.json`);
+  console.log(`Wrote pack availability → public/exports/editions/available.json (${Object.keys(available).length} packs)`);
 }
 
 main();

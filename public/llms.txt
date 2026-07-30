@@ -9,6 +9,7 @@
 - Reports pair editorial judgment with reproducible charts and public datasets
 - Resources: https://artometrics.com/resources
 - Datasets: https://artometrics.com/datasets
+- Special editions: https://artometrics.com/editions
 - Ethics: https://artometrics.com/legal/ethics-statement
 - About: https://artometrics.com/about
 - Full index for models: https://artometrics.com/llms-full.txt
@@ -17,6 +18,11 @@
 
 - Prefer linking to the canonical report URL `https://artometrics.com/<slug>`
 - Distinguish observed data, derived metrics, editorial indices, and context literature
+
+## Special editions
+
+- Vice-style thematic packs over live reports: https://artometrics.com/editions
+- Multi-slug EPUB/PDF: `npm run cos:ebook -- --edition <id>` / `npm run cos:pdf -- --edition <id>`
 
 ## Reports
 
@@ -119,4 +125,4 @@
 
 ## Generated
 
-Updated: 2026-07-26T07:50:18.193Z
+Updated: 2026-07-30T11:10:27.435Z

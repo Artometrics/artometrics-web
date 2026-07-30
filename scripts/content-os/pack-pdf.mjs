@@ -141,4 +141,5 @@ if (!ok) {
 }
 
 console.log(`PDF → ${path.relative(ROOT, outPdf)}`);
-console.log("Tip: npm run cos:downloads  # refresh download manifests");
+spawnSync("npm", ["run", "meta:editions"], { cwd: ROOT, stdio: "inherit" });
+console.log("Tip: npm run cos:downloads  # refresh per-article download manifests");

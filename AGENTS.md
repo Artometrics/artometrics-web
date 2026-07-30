@@ -88,6 +88,7 @@ Schemas are enforced by `scripts/build-content.mjs` (not Astro Zod).
 - **Profiles:** `/u/<handle>` (public), `/me` (private hub)
 - **Social:** `/following`
 - **Library / reference:** `/library`, `/library/reference`
+- **Special editions:** `/editions`, `/editions/<id>` (Vice-style manifests in `data/editions.ts`; packs via `cos:ebook` / `cos:pdf -- --edition`)
 - **About / contact:** `/about`, `/contact`
 - **RSS / AEO:** `/rss.xml`, `/llms.txt`, `/sitemap.xml`
 

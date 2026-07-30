@@ -139,4 +139,6 @@ print(f"EPUB → {out} ({len(items)} chapters)")
     console.error("ebooklib failed — pip3 install ebooklib (npm run setup:python)");
     process.exit(1);
   }
+  // Refresh edition pack availability for download rails.
+  spawnSync("npm", ["run", "meta:editions"], { cwd: ROOT, stdio: "inherit" });
 }

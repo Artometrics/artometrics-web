@@ -1,4 +1,4 @@
-import { Text, View, StyleSheet, Pressable } from "react-native";
+import { Text, View, StyleSheet, Pressable, Linking, Platform } from "react-native";
 import { Link, useLocalSearchParams } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { PageSeo } from "@/components/PageSeo";
@@ -8,6 +8,11 @@ import { EDITIONS, getEdition } from "@/data/editions";
 import { SECTION_META } from "@/data/sections";
 import { getBlogPost } from "@/lib/content";
 import { paramString } from "@/lib/params";
+import {
+  editionEpubHref,
+  editionPdfHref,
+  getEditionPacks,
+} from "@/lib/editions/packs";
 
 export async function generateStaticParams() {
   return EDITIONS.map((e) => ({ id: e.id }));
@@ -35,6 +40,14 @@ export default function EditionScreen() {
     .filter((row) => row.post);
 
   const missing = edition.articleSlugs.filter((slug) => !getBlogPost(slug));
+  const packs = getEditionPacks(edition.id);
+  const openPack = (href: string) => {
+    if (Platform.OS === "web" && typeof window !== "undefined") {
+      window.open(href, "_blank", "noopener,noreferrer");
+      return;
+    }
+    void Linking.openURL(href);
+  };
 
   return (
     <Wrapper variant="narrow" style={styles.wrap}>
@@ -50,6 +63,26 @@ export default function EditionScreen() {
         {SECTION_META[edition.section]?.title ?? edition.section}
       </Text>
       <Text style={[styles.body, { color: colors.textMuted }]}>{edition.dek}</Text>
+
+      {packs.epub || packs.pdf ? (
+        <View style={styles.downloads}>
+          <Text style={[styles.h2, { color: colors.text }]}>Download</Text>
+          {packs.epub ? (
+            <Pressable onPress={() => openPack(editionEpubHref(edition.id))}>
+              <Text style={[styles.downloadLink, { color: colors.accent }]}>
+                EPUB — {edition.title}
+              </Text>
+            </Pressable>
+          ) : null}
+          {packs.pdf ? (
+            <Pressable onPress={() => openPack(editionPdfHref(edition.id))}>
+              <Text style={[styles.downloadLink, { color: colors.accent }]}>
+                PDF — {edition.title}
+              </Text>
+            </Pressable>
+          ) : null}
+        </View>
+      ) : null}
 
       <Text style={[styles.h2, { color: colors.text }]}>In this issue</Text>
       <View style={styles.links}>
@@ -85,7 +118,8 @@ export default function EditionScreen() {
       ) : null}
 
       <Text style={[styles.note, { color: colors.textSubtle }]}>
-        Pack: npm run cos:ebook -- --edition {edition.id}
+        Rebuild pack: npm run cos:ebook -- --edition {edition.id}
+        {packs.pdf || packs.epub ? "" : " (no committed export yet)"}
       </Text>
     </Wrapper>
   );
@@ -104,6 +138,8 @@ const styles = StyleSheet.create({
   meta: { fontSize: 12, letterSpacing: 1.5, textTransform: "uppercase" },
   body: { fontSize: 16, lineHeight: 26 },
   h2: { fontSize: 20, marginTop: 16, fontFamily: Fonts.serif },
+  downloads: { gap: 8, marginTop: 4 },
+  downloadLink: { fontSize: 16, fontWeight: "600", letterSpacing: 0.3 },
   links: { gap: 12 },
   row: { gap: 2 },
   rowTitle: { fontSize: 17, lineHeight: 24 },

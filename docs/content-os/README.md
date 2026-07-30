@@ -34,7 +34,16 @@ npm run cos:publish -- --slug my-topic
 
 # Rebuild AEO llms.txt from published posts
 npm run cos:llms
+
+# Special edition packs (manifests in data/editions.ts)
+npm run meta:editions
+npm run cos:ebook -- --edition music
+npm run cos:pdf -- --edition music   # needs pandoc + weasyprint (npm run setup:pipeline)
 ```
+
+## Edition PDF dependency
+
+`cos:pdf -- --edition <id>` builds `public/exports/editions/<id>.pdf` via **pandoc** with `--pdf-engine=weasyprint` (or bare `weasyprint`). Install with `npm run setup:pipeline`. EPUB packing only needs Python `ebooklib`. After a successful pack, `meta:editions` refreshes `public/exports/editions/available.json` so `/editions/<id>` can show download links.
 
 ## Phase 0 (this PR)
 
