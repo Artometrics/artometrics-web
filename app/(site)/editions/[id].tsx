@@ -1,4 +1,4 @@
-import { Text, View, StyleSheet, Pressable, Linking, Platform } from "react-native";
+import { Text, View, StyleSheet, Pressable, Linking, Platform, Image } from "react-native";
 import { Link, useLocalSearchParams } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { PageSeo } from "@/components/PageSeo";
@@ -62,6 +62,14 @@ export default function EditionScreen() {
       <Text style={[styles.meta, { color: colors.textSubtle }]}>
         {SECTION_META[edition.section]?.title ?? edition.section}
       </Text>
+      {edition.heroImage ? (
+        <Image
+          source={{ uri: edition.heroImage }}
+          style={styles.hero}
+          resizeMode="cover"
+          accessibilityLabel={`${edition.title} cover`}
+        />
+      ) : null}
       <Text style={[styles.body, { color: colors.textMuted }]}>{edition.dek}</Text>
 
       {packs.epub || packs.pdf ? (
@@ -136,6 +144,7 @@ const styles = StyleSheet.create({
   },
   title: { fontSize: 36, fontWeight: "300", fontFamily: Fonts.serif },
   meta: { fontSize: 12, letterSpacing: 1.5, textTransform: "uppercase" },
+  hero: { width: "100%", aspectRatio: 3 / 4, maxHeight: 520, marginVertical: 8 },
   body: { fontSize: 16, lineHeight: 26 },
   h2: { fontSize: 20, marginTop: 16, fontFamily: Fonts.serif },
   downloads: { gap: 8, marginTop: 4 },

@@ -1,4 +1,4 @@
-import { Pressable, StyleSheet, Text, View } from "react-native";
+import { ImageBackground, Pressable, StyleSheet, Text, View } from "react-native";
 import type { CoverKind } from "@/lib/twilda/novelcrafter/data";
 import { Colors, Fonts } from "@/constants/Colors";
 import { useTheme } from "@/lib/theme";
@@ -23,6 +23,12 @@ const COVER_BG: Record<CoverKind, string> = {
   plain: "#2a2a2a",
 };
 
+/** Optional full-bleed jacket art for flagship manuscripts. */
+const COVER_ART: Partial<Record<CoverKind, string>> = {
+  artometrics: "/images/books/artometrics-culture-quantified.jpg",
+  psychonomics: "/images/books/psychonomics-leader-profiles.jpg",
+};
+
 export function CoverTile({
   title,
   author,
@@ -37,6 +43,16 @@ export function CoverTile({
   onPress: () => void;
 }) {
   const { colors } = useTheme();
+  const art = COVER_ART[coverKind];
+  const coverInner = (
+    <>
+      <Text style={styles.coverEyebrow}>{COVER_LABEL[coverKind] ?? "Novel"}</Text>
+      <Text style={styles.coverTitle} numberOfLines={3}>
+        {title}
+      </Text>
+    </>
+  );
+
   return (
     <Pressable
       onPress={onPress}
@@ -44,17 +60,20 @@ export function CoverTile({
         StyleSheet.flatten([styles.wrap, pressed ? { opacity: 0.9 } : null])
       }
     >
-      <View
-        style={StyleSheet.flatten([
-          styles.cover,
-          { backgroundColor: COVER_BG[coverKind] ?? COVER_BG.plain },
-        ])}
-      >
-        <Text style={styles.coverEyebrow}>{COVER_LABEL[coverKind] ?? "Novel"}</Text>
-        <Text style={styles.coverTitle} numberOfLines={3}>
-          {title}
-        </Text>
-      </View>
+      {art ? (
+        <ImageBackground source={{ uri: art }} style={styles.cover} imageStyle={styles.coverImage}>
+          <View style={styles.coverScrim}>{coverInner}</View>
+        </ImageBackground>
+      ) : (
+        <View
+          style={StyleSheet.flatten([
+            styles.cover,
+            { backgroundColor: COVER_BG[coverKind] ?? COVER_BG.plain },
+          ])}
+        >
+          {coverInner}
+        </View>
+      )}
       <View style={styles.meta}>
         <Text style={[styles.metaTitle, { color: colors.text }]} numberOfLines={2}>
           {title}
@@ -78,10 +97,19 @@ const styles = StyleSheet.create({
     aspectRatio: 2 / 3,
     padding: 14,
     justifyContent: "flex-end",
+    overflow: "hidden",
+  },
+  coverImage: { resizeMode: "cover" },
+  coverScrim: {
+    flex: 1,
+    justifyContent: "flex-end",
+    backgroundColor: "rgba(0,0,0,0.35)",
+    margin: -14,
+    padding: 14,
   },
   coverEyebrow: {
     fontSize: 11,
-    color: "rgba(255,255,255,0.7)",
+    color: "rgba(255,255,255,0.85)",
     textTransform: "uppercase",
     letterSpacing: 1,
     marginBottom: 6,

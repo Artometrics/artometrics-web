@@ -5,6 +5,7 @@
     "dek": "Charts, catalogs, and the dual books of fame — crash course for anyone who lives in the attention economy of sound.",
     "section": "arts",
     "status": "collecting",
+    "heroImage": "/images/editions/music.jpg",
     "articleSlugs": [
       "billboard-hot-100",
       "billboard-top-100",
@@ -32,6 +33,7 @@
     "dek": "Franchise economics, streaming libraries, and when a star becomes expensive to protect.",
     "section": "arts",
     "status": "collecting",
+    "heroImage": "/images/editions/movies.jpg",
     "articleSlugs": [
       "horror-movie-profit",
       "horror-movies",
@@ -59,6 +61,7 @@
     "dek": "Steam, Pokémon, boards, and fandom as preference infrastructure.",
     "section": "arts",
     "status": "collecting",
+    "heroImage": "/images/editions/games.jpg",
     "articleSlugs": [
       "video-games-steam",
       "video-games-sliced",
@@ -80,6 +83,7 @@
     "dek": "Coffee, beer, wine, ramen, and the prestige economics of taste.",
     "section": "culture",
     "status": "collecting",
+    "heroImage": "/images/editions/food.jpg",
     "articleSlugs": [
       "coffee-the-artometrics-of-java",
       "craft-beer-usa",
@@ -102,6 +106,7 @@
     "dek": "Dynasties, markets, and institutional winning — teams as systems.",
     "section": "sports",
     "status": "collecting",
+    "heroImage": "/images/editions/sports.jpg",
     "articleSlugs": [
       "sports-dynasty-index-best-and-worst-conversion",
       "yankees-the-artometrics-of-baseballs-empire",
@@ -130,6 +135,7 @@
     "dek": "Leaders, silence, access brands, and the economics of when institutions stop protecting.",
     "section": "civics",
     "status": "collecting",
+    "heroImage": "/images/editions/power.jpg",
     "articleSlugs": [
       "caesar-the-psychonomics-of-emperor-julius",
       "beyonce-the-psychonomics-of-control",
@@ -156,6 +162,7 @@
     "dek": "Canon, museums, heritage, and the historical bridge from artistic practice to scientific method.",
     "section": "science",
     "status": "collecting",
+    "heroImage": "/images/editions/science-art.jpg",
     "articleSlugs": [
       "pantheon-the-artometrics-of-collective-memory",
       "uk-museums",
@@ -179,6 +186,7 @@
     "dek": "How lists become memory — Gutenberg, Pantheon, Rolling Stone, and literary fame.",
     "section": "humanities",
     "status": "collecting",
+    "heroImage": "/images/editions/canon.jpg",
     "articleSlugs": [
       "project-gutenberg",
       "project-gutenberg-public-domain-canon-map",
@@ -200,6 +208,7 @@
     "dek": "Soft power, rival cities, export identity — culture on a map.",
     "section": "civics",
     "status": "collecting",
+    "heroImage": "/images/editions/geo.jpg",
     "articleSlugs": [
       "cultural-exports-geoeconomics",
       "export-superpowers-us-china-germany",
@@ -222,6 +231,7 @@
     "dek": "Netflix, Steam, YouTube dynasties, and attention as a factor market.",
     "section": "arts",
     "status": "collecting",
+    "heroImage": "/images/editions/platforms.jpg",
     "articleSlugs": [
       "netflix-engagement",
       "netflix-titles",
@@ -245,6 +255,7 @@
     "dek": "Language, schools, regional identity — preference infrastructure made visible.",
     "section": "culture",
     "status": "collecting",
+    "heroImage": "/images/editions/identity.jpg",
     "articleSlugs": [
       "school-diversity",
       "languages-glottolog",
@@ -262,6 +273,7 @@
     "dek": "Wages, tuition, prestige, and what creative labor actually pays.",
     "section": "civics",
     "status": "collecting",
+    "heroImage": "/images/editions/money.jpg",
     "articleSlugs": [
       "wealth-income",
       "college-major-income",
@@ -281,6 +293,7 @@
     "dek": "Airlines, storms, nuclear ledgers, hospitals — institutional risk as narrative and number.",
     "section": "science",
     "status": "collecting",
+    "heroImage": "/images/editions/risk.jpg",
     "articleSlugs": [
       "airline-safety",
       "hurricanes-puerto-rico",
@@ -301,6 +314,7 @@
     "dek": "OSS-style leader profiles — when one person’s psychology becomes infrastructure.",
     "section": "humanities",
     "status": "collecting",
+    "heroImage": "/images/editions/psychonomics.jpg",
     "articleSlugs": [
       "caesar-the-psychonomics-of-emperor-julius",
       "beyonce-the-psychonomics-of-control",
