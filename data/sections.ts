@@ -293,7 +293,7 @@ export function inferTaxonomy(
 
   const hay = `${slug} ${title} ${tags.join(" ")}`.toLowerCase();
   const rules: [RegExp, DomainSlug, SubdomainSlug][] = [
-    [/\b(yankees|dodgers|giant|mlb|baseball)\b/, "sports", "baseball"],
+    [/\b(yankees|dodgers|padres|giant|mlb|baseball)\b/, "sports", "baseball"],
     [/\b(celtics|lakers|warrior|nba|basketball)\b/, "sports", "basketball"],
     [/\b(cowboys|patriots|nfl|super.?bowl|football)\b/, "sports", "football"],
     [/\b(soccer|premier.?league|fifa)\b/, "sports", "soccer"],

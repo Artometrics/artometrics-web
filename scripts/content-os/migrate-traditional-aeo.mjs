@@ -33,7 +33,7 @@ const bySlug = Object.fromEntries(
 function inferSection(slug, title, tags = []) {
   const hay = `${slug} ${title} ${tags.join(" ")}`.toLowerCase();
   const rules = [
-    [/\b(celtics|lakers|yankees|dodgers|patriots|cowboys|warrior|giant|sports|nba|nfl|mlb|dynasty|super.?bowl|league.?money|regional.?sports)\b/, "sports"],
+    [/\b(celtics|lakers|yankees|dodgers|padres|patriots|cowboys|warrior|giant|sports|nba|nfl|mlb|dynasty|super.?bowl|league.?money|regional.?sports)\b/, "sports"],
     [/\b(film|movie|oscar|emmy|horror|franchise|disney|cinema|netflix|pixar|simpsons|streaming|imdb|anime|tv.?golden|blockbuster)\b/, "movies-tv"],
     [/\b(music|grammy|spotify|album|song|billboard|beyonce|taylor|christmas.?songs|radio|rolling.?stone|musicbrainz)\b/, "music"],
     [/\b(museum|heritage|gallery|uk.?museums|world.?heritage)\b/, "galleries"],

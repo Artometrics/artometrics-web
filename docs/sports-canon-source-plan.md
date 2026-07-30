@@ -52,6 +52,12 @@ Each report receives:
 
 ## Scale-up order
 
+### Batch 2b - NL West companion
+5b. `padres-the-artometrics-of-paying-for-october`
+   - Theme: star payroll without ring conversion; expansion scarcity; pennant drought.
+   - Sources: Baseball Reference, Lahman, payroll-rank summaries, Retrosheet/Baseball Almanac.
+   - Cross-refs: Dodgers machine, Giants arc, sports dynasty index.
+
 ### Batch 3 - league pillars
 - NBA: Knicks, Spurs, Bulls.
 - MLB: Red Sox, Cubs, A's.

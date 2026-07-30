@@ -180,45 +180,80 @@ def write_hero(slug: str, title: str, description: str, tags: str) -> None:
     render_hero(title, description, tags, PUBLIC / "images/content/articles" / slug / "hero.png")
 
 
-def article(slug: str, title: str, description: str, tags: str, toc, intro, facts, context, sections, conclusion, references, note, source_credit: str):
+def article(
+    slug: str,
+    title: str,
+    description: str,
+    tags: str,
+    toc,
+    intro,
+    facts,
+    context,
+    sections,
+    conclusion,
+    references,
+    note,
+    source_credit: str,
+    *,
+    author: str | None = None,
+    pub_date: str = "2026-07-01",
+    include_toc: bool = True,
+    context_heading: str = "DATASET CONTEXT",
+):
+    tag_list = [t.strip() for t in tags.split(",") if t.strip()]
+    tags_yaml = "\n".join(f"  - {t}" for t in tag_list) if tag_list else f"  - {tags}"
     toc_items = "\n".join(f'  <li><a href="#{sid}" id="toc-{sid}">{label}</a></li>' for sid, label in toc)
     body = [
         "---",
         f'title: "{title}"',
         f"slug: {slug}",
-        "pubDate: 2026-07-01",
+    ]
+    if author:
+        body.append(f"author: {author}")
+    body += [
+        f"pubDate: {pub_date}",
         f'description: "{description}"',
         f"heroImage: /images/content/articles/{slug}/hero.png",
-        f"tags: [{tags}]",
         "draft: false",
+        "tags:",
+        tags_yaml,
         "---",
         '<div id="quarto-content">',
-        '<nav id="TOC" role="doc-toc">',
-        '    <h2 id="toc-title">IN THIS REPORT</h2>',
-        "  <ul>",
-        toc_items,
-        "  </ul>",
-        "</nav>",
+    ]
+    if include_toc:
+        body += [
+            '<nav id="TOC" role="doc-toc">',
+            '    <h2 id="toc-title">IN THIS REPORT</h2>',
+            "  <ul>",
+            toc_items,
+            "  </ul>",
+            "</nav>",
+        ]
+    body += [
         '<main class="art-article-main">',
         *[f'<p class="art-p">{p}</p>' for p in intro],
-        '<h2 id="fast-facts" class="anchored">FAST FACTS</h2>',
+        '<h2 id="fast-facts" class="anchored">Fast facts</h2>',
         f'<div class="facts-grid">\n{facts_html(facts)}\n</div>',
-        '<h2 id="dataset-context" class="anchored">DATASET CONTEXT</h2>',
+        f'<h2 id="dataset-context" class="anchored">{context_heading}</h2>',
         *[f'<p class="art-p">{p}</p>' for p in context],
     ]
     for section in sections:
         body += [
             f'<h2 id="{section["id"]}" class="anchored">{section["title"]}</h2>',
+        ]
+        if section.get("subtitle"):
+            body.append(f'<h3 id="{section["id"]}-look" class="anchored">{section["subtitle"]}</h3>')
+        body += [
             chart_html(slug, section["chart"], section["caption"], section.get("source", source_credit)),
             *[f'<p class="art-p">{p}</p>' for p in section["prose"]],
         ]
     body += [
-        '<h2 id="conclusion" class="anchored">CONCLUSION</h2>',
+        '<h2 id="conclusion" class="anchored">Conclusion</h2>',
         *[f'<p class="art-p">{p}</p>' for p in conclusion],
-        '<h2 id="references" class="anchored">REFERENCES</h2>',
+        '<h2 id="references" class="anchored">References</h2>',
         *[f"<p>{p}</p>" for p in references],
-        '<h2 id="editors-note" class="anchored">EDITOR\'S NOTE</h2>',
-        f'<div class="art-editorial-note"><p>{note}</p></div>',
+        '<h2 id="editors-note" class="anchored">Editor\'s note</h2>',
+        f'<div class="art-editorial-note"><p><em>{note}</em></p></div>',
         "</main>",
         "</div>",
         "",
@@ -474,6 +509,216 @@ def dodgers():
         ["Baseball Reference. <em>Los Angeles Dodgers Franchise History</em>.", "Lahman, S. <em>Lahman Baseball Database</em>.", "Forbes and public payroll-rank summaries.", "Retrosheet and Baseball Almanac pennant/title records."],
         "Recent win totals and payroll ranks are rounded public-reference summaries. The 2020 shortened season is left unadjusted and interpreted separately in the prose.",
         "Data: Baseball Reference, Lahman, Retrosheet, Forbes - ARTOMETRICS",
+    )
+
+
+def padres():
+    slug = "padres-the-artometrics-of-paying-for-october"
+    decades = ["1970s", "1980s", "1990s", "2000s", "2010s", "2020s"]
+    playoff_apps = [0, 1, 2, 2, 0, 3]
+    write_chart(
+        slug,
+        "chart1_october_scarcity",
+        {
+            "data": [bar_v(decades, playoff_apps, [ART_RED if v >= 2 else ART_BLUE for v in playoff_apps])],
+            "layout": layout(
+                "October was never a San Diego habit",
+                "THE FRANCHISE LIVED MOSTLY OUTSIDE THE POSTSEASON",
+                x_title="Decade",
+                y_title="Postseason appearances",
+            ),
+        },
+    )
+
+    clubs = ["Rockies", "Padres", "Mariners", "Brewers", "D-backs", "Angels", "Royals", "Mets"]
+    titles = [0, 0, 0, 0, 1, 1, 2, 2]
+    write_chart(
+        slug,
+        "chart2_expansion_peer_gap",
+        {
+            "data": [bar_h(clubs, titles, [ART_BLUE if t else ART_RED for t in titles])],
+            "layout": layout(
+                "Among modern clubs, the Padres still sit at zero",
+                "STAR PAYROLL HAS NOT CLOSED THE RING GAP",
+                x_title="World Series titles",
+            ),
+        },
+    )
+
+    years = ["2019", "2020", "2021", "2022", "2023", "2024"]
+    wins = [70, 37, 79, 89, 82, 93]
+    write_chart(
+        slug,
+        "chart3_star_market_floor",
+        {
+            "data": [line(years, wins)],
+            "layout": layout(
+                "The star-market Padres raised the floor, then the ceiling",
+                "CONTENTION ARRIVED WITH THE PAYROLL",
+                x_title="Season",
+                y_title="Regular-season wins",
+            ),
+        },
+    )
+
+    spend_years = [2019, 2020, 2021, 2022, 2023, 2024]
+    payroll_rank = [12, 9, 10, 3, 1, 4]
+    october = [0, 1, 0, 3, 0, 2]
+    outcomes = [
+        "Missed playoffs",
+        "Wild Card exit",
+        "Missed playoffs",
+        "NLCS",
+        "Missed playoffs",
+        "NLDS exit",
+    ]
+    write_chart(
+        slug,
+        "chart4_payroll_conversion",
+        {
+            "data": [
+                scatter(
+                    spend_years,
+                    payroll_rank,
+                    [str(y) for y in spend_years],
+                    [14 + o * 6 for o in october],
+                    [ART_RED if o >= 2 else ART_BLUE for o in october],
+                    customdata=outcomes,
+                    hover="<b>%{text}</b><br>Payroll rank: %{y}<br>October: %{customdata}<extra></extra>",
+                )
+            ],
+            "layout": {
+                **layout(
+                    "San Diego bought access, not certainty",
+                    "TOP PAYROLL STILL FAILED TO BUY A RING",
+                    x_title="Season",
+                    y_title="Payroll rank (lower is richer)",
+                ),
+                "yaxis": {
+                    **layout("", "")["yaxis"],
+                    "autorange": "reversed",
+                    "title": {"text": "Payroll rank (lower is richer)"},
+                },
+            },
+        },
+    )
+
+    gaps = ["1969-84", "1984-98", "1998-now"]
+    gap_years = [15, 14, 27]
+    write_chart(
+        slug,
+        "chart5_pennant_gaps",
+        {
+            "data": [bar_v(gaps, gap_years, [ART_BLUE, ART_BLUE, ART_RED])],
+            "layout": layout(
+                "Two pennants, then a generation without one",
+                "THE MODERN DROUGHT IS THE LONGEST PENNANT WAIT",
+                x_title="Pennant gap",
+                y_title="Years",
+            ),
+        },
+    )
+
+    sections = [
+        {
+            "id": "october-scarcity",
+            "title": "October was never a San Diego habit",
+            "subtitle": "Padres postseason appearances by decade",
+            "chart": "chart1_october_scarcity",
+            "caption": "Padres postseason appearances by decade",
+            "prose": [
+                "The Padres are not a franchise that casually visits October. Most decades produced zero or one appearance; the modern 2020s spike is the exception that proves how thin the archive is.",
+                "That scarcity is the institutional backdrop for every star signing: San Diego is not defending a dynasty. It is trying to invent one.",
+            ],
+        },
+        {
+            "id": "expansion-peer-gap",
+            "title": "Among modern clubs, the Padres still sit at zero",
+            "subtitle": "World Series titles among selected expansion-era clubs",
+            "chart": "chart2_expansion_peer_gap",
+            "caption": "World Series titles among selected expansion-era clubs",
+            "prose": [
+                "Zero titles place the Padres with baseball's unfinished expansion stories. Peer clubs that arrived later or around the same window have already closed at least once.",
+                "For a baseball expert, the Padres argument is no longer whether they can afford stars. It is whether star concentration can substitute for the ring the archive still lacks.",
+            ],
+        },
+        {
+            "id": "star-market-floor",
+            "title": "The star market raised the floor, then the ceiling",
+            "subtitle": "Padres regular-season wins in the modern star-market era",
+            "chart": "chart3_star_market_floor",
+            "caption": "Padres regular-season wins in the modern star-market era",
+            "prose": [
+                "From Machado through the Soto window and into 2024, San Diego's win totals finally look like a club spending to contend. The shortened 2020 season is left unadjusted; the surrounding years show the real lift.",
+                "The product of the star market is not a dynasty chart. It is a raised floor with occasional ceiling spikes—89 wins in 2022, 93 in 2024—still searching for conversion.",
+            ],
+        },
+        {
+            "id": "payroll-conversion",
+            "title": "San Diego bought access, not certainty",
+            "subtitle": "Payroll rank and October outcome markers",
+            "chart": "chart4_payroll_conversion",
+            "caption": "Payroll rank and October outcome markers",
+            "prose": [
+                "The modern Padres spent their way into the payroll elite. 2022 bought an NLCS; 2023 bought a missed October despite a top-line payroll; 2024 bought another short series and another exit.",
+                "That is the San Diego contradiction: money purchased relevance next to the Dodgers, but not the institutional conversion that turns payroll rank into a ring.",
+            ],
+        },
+        {
+            "id": "pennant-gaps",
+            "title": "Two pennants, then a generation without one",
+            "subtitle": "Selected Padres National League pennant gaps",
+            "chart": "chart5_pennant_gaps",
+            "caption": "Selected Padres National League pennant gaps",
+            "prose": [
+                "The franchise has only two pennants—1984 and 1998—and both World Series ended in defeat. The wait since 1998 is now the longest pennant gap in club history.",
+                "Read against the star-market era, the chart is blunt: San Diego has bought October chances without yet buying the league championship that would reopen the title door.",
+            ],
+        },
+    ]
+    article(
+        slug,
+        "How the Padres Bought Stars Without Buying a Dynasty",
+        "San Diego turned star payroll into contention—and still owns baseball's clearest zero-ring conversion problem.",
+        "sports, baseball",
+        [("fast-facts", "Fast facts"), ("dataset-context", "Data and method")]
+        + [(s["id"], s["title"]) for s in sections]
+        + [("conclusion", "Conclusion"), ("references", "References"), ("editors-note", "Editor's note")],
+        [
+            "The San Diego Padres are what happens when an expansion franchise learns to spend before it learns to close. Two National League pennants, zero World Series titles, and a modern star market that finally made contention feel expensive rather than accidental.",
+            "Machado, Tatis, the Soto window, and a payroll that climbed into baseball's elite bought relevance next to the Dodgers. What they have not bought is the first ring. Two pennants—1984 and 1998—both ended in World Series defeat. Entering 2025, the wait since the last National League flag is twenty-seven years, the longest pennant gap in club history.",
+            "What follows charts that unfinished conversion: postseason scarcity by decade, the expansion peer gap, the star-market win floor, payroll against October markers, and the long shadow of a franchise that paid for access without closing.",
+        ],
+        [
+            ("0", "World Series championships in franchise history"),
+            ("2", "National League pennants — 1984 and 1998"),
+            ("1969", "Expansion season that started the franchise clock"),
+            ("2004", "Year Petco Park opened and reset the economic stage"),
+            ("93", "Regular-season wins in 2024, the modern ceiling spike"),
+            ("27", "Years since the most recent pennant entering 2025"),
+        ],
+        [
+            "Public Baseball Reference franchise records, Lahman-style season summaries, and widely cited payroll-rank histories feed the charts. The emphasis is franchise identity and conversion—not player-level WAR modeling. The shortened 2020 season is left unadjusted and read separately in the prose.",
+            "Analysts focus on whether star concentration can manufacture a first title. Fans feel the distance between sold-out relevance and an empty championship row. The gap between those experiences is the Padres' modern story.",
+        ],
+        sections,
+        [
+            "The Padres are not merely unlucky in October. They are structurally unfinished: scarce postseason history, two pennants without a ring, and a recent payroll surge that bought access beside Los Angeles without buying closure.",
+            "The data says their defining modern trait is not one collapse. It is repeated payment for the conditions where a first title becomes possible—and the continued absence of the title itself. For the NL West atlas, see also the Dodgers consistency machine and the Giants' long arc; for the cross-league benchmark, see the sports dynasty index.",
+        ],
+        [
+            "Baseball Reference. <em>San Diego Padres Franchise History</em>.",
+            "Lahman, S. <em>Lahman Baseball Database</em>.",
+            "Forbes and public payroll-rank summaries.",
+            "Retrosheet and Baseball Almanac pennant/title records.",
+            'Related Artometrics reports: <a href="/dodgers-the-artometrics-of-baseballs-modern-machine">Dodgers</a> · <a href="/giant-the-artometrics-of-a-san-francisco-dynasty">Giants</a> · <a href="/sports-dynasty-index-best-and-worst-conversion">Sports Dynasty Index</a> · <a href="/yankees-the-artometrics-of-baseballs-empire">Yankees</a>.',
+        ],
+        "Recent win totals and payroll ranks are rounded public-reference summaries. The 2020 shortened season is left unadjusted and interpreted separately in the prose. Pennant-gap years are counted from the prior pennant season through the active wait entering 2025.",
+        "Data: Baseball Reference, Lahman, Retrosheet, Forbes - ARTOMETRICS",
+        author="kyle-mcauliffe",
+        pub_date="2026-07-30T00:00:00.000Z",
+        include_toc=False,
+        context_heading="Data and method",
     )
 
 
@@ -763,6 +1008,12 @@ def write_plan():
 
         ## Scale-up order
 
+        ### Batch 2b - NL West companion
+        5b. `padres-the-artometrics-of-paying-for-october`
+           - Theme: star payroll without ring conversion; expansion scarcity; pennant drought.
+           - Sources: Baseball Reference, Lahman, payroll-rank summaries, Retrosheet/Baseball Almanac.
+           - Cross-refs: Dodgers machine, Giants arc, sports dynasty index.
+
         ### Batch 3 - league pillars
         - NBA: Knicks, Spurs, Bulls.
         - MLB: Red Sox, Cubs, A's.
@@ -798,18 +1049,37 @@ def write_plan():
     (DOCS_DIR / "sports-canon-source-plan.md").write_text(plan + "\n")
 
 
-def main():
+GENERATORS = {
+    "yankees": yankees,
+    "lakers": lakers,
+    "cowboys": cowboys,
+    "celtics": celtics,
+    "dodgers": dodgers,
+    "padres": padres,
+    "patriots": patriots,
+    "dynasty-index": cross_sport_dynasty_index,
+    "league-money": league_money_and_skill_report,
+    "regional-identity": regional_sports_identity_map,
+}
+
+
+def main(argv: list[str] | None = None):
+    import sys
+
+    args = list(sys.argv[1:] if argv is None else argv)
     write_plan()
-    yankees()
-    lakers()
-    cowboys()
-    celtics()
-    dodgers()
-    patriots()
-    cross_sport_dynasty_index()
-    league_money_and_skill_report()
-    regional_sports_identity_map()
-    print("Generated sports canon plan, 6 team reports, and 3 cross-sports reports.")
+    if "--only" in args:
+        idx = args.index("--only")
+        key = args[idx + 1] if idx + 1 < len(args) else ""
+        if key not in GENERATORS:
+            raise SystemExit(f"Unknown --only target {key!r}; choose from {', '.join(GENERATORS)}")
+        GENERATORS[key]()
+        print(f"Generated sports canon plan and report: {key}")
+        return
+
+    for fn in GENERATORS.values():
+        fn()
+    print("Generated sports canon plan, team reports, and cross-sports reports.")
 
 
 if __name__ == "__main__":

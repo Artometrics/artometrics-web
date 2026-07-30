@@ -49,6 +49,7 @@ const TAXONOMY = {
   // Sports — Baseball
   "dodgers-the-artometrics-of-baseballs-modern-machine": ["sports", "baseball"],
   "giant-the-artometrics-of-a-san-francisco-dynasty": ["sports", "baseball"],
+  "padres-the-artometrics-of-paying-for-october": ["sports", "baseball"],
   "yankees-the-artometrics-of-baseballs-empire": ["sports", "baseball"],
   // Sports — Basketball
   "celtics-the-artometrics-of-institutional-winning": ["sports", "basketball"],
