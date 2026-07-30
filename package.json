@@ -43,6 +43,7 @@
     "cos:pdf": "node scripts/content-os/pack-pdf.mjs",
     "brand:favicons": "python3 scripts/brand/generate-favicons.py",
     "cos:ebook": "node scripts/content-os/pack-ebook.mjs",
+    "meta:editions": "npx tsx scripts/meta/write-editions-json.mjs",
     "cos:narrate": "node scripts/content-os/narrate-elevenlabs.mjs",
     "cos:buffer-schedule": "node scripts/content-os/buffer-schedule.mjs",
     "cos:notion-sync": "node scripts/content-os/notion-sync.mjs",

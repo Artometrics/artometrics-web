@@ -31,6 +31,10 @@ const SECTIONS = [
   "culture",
 ];
 
+const editions = existsSync(join(ROOT, "public/data/meta/editions.json"))
+  ? JSON.parse(readFileSync(join(ROOT, "public/data/meta/editions.json"), "utf8"))
+  : [];
+
 const staticPaths = [
   "/",
   "/blog",
@@ -43,6 +47,8 @@ const staticPaths = [
   "/resources",
   "/datasets",
   "/library",
+  "/editions",
+  ...editions.map((e) => `/editions/${e.id}`),
   "/search",
   "/newsletter",
   "/authors",

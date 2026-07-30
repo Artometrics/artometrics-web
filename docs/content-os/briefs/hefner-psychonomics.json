@@ -1,0 +1,69 @@
+{
+  "slug": "hefner-psychonomics",
+  "desk": "humanities",
+  "title": "Hefner: The Access Household",
+  "workingTitle": "Hefner: The Access Household",
+  "primaryKeyword": "Hugh Hefner psychonomics Playboy",
+  "secondaryKeywords": [
+    "artometrics meta analysis",
+    "cross report framework",
+    "culture quantified"
+  ],
+  "searchIntent": "informational",
+  "audience": "Readers who want frameworks that cite multiple Artometrics reports.",
+  "metaDescription": "Psychonomics profile of Hugh Hefner \u2014 the mansion as access household. Companion to Playboy After Hef.",
+  "angle": "Access mythology personified.",
+  "dataSources": [
+    {
+      "name": "Artometrics sibling reports",
+      "url": "/editions",
+      "notes": "Cross-cite live slugs"
+    }
+  ],
+  "sectionPlan": [
+    {
+      "id": "claim",
+      "title": "NEW CLAIM",
+      "question": "What claim do the sources jointly unlock?",
+      "keyword": "Hugh Hefner psychonomics Playboy"
+    },
+    {
+      "id": "sources",
+      "title": "SOURCE REPORTS",
+      "question": "What does each sibling contribute?",
+      "keyword": "Hugh Hefner psychonomics Playboy"
+    },
+    {
+      "id": "framework",
+      "title": "FRAMEWORK",
+      "question": "What reusable model emerges?",
+      "keyword": "Hugh Hefner psychonomics Playboy"
+    }
+  ],
+  "banner": {
+    "mood": "Documentary cream paper, spare red",
+    "subjects": "Empty desk instruments",
+    "avoid": "Purple gradients, collage"
+  },
+  "distribution": {
+    "linkedinHook": "Psychonomics profile of Hugh Hefner \u2014 the mansion as access household. Companion to Playboy After Hef.",
+    "shortFact": "Access mythology personified.",
+    "youtubeTitle": "Hefner: The Access Household",
+    "buffer": true,
+    "slackNotify": true,
+    "slackChannel": "#editorial"
+  },
+  "channels": {
+    "buffer": true,
+    "slack": true,
+    "newsletter": true
+  },
+  "relatedSlugs": [],
+  "status": "brief",
+  "createdAt": "2026-07-30",
+  "updatedAt": "2026-07-30",
+  "kind": "psychonomics-profile",
+  "sourceSlugs": [
+    "playboy-after-hef"
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "slug": "preference-infrastructure-fandom",
+  "desk": "arts",
+  "title": "Preference Infrastructure in Fandom",
+  "workingTitle": "Preference Infrastructure in Fandom",
+  "primaryKeyword": "fandom preference infrastructure games",
+  "secondaryKeywords": [
+    "artometrics meta analysis",
+    "cross report framework",
+    "culture quantified"
+  ],
+  "searchIntent": "informational",
+  "audience": "Readers who want frameworks that cite multiple Artometrics reports.",
+  "metaDescription": "Steam, Pok\u00e9mon, anime \u2014 how fandoms build measurable preference infrastructure.",
+  "angle": "Games Issue glue.",
+  "dataSources": [
+    {
+      "name": "Artometrics sibling reports",
+      "url": "/editions",
+      "notes": "Cross-cite live slugs"
+    }
+  ],
+  "sectionPlan": [
+    {
+      "id": "claim",
+      "title": "NEW CLAIM",
+      "question": "What claim do the sources jointly unlock?",
+      "keyword": "fandom preference infrastructure games"
+    },
+    {
+      "id": "sources",
+      "title": "SOURCE REPORTS",
+      "question": "What does each sibling contribute?",
+      "keyword": "fandom preference infrastructure games"
+    },
+    {
+      "id": "framework",
+      "title": "FRAMEWORK",
+      "question": "What reusable model emerges?",
+      "keyword": "fandom preference infrastructure games"
+    }
+  ],
+  "banner": {
+    "mood": "Documentary cream paper, spare red",
+    "subjects": "Empty desk instruments",
+    "avoid": "Purple gradients, collage"
+  },
+  "distribution": {
+    "linkedinHook": "Steam, Pok\u00e9mon, anime \u2014 how fandoms build measurable preference infrastructure.",
+    "shortFact": "Games Issue glue.",
+    "youtubeTitle": "Preference Infrastructure in Fandom",
+    "buffer": true,
+    "slackNotify": true,
+    "slackChannel": "#editorial"
+  },
+  "channels": {
+    "buffer": true,
+    "slack": true,
+    "newsletter": true
+  },
+  "relatedSlugs": [],
+  "status": "brief",
+  "createdAt": "2026-07-30",
+  "updatedAt": "2026-07-30",
+  "kind": "meta",
+  "sourceSlugs": [
+    "video-games-steam",
+    "pokemon",
+    "anime"
+  ]
+}

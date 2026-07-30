@@ -161,6 +161,7 @@ export function SiteNavOverlay() {
           </Text>
           {[
             { href: "/blog", label: "Latest" },
+            { href: "/editions", label: "Editions" },
             { href: "/podcast", label: "Podcasts" },
             { href: "/library", label: "Library" },
             { href: "/library/reference", label: "Reference" },

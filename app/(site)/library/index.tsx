@@ -9,6 +9,11 @@ import { SECTION_META, SECTION_SLUGS } from "@/data/sections";
 
 const HUB = [
   {
+    href: "/editions",
+    title: "Editions",
+    body: "Special issues — Music, Movies, Games, Power, and more.",
+  },
+  {
     href: "/datasets",
     title: "Datasets",
     body: "CSV packs from published stories.",

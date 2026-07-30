@@ -1,0 +1,73 @@
+{
+  "slug": "dual-books-of-fame",
+  "desk": "arts",
+  "title": "Dual Books of Fame: When Film Dies and the Catalog Lives",
+  "workingTitle": "Dual Books of Fame: When Film Dies and t",
+  "primaryKeyword": "dual books of fame entertainment",
+  "secondaryKeywords": [
+    "artometrics meta analysis",
+    "cross report framework",
+    "culture quantified"
+  ],
+  "searchIntent": "informational",
+  "audience": "Readers who want frameworks that cite multiple Artometrics reports.",
+  "metaDescription": "Film ROI vs music catalog durability \u2014 a framework for stars who keep one book alive while the other collapses.",
+  "angle": "Join Leto film book, MJ catalog, Beyonc\u00e9 firm control into one dual-ledger model.",
+  "dataSources": [
+    {
+      "name": "Artometrics sibling reports",
+      "url": "/editions",
+      "notes": "Cross-cite live slugs"
+    }
+  ],
+  "sectionPlan": [
+    {
+      "id": "claim",
+      "title": "NEW CLAIM",
+      "question": "What claim do the sources jointly unlock?",
+      "keyword": "dual books of fame entertainment"
+    },
+    {
+      "id": "sources",
+      "title": "SOURCE REPORTS",
+      "question": "What does each sibling contribute?",
+      "keyword": "dual books of fame entertainment"
+    },
+    {
+      "id": "framework",
+      "title": "FRAMEWORK",
+      "question": "What reusable model emerges?",
+      "keyword": "dual books of fame entertainment"
+    }
+  ],
+  "banner": {
+    "mood": "Documentary cream paper, spare red",
+    "subjects": "Empty desk instruments",
+    "avoid": "Purple gradients, collage"
+  },
+  "distribution": {
+    "linkedinHook": "Film ROI vs music catalog durability \u2014 a framework for stars who keep one book alive while the other collapses.",
+    "shortFact": "Join Leto film book, MJ catalog, Beyonc\u00e9 firm control into one dual-ledger model.",
+    "youtubeTitle": "Dual Books of Fame: When Film Dies and the Catalog Lives",
+    "buffer": true,
+    "slackNotify": true,
+    "slackChannel": "#editorial"
+  },
+  "channels": {
+    "buffer": true,
+    "slack": true,
+    "newsletter": true
+  },
+  "relatedSlugs": [
+    "protection-threshold"
+  ],
+  "status": "brief",
+  "createdAt": "2026-07-30",
+  "updatedAt": "2026-07-30",
+  "kind": "meta",
+  "sourceSlugs": [
+    "protection-threshold",
+    "michael-jackson-psychonomics",
+    "beyonce-the-psychonomics-of-control"
+  ]
+}

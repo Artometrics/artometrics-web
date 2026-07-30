@@ -1,0 +1,70 @@
+{
+  "slug": "comparative-psychonomics-panel",
+  "desk": "humanities",
+  "title": "Comparative Psychonomics Panel",
+  "workingTitle": "Comparative Psychonomics Panel",
+  "primaryKeyword": "psychonomics comparative leader profiles",
+  "secondaryKeywords": [
+    "artometrics meta analysis",
+    "cross report framework",
+    "culture quantified"
+  ],
+  "searchIntent": "informational",
+  "audience": "Readers who want frameworks that cite multiple Artometrics reports.",
+  "metaDescription": "What transfers across Caesar, Beyonc\u00e9, and the next leader panel \u2014 method before mythology.",
+  "angle": "Psychonomics Issue method + leader-panel dataset.",
+  "dataSources": [
+    {
+      "name": "Artometrics sibling reports",
+      "url": "/editions",
+      "notes": "Cross-cite live slugs"
+    }
+  ],
+  "sectionPlan": [
+    {
+      "id": "claim",
+      "title": "NEW CLAIM",
+      "question": "What claim do the sources jointly unlock?",
+      "keyword": "psychonomics comparative leader profiles"
+    },
+    {
+      "id": "sources",
+      "title": "SOURCE REPORTS",
+      "question": "What does each sibling contribute?",
+      "keyword": "psychonomics comparative leader profiles"
+    },
+    {
+      "id": "framework",
+      "title": "FRAMEWORK",
+      "question": "What reusable model emerges?",
+      "keyword": "psychonomics comparative leader profiles"
+    }
+  ],
+  "banner": {
+    "mood": "Documentary cream paper, spare red",
+    "subjects": "Empty desk instruments",
+    "avoid": "Purple gradients, collage"
+  },
+  "distribution": {
+    "linkedinHook": "What transfers across Caesar, Beyonc\u00e9, and the next leader panel \u2014 method before mythology.",
+    "shortFact": "Psychonomics Issue method + leader-panel dataset.",
+    "youtubeTitle": "Comparative Psychonomics Panel",
+    "buffer": true,
+    "slackNotify": true,
+    "slackChannel": "#editorial"
+  },
+  "channels": {
+    "buffer": true,
+    "slack": true,
+    "newsletter": true
+  },
+  "relatedSlugs": [],
+  "status": "brief",
+  "createdAt": "2026-07-30",
+  "updatedAt": "2026-07-30",
+  "kind": "meta",
+  "sourceSlugs": [
+    "caesar-the-psychonomics-of-emperor-julius",
+    "beyonce-the-psychonomics-of-control"
+  ]
+}

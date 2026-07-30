@@ -8,6 +8,8 @@ const COVER_LABEL: Record<CoverKind, string> = {
   trinity: "Trinity",
   cardinal: "Cardinal",
   apocrypha: "Apocrypha",
+  artometrics: "Artometrics",
+  psychonomics: "Psychonomics",
   plain: "Novel",
 };
 
@@ -16,6 +18,8 @@ const COVER_BG: Record<CoverKind, string> = {
   trinity: "#1e3a5f",
   cardinal: "#3d2b1f",
   apocrypha: "#2c1810",
+  artometrics: "#C0392B",
+  psychonomics: "#1a1a1a",
   plain: "#2a2a2a",
 };
 

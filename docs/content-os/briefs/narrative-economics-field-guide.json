@@ -1,0 +1,85 @@
+{
+  "slug": "narrative-economics-field-guide",
+  "desk": "civics",
+  "title": "Narrative Economics: The Field Guide Culture Workers Needed",
+  "workingTitle": "Narrative Economics Guide",
+  "primaryKeyword": "narrative economics explained",
+  "secondaryKeywords": [
+    "Robert Shiller narrative economics",
+    "economic narratives contagion",
+    "viral stories markets",
+    "meme stocks narrative",
+    "celebrity ruin narratives"
+  ],
+  "searchIntent": "informational",
+  "audience": "Growing professionals and seasoned operators who need a citeable briefing on why stories move markets, careers, and institutions.",
+  "metaDescription": "A field guide to narrative economics — how contagious stories shape markets, cancellations, and cultural booms — built for people who brief others.",
+  "angle": "Translate Shiller’s framework into Artometrics desk language: definition → mechanism → measurement → case tiles (crypto, pandemic, MeToo timing, meme stocks) → how to use it in outreach without becoming a guru.",
+  "dataSources": [
+    {
+      "name": "Shiller — Narrative Economics (book / AER papers)",
+      "url": "https://www.amazon.com/",
+      "notes": "Primary theoretical source; cite edition carefully"
+    },
+    {
+      "name": "Google Trends / news volume proxies",
+      "url": "https://trends.google.com/",
+      "notes": "Observed contagion curves for selected narratives"
+    },
+    {
+      "name": "Artometrics prior desks (franchise, awards, streaming)",
+      "url": "/blog",
+      "notes": "Internal cross-links as worked examples"
+    }
+  ],
+  "sectionPlan": [
+    {
+      "id": "define",
+      "title": "WHAT NARRATIVE ECONOMICS IS",
+      "question": "What did Shiller add that standard econ left on the table?",
+      "keyword": "narrative economics explained"
+    },
+    {
+      "id": "mechanism",
+      "title": "HOW STORIES CONTAGION",
+      "question": "What makes a narrative go epidemic — and then die?",
+      "keyword": "economic narratives contagion"
+    },
+    {
+      "id": "measure",
+      "title": "HOW TO MEASURE ONE",
+      "question": "Which proxies are honest enough for a magazine chart?",
+      "keyword": "viral stories markets"
+    },
+    {
+      "id": "cases",
+      "title": "FOUR WORKED CASES",
+      "question": "Crypto, pandemic, meme stocks, celebrity ruin — same machine?",
+      "keyword": "celebrity ruin narratives"
+    },
+    {
+      "id": "outreach",
+      "title": "HOW TO BRIEF WITH IT",
+      "question": "What should a strategist actually say on Monday?",
+      "keyword": "Robert Shiller narrative economics"
+    }
+  ],
+  "banner": {
+    "mood": "Newspaper stack becoming a waveform, documentary still, cream + red",
+    "subjects": "Teletype, chalk epidemic curve, empty podium",
+    "avoid": "Stock-photo handshakes, purple gradients, crypto bro collage"
+  },
+  "distribution": {
+    "linkedinHook": "Narrative economics is the missing briefing note between ‘the vibes shifted’ and ‘the market moved.’",
+    "shortFact": "Stories contagion like epidemics — with peaks, mutations, and burnout you can chart.",
+    "youtubeTitle": "Narrative Economics: Field Guide for Culture Workers",
+    "buffer": true,
+    "slackNotify": true,
+    "slackChannel": "#editorial"
+  },
+  "channels": { "buffer": true, "slack": true, "newsletter": true },
+  "relatedSlugs": ["protection-threshold", "preference-falsification-explained"],
+  "status": "brief",
+  "createdAt": "2026-07-30",
+  "updatedAt": "2026-07-30"
+}

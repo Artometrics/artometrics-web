@@ -1,0 +1,69 @@
+{
+  "slug": "trump-psychonomics",
+  "desk": "humanities",
+  "title": "Trump: Media-Native Preference Cascades",
+  "workingTitle": "Trump: Media-Native Preference Cascades",
+  "primaryKeyword": "Trump psychonomics media cascades",
+  "secondaryKeywords": [
+    "artometrics meta analysis",
+    "cross report framework",
+    "culture quantified"
+  ],
+  "searchIntent": "informational",
+  "audience": "Readers who want frameworks that cite multiple Artometrics reports.",
+  "metaDescription": "Psychonomics profile of Trump \u2014 media-native preference cascades. Published behavior; non-partisan discipline.",
+  "angle": "Preference cascades + attention markets; not campaign copy.",
+  "dataSources": [
+    {
+      "name": "Artometrics sibling reports",
+      "url": "/editions",
+      "notes": "Cross-cite live slugs"
+    }
+  ],
+  "sectionPlan": [
+    {
+      "id": "claim",
+      "title": "NEW CLAIM",
+      "question": "What claim do the sources jointly unlock?",
+      "keyword": "Trump psychonomics media cascades"
+    },
+    {
+      "id": "sources",
+      "title": "SOURCE REPORTS",
+      "question": "What does each sibling contribute?",
+      "keyword": "Trump psychonomics media cascades"
+    },
+    {
+      "id": "framework",
+      "title": "FRAMEWORK",
+      "question": "What reusable model emerges?",
+      "keyword": "Trump psychonomics media cascades"
+    }
+  ],
+  "banner": {
+    "mood": "Documentary cream paper, spare red",
+    "subjects": "Empty desk instruments",
+    "avoid": "Purple gradients, collage"
+  },
+  "distribution": {
+    "linkedinHook": "Psychonomics profile of Trump \u2014 media-native preference cascades. Published behavior; non-partisan discipline.",
+    "shortFact": "Preference cascades + attention markets; not campaign copy.",
+    "youtubeTitle": "Trump: Media-Native Preference Cascades",
+    "buffer": true,
+    "slackNotify": true,
+    "slackChannel": "#editorial"
+  },
+  "channels": {
+    "buffer": true,
+    "slack": true,
+    "newsletter": true
+  },
+  "relatedSlugs": [],
+  "status": "brief",
+  "createdAt": "2026-07-30",
+  "updatedAt": "2026-07-30",
+  "kind": "psychonomics-profile",
+  "sourceSlugs": [
+    "preference-falsification-explained"
+  ]
+}

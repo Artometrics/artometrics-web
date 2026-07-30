@@ -1,0 +1,74 @@
+{
+  "slug": "preference-falsification-explained",
+  "desk": "humanities",
+  "title": "Preference Falsification: Why Everyone Knew and Nobody Spoke",
+  "workingTitle": "Preference Falsification",
+  "primaryKeyword": "preference falsification Timur Kuran",
+  "secondaryKeywords": [
+    "preference falsification explained",
+    "why people stay silent institutions",
+    "private truth public lie",
+    "MeToo information cascade",
+    "Savile silence dynamics"
+  ],
+  "searchIntent": "informational",
+  "audience": "Anyone briefing a team on institutional silence — studios, newsrooms, churches, campuses.",
+  "metaDescription": "Timur Kuran’s preference falsification — private truths, public lies — as the missing model for Savile rooms, studio lots, and delayed exposés.",
+  "angle": "The companion discipline piece to Protection Threshold. Economics of silence isn’t only money — it’s falsified preferences until a threshold cascade. Connect carefully to BBC/Savile and MeToo without claiming identical mechanisms.",
+  "dataSources": [
+    {
+      "name": "Timur Kuran — Private Truths, Public Lies",
+      "url": "https://www.hup.harvard.edu/",
+      "notes": "Core theory"
+    },
+    {
+      "name": "Artometrics Protection Threshold / BBC timelines",
+      "url": "/docs/content-os/drafts/protection-threshold/PLAN.md",
+      "notes": "Worked institutional examples"
+    }
+  ],
+  "sectionPlan": [
+    {
+      "id": "define",
+      "title": "THE MODEL",
+      "question": "What is preference falsification in one clean diagram?",
+      "keyword": "preference falsification explained"
+    },
+    {
+      "id": "threshold",
+      "title": "THE CASCADE",
+      "question": "What trips a public preference shift after years of private knowledge?",
+      "keyword": "MeToo information cascade"
+    },
+    {
+      "id": "cases",
+      "title": "ROOMS THAT KNEW",
+      "question": "How do Savile-type and studio-type silences map onto the model?",
+      "keyword": "Savile silence dynamics"
+    },
+    {
+      "id": "use",
+      "title": "HOW TO BRIEF IT",
+      "question": "What should leaders measure if they want earlier truth?",
+      "keyword": "why people stay silent institutions"
+    }
+  ],
+  "banner": {
+    "mood": "Closed meeting-room glass, one empty chair, cream + red",
+    "subjects": "Nameplates face-down, muted microphone",
+    "avoid": "Whistleblower stock hero shot, purple gradients"
+  },
+  "distribution": {
+    "linkedinHook": "Preference falsification is why ‘everyone knew’ is compatible with ‘nobody said.’",
+    "shortFact": "Private truths + public lies until a cascade threshold — the model behind delayed exposés.",
+    "youtubeTitle": "Preference Falsification: Why Nobody Spoke",
+    "buffer": true,
+    "slackNotify": true,
+    "slackChannel": "#editorial"
+  },
+  "channels": { "buffer": true, "slack": true, "newsletter": true },
+  "relatedSlugs": ["protection-threshold", "narrative-economics-field-guide"],
+  "status": "brief",
+  "createdAt": "2026-07-30",
+  "updatedAt": "2026-07-30"
+}

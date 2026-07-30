@@ -58,6 +58,8 @@ const COVER_OPTIONS: { value: CoverKind; label: string }[] = [
   { value: "trinity", label: "Trinity" },
   { value: "cardinal", label: "Cardinal" },
   { value: "apocrypha", label: "Apocrypha" },
+  { value: "artometrics", label: "Artometrics" },
+  { value: "psychonomics", label: "Psychonomics" },
   { value: "plain", label: "Plain" },
 ];
 

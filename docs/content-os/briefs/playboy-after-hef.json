@@ -1,0 +1,90 @@
+{
+  "slug": "playboy-after-hef",
+  "desk": "arts",
+  "title": "Playboy After Hef: What Happens When the Brand Outlives the House",
+  "workingTitle": "Playboy After Hef",
+  "primaryKeyword": "Playboy brand after Hugh Hefner",
+  "secondaryKeywords": [
+    "PLBY Group licensing model",
+    "Cooper Hefner Playboy bid",
+    "Playboy Mansion cultural history",
+    "Hugh Hefner legacy criticism",
+    "Playboy magazine relaunch"
+  ],
+  "searchIntent": "informational",
+  "audience": "Readers who want a brand autopsy — club, magazine, mansion, licensing shell — not nostalgia or pure takedown.",
+  "metaDescription": "From mansion hospitality to PLBY licensing: how Playboy survived Hefner, rejected his son’s bid, and still sells access mythology in a post-MeToo culture.",
+  "angle": "Playboy is the perfect Artometrics object: a firm that sold proximity to young women as lifestyle, then tried to become pure IP. Trace club → magazine → mansion → SPAC/licensing, Cooper’s rejected bid, posthumous creep literature, and the awkward cultural afterlife (Hef cameo + Brand’s bunny in Hop) beside today’s age-gap Hollywood discourse.",
+  "dataSources": [
+    {
+      "name": "PLBY Group investor releases / 10-K style public filings",
+      "url": "https://investors.playboy.com/",
+      "notes": "Revenue mix: licensing, media, experiences; magazine relaunch; Great Playmate Search"
+    },
+    {
+      "name": "Variety — Playboy rejects Cooper Hefner bid (2024)",
+      "url": "https://variety.com/2024/biz/news/playboy-rejects-cooper-hefner-100-million-offer-1236189567/",
+      "notes": "$100M+ cash offer rejected as undervaluing brand assets"
+    },
+    {
+      "name": "Hop (2011) credits — Brand as E.B.; Hefner mansion voice",
+      "url": "https://en.wikipedia.org/wiki/Hop_(film)",
+      "notes": "Cultural crossover beat — not a misconduct claim; tonal bridge to Brand/BBC era"
+    },
+    {
+      "name": "Published Hefner biographies / #MeToo-era mansion reporting",
+      "url": "https://www.nytimes.com/",
+      "notes": "Use major outlets only for posthumous criticism of Hefner’s late-life mansion culture"
+    }
+  ],
+  "sectionPlan": [
+    {
+      "id": "peg",
+      "title": "THE BRAND THAT OUTLIVED THE HOUSE",
+      "question": "What is Playboy selling now that the mansion era is over?",
+      "keyword": "Playboy brand after Hugh Hefner"
+    },
+    {
+      "id": "life-cycle",
+      "title": "CLUB → MAGAZINE → MANSION → IP",
+      "question": "How did the product shift from hospitality/access to licensing?",
+      "keyword": "Playboy Mansion cultural history"
+    },
+    {
+      "id": "hefner-book",
+      "title": "THE FOUNDER PROBLEM",
+      "question": "What happens when the founder *was* the product — and the archive turns against him?",
+      "keyword": "Hugh Hefner legacy criticism"
+    },
+    {
+      "id": "sons-bid",
+      "title": "THE $100M LEGACY BID",
+      "question": "Why reject Cooper Hefner’s cash offer if the brand is ‘heritage’?",
+      "keyword": "Cooper Hefner Playboy bid"
+    },
+    {
+      "id": "afterlife",
+      "title": "BUNNIES IN THE CULTURE",
+      "question": "What do Hop, Brand, and today’s age-gap discourse say about the myth Playboy still licenses?",
+      "keyword": "Playboy magazine relaunch"
+    }
+  ],
+  "banner": {
+    "mood": "Empty mid-century lounge at dawn, cream and black, one red accent, no logos",
+    "subjects": "Abandoned pool cabana, empty velvet rope, magazine stack without faces",
+    "avoid": "Bunny costume cheesecake, celebrity likenesses, purple gradients"
+  },
+  "distribution": {
+    "linkedinHook": "Playboy didn’t die with Hefner — it became a licensing shell. The question is what myth that shell is still selling.",
+    "shortFact": "Cooper Hefner’s $100M+ bid was rejected in 2024 while PLBY pushed magazine/Playmate relaunch.",
+    "youtubeTitle": "Playboy After Hef: The Brand That Outlived the Mansion",
+    "buffer": true,
+    "slackNotify": true,
+    "slackChannel": "#editorial"
+  },
+  "channels": { "buffer": true, "slack": true, "newsletter": true },
+  "relatedSlugs": ["protection-threshold", "age-gap-hollywood-market"],
+  "status": "brief",
+  "createdAt": "2026-07-30",
+  "updatedAt": "2026-07-30"
+}

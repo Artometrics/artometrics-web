@@ -4,6 +4,8 @@
 import { trinitySeed as trinity } from "@/lib/twilda/trinity-seed";
 import { cardinalSeed } from "@/lib/twilda/cardinal-seed";
 import { apocryphaSeed } from "@/lib/twilda/apocrypha-seed";
+import { artometricsBookSeed } from "@/lib/twilda/artometrics-book-seed";
+import { psychonomicsBookSeed } from "@/lib/twilda/psychonomics-book-seed";
 
 export type CodexType = "character" | "location" | "lore" | "other";
 
@@ -52,7 +54,14 @@ export interface Novel {
   chapters: Chapter[];
 }
 
-export type CoverKind = "gatsby" | "cardinal" | "trinity" | "apocrypha" | "plain";
+export type CoverKind =
+  | "gatsby"
+  | "cardinal"
+  | "trinity"
+  | "apocrypha"
+  | "artometrics"
+  | "psychonomics"
+  | "plain";
 
 export function wordCount(text: string): number {
   const t = text.trim();
@@ -367,8 +376,17 @@ export { trinitySeed as trinity } from "@/lib/twilda/trinity-seed";
 
 const cardinal: Novel = cardinalSeed;
 const apocrypha: Novel = apocryphaSeed;
+const artometricsBook: Novel = artometricsBookSeed;
+const psychonomicsBook: Novel = psychonomicsBookSeed;
 
-export const novels: Novel[] = [gatsby, trinity, cardinal, apocrypha];
+export const novels: Novel[] = [
+  gatsby,
+  trinity,
+  cardinal,
+  apocrypha,
+  artometricsBook,
+  psychonomicsBook,
+];
 
 export function getNovel(id: string): Novel | undefined {
   return novels.find((n) => n.id === id);

@@ -1,0 +1,79 @@
+{
+  "slug": "age-gap-hollywood-market",
+  "desk": "arts",
+  "title": "The Age-Gap Market: Hollywood’s Most Public Preference Pattern",
+  "workingTitle": "Age-Gap Hollywood Market",
+  "primaryKeyword": "Hollywood age gap dating pattern data",
+  "secondaryKeywords": [
+    "Leonardo DiCaprio dating age chart",
+    "age asymmetry power Hollywood",
+    "celebrity relationship age gap statistics",
+    "entertainment industry age preferences",
+    "modeling industry age pipeline"
+  ],
+  "searchIntent": "informational",
+  "audience": "Readers who want the DiCaprio meme turned into a market-structure report — power, pipelines, and public data — not slut-shaming or fan war.",
+  "metaDescription": "Treat Hollywood’s public age-gap dating patterns as a market: pipelines from modeling, power asymmetry, and what the viral DiCaprio chart actually measures.",
+  "angle": "The internet already made the chart. Artometrics asks what system produces repeatedly public pairings with large age asymmetries — casting/modeling pipelines, status asymmetry, and preference that stays legal while remaining structurally telling. DiCaprio is the calibration case, not the only case. Connect lightly to Playboy’s access mythology without claiming criminality.",
+  "dataSources": [
+    {
+      "name": "Public relationship timelines (major outlets)",
+      "url": "https://www.newsweek.com/facet-check-leonardo-dicaprio-doesnt-date-women-over-age-25-1738497",
+      "notes": "Newsweek fact check + comparable reporting; label uncertainty"
+    },
+    {
+      "name": "Modeling industry age/career length studies",
+      "url": "https://www.vogue.com/",
+      "notes": "Pipeline supply side — cite carefully"
+    },
+    {
+      "name": "Artometrics awards / filmography files",
+      "url": "/data/",
+      "notes": "Career peak timing vs relationship publicity windows"
+    }
+  ],
+  "sectionPlan": [
+    {
+      "id": "chart",
+      "title": "THE CHART EVERYONE ALREADY SAW",
+      "question": "What does the DiCaprio age chart measure — and what does it not?",
+      "keyword": "Leonardo DiCaprio dating age chart"
+    },
+    {
+      "id": "market",
+      "title": "SUPPLY, DEMAND, ASYMMETRY",
+      "question": "Which pipelines feed public pairings with large age gaps?",
+      "keyword": "modeling industry age pipeline"
+    },
+    {
+      "id": "power",
+      "title": "POWER WITHOUT BREAKING THE LAW",
+      "question": "How do we talk about structural harm when relationships are between adults?",
+      "keyword": "age asymmetry power Hollywood"
+    },
+    {
+      "id": "brand-rhyme",
+      "title": "MANSION MYTHOLOGY",
+      "question": "Where does Playboy’s access brand rhyme with today’s pattern — and where does it not?",
+      "keyword": "celebrity relationship age gap statistics"
+    }
+  ],
+  "banner": {
+    "mood": "Two empty bar stools of different heights, night city glass, cream + red",
+    "subjects": "Red carpet stanchions, no faces",
+    "avoid": "Girlfriend collage, body shots, purple gradients"
+  },
+  "distribution": {
+    "linkedinHook": "The DiCaprio chart isn’t a meme. It’s a public preference pattern waiting for a market explanation.",
+    "shortFact": "Calibration case: repeated public relationships ending near partner age 25 — measured, caveated, systematized.",
+    "youtubeTitle": "Hollywood’s Age-Gap Market, Quantified",
+    "buffer": true,
+    "slackNotify": true,
+    "slackChannel": "#editorial"
+  },
+  "channels": { "buffer": true, "slack": true, "newsletter": true },
+  "relatedSlugs": ["playboy-after-hef", "protection-threshold"],
+  "status": "brief",
+  "createdAt": "2026-07-30",
+  "updatedAt": "2026-07-30"
+}

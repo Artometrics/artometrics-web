@@ -1,0 +1,71 @@
+{
+  "slug": "institutional-winning-meta",
+  "desk": "sports",
+  "title": "Institutional Winning",
+  "workingTitle": "Institutional Winning",
+  "primaryKeyword": "sports dynasty institutional winning",
+  "secondaryKeywords": [
+    "artometrics meta analysis",
+    "cross report framework",
+    "culture quantified"
+  ],
+  "searchIntent": "informational",
+  "audience": "Readers who want frameworks that cite multiple Artometrics reports.",
+  "metaDescription": "Across Yankees, Patriots, Celtics, Warriors \u2014 what transfers when winning is a system, not a star.",
+  "angle": "Sports dynasty reports \u2192 comparative institutional model.",
+  "dataSources": [
+    {
+      "name": "Artometrics sibling reports",
+      "url": "/editions",
+      "notes": "Cross-cite live slugs"
+    }
+  ],
+  "sectionPlan": [
+    {
+      "id": "claim",
+      "title": "NEW CLAIM",
+      "question": "What claim do the sources jointly unlock?",
+      "keyword": "sports dynasty institutional winning"
+    },
+    {
+      "id": "sources",
+      "title": "SOURCE REPORTS",
+      "question": "What does each sibling contribute?",
+      "keyword": "sports dynasty institutional winning"
+    },
+    {
+      "id": "framework",
+      "title": "FRAMEWORK",
+      "question": "What reusable model emerges?",
+      "keyword": "sports dynasty institutional winning"
+    }
+  ],
+  "banner": {
+    "mood": "Documentary cream paper, spare red",
+    "subjects": "Empty desk instruments",
+    "avoid": "Purple gradients, collage"
+  },
+  "distribution": {
+    "linkedinHook": "Across Yankees, Patriots, Celtics, Warriors \u2014 what transfers when winning is a system, not a star.",
+    "shortFact": "Sports dynasty reports \u2192 comparative institutional model.",
+    "youtubeTitle": "Institutional Winning",
+    "buffer": true,
+    "slackNotify": true,
+    "slackChannel": "#editorial"
+  },
+  "channels": {
+    "buffer": true,
+    "slack": true,
+    "newsletter": true
+  },
+  "relatedSlugs": [],
+  "status": "brief",
+  "createdAt": "2026-07-30",
+  "updatedAt": "2026-07-30",
+  "kind": "meta",
+  "sourceSlugs": [
+    "sports-dynasty-index-best-and-worst-conversion",
+    "patriots-the-artometrics-of-the-system-dynasty",
+    "celtics-the-artometrics-of-institutional-winning"
+  ]
+}

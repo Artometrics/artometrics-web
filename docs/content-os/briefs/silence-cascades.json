@@ -1,0 +1,70 @@
+{
+  "slug": "silence-cascades",
+  "desk": "humanities",
+  "title": "Silence Cascades: Why Everyone Knew and the Calendar Moved Anyway",
+  "workingTitle": "Silence Cascades: Why Everyone Knew and ",
+  "primaryKeyword": "preference falsification institutional silence",
+  "secondaryKeywords": [
+    "artometrics meta analysis",
+    "cross report framework",
+    "culture quantified"
+  ],
+  "searchIntent": "informational",
+  "audience": "Readers who want frameworks that cite multiple Artometrics reports.",
+  "metaDescription": "Kuran\u2019s preference falsification meets Protection Threshold timelines \u2014 when private knowledge becomes public cascade.",
+  "angle": "Meta join of preference falsification + silence-cascade-timeline + BBC/Savile pattern.",
+  "dataSources": [
+    {
+      "name": "Artometrics sibling reports",
+      "url": "/editions",
+      "notes": "Cross-cite live slugs"
+    }
+  ],
+  "sectionPlan": [
+    {
+      "id": "claim",
+      "title": "NEW CLAIM",
+      "question": "What claim do the sources jointly unlock?",
+      "keyword": "preference falsification institutional silence"
+    },
+    {
+      "id": "sources",
+      "title": "SOURCE REPORTS",
+      "question": "What does each sibling contribute?",
+      "keyword": "preference falsification institutional silence"
+    },
+    {
+      "id": "framework",
+      "title": "FRAMEWORK",
+      "question": "What reusable model emerges?",
+      "keyword": "preference falsification institutional silence"
+    }
+  ],
+  "banner": {
+    "mood": "Documentary cream paper, spare red",
+    "subjects": "Empty desk instruments",
+    "avoid": "Purple gradients, collage"
+  },
+  "distribution": {
+    "linkedinHook": "Kuran\u2019s preference falsification meets Protection Threshold timelines \u2014 when private knowledge becomes public cascade.",
+    "shortFact": "Meta join of preference falsification + silence-cascade-timeline + BBC/Savile pattern.",
+    "youtubeTitle": "Silence Cascades: Why Everyone Knew and the Calendar Moved Anyway",
+    "buffer": true,
+    "slackNotify": true,
+    "slackChannel": "#editorial"
+  },
+  "channels": {
+    "buffer": true,
+    "slack": true,
+    "newsletter": true
+  },
+  "relatedSlugs": [],
+  "status": "brief",
+  "createdAt": "2026-07-30",
+  "updatedAt": "2026-07-30",
+  "kind": "meta",
+  "sourceSlugs": [
+    "preference-falsification-explained",
+    "protection-threshold"
+  ]
+}

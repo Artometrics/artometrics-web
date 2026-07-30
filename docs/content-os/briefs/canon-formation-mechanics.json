@@ -1,0 +1,71 @@
+{
+  "slug": "canon-formation-mechanics",
+  "desk": "humanities",
+  "title": "Canon Formation Mechanics",
+  "workingTitle": "Canon Formation Mechanics",
+  "primaryKeyword": "canon formation data culture",
+  "secondaryKeywords": [
+    "artometrics meta analysis",
+    "cross report framework",
+    "culture quantified"
+  ],
+  "searchIntent": "informational",
+  "audience": "Readers who want frameworks that cite multiple Artometrics reports.",
+  "metaDescription": "How lists become memory \u2014 Gutenberg, Pantheon, Rolling Stone as measurement instruments.",
+  "angle": "Canon Issue meta from list instruments.",
+  "dataSources": [
+    {
+      "name": "Artometrics sibling reports",
+      "url": "/editions",
+      "notes": "Cross-cite live slugs"
+    }
+  ],
+  "sectionPlan": [
+    {
+      "id": "claim",
+      "title": "NEW CLAIM",
+      "question": "What claim do the sources jointly unlock?",
+      "keyword": "canon formation data culture"
+    },
+    {
+      "id": "sources",
+      "title": "SOURCE REPORTS",
+      "question": "What does each sibling contribute?",
+      "keyword": "canon formation data culture"
+    },
+    {
+      "id": "framework",
+      "title": "FRAMEWORK",
+      "question": "What reusable model emerges?",
+      "keyword": "canon formation data culture"
+    }
+  ],
+  "banner": {
+    "mood": "Documentary cream paper, spare red",
+    "subjects": "Empty desk instruments",
+    "avoid": "Purple gradients, collage"
+  },
+  "distribution": {
+    "linkedinHook": "How lists become memory \u2014 Gutenberg, Pantheon, Rolling Stone as measurement instruments.",
+    "shortFact": "Canon Issue meta from list instruments.",
+    "youtubeTitle": "Canon Formation Mechanics",
+    "buffer": true,
+    "slackNotify": true,
+    "slackChannel": "#editorial"
+  },
+  "channels": {
+    "buffer": true,
+    "slack": true,
+    "newsletter": true
+  },
+  "relatedSlugs": [],
+  "status": "brief",
+  "createdAt": "2026-07-30",
+  "updatedAt": "2026-07-30",
+  "kind": "meta",
+  "sourceSlugs": [
+    "project-gutenberg-public-domain-canon-map",
+    "pantheon-the-artometrics-of-collective-memory",
+    "rolling-stone-albums"
+  ]
+}

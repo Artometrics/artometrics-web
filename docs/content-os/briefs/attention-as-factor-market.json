@@ -1,0 +1,72 @@
+{
+  "slug": "attention-as-factor-market",
+  "desk": "civics",
+  "title": "Attention as a Factor Market",
+  "workingTitle": "Attention as a Factor Market",
+  "primaryKeyword": "attention economy factor market",
+  "secondaryKeywords": [
+    "artometrics meta analysis",
+    "cross report framework",
+    "culture quantified"
+  ],
+  "searchIntent": "informational",
+  "audience": "Readers who want frameworks that cite multiple Artometrics reports.",
+  "metaDescription": "Inventory, CPM, creator labor share \u2014 attention treated as a factor, not a vibe.",
+  "angle": "Platforms Issue meta from Netflix/Steam/H3/web metrics.",
+  "dataSources": [
+    {
+      "name": "Artometrics sibling reports",
+      "url": "/editions",
+      "notes": "Cross-cite live slugs"
+    }
+  ],
+  "sectionPlan": [
+    {
+      "id": "claim",
+      "title": "NEW CLAIM",
+      "question": "What claim do the sources jointly unlock?",
+      "keyword": "attention economy factor market"
+    },
+    {
+      "id": "sources",
+      "title": "SOURCE REPORTS",
+      "question": "What does each sibling contribute?",
+      "keyword": "attention economy factor market"
+    },
+    {
+      "id": "framework",
+      "title": "FRAMEWORK",
+      "question": "What reusable model emerges?",
+      "keyword": "attention economy factor market"
+    }
+  ],
+  "banner": {
+    "mood": "Documentary cream paper, spare red",
+    "subjects": "Empty desk instruments",
+    "avoid": "Purple gradients, collage"
+  },
+  "distribution": {
+    "linkedinHook": "Inventory, CPM, creator labor share \u2014 attention treated as a factor, not a vibe.",
+    "shortFact": "Platforms Issue meta from Netflix/Steam/H3/web metrics.",
+    "youtubeTitle": "Attention as a Factor Market",
+    "buffer": true,
+    "slackNotify": true,
+    "slackChannel": "#editorial"
+  },
+  "channels": {
+    "buffer": true,
+    "slack": true,
+    "newsletter": true
+  },
+  "relatedSlugs": [],
+  "status": "brief",
+  "createdAt": "2026-07-30",
+  "updatedAt": "2026-07-30",
+  "kind": "meta",
+  "sourceSlugs": [
+    "netflix-engagement",
+    "video-games-steam",
+    "h3-the-artometrics-of-a-youtube-dynasty",
+    "web-page-metrics"
+  ]
+}

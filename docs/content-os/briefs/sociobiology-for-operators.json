@@ -1,0 +1,74 @@
+{
+  "slug": "sociobiology-for-operators",
+  "desk": "science",
+  "title": "Sociobiology for Operators: What the Field Still Offers (and What It Doesn’t)",
+  "workingTitle": "Sociobiology Field Guide",
+  "primaryKeyword": "sociobiology explained for professionals",
+  "secondaryKeywords": [
+    "EO Wilson sociobiology controversy",
+    "evolutionary psychology status coalitions",
+    "kin selection culture",
+    "biological metaphors social science limits",
+    "status competition organizations"
+  ],
+  "searchIntent": "informational",
+  "audience": "Professionals who keep hearing evolutionary metaphors in strategy rooms and want a non-crank briefing.",
+  "metaDescription": "A careful field guide to sociobiology — useful models of status, kinship, and coalitions, plus the history of misuse — for operators who brief others.",
+  "angle": "Rehabilitate the *useful* toolkit without laundering scientific racism or just-so stories. History of the Wilson controversy → core concepts that survive → how culture desks can use them → hard limits.",
+  "dataSources": [
+    {
+      "name": "EO Wilson — Sociobiology (1975) + later clarifications",
+      "url": "https://www.hup.harvard.edu/",
+      "notes": "Primary text + controversy context"
+    },
+    {
+      "name": "Modern behavioral ecology / evolutionary anthro reviews",
+      "url": "https://www.nature.com/",
+      "notes": "What replicated; what didn’t"
+    }
+  ],
+  "sectionPlan": [
+    {
+      "id": "history",
+      "title": "THE FIGHT OVER THE BOOK",
+      "question": "Why did sociobiology explode the academy — and what was actually in dispute?",
+      "keyword": "EO Wilson sociobiology controversy"
+    },
+    {
+      "id": "toolkit",
+      "title": "THE SURVIVING TOOLKIT",
+      "question": "Which models (kin, reciprocal altruism, status) still earn their keep?",
+      "keyword": "kin selection culture"
+    },
+    {
+      "id": "orgs",
+      "title": "STATUS IN ORGANIZATIONS",
+      "question": "How do coalition and dominance games show up in firms and fandoms?",
+      "keyword": "status competition organizations"
+    },
+    {
+      "id": "limits",
+      "title": "HARD LIMITS",
+      "question": "Where must culture desks refuse biological metaphor?",
+      "keyword": "biological metaphors social science limits"
+    }
+  ],
+  "banner": {
+    "mood": "Natural history museum hall empty at night, cream + red",
+    "subjects": "Specimen drawers, ant colony display, no human faces",
+    "avoid": "Phrenology vibes, purple gradients, ‘alpha’ meme imagery"
+  },
+  "distribution": {
+    "linkedinHook": "Sociobiology became a slur before most operators learned what was useful in it. Here’s the non-crank briefing.",
+    "shortFact": "Status, kinship, coalitions — keep the models, bin the just-so supremacy stories.",
+    "youtubeTitle": "Sociobiology for Operators (Without the Crank Layer)",
+    "buffer": true,
+    "slackNotify": true,
+    "slackChannel": "#editorial"
+  },
+  "channels": { "buffer": true, "slack": true, "newsletter": true },
+  "relatedSlugs": ["narrative-economics-field-guide", "preference-falsification-explained"],
+  "status": "brief",
+  "createdAt": "2026-07-30",
+  "updatedAt": "2026-07-30"
+}

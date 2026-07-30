@@ -1,0 +1,71 @@
+{
+  "slug": "narrative-economics-of-hits",
+  "desk": "arts",
+  "title": "Narrative Economics of Hits",
+  "workingTitle": "Narrative Economics of Hits",
+  "primaryKeyword": "narrative economics hit songs films",
+  "secondaryKeywords": [
+    "artometrics meta analysis",
+    "cross report framework",
+    "culture quantified"
+  ],
+  "searchIntent": "informational",
+  "audience": "Readers who want frameworks that cite multiple Artometrics reports.",
+  "metaDescription": "Shiller\u2019s contagion model applied to Billboard and box office boom\u2013bust stories.",
+  "angle": "Narrative economics field guide \u00d7 music/movies charts.",
+  "dataSources": [
+    {
+      "name": "Artometrics sibling reports",
+      "url": "/editions",
+      "notes": "Cross-cite live slugs"
+    }
+  ],
+  "sectionPlan": [
+    {
+      "id": "claim",
+      "title": "NEW CLAIM",
+      "question": "What claim do the sources jointly unlock?",
+      "keyword": "narrative economics hit songs films"
+    },
+    {
+      "id": "sources",
+      "title": "SOURCE REPORTS",
+      "question": "What does each sibling contribute?",
+      "keyword": "narrative economics hit songs films"
+    },
+    {
+      "id": "framework",
+      "title": "FRAMEWORK",
+      "question": "What reusable model emerges?",
+      "keyword": "narrative economics hit songs films"
+    }
+  ],
+  "banner": {
+    "mood": "Documentary cream paper, spare red",
+    "subjects": "Empty desk instruments",
+    "avoid": "Purple gradients, collage"
+  },
+  "distribution": {
+    "linkedinHook": "Shiller\u2019s contagion model applied to Billboard and box office boom\u2013bust stories.",
+    "shortFact": "Narrative economics field guide \u00d7 music/movies charts.",
+    "youtubeTitle": "Narrative Economics of Hits",
+    "buffer": true,
+    "slackNotify": true,
+    "slackChannel": "#editorial"
+  },
+  "channels": {
+    "buffer": true,
+    "slack": true,
+    "newsletter": true
+  },
+  "relatedSlugs": [],
+  "status": "brief",
+  "createdAt": "2026-07-30",
+  "updatedAt": "2026-07-30",
+  "kind": "meta",
+  "sourceSlugs": [
+    "narrative-economics-field-guide",
+    "billboard-hot-100",
+    "horror-movie-profit"
+  ]
+}
