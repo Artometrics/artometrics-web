@@ -1,0 +1,95 @@
+{
+  "slug": "padres-world-series-ownership-blueprint",
+  "desk": "sports",
+  "subdomain": "baseball",
+  "title": "A World Series Ownership Blueprint for the San Diego Padres",
+  "workingTitle": "Padres World Series Ownership Blueprint",
+  "primaryKeyword": "padres world series ownership strategy",
+  "secondaryKeywords": [
+    "san diego padres franchise value",
+    "padres player assets war",
+    "padres farm system replenishment",
+    "how padres can win world series",
+    "padres vs dodgers contention assets"
+  ],
+  "searchIntent": "informational",
+  "audience": "A prospective Padres owner or a friend who wants a serious, sendable memo on how San Diego converts capital and players into a first World Series—not a hot-take recap.",
+  "metaDescription": "A buyer’s memo: franchise capital, player assets, peer gaps, and the operating plan to win San Diego’s first title.",
+  "angle": "Treat ownership as an operating problem: inventory capital and controllable WAR, compare the championship asset stack to true contenders, then rank the gaps a buyer closes first.",
+  "dataSources": [
+    {
+      "name": "Forbes MLB valuations (March 2026)",
+      "url": "https://www.forbes.com/teams/san-diego-padres/",
+      "notes": "Padres ~$3.1B / 10th; peer values for Yankees, Dodgers, Giants, Mets, Angels, D-backs, Rockies."
+    },
+    {
+      "name": "Baseball Reference — 2024 Padres statistics",
+      "url": "https://www.baseball-reference.com/teams/SDP/2024.shtml",
+      "notes": "bWAR for Merrill, King, Cease, Machado, Tatis, and other core contributors."
+    },
+    {
+      "name": "FanGraphs / Spotrac payroll summaries",
+      "url": "https://www.fangraphs.com/roster-resource/payroll/padres",
+      "notes": "Rounded cost markers for efficiency screening only."
+    }
+  ],
+  "sectionPlan": [
+    {
+      "id": "franchise-capital",
+      "title": "FRANCHISE CAPITAL",
+      "question": "Does San Diego already clear the capital bar for contention?",
+      "keyword": "san diego padres franchise value"
+    },
+    {
+      "id": "player-assets",
+      "title": "PLAYER ASSETS",
+      "question": "Which 2024 contributors were the real ownership inventory?",
+      "keyword": "padres player assets war"
+    },
+    {
+      "id": "cost-vs-war",
+      "title": "COST VERSUS WAR",
+      "question": "Where did the club buy surplus wins versus expensive names?",
+      "keyword": "padres payroll conversion"
+    },
+    {
+      "id": "asset-stack",
+      "title": "CONTENDER ASSET STACK",
+      "question": "Where do the Padres lag Dodgers/Astros/Phillies/Rangers?",
+      "keyword": "padres vs dodgers contention assets"
+    },
+    {
+      "id": "ownership-playbook",
+      "title": "OWNERSHIP PLAYBOOK",
+      "question": "Which gaps should a buyer close first to win a World Series?",
+      "keyword": "how padres can win world series"
+    }
+  ],
+  "banner": {
+    "mood": "Documentary cream paper, spare Artometrics red, ownership-memo atmosphere",
+    "subjects": "Empty Petco-like field at dusk, folder of unmarked charts on a desk—no logos, no identifiable players",
+    "avoid": "Padres logos, sale rumors as tabloid collage, purple gradients"
+  },
+  "distribution": {
+    "linkedinHook": "Forbes books the Padres as a top-ten MLB asset. The missing World Series is an operating problem—not a small-market excuse.",
+    "shortFact": "Merrill, King, and Cease outproduced several max-contract returns in 2024 bWAR.",
+    "youtubeTitle": "What It Would Take to Own the Padres and Win a World Series",
+    "buffer": true,
+    "slackNotify": true,
+    "slackChannel": "#editorial"
+  },
+  "channels": {
+    "buffer": true,
+    "slack": true,
+    "newsletter": true
+  },
+  "relatedSlugs": [
+    "padres-the-artometrics-of-paying-for-october",
+    "dodgers-the-artometrics-of-baseballs-modern-machine",
+    "sports-dynasty-index-best-and-worst-conversion",
+    "league-money-skill-and-star-systems"
+  ],
+  "status": "published",
+  "createdAt": "2026-07-30",
+  "updatedAt": "2026-07-30"
+}

@@ -184,7 +184,7 @@ function resolveTaxonomy(slug, title, rawTags = []) {
     // Lightweight fallback aligned with data/sections inferTaxonomy
     const hay = `${slug} ${title} ${rawTags.join(" ")}`.toLowerCase();
     const rules = [
-      [/\b(yankees|dodgers|giant|mlb|baseball)\b/, "sports", "baseball"],
+      [/\b(yankees|dodgers|padres|giant|mlb|baseball)\b/, "sports", "baseball"],
       [/\b(celtics|lakers|warrior|nba|basketball)\b/, "sports", "basketball"],
       [/\b(cowboys|patriots|nfl|super.?bowl|football)\b/, "sports", "football"],
       [/\b(steam|pokemon|video.?game|gaming|board.?game)\b/, "sports", "gaming"],
