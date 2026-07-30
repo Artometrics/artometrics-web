@@ -3,6 +3,54 @@
     "epub": true,
     "pdf": true
   },
+  "movies": {
+    "epub": true,
+    "pdf": true
+  },
+  "games": {
+    "epub": true,
+    "pdf": true
+  },
+  "food": {
+    "epub": true,
+    "pdf": true
+  },
+  "sports": {
+    "epub": true,
+    "pdf": true
+  },
+  "power": {
+    "epub": true,
+    "pdf": true
+  },
+  "science-art": {
+    "epub": true,
+    "pdf": true
+  },
+  "canon": {
+    "epub": true,
+    "pdf": true
+  },
+  "geo": {
+    "epub": true,
+    "pdf": true
+  },
+  "platforms": {
+    "epub": true,
+    "pdf": true
+  },
+  "identity": {
+    "epub": true,
+    "pdf": true
+  },
+  "money": {
+    "epub": true,
+    "pdf": true
+  },
+  "risk": {
+    "epub": true,
+    "pdf": true
+  },
   "psychonomics": {
     "epub": true,
     "pdf": true

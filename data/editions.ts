@@ -21,6 +21,7 @@ export const EDITIONS: EditionManifest[] = [
     title: "The Music Issue",
     dek: "Charts, catalogs, and the dual books of fame — crash course for anyone who lives in the attention economy of sound.",
     section: "arts",
+    heroImage: "/images/editions/music.jpg",
     status: "collecting",
     articleSlugs: [
       "billboard-hot-100",
@@ -42,6 +43,7 @@ export const EDITIONS: EditionManifest[] = [
     title: "The Movie Issue",
     dek: "Franchise economics, streaming libraries, and when a star becomes expensive to protect.",
     section: "arts",
+    heroImage: "/images/editions/movies.jpg",
     status: "collecting",
     articleSlugs: [
       "horror-movie-profit",
@@ -64,6 +66,7 @@ export const EDITIONS: EditionManifest[] = [
     title: "The Games Issue",
     dek: "Steam, Pokémon, boards, and fandom as preference infrastructure.",
     section: "arts",
+    heroImage: "/images/editions/games.jpg",
     status: "collecting",
     articleSlugs: [
       "video-games-steam",
@@ -81,6 +84,7 @@ export const EDITIONS: EditionManifest[] = [
     title: "The Culinary Issue",
     dek: "Coffee, beer, wine, ramen, and the prestige economics of taste.",
     section: "culture",
+    heroImage: "/images/editions/food.jpg",
     status: "collecting",
     articleSlugs: [
       "coffee-the-artometrics-of-java",
@@ -99,6 +103,7 @@ export const EDITIONS: EditionManifest[] = [
     title: "The Sports Issue",
     dek: "Dynasties, markets, and institutional winning — teams as systems.",
     section: "sports",
+    heroImage: "/images/editions/sports.jpg",
     status: "collecting",
     articleSlugs: [
       "sports-dynasty-index-best-and-worst-conversion",
@@ -122,6 +127,7 @@ export const EDITIONS: EditionManifest[] = [
     title: "The Power Issue",
     dek: "Leaders, silence, access brands, and the economics of when institutions stop protecting.",
     section: "civics",
+    heroImage: "/images/editions/power.jpg",
     status: "collecting",
     articleSlugs: [
       "caesar-the-psychonomics-of-emperor-julius",
@@ -146,6 +152,7 @@ export const EDITIONS: EditionManifest[] = [
     title: "The Science of Art Issue",
     dek: "Canon, museums, heritage, and the historical bridge from artistic practice to scientific method.",
     section: "science",
+    heroImage: "/images/editions/science-art.jpg",
     status: "collecting",
     articleSlugs: [
       "pantheon-the-artometrics-of-collective-memory",
@@ -164,6 +171,7 @@ export const EDITIONS: EditionManifest[] = [
     title: "The Canon Issue",
     dek: "How lists become memory — Gutenberg, Pantheon, Rolling Stone, and literary fame.",
     section: "humanities",
+    heroImage: "/images/editions/canon.jpg",
     status: "collecting",
     articleSlugs: [
       "project-gutenberg",
@@ -181,6 +189,7 @@ export const EDITIONS: EditionManifest[] = [
     title: "The Atlas Issue",
     dek: "Soft power, rival cities, export identity — culture on a map.",
     section: "civics",
+    heroImage: "/images/editions/geo.jpg",
     status: "collecting",
     articleSlugs: [
       "cultural-exports-geoeconomics",
@@ -200,6 +209,7 @@ export const EDITIONS: EditionManifest[] = [
     title: "The Platform Issue",
     dek: "Netflix, Steam, YouTube dynasties, and attention as a factor market.",
     section: "arts",
+    heroImage: "/images/editions/platforms.jpg",
     status: "collecting",
     articleSlugs: [
       "netflix-engagement",
@@ -218,6 +228,7 @@ export const EDITIONS: EditionManifest[] = [
     title: "The Identity Issue",
     dek: "Language, schools, regional identity — preference infrastructure made visible.",
     section: "culture",
+    heroImage: "/images/editions/identity.jpg",
     status: "collecting",
     articleSlugs: [
       "school-diversity",
@@ -233,6 +244,7 @@ export const EDITIONS: EditionManifest[] = [
     title: "The Money Issue",
     dek: "Wages, tuition, prestige, and what creative labor actually pays.",
     section: "civics",
+    heroImage: "/images/editions/money.jpg",
     status: "collecting",
     articleSlugs: [
       "wealth-income",
@@ -250,6 +262,7 @@ export const EDITIONS: EditionManifest[] = [
     title: "The Risk Issue",
     dek: "Airlines, storms, nuclear ledgers, hospitals — institutional risk as narrative and number.",
     section: "science",
+    heroImage: "/images/editions/risk.jpg",
     status: "collecting",
     articleSlugs: [
       "airline-safety",
@@ -268,6 +281,7 @@ export const EDITIONS: EditionManifest[] = [
     title: "The Psychonomics Issue",
     dek: "OSS-style leader profiles — when one person’s psychology becomes infrastructure.",
     section: "humanities",
+    heroImage: "/images/editions/psychonomics.jpg",
     status: "collecting",
     articleSlugs: [
       "caesar-the-psychonomics-of-emperor-julius",

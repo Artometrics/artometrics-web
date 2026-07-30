@@ -3,7 +3,7 @@ title: "The Protection Threshold: When Flops End Hollywood’s Silence"
 slug: protection-threshold
 pubDate: 2026-07-30
 description: "BBC’s Jared Leto exposé raises “why not sooner?” We test whether box-office decline, dual film/music books, and institutional risk mark a protection threshold."
-heroImage: /images/content/articles/protection-threshold/hero.png
+heroImage: /images/content/articles/protection-threshold/hero.jpg
 tags:
   - arts
 draft: true

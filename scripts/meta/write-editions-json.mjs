@@ -38,6 +38,7 @@ async function main() {
     dek: e.dek,
     section: e.section,
     status: e.status,
+    heroImage: e.heroImage ?? null,
     articleSlugs: e.articleSlugs,
     glueSlugs: e.glueSlugs,
     podcastIds: e.podcastIds ?? [],
