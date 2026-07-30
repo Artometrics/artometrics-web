@@ -57,6 +57,7 @@ const COVER_OPTIONS: { value: CoverKind; label: string }[] = [
   { value: "gatsby", label: "Gatsby" },
   { value: "trinity", label: "Trinity" },
   { value: "cardinal", label: "Cardinal" },
+  { value: "apocrypha", label: "Apocrypha" },
   { value: "plain", label: "Plain" },
 ];
 

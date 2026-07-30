@@ -3,6 +3,7 @@ import type { Database } from "@/lib/twilda/database.types";
 import type { CoverKind, Novel } from "@/lib/twilda/novelcrafter/data";
 import { gatsbySeed } from "@/lib/twilda/seed";
 import { cardinalSeed, cardinalDraftMeta } from "@/lib/twilda/cardinal-seed";
+import { apocryphaSeed, apocryphaSnippets, apocryphaDraftMeta } from "@/lib/twilda/apocrypha-seed";
 import {
   trinityV2Seed,
   trinityV2Snippets,
@@ -165,7 +166,11 @@ async function seedNovelShell(
   userId: string,
   seed: Novel,
   draftMeta: { name: string; slug: string; summary: string },
-  options?: { withCodex?: boolean; withChapters?: boolean },
+  options?: {
+    withCodex?: boolean;
+    withChapters?: boolean;
+    snippets?: { title: string; content: string }[];
+  },
 ): Promise<string> {
   const { data: novel, error } = await supabase
     .from("novels")
@@ -201,13 +206,14 @@ async function seedNovelShell(
     await seedDraftContent(supabase, novel.id, draft.id, {
       chapters: seed.chapters,
       codex: options?.withCodex === false ? [] : seed.codex,
+      snippets: options?.snippets,
     });
   }
 
   return novel.id;
 }
 
-/** Ensure Gatsby, Trinity (both drafts), and Cardinal exist in the library. */
+/** Ensure Gatsby, Trinity (both drafts), Cardinal, and Apocrypha exist in the library. */
 export async function ensureStarterNovels(supabase: Client, userId: string) {
   const existing = await listNovelCovers(supabase, userId);
   const covers = new Set(existing.map((n) => n.cover_kind));
@@ -247,6 +253,14 @@ export async function ensureStarterNovels(supabase: Client, userId: string) {
     await seedNovelShell(supabase, userId, cardinalSeed, cardinalDraftMeta, {
       withCodex: false,
       withChapters: true,
+    });
+  }
+
+  if (!covers.has("apocrypha")) {
+    await seedNovelShell(supabase, userId, apocryphaSeed, apocryphaDraftMeta, {
+      withCodex: true,
+      withChapters: true,
+      snippets: apocryphaSnippets,
     });
   }
 }
