@@ -1,6 +1,5 @@
-import { Image, Pressable, Text, View, StyleSheet } from "react-native";
+import { Image, Pressable, Text, View } from "react-native";
 import { Link } from "expo-router";
-import { Fonts } from "@/constants/Colors";
 import { useTheme } from "@/lib/theme";
 import { assetUrl } from "@/lib/assets";
 import {
@@ -22,7 +21,7 @@ export function MagazineCard({
   variant?: Variant;
   width?: number;
 }) {
-  const { colors, mode } = useTheme();
+  const { mode } = useTheme();
   const label = sectionLabel(post.tags);
   const hero = assetUrl(post.heroImage);
   const author = post.author ? formatAuthorName(String(post.author)) : "Kyle McAuliffe";
@@ -34,54 +33,59 @@ export function MagazineCard({
   return (
     <Link href={`/${post.slug}`} asChild>
       <Pressable
-        style={StyleSheet.flatten([
-          styles.card,
-          width ? { width } : styles.cardFlex,
-          variant === "compact" ? styles.compact : null,
-        ])}
+        className={[
+          "gap-2.5",
+          width ? "" : "flex-1 min-w-[200px]",
+          variant === "compact" ? "min-w-[160px]" : "",
+        ]
+          .filter(Boolean)
+          .join(" ")}
+        style={width ? { width } : undefined}
       >
         {hero ? (
           <Image
             source={{ uri: hero }}
-            style={[styles.image, { aspectRatio: aspect }]}
+            className="w-full bg-base-200"
+            style={{ aspectRatio: aspect }}
             resizeMode="cover"
             accessibilityLabel={post.title}
           />
         ) : (
           <View
-            style={[
-              styles.image,
-              styles.imageFallback,
-              { aspectRatio: aspect, backgroundColor: colors.bgElevated },
-            ]}
+            className="w-full bg-bg-elevated items-center justify-center"
+            style={{ aspectRatio: aspect }}
           >
             <Image
               source={{ uri: fallbackMark }}
-              style={styles.fallbackMark}
+              className="w-14 h-14 opacity-35"
               resizeMode="contain"
               accessibilityLabel="Artometrics"
             />
           </View>
         )}
-        <View style={styles.body}>
+        <View className="gap-1.5">
           {label ? (
-            <Text style={[styles.kicker, { color: colors.accent }]}>{label}</Text>
+            <Text className="text-[10px] tracking-[1.4px] uppercase font-bold text-accent">
+              {label}
+            </Text>
           ) : null}
           <Text
-            style={[
-              variant === "compact" ? styles.titleCompact : styles.title,
-              { color: colors.text },
-            ]}
+            className={[
+              "font-display uppercase text-fg",
+              variant === "compact"
+                ? "text-[15px] leading-[18px]"
+                : "text-xl leading-6 tracking-[0.4px]",
+            ].join(" ")}
             numberOfLines={variant === "compact" ? 3 : 4}
           >
             {post.title}
           </Text>
           {variant !== "compact" ? (
-            <Text style={[styles.deck, { color: colors.textMuted }]} numberOfLines={2}>
+            <Text className="font-sans text-[13px] leading-[18px] text-muted" numberOfLines={2}>
               {deckLine(post.description, 18)}
             </Text>
           ) : null}
-          <Text style={[styles.meta, { color: colors.textSubtle }]}>
+          <Text className="text-[10px] mt-0.5 tracking-[0.6px] uppercase font-semibold text-subtle">
             {author} · {formatDate(post.pubDate)}
           </Text>
         </View>
@@ -89,46 +93,3 @@ export function MagazineCard({
     </Link>
   );
 }
-
-const styles = StyleSheet.create({
-  card: { gap: 10 },
-  cardFlex: { flex: 1, minWidth: 200 },
-  compact: { minWidth: 160 },
-  image: { width: "100%", backgroundColor: "#e5e5e5" },
-  imageFallback: { alignItems: "center", justifyContent: "center" },
-  fallbackMark: { width: 56, height: 56, opacity: 0.35 },
-  body: { gap: 6 },
-  kicker: {
-    fontSize: 10,
-    letterSpacing: 1.4,
-    textTransform: "uppercase",
-    fontWeight: "700",
-  },
-  title: {
-    fontFamily: Fonts.display,
-    fontSize: 20,
-    lineHeight: 24,
-    fontWeight: "400",
-    textTransform: "uppercase",
-    letterSpacing: 0.4,
-  },
-  titleCompact: {
-    fontFamily: Fonts.display,
-    fontSize: 15,
-    lineHeight: 18,
-    fontWeight: "400",
-    textTransform: "uppercase",
-  },
-  deck: {
-    fontFamily: Fonts.sans,
-    fontSize: 13,
-    lineHeight: 18,
-  },
-  meta: {
-    fontSize: 10,
-    marginTop: 2,
-    letterSpacing: 0.6,
-    textTransform: "uppercase",
-    fontWeight: "600",
-  },
-});

@@ -1,15 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
-import {
-  Pressable,
-  Share,
-  Text,
-  View,
-  StyleSheet,
-  Platform,
-} from "react-native";
+import { Pressable, Share, Text, View, Platform } from "react-native";
 import { Link } from "expo-router";
-import { Fonts } from "@/constants/Colors";
-import { useTheme } from "@/lib/theme";
 import { useAuth } from "@/lib/auth";
 import { apiFetch } from "@/lib/supabase/client";
 import { assetUrl } from "@/lib/assets";
@@ -70,7 +61,6 @@ async function downloadAll(items: DownloadItem[]) {
 }
 
 export function ArticleActions({ slug, title, placement = "all" }: Props) {
-  const { colors } = useTheme();
   const { user } = useAuth();
   const [saved, setSaved] = useState(false);
   const [busy, setBusy] = useState(false);
@@ -172,38 +162,41 @@ export function ArticleActions({ slug, title, placement = "all" }: Props) {
 
   return (
     <View
-      style={[
-        styles.wrap,
-        placement === "top" && styles.wrapTop,
-        placement === "bottom" && styles.wrapBottom,
-        { borderColor: colors.border },
-      ]}
+      className={[
+        "border-t border-b border-border py-[18px] gap-3.5 my-3",
+        placement === "top" ? "border-b-0 mb-0 pb-3" : "",
+        placement === "bottom" ? "mt-2 pt-5" : "",
+      ]
+        .filter(Boolean)
+        .join(" ")}
     >
       {showTop ? (
-        <View style={styles.row}>
+        <View className="flex-row flex-wrap gap-2.5 items-center">
           <Pressable
             onPress={share}
             accessibilityRole="button"
             accessibilityLabel="Share this report"
-            style={[styles.btnPrimary, { backgroundColor: colors.text, borderColor: colors.text }]}
+            className="border border-fg bg-fg px-4 py-2.5"
           >
-            <Text style={[styles.btnText, { color: colors.bg }]}>Share</Text>
+            <Text className="text-xs font-bold tracking-[0.6px] uppercase text-bg">Share</Text>
           </Pressable>
           {user ? (
             <Pressable
               onPress={toggleSave}
               disabled={busy}
               accessibilityRole="button"
-              style={[styles.btn, { borderColor: colors.border }]}
+              className="border border-border px-3.5 py-2.5"
             >
-              <Text style={[styles.btnText, { color: colors.text }]}>
+              <Text className="text-xs font-bold tracking-[0.6px] uppercase text-fg">
                 {saved ? "Saved" : "Save"}
               </Text>
             </Pressable>
           ) : (
             <Link href="/login" asChild>
-              <Pressable style={StyleSheet.flatten([styles.btn, { borderColor: colors.border }])}>
-                <Text style={[styles.btnText, { color: colors.textMuted }]}>Sign in to save</Text>
+              <Pressable className="border border-border px-3.5 py-2.5">
+                <Text className="text-xs font-bold tracking-[0.6px] uppercase text-muted">
+                  Sign in to save
+                </Text>
               </Pressable>
             </Link>
           )}
@@ -211,16 +204,18 @@ export function ArticleActions({ slug, title, placement = "all" }: Props) {
       ) : null}
 
       {showBottom && downloads.length ? (
-        <View style={styles.downloadBlock}>
-          <Text style={[styles.head, { color: colors.accent }]}>Downloads</Text>
-          <View style={styles.row}>
+        <View className="gap-3">
+          <Text className="text-[11px] tracking-[1.6px] uppercase font-bold text-accent">
+            Downloads
+          </Text>
+          <View className="flex-row flex-wrap gap-2.5 items-center">
             <Pressable
               onPress={() => setMenuOpen((v) => !v)}
               accessibilityRole="button"
               accessibilityState={{ expanded: menuOpen }}
-              style={[styles.btnPrimary, { backgroundColor: colors.accent, borderColor: colors.accent }]}
+              className="border border-accent bg-accent px-4 py-2.5"
             >
-              <Text style={[styles.btnText, { color: "#FAFAF8" }]}>
+              <Text className="text-xs font-bold tracking-[0.6px] uppercase text-paper">
                 {menuOpen ? "Close" : "Download"}
               </Text>
             </Pressable>
@@ -228,9 +223,9 @@ export function ArticleActions({ slug, title, placement = "all" }: Props) {
               <Pressable
                 key={item.key}
                 onPress={() => openUrl(item.href)}
-                style={[styles.btn, { borderColor: colors.border }]}
+                className="border border-border px-3.5 py-2.5"
               >
-                <Text style={[styles.btnText, { color: colors.text }]}>
+                <Text className="text-xs font-bold tracking-[0.6px] uppercase text-fg">
                   {item.key === "data" ? "Data" : "Code"}
                 </Text>
               </Pressable>
@@ -238,9 +233,9 @@ export function ArticleActions({ slug, title, placement = "all" }: Props) {
             {downloads.length > 1 ? (
               <Pressable
                 onPress={() => void downloadAll(downloads)}
-                style={[styles.btn, { borderColor: colors.text }]}
+                className="border border-fg px-3.5 py-2.5"
               >
-                <Text style={[styles.btnText, { color: colors.text }]}>
+                <Text className="text-xs font-bold tracking-[0.6px] uppercase text-fg">
                   {Platform.OS === "web" ? "Download all" : "Share all links"}
                 </Text>
               </Pressable>
@@ -248,7 +243,7 @@ export function ArticleActions({ slug, title, placement = "all" }: Props) {
           </View>
 
           {menuOpen ? (
-            <View style={[styles.menu, { borderColor: colors.border, backgroundColor: colors.bg }]}>
+            <View className="border border-border bg-bg py-1">
               {downloads.map((item) => (
                 <Pressable
                   key={item.key}
@@ -256,9 +251,9 @@ export function ArticleActions({ slug, title, placement = "all" }: Props) {
                     openUrl(item.href);
                     setMenuOpen(false);
                   }}
-                  style={styles.menuItem}
+                  className="px-3.5 py-3"
                 >
-                  <Text style={[styles.menuLabel, { color: colors.text }]}>{item.label}</Text>
+                  <Text className="font-serif text-base leading-[22px] text-fg">{item.label}</Text>
                 </Pressable>
               ))}
               {downloads.length > 1 ? (
@@ -267,9 +262,9 @@ export function ArticleActions({ slug, title, placement = "all" }: Props) {
                     void downloadAll(downloads);
                     setMenuOpen(false);
                   }}
-                  style={styles.menuItem}
+                  className="px-3.5 py-3"
                 >
-                  <Text style={[styles.menuLabel, { color: colors.accent }]}>
+                  <Text className="font-serif text-base leading-[22px] text-accent">
                     {Platform.OS === "web"
                       ? `Download all (${downloads.length} files)`
                       : `Share all links (${downloads.length})`}
@@ -283,61 +278,3 @@ export function ArticleActions({ slug, title, placement = "all" }: Props) {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  wrap: {
-    borderTopWidth: 1,
-    borderBottomWidth: 1,
-    paddingVertical: 18,
-    gap: 14,
-    marginVertical: 12,
-  },
-  wrapTop: {
-    borderBottomWidth: 0,
-    marginBottom: 0,
-    paddingBottom: 12,
-  },
-  wrapBottom: {
-    borderTopWidth: 1,
-    marginTop: 8,
-    paddingTop: 20,
-  },
-  row: { flexDirection: "row", flexWrap: "wrap", gap: 10, alignItems: "center" },
-  btnPrimary: {
-    borderWidth: 1,
-    paddingHorizontal: 16,
-    paddingVertical: 10,
-  },
-  btn: {
-    borderWidth: 1,
-    paddingHorizontal: 14,
-    paddingVertical: 10,
-  },
-  btnText: {
-    fontSize: 12,
-    fontWeight: "700",
-    letterSpacing: 0.6,
-    textTransform: "uppercase",
-  },
-  downloadBlock: { gap: 12 },
-  head: {
-    fontSize: 11,
-    letterSpacing: 1.6,
-    textTransform: "uppercase",
-    fontWeight: "700",
-  },
-  menu: {
-    borderWidth: 1,
-    paddingVertical: 4,
-    gap: 0,
-  },
-  menuItem: {
-    paddingHorizontal: 14,
-    paddingVertical: 12,
-  },
-  menuLabel: {
-    fontFamily: Fonts.serif,
-    fontSize: 16,
-    lineHeight: 22,
-  },
-});

@@ -1,7 +1,5 @@
-import { Image, Pressable, Text, View, StyleSheet } from "react-native";
+import { Image, Pressable, Text, View } from "react-native";
 import { Link } from "expo-router";
-import { Fonts } from "@/constants/Colors";
-import { useTheme } from "@/lib/theme";
 import { assetUrl } from "@/lib/assets";
 import {
   deckLine,
@@ -18,7 +16,6 @@ export function BlogCard({
   post: BlogPost;
   variant?: "stack" | "row";
 }) {
-  const { colors } = useTheme();
   const label = sectionLabel(post.tags);
   const hero = assetUrl(post.heroImage);
   const author = post.author ? formatAuthorName(String(post.author)) : "Kyle McAuliffe";
@@ -26,24 +23,26 @@ export function BlogCard({
   if (variant === "stack") {
     return (
       <Link href={`/${post.slug}`} asChild>
-        <Pressable style={StyleSheet.flatten([styles.stack, { borderBottomColor: colors.border }])}>
+        <Pressable className="overflow-hidden flex-1 min-w-[260px] gap-3 pb-4 border-b border-border">
           {hero ? (
             <Image
               source={{ uri: hero }}
-              style={styles.image}
+              className="w-full aspect-[16/10]"
               resizeMode="cover"
               accessibilityLabel={post.title}
             />
           ) : null}
-          <View style={styles.body}>
+          <View className="gap-2">
             {label ? (
-              <Text style={[styles.kicker, { color: colors.accent }]}>{label}</Text>
+              <Text className="text-[11px] tracking-[1.4px] uppercase font-bold text-accent">
+                {label}
+              </Text>
             ) : null}
-            <Text style={[styles.title, { color: colors.text }]}>{post.title}</Text>
-            <Text style={[styles.deck, { color: colors.textMuted }]} numberOfLines={3}>
+            <Text className="font-serif text-[22px] leading-7 font-bold text-fg">{post.title}</Text>
+            <Text className="font-serif text-[15px] leading-[22px] text-muted" numberOfLines={3}>
               {deckLine(post.description, 28)}
             </Text>
-            <Text style={[styles.meta, { color: colors.textSubtle }]}>
+            <Text className="text-xs mt-0.5 text-subtle">
               {author} · {formatDate(post.pubDate)}
             </Text>
           </View>
@@ -54,23 +53,23 @@ export function BlogCard({
 
   return (
     <Link href={`/${post.slug}`} asChild>
-      <Pressable style={StyleSheet.flatten([styles.row, { borderBottomColor: colors.border }])}>
-        <View style={styles.rowCopy}>
+      <Pressable className="flex-row items-start justify-between gap-4 py-[18px] border-b border-border">
+        <View className="flex-1 gap-1.5 pr-1">
           {label ? (
-            <Text style={[styles.kicker, { color: colors.accent }]}>{label}</Text>
+            <Text className="text-[11px] tracking-[1.4px] uppercase font-bold text-accent">
+              {label}
+            </Text>
           ) : null}
-          <Text style={[styles.rowTitle, { color: colors.text }]}>{post.title}</Text>
-          <Text style={[styles.deck, { color: colors.textMuted }]} numberOfLines={2}>
+          <Text className="font-serif text-xl leading-[26px] font-bold text-fg">{post.title}</Text>
+          <Text className="font-serif text-[15px] leading-[22px] text-muted" numberOfLines={2}>
             {deckLine(post.description, 22)}
           </Text>
-          <Text style={[styles.meta, { color: colors.textSubtle }]}>
-            {formatDate(post.pubDate)}
-          </Text>
+          <Text className="text-xs mt-0.5 text-subtle">{formatDate(post.pubDate)}</Text>
         </View>
         {hero ? (
           <Image
             source={{ uri: hero }}
-            style={styles.rowThumb}
+            className="w-24 h-24"
             resizeMode="cover"
             accessibilityLabel={post.title}
           />
@@ -79,53 +78,3 @@ export function BlogCard({
     </Link>
   );
 }
-
-const styles = StyleSheet.create({
-  stack: {
-    overflow: "hidden",
-    flex: 1,
-    minWidth: 260,
-    gap: 12,
-    paddingBottom: 16,
-    borderBottomWidth: StyleSheet.hairlineWidth,
-  },
-  image: { width: "100%", aspectRatio: 16 / 10 },
-  body: { gap: 8 },
-  kicker: {
-    fontSize: 11,
-    letterSpacing: 1.4,
-    textTransform: "uppercase",
-    fontWeight: "700",
-  },
-  title: {
-    fontFamily: Fonts.serif,
-    fontSize: 22,
-    lineHeight: 28,
-    fontWeight: "700",
-  },
-  deck: {
-    fontFamily: Fonts.serif,
-    fontSize: 15,
-    lineHeight: 22,
-  },
-  meta: { fontSize: 12, marginTop: 2 },
-  row: {
-    flexDirection: "row",
-    alignItems: "flex-start",
-    justifyContent: "space-between",
-    gap: 16,
-    paddingVertical: 18,
-    borderBottomWidth: StyleSheet.hairlineWidth,
-  },
-  rowCopy: { flex: 1, gap: 6, paddingRight: 4 },
-  rowTitle: {
-    fontFamily: Fonts.serif,
-    fontSize: 20,
-    lineHeight: 26,
-    fontWeight: "700",
-  },
-  rowThumb: {
-    width: 96,
-    height: 96,
-  },
-});

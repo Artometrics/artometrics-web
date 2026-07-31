@@ -1,12 +1,10 @@
 import { useEffect, useState } from "react";
-import { Pressable, StyleSheet, Text, View } from "react-native";
+import { Pressable, Text, View } from "react-native";
 import {
   setAudioModeAsync,
   useAudioPlayer,
   useAudioPlayerStatus,
 } from "expo-audio";
-import { Fonts } from "@/constants/Colors";
-import { useTheme } from "@/lib/theme";
 import { assetUrl } from "@/lib/assets";
 
 const RATES = [0.75, 1, 1.25, 1.5, 2] as const;
@@ -24,7 +22,6 @@ function formatTime(seconds: number) {
 }
 
 export function ArticleNarrationPlayer({ audioSrc, title }: Props) {
-  const { colors } = useTheme();
   const uri = assetUrl(audioSrc);
   const player = useAudioPlayer(uri);
   const status = useAudioPlayerStatus(player);
@@ -93,52 +90,48 @@ export function ArticleNarrationPlayer({ audioSrc, title }: Props) {
 
   return (
     <View
-      style={[
-        styles.wrap,
-        { borderColor: colors.border, backgroundColor: colors.bgElevated },
-      ]}
+      className="border border-border bg-bg-elevated p-3.5 gap-3 mt-1"
       accessibilityLabel={title ? `Listen to ${title}` : "Listen to narration"}
     >
-      <View style={styles.topRow}>
+      <View className="flex-row items-center flex-wrap gap-3">
         <Pressable
           onPress={() => void toggle()}
-          style={[styles.playBtn, { backgroundColor: colors.text }]}
+          className="bg-fg px-4 py-2.5 min-w-[88px] items-center"
           accessibilityRole="button"
           accessibilityLabel={status.playing ? "Pause narration" : "Play narration"}
         >
-          <Text style={[styles.playLabel, { color: colors.inverse }]}>
+          <Text className="font-sans text-[13px] font-bold tracking-[0.4px] uppercase text-inverse">
             {status.playing ? "Pause" : "Listen"}
           </Text>
         </Pressable>
-        <View style={styles.metaCol}>
-          <Text style={[styles.kicker, { color: colors.accent }]}>Narration</Text>
-          <Text style={[styles.time, { color: colors.textMuted }]}>
+        <View className="grow gap-0.5 min-w-[100px]">
+          <Text className="font-sans text-[11px] font-bold tracking-[1.6px] uppercase text-accent">
+            Narration
+          </Text>
+          <Text className="font-mono text-xs leading-4 text-muted">
             {formatTime(current)} / {formatTime(duration)}
           </Text>
         </View>
-        <View style={styles.rates}>
+        <View className="flex-row flex-wrap gap-1.5">
           {RATES.map((r) => {
             const active = rate === r;
             return (
               <Pressable
                 key={r}
                 onPress={() => setRate(r)}
-                style={[
-                  styles.rateBtn,
-                  {
-                    borderColor: colors.border,
-                    backgroundColor: active ? colors.text : "transparent",
-                  },
-                ]}
+                className={[
+                  "border px-2 py-1.5 min-w-10 items-center",
+                  active ? "border-fg bg-fg" : "border-border bg-transparent",
+                ].join(" ")}
                 accessibilityRole="button"
                 accessibilityLabel={`${r} times speed`}
                 accessibilityState={{ selected: active }}
               >
                 <Text
-                  style={[
-                    styles.rateLabel,
-                    { color: active ? colors.inverse : colors.text },
-                  ]}
+                  className={[
+                    "font-sans text-xs font-bold",
+                    active ? "text-inverse" : "text-fg",
+                  ].join(" ")}
                 >
                   {r === 1 ? "1×" : `${r}×`}
                 </Text>
@@ -149,7 +142,7 @@ export function ArticleNarrationPlayer({ audioSrc, title }: Props) {
       </View>
 
       <Pressable
-        style={[styles.track, { backgroundColor: colors.border }]}
+        className="h-1.5 w-full overflow-hidden bg-border"
         onLayout={(e) => setTrackWidth(e.nativeEvent.layout.width)}
         onPress={(e) => {
           if (!trackWidth) return;
@@ -159,78 +152,10 @@ export function ArticleNarrationPlayer({ audioSrc, title }: Props) {
         accessibilityLabel="Seek narration"
       >
         <View
-          style={[
-            styles.fill,
-            { width: `${progress * 100}%`, backgroundColor: colors.accent },
-          ]}
+          className="h-full bg-accent"
+          style={{ width: `${progress * 100}%` }}
         />
       </Pressable>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  wrap: {
-    borderWidth: 1,
-    padding: 14,
-    gap: 12,
-    marginTop: 4,
-  },
-  topRow: {
-    flexDirection: "row",
-    alignItems: "center",
-    flexWrap: "wrap",
-    gap: 12,
-  },
-  playBtn: {
-    paddingHorizontal: 16,
-    paddingVertical: 10,
-    minWidth: 88,
-    alignItems: "center",
-  },
-  playLabel: {
-    fontFamily: Fonts.sans,
-    fontSize: 13,
-    fontWeight: "700",
-    letterSpacing: 0.4,
-    textTransform: "uppercase",
-  },
-  metaCol: { flexGrow: 1, gap: 2, minWidth: 100 },
-  kicker: {
-    fontFamily: Fonts.sans,
-    fontSize: 11,
-    fontWeight: "700",
-    letterSpacing: 1.6,
-    textTransform: "uppercase",
-  },
-  time: {
-    fontFamily: Fonts.mono,
-    fontSize: 12,
-    lineHeight: 16,
-  },
-  rates: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    gap: 6,
-  },
-  rateBtn: {
-    borderWidth: 1,
-    paddingHorizontal: 8,
-    paddingVertical: 6,
-    minWidth: 40,
-    alignItems: "center",
-  },
-  rateLabel: {
-    fontFamily: Fonts.sans,
-    fontSize: 12,
-    fontWeight: "700",
-  },
-  track: {
-    height: 6,
-    width: "100%",
-    overflow: "hidden",
-  },
-  fill: {
-    height: "100%",
-  },
-});
