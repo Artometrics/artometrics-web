@@ -26,6 +26,10 @@
 
 ## Reports
 
+- [The Most Expensive Team That Has Never Won Anything](https://artometrics.com/padres-the-artometrics-of-paying-for-october): San Diego just agreed to the richest sale in baseball history. The Padres have also never won a World Series. Those two facts belong to the same story. (sports)
+- [The Padres Cost $3.9 Billion. Winning Will Cost More.](https://artometrics.com/padres-world-series-ownership-blueprint): A buyer’s memo on baseball’s record franchise sale: what San Diego’s assets are actually worth, where the balance sheet breaks, and the six moves that would buy a first World Series. (sports)
+- [Beyoncé and the Cost of Controlling the House](https://artometrics.com/beyonce-the-psychonomics-of-control): A Psychonomics profile of Beyoncé — Hermann Leadership Trait Analysis, Parkwood as institutionalized self, Lemonade’s canon economics, and an 8,000-line lyric machine. (humanities)
+- [When Louis Vuitton Beat Molly Tea in Court — and Lost the Chinese Internet](https://artometrics.com/lv-molly-tea-trademark-china): A Suzhou court awarded Louis Vuitton ¥10.3 million against Molly Tea for a four-petal logo. The trademark ruling was routine; the cultural backlash was not. Here is what the filings, similar cases, and resale noise actually show. (arts)
 - [How Oscars, Grammys, and Nobels Convert Attention Into Prestige](https://artometrics.com/awards-prestige-economy-oscars-grammys-nobels): A cross-medium look at how prizes turn visibility into legitimacy across film, music, and science. (humanities)
 - [California and Texas: Where Rival State Systems Diverge](https://artometrics.com/california-vs-texas-state-rivalry): What the two largest U.S. states share—and where their economies, exports, and risks part ways. (civics)
 - [How the Celtics Turned 1960s Dominance Into Permanent Expectation](https://artometrics.com/celtics-the-artometrics-of-institutional-winning): Boston’s championship inheritance still shapes every modern season. (sports)
@@ -125,4 +129,4 @@
 
 ## Generated
 
-Updated: 2026-07-30T11:10:27.435Z
+Updated: 2026-07-31T03:05:11.534Z

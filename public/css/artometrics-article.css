@@ -797,6 +797,22 @@ pre:has(> code.sourceCode.sql),
   line-height: 1.92 !important;
   color: var(--art-dark) !important;
 }
+.artometrics-article-body main.art-article-main > p.art-lede{
+  font-size: 1.34rem !important;
+  line-height: 1.7 !important;
+  font-weight: 500 !important;
+  max-width: min(50rem, 100%) !important;
+  margin: 0 auto 2.1rem !important;
+  padding-bottom: 1.6rem !important;
+  border-bottom: 1px solid #E8E6E1 !important;
+}
+.artometrics-article-body main.art-article-main blockquote p{
+  text-align: left !important;
+  font-size: 1.18rem !important;
+  font-style: italic !important;
+  line-height: 1.7 !important;
+  margin: 0 !important;
+}
 .artometrics-article-body main.art-article-main > h2{
   font-family: 'DM Sans', sans-serif !important;
   font-size: 1.2rem !important;

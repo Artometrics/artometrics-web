@@ -2,67 +2,73 @@
   "slug": "padres-the-artometrics-of-paying-for-october",
   "desk": "sports",
   "subdomain": "baseball",
-  "title": "How the Padres Bought Stars Without Buying a Dynasty",
+  "title": "The Most Expensive Team That Has Never Won Anything",
   "workingTitle": "Padres Paying for October",
   "primaryKeyword": "san diego padres world series drought",
   "secondaryKeywords": [
+    "padres sale price 3.9 billion",
     "padres payroll conversion",
     "padres nl pennants",
-    "padres star market era",
     "padres vs dodgers contention",
     "expansion franchise championship gap"
   ],
   "searchIntent": "informational",
-  "audience": "Baseball readers who want evidence on whether San Diego's star payroll can manufacture a first title—not hype about the next free-agent splash.",
-  "metaDescription": "San Diego turned star payroll into contention—and still owns baseball's clearest zero-ring conversion problem.",
-  "angle": "Treat the Padres as baseball's clearest case of buying October access without buying a dynasty: scarce postseason history, two pennants, zero rings, modern payroll elite.",
+  "audience": "Baseball and sports-business readers who want a narrative feature on why the richest franchise sale in the sport's history belongs to a club that has never won anything.",
+  "metaDescription": "San Diego just agreed to the richest sale in baseball history. The Padres have also never won a World Series. Those two facts belong to the same story.",
+  "angle": "Long-form feature, not a chart brief: tell the record $3.9bn sale and the 57-year title drought as one story, using postseason scarcity, six seasons of payroll, the expansion peer group and the Seidler-era inheritance as evidence.",
+  "format": "long-form feature",
   "dataSources": [
     {
-      "name": "Baseball Reference — San Diego Padres Franchise History",
+      "name": "Baseball Reference — Padres franchise, 2025 and 2026 seasons",
       "url": "https://www.baseball-reference.com/teams/SDP/",
-      "notes": "Season wins, postseason appearances, pennants, World Series results."
+      "notes": "Season wins, postseason results, 2026 record and run differential through July 29."
     },
     {
-      "name": "Lahman Baseball Database",
-      "url": "https://sabr.org/lahman-database/",
-      "notes": "Longitudinal franchise tables for era structure."
+      "name": "MLB.com / Sportico / San Diego Union-Tribune — sale reporting",
+      "url": "https://www.mlb.com/news/padres-agree-to-sell-team-to-kwanza-jones-jose-e-feliciano",
+      "notes": "$3.9B valuation, bidder field, Seidler trust litigation, owner-approval timetable."
     },
     {
-      "name": "Public MLB payroll-rank summaries",
-      "url": "https://www.spotrac.com/mlb/payroll/",
-      "notes": "Rounded payroll ranks for the star-market window; label as public-reference markers."
+      "name": "Spotrac competitive-balance-tax payrolls",
+      "url": "https://www.spotrac.com/mlb/san-diego-padres/yearly/payroll/",
+      "notes": "2021-26 tax payrolls and ranks; single consistent series, not Opening Day tables."
+    },
+    {
+      "name": "FanGraphs and Baseball America farm rankings (July 2026)",
+      "url": "https://www.baseballamerica.com/stories/mlb-farm-system-midseason-talent-rankings-for-july-2026/",
+      "notes": "System ranked last of 30 after the Leo De Vries trade."
     }
   ],
   "sectionPlan": [
     {
       "id": "october-scarcity",
-      "title": "OCTOBER SCARCITY",
-      "question": "How rare has postseason baseball been across Padres decades?",
+      "title": "Fifty-seven seasons, nine trips to October",
+      "question": "How rare has postseason baseball actually been in San Diego?",
       "keyword": "padres postseason history"
     },
     {
-      "id": "expansion-peer-gap",
-      "title": "EXPANSION PEER GAP",
-      "question": "Where do zero titles place San Diego among expansion-era clubs?",
-      "keyword": "expansion franchise championship gap"
-    },
-    {
-      "id": "star-market-floor",
-      "title": "STAR-MARKET FLOOR",
-      "question": "What did the modern star payroll do to the regular-season floor?",
+      "id": "preller-doctrine",
+      "title": "The Preller doctrine: buy now, always",
+      "question": "How did the club turn itself into a star-market team?",
       "keyword": "padres star market era"
     },
     {
       "id": "payroll-conversion",
-      "title": "PAYROLL CONVERSION",
-      "question": "Did top payroll ranks convert into deep October runs or a ring?",
+      "title": "What $1.5bn of payroll bought",
+      "question": "Did six seasons of elite payroll convert into October success?",
       "keyword": "padres payroll conversion"
     },
     {
-      "id": "pennant-gaps",
-      "title": "PENNANT GAPS",
-      "question": "How long has San Diego waited since its last National League pennant?",
-      "keyword": "padres nl pennants"
+      "id": "expansion-peer-gap",
+      "title": "The company San Diego keeps",
+      "question": "Where do zero titles place the Padres among expansion clubs?",
+      "keyword": "expansion franchise championship gap"
+    },
+    {
+      "id": "seidler-decade",
+      "title": "The Seidler decade, and the bill that came with it",
+      "question": "What does the buyer inherit, in assets and liabilities?",
+      "keyword": "padres sale price 3.9 billion"
     }
   ],
   "banner": {
@@ -71,9 +77,9 @@
     "avoid": "Padres logos, player faces, charts-in-image, purple gradients, collage stickers"
   },
   "distribution": {
-    "linkedinHook": "Zero World Series titles. Two pennants. A modern payroll that finally bought contention—and still no ring.",
-    "shortFact": "27 years since the Padres' most recent NL pennant entering 2025.",
-    "youtubeTitle": "How the Padres Bought Stars Without Buying a Dynasty",
+    "linkedinHook": "The Padres just agreed to sell for $3.9bn, a record for a baseball club. They have never won a World Series. Those two facts are the same story.",
+    "shortFact": "28 years since the Padres' last pennant; about $1.5bn of payroll in the past six seasons; zero titles in 57 years.",
+    "youtubeTitle": "The Most Expensive Team That Has Never Won Anything",
     "buffer": true,
     "slackNotify": true,
     "slackChannel": "#editorial"
@@ -84,12 +90,12 @@
     "newsletter": true
   },
   "relatedSlugs": [
+    "padres-world-series-ownership-blueprint",
     "dodgers-the-artometrics-of-baseballs-modern-machine",
     "giant-the-artometrics-of-a-san-francisco-dynasty",
-    "sports-dynasty-index-best-and-worst-conversion",
     "yankees-the-artometrics-of-baseballs-empire"
   ],
   "status": "published",
   "createdAt": "2026-07-30",
-  "updatedAt": "2026-07-30"
+  "updatedAt": "2026-07-31"
 }

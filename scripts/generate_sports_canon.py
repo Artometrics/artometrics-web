@@ -262,6 +262,99 @@ def article(
     write_hero(slug, title, description, tags)
 
 
+def yaml_str(value: str) -> str:
+    """Double-quoted YAML scalar."""
+    return '"' + str(value).replace("\\", "\\\\").replace('"', '\\"') + '"'
+
+
+def feature(
+    slug: str,
+    title: str,
+    description: str,
+    tags: str,
+    *,
+    author: str,
+    pub_date: str,
+    standfirst: str,
+    lede,
+    facts,
+    method,
+    sections,
+    ending,
+    ending_heading: str,
+    references,
+    note,
+    source_credit: str,
+    tldr: str,
+    key_points,
+    faq,
+    facts_heading: str = "The numbers behind the story",
+    method_heading: str = "Data and method",
+):
+    """Render a long-form magazine feature.
+
+    Unlike `article()`, which pairs each chart with a two-line data read, this
+    renderer treats charts as evidence inside continuous narrative sections.
+    """
+    tag_list = [t.strip() for t in tags.split(",") if t.strip()]
+    front = [
+        "---",
+        f"title: {yaml_str(title)}",
+        f"slug: {slug}",
+        f"author: {author}",
+        f"pubDate: {pub_date}",
+        f"description: {yaml_str(description)}",
+        f"heroImage: /images/content/articles/{slug}/hero.png",
+        "draft: false",
+        "tags:",
+        *[f"  - {t}" for t in tag_list],
+        f"tldr: {yaml_str(tldr)}",
+        "keyPoints:",
+        *[f"  - {yaml_str(p)}" for p in key_points],
+        "faq:",
+    ]
+    for question, answer in faq:
+        front += [f"  - question: {yaml_str(question)}", f"    answer: {yaml_str(answer)}"]
+    front.append("---")
+
+    body = front + [
+        '<div id="quarto-content">',
+        '<main class="art-article-main">',
+        f'<p class="art-p art-lede">{standfirst}</p>',
+        *[f'<p class="art-p">{p}</p>' for p in lede],
+        f'<h2 id="fast-facts" class="anchored">{facts_heading}</h2>',
+        f'<div class="facts-grid">\n{facts_html(facts)}\n</div>',
+    ]
+    for section in sections:
+        body.append(f'<h2 id="{section["id"]}" class="anchored">{section["title"]}</h2>')
+        chart_at = section.get("chart_after", 1) if section.get("chart") else None
+        for index, paragraph in enumerate(section["prose"]):
+            if chart_at is not None and index == chart_at:
+                body.append(
+                    chart_html(slug, section["chart"], section["caption"], section.get("source", source_credit))
+                )
+            body.append(f'<p class="art-p">{paragraph}</p>')
+        if chart_at is not None and chart_at >= len(section["prose"]):
+            body.append(chart_html(slug, section["chart"], section["caption"], section.get("source", source_credit)))
+        if section.get("pullquote"):
+            body.append(f"<blockquote><p>{section['pullquote']}</p></blockquote>")
+    body += [
+        f'<h2 id="conclusion" class="anchored">{ending_heading}</h2>',
+        *[f'<p class="art-p">{p}</p>' for p in ending],
+        f'<h2 id="dataset-context" class="anchored">{method_heading}</h2>',
+        *[f'<p class="art-p">{p}</p>' for p in method],
+        '<h2 id="references" class="anchored">References</h2>',
+        *[f"<p>{p}</p>" for p in references],
+        '<h2 id="editors-note" class="anchored">Editor\'s note</h2>',
+        f'<div class="art-editorial-note"><p><em>{note}</em></p></div>',
+        "</main>",
+        "</div>",
+        "",
+    ]
+    (BLOG_DIR / f"{slug}.md").write_text("\n".join(body))
+    write_hero(slug, title, description, tags)
+
+
 def yankees():
     slug = "yankees-the-artometrics-of-baseballs-empire"
     decades = ["1920s", "1930s", "1940s", "1950s", "1960s", "1970s", "1980s", "1990s", "2000s", "2010s", "2020s"]
@@ -513,64 +606,89 @@ def dodgers():
 
 
 def padres():
+    """Long-form feature: the record sale and the unconverted franchise behind it."""
     slug = "padres-the-artometrics-of-paying-for-october"
+
     decades = ["1970s", "1980s", "1990s", "2000s", "2010s", "2020s"]
-    playoff_apps = [0, 1, 2, 2, 0, 3]
+    playoff_apps = [0, 1, 2, 2, 0, 4]
     write_chart(
         slug,
         "chart1_october_scarcity",
         {
-            "data": [bar_v(decades, playoff_apps, [ART_RED if v >= 2 else ART_BLUE for v in playoff_apps])],
+            "data": [bar_v(decades, playoff_apps, [ART_RED if v >= 3 else ART_BLUE for v in playoff_apps])],
             "layout": layout(
-                "October was never a San Diego habit",
-                "THE FRANCHISE LIVED MOSTLY OUTSIDE THE POSTSEASON",
+                "Nine trips to October in 57 seasons",
+                "THE 2020s ARE THE FIRST DECADE SAN DIEGO MADE A HABIT OF IT",
                 x_title="Decade",
                 y_title="Postseason appearances",
             ),
         },
     )
 
-    clubs = ["Rockies", "Padres", "Mariners", "Brewers", "D-backs", "Angels", "Royals", "Mets"]
-    titles = [0, 0, 0, 0, 1, 1, 2, 2]
+    clubs = [
+        "Padres",
+        "Brewers",
+        "Mariners",
+        "Rockies",
+        "Rays",
+        "Angels",
+        "D-backs",
+        "Nationals",
+        "Rangers",
+        "Mets",
+        "Royals",
+        "Blue Jays",
+        "Marlins",
+        "Astros",
+    ]
+    titles = [0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 2]
     write_chart(
         slug,
         "chart2_expansion_peer_gap",
         {
-            "data": [bar_h(clubs, titles, [ART_BLUE if t else ART_RED for t in titles])],
+            "data": [
+                bar_h(
+                    clubs,
+                    titles,
+                    [ART_RED if c == "Padres" else ART_BLUE for c in clubs],
+                    hover="<b>%{y}</b><br>World Series titles: %{x}<extra></extra>",
+                )
+            ],
             "layout": layout(
-                "Among modern clubs, the Padres still sit at zero",
-                "STAR PAYROLL HAS NOT CLOSED THE RING GAP",
-                x_title="World Series titles",
+                "Nine of the 14 expansion clubs have closed. San Diego has not",
+                "THE FOUR OTHERS AT ZERO HAVE NEVER SPENT LIKE THIS",
+                x_title="World Series titles won since joining the league",
+                height=620,
             ),
         },
     )
 
-    years = ["2019", "2020", "2021", "2022", "2023", "2024"]
-    wins = [70, 37, 79, 89, 82, 93]
+    years = ["2019", "2020", "2021", "2022", "2023", "2024", "2025"]
+    wins = [70, 37, 79, 89, 82, 93, 90]
     write_chart(
         slug,
         "chart3_star_market_floor",
         {
             "data": [line(years, wins)],
             "layout": layout(
-                "The star-market Padres raised the floor, then the ceiling",
-                "CONTENTION ARRIVED WITH THE PAYROLL",
-                x_title="Season",
+                "The spending raised the floor",
+                "FROM 70 WINS IN 2019 TO A 90-WIN HABIT",
+                x_title="Season (2020 was a 60-game schedule)",
                 y_title="Regular-season wins",
             ),
         },
     )
 
-    spend_years = [2019, 2020, 2021, 2022, 2023, 2024]
-    payroll_rank = [12, 9, 10, 3, 1, 4]
-    october = [0, 1, 0, 3, 0, 2]
+    spend_years = [2021, 2022, 2023, 2024, 2025, 2026]
+    tax_payroll = [216.5, 235.1, 291.2, 227.8, 270.4, 259.1]
+    october_depth = [0, 3, 0, 2, 1, 0]
     outcomes = [
-        "Missed playoffs",
-        "Wild Card exit",
-        "Missed playoffs",
-        "NLCS",
-        "Missed playoffs",
-        "NLDS exit",
+        "Missed the playoffs",
+        "Beat the Dodgers, lost the NLCS",
+        "Missed the playoffs",
+        "NLDS Game 5 loss, shut out twice",
+        "Wild-card exit, five runs in three games",
+        "In progress: 55-53",
     ]
     write_chart(
         slug,
@@ -579,32 +697,25 @@ def padres():
             "data": [
                 scatter(
                     spend_years,
-                    payroll_rank,
+                    tax_payroll,
                     [str(y) for y in spend_years],
-                    [14 + o * 6 for o in october],
-                    [ART_RED if o >= 2 else ART_BLUE for o in october],
+                    [16 + o * 7 for o in october_depth],
+                    [ART_RED if o >= 2 else ART_BLUE for o in october_depth],
                     customdata=outcomes,
-                    hover="<b>%{text}</b><br>Payroll rank: %{y}<br>October: %{customdata}<extra></extra>",
+                    hover="<b>%{text}</b><br>Tax payroll: $%{y}M<br>October: %{customdata}<extra></extra>",
                 )
             ],
-            "layout": {
-                **layout(
-                    "San Diego bought access, not certainty",
-                    "TOP PAYROLL STILL FAILED TO BUY A RING",
-                    x_title="Season",
-                    y_title="Payroll rank (lower is richer)",
-                ),
-                "yaxis": {
-                    **layout("", "")["yaxis"],
-                    "autorange": "reversed",
-                    "title": {"text": "Payroll rank (lower is richer)"},
-                },
-            },
+            "layout": layout(
+                "Six seasons, about $1.5bn of payroll, no pennant",
+                "SPENDING BOUGHT ACCESS TO OCTOBER, NOT PASSAGE THROUGH IT",
+                x_title="Season",
+                y_title="Competitive-balance-tax payroll, $M",
+            ),
         },
     )
 
-    gaps = ["1969-84", "1984-98", "1998-now"]
-    gap_years = [15, 14, 27]
+    gaps = ["1969-84", "1984-98", "1998-2026"]
+    gap_years = [15, 14, 28]
     write_chart(
         slug,
         "chart5_pennant_gaps",
@@ -612,8 +723,8 @@ def padres():
             "data": [bar_v(gaps, gap_years, [ART_BLUE, ART_BLUE, ART_RED])],
             "layout": layout(
                 "Two pennants, then a generation without one",
-                "THE MODERN DROUGHT IS THE LONGEST PENNANT WAIT",
-                x_title="Pennant gap",
+                "THE ENTIRE STAR-MARKET ERA FITS INSIDE THE CURRENT WAIT",
+                x_title="Years between National League pennants",
                 y_title="Years",
             ),
         },
@@ -622,148 +733,175 @@ def padres():
     sections = [
         {
             "id": "october-scarcity",
-            "title": "October was never a San Diego habit",
-            "subtitle": "Padres postseason appearances by decade",
+            "title": "Fifty-seven seasons, nine trips to October",
             "chart": "chart1_october_scarcity",
-            "caption": "Padres postseason appearances by decade",
+            "caption": "Padres postseason appearances by decade, 1970s to 2020s",
             "prose": [
-                "The Padres are not a franchise that casually visits October. Most decades produced zero or one appearance; the modern 2020s spike is the exception that proves how thin the archive is.",
-                "That scarcity is the institutional backdrop for every star signing: San Diego is not defending a dynasty. It is trying to invent one.",
+                "The scarcity is the part outsiders forget. San Diego joined the National League in 1969 and was bad enough, fast enough, that by 1974 the club had been sold to a buyer who intended to move it to Washington. Topps had already printed baseball cards listing the players as members of a Washington team when Ray Kroc, of McDonald’s, bought the franchise and kept it in San Diego.",
+                "What followed was not a franchise so much as a sequence of unconnected good years. The 1984 team, built around Tony Gwynn, Steve Garvey and Goose Gossage, came back from 0-2 against the Cubs to win the pennant, then lost the World Series to Detroit in five games. The 1998 team won 98 games, beat Atlanta, and was swept by a Yankees club that had won 114. The division titles of 2005 and 2006 arrived with 82 and 88 wins, the thinnest credentials the modern West has sent to October.",
+                "Nine postseason appearances in 57 seasons, four of them since 2020. The spike at the right edge of the chart is not a dynasty forming. It is the first sustained October habit the franchise has ever had, and it arrived only once the club began paying like the teams it was chasing.",
             ],
         },
         {
-            "id": "expansion-peer-gap",
-            "title": "Among modern clubs, the Padres still sit at zero",
-            "subtitle": "World Series titles among selected expansion-era clubs",
-            "chart": "chart2_expansion_peer_gap",
-            "caption": "World Series titles among selected expansion-era clubs",
-            "prose": [
-                "Zero titles place the Padres with baseball's unfinished expansion stories. Peer clubs that arrived later or around the same window have already closed at least once.",
-                "For a baseball expert, the Padres argument is no longer whether they can afford stars. It is whether star concentration can substitute for the ring the archive still lacks.",
-            ],
-        },
-        {
-            "id": "star-market-floor",
-            "title": "The star market raised the floor, then the ceiling",
-            "subtitle": "Padres regular-season wins in the modern star-market era",
+            "id": "preller-doctrine",
+            "title": "The Preller doctrine: buy now, always",
             "chart": "chart3_star_market_floor",
-            "caption": "Padres regular-season wins in the modern star-market era",
+            "chart_after": 2,
+            "caption": "Padres regular-season wins, 2019 to 2025",
             "prose": [
-                "From Machado through the Soto window and into 2024, San Diego's win totals finally look like a club spending to contend. The shortened 2020 season is left unadjusted; the surrounding years show the real lift.",
-                "The product of the star market is not a dynasty chart. It is a raised floor with occasional ceiling spikes—89 wins in 2022, 93 in 2024—still searching for conversion.",
+                "A.J. Preller has run baseball operations in San Diego since 2014, and his method has never really changed: convert the future into the present, at a premium, repeatedly. The first attempt — the 2015 winter of Matt Kemp, Justin Upton, Wil Myers and James Shields — returned 74 wins and a teardown. The second attempt worked better because it was aimed at stars rather than useful veterans.",
+                "Manny Machado signed for 10 years and $300m in 2019, then re-signed for 11 years and $350m in 2023. Fernando Tatis Jr. signed for 14 years and $340m in 2021, the longest contract in the sport at the time. Xander Bogaerts signed for 11 years and $280m. In 2022 Preller sent six players to Washington — a package including James Wood, MacKenzie Gore and CJ Abrams — for Juan Soto, who was still two years from free agency, and then traded Soto to the Yankees sixteen months later.",
+                "In the narrow sense, it worked. San Diego went from 70 wins in 2019 to 89 in 2022, 93 in 2024 and 90 in 2025. The floor rose and stayed up. What never arrived was the thing the spending was supposed to buy.",
             ],
         },
         {
             "id": "payroll-conversion",
-            "title": "San Diego bought access, not certainty",
-            "subtitle": "Payroll rank and October outcome markers",
+            "title": "What $1.5bn of payroll bought",
             "chart": "chart4_payroll_conversion",
-            "caption": "Payroll rank and October outcome markers",
+            "caption": "Padres tax payroll and postseason outcome by season, 2021 to 2026",
             "prose": [
-                "The modern Padres spent their way into the payroll elite. 2022 bought an NLCS; 2023 bought a missed October despite a top-line payroll; 2024 bought another short series and another exit.",
-                "That is the San Diego contradiction: money purchased relevance next to the Dodgers, but not the institutional conversion that turns payroll rank into a ring.",
+                "Add the past six years of Padres payroll together and the figure is roughly $1.5bn in salary, a top-ten number every season and top-six in three of them. Set that against the October return and the pattern is uncomfortably legible.",
+                "2021: a $216m payroll and a September collapse that missed the playoffs outright. 2022: an upset of a 111-win Dodgers team in the division series, then five games and out against Philadelphia. 2023: the largest payroll in club history, $291m, and an 82-80 finish. 2024: 93 wins, a Game 5 loss to Los Angeles in which the offense was shut out over the final two games. 2025: 90 wins, and three games at Wrigley Field in which it scored five runs.",
+                "This is the specific way the Padres lose, and it is worth naming precisely, because it is not the same as losing to money. San Diego has bought its way into the highest-variance rounds of a tournament and has then failed, in consecutive seasons, to score in the games that decide them.",
+            ],
+            "pullquote": "Two straight seasons have ended in a winner-take-all game the offense never turned up for: shut out over the last two games of 2024, five runs across three games in 2025.",
+        },
+        {
+            "id": "expansion-peer-gap",
+            "title": "The company San Diego keeps",
+            "chart": "chart2_expansion_peer_gap",
+            "caption": "World Series titles won by the 14 expansion clubs added since 1961",
+            "prose": [
+                "Fourteen clubs have joined the major leagues since 1961. Nine have won a World Series. The five that have not are the Padres, Brewers, Mariners, Rockies and Rays.",
+                "The other four have an alibi. Tampa Bay and Milwaukee have spent most of their existence in the bottom third of payrolls — the Brewers are 67-40 this season on a $124m Opening Day payroll, which is the thing clubs do instead of spending. Seattle and Colorado have been indifferent or poor for long stretches. San Diego has no such defence. It has the seventh-largest tax payroll in baseball at $259m, three consecutive franchise attendance records, and an empty trophy case.",
+                "That is the Artometrics reading of this franchise. Not a small-market club that cannot compete, and not a badly run club that wastes money. A club that has solved demand, solved payroll, and never solved conversion.",
             ],
         },
         {
-            "id": "pennant-gaps",
-            "title": "Two pennants, then a generation without one",
-            "subtitle": "Selected Padres National League pennant gaps",
+            "id": "seidler-decade",
+            "title": "The Seidler decade, and the bill that came with it",
             "chart": "chart5_pennant_gaps",
-            "caption": "Selected Padres National League pennant gaps",
+            "chart_after": 4,
+            "caption": "Gaps between Padres National League pennants",
             "prose": [
-                "The franchise has only two pennants—1984 and 1998—and both World Series ended in defeat. The wait since 1998 is now the longest pennant gap in club history.",
-                "Read against the star-market era, the chart is blunt: San Diego has bought October chances without yet buying the league championship that would reopen the title door.",
+                "Peter Seidler became control person after the 2020 season and behaved like a man working against a clock, which he was. He authorised the Tatis, Machado and Bogaerts contracts, absorbed the luxury-tax bills, and told anyone who asked that the point of all of it was a first title. He died in November 2023.",
+                "What followed was less romantic. Seidler’s widow, Sheel, sued his brothers Bob and Matt in Texas probate court over their conduct as trustees of the trust that holds the family’s controlling stake; most of the claims were dropped by February. In November 2025 the family retained BDT &amp; MSD to explore a sale. By spring the field was four bidders — Feliciano and Jones, Dan Friedkin, Joe Lacob and Tom Gores — with three bids of at least $3.5bn. Feliciano and Jones won at $3.9bn, and the transfer now waits on 22 of the other 29 owners.",
+                "The buyer inherits three things. First, the best-supported baseball audience outside Los Angeles: 3.4m admissions in 2025, second only to the Dodgers; about 42,000 a game this season; 25,000 full-season memberships with a wait list three years old; and 70,000 direct-to-consumer streaming subscribers, more than any club under the league’s local-media umbrella.",
+                "Second, $858m of guaranteed money owed after this season to five players — Tatis through 2034, Machado and Bogaerts through 2033, Jackson Merrill through 2034, Jake Cronenworth through 2030. Third, the emptiest farm system in the sport: last of 30 in FanGraphs’ July ranking, and last again in the assessment of the evaluators consulted by the San Diego Union-Tribune, after the 2025 deadline trade that sent Leo De Vries — then among the three or four best prospects in baseball — to the Athletics for the closer Mason Miller.",
+                "The franchise’s two pennants are 1984 and 1998. Fourteen years separated them. Twenty-eight years and counting have followed, the longest wait in club history, and the entire modern spending era fits inside it.",
+                "The 2026 team is the same argument in miniature. It is 55-53 and third in the West, thirteen games behind a Dodgers club that has won the past two World Series. It has been outscored by 18 runs. Against opponents at .500 or better it is 25-38. It is also, as of this week, on a five-game winning streak and a game and a half out of a wild card — which is precisely the position San Diego has learned to occupy. Close enough to justify buying. Never close enough to be safe.",
             ],
         },
     ]
-    article(
+
+    feature(
         slug,
-        "How the Padres Bought Stars Without Buying a Dynasty",
-        "San Diego turned star payroll into contention—and still owns baseball's clearest zero-ring conversion problem.",
+        "The Most Expensive Team That Has Never Won Anything",
+        "San Diego just agreed to the richest sale in baseball history. The Padres have also never won a World Series. Those two facts belong to the same story.",
         "sports, baseball",
-        [("fast-facts", "Fast facts"), ("dataset-context", "Data and method")]
-        + [(s["id"], s["title"]) for s in sections]
-        + [("conclusion", "Conclusion"), ("references", "References"), ("editors-note", "Editor's note")],
-        [
-            "The San Diego Padres are what happens when an expansion franchise learns to spend before it learns to close. Two National League pennants, zero World Series titles, and a modern star market that finally made contention feel expensive rather than accidental.",
-            "Machado, Tatis, the Soto window, and a payroll that climbed into baseball's elite bought relevance next to the Dodgers. What they have not bought is the first ring. Two pennants—1984 and 1998—both ended in World Series defeat. Entering 2025, the wait since the last National League flag is twenty-seven years, the longest pennant gap in club history.",
-            "What follows charts that unfinished conversion: postseason scarcity by decade, the expansion peer gap, the star-market win floor, payroll against October markers, and the long shadow of a franchise that paid for access without closing.",
-        ],
-        [
-            ("0", "World Series championships in franchise history"),
-            ("2", "National League pennants — 1984 and 1998"),
-            ("1969", "Expansion season that started the franchise clock"),
-            ("2004", "Year Petco Park opened and reset the economic stage"),
-            ("93", "Regular-season wins in 2024, the modern ceiling spike"),
-            ("27", "Years since the most recent pennant entering 2025"),
-        ],
-        [
-            "Public Baseball Reference franchise records, Lahman-style season summaries, and widely cited payroll-rank histories feed the charts. The emphasis is franchise identity and conversion—not player-level WAR modeling. The shortened 2020 season is left unadjusted and read separately in the prose.",
-            "Analysts focus on whether star concentration can manufacture a first title. Fans feel the distance between sold-out relevance and an empty championship row. The gap between those experiences is the Padres' modern story.",
-        ],
-        sections,
-        [
-            "The Padres are not merely unlucky in October. They are structurally unfinished: scarce postseason history, two pennants without a ring, and a recent payroll surge that bought access beside Los Angeles without buying closure.",
-            "The data says their defining modern trait is not one collapse. It is repeated payment for the conditions where a first title becomes possible—and the continued absence of the title itself. For the NL West atlas, see also the Dodgers consistency machine and the Giants' long arc; for the cross-league benchmark, see the sports dynasty index.",
-        ],
-        [
-            "Baseball Reference. <em>San Diego Padres Franchise History</em>.",
-            "Lahman, S. <em>Lahman Baseball Database</em>.",
-            "Forbes and public payroll-rank summaries.",
-            "Retrosheet and Baseball Almanac pennant/title records.",
-            'Related Artometrics reports: <a href="/dodgers-the-artometrics-of-baseballs-modern-machine">Dodgers</a> · <a href="/giant-the-artometrics-of-a-san-francisco-dynasty">Giants</a> · <a href="/sports-dynasty-index-best-and-worst-conversion">Sports Dynasty Index</a> · <a href="/yankees-the-artometrics-of-baseballs-empire">Yankees</a>.',
-        ],
-        "Recent win totals and payroll ranks are rounded public-reference summaries. The 2020 shortened season is left unadjusted and interpreted separately in the prose. Pennant-gap years are counted from the prior pennant season through the active wait entering 2025.",
-        "Data: Baseball Reference, Lahman, Retrosheet, Forbes - ARTOMETRICS",
         author="kyle-mcauliffe",
-        pub_date="2026-07-30T00:00:00.000Z",
-        include_toc=False,
-        context_heading="Data and method",
+        pub_date="2026-07-31T00:00:00.000Z",
+        standfirst="A record $3.9bn says the Padres are one of the most valuable properties in baseball. Fifty-seven seasons say nobody has worked out how to convert it.",
+        lede=[
+            "On the evening of October 2nd 2025, Fernando Tatis Jr. stood at his locker inside Wrigley Field, red-eyed, and tried to account for a season that had just ended in a 3-1 defeat. He had gone 0-for-4 with three strikeouts. The Padres, who had won 90 games and spent like a superpower to do it, had scored five runs in three games. “It sucks,” Manny Machado said afterwards. “We wanted to be holding up the trophy at the end of the year. We fell short.”",
+            "Seven months later the Seidler family signed a definitive agreement to hand the franchise to José E. Feliciano, a co-founder of Clearlake Capital, and his wife, Kwanza Jones, at a valuation of $3.9bn. It is the largest price ever agreed for a Major League Baseball club: $1.48bn more than Steve Cohen paid for the Mets in 2020, and nearly five times the $800m that a group including the late Peter Seidler paid John Moores for the Padres in 2012.",
+            "The two events are usually filed separately — one a sporting disappointment, the other a financial triumph. They are the same story. San Diego has discovered that in modern baseball it is possible to build an extraordinarily valuable business out of the pursuit of a championship, and that the pursuit is considerably easier to monetise than the championship itself.",
+            "The Padres have played 57 seasons and won none. They are now the most expensive franchise in the history of the sport never to have won anything, and the record price is not in spite of that fact. It is priced around it.",
+        ],
+        facts=[
+            ("$3.9bn", "Agreed sale price, a record for a Major League club"),
+            ("0", "World Series titles in 57 seasons"),
+            ("2", "National League pennants, in 1984 and 1998"),
+            ("28", "Years since the most recent pennant"),
+            ("$259M", "2026 tax payroll, seventh-largest in baseball"),
+            ("30th", "Farm system rank of 30 clubs, July 2026"),
+        ],
+        sections=sections,
+        ending_heading="What the buyer is actually buying",
+        ending=[
+            "The Padres are the best-attended unfinished business in American sport. Everything sellable in San Diego has been sold: tickets, sponsorship, streaming subscriptions, and now the franchise itself, at a price no baseball club has ever commanded.",
+            "What has not been sold is the outcome. The $3.9bn is a wager that the final piece is still available, and that the version of this team which eventually scores in October is worth materially more than the version that keeps not doing so. Nothing in 57 seasons says that is a bad bet. Nothing in it says the bet is safe.",
+            "The companion memo to this report takes the other side of the desk: what the incoming owners inherit, where the balance sheet breaks, and the six moves that would actually buy San Diego a first title.",
+        ],
+        method=[
+            "Season records, win totals and player value figures come from Baseball Reference and are current through games of July 29th 2026. Payroll figures are competitive-balance-tax payrolls as compiled by Spotrac, which is why they differ from Opening Day salary tables. Sale terms, bidder detail and the approval timetable come from MLB.com, Sportico, Sports Business Journal and the San Diego Union-Tribune. Attendance, membership and subscription figures come from the club and SBJ. Farm-system ranks are FanGraphs and Baseball America, July 2026.",
+            "The 60-game 2020 season is shown unadjusted and read separately in the prose. Each qualifying season counts as one postseason appearance. Expansion-club counts cover the 14 franchises added to the National and American Leagues since 1961.",
+        ],
+        references=[
+            "Baseball Reference. <em>San Diego Padres Franchise History; 2025 and 2026 season pages</em>.",
+            "MLB.com. <em>Padres agree to sell team to Kwanza Jones, José E. Feliciano</em>, May 2026.",
+            "Sportico. <em>San Diego Padres Sale: Feliciano, Jones to Pay MLB-Record $3.9 Billion</em>, 2026.",
+            "Forbes. <em>Baseball’s Most Valuable Teams 2026</em>, March 2026.",
+            "Sports Business Journal. <em>Padres have 70,000 DTC subscribers in record-breaking year</em>, October 2025.",
+            "FanGraphs and Baseball America farm-system rankings, July 2026; Spotrac payroll tables.",
+            'Related Artometrics reports: <a href="/padres-world-series-ownership-blueprint">The Padres Cost $3.9 Billion. Winning Will Cost More.</a> · <a href="/dodgers-the-artometrics-of-baseballs-modern-machine">Dodgers</a> · <a href="/giant-the-artometrics-of-a-san-francisco-dynasty">Giants</a> · <a href="/yankees-the-artometrics-of-baseballs-empire">Yankees</a>.',
+        ],
+        note="Payroll figures are tax payrolls rather than Opening Day totals; the two series differ by tens of millions of dollars in some seasons. Records and player value figures are current through July 29th 2026, and the 2026 season is unfinished. The sale remains subject to approval by 22 of the other 29 club owners.",
+        source_credit="Data: Baseball Reference, Spotrac, Forbes, FanGraphs - ARTOMETRICS",
+        tldr="San Diego agreed in May 2026 to sell for $3.9bn, the largest price ever paid for a baseball club. The Padres have played 57 seasons without winning a World Series, have committed about $1.5bn to payroll in six years, and have lost two consecutive winner-take-all games in which the offense all but disappeared. The record price is a wager on the one asset the franchise has never delivered.",
+        key_points=[
+            "$3.9bn — record agreed sale price, pending a vote of 22 of the other 29 owners",
+            "0 titles in 57 seasons — the most valuable franchise never to win anything",
+            "$1.5bn — payroll committed across the past six seasons, top-ten every year",
+            "5 runs in 3 games — the 2025 wild-card exit at Wrigley Field",
+            "$858M — guaranteed money owed to five players after 2026",
+            "30th of 30 — farm-system rank after the Leo De Vries trade",
+        ],
+        faq=[
+            (
+                "Have the San Diego Padres ever won a World Series?",
+                "No. In 57 seasons since their 1969 debut they have won two National League pennants, in 1984 and 1998, and lost both World Series — to Detroit in five games and to the Yankees in a sweep. The 28-year wait since the 1998 flag is the longest in franchise history.",
+            ),
+            (
+                "How much did the Padres sell for, and is the sale final?",
+                "The Seidler family agreed in May 2026 to transfer control to a group led by José E. Feliciano and Kwanza Jones at a $3.9bn valuation, a record for a Major League club. The deal still needs approval from 22 of the other 29 owners; final documentation was filed in late July and a vote is expected in August.",
+            ),
+            (
+                "Why has the Padres’ spending not delivered a championship?",
+                "Payroll has bought access rather than conversion. San Diego has committed roughly $1.5bn in salary since 2021 and reached the postseason four times in six years, but keeps losing short series: shut out over the last two games of the 2024 division series, and held to five runs across three games in the 2025 wild-card round.",
+            ),
+            (
+                "What condition is the franchise in for a new owner?",
+                "Strong on demand, weak on supply. Attendance has set franchise records three years running and the club has the most direct-to-consumer streaming subscribers of any team under MLB’s local-media umbrella, but $858m is owed to five players after 2026 and the farm system ranks last in baseball.",
+            ),
+        ],
     )
 
 
 def padres_ownership_blueprint():
-    """Ownership memo: how a buyer would convert Padres assets into a first World Series."""
+    """Long-form buyer's memo: what $3.9bn buys in San Diego, and what to fix first."""
     slug = "padres-world-series-ownership-blueprint"
 
-    clubs = ["Rockies", "D-backs", "Athletics", "Angels", "Padres", "Mets", "Giants", "Dodgers", "Yankees"]
-    values = [1.68, 1.96, 2.0, 2.8, 3.1, 3.5, 4.05, 7.8, 8.5]
+    marks = [
+        "2012 purchase price",
+        "Previous MLB record (Mets, 2020)",
+        "Forbes valuation (Mar 2026)",
+        "Agreed sale price (2026)",
+    ]
+    values = [0.80, 2.42, 3.10, 3.90]
     write_chart(
         slug,
         "chart1_franchise_capital",
         {
             "data": [
                 bar_h(
-                    clubs,
+                    marks,
                     values,
-                    [ART_RED if c == "Padres" else ART_BLUE for c in clubs],
-                    hover="<b>%{y}</b><br>Forbes value: $%{x}B<extra></extra>",
+                    [ART_BLUE, ART_BLUE, ART_GREY, ART_RED],
+                    hover="<b>%{y}</b><br>$%{x}B<extra></extra>",
                 )
             ],
             "layout": layout(
-                "San Diego is no longer a small-market excuse",
-                "FORBES PUTS THE PADRES IN BASEBALL'S TOP TEN",
-                x_title="Franchise value, $B (Forbes, Mar 2026)",
+                "A 26% premium to the published mark, and a new record",
+                "SAN DIEGO SOLD FOR NEARLY FIVE TIMES ITS 2012 PRICE",
+                x_title="Valuation, $bn",
             ),
         },
     )
 
-    players = [
-        "Bogaerts",
-        "Cronenworth",
-        "Darvish",
-        "Suarez",
-        "Kim",
-        "Tatis Jr.",
-        "Machado",
-        "Profar",
-        "Cease",
-        "King",
-        "Merrill",
-    ]
-    war = [1.2, 1.9, 2.0, 2.1, 2.6, 2.7, 3.1, 3.6, 4.0, 4.1, 4.5]
-    # Red = controllable / short-control core; blue = long-term locked or veteran free-agent year
-    controllable = {"Merrill", "King", "Cease", "Kim", "Profar"}
+    players = ["Cronenworth", "Machado", "Bogaerts", "Merrill", "Tatis Jr.", "Miller", "King"]
+    war = [-0.1, 0.8, 1.0, 1.2, 1.6, 2.7, 2.9]
+    cheap = {"Miller", "Merrill", "King"}
     write_chart(
         slug,
         "chart2_player_assets",
@@ -772,58 +910,56 @@ def padres_ownership_blueprint():
                 bar_h(
                     players,
                     war,
-                    [ART_RED if p in controllable else ART_BLUE for p in players],
-                    hover="<b>%{y}</b><br>2024 bWAR: %{x}<extra></extra>",
+                    [ART_RED if p in cheap else ART_BLUE for p in players],
+                    hover="<b>%{y}</b><br>2026 bWAR: %{x}<extra></extra>",
                 )
             ],
             "layout": layout(
-                "The 2024 win engine was younger than the payroll story",
-                "CONTROLLABLE TALENT OUTPRODUCED SEVERAL MAX CONTRACTS",
-                x_title="2024 Baseball-Reference WAR",
+                "The engine is two pitchers, not the long contracts",
+                "2026 WINS ABOVE REPLACEMENT, THROUGH JULY 29TH",
+                x_title="2026 Baseball Reference WAR",
             ),
         },
     )
 
-    names = ["Merrill", "King", "Cease", "Profar", "Machado", "Tatis Jr.", "Bogaerts"]
-    approx_aav = [0.8, 8.0, 8.0, 1.0, 32.0, 20.0, 25.0]
-    war_eff = [4.5, 4.1, 4.0, 3.6, 3.1, 2.7, 1.2]
+    names = ["Miller", "Cronenworth", "Merrill", "Tatis Jr.", "King", "Bogaerts", "Machado"]
+    aav = [4.0, 11.4, 15.0, 24.3, 25.0, 25.5, 31.8]
+    war_now = [2.7, -0.1, 1.2, 1.6, 2.9, 1.0, 0.8]
     write_chart(
         slug,
         "chart3_cost_vs_war",
         {
             "data": [
                 scatter(
-                    approx_aav,
-                    war_eff,
+                    aav,
+                    war_now,
                     names,
-                    [18 + w * 4 for w in war_eff],
-                    [ART_RED if n in {"Merrill", "King", "Cease", "Profar"} else ART_BLUE for n in names],
-                    hover="<b>%{text}</b><br>Approx. 2024 cost marker: $%{x}M<br>bWAR: %{y}<extra></extra>",
+                    [18 + max(w, 0) * 6 for w in war_now],
+                    [ART_RED if a <= 25.0 and w >= 1.2 else ART_BLUE for a, w in zip(aav, war_now)],
+                    hover="<b>%{text}</b><br>Contract average: $%{x}M a year<br>2026 bWAR: %{y}<extra></extra>",
                 )
             ],
             "layout": layout(
-                "Championship clubs buy surplus, not just names",
-                "LOW-COST WAR IS THE OWNERSHIP EDGE",
-                x_title="Approximate 2024 salary / cost marker, $M",
-                y_title="2024 bWAR",
+                "Championship rosters are built on the gap between cost and value",
+                "SAN DIEGO’S SURPLUS SITS IN THREE CONTRACTS",
+                x_title="Contract average annual value, $M",
+                y_title="2026 Baseball Reference WAR",
             ),
         },
     )
 
-    peers = ["Padres", "Dodgers", "Phillies", "Astros", "Rangers"]
-    # Editorial 0-100 championship-asset indices (labeled as such in prose)
-    market = [72, 98, 80, 78, 74]
-    payroll = [78, 96, 88, 82, 80]
-    controllable_idx = [70, 86, 68, 90, 64]
-    pitching = [74, 88, 82, 85, 76]
-    farm = [48, 92, 60, 84, 58]
-    october = [35, 90, 70, 88, 75]
+    peers = ["Padres", "Dodgers", "Brewers", "Phillies", "Astros"]
+    market = [74, 100, 46, 82, 78]
+    payroll = [88, 100, 42, 95, 84]
+    controllable_idx = [52, 78, 92, 60, 70]
+    farm = [12, 84, 90, 55, 48]
+    october = [18, 96, 40, 68, 80]
     write_chart(
         slug,
         "chart4_asset_stack",
         {
             "data": [
-                bar_h(peers, market, [ART_GREY] * len(peers), name="Market capital", hover="<b>%{y}</b><br>Market capital index: %{x}<extra></extra>"),
+                bar_h(peers, market, [ART_GREY] * len(peers), name="Market capital", hover="<b>%{y}</b><br>Market capital: %{x}<extra></extra>"),
                 bar_h(peers, payroll, [ART_BLUE] * len(peers), name="Payroll firepower", hover="<b>%{y}</b><br>Payroll firepower: %{x}<extra></extra>"),
                 bar_h(peers, controllable_idx, [ART_MID] * len(peers), name="Controllable talent", hover="<b>%{y}</b><br>Controllable talent: %{x}<extra></extra>"),
                 bar_h(peers, farm, ["#8E7B67"] * len(peers), name="Farm replenishment", hover="<b>%{y}</b><br>Farm replenishment: %{x}<extra></extra>"),
@@ -831,7 +967,7 @@ def padres_ownership_blueprint():
             ],
             "layout": {
                 **layout(
-                    "Padres capital is real; conversion and farm depth are not",
+                    "Capital and payroll are competitive. Replenishment is not",
                     "THE CHAMPIONSHIP GAP IS STRUCTURAL, NOT COSMETIC",
                     x_title="Editorial championship-asset index (0-100)",
                     height=640,
@@ -845,14 +981,15 @@ def padres_ownership_blueprint():
     )
 
     levers = [
-        "Star headliners",
-        "Market / Petco capital",
-        "Retain Merrill-class core",
-        "Rotation depth for October",
-        "Contract flexibility",
-        "Farm replenishment",
+        "Sign another $300M star",
+        "Settle baseball governance",
+        "Extend Miller, protect Merrill",
+        "Rebuild the local media business",
+        "Fix the October offense",
+        "Buy rotation innings",
+        "Refund the pipeline",
     ]
-    urgency = [28, 32, 45, 68, 72, 86]
+    urgency = [22, 58, 66, 71, 78, 84, 94]
     write_chart(
         slug,
         "chart5_ownership_playbook",
@@ -861,118 +998,171 @@ def padres_ownership_blueprint():
                 bar_h(
                     levers,
                     urgency,
-                    [ART_RED if u >= 65 else ART_BLUE for u in urgency],
-                    hover="<b>%{y}</b><br>Ownership urgency: %{x}<extra></extra>",
+                    [ART_RED if u >= 70 else ART_BLUE for u in urgency],
+                    hover="<b>%{y}</b><br>Urgency: %{x}<extra></extra>",
                 )
             ],
             "layout": layout(
-                "A buyer should not start by shopping another superstar",
-                "THE FIRST JOBS ARE FARM, FLEXIBILITY, AND DEPTH",
-                x_title="Ownership urgency index (higher = close this gap first)",
+                "The first move is not a signing",
+                "WHERE NEW OWNERSHIP SHOULD SPEND ITS FIRST YEAR",
+                x_title="Editorial urgency index (higher = close this gap first)",
             ),
         },
     )
 
     sections = [
         {
-            "id": "franchise-capital",
-            "title": "The franchise already clears the capital bar",
-            "subtitle": "Forbes franchise values among Padres peers and MLB giants",
+            "id": "demand-asset",
+            "title": "Asset: demand is not the problem",
             "chart": "chart1_franchise_capital",
-            "caption": "Forbes franchise values among Padres peers and MLB giants",
+            "chart_after": 1,
+            "caption": "What the Padres have been worth, 2012 to 2026",
             "prose": [
-                "Forbes’ March 2026 book puts the Padres at about $3.1 billion—tenth in MLB after a roughly 59% year-over-year jump—with sale talk that can push toward $3.5 billion if the events business is packaged in. That is not a charity case. It is a top-ten American sports asset sitting next to a $7.8 billion Dodgers machine in the same division.",
-                "For a prospective owner, the implication is blunt: you are not buying a blank-slate small market. You are buying a waterfront ballpark business, a nationalized brand after the star-market years, and a competitive payroll habit that already proved San Diego will show up when the team is good. Attendance in 2024 cleared 3.33 million. Capital is not the missing ingredient. Conversion is.",
+                "Start with the reason the price was a record. San Diego is the only major-league franchise left in the city, and it behaves like a far larger market than its television rank implies. The club drew 3.4m in 2025, second in baseball behind the Dodgers, and is averaging close to 42,000 a game in 2026. It has set franchise attendance records in three consecutive seasons, holds about 25,000 full-season memberships against a wait list three years old, and renewed 94% of them into 2026 after a 7% price rise.",
+                "The valuation ladder tells the same story from the other end. The Fowler-Seidler group paid $800m in 2012. Forbes marked the club at $3.1bn in March, a 59% jump in a year and tenth in the sport. The agreed sale is $3.9bn. Whatever else is wrong here, no one is being asked to create a market.",
+                "The underpriced line item is geography. The club’s home television territory includes Tijuana, and no other franchise in the sport has an adjacent metropolitan area of that size with no competing team in it.",
             ],
         },
         {
-            "id": "player-assets",
-            "title": "The real 2024 assets were not only the max contracts",
-            "subtitle": "Padres 2024 Baseball-Reference WAR by core contributor",
+            "id": "media-liability",
+            "title": "Liability: the television hole",
+            "prose": [
+                "The largest structural problem is not on the field. In May 2023 Diamond Sports stopped paying on a 20-year, $1.2bn contract, and the collapse of Bally Sports San Diego erased more than $60m a year of contracted revenue. MLB has produced and distributed the club’s local telecasts ever since — San Diego was the first team into the league’s local-media portfolio — and reported local media revenue is now in the $20m-$30m range, with industry sources placing it a little higher.",
+                "The club has handled the transition better than anyone: 70,000 direct-to-consumer subscribers to Padres.TV, the largest such base under the league’s umbrella, plus ten free over-the-air Saturday games through the local CBS affiliate. ESPN takes in-market streaming rights in 2026 under the league’s new agreement. But the underlying position has not changed. San Diego has been paying a top-seven payroll out of a bottom-tier local media base, and the difference was covered by an owner willing to lose money.",
+                "Forbes’ estimate — roughly $20m of operating income on $484m of revenue — is the thesis in one line. The incoming owners are buying a club whose competitive posture depends on a continued appetite for absorbing losses.",
+            ],
+        },
+        {
+            "id": "win-engine",
+            "title": "Asset: the win engine, and what it costs",
             "chart": "chart2_player_assets",
-            "caption": "Padres 2024 Baseball-Reference WAR by core contributor",
+            "caption": "Padres wins above replacement in 2026, through July 29th",
             "prose": [
-                "Read the 2024 roster as an ownership inventory, not a highlight reel. Jackson Merrill (4.5 bWAR), Michael King (4.1), and Dylan Cease (4.0) outproduced several of the franchise’s most expensive long-term commitments. Machado (3.1) and Tatis (2.7) remain cornerstone talent; Bogaerts (1.2) shows how a max deal can stop behaving like a max asset.",
-                "The ownership read: protect and surround the controllable surplus (Merrill, King, Cease-class arms) before you chase the next headline free agent. Stars matter. Surplus WAR at non-star prices is what turns stars into a World Series roster.",
+                "Now the roster. Through July 29th the most productive Padres by Baseball Reference’s wins above replacement are Michael King at 2.9, Mason Miller at 2.7, Tatis at 1.6, Jackson Merrill at 1.2 and Machado at 0.8.",
+                "Miller’s season is an outlier in the sport: a 0.79 earned-run average, 28 saves, 85 strikeouts in 45⅔ innings, an adjusted ERA more than five times the league norm. He is being paid $4m and is under club control through 2029. King is in the first year of a three-year, $75m contract with player options attached, and is the only starter to have held the rotation together through an injury-wrecked summer.",
+                "Together those two pitchers have produced 5.6 wins for about $21m of 2026 salary. The five players owed $858m after this season — Tatis, Machado, Bogaerts, Merrill and Cronenworth — have produced 4.5 between them.",
+            ],
+            "pullquote": "Two pitchers costing $21m this season have been worth more than the five players owed $858m after it.",
+        },
+        {
+            "id": "pipeline-liability",
+            "title": "Liability: the pipeline is empty",
+            "prose": [
+                "FanGraphs ranks the Padres’ farm system last in baseball. Baseball America places it 30th, describing the strength as a handful of high-ceiling names and the weakness as depth, with minor-league rosters “full of old-for-their-level players.” Scouts consulted by the Union-Tribune in late July put it last of 30.",
+                "The proximate cause is the July 2025 trade that sent Leo De Vries and three other young arms to the Athletics for Miller and JP Sears. Miller has been superb. De Vries is now rated the second-best prospect in the sport. That is the Preller method in a single transaction: certainty now, paid for with the only cheap wins a club ever gets.",
+                "Ethan Salas, a 20-year-old catcher at Double-A, is healthy and hitting again and remains a top-ten prospect nationally. Two Single-A left-handers, Kruz Schoolcraft and Kash Mayfield, are the next-best assets, and both are years away. The consequence for an owner is not sentimental: an empty system means every hole on the roster is filled at retail, permanently, which is a large part of why the payroll is $259m and the run differential is minus 18.",
             ],
         },
         {
-            "id": "cost-vs-war",
-            "title": "Buy surplus wins, not just famous contracts",
-            "subtitle": "Approximate 2024 cost markers versus bWAR for key Padres contributors",
+            "id": "surplus",
+            "title": "Where the surplus actually sits",
             "chart": "chart3_cost_vs_war",
-            "caption": "Approximate 2024 cost markers versus bWAR for key Padres contributors",
+            "caption": "Contract average annual value against 2026 value produced",
             "prose": [
-                "This chart is the buyer’s efficiency screen. Merrill and Profar sit in the upper-left: high output, low cash burn. Machado and Tatis sit where franchise faces usually sit—expensive and still useful. Bogaerts is the warning light: high commitment, muted 2024 return.",
-                "A World Series ownership model does not abolish star payroll. It refuses to let star payroll crowd out the cheap wins that make October depth possible. Recent champions—Dodgers, Astros, Rangers, Braves—differed in aesthetics, but each had a surplus engine underneath the billboards.",
+                "Championship teams are not built on the largest contracts. They are built on the gap between what players produce and what they cost, and in San Diego that gap is concentrated in three places.",
+                "Merrill’s nine-year, $135m extension, signed before this season at a $15m average, pays him $7.1m in 2027. Miller is arbitration-controlled through 2029. King’s deal is expensive but short. Against them sit Machado at a $31.8m average through 2033, Bogaerts at $25.5m through 2033 and Cronenworth at $11.4m through 2030 — a trio worth 1.7 wins between them this year, at 33, 33 and 32 years old.",
+                "The instruction that follows is unglamorous. The surplus contracts are the franchise, and the temptation before the August 3rd deadline will be to spend them: San Diego has been widely reported as a possible seller of Miller. Trading three controlled years of the best relief pitcher in baseball to relieve a balance sheet that a $3.9bn buyer is about to recapitalise would be the most expensive kind of saving.",
             ],
         },
         {
-            "id": "asset-stack",
-            "title": "Compared with true contenders, the soft spots are farm and October",
-            "subtitle": "Editorial championship-asset indices for Padres and peer contenders",
+            "id": "peer-gap",
+            "title": "The peer gap, measured against the clubs in the way",
             "chart": "chart4_asset_stack",
-            "caption": "Editorial championship-asset indices for Padres and peer contenders",
+            "caption": "Editorial championship-asset index: Padres against four contenders",
             "prose": [
-                "Stack San Diego against clubs that either won recently or live in the same contention tax bracket. Market capital and payroll firepower are competitive. Controllable talent is closer than the zero-ring narrative suggests. Farm replenishment and October conversion are the structural gaps—exactly what you would expect from a club that traded prospect capital to buy present stars and then exited early.",
-                "The Dodgers remain the division final boss because they score highly across the whole stack, not because they merely outspend one winter. An ownership plan that only tries to match Los Angeles in free agency is a plan to remain permanently adjacent.",
+                "Set the Padres against the teams they have to beat and the shape of the deficit is consistent. Capital and payroll are competitive. Replenishment and October conversion are not.",
+                "The Dodgers are the immediate obstacle and cannot be outspent: back-to-back champions, roughly twice San Diego’s revenue, thirteen games clear in the division. Milwaukee is the more instructive comparison — 67-40 this season on a $124m Opening Day payroll, built almost entirely through internal development. San Diego has spent five years trying to beat Los Angeles at its own game on a fifth of its local media revenue, while running Milwaukee’s problem in reverse.",
+                "The index above is editorial rather than a model. It scores five dimensions on a 0-100 scale to make the shape of the gap legible; the inputs behind it are valuation, tax payroll, share of value from controlled players, published farm rankings and postseason results since 2020.",
             ],
         },
         {
-            "id": "ownership-playbook",
-            "title": "The ownership playbook: close the gaps that create rings",
-            "subtitle": "Priority gaps a Padres buyer should attack first",
+            "id": "playbook",
+            "title": "The memo: six moves, in order",
             "chart": "chart5_ownership_playbook",
-            "caption": "Priority gaps a Padres buyer should attack first",
+            "caption": "Where new ownership should spend its first year",
             "prose": [
-                "If you were writing the first 100-day memo after buying the club, the sequence would not begin with another marquee bat. It would begin with farm replenishment, contract flexibility, and rotation depth durable enough for a short series against Los Angeles.",
-                "Concrete operating rules for a first-title ownership: (1) treat Merrill-class controllable talent as non-negotiable core, not trade bait for win-now patches; (2) replenish the farm every year the big-league club is a buyer—draft, international, and Rule 5 discipline are ownership KPIs, not hobby departments; (3) build a playoff rotation and high-leverage bullpen that can survive a five-game sample; (4) triage long-term contracts by surplus, not by sunk cost—extend what still creates advantage, move or absorb what does not; (5) use Petco and the events business as the revenue floor that funds a sustainable luxury-tax strategy, not as a reason to panic-spend for one October.",
+                "The instinct at this price will be a statement signing. It is the wrong first move: the roster’s marginal need is not another $300m bat. In rough order of urgency:",
+                "<strong>1. Refund the pipeline as a capital project, not a scouting line.</strong> Spend the full draft and international bonus pools, buy development infrastructure and hire away the staff that rival clubs use to turn marginal prospects into major leaguers. It is the cheapest source of wins in the sport and the only one that compounds. It is also the item the outgoing regime spent.",
+                "<strong>2. Buy innings, not headliners.</strong> The rotation has been carried by King through a summer in which the salary sitting on the injured list has been the ninth-largest in baseball. October is decided by a club’s fourth and fifth-best pitchers, which is the category San Diego has never bought and the one available cheaply every winter.",
+                "<strong>3. Fix the October offense deliberately.</strong> The last two eliminations were failures to score: shut out over the final two games of the 2024 division series, five runs across three games in 2025. This lineup is built on power and aggression, a profile that fails against elite pitching in short series. On-base skill and contact are the missing inputs, and they cost less than power does.",
+                "<strong>4. Treat local media as a business you own.</strong> Seventy thousand direct subscribers is the biggest such base in baseball and it was assembled in three seasons out of a bankruptcy. Own the funnel, price it properly and extend it across the border rather than waiting for a regional network that is not coming back.",
+                "<strong>5. Extend Miller; treat Merrill as untouchable.</strong> Both are cheap, both are in their twenties, and neither can be replaced from within this system. Buying out Miller’s arbitration years fixes a cost curve for four seasons; trading him fixes a quarter.",
+                "<strong>6. Settle governance before the winter.</strong> Feliciano will be the control person and intends to run the club in partnership with Jones. The most valuable document they can produce internally is the mandate: one decision-maker for baseball, one time horizon, one definition of success. The Seidler era’s strength was clarity of purpose; its weakness was that the purpose outlived the plan for achieving it.",
             ],
         },
     ]
-    article(
+
+    feature(
         slug,
-        "A World Series Ownership Blueprint for the San Diego Padres",
-        "A buyer’s memo: franchise capital, player assets, peer gaps, and the operating plan to win San Diego’s first title.",
+        "The Padres Cost $3.9 Billion. Winning Will Cost More.",
+        "A buyer’s memo on baseball’s record franchise sale: what San Diego’s assets are actually worth, where the balance sheet breaks, and the six moves that would buy a first World Series.",
         "sports, baseball",
-        [("fast-facts", "Fast facts"), ("dataset-context", "Data and method")]
-        + [(s["id"], s["title"]) for s in sections]
-        + [("conclusion", "Conclusion"), ("references", "References"), ("editors-note", "Editor's note")],
-        [
-            "Imagine you are trying to buy the San Diego Padres—and your first deliverable is not a vibe deck. It is a World Series operating plan. Forbes now books the club as a top-ten MLB asset; the on-field product has already proven it can buy October access. What it has not proven is conversion.",
-            "This report is written as a sendable ownership memo. It inventories the franchise’s capital and player assets, compares them with true contenders, and ranks the gaps a serious buyer would close first. The companion historical piece—How the Padres Bought Stars Without Buying a Dynasty—explains why the ring is still missing. This piece answers what to do about it.",
-            "The thesis is narrow: San Diego does not need to become a louder version of its star-market era. It needs to become a surplus machine—controllable talent, farm replenishment, pitching depth, and contract discipline—capable of beating the Dodgers’ variance tax often enough to finish.",
-        ],
-        [
-            ("$3.1B", "Forbes Padres franchise value, March 2026 (10th in MLB)"),
-            ("4.5", "Jackson Merrill 2024 bWAR — the controllable centerpiece"),
-            ("93", "Padres regular-season wins in 2024"),
-            ("3.33M", "Petco Park attendance in 2024"),
-            ("0", "World Series titles — the only number that still fails"),
-            ("5", "Ownership gaps ranked in the closing playbook chart"),
-        ],
-        [
-            "Player output uses 2024 Baseball-Reference WAR. Franchise values use Forbes’ March 2026 MLB valuations as reported in public coverage. Salary/cost markers are rounded public-reference approximations for efficiency screening, not a full CBT model. Championship-asset indices and ownership-urgency scores are editorial composites labeled as such—useful for prioritization, not as proprietary projections.",
-            "Read this as an ownership strategy brief for a friend who wants the club someday, or as the memo you would want on day one after a sale. It is not insider information about any active transaction.",
-        ],
-        sections,
-        [
-            "The Padres already have enough franchise capital and enough star gravity to contend. The missing World Series is not proof that San Diego cannot win; it is proof that star payroll without surplus and depth is an incomplete ownership model.",
-            "A buyer who protects Merrill-class talent, replenishes the farm, builds October pitching, and manages contracts for surplus—not headlines—gives the franchise its first honest machine for a title. That is the report you send when the question is not whether the Padres are valuable, but whether they can finally finish.",
-        ],
-        [
-            "Forbes MLB team valuations, March 2026 (via public reporting including the San Diego Union-Tribune).",
-            "Baseball Reference. <em>2024 San Diego Padres Statistics</em> and player pages (bWAR).",
-            "FanGraphs / Spotrac public payroll summaries for approximate cost markers.",
-            "Baseball America / industry farm-system coverage for replenishment context (editorial index).",
-            'Related Artometrics reports: <a href="/padres-the-artometrics-of-paying-for-october">Padres: Paying for October</a> · <a href="/dodgers-the-artometrics-of-baseballs-modern-machine">Dodgers</a> · <a href="/sports-dynasty-index-best-and-worst-conversion">Sports Dynasty Index</a> · <a href="/league-money-skill-and-star-systems">League Money &amp; Skill</a>.',
-        ],
-        "Forbes values and salary markers are rounded from public reporting. Asset-stack and urgency indices are editorial prioritization tools. This is not investment advice or a claim about any specific ownership group’s private plans.",
-        "Data: Forbes, Baseball Reference, FanGraphs/Spotrac, Baseball America - ARTOMETRICS",
         author="kyle-mcauliffe",
-        pub_date="2026-07-30T00:00:00.000Z",
-        include_toc=False,
-        context_heading="Data and method",
+        pub_date="2026-07-31T00:00:00.000Z",
+        standfirst="The most expensive baseball team ever sold has the emptiest farm system in the sport, $858m owed to five players and no regional television network. This is the asset sheet.",
+        lede=[
+            "The price is $3.9bn. Forbes valued the San Diego Padres at $3.1bn in March, on estimated revenue of $484m and operating income of about $20m. José E. Feliciano and Kwanza Jones agreed in May to pay a 26% premium to that mark — roughly eight times revenue, for a club in the 30th-largest media market in the United States.",
+            "That arithmetic sets the terms of everything below. No plausible baseball operating margin services $3.9bn. The return has to come from franchise appreciation, from the events and property business around Petco Park, and from the one asset San Diego has never held: a championship, and the permanent revaluation of a market that has waited 57 years for one.",
+            "The transfer is not yet complete. Final documentation reached the league in late July, approval requires 22 of the other 29 owners, and a vote is expected in August, after the August 3rd trade deadline. “It’s a question of getting investment commitments, documentation to be put in a condition that it’s ready for a club vote,” the commissioner, Rob Manfred, said on July 14th.",
+            "What follows is the memo a buyer wants on day one: what works, what is broken, where the surplus sits, and what to do first.",
+        ],
+        facts=[
+            ("$3.9bn", "Agreed price, pending a vote of 22 of 29 owners"),
+            ("$3.1bn", "Forbes’ March 2026 valuation, on $484M of revenue"),
+            ("$858M", "Guaranteed money owed to five players after 2026"),
+            ("30th", "Farm-system rank of 30 clubs, July 2026"),
+            ("$259M", "2026 tax payroll, seventh in baseball"),
+            ("5.6", "Wins from King and Miller, who cost $21M this season"),
+        ],
+        sections=sections,
+        ending_heading="The arithmetic of a first title",
+        ending=[
+            "San Diego does not have a 90-win problem. It has reached the postseason four times in six years and will probably do so again inside two. It has a twelve-game problem: the tournament that follows the season, which the Padres have entered five times since 2020 and left without a pennant every time.",
+            "Closing that gap is not a payroll exercise, which is fortunate, because payroll is the one lever this club has already pulled to its limit. It is a depth-and-pipeline exercise, and those are the two things a recapitalised franchise can buy quickly — if the owners spend on infrastructure rather than announcements.",
+            "The Padres are worth a record price because someone finally believes the last step is available. The list above is what has to be true for that belief to pay. The companion report explains why 57 years of evidence makes it such an expensive bet.",
+        ],
+        method=[
+            "Player value figures are Baseball Reference wins above replacement, current through games of July 29th 2026. Contract terms and average annual values come from Spotrac and FanGraphs’ RosterResource; tax payrolls are Spotrac’s. Valuations are Forbes, March 2026; sale terms and the approval timetable come from MLB.com, Sportico, Sports Business Journal and the San Diego Union-Tribune. Farm-system ranks are FanGraphs, Baseball America and MLB Pipeline, July 2026. Media revenue figures are as reported by SBJ and the Union-Tribune.",
+            "The championship-asset index is editorial. It converts five inputs — valuation, tax payroll, share of value from controlled players, published farm rank and postseason results since 2020 — into a 0-100 score per club so the shape of the gap can be read at a glance. It is a framing device, not a forecast, and no projection of wins or title probability is implied.",
+        ],
+        references=[
+            "Baseball Reference. <em>2026 San Diego Padres Statistics</em>.",
+            "Forbes. <em>Baseball’s Most Valuable Teams 2026</em>, March 2026.",
+            "Sportico. <em>San Diego Padres Sale: Feliciano, Jones to Pay MLB-Record $3.9 Billion</em>, 2026.",
+            "Sports Business Journal. <em>Feliciano group submits final documentation for Padres sale</em>, July 2026.",
+            "San Diego Union-Tribune. <em>Padres have minor-league pieces to entice teams at trade deadline</em>, July 2026.",
+            "Baseball America. <em>MLB Farm System Midseason Talent Rankings</em>, July 2026; FanGraphs RosterResource; Spotrac contract tables.",
+            'Related Artometrics reports: <a href="/padres-the-artometrics-of-paying-for-october">The Most Expensive Team That Has Never Won Anything</a> · <a href="/dodgers-the-artometrics-of-baseballs-modern-machine">Dodgers</a> · <a href="/sports-dynasty-index-best-and-worst-conversion">Sports Dynasty Index</a>.',
+        ],
+        note="This report is editorial analysis, not investment advice, and Artometrics has no relationship with any party to the transaction. Valuations, revenue and media-rights figures are third-party estimates. Player value figures are current through July 29th 2026 and the season is unfinished. The championship-asset and urgency indices are editorial constructs, clearly labelled as such.",
+        source_credit="Data: Baseball Reference, Forbes, Spotrac, FanGraphs, Baseball America - ARTOMETRICS",
+        tldr="A group led by José E. Feliciano and Kwanza Jones agreed to pay $3.9bn for the Padres, a record for a baseball club and a 26% premium to Forbes’ valuation. They inherit baseball’s second-best attended club and its worst farm system, $858m owed to five players after 2026, and a local television business that lost more than $60m a year in 2023. The path to a first title runs through pipeline, pitching depth and October offense — not another maximum contract.",
+        key_points=[
+            "$3.9bn agreed price against a $3.1bn Forbes mark and $484M of revenue",
+            "5.6 wins from King and Miller for $21M; 4.5 from the five players owed $858M",
+            "Farm system ranked last of 30 after the Leo De Vries trade for Mason Miller",
+            "Local media revenue fell from $60M+ a year to a reported $20M-$30M after 2023",
+            "70,000 direct-to-consumer subscribers, the most under MLB’s local-media umbrella",
+            "Six ownership moves, in order: pipeline, innings, October offense, media, extensions, governance",
+        ],
+        faq=[
+            (
+                "Who is buying the Padres and for how much?",
+                "A group led by José E. Feliciano, a co-founder of Clearlake Capital, and his wife, Kwanza Jones, agreed in May 2026 to acquire control at a $3.9bn valuation — a record for a Major League club. Feliciano will be the control person. The deal requires approval from 22 of the other 29 owners, and a vote is expected in August 2026.",
+            ),
+            (
+                "What is the Padres’ biggest problem for a new owner?",
+                "Two: the farm system ranks last of 30 clubs, so every roster hole is filled at retail; and local media revenue collapsed from more than $60m a year to a reported $20m-$30m after Diamond Sports stopped paying in 2023, leaving a top-seven payroll funded by ownership losses.",
+            ),
+            (
+                "How much money do the Padres owe their existing players?",
+                "About $858m is guaranteed after the 2026 season to five players: Fernando Tatis Jr. through 2034, Manny Machado and Xander Bogaerts through 2033, Jackson Merrill through 2034 and Jake Cronenworth through 2030. Those five have produced 4.5 wins above replacement in 2026 through July 29th.",
+            ),
+            (
+                "What would it take for the Padres to win a World Series?",
+                "On this analysis, depth rather than star power: refunding a last-ranked farm system, buying rotation innings instead of headliners, adding on-base and contact skills to a lineup that has failed to score in consecutive eliminations, rebuilding local media revenue, extending cheap young assets such as Mason Miller and Jackson Merrill, and settling a single line of baseball authority under the new owners.",
+            ),
+        ],
     )
 
 
