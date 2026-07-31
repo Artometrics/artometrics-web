@@ -34,12 +34,16 @@ def layout(title: str, subtitle: str, *, x_title: str = "", y_title: str = "", h
             "font": {"family": "DM Sans, Helvetica, sans-serif", "size": 15, "color": ART_DARK},
             "x": 0.5,
             "xanchor": "center",
+            # Anchor the two-line title inside the top margin; without this the
+            # first line is cropped out of the static PNG export.
+            "y": 0.97,
+            "yanchor": "top",
             "automargin": True,
         },
         "paper_bgcolor": ART_CREAM,
         "plot_bgcolor": ART_CREAM,
         "font": {"family": "DM Sans, Helvetica, sans-serif", "color": ART_DARK, "size": 12},
-        "margin": {"l": 84, "r": 52, "t": 88, "b": 64},
+        "margin": {"l": 84, "r": 52, "t": 104, "b": 64},
         "height": height,
         "hovermode": "closest",
         "showlegend": False,
@@ -739,7 +743,7 @@ def padres():
             "prose": [
                 "The scarcity is the part outsiders forget. San Diego joined the National League in 1969 and was bad enough, fast enough, that by 1974 the club had been sold to a buyer who intended to move it to Washington. Topps had already printed baseball cards listing the players as members of a Washington team when Ray Kroc, of McDonald’s, bought the franchise and kept it in San Diego.",
                 "What followed was not a franchise so much as a sequence of unconnected good years. The 1984 team, built around Tony Gwynn, Steve Garvey and Goose Gossage, came back from 0-2 against the Cubs to win the pennant, then lost the World Series to Detroit in five games. The 1998 team won 98 games, beat Atlanta, and was swept by a Yankees club that had won 114. The division titles of 2005 and 2006 arrived with 82 and 88 wins, the thinnest credentials the modern West has sent to October.",
-                "Nine postseason appearances in 57 seasons, four of them since 2020. The spike at the right edge of the chart is not a dynasty forming. It is the first sustained October habit the franchise has ever had, and it arrived only once the club began paying like the teams it was chasing.",
+                "Nine postseason appearances in 57 seasons, four of them since 2020. That late cluster is not a dynasty forming. It is the first sustained October habit the franchise has ever had, and it arrived only once the club began paying like the teams it was chasing.",
             ],
         },
         {
@@ -1072,7 +1076,7 @@ def padres_ownership_blueprint():
             "prose": [
                 "Set the Padres against the teams they have to beat and the shape of the deficit is consistent. Capital and payroll are competitive. Replenishment and October conversion are not.",
                 "The Dodgers are the immediate obstacle and cannot be outspent: back-to-back champions, roughly twice San Diego’s revenue, thirteen games clear in the division. Milwaukee is the more instructive comparison — 67-40 this season on a $124m Opening Day payroll, built almost entirely through internal development. San Diego has spent five years trying to beat Los Angeles at its own game on a fifth of its local media revenue, while running Milwaukee’s problem in reverse.",
-                "The index above is editorial rather than a model. It scores five dimensions on a 0-100 scale to make the shape of the gap legible; the inputs behind it are valuation, tax payroll, share of value from controlled players, published farm rankings and postseason results since 2020.",
+                "The championship-asset index is editorial rather than a model. It scores five dimensions on a 0-100 scale to make the shape of the gap legible; the inputs behind it are valuation, tax payroll, share of value from controlled players, published farm rankings and postseason results since 2020.",
             ],
         },
         {
@@ -1095,7 +1099,7 @@ def padres_ownership_blueprint():
     feature(
         slug,
         "The Padres Cost $3.9 Billion. Winning Will Cost More.",
-        "A buyer’s memo on baseball’s record franchise sale: what San Diego’s assets are actually worth, where the balance sheet breaks, and the six moves that would buy a first World Series.",
+        "A buyer’s memo on baseball’s record franchise sale: what San Diego’s assets are worth, where the balance sheet breaks, and how to buy a title.",
         "sports, baseball",
         author="kyle-mcauliffe",
         pub_date="2026-07-31T00:00:00.000Z",

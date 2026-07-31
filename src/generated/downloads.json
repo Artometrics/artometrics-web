@@ -64,8 +64,8 @@
     "dataset": "/data/articles/beyonce-the-psychonomics-of-control/beyonce_eras.csv",
     "quarto": null,
     "html": null,
-    "pdf": null,
-    "epub": null,
+    "pdf": "/exports/beyonce-the-psychonomics-of-control.pdf",
+    "epub": "/exports/beyonce-the-psychonomics-of-control.epub",
     "audio": null,
     "github": "https://github.com/Artometrics/beyonce-the-psychonomics-of-control"
   },
@@ -94,8 +94,8 @@
     "dataset": "/data/articles/billboard-hot-100/dataset.csv",
     "quarto": null,
     "html": null,
-    "pdf": null,
-    "epub": null,
+    "pdf": "/exports/billboard-hot-100.pdf",
+    "epub": "/exports/billboard-hot-100.epub",
     "audio": null,
     "github": "https://github.com/Artometrics/billboard-hot-100"
   },
@@ -134,8 +134,8 @@
     "dataset": "/data/articles/caesar-the-psychonomics-of-emperor-julius/caesar_gdp.csv",
     "quarto": null,
     "html": null,
-    "pdf": null,
-    "epub": null,
+    "pdf": "/exports/caesar-the-psychonomics-of-emperor-julius.pdf",
+    "epub": "/exports/caesar-the-psychonomics-of-emperor-julius.epub",
     "audio": null,
     "github": "https://github.com/Artometrics/caesar-the-psychonomics-of-emperor-julius"
   },
@@ -384,8 +384,8 @@
     "dataset": "/data/articles/horror-movie-profit/dataset.csv",
     "quarto": null,
     "html": "/exports/horror-movie-profit.html",
-    "pdf": null,
-    "epub": null,
+    "pdf": "/exports/horror-movie-profit.pdf",
+    "epub": "/exports/horror-movie-profit.epub",
     "audio": null,
     "github": "https://github.com/Artometrics/horror-movie-profit"
   },
@@ -589,6 +589,26 @@
     "audio": null,
     "github": "https://github.com/Artometrics/nyc-restaurant-inspections"
   },
+  "padres-the-artometrics-of-paying-for-october": {
+    "slug": "padres-the-artometrics-of-paying-for-october",
+    "dataset": null,
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "epub": null,
+    "audio": null,
+    "github": "https://github.com/Artometrics/padres-the-artometrics-of-paying-for-october"
+  },
+  "padres-world-series-ownership-blueprint": {
+    "slug": "padres-world-series-ownership-blueprint",
+    "dataset": null,
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "epub": null,
+    "audio": null,
+    "github": "https://github.com/Artometrics/padres-world-series-ownership-blueprint"
+  },
   "pantheon-the-artometrics-of-collective-memory": {
     "slug": "pantheon-the-artometrics-of-collective-memory",
     "dataset": null,
@@ -674,8 +694,8 @@
     "dataset": "/data/articles/readmitted/data/hrrp_condition_err.csv",
     "quarto": "/data/articles/readmitted/source.qmd",
     "html": "/exports/readmitted.html",
-    "pdf": null,
-    "epub": null,
+    "pdf": "/exports/readmitted.pdf",
+    "epub": "/exports/readmitted.epub",
     "audio": null,
     "github": "https://github.com/Artometrics/artometrics-web"
   },

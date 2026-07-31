@@ -3,7 +3,7 @@ title: "The Padres Cost $3.9 Billion. Winning Will Cost More."
 slug: padres-world-series-ownership-blueprint
 author: kyle-mcauliffe
 pubDate: 2026-07-31T00:00:00.000Z
-description: "A buyer’s memo on baseball’s record franchise sale: what San Diego’s assets are actually worth, where the balance sheet breaks, and the six moves that would buy a first World Series."
+description: "A buyer’s memo on baseball’s record franchise sale: what San Diego’s assets are worth, where the balance sheet breaks, and how to buy a title."
 heroImage: /images/content/articles/padres-world-series-ownership-blueprint/hero.png
 draft: false
 tags:
@@ -83,7 +83,7 @@ faq:
   <figcaption class="art-chart-caption">Editorial championship-asset index: Padres against four contenders</figcaption>
 </figure>
 <p class="art-p">The Dodgers are the immediate obstacle and cannot be outspent: back-to-back champions, roughly twice San Diego’s revenue, thirteen games clear in the division. Milwaukee is the more instructive comparison — 67-40 this season on a $124m Opening Day payroll, built almost entirely through internal development. San Diego has spent five years trying to beat Los Angeles at its own game on a fifth of its local media revenue, while running Milwaukee’s problem in reverse.</p>
-<p class="art-p">The index above is editorial rather than a model. It scores five dimensions on a 0-100 scale to make the shape of the gap legible; the inputs behind it are valuation, tax payroll, share of value from controlled players, published farm rankings and postseason results since 2020.</p>
+<p class="art-p">The championship-asset index is editorial rather than a model. It scores five dimensions on a 0-100 scale to make the shape of the gap legible; the inputs behind it are valuation, tax payroll, share of value from controlled players, published farm rankings and postseason results since 2020.</p>
 <h2 id="playbook" class="anchored">The memo: six moves, in order</h2>
 <p class="art-p">The instinct at this price will be a statement signing. It is the wrong first move: the roster’s marginal need is not another $300m bat. In rough order of urgency:</p>
 <figure class="art-chart">
