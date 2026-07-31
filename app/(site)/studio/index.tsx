@@ -8,7 +8,21 @@ import { ToolsAccent } from "@/components/tools/ToolsAccent";
 import { useTheme } from "@/lib/theme";
 import { useAuth } from "@/lib/auth";
 import { loadStudioContinue, type StudioContinue } from "@/lib/platform/studio";
+import { useStudioStore } from "@/lib/studio/store";
 import { formatUpdated } from "@/lib/twilda/service";
+
+const TOOL_ROUTES: Record<string, "twilda" | "aftercare" | "samples" | "palette"> = {
+  "/tools/twilda": "twilda",
+  "/tools/aftercare": "aftercare",
+  "/tools/samples": "samples",
+  "/tools/palette": "palette",
+};
+
+function openTool(href: string) {
+  const tool = TOOL_ROUTES[href];
+  if (tool) useStudioStore.getState().setLastTool(tool);
+  router.push(href as `/`);
+}
 
 export default function StudioHomeScreen() {
   const { colors } = useTheme();
@@ -74,10 +88,10 @@ export default function StudioHomeScreen() {
           </Text>
           <PrimaryButton
             label="New novel"
-            onPress={() => router.push("/tools/twilda")}
+            onPress={() => openTool("/tools/twilda")}
             className="mt-2"
           />
-          <Pressable onPress={() => router.push("/tools/aftercare")} className="mt-3">
+          <Pressable onPress={() => openTool("/tools/aftercare")} className="mt-3">
             <Text className="text-accent font-bold">Open Aftercare →</Text>
           </Pressable>
         </View>
@@ -118,10 +132,10 @@ export default function StudioHomeScreen() {
       )}
 
       <View className="flex-row flex-wrap gap-3 mt-2">
-        <PrimaryButton label="Continue writing" onPress={() => router.push("/tools/twilda")} />
+        <PrimaryButton label="Continue writing" onPress={() => openTool("/tools/twilda")} />
         <PrimaryButton
           label="Today's check-in"
-          onPress={() => router.push("/tools/aftercare")}
+          onPress={() => openTool("/tools/aftercare")}
           className="bg-muted"
         />
       </View>
@@ -162,7 +176,13 @@ export default function StudioHomeScreen() {
             },
           ].map((item) => (
             <Link key={item.href} href={item.href as `/tools`} asChild>
-              <Pressable className="border border-border p-[18px] gap-1.5">
+              <Pressable
+                className="border border-border p-[18px] gap-1.5"
+                onPress={() => {
+                  const tool = TOOL_ROUTES[item.href];
+                  if (tool) useStudioStore.getState().setLastTool(tool);
+                }}
+              >
                 <Text className="font-serif text-[22px] font-bold text-fg">{item.title}</Text>
                 <Text className="font-serif text-[15px] leading-6 text-muted">{item.body}</Text>
               </Pressable>

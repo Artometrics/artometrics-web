@@ -1,12 +1,12 @@
 import { useCallback, useState } from "react";
 import {
   ActivityIndicator,
-  Image,
   Pressable,
   Text,
   TextInput,
   View,
 } from "react-native";
+import { Image } from "expo-image";
 import { useFocusEffect } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { PageSeo } from "@/components/PageSeo";
@@ -202,7 +202,8 @@ export default function AftercareTarotScreen() {
                     <Image
                       source={{ uri: art }}
                       className="w-full aspect-[2/3] bg-base-200"
-                      resizeMode="cover"
+                      contentFit="cover"
+                      transition={200}
                     />
                   ) : (
                     <View className="w-full aspect-[2/3] border border-border bg-bg-elevated items-center justify-center">

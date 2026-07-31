@@ -1,5 +1,6 @@
 import { forwardRef } from "react";
 import { Pressable, Text, type ViewStyle } from "react-native";
+import { hapticLight } from "@/lib/haptics";
 
 type Props = {
   label: string;
@@ -16,7 +17,10 @@ export const PrimaryButton = forwardRef<
   return (
     <Pressable
       ref={ref}
-      onPress={onPress}
+      onPress={() => {
+        void hapticLight();
+        onPress?.();
+      }}
       disabled={disabled}
       className={[
         "self-start rounded-btn bg-accent px-5 py-3",

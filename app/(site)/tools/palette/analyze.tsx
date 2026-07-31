@@ -1,23 +1,24 @@
 import { useMemo, useState } from "react";
 import {
   Alert,
-  Image,
-  Platform,
   Pressable,
   Text,
   TextInput,
   View,
 } from "react-native";
+import { Image } from "expo-image";
 import { router } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { PageSeo } from "@/components/PageSeo";
 import { ToolsSubnav } from "@/components/tools/ToolsSubnav";
 import { PrimaryButton } from "@/components/PrimaryButton";
+import { PaletteSkiaStrip } from "@/components/PaletteSkiaStrip";
 import { useRequireAuth } from "@/lib/tools/requireAuth";
 import { extractDominantColors } from "@/lib/palette/extract";
 import { recommendFromHexes } from "@/lib/palette/recommend";
 import { savePalette } from "@/lib/palette/storage";
 import { newPaletteId, type SavedPalette } from "@/lib/palette/types";
+import { pickImage } from "@/lib/pickers";
 
 const NAV = [
   { href: "/tools/palette", label: "Saved" },
@@ -37,41 +38,23 @@ export default function PaletteAnalyzeScreen() {
     [hexes],
   );
 
-  async function pickImage() {
-    if (Platform.OS !== "web" || typeof document === "undefined") {
+  async function onPickImage() {
+    const picked = await pickImage();
+    if (!picked) return;
+    setImageUri(picked.uri);
+    setBusy(true);
+    try {
+      const extracted = await extractDominantColors(picked.uri, 6);
+      setHexes(extracted);
+      setTitle("From photo");
+    } catch (e) {
       Alert.alert(
-        "Web upload",
-        "Photo analysis is available on web in this MVP. Open Artometrics in a browser to upload a selfie.",
+        "Analyze error",
+        e instanceof Error ? e.message : "Could not read colors",
       );
-      return;
+    } finally {
+      setBusy(false);
     }
-    const input = document.createElement("input");
-    input.type = "file";
-    input.accept = "image/*";
-    input.onchange = () => {
-      const file = input.files?.[0];
-      if (!file) return;
-      const reader = new FileReader();
-      reader.onload = async () => {
-        const uri = String(reader.result ?? "");
-        setImageUri(uri);
-        setBusy(true);
-        try {
-          const extracted = await extractDominantColors(uri, 6);
-          setHexes(extracted);
-          setTitle("From photo");
-        } catch (e) {
-          Alert.alert(
-            "Analyze error",
-            e instanceof Error ? e.message : "Could not read colors",
-          );
-        } finally {
-          setBusy(false);
-        }
-      };
-      reader.readAsDataURL(file);
-    };
-    input.click();
   }
 
   async function onSave() {
@@ -119,7 +102,7 @@ export default function PaletteAnalyzeScreen() {
         Upload a photo for a suggested season, undertone read, and wearable palette.
       </Text>
 
-      <PrimaryButton label="Upload photo" onPress={() => void pickImage()} />
+      <PrimaryButton label="Upload photo" onPress={() => void onPickImage()} />
       {busy ? (
         <Text className="text-muted">Reading colors…</Text>
       ) : null}
@@ -149,7 +132,7 @@ export default function PaletteAnalyzeScreen() {
                   />
                 ))}
               </View>
-              <Image source={{ uri: imageUri }} className="w-40 h-[200px] rounded-2xl" resizeMode="cover" />
+              <Image source={{ uri: imageUri }} className="w-40 h-[200px] rounded-2xl" contentFit="cover" transition={200} />
               {tab === "drape" ? (
                 <View className="gap-2">
                   {result.season.avoid.slice(0, 4).map((c) => (
@@ -206,16 +189,22 @@ export default function PaletteAnalyzeScreen() {
           </View>
 
           {tab === "palette" || tab === "editorial" ? (
-            <View className="flex-row flex-wrap gap-2">
-              {(tab === "palette" ? result.season.palette : hexes).map((c) => (
-                <View key={c} className="items-center gap-1">
-                  <View
-                    className="w-12 h-12 border border-border rounded-lg"
-                    style={{ backgroundColor: c }}
-                  />
-                  <Text className="text-subtle text-[10px]">{c}</Text>
-                </View>
-              ))}
+            <View className="gap-2">
+              <View className="flex-row flex-wrap gap-2">
+                {(tab === "palette" ? result.season.palette : hexes).map((c) => (
+                  <View key={c} className="items-center gap-1">
+                    <View
+                      className="w-12 h-12 border border-border rounded-lg"
+                      style={{ backgroundColor: c }}
+                    />
+                    <Text className="text-subtle text-[10px]">{c}</Text>
+                  </View>
+                ))}
+              </View>
+              <PaletteSkiaStrip
+                colors={tab === "palette" ? result.season.palette : hexes}
+                className="rounded-lg border border-border"
+              />
             </View>
           ) : (
             <Text className="font-serif text-base leading-[26px] max-w-[560px] text-muted">

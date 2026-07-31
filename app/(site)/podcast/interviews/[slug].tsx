@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { Image, Text, View, Pressable } from "react-native";
+import { Text, View, Pressable } from "react-native";
+import { Image } from "expo-image";
 import {
   setAudioModeAsync,
   useAudioPlayer,
@@ -148,7 +149,8 @@ export default function PodcastEpisodeScreen() {
         <Image
           source={{ uri: assetUrl(episode.image?.url)! }}
           className="w-full aspect-video border border-border my-2"
-          resizeMode="cover"
+          contentFit="cover"
+          transition={200}
           accessibilityLabel={episode.image?.alt || episode.title}
         />
       ) : null}

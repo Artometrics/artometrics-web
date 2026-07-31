@@ -1,6 +1,8 @@
-import { ImageBackground, Pressable, Text, View } from "react-native";
+import { ImageBackground } from "expo-image";
+import { Pressable, Text, View } from "react-native";
 import type { CoverKind } from "@/lib/twilda/novelcrafter/data";
 import { Colors } from "@/constants/Colors";
+import { assetUrl } from "@/lib/assets";
 
 const COVER_LABEL: Record<CoverKind, string> = {
   gatsby: "Gatsby",
@@ -57,9 +59,10 @@ export function CoverTile({
     <Pressable onPress={onPress} className="mb-5 w-[47%] active:opacity-90">
       {art ? (
         <ImageBackground
-          source={{ uri: art }}
+          source={{ uri: assetUrl(art) }}
           className="aspect-[2/3] justify-end overflow-hidden p-3.5"
-          imageStyle={{ resizeMode: "cover" }}
+          contentFit="cover"
+          transition={200}
         >
           <View className="-m-3.5 flex-1 justify-end bg-black/35 p-3.5">{coverInner}</View>
         </ImageBackground>

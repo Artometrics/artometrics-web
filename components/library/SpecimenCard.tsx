@@ -1,4 +1,5 @@
-import { Image, Pressable, Text, View, Linking } from "react-native";
+import { Pressable, Text, View, Linking } from "react-native";
+import { Image } from "expo-image";
 import type { ReferenceItem, ReferenceSource } from "@/lib/reference/catalog";
 
 export type SpecimenStat = {
@@ -92,7 +93,8 @@ export function SpecimenCard({
             <Image
               source={{ uri: img }}
               className="w-[120px] h-[120px] rounded-lg border-2 border-white/35"
-              resizeMode="cover"
+              contentFit="cover"
+              transition={200}
             />
           ) : (
             <View className="w-24 h-24 rounded-full bg-black/25 items-center justify-center border border-white/35">

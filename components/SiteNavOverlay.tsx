@@ -1,7 +1,17 @@
 import { useEffect, useState } from "react";
 import { Platform, Pressable, ScrollView, Text, TextInput, View } from "react-native";
 import { Link, usePathname, router } from "expo-router";
-import Ionicons from "@expo/vector-icons/Ionicons";
+import {
+  Mail,
+  Moon,
+  Newspaper,
+  Palette,
+  PenLine,
+  Search,
+  Sun,
+  User,
+  X,
+} from "@/components/icons";
 import { useChrome } from "@/lib/chrome";
 import { useTheme } from "@/lib/theme";
 import { useAuth } from "@/lib/auth";
@@ -55,12 +65,12 @@ export function SiteNavOverlay() {
             className="h-11 w-11 items-center justify-center"
             hitSlop={12}
           >
-            <Ionicons name="close" size={28} color={colors.text} />
+            <X size={28} color={colors.text} />
           </Pressable>
         </View>
 
         <View className="mt-2 flex-row items-center gap-2.5 border-b border-border pb-2.5">
-          <Ionicons name="search-outline" size={18} color={colors.textMuted} />
+          <Search size={18} color={colors.textMuted} />
           <TextInput
             value={q}
             onChangeText={setQ}
@@ -82,19 +92,19 @@ export function SiteNavOverlay() {
         <View className="gap-3.5 py-4.5">
           <Link href="/pricing" asChild>
             <Pressable onPress={() => setMenuOpen(false)} className="flex-row items-center gap-3">
-              <Ionicons name="newspaper-outline" size={18} color={colors.text} />
+              <Newspaper size={18} color={colors.text} />
               <Text className="text-[15px] font-medium text-fg">Subscribe</Text>
             </Pressable>
           </Link>
           <Link href="/newsletter" asChild>
             <Pressable onPress={() => setMenuOpen(false)} className="flex-row items-center gap-3">
-              <Ionicons name="mail-outline" size={18} color={colors.text} />
+              <Mail size={18} color={colors.text} />
               <Text className="text-[15px] font-medium text-fg">Newsletters</Text>
             </Pressable>
           </Link>
           <Link href={user ? "/me" : "/login"} asChild>
             <Pressable onPress={() => setMenuOpen(false)} className="flex-row items-center gap-3">
-              <Ionicons name="person-outline" size={18} color={colors.text} />
+              <User size={18} color={colors.text} />
               <Text className="text-[15px] font-medium text-fg">
                 {user ? "Profile" : "Sign in"}
               </Text>
@@ -102,22 +112,22 @@ export function SiteNavOverlay() {
           </Link>
           <Link href={user ? "/studio" : "/login?next=%2Fstudio"} asChild>
             <Pressable onPress={() => setMenuOpen(false)} className="flex-row items-center gap-3">
-              <Ionicons name="create-outline" size={18} color={colors.text} />
+              <PenLine size={18} color={colors.text} />
               <Text className="text-[15px] font-medium text-fg">Studio</Text>
             </Pressable>
           </Link>
           <Pressable onPress={toggle} className="flex-row items-center gap-3">
-            <Ionicons
-              name={mode === "dark" ? "sunny-outline" : "moon-outline"}
-              size={18}
-              color={colors.text}
-            />
+            {mode === "dark" ? (
+              <Sun size={18} color={colors.text} />
+            ) : (
+              <Moon size={18} color={colors.text} />
+            )}
             <Text className="text-[15px] font-medium text-fg">
               {mode === "dark" ? "Light mode" : "Dark mode"}
             </Text>
           </Pressable>
           <Pressable onPress={toggleBrandStyle} className="flex-row items-center gap-3">
-            <Ionicons name="color-palette-outline" size={18} color={colors.text} />
+            <Palette size={18} color={colors.text} />
             <Text className="text-[15px] font-medium text-fg">
               {brandStyle === "swiss" ? "Magazine style" : "Swiss style"}
             </Text>

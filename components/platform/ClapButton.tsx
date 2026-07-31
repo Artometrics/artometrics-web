@@ -1,7 +1,6 @@
-import { useEffect, useState } from "react";
 import { Pressable, Text } from "react-native";
 import { useAuth } from "@/lib/auth";
-import { clapCount, hasClapped, toggleClap } from "@/lib/platform/social";
+import { useClaps } from "@/lib/platform/useClaps";
 
 export function ClapButton({
   targetKind,
@@ -11,31 +10,13 @@ export function ClapButton({
   targetId: string;
 }) {
   const { user } = useAuth();
-  const [count, setCount] = useState(0);
-  const [clapped, setClapped] = useState(false);
-
-  useEffect(() => {
-    void (async () => {
-      try {
-        setCount(await clapCount(targetKind, targetId));
-        if (user) setClapped(await hasClapped(user.id, targetKind, targetId));
-      } catch {
-        /* soft */
-      }
-    })();
-  }, [targetKind, targetId, user]);
+  const { count, clapped, toggle } = useClaps(targetKind, targetId);
 
   return (
     <Pressable
-      onPress={async () => {
+      onPress={() => {
         if (!user) return;
-        try {
-          const res = await toggleClap(user.id, targetKind, targetId);
-          setClapped(res.clapped);
-          setCount(res.count);
-        } catch {
-          /* soft */
-        }
+        toggle();
       }}
       className={[
         "border px-3 py-2 rounded-btn self-start",

@@ -1,4 +1,5 @@
-import { Image, Pressable, Text, View } from "react-native";
+import { Pressable, Text, View } from "react-native";
+import { Image } from "expo-image";
 import { Link } from "expo-router";
 import { useTheme } from "@/lib/theme";
 import { assetUrl } from "@/lib/assets";
@@ -47,7 +48,8 @@ export function MagazineCard({
             source={{ uri: hero }}
             className="w-full bg-base-200"
             style={{ aspectRatio: aspect }}
-            resizeMode="cover"
+            contentFit="cover"
+            transition={200}
             accessibilityLabel={post.title}
           />
         ) : (
@@ -58,7 +60,7 @@ export function MagazineCard({
             <Image
               source={{ uri: fallbackMark }}
               className="w-14 h-14 opacity-35"
-              resizeMode="contain"
+              contentFit="contain"
               accessibilityLabel="Artometrics"
             />
           </View>

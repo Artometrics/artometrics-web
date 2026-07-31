@@ -8,7 +8,7 @@ import {
   View,
   type View as RNView,
 } from "react-native";
-import Ionicons from "@expo/vector-icons/Ionicons";
+import { ChevronDown, ChevronUp } from "@/components/icons";
 import { useTheme } from "@/lib/theme";
 
 const menuShadow =
@@ -83,11 +83,11 @@ export function StudioSelect({
         >
           {selected?.label || placeholder}
         </Text>
-        <Ionicons
-          name={open ? "chevron-up" : "chevron-down"}
-          size={16}
-          color={colors.textMuted}
-        />
+        {open ? (
+          <ChevronUp size={16} color={colors.textMuted} />
+        ) : (
+          <ChevronDown size={16} color={colors.textMuted} />
+        )}
       </Pressable>
 
       {open ? (

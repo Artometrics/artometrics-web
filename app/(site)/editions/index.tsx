@@ -1,4 +1,5 @@
-import { Image, Text, View, Pressable } from "react-native";
+import { Text, View, Pressable } from "react-native";
+import { Image } from "expo-image";
 import { Link } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { PageSeo } from "@/components/PageSeo";
@@ -16,7 +17,8 @@ export default function EditionsIndex() {
       <Image
         source={{ uri: "/images/editions/_index-banner.jpg" }}
         className="w-full h-[220px] mb-2"
-        resizeMode="cover"
+        contentFit="cover"
+        transition={200}
         accessibilityLabel="Artometrics special editions"
       />
       <Text className="text-[11px] tracking-[2.5px] uppercase font-semibold text-accent">Magazine</Text>
@@ -33,7 +35,8 @@ export default function EditionsIndex() {
                 <Image
                   source={{ uri: ed.heroImage }}
                   className="w-full aspect-[3/4] mb-1"
-                  resizeMode="cover"
+                  contentFit="cover"
+                  transition={200}
                   accessibilityLabel={`${ed.title} cover`}
                 />
               ) : null}

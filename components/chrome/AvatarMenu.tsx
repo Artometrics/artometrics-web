@@ -1,9 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import { Platform, Pressable, Text, View, type View as RNView } from "react-native";
 import { router } from "expo-router";
-import Ionicons from "@expo/vector-icons/Ionicons";
+import { User } from "@/components/icons";
 import { useAuth } from "@/lib/auth";
 import { useTheme } from "@/lib/theme";
+import { hapticSelection } from "@/lib/haptics";
 import { getProfile } from "@/lib/profile/service";
 
 const menuShadow =
@@ -50,12 +51,7 @@ export function AvatarMenu() {
         accessibilityLabel="Sign in"
         className="h-10 w-10 items-center justify-center rounded-btn border border-fg bg-bg-elevated"
       >
-        <Ionicons
-          name="person-outline"
-          size={20}
-          color={colors.text}
-          style={{ color: colors.text }}
-        />
+        <User size={20} color={colors.text} />
       </Pressable>
     );
   }
@@ -83,7 +79,12 @@ export function AvatarMenu() {
   return (
     <View ref={rootRef} className="relative z-20" collapsable={false}>
       <Pressable
-        onPress={() => setOpen((v) => !v)}
+        onPress={() =>
+          setOpen((v) => {
+            if (!v) void hapticSelection();
+            return !v;
+          })
+        }
         hitSlop={8}
         accessibilityLabel="Account menu"
         accessibilityRole="button"
@@ -92,12 +93,7 @@ export function AvatarMenu() {
           open ? "border-accent" : "border-fg",
         ].join(" ")}
       >
-        <Ionicons
-          name="person"
-          size={20}
-          color={colors.text}
-          style={{ color: colors.text }}
-        />
+        <User size={20} color={colors.text} />
       </Pressable>
 
       {open ? (

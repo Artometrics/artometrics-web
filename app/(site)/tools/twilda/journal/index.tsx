@@ -2,11 +2,11 @@ import { useCallback, useState } from "react";
 import {
   ActivityIndicator,
   Alert,
-  FlatList,
   Pressable,
   RefreshControl,
   Text,
 } from "react-native";
+import { FlashList } from "@shopify/flash-list";
 import { router, useFocusEffect } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { PageSeo } from "@/components/PageSeo";
@@ -95,7 +95,7 @@ export default function TwildaJournalScreen() {
       {loading ? (
         <ActivityIndicator className="mt-8" color={colors.accent} />
       ) : (
-        <FlatList
+        <FlashList
           data={entries}
           keyExtractor={(item) => item.id}
           scrollEnabled={false}

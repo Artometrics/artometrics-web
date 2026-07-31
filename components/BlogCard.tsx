@@ -1,4 +1,5 @@
-import { Image, Pressable, Text, View } from "react-native";
+import { Pressable, Text, View } from "react-native";
+import { Image } from "expo-image";
 import { Link } from "expo-router";
 import { assetUrl } from "@/lib/assets";
 import {
@@ -28,7 +29,8 @@ export function BlogCard({
             <Image
               source={{ uri: hero }}
               className="w-full aspect-[16/10]"
-              resizeMode="cover"
+              contentFit="cover"
+              transition={200}
               accessibilityLabel={post.title}
             />
           ) : null}
@@ -70,7 +72,8 @@ export function BlogCard({
           <Image
             source={{ uri: hero }}
             className="w-24 h-24"
-            resizeMode="cover"
+            contentFit="cover"
+            transition={200}
             accessibilityLabel={post.title}
           />
         ) : null}

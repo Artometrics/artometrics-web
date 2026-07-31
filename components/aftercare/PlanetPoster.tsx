@@ -1,4 +1,5 @@
-import { Image, Platform, Text, View } from "react-native";
+import { Platform, Text, View } from "react-native";
+import { Image } from "expo-image";
 import type { PlanetMeta } from "@/lib/aftercare/planets";
 
 /** Celestial “planet poster” card — dark academia, geometry ring, cream type. */
@@ -59,7 +60,8 @@ export function PlanetPoster({
             height: size * 0.62,
             borderRadius: (size * 0.62) / 2,
           }}
-          resizeMode="cover"
+          contentFit="cover"
+          transition={200}
           accessibilityLabel={planet.id}
         />
         <View

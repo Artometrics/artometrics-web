@@ -1,11 +1,11 @@
 import {
-  Image,
   Text,
   View,
   type StyleProp,
   type TextStyle,
   type ViewStyle,
 } from "react-native";
+import { Image } from "expo-image";
 import { Colors } from "@/constants/Colors";
 import { assetUrl } from "@/lib/assets";
 import { useTheme } from "@/lib/theme";
@@ -72,7 +72,7 @@ export function Logo({
           <Image
             source={{ uri: mark }}
             style={{ width: markSize, height: markSize }}
-            resizeMode="contain"
+            contentFit="contain"
           />
         ) : (
           <Text

@@ -1,4 +1,5 @@
-import { Image, Text } from "react-native";
+import { Text } from "react-native";
+import { Image } from "expo-image";
 import { Link, useLocalSearchParams } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { assetUrl } from "@/lib/assets";
@@ -31,7 +32,8 @@ export default function AuthorScreen() {
         <Image
           source={{ uri: assetUrl(author.image?.url)! }}
           className="w-24 h-24 rounded-full mb-2 bg-bg-elevated"
-          resizeMode="cover"
+          contentFit="cover"
+          transition={200}
           accessibilityLabel={author.image?.alt || author.name}
         />
       ) : null}

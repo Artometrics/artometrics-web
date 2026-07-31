@@ -2,10 +2,10 @@ import {
   Pressable,
   Text,
   View,
-  Image,
   useWindowDimensions,
   Platform,
 } from "react-native";
+import { Image } from "expo-image";
 import { Link } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { MagazineCard } from "@/components/MagazineCard";
@@ -90,7 +90,8 @@ export default function HomeScreen() {
                         ? ({ filter: "grayscale(1) contrast(1.05)" } as object)
                         : undefined
                     }
-                    resizeMode="cover"
+                    contentFit="cover"
+                    transition={200}
                     accessibilityLabel={featured.title}
                   />
                 </Pressable>
@@ -163,7 +164,8 @@ export default function HomeScreen() {
                           ? ({ filter: "grayscale(0.35)" } as object)
                           : undefined
                       }
-                      resizeMode="cover"
+                      contentFit="cover"
+                      transition={200}
                       accessibilityLabel={featured.title}
                     />
                   </Pressable>
@@ -254,7 +256,8 @@ export default function HomeScreen() {
                     <Image
                       source={{ uri: img }}
                       className="w-full aspect-square border border-border bg-bg-elevated"
-                      resizeMode="cover"
+                      contentFit="cover"
+                      transition={200}
                     />
                   ) : (
                     <View className="w-full aspect-square border border-border bg-bg-elevated" />

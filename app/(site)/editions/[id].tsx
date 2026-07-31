@@ -1,4 +1,5 @@
-import { Text, View, Pressable, Linking, Platform, Image } from "react-native";
+import { Text, View, Pressable, Linking, Platform } from "react-native";
+import { Image } from "expo-image";
 import { Link, useLocalSearchParams } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { PageSeo } from "@/components/PageSeo";
@@ -67,7 +68,8 @@ export default function EditionScreen() {
         <Image
           source={{ uri: edition.heroImage }}
           className="w-full aspect-[3/4] max-h-[520px] my-2"
-          resizeMode="cover"
+          contentFit="cover"
+          transition={200}
           accessibilityLabel={`${edition.title} cover`}
         />
       ) : null}

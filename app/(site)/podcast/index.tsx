@@ -1,4 +1,5 @@
-import { Image, Pressable, Text, View } from "react-native";
+import { Pressable, Text, View } from "react-native";
+import { Image } from "expo-image";
 import { Link } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { PageSeo } from "@/components/PageSeo";
@@ -31,7 +32,7 @@ export default function PodcastIndex() {
                 className="flex-basis-[300px] flex-grow border border-border overflow-hidden bg-bg-elevated"
               >
                 {image ? (
-                  <Image source={{ uri: image }} className="w-full aspect-video" resizeMode="cover" />
+                  <Image source={{ uri: image }} className="w-full aspect-video" contentFit="cover" transition={200} />
                 ) : null}
                 <View className="p-4 gap-2">
                   <Text className="text-[11px] tracking-[2.5px] uppercase font-semibold text-accent">

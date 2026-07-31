@@ -2,12 +2,12 @@ import { useCallback, useState } from "react";
 import {
   ActivityIndicator,
   Alert,
-  FlatList,
   Pressable,
   RefreshControl,
   Text,
   View,
 } from "react-native";
+import { FlashList } from "@shopify/flash-list";
 import { router, useFocusEffect } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { PageSeo } from "@/components/PageSeo";
@@ -107,12 +107,11 @@ export default function TwildaLibraryScreen() {
           No novels yet. Create a blank novel or wait for starters to seed.
         </Text>
       ) : (
-        <FlatList
+        <FlashList
           data={novels}
           keyExtractor={(item) => item.id}
           numColumns={2}
-          columnWrapperStyle={{ justifyContent: "space-between" }}
-          contentContainerStyle={{ paddingTop: 16, paddingBottom: 24 }}
+          contentContainerClassName="pt-4 pb-6"
           scrollEnabled={false}
           refreshControl={
             <RefreshControl

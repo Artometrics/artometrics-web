@@ -1,4 +1,5 @@
-import { Image, Pressable, Text, View } from "react-native";
+import { Pressable, Text, View } from "react-native";
+import { Image } from "expo-image";
 import { Link } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { PageSeo } from "@/components/PageSeo";
@@ -27,7 +28,8 @@ export default function AuthorsIndex() {
                   <Image
                     source={{ uri: avatar }}
                     className="w-[72px] h-[72px] rounded-full"
-                    resizeMode="cover"
+                    contentFit="cover"
+                    transition={200}
                     accessibilityLabel={author.image?.alt || author.name}
                   />
                 ) : null}

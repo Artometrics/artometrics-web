@@ -1,15 +1,15 @@
 import { useCallback, useState } from "react";
 import {
   ActivityIndicator,
-  Image,
   Platform,
   Pressable,
   Text,
   View,
   useWindowDimensions,
 } from "react-native";
+import { Image } from "expo-image";
 import { router, useFocusEffect } from "expo-router";
-import Ionicons from "@expo/vector-icons/Ionicons";
+import { ArrowRight, X } from "@/components/icons";
 import { Wrapper } from "@/components/Wrapper";
 import { PageSeo } from "@/components/PageSeo";
 import { ToolsSubnav } from "@/components/tools/ToolsSubnav";
@@ -202,7 +202,7 @@ export default function AftercareHomeScreen() {
               <Image
                 source={{ uri: heroBg }}
                 className="absolute w-[70%] h-[70%] top-[18%] left-[15%] opacity-[0.06]"
-                resizeMode="contain"
+                contentFit="contain"
               />
             ) : null}
             <View className="absolute inset-0 bg-black/35" />
@@ -226,7 +226,7 @@ export default function AftercareHomeScreen() {
                 hitSlop={10}
                 accessibilityLabel="Close story"
               >
-                <Ionicons name="close" size={22} color="#FFFFFF" style={{ color: "#FFFFFF" }} />
+                <X size={22} color="#FFFFFF" />
               </Pressable>
             </View>
           </View>
@@ -324,12 +324,7 @@ export default function AftercareHomeScreen() {
                       className="flex-row items-center justify-between bg-white px-4 py-3.5 rounded-full"
                     >
                       <Text className="text-[#0A0A0A] text-sm font-bold">{label}</Text>
-                      <Ionicons
-                        name="arrow-forward"
-                        size={16}
-                        color="#0A0A0A"
-                        style={{ color: "#0A0A0A" }}
-                      />
+                      <ArrowRight size={16} color="#0A0A0A" />
                     </Pressable>
                   ))}
                 </View>

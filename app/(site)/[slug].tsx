@@ -1,4 +1,5 @@
-import { Image, Text, View, useWindowDimensions } from "react-native";
+import { Text, View, useWindowDimensions } from "react-native";
+import { Image } from "expo-image";
 import { useLocalSearchParams, Link } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { ArticleBody } from "@/components/ArticleBody";
@@ -126,7 +127,8 @@ export default function ReportScreen() {
           <Image
             source={{ uri: hero }}
             className="w-full aspect-video max-h-[520px]"
-            resizeMode="cover"
+            contentFit="cover"
+            transition={200}
             accessibilityLabel={post.title}
           />
         </Wrapper>

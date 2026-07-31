@@ -9,7 +9,7 @@ import {
   type View as RNView,
 } from "react-native";
 import { Link, router } from "expo-router";
-import Ionicons from "@expo/vector-icons/Ionicons";
+import { ArrowRight, CircleX, Menu, Search } from "@/components/icons";
 import { Logo } from "@/components/Logo";
 import { Wrapper } from "@/components/Wrapper";
 import { AvatarMenu } from "@/components/chrome/AvatarMenu";
@@ -154,12 +154,7 @@ export function SiteHeader() {
             hitSlop={12}
             testID="site-menu-button"
           >
-            <Ionicons
-              name="menu-outline"
-              size={26}
-              color={colors.text}
-              style={{ color: colors.text }}
-            />
+            <Menu size={26} color={colors.text} />
           </Pressable>
 
           <Link href="/" asChild>
@@ -181,12 +176,7 @@ export function SiteHeader() {
                   hitSlop={10}
                   className="h-10 w-10 items-center justify-center rounded-btn border border-border bg-bg-elevated"
                 >
-                  <Ionicons
-                    name="search-outline"
-                    size={20}
-                    color={colors.text}
-                    style={{ color: colors.text }}
-                  />
+                  <Search size={20} color={colors.text} />
                 </Pressable>
               ) : (
                 <Animated.View
@@ -204,11 +194,9 @@ export function SiteHeader() {
                   ]}
                 >
                   <View className="h-10 flex-row items-center gap-2 pl-2.5 pr-1.5">
-                    <Ionicons
-                      name="search"
+                    <Search
                       size={18}
                       color={focused ? colors.accent : colors.textMuted}
-                      style={{ color: focused ? colors.accent : colors.textMuted }}
                     />
                     <TextInput
                       ref={inputRef}
@@ -243,12 +231,7 @@ export function SiteHeader() {
                         accessibilityLabel="Clear search"
                         className="p-0.5"
                       >
-                        <Ionicons
-                          name="close-circle"
-                          size={18}
-                          color={colors.textSubtle}
-                          style={{ color: colors.textSubtle }}
-                        />
+                        <CircleX size={18} color={colors.textSubtle} />
                       </Pressable>
                     ) : null}
                     <Pressable
@@ -257,12 +240,7 @@ export function SiteHeader() {
                       accessibilityLabel="Submit search"
                       className="h-7 w-7 items-center justify-center rounded-btn bg-fg"
                     >
-                      <Ionicons
-                        name="arrow-forward"
-                        size={16}
-                        color={colors.inverse}
-                        style={{ color: colors.inverse }}
-                      />
+                      <ArrowRight size={16} color={colors.inverse} />
                     </Pressable>
                   </View>
 
@@ -306,12 +284,7 @@ export function SiteHeader() {
               <Text className="text-[11px] font-extrabold uppercase tracking-[1.4px] text-white">
                 Studio
               </Text>
-              <Ionicons
-                name="arrow-forward"
-                size={14}
-                color="#FFFFFF"
-                style={{ color: "#FFFFFF" }}
-              />
+              <ArrowRight size={14} color="#FFFFFF" />
             </Pressable>
 
             <AvatarMenu />

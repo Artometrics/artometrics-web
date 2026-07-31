@@ -1,4 +1,5 @@
-import { Image, Platform, Pressable, Text, View } from "react-native";
+import { Platform, Pressable, Text, View } from "react-native";
+import { Image } from "expo-image";
 import type { PlanetMeta } from "@/lib/aftercare/planets";
 
 const chipBackdrop =
@@ -53,7 +54,8 @@ export function CosmicChartCard({
           <Image
             source={{ uri: planet.imageUrl }}
             className="h-[72px] w-[72px] rounded-full"
-            resizeMode="cover"
+            contentFit="cover"
+            transition={200}
           />
           <View
             className="absolute top-7 right-[42px] h-2 w-2 rounded-full"

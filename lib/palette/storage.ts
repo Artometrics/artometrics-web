@@ -1,10 +1,10 @@
-import AsyncStorage from "@react-native-async-storage/async-storage";
+import { kv } from "@/lib/storage/kv";
 import type { SavedPalette } from "@/lib/palette/types";
 
 const KEY = "artometrics-color-palettes";
 
 export async function listPalettes(userId: string): Promise<SavedPalette[]> {
-  const raw = await AsyncStorage.getItem(KEY);
+  const raw = await kv.getItem(KEY);
   if (!raw) return [];
   try {
     const all = JSON.parse(raw) as SavedPalette[];
@@ -17,7 +17,7 @@ export async function listPalettes(userId: string): Promise<SavedPalette[]> {
 }
 
 export async function savePalette(palette: SavedPalette): Promise<void> {
-  const raw = await AsyncStorage.getItem(KEY);
+  const raw = await kv.getItem(KEY);
   let all: SavedPalette[] = [];
   try {
     all = raw ? (JSON.parse(raw) as SavedPalette[]) : [];
@@ -28,15 +28,15 @@ export async function savePalette(palette: SavedPalette): Promise<void> {
   const idx = all.findIndex((p) => p.id === next.id);
   if (idx >= 0) all[idx] = next;
   else all.push(next);
-  await AsyncStorage.setItem(KEY, JSON.stringify(all));
+  await kv.setItem(KEY, JSON.stringify(all));
 }
 
 export async function deletePalette(userId: string, id: string): Promise<void> {
-  const raw = await AsyncStorage.getItem(KEY);
+  const raw = await kv.getItem(KEY);
   if (!raw) return;
   try {
     const all = JSON.parse(raw) as SavedPalette[];
-    await AsyncStorage.setItem(
+    await kv.setItem(
       KEY,
       JSON.stringify(all.filter((p) => !(p.userId === userId && p.id === id))),
     );
