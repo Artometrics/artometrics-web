@@ -799,10 +799,14 @@ pre:has(> code.sourceCode.sql),
   font-size: 1.34rem !important;
   line-height: 1.7 !important;
   font-weight: 500 !important;
-  max-width: min(50rem, 100%) !important;
-  margin: 0 auto 2.1rem !important;
+  max-width: min(56rem, 100%) !important;
+  margin: 0 auto 2.1rem 0 !important;
   padding-bottom: 1.6rem !important;
   border-bottom: 1px solid #E8E6E1 !important;
+}
+.artometrics-article-body main.art-article-main > blockquote{
+  max-width: min(56rem, 100%) !important;
+  margin: 2.4rem auto 2.4rem 0 !important;
 }
 .artometrics-article-body main.art-article-main blockquote p{
   text-align: left !important;
