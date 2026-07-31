@@ -1,4 +1,3 @@
-<style>
 /* ── Progress bar ──────────────────────────────────────────────────── */
 .artometrics-article-body #art-progress-bar{
   position: fixed;
@@ -160,7 +159,6 @@
 .artometrics-article-body .art-ref-item:last-child{ border-bottom: none; }
 .artometrics-article-body .art-ref-item a{ color: #C0392B; text-decoration: none; }
 .artometrics-article-body .art-ref-item a:hover{ text-decoration: underline; }
-</style>
 
 /* ============================================================
    ARTOMETRICS — Magazine HTML Theme (Centered Edition)

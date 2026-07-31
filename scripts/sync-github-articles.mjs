@@ -94,10 +94,12 @@ function writeArticleCss() {
       /h2:first-of-type \+ ul,/g,
       "main.art-article-main h2#fast-facts + ul,"
     );
+  // art-head.html wraps its rules in <style> tags; left in place they are parsed
+  // as garbage and swallow the rule that follows each one.
   const artHead = fs.readFileSync(
     path.join(sampleRepo, "art-head.html"),
     "utf8"
-  );
+  ).replace(/<\/?style[^>]*>/gi, "");
   const siteExtras = `
 /* ── Site layout fixes (Quarto embed without main wrapper) ── */
 .artometrics-article-body #quarto-content {
