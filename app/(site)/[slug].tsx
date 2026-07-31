@@ -3,6 +3,7 @@ import { useLocalSearchParams, Link } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { ArticleBody } from "@/components/ArticleBody";
 import { ArticleActions } from "@/components/ArticleActions";
+import { ArticleNarrationPlayer } from "@/components/ArticleNarrationPlayer";
 import { CommentThread } from "@/components/platform/CommentThread";
 import { ClapButton } from "@/components/platform/ClapButton";
 import { TldrBox } from "@/components/TldrBox";
@@ -144,6 +145,10 @@ export default function ReportScreen() {
           {post.pubDate ? ` · ${formatDate(post.pubDate)}` : ""}
           {` · ${minutes} min read`}
         </Text>
+        <ArticleNarrationPlayer
+          audioSrc={(post as { audioSrc?: string | null }).audioSrc}
+          title={post.title}
+        />
         <TldrBox
           tldr={tldr ?? post.description}
           keyPoints={withTopicKeyPoint(keyPoints, label)}
