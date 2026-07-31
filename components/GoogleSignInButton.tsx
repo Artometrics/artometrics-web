@@ -1,5 +1,4 @@
-import { Pressable, Text, StyleSheet, View } from "react-native";
-import { useTheme } from "@/lib/theme";
+import { Pressable, Text, View } from "react-native";
 
 type Props = {
   label?: string;
@@ -13,48 +12,23 @@ export function GoogleSignInButton({
   onPress,
   disabled,
 }: Props) {
-  const { colors } = useTheme();
   return (
     <Pressable
       onPress={onPress}
       disabled={disabled}
-      style={StyleSheet.flatten([
-        styles.btn,
-        {
-          borderColor: colors.border,
-          backgroundColor: colors.bgElevated,
-          opacity: disabled ? 0.6 : 1,
-        },
-      ])}
+      className={[
+        "self-stretch rounded-btn border border-border bg-bg-elevated px-5 py-3",
+        disabled ? "opacity-60" : "",
+      ]
+        .filter(Boolean)
+        .join(" ")}
       accessibilityRole="button"
       accessibilityLabel={label}
     >
-      <View style={styles.row}>
-        <Text style={[styles.g, { color: colors.text }]}>G</Text>
-        <Text style={[styles.label, { color: colors.text }]}>{label}</Text>
+      <View className="flex-row items-center justify-center gap-2.5">
+        <Text className="w-5 text-center text-base font-bold text-fg">G</Text>
+        <Text className="text-sm font-semibold tracking-wide text-fg">{label}</Text>
       </View>
     </Pressable>
   );
 }
-
-const styles = StyleSheet.create({
-  btn: {
-    alignSelf: "stretch",
-    borderWidth: 1,
-    paddingHorizontal: 20,
-    paddingVertical: 12,
-    borderRadius: 2,
-  },
-  row: { flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 10 },
-  g: {
-    fontSize: 16,
-    fontWeight: "700",
-    width: 20,
-    textAlign: "center",
-  },
-  label: {
-    fontSize: 14,
-    fontWeight: "600",
-    letterSpacing: 0.3,
-  },
-});

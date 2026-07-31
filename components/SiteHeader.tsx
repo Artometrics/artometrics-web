@@ -6,7 +6,6 @@ import {
   Text,
   TextInput,
   View,
-  StyleSheet,
   type View as RNView,
 } from "react-native";
 import { Link, router } from "expo-router";
@@ -14,7 +13,6 @@ import Ionicons from "@expo/vector-icons/Ionicons";
 import { Logo } from "@/components/Logo";
 import { Wrapper } from "@/components/Wrapper";
 import { AvatarMenu } from "@/components/chrome/AvatarMenu";
-import { Fonts } from "@/constants/Colors";
 import { useAuth } from "@/lib/auth";
 import { useChrome } from "@/lib/chrome";
 import { useTheme } from "@/lib/theme";
@@ -26,6 +24,16 @@ const PLACEHOLDERS = [
   "Find a podcast…",
   "Look up an author…",
 ];
+
+const searchPanelShadow =
+  Platform.OS === "web"
+    ? ({ boxShadow: "0 10px 28px rgba(23, 23, 23, 0.08)" } as object)
+    : {
+        shadowOffset: { width: 0, height: 8 },
+        shadowOpacity: 0.12,
+        shadowRadius: 16,
+        elevation: 6,
+      };
 
 export function SiteHeader() {
   const { user } = useAuth();
@@ -126,27 +134,23 @@ export function SiteHeader() {
   const studioHref = user ? "/studio" : "/login?next=%2Fstudio";
 
   return (
-    <View
-      style={[
-        styles.shell,
-        { backgroundColor: colors.headerBg, borderBottomColor: colors.border },
-      ]}
-    >
+    <View className="relative z-40 border-b-2 border-border bg-header">
       {searchOpen ? (
         <Pressable
           accessibilityLabel="Dismiss search"
           onPress={closeSearch}
-          style={styles.dismissScrim}
+          className="absolute inset-x-0 top-0 z-[1]"
+          style={{ bottom: -4000 }}
         />
       ) : null}
 
       <Wrapper variant="magazine">
-        <View style={styles.topRow}>
+        <View className="z-[2] min-h-14 flex-row items-center justify-between gap-2 py-2.5">
           <Pressable
             onPress={() => setMenuOpen(true)}
             accessibilityRole="button"
             accessibilityLabel="Open menu"
-            style={styles.sideBtn}
+            className="z-[2] h-11 w-11 items-center justify-center"
             hitSlop={12}
             testID="site-menu-button"
           >
@@ -159,33 +163,23 @@ export function SiteHeader() {
           </Pressable>
 
           <Link href="/" asChild>
-            <Pressable style={styles.logoWrap} accessibilityLabel="Artometrics home">
-              <Logo
-                size={32}
-                align="center"
-                compact={0}
-                style={{ color: colors.text }}
-                markVariant="auto"
-              />
+            <Pressable
+              className="absolute left-14 right-[200px] z-[3] items-center justify-center"
+              accessibilityLabel="Artometrics home"
+            >
+              <Logo size={32} align="center" compact={0} markVariant="auto" />
             </Pressable>
           </Link>
 
-          <View style={styles.actions}>
-            <View ref={searchRootRef} style={styles.searchRoot} collapsable={false}>
+          <View className="z-[4] ml-auto flex-row items-center justify-end gap-2">
+            <View ref={searchRootRef} className="relative z-[5]" collapsable={false}>
               {!searchOpen ? (
                 <Pressable
                   onPress={openSearch}
                   accessibilityLabel="Open search"
                   accessibilityRole="button"
                   hitSlop={10}
-                  style={StyleSheet.flatten([
-                    styles.iconBtn,
-                    styles.searchTrigger,
-                    {
-                      borderColor: colors.border,
-                      backgroundColor: colors.bgElevated,
-                    },
-                  ])}
+                  className="h-10 w-10 items-center justify-center rounded-btn border border-border bg-bg-elevated"
                 >
                   <Ionicons
                     name="search-outline"
@@ -196,18 +190,20 @@ export function SiteHeader() {
                 </Pressable>
               ) : (
                 <Animated.View
-                  style={StyleSheet.flatten([
-                    styles.searchPanel,
+                  className={[
+                    "overflow-hidden min-h-10 rounded-btn border-[1.5px] bg-bg-elevated",
+                    focused ? "border-accent" : "border-border",
+                  ].join(" ")}
+                  style={[
                     {
                       width: panelWidth,
                       opacity: panelOpacity,
-                      borderColor: focused ? colors.accent : colors.border,
-                      backgroundColor: colors.bgElevated,
                       shadowColor: colors.text,
                     },
-                  ])}
+                    searchPanelShadow,
+                  ]}
                 >
-                  <View style={styles.searchFieldRow}>
+                  <View className="h-10 flex-row items-center gap-2 pl-2.5 pr-1.5">
                     <Ionicons
                       name="search"
                       size={18}
@@ -220,7 +216,7 @@ export function SiteHeader() {
                       onChangeText={setQ}
                       placeholder={PLACEHOLDERS[placeholderIdx]}
                       placeholderTextColor={colors.textSubtle}
-                      style={StyleSheet.flatten([styles.searchInput, { color: colors.text }])}
+                      className="min-w-0 flex-1 text-sm font-sans text-fg outline-none"
                       onSubmitEditing={submitSearch}
                       onFocus={() => setFocused(true)}
                       onBlur={() => setFocused(false)}
@@ -245,7 +241,7 @@ export function SiteHeader() {
                         onPress={() => setQ("")}
                         hitSlop={8}
                         accessibilityLabel="Clear search"
-                        style={styles.clearBtn}
+                        className="p-0.5"
                       >
                         <Ionicons
                           name="close-circle"
@@ -259,10 +255,7 @@ export function SiteHeader() {
                       onPress={submitSearch}
                       hitSlop={8}
                       accessibilityLabel="Submit search"
-                      style={StyleSheet.flatten([
-                        styles.goBtn,
-                        { backgroundColor: colors.text },
-                      ])}
+                      className="h-7 w-7 items-center justify-center rounded-btn bg-fg"
                     >
                       <Ionicons
                         name="arrow-forward"
@@ -274,47 +267,26 @@ export function SiteHeader() {
                   </View>
 
                   {showSuggestions ? (
-                    <View
-                      style={StyleSheet.flatten([
-                        styles.suggestPanel,
-                        {
-                          borderTopColor: colors.border,
-                          backgroundColor: colors.headerBg,
-                        },
-                      ])}
-                    >
+                    <View className="border-t border-border bg-header">
                       {suggestions.map((hit) => (
                         <Pressable
                           key={`${hit.type}-${hit.id}`}
                           onPress={() => goHit(hit)}
-                          style={({ pressed }) =>
-                            StyleSheet.flatten([
-                              styles.suggestRow,
-                              {
-                                backgroundColor: pressed ? colors.accentSoft : "transparent",
-                              },
-                            ])
-                          }
+                          className="gap-0.5 px-3 py-2.5 active:bg-accent-soft"
                         >
-                          <Text style={[styles.suggestMeta, { color: colors.accent }]}>
+                          <Text className="text-[10px] font-bold uppercase tracking-[1.2px] text-accent">
                             {hit.meta ?? hit.type}
                           </Text>
-                          <Text
-                            style={[styles.suggestTitle, { color: colors.text }]}
-                            numberOfLines={1}
-                          >
+                          <Text className="text-[15px] leading-5 font-serif text-fg" numberOfLines={1}>
                             {hit.title}
                           </Text>
                         </Pressable>
                       ))}
                       <Pressable
                         onPress={submitSearch}
-                        style={StyleSheet.flatten([
-                          styles.suggestAll,
-                          { borderTopColor: colors.border },
-                        ])}
+                        className="border-t border-border px-3 py-2.5"
                       >
-                        <Text style={[styles.suggestAllText, { color: colors.textMuted }]}>
+                        <Text className="text-[13px] font-sans text-muted">
                           View all results for “{q.trim()}”
                         </Text>
                       </Pressable>
@@ -329,12 +301,11 @@ export function SiteHeader() {
               accessibilityLabel="Studio"
               accessibilityRole="button"
               hitSlop={8}
-              style={StyleSheet.flatten([
-                styles.studioCta,
-                { backgroundColor: colors.accent },
-              ])}
+              className="min-h-10 flex-row items-center gap-1.5 bg-accent px-3 py-2.5"
             >
-              <Text style={styles.studioCtaText}>Studio</Text>
+              <Text className="text-[11px] font-extrabold uppercase tracking-[1.4px] text-white">
+                Studio
+              </Text>
               <Ionicons
                 name="arrow-forward"
                 size={14}
@@ -350,147 +321,3 @@ export function SiteHeader() {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  shell: {
-    borderBottomWidth: 2,
-    zIndex: 40,
-    position: "relative",
-  },
-  studioCta: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: 6,
-    paddingHorizontal: 12,
-    paddingVertical: 10,
-    minHeight: 40,
-  },
-  studioCtaText: {
-    color: "#FFFFFF",
-    fontSize: 11,
-    fontWeight: "800",
-    letterSpacing: 1.4,
-    textTransform: "uppercase",
-  },
-  dismissScrim: {
-    ...StyleSheet.absoluteFill,
-    top: 0,
-    bottom: -4000,
-    zIndex: 1,
-  },
-  topRow: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-    paddingVertical: 10,
-    minHeight: 56,
-    gap: 8,
-    zIndex: 2,
-  },
-  sideBtn: {
-    width: 44,
-    height: 44,
-    alignItems: "center",
-    justifyContent: "center",
-    zIndex: 2,
-  },
-  logoWrap: {
-    position: "absolute",
-    left: 56,
-    right: 200,
-    alignItems: "center",
-    justifyContent: "center",
-    zIndex: 3,
-  },
-  actions: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "flex-end",
-    gap: 8,
-    zIndex: 4,
-    marginLeft: "auto",
-  },
-  searchRoot: {
-    position: "relative",
-    zIndex: 5,
-  },
-  iconBtn: {
-    width: 40,
-    height: 40,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  searchTrigger: {
-    borderWidth: StyleSheet.hairlineWidth,
-    borderRadius: 2,
-  },
-  searchPanel: {
-    borderWidth: 1.5,
-    borderRadius: 2,
-    overflow: "hidden",
-    minHeight: 40,
-    ...(Platform.OS === "web"
-      ? ({
-          boxShadow: "0 10px 28px rgba(23, 23, 23, 0.08)",
-        } as object)
-      : {
-          shadowOffset: { width: 0, height: 8 },
-          shadowOpacity: 0.12,
-          shadowRadius: 16,
-          elevation: 6,
-        }),
-  },
-  searchFieldRow: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: 8,
-    paddingLeft: 10,
-    paddingRight: 6,
-    height: 40,
-  },
-  searchInput: {
-    flex: 1,
-    fontSize: 14,
-    fontFamily: Fonts.sans,
-    minWidth: 0,
-    ...(Platform.OS === "web" ? ({ outlineStyle: "none" } as object) : null),
-  },
-  clearBtn: {
-    padding: 2,
-  },
-  goBtn: {
-    width: 28,
-    height: 28,
-    borderRadius: 2,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  suggestPanel: {
-    borderTopWidth: StyleSheet.hairlineWidth,
-  },
-  suggestRow: {
-    paddingHorizontal: 12,
-    paddingVertical: 10,
-    gap: 2,
-  },
-  suggestMeta: {
-    fontSize: 10,
-    letterSpacing: 1.2,
-    textTransform: "uppercase",
-    fontWeight: "700",
-  },
-  suggestTitle: {
-    fontFamily: Fonts.serif,
-    fontSize: 15,
-    lineHeight: 20,
-  },
-  suggestAll: {
-    borderTopWidth: StyleSheet.hairlineWidth,
-    paddingHorizontal: 12,
-    paddingVertical: 10,
-  },
-  suggestAllText: {
-    fontSize: 13,
-    fontFamily: Fonts.sans,
-  },
-});

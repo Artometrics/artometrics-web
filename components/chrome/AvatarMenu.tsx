@@ -1,18 +1,20 @@
 import { useEffect, useRef, useState } from "react";
-import {
-  Platform,
-  Pressable,
-  Text,
-  View,
-  StyleSheet,
-  type View as RNView,
-} from "react-native";
+import { Platform, Pressable, Text, View, type View as RNView } from "react-native";
 import { router } from "expo-router";
 import Ionicons from "@expo/vector-icons/Ionicons";
-import { Fonts } from "@/constants/Colors";
 import { useAuth } from "@/lib/auth";
 import { useTheme } from "@/lib/theme";
 import { getProfile } from "@/lib/profile/service";
+
+const menuShadow =
+  Platform.OS === "web"
+    ? ({ boxShadow: "0 12px 32px rgba(23,23,23,0.12)" } as object)
+    : {
+        shadowOffset: { width: 0, height: 8 },
+        shadowOpacity: 0.15,
+        shadowRadius: 16,
+        elevation: 8,
+      };
 
 export function AvatarMenu() {
   const { user, signOut } = useAuth();
@@ -46,11 +48,7 @@ export function AvatarMenu() {
         onPress={() => router.push("/login")}
         hitSlop={8}
         accessibilityLabel="Sign in"
-        style={StyleSheet.flatten([
-          styles.iconBtn,
-          styles.iconBtnBordered,
-          { borderColor: colors.text, backgroundColor: colors.bgElevated },
-        ])}
+        className="h-10 w-10 items-center justify-center rounded-btn border border-fg bg-bg-elevated"
       >
         <Ionicons
           name="person-outline"
@@ -83,20 +81,16 @@ export function AvatarMenu() {
   ];
 
   return (
-    <View ref={rootRef} style={styles.root} collapsable={false}>
+    <View ref={rootRef} className="relative z-20" collapsable={false}>
       <Pressable
         onPress={() => setOpen((v) => !v)}
         hitSlop={8}
         accessibilityLabel="Account menu"
         accessibilityRole="button"
-        style={StyleSheet.flatten([
-          styles.iconBtn,
-          styles.iconBtnBordered,
-          {
-            borderColor: open ? colors.accent : colors.text,
-            backgroundColor: colors.bgElevated,
-          },
-        ])}
+        className={[
+          "h-10 w-10 items-center justify-center rounded-btn border bg-bg-elevated",
+          open ? "border-accent" : "border-fg",
+        ].join(" ")}
       >
         <Ionicons
           name="person"
@@ -108,16 +102,13 @@ export function AvatarMenu() {
 
       {open ? (
         <View
-          style={StyleSheet.flatten([
-            styles.menu,
-            {
-              borderColor: colors.border,
-              backgroundColor: colors.headerBg,
-              shadowColor: colors.text,
-            },
-          ])}
+          className="absolute top-[46px] right-0 z-50 min-w-[200px] rounded-btn border border-border bg-header py-1.5"
+          style={[{ shadowColor: colors.text }, menuShadow]}
         >
-          <Text style={[styles.email, { color: colors.textSubtle }]} numberOfLines={1}>
+          <Text
+            className="px-3 py-2 text-[11px] font-sans text-subtle"
+            numberOfLines={1}
+          >
             {user.email}
           </Text>
           {items.map((item) => (
@@ -131,14 +122,9 @@ export function AvatarMenu() {
                 }
                 if (item.href) router.push(item.href as `/`);
               }}
-              style={({ pressed }) =>
-                StyleSheet.flatten([
-                  styles.item,
-                  { backgroundColor: pressed ? colors.accentSoft : "transparent" },
-                ])
-              }
+              className="px-3 py-2.5 active:bg-accent-soft"
             >
-              <Text style={[styles.itemText, { color: colors.text }]}>{item.label}</Text>
+              <Text className="text-base font-serif text-fg">{item.label}</Text>
             </Pressable>
           ))}
         </View>
@@ -146,49 +132,3 @@ export function AvatarMenu() {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  root: { position: "relative", zIndex: 20 },
-  iconBtn: {
-    width: 40,
-    height: 40,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  iconBtnBordered: {
-    borderWidth: StyleSheet.hairlineWidth,
-    borderRadius: 2,
-  },
-  menu: {
-    position: "absolute",
-    top: 46,
-    right: 0,
-    minWidth: 200,
-    borderWidth: StyleSheet.hairlineWidth,
-    borderRadius: 2,
-    paddingVertical: 6,
-    zIndex: 50,
-    ...(Platform.OS === "web"
-      ? ({ boxShadow: "0 12px 32px rgba(23,23,23,0.12)" } as object)
-      : {
-          shadowOffset: { width: 0, height: 8 },
-          shadowOpacity: 0.15,
-          shadowRadius: 16,
-          elevation: 8,
-        }),
-  },
-  email: {
-    fontSize: 11,
-    paddingHorizontal: 12,
-    paddingVertical: 8,
-    fontFamily: Fonts.sans,
-  },
-  item: {
-    paddingHorizontal: 12,
-    paddingVertical: 10,
-  },
-  itemText: {
-    fontFamily: Fonts.serif,
-    fontSize: 16,
-  },
-});
