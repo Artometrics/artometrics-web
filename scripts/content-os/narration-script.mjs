@@ -7,8 +7,12 @@
  * charts, captions and figures are dropped, and notation that reads badly aloud
  * -- typographic quotes, "$3.9bn", "45 2/3" -- is expanded.
  *
+ * The fact grid and the trailing method/references apparatus are dropped by
+ * default -- the grid restates numbers the prose already carries, and reads as a
+ * clipped list aloud.
+ *
  *   npm run cos:narration-script -- --slug <slug>
- *   npm run cos:narration-script -- --slug <slug> --keep-method
+ *   npm run cos:narration-script -- --slug <slug> --keep-facts --keep-method
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -20,6 +24,7 @@ const ROOT = path.resolve(__dirname, "../..");
 const args = process.argv.slice(2);
 const slug = valueOf("--slug");
 const keepMethod = args.includes("--keep-method");
+const keepFacts = args.includes("--keep-facts");
 const outDirArg = valueOf("--out-dir");
 
 function valueOf(flag) {
@@ -40,6 +45,11 @@ const TAIL_HEADINGS = new Set([
   "sources",
 ]);
 const METHOD_HEADINGS = new Set(["data and method", "method", "data"]);
+const FACT_HEADINGS = new Set([
+  "the numbers behind the story",
+  "fast facts",
+  "the numbers",
+]);
 
 const FRACTIONS = {
   "½": " and a half",
@@ -119,6 +129,20 @@ for (const rawLine of body.split("\n")) {
   const line = rawLine.trim();
   if (!line) continue;
 
+  // Fact-grid tiles read best as "<number>: <label>." Checked before the
+  // container skip below, since each tile is its own <div>.
+  if (line.includes('class="fact-box"')) {
+    if (!keepFacts) continue;
+    const number = line.match(/fact-number[^>]*>([\s\S]*?)<\/span>/i);
+    const label = line.match(/fact-label[^>]*>([\s\S]*?)<\/span>/i);
+    if (number && label) {
+      const n = speakable(unwrapTags(number[1])).replace(/[.:]$/, "");
+      const l = speakable(unwrapTags(label[1])).replace(/\.$/, "");
+      lines.push(`${n}: ${l}.`);
+    }
+    continue;
+  }
+
   // Charts, figures and their captions carry no audio.
   if (/^<\/?(figure|div|main|section)\b/i.test(line)) continue;
   if (/figcaption|art-chart|data-chart/i.test(line)) continue;
@@ -131,19 +155,10 @@ for (const rawLine of body.split("\n")) {
       stopped = true;
       break;
     }
+    // The fact grid restates numbers the prose already covers, so its heading
+    // is dropped alongside the tiles unless they are explicitly kept.
+    if (!keepFacts && FACT_HEADINGS.has(key)) continue;
     lines.push("", speakable(text).toUpperCase(), "");
-    continue;
-  }
-
-  // Fact-grid tiles read best as "<number>: <label>."
-  if (line.includes('class="fact-box"')) {
-    const number = line.match(/fact-number[^>]*>([\s\S]*?)<\/span>/i);
-    const label = line.match(/fact-label[^>]*>([\s\S]*?)<\/span>/i);
-    if (number && label) {
-      const n = speakable(unwrapTags(number[1])).replace(/[.:]$/, "");
-      const l = speakable(unwrapTags(label[1])).replace(/\.$/, "");
-      lines.push(`${n}: ${l}.`);
-    }
     continue;
   }
 
