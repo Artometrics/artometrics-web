@@ -5,6 +5,7 @@ author: kyle-mcauliffe
 pubDate: 2026-07-31T00:00:00.000Z
 description: "A buyer’s memo on baseball’s record franchise sale: what San Diego’s assets are worth, where the balance sheet breaks, and how to buy a title."
 heroImage: /images/content/articles/padres-world-series-ownership-blueprint/hero.png
+audioSrc: /audios/padres-world-series-ownership-blueprint.mp3
 draft: false
 tags:
   - sports

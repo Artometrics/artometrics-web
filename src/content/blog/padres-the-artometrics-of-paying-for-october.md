@@ -5,6 +5,7 @@ author: kyle-mcauliffe
 pubDate: 2026-07-31T00:00:00.000Z
 description: "San Diego just agreed to the richest sale in baseball history. The Padres have also never won a World Series. Those two facts belong to the same story."
 heroImage: /images/content/articles/padres-the-artometrics-of-paying-for-october/hero.png
+audioSrc: /audios/padres-the-artometrics-of-paying-for-october.mp3
 draft: false
 tags:
   - sports
