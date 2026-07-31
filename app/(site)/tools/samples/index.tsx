@@ -4,7 +4,6 @@ import {
   Alert,
   Platform,
   Pressable,
-  StyleSheet,
   Text,
   View,
 } from "react-native";
@@ -35,7 +34,7 @@ const NAV = [
 ];
 
 export default function SamplesHomeScreen() {
-  const { colors, fonts } = useTheme();
+  const { colors } = useTheme();
   const { user, ready } = useRequireAuth();
   const [packs, setPacks] = useState<SamplePack[]>([]);
   const [loading, setLoading] = useState(true);
@@ -103,66 +102,55 @@ export default function SamplesHomeScreen() {
 
   if (!ready || !user) {
     return (
-      <Wrapper variant="narrow" style={styles.wrap}>
-        <Text style={{ color: colors.textMuted }}>Opening Sample Maker…</Text>
+      <Wrapper variant="narrow" className="gap-2.5 py-8">
+        <Text className="text-muted">Opening Sample Maker…</Text>
       </Wrapper>
     );
   }
 
   return (
-    <Wrapper style={styles.wrap}>
+    <Wrapper className="gap-2.5 py-8">
       <PageSeo
         title="Sample Maker"
         description="Record audio, shape it with synth settings, and save favorite clips to your profile."
         path="/tools/samples"
       />
       <ToolsSubnav links={NAV} />
-      <Text style={[styles.eyebrow, { color: colors.accent }]}>Studio</Text>
-      <Text style={[styles.title, { color: colors.text, fontFamily: fonts.serif }]}>
-        Sample Maker
-      </Text>
+      <Text className="text-xs tracking-[1.8px] uppercase font-bold text-accent">Studio</Text>
+      <Text className="font-serif text-[36px] font-bold text-fg">Sample Maker</Text>
       <ToolsAccent />
-      <Text style={[styles.deck, { color: colors.textMuted, fontFamily: fonts.serif }]}>
+      <Text className="font-serif text-base leading-[26px] max-w-[560px] text-muted">
         Record a sound, tweak synth settings, mark favorite clips, and export the pack.
       </Text>
 
-      <PrimaryButton label="New pack" onPress={onCreate} style={{ marginTop: 12 }} />
-      <Pressable onPress={() => router.push("/tools/samples/record")} style={{ marginTop: 12 }}>
-        <Text style={{ color: colors.accent, fontWeight: "700" }}>Quick record →</Text>
+      <PrimaryButton label="New pack" onPress={onCreate} className="mt-3" />
+      <Pressable onPress={() => router.push("/tools/samples/record")} className="mt-3">
+        <Text className="text-accent font-bold">Quick record →</Text>
       </Pressable>
 
       {loading ? (
-        <ActivityIndicator style={{ marginTop: 28 }} color={colors.accent} />
+        <ActivityIndicator className="mt-7" color={colors.accent} />
       ) : packs.length === 0 ? (
-        <View
-          style={[
-            styles.empty,
-            { borderColor: colors.border, backgroundColor: colors.bgElevated },
-          ]}
-        >
-          <Text style={[styles.emptyTitle, { color: colors.text, fontFamily: fonts.serif }]}>
-            No packs yet
-          </Text>
-          <Text style={[styles.deck, { color: colors.textMuted }]}>
+        <View className="mt-5 border border-border bg-bg-elevated p-[22px] gap-2">
+          <Text className="text-[22px] font-bold font-serif text-fg">No packs yet</Text>
+          <Text className="font-serif text-base leading-[26px] max-w-[560px] text-muted">
             Start a recording and save clips you want to keep.
           </Text>
         </View>
       ) : (
-        <View style={styles.list}>
+        <View className="mt-4 gap-3">
           {packs.map((pack) => (
             <Pressable
               key={pack.id}
               onPress={() => router.push(`/tools/samples/${pack.id}`)}
-              style={[styles.card, { borderColor: colors.border }]}
+              className="border border-border p-4 gap-1.5"
             >
-              <Text style={[styles.cardTitle, { color: colors.text, fontFamily: fonts.serif }]}>
-                {pack.title}
-              </Text>
-              <Text style={[styles.meta, { color: colors.textSubtle }]}>
+              <Text className="text-xl font-bold font-serif text-fg">{pack.title}</Text>
+              <Text className="text-xs tracking-wide text-subtle">
                 {pack.clips.filter((c) => c.favorite).length} favorites ·{" "}
                 {pack.synth.preset} · {new Date(pack.updatedAt).toLocaleDateString()}
               </Text>
-              <View style={styles.row}>
+              <View className="flex-row gap-4 mt-2">
                 <Pressable
                   onPress={(e) => {
                     e.stopPropagation?.();
@@ -170,9 +158,7 @@ export default function SamplesHomeScreen() {
                   }}
                   hitSlop={8}
                 >
-                  <Text style={{ color: colors.accent, fontWeight: "700", fontSize: 13 }}>
-                    Export
-                  </Text>
+                  <Text className="text-accent font-bold text-[13px]">Export</Text>
                 </Pressable>
                 <Pressable
                   onPress={(e) => {
@@ -182,14 +168,13 @@ export default function SamplesHomeScreen() {
                       {
                         text: "Delete",
                         style: "destructive",
-                        onPress: () =>
-                          void deleteSamplePack(user.id, pack.id).then(load),
+                        onPress: () => void deleteSamplePack(user.id, pack.id).then(load),
                       },
                     ]);
                   }}
                   hitSlop={8}
                 >
-                  <Text style={{ color: colors.textMuted, fontSize: 13 }}>Delete</Text>
+                  <Text className="text-muted text-[13px]">Delete</Text>
                 </Pressable>
               </View>
             </Pressable>
@@ -199,31 +184,3 @@ export default function SamplesHomeScreen() {
     </Wrapper>
   );
 }
-
-const styles = StyleSheet.create({
-  wrap: { paddingVertical: 32, gap: 10 },
-  eyebrow: {
-    fontSize: 12,
-    letterSpacing: 1.8,
-    textTransform: "uppercase",
-    fontWeight: "700",
-  },
-  title: { fontSize: 36, fontWeight: "700" },
-  deck: { fontSize: 16, lineHeight: 26, maxWidth: 560 },
-  empty: {
-    marginTop: 20,
-    borderWidth: StyleSheet.hairlineWidth,
-    padding: 22,
-    gap: 8,
-  },
-  emptyTitle: { fontSize: 22, fontWeight: "700" },
-  list: { marginTop: 16, gap: 12 },
-  card: {
-    borderWidth: StyleSheet.hairlineWidth,
-    padding: 16,
-    gap: 6,
-  },
-  cardTitle: { fontSize: 20, fontWeight: "700" },
-  meta: { fontSize: 12, letterSpacing: 0.3 },
-  row: { flexDirection: "row", gap: 16, marginTop: 8 },
-});

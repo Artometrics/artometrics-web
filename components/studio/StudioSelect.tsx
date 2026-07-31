@@ -6,12 +6,20 @@ import {
   Text,
   TextInput,
   View,
-  StyleSheet,
   type View as RNView,
 } from "react-native";
 import Ionicons from "@expo/vector-icons/Ionicons";
-import { Fonts } from "@/constants/Colors";
 import { useTheme } from "@/lib/theme";
+
+const menuShadow =
+  Platform.OS === "web"
+    ? ({ boxShadow: "0 12px 28px rgba(23,23,23,0.12)" } as object)
+    : {
+        shadowOffset: { width: 0, height: 8 },
+        shadowOpacity: 0.14,
+        shadowRadius: 14,
+        elevation: 8,
+      };
 
 export type StudioSelectOption = { value: string; label: string };
 
@@ -53,24 +61,24 @@ export function StudioSelect({
   }, [open]);
 
   return (
-    <View ref={rootRef} style={styles.root} collapsable={false}>
+    <View ref={rootRef} className="relative z-10 gap-1.5" collapsable={false}>
       {label ? (
-        <Text style={[styles.label, { color: colors.textMuted }]}>{label}</Text>
+        <Text className="text-xs font-bold uppercase tracking-[0.8px] text-muted">{label}</Text>
       ) : null}
       <Pressable
         onPress={() => setOpen((v) => !v)}
         accessibilityRole="button"
         accessibilityLabel={label || placeholder}
-        style={StyleSheet.flatten([
-          styles.trigger,
-          {
-            borderColor: open ? colors.accent : colors.border,
-            backgroundColor: colors.bgElevated,
-          },
-        ])}
+        className={[
+          "min-h-[44px] flex-row items-center justify-between gap-2 rounded-[2px] border bg-bg-elevated px-3",
+          open ? "border-accent" : "border-border",
+        ].join(" ")}
       >
         <Text
-          style={[styles.triggerText, { color: selected ? colors.text : colors.textSubtle }]}
+          className={[
+            "flex-1 font-serif text-base",
+            selected ? "text-fg" : "text-subtle",
+          ].join(" ")}
           numberOfLines={1}
         >
           {selected?.label || placeholder}
@@ -79,36 +87,26 @@ export function StudioSelect({
           name={open ? "chevron-up" : "chevron-down"}
           size={16}
           color={colors.textMuted}
-          style={{ color: colors.textMuted }}
         />
       </Pressable>
 
       {open ? (
         <View
-          style={StyleSheet.flatten([
-            styles.menu,
-            {
-              borderColor: colors.border,
-              backgroundColor: colors.headerBg,
-              shadowColor: colors.text,
-            },
-          ])}
+          className="absolute top-full right-0 left-0 z-40 mt-1 max-h-60 rounded-[2px] border border-border bg-header"
+          style={[{ shadowColor: colors.text }, menuShadow]}
         >
           {searchable ? (
             <TextInput
               value={q}
               onChangeText={setQ}
               placeholder="Filter…"
-              placeholderTextColor={colors.textSubtle}
-              style={StyleSheet.flatten([
-                styles.search,
-                { borderBottomColor: colors.border, color: colors.text },
-              ])}
+              placeholderTextColorClassName="text-subtle"
+              className="border-b border-border px-3 py-2.5 font-sans text-sm text-fg outline-none"
               autoCapitalize="none"
               autoCorrect={false}
             />
           ) : null}
-          <ScrollView style={styles.list} keyboardShouldPersistTaps="handled" nestedScrollEnabled>
+          <ScrollView className="max-h-[200px]" keyboardShouldPersistTaps="handled" nestedScrollEnabled>
             {filtered.map((opt) => {
               const active = opt.value === value;
               return (
@@ -119,27 +117,19 @@ export function StudioSelect({
                     setOpen(false);
                     setQ("");
                   }}
-                  style={({ pressed }) =>
-                    StyleSheet.flatten([
-                      styles.option,
-                      {
-                        backgroundColor: active
-                          ? colors.accentSoft
-                          : pressed
-                            ? colors.bgElevated
-                            : "transparent",
-                      },
-                    ])
-                  }
+                  className={[
+                    "px-3 py-[11px]",
+                    active ? "bg-accent-soft" : "active:bg-bg-elevated",
+                  ].join(" ")}
                 >
-                  <Text style={[styles.optionText, { color: colors.text }]} numberOfLines={2}>
+                  <Text className="font-serif text-[15px] leading-[22px] text-fg" numberOfLines={2}>
                     {opt.label}
                   </Text>
                 </Pressable>
               );
             })}
             {filtered.length === 0 ? (
-              <Text style={[styles.empty, { color: colors.textSubtle }]}>No matches</Text>
+              <Text className="p-3.5 text-[13px] text-subtle">No matches</Text>
             ) : null}
           </ScrollView>
         </View>
@@ -147,55 +137,3 @@ export function StudioSelect({
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  root: { position: "relative", zIndex: 10, gap: 6 },
-  label: {
-    fontSize: 12,
-    letterSpacing: 0.8,
-    textTransform: "uppercase",
-    fontWeight: "700",
-  },
-  trigger: {
-    borderWidth: StyleSheet.hairlineWidth,
-    borderRadius: 2,
-    minHeight: 44,
-    paddingHorizontal: 12,
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-    gap: 8,
-  },
-  triggerText: { flex: 1, fontFamily: Fonts.serif, fontSize: 16 },
-  menu: {
-    position: "absolute",
-    left: 0,
-    right: 0,
-    top: "100%",
-    marginTop: 4,
-    borderWidth: StyleSheet.hairlineWidth,
-    borderRadius: 2,
-    zIndex: 40,
-    maxHeight: 240,
-    ...(Platform.OS === "web"
-      ? ({ boxShadow: "0 12px 28px rgba(23,23,23,0.12)" } as object)
-      : {
-          shadowOffset: { width: 0, height: 8 },
-          shadowOpacity: 0.14,
-          shadowRadius: 14,
-          elevation: 8,
-        }),
-  },
-  search: {
-    borderBottomWidth: StyleSheet.hairlineWidth,
-    paddingHorizontal: 12,
-    paddingVertical: 10,
-    fontSize: 14,
-    fontFamily: Fonts.sans,
-    ...(Platform.OS === "web" ? ({ outlineStyle: "none" } as object) : null),
-  },
-  list: { maxHeight: 200 },
-  option: { paddingHorizontal: 12, paddingVertical: 11 },
-  optionText: { fontFamily: Fonts.serif, fontSize: 15, lineHeight: 22 },
-  empty: { padding: 14, fontSize: 13 },
-});

@@ -1,10 +1,8 @@
-import { Text, View, StyleSheet } from "react-native";
+import { Text, View } from "react-native";
 import { Link, useLocalSearchParams } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { MagazineCard } from "@/components/MagazineCard";
 import { PageSeo } from "@/components/PageSeo";
-import { Fonts } from "@/constants/Colors";
-import { useTheme } from "@/lib/theme";
 import {
   DOMAIN_META,
   LEGACY_DESK_TO_SECTION,
@@ -40,16 +38,15 @@ export async function generateStaticParams() {
 export default function TopicChannelPage() {
   const params = useLocalSearchParams<{ channel: string | string[] }>();
   const raw = paramString(params.channel);
-  const { colors } = useTheme();
   const mapped = resolveDomain(raw);
   const meta = mapped ? DOMAIN_META[mapped] : null;
 
   if (!meta || !mapped) {
     return (
-      <Wrapper style={styles.wrap}>
-        <Text style={{ color: colors.text }}>Section not found</Text>
+      <Wrapper className="gap-3 py-10">
+        <Text className="text-fg">Section not found</Text>
         <Link href="/topics">
-          <Text style={{ color: colors.accent }}>All sections</Text>
+          <Text className="text-accent">All sections</Text>
         </Link>
       </Wrapper>
     );
@@ -58,20 +55,22 @@ export default function TopicChannelPage() {
   const posts = getBlogPosts().filter((p) => primarySection(p.tags) === mapped);
 
   return (
-    <Wrapper variant="magazine" style={styles.wrap}>
+    <Wrapper variant="magazine" className="gap-3 py-10">
       <PageSeo title={meta.title} description={meta.description} path={`/topics/${mapped}`} />
-      <Text style={[styles.kicker, { color: colors.textSubtle }]}>View all</Text>
-      <Text style={[styles.title, { color: colors.text }]}>{meta.title}</Text>
-      <Text style={[styles.deck, { color: colors.textMuted }]}>{meta.description}</Text>
-      <View style={[styles.rule, { backgroundColor: colors.border }]} />
+      <Text className="text-xs font-bold tracking-[1.2px] uppercase text-subtle">View all</Text>
+      <Text className="font-sans text-[40px] font-extrabold tracking-tight text-fg">
+        {meta.title}
+      </Text>
+      <Text className="font-serif text-[17px] leading-[26px] max-w-[640px] text-muted">
+        {meta.description}
+      </Text>
+      <View className="h-px my-2 bg-border" />
       {posts.length === 0 ? (
-        <Text style={{ color: colors.textMuted, fontFamily: Fonts.serif, fontSize: 16 }}>
-          More stories coming soon.
-        </Text>
+        <Text className="font-serif text-base text-muted">More stories coming soon.</Text>
       ) : (
-        <View style={styles.grid}>
+        <View className="flex-row flex-wrap gap-5 mt-2">
           {posts.map((post) => (
-            <View key={post.slug} style={styles.item}>
+            <View key={post.slug} className="flex-[1] min-w-[220px] max-w-[320px]">
               <MagazineCard post={post} variant="portrait" />
             </View>
           ))}
@@ -80,18 +79,3 @@ export default function TopicChannelPage() {
     </Wrapper>
   );
 }
-
-const styles = StyleSheet.create({
-  wrap: { paddingVertical: 40, gap: 12 },
-  kicker: {
-    fontSize: 12,
-    fontWeight: "700",
-    letterSpacing: 1.2,
-    textTransform: "uppercase",
-  },
-  title: { fontFamily: Fonts.sans, fontSize: 40, fontWeight: "800", letterSpacing: -0.6 },
-  deck: { fontFamily: Fonts.serif, fontSize: 17, lineHeight: 26, maxWidth: 640 },
-  rule: { height: StyleSheet.hairlineWidth, marginVertical: 8 },
-  grid: { flexDirection: "row", flexWrap: "wrap", gap: 20, marginTop: 8 },
-  item: { flexBasis: 220, flexGrow: 1, maxWidth: 320 },
-});

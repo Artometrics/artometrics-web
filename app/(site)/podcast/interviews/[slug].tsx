@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Image, Text, View, StyleSheet, Pressable } from "react-native";
+import { Image, Text, View, Pressable } from "react-native";
 import {
   setAudioModeAsync,
   useAudioPlayer,
@@ -18,7 +18,6 @@ import {
 import { useAuth } from "@/lib/auth";
 import { apiFetch } from "@/lib/supabase/client";
 import { paramString } from "@/lib/params";
-import { useTheme } from "@/lib/theme";
 
 export async function generateStaticParams() {
   return getPodcastEpisodes().map((ep) => ({ slug: ep.id }));
@@ -28,7 +27,6 @@ export default function PodcastEpisodeScreen() {
   const params = useLocalSearchParams<{ slug: string | string[] }>();
   const slug = paramString(params.slug);
   const episode = getPodcastEpisode(slug);
-  const { colors } = useTheme();
   const { user, loading: authLoading } = useAuth();
   const [subActive, setSubActive] = useState(false);
   const [memberHtml, setMemberHtml] = useState<string | null>(null);
@@ -99,10 +97,10 @@ export default function PodcastEpisodeScreen() {
 
   if (!episode) {
     return (
-      <Wrapper style={styles.wrap}>
-        <Text style={[styles.title, { color: colors.text }]}>Episode not found</Text>
+      <Wrapper className="gap-3 py-10">
+        <Text className="text-[34px] leading-10 font-light text-fg">Episode not found</Text>
         <Link href="/podcast">
-          <Text style={[styles.link, { color: colors.accent }]}>Back to podcast</Text>
+          <Text className="font-semibold text-accent">Back to podcast</Text>
         </Link>
       </Wrapper>
     );
@@ -134,107 +132,55 @@ export default function PodcastEpisodeScreen() {
   }
 
   return (
-    <>
-      <Wrapper style={styles.wrap} variant="narrow">
-        <Text style={[styles.eyebrow, { color: colors.accent }]}>
-          Episode {episode.episodeNumber ?? episode.id}
-        </Text>
-        <Text style={[styles.title, { color: colors.text }]}>{episode.title}</Text>
-        <Text style={[styles.meta, { color: colors.textSubtle }]}>
-          {formatDate(episode.pubDate)}
-          {episode.duration ? ` · ${episode.duration}` : ""}
-          {" · "}
-          {formatAuthorName(episode.author)}
-        </Text>
-        <Text style={[styles.description, { color: colors.textMuted }]}>
-          {episode.description}
-        </Text>
-        {assetUrl(episode.image?.url) ? (
-          <Image
-            source={{ uri: assetUrl(episode.image?.url)! }}
-            style={[styles.hero, { borderColor: colors.border }]}
-            resizeMode="cover"
-            accessibilityLabel={episode.image?.alt || episode.title}
-          />
-        ) : null}
+    <Wrapper variant="narrow" className="gap-3 py-10">
+      <Text className="text-[11px] tracking-[2.5px] uppercase font-semibold text-accent">
+        Episode {episode.episodeNumber ?? episode.id}
+      </Text>
+      <Text className="text-[34px] leading-10 font-light text-fg">{episode.title}</Text>
+      <Text className="text-[13px] text-subtle">
+        {formatDate(episode.pubDate)}
+        {episode.duration ? ` · ${episode.duration}` : ""}
+        {" · "}
+        {formatAuthorName(episode.author)}
+      </Text>
+      <Text className="text-[17px] leading-7 text-muted">{episode.description}</Text>
+      {assetUrl(episode.image?.url) ? (
+        <Image
+          source={{ uri: assetUrl(episode.image?.url)! }}
+          className="w-full aspect-video border border-border my-2"
+          resizeMode="cover"
+          accessibilityLabel={episode.image?.alt || episode.title}
+        />
+      ) : null}
 
-        {gateLoading ? (
-          <Text style={[styles.gateCopy, { color: colors.textMuted }]}>
-            Checking membership…
+      {gateLoading ? (
+        <Text className="text-sm leading-[22px] text-muted">Checking membership…</Text>
+      ) : locked ? (
+        <View className="border border-border p-5 gap-2 my-3 bg-bg-elevated">
+          <Text className="text-lg text-fg">Members episode</Text>
+          <Text className="text-sm leading-[22px] text-muted">
+            Subscribe to unlock the full interview audio and transcript.
           </Text>
-        ) : locked ? (
-          <View
-            style={[
-              styles.gate,
-              { borderColor: colors.border, backgroundColor: colors.bgElevated },
-            ]}
-          >
-            <Text style={[styles.gateTitle, { color: colors.text }]}>Members episode</Text>
-            <Text style={[styles.gateCopy, { color: colors.textMuted }]}>
-              Subscribe to unlock the full interview audio and transcript.
-            </Text>
-            <Link href="/pricing">
-              <Text style={[styles.link, { color: colors.accent }]}>View membership plans</Text>
-            </Link>
-          </View>
-        ) : audioUri ? (
-          <Pressable
-            style={[styles.playBtn, { backgroundColor: colors.text }]}
-            onPress={toggleAudio}
-          >
-            <Text style={[styles.playLabel, { color: colors.bg }]}>
-              {status.playing ? "Pause" : "Play episode"}
-            </Text>
-          </Pressable>
-        ) : null}
+          <Link href="/pricing">
+            <Text className="font-semibold text-accent">View membership plans</Text>
+          </Link>
+        </View>
+      ) : audioUri ? (
+        <Pressable
+          className="self-start px-[18px] py-3 rounded-btn my-2 bg-fg"
+          onPress={toggleAudio}
+        >
+          <Text className="text-xs font-bold tracking-[1.5px] uppercase text-bg">
+            {status.playing ? "Pause" : "Play episode"}
+          </Text>
+        </Pressable>
+      ) : null}
 
-        {!locked && memberError ? (
-          <Text style={[styles.gateCopy, { color: colors.accent }]}>{memberError}</Text>
-        ) : null}
+      {!locked && memberError ? (
+        <Text className="text-sm leading-[22px] text-accent">{memberError}</Text>
+      ) : null}
 
-        {!locked && bodyHtml ? <ArticleBody html={bodyHtml} /> : null}
-      </Wrapper>
-    </>
+      {!locked && bodyHtml ? <ArticleBody html={bodyHtml} /> : null}
+    </Wrapper>
   );
 }
-
-const styles = StyleSheet.create({
-  wrap: { paddingVertical: 40, gap: 12 },
-  eyebrow: {
-    fontSize: 11,
-    letterSpacing: 2.5,
-    textTransform: "uppercase",
-    fontWeight: "600",
-  },
-  title: { fontSize: 34, lineHeight: 40, fontWeight: "300" },
-  meta: { fontSize: 13 },
-  description: { fontSize: 17, lineHeight: 28 },
-  hero: {
-    width: "100%",
-    aspectRatio: 16 / 9,
-    borderWidth: 1,
-    marginVertical: 8,
-  },
-  playBtn: {
-    alignSelf: "flex-start",
-    paddingHorizontal: 18,
-    paddingVertical: 12,
-    borderRadius: 2,
-    marginVertical: 8,
-  },
-  playLabel: {
-    fontSize: 12,
-    fontWeight: "700",
-    letterSpacing: 1.5,
-    textTransform: "uppercase",
-  },
-  gate: {
-    borderWidth: 1,
-    padding: 20,
-    gap: 8,
-    marginVertical: 12,
-  },
-  gateTitle: { fontSize: 18 },
-  gateCopy: { fontSize: 14, lineHeight: 22 },
-  link: { fontWeight: "600" },
-});

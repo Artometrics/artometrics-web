@@ -1,11 +1,9 @@
 import { useEffect, useState } from "react";
-import { Text, TextInput, View, StyleSheet } from "react-native";
+import { Text, TextInput, View } from "react-native";
 import { router, useLocalSearchParams } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { PageSeo } from "@/components/PageSeo";
 import { PrimaryButton } from "@/components/PrimaryButton";
-import { Fonts } from "@/constants/Colors";
-import { useTheme } from "@/lib/theme";
 import { useAuth } from "@/lib/auth";
 import {
   createOrUpdateDraft,
@@ -17,7 +15,6 @@ import { apiFetch } from "@/lib/supabase/client";
 import { paramString } from "@/lib/params";
 
 export default function StudioPublishScreen() {
-  const { colors } = useTheme();
   const { user, loading } = useAuth();
   const params = useLocalSearchParams<{
     title?: string | string[];
@@ -46,8 +43,8 @@ export default function StudioPublishScreen() {
   if (loading || !user) {
     if (!loading && !user) router.replace("/login?next=%2Fstudio%2Fpublish");
     return (
-      <Wrapper style={styles.wrap}>
-        <Text style={{ color: colors.textMuted }}>Loading…</Text>
+      <Wrapper className="gap-2.5 py-10">
+        <Text className="text-muted">Loading…</Text>
       </Wrapper>
     );
   }
@@ -73,44 +70,41 @@ export default function StudioPublishScreen() {
   }
 
   return (
-    <Wrapper variant="narrow" style={styles.wrap}>
+    <Wrapper variant="narrow" className="gap-2.5 py-10">
       <PageSeo
         title="Publish"
         description="Publish writing to your Artometrics profile or submit to the magazine."
         path="/studio/publish"
       />
-      <Text style={[styles.eyebrow, { color: colors.accent }]}>Studio</Text>
-      <Text style={[styles.title, { color: colors.text }]}>Publish</Text>
-      <Text style={[styles.deck, { color: colors.textMuted }]}>
+      <Text className="text-xs tracking-[1.8px] uppercase font-bold text-accent">Studio</Text>
+      <Text className="font-serif text-[36px] font-bold text-fg">Publish</Text>
+      <Text className="font-serif text-base leading-[26px] text-muted">
         Profile posts go live on your public page. Magazine submissions need editorial review (and can
         sync into Sanity when configured).
       </Text>
 
-      <Text style={[styles.label, { color: colors.textMuted }]}>Title</Text>
+      <Text className="text-[11px] tracking-[1.2px] uppercase font-bold mt-2 text-muted">Title</Text>
       <TextInput
         value={title}
         onChangeText={setTitle}
         placeholder="Title"
-        placeholderTextColor={colors.textSubtle}
-        style={[styles.input, { borderColor: colors.border, color: colors.text }]}
+        placeholderTextColorClassName="text-subtle"
+        className="border border-border px-3 py-2.5 text-base font-serif text-fg bg-bg-elevated"
       />
-      <Text style={[styles.label, { color: colors.textMuted }]}>Body</Text>
+      <Text className="text-[11px] tracking-[1.2px] uppercase font-bold mt-2 text-muted">Body</Text>
       <TextInput
         value={body}
         onChangeText={setBody}
         placeholder="Write freely…"
-        placeholderTextColor={colors.textSubtle}
+        placeholderTextColorClassName="text-subtle"
         multiline
-        style={[
-          styles.input,
-          styles.body,
-          { borderColor: colors.border, color: colors.text, backgroundColor: colors.bgElevated },
-        ]}
+        className="border border-border px-3 py-2.5 text-base font-serif min-h-[200px] text-fg bg-bg-elevated"
+        style={{ textAlignVertical: "top" }}
       />
 
-      {msg ? <Text style={[styles.deck, { color: colors.accent }]}>{msg}</Text> : null}
+      {msg ? <Text className="font-serif text-base leading-[26px] text-accent">{msg}</Text> : null}
 
-      <View style={styles.actions}>
+      <View className="gap-2.5 mt-3">
         <PrimaryButton label="Save draft" onPress={() => void saveDraft()} disabled={busy} />
         <PrimaryButton
           label="Publish to profile"
@@ -139,7 +133,7 @@ export default function StudioPublishScreen() {
         <PrimaryButton
           label="Submit to magazine"
           disabled={busy}
-          style={{ backgroundColor: colors.textMuted }}
+          className="bg-muted"
           onPress={async () => {
             setBusy(true);
             setMsg(null);
@@ -178,31 +172,3 @@ export default function StudioPublishScreen() {
     </Wrapper>
   );
 }
-
-const styles = StyleSheet.create({
-  wrap: { paddingVertical: 40, gap: 10 },
-  eyebrow: {
-    fontSize: 12,
-    letterSpacing: 1.8,
-    textTransform: "uppercase",
-    fontWeight: "700",
-  },
-  title: { fontFamily: Fonts.serif, fontSize: 36, fontWeight: "700" },
-  deck: { fontFamily: Fonts.serif, fontSize: 16, lineHeight: 26 },
-  label: {
-    fontSize: 11,
-    letterSpacing: 1.2,
-    textTransform: "uppercase",
-    fontWeight: "700",
-    marginTop: 8,
-  },
-  input: {
-    borderWidth: StyleSheet.hairlineWidth,
-    paddingHorizontal: 12,
-    paddingVertical: 10,
-    fontSize: 16,
-    fontFamily: Fonts.serif,
-  },
-  body: { minHeight: 200, textAlignVertical: "top" },
-  actions: { gap: 10, marginTop: 12 },
-});

@@ -7,7 +7,6 @@ import {
   Platform,
   ScrollView,
   View,
-  StyleSheet,
 } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import { SiteHeader } from "@/components/SiteHeader";
@@ -22,7 +21,7 @@ import { getBlogPost } from "@/lib/content";
 function SiteChrome() {
   const pathname = usePathname();
   const { setScrollY, setIsArticle } = useChrome();
-  const { colors, mode } = useTheme();
+  const { mode } = useTheme();
   const scrollRef = useRef<ScrollView>(null);
 
   useEffect(() => {
@@ -43,14 +42,14 @@ function SiteChrome() {
   };
 
   return (
-    <SafeAreaView style={[styles.safe, { backgroundColor: colors.bg }]} edges={["top"]}>
+    <SafeAreaView className="flex-1 bg-bg" edges={["top"]}>
       <StatusBar style={mode === "dark" ? "light" : "dark"} />
-      <View style={[styles.root, { backgroundColor: colors.bg }]}>
+      <View className="relative flex-1 bg-bg">
         <SiteHeader />
         <ScrollView
           ref={scrollRef}
-          style={styles.scroll}
-          contentContainerStyle={styles.content}
+          className="flex-1"
+          contentContainerClassName="grow pb-6"
           onScroll={onScroll}
           scrollEventThrottle={32}
           keyboardShouldPersistTaps="handled"
@@ -78,10 +77,3 @@ export default function SiteLayout() {
     </SafeAreaProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  safe: { flex: 1 },
-  root: { flex: 1, position: "relative" },
-  scroll: { flex: 1 },
-  content: { flexGrow: 1, paddingBottom: 24 },
-});

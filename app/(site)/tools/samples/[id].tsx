@@ -3,7 +3,6 @@ import {
   Alert,
   Platform,
   Pressable,
-  StyleSheet,
   Text,
   TextInput,
   View,
@@ -47,7 +46,7 @@ const NAV = [
 export default function SamplePackScreen() {
   const params = useLocalSearchParams<{ id: string | string[] }>();
   const id = paramString(params.id);
-  const { colors, fonts } = useTheme();
+  const { colors } = useTheme();
   const { user, ready } = useRequireAuth();
   const [pack, setPack] = useState<SamplePack | null>(null);
   const [busy, setBusy] = useState(false);
@@ -211,14 +210,14 @@ export default function SamplePackScreen() {
 
   if (!ready || !user || !pack) {
     return (
-      <Wrapper variant="narrow" style={styles.wrap}>
-        <Text style={{ color: colors.textMuted }}>Loading pack…</Text>
+      <Wrapper variant="narrow" className="gap-2.5 py-8 flex-1">
+        <Text className="text-muted">Loading pack…</Text>
       </Wrapper>
     );
   }
 
   return (
-    <Wrapper style={styles.wrap}>
+    <Wrapper className="gap-2.5 py-8 flex-1">
       <PageSeo
         title={pack.title}
         description="Shape your recording with synth settings and save favorite clips."
@@ -228,29 +227,26 @@ export default function SamplePackScreen() {
       <TextInput
         value={pack.title}
         onChangeText={(title) => void persist({ ...pack, title })}
-        style={[
-          styles.titleInput,
-          { color: colors.text, borderColor: colors.border, fontFamily: fonts.serif },
-        ]}
+        className="text-[28px] font-bold border-b border-border py-1.5 text-fg"
       />
-      <Text style={[styles.deck, { color: colors.textMuted }]}>
+      <Text className="font-serif text-base leading-[26px] max-w-[560px] text-muted">
         Record → synth → favorite clips → export.
       </Text>
 
-      <View style={[styles.panel, { borderColor: colors.border }]}>
-        <Text style={[styles.label, { color: colors.textMuted }]}>Transport</Text>
-        <View style={styles.row}>
+      <View className="border border-border p-4 gap-3">
+        <Text className="text-[11px] tracking-[1.4px] uppercase font-bold text-muted">Transport</Text>
+        <View className="flex-row flex-wrap gap-2.5 items-center">
           <PrimaryButton
             label={recording ? "Recording…" : "Record"}
             onPress={() => void startRec()}
             disabled={busy || recording}
-            style={{ backgroundColor: recording ? colors.accent : colors.text }}
+            className={recording ? "" : "bg-fg"}
           />
           <PrimaryButton
             label="Stop"
             onPress={() => void stopRec()}
             disabled={!recording}
-            style={{ backgroundColor: colors.textMuted }}
+            className="bg-muted"
           />
           <PrimaryButton
             label={player.playing ? "Pause" : "Play"}
@@ -270,38 +266,31 @@ export default function SamplePackScreen() {
             disabled={!pack.sourceUri}
           />
         </View>
-        {statusMsg ? (
-          <Text style={[styles.meta, { color: colors.accent }]}>{statusMsg}</Text>
-        ) : null}
+        {statusMsg ? <Text className="text-[13px] text-accent">{statusMsg}</Text> : null}
         {pack.sourceUri ? (
-          <Text style={[styles.meta, { color: colors.textSubtle }]} numberOfLines={1}>
+          <Text className="text-[13px] text-subtle" numberOfLines={1}>
             Source ready · ~{pack.durationSec.toFixed(1)}s
           </Text>
         ) : null}
       </View>
 
-      <View style={[styles.panel, { borderColor: colors.border }]}>
-        <Text style={[styles.label, { color: colors.textMuted }]}>Synth</Text>
-        <View style={styles.presetRow}>
+      <View className="border border-border p-4 gap-3">
+        <Text className="text-[11px] tracking-[1.4px] uppercase font-bold text-muted">Synth</Text>
+        <View className="flex-row flex-wrap gap-2">
           {presets.map((p) => (
             <Pressable
               key={p}
               onPress={() => usePreset(p)}
-              style={[
-                styles.chip,
-                {
-                  backgroundColor: synth.preset === p ? colors.text : colors.bgElevated,
-                  borderColor: colors.border,
-                },
-              ]}
+              className={[
+                "border border-border px-3 py-2",
+                synth.preset === p ? "bg-fg border-fg" : "bg-bg-elevated border-border",
+              ].join(" ")}
             >
               <Text
-                style={{
-                  color: synth.preset === p ? colors.inverse : colors.text,
-                  fontSize: 13,
-                  fontWeight: "600",
-                  textTransform: "capitalize",
-                }}
+                className={[
+                  "text-[13px] font-semibold capitalize",
+                  synth.preset === p ? "text-inverse" : "text-fg",
+                ].join(" ")}
               >
                 {p}
               </Text>
@@ -342,11 +331,11 @@ export default function SamplePackScreen() {
         />
       </View>
 
-      <View style={[styles.panel, { borderColor: colors.border }]}>
-        <Text style={[styles.label, { color: colors.textMuted }]}>Clips</Text>
+      <View className="border border-border p-4 gap-3">
+        <Text className="text-[11px] tracking-[1.4px] uppercase font-bold text-muted">Clips</Text>
         <PrimaryButton label="Add clip from recording" onPress={() => addClipFromSource(true)} />
         {pack.clips.length === 0 ? (
-          <Text style={[styles.meta, { color: colors.textSubtle }]}>
+          <Text className="text-[13px] text-subtle">
             No clips yet. Add favorites to build your sample pack.
           </Text>
         ) : (
@@ -354,15 +343,15 @@ export default function SamplePackScreen() {
             <Pressable
               key={clip.id}
               onPress={() => toggleFavorite(clip.id)}
-              style={[styles.clipRow, { borderColor: colors.border }]}
+              className="flex-row items-center gap-3 border border-border p-3"
             >
-              <View style={{ flex: 1 }}>
-                <Text style={{ color: colors.text, fontWeight: "600" }}>{clip.label}</Text>
-                <Text style={[styles.meta, { color: colors.textSubtle }]}>
+              <View className="flex-1">
+                <Text className="text-fg font-semibold">{clip.label}</Text>
+                <Text className="text-[13px] text-subtle">
                   {clip.startSec.toFixed(1)}s – {clip.endSec.toFixed(1)}s
                 </Text>
               </View>
-              <Text style={{ color: clip.favorite ? colors.accent : colors.textMuted }}>
+              <Text className={clip.favorite ? "text-accent" : "text-muted"}>
                 {clip.favorite ? "★ Favorite" : "☆"}
               </Text>
             </Pressable>
@@ -370,10 +359,10 @@ export default function SamplePackScreen() {
         )}
       </View>
 
-      <View style={styles.row}>
+      <View className="flex-row flex-wrap gap-2.5 items-center">
         <PrimaryButton label="Export favorites" onPress={() => void exportPack()} />
         <Pressable onPress={() => router.push("/tools/samples")}>
-          <Text style={{ color: colors.accent, fontWeight: "700" }}>All packs →</Text>
+          <Text className="text-accent font-bold">All packs →</Text>
         </Pressable>
       </View>
     </Wrapper>
@@ -398,19 +387,19 @@ function SliderRow({
   // Simple stepper buttons — no extra slider dependency
   const step = (max - min) / 20;
   return (
-    <View style={styles.sliderRow}>
-      <Text style={{ color: colors.textMuted, fontSize: 13, flex: 1 }}>{label}</Text>
+    <View className="flex-row items-center gap-2">
+      <Text className="text-muted text-[13px] flex-1">{label}</Text>
       <Pressable
         onPress={() => onChange(Math.max(min, value - step))}
-        style={[styles.stepBtn, { borderColor: colors.border }]}
+        className="w-9 h-9 items-center justify-center border border-border"
       >
-        <Text style={{ color: colors.text }}>−</Text>
+        <Text className="text-fg">−</Text>
       </Pressable>
       <Pressable
         onPress={() => onChange(Math.min(max, value + step))}
-        style={[styles.stepBtn, { borderColor: colors.border }]}
+        className="w-9 h-9 items-center justify-center border border-border"
       >
-        <Text style={{ color: colors.text }}>+</Text>
+        <Text className="text-fg">+</Text>
       </Pressable>
     </View>
   );
@@ -420,47 +409,3 @@ export async function generateStaticParams() {
   return [{ id: "demo" }];
 }
 
-const styles = StyleSheet.create({
-  wrap: { paddingVertical: 32, gap: 14 },
-  titleInput: {
-    fontSize: 28,
-    fontWeight: "700",
-    borderBottomWidth: StyleSheet.hairlineWidth,
-    paddingVertical: 6,
-  },
-  deck: { fontSize: 15, lineHeight: 24 },
-  panel: {
-    borderWidth: StyleSheet.hairlineWidth,
-    padding: 16,
-    gap: 12,
-  },
-  label: {
-    fontSize: 11,
-    letterSpacing: 1.4,
-    textTransform: "uppercase",
-    fontWeight: "700",
-  },
-  row: { flexDirection: "row", flexWrap: "wrap", gap: 10, alignItems: "center" },
-  meta: { fontSize: 13 },
-  presetRow: { flexDirection: "row", flexWrap: "wrap", gap: 8 },
-  chip: {
-    borderWidth: StyleSheet.hairlineWidth,
-    paddingHorizontal: 12,
-    paddingVertical: 8,
-  },
-  clipRow: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: 12,
-    borderWidth: StyleSheet.hairlineWidth,
-    padding: 12,
-  },
-  sliderRow: { flexDirection: "row", alignItems: "center", gap: 8 },
-  stepBtn: {
-    width: 36,
-    height: 36,
-    alignItems: "center",
-    justifyContent: "center",
-    borderWidth: StyleSheet.hairlineWidth,
-  },
-});

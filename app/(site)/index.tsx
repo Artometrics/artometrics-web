@@ -2,7 +2,6 @@ import {
   Pressable,
   Text,
   View,
-  StyleSheet,
   Image,
   useWindowDimensions,
   Platform,
@@ -13,8 +12,6 @@ import { MagazineCard } from "@/components/MagazineCard";
 import { CarouselRail } from "@/components/CarouselRail";
 import { TrendingRail } from "@/components/TrendingRail";
 import { PageSeo } from "@/components/PageSeo";
-import { Fonts } from "@/constants/Colors";
-import { useTheme } from "@/lib/theme";
 import { assetUrl } from "@/lib/assets";
 import {
   deckLine,
@@ -31,7 +28,6 @@ import { useAuth } from "@/lib/auth";
 const RAIL_SECTIONS: SectionSlug[] = [...SECTION_SLUGS];
 
 export default function HomeScreen() {
-  const { colors } = useTheme();
   const { user } = useAuth();
   const { width } = useWindowDimensions();
   const posts = getBlogPosts();
@@ -58,43 +54,42 @@ export default function HomeScreen() {
         path="/"
       />
 
-      <Wrapper variant="magazine" style={styles.heroSwiss}>
-        <View style={styles.heroSwissRow}>
-          <View style={styles.heroCopy}>
-            <Text style={[styles.megaTitle, { color: colors.text }]}>
+      <Wrapper variant="magazine" className="pt-7 pb-2">
+        <View className="flex-row flex-wrap gap-6 items-stretch">
+          <View className="flex-[1.2] min-w-[260px] gap-4 justify-center">
+            <Text className="font-display text-[64px] leading-[64px] tracking-wide uppercase text-fg">
               DATA{"\n"}MAGAZINE
-              <Text style={{ color: colors.accent }}>*</Text>
+              <Text className="text-accent">*</Text>
             </Text>
-            <Text style={[styles.megaSub, { color: colors.accent }]}>
+            <Text className="font-sans text-sm leading-5 font-extrabold tracking-wide max-w-[360px] text-accent">
               REPORTS ON CULTURE, POWER, AND THE CREATIVE ECONOMY.
             </Text>
             <Link href="/blog" asChild>
               <Pressable
-                style={StyleSheet.flatten([
-                  styles.circleCta,
-                  { backgroundColor: colors.accent },
-                ])}
+                className="w-[52px] h-[52px] rounded-full items-center justify-center mt-1 bg-accent"
                 accessibilityLabel="Browse reports"
               >
-                <Text style={styles.circleCtaText}>→</Text>
+                <Text className="text-white text-[22px] font-bold">→</Text>
               </Pressable>
             </Link>
           </View>
           {featured && heroUri ? (
-            <View style={styles.heroPhotoWrap}>
-              <View style={[styles.heroRedBlock, { backgroundColor: colors.accent }]}>
-                <Text style={styles.heroRedLabel}>BASED IN{"\n"}CULTURE</Text>
+            <View className="flex-1 min-w-[240px] relative pt-6 pr-4">
+              <View className="absolute top-0 right-0 w-[72px] py-3.5 px-2 z-[2] bg-accent">
+                <Text className="text-white text-[9px] font-extrabold tracking-[1.2px] text-center leading-3">
+                  BASED IN{"\n"}CULTURE
+                </Text>
               </View>
               <Link href={`/${featured.slug}`} asChild>
-                <Pressable style={styles.heroPhoto}>
+                <Pressable className="border-2 border-fg">
                   <Image
                     source={{ uri: heroUri }}
-                    style={StyleSheet.flatten([
-                      styles.heroPhotoImg,
+                    className="w-full aspect-[4/5]"
+                    style={
                       Platform.OS === "web"
                         ? ({ filter: "grayscale(1) contrast(1.05)" } as object)
-                        : null,
-                    ])}
+                        : undefined
+                    }
                     resizeMode="cover"
                     accessibilityLabel={featured.title}
                   />
@@ -105,8 +100,8 @@ export default function HomeScreen() {
         </View>
       </Wrapper>
 
-      <View style={[styles.statsBar, { backgroundColor: colors.text }]}>
-        <Wrapper variant="magazine" style={styles.statsInner}>
+      <View className="mt-5 mb-3 bg-fg">
+        <Wrapper variant="magazine" className="flex-row flex-wrap py-[18px]">
           {[
             [String(posts.length), "REPORTS"],
             [String(SECTION_SLUGS.length), "DESKS"],
@@ -115,36 +110,33 @@ export default function HomeScreen() {
           ].map(([n, label], i, arr) => (
             <View
               key={label}
-              style={StyleSheet.flatten([
-                styles.statCell,
-                i < arr.length - 1
-                  ? { borderRightWidth: StyleSheet.hairlineWidth, borderRightColor: "#333" }
-                  : null,
-              ])}
+              className={[
+                "flex-grow flex-basis-[120px] px-3 py-1.5 gap-1",
+                i < arr.length - 1 ? "border-r border-base-700" : "",
+              ]
+                .filter(Boolean)
+                .join(" ")}
             >
-              <Text style={[styles.statNum, { color: colors.accent }]}>{n}</Text>
-              <Text style={styles.statLabel}>{label}</Text>
+              <Text className="font-display text-[36px] leading-10 text-accent">{n}</Text>
+              <Text className="text-white text-[10px] font-bold tracking-[1.4px]">{label}</Text>
             </View>
           ))}
         </Wrapper>
       </View>
 
       {user ? (
-        <Wrapper variant="magazine" style={styles.studioStrip}>
-          <Text style={StyleSheet.flatten([styles.studioEyebrow, { color: colors.accent }])}>
+        <Wrapper variant="magazine" className="pt-5 pb-2 gap-2">
+          <Text className="text-[11px] tracking-[1.6px] uppercase font-bold text-accent">
             Studio
           </Text>
-          <Text style={StyleSheet.flatten([styles.studioLine, { color: colors.textMuted }])}>
+          <Text className="font-sans text-[15px] leading-[22px] max-w-[520px] text-muted">
             Continue writing, check in, or publish — without leaving Artometrics.
           </Text>
           <Link href="/studio" asChild>
-            <Pressable
-              style={StyleSheet.flatten([
-                styles.studioCta,
-                { backgroundColor: colors.accent },
-              ])}
-            >
-              <Text style={styles.studioCtaText}>Open Studio →</Text>
+            <Pressable className="self-start px-4 py-3 bg-accent">
+              <Text className="text-white font-extrabold text-xs tracking-[1.2px] uppercase">
+                Open Studio →
+              </Text>
             </Pressable>
           </Link>
         </Wrapper>
@@ -157,21 +149,20 @@ export default function HomeScreen() {
       </CarouselRail>
 
       {featured ? (
-        <Wrapper variant="magazine" style={styles.heroBlock}>
-          <View style={styles.heroRow}>
-            <View style={styles.heroMain}>
+        <Wrapper variant="magazine" className="pt-4 pb-10">
+          <View className="flex-row flex-wrap gap-7">
+            <View className="flex-[2] min-w-[280px] gap-2.5">
               {heroUri ? (
                 <Link href={`/${featured.slug}`} asChild>
-                  <Pressable style={styles.heroMedia}>
+                  <Pressable className="mb-2">
                     <Image
                       source={{ uri: heroUri }}
-                      style={StyleSheet.flatten([
-                        styles.heroImage,
-                        { borderColor: colors.border },
+                      className="w-full aspect-video border-2 border-border"
+                      style={
                         Platform.OS === "web"
                           ? ({ filter: "grayscale(0.35)" } as object)
-                          : null,
-                      ])}
+                          : undefined
+                      }
                       resizeMode="cover"
                       accessibilityLabel={featured.title}
                     />
@@ -179,48 +170,32 @@ export default function HomeScreen() {
                 </Link>
               ) : null}
               {featuredLabel ? (
-                <Text style={StyleSheet.flatten([styles.eyebrow, { color: colors.accent }])}>
+                <Text className="text-[11px] tracking-[1.6px] uppercase font-bold mt-1 text-accent">
                   {featuredLabel}
                 </Text>
               ) : null}
               <Link href={`/${featured.slug}`} asChild>
                 <Pressable>
-                  <Text style={StyleSheet.flatten([styles.heroTitle, { color: colors.text }])}>
+                  <Text className="font-display text-[40px] leading-[44px] tracking-wide uppercase text-fg">
                     {featured.title}
                   </Text>
                 </Pressable>
               </Link>
-              <Text style={StyleSheet.flatten([styles.heroDek, { color: colors.textMuted }])}>
+              <Text className="font-sans text-base leading-6 max-w-[640px] text-muted">
                 {deckLine(featured.description, 36)}
               </Text>
-              <Text style={StyleSheet.flatten([styles.byline, { color: colors.textSubtle }])}>
+              <Text className="text-[11px] mt-0.5 tracking-wide uppercase font-semibold text-subtle">
                 {featuredAuthor}
                 {featured.pubDate ? ` · ${formatDate(featured.pubDate)}` : ""}
               </Text>
               {leadSecondary ? (
-                <View
-                  style={StyleSheet.flatten([
-                    styles.secondary,
-                    { borderTopColor: colors.border },
-                  ])}
-                >
+                <View className="mt-5 pt-4 border-t-2 border-border gap-1.5">
                   <Link href={`/${leadSecondary.slug}`} asChild>
                     <Pressable>
-                      <Text
-                        style={StyleSheet.flatten([
-                          styles.secondaryTitle,
-                          { color: colors.text },
-                        ])}
-                      >
+                      <Text className="font-display text-[22px] leading-[26px] uppercase text-fg">
                         {leadSecondary.title}
                       </Text>
-                      <Text
-                        style={StyleSheet.flatten([
-                          styles.secondaryDek,
-                          { color: colors.textMuted },
-                        ])}
-                        numberOfLines={2}
-                      >
+                      <Text className="font-sans text-sm leading-[21px] text-muted" numberOfLines={2}>
                         {deckLine(leadSecondary.description, 22)}
                       </Text>
                     </Pressable>
@@ -228,7 +203,7 @@ export default function HomeScreen() {
                 </View>
               ) : null}
             </View>
-            <View style={styles.trendingCol}>
+            <View className="flex-1 min-w-[260px] max-w-[380px]">
               <TrendingRail posts={trending} />
             </View>
           </View>
@@ -257,13 +232,11 @@ export default function HomeScreen() {
         ))}
       </CarouselRail>
 
-      <Wrapper variant="magazine" style={styles.gridSection}>
-        <Text style={StyleSheet.flatten([styles.sectionTitle, { color: colors.text }])}>
-          Latest
-        </Text>
-        <View style={styles.grid}>
+      <Wrapper variant="magazine" className="mb-10 gap-4">
+        <Text className="font-display text-[32px] tracking-wide uppercase text-fg">Latest</Text>
+        <View className="flex-row flex-wrap gap-5">
           {posts.slice(0, 12).map((post) => (
-            <View key={post.slug} style={styles.gridItem}>
+            <View key={post.slug} className="flex-basis-[280px] flex-grow max-w-[400px]">
               <MagazineCard post={post} variant="tile" />
             </View>
           ))}
@@ -280,44 +253,17 @@ export default function HomeScreen() {
                   {img ? (
                     <Image
                       source={{ uri: img }}
-                      style={{
-                        width: "100%",
-                        aspectRatio: 1,
-                        backgroundColor: colors.bgElevated,
-                        borderWidth: 1,
-                        borderColor: colors.border,
-                      }}
+                      className="w-full aspect-square border border-border bg-bg-elevated"
                       resizeMode="cover"
                     />
                   ) : (
-                    <View
-                      style={{
-                        width: "100%",
-                        aspectRatio: 1,
-                        backgroundColor: colors.bgElevated,
-                        borderWidth: 1,
-                        borderColor: colors.border,
-                      }}
-                    />
+                    <View className="w-full aspect-square border border-border bg-bg-elevated" />
                   )}
-                  <Text
-                    style={{
-                      color: colors.accent,
-                      fontSize: 10,
-                      fontWeight: "700",
-                      letterSpacing: 1.2,
-                    }}
-                  >
+                  <Text className="text-[10px] font-bold tracking-[1.2px] text-accent">
                     EPISODE {ep.episodeNumber ?? ep.id}
                   </Text>
                   <Text
-                    style={{
-                      color: colors.text,
-                      fontFamily: Fonts.display,
-                      fontSize: 18,
-                      lineHeight: 22,
-                      textTransform: "uppercase",
-                    }}
+                    className="font-display text-lg leading-[22px] uppercase text-fg"
                     numberOfLines={3}
                   >
                     {ep.title}
@@ -329,20 +275,13 @@ export default function HomeScreen() {
         </CarouselRail>
       ) : null}
 
-      <Wrapper variant="magazine" style={styles.jump}>
-        <Text style={StyleSheet.flatten([styles.sectionTitle, { color: colors.text }])}>
-          Sections
-        </Text>
-        <View style={styles.jumpRow}>
+      <Wrapper variant="magazine" className="mb-8 gap-3.5">
+        <Text className="font-display text-[32px] tracking-wide uppercase text-fg">Sections</Text>
+        <View className="flex-row flex-wrap gap-2">
           {SECTION_SLUGS.map((slug) => (
             <Link key={slug} href={`/topics/${slug}` as `/topics/${string}`} asChild>
-              <Pressable
-                style={StyleSheet.flatten([
-                  styles.jumpChip,
-                  { borderColor: colors.border },
-                ])}
-              >
-                <Text style={StyleSheet.flatten([styles.jumpText, { color: colors.text }])}>
+              <Pressable className="border-2 border-border px-3 py-2">
+                <Text className="text-[11px] font-extrabold tracking-wide uppercase text-fg">
                   {SECTION_META[slug].title}
                 </Text>
               </Pressable>
@@ -351,14 +290,17 @@ export default function HomeScreen() {
         </View>
       </Wrapper>
 
-      <Wrapper variant="magazine" style={styles.ctaBandWrap}>
-        <View style={[styles.ctaBand, { backgroundColor: colors.accent }]}>
-          <Text style={styles.ctaBandTitle}>
+      <Wrapper variant="magazine" className="mb-10">
+        <View className="flex-row flex-wrap items-center justify-between gap-4 p-7 bg-accent">
+          <Text className="flex-1 min-w-[220px] text-white font-display text-[32px] leading-9 tracking-wide">
             {"LET'S READ SOMETHING\nTHAT PERFORMS."}
           </Text>
           <Link href="/blog" asChild>
-            <Pressable style={styles.ctaBandBtn} accessibilityLabel="Browse reports">
-              <Text style={styles.ctaBandBtnText}>↗</Text>
+            <Pressable
+              className="w-16 h-16 rounded-full bg-inverse items-center justify-center"
+              accessibilityLabel="Browse reports"
+            >
+              <Text className="text-fg text-[26px] font-bold">↗</Text>
             </Pressable>
           </Link>
         </View>
@@ -366,231 +308,3 @@ export default function HomeScreen() {
     </>
   );
 }
-
-const styles = StyleSheet.create({
-  heroSwiss: { paddingTop: 28, paddingBottom: 8 },
-  heroSwissRow: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    gap: 24,
-    alignItems: "stretch",
-  },
-  heroCopy: { flex: 1.2, minWidth: 260, gap: 16, justifyContent: "center" },
-  megaTitle: {
-    fontFamily: Fonts.display,
-    fontSize: 64,
-    lineHeight: 64,
-    letterSpacing: 1,
-    textTransform: "uppercase",
-  },
-  megaSub: {
-    fontFamily: Fonts.sans,
-    fontSize: 14,
-    lineHeight: 20,
-    fontWeight: "800",
-    letterSpacing: 0.6,
-    maxWidth: 360,
-  },
-  circleCta: {
-    width: 52,
-    height: 52,
-    borderRadius: 26,
-    alignItems: "center",
-    justifyContent: "center",
-    marginTop: 4,
-  },
-  circleCtaText: { color: "#FFFFFF", fontSize: 22, fontWeight: "700" },
-  heroPhotoWrap: {
-    flex: 1,
-    minWidth: 240,
-    position: "relative",
-    paddingTop: 24,
-    paddingRight: 16,
-  },
-  heroRedBlock: {
-    position: "absolute",
-    top: 0,
-    right: 0,
-    width: 72,
-    paddingVertical: 14,
-    paddingHorizontal: 8,
-    zIndex: 2,
-  },
-  heroRedLabel: {
-    color: "#FFFFFF",
-    fontSize: 9,
-    fontWeight: "800",
-    letterSpacing: 1.2,
-    textAlign: "center",
-    lineHeight: 12,
-  },
-  heroPhoto: { borderWidth: 2, borderColor: "#000" },
-  heroPhotoImg: { width: "100%", aspectRatio: 4 / 5 },
-  statsBar: { marginTop: 20, marginBottom: 12 },
-  statsInner: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    paddingVertical: 18,
-  },
-  statCell: {
-    flexGrow: 1,
-    flexBasis: 120,
-    paddingHorizontal: 12,
-    paddingVertical: 6,
-    gap: 4,
-  },
-  statNum: {
-    fontFamily: Fonts.display,
-    fontSize: 36,
-    lineHeight: 40,
-  },
-  statLabel: {
-    color: "#FFFFFF",
-    fontSize: 10,
-    fontWeight: "700",
-    letterSpacing: 1.4,
-  },
-  studioStrip: {
-    paddingTop: 20,
-    paddingBottom: 8,
-    gap: 8,
-  },
-  studioEyebrow: {
-    fontSize: 11,
-    letterSpacing: 1.6,
-    textTransform: "uppercase",
-    fontWeight: "700",
-  },
-  studioLine: {
-    fontFamily: Fonts.sans,
-    fontSize: 15,
-    lineHeight: 22,
-    maxWidth: 520,
-  },
-  studioCta: {
-    alignSelf: "flex-start",
-    paddingHorizontal: 16,
-    paddingVertical: 12,
-  },
-  studioCtaText: {
-    color: "#FFFFFF",
-    fontWeight: "800",
-    fontSize: 12,
-    letterSpacing: 1.2,
-    textTransform: "uppercase",
-  },
-  heroBlock: { paddingTop: 16, paddingBottom: 40 },
-  heroRow: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    gap: 28,
-  },
-  heroMain: { flex: 2, minWidth: 280, gap: 10 },
-  trendingCol: { flex: 1, minWidth: 260, maxWidth: 380 },
-  heroMedia: { marginBottom: 8 },
-  heroImage: { width: "100%", aspectRatio: 16 / 9, borderWidth: 2 },
-  eyebrow: {
-    fontSize: 11,
-    letterSpacing: 1.6,
-    textTransform: "uppercase",
-    fontWeight: "700",
-    marginTop: 4,
-  },
-  heroTitle: {
-    fontFamily: Fonts.display,
-    fontSize: 40,
-    lineHeight: 44,
-    fontWeight: "400",
-    letterSpacing: 0.4,
-    textTransform: "uppercase",
-  },
-  heroDek: {
-    fontFamily: Fonts.sans,
-    fontSize: 16,
-    lineHeight: 24,
-    maxWidth: 640,
-  },
-  byline: {
-    fontSize: 11,
-    marginTop: 2,
-    letterSpacing: 0.8,
-    textTransform: "uppercase",
-    fontWeight: "600",
-  },
-  secondary: {
-    marginTop: 20,
-    paddingTop: 16,
-    borderTopWidth: 2,
-    gap: 6,
-  },
-  secondaryTitle: {
-    fontFamily: Fonts.display,
-    fontSize: 22,
-    lineHeight: 26,
-    fontWeight: "400",
-    textTransform: "uppercase",
-  },
-  secondaryDek: {
-    fontFamily: Fonts.sans,
-    fontSize: 14,
-    lineHeight: 21,
-  },
-  gridSection: { marginBottom: 40, gap: 16 },
-  sectionTitle: {
-    fontFamily: Fonts.display,
-    fontSize: 32,
-    fontWeight: "400",
-    letterSpacing: 0.5,
-    textTransform: "uppercase",
-  },
-  grid: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    gap: 20,
-  },
-  gridItem: {
-    flexBasis: 280,
-    flexGrow: 1,
-    maxWidth: 400,
-  },
-  jump: { marginBottom: 32, gap: 14 },
-  jumpRow: { flexDirection: "row", flexWrap: "wrap", gap: 8 },
-  jumpChip: {
-    borderWidth: 2,
-    paddingHorizontal: 12,
-    paddingVertical: 8,
-  },
-  jumpText: {
-    fontSize: 11,
-    fontWeight: "800",
-    letterSpacing: 1,
-    textTransform: "uppercase",
-  },
-  ctaBandWrap: { marginBottom: 40 },
-  ctaBand: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    alignItems: "center",
-    justifyContent: "space-between",
-    gap: 16,
-    padding: 28,
-  },
-  ctaBandTitle: {
-    flex: 1,
-    minWidth: 220,
-    color: "#FFFFFF",
-    fontFamily: Fonts.display,
-    fontSize: 32,
-    lineHeight: 36,
-    letterSpacing: 0.5,
-  },
-  ctaBandBtn: {
-    width: 64,
-    height: 64,
-    borderRadius: 32,
-    backgroundColor: "#FFFFFF",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  ctaBandBtnText: { color: "#000000", fontSize: 26, fontWeight: "700" },
-});

@@ -2,7 +2,6 @@ import { useCallback, useState } from "react";
 import {
   ActivityIndicator,
   Pressable,
-  StyleSheet,
   Text,
   TextInput,
   View,
@@ -12,7 +11,6 @@ import { Wrapper } from "@/components/Wrapper";
 import { PageSeo } from "@/components/PageSeo";
 import { ToolsSubnav } from "@/components/tools/ToolsSubnav";
 import { PrimaryButton } from "@/components/PrimaryButton";
-import { Fonts } from "@/constants/Colors";
 import { useTheme } from "@/lib/theme";
 import { useRequireAuth } from "@/lib/tools/requireAuth";
 import { apiFetch } from "@/lib/supabase/client";
@@ -132,49 +130,45 @@ export default function AftercareJournalScreen() {
 
   if (!ready) {
     return (
-      <Wrapper style={styles.wrap}>
-        <Text style={{ color: colors.textMuted }}>Loading…</Text>
+      <Wrapper className="gap-2.5 py-8">
+        <Text className="text-muted">Loading…</Text>
       </Wrapper>
     );
   }
 
   return (
-    <Wrapper style={styles.wrap}>
+    <Wrapper className="gap-2.5 py-8">
       <PageSeo
         title="Journal · Aftercare"
         description="Mood-tagged journal on Artometrics Aftercare."
         path="/tools/aftercare/journal"
       />
       <ToolsSubnav links={NAV} />
-      <Text style={[styles.eyebrow, { color: colors.accent }]}>Aftercare</Text>
-      <Text style={[styles.title, { color: colors.text }]}>Journal</Text>
-      <Text style={[styles.deck, { color: colors.textMuted }]}>
+      <Text className="text-xs tracking-[1.8px] uppercase font-bold text-accent">Aftercare</Text>
+      <Text className="font-serif text-[36px] font-bold text-fg">Journal</Text>
+      <Text className="font-serif text-base leading-[26px] max-w-[560px] text-muted">
         Name the feeling, then write what wants tending.
       </Text>
 
-      <View style={[styles.form, { borderColor: colors.border }]}>
-        <Text style={[styles.label, { color: colors.textMuted }]}>Mood</Text>
-        <View style={styles.moods}>
+      <View className="mt-2 border border-border p-4 gap-2.5">
+        <Text className="text-xs tracking-wide uppercase font-bold text-muted">Mood</Text>
+        <View className="flex-row flex-wrap gap-2">
           {MOODS.map((m) => {
             const active = mood === m;
             return (
               <Pressable
                 key={m}
                 onPress={() => setMood(m)}
-                style={[
-                  styles.moodChip,
-                  {
-                    borderColor: colors.border,
-                    backgroundColor: active ? colors.text : "transparent",
-                  },
-                ]}
+                className={[
+                  "border px-3 py-2",
+                  active ? "bg-fg border-fg" : "bg-transparent border-border",
+                ].join(" ")}
               >
                 <Text
-                  style={{
-                    color: active ? colors.inverse : colors.text,
-                    fontSize: 13,
-                    textTransform: "capitalize",
-                  }}
+                  className={[
+                    "text-[13px] capitalize",
+                    active ? "text-inverse" : "text-fg",
+                  ].join(" ")}
                 >
                   {m}
                 </Text>
@@ -187,34 +181,19 @@ export default function AftercareJournalScreen() {
           value={title}
           onChangeText={setTitle}
           placeholder="Title (optional)"
-          placeholderTextColor={colors.textSubtle}
-          style={[
-            styles.input,
-            {
-              borderColor: colors.border,
-              color: colors.text,
-              backgroundColor: colors.bgElevated,
-            },
-          ]}
+          placeholderTextColorClassName="text-subtle"
+          className="border border-border px-3 py-2.5 font-serif text-base text-fg bg-bg-elevated"
         />
         <TextInput
           multiline
           value={body}
           onChangeText={setBody}
           placeholder="What softens, what stays…"
-          placeholderTextColor={colors.textSubtle}
-          style={[
-            styles.editor,
-            {
-              borderColor: colors.border,
-              color: colors.text,
-              backgroundColor: colors.bgElevated,
-            },
-          ]}
+          placeholderTextColorClassName="text-subtle"
+          className="border border-border p-3 min-h-[140px] font-serif text-base leading-[26px] text-fg bg-bg-elevated"
+          style={{ textAlignVertical: "top" }}
         />
-        {error ? (
-          <Text style={[styles.error, { color: colors.accent }]}>{error}</Text>
-        ) : null}
+        {error ? <Text className="font-serif text-[15px] text-accent">{error}</Text> : null}
         <PrimaryButton
           label={saving ? "Saving…" : "Save entry"}
           onPress={onCreate}
@@ -222,42 +201,35 @@ export default function AftercareJournalScreen() {
         />
       </View>
 
-      <Text style={[styles.sectionLabel, { color: colors.textMuted }]}>
+      <Text className="mt-4 text-xs tracking-wide uppercase font-bold text-muted">
         Recent entries
       </Text>
       {loading ? (
         <ActivityIndicator color={colors.accent} />
       ) : entries.length === 0 ? (
-        <Text style={[styles.deck, { color: colors.textMuted }]}>
+        <Text className="font-serif text-base leading-[26px] max-w-[560px] text-muted">
           No entries yet. Start with whatever is true today.
         </Text>
       ) : (
-        <View style={styles.list}>
+        <View className="gap-3 mt-1">
           {entries.map((entry) => (
-            <View
-              key={entry.id}
-              style={[styles.entry, { borderColor: colors.border }]}
-            >
-              <View style={styles.entryHead}>
+            <View key={entry.id} className="border border-border p-3.5 gap-1.5">
+              <View className="flex-row justify-between items-center">
                 {entry.mood ? (
-                  <Text style={[styles.moodTag, { color: colors.accent }]}>
+                  <Text className="text-xs tracking-wide uppercase font-bold text-accent">
                     {entry.mood}
                   </Text>
                 ) : null}
                 {entry.created_at ? (
-                  <Text style={[styles.meta, { color: colors.textSubtle }]}>
+                  <Text className="text-xs text-subtle">
                     {new Date(entry.created_at).toLocaleDateString()}
                   </Text>
                 ) : null}
               </View>
               {entry.title ? (
-                <Text style={[styles.entryTitle, { color: colors.text }]}>
-                  {entry.title}
-                </Text>
+                <Text className="font-serif text-lg font-bold text-fg">{entry.title}</Text>
               ) : null}
-              <Text style={[styles.entryBody, { color: colors.textMuted }]}>
-                {entry.body}
-              </Text>
+              <Text className="font-serif text-[15px] leading-6 text-muted">{entry.body}</Text>
             </View>
           ))}
         </View>
@@ -265,77 +237,3 @@ export default function AftercareJournalScreen() {
     </Wrapper>
   );
 }
-
-const styles = StyleSheet.create({
-  wrap: { paddingVertical: 32, gap: 10 },
-  eyebrow: {
-    fontSize: 12,
-    letterSpacing: 1.8,
-    textTransform: "uppercase",
-    fontWeight: "700",
-  },
-  title: { fontFamily: Fonts.serif, fontSize: 36, fontWeight: "700" },
-  deck: { fontFamily: Fonts.serif, fontSize: 16, lineHeight: 26, maxWidth: 560 },
-  form: {
-    marginTop: 8,
-    borderWidth: StyleSheet.hairlineWidth,
-    padding: 16,
-    gap: 10,
-  },
-  label: {
-    fontSize: 12,
-    letterSpacing: 0.8,
-    textTransform: "uppercase",
-    fontWeight: "700",
-  },
-  moods: { flexDirection: "row", flexWrap: "wrap", gap: 8 },
-  moodChip: {
-    borderWidth: StyleSheet.hairlineWidth,
-    paddingHorizontal: 12,
-    paddingVertical: 8,
-  },
-  input: {
-    borderWidth: StyleSheet.hairlineWidth,
-    paddingHorizontal: 12,
-    paddingVertical: 10,
-    fontFamily: Fonts.serif,
-    fontSize: 16,
-  },
-  editor: {
-    borderWidth: StyleSheet.hairlineWidth,
-    padding: 12,
-    minHeight: 140,
-    textAlignVertical: "top",
-    fontFamily: Fonts.serif,
-    fontSize: 16,
-    lineHeight: 26,
-  },
-  error: { fontFamily: Fonts.serif, fontSize: 15 },
-  sectionLabel: {
-    marginTop: 16,
-    fontSize: 12,
-    letterSpacing: 0.8,
-    textTransform: "uppercase",
-    fontWeight: "700",
-  },
-  list: { gap: 12, marginTop: 4 },
-  entry: {
-    borderWidth: StyleSheet.hairlineWidth,
-    padding: 14,
-    gap: 6,
-  },
-  entryHead: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-  },
-  moodTag: {
-    fontSize: 12,
-    letterSpacing: 1,
-    textTransform: "uppercase",
-    fontWeight: "700",
-  },
-  meta: { fontSize: 12 },
-  entryTitle: { fontFamily: Fonts.serif, fontSize: 18, fontWeight: "700" },
-  entryBody: { fontFamily: Fonts.serif, fontSize: 15, lineHeight: 24 },
-});

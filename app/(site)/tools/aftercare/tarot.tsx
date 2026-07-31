@@ -3,7 +3,6 @@ import {
   ActivityIndicator,
   Image,
   Pressable,
-  StyleSheet,
   Text,
   TextInput,
   View,
@@ -13,7 +12,6 @@ import { Wrapper } from "@/components/Wrapper";
 import { PageSeo } from "@/components/PageSeo";
 import { ToolsSubnav } from "@/components/tools/ToolsSubnav";
 import { PrimaryButton } from "@/components/PrimaryButton";
-import { Fonts } from "@/constants/Colors";
 import { useTheme } from "@/lib/theme";
 import { useRequireAuth } from "@/lib/tools/requireAuth";
 import { apiFetch } from "@/lib/supabase/client";
@@ -133,42 +131,39 @@ export default function AftercareTarotScreen() {
 
   if (!ready) {
     return (
-      <Wrapper style={styles.wrap}>
-        <Text style={{ color: colors.textMuted }}>Loading…</Text>
+      <Wrapper className="gap-2.5 py-8">
+        <Text className="text-muted">Loading…</Text>
       </Wrapper>
     );
   }
 
   return (
-    <Wrapper style={styles.wrap}>
+    <Wrapper className="gap-2.5 py-8">
       <PageSeo
         title="Tarot · Aftercare"
         description="Gentle tarot pulls on Artometrics Aftercare."
         path="/tools/aftercare/tarot"
       />
       <ToolsSubnav links={NAV} />
-      <Text style={[styles.eyebrow, { color: colors.accent }]}>Aftercare</Text>
-      <Text style={[styles.title, { color: colors.text }]}>Tarot</Text>
-      <Text style={[styles.deck, { color: colors.textMuted }]}>
+      <Text className="text-xs tracking-[1.8px] uppercase font-bold text-accent">Aftercare</Text>
+      <Text className="font-serif text-[36px] font-bold text-fg">Tarot</Text>
+      <Text className="font-serif text-base leading-[26px] max-w-[560px] text-muted">
         Ask softly. Sit with what arrives.
       </Text>
 
-      <View style={styles.spreadRow}>
+      <View className="flex-row flex-wrap gap-2 mt-1">
         {(["single", "three"] as const).map((s) => {
           const active = spreadType === s;
           return (
             <Pressable
               key={s}
               onPress={() => setSpreadType(s)}
-              style={[
-                styles.chip,
-                {
-                  borderColor: colors.border,
-                  backgroundColor: active ? colors.text : "transparent",
-                },
-              ]}
+              className={[
+                "border px-3 py-2",
+                active ? "bg-fg border-fg" : "bg-transparent border-border",
+              ].join(" ")}
             >
-              <Text style={{ color: active ? colors.inverse : colors.text, fontSize: 13 }}>
+              <Text className={[active ? "text-inverse" : "text-fg", "text-[13px]"].join(" ")}>
                 {s === "single" ? "Single card" : "Three-card"}
               </Text>
             </Pressable>
@@ -180,20 +175,11 @@ export default function AftercareTarotScreen() {
         value={question}
         onChangeText={setQuestion}
         placeholder="Optional question"
-        placeholderTextColor={colors.textSubtle}
-        style={[
-          styles.input,
-          {
-            borderColor: colors.border,
-            color: colors.text,
-            backgroundColor: colors.bgElevated,
-          },
-        ]}
+        placeholderTextColorClassName="text-subtle"
+        className="border border-border px-3 py-2.5 font-serif text-base text-fg bg-bg-elevated"
       />
 
-      {error ? (
-        <Text style={[styles.error, { color: colors.accent }]}>{error}</Text>
-      ) : null}
+      {error ? <Text className="font-serif text-[15px] text-accent">{error}</Text> : null}
 
       <PrimaryButton
         label={pulling ? "Pulling…" : "Pull cards"}
@@ -202,84 +188,66 @@ export default function AftercareTarotScreen() {
       />
 
       {pull ? (
-        <View style={[styles.result, { borderColor: colors.border }]}>
-          <Text style={[styles.sectionLabel, { color: colors.textMuted }]}>
-            This pull
-          </Text>
+        <View className="mt-2 border border-border p-4 gap-2.5">
+          <Text className="text-xs tracking-wide uppercase font-bold text-muted">This pull</Text>
           {pull.question ? (
-            <Text style={[styles.question, { color: colors.text }]}>
-              “{pull.question}”
-            </Text>
+            <Text className="font-serif text-[17px] leading-[26px] text-fg">"{pull.question}"</Text>
           ) : null}
-          <View style={styles.cards}>
+          <View className="flex-row flex-wrap gap-3">
             {(pull.cards ?? []).map((card, i) => {
               const art = resolveMediaUrl(card.imageUrl);
               return (
-              <View
-                key={`${card.cardId ?? card.name}-${i}`}
-                style={[styles.card, { borderColor: colors.border }]}
-              >
-                {art ? (
-                  <Image
-                    source={{ uri: art }}
-                    style={styles.cardArt}
-                    resizeMode="cover"
-                  />
-                ) : (
-                  <View
-                    style={[
-                      styles.cardArtFallback,
-                      { backgroundColor: colors.bgElevated, borderColor: colors.border },
-                    ]}
-                  >
-                    <Text style={{ color: colors.textSubtle, fontSize: 12 }}>No art</Text>
-                  </View>
-                )}
-                {card.position ? (
-                  <Text style={[styles.position, { color: colors.accent }]}>
-                    {card.position}
+                <View key={`${card.cardId ?? card.name}-${i}`} className="border border-border p-2.5 w-[140px] gap-1.5">
+                  {art ? (
+                    <Image
+                      source={{ uri: art }}
+                      className="w-full aspect-[2/3] bg-base-200"
+                      resizeMode="cover"
+                    />
+                  ) : (
+                    <View className="w-full aspect-[2/3] border border-border bg-bg-elevated items-center justify-center">
+                      <Text className="text-subtle text-xs">No art</Text>
+                    </View>
+                  )}
+                  {card.position ? (
+                    <Text className="text-[11px] tracking-wide uppercase font-bold text-accent">
+                      {card.position}
+                    </Text>
+                  ) : null}
+                  <Text className="font-serif text-[15px] font-bold text-fg">
+                    {card.name}
+                    {card.reversed ? " (rev.)" : ""}
                   </Text>
-                ) : null}
-                <Text style={[styles.cardName, { color: colors.text }]}>
-                  {card.name}
-                  {card.reversed ? " (rev.)" : ""}
-                </Text>
-              </View>
+                </View>
               );
             })}
           </View>
           {pull.interpretation ? (
-            <Text style={[styles.interp, { color: colors.textMuted }]}>
-              {pull.interpretation}
-            </Text>
+            <Text className="font-serif text-base leading-[26px] text-muted">{pull.interpretation}</Text>
           ) : null}
         </View>
       ) : null}
 
-      <Text style={[styles.sectionLabel, { color: colors.textMuted, marginTop: 12 }]}>
-        History
-      </Text>
+      <Text className="mt-3 text-xs tracking-wide uppercase font-bold text-muted">History</Text>
       {loading ? (
         <ActivityIndicator color={colors.accent} />
       ) : history.length === 0 ? (
-        <Text style={[styles.deck, { color: colors.textMuted }]}>
+        <Text className="font-serif text-base leading-[26px] max-w-[560px] text-muted">
           No pulls yet. Start with a single card.
         </Text>
       ) : (
-        <View style={styles.history}>
+        <View className="gap-2.5">
           {history.map((h) => (
             <Pressable
               key={h.id}
               onPress={() => setPull(h)}
-              style={[styles.historyItem, { borderColor: colors.border }]}
+              className="border border-border p-3 gap-1"
             >
-              <Text style={[styles.meta, { color: colors.accent }]}>
+              <Text className="text-xs font-semibold text-accent">
                 {h.spread_type === "three" ? "Three-card" : "Single"}
-                {h.created_at
-                  ? ` · ${new Date(h.created_at).toLocaleDateString()}`
-                  : ""}
+                {h.created_at ? ` · ${new Date(h.created_at).toLocaleDateString()}` : ""}
               </Text>
-              <Text style={[styles.historyQ, { color: colors.text }]} numberOfLines={2}>
+              <Text className="font-serif text-[15px] leading-[22px] text-fg" numberOfLines={2}>
                 {h.question ||
                   (h.cards ?? []).map((c) => c.name).join(", ") ||
                   "Untitled pull"}
@@ -291,73 +259,3 @@ export default function AftercareTarotScreen() {
     </Wrapper>
   );
 }
-
-const styles = StyleSheet.create({
-  wrap: { paddingVertical: 32, gap: 10 },
-  eyebrow: {
-    fontSize: 12,
-    letterSpacing: 1.8,
-    textTransform: "uppercase",
-    fontWeight: "700",
-  },
-  title: { fontFamily: Fonts.serif, fontSize: 36, fontWeight: "700" },
-  deck: { fontFamily: Fonts.serif, fontSize: 16, lineHeight: 26, maxWidth: 560 },
-  spreadRow: { flexDirection: "row", flexWrap: "wrap", gap: 8, marginTop: 4 },
-  chip: {
-    borderWidth: StyleSheet.hairlineWidth,
-    paddingHorizontal: 12,
-    paddingVertical: 8,
-  },
-  input: {
-    borderWidth: StyleSheet.hairlineWidth,
-    paddingHorizontal: 12,
-    paddingVertical: 10,
-    fontFamily: Fonts.serif,
-    fontSize: 16,
-  },
-  error: { fontFamily: Fonts.serif, fontSize: 15 },
-  result: {
-    marginTop: 8,
-    borderWidth: StyleSheet.hairlineWidth,
-    padding: 16,
-    gap: 10,
-  },
-  sectionLabel: {
-    fontSize: 12,
-    letterSpacing: 0.8,
-    textTransform: "uppercase",
-    fontWeight: "700",
-  },
-  question: { fontFamily: Fonts.serif, fontSize: 17, lineHeight: 26 },
-  cards: { flexDirection: "row", flexWrap: "wrap", gap: 12 },
-  card: {
-    borderWidth: StyleSheet.hairlineWidth,
-    padding: 10,
-    width: 140,
-    gap: 6,
-  },
-  cardArt: { width: "100%", aspectRatio: 2 / 3, backgroundColor: "#eee" },
-  cardArtFallback: {
-    width: "100%",
-    aspectRatio: 2 / 3,
-    borderWidth: StyleSheet.hairlineWidth,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  position: {
-    fontSize: 11,
-    letterSpacing: 1,
-    textTransform: "uppercase",
-    fontWeight: "700",
-  },
-  cardName: { fontFamily: Fonts.serif, fontSize: 15, fontWeight: "700" },
-  interp: { fontFamily: Fonts.serif, fontSize: 16, lineHeight: 26 },
-  history: { gap: 10 },
-  historyItem: {
-    borderWidth: StyleSheet.hairlineWidth,
-    padding: 12,
-    gap: 4,
-  },
-  meta: { fontSize: 12, fontWeight: "600" },
-  historyQ: { fontFamily: Fonts.serif, fontSize: 15, lineHeight: 22 },
-});

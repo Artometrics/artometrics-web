@@ -9,6 +9,7 @@ import {
 } from "react";
 import { Appearance, Platform } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { Uniwind } from "uniwind";
 import {
   resolveBrandFonts,
   resolveThemeColors,
@@ -17,6 +18,7 @@ import {
   type ThemeColors,
   type ThemeMode,
 } from "@/constants/Colors";
+import { brandThemeCssVars } from "@/lib/uniwind-theme";
 
 type Preference = ThemeMode | "system";
 
@@ -216,8 +218,13 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   const fonts = useMemo(() => resolveBrandFonts(brandStyle), [brandStyle]);
 
   useEffect(() => {
+    // Keep Uniwind className themes in lockstep with preference + brand tokens.
+    Uniwind.setTheme(preference === "system" ? "system" : preference);
+    const vars = brandThemeCssVars(brandStyle);
+    Uniwind.updateCSSVariables("light", vars.light);
+    Uniwind.updateCSSVariables("dark", vars.dark);
     applyDomTheme(mode, brandStyle, colors);
-  }, [mode, brandStyle, colors]);
+  }, [preference, mode, brandStyle, colors]);
 
   const value = useMemo(
     () => ({

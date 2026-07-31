@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react";
-import { Text, StyleSheet } from "react-native";
+import { Text } from "react-native";
 import { Link, router } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { PageSeo } from "@/components/PageSeo";
-import { Fonts } from "@/constants/Colors";
-import { useTheme } from "@/lib/theme";
 import { useAuth } from "@/lib/auth";
 import { getSupabase } from "@/lib/supabase/client";
 
@@ -15,7 +13,6 @@ const RETRY_MS = [0, 250, 500, 1000, 1500];
  * Supabase puts tokens in the hash; detectSessionInUrl + getSession picks them up.
  */
 export default function AuthCallbackScreen() {
-  const { colors } = useTheme();
   const { user, loading } = useAuth();
   const [error, setError] = useState<string | null>(null);
 
@@ -60,29 +57,23 @@ export default function AuthCallbackScreen() {
   }, [user, loading]);
 
   return (
-    <Wrapper variant="narrow" style={styles.wrap}>
+    <Wrapper variant="narrow" className="gap-3 py-16">
       <PageSeo
         title="Signing in"
         description="Completing Artometrics sign-in."
         path="/auth/callback"
       />
-      <Text style={[styles.title, { color: colors.text }]}>
+      <Text className="font-serif text-[28px] font-semibold text-fg">
         {error ? "Sign-in issue" : "Signing you in…"}
       </Text>
-      <Text style={[styles.p, { color: colors.textMuted }]}>
+      <Text className="font-serif text-base leading-[26px] text-muted">
         {error ?? "One moment while we finish Google login."}
       </Text>
       {error ? (
         <Link href="/login">
-          <Text style={{ color: colors.accent, marginTop: 8 }}>Back to Log in</Text>
+          <Text className="text-accent mt-2">Back to Log in</Text>
         </Link>
       ) : null}
     </Wrapper>
   );
 }
-
-const styles = StyleSheet.create({
-  wrap: { paddingVertical: 64, gap: 12 },
-  title: { fontFamily: Fonts.serif, fontSize: 28, fontWeight: "600" },
-  p: { fontFamily: Fonts.serif, fontSize: 16, lineHeight: 26 },
-});

@@ -1,10 +1,8 @@
 import { useEffect, useRef } from "react";
-import { StyleSheet, View } from "react-native";
-import { useTheme } from "@/lib/theme";
+import { View } from "react-native";
 
 /** Subtle animated accent beam under Tools titles (web-only motion polish). */
 export function ToolsAccent() {
-  const { colors } = useTheme();
   const ref = useRef<View>(null);
 
   useEffect(() => {
@@ -24,19 +22,10 @@ export function ToolsAccent() {
   return (
     <View
       ref={ref}
-      style={StyleSheet.flatten([styles.beam, { backgroundColor: colors.accent }])}
+      className="mt-1 mb-2 h-[3px] w-[120px] bg-accent"
+      style={{ transformOrigin: "left center" }}
       accessibilityElementsHidden
       importantForAccessibility="no"
     />
   );
 }
-
-const styles = StyleSheet.create({
-  beam: {
-    height: 3,
-    width: 120,
-    marginTop: 4,
-    marginBottom: 8,
-    transformOrigin: "left center",
-  },
-});

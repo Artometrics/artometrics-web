@@ -1,11 +1,10 @@
 import { useCallback, useState } from "react";
-import { ActivityIndicator, Pressable, Text, View, StyleSheet } from "react-native";
+import { ActivityIndicator, Pressable, Text, View } from "react-native";
 import { Link, router, useFocusEffect } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { PageSeo } from "@/components/PageSeo";
 import { PrimaryButton } from "@/components/PrimaryButton";
 import { ToolsAccent } from "@/components/tools/ToolsAccent";
-import { Fonts } from "@/constants/Colors";
 import { useTheme } from "@/lib/theme";
 import { useAuth } from "@/lib/auth";
 import { loadStudioContinue, type StudioContinue } from "@/lib/platform/studio";
@@ -42,8 +41,8 @@ export default function StudioHomeScreen() {
 
   if (authLoading || !user) {
     return (
-      <Wrapper variant="narrow" style={styles.wrap}>
-        <Text style={[styles.deck, { color: colors.textMuted }]}>Opening Studio…</Text>
+      <Wrapper variant="narrow" className="gap-3 py-10">
+        <Text className="font-serif text-[17px] leading-7 text-muted">Opening Studio…</Text>
       </Wrapper>
     );
   }
@@ -51,51 +50,48 @@ export default function StudioHomeScreen() {
   const empty = !cont?.novel && !cont?.journal && !cont?.aftercareNote;
 
   return (
-    <Wrapper style={styles.wrap}>
+    <Wrapper className="gap-3 py-10">
       <PageSeo
         title="Studio"
         description="Write, plan, record samples, and build color kits — your Artometrics workspace."
         path="/studio"
       />
-      <Text style={[styles.eyebrow, { color: colors.accent }]}>Your workspace</Text>
-      <Text style={[styles.title, { color: colors.text }]}>Studio</Text>
+      <Text className="text-xs tracking-[1.8px] uppercase font-bold text-accent">Your workspace</Text>
+      <Text className="font-serif text-[42px] font-bold text-fg">Studio</Text>
       <ToolsAccent />
-      <Text style={[styles.deck, { color: colors.textMuted }]}>
+      <Text className="font-serif text-[17px] leading-7 max-w-[560px] text-muted">
         One place to continue writing, check in, and publish when you are ready.
       </Text>
 
       {loading ? (
-        <ActivityIndicator style={{ marginTop: 32 }} color={colors.accent} />
+        <ActivityIndicator className="mt-8" color={colors.accent} />
       ) : empty ? (
-        <View style={[styles.empty, { borderColor: colors.border, backgroundColor: colors.bgElevated }]}>
-          <Text style={[styles.emptyTitle, { color: colors.text }]}>Start with a blank page</Text>
-          <Text style={[styles.deck, { color: colors.textMuted }]}>
-            Create a novel in Twilda, or open Aftercare for today’s check-in. Your work stays private until
+        <View className="mt-5 border border-border bg-bg-elevated p-6 gap-2.5">
+          <Text className="font-serif text-[26px] font-bold text-fg">Start with a blank page</Text>
+          <Text className="font-serif text-[17px] leading-7 max-w-[560px] text-muted">
+            Create a novel in Twilda, or open Aftercare for today's check-in. Your work stays private until
             you publish.
           </Text>
           <PrimaryButton
             label="New novel"
             onPress={() => router.push("/tools/twilda")}
-            style={{ marginTop: 8 }}
+            className="mt-2"
           />
-          <Pressable onPress={() => router.push("/tools/aftercare")} style={{ marginTop: 12 }}>
-            <Text style={{ color: colors.accent, fontWeight: "700" }}>Open Aftercare →</Text>
+          <Pressable onPress={() => router.push("/tools/aftercare")} className="mt-3">
+            <Text className="text-accent font-bold">Open Aftercare →</Text>
           </Pressable>
         </View>
       ) : (
-        <View style={styles.section}>
-          <Text style={[styles.sectionLabel, { color: colors.textMuted }]}>Continue</Text>
+        <View className="mt-5 gap-2.5">
+          <Text className="text-[11px] tracking-[1.4px] uppercase font-bold text-muted">Continue</Text>
           {cont?.novel ? (
             <Pressable
               onPress={() => router.push(`/tools/twilda/novels/${cont.novel!.id}`)}
-              style={StyleSheet.flatten([
-                styles.continueRow,
-                { borderColor: colors.border, backgroundColor: colors.bgElevated },
-              ])}
+              className="border border-border bg-bg-elevated p-4 gap-1"
             >
-              <Text style={[styles.meta, { color: colors.accent }]}>Twilda · Novel</Text>
-              <Text style={[styles.continueTitle, { color: colors.text }]}>{cont.novel.title}</Text>
-              <Text style={[styles.meta, { color: colors.textSubtle }]}>
+              <Text className="text-xs tracking-wide text-accent">Twilda · Novel</Text>
+              <Text className="font-serif text-xl font-bold text-fg">{cont.novel.title}</Text>
+              <Text className="text-xs tracking-wide text-subtle">
                 {formatUpdated(cont.novel.last_opened_at ?? cont.novel.updated_at)}
               </Text>
             </Pressable>
@@ -103,42 +99,36 @@ export default function StudioHomeScreen() {
           {cont?.journal ? (
             <Pressable
               onPress={() => router.push(`/tools/twilda/journal/${cont.journal!.id}`)}
-              style={StyleSheet.flatten([
-                styles.continueRow,
-                { borderColor: colors.border, backgroundColor: colors.bgElevated },
-              ])}
+              className="border border-border bg-bg-elevated p-4 gap-1"
             >
-              <Text style={[styles.meta, { color: colors.accent }]}>Twilda · Journal</Text>
-              <Text style={[styles.continueTitle, { color: colors.text }]}>{cont.journal.title}</Text>
+              <Text className="text-xs tracking-wide text-accent">Twilda · Journal</Text>
+              <Text className="font-serif text-xl font-bold text-fg">{cont.journal.title}</Text>
             </Pressable>
           ) : null}
           {cont?.aftercareNote ? (
             <Pressable
               onPress={() => router.push("/tools/aftercare/journal")}
-              style={StyleSheet.flatten([
-                styles.continueRow,
-                { borderColor: colors.border, backgroundColor: colors.bgElevated },
-              ])}
+              className="border border-border bg-bg-elevated p-4 gap-1"
             >
-              <Text style={[styles.meta, { color: colors.accent }]}>Aftercare</Text>
-              <Text style={[styles.continueTitle, { color: colors.text }]}>{cont.aftercareNote}</Text>
+              <Text className="text-xs tracking-wide text-accent">Aftercare</Text>
+              <Text className="font-serif text-xl font-bold text-fg">{cont.aftercareNote}</Text>
             </Pressable>
           ) : null}
         </View>
       )}
 
-      <View style={styles.ctaRow}>
+      <View className="flex-row flex-wrap gap-3 mt-2">
         <PrimaryButton label="Continue writing" onPress={() => router.push("/tools/twilda")} />
         <PrimaryButton
           label="Today's check-in"
           onPress={() => router.push("/tools/aftercare")}
-          style={{ backgroundColor: colors.textMuted }}
+          className="bg-muted"
         />
       </View>
 
-      <View style={styles.section}>
-        <Text style={[styles.sectionLabel, { color: colors.textMuted }]}>Spaces</Text>
-        <View style={styles.spaces}>
+      <View className="mt-5 gap-2.5">
+        <Text className="text-[11px] tracking-[1.4px] uppercase font-bold text-muted">Spaces</Text>
+        <View className="gap-3">
           {[
             {
               href: "/tools/twilda",
@@ -172,14 +162,9 @@ export default function StudioHomeScreen() {
             },
           ].map((item) => (
             <Link key={item.href} href={item.href as `/tools`} asChild>
-              <Pressable
-                style={StyleSheet.flatten([
-                  styles.spaceCard,
-                  { borderColor: colors.border },
-                ])}
-              >
-                <Text style={[styles.spaceTitle, { color: colors.text }]}>{item.title}</Text>
-                <Text style={[styles.spaceBody, { color: colors.textMuted }]}>{item.body}</Text>
+              <Pressable className="border border-border p-[18px] gap-1.5">
+                <Text className="font-serif text-[22px] font-bold text-fg">{item.title}</Text>
+                <Text className="font-serif text-[15px] leading-6 text-muted">{item.body}</Text>
               </Pressable>
             </Link>
           ))}
@@ -188,45 +173,3 @@ export default function StudioHomeScreen() {
     </Wrapper>
   );
 }
-
-const styles = StyleSheet.create({
-  wrap: { paddingVertical: 40, gap: 12 },
-  eyebrow: {
-    fontSize: 12,
-    letterSpacing: 1.8,
-    textTransform: "uppercase",
-    fontWeight: "700",
-  },
-  title: { fontFamily: Fonts.serif, fontSize: 42, fontWeight: "700" },
-  deck: { fontFamily: Fonts.serif, fontSize: 17, lineHeight: 28, maxWidth: 560 },
-  empty: {
-    marginTop: 20,
-    borderWidth: StyleSheet.hairlineWidth,
-    padding: 24,
-    gap: 10,
-  },
-  emptyTitle: { fontFamily: Fonts.serif, fontSize: 26, fontWeight: "700" },
-  section: { marginTop: 20, gap: 10 },
-  sectionLabel: {
-    fontSize: 11,
-    letterSpacing: 1.4,
-    textTransform: "uppercase",
-    fontWeight: "700",
-  },
-  continueRow: {
-    borderWidth: StyleSheet.hairlineWidth,
-    padding: 16,
-    gap: 4,
-  },
-  continueTitle: { fontFamily: Fonts.serif, fontSize: 20, fontWeight: "700" },
-  meta: { fontSize: 12, letterSpacing: 0.4 },
-  ctaRow: { flexDirection: "row", flexWrap: "wrap", gap: 12, marginTop: 8 },
-  spaces: { gap: 12 },
-  spaceCard: {
-    borderWidth: StyleSheet.hairlineWidth,
-    padding: 18,
-    gap: 6,
-  },
-  spaceTitle: { fontFamily: Fonts.serif, fontSize: 22, fontWeight: "700" },
-  spaceBody: { fontFamily: Fonts.serif, fontSize: 15, lineHeight: 24 },
-});

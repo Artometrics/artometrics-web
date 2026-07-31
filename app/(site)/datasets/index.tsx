@@ -1,42 +1,36 @@
-import { Text, View, StyleSheet, Pressable } from "react-native";
+import { Text, View, Pressable } from "react-native";
 import { Link } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { PageSeo } from "@/components/PageSeo";
-import { Fonts } from "@/constants/Colors";
-import { useTheme } from "@/lib/theme";
 import { DATASET_PACKS } from "@/data/datasets";
 import { SECTION_META } from "@/data/sections";
 
 export default function DatasetsIndex() {
-  const { colors } = useTheme();
   return (
-    <Wrapper style={styles.wrap}>
+    <Wrapper className="gap-3.5 py-12">
       <PageSeo
         title="Datasets"
         description="Dataset packs for Artometrics reports — schema, citations, and related stories."
         path="/datasets"
       />
-      <Text style={[styles.eyebrow, { color: colors.accent }]}>Library</Text>
-      <Text style={[styles.title, { color: colors.text }]}>Datasets</Text>
-      <Text style={[styles.deck, { color: colors.textMuted }]}>
+      <Text className="text-[11px] tracking-[2.5px] uppercase font-semibold text-accent">Library</Text>
+      <Text className="text-[40px] font-light font-serif text-fg">Datasets</Text>
+      <Text className="text-base max-w-[640px] mb-2 leading-6 text-muted">
         Packs for Artometrics sections — one schema, citations, and links to the reports that use
         them. Packs start planned and graduate to downloadable CSVs.
       </Text>
-      <View style={styles.grid}>
+      <View className="gap-4 flex-row flex-wrap">
         {DATASET_PACKS.map((pack) => (
           <Link key={pack.id} href={`/datasets/${pack.id}`} asChild>
-            <Pressable
-              style={StyleSheet.flatten([
-                styles.card,
-                { borderColor: colors.border, backgroundColor: colors.bgElevated },
-              ])}
-            >
-              <Text style={[styles.status, { color: colors.accent }]}>{pack.status}</Text>
-              <Text style={[styles.cardTitle, { color: colors.text }]}>{pack.title}</Text>
-              <Text style={[styles.section, { color: colors.textSubtle }]}>
+            <Pressable className="flex-[1] min-w-[280px] border border-border bg-bg-elevated p-[18px] gap-2">
+              <Text className="text-[10px] tracking-[1.5px] uppercase font-bold text-accent">
+                {pack.status}
+              </Text>
+              <Text className="text-[22px] text-fg">{pack.title}</Text>
+              <Text className="text-xs tracking-[1.5px] uppercase text-subtle">
                 {SECTION_META[pack.section].title}
               </Text>
-              <Text style={[styles.cardBody, { color: colors.textMuted }]} numberOfLines={4}>
+              <Text className="text-sm leading-[22px] text-muted" numberOfLines={4}>
                 {pack.summary}
               </Text>
             </Pressable>
@@ -46,32 +40,3 @@ export default function DatasetsIndex() {
     </Wrapper>
   );
 }
-
-const styles = StyleSheet.create({
-  wrap: { paddingVertical: 48, gap: 14 },
-  eyebrow: {
-    fontSize: 11,
-    letterSpacing: 2.5,
-    textTransform: "uppercase",
-    fontWeight: "600",
-  },
-  title: { fontSize: 40, fontWeight: "300", fontFamily: Fonts.serif },
-  deck: { fontSize: 16, maxWidth: 640, marginBottom: 8, lineHeight: 24 },
-  grid: { gap: 16, flexDirection: "row", flexWrap: "wrap" },
-  card: {
-    flexBasis: 280,
-    flexGrow: 1,
-    borderWidth: StyleSheet.hairlineWidth,
-    padding: 18,
-    gap: 8,
-  },
-  status: {
-    fontSize: 10,
-    letterSpacing: 1.5,
-    textTransform: "uppercase",
-    fontWeight: "700",
-  },
-  cardTitle: { fontSize: 22 },
-  section: { fontSize: 12, letterSpacing: 1.5, textTransform: "uppercase" },
-  cardBody: { fontSize: 14, lineHeight: 22 },
-});

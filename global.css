@@ -1,0 +1,96 @@
+@import "tailwindcss";
+@import "uniwind";
+
+/*
+  Artometrics design tokens
+  - @theme: static palette + fonts (utilities always available)
+  - @layer theme: semantic surfaces that flip with light/dark (+ runtime brand overrides)
+*/
+
+@theme {
+  /* Accent scale */
+  --color-accent-50: #fff1f0;
+  --color-accent-100: #ffd9d6;
+  --color-accent-200: #ffb3ad;
+  --color-accent-300: #ff7a70;
+  --color-accent-400: #f04337;
+  --color-accent-500: #d9251b;
+  --color-accent-600: #c41e16;
+  --color-accent-700: #a31812;
+  --color-accent-800: #7f120e;
+  --color-accent-900: #5c0d0a;
+  --color-accent-950: #3a0806;
+
+  /* Neutral scale */
+  --color-base-50: #ffffff;
+  --color-base-100: #f5f5f5;
+  --color-base-200: #e5e5e5;
+  --color-base-300: #d4d4d4;
+  --color-base-400: #a3a3a3;
+  --color-base-500: #737373;
+  --color-base-600: #525252;
+  --color-base-700: #2a2a2a;
+  --color-base-800: #141414;
+  --color-base-900: #0a0a0a;
+  --color-base-950: #000000;
+
+  /* Magazine paper */
+  --color-paper: #fafaf8;
+  --color-paper-elevated: #f2f0eb;
+  --color-magazine-accent: #c0392b;
+  --color-magazine-accent-soft: #f9e8e6;
+
+  /* Fonts */
+  --font-display: Anton, Helvetica Neue, Helvetica, Arial, system-ui, sans-serif;
+  --font-sans: Helvetica Neue, Helvetica, Arial, system-ui, sans-serif;
+  --font-serif: Helvetica Neue, Helvetica, Arial, system-ui, sans-serif;
+  --font-wordmark: Anton, Helvetica Neue, Helvetica, Arial, system-ui, sans-serif;
+  --font-mono: "Courier New", Courier, monospace;
+
+  /* Layout */
+  --radius-btn: 2px;
+}
+
+@layer theme {
+  :root {
+    @variant light {
+      --color-bg: #ffffff;
+      --color-bg-elevated: #ffffff;
+      --color-fg: #000000;
+      --color-muted: #525252;
+      --color-subtle: #737373;
+      --color-border: #000000;
+      --color-accent: #d9251b;
+      --color-accent-soft: #fff1f0;
+      --color-inverse: #ffffff;
+      --color-header: #ffffff;
+      --color-overlay: #ffffff;
+      --color-rule: #000000;
+      --font-display: Anton, Helvetica Neue, Helvetica, Arial, system-ui, sans-serif;
+      --font-sans: Helvetica Neue, Helvetica, Arial, system-ui, sans-serif;
+      --font-serif: Helvetica Neue, Helvetica, Arial, system-ui, sans-serif;
+      --font-wordmark: Anton, Helvetica Neue, Helvetica, Arial, system-ui, sans-serif;
+      --font-mono: "Courier New", Courier, monospace;
+    }
+
+    @variant dark {
+      --color-bg: #000000;
+      --color-bg-elevated: #0a0a0a;
+      --color-fg: #ffffff;
+      --color-muted: #a3a3a3;
+      --color-subtle: #737373;
+      --color-border: #ffffff;
+      --color-accent: #f04337;
+      --color-accent-soft: #3a0806;
+      --color-inverse: #000000;
+      --color-header: #000000;
+      --color-overlay: #000000;
+      --color-rule: #ffffff;
+      --font-display: Anton, Helvetica Neue, Helvetica, Arial, system-ui, sans-serif;
+      --font-sans: Helvetica Neue, Helvetica, Arial, system-ui, sans-serif;
+      --font-serif: Helvetica Neue, Helvetica, Arial, system-ui, sans-serif;
+      --font-wordmark: Anton, Helvetica Neue, Helvetica, Arial, system-ui, sans-serif;
+      --font-mono: "Courier New", Courier, monospace;
+    }
+  }
+}

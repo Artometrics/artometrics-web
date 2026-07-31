@@ -1,13 +1,11 @@
 import { useState } from "react";
-import { Platform, Text, TextInput, View, StyleSheet, Pressable } from "react-native";
+import { Platform, Text, TextInput, View, Pressable } from "react-native";
 import { Link, router, useLocalSearchParams } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { PrimaryButton } from "@/components/PrimaryButton";
 import { GoogleSignInButton } from "@/components/GoogleSignInButton";
 import { PageSeo } from "@/components/PageSeo";
-import { Fonts } from "@/constants/Colors";
 import { useAuth } from "@/lib/auth";
-import { useTheme } from "@/lib/theme";
 import { paramString } from "@/lib/params";
 
 function safeNext(raw: string | undefined): string {
@@ -23,7 +21,6 @@ function safeNext(raw: string | undefined): string {
 
 export default function LoginScreen() {
   const { signIn, signInWithGoogle } = useAuth();
-  const { colors } = useTheme();
   const params = useLocalSearchParams<{ next?: string | string[] }>();
   const nextPath = safeNext(paramString(params.next));
   const [email, setEmail] = useState("");
@@ -56,7 +53,6 @@ export default function LoginScreen() {
       setBusy(false);
       return;
     }
-    // Web leaves the page for Google; native finishes in-app.
     if (Platform.OS !== "web" && result.ok) {
       setBusy(false);
       router.replace(nextPath as `/account`);
@@ -64,70 +60,42 @@ export default function LoginScreen() {
   }
 
   return (
-    <Wrapper variant="narrow" style={styles.wrap}>
+    <Wrapper variant="narrow" className="gap-3.5 py-12">
       <PageSeo title="Log in" description="Sign in to Artometrics." path="/login" />
-      <Text style={[styles.eyebrow, { color: colors.accent }]}>Members</Text>
-      <Text style={[styles.title, { color: colors.text }]}>Log in</Text>
-      <View style={styles.form}>
+      <Text className="text-[11px] tracking-[2.5px] uppercase font-semibold text-accent">
+        Members
+      </Text>
+      <Text className="text-[36px] font-light font-serif text-fg">Log in</Text>
+      <View className="gap-3 mt-2">
         <GoogleSignInButton onPress={onGoogle} disabled={busy} />
-        <Text style={[styles.or, { color: colors.textSubtle }]}>or use email</Text>
+        <Text className="text-xs tracking-[1.2px] uppercase text-center my-1 text-subtle">
+          or use email
+        </Text>
         <TextInput
           autoCapitalize="none"
           keyboardType="email-address"
           placeholder="Email"
           value={email}
           onChangeText={setEmail}
-          style={[
-            styles.input,
-            { borderColor: colors.border, color: colors.text, backgroundColor: colors.bgElevated },
-          ]}
-          placeholderTextColor={colors.textSubtle}
+          className="border border-border px-3.5 py-3 text-base text-fg bg-bg-elevated"
+          placeholderTextColorClassName="text-subtle"
         />
         <TextInput
           secureTextEntry
           placeholder="Password"
           value={password}
           onChangeText={setPassword}
-          style={[
-            styles.input,
-            { borderColor: colors.border, color: colors.text, backgroundColor: colors.bgElevated },
-          ]}
-          placeholderTextColor={colors.textSubtle}
+          className="border border-border px-3.5 py-3 text-base text-fg bg-bg-elevated"
+          placeholderTextColorClassName="text-subtle"
         />
-        {error ? <Text style={[styles.error, { color: colors.accent }]}>{error}</Text> : null}
+        {error ? <Text className="text-sm text-accent">{error}</Text> : null}
         <PrimaryButton label={busy ? "Signing in…" : "Log in"} onPress={onSubmit} disabled={busy} />
       </View>
       <Pressable>
         <Link href="/signup">
-          <Text style={{ color: colors.accent, marginTop: 8 }}>Need an account? Sign up</Text>
+          <Text className="text-accent mt-2">Need an account? Sign up</Text>
         </Link>
       </Pressable>
     </Wrapper>
   );
 }
-
-const styles = StyleSheet.create({
-  wrap: { paddingVertical: 48, gap: 14 },
-  eyebrow: {
-    fontSize: 11,
-    letterSpacing: 2.5,
-    textTransform: "uppercase",
-    fontWeight: "600",
-  },
-  title: { fontSize: 36, fontWeight: "300", fontFamily: Fonts.serif },
-  form: { gap: 12, marginTop: 8 },
-  or: {
-    fontSize: 12,
-    letterSpacing: 1.2,
-    textTransform: "uppercase",
-    textAlign: "center",
-    marginVertical: 4,
-  },
-  input: {
-    borderWidth: 1,
-    paddingHorizontal: 14,
-    paddingVertical: 12,
-    fontSize: 16,
-  },
-  error: { fontSize: 14 },
-});

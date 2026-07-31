@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ActivityIndicator, StyleSheet, Text, View } from "react-native";
+import { ActivityIndicator, Text, View } from "react-native";
 import { router } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { useTheme } from "@/lib/theme";
@@ -44,19 +44,15 @@ export default function SampleQuickRecordScreen() {
   }, [ready, user]);
 
   return (
-    <Wrapper variant="narrow" style={styles.wrap}>
+    <Wrapper variant="narrow" className="py-12 items-center">
       {error ? (
-        <Text style={{ color: colors.accent }}>{error}</Text>
+        <Text className="text-accent">{error}</Text>
       ) : (
         <>
           <ActivityIndicator color={colors.accent} />
-          <Text style={{ color: colors.textMuted, marginTop: 12 }}>Starting recorder…</Text>
+          <Text className="text-muted mt-3">Starting recorder…</Text>
         </>
       )}
     </Wrapper>
   );
 }
-
-const styles = StyleSheet.create({
-  wrap: { paddingVertical: 48, alignItems: "center" },
-});

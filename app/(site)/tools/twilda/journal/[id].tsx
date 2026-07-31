@@ -2,7 +2,6 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import {
   ActivityIndicator,
   Alert,
-  StyleSheet,
   Text,
   TextInput,
   View,
@@ -12,7 +11,6 @@ import { Wrapper } from "@/components/Wrapper";
 import { PageSeo } from "@/components/PageSeo";
 import { ToolsSubnav } from "@/components/tools/ToolsSubnav";
 import { PrimaryButton } from "@/components/PrimaryButton";
-import { Fonts } from "@/constants/Colors";
 import { useTheme } from "@/lib/theme";
 import { useRequireAuth } from "@/lib/tools/requireAuth";
 import { getSupabase } from "@/lib/supabase/client";
@@ -86,17 +84,17 @@ export default function TwildaJournalEntryScreen() {
 
   if (!ready || loading) {
     return (
-      <Wrapper style={styles.wrap}>
+      <Wrapper className="gap-2.5 py-7">
         <ActivityIndicator color={colors.accent} />
       </Wrapper>
     );
   }
 
   return (
-    <Wrapper style={styles.wrap}>
+    <Wrapper className="gap-2.5 py-7">
       <PageSeo title={title || "Journal"} path={`/tools/twilda/journal/${id}`} />
       <ToolsSubnav links={NAV} />
-      <Text style={[styles.meta, { color: colors.textMuted }]}>
+      <Text className="text-xs min-h-4 text-muted">
         {saveState === "saving" ? "Saving…" : saveState === "saved" ? "Saved" : " "}
       </Text>
       <TextInput
@@ -106,8 +104,8 @@ export default function TwildaJournalEntryScreen() {
           scheduleSave(t, body);
         }}
         placeholder="Title"
-        placeholderTextColor={colors.textSubtle}
-        style={[styles.titleInput, { color: colors.text, borderBottomColor: colors.border }]}
+        placeholderTextColorClassName="text-subtle"
+        className="font-serif text-[28px] font-bold border-b border-border py-2 text-fg"
       />
       <TextInput
         multiline
@@ -117,18 +115,19 @@ export default function TwildaJournalEntryScreen() {
           scheduleSave(title, t);
         }}
         placeholder="Write…"
-        placeholderTextColor={colors.textSubtle}
-        style={[styles.bodyInput, { color: colors.text, borderColor: colors.border }]}
+        placeholderTextColorClassName="text-subtle"
+        className="border border-border min-h-[320px] p-3.5 font-serif text-[17px] leading-7 text-fg bg-bg-elevated"
+        style={{ textAlignVertical: "top" }}
       />
-      <View style={{ flexDirection: "row", flexWrap: "wrap", gap: 12 }}>
+      <View className="flex-row flex-wrap gap-3">
         <PrimaryButton
           label="Back"
-          style={{ backgroundColor: colors.text }}
+          className="bg-fg"
           onPress={() => router.push("/tools/twilda/journal")}
         />
         <PrimaryButton
           label="Publish…"
-          style={{ backgroundColor: colors.textMuted }}
+          className="bg-muted"
           onPress={() =>
             router.push(
               `/studio/publish?title=${encodeURIComponent(title)}&body=${encodeURIComponent(body.slice(0, 4000))}&source=twilda_journal&sourceId=${id}`,
@@ -137,7 +136,7 @@ export default function TwildaJournalEntryScreen() {
         />
         <PrimaryButton
           label="Delete"
-          style={{ backgroundColor: colors.textMuted }}
+          className="bg-muted"
           onPress={() =>
             Alert.alert("Delete entry?", "This cannot be undone.", [
               { text: "Cancel", style: "cancel" },
@@ -156,24 +155,3 @@ export default function TwildaJournalEntryScreen() {
     </Wrapper>
   );
 }
-
-const styles = StyleSheet.create({
-  wrap: { paddingVertical: 28, gap: 10 },
-  meta: { fontSize: 12, minHeight: 16 },
-  titleInput: {
-    fontFamily: Fonts.serif,
-    fontSize: 28,
-    fontWeight: "700",
-    borderBottomWidth: StyleSheet.hairlineWidth,
-    paddingVertical: 8,
-  },
-  bodyInput: {
-    borderWidth: StyleSheet.hairlineWidth,
-    minHeight: 320,
-    padding: 14,
-    fontFamily: Fonts.serif,
-    fontSize: 17,
-    lineHeight: 28,
-    textAlignVertical: "top",
-  },
-});

@@ -1,9 +1,7 @@
-import { Text, View, StyleSheet, Pressable } from "react-native";
+import { Text, View, Pressable } from "react-native";
 import { Link } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { PageSeo } from "@/components/PageSeo";
-import { Fonts } from "@/constants/Colors";
-import { useTheme } from "@/lib/theme";
 
 const guides = [
   {
@@ -22,91 +20,49 @@ const guides = [
 ];
 
 export default function ResourcesScreen() {
-  const { colors } = useTheme();
   return (
-    <Wrapper style={styles.wrap}>
+    <Wrapper className="gap-3.5 py-12">
       <PageSeo
         title="Resources"
         description="Guides and dataset library for Artometrics readers and models."
         path="/resources"
       />
-      <Text style={[styles.eyebrow, { color: colors.accent }]}>Library</Text>
-      <Text style={[styles.title, { color: colors.text }]}>Resources</Text>
-      <Text style={[styles.deck, { color: colors.textMuted }]}>
+      <Text className="text-[11px] tracking-[2.5px] uppercase font-semibold text-accent">
+        Library
+      </Text>
+      <Text className="text-[40px] font-light font-serif text-fg">Resources</Text>
+      <Text className="text-base max-w-[560px] mb-2 leading-6 text-muted">
         Guides for readers, analysts, and models — plus the dataset library behind the reports.
       </Text>
 
-      <View style={styles.block}>
+      <View className="gap-3.5">
         {guides.map((g) => (
-          <View key={g.title} style={[styles.card, { borderTopColor: colors.text }]}>
-            <Text style={[styles.cardTitle, { color: colors.text }]}>{g.title}</Text>
-            <Text style={[styles.cardBody, { color: colors.textMuted }]}>{g.body}</Text>
+          <View key={g.title} className="border-t-2 border-fg pt-3.5 gap-2">
+            <Text className="text-xl text-fg">{g.title}</Text>
+            <Text className="text-[15px] leading-6 text-muted">{g.body}</Text>
             {"href" in g && g.href ? (
-              <Text style={[styles.link, { color: colors.accent }]}>artometrics.com{g.href}</Text>
+              <Text className="font-semibold mt-1 text-accent">artometrics.com{g.href}</Text>
             ) : null}
           </View>
         ))}
       </View>
 
-      <View style={styles.actions}>
+      <View className="flex-row flex-wrap gap-3 mt-4">
         <Link href="/datasets" asChild>
-          <Pressable
-            style={StyleSheet.flatten([styles.btn, { backgroundColor: colors.text }])}
-          >
-            <Text style={[styles.btnText, { color: colors.inverse }]}>Browse datasets</Text>
+          <Pressable className="px-[18px] py-3 bg-fg">
+            <Text className="text-xs tracking-[1.5px] uppercase font-bold text-inverse">
+              Browse datasets
+            </Text>
           </Pressable>
         </Link>
         <Link href="/blog" asChild>
-          <Pressable
-            style={StyleSheet.flatten([styles.btnGhost, { borderColor: colors.border }])}
-          >
-            <Text style={[styles.btnGhostText, { color: colors.text }]}>All reports</Text>
+          <Pressable className="border border-border px-[18px] py-3">
+            <Text className="text-xs tracking-[1.5px] uppercase font-bold text-fg">
+              All reports
+            </Text>
           </Pressable>
         </Link>
       </View>
     </Wrapper>
   );
 }
-
-const styles = StyleSheet.create({
-  wrap: { paddingVertical: 48, gap: 14 },
-  eyebrow: {
-    fontSize: 11,
-    letterSpacing: 2.5,
-    textTransform: "uppercase",
-    fontWeight: "600",
-  },
-  title: { fontSize: 40, fontWeight: "300", fontFamily: Fonts.serif },
-  deck: { fontSize: 16, maxWidth: 560, marginBottom: 8, lineHeight: 24 },
-  block: { gap: 14 },
-  card: {
-    borderTopWidth: 2,
-    paddingTop: 14,
-    gap: 8,
-  },
-  cardTitle: { fontSize: 20 },
-  cardBody: { fontSize: 15, lineHeight: 24 },
-  link: { fontWeight: "600", marginTop: 4 },
-  actions: { flexDirection: "row", flexWrap: "wrap", gap: 12, marginTop: 16 },
-  btn: {
-    paddingHorizontal: 18,
-    paddingVertical: 12,
-  },
-  btnText: {
-    fontSize: 12,
-    letterSpacing: 1.5,
-    textTransform: "uppercase",
-    fontWeight: "700",
-  },
-  btnGhost: {
-    borderWidth: 1,
-    paddingHorizontal: 18,
-    paddingVertical: 12,
-  },
-  btnGhostText: {
-    fontSize: 12,
-    letterSpacing: 1.5,
-    textTransform: "uppercase",
-    fontWeight: "700",
-  },
-});

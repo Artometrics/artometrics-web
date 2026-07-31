@@ -1,11 +1,9 @@
 import { useEffect, useState } from "react";
-import { Text, View, StyleSheet } from "react-native";
+import { Text, View } from "react-native";
 import { Link } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { PrimaryButton } from "@/components/PrimaryButton";
 import { PageSeo } from "@/components/PageSeo";
-import { Fonts } from "@/constants/Colors";
-import { useTheme } from "@/lib/theme";
 import { PLANS } from "@/lib/product/plans";
 import { apiFetch } from "@/lib/supabase/client";
 import { useAuth } from "@/lib/auth";
@@ -13,7 +11,6 @@ import { openExternalUrl } from "@/lib/openExternal";
 
 export default function PricingScreen() {
   const { user } = useAuth();
-  const { colors } = useTheme();
   const [error, setError] = useState<string | null>(null);
   const [busyTier, setBusyTier] = useState<string | null>(null);
   const [alreadyActive, setAlreadyActive] = useState(false);
@@ -58,59 +55,59 @@ export default function PricingScreen() {
   }
 
   return (
-    <Wrapper style={styles.wrap}>
+    <Wrapper className="gap-3 py-12">
       <PageSeo
         title="Pricing"
         description="Subscribe to Artometrics for member episodes and saved reports."
         path="/pricing"
       />
-      <Text style={[styles.eyebrow, { color: colors.accent }]}>Membership</Text>
-      <Text style={[styles.title, { color: colors.text }]}>
+      <Text className="text-[11px] tracking-[2.5px] uppercase font-semibold text-accent">
+        Membership
+      </Text>
+      <Text className="text-[36px] font-light font-serif text-fg">
         Subscribe for unlimited digital access
       </Text>
-      <Text style={[styles.deck, { color: colors.textMuted }]}>
+      <Text className="text-base max-w-[560px] mb-3 leading-6 text-muted">
         Your first week is free. Then pick monthly or annual — cancel anytime.
       </Text>
       {alreadyActive ? (
-        <Text style={[styles.deck, { color: colors.text }]}>
+        <Text className="text-base max-w-[560px] mb-3 leading-6 text-fg">
           You already have an active membership.{" "}
           <Link href="/account">
-            <Text style={{ color: colors.accent }}>Manage billing</Text>
+            <Text className="text-accent">Manage billing</Text>
           </Link>
           .
         </Text>
       ) : null}
       {error ? (
-        <Text style={[styles.error, { color: colors.accent }]}>{error}</Text>
+        <Text className="text-sm leading-[22px] max-w-[560px] text-accent">{error}</Text>
       ) : null}
-      <View style={styles.grid}>
+      <View className="gap-4 flex-row flex-wrap">
         {PLANS.map((plan) => (
           <View
             key={plan.tier}
-            style={[
-              styles.card,
-              {
-                borderColor: plan.popular ? colors.accent : colors.border,
-                backgroundColor: colors.bgElevated,
-                borderWidth: plan.popular ? 2 : StyleSheet.hairlineWidth,
-              },
-            ]}
+            className={[
+              "flex-grow flex-basis-[260px] p-6 gap-3 bg-bg-elevated",
+              plan.popular ? "border-2 border-accent" : "border border-border",
+            ].join(" ")}
           >
             {plan.badge ? (
-              <Text style={[styles.popular, { color: colors.accent }]}>{plan.badge}</Text>
+              <Text className="text-[10px] tracking-[1.5px] uppercase font-bold text-accent">
+                {plan.badge}
+              </Text>
             ) : null}
-            <Text style={[styles.planTitle, { color: colors.text }]}>{plan.title}</Text>
-            <Text style={[styles.price, { color: colors.text }]}>
+            <Text className="text-[22px] text-fg">{plan.title}</Text>
+            <Text className="text-[32px] font-light text-fg">
               {plan.price}
-              <Text style={[styles.period, { color: colors.textSubtle }]}>
+              <Text className="text-sm text-subtle">
                 {" "}
                 / {plan.period.replace(/^Per /i, "").toLowerCase()}
               </Text>
             </Text>
-            <Text style={[styles.trial, { color: colors.textMuted }]}>{plan.trialLabel}</Text>
-            <View style={styles.features}>
+            <Text className="text-[13px] leading-5 text-muted">{plan.trialLabel}</Text>
+            <View className="gap-1.5 my-2">
               {plan.features.map((feature) => (
-                <Text key={feature} style={[styles.feature, { color: colors.textMuted }]}>
+                <Text key={feature} className="text-sm leading-[22px] text-muted">
                   · {feature}
                 </Text>
               ))}
@@ -135,35 +132,3 @@ export default function PricingScreen() {
     </Wrapper>
   );
 }
-
-const styles = StyleSheet.create({
-  wrap: { paddingVertical: 48, gap: 12 },
-  eyebrow: {
-    fontSize: 11,
-    letterSpacing: 2.5,
-    textTransform: "uppercase",
-    fontWeight: "600",
-  },
-  title: { fontSize: 36, fontWeight: "300", fontFamily: Fonts.serif },
-  deck: { fontSize: 16, maxWidth: 560, marginBottom: 12, lineHeight: 24 },
-  error: { fontSize: 14, lineHeight: 22, maxWidth: 560 },
-  grid: { gap: 16, flexDirection: "row", flexWrap: "wrap" },
-  card: {
-    flexGrow: 1,
-    flexBasis: 260,
-    padding: 24,
-    gap: 12,
-  },
-  popular: {
-    fontSize: 10,
-    letterSpacing: 1.5,
-    textTransform: "uppercase",
-    fontWeight: "700",
-  },
-  planTitle: { fontSize: 22 },
-  price: { fontSize: 32, fontWeight: "300" },
-  period: { fontSize: 14 },
-  trial: { fontSize: 13, lineHeight: 20 },
-  features: { gap: 6, marginVertical: 8 },
-  feature: { fontSize: 14, lineHeight: 22 },
-});
