@@ -2,20 +2,18 @@ import { useCallback, useState } from "react";
 import {
   ActivityIndicator,
   Alert,
-  FlatList,
   Pressable,
   RefreshControl,
-  StyleSheet,
   Text,
   View,
 } from "react-native";
+import { FlashList } from "@shopify/flash-list";
 import { router, useFocusEffect } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { PageSeo } from "@/components/PageSeo";
 import { ToolsSubnav } from "@/components/tools/ToolsSubnav";
 import { CoverTile } from "@/components/twilda/CoverTile";
 import { PrimaryButton } from "@/components/PrimaryButton";
-import { Fonts } from "@/constants/Colors";
 import { useTheme } from "@/lib/theme";
 import { useRequireAuth } from "@/lib/tools/requireAuth";
 import { getSupabase } from "@/lib/supabase/client";
@@ -85,36 +83,35 @@ export default function TwildaLibraryScreen() {
 
   if (!ready) {
     return (
-      <Wrapper style={styles.wrap}>
-        <Text style={{ color: colors.textMuted }}>Loading…</Text>
+      <Wrapper className="gap-2.5 py-8">
+        <Text className="text-muted">Loading…</Text>
       </Wrapper>
     );
   }
 
   return (
-    <Wrapper style={styles.wrap}>
+    <Wrapper className="gap-2.5 py-8">
       <PageSeo title="Twilda" description="Story workspace on Artometrics." path="/tools/twilda" />
       <ToolsSubnav links={NAV} />
-      <Text style={[styles.eyebrow, { color: colors.accent }]}>Twilda</Text>
-      <Text style={[styles.title, { color: colors.text }]}>Library</Text>
-      <Text style={[styles.deck, { color: colors.textMuted }]}>
+      <Text className="text-xs tracking-[1.8px] uppercase font-bold text-accent">Twilda</Text>
+      <Text className="font-serif text-[36px] font-bold text-fg">Library</Text>
+      <Text className="font-serif text-base leading-[26px] max-w-[560px] text-muted">
         Plan, write, storyboard, and keep your Codex in one place.
       </Text>
       <PrimaryButton label="New novel" onPress={onCreate} />
 
       {loading ? (
-        <ActivityIndicator style={{ marginTop: 40 }} color={colors.accent} />
+        <ActivityIndicator className="mt-10" color={colors.accent} />
       ) : novels.length === 0 ? (
-        <Text style={[styles.deck, { color: colors.textMuted, marginTop: 24 }]}>
+        <Text className="font-serif text-base leading-[26px] max-w-[560px] mt-6 text-muted">
           No novels yet. Create a blank novel or wait for starters to seed.
         </Text>
       ) : (
-        <FlatList
+        <FlashList
           data={novels}
           keyExtractor={(item) => item.id}
           numColumns={2}
-          columnWrapperStyle={styles.row}
-          contentContainerStyle={styles.list}
+          contentContainerClassName="pt-4 pb-6"
           scrollEnabled={false}
           refreshControl={
             <RefreshControl
@@ -130,7 +127,7 @@ export default function TwildaLibraryScreen() {
             />
           }
           ListHeaderComponent={
-            <Text style={[styles.sectionLabel, { color: colors.textMuted }]}>
+            <Text className="text-xs mb-3 uppercase tracking-wide text-muted">
               {novels.length} {novels.length === 1 ? "novel" : "novels"}
             </Text>
           }
@@ -146,24 +143,9 @@ export default function TwildaLibraryScreen() {
         />
       )}
 
-      <Pressable onPress={() => router.push("/tools/twilda/reference")} style={{ marginTop: 8 }}>
-        <Text style={{ color: colors.accent, fontWeight: "700" }}>Browse reference library →</Text>
+      <Pressable onPress={() => router.push("/tools/twilda/reference")} className="mt-2">
+        <Text className="text-accent font-bold">Browse reference library →</Text>
       </Pressable>
     </Wrapper>
   );
 }
-
-const styles = StyleSheet.create({
-  wrap: { paddingVertical: 32, gap: 10 },
-  eyebrow: { fontSize: 12, letterSpacing: 1.8, textTransform: "uppercase", fontWeight: "700" },
-  title: { fontFamily: Fonts.serif, fontSize: 36, fontWeight: "700" },
-  deck: { fontFamily: Fonts.serif, fontSize: 16, lineHeight: 26, maxWidth: 560 },
-  list: { paddingTop: 16, paddingBottom: 24 },
-  row: { justifyContent: "space-between" },
-  sectionLabel: {
-    fontSize: 12,
-    marginBottom: 12,
-    textTransform: "uppercase",
-    letterSpacing: 0.8,
-  },
-});

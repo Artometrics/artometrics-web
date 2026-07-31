@@ -1,8 +1,7 @@
-import { Text, View, StyleSheet, Pressable } from "react-native";
+import { Text, View, Pressable } from "react-native";
 import { Link, router } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { Fonts } from "@/constants/Colors";
-import { useTheme } from "@/lib/theme";
 import { PageSeo } from "@/components/PageSeo";
 import { GenreSpecimenCard } from "@/components/library/SpecimenCard";
 import { SECTION_META, SECTION_SLUGS } from "@/data/sections";
@@ -28,21 +27,24 @@ const HUB = [
 ] as const;
 
 export default function LibraryScreen() {
-  const { colors } = useTheme();
   return (
-    <Wrapper style={styles.wrap}>
+    <Wrapper className="gap-3.5 py-10">
       <PageSeo
         title="Library"
         description="Datasets and archives from Artometrics reporting."
         path="/library"
       />
-      <Text style={[styles.title, { color: colors.text }]}>Library</Text>
-      <Text style={[styles.deck, { color: colors.textMuted }]}>
+      <Text className="font-display text-[44px] font-normal uppercase tracking-wide text-fg">
+        Library
+      </Text>
+      <Text className="font-sans text-base leading-6 max-w-[560px] text-muted">
         Genres, desks, and open-reference specimens for research and remix.
       </Text>
 
-      <Text style={[styles.sub, { color: colors.text }]}>Collections</Text>
-      <View style={styles.grid}>
+      <Text className="font-display text-[26px] font-normal mt-4 uppercase tracking-wide text-fg">
+        Collections
+      </Text>
+      <View className="flex-row flex-wrap gap-4 mt-1">
         {HUB.map((card, i) => (
           <GenreSpecimenCard
             key={card.href}
@@ -55,8 +57,10 @@ export default function LibraryScreen() {
         ))}
       </View>
 
-      <Text style={[styles.sub, { color: colors.text }]}>Browse by desk</Text>
-      <View style={styles.grid}>
+      <Text className="font-display text-[26px] font-normal mt-4 uppercase tracking-wide text-fg">
+        Browse by desk
+      </Text>
+      <View className="flex-row flex-wrap gap-4 mt-1">
         {SECTION_SLUGS.map((s, i) => (
           <GenreSpecimenCard
             key={s}
@@ -70,49 +74,12 @@ export default function LibraryScreen() {
       </View>
 
       <Link href="/tools" asChild>
-        <Pressable style={StyleSheet.flatten([styles.toolsLink, { borderColor: colors.border }])}>
-          <Text style={[styles.toolsText, { color: colors.text }]}>Studio tools →</Text>
+        <Pressable className="mt-3 border-2 border-border px-3.5 py-3 self-start">
+          <Text className="text-xs font-extrabold tracking-[1.2px] uppercase text-fg">
+            Studio tools →
+          </Text>
         </Pressable>
       </Link>
     </Wrapper>
   );
 }
-
-const styles = StyleSheet.create({
-  wrap: { paddingVertical: 40, gap: 14 },
-  title: {
-    fontFamily: Fonts.display,
-    fontSize: 44,
-    fontWeight: "400",
-    textTransform: "uppercase",
-    letterSpacing: 1,
-  },
-  deck: { fontFamily: Fonts.sans, fontSize: 16, lineHeight: 24, maxWidth: 560 },
-  sub: {
-    fontFamily: Fonts.display,
-    fontSize: 26,
-    fontWeight: "400",
-    marginTop: 16,
-    textTransform: "uppercase",
-    letterSpacing: 0.5,
-  },
-  grid: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    gap: 16,
-    marginTop: 4,
-  },
-  toolsLink: {
-    marginTop: 12,
-    borderWidth: 2,
-    paddingHorizontal: 14,
-    paddingVertical: 12,
-    alignSelf: "flex-start",
-  },
-  toolsText: {
-    fontSize: 12,
-    fontWeight: "800",
-    letterSpacing: 1.2,
-    textTransform: "uppercase",
-  },
-});

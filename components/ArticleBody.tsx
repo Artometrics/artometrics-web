@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { useWindowDimensions, View, StyleSheet } from "react-native";
+import { useWindowDimensions, View } from "react-native";
 import RenderHtml, {
   defaultSystemFonts,
   type MixedStyleRecord,
@@ -91,7 +91,7 @@ export function ArticleBody({ html }: { html: string }) {
   const contentWidth = Math.max(280, width - 40);
 
   return (
-    <View style={styles.wrap}>
+    <View className="w-full pb-2">
       <RenderHtml
         contentWidth={contentWidth}
         source={source}
@@ -103,7 +103,3 @@ export function ArticleBody({ html }: { html: string }) {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  wrap: { width: "100%", paddingBottom: 8 },
-});

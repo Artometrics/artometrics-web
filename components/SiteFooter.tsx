@@ -1,57 +1,67 @@
-import { Pressable, Text, View, StyleSheet } from "react-native";
+import { Pressable, Text, View } from "react-native";
 import { Link } from "expo-router";
 import { Logo } from "@/components/Logo";
 import { Wrapper } from "@/components/Wrapper";
-import { Fonts } from "@/constants/Colors";
-import { useTheme } from "@/lib/theme";
 import { SECTION_META, SECTION_SLUGS } from "@/data/sections";
 
 export function SiteFooter() {
   const year = new Date().getFullYear();
-  const { colors } = useTheme();
   const mid = Math.ceil(SECTION_SLUGS.length / 2);
   const colA = SECTION_SLUGS.slice(0, mid);
   const colB = SECTION_SLUGS.slice(mid);
 
   return (
-    <View style={styles.shell}>
-      <Wrapper style={styles.ctaWrap}>
-        <View style={[styles.cta, { backgroundColor: colors.accent }]}>
-          <Text style={styles.ctaTitle}>
+    <View className="mt-6">
+      <Wrapper className="mb-0">
+        <View className="flex-row flex-wrap items-center justify-between gap-5 bg-accent px-2 py-8">
+          <Text className="min-w-[220px] flex-1 text-4xl leading-10 tracking-wide font-display text-white">
             {"LET'S CREATE\nSOMETHING GREAT\nTOGETHER."}
           </Text>
           <Link href="/contact" asChild>
-            <Pressable style={styles.ctaCircle} accessibilityLabel="Contact Artometrics">
-              <Text style={styles.ctaArrow}>↗</Text>
+            <Pressable
+              className="h-[72px] w-[72px] items-center justify-center rounded-full bg-white"
+              accessibilityLabel="Contact Artometrics"
+            >
+              <Text className="text-[28px] font-bold text-black">↗</Text>
             </Pressable>
           </Link>
         </View>
       </Wrapper>
-      <View style={[styles.dark, { backgroundColor: "#000000" }]}>
-        <Wrapper style={styles.inner}>
-          <View style={styles.cols}>
-            <View style={styles.col}>
-              <Text style={styles.groupTitle}>Sections</Text>
+      <View className="bg-black py-9">
+        <Wrapper className="gap-7">
+          <View className="flex-row flex-wrap gap-7">
+            <View className="min-w-[140px] flex-grow gap-2">
+              <Text className="mb-1.5 text-[11px] font-extrabold uppercase tracking-[1.6px] text-accent">
+                Sections
+              </Text>
               {colA.map((s) => (
                 <Link key={s} href={`/topics/${s}` as `/topics/${string}`} asChild>
                   <Pressable>
-                    <Text style={styles.groupLink}>{SECTION_META[s].title}</Text>
+                    <Text className="py-0.5 text-[13px] font-semibold uppercase tracking-wide text-white/80">
+                      {SECTION_META[s].title}
+                    </Text>
                   </Pressable>
                 </Link>
               ))}
             </View>
-            <View style={styles.col}>
-              <Text style={styles.groupTitle}> </Text>
+            <View className="min-w-[140px] flex-grow gap-2">
+              <Text className="mb-1.5 text-[11px] font-extrabold uppercase tracking-[1.6px] text-accent">
+                {" "}
+              </Text>
               {colB.map((s) => (
                 <Link key={s} href={`/topics/${s}` as `/topics/${string}`} asChild>
                   <Pressable>
-                    <Text style={styles.groupLink}>{SECTION_META[s].title}</Text>
+                    <Text className="py-0.5 text-[13px] font-semibold uppercase tracking-wide text-white/80">
+                      {SECTION_META[s].title}
+                    </Text>
                   </Pressable>
                 </Link>
               ))}
             </View>
-            <View style={styles.col}>
-              <Text style={styles.groupTitle}>More</Text>
+            <View className="min-w-[140px] flex-grow gap-2">
+              <Text className="mb-1.5 text-[11px] font-extrabold uppercase tracking-[1.6px] text-accent">
+                More
+              </Text>
               {[
                 ["/blog", "Latest"],
                 ["/editions", "Editions"],
@@ -63,7 +73,9 @@ export function SiteFooter() {
               ].map(([href, label]) => (
                 <Link key={href} href={href as `/blog`} asChild>
                   <Pressable>
-                    <Text style={styles.groupLink}>{label}</Text>
+                    <Text className="py-0.5 text-[13px] font-semibold uppercase tracking-wide text-white/80">
+                      {label}
+                    </Text>
                   </Pressable>
                 </Link>
               ))}
@@ -71,12 +83,12 @@ export function SiteFooter() {
           </View>
 
           <Link href="/" asChild>
-            <Pressable style={styles.brandBlock} accessibilityLabel="Artometrics home">
+            <Pressable className="items-center gap-2.5 pt-2" accessibilityLabel="Artometrics home">
               <Logo size={44} compact={1} align="center" markVariant="light" showWordmark={false} />
             </Pressable>
           </Link>
 
-          <View style={styles.legalRow}>
+          <View className="flex-row flex-wrap justify-center gap-1.5">
             {[
               ["/legal/privacy", "Privacy"],
               ["/legal/terms", "Terms"],
@@ -85,89 +97,21 @@ export function SiteFooter() {
               ["/security", "Security"],
               ["/contact", "Contact"],
             ].map(([href, label], i, arr) => (
-              <View key={href} style={styles.legalItem}>
+              <View key={href} className="flex-row items-center gap-1.5">
                 <Link href={href as `/legal/privacy`} asChild>
                   <Pressable>
-                    <Text style={styles.legalLink}>{label}</Text>
+                    <Text className="text-xs text-white/70">{label}</Text>
                   </Pressable>
                 </Link>
-                {i < arr.length - 1 ? <Text style={styles.legalSep}>|</Text> : null}
+                {i < arr.length - 1 ? <Text className="text-xs text-white/35">|</Text> : null}
               </View>
             ))}
           </View>
-          <Text style={styles.copy}>© {year} Artometrics</Text>
+          <Text className="text-center text-xs uppercase tracking-wide text-white/45">
+            © {year} Artometrics
+          </Text>
         </Wrapper>
       </View>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  shell: { marginTop: 24 },
-  ctaWrap: { marginBottom: 0 },
-  cta: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    alignItems: "center",
-    justifyContent: "space-between",
-    gap: 20,
-    paddingVertical: 32,
-    paddingHorizontal: 8,
-  },
-  ctaTitle: {
-    flex: 1,
-    minWidth: 220,
-    color: "#FFFFFF",
-    fontFamily: Fonts.display,
-    fontSize: 36,
-    lineHeight: 40,
-    letterSpacing: 0.5,
-  },
-  ctaCircle: {
-    width: 72,
-    height: 72,
-    borderRadius: 36,
-    backgroundColor: "#FFFFFF",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  ctaArrow: { color: "#000000", fontSize: 28, fontWeight: "700" },
-  dark: { paddingVertical: 36 },
-  inner: { gap: 28 },
-  cols: { flexDirection: "row", flexWrap: "wrap", gap: 28 },
-  col: { minWidth: 140, gap: 8, flexGrow: 1 },
-  groupTitle: {
-    fontFamily: Fonts.sans,
-    fontSize: 11,
-    fontWeight: "800",
-    letterSpacing: 1.6,
-    textTransform: "uppercase",
-    color: "#D9251B",
-    marginBottom: 6,
-  },
-  groupLink: {
-    color: "rgba(255,255,255,0.8)",
-    fontSize: 13,
-    paddingVertical: 2,
-    letterSpacing: 0.4,
-    textTransform: "uppercase",
-    fontWeight: "600",
-  },
-  brandBlock: { alignItems: "center", gap: 10, paddingTop: 8 },
-  legalRow: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    justifyContent: "center",
-    gap: 6,
-  },
-  legalItem: { flexDirection: "row", alignItems: "center", gap: 6 },
-  legalLink: { color: "rgba(255,255,255,0.7)", fontSize: 12 },
-  legalSep: { color: "rgba(255,255,255,0.35)", fontSize: 12 },
-  copy: {
-    textAlign: "center",
-    color: "rgba(255,255,255,0.45)",
-    fontSize: 12,
-    letterSpacing: 1,
-    textTransform: "uppercase",
-  },
-});

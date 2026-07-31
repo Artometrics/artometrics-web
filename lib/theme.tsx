@@ -8,7 +8,8 @@ import {
   type ReactNode,
 } from "react";
 import { Appearance, Platform } from "react-native";
-import AsyncStorage from "@react-native-async-storage/async-storage";
+import { kv } from "@/lib/storage/kv";
+import { Uniwind } from "uniwind";
 import {
   resolveBrandFonts,
   resolveThemeColors,
@@ -17,6 +18,7 @@ import {
   type ThemeColors,
   type ThemeMode,
 } from "@/constants/Colors";
+import { brandThemeCssVars } from "@/lib/uniwind-theme";
 
 type Preference = ThemeMode | "system";
 
@@ -47,10 +49,8 @@ function systemMode(): ThemeMode {
 
 function readStoredPreferenceSync(): Preference | null {
   try {
-    if (Platform.OS === "web" && typeof localStorage !== "undefined") {
-      const saved = localStorage.getItem(STORAGE_KEY);
-      if (saved === "light" || saved === "dark" || saved === "system") return saved;
-    }
+    const saved = kv.getString(STORAGE_KEY);
+    if (saved === "light" || saved === "dark" || saved === "system") return saved;
   } catch {
     /* ignore */
   }
@@ -59,10 +59,8 @@ function readStoredPreferenceSync(): Preference | null {
 
 function readStoredBrandSync(): BrandStyle | null {
   try {
-    if (Platform.OS === "web" && typeof localStorage !== "undefined") {
-      const saved = localStorage.getItem(BRAND_KEY);
-      if (saved === "swiss" || saved === "magazine") return saved;
-    }
+    const saved = kv.getString(BRAND_KEY);
+    if (saved === "swiss" || saved === "magazine") return saved;
   } catch {
     /* ignore */
   }
@@ -70,11 +68,8 @@ function readStoredBrandSync(): BrandStyle | null {
 }
 
 async function readStoredPreference(): Promise<Preference | null> {
-  const sync = readStoredPreferenceSync();
-  if (sync) return sync;
   try {
-    if (Platform.OS === "web") return null;
-    const saved = await AsyncStorage.getItem(STORAGE_KEY);
+    const saved = await kv.getItem(STORAGE_KEY);
     if (saved === "light" || saved === "dark" || saved === "system") return saved;
   } catch {
     /* ignore */
@@ -83,11 +78,8 @@ async function readStoredPreference(): Promise<Preference | null> {
 }
 
 async function readStoredBrand(): Promise<BrandStyle | null> {
-  const sync = readStoredBrandSync();
-  if (sync) return sync;
   try {
-    if (Platform.OS === "web") return null;
-    const saved = await AsyncStorage.getItem(BRAND_KEY);
+    const saved = await kv.getItem(BRAND_KEY);
     if (saved === "swiss" || saved === "magazine") return saved;
   } catch {
     /* ignore */
@@ -97,11 +89,7 @@ async function readStoredBrand(): Promise<BrandStyle | null> {
 
 async function writeStoredPreference(p: Preference): Promise<void> {
   try {
-    if (Platform.OS === "web" && typeof localStorage !== "undefined") {
-      localStorage.setItem(STORAGE_KEY, p);
-      return;
-    }
-    await AsyncStorage.setItem(STORAGE_KEY, p);
+    await kv.setItem(STORAGE_KEY, p);
   } catch {
     /* ignore */
   }
@@ -109,11 +97,7 @@ async function writeStoredPreference(p: Preference): Promise<void> {
 
 async function writeStoredBrand(b: BrandStyle): Promise<void> {
   try {
-    if (Platform.OS === "web" && typeof localStorage !== "undefined") {
-      localStorage.setItem(BRAND_KEY, b);
-      return;
-    }
-    await AsyncStorage.setItem(BRAND_KEY, b);
+    await kv.setItem(BRAND_KEY, b);
   } catch {
     /* ignore */
   }
@@ -161,14 +145,12 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     setSystem(systemMode());
     let cancelled = false;
-    if (Platform.OS !== "web") {
-      void readStoredPreference().then((saved) => {
-        if (!cancelled && saved) setPreferenceState(saved);
-      });
-      void readStoredBrand().then((saved) => {
-        if (!cancelled && saved) setBrandStyleState(saved);
-      });
-    }
+    void readStoredPreference().then((saved) => {
+      if (!cancelled && saved) setPreferenceState(saved);
+    });
+    void readStoredBrand().then((saved) => {
+      if (!cancelled && saved) setBrandStyleState(saved);
+    });
 
     if (Platform.OS === "web" && typeof window !== "undefined") {
       const mq = window.matchMedia("(prefers-color-scheme: dark)");
@@ -216,8 +198,13 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   const fonts = useMemo(() => resolveBrandFonts(brandStyle), [brandStyle]);
 
   useEffect(() => {
+    // Keep Uniwind className themes in lockstep with preference + brand tokens.
+    Uniwind.setTheme(preference === "system" ? "system" : preference);
+    const vars = brandThemeCssVars(brandStyle);
+    Uniwind.updateCSSVariables("light", vars.light);
+    Uniwind.updateCSSVariables("dark", vars.dark);
     applyDomTheme(mode, brandStyle, colors);
-  }, [mode, brandStyle, colors]);
+  }, [preference, mode, brandStyle, colors]);
 
   const value = useMemo(
     () => ({

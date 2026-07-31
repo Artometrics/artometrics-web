@@ -1,10 +1,9 @@
 import { useCallback, useState } from "react";
-import { ActivityIndicator, Text, View, StyleSheet } from "react-native";
+import { ActivityIndicator, Text, View } from "react-native";
 import { Link, router, useFocusEffect } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { PageSeo } from "@/components/PageSeo";
 import { PrimaryButton } from "@/components/PrimaryButton";
-import { Fonts } from "@/constants/Colors";
 import { useTheme } from "@/lib/theme";
 import { useAuth } from "@/lib/auth";
 import { listFollowingFeed, type MemberPost } from "@/lib/platform/posts";
@@ -50,45 +49,44 @@ export default function FollowingFeedScreen() {
 
   if (authLoading || !user) {
     return (
-      <Wrapper style={styles.wrap}>
-        <Text style={{ color: colors.textMuted }}>Loading…</Text>
+      <Wrapper className="gap-2.5 py-10">
+        <Text className="text-muted">Loading…</Text>
       </Wrapper>
     );
   }
 
   return (
-    <Wrapper style={styles.wrap}>
+    <Wrapper className="gap-2.5 py-10">
       <PageSeo
         title="Following"
         description="Published work from people you follow on Artometrics."
         path="/following"
       />
-      <Text style={[styles.eyebrow, { color: colors.accent }]}>Feed</Text>
-      <Text style={[styles.title, { color: colors.text }]}>Following</Text>
-      <Text style={[styles.deck, { color: colors.textMuted }]}>
+      <Text className="text-xs tracking-[1.8px] uppercase font-bold text-accent">Feed</Text>
+      <Text className="font-serif text-[36px] font-bold text-fg">Following</Text>
+      <Text className="font-serif text-base leading-[26px] max-w-[600px] text-muted">
         Longform from members you follow — not a noisy stream.
       </Text>
 
       {loading ? (
-        <ActivityIndicator color={colors.accent} style={{ marginTop: 24 }} />
+        <ActivityIndicator color={colors.accent} className="mt-6" />
       ) : posts.length === 0 ? (
-        <View style={{ marginTop: 20, gap: 12 }}>
-          <Text style={[styles.deck, { color: colors.textMuted }]}>
+        <View className="mt-5 gap-3">
+          <Text className="font-serif text-base leading-[26px] max-w-[600px] text-muted">
             Follow someone from their public profile to fill this feed.
           </Text>
           <PrimaryButton label="Open Studio" onPress={() => router.push("/studio")} />
         </View>
       ) : (
-        <View style={styles.list}>
+        <View className="mt-4 gap-3.5">
           {posts.map((post) => (
-            <View
-              key={post.id}
-              style={StyleSheet.flatten([styles.card, { borderColor: colors.border }])}
-            >
-              <Text style={[styles.meta, { color: colors.accent }]}>{post.author}</Text>
-              <Text style={[styles.cardTitle, { color: colors.text }]}>{post.title}</Text>
+            <View key={post.id} className="border border-border p-[18px] gap-2">
+              <Text className="text-[11px] tracking-[1.2px] uppercase font-bold text-accent">
+                {post.author}
+              </Text>
+              <Text className="font-serif text-[22px] font-bold text-fg">{post.title}</Text>
               {post.excerpt ? (
-                <Text style={[styles.deck, { color: colors.textMuted }]} numberOfLines={3}>
+                <Text className="font-serif text-base leading-[26px] max-w-[600px] text-muted" numberOfLines={3}>
                   {post.excerpt}
                 </Text>
               ) : null}
@@ -97,30 +95,9 @@ export default function FollowingFeedScreen() {
         </View>
       )}
 
-      <Link href="/me" style={{ marginTop: 16 }}>
-        <Text style={{ color: colors.accent, fontWeight: "700" }}>Your hub →</Text>
+      <Link href="/me" className="mt-4">
+        <Text className="text-accent font-bold">Your hub →</Text>
       </Link>
     </Wrapper>
   );
 }
-
-const styles = StyleSheet.create({
-  wrap: { paddingVertical: 40, gap: 10 },
-  eyebrow: {
-    fontSize: 12,
-    letterSpacing: 1.8,
-    textTransform: "uppercase",
-    fontWeight: "700",
-  },
-  title: { fontFamily: Fonts.serif, fontSize: 36, fontWeight: "700" },
-  deck: { fontFamily: Fonts.serif, fontSize: 16, lineHeight: 26, maxWidth: 600 },
-  list: { marginTop: 16, gap: 14 },
-  card: { borderWidth: StyleSheet.hairlineWidth, padding: 18, gap: 8 },
-  cardTitle: { fontFamily: Fonts.serif, fontSize: 22, fontWeight: "700" },
-  meta: {
-    fontSize: 11,
-    letterSpacing: 1.2,
-    textTransform: "uppercase",
-    fontWeight: "700",
-  },
-});

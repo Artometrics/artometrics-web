@@ -1,0 +1,37 @@
+/**
+ * Shared Lucide icons for Artometrics chrome / tools.
+ * Prefer this over @expo/vector-icons so iconography stays consistent.
+ */
+export {
+  X,
+  Search,
+  Newspaper,
+  Mail,
+  User,
+  PenLine,
+  Palette,
+  Menu,
+  ChevronDown,
+  ChevronUp,
+  ChevronRight,
+  ChevronLeft,
+  ArrowRight,
+  CircleX,
+  Moon,
+  Sun,
+  Settings,
+  LogOut,
+  Bell,
+  Heart,
+  Clapperboard,
+  BookOpen,
+  Mic,
+  Image as ImageIcon,
+  Upload,
+  Download,
+  Plus,
+  Check,
+  Home,
+  Library,
+  Sparkles,
+} from "lucide-react-native";

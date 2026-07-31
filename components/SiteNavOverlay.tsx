@@ -1,21 +1,25 @@
 import { useEffect, useState } from "react";
-import {
-  Platform,
-  Pressable,
-  ScrollView,
-  Text,
-  TextInput,
-  View,
-  StyleSheet,
-} from "react-native";
+import { Platform, Pressable, ScrollView, Text, TextInput, View } from "react-native";
 import { Link, usePathname, router } from "expo-router";
-import Ionicons from "@expo/vector-icons/Ionicons";
-import { Fonts } from "@/constants/Colors";
+import {
+  Mail,
+  Moon,
+  Newspaper,
+  Palette,
+  PenLine,
+  Search,
+  Sun,
+  User,
+  X,
+} from "@/components/icons";
 import { useChrome } from "@/lib/chrome";
 import { useTheme } from "@/lib/theme";
 import { useAuth } from "@/lib/auth";
 import { Wrapper } from "@/components/Wrapper";
 import { SECTION_META, SECTION_SLUGS } from "@/data/sections";
+
+const overlayPosition =
+  Platform.OS === "web" ? ({ position: "fixed" as const }) : ({ position: "absolute" as const });
 
 export function SiteNavOverlay() {
   const pathname = usePathname();
@@ -48,115 +52,114 @@ export function SiteNavOverlay() {
 
   return (
     <View
-      style={[styles.overlay, { backgroundColor: colors.overlayBg }]}
+      className="inset-0 z-[2000] bg-overlay"
+      style={overlayPosition}
       accessibilityViewIsModal
     >
-      <Wrapper style={styles.inner}>
-        <View style={styles.top}>
+      <Wrapper className="max-w-[960px] flex-1 pt-2 pb-6">
+        <View className="flex-row items-center justify-start py-1">
           <Pressable
             onPress={() => setMenuOpen(false)}
             accessibilityRole="button"
             accessibilityLabel="Close menu"
-            style={styles.closeBtn}
+            className="h-11 w-11 items-center justify-center"
             hitSlop={12}
           >
-            <Ionicons name="close" size={28} color={colors.text} />
+            <X size={28} color={colors.text} />
           </Pressable>
         </View>
 
-        <View style={[styles.searchRow, { borderBottomColor: colors.border }]}>
-          <Ionicons name="search-outline" size={18} color={colors.textMuted} />
+        <View className="mt-2 flex-row items-center gap-2.5 border-b border-border pb-2.5">
+          <Search size={18} color={colors.textMuted} />
           <TextInput
             value={q}
             onChangeText={setQ}
             placeholder="Search"
             placeholderTextColor={colors.textSubtle}
-            style={[styles.searchInput, { color: colors.text }]}
+            className="flex-1 py-1.5 text-base font-sans text-fg outline-none"
             onSubmitEditing={goSearch}
             returnKeyType="search"
           />
           <Pressable
             onPress={goSearch}
-            style={[styles.goBtn, { backgroundColor: colors.text }]}
+            className="bg-fg px-3 py-2"
             hitSlop={8}
           >
-            <Text style={[styles.goText, { color: colors.inverse }]}>GO</Text>
+            <Text className="text-xs font-bold tracking-wide text-inverse">GO</Text>
           </Pressable>
         </View>
 
-        <View style={styles.utility}>
+        <View className="gap-3.5 py-4.5">
           <Link href="/pricing" asChild>
-            <Pressable onPress={() => setMenuOpen(false)} style={styles.utilItem}>
-              <Ionicons name="newspaper-outline" size={18} color={colors.text} />
-              <Text style={[styles.utilText, { color: colors.text }]}>Subscribe</Text>
+            <Pressable onPress={() => setMenuOpen(false)} className="flex-row items-center gap-3">
+              <Newspaper size={18} color={colors.text} />
+              <Text className="text-[15px] font-medium text-fg">Subscribe</Text>
             </Pressable>
           </Link>
           <Link href="/newsletter" asChild>
-            <Pressable onPress={() => setMenuOpen(false)} style={styles.utilItem}>
-              <Ionicons name="mail-outline" size={18} color={colors.text} />
-              <Text style={[styles.utilText, { color: colors.text }]}>Newsletters</Text>
+            <Pressable onPress={() => setMenuOpen(false)} className="flex-row items-center gap-3">
+              <Mail size={18} color={colors.text} />
+              <Text className="text-[15px] font-medium text-fg">Newsletters</Text>
             </Pressable>
           </Link>
           <Link href={user ? "/me" : "/login"} asChild>
-            <Pressable onPress={() => setMenuOpen(false)} style={styles.utilItem}>
-              <Ionicons name="person-outline" size={18} color={colors.text} />
-              <Text style={[styles.utilText, { color: colors.text }]}>
+            <Pressable onPress={() => setMenuOpen(false)} className="flex-row items-center gap-3">
+              <User size={18} color={colors.text} />
+              <Text className="text-[15px] font-medium text-fg">
                 {user ? "Profile" : "Sign in"}
               </Text>
             </Pressable>
           </Link>
           <Link href={user ? "/studio" : "/login?next=%2Fstudio"} asChild>
-            <Pressable onPress={() => setMenuOpen(false)} style={styles.utilItem}>
-              <Ionicons name="create-outline" size={18} color={colors.text} />
-              <Text style={[styles.utilText, { color: colors.text }]}>Studio</Text>
+            <Pressable onPress={() => setMenuOpen(false)} className="flex-row items-center gap-3">
+              <PenLine size={18} color={colors.text} />
+              <Text className="text-[15px] font-medium text-fg">Studio</Text>
             </Pressable>
           </Link>
-          <Pressable onPress={toggle} style={styles.utilItem}>
-            <Ionicons
-              name={mode === "dark" ? "sunny-outline" : "moon-outline"}
-              size={18}
-              color={colors.text}
-            />
-            <Text style={[styles.utilText, { color: colors.text }]}>
+          <Pressable onPress={toggle} className="flex-row items-center gap-3">
+            {mode === "dark" ? (
+              <Sun size={18} color={colors.text} />
+            ) : (
+              <Moon size={18} color={colors.text} />
+            )}
+            <Text className="text-[15px] font-medium text-fg">
               {mode === "dark" ? "Light mode" : "Dark mode"}
             </Text>
           </Pressable>
-          <Pressable onPress={toggleBrandStyle} style={styles.utilItem}>
-            <Ionicons name="color-palette-outline" size={18} color={colors.text} />
-            <Text style={[styles.utilText, { color: colors.text }]}>
+          <Pressable onPress={toggleBrandStyle} className="flex-row items-center gap-3">
+            <Palette size={18} color={colors.text} />
+            <Text className="text-[15px] font-medium text-fg">
               {brandStyle === "swiss" ? "Magazine style" : "Swiss style"}
             </Text>
           </Pressable>
         </View>
 
-        <ScrollView
-          style={styles.scroll}
-          contentContainerStyle={styles.scrollContent}
-          showsVerticalScrollIndicator={false}
-        >
-          <Text style={[styles.groupLabel, { color: colors.textSubtle }]}>Sections</Text>
+        <ScrollView className="flex-1" contentContainerClassName="pb-12" showsVerticalScrollIndicator={false}>
+          <Text className="mt-2 mb-2 text-[11px] font-bold uppercase tracking-[1.6px] text-subtle">
+            Sections
+          </Text>
           <Link href="/" asChild>
             <Pressable
               onPress={() => setMenuOpen(false)}
-              style={StyleSheet.flatten([styles.sectionItem, { borderBottomColor: colors.border }])}
+              className="border-b border-border py-3.5"
             >
-              <Text style={[styles.sectionLink, { color: colors.text }]}>Home</Text>
+              <Text className="text-[22px] leading-7 font-serif text-fg">Home</Text>
             </Pressable>
           </Link>
           {SECTION_SLUGS.map((slug) => (
             <Link key={slug} href={`/topics/${slug}` as `/topics/${string}`} asChild>
               <Pressable
                 onPress={() => setMenuOpen(false)}
-                style={StyleSheet.flatten([styles.sectionItem, { borderBottomColor: colors.border }])}
+                className="border-b border-border py-3.5"
               >
-                <Text style={[styles.sectionLink, { color: colors.text }]}>
+                <Text className="text-[22px] leading-7 font-serif text-fg">
                   {SECTION_META[slug].title}
                 </Text>
               </Pressable>
             </Link>
           ))}
 
-          <Text style={[styles.groupLabel, { color: colors.textSubtle, marginTop: 28 }]}>
+          <Text className="mt-7 mb-2 text-[11px] font-bold uppercase tracking-[1.6px] text-subtle">
             More
           </Text>
           {[
@@ -174,9 +177,9 @@ export function SiteNavOverlay() {
             <Link key={link.href} href={link.href as `/blog`} asChild>
               <Pressable
                 onPress={() => setMenuOpen(false)}
-                style={StyleSheet.flatten([styles.sectionItem, { borderBottomColor: colors.border }])}
+                className="border-b border-border py-3.5"
               >
-                <Text style={[styles.moreLink, { color: colors.text }]}>{link.label}</Text>
+                <Text className="text-lg leading-6 font-serif text-fg">{link.label}</Text>
               </Pressable>
             </Link>
           ))}
@@ -185,68 +188,3 @@ export function SiteNavOverlay() {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  overlay: {
-    ...Platform.select({
-      web: { position: "fixed" as const },
-      default: { position: "absolute" as const },
-    }),
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    zIndex: 2000,
-  },
-  inner: { flex: 1, paddingTop: 8, paddingBottom: 24, maxWidth: 960 },
-  top: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "flex-start",
-    paddingVertical: 4,
-  },
-  closeBtn: {
-    width: 44,
-    height: 44,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  searchRow: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: 10,
-    marginTop: 8,
-    borderBottomWidth: StyleSheet.hairlineWidth,
-    paddingBottom: 10,
-  },
-  searchInput: { flex: 1, fontSize: 16, fontFamily: Fonts.sans, paddingVertical: 6 },
-  goBtn: { paddingHorizontal: 12, paddingVertical: 8 },
-  goText: { fontSize: 12, fontWeight: "700", letterSpacing: 0.6 },
-  utility: { gap: 14, paddingVertical: 18 },
-  utilItem: { flexDirection: "row", alignItems: "center", gap: 12 },
-  utilText: { fontSize: 15, fontWeight: "500" },
-  scroll: { flex: 1 },
-  scrollContent: { paddingBottom: 48 },
-  groupLabel: {
-    fontSize: 11,
-    fontWeight: "700",
-    letterSpacing: 1.6,
-    textTransform: "uppercase",
-    marginBottom: 8,
-    marginTop: 8,
-  },
-  sectionItem: {
-    paddingVertical: 14,
-    borderBottomWidth: StyleSheet.hairlineWidth,
-  },
-  sectionLink: {
-    fontFamily: Fonts.serif,
-    fontSize: 22,
-    lineHeight: 28,
-  },
-  moreLink: {
-    fontFamily: Fonts.serif,
-    fontSize: 18,
-    lineHeight: 24,
-  },
-});

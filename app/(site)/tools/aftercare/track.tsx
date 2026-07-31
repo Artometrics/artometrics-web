@@ -2,7 +2,6 @@ import { useCallback, useMemo, useState } from "react";
 import {
   ActivityIndicator,
   Pressable,
-  StyleSheet,
   Text,
   TextInput,
   View,
@@ -12,7 +11,6 @@ import { Wrapper } from "@/components/Wrapper";
 import { PageSeo } from "@/components/PageSeo";
 import { ToolsSubnav } from "@/components/tools/ToolsSubnav";
 import { PrimaryButton } from "@/components/PrimaryButton";
-import { Fonts } from "@/constants/Colors";
 import { useTheme } from "@/lib/theme";
 import { useRequireAuth } from "@/lib/tools/requireAuth";
 import { apiFetch } from "@/lib/supabase/client";
@@ -128,49 +126,45 @@ export default function AftercareTrackScreen() {
 
   if (!ready) {
     return (
-      <Wrapper style={styles.wrap}>
-        <Text style={{ color: colors.textMuted }}>Loading…</Text>
+      <Wrapper className="gap-2.5 py-8">
+        <Text className="text-muted">Loading…</Text>
       </Wrapper>
     );
   }
 
   return (
-    <Wrapper style={styles.wrap}>
+    <Wrapper className="gap-2.5 py-8">
       <PageSeo
         title="Track · Aftercare"
         description="Mood tracking on Artometrics Aftercare."
         path="/tools/aftercare/track"
       />
       <ToolsSubnav links={NAV} />
-      <Text style={[styles.eyebrow, { color: colors.accent }]}>Aftercare</Text>
-      <Text style={[styles.title, { color: colors.text }]}>Track</Text>
-      <Text style={[styles.deck, { color: colors.textMuted }]}>
+      <Text className="text-xs tracking-[1.8px] uppercase font-bold text-accent">Aftercare</Text>
+      <Text className="font-serif text-[36px] font-bold text-fg">Track</Text>
+      <Text className="font-serif text-base leading-[26px] max-w-[560px] text-muted">
         Log mood from 1 (heavy) to 5 (light). A short note is enough.
       </Text>
 
-      <View style={[styles.form, { borderColor: colors.border }]}>
-        <Text style={[styles.label, { color: colors.textMuted }]}>Mood</Text>
-        <View style={styles.moodRow}>
+      <View className="mt-2 border border-border p-4 gap-2.5">
+        <Text className="text-xs tracking-wide uppercase font-bold text-muted">Mood</Text>
+        <View className="flex-row gap-2">
           {[1, 2, 3, 4, 5].map((n) => {
             const active = mood === n;
             return (
               <Pressable
                 key={n}
                 onPress={() => setMood(n)}
-                style={[
-                  styles.moodBtn,
-                  {
-                    borderColor: colors.border,
-                    backgroundColor: active ? colors.text : "transparent",
-                  },
-                ]}
+                className={[
+                  "border w-11 h-11 items-center justify-center",
+                  active ? "bg-fg border-fg" : "bg-transparent border-border",
+                ].join(" ")}
               >
                 <Text
-                  style={{
-                    color: active ? colors.inverse : colors.text,
-                    fontWeight: "700",
-                    fontSize: 15,
-                  }}
+                  className={[
+                    "font-bold text-[15px]",
+                    active ? "text-inverse" : "text-fg",
+                  ].join(" ")}
                 >
                   {n}
                 </Text>
@@ -183,19 +177,11 @@ export default function AftercareTrackScreen() {
           value={note}
           onChangeText={setNote}
           placeholder="Optional note"
-          placeholderTextColor={colors.textSubtle}
-          style={[
-            styles.editor,
-            {
-              borderColor: colors.border,
-              color: colors.text,
-              backgroundColor: colors.bgElevated,
-            },
-          ]}
+          placeholderTextColorClassName="text-subtle"
+          className="border border-border p-3 min-h-[88px] font-serif text-base leading-6 text-fg bg-bg-elevated"
+          style={{ textAlignVertical: "top" }}
         />
-        {error ? (
-          <Text style={[styles.error, { color: colors.accent }]}>{error}</Text>
-        ) : null}
+        {error ? <Text className="font-serif text-[15px] text-accent">{error}</Text> : null}
         <PrimaryButton
           label={saving ? "Saving…" : "Log mood"}
           onPress={onSave}
@@ -203,59 +189,38 @@ export default function AftercareTrackScreen() {
         />
       </View>
 
-      <Text style={[styles.sectionLabel, { color: colors.textMuted }]}>
-        Recent
-      </Text>
+      <Text className="mt-3 text-xs tracking-wide uppercase font-bold text-muted">Recent</Text>
       {loading ? (
         <ActivityIndicator color={colors.accent} />
       ) : recentMoods.length === 0 ? (
-        <Text style={[styles.deck, { color: colors.textMuted }]}>
+        <Text className="font-serif text-base leading-[26px] max-w-[560px] text-muted">
           No mood logs yet.
         </Text>
       ) : (
         <>
-          <View style={styles.bars}>
+          <View className="flex-row items-end gap-1.5 min-h-[88px] py-2">
             {[...recentMoods].reverse().map((log) => {
               const v = Number(log.value) || 0;
               const height = Math.max(8, (v / maxBar) * 72);
               return (
-                <View key={log.id} style={styles.barCol}>
-                  <View
-                    style={[
-                      styles.bar,
-                      {
-                        height,
-                        backgroundColor: colors.accent,
-                      },
-                    ]}
-                  />
-                  <Text style={[styles.barLabel, { color: colors.textSubtle }]}>
-                    {v}
-                  </Text>
+                <View key={log.id} className="items-center gap-1 flex-1 max-w-7">
+                  <View className="w-full min-h-2 bg-accent" style={{ height }} />
+                  <Text className="text-[10px] text-subtle">{v}</Text>
                 </View>
               );
             })}
           </View>
-          <View style={styles.list}>
+          <View className="gap-2">
             {recentMoods.map((log) => (
-              <View
-                key={`row-${log.id}`}
-                style={[styles.row, { borderColor: colors.border }]}
-              >
-                <Text style={[styles.rowMood, { color: colors.text }]}>
-                  {log.value}/5
-                </Text>
-                <View style={{ flex: 1, gap: 2 }}>
-                  <Text style={[styles.meta, { color: colors.textSubtle }]}>
+              <View key={`row-${log.id}`} className="border border-border p-3 flex-row gap-3 items-start">
+                <Text className="font-serif text-lg font-bold min-w-10 text-fg">{log.value}/5</Text>
+                <View className="flex-1 gap-0.5">
+                  <Text className="text-xs text-subtle">
                     {log.logged_on ||
-                      (log.created_at
-                        ? new Date(log.created_at).toLocaleDateString()
-                        : "")}
+                      (log.created_at ? new Date(log.created_at).toLocaleDateString() : "")}
                   </Text>
                   {log.notes ? (
-                    <Text style={[styles.note, { color: colors.textMuted }]}>
-                      {log.notes}
-                    </Text>
+                    <Text className="font-serif text-[15px] leading-[22px] text-muted">{log.notes}</Text>
                   ) : null}
                 </View>
               </View>
@@ -266,73 +231,3 @@ export default function AftercareTrackScreen() {
     </Wrapper>
   );
 }
-
-const styles = StyleSheet.create({
-  wrap: { paddingVertical: 32, gap: 10 },
-  eyebrow: {
-    fontSize: 12,
-    letterSpacing: 1.8,
-    textTransform: "uppercase",
-    fontWeight: "700",
-  },
-  title: { fontFamily: Fonts.serif, fontSize: 36, fontWeight: "700" },
-  deck: { fontFamily: Fonts.serif, fontSize: 16, lineHeight: 26, maxWidth: 560 },
-  form: {
-    marginTop: 8,
-    borderWidth: StyleSheet.hairlineWidth,
-    padding: 16,
-    gap: 10,
-  },
-  label: {
-    fontSize: 12,
-    letterSpacing: 0.8,
-    textTransform: "uppercase",
-    fontWeight: "700",
-  },
-  moodRow: { flexDirection: "row", gap: 8 },
-  moodBtn: {
-    borderWidth: StyleSheet.hairlineWidth,
-    width: 44,
-    height: 44,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  editor: {
-    borderWidth: StyleSheet.hairlineWidth,
-    padding: 12,
-    minHeight: 88,
-    textAlignVertical: "top",
-    fontFamily: Fonts.serif,
-    fontSize: 16,
-    lineHeight: 24,
-  },
-  error: { fontFamily: Fonts.serif, fontSize: 15 },
-  sectionLabel: {
-    marginTop: 12,
-    fontSize: 12,
-    letterSpacing: 0.8,
-    textTransform: "uppercase",
-    fontWeight: "700",
-  },
-  bars: {
-    flexDirection: "row",
-    alignItems: "flex-end",
-    gap: 6,
-    minHeight: 88,
-    paddingVertical: 8,
-  },
-  barCol: { alignItems: "center", gap: 4, flex: 1, maxWidth: 28 },
-  bar: { width: "100%", minHeight: 8 },
-  barLabel: { fontSize: 10 },
-  list: { gap: 8 },
-  row: {
-    borderWidth: StyleSheet.hairlineWidth,
-    padding: 12,
-    flexDirection: "row",
-    gap: 12,
-    alignItems: "flex-start",
-  },
-  rowMood: { fontFamily: Fonts.serif, fontSize: 18, fontWeight: "700", minWidth: 40 },
-  meta: { fontSize: 12 },
-  note: { fontFamily: Fonts.serif, fontSize: 15, lineHeight: 22 },
-});

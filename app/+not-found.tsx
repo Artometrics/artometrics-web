@@ -1,27 +1,18 @@
-import { Text, StyleSheet } from "react-native";
+import { Text } from "react-native";
 import { Link, Stack } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
-import { useTheme } from "@/lib/theme";
 
 export default function NotFoundScreen() {
-  const { colors } = useTheme();
   return (
     <>
       <Stack.Screen options={{ title: "Not found", headerShown: false }} />
-      <Wrapper style={styles.wrap}>
-        <Text style={[styles.code, { color: colors.accent }]}>404</Text>
-        <Text style={[styles.title, { color: colors.text }]}>Page not found</Text>
+      <Wrapper className="items-start gap-3 py-20">
+        <Text className="text-sm tracking-[2px] text-accent">404</Text>
+        <Text className="text-[32px] font-light text-fg">Page not found</Text>
         <Link href="/">
-          <Text style={[styles.link, { color: colors.accent }]}>Return home</Text>
+          <Text className="mt-2 font-semibold text-accent">Return home</Text>
         </Link>
       </Wrapper>
     </>
   );
 }
-
-const styles = StyleSheet.create({
-  wrap: { paddingVertical: 80, gap: 12, alignItems: "flex-start" },
-  code: { fontSize: 14, letterSpacing: 2 },
-  title: { fontSize: 32, fontWeight: "300" },
-  link: { fontWeight: "600", marginTop: 8 },
-});

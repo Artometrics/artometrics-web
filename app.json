@@ -60,7 +60,15 @@
           "enableBackgroundPlayback": true
         }
       ],
-      "expo-asset"
+      "expo-asset",
+      "expo-image",
+      "expo-secure-store",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow Artometrics to access photos for Color Kit and Studio tools."
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true

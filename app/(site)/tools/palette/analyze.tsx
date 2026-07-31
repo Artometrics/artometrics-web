@@ -1,25 +1,24 @@
 import { useMemo, useState } from "react";
 import {
   Alert,
-  Image,
-  Platform,
   Pressable,
-  StyleSheet,
   Text,
   TextInput,
   View,
 } from "react-native";
+import { Image } from "expo-image";
 import { router } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { PageSeo } from "@/components/PageSeo";
 import { ToolsSubnav } from "@/components/tools/ToolsSubnav";
 import { PrimaryButton } from "@/components/PrimaryButton";
-import { useTheme } from "@/lib/theme";
+import { PaletteSkiaStrip } from "@/components/PaletteSkiaStrip";
 import { useRequireAuth } from "@/lib/tools/requireAuth";
 import { extractDominantColors } from "@/lib/palette/extract";
 import { recommendFromHexes } from "@/lib/palette/recommend";
 import { savePalette } from "@/lib/palette/storage";
 import { newPaletteId, type SavedPalette } from "@/lib/palette/types";
+import { pickImage } from "@/lib/pickers";
 
 const NAV = [
   { href: "/tools/palette", label: "Saved" },
@@ -27,7 +26,6 @@ const NAV = [
 ];
 
 export default function PaletteAnalyzeScreen() {
-  const { colors, fonts } = useTheme();
   const { user, ready } = useRequireAuth();
   const [imageUri, setImageUri] = useState<string | null>(null);
   const [hexes, setHexes] = useState<string[]>([]);
@@ -40,41 +38,23 @@ export default function PaletteAnalyzeScreen() {
     [hexes],
   );
 
-  async function pickImage() {
-    if (Platform.OS !== "web" || typeof document === "undefined") {
+  async function onPickImage() {
+    const picked = await pickImage();
+    if (!picked) return;
+    setImageUri(picked.uri);
+    setBusy(true);
+    try {
+      const extracted = await extractDominantColors(picked.uri, 6);
+      setHexes(extracted);
+      setTitle("From photo");
+    } catch (e) {
       Alert.alert(
-        "Web upload",
-        "Photo analysis is available on web in this MVP. Open Artometrics in a browser to upload a selfie.",
+        "Analyze error",
+        e instanceof Error ? e.message : "Could not read colors",
       );
-      return;
+    } finally {
+      setBusy(false);
     }
-    const input = document.createElement("input");
-    input.type = "file";
-    input.accept = "image/*";
-    input.onchange = () => {
-      const file = input.files?.[0];
-      if (!file) return;
-      const reader = new FileReader();
-      reader.onload = async () => {
-        const uri = String(reader.result ?? "");
-        setImageUri(uri);
-        setBusy(true);
-        try {
-          const extracted = await extractDominantColors(uri, 6);
-          setHexes(extracted);
-          setTitle("From photo");
-        } catch (e) {
-          Alert.alert(
-            "Analyze error",
-            e instanceof Error ? e.message : "Could not read colors",
-          );
-        } finally {
-          setBusy(false);
-        }
-      };
-      reader.readAsDataURL(file);
-    };
-    input.click();
   }
 
   async function onSave() {
@@ -101,66 +81,65 @@ export default function PaletteAnalyzeScreen() {
 
   if (!ready || !user) {
     return (
-      <Wrapper variant="narrow" style={styles.wrap}>
-        <Text style={{ color: colors.textMuted }}>Loading…</Text>
+      <Wrapper variant="narrow" className="gap-2.5 py-8 flex-1">
+        <Text className="text-muted">Loading…</Text>
       </Wrapper>
     );
   }
 
   return (
-    <Wrapper style={styles.wrap}>
+    <Wrapper className="gap-2.5 py-8 flex-1">
       <PageSeo
         title="Analyze colors"
         description="Get season and palette recommendations from a selfie or photo."
         path="/tools/palette/analyze"
       />
       <ToolsSubnav links={NAV} />
-      <Text style={[styles.title, { color: colors.text, fontFamily: fonts.serif }]}>
+      <Text className="font-serif text-[36px] font-bold text-fg">
         One selfie. Your season.
       </Text>
-      <Text style={[styles.deck, { color: colors.textMuted }]}>
+      <Text className="font-serif text-base leading-[26px] max-w-[560px] text-muted">
         Upload a photo for a suggested season, undertone read, and wearable palette.
       </Text>
 
-      <PrimaryButton label="Upload photo" onPress={() => void pickImage()} />
+      <PrimaryButton label="Upload photo" onPress={() => void onPickImage()} />
       {busy ? (
-        <Text style={{ color: colors.textMuted }}>Reading colors…</Text>
+        <Text className="text-muted">Reading colors…</Text>
       ) : null}
 
       {result ? (
-        <View style={[styles.card, { borderColor: colors.border, backgroundColor: colors.bgElevated }]}>
-          <View style={styles.cardTop}>
-            <Text style={[styles.meta, { color: colors.textMuted }]}>Your suggested season</Text>
-            <Text style={[styles.brand, { color: colors.textSubtle }]}>ARTOMETRICS</Text>
+        <View className="border border-border p-5 gap-3 mt-2 bg-bg-elevated">
+          <View className="flex-row justify-between items-center">
+            <Text className="text-[13px] text-muted">Your suggested season</Text>
+            <Text className="text-[11px] tracking-[2px] font-bold text-subtle">ARTOMETRICS</Text>
           </View>
 
-          <Text style={[styles.season, { color: colors.text, fontFamily: fonts.serif }]}>
+          <Text className="text-[32px] font-bold font-serif text-fg">
             {result.season.name}
           </Text>
-          <Text style={[styles.tagline, { color: colors.textMuted }]}>
+          <Text className="text-[15px] -mt-1 text-muted">
             {result.season.tagline}
           </Text>
 
           {imageUri ? (
-            <View style={styles.photoRow}>
-              <View style={styles.sideSwatches}>
+            <View className="flex-row items-center justify-center gap-3 my-2">
+              <View className="gap-2">
                 {result.season.palette.slice(0, 3).map((c) => (
                   <View
                     key={c}
-                    style={[styles.sideSwatch, { backgroundColor: c, borderColor: colors.border }]}
+                    className="w-7 h-10 rounded-lg border border-border"
+                    style={{ backgroundColor: c }}
                   />
                 ))}
               </View>
-              <Image source={{ uri: imageUri }} style={styles.photo} resizeMode="cover" />
+              <Image source={{ uri: imageUri }} className="w-40 h-[200px] rounded-2xl" contentFit="cover" transition={200} />
               {tab === "drape" ? (
-                <View style={styles.sideSwatches}>
+                <View className="gap-2">
                   {result.season.avoid.slice(0, 4).map((c) => (
                     <View
                       key={c}
-                      style={[
-                        styles.sideSwatch,
-                        { backgroundColor: c, borderColor: colors.border, opacity: 0.55 },
-                      ]}
+                      className="w-7 h-10 rounded-lg border border-border"
+                      style={{ backgroundColor: c, opacity: 0.55 }}
                     />
                   ))}
                 </View>
@@ -170,7 +149,7 @@ export default function PaletteAnalyzeScreen() {
             </View>
           ) : null}
 
-          <View style={styles.traits}>
+          <View className="flex-row flex-wrap gap-2">
             {(
               [
                 ["UNDERTONE", result.traits.undertone],
@@ -178,38 +157,30 @@ export default function PaletteAnalyzeScreen() {
                 ["CLARITY", result.traits.clarity],
               ] as const
             ).map(([k, v]) => (
-              <View
-                key={k}
-                style={[styles.traitPill, { borderColor: colors.border, backgroundColor: colors.bg }]}
-              >
-                <Text style={[styles.traitKey, { color: colors.textSubtle }]}>{k}</Text>
-                <Text style={[styles.traitVal, { color: colors.text }]}>
+              <View key={k} className="border border-border rounded-full px-3 py-2 min-w-[100px] bg-bg">
+                <Text className="text-[10px] tracking-wide font-bold text-subtle">{k}</Text>
+                <Text className="text-sm font-semibold mt-0.5 text-fg">
                   {v.charAt(0).toUpperCase() + v.slice(1)}
                 </Text>
               </View>
             ))}
           </View>
 
-          <View style={styles.tabs}>
+          <View className="flex-row gap-2 mt-1">
             {(["editorial", "drape", "palette"] as const).map((t) => (
               <Pressable
                 key={t}
                 onPress={() => setTab(t)}
-                style={[
-                  styles.tab,
-                  {
-                    backgroundColor: tab === t ? colors.text : colors.bg,
-                    borderColor: colors.border,
-                  },
-                ]}
+                className={[
+                  "border border-border rounded-full px-3.5 py-2",
+                  tab === t ? "bg-fg border-fg" : "bg-bg border-border",
+                ].join(" ")}
               >
                 <Text
-                  style={{
-                    color: tab === t ? colors.inverse : colors.text,
-                    fontSize: 13,
-                    fontWeight: "600",
-                    textTransform: "capitalize",
-                  }}
+                  className={[
+                    "text-[13px] font-semibold capitalize",
+                    tab === t ? "text-inverse" : "text-fg",
+                  ].join(" ")}
                 >
                   {t}
                 </Text>
@@ -218,30 +189,38 @@ export default function PaletteAnalyzeScreen() {
           </View>
 
           {tab === "palette" || tab === "editorial" ? (
-            <View style={styles.paletteRow}>
-              {(tab === "palette" ? result.season.palette : hexes).map((c) => (
-                <View key={c} style={styles.palItem}>
-                  <View
-                    style={[styles.palSwatch, { backgroundColor: c, borderColor: colors.border }]}
-                  />
-                  <Text style={{ color: colors.textSubtle, fontSize: 10 }}>{c}</Text>
-                </View>
-              ))}
+            <View className="gap-2">
+              <View className="flex-row flex-wrap gap-2">
+                {(tab === "palette" ? result.season.palette : hexes).map((c) => (
+                  <View key={c} className="items-center gap-1">
+                    <View
+                      className="w-12 h-12 border border-border rounded-lg"
+                      style={{ backgroundColor: c }}
+                    />
+                    <Text className="text-subtle text-[10px]">{c}</Text>
+                  </View>
+                ))}
+              </View>
+              <PaletteSkiaStrip
+                colors={tab === "palette" ? result.season.palette : hexes}
+                className="rounded-lg border border-border"
+              />
             </View>
           ) : (
-            <Text style={[styles.deck, { color: colors.textMuted }]}>
+            <Text className="font-serif text-base leading-[26px] max-w-[560px] text-muted">
               Your colors, left. Colors to avoid, right.
             </Text>
           )}
 
           {tab === "editorial" ? (
             <View style={{ gap: 8, marginTop: 8 }}>
-              <Text style={[styles.label, { color: colors.textMuted }]}>Colors to avoid</Text>
-              <View style={styles.paletteRow}>
+              <Text className="text-[11px] tracking-[1.4px] uppercase font-bold text-muted">Colors to avoid</Text>
+              <View className="flex-row flex-wrap gap-2">
                 {result.season.avoid.map((c) => (
                   <View
                     key={c}
-                    style={[styles.palSwatch, { backgroundColor: c, borderColor: colors.border }]}
+                    className="w-12 h-12 border border-border rounded-lg"
+                    style={{ backgroundColor: c }}
                   />
                 ))}
               </View>
@@ -252,16 +231,13 @@ export default function PaletteAnalyzeScreen() {
             value={title}
             onChangeText={setTitle}
             placeholder="Palette title"
-            placeholderTextColor={colors.textSubtle}
-            style={[
-              styles.titleInput,
-              { color: colors.text, borderColor: colors.border, fontFamily: fonts.serif },
-            ]}
+            placeholderTextColorClassName="text-subtle"
+            className="text-[28px] font-bold border-b border-border py-1.5 text-fg"
           />
           <PrimaryButton label="Save to profile" onPress={() => void onSave()} />
         </View>
       ) : (
-        <Text style={[styles.deck, { color: colors.textSubtle }]}>
+        <Text className="font-serif text-base leading-[26px] max-w-[560px] text-subtle">
           Tip: natural daylight selfies work best. No filter, face in frame.
         </Text>
       )}
@@ -269,75 +245,3 @@ export default function PaletteAnalyzeScreen() {
   );
 }
 
-const styles = StyleSheet.create({
-  wrap: { paddingVertical: 32, gap: 14 },
-  title: { fontSize: 34, fontWeight: "700" },
-  deck: { fontSize: 15, lineHeight: 24, maxWidth: 560 },
-  card: {
-    borderWidth: StyleSheet.hairlineWidth,
-    padding: 20,
-    gap: 12,
-    marginTop: 8,
-  },
-  cardTop: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-  },
-  meta: { fontSize: 12 },
-  brand: { fontSize: 11, letterSpacing: 2, fontWeight: "700" },
-  season: { fontSize: 32, fontWeight: "700" },
-  tagline: { fontSize: 15, marginTop: -4 },
-  photoRow: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
-    gap: 12,
-    marginVertical: 8,
-  },
-  photo: { width: 160, height: 200, borderRadius: 16 },
-  sideSwatches: { gap: 8 },
-  sideSwatch: {
-    width: 28,
-    height: 40,
-    borderRadius: 8,
-    borderWidth: StyleSheet.hairlineWidth,
-  },
-  traits: { flexDirection: "row", flexWrap: "wrap", gap: 8 },
-  traitPill: {
-    borderWidth: StyleSheet.hairlineWidth,
-    borderRadius: 999,
-    paddingHorizontal: 12,
-    paddingVertical: 8,
-    minWidth: 100,
-  },
-  traitKey: { fontSize: 10, letterSpacing: 1, fontWeight: "700" },
-  traitVal: { fontSize: 14, fontWeight: "600", marginTop: 2 },
-  tabs: { flexDirection: "row", gap: 8, marginTop: 4 },
-  tab: {
-    borderWidth: StyleSheet.hairlineWidth,
-    borderRadius: 999,
-    paddingHorizontal: 14,
-    paddingVertical: 8,
-  },
-  paletteRow: { flexDirection: "row", flexWrap: "wrap", gap: 10 },
-  palItem: { alignItems: "center", gap: 4 },
-  palSwatch: {
-    width: 44,
-    height: 56,
-    borderRadius: 10,
-    borderWidth: StyleSheet.hairlineWidth,
-  },
-  label: {
-    fontSize: 11,
-    letterSpacing: 1.2,
-    textTransform: "uppercase",
-    fontWeight: "700",
-  },
-  titleInput: {
-    borderBottomWidth: StyleSheet.hairlineWidth,
-    fontSize: 18,
-    paddingVertical: 8,
-    marginTop: 8,
-  },
-});

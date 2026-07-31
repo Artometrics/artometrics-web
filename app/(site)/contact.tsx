@@ -1,23 +1,22 @@
-import { Text, StyleSheet } from "react-native";
+import { Text } from "react-native";
 import { Wrapper } from "@/components/Wrapper";
 import { PrimaryButton } from "@/components/PrimaryButton";
 import { PageSeo } from "@/components/PageSeo";
-import { Fonts } from "@/constants/Colors";
-import { useTheme } from "@/lib/theme";
 import { openExternalUrl } from "@/lib/openExternal";
 
 export default function ContactScreen() {
-  const { colors } = useTheme();
   return (
-    <Wrapper variant="narrow" style={styles.wrap}>
+    <Wrapper variant="narrow" className="gap-3.5 py-12">
       <PageSeo
         title="Contact"
         description="Editorial tips, dataset corrections, and partnership notes for Artometrics."
         path="/contact"
       />
-      <Text style={[styles.eyebrow, { color: colors.accent }]}>Contact</Text>
-      <Text style={[styles.title, { color: colors.text }]}>Get in touch</Text>
-      <Text style={[styles.p, { color: colors.textMuted }]}>
+      <Text className="text-[11px] tracking-[2.5px] uppercase font-semibold text-accent">
+        Contact
+      </Text>
+      <Text className="text-[36px] font-light font-serif text-fg">Get in touch</Text>
+      <Text className="text-base leading-7 mb-2 text-muted">
         Editorial tips, dataset corrections, and partnership notes go to the Artometrics team.
       </Text>
       <PrimaryButton
@@ -27,15 +26,3 @@ export default function ContactScreen() {
     </Wrapper>
   );
 }
-
-const styles = StyleSheet.create({
-  wrap: { paddingVertical: 48, gap: 14 },
-  eyebrow: {
-    fontSize: 11,
-    letterSpacing: 2.5,
-    textTransform: "uppercase",
-    fontWeight: "600",
-  },
-  title: { fontSize: 36, fontWeight: "300", fontFamily: Fonts.serif },
-  p: { fontSize: 16, lineHeight: 28, marginBottom: 8 },
-});

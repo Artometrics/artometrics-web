@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import { Pressable, Text, TextInput, View, StyleSheet } from "react-native";
+import { Pressable, Text, TextInput, View } from "react-native";
 import { Link, router } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { PrimaryButton } from "@/components/PrimaryButton";
 import { PageSeo } from "@/components/PageSeo";
-import { BRAND_STYLE_LABELS, Fonts, type BrandStyle } from "@/constants/Colors";
+import { BRAND_STYLE_LABELS, type BrandStyle } from "@/constants/Colors";
 import { useTheme } from "@/lib/theme";
 import { useAuth } from "@/lib/auth";
 import { apiFetch } from "@/lib/supabase/client";
@@ -26,8 +26,7 @@ function formatPlanLabel(planTier: string | null, status: string | null) {
 }
 
 export default function SettingsScreen() {
-  const { colors, mode, toggle, setPreference, brandStyle, setBrandStyle, fonts } =
-    useTheme();
+  const { mode, toggle, setPreference, brandStyle, setBrandStyle } = useTheme();
   const { user, loading, signOut } = useAuth();
   const [planLabel, setPlanLabel] = useState<string | null>(null);
   const [active, setActive] = useState(false);
@@ -78,18 +77,18 @@ export default function SettingsScreen() {
 
   if (loading) {
     return (
-      <Wrapper variant="narrow" style={styles.wrap}>
-        <Text style={[styles.p, { color: colors.textMuted }]}>Loading settings…</Text>
+      <Wrapper variant="narrow" className="gap-3.5 py-12">
+        <Text className="font-serif text-base leading-7 text-muted">Loading settings…</Text>
       </Wrapper>
     );
   }
 
   if (!user) {
     return (
-      <Wrapper variant="narrow" style={styles.wrap}>
+      <Wrapper variant="narrow" className="gap-3.5 py-12">
         <PageSeo title="Settings" description="Artometrics account settings." path="/settings" />
-        <Text style={[styles.title, { color: colors.text }]}>Settings</Text>
-        <Text style={[styles.p, { color: colors.textMuted }]}>Log in to manage your account.</Text>
+        <Text className="font-serif text-[36px] font-bold text-fg">Settings</Text>
+        <Text className="font-serif text-base leading-7 text-muted">Log in to manage your account.</Text>
         <Link href="/login" asChild>
           <PrimaryButton label="Log in" />
         </Link>
@@ -113,76 +112,66 @@ export default function SettingsScreen() {
   }
 
   return (
-    <Wrapper variant="narrow" style={styles.wrap}>
+    <Wrapper variant="narrow" className="gap-3.5 py-12">
       <PageSeo title="Settings" description="Your Artometrics settings." path="/settings" />
-      <Text style={[styles.eyebrow, { color: colors.accent }]}>Account</Text>
-      <Text style={[styles.title, { color: colors.text }]}>Settings</Text>
-      <Text style={[styles.p, { color: colors.textMuted }]}>{user.email}</Text>
+      <Text className="text-xs tracking-[1.8px] uppercase font-bold text-accent">Account</Text>
+      <Text className="font-serif text-[36px] font-bold text-fg">Settings</Text>
+      <Text className="font-serif text-base leading-7 text-muted">{user.email}</Text>
       {planLabel ? (
-        <Text style={[styles.p, { color: colors.text }]}>Plan: {planLabel}</Text>
+        <Text className="font-serif text-base leading-7 text-fg">Plan: {planLabel}</Text>
       ) : (
-        <Text style={[styles.p, { color: colors.textSubtle }]}>
+        <Text className="font-serif text-base leading-7 text-subtle">
           No active plan —{" "}
           <Link href="/pricing">
-            <Text style={{ color: colors.accent }}>view membership</Text>
+            <Text className="text-accent">view membership</Text>
           </Link>
           .
         </Text>
       )}
-      {actionError ? <Text style={[styles.p, { color: colors.accent }]}>{actionError}</Text> : null}
+      {actionError ? <Text className="font-serif text-base leading-7 text-accent">{actionError}</Text> : null}
 
-      <View style={styles.block}>
-        <Text style={[styles.h, { color: colors.text, fontFamily: fonts.serif }]}>
-          Appearance
-        </Text>
+      <View className="mt-3 gap-2.5">
+        <Text className="font-serif text-[22px] font-bold text-fg">Appearance</Text>
         <Pressable
           onPress={toggle}
-          style={StyleSheet.flatten([styles.themeRow, { borderColor: colors.border }])}
+          className="border border-border p-3.5 flex-row justify-between items-center"
         >
-          <Text style={[styles.p, { color: colors.text }]}>
+          <Text className="font-serif text-base leading-7 text-fg">
             {mode === "dark" ? "Dark mode" : "Light mode"}
           </Text>
-          <Text style={{ color: colors.accent, fontWeight: "700" }}>Switch</Text>
+          <Text className="text-accent font-bold">Switch</Text>
         </Pressable>
-        <Pressable onPress={() => setPreference("system")} style={{ marginTop: 8 }}>
-          <Text style={{ color: colors.textMuted, fontSize: 14 }}>Use system setting</Text>
+        <Pressable onPress={() => setPreference("system")} className="mt-2">
+          <Text className="text-muted text-sm">Use system setting</Text>
         </Pressable>
 
-        <Text style={[styles.h, { color: colors.text, marginTop: 20, fontFamily: fonts.serif }]}>
-          Brand style
-        </Text>
-        <Text style={[styles.p, { color: colors.textMuted, marginBottom: 8 }]}>
+        <Text className="font-serif text-[22px] font-bold mt-5 text-fg">Brand style</Text>
+        <Text className="font-serif text-base leading-7 text-muted mb-2">
           Swiss is the current chrome. Magazine restores the Chomsky / paper look.
         </Text>
         {(["swiss", "magazine"] as BrandStyle[]).map((style) => {
-          const active = brandStyle === style;
+          const isSelected = brandStyle === style;
           return (
             <Pressable
               key={style}
               onPress={() => setBrandStyle(style)}
-              style={StyleSheet.flatten([
-                styles.themeRow,
-                {
-                  borderColor: active ? colors.accent : colors.border,
-                  marginTop: 8,
-                  backgroundColor: active ? colors.accentSoft : "transparent",
-                },
-              ])}
+              className={[
+                "border p-3.5 flex-row justify-between items-center mt-2",
+                isSelected ? "border-accent bg-accent-soft" : "border-border bg-transparent",
+              ].join(" ")}
             >
-              <Text style={[styles.p, { color: colors.text }]}>
+              <Text className="font-serif text-base leading-7 text-fg">
                 {BRAND_STYLE_LABELS[style]}
               </Text>
-              <Text style={{ color: colors.accent, fontWeight: "700" }}>
-                {active ? "Selected" : "Use"}
-              </Text>
+              <Text className="text-accent font-bold">{isSelected ? "Selected" : "Use"}</Text>
             </Pressable>
           );
         })}
       </View>
 
-      <View style={styles.block}>
-        <Text style={[styles.h, { color: colors.text }]}>Public profile</Text>
-        <Text style={[styles.hint, { color: colors.textMuted }]}>
+      <View className="mt-3 gap-2.5">
+        <Text className="font-serif text-[22px] font-bold text-fg">Public profile</Text>
+        <Text className="font-serif text-[15px] leading-6 text-muted">
           Claim a handle to get `/u/yourname`. Work stays private until you publish.
         </Text>
         {(
@@ -196,19 +185,19 @@ export default function SettingsScreen() {
             ["Birth place", birthPlace, setBirthPlace, ""],
           ] as const
         ).map(([label, value, set, ph]) => (
-          <View key={label} style={{ gap: 4 }}>
-            <Text style={[styles.label, { color: colors.textMuted }]}>{label}</Text>
+          <View key={label} className="gap-1">
+            <Text className="text-xs tracking-wide uppercase font-bold text-muted">{label}</Text>
             <TextInput
               value={value}
               onChangeText={set}
               placeholder={ph}
-              placeholderTextColor={colors.textSubtle}
-              style={[styles.input, { borderColor: colors.border, color: colors.text }]}
+              placeholderTextColorClassName="text-subtle"
+              className="border border-border px-3 py-2.5 text-base text-fg bg-bg-elevated"
               autoCapitalize={label === "Handle" ? "none" : "sentences"}
             />
           </View>
         ))}
-        {profileMsg ? <Text style={[styles.p, { color: colors.accent }]}>{profileMsg}</Text> : null}
+        {profileMsg ? <Text className="font-serif text-base leading-7 text-accent">{profileMsg}</Text> : null}
         <PrimaryButton
           label="Save profile"
           onPress={async () => {
@@ -237,12 +226,12 @@ export default function SettingsScreen() {
         />
       </View>
 
-      <View style={styles.actions}>
+      <View className="flex-row flex-wrap gap-3 mt-4">
         {active ? (
           <PrimaryButton label="Manage billing" onPress={openPortal} />
         ) : (
           <Link href="/pricing" asChild>
-            <PrimaryButton label="Start free trial" style={{ backgroundColor: colors.textMuted }} />
+            <PrimaryButton label="Start free trial" className="bg-muted" />
           </Link>
         )}
         <Link href="/studio" asChild>
@@ -250,7 +239,7 @@ export default function SettingsScreen() {
         </Link>
         <PrimaryButton
           label="Sign out"
-          style={{ backgroundColor: colors.textMuted }}
+          className="bg-muted"
           onPress={async () => {
             await signOut();
             router.replace("/");
@@ -260,33 +249,3 @@ export default function SettingsScreen() {
     </Wrapper>
   );
 }
-
-const styles = StyleSheet.create({
-  wrap: { paddingVertical: 48, gap: 14 },
-  eyebrow: {
-    fontSize: 12,
-    letterSpacing: 1.8,
-    textTransform: "uppercase",
-    fontWeight: "700",
-  },
-  title: { fontFamily: Fonts.serif, fontSize: 36, fontWeight: "700" },
-  h: { fontFamily: Fonts.serif, fontSize: 22, fontWeight: "700" },
-  p: { fontFamily: Fonts.serif, fontSize: 16, lineHeight: 28 },
-  hint: { fontFamily: Fonts.serif, fontSize: 15, lineHeight: 24 },
-  label: { fontSize: 12, letterSpacing: 0.6, textTransform: "uppercase", fontWeight: "700" },
-  block: { marginTop: 12, gap: 10 },
-  themeRow: {
-    borderWidth: StyleSheet.hairlineWidth,
-    padding: 14,
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-  },
-  input: {
-    borderWidth: StyleSheet.hairlineWidth,
-    paddingHorizontal: 12,
-    paddingVertical: 10,
-    fontSize: 16,
-  },
-  actions: { flexDirection: "row", flexWrap: "wrap", gap: 12, marginTop: 16 },
-});

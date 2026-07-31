@@ -1,4 +1,4 @@
-import { Pressable, Text, View, StyleSheet, Platform } from "react-native";
+import { Pressable, Text, View, Platform } from "react-native";
 import { router } from "expo-router";
 import { useAuth } from "@/lib/auth";
 
@@ -19,16 +19,30 @@ const NODES: Node[] = [
   { id: "studio", label: "Studio", href: "/studio", top: "68%", left: "68%" },
 ];
 
+const LINES = [
+  { top: "28%", left: "40%", width: "28%", rotate: "-18deg" },
+  { top: "38%", left: "30%", width: "32%", rotate: "22deg" },
+  { top: "58%", left: "28%", width: "36%", rotate: "-8deg" },
+  { top: "62%", left: "48%", width: "24%", rotate: "30deg" },
+] as const;
+
 /** Soft “mind map” of Aftercare strategies — pressable nodes. */
 export function StrategyMap() {
   const { user } = useAuth();
   return (
-    <View style={styles.wrap}>
-      {/* Decorative connectors */}
-      <View style={[styles.line, { top: "28%", left: "40%", width: "28%", transform: [{ rotate: "-18deg" }] }]} />
-      <View style={[styles.line, { top: "38%", left: "30%", width: "32%", transform: [{ rotate: "22deg" }] }]} />
-      <View style={[styles.line, { top: "58%", left: "28%", width: "36%", transform: [{ rotate: "-8deg" }] }]} />
-      <View style={[styles.line, { top: "62%", left: "48%", width: "24%", transform: [{ rotate: "30deg" }] }]} />
+    <View className="relative my-2 min-h-[220px] w-full">
+      {LINES.map((line, i) => (
+        <View
+          key={i}
+          className="absolute h-px bg-white/35"
+          style={{
+            top: line.top,
+            left: line.left,
+            width: line.width,
+            transform: [{ rotate: line.rotate }],
+          }}
+        />
+      ))}
 
       {NODES.map((n) => (
         <Pressable
@@ -40,46 +54,15 @@ export function StrategyMap() {
             }
             router.push(n.href as `/`);
           }}
-          style={StyleSheet.flatten([
-            styles.node,
+          className="absolute rounded-full border border-white/20 bg-[rgba(12,12,14,0.82)] px-3 py-2"
+          style={[
             { top: n.top, left: n.left },
-          ])}
+            Platform.OS === "web" ? ({ backdropFilter: "blur(8px)" } as object) : null,
+          ]}
         >
-          <Text style={styles.nodeText}>{n.label}</Text>
+          <Text className="text-xs font-semibold tracking-[0.2px] text-inverse">{n.label}</Text>
         </Pressable>
       ))}
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  wrap: {
-    position: "relative",
-    width: "100%",
-    minHeight: 220,
-    marginVertical: 8,
-  },
-  line: {
-    position: "absolute",
-    height: StyleSheet.hairlineWidth,
-    backgroundColor: "rgba(255,255,255,0.35)",
-  },
-  node: {
-    position: "absolute",
-    paddingHorizontal: 12,
-    paddingVertical: 8,
-    borderRadius: 999,
-    backgroundColor: "rgba(12,12,14,0.82)",
-    borderWidth: StyleSheet.hairlineWidth,
-    borderColor: "rgba(255,255,255,0.22)",
-    ...(Platform.OS === "web"
-      ? ({ backdropFilter: "blur(8px)" } as object)
-      : null),
-  },
-  nodeText: {
-    color: "#FFFFFF",
-    fontSize: 12,
-    fontWeight: "600",
-    letterSpacing: 0.2,
-  },
-});

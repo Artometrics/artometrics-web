@@ -1,8 +1,6 @@
 import { useCallback, useState } from "react";
-import { Pressable, Text, TextInput, View, StyleSheet } from "react-native";
+import { Pressable, Text, TextInput, View } from "react-native";
 import { Link, useFocusEffect } from "expo-router";
-import { Fonts } from "@/constants/Colors";
-import { useTheme } from "@/lib/theme";
 import { useAuth } from "@/lib/auth";
 import { addComment, listComments, type CommentRow } from "@/lib/platform/social";
 
@@ -13,7 +11,6 @@ export function CommentThread({
   targetKind: "report" | "member_post";
   targetId: string;
 }) {
-  const { colors } = useTheme();
   const { user } = useAuth();
   const [comments, setComments] = useState<CommentRow[]>([]);
   const [body, setBody] = useState("");
@@ -38,38 +35,35 @@ export function CommentThread({
   const replies = (parentId: string) => comments.filter((c) => c.parent_id === parentId);
 
   return (
-    <View style={[styles.wrap, { borderTopColor: colors.border }]}>
-      <Text style={[styles.h, { color: colors.text }]}>Comments</Text>
-      <Text style={[styles.hint, { color: colors.textMuted }]}>
+    <View className="mt-9 pt-7 border-t border-border gap-3">
+      <Text className="font-serif text-2xl font-bold text-fg">Comments</Text>
+      <Text className="font-serif text-[15px] leading-6 text-muted">
         Thoughtful notes welcome — keep it longform.
       </Text>
 
       {!user ? (
-        <Text style={[styles.hint, { color: colors.textMuted }]}>
+        <Text className="font-serif text-[15px] leading-6 text-muted">
           <Link href="/login">
-            <Text style={{ color: colors.accent }}>Sign in</Text>
+            <Text className="text-accent">Sign in</Text>
           </Link>{" "}
           to join the conversation.
         </Text>
       ) : (
-        <View style={{ gap: 8 }}>
+        <View className="gap-2">
           {replyTo ? (
             <Pressable onPress={() => setReplyTo(null)}>
-              <Text style={{ color: colors.accent, fontSize: 13 }}>Cancel reply</Text>
+              <Text className="text-accent text-[13px]">Cancel reply</Text>
             </Pressable>
           ) : null}
           <TextInput
             value={body}
             onChangeText={setBody}
             placeholder={replyTo ? "Write a reply…" : "Add a comment…"}
-            placeholderTextColor={colors.textSubtle}
+            placeholderTextColorClassName="text-subtle"
             multiline
-            style={[
-              styles.input,
-              { borderColor: colors.border, color: colors.text, backgroundColor: colors.bgElevated },
-            ]}
+            className="border border-border min-h-[88px] p-3 font-serif text-base text-fg bg-bg-elevated"
           />
-          {error ? <Text style={{ color: colors.accent }}>{error}</Text> : null}
+          {error ? <Text className="text-accent">{error}</Text> : null}
           <Pressable
             onPress={async () => {
               setError(null);
@@ -82,41 +76,38 @@ export function CommentThread({
                 setError(e instanceof Error ? e.message : "Could not post");
               }
             }}
-            style={StyleSheet.flatten([styles.postBtn, { backgroundColor: colors.text }])}
+            className="self-start px-4 py-2.5 bg-fg"
           >
-            <Text style={[styles.postBtnText, { color: colors.inverse }]}>Post</Text>
+            <Text className="font-bold text-sm text-inverse">Post</Text>
           </Pressable>
         </View>
       )}
 
-      <View style={styles.list}>
+      <View className="gap-[18px] mt-2">
         {roots.map((c) => (
-          <View key={c.id} style={styles.item}>
-            <Text style={[styles.author, { color: colors.accent }]}>
+          <View key={c.id} className="gap-1.5">
+            <Text className="text-[11px] tracking-[1.1px] uppercase font-bold text-accent">
               {c.profiles?.handle
                 ? `@${c.profiles.handle}`
                 : c.profiles?.display_name || "Member"}
             </Text>
-            <Text style={[styles.body, { color: colors.text }]}>{c.body}</Text>
+            <Text className="font-serif text-base leading-[26px] text-fg">{c.body}</Text>
             {user ? (
               <Pressable onPress={() => setReplyTo(c.id)} hitSlop={8}>
-                <Text style={{ color: colors.textSubtle, fontSize: 13 }}>Reply</Text>
+                <Text className="text-subtle text-[13px]">Reply</Text>
               </Pressable>
             ) : null}
             {replies(c.id).map((r) => (
               <View
                 key={r.id}
-                style={StyleSheet.flatten([
-                  styles.reply,
-                  { borderLeftColor: colors.border },
-                ])}
+                className="ml-3.5 mt-2.5 pl-3 border-l-2 border-border gap-1"
               >
-                <Text style={[styles.author, { color: colors.accent }]}>
+                <Text className="text-[11px] tracking-[1.1px] uppercase font-bold text-accent">
                   {r.profiles?.handle
                     ? `@${r.profiles.handle}`
                     : r.profiles?.display_name || "Member"}
                 </Text>
-                <Text style={[styles.body, { color: colors.text }]}>{r.body}</Text>
+                <Text className="font-serif text-base leading-[26px] text-fg">{r.body}</Text>
               </View>
             ))}
           </View>
@@ -125,44 +116,3 @@ export function CommentThread({
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  wrap: {
-    marginTop: 36,
-    paddingTop: 28,
-    borderTopWidth: StyleSheet.hairlineWidth,
-    gap: 12,
-  },
-  h: { fontFamily: Fonts.serif, fontSize: 24, fontWeight: "700" },
-  hint: { fontFamily: Fonts.serif, fontSize: 15, lineHeight: 24 },
-  input: {
-    borderWidth: StyleSheet.hairlineWidth,
-    minHeight: 88,
-    padding: 12,
-    fontFamily: Fonts.serif,
-    fontSize: 16,
-    textAlignVertical: "top",
-  },
-  postBtn: {
-    alignSelf: "flex-start",
-    paddingHorizontal: 16,
-    paddingVertical: 10,
-  },
-  postBtnText: { fontWeight: "700", fontSize: 14 },
-  list: { gap: 18, marginTop: 8 },
-  item: { gap: 6 },
-  author: {
-    fontSize: 11,
-    letterSpacing: 1.1,
-    textTransform: "uppercase",
-    fontWeight: "700",
-  },
-  body: { fontFamily: Fonts.serif, fontSize: 16, lineHeight: 26 },
-  reply: {
-    marginLeft: 14,
-    marginTop: 10,
-    paddingLeft: 12,
-    borderLeftWidth: 2,
-    gap: 4,
-  },
-});

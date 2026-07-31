@@ -1,11 +1,9 @@
 import { useEffect, useState } from "react";
-import { Text, View, StyleSheet } from "react-native";
+import { Text, View } from "react-native";
 import { Link, router, useLocalSearchParams } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { PrimaryButton } from "@/components/PrimaryButton";
 import { PageSeo } from "@/components/PageSeo";
-import { Fonts } from "@/constants/Colors";
-import { useTheme } from "@/lib/theme";
 import { useAuth } from "@/lib/auth";
 import { paramString } from "@/lib/params";
 import { ensureProfileRow, getProfile } from "@/lib/profile/service";
@@ -14,7 +12,6 @@ import { ensureProfileRow, getProfile } from "@/lib/profile/service";
  * Account entry hub — billing/settings live at /settings; identity at /me and /u/[handle].
  */
 export default function AccountScreen() {
-  const { colors } = useTheme();
   const { user, loading } = useAuth();
   const params = useLocalSearchParams<{ checkout?: string | string[] }>();
   const checkoutSuccess = paramString(params.checkout) === "success";
@@ -42,40 +39,37 @@ export default function AccountScreen() {
 
   if (loading) {
     return (
-      <Wrapper variant="narrow" style={styles.wrap}>
-        <Text style={[styles.p, { color: colors.textMuted }]}>Loading account…</Text>
+      <Wrapper variant="narrow" className="gap-3.5 py-12">
+        <Text className="font-serif text-base leading-7 text-muted">Loading account…</Text>
       </Wrapper>
     );
   }
 
   if (!user) {
     return (
-      <Wrapper variant="narrow" style={styles.wrap}>
+      <Wrapper variant="narrow" className="gap-3.5 py-12">
         <PageSeo title="Account" description="Artometrics members area." path="/account" />
         {checkoutSuccess ? (
-          <View
-            style={[
-              styles.successBanner,
-              { backgroundColor: colors.accentSoft, borderColor: colors.accent },
-            ]}
-          >
-            <Text style={[styles.successTitle, { color: colors.accent }]}>Checkout complete</Text>
-            <Text style={[styles.p, { color: colors.text }]}>
+          <View className="gap-1.5 border border-accent bg-accent-soft px-4 py-3.5 mb-1">
+            <Text className="text-xs tracking-[1.6px] uppercase font-bold text-accent">
+              Checkout complete
+            </Text>
+            <Text className="font-serif text-base leading-7 text-fg">
               Log in with the same email you used at checkout to open your membership.
             </Text>
           </View>
         ) : null}
-        <Text style={[styles.eyebrow, { color: colors.accent }]}>Account</Text>
-        <Text style={[styles.title, { color: colors.text }]}>Members area</Text>
-        <Text style={[styles.p, { color: colors.textMuted }]}>
+        <Text className="text-xs tracking-[1.8px] uppercase font-bold text-accent">Account</Text>
+        <Text className="font-serif text-[36px] font-bold text-fg">Members area</Text>
+        <Text className="font-serif text-base leading-7 text-muted">
           Log in for Studio, your profile, and membership.
         </Text>
-        <View style={styles.actions}>
+        <View className="flex-row flex-wrap gap-3 mt-2">
           <Link href="/login" asChild>
             <PrimaryButton label="Log in" />
           </Link>
           <Link href="/signup" asChild>
-            <PrimaryButton label="Sign up" style={{ backgroundColor: colors.textMuted }} />
+            <PrimaryButton label="Sign up" className="bg-muted" />
           </Link>
         </View>
       </Wrapper>
@@ -83,70 +77,37 @@ export default function AccountScreen() {
   }
 
   return (
-    <Wrapper variant="narrow" style={styles.wrap}>
+    <Wrapper variant="narrow" className="gap-3.5 py-12">
       <PageSeo title="Account" description="Your Artometrics membership." path="/account" />
       {checkoutSuccess ? (
-        <View
-          style={[
-            styles.successBanner,
-            { backgroundColor: colors.accentSoft, borderColor: colors.accent },
-          ]}
-        >
-          <Text style={[styles.successTitle, { color: colors.accent }]}>You are subscribed</Text>
-          <Text style={[styles.p, { color: colors.text }]}>
+        <View className="gap-1.5 border border-accent bg-accent-soft px-4 py-3.5 mb-1">
+          <Text className="text-xs tracking-[1.6px] uppercase font-bold text-accent">
+            You are subscribed
+          </Text>
+          <Text className="font-serif text-base leading-7 text-fg">
             Welcome — open Studio or finish your public profile.
           </Text>
         </View>
       ) : null}
-      <Text style={[styles.eyebrow, { color: colors.accent }]}>Account</Text>
-      <Text style={[styles.title, { color: colors.text }]}>Welcome back</Text>
-      <Text style={[styles.p, { color: colors.textMuted }]}>{user.email}</Text>
-      <View style={styles.actions}>
+      <Text className="text-xs tracking-[1.8px] uppercase font-bold text-accent">Account</Text>
+      <Text className="font-serif text-[36px] font-bold text-fg">Welcome back</Text>
+      <Text className="font-serif text-base leading-7 text-muted">{user.email}</Text>
+      <View className="flex-row flex-wrap gap-3 mt-2">
         <PrimaryButton label="Open Studio" onPress={() => router.push("/studio")} />
-        <PrimaryButton
-          label="Your hub"
-          onPress={() => router.push("/me")}
-          style={{ backgroundColor: colors.textMuted }}
-        />
+        <PrimaryButton label="Your hub" onPress={() => router.push("/me")} className="bg-muted" />
         <PrimaryButton
           label="Settings"
           onPress={() => router.push("/settings")}
-          style={{ backgroundColor: colors.textMuted }}
+          className="bg-muted"
         />
         {handle ? (
           <PrimaryButton
             label={`@${handle}`}
             onPress={() => router.push(`/u/${handle}`)}
-            style={{ backgroundColor: colors.textMuted }}
+            className="bg-muted"
           />
         ) : null}
       </View>
     </Wrapper>
   );
 }
-
-const styles = StyleSheet.create({
-  wrap: { paddingVertical: 48, gap: 14 },
-  successBanner: {
-    borderWidth: 1,
-    paddingHorizontal: 16,
-    paddingVertical: 14,
-    gap: 6,
-    marginBottom: 4,
-  },
-  successTitle: {
-    fontSize: 12,
-    letterSpacing: 1.6,
-    textTransform: "uppercase",
-    fontWeight: "700",
-  },
-  eyebrow: {
-    fontSize: 12,
-    letterSpacing: 1.8,
-    textTransform: "uppercase",
-    fontWeight: "700",
-  },
-  title: { fontFamily: Fonts.serif, fontSize: 36, fontWeight: "700" },
-  p: { fontFamily: Fonts.serif, fontSize: 16, lineHeight: 28 },
-  actions: { flexDirection: "row", flexWrap: "wrap", gap: 12, marginTop: 8 },
-});

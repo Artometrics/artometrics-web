@@ -4,7 +4,6 @@ import {
   Alert,
   Platform,
   Pressable,
-  StyleSheet,
   Text,
   View,
 } from "react-native";
@@ -31,7 +30,7 @@ const NAV = [
 ];
 
 export default function PaletteHomeScreen() {
-  const { colors, fonts } = useTheme();
+  const { colors } = useTheme();
   const { user, ready } = useRequireAuth();
   const [items, setItems] = useState<SavedPalette[]>([]);
   const [loading, setLoading] = useState(true);
@@ -80,78 +79,66 @@ export default function PaletteHomeScreen() {
 
   if (!ready || !user) {
     return (
-      <Wrapper variant="narrow" style={styles.wrap}>
-        <Text style={{ color: colors.textMuted }}>Opening Color Kit…</Text>
+      <Wrapper variant="narrow" className="gap-2.5 py-8">
+        <Text className="text-muted">Opening Color Kit…</Text>
       </Wrapper>
     );
   }
 
   return (
-    <Wrapper style={styles.wrap}>
+    <Wrapper className="gap-2.5 py-8">
       <PageSeo
         title="Color Kit"
         description="Save color palettes or get season recommendations from a selfie or photo."
         path="/tools/palette"
       />
       <ToolsSubnav links={NAV} />
-      <Text style={[styles.eyebrow, { color: colors.accent }]}>Studio</Text>
-      <Text style={[styles.title, { color: colors.text, fontFamily: fonts.serif }]}>
-        Color Kit
-      </Text>
+      <Text className="text-xs tracking-[1.8px] uppercase font-bold text-accent">Studio</Text>
+      <Text className="font-serif text-[36px] font-bold text-fg">Color Kit</Text>
       <ToolsAccent />
-      <Text style={[styles.deck, { color: colors.textMuted, fontFamily: fonts.serif }]}>
+      <Text className="font-serif text-base leading-[26px] max-w-[560px] text-muted">
         Analyze a photo for season + palette recommendations, then save looks to your profile.
       </Text>
 
       <PrimaryButton
         label="Analyze a photo"
         onPress={() => router.push("/tools/palette/analyze")}
-        style={{ marginTop: 12 }}
+        className="mt-3"
       />
 
       {loading ? (
-        <ActivityIndicator style={{ marginTop: 28 }} color={colors.accent} />
+        <ActivityIndicator className="mt-7" color={colors.accent} />
       ) : items.length === 0 ? (
-        <View
-          style={[
-            styles.empty,
-            { borderColor: colors.border, backgroundColor: colors.bgElevated },
-          ]}
-        >
-          <Text style={[styles.emptyTitle, { color: colors.text, fontFamily: fonts.serif }]}>
-            No saved palettes
-          </Text>
-          <Text style={[styles.deck, { color: colors.textMuted }]}>
+        <View className="mt-5 border border-border bg-bg-elevated p-[22px] gap-2">
+          <Text className="text-[22px] font-bold font-serif text-fg">No saved palettes</Text>
+          <Text className="font-serif text-base leading-[26px] max-w-[560px] text-muted">
             Upload a selfie or photo to get your suggested season and swatches.
           </Text>
         </View>
       ) : (
-        <View style={styles.list}>
+        <View className="mt-4 gap-3">
           {items.map((pal) => {
             const season = pal.seasonId ? seasonById(pal.seasonId) : null;
             return (
-              <View key={pal.id} style={[styles.card, { borderColor: colors.border }]}>
-                <Text style={[styles.cardTitle, { color: colors.text, fontFamily: fonts.serif }]}>
-                  {pal.title}
-                </Text>
+              <View key={pal.id} className="border border-border p-4 gap-2">
+                <Text className="text-xl font-bold font-serif text-fg">{pal.title}</Text>
                 {season ? (
-                  <Text style={[styles.meta, { color: colors.accent }]}>
+                  <Text className="text-[13px] leading-5 text-accent">
                     {season.name} — {season.tagline}
                   </Text>
                 ) : null}
-                <View style={styles.swatches}>
+                <View className="flex-row flex-wrap gap-2 mt-1">
                   {pal.colors.map((c) => (
                     <View
                       key={c}
-                      style={[styles.swatch, { backgroundColor: c, borderColor: colors.border }]}
+                      className="w-9 h-12 border border-border rounded-md"
+                      style={{ backgroundColor: c }}
                     />
                   ))}
                 </View>
-                <View style={styles.row}>
+                <View className="flex-row gap-4 mt-1.5">
                   <Pressable onPress={() => void onExport(pal)} hitSlop={8}>
-                    <Text style={{ color: colors.accent, fontWeight: "700", fontSize: 13 }}>
-                      Export
-                    </Text>
+                    <Text className="text-accent font-bold text-[13px]">Export</Text>
                   </Pressable>
                   <Pressable
                     onPress={() =>
@@ -166,7 +153,7 @@ export default function PaletteHomeScreen() {
                     }
                     hitSlop={8}
                   >
-                    <Text style={{ color: colors.textMuted, fontSize: 13 }}>Delete</Text>
+                    <Text className="text-muted text-[13px]">Delete</Text>
                   </Pressable>
                 </View>
               </View>
@@ -177,38 +164,3 @@ export default function PaletteHomeScreen() {
     </Wrapper>
   );
 }
-
-const styles = StyleSheet.create({
-  wrap: { paddingVertical: 32, gap: 10 },
-  eyebrow: {
-    fontSize: 12,
-    letterSpacing: 1.8,
-    textTransform: "uppercase",
-    fontWeight: "700",
-  },
-  title: { fontSize: 36, fontWeight: "700" },
-  deck: { fontSize: 16, lineHeight: 26, maxWidth: 560 },
-  empty: {
-    marginTop: 20,
-    borderWidth: StyleSheet.hairlineWidth,
-    padding: 22,
-    gap: 8,
-  },
-  emptyTitle: { fontSize: 22, fontWeight: "700" },
-  list: { marginTop: 16, gap: 12 },
-  card: {
-    borderWidth: StyleSheet.hairlineWidth,
-    padding: 16,
-    gap: 8,
-  },
-  cardTitle: { fontSize: 20, fontWeight: "700" },
-  meta: { fontSize: 13, lineHeight: 20 },
-  swatches: { flexDirection: "row", flexWrap: "wrap", gap: 8, marginTop: 4 },
-  swatch: {
-    width: 36,
-    height: 48,
-    borderWidth: StyleSheet.hairlineWidth,
-    borderRadius: 6,
-  },
-  row: { flexDirection: "row", gap: 16, marginTop: 6 },
-});

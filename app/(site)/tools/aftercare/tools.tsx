@@ -2,7 +2,6 @@ import { useCallback, useMemo, useState } from "react";
 import {
   ActivityIndicator,
   Pressable,
-  StyleSheet,
   Text,
   TextInput,
   View,
@@ -16,7 +15,6 @@ import { StudioDateField, StudioTimeField } from "@/components/studio/StudioDate
 import { StudioPlaceField } from "@/components/studio/StudioPlaceField";
 import { StudioSelect } from "@/components/studio/StudioSelect";
 import { PrimaryButton } from "@/components/PrimaryButton";
-import { Fonts } from "@/constants/Colors";
 import { useTheme } from "@/lib/theme";
 import { useRequireAuth } from "@/lib/tools/requireAuth";
 import { apiFetch } from "@/lib/supabase/client";
@@ -229,8 +227,8 @@ export default function AftercareBirthToolsScreen() {
 
   if (!ready) {
     return (
-      <Wrapper style={styles.wrap}>
-        <Text style={{ color: colors.textMuted }}>Loading…</Text>
+      <Wrapper className="gap-2.5 py-8 flex-1">
+        <Text className="text-muted">Loading…</Text>
       </Wrapper>
     );
   }
@@ -242,7 +240,7 @@ export default function AftercareBirthToolsScreen() {
   ].filter(Boolean);
 
   return (
-    <Wrapper style={styles.wrap}>
+    <Wrapper className="gap-2.5 py-8 flex-1">
       <PageSeo
         title="Birth tools · Aftercare"
         description="Birth profile and reflective calculators on Artometrics Aftercare."
@@ -256,8 +254,8 @@ export default function AftercareBirthToolsScreen() {
           { label: "Birth tools" },
         ]}
       />
-      <Text style={[styles.title, { color: colors.text }]}>Birth tools</Text>
-      <Text style={[styles.deck, { color: colors.textMuted }]}>
+      <Text className="font-serif text-[36px] font-bold text-fg">Birth tools</Text>
+      <Text className="font-serif text-base leading-[26px] max-w-[640px] text-muted">
         Name numbers, life path, and sun notes — reflective tools, not science, medical, or
         financial advice.
       </Text>
@@ -266,41 +264,25 @@ export default function AftercareBirthToolsScreen() {
         <ActivityIndicator color={colors.accent} style={{ marginTop: 16 }} />
       ) : (
         <>
-          <View style={styles.split}>
-            <View
-              style={StyleSheet.flatten([
-                styles.panel,
-                {
-                  borderColor: colors.border,
-                  backgroundColor: colors.bgElevated,
-                  zIndex: 20,
-                },
-              ])}
-            >
-              <Text style={[styles.sectionLabel, { color: colors.textMuted }]}>
+          <View className="mt-2 gap-5 flex-row flex-wrap items-start">
+            <View className="border border-border rounded-sm p-[18px] gap-3 bg-bg-elevated z-20 flex-grow flex-[1] min-w-[320px] max-w-[420px]">
+              <Text className="text-xs tracking-wide uppercase font-bold text-muted">
                 Profile
               </Text>
               <View style={{ gap: 6 }}>
-                <Text style={[styles.fieldLabel, { color: colors.textMuted }]}>
+                <Text className="text-xs tracking-wide uppercase font-bold text-muted">
                   Display name
                 </Text>
                 <TextInput
                   value={displayName}
                   onChangeText={setDisplayName}
                   placeholder="Name for numerology"
-                  placeholderTextColor={colors.textSubtle}
-                  style={StyleSheet.flatten([
-                    styles.input,
-                    {
-                      borderColor: colors.border,
-                      color: colors.text,
-                      backgroundColor: colors.bg,
-                    },
-                  ])}
+                  placeholderTextColorClassName="text-subtle"
+                  className="border border-border rounded-sm min-h-11 px-3 py-2.5 text-base text-fg bg-bg"
                 />
               </View>
               {badgeParts.length ? (
-                <Text style={[styles.badges, { color: colors.accent }]}>
+                <Text className="text-sm text-accent">
                   {badgeParts.join(" · ")}
                 </Text>
               ) : null}
@@ -331,10 +313,10 @@ export default function AftercareBirthToolsScreen() {
               />
 
               {error ? (
-                <Text style={[styles.error, { color: colors.accent }]}>{error}</Text>
+                <Text className="font-serif text-[15px] text-accent">{error}</Text>
               ) : null}
               {savedMsg ? (
-                <Text style={[styles.saved, { color: colors.textMuted }]}>{savedMsg}</Text>
+                <Text className="text-sm text-muted">{savedMsg}</Text>
               ) : null}
               <PrimaryButton
                 label={saving ? "Saving…" : "Save profile"}
@@ -343,21 +325,16 @@ export default function AftercareBirthToolsScreen() {
               />
             </View>
 
-            <View style={styles.deckCol}>
-              <View
-                style={StyleSheet.flatten([
-                  styles.todayStrip,
-                  { borderColor: colors.border, backgroundColor: colors.bgElevated },
-                ])}
-              >
-                <Text style={[styles.sectionLabel, { color: colors.textMuted }]}>Today</Text>
-                <Text style={[styles.todayLine, { color: colors.text }]}>
+            <View className="flex-grow flex-[1] min-w-[280px] gap-3">
+              <View className="border border-border p-3.5 gap-1.5 bg-bg-elevated">
+                <Text className="text-xs tracking-wide uppercase font-bold text-muted">Today</Text>
+                <Text className="font-serif text-base text-fg">
                   {age != null ? `Age ${age}` : "Add a birth date"}
                   {nextBday
                     ? ` · Next birthday in ${nextBday.daysUntil} day${nextBday.daysUntil === 1 ? "" : "s"}`
                     : ""}
                 </Text>
-                <Text style={[styles.todayMeta, { color: colors.textSubtle }]}>
+                <Text className="text-xs text-subtle">
                   Moon: {moon.name}
                   {typeof moon.illumination === "number" ? ` · ~${moon.illumination}% lit` : ""}
                   {insight?.note ? ` · ${sunSign ?? "—"} season` : ""}
@@ -395,11 +372,11 @@ export default function AftercareBirthToolsScreen() {
                 </View>
               ) : null}
 
-              <Text style={[styles.sectionLabel, { color: colors.textMuted }]}>
+              <Text className="text-xs tracking-wide uppercase font-bold text-muted">
                 Reading deck
               </Text>
               {!displayName.trim() && !validDate ? (
-                <Text style={[styles.note, { color: colors.textMuted }]}>
+                <Text className="text-sm text-muted">
                   Enter a display name and birth date to unlock Expression, Soul Urge, Life Path,
                   and sun readings.
                 </Text>
@@ -411,41 +388,35 @@ export default function AftercareBirthToolsScreen() {
                 return (
                   <View
                     key={card.id}
-                    style={StyleSheet.flatten([
-                      styles.readingCard,
-                      {
-                        borderColor: colors.border,
-                        backgroundColor: colors.bgElevated,
-                      },
-                    ])}
+                    className="border border-border p-3.5 gap-2 bg-bg-elevated"
                   >
                     <Pressable
                       onPress={() => setOpenReading(open ? null : card.id)}
-                      style={styles.readingHead}
+                      className="flex-row justify-between items-center gap-2"
                     >
-                      <Text style={[styles.readingBadge, { color: colors.accent }]}>
+                      <Text className="text-xs tracking-wide uppercase font-bold text-accent">
                         {card.badge}
                       </Text>
-                      <Text style={[styles.readingTitle, { color: colors.text }]}>
+                      <Text className="font-serif text-lg font-bold flex-1 text-fg">
                         {"title" in card.reading
                           ? card.reading.title
                           : `${(card.reading as SunReading).sign} · ${(card.reading as SunReading).element} / ${(card.reading as SunReading).modality}`}
                       </Text>
-                      <Text style={[styles.chev, { color: colors.textSubtle }]}>
+                      <Text className="text-subtle text-lg">
                         {open ? "−" : "+"}
                       </Text>
                     </Pressable>
                     {open ? (
-                      <View style={styles.readingBody}>
+                      <View className="gap-2 pt-1">
                         {"keywords" in card.reading ? (
-                          <Text style={[styles.keywords, { color: colors.textMuted }]}>
+                          <Text className="text-sm text-muted">
                             {(card.reading as NumberReading).keywords.join(" · ")}
                           </Text>
                         ) : null}
-                        <Text style={[styles.essay, { color: colors.text }]}>
+                        <Text className="font-serif text-[15px] leading-6 text-fg">
                           {card.reading.essay}
                         </Text>
-                        <Text style={[styles.prompt, { color: colors.textMuted }]}>
+                        <Text className="text-sm italic text-muted">
                           {"seasonPrompt" in card.reading
                             ? (card.reading as NumberReading).seasonPrompt
                             : (card.reading as SunReading).seasonNote}
@@ -456,7 +427,7 @@ export default function AftercareBirthToolsScreen() {
                 );
               })}
 
-              <Text style={[styles.disclaimer, { color: colors.textSubtle }]}>
+              <Text className="text-xs leading-5 text-subtle">
                 Reflective tools for creative self-inquiry. Not science, astrology-as-fact, medical,
                 or financial advice.
               </Text>
@@ -468,88 +439,3 @@ export default function AftercareBirthToolsScreen() {
   );
 }
 
-const styles = StyleSheet.create({
-  wrap: { paddingVertical: 32, gap: 10 },
-  title: { fontFamily: Fonts.serif, fontSize: 36, fontWeight: "700" },
-  deck: { fontFamily: Fonts.serif, fontSize: 16, lineHeight: 26, maxWidth: 640 },
-  split: {
-    marginTop: 8,
-    gap: 20,
-    flexDirection: "row",
-    flexWrap: "wrap",
-    alignItems: "flex-start",
-  },
-  panel: {
-    flexGrow: 1,
-    flexBasis: 320,
-    maxWidth: 420,
-    borderWidth: StyleSheet.hairlineWidth,
-    borderRadius: 2,
-    padding: 18,
-    gap: 12,
-  },
-  deckCol: { flexGrow: 1, flexBasis: 320, gap: 12, minWidth: 280 },
-  sectionLabel: {
-    fontSize: 12,
-    letterSpacing: 0.8,
-    textTransform: "uppercase",
-    fontWeight: "700",
-  },
-  fieldLabel: {
-    fontSize: 12,
-    letterSpacing: 0.8,
-    textTransform: "uppercase",
-    fontWeight: "700",
-  },
-  input: {
-    borderWidth: StyleSheet.hairlineWidth,
-    borderRadius: 2,
-    minHeight: 44,
-    paddingHorizontal: 12,
-    paddingVertical: 10,
-    fontFamily: Fonts.serif,
-    fontSize: 16,
-  },
-  badges: {
-    fontFamily: Fonts.serif,
-    fontSize: 15,
-    lineHeight: 22,
-    fontWeight: "600",
-  },
-  error: { fontFamily: Fonts.serif, fontSize: 15 },
-  saved: { fontFamily: Fonts.serif, fontSize: 15 },
-  todayStrip: {
-    borderWidth: StyleSheet.hairlineWidth,
-    borderRadius: 2,
-    padding: 14,
-    gap: 4,
-  },
-  todayLine: { fontFamily: Fonts.serif, fontSize: 18, fontWeight: "700" },
-  todayMeta: { fontSize: 13, lineHeight: 20 },
-  readingCard: {
-    borderWidth: StyleSheet.hairlineWidth,
-    borderRadius: 2,
-    overflow: "hidden",
-  },
-  readingHead: { padding: 14, gap: 4, paddingRight: 36 },
-  readingBadge: {
-    fontSize: 11,
-    letterSpacing: 1,
-    textTransform: "uppercase",
-    fontWeight: "700",
-  },
-  readingTitle: { fontFamily: Fonts.serif, fontSize: 20, fontWeight: "700", paddingRight: 12 },
-  chev: {
-    position: "absolute",
-    right: 14,
-    top: 14,
-    fontSize: 20,
-    fontWeight: "600",
-  },
-  readingBody: { paddingHorizontal: 14, paddingBottom: 16, gap: 10 },
-  keywords: { fontSize: 13, letterSpacing: 0.3 },
-  essay: { fontFamily: Fonts.serif, fontSize: 16, lineHeight: 26 },
-  prompt: { fontFamily: Fonts.serif, fontSize: 15, lineHeight: 24, fontStyle: "italic" },
-  note: { fontFamily: Fonts.serif, fontSize: 16, lineHeight: 26 },
-  disclaimer: { fontSize: 12, lineHeight: 18, marginTop: 4 },
-});

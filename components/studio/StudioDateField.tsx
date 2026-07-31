@@ -1,6 +1,4 @@
-import { Platform, Text, TextInput, View, StyleSheet } from "react-native";
-import { Fonts } from "@/constants/Colors";
-import { useTheme } from "@/lib/theme";
+import { Platform, Text, TextInput, View } from "react-native";
 
 export function StudioDateField({
   label,
@@ -13,26 +11,18 @@ export function StudioDateField({
   onChange: (value: string) => void;
   placeholder?: string;
 }) {
-  const { colors } = useTheme();
   return (
-    <View style={styles.wrap}>
-      <Text style={[styles.label, { color: colors.textMuted }]}>{label}</Text>
+    <View className="gap-1.5">
+      <Text className="text-xs font-bold uppercase tracking-[0.8px] text-muted">{label}</Text>
       <TextInput
         value={value}
         onChangeText={onChange}
         placeholder={placeholder}
-        placeholderTextColor={colors.textSubtle}
+        placeholderTextColorClassName="text-subtle"
         autoCapitalize="none"
         autoCorrect={false}
         {...(Platform.OS === "web" ? ({ type: "date" } as object) : null)}
-        style={StyleSheet.flatten([
-          styles.input,
-          {
-            borderColor: colors.border,
-            color: colors.text,
-            backgroundColor: colors.bgElevated,
-          },
-        ])}
+        className="min-h-[44px] rounded-[2px] border border-border bg-bg-elevated px-3 py-2.5 font-serif text-base text-fg outline-none"
       />
     </View>
   );
@@ -49,47 +39,19 @@ export function StudioTimeField({
   onChange: (value: string) => void;
   placeholder?: string;
 }) {
-  const { colors } = useTheme();
   return (
-    <View style={styles.wrap}>
-      <Text style={[styles.label, { color: colors.textMuted }]}>{label}</Text>
+    <View className="gap-1.5">
+      <Text className="text-xs font-bold uppercase tracking-[0.8px] text-muted">{label}</Text>
       <TextInput
         value={value}
         onChangeText={onChange}
         placeholder={placeholder}
-        placeholderTextColor={colors.textSubtle}
+        placeholderTextColorClassName="text-subtle"
         autoCapitalize="none"
         autoCorrect={false}
         {...(Platform.OS === "web" ? ({ type: "time" } as object) : null)}
-        style={StyleSheet.flatten([
-          styles.input,
-          {
-            borderColor: colors.border,
-            color: colors.text,
-            backgroundColor: colors.bgElevated,
-          },
-        ])}
+        className="min-h-[44px] rounded-[2px] border border-border bg-bg-elevated px-3 py-2.5 font-serif text-base text-fg outline-none"
       />
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  wrap: { gap: 6 },
-  label: {
-    fontSize: 12,
-    letterSpacing: 0.8,
-    textTransform: "uppercase",
-    fontWeight: "700",
-  },
-  input: {
-    borderWidth: StyleSheet.hairlineWidth,
-    borderRadius: 2,
-    minHeight: 44,
-    paddingHorizontal: 12,
-    paddingVertical: 10,
-    fontFamily: Fonts.serif,
-    fontSize: 16,
-    ...(Platform.OS === "web" ? ({ outlineStyle: "none" } as object) : null),
-  },
-});

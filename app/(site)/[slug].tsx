@@ -1,4 +1,5 @@
-import { Image, Text, View, StyleSheet, useWindowDimensions } from "react-native";
+import { Text, View, useWindowDimensions } from "react-native";
+import { Image } from "expo-image";
 import { useLocalSearchParams, Link } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { ArticleBody } from "@/components/ArticleBody";
@@ -10,8 +11,6 @@ import { TldrBox } from "@/components/TldrBox";
 import { MagazineCard } from "@/components/MagazineCard";
 import { CarouselRail } from "@/components/CarouselRail";
 import { PageSeo } from "@/components/PageSeo";
-import { Fonts } from "@/constants/Colors";
-import { useTheme } from "@/lib/theme";
 import { assetUrl } from "@/lib/assets";
 import {
   formatAuthorName,
@@ -52,7 +51,6 @@ export async function generateStaticParams() {
 }
 
 export default function ReportScreen() {
-  const { colors } = useTheme();
   const { width } = useWindowDimensions();
   const bleed = width < 900;
   const params = useLocalSearchParams<{ slug: string | string[] }>();
@@ -60,10 +58,10 @@ export default function ReportScreen() {
   const post = getBlogPost(slug);
   if (!post) {
     return (
-      <Wrapper style={styles.wrap}>
-        <Text style={[styles.title, { color: colors.text }]}>Report not found</Text>
+      <Wrapper className="gap-3 pt-10 pb-4">
+        <Text className="font-serif text-[36px] font-bold text-fg">Report not found</Text>
         <Link href="/blog">
-          <Text style={{ color: colors.accent }}>Back to reports</Text>
+          <Text className="text-accent">Back to reports</Text>
         </Link>
       </Wrapper>
     );
@@ -115,7 +113,7 @@ export default function ReportScreen() {
   ];
 
   return (
-    <View style={{ backgroundColor: colors.bg }}>
+    <View className="bg-bg">
       <PageSeo
         title={post.title}
         description={post.description}
@@ -125,22 +123,25 @@ export default function ReportScreen() {
       />
       <SeoJsonLd data={jsonLd} />
       {hero ? (
-        <Wrapper variant={bleed ? "bleed" : "magazine"} style={styles.heroWrap}>
+        <Wrapper variant={bleed ? "bleed" : "magazine"} className="pt-0 pb-2">
           <Image
             source={{ uri: hero }}
-            style={styles.hero}
-            resizeMode="cover"
+            className="w-full aspect-video max-h-[520px]"
+            contentFit="cover"
+            transition={200}
             accessibilityLabel={post.title}
           />
         </Wrapper>
       ) : null}
-      <Wrapper style={styles.front} variant="wide">
+      <Wrapper variant="wide" className="pt-9 pb-2 gap-4">
         {label ? (
-          <Text style={[styles.eyebrow, { color: colors.accent }]}>{label}</Text>
+          <Text className="text-xs tracking-[1.8px] uppercase font-bold text-accent">{label}</Text>
         ) : null}
-        <Text style={[styles.title, { color: colors.text }]}>{post.title}</Text>
-        <Text style={[styles.dek, { color: colors.textMuted }]}>{post.description}</Text>
-        <Text style={[styles.byline, { color: colors.text }]}>
+        <Text className="font-serif text-[36px] leading-[42px] font-bold tracking-tight text-fg">
+          {post.title}
+        </Text>
+        <Text className="font-serif text-xl leading-[30px] text-muted">{post.description}</Text>
+        <Text className="font-serif text-[15px] leading-[22px] mt-1 text-fg">
           By {authorLabel}
           {post.pubDate ? ` · ${formatDate(post.pubDate)}` : ""}
           {` · ${minutes} min read`}
@@ -155,30 +156,32 @@ export default function ReportScreen() {
         />
         <ArticleActions slug={post.slug} title={post.title} placement="top" />
       </Wrapper>
-      <Wrapper variant="wide" style={styles.article}>
+      <Wrapper variant="wide" className="pt-2 pb-8">
         <ArticleBody html={post.body} />
       </Wrapper>
       <Wrapper variant="wide">
         <ArticleActions slug={post.slug} title={post.title} placement="bottom" />
-        <View style={{ marginTop: 16 }}>
+        <View className="mt-4">
           <ClapButton targetKind="report" targetId={post.slug} />
         </View>
         <CommentThread targetKind="report" targetId={post.slug} />
       </Wrapper>
       {faq.length ? (
-        <Wrapper variant="wide" style={styles.faq}>
-          <Text style={[styles.faqTitle, { color: colors.text }]}>Frequently asked questions</Text>
+        <Wrapper variant="wide" className="pb-6 gap-2">
+          <Text className="font-sans text-xl font-extrabold mb-2 text-fg">
+            Frequently asked questions
+          </Text>
           {faq.map((item) => (
-            <View key={item.question} style={[styles.faqItem, { borderBottomColor: colors.border }]}>
-              <Text style={[styles.faqQ, { color: colors.text }]}>{item.question}</Text>
-              <Text style={[styles.faqA, { color: colors.textMuted }]}>{item.answer}</Text>
+            <View key={item.question} className="py-3 border-b border-border gap-1.5">
+              <Text className="text-base font-bold leading-[22px] text-fg">{item.question}</Text>
+              <Text className="text-[15px] leading-[22px] text-muted">{item.answer}</Text>
             </View>
           ))}
         </Wrapper>
       ) : null}
 
       {recommended.length ? (
-        <View style={styles.recommendedBlock}>
+        <View className="mt-2 mb-2">
           <CarouselRail title="Recommended reads" href="/blog">
             {recommended.map((r) => (
               <MagazineCard key={r.slug} post={r} variant="portrait" width={cardW} />
@@ -187,11 +190,16 @@ export default function ReportScreen() {
         </View>
       ) : null}
 
-      <Wrapper variant="prose" style={[styles.adjacent, { borderTopColor: colors.text }]}>
+      <Wrapper
+        variant="prose"
+        className="flex-row justify-between gap-6 py-8 border-t-2 border-fg mb-6"
+      >
         {adjacent.previous ? (
           <Link href={adjacent.previous.href as `/${string}`}>
-            <Text style={[styles.adjLabel, { color: colors.textSubtle }]}>Previous</Text>
-            <Text style={[styles.adjTitle, { color: colors.text }]}>
+            <Text className="text-[11px] tracking-[1.5px] uppercase font-semibold mb-1.5 text-subtle">
+              Previous
+            </Text>
+            <Text className="font-serif text-[17px] leading-6 max-w-[260px] text-fg">
               {adjacent.previous.title}
             </Text>
           </Link>
@@ -200,84 +208,15 @@ export default function ReportScreen() {
         )}
         {adjacent.next ? (
           <Link href={adjacent.next.href as `/${string}`}>
-            <Text style={[styles.adjLabel, { color: colors.textSubtle }]}>Next</Text>
-            <Text style={[styles.adjTitle, { color: colors.text }]}>{adjacent.next.title}</Text>
+            <Text className="text-[11px] tracking-[1.5px] uppercase font-semibold mb-1.5 text-subtle">
+              Next
+            </Text>
+            <Text className="font-serif text-[17px] leading-6 max-w-[260px] text-fg">
+              {adjacent.next.title}
+            </Text>
           </Link>
         ) : null}
       </Wrapper>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  wrap: { paddingTop: 40, paddingBottom: 16, gap: 12 },
-  front: { paddingTop: 36, paddingBottom: 8, gap: 16 },
-  eyebrow: {
-    fontSize: 12,
-    letterSpacing: 1.8,
-    textTransform: "uppercase",
-    fontWeight: "700",
-  },
-  title: {
-    fontFamily: Fonts.serif,
-    fontSize: 36,
-    lineHeight: 42,
-    fontWeight: "700",
-    letterSpacing: -0.4,
-  },
-  dek: {
-    fontFamily: Fonts.serif,
-    fontSize: 20,
-    lineHeight: 30,
-    fontWeight: "400",
-  },
-  byline: {
-    fontFamily: Fonts.serif,
-    fontSize: 15,
-    lineHeight: 22,
-    marginTop: 4,
-  },
-  heroWrap: { paddingTop: 0, paddingBottom: 8 },
-  hero: {
-    width: "100%",
-    aspectRatio: 16 / 9,
-    maxHeight: 520,
-  },
-  article: { paddingTop: 8, paddingBottom: 32 },
-  faq: { paddingBottom: 24, gap: 8 },
-  faqTitle: {
-    fontFamily: Fonts.sans,
-    fontSize: 20,
-    fontWeight: "800",
-    marginBottom: 8,
-  },
-  faqItem: {
-    paddingVertical: 12,
-    borderBottomWidth: StyleSheet.hairlineWidth,
-    gap: 6,
-  },
-  faqQ: { fontSize: 16, fontWeight: "700", lineHeight: 22 },
-  faqA: { fontSize: 15, lineHeight: 22 },
-  recommendedBlock: { marginTop: 8, marginBottom: 8 },
-  adjacent: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    gap: 24,
-    paddingVertical: 32,
-    borderTopWidth: 2,
-    marginBottom: 24,
-  },
-  adjLabel: {
-    fontSize: 11,
-    letterSpacing: 1.5,
-    textTransform: "uppercase",
-    fontWeight: "600",
-    marginBottom: 6,
-  },
-  adjTitle: {
-    fontFamily: Fonts.serif,
-    fontSize: 17,
-    lineHeight: 24,
-    maxWidth: 260,
-  },
-});

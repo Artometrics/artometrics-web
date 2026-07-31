@@ -1,6 +1,4 @@
-import { Text, View, StyleSheet } from "react-native";
-import { Fonts } from "@/constants/Colors";
-import { useTheme } from "@/lib/theme";
+import { Text, View } from "react-native";
 
 export function TldrBox({
   tldr,
@@ -9,27 +7,21 @@ export function TldrBox({
   tldr?: string | null;
   keyPoints?: string[] | null;
 }) {
-  const { colors } = useTheme();
   const points = (keyPoints ?? []).filter(Boolean);
   if (!tldr && !points.length) return null;
 
   return (
-    <View
-      style={[
-        styles.box,
-        { borderLeftColor: colors.accent, backgroundColor: colors.accentSoft, borderColor: colors.border },
-      ]}
-    >
-      <Text style={[styles.label, { color: colors.accent }]}>TL;DR</Text>
-      {tldr ? (
-        <Text style={[styles.tldr, { color: colors.text }]}>{tldr}</Text>
-      ) : null}
+    <View className="border-l-4 border-l-accent border border-border bg-accent-soft px-4 py-3.5 gap-2 mt-2 mb-2">
+      <Text className="text-[11px] font-extrabold tracking-[1.8px] uppercase font-sans text-accent">
+        TL;DR
+      </Text>
+      {tldr ? <Text className="font-sans text-[15px] leading-[22px] text-fg">{tldr}</Text> : null}
       {points.length ? (
-        <View style={styles.list}>
+        <View className="gap-2 mt-1">
           {points.map((point) => (
-            <View key={point} style={styles.row}>
-              <View style={[styles.dot, { backgroundColor: colors.accent }]} />
-              <Text style={[styles.point, { color: colors.text }]}>{point}</Text>
+            <View key={point} className="flex-row items-start gap-2.5">
+              <View className="w-1.5 h-1.5 rounded-full mt-[7px] bg-accent" />
+              <Text className="flex-1 font-mono text-[13px] leading-5 text-fg">{point}</Text>
             </View>
           ))}
         </View>
@@ -37,36 +29,3 @@ export function TldrBox({
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  box: {
-    borderLeftWidth: 4,
-    borderWidth: StyleSheet.hairlineWidth,
-    paddingHorizontal: 16,
-    paddingVertical: 14,
-    gap: 8,
-    marginTop: 8,
-    marginBottom: 8,
-  },
-  label: {
-    fontSize: 11,
-    fontWeight: "800",
-    letterSpacing: 1.8,
-    textTransform: "uppercase",
-    fontFamily: Fonts.sans,
-  },
-  tldr: {
-    fontFamily: Fonts.sans,
-    fontSize: 15,
-    lineHeight: 22,
-  },
-  list: { gap: 8, marginTop: 4 },
-  row: { flexDirection: "row", alignItems: "flex-start", gap: 10 },
-  dot: { width: 6, height: 6, borderRadius: 3, marginTop: 7 },
-  point: {
-    flex: 1,
-    fontFamily: Fonts.mono,
-    fontSize: 13,
-    lineHeight: 20,
-  },
-});

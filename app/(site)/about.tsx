@@ -1,82 +1,59 @@
-import { Text, View, StyleSheet } from "react-native";
+import { Text, View } from "react-native";
 import { Link } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { PrimaryButton } from "@/components/PrimaryButton";
 import { PageSeo } from "@/components/PageSeo";
-import { Fonts } from "@/constants/Colors";
-import { useTheme } from "@/lib/theme";
 import { SECTION_META, SECTION_SLUGS } from "@/data/sections";
 
 export default function AboutScreen() {
-  const { colors } = useTheme();
   return (
-    <Wrapper variant="narrow" style={styles.wrap}>
+    <Wrapper variant="narrow" className="gap-3.5 py-12">
       <PageSeo
         title="About"
         description="Artometrics — art for data scientists and data science for artists."
         path="/about"
       />
-      <Text style={[styles.eyebrow, { color: colors.accent }]}>Masthead</Text>
-      <Text style={[styles.title, { color: colors.text }]}>
+      <Text className="text-xs tracking-[1.8px] uppercase font-bold text-accent">Masthead</Text>
+      <Text className="font-serif text-[34px] font-bold leading-10 text-fg">
         Art for data scientists. Data science for artists.
       </Text>
-      <View style={styles.copy}>
-        <Text style={[styles.p, { color: colors.textMuted }]}>
+      <View className="gap-3.5 mt-2">
+        <Text className="font-serif text-base leading-7 text-muted">
           Artometrics is an independent magazine that treats culture like data — anime catalogs,
           franchise economics, civilizational cycles, and the institutions that shape creative
           markets. Every report pairs editorial judgment with reproducible charts and public
           datasets.
         </Text>
-        <Text style={[styles.h, { color: colors.text }]}>About Artometrics</Text>
-        <Text style={[styles.p, { color: colors.textMuted }]}>
+        <Text className="font-serif text-[22px] font-bold mt-2 text-fg">About Artometrics</Text>
+        <Text className="font-serif text-base leading-7 text-muted">
           We are building a media company in public: long-form investigations, a podcast, a dataset
           library, and membership tools. The brief is simple — ship evidence with taste. Contact us
           for tips, corrections, or partnerships.
         </Text>
-        <Text style={[styles.h, { color: colors.text }]}>Sections</Text>
+        <Text className="font-serif text-[22px] font-bold mt-2 text-fg">Sections</Text>
         {SECTION_SLUGS.map((s) => (
-          <Text key={s} style={[styles.p, { color: colors.textMuted }]}>
+          <Text key={s} className="font-serif text-base leading-7 text-muted">
             <Link href={`/topics/${s}` as `/topics/${string}`}>
-              <Text style={{ color: colors.accent, fontWeight: "700" }}>{SECTION_META[s].title}</Text>
+              <Text className="font-bold text-accent">{SECTION_META[s].title}</Text>
             </Link>
             {" — "}
             {SECTION_META[s].description}
           </Text>
         ))}
-        <Text style={[styles.h, { color: colors.text }]}>How we work with AI</Text>
-        <Text style={[styles.p, { color: colors.textMuted }]}>
+        <Text className="font-serif text-[22px] font-bold mt-2 text-fg">How we work with AI</Text>
+        <Text className="font-serif text-base leading-7 text-muted">
           Reports may be produced in directed collaboration with AI tools under human editorial
-          judgment. We document process in editor’s notes. We do not invent statistics.
+          judgment. We document process in editor's notes. We do not invent statistics.
         </Text>
       </View>
-      <View style={styles.actions}>
+      <View className="flex-row flex-wrap gap-3 mt-5">
         <Link href="/blog" asChild>
           <PrimaryButton label="Browse reports" />
         </Link>
         <Link href="/contact" asChild>
-          <PrimaryButton label="Contact" style={{ backgroundColor: colors.textMuted }} />
+          <PrimaryButton label="Contact" className="bg-muted" />
         </Link>
       </View>
     </Wrapper>
   );
 }
-
-const styles = StyleSheet.create({
-  wrap: { paddingVertical: 48, gap: 14 },
-  eyebrow: {
-    fontSize: 12,
-    letterSpacing: 1.8,
-    textTransform: "uppercase",
-    fontWeight: "700",
-  },
-  title: {
-    fontFamily: Fonts.serif,
-    fontSize: 34,
-    fontWeight: "700",
-    lineHeight: 40,
-  },
-  copy: { gap: 14, marginTop: 8 },
-  h: { fontFamily: Fonts.serif, fontSize: 22, fontWeight: "700", marginTop: 8 },
-  p: { fontFamily: Fonts.serif, fontSize: 16, lineHeight: 28 },
-  actions: { flexDirection: "row", flexWrap: "wrap", gap: 12, marginTop: 20 },
-});

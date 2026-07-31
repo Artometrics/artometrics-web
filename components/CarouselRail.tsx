@@ -1,8 +1,6 @@
 import { ReactNode } from "react";
-import { ScrollView, View, Text, StyleSheet, Pressable, Platform } from "react-native";
+import { ScrollView, View, Text, Pressable, Platform } from "react-native";
 import { Link } from "expo-router";
-import { Fonts } from "@/constants/Colors";
-import { useTheme } from "@/lib/theme";
 import { Wrapper } from "@/components/Wrapper";
 
 export function CarouselRail({
@@ -16,16 +14,21 @@ export function CarouselRail({
   children: ReactNode;
   itemGap?: number;
 }) {
-  const { colors } = useTheme();
-
   return (
-    <View style={styles.section}>
-      <Wrapper variant="magazine" style={styles.head}>
-        <Text style={[styles.title, { color: colors.text }]}>{title}</Text>
+    <View className="mb-9">
+      <Wrapper
+        variant="magazine"
+        className="flex-row items-baseline justify-between mb-3.5 gap-3"
+      >
+        <Text className="font-display text-[28px] tracking-[0.5px] uppercase text-fg">
+          {title}
+        </Text>
         {href ? (
           <Link href={href as `/topics/${string}`} asChild>
             <Pressable hitSlop={8}>
-              <Text style={[styles.more, { color: colors.textMuted }]}>View all</Text>
+              <Text className="text-xs font-bold tracking-[0.6px] uppercase text-muted">
+                View all
+              </Text>
             </Pressable>
           </Link>
         ) : null}
@@ -35,42 +38,20 @@ export function CarouselRail({
         showsHorizontalScrollIndicator={false}
         nestedScrollEnabled
         decelerationRate="fast"
-        contentContainerStyle={[styles.track, { gap: itemGap, paddingHorizontal: 20 }]}
-        style={styles.scroll}
+        contentContainerStyle={[
+          {
+            flexDirection: "row",
+            alignItems: "stretch",
+            paddingBottom: 4,
+            gap: itemGap,
+            paddingHorizontal: 20,
+          },
+          Platform.OS === "web" ? ({ scrollSnapType: "x mandatory" } as object) : null,
+        ]}
+        className="w-full"
       >
         {children}
       </ScrollView>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  section: { marginBottom: 36 },
-  head: {
-    flexDirection: "row",
-    alignItems: "baseline",
-    justifyContent: "space-between",
-    marginBottom: 14,
-    gap: 12,
-  },
-  title: {
-    fontFamily: Fonts.display,
-    fontSize: 28,
-    fontWeight: "400",
-    letterSpacing: 0.5,
-    textTransform: "uppercase",
-  },
-  more: {
-    fontSize: 12,
-    fontWeight: "700",
-    letterSpacing: 0.6,
-    textTransform: "uppercase",
-  },
-  scroll: { width: "100%" },
-  track: {
-    flexDirection: "row",
-    alignItems: "stretch",
-    paddingBottom: 4,
-    ...(Platform.OS === "web" ? ({ scrollSnapType: "x mandatory" } as object) : null),
-  },
-});

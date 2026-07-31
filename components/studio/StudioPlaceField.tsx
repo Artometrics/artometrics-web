@@ -6,12 +6,20 @@ import {
   Text,
   TextInput,
   View,
-  StyleSheet,
   type View as RNView,
 } from "react-native";
-import { Fonts } from "@/constants/Colors";
 import { useTheme } from "@/lib/theme";
 import { suggestTimezone } from "@/lib/studio/timezones";
+
+const menuShadow =
+  Platform.OS === "web"
+    ? ({ boxShadow: "0 12px 28px rgba(23,23,23,0.12)" } as object)
+    : {
+        shadowOffset: { width: 0, height: 8 },
+        shadowOpacity: 0.14,
+        shadowRadius: 14,
+        elevation: 8,
+      };
 
 export type PlaceHit = {
   label: string;
@@ -96,43 +104,31 @@ export function StudioPlaceField({
   }
 
   return (
-    <View ref={rootRef} style={styles.root} collapsable={false}>
-      <Text style={[styles.label, { color: colors.textMuted }]}>{label}</Text>
-      <View
-        style={StyleSheet.flatten([
-          styles.inputRow,
-          { borderColor: colors.border, backgroundColor: colors.bgElevated },
-        ])}
-      >
+    <View ref={rootRef} className="relative z-[12] gap-1.5" collapsable={false}>
+      <Text className="text-xs font-bold uppercase tracking-[0.8px] text-muted">{label}</Text>
+      <View className="min-h-[44px] flex-row items-center gap-2 rounded-[2px] border border-border bg-bg-elevated px-3">
         <TextInput
           value={q}
           onChangeText={search}
           onFocus={() => hits.length > 0 && setOpen(true)}
           placeholder={placeholder}
-          placeholderTextColor={colors.textSubtle}
-          style={StyleSheet.flatten([styles.input, { color: colors.text }])}
+          placeholderTextColorClassName="text-subtle"
+          className="flex-1 py-2.5 font-serif text-base text-fg outline-none"
         />
         {loading ? <ActivityIndicator size="small" color={colors.accent} /> : null}
       </View>
       {open && hits.length > 0 ? (
         <View
-          style={StyleSheet.flatten([
-            styles.menu,
-            { borderColor: colors.border, backgroundColor: colors.headerBg },
-          ])}
+          className="absolute top-full right-0 left-0 z-50 mt-1 rounded-[2px] border border-border bg-header"
+          style={[{ shadowColor: colors.text }, menuShadow]}
         >
           {hits.map((hit) => (
             <Pressable
               key={`${hit.label}-${hit.lat}-${hit.lon}`}
               onPress={() => pick(hit)}
-              style={({ pressed }) =>
-                StyleSheet.flatten([
-                  styles.option,
-                  { backgroundColor: pressed ? colors.accentSoft : "transparent" },
-                ])
-              }
+              className="px-3 py-3 active:bg-accent-soft"
             >
-              <Text style={[styles.optionText, { color: colors.text }]}>{hit.label}</Text>
+              <Text className="font-serif text-[15px] leading-[22px] text-fg">{hit.label}</Text>
             </Pressable>
           ))}
         </View>
@@ -140,49 +136,3 @@ export function StudioPlaceField({
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  root: { position: "relative", zIndex: 12, gap: 6 },
-  label: {
-    fontSize: 12,
-    letterSpacing: 0.8,
-    textTransform: "uppercase",
-    fontWeight: "700",
-  },
-  inputRow: {
-    borderWidth: StyleSheet.hairlineWidth,
-    borderRadius: 2,
-    minHeight: 44,
-    paddingHorizontal: 12,
-    flexDirection: "row",
-    alignItems: "center",
-    gap: 8,
-  },
-  input: {
-    flex: 1,
-    fontFamily: Fonts.serif,
-    fontSize: 16,
-    paddingVertical: 10,
-    ...(Platform.OS === "web" ? ({ outlineStyle: "none" } as object) : null),
-  },
-  menu: {
-    position: "absolute",
-    left: 0,
-    right: 0,
-    top: "100%",
-    marginTop: 4,
-    borderWidth: StyleSheet.hairlineWidth,
-    borderRadius: 2,
-    zIndex: 50,
-    ...(Platform.OS === "web"
-      ? ({ boxShadow: "0 12px 28px rgba(23,23,23,0.12)" } as object)
-      : {
-          shadowOffset: { width: 0, height: 8 },
-          shadowOpacity: 0.14,
-          shadowRadius: 14,
-          elevation: 8,
-        }),
-  },
-  option: { paddingHorizontal: 12, paddingVertical: 12 },
-  optionText: { fontFamily: Fonts.serif, fontSize: 15, lineHeight: 22 },
-});

@@ -1,16 +1,13 @@
-import { Text, View, StyleSheet } from "react-native";
+import { Text, View } from "react-native";
 import { useLocalSearchParams } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { BlogCard } from "@/components/BlogCard";
-import { useTheme } from "@/lib/theme";
-import { Fonts } from "@/constants/Colors";
 import { getBlogPosts, primarySection } from "@/lib/content";
 import { SECTION_META, SECTION_SLUGS, type SectionSlug } from "@/data/sections";
 import { PageSeo } from "@/components/PageSeo";
 import { paramString } from "@/lib/params";
 
 export default function BlogIndex() {
-  const { colors } = useTheme();
   const params = useLocalSearchParams<{
     desk?: string | string[];
     section?: string | string[];
@@ -23,7 +20,7 @@ export default function BlogIndex() {
   );
 
   return (
-    <Wrapper style={styles.wrap}>
+    <Wrapper className="gap-3 py-10">
       <PageSeo
         title={sectionFilter ? SECTION_META[sectionFilter].title : "Latest"}
         description={
@@ -33,19 +30,19 @@ export default function BlogIndex() {
         }
         path="/blog"
       />
-      <Text style={[styles.eyebrow, { color: colors.accent }]}>
+      <Text className="text-xs tracking-[1.8px] uppercase font-bold text-accent">
         {sectionFilter ? "Section" : "Archive"}
       </Text>
-      <Text style={[styles.title, { color: colors.text }]}>
+      <Text className="font-serif text-[40px] font-bold tracking-tight text-fg">
         {sectionFilter ? SECTION_META[sectionFilter].title : "Latest"}
       </Text>
-      <Text style={[styles.deck, { color: colors.textMuted }]}>
+      <Text className="font-serif text-[17px] leading-[26px] mb-2 max-w-[560px] text-muted">
         {sectionFilter
           ? SECTION_META[sectionFilter].description
           : "Sports, movies & TV, music, culture, cities, and more."}
       </Text>
-      <View style={[styles.rule, { backgroundColor: colors.border }]} />
-      <View style={styles.list}>
+      <View className="h-px mt-2 mb-1 bg-border" />
+      <View>
         {posts.map((post) => (
           <BlogCard key={post.slug} post={post} variant="row" />
         ))}
@@ -53,32 +50,3 @@ export default function BlogIndex() {
     </Wrapper>
   );
 }
-
-const styles = StyleSheet.create({
-  wrap: { paddingVertical: 40, gap: 12 },
-  eyebrow: {
-    fontSize: 12,
-    letterSpacing: 1.8,
-    textTransform: "uppercase",
-    fontWeight: "700",
-  },
-  title: {
-    fontFamily: Fonts.serif,
-    fontSize: 40,
-    fontWeight: "700",
-    letterSpacing: -0.4,
-  },
-  deck: {
-    fontFamily: Fonts.serif,
-    fontSize: 17,
-    lineHeight: 26,
-    marginBottom: 8,
-    maxWidth: 560,
-  },
-  rule: {
-    height: StyleSheet.hairlineWidth,
-    marginTop: 8,
-    marginBottom: 4,
-  },
-  list: { gap: 0 },
-});

@@ -1,10 +1,9 @@
 import { useCallback, useState } from "react";
-import { ActivityIndicator, Pressable, Text, View, StyleSheet } from "react-native";
+import { ActivityIndicator, Pressable, Text, View } from "react-native";
 import { useFocusEffect, useLocalSearchParams } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { PageSeo } from "@/components/PageSeo";
 import { PrimaryButton } from "@/components/PrimaryButton";
-import { Fonts } from "@/constants/Colors";
 import { useTheme } from "@/lib/theme";
 import { useAuth } from "@/lib/auth";
 import { paramString } from "@/lib/params";
@@ -61,7 +60,7 @@ export default function PublicProfileScreen() {
   const isSelf = Boolean(user && profile && user.id === profile.id);
 
   return (
-    <Wrapper style={styles.wrap}>
+    <Wrapper className="gap-2.5 py-10">
       <PageSeo
         title={profile ? `${name} · Artometrics` : "Profile"}
         description={profile?.bio || `Member profile on Artometrics.`}
@@ -69,21 +68,21 @@ export default function PublicProfileScreen() {
       />
 
       {loading ? (
-        <ActivityIndicator color={colors.accent} style={{ marginTop: 40 }} />
+        <ActivityIndicator color={colors.accent} className="mt-10" />
       ) : error || !profile ? (
         <>
-          <Text style={[styles.title, { color: colors.text }]}>Profile</Text>
-          <Text style={[styles.deck, { color: colors.textMuted }]}>{error}</Text>
+          <Text className="font-serif text-[36px] font-bold text-fg">Profile</Text>
+          <Text className="font-serif text-base leading-[26px] max-w-[640px] text-muted">{error}</Text>
         </>
       ) : (
         <>
-          <Text style={[styles.eyebrow, { color: colors.accent }]}>Member</Text>
-          <Text style={[styles.title, { color: colors.text }]}>{name}</Text>
-          <Text style={[styles.handle, { color: colors.textSubtle }]}>@{profile.handle}</Text>
+          <Text className="text-xs tracking-[1.8px] uppercase font-bold text-accent">Member</Text>
+          <Text className="font-serif text-[36px] font-bold text-fg">{name}</Text>
+          <Text className="font-sans text-[15px] text-subtle">@{profile.handle}</Text>
           {profile.bio ? (
-            <Text style={[styles.deck, { color: colors.textMuted }]}>{profile.bio}</Text>
+            <Text className="font-serif text-base leading-[26px] max-w-[640px] text-muted">{profile.bio}</Text>
           ) : (
-            <Text style={[styles.deck, { color: colors.textSubtle }]}>
+            <Text className="font-serif text-base leading-[26px] max-w-[640px] text-subtle">
               {isSelf
                 ? "Add a bio in Settings to introduce your work."
                 : "No bio yet."}
@@ -103,25 +102,18 @@ export default function PublicProfileScreen() {
                   setFollowing(true);
                 }
               }}
-              style={{
-                marginTop: 8,
-                backgroundColor: following ? colors.textMuted : colors.text,
-                alignSelf: "flex-start",
-              }}
+              className={["mt-2 self-start", following ? "bg-muted" : "bg-fg"].join(" ")}
             />
           ) : null}
 
-          <View style={styles.tabs}>
+          <View className="flex-row gap-5 mt-5">
             {(["published", "about"] as const).map((t) => (
-              <Pressable key={t} onPress={() => setTab(t)} style={styles.tabBtn}>
+              <Pressable key={t} onPress={() => setTab(t)} className="pb-1">
                 <Text
-                  style={[
-                    styles.tabLabel,
-                    {
-                      color: tab === t ? colors.accent : colors.textMuted,
-                      borderBottomColor: tab === t ? colors.accent : "transparent",
-                    },
-                  ]}
+                  className={[
+                    "text-[13px] tracking-[1.2px] uppercase font-bold border-b-2 pb-1.5",
+                    tab === t ? "text-accent border-accent" : "text-muted border-transparent",
+                  ].join(" ")}
                 >
                   {t === "published" ? "Published" : "About"}
                 </Text>
@@ -131,19 +123,16 @@ export default function PublicProfileScreen() {
 
           {tab === "published" ? (
             posts.length === 0 ? (
-              <Text style={[styles.deck, { color: colors.textMuted, marginTop: 16 }]}>
+              <Text className="font-serif text-base leading-[26px] max-w-[640px] mt-4 text-muted">
                 No published work yet. Quiet on purpose.
               </Text>
             ) : (
-              <View style={styles.list}>
+              <View className="mt-3 gap-3">
                 {posts.map((post) => (
-                  <View
-                    key={post.id}
-                    style={StyleSheet.flatten([styles.post, { borderColor: colors.border }])}
-                  >
-                    <Text style={[styles.postTitle, { color: colors.text }]}>{post.title}</Text>
+                  <View key={post.id} className="border border-border p-4 gap-2">
+                    <Text className="font-serif text-[22px] font-bold text-fg">{post.title}</Text>
                     {post.excerpt ? (
-                      <Text style={[styles.deck, { color: colors.textMuted }]} numberOfLines={3}>
+                      <Text className="font-serif text-base leading-[26px] max-w-[640px] text-muted" numberOfLines={3}>
                         {post.excerpt}
                       </Text>
                     ) : null}
@@ -152,16 +141,18 @@ export default function PublicProfileScreen() {
               </View>
             )
           ) : (
-            <View style={{ marginTop: 16, gap: 8 }}>
-              <Text style={[styles.deck, { color: colors.textMuted }]}>
+            <View className="mt-4 gap-2">
+              <Text className="font-serif text-base leading-[26px] max-w-[640px] text-muted">
                 Taste and preference mirror will deepen here as reading history and saves accumulate.
               </Text>
               {profile.desks_interest?.length ? (
-                <Text style={[styles.deck, { color: colors.text }]}>
+                <Text className="font-serif text-base leading-[26px] max-w-[640px] text-fg">
                   Desks: {profile.desks_interest.join(", ")}
                 </Text>
               ) : (
-                <Text style={[styles.deck, { color: colors.textSubtle }]}>No desks listed yet.</Text>
+                <Text className="font-serif text-base leading-[26px] max-w-[640px] text-subtle">
+                  No desks listed yet.
+                </Text>
               )}
             </View>
           )}
@@ -170,29 +161,3 @@ export default function PublicProfileScreen() {
     </Wrapper>
   );
 }
-
-const styles = StyleSheet.create({
-  wrap: { paddingVertical: 40, gap: 10 },
-  eyebrow: {
-    fontSize: 12,
-    letterSpacing: 1.8,
-    textTransform: "uppercase",
-    fontWeight: "700",
-  },
-  title: { fontFamily: Fonts.serif, fontSize: 36, fontWeight: "700" },
-  handle: { fontFamily: Fonts.sans, fontSize: 15 },
-  deck: { fontFamily: Fonts.serif, fontSize: 16, lineHeight: 26, maxWidth: 640 },
-  tabs: { flexDirection: "row", gap: 20, marginTop: 20 },
-  tabBtn: { paddingBottom: 4 },
-  tabLabel: {
-    fontSize: 13,
-    letterSpacing: 1.2,
-    textTransform: "uppercase",
-    fontWeight: "700",
-    borderBottomWidth: 2,
-    paddingBottom: 6,
-  },
-  list: { marginTop: 12, gap: 12 },
-  post: { borderWidth: StyleSheet.hairlineWidth, padding: 16, gap: 8 },
-  postTitle: { fontFamily: Fonts.serif, fontSize: 22, fontWeight: "700" },
-});

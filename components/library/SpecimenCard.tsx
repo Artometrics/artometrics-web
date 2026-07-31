@@ -1,5 +1,5 @@
-import { Image, Pressable, Text, View, StyleSheet, Linking } from "react-native";
-import { Fonts } from "@/constants/Colors";
+import { Pressable, Text, View, Linking } from "react-native";
+import { Image } from "expo-image";
 import type { ReferenceItem, ReferenceSource } from "@/lib/reference/catalog";
 
 export type SpecimenStat = {
@@ -77,39 +77,62 @@ export function SpecimenCard({
         const href = item.url || item.downloadUrl || item.imageUrl;
         if (href) void Linking.openURL(href);
       }}
-      style={StyleSheet.flatten([styles.card, width ? { width } : styles.cardFlex])}
+      className={[
+        "bg-white rounded-md overflow-hidden border border-base-900",
+        width ? "" : "basis-[260px] grow max-w-[340px]",
+      ]
+        .filter(Boolean)
+        .join(" ")}
+      style={width ? { width } : undefined}
     >
-      <View style={[styles.header, { backgroundColor: bg }]}>
-        <Text style={styles.year}>{year}</Text>
-        {img ? (
-          <Image source={{ uri: img }} style={styles.img} resizeMode="cover" />
-        ) : (
-          <View style={styles.orbMark}>
-            <Text style={styles.orbLetter}>{title.slice(0, 1)}</Text>
-          </View>
-        )}
-        <Text style={styles.idTag}>{idTag}</Text>
-      </View>
-      <View style={styles.body}>
-        <Text style={styles.title} numberOfLines={2}>
-          {title}
-        </Text>
-        {stats.map((s) => (
-          <View key={s.label} style={styles.statRow}>
-            <Text style={styles.statLabel}>{s.label}</Text>
-            <Text style={styles.statValue} numberOfLines={1}>
-              {s.value}
-            </Text>
-            {typeof s.scale === "number" ? (
-              <View style={styles.scaleTrack}>
-                <View style={[styles.scaleThumb, { left: `${Math.round(s.scale * 100)}%` }]} />
-              </View>
-            ) : (
-              <View style={styles.scaleSpacer} />
-            )}
-          </View>
-        ))}
-      </View>
+      <View className="h-[180px] items-center justify-center p-3" style={{ backgroundColor: bg }}>
+          <Text className="absolute top-2.5 left-3 text-[10px] font-bold tracking-wide text-white/85">
+            {year}
+          </Text>
+          {img ? (
+            <Image
+              source={{ uri: img }}
+              className="w-[120px] h-[120px] rounded-lg border-2 border-white/35"
+              contentFit="cover"
+              transition={200}
+            />
+          ) : (
+            <View className="w-24 h-24 rounded-full bg-black/25 items-center justify-center border border-white/35">
+              <Text className="text-white font-display text-[42px]">{title.slice(0, 1)}</Text>
+            </View>
+          )}
+          <Text className="absolute bottom-2.5 right-3 text-[10px] font-semibold tracking-[0.6px] text-white/85">
+            {idTag}
+          </Text>
+        </View>
+        <View className="p-3.5 gap-1.5 bg-white">
+          <Text
+            className="font-sans text-[22px] font-extrabold tracking-[0.5px] text-base-900 mb-1.5"
+            numberOfLines={2}
+          >
+            {title}
+          </Text>
+          {stats.map((s) => (
+            <View key={s.label} className="flex-row items-center gap-2 py-[3px] border-b border-base-200">
+              <Text className="w-[72px] text-[9px] font-extrabold tracking-[0.8px] text-base-500">
+                {s.label}
+              </Text>
+              <Text className="flex-1 text-[11px] font-bold text-base-900" numberOfLines={1}>
+                {s.value}
+              </Text>
+              {typeof s.scale === "number" ? (
+                <View className="w-12 h-0.5 bg-base-900 relative">
+                  <View
+                    className="absolute -top-[3px] -ml-[3px] w-2 h-2 bg-base-900"
+                    style={{ left: `${Math.round(s.scale * 100)}%` }}
+                  />
+                </View>
+              ) : (
+                <View className="w-12" />
+              )}
+            </View>
+          ))}
+        </View>
     </Pressable>
   );
 }
@@ -142,137 +165,49 @@ export function GenreSpecimenCard({
   return (
     <Pressable
       onPress={onPress}
-      style={StyleSheet.flatten([styles.card, styles.cardFlex])}
+      className="bg-white rounded-md overflow-hidden border border-base-900 basis-[260px] grow max-w-[340px]"
     >
-      <View style={[styles.header, { backgroundColor: bg }]}>
-        <Text style={styles.year}>DESK</Text>
-        <View style={styles.orbMark}>
-          <Text style={styles.orbLetter}>{title.slice(0, 1).toUpperCase()}</Text>
-        </View>
-        <Text style={styles.idTag}>{String(index + 1).padStart(2, "0")}</Text>
-      </View>
-      <View style={styles.body}>
-        <Text style={styles.title} numberOfLines={2}>
-          {title.toUpperCase()}
-        </Text>
-        {stats.map((s) => (
-          <View key={s.label} style={styles.statRow}>
-            <Text style={styles.statLabel}>{s.label}</Text>
-            <Text style={styles.statValue} numberOfLines={1}>
-              {s.value}
+      <View className="h-[180px] items-center justify-center p-3" style={{ backgroundColor: bg }}>
+          <Text className="absolute top-2.5 left-3 text-[10px] font-bold tracking-wide text-white/85">
+            DESK
+          </Text>
+          <View className="w-24 h-24 rounded-full bg-black/25 items-center justify-center border border-white/35">
+            <Text className="text-white font-display text-[42px]">
+              {title.slice(0, 1).toUpperCase()}
             </Text>
-            {typeof s.scale === "number" ? (
-              <View style={styles.scaleTrack}>
-                <View style={[styles.scaleThumb, { left: `${Math.round(s.scale * 100)}%` }]} />
-              </View>
-            ) : (
-              <View style={styles.scaleSpacer} />
-            )}
           </View>
-        ))}
-      </View>
+          <Text className="absolute bottom-2.5 right-3 text-[10px] font-semibold tracking-[0.6px] text-white/85">
+            {String(index + 1).padStart(2, "0")}
+          </Text>
+        </View>
+        <View className="p-3.5 gap-1.5 bg-white">
+          <Text
+            className="font-sans text-[22px] font-extrabold tracking-[0.5px] text-base-900 mb-1.5"
+            numberOfLines={2}
+          >
+            {title.toUpperCase()}
+          </Text>
+          {stats.map((s) => (
+            <View key={s.label} className="flex-row items-center gap-2 py-[3px] border-b border-base-200">
+              <Text className="w-[72px] text-[9px] font-extrabold tracking-[0.8px] text-base-500">
+                {s.label}
+              </Text>
+              <Text className="flex-1 text-[11px] font-bold text-base-900" numberOfLines={1}>
+                {s.value}
+              </Text>
+              {typeof s.scale === "number" ? (
+                <View className="w-12 h-0.5 bg-base-900 relative">
+                  <View
+                    className="absolute -top-[3px] -ml-[3px] w-2 h-2 bg-base-900"
+                    style={{ left: `${Math.round(s.scale * 100)}%` }}
+                  />
+                </View>
+              ) : (
+                <View className="w-12" />
+              )}
+            </View>
+          ))}
+        </View>
     </Pressable>
   );
 }
-
-const styles = StyleSheet.create({
-  card: {
-    backgroundColor: "#FFFFFF",
-    borderRadius: 6,
-    overflow: "hidden",
-    borderWidth: 1,
-    borderColor: "#0A0A0A",
-  },
-  cardFlex: { flexBasis: 260, flexGrow: 1, maxWidth: 340 },
-  header: {
-    height: 180,
-    alignItems: "center",
-    justifyContent: "center",
-    padding: 12,
-  },
-  year: {
-    position: "absolute",
-    top: 10,
-    left: 12,
-    color: "rgba(255,255,255,0.85)",
-    fontSize: 10,
-    fontWeight: "700",
-    letterSpacing: 1,
-  },
-  idTag: {
-    position: "absolute",
-    bottom: 10,
-    right: 12,
-    color: "rgba(255,255,255,0.85)",
-    fontSize: 10,
-    fontWeight: "600",
-    letterSpacing: 0.6,
-  },
-  img: {
-    width: 120,
-    height: 120,
-    borderRadius: 8,
-    borderWidth: 2,
-    borderColor: "rgba(255,255,255,0.35)",
-  },
-  orbMark: {
-    width: 96,
-    height: 96,
-    borderRadius: 48,
-    backgroundColor: "rgba(0,0,0,0.25)",
-    alignItems: "center",
-    justifyContent: "center",
-    borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.35)",
-  },
-  orbLetter: {
-    color: "#FFFFFF",
-    fontFamily: Fonts.display,
-    fontSize: 42,
-  },
-  body: { padding: 14, gap: 6, backgroundColor: "#FFFFFF" },
-  title: {
-    fontFamily: Fonts.sans,
-    fontSize: 22,
-    fontWeight: "800",
-    letterSpacing: 0.5,
-    color: "#0A0A0A",
-    marginBottom: 6,
-  },
-  statRow: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: 8,
-    paddingVertical: 3,
-    borderBottomWidth: StyleSheet.hairlineWidth,
-    borderBottomColor: "#E5E5E5",
-  },
-  statLabel: {
-    width: 72,
-    fontSize: 9,
-    fontWeight: "800",
-    letterSpacing: 0.8,
-    color: "#737373",
-  },
-  statValue: {
-    flex: 1,
-    fontSize: 11,
-    fontWeight: "700",
-    color: "#0A0A0A",
-  },
-  scaleTrack: {
-    width: 48,
-    height: 2,
-    backgroundColor: "#0A0A0A",
-    position: "relative",
-  },
-  scaleThumb: {
-    position: "absolute",
-    top: -3,
-    marginLeft: -3,
-    width: 8,
-    height: 8,
-    backgroundColor: "#0A0A0A",
-  },
-  scaleSpacer: { width: 48 },
-});

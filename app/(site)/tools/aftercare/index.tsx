@@ -1,16 +1,15 @@
 import { useCallback, useState } from "react";
 import {
   ActivityIndicator,
-  Image,
   Platform,
   Pressable,
-  StyleSheet,
   Text,
   View,
   useWindowDimensions,
 } from "react-native";
+import { Image } from "expo-image";
 import { router, useFocusEffect } from "expo-router";
-import Ionicons from "@expo/vector-icons/Ionicons";
+import { ArrowRight, X } from "@/components/icons";
 import { Wrapper } from "@/components/Wrapper";
 import { PageSeo } from "@/components/PageSeo";
 import { ToolsSubnav } from "@/components/tools/ToolsSubnav";
@@ -18,7 +17,7 @@ import { StoryProgress } from "@/components/aftercare/StoryProgress";
 import { StrategyMap } from "@/components/aftercare/StrategyMap";
 import { PlanetPoster } from "@/components/aftercare/PlanetPoster";
 import { CosmicChartCard } from "@/components/aftercare/CosmicChartCard";
-import { Fonts } from "@/constants/Colors";
+import { useTheme } from "@/lib/theme";
 import { useAuth } from "@/lib/auth";
 import { apiFetch } from "@/lib/supabase/client";
 import { assetUrl } from "@/lib/assets";
@@ -56,6 +55,7 @@ type SlideId = "open" | "poster" | "chart" | "strategies" | "checkin";
 const SLIDES: SlideId[] = ["open", "poster", "chart", "strategies", "checkin"];
 
 export default function AftercareHomeScreen() {
+  const { colors } = useTheme();
   const { width } = useWindowDimensions();
   const { user, loading: authLoading } = useAuthGate();
   const [skyNote, setSkyNote] = useState<string | null>(null);
@@ -160,8 +160,8 @@ export default function AftercareHomeScreen() {
 
   if (authLoading) {
     return (
-      <Wrapper style={styles.wrap}>
-        <Text style={{ color: "#888" }}>Loading…</Text>
+      <Wrapper className="gap-2.5 py-8 flex-1">
+        <Text className="text-muted">Loading…</Text>
       </Wrapper>
     );
   }
@@ -172,7 +172,7 @@ export default function AftercareHomeScreen() {
     assetUrl("/images/brand/chomsky-a-black.png");
 
   return (
-    <Wrapper style={styles.wrap}>
+    <Wrapper className="gap-2.5 py-8 flex-1">
       <PageSeo
         title="Aftercare"
         description="Journal, tarot, mood tracking, and birth tools on Artometrics."
@@ -181,50 +181,44 @@ export default function AftercareHomeScreen() {
       <ToolsSubnav links={NAV} />
 
       {loading ? (
-        <ActivityIndicator style={{ marginTop: 40 }} color="#D9251B" />
+        <ActivityIndicator className="mt-10" color={colors.accent} />
       ) : (
-        <View style={[styles.phoneFrame, { width: storyW, height: storyH }]}>
+        <View className="rounded-[28px] overflow-hidden bg-[#0C0C0E] border border-white/10 relative self-center" style={{ width: storyW, height: storyH }}>
           {/* Atmospheric background */}
-          <View style={styles.bgStack}>
+          <View className="absolute inset-0">
             <View
-              style={[
-                styles.blob,
-                { top: "8%", left: "-10%", backgroundColor: "#6B4F3A" },
-              ]}
+              className="absolute w-[280px] h-[280px] rounded-full opacity-55"
+              style={{ top: "8%", left: "-10%", backgroundColor: "#6B4F3A" }}
             />
             <View
-              style={[
-                styles.blob,
-                { top: "35%", right: "-16%", backgroundColor: "#3D5A6C", width: 220, height: 220 },
-              ]}
+              className="absolute w-[280px] h-[280px] rounded-full opacity-55"
+              style={{ top: "35%", right: "-16%", backgroundColor: "#3D5A6C", width: 220, height: 220 }}
             />
             <View
-              style={[
-                styles.blob,
-                { bottom: "5%", left: "10%", backgroundColor: "#2A2A2E", width: 260, height: 260 },
-              ]}
+              className="absolute w-[280px] h-[280px] rounded-full opacity-55"
+              style={{ bottom: "5%", left: "10%", backgroundColor: "#2A2A2E", width: 260, height: 260 }}
             />
             {heroBg ? (
               <Image
                 source={{ uri: heroBg }}
-                style={styles.watermark}
-                resizeMode="contain"
+                className="absolute w-[70%] h-[70%] top-[18%] left-[15%] opacity-[0.06]"
+                contentFit="contain"
               />
             ) : null}
-            <View style={styles.vignette} />
+            <View className="absolute inset-0 bg-black/35" />
           </View>
 
           {/* Story chrome */}
-          <View style={styles.chrome}>
+          <View className="absolute top-0 left-0 right-0 z-[5] pt-3.5 px-3 gap-2.5">
             <StoryProgress count={SLIDES.length} index={index} />
-            <View style={styles.chromeRow}>
-              <View style={styles.identity}>
-                <View style={styles.avatar}>
-                  <View style={styles.avatarInner} />
+            <View className="flex-row items-center justify-between">
+              <View className="flex-row items-center gap-2">
+                <View className="w-7 h-7 rounded-full border-[1.5px] border-white/85 items-center justify-center">
+                  <View className="w-3 h-3 rounded-sm bg-white" />
                 </View>
                 <View>
-                  <Text style={styles.handle}>aftercare</Text>
-                  <Text style={styles.metaTiny}>{moonLabel || "Today"}</Text>
+                  <Text className="text-white text-[13px] font-bold">aftercare</Text>
+                  <Text className="text-white/65 text-[11px]">{moonLabel || "Today"}</Text>
                 </View>
               </View>
               <Pressable
@@ -232,30 +226,30 @@ export default function AftercareHomeScreen() {
                 hitSlop={10}
                 accessibilityLabel="Close story"
               >
-                <Ionicons name="close" size={22} color="#FFFFFF" style={{ color: "#FFFFFF" }} />
+                <X size={22} color="#FFFFFF" />
               </Pressable>
             </View>
           </View>
 
           {/* Tap zones */}
-          <View style={styles.tapRow} pointerEvents="box-none">
-            <Pressable style={styles.tapHalf} onPress={() => go(-1)} />
-            <Pressable style={styles.tapHalf} onPress={() => go(1)} />
+          <View className="absolute inset-0 flex-row z-[2]" pointerEvents="box-none">
+            <Pressable className="flex-1" onPress={() => go(-1)} />
+            <Pressable className="flex-1" onPress={() => go(1)} />
           </View>
 
           {/* Slide content */}
-          <View style={styles.slideBody} pointerEvents="box-none">
-            {error ? <Text style={styles.error}>{error}</Text> : null}
+          <View className="absolute left-5 right-5 top-[88px] bottom-12 z-[3] justify-between" pointerEvents="box-none">
+            {error ? <Text className="font-serif text-[15px] text-accent">{error}</Text> : null}
 
             {slide === "open" ? (
               <>
-                <Text style={styles.lede}>
+                <Text className="text-white/88 font-sans text-sm leading-5 max-w-[220px]">
                   Soft rituals for the creative life — {greetingName}.
                 </Text>
-                <Text style={styles.display}>CHECK{"\n"}IN</Text>
-                <View style={styles.footerRow}>
-                  <Text style={styles.footerTitle}>{"Today's sky"}</Text>
-                  <Text style={styles.footerBody} numberOfLines={4}>
+                <Text className="font-wordmark text-white text-[56px] leading-[58px] text-center self-center my-auto">CHECK{"\n"}IN</Text>
+                <View className="gap-1.5 flex-row flex-wrap justify-between items-end">
+                  <Text className="text-white text-[15px] font-extrabold tracking-wide flex-[0.4]">{"Today's sky"}</Text>
+                  <Text className="text-white/72 text-xs leading-[17px] flex-[0.52] text-right" numberOfLines={4}>
                     {skyNote ||
                       "Add a birth date in Birth tools for a more personal note."}
                   </Text>
@@ -264,7 +258,7 @@ export default function AftercareHomeScreen() {
             ) : null}
 
             {slide === "poster" ? (
-              <View style={styles.posterSlide} pointerEvents="none">
+              <View className="flex-1 justify-center" pointerEvents="none">
                 <PlanetPoster
                   seasonTitle={celestial.seasonTitle}
                   seasonLine={celestial.seasonLine}
@@ -276,7 +270,7 @@ export default function AftercareHomeScreen() {
             ) : null}
 
             {slide === "chart" ? (
-              <View style={styles.chartSlide} pointerEvents="box-none">
+              <View className="flex-1 justify-center" pointerEvents="box-none">
                 <CosmicChartCard
                   eyebrow={
                     skyNote ||
@@ -291,25 +285,20 @@ export default function AftercareHomeScreen() {
 
             {slide === "strategies" ? (
               <View
-                style={StyleSheet.flatten([
-                  styles.glass,
-                  Platform.OS === "web"
-                    ? ({ backdropFilter: "blur(18px)" } as object)
-                    : null,
-                ])}
+                className="mt-6 rounded-[22px] p-4 bg-white/14 border border-white/22 gap-2" style={Platform.OS === "web" ? ({ backdropFilter: "blur(18px)" } as object) : undefined}
                 pointerEvents="auto"
               >
-                <View style={styles.glassHead}>
-                  <View style={styles.dots}>
-                    <View style={styles.dot} />
-                    <View style={styles.dot} />
-                    <View style={[styles.dot, { opacity: 0.5 }]} />
-                    <View style={[styles.dot, { opacity: 0.35 }]} />
+                <View className="flex-row items-center gap-2.5">
+                  <View className="flex-row flex-wrap w-[22px] gap-0.5">
+                    <View className="w-[7px] h-[7px] rounded bg-white" />
+                    <View className="w-[7px] h-[7px] rounded bg-white" />
+                    <View className="w-[7px] h-[7px] rounded bg-white opacity-50" />
+                    <View className="w-[7px] h-[7px] rounded bg-white opacity-35" />
                   </View>
-                  <Text style={styles.glassTitle}>Strategies.</Text>
+                  <Text className="text-white font-wordmark text-[28px]">Strategies.</Text>
                 </View>
                 <StrategyMap />
-                <Text style={styles.glassFoot}>
+                <Text className="text-white/75 text-xs leading-[17px] text-center mt-1">
                   Combine strategies to create a comfortable plan.
                 </Text>
               </View>
@@ -317,13 +306,13 @@ export default function AftercareHomeScreen() {
 
             {slide === "checkin" ? (
               <>
-                <Text style={styles.lede}>
+                <Text className="text-white/88 font-sans text-sm leading-5 max-w-[220px]">
                   {guest
                     ? "Sign in to save rituals. Preview the doors below."
                     : "Pick a door. Stay as long as you need."}
                 </Text>
-                <Text style={styles.display}>BEGIN</Text>
-                <View style={styles.ctaStack} pointerEvents="auto">
+                <Text className="font-wordmark text-white text-[56px] leading-[58px] text-center self-center my-auto">BEGIN</Text>
+                <View className="gap-2.5 mt-3" pointerEvents="auto">
                   {[
                     ["/tools/aftercare/journal", "Open journal"],
                     ["/tools/aftercare/tarot", "Pull cards"],
@@ -332,15 +321,10 @@ export default function AftercareHomeScreen() {
                     <Pressable
                       key={href}
                       onPress={() => goTool(href)}
-                      style={styles.ctaBtn}
+                      className="flex-row items-center justify-between bg-white px-4 py-3.5 rounded-full"
                     >
-                      <Text style={styles.ctaBtnText}>{label}</Text>
-                      <Ionicons
-                        name="arrow-forward"
-                        size={16}
-                        color="#0A0A0A"
-                        style={{ color: "#0A0A0A" }}
-                      />
+                      <Text className="text-[#0A0A0A] text-sm font-bold">{label}</Text>
+                      <ArrowRight size={16} color="#0A0A0A" />
                     </Pressable>
                   ))}
                 </View>
@@ -348,8 +332,8 @@ export default function AftercareHomeScreen() {
             ) : null}
           </View>
 
-          <View style={styles.hintBar}>
-            <Text style={styles.hint}>
+          <View className="absolute bottom-3.5 left-0 right-0 items-center z-[4]">
+            <Text className="text-white/45 text-[11px] tracking-wide">
               Tap edges to move · {index + 1}/{SLIDES.length}
             </Text>
           </View>
@@ -359,214 +343,3 @@ export default function AftercareHomeScreen() {
   );
 }
 
-const styles = StyleSheet.create({
-  wrap: { paddingVertical: 24, gap: 12, alignItems: "center" },
-  phoneFrame: {
-    borderRadius: 28,
-    overflow: "hidden",
-    backgroundColor: "#0C0C0E",
-    borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.08)",
-    position: "relative",
-    alignSelf: "center",
-    ...(Platform.OS === "web"
-      ? ({ boxShadow: "0 24px 60px rgba(0,0,0,0.35)" } as object)
-      : {
-          shadowColor: "#000",
-          shadowOpacity: 0.35,
-          shadowRadius: 24,
-          shadowOffset: { width: 0, height: 16 },
-          elevation: 12,
-        }),
-  },
-  bgStack: { ...StyleSheet.absoluteFill },
-  blob: {
-    position: "absolute",
-    width: 280,
-    height: 280,
-    borderRadius: 999,
-    opacity: 0.55,
-    ...(Platform.OS === "web"
-      ? ({ filter: "blur(40px)" } as object)
-      : null),
-  },
-  watermark: {
-    position: "absolute",
-    width: "70%",
-    height: "70%",
-    top: "18%",
-    left: "15%",
-    opacity: 0.06,
-  },
-  vignette: {
-    ...StyleSheet.absoluteFill,
-    backgroundColor: "rgba(0,0,0,0.35)",
-  },
-  chrome: {
-    position: "absolute",
-    top: 0,
-    left: 0,
-    right: 0,
-    zIndex: 5,
-    paddingTop: 14,
-    paddingHorizontal: 12,
-    gap: 10,
-  },
-  chromeRow: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-  },
-  identity: { flexDirection: "row", alignItems: "center", gap: 8 },
-  avatar: {
-    width: 28,
-    height: 28,
-    borderRadius: 14,
-    borderWidth: 1.5,
-    borderColor: "rgba(255,255,255,0.85)",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  avatarInner: {
-    width: 12,
-    height: 12,
-    borderRadius: 2,
-    backgroundColor: "#FFFFFF",
-  },
-  handle: {
-    color: "#FFFFFF",
-    fontSize: 13,
-    fontWeight: "700",
-  },
-  metaTiny: {
-    color: "rgba(255,255,255,0.65)",
-    fontSize: 11,
-  },
-  tapRow: {
-    ...StyleSheet.absoluteFill,
-    flexDirection: "row",
-    zIndex: 2,
-  },
-  tapHalf: { flex: 1 },
-  slideBody: {
-    position: "absolute",
-    left: 20,
-    right: 20,
-    top: 88,
-    bottom: 48,
-    zIndex: 3,
-    justifyContent: "space-between",
-  },
-  lede: {
-    color: "rgba(255,255,255,0.88)",
-    fontFamily: Fonts.sans,
-    fontSize: 14,
-    lineHeight: 20,
-    maxWidth: 220,
-  },
-  display: {
-    fontFamily: "Chomsky",
-    color: "#FFFFFF",
-    fontSize: 56,
-    lineHeight: 58,
-    textAlign: "center",
-    alignSelf: "center",
-    marginTop: "auto",
-    marginBottom: "auto",
-  },
-  footerRow: {
-    gap: 6,
-    flexDirection: "row",
-    flexWrap: "wrap",
-    justifyContent: "space-between",
-    alignItems: "flex-end",
-  },
-  footerTitle: {
-    color: "#FFFFFF",
-    fontSize: 15,
-    fontWeight: "800",
-    letterSpacing: 0.2,
-    flexBasis: "40%",
-  },
-  footerBody: {
-    color: "rgba(255,255,255,0.72)",
-    fontSize: 12,
-    lineHeight: 17,
-    flexBasis: "52%",
-    textAlign: "right",
-  },
-  glass: {
-    marginTop: 24,
-    borderRadius: 22,
-    padding: 16,
-    backgroundColor: "rgba(255,255,255,0.14)",
-    borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.22)",
-    gap: 8,
-  },
-  glassHead: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: 10,
-  },
-  dots: { flexDirection: "row", flexWrap: "wrap", width: 22, gap: 3 },
-  dot: {
-    width: 7,
-    height: 7,
-    borderRadius: 4,
-    backgroundColor: "#FFFFFF",
-  },
-  glassTitle: {
-    color: "#FFFFFF",
-    fontFamily: "Chomsky",
-    fontSize: 28,
-  },
-  glassFoot: {
-    color: "rgba(255,255,255,0.75)",
-    fontSize: 12,
-    lineHeight: 17,
-    textAlign: "center",
-    marginTop: 4,
-  },
-  ctaStack: { gap: 10, marginTop: 12 },
-  ctaBtn: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-    backgroundColor: "#FFFFFF",
-    paddingHorizontal: 16,
-    paddingVertical: 14,
-    borderRadius: 999,
-  },
-  ctaBtnText: {
-    color: "#0A0A0A",
-    fontSize: 14,
-    fontWeight: "700",
-  },
-  hintBar: {
-    position: "absolute",
-    bottom: 14,
-    left: 0,
-    right: 0,
-    alignItems: "center",
-    zIndex: 4,
-  },
-  hint: {
-    color: "rgba(255,255,255,0.45)",
-    fontSize: 11,
-    letterSpacing: 0.4,
-  },
-  error: {
-    color: "#FFB3AD",
-    fontSize: 13,
-    marginBottom: 8,
-  },
-  posterSlide: {
-    flex: 1,
-    justifyContent: "center",
-  },
-  chartSlide: {
-    flex: 1,
-    justifyContent: "center",
-  },
-});

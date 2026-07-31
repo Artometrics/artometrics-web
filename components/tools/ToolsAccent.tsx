@@ -1,12 +1,6 @@
-import { View, StyleSheet } from "react-native";
-import { useTheme } from "@/lib/theme";
+import { View } from "react-native";
 
 /** Native fallback — static accent rule. */
 export function ToolsAccent() {
-  const { colors } = useTheme();
-  return <View style={[styles.beam, { backgroundColor: colors.accent }]} />;
+  return <View className="mt-1 mb-2 h-[3px] w-[120px] bg-accent" />;
 }
-
-const styles = StyleSheet.create({
-  beam: { height: 3, width: 120, marginTop: 4, marginBottom: 8 },
-});

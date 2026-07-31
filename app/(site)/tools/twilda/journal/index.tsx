@@ -2,19 +2,16 @@ import { useCallback, useState } from "react";
 import {
   ActivityIndicator,
   Alert,
-  FlatList,
   Pressable,
   RefreshControl,
-  StyleSheet,
   Text,
-  View,
 } from "react-native";
+import { FlashList } from "@shopify/flash-list";
 import { router, useFocusEffect } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { PageSeo } from "@/components/PageSeo";
 import { ToolsSubnav } from "@/components/tools/ToolsSubnav";
 import { PrimaryButton } from "@/components/PrimaryButton";
-import { Fonts } from "@/constants/Colors";
 import { useTheme } from "@/lib/theme";
 import { useRequireAuth } from "@/lib/tools/requireAuth";
 import { getSupabase } from "@/lib/supabase/client";
@@ -69,19 +66,19 @@ export default function TwildaJournalScreen() {
 
   if (!ready) {
     return (
-      <Wrapper style={styles.wrap}>
-        <Text style={{ color: colors.textMuted }}>Loading…</Text>
+      <Wrapper className="gap-2.5 py-8">
+        <Text className="text-muted">Loading…</Text>
       </Wrapper>
     );
   }
 
   return (
-    <Wrapper style={styles.wrap}>
+    <Wrapper className="gap-2.5 py-8">
       <PageSeo title="Twilda Journal" description="Private writing notes." path="/tools/twilda/journal" />
       <ToolsSubnav links={NAV} />
-      <Text style={[styles.eyebrow, { color: colors.accent }]}>Twilda</Text>
-      <Text style={[styles.title, { color: colors.text }]}>Journal</Text>
-      <Text style={[styles.deck, { color: colors.textMuted }]}>
+      <Text className="text-xs tracking-[1.8px] uppercase font-bold text-accent">Twilda</Text>
+      <Text className="font-serif text-[36px] font-bold text-fg">Journal</Text>
+      <Text className="font-serif text-base leading-[26px] text-muted">
         Private notes — only you can see these.
       </Text>
       <PrimaryButton
@@ -96,9 +93,9 @@ export default function TwildaJournalScreen() {
         }}
       />
       {loading ? (
-        <ActivityIndicator style={{ marginTop: 32 }} color={colors.accent} />
+        <ActivityIndicator className="mt-8" color={colors.accent} />
       ) : (
-        <FlatList
+        <FlashList
           data={entries}
           keyExtractor={(item) => item.id}
           scrollEnabled={false}
@@ -116,19 +113,19 @@ export default function TwildaJournalScreen() {
             />
           }
           ListEmptyComponent={
-            <Text style={[styles.deck, { color: colors.textMuted, marginTop: 20 }]}>
+            <Text className="font-serif text-base leading-[26px] mt-5 text-muted">
               No entries yet.
             </Text>
           }
           renderItem={({ item }) => (
             <Pressable
               onPress={() => router.push(`/tools/twilda/journal/${item.id}`)}
-              style={[styles.row, { borderBottomColor: colors.border }]}
+              className="py-3.5 border-b border-border gap-1"
             >
-              <Text style={[styles.rowTitle, { color: colors.text }]}>
+              <Text className="font-serif text-lg text-fg">
                 {item.title || "Untitled"}
               </Text>
-              <Text style={{ color: colors.textMuted, fontSize: 13 }}>
+              <Text className="text-muted text-[13px]">
                 {formatJournalDate(item.updated_at)}
               </Text>
             </Pressable>
@@ -138,12 +135,3 @@ export default function TwildaJournalScreen() {
     </Wrapper>
   );
 }
-
-const styles = StyleSheet.create({
-  wrap: { paddingVertical: 32, gap: 10 },
-  eyebrow: { fontSize: 12, letterSpacing: 1.8, textTransform: "uppercase", fontWeight: "700" },
-  title: { fontFamily: Fonts.serif, fontSize: 36, fontWeight: "700" },
-  deck: { fontFamily: Fonts.serif, fontSize: 16, lineHeight: 26 },
-  row: { paddingVertical: 14, borderBottomWidth: StyleSheet.hairlineWidth, gap: 4 },
-  rowTitle: { fontFamily: Fonts.serif, fontSize: 18 },
-});

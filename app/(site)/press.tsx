@@ -1,54 +1,43 @@
-import { Text, StyleSheet } from "react-native";
+import { Text } from "react-native";
 import { Link } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { PageSeo } from "@/components/PageSeo";
-import { Fonts } from "@/constants/Colors";
-import { useTheme } from "@/lib/theme";
 
 export default function PressScreen() {
-  const { colors } = useTheme();
   return (
-    <Wrapper variant="narrow" style={styles.wrap}>
+    <Wrapper variant="narrow" className="gap-3 py-12">
       <PageSeo
         title="Press"
         description="Artometrics boilerplate, brand assets, and press contact."
         path="/press"
       />
-      <Text style={[styles.eyebrow, { color: colors.accent }]}>Press</Text>
-      <Text style={[styles.title, { color: colors.text }]}>Brand & press</Text>
-      <Text style={[styles.p, { color: colors.textMuted }]}>
+      <Text className="text-xs tracking-[1.8px] uppercase font-bold text-accent">Press</Text>
+      <Text className="font-serif text-[36px] font-bold text-fg">Brand & press</Text>
+      <Text className="font-serif text-base leading-[26px] text-muted">
         Artometrics is an independent data-science magazine for the creative industries and culture
         — art for data scientists and data science for artists.
       </Text>
-      <Text style={[styles.h, { color: colors.text }]}>Boilerplate</Text>
-      <Text style={[styles.p, { color: colors.textMuted }]}>
+      <Text className="font-serif text-[22px] font-bold mt-3 text-fg">Boilerplate</Text>
+      <Text className="font-serif text-base leading-[26px] text-muted">
         We publish editorial data reports with reproducible charts and public datasets, a podcast,
         and membership tools for readers who want evidence without hype.
       </Text>
-      <Text style={[styles.h, { color: colors.text }]}>Assets</Text>
-      <Text style={[styles.p, { color: colors.textMuted }]}>
+      <Text className="font-serif text-[22px] font-bold mt-3 text-fg">Assets</Text>
+      <Text className="font-serif text-base leading-[26px] text-muted">
         Chomsky A mark (black / white / red): see{" "}
         <Link href="/library">
-          <Text style={{ color: colors.accent }}>/library</Text>
+          <Text className="text-accent">/library</Text>
         </Link>{" "}
         and the brand kit checklist in the owner playbook.
       </Text>
-      <Text style={[styles.h, { color: colors.text }]}>Contact</Text>
-      <Text style={[styles.p, { color: colors.textMuted }]}>
+      <Text className="font-serif text-[22px] font-bold mt-3 text-fg">Contact</Text>
+      <Text className="font-serif text-base leading-[26px] text-muted">
         Press inquiries via{" "}
         <Link href="/contact">
-          <Text style={{ color: colors.accent }}>Contact</Text>
+          <Text className="text-accent">Contact</Text>
         </Link>
         .
       </Text>
     </Wrapper>
   );
 }
-
-const styles = StyleSheet.create({
-  wrap: { paddingVertical: 48, gap: 12 },
-  eyebrow: { fontSize: 12, letterSpacing: 1.8, textTransform: "uppercase", fontWeight: "700" },
-  title: { fontFamily: Fonts.serif, fontSize: 36, fontWeight: "700" },
-  h: { fontFamily: Fonts.serif, fontSize: 22, fontWeight: "700", marginTop: 12 },
-  p: { fontFamily: Fonts.serif, fontSize: 16, lineHeight: 26 },
-});

@@ -1,43 +1,41 @@
-import { Image, Pressable, Text, View, StyleSheet } from "react-native";
+import { Pressable, Text, View } from "react-native";
+import { Image } from "expo-image";
 import { Link } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { PageSeo } from "@/components/PageSeo";
-import { Fonts } from "@/constants/Colors";
-import { useTheme } from "@/lib/theme";
 import { assetUrl } from "@/lib/assets";
 import { getAuthors } from "@/lib/content";
 
 export default function AuthorsIndex() {
-  const { colors } = useTheme();
   const authors = getAuthors();
 
   return (
-    <Wrapper style={styles.wrap}>
+    <Wrapper className="gap-3 py-12">
       <PageSeo title="Authors" description="Artometrics masthead." path="/authors" />
-      <Text style={[styles.eyebrow, { color: colors.accent }]}>Masthead</Text>
-      <Text style={[styles.title, { color: colors.text }]}>Authors</Text>
-      <View style={styles.grid}>
+      <Text className="text-[11px] tracking-[2.5px] uppercase font-semibold text-accent">
+        Masthead
+      </Text>
+      <Text className="text-[40px] font-light font-serif mb-3 text-fg">Authors</Text>
+      <View className="gap-5 flex-row flex-wrap">
         {authors.map((author) => {
           const avatar = assetUrl(author.image?.url);
           return (
             <Link key={author.id} href={`/authors/${author.id}`} asChild>
               <Pressable
-                style={StyleSheet.flatten([
-                  styles.card,
-                  { borderColor: colors.border, backgroundColor: colors.bgElevated },
-                ])}
+                className="flex-basis-[200px] flex-grow border border-border p-4 gap-2 items-start bg-bg-elevated"
               >
                 {avatar ? (
                   <Image
                     source={{ uri: avatar }}
-                    style={styles.avatar}
-                    resizeMode="cover"
+                    className="w-[72px] h-[72px] rounded-full"
+                    contentFit="cover"
+                    transition={200}
                     accessibilityLabel={author.image?.alt || author.name}
                   />
                 ) : null}
-                <Text style={[styles.name, { color: colors.text }]}>{author.name}</Text>
+                <Text className="text-lg font-bold text-fg">{author.name}</Text>
                 {author.role ? (
-                  <Text style={[styles.role, { color: colors.textMuted }]}>{author.role}</Text>
+                  <Text className="text-[13px] text-muted">{author.role}</Text>
                 ) : null}
               </Pressable>
             </Link>
@@ -47,26 +45,3 @@ export default function AuthorsIndex() {
     </Wrapper>
   );
 }
-
-const styles = StyleSheet.create({
-  wrap: { paddingVertical: 48, gap: 12 },
-  eyebrow: {
-    fontSize: 11,
-    letterSpacing: 2.5,
-    textTransform: "uppercase",
-    fontWeight: "600",
-  },
-  title: { fontSize: 40, fontWeight: "300", fontFamily: Fonts.serif, marginBottom: 12 },
-  grid: { gap: 20, flexDirection: "row", flexWrap: "wrap" },
-  card: {
-    flexBasis: 200,
-    flexGrow: 1,
-    borderWidth: StyleSheet.hairlineWidth,
-    padding: 16,
-    gap: 8,
-    alignItems: "flex-start",
-  },
-  avatar: { width: 72, height: 72, borderRadius: 36 },
-  name: { fontSize: 18, fontWeight: "700" },
-  role: { fontSize: 13 },
-});

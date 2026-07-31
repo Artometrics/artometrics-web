@@ -6,18 +6,14 @@ import {
   TextInput,
   Pressable,
   View,
-  StyleSheet,
 } from "react-native";
 import { Link } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { PageSeo } from "@/components/PageSeo";
-import { Fonts } from "@/constants/Colors";
-import { useTheme } from "@/lib/theme";
 
 const FORM_NAME = "artometrics-newsletter";
 
 export default function NewsletterScreen() {
-  const { colors } = useTheme();
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "saving" | "done" | "error">("idle");
   const [error, setError] = useState<string | null>(null);
@@ -52,81 +48,59 @@ export default function NewsletterScreen() {
   }
 
   return (
-    <Wrapper variant="narrow" style={styles.wrap}>
+    <Wrapper variant="narrow" className="gap-3.5 py-12">
       <PageSeo
         title="Newsletter"
         description="Notes from Artometrics — new reports, datasets, and interviews."
         path="/newsletter"
       />
-      <Text style={[styles.eyebrow, { color: colors.accent }]}>Inbox</Text>
-      <Text style={[styles.title, { color: colors.text }]}>Newsletter</Text>
-      <Text style={[styles.deck, { color: colors.textMuted }]}>
+      <Text className="text-xs tracking-[1.8px] uppercase font-bold text-accent">Inbox</Text>
+      <Text className="font-display text-[40px] uppercase text-fg">Newsletter</Text>
+      <Text className="font-sans text-base leading-[26px] text-muted">
         Occasional notes when a report ships. No spam. Read the{" "}
         <Link href="/legal/privacy">
-          <Text style={{ color: colors.accent }}>privacy policy</Text>
+          <Text className="text-accent">privacy policy</Text>
         </Link>
         .
       </Text>
       {status === "done" ? (
-        <Text style={[styles.deck, { color: colors.text }]}>
+        <Text className="font-sans text-base leading-[26px] text-fg">
           Thanks — you are on the list. We will write when something ships.
         </Text>
       ) : (
-        <View style={[styles.row, { borderColor: colors.border }]}>
+        <View className="flex-row border-2 border-border mt-2">
           <TextInput
             value={email}
             onChangeText={setEmail}
             placeholder="Enter your email"
-            placeholderTextColor={colors.textSubtle}
+            placeholderTextColorClassName="text-subtle"
             keyboardType="email-address"
             autoCapitalize="none"
             editable={status !== "saving"}
-            style={[styles.input, { color: colors.text }]}
+            className="flex-1 px-3 py-3 text-base text-fg"
             onSubmitEditing={() => void submit()}
           />
           <Pressable
             onPress={() => void submit()}
             disabled={status === "saving"}
-            style={[styles.btn, { backgroundColor: colors.accent }]}
+            className="px-4 justify-center py-3.5 min-w-[96px] bg-accent"
           >
             {status === "saving" ? (
               <ActivityIndicator color="#FFFFFF" />
             ) : (
-              <Text style={styles.btnText}>Sign up</Text>
+              <Text className="text-white font-extrabold tracking-wide text-xs uppercase">
+                Sign up
+              </Text>
             )}
           </Pressable>
         </View>
       )}
-      {error ? <Text style={[styles.error, { color: colors.accent }]}>{error}</Text> : null}
+      {error ? <Text className="text-sm text-accent">{error}</Text> : null}
       {Platform.OS !== "web" ? (
-        <Text style={[styles.hint, { color: colors.textSubtle }]}>
+        <Text className="text-xs mt-1 text-subtle">
           Newsletter signup is available on the web at artometrics.com/newsletter.
         </Text>
       ) : null}
     </Wrapper>
   );
 }
-
-const styles = StyleSheet.create({
-  wrap: { paddingVertical: 48, gap: 14 },
-  eyebrow: { fontSize: 12, letterSpacing: 1.8, textTransform: "uppercase", fontWeight: "700" },
-  title: {
-    fontFamily: Fonts.display,
-    fontSize: 40,
-    fontWeight: "400",
-    textTransform: "uppercase",
-  },
-  deck: { fontFamily: Fonts.sans, fontSize: 16, lineHeight: 26 },
-  row: { flexDirection: "row", borderWidth: 2, marginTop: 8 },
-  input: { flex: 1, paddingHorizontal: 12, paddingVertical: 12, fontSize: 16 },
-  btn: { paddingHorizontal: 16, justifyContent: "center", paddingVertical: 14, minWidth: 96 },
-  btnText: {
-    color: "#FFFFFF",
-    fontWeight: "800",
-    letterSpacing: 1,
-    fontSize: 12,
-    textTransform: "uppercase",
-  },
-  error: { fontSize: 14 },
-  hint: { fontSize: 12, marginTop: 4 },
-});

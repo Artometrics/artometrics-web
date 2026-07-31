@@ -4,7 +4,6 @@ import {
   Alert,
   Pressable,
   ScrollView,
-  StyleSheet,
   Text,
   TextInput,
   View,
@@ -16,7 +15,6 @@ import { ToolsSubnav } from "@/components/tools/ToolsSubnav";
 import { StudioBreadcrumb } from "@/components/studio/StudioBreadcrumb";
 import { StudioSelect } from "@/components/studio/StudioSelect";
 import { PrimaryButton } from "@/components/PrimaryButton";
-import { Fonts } from "@/constants/Colors";
 import { useTheme } from "@/lib/theme";
 import { useRequireAuth } from "@/lib/tools/requireAuth";
 import { getSupabase } from "@/lib/supabase/client";
@@ -230,7 +228,7 @@ export default function TwildaNovelWorkspace() {
 
   if (!ready || loading) {
     return (
-      <Wrapper style={styles.wrap}>
+      <Wrapper className="gap-2.5 py-8 flex-1">
         <ActivityIndicator color={colors.accent} />
       </Wrapper>
     );
@@ -238,20 +236,17 @@ export default function TwildaNovelWorkspace() {
 
   if (!novel) {
     return (
-      <Wrapper style={styles.wrap}>
-        <Text style={{ color: colors.text }}>Novel not found.</Text>
+      <Wrapper className="gap-2.5 py-8 flex-1">
+        <Text className="text-fg">Novel not found.</Text>
         <PrimaryButton label="Back to library" onPress={() => router.push("/tools/twilda")} />
       </Wrapper>
     );
   }
 
-  const panelStyle = StyleSheet.flatten([
-    styles.panel,
-    { borderColor: colors.border, backgroundColor: colors.bgElevated },
-  ]);
+  const panelClassName = "border border-border rounded-sm p-4 gap-2 bg-bg-elevated";
 
   return (
-    <Wrapper style={styles.wrap}>
+    <Wrapper className="gap-2.5 py-8 flex-1">
       <PageSeo title={novel.title} description="Twilda workspace" path={`/tools/twilda/novels/${id}`} />
       <ToolsSubnav links={NAV} />
       <StudioBreadcrumb
@@ -265,39 +260,27 @@ export default function TwildaNovelWorkspace() {
             : []),
         ]}
       />
-      <View style={styles.titleRow}>
-        <Text style={[styles.title, { color: colors.text }]}>{novel.title}</Text>
-        <Text style={[styles.save, { color: colors.textMuted }]}>
+      <View className="flex-row flex-wrap items-baseline justify-between gap-2">
+        <Text className="font-serif text-[36px] font-bold text-fg">{novel.title}</Text>
+        <Text className="text-xs min-h-4 text-muted">
           {saveState === "saving" ? "Saving…" : saveState === "saved" ? "Saved" : " "}
         </Text>
       </View>
 
-      <View
-        style={StyleSheet.flatten([
-          styles.segment,
-          { borderColor: colors.border, backgroundColor: colors.bg },
-        ])}
-      >
+      <View className="flex-row flex-wrap border border-border rounded-sm p-0.5 gap-0.5 my-1.5 self-start bg-bg">
         {MODES.map((m) => {
           const active = mode === m.id;
           return (
             <Pressable
               key={m.id}
               onPress={() => setMode(m.id)}
-              style={StyleSheet.flatten([
-                styles.segmentItem,
-                active
-                  ? { backgroundColor: colors.text }
-                  : { backgroundColor: "transparent" },
-              ])}
+              className={["px-3.5 py-2 rounded-sm", active ? "bg-fg" : "bg-transparent"].join(" ")}
             >
               <Text
-                style={{
-                  color: active ? colors.inverse : colors.textMuted,
-                  fontSize: 13,
-                  fontWeight: active ? "700" : "500",
-                  letterSpacing: 0.2,
-                }}
+                className={[
+                  "text-[13px] tracking-wide",
+                  active ? "text-inverse font-bold" : "text-muted font-medium",
+                ].join(" ")}
               >
                 {m.label}
               </Text>
@@ -308,10 +291,10 @@ export default function TwildaNovelWorkspace() {
 
       <ScrollView contentContainerStyle={{ gap: 12, paddingBottom: 48 }}>
         {mode === "plan" ? (
-          <View style={[panelStyle, { gap: 12 }]}>
+          <View className={panelClassName} style={{ gap: 12 }}>
             {novel.chapters.map((ch) => (
-              <View key={ch.id} style={[styles.block, { borderColor: colors.border }]}>
-                <Text style={[styles.h, { color: colors.text }]}>{ch.title}</Text>
+              <View key={ch.id} className="border border-border p-3.5 gap-1.5">
+                <Text className="font-serif text-lg font-bold text-fg">{ch.title}</Text>
                 {ch.scenes.map((sc) => (
                   <Pressable
                     key={sc.id}
@@ -321,13 +304,13 @@ export default function TwildaNovelWorkspace() {
                       setMode("write");
                     }}
                   >
-                    <Text style={{ color: colors.accent, paddingVertical: 6 }}>
+                    <Text className="text-accent py-1.5">
                       {sc.title || "Scene"} →
                     </Text>
                   </Pressable>
                 ))}
                 <Pressable onPress={() => createScene(sb(), user!.id, ch.id).then(load)}>
-                  <Text style={{ color: colors.textMuted }}>+ Scene</Text>
+                  <Text className="text-muted">+ Scene</Text>
                 </Pressable>
               </View>
             ))}
@@ -339,8 +322,8 @@ export default function TwildaNovelWorkspace() {
         ) : null}
 
         {mode === "write" ? (
-          <View style={[panelStyle, { gap: 12, zIndex: 8 }]}>
-            <View style={styles.selectors}>
+          <View className={panelClassName} style={{ gap: 12, zIndex: 8 }}>
+            <View className="flex-row flex-wrap gap-3">
               <View style={{ flex: 1, minWidth: 140, zIndex: 12 }}>
                 <StudioSelect
                   label="Chapter"
@@ -365,28 +348,22 @@ export default function TwildaNovelWorkspace() {
               value={sceneText}
               onChangeText={onSceneChange}
               placeholder="Write this scene…"
-              placeholderTextColor={colors.textSubtle}
-              style={StyleSheet.flatten([
-                styles.editor,
-                {
-                  borderColor: colors.border,
-                  color: colors.text,
-                  backgroundColor: colors.bg,
-                },
-              ])}
+              placeholderTextColorClassName="text-subtle"
+              className="border border-border rounded-sm min-h-[200px] p-3.5 font-serif text-base leading-7 text-fg bg-bg"
+              style={{ textAlignVertical: "top" }}
             />
           </View>
         ) : null}
 
         {mode === "board" ? (
-          <View style={[panelStyle, { gap: 12 }]}>
+          <View className={panelClassName} style={{ gap: 12 }}>
             {panels.map((p) => (
-              <View key={p.id} style={[styles.block, { borderColor: colors.border }]}>
-                <Text style={[styles.h, { color: colors.text }]}>
+              <View key={p.id} className="border border-border p-3.5 gap-1.5">
+                <Text className="font-serif text-lg font-bold text-fg">
                   Panel {p.sort_order + 1}
                 </Text>
-                <Text style={{ color: colors.textMuted }}>{p.caption || "No caption"}</Text>
-                <Text style={{ color: colors.textSubtle }}>{p.prompt || "No prompt"}</Text>
+                <Text className="text-muted">{p.caption || "No caption"}</Text>
+                <Text className="text-subtle">{p.prompt || "No prompt"}</Text>
               </View>
             ))}
             <PrimaryButton
@@ -400,12 +377,12 @@ export default function TwildaNovelWorkspace() {
         ) : null}
 
         {mode === "codex" ? (
-          <View style={[panelStyle, { gap: 12 }]}>
+          <View className={panelClassName} style={{ gap: 12 }}>
             {novel.codex.map((entry) => (
-              <View key={entry.id} style={[styles.block, { borderColor: colors.border }]}>
-                <Text style={[styles.source, { color: colors.accent }]}>{entry.type}</Text>
-                <Text style={[styles.h, { color: colors.text }]}>{entry.name}</Text>
-                <Text style={{ color: colors.textMuted }}>{entry.summary}</Text>
+              <View key={entry.id} className="border border-border p-3.5 gap-1.5">
+                <Text className="text-[11px] tracking-[1.2px] uppercase font-bold text-accent">{entry.type}</Text>
+                <Text className="font-serif text-lg font-bold text-fg">{entry.name}</Text>
+                <Text className="text-muted">{entry.summary}</Text>
               </View>
             ))}
             <PrimaryButton
@@ -423,7 +400,7 @@ export default function TwildaNovelWorkspace() {
         ) : null}
 
         {mode === "settings" ? (
-          <View style={[panelStyle, { gap: 12, zIndex: 8 }]}>
+          <View className={panelClassName} style={{ gap: 12, zIndex: 8 }}>
             {(
               [
                 ["Title", title, setTitle],
@@ -432,18 +409,11 @@ export default function TwildaNovelWorkspace() {
               ] as const
             ).map(([label, value, set]) => (
               <View key={label} style={{ gap: 6 }}>
-                <Text style={[styles.fieldLabel, { color: colors.textMuted }]}>{label}</Text>
+                <Text className="text-xs tracking-wide uppercase font-bold text-muted">{label}</Text>
                 <TextInput
                   value={value}
                   onChangeText={set}
-                  style={StyleSheet.flatten([
-                    styles.input,
-                    {
-                      borderColor: colors.border,
-                      color: colors.text,
-                      backgroundColor: colors.bg,
-                    },
-                  ])}
+                  className="border border-border rounded-sm min-h-11 px-3 py-2.5 text-base text-fg bg-bg"
                 />
               </View>
             ))}
@@ -454,20 +424,13 @@ export default function TwildaNovelWorkspace() {
               onChange={(v) => setCoverKind(v as CoverKind)}
             />
             <View style={{ gap: 6 }}>
-              <Text style={[styles.fieldLabel, { color: colors.textMuted }]}>Synopsis</Text>
+              <Text className="text-xs tracking-wide uppercase font-bold text-muted">Synopsis</Text>
               <TextInput
                 multiline
                 value={synopsis}
                 onChangeText={setSynopsis}
-                style={StyleSheet.flatten([
-                  styles.editor,
-                  {
-                    borderColor: colors.border,
-                    color: colors.text,
-                    backgroundColor: colors.bg,
-                    minHeight: 120,
-                  },
-                ])}
+                className="border border-border rounded-sm min-h-[120px] p-3.5 font-serif text-base leading-7 text-fg bg-bg"
+                style={{ textAlignVertical: "top" }}
               />
             </View>
             <PrimaryButton
@@ -484,16 +447,11 @@ export default function TwildaNovelWorkspace() {
                 Alert.alert("Saved", "Novel settings updated.");
               }}
             />
-            <View
-              style={StyleSheet.flatten([
-                styles.dangerZone,
-                { borderColor: colors.border },
-              ])}
-            >
-              <Text style={[styles.fieldLabel, { color: colors.textMuted }]}>Danger zone</Text>
+            <View className="border-t border-border mt-4 pt-4 gap-2">
+              <Text className="text-xs tracking-wide uppercase font-bold text-muted">Danger zone</Text>
               <PrimaryButton
                 label="Delete novel"
-                style={{ backgroundColor: colors.textMuted }}
+                className="bg-muted"
                 onPress={() =>
                   Alert.alert("Delete novel?", "This cannot be undone.", [
                     { text: "Cancel", style: "cancel" },
@@ -516,74 +474,3 @@ export default function TwildaNovelWorkspace() {
   );
 }
 
-const styles = StyleSheet.create({
-  wrap: { paddingVertical: 28, gap: 8, flex: 1 },
-  titleRow: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    alignItems: "baseline",
-    justifyContent: "space-between",
-    gap: 8,
-  },
-  title: { fontFamily: Fonts.serif, fontSize: 32, fontWeight: "700", flexShrink: 1 },
-  save: { fontSize: 12, minHeight: 16 },
-  segment: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    borderWidth: StyleSheet.hairlineWidth,
-    borderRadius: 2,
-    padding: 3,
-    gap: 2,
-    marginVertical: 6,
-    alignSelf: "flex-start",
-  },
-  segmentItem: {
-    paddingHorizontal: 14,
-    paddingVertical: 8,
-    borderRadius: 1,
-  },
-  panel: {
-    borderWidth: StyleSheet.hairlineWidth,
-    borderRadius: 2,
-    padding: 16,
-  },
-  selectors: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    gap: 12,
-  },
-  block: { borderWidth: StyleSheet.hairlineWidth, padding: 14, gap: 6 },
-  h: { fontFamily: Fonts.serif, fontSize: 18, fontWeight: "700" },
-  fieldLabel: {
-    fontSize: 12,
-    letterSpacing: 0.8,
-    textTransform: "uppercase",
-    fontWeight: "700",
-  },
-  source: { fontSize: 11, letterSpacing: 1.2, textTransform: "uppercase", fontWeight: "700" },
-  input: {
-    borderWidth: StyleSheet.hairlineWidth,
-    borderRadius: 2,
-    paddingHorizontal: 12,
-    paddingVertical: 10,
-    minHeight: 44,
-    fontFamily: Fonts.serif,
-    fontSize: 16,
-  },
-  editor: {
-    borderWidth: StyleSheet.hairlineWidth,
-    borderRadius: 2,
-    padding: 14,
-    minHeight: 280,
-    textAlignVertical: "top",
-    fontFamily: Fonts.serif,
-    fontSize: 17,
-    lineHeight: 28,
-  },
-  dangerZone: {
-    marginTop: 12,
-    paddingTop: 16,
-    borderTopWidth: StyleSheet.hairlineWidth,
-    gap: 10,
-  },
-});

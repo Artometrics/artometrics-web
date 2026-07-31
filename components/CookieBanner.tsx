@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
-import { Platform, Pressable, Text, View, StyleSheet } from "react-native";
+import { Platform, Pressable, Text, View } from "react-native";
 import { Link } from "expo-router";
-import { useTheme } from "@/lib/theme";
-import { Fonts } from "@/constants/Colors";
 import { loadGoogleAnalytics } from "@/lib/analytics/ga";
 
 const KEY = "artometrics-cookie-pref";
 
+const overlayPosition =
+  Platform.OS === "web" ? ({ position: "fixed" as const }) : ({ position: "absolute" as const });
+
 export function CookieBanner() {
-  const { colors } = useTheme();
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -32,37 +32,19 @@ export function CookieBanner() {
   }
 
   return (
-    <View style={[styles.banner, { backgroundColor: colors.bgElevated, borderColor: colors.border }]}>
-      <Text style={[styles.copy, { color: colors.text }]}>
+    <View
+      className="left-3 right-3 bottom-3 z-[1500] self-center max-w-[480px] gap-3 border border-border bg-bg-elevated p-3.5"
+      style={overlayPosition}
+    >
+      <Text className="text-[13px] leading-5 font-serif text-fg">
         We use essential cookies for membership and optional analytics when configured.{" "}
         <Link href="/legal/cookies">
-          <Text style={{ color: colors.accent, textDecorationLine: "underline" }}>Cookie policy</Text>
+          <Text className="underline text-accent">Cookie policy</Text>
         </Link>
       </Text>
-      <Pressable onPress={accept} style={[styles.btn, { backgroundColor: colors.text }]}>
-        <Text style={[styles.btnText, { color: colors.inverse }]}>OK</Text>
+      <Pressable onPress={accept} className="self-start bg-fg px-4 py-2">
+        <Text className="text-xs font-bold tracking-wide text-inverse">OK</Text>
       </Pressable>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  banner: {
-    ...Platform.select({
-      web: { position: "fixed" as const },
-      default: { position: "absolute" as const },
-    }),
-    left: 12,
-    right: 12,
-    bottom: 12,
-    zIndex: 1500,
-    borderWidth: 1,
-    padding: 14,
-    gap: 12,
-    maxWidth: 480,
-    alignSelf: "center",
-  },
-  copy: { fontSize: 13, lineHeight: 20, fontFamily: Fonts.serif },
-  btn: { alignSelf: "flex-start", paddingHorizontal: 16, paddingVertical: 8 },
-  btnText: { fontSize: 12, fontWeight: "700", letterSpacing: 1 },
-});

@@ -1,10 +1,9 @@
 import { useCallback, useState } from "react";
-import { ActivityIndicator, Pressable, Text, View, StyleSheet } from "react-native";
+import { ActivityIndicator, Pressable, Text, View } from "react-native";
 import { Link, router, useFocusEffect } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { PageSeo } from "@/components/PageSeo";
 import { PrimaryButton } from "@/components/PrimaryButton";
-import { Fonts } from "@/constants/Colors";
 import { useTheme } from "@/lib/theme";
 import { useAuth } from "@/lib/auth";
 import { apiFetch } from "@/lib/supabase/client";
@@ -59,8 +58,8 @@ export default function MeHubScreen() {
 
   if (authLoading || !user) {
     return (
-      <Wrapper style={styles.wrap}>
-        <Text style={{ color: colors.textMuted }}>Loading…</Text>
+      <Wrapper className="gap-3 py-10">
+        <Text className="text-muted">Loading…</Text>
       </Wrapper>
     );
   }
@@ -68,66 +67,65 @@ export default function MeHubScreen() {
   const name = profile?.display_name || profile?.pen_name || "Member";
 
   return (
-    <Wrapper style={styles.wrap}>
+    <Wrapper className="gap-3 py-10">
       <PageSeo title="Your hub" description="Your Artometrics profile hub." path="/me" />
-      <Text style={[styles.eyebrow, { color: colors.accent }]}>You</Text>
-      <Text style={[styles.title, { color: colors.text }]}>{name}</Text>
+      <Text className="text-xs tracking-[1.8px] uppercase font-bold text-accent">You</Text>
+      <Text className="font-serif text-[36px] font-bold text-fg">{name}</Text>
       {profile?.handle ? (
         <Link href={`/u/${profile.handle}` as `/u/${string}`}>
-          <Text style={{ color: colors.accent, fontWeight: "700" }}>@{profile.handle} →</Text>
+          <Text className="text-accent font-bold">@{profile.handle} →</Text>
         </Link>
       ) : (
-        <Text style={[styles.deck, { color: colors.textMuted }]}>
+        <Text className="font-serif text-base leading-[26px] max-w-[560px] text-muted">
           Claim a handle in{" "}
           <Link href="/settings">
-            <Text style={{ color: colors.accent }}>Settings</Text>
+            <Text className="text-accent">Settings</Text>
           </Link>{" "}
           to open a public profile.
         </Text>
       )}
       {profile?.bio ? (
-        <Text style={[styles.deck, { color: colors.textMuted }]}>{profile.bio}</Text>
+        <Text className="font-serif text-base leading-[26px] max-w-[560px] text-muted">{profile.bio}</Text>
       ) : null}
 
-      <View style={styles.actions}>
+      <View className="flex-row flex-wrap gap-2.5 mt-2">
         <PrimaryButton label="Studio" onPress={() => router.push("/studio")} />
         <PrimaryButton
           label="Publish"
           onPress={() => router.push("/studio/publish")}
-          style={{ backgroundColor: colors.textMuted }}
+          className="bg-muted"
         />
         <Link href="/settings" asChild>
-          <PrimaryButton label="Settings" style={{ backgroundColor: colors.textMuted }} />
+          <PrimaryButton label="Settings" className="bg-muted" />
         </Link>
       </View>
 
       {loading ? (
-        <ActivityIndicator color={colors.accent} style={{ marginTop: 24 }} />
+        <ActivityIndicator color={colors.accent} className="mt-6" />
       ) : (
         <>
-          <View style={[styles.block, { borderTopColor: colors.border }]}>
-            <Text style={[styles.h, { color: colors.text }]}>Your posts</Text>
+          <View className="mt-5 pt-[18px] border-t border-border gap-2">
+            <Text className="font-serif text-[22px] font-bold text-fg">Your posts</Text>
             {posts.length === 0 ? (
-              <Text style={[styles.deck, { color: colors.textMuted }]}>
+              <Text className="font-serif text-base leading-[26px] max-w-[560px] text-muted">
                 Nothing published yet. Write in Studio, then publish to your profile.
               </Text>
             ) : (
               posts.map((post) => (
-                <View
-                  key={post.id}
-                  style={StyleSheet.flatten([styles.row, { borderBottomColor: colors.border }])}
-                >
-                  <Text style={[styles.meta, { color: colors.accent }]}>{post.status}</Text>
-                  <Text style={[styles.rowTitle, { color: colors.text }]}>{post.title}</Text>
+                <View key={post.id} className="py-3 border-b border-border gap-1">
+                  <Text className="text-[11px] tracking-[1.2px] uppercase font-bold text-accent">
+                    {post.status}
+                  </Text>
+                  <Text className="font-serif text-lg text-fg">{post.title}</Text>
                 </View>
               ))
             )}
           </View>
 
-          <View style={[styles.block, { borderTopColor: colors.border }]}>
-            <Text style={[styles.h, { color: colors.text }]}>Saved reports</Text>
+          <View className="mt-5 pt-[18px] border-t border-border gap-2">
+            <Text className="font-serif text-[22px] font-bold text-fg">Saved reports</Text>
             {saved.length === 0 ? (
-              <Text style={[styles.deck, { color: colors.textMuted }]}>
+              <Text className="font-serif text-base leading-[26px] max-w-[560px] text-muted">
                 No saved reports yet. Open any article and tap Save.
               </Text>
             ) : (
@@ -135,13 +133,8 @@ export default function MeHubScreen() {
                 const post = getBlogPost(item.article_slug);
                 return (
                   <Link key={item.article_slug} href={`/${item.article_slug}` as `/`} asChild>
-                    <Pressable
-                      style={StyleSheet.flatten([
-                        styles.row,
-                        { borderBottomColor: colors.border },
-                      ])}
-                    >
-                      <Text style={[styles.rowTitle, { color: colors.text }]}>
+                    <Pressable className="py-3 border-b border-border gap-1">
+                      <Text className="font-serif text-lg text-fg">
                         {post?.title ?? item.article_slug}
                       </Text>
                     </Pressable>
@@ -155,31 +148,3 @@ export default function MeHubScreen() {
     </Wrapper>
   );
 }
-
-const styles = StyleSheet.create({
-  wrap: { paddingVertical: 40, gap: 12 },
-  eyebrow: {
-    fontSize: 12,
-    letterSpacing: 1.8,
-    textTransform: "uppercase",
-    fontWeight: "700",
-  },
-  title: { fontFamily: Fonts.serif, fontSize: 36, fontWeight: "700" },
-  deck: { fontFamily: Fonts.serif, fontSize: 16, lineHeight: 26, maxWidth: 560 },
-  h: { fontFamily: Fonts.serif, fontSize: 22, fontWeight: "700" },
-  actions: { flexDirection: "row", flexWrap: "wrap", gap: 10, marginTop: 8 },
-  block: {
-    marginTop: 20,
-    paddingTop: 18,
-    borderTopWidth: StyleSheet.hairlineWidth,
-    gap: 8,
-  },
-  row: { paddingVertical: 12, borderBottomWidth: StyleSheet.hairlineWidth, gap: 4 },
-  rowTitle: { fontFamily: Fonts.serif, fontSize: 18 },
-  meta: {
-    fontSize: 11,
-    letterSpacing: 1.2,
-    textTransform: "uppercase",
-    fontWeight: "700",
-  },
-});
