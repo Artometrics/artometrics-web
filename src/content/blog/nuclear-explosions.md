@@ -23,33 +23,26 @@ keyPoints:
   - 1970–1970 — Year span covered in the file
   - WR — Most common Purpose
 faq:
-  - question: How magnitudes move through the record?
+  - question: >-
+      How many records are in this dataset?
     answer: >-
-      Key figure: 2,051 — Records in the working dataset. Zeros in the magnitude
-      field are not moral quiet. They are measurement gaps, non-detections, or
-      unfilled cells that pull the median to the floor while a thin upper tail
-      records…
-  - question: Who sits at the top?
+      2,051 records in the working dataset.
+  - question: >-
+      What is the median Magnitude body?
     answer: >-
-      Key figure: 0.00 — Median Magnitude body. Zeros in the magnitude field are
-      not moral quiet. They are measurement gaps, non-detections, or unfilled
-      cells that pull the median to the floor while a thin upper tail records…
-  - question: What does the data show about Purpose spreads magnitudes?
+      The median Magnitude body is 0.00.
+  - question: >-
+      What is the highest observed value in this extract?
     answer: >-
-      Key figure: 7.40 — Highest observed Magnitude body. Zeros in the magnitude
-      field are not moral quiet. They are measurement gaps, non-detections, or
-      unfilled cells that pull the median to the floor while a thin upper tail
-      records…
-  - question: Who beats the median — and who trails?
+      The highest observed value in the extract is 7.40.
+  - question: >-
+      Which country leads in this extract?
     answer: >-
-      Key figure: USSR — Top Country by Magnitude body. Zeros in the magnitude
-      field are not moral quiet. They are measurement gaps, non-detections, or
-      unfilled cells that pull the median to the floor while a thin upper tail
-      records…
+      USSR leads the country ranking in this extract.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">Nuclear test histories are usually told as geopolitics. The event catalogs underneath — body-wave magnitudes, dates, purposes, and depths — also form a quantitative archive of how intensely states practiced the bomb.</p>
+<p class="art-p art-lede">Nuclear test histories are usually told as geopolitics. The event catalogs underneath — body-wave magnitudes, dates, purposes, and depths — also form a quantitative archive of how intensely states practiced the bomb.</p>
 <p class="art-p">A TidyTuesday working extract of <strong>2,051</strong> records puts median body-wave magnitude at <strong>0.00</strong> and the highest observed magnitude at <strong>7.40</strong>. The <strong>USSR</strong> leads the country ranking by magnitude body in the fact box, and purpose code <strong>WR</strong> is the most common label. The year marker in the extract collapses to <strong>1970</strong> for one of the summary spans, so timeline charts should be read as the file's available event clock rather than a claim that testing happened only in a single year.</p>
 <p class="art-p">Zeros in the magnitude field are not moral quiet. They are measurement gaps, non-detections, or unfilled cells that pull the median to the floor while a thin upper tail records the events that shook instruments hardest.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>

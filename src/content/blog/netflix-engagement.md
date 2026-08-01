@@ -23,34 +23,26 @@ keyPoints:
   - 2010–2025 — Year span covered in the file
   - 1_What_We_Watched_A_Netflix_ — Most common Source
 faq:
-  - question: How the pattern changed over time?
+  - question: >-
+      How many records are in this dataset?
     answer: >-
-      Key figure: 27,803 — Records in the working dataset. Engagement reports
-      from Netflix’s weekly viewership releases — hours viewed, runtime, and
-      global availability flags — arrive here via the TidyTuesday 2025-07-29
-      shows table.
-  - question: Who sits at the top?
+      27,803 records in the working dataset.
+  - question: >-
+      What is the median Hours viewed?
     answer: >-
-      Key figure: 2,500,000 — Median Hours viewed. Engagement reports from
-      Netflix’s weekly viewership releases — hours viewed, runtime, and global
-      availability flags — arrive here via the TidyTuesday 2025-07-29 shows
-      table.
-  - question: How the field is spread?
+      The median Hours viewed is 2,500,000.
+  - question: >-
+      What is the highest observed value in this extract?
     answer: >-
-      Key figure: 840,300,000 — Highest observed Hours viewed. Engagement
-      reports from Netflix’s weekly viewership releases — hours viewed, runtime,
-      and global availability flags — arrive here via the TidyTuesday 2025-07-29
-      shows table.
-  - question: Who beats the median — and who trails?
+      The highest observed value in the extract is 840,300,000.
+  - question: >-
+      Which title leads in this extract?
     answer: >-
-      Key figure: Squid Game: Season 2 // 오징어 — Top Title by Hours viewed.
-      Engagement reports from Netflix’s weekly viewership releases — hours
-      viewed, runtime, and global availability flags — arrive here via the
-      TidyTuesday 2025-07-29 shows table.
+      Squid Game: Season 2 // 오징어 leads the title ranking in this extract.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">Netflix’s public engagement tables measure attention in hours viewed — a blunt but useful currency for which titles absorbed the most time on the service.</p>
+<p class="art-p art-lede">Netflix’s public engagement tables measure attention in hours viewed — a blunt but useful currency for which titles absorbed the most time on the service.</p>
 <p class="art-p">The working file covers <strong>27,803</strong> records from <strong>2010–2025</strong>. Median hours viewed sit at <strong>2,500,000</strong>; the highest observed value is <strong>840,300,000</strong>. Squid Game: Season 2 tops the title ranking in the extract.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>
 <p class="art-p">The numbers that set the scale for this report:</p>

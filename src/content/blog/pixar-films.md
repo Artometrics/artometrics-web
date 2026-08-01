@@ -26,34 +26,26 @@ keyPoints:
     opening below A
   - '+17 — Minutes added to median runtime, early era vs 2017–present'
 faq:
-  - question: What does the data show about Runtime Creep?
+  - question: >-
+      What is the median Rotten Tomatoes score across rated Pixar theatrical releases?
     answer: >-
-      Key figure: 96% — Median Rotten Tomatoes score across rated Pixar
-      theatrical releases. Calibration points: a 96% median Rotten Tomatoes
-      score across rated theatrical releases; a longest runtime of 155 minutes;
-      Toy Story’s 81 -minute floor; Cars 2 at 40% on Rotten…
-  - question: What does the data show about Critic Scores?
+      The median Rotten Tomatoes score across rated Pixar theatrical releases is 96%.
+  - question: >-
+      What is Longest runtime in the set?
     answer: >-
-      Key figure: 155 — Longest runtime in the set — nan (2023). Calibration
-      points: a 96% median Rotten Tomatoes score across rated theatrical
-      releases; a longest runtime of 155 minutes; Toy Story’s 81 -minute floor;
-      Cars 2 at 40% on Rotten…
-  - question: What does the data show about Audience vs Critics?
+      155 — Longest runtime in the set.
+  - question: >-
+      What is Shortest runtime?
     answer: >-
-      Key figure: 81 — Shortest runtime — Toy Story, the film that started the
-      canon. Calibration points: a 96% median Rotten Tomatoes score across rated
-      theatrical releases; a longest runtime of 155 minutes; Toy Story’s 81
-      -minute floor; Cars 2 at 40% on Rotten…
-  - question: What does the data show about Rating Mix?
+      81 — Shortest runtime.
+  - question: >-
+      What is Lowest Rotten Tomatoes score?
     answer: >-
-      Key figure: 40% — Lowest Rotten Tomatoes score — Cars 2, the critic floor.
-      Calibration points: a 96% median Rotten Tomatoes score across rated
-      theatrical releases; a longest runtime of 155 minutes; Toy Story’s 81
-      -minute floor; Cars 2 at 40% on Rotten…
+      40% — Lowest Rotten Tomatoes score.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">Pixar is the rare studio brand that became a quality guarantee — but guarantees are measurable. The TidyTuesday 2025-03-11 Pixar films release joins with its public_response companion file: 27 theatrical features, 24 with critic and audience scores attached.</p>
+<p class="art-p art-lede">Pixar is the rare studio brand that became a quality guarantee — but guarantees are measurable. The TidyTuesday 2025-03-11 Pixar films release joins with its public_response companion file: 27 theatrical features, 24 with critic and audience scores attached.</p>
 <p class="art-p">Five charts, five angles on the same question: did Pixar’s films get longer, softer, or harder to love as the catalog grew? The answers are longer, still crowd-pleasing, and critic-dependent at the margins.</p>
 <p class="art-p">Calibration points: a <strong>96%</strong> median Rotten Tomatoes score across rated theatrical releases; a longest runtime of <strong>155</strong> minutes; Toy Story’s <strong>81</strong>-minute floor; Cars 2 at <strong>40%</strong> on Rotten Tomatoes; CinemaScore grades clustering at <strong>A+</strong>; and <strong>+17</strong> minutes added to median runtime from the early era to 2017–present.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>
@@ -122,6 +114,6 @@ faq:
 <h2 id="editor-s-note" class="anchored">Editor’s note</h2>
 
 <div class="art-editorial-note"><p><em>This report replaces the initial batch-generated Pixar draft with a hand-tuned analysis joining both TidyTuesday files. Charts use Artometrics styling and Plotly JSON exports.</em></p></div>
-<p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2025/2025-03-11" target="_blank" rel="noopener noreferrer">View TidyTuesday source on GitHub</a></p>
+<p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2025/2025-03-11" target="_blank" rel="noopener noreferrer">Source archive (GitHub)</a></p>
 </main>
 </div>

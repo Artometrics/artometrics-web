@@ -20,39 +20,26 @@ keyPoints:
   - 18.0 — Highest observed Word count
   - The Adventure of the Beryl C — Top Book by Word count
 faq:
-  - question: What does the data show about Story-level medians sit in a narrow band?
-    answer: >-
-      Key figure: 65,958 — Records in the working dataset. The source is the
-      TidyTuesday release from 2025-11-18 (R for Data Science community). The
-      working file contains 65,958 rows and 4 columns after merging available
-      tables in the…
   - question: >-
-      What does the data show about Even the leaders barely clear the file
-      median?
+      How many records are in this dataset?
     answer: >-
-      Key figure: 12.0 — Median Word count. The source is the TidyTuesday
-      release from 2025-11-18 (R for Data Science community). The working file
-      contains 65,958 rows and 4 columns after merging available tables in the…
+      65,958 records in the working dataset.
   - question: >-
-      What does the data show about Median 12.0, mean 10.9 — a mostly symmetric
-      shape?
+      What is the median Word count?
     answer: >-
-      Key figure: 18.0 — Highest observed Word count. The source is the
-      TidyTuesday release from 2025-11-18 (R for Data Science community). The
-      working file contains 65,958 rows and 4 columns after merging available
-      tables in the…
+      The median Word count is 12.0.
   - question: >-
-      What does the data show about Five books account for a third of aggregate
-      word count?
+      What is the highest observed value in this extract?
     answer: >-
-      Key figure: The Adventure of the Beryl C — Top Book by Word count. The
-      source is the TidyTuesday release from 2025-11-18 (R for Data Science
-      community). The working file contains 65,958 rows and 4 columns after
-      merging available tables in the…
+      The highest observed value in the extract is 18.0.
+  - question: >-
+      Which Book leads in this extract?
+    answer: >-
+      The Adventure of the Beryl C leads the Book ranking in this extract.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">Conan Doyle’s Sherlock Holmes corpus arrives here as a tokenized text table: 65,958 records and a median word count of 12.0. That median is the calibration point for everything that follows — not novel length in the bookstore sense, but the word-count field as stored in this working extract.</p>
+<p class="art-p art-lede">Conan Doyle’s Sherlock Holmes corpus arrives here as a tokenized text table: 65,958 records and a median word count of 12.0. That median is the calibration point for everything that follows — not novel length in the bookstore sense, but the word-count field as stored in this working extract.</p>
 <p class="art-p">The Adventure of the Beryl Coronet tops the fact-box ranking by word count, while the charted story leaders highlight The Yellow Face at 13.0 against a top-dozen median of 12.0. The canon is famous for plot; this file is interested in textual mass and how that mass concentrates across books.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>
 <p class="art-p">The numbers that set the scale for this report:</p>
@@ -116,7 +103,7 @@ faq:
 <p>Data Science Learning Community. (2025). <em>TidyTuesday: Sherlock Holmes</em>. <a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-11-18/holmes.csv" target="_blank" rel="noopener noreferrer">https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-11-18/holmes.csv</a></p>
 <h2 id="editors-note" class="anchored">Editor’s note</h2>
 <div class="art-editorial-note"><p><em>Artometrics data report from the TidyTuesday research pipeline. Charts and aggregates are reproducible from the embedded exhibits and public source files.</em></p></div>
-<p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2025/2025-11-18" target="_blank" rel="noopener noreferrer">View TidyTuesday source on GitHub</a></p>
+<p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2025/2025-11-18" target="_blank" rel="noopener noreferrer">Source archive (GitHub)</a></p>
 
 </main>
 </div>

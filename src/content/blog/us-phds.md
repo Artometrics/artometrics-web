@@ -3,14 +3,14 @@ title: Which U.S. PhD Fields Expanded Fastest?
 slug: us-phds
 author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
-description: Doctorate production data show which disciplines grew quickest.
+description: Doctorate output data show which disciplines grew quickest.
 heroImage: /images/content/articles/us-phds/hero.png
 draft: false
 tags:
   - civics
   - education
 tldr: >-
-  U.S. doctorate production is a labor-market story told in field counts. This
+  U.S. doctorate output is a labor-market story told in field counts. This
   file holds 3,370 records spanning 2008–2017, with a median of 85.0 PhDs and a
   high of 5,302. Social sciences lead the fact-box field ranking; life sciences
   appear among the notable broad fields.
@@ -23,39 +23,26 @@ keyPoints:
   - Life sciences — Most common Broad field
 faq:
   - question: >-
-      What does the data show about Median doctorate counts edged upward across
-      the decade?
+      How many records are in this dataset?
     answer: >-
-      Key figure: 3,370 — Records in the working dataset. The source is the
-      TidyTuesday release from 2019-02-19 (R for Data Science community). The
-      working file contains 3,370 rows and 6 columns after merging available
-      tables in the week…
-  - question: What does the data show about Social sciences lead the field ladder?
-    answer: >-
-      Key figure: 85.0 — Median N phds. The source is the TidyTuesday release
-      from 2019-02-19 (R for Data Science community). The working file contains
-      3,370 rows and 6 columns after merging available tables in the week…
+      3,370 records in the working dataset.
   - question: >-
-      What does the data show about Broad fields do not share one production
-      band?
+      What is the median N phds?
     answer: >-
-      Key figure: 5,302 — Highest observed N phds. The source is the TidyTuesday
-      release from 2019-02-19 (R for Data Science community). The working file
-      contains 3,370 rows and 6 columns after merging available tables in the
-      week…
+      The median N phds is 85.0.
   - question: >-
-      What does the data show about Psychology and social sciences clear the
-      median; engineering trails?
+      What is the highest observed value in this extract?
     answer: >-
-      Key figure: Social sciences — Top Field by N phds. The source is the
-      TidyTuesday release from 2019-02-19 (R for Data Science community). The
-      working file contains 3,370 rows and 6 columns after merging available
-      tables in the week…
+      The highest observed value in the extract is 5,302.
+  - question: >-
+      Which Field leads in this extract?
+    answer: >-
+      Social sciences leads the Field ranking in this extract.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">U.S. doctorate production is a labor-market story told in field counts. This file holds 3,370 records spanning 2008–2017, with a median of 85.0 PhDs and a high of 5,302. Social sciences lead the fact-box field ranking; life sciences appear among the notable broad fields.</p>
-<p class="art-p">The question is which disciplines grew — and which sit above or below the median production level — when doctorate output is measured year by year and field by field. Medians keep a few giant programs from dictating every comparison.</p>
+<p class="art-p art-lede">U.S. doctorate output is a labor-market story told in field counts. This file holds 3,370 records spanning 2008–2017, with a median of 85.0 PhDs and a high of 5,302. Social sciences lead the fact-box field ranking; life sciences appear among the notable broad fields.</p>
+<p class="art-p">The question is which disciplines grew — and which sit above or below the median output level — when doctorate output is measured year by year and field by field. Medians keep a few giant programs from dictating every comparison.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>
 <p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
@@ -86,8 +73,8 @@ faq:
 <p class="art-p">Social sciences leads at 4,944 PhDs in the leaders cut, while 915 marks the median among the top dozen. The distance between first place and that top-dozen median shows how quickly the ladder drops even inside the upper tier.</p>
 <p class="art-p">Fact-box highlights place social sciences at the top of the field ranking and note life sciences among the broad-field landmarks. The chart makes the numeric gap concrete.</p>
 
-<h2 id="broad-fields-do-not-share-one-production-band" class="anchored">Broad fields do not share one production band</h2>
-<h3 id="broad-fields-do-not-share-one-production-band-look" class="anchored">N phds by Broad field</h3>
+<h2 id="broad-fields-do-not-share-one-output-band" class="anchored">Broad fields do not share one output band</h2>
+<h3 id="broad-fields-do-not-share-one-output-band-look" class="anchored">N phds by Broad field</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/us-phds/charts/chart3_distribution.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/us-phds/charts/chart3_distribution.png" role="img" aria-label="N phds by Broad field"></div>
 </figure>
@@ -107,20 +94,20 @@ faq:
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/us-phds/charts/chart_pareto.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/us-phds/charts/chart_pareto.png" role="img" aria-label="Cumulative N phds"></div>
 </figure>
-<p class="art-p">The top five field entries account for 63% of the aggregate n phds. Concentration is high: a small set of fields drives most of the summed doctorate production in the file.</p>
+<p class="art-p">The top five field entries account for 63% of the aggregate n phds. Concentration is high: a small set of fields drives most of the summed doctorate output in the file.</p>
 <p class="art-p">Steep Pareto curves mean capacity and attention cluster. The long tail of smaller fields still matters for the ecosystem, but it does not dominate the total.</p>
 <h2 id="what-this-file-cannot-tell-you" class="anchored">What this file cannot tell you</h2>
 <p class="art-p">Community-cleaned TidyTuesday snapshots are not live NSF Survey of Earned Doctorates APIs. Missing values, field-name variants, and 2008–2017 coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p>
 <p class="art-p">Findings describe this U.S. PhDs extract — structural signals about doctorate counts by field — not a full labor-market forecast or ranking of program quality.</p>
 <h2 id="what-to-take-away" class="anchored">What to take away</h2>
-<p class="art-p">Doctorate production in this file centers on a median of 85.0, edges up from 80.0 to 87.0 over the window, and concentrates heavily: five fields hold 63% of aggregate n phds.</p>
+<p class="art-p">Doctorate output in this file centers on a median of 85.0, edges up from 80.0 to 87.0 over the window, and concentrates heavily: five fields hold 63% of aggregate n phds.</p>
 <p class="art-p">Social sciences lead the upper ladder, psychology and social sciences sit well above the median, and engineering trails it — a volume map of disciplines, not a prestige contest.</p>
 <h2 id="sources" class="anchored">Sources</h2>
 
 <p>Data Science Learning Community. (2019). <em>TidyTuesday: US PhDs Awarded</em>. <a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2019/2019-02-19/phd_by_field.csv" target="_blank" rel="noopener noreferrer">https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2019/2019-02-19/phd_by_field.csv</a></p>
 <h2 id="editors-note" class="anchored">Editor’s note</h2>
 <div class="art-editorial-note"><p><em>Artometrics data report from the TidyTuesday research pipeline. Charts and aggregates are reproducible from the embedded exhibits and public source files.</em></p></div>
-<p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2019/2019-02-19" target="_blank" rel="noopener noreferrer">View TidyTuesday source on GitHub</a></p>
+<p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2019/2019-02-19" target="_blank" rel="noopener noreferrer">Source archive (GitHub)</a></p>
 
 </main>
 </div>

@@ -22,34 +22,25 @@ keyPoints:
   - Colorado — Top State by Adults
 faq:
   - question: >-
-      What does the data show about Western and New England States Lead Adult
-      Exercise?
+      How many records are in this dataset?
     answer: >-
-      Key figure: 52 — Records in the working dataset. The source is the
-      TidyTuesday release from 2018-07-17 (week16_exercise.xlsx). After
-      cleaning, 52 rows remain.
+      52 records in the working dataset.
   - question: >-
-      What does the data show about The Top Dozen Sits Well Above the National
-      Median?
+      What is the median Adults?
     answer: >-
-      Key figure: 23.0 — Median Adults. The source is the TidyTuesday release
-      from 2018-07-17 (week16_exercise.xlsx). After cleaning, 52 rows remain.
-  - question: What does the data show about Most States Cluster Near the Low-20s?
-    answer: >-
-      Key figure: 32.0 — Highest observed Adults. The source is the TidyTuesday
-      release from 2018-07-17 (week16_exercise.xlsx). After cleaning, 52 rows
-      remain.
+      The median Adults is 23.0.
   - question: >-
-      What does the data show about Top States Hold a Disproportionate Share of
-      the Aggregate?
+      What is the highest observed value in this extract?
     answer: >-
-      Key figure: Colorado — Top State by Adults. The source is the TidyTuesday
-      release from 2018-07-17 (week16_exercise.xlsx). After cleaning, 52 rows
-      remain.
+      The highest observed value in the extract is 32.0.
+  - question: >-
+      Which State leads in this extract?
+    answer: >-
+      Colorado leads the State ranking in this extract.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">Exercise is unevenly distributed across American states — a public-health map disguised as lifestyle branding. The TidyTuesday exercise extract used here holds <strong>52</strong> records (states plus D.C.) with a median of <strong>23.0</strong> on the adults metric and a high of <strong>32.0</strong> in Colorado.</p>
+<p class="art-p art-lede">Exercise is unevenly distributed across American states — a public-health map disguised as lifestyle branding. The TidyTuesday exercise extract used here holds <strong>52</strong> records (states plus D.C.) with a median of <strong>23.0</strong> on the adults metric and a high of <strong>32.0</strong> in Colorado.</p>
 <p class="art-p">Mountain and New England states dominate the leaders. The charts ask how wide the spread is, how concentrated the top share is, and how adult rates relate to the men’s series in the file.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>
 <p class="art-p">The numbers that set the scale for this report:</p>

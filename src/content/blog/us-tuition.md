@@ -23,40 +23,25 @@ keyPoints:
   - 2004–2015 — Year span covered in the file
 faq:
   - question: >-
-      What does the data show about Median tuition climbed from the
-      mid-five-thousands to the low-nine-thousands?
+      How many records are in this dataset?
     answer: >-
-      Key figure: 600 — Records in the working dataset. The source is the
-      TidyTuesday release from 2018-04-02 (R for Data Science community). The
-      working file contains 600 rows and 3 columns after merging available
-      tables in the week…
+      600 records in the working dataset.
   - question: >-
-      What does the data show about Vermont leads the state ladder in the
-      charted cut?
+      What is the median Value?
     answer: >-
-      Key figure: 7,607 — Median Value. The source is the TidyTuesday release
-      from 2018-04-02 (R for Data Science community). The working file contains
-      600 rows and 3 columns after merging available tables in the week…
+      The median Value is 7,607.
   - question: >-
-      What does the data show about Median and mean sit close; the top decile
-      starts above eleven thousand?
+      What is the highest observed value in this extract?
     answer: >-
-      Key figure: 15,224 — Highest observed Value. The source is the TidyTuesday
-      release from 2018-04-02 (R for Data Science community). The working file
-      contains 600 rows and 3 columns after merging available tables in the
-      week…
+      The highest observed value in the extract is 15,224.
   - question: >-
-      What does the data show about Leading states do not move in lockstep over
-      time?
+      Which state leads tuition costs in this extract?
     answer: >-
-      Key figure: New Hampshire — Top State by Value. The source is the
-      TidyTuesday release from 2018-04-02 (R for Data Science community). The
-      working file contains 600 rows and 3 columns after merging available
-      tables in the week…
+      New Hampshire leads the state ranking in this tuition extract.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">College price is a time series with a political charge. This file holds 600 state-level tuition records spanning 2004–2015, with a median value of 7,607 and a high of 15,224. New Hampshire appears in the fact-box state ranking; the charts track how the typical state price moved and which states sat at the top of the ladder.</p>
+<p class="art-p art-lede">College price is a time series with a political charge. This file holds 600 state-level tuition records spanning 2004–2015, with a median value of 7,607 and a high of 15,224. New Hampshire appears in the fact-box state ranking; the charts track how the typical state price moved and which states sat at the top of the ladder.</p>
 <p class="art-p">The calibration point is that 7,607 median. Everything else — Vermont’s charted lead, the rise from 5,876 to 9,141, the top-decile threshold at 11,204 — is distance from that center of the tuition distribution.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>
 <p class="art-p">The numbers that set the scale for this report:</p>
@@ -121,7 +106,7 @@ faq:
 <p>Data Science Learning Community. (2018). <em>TidyTuesday: US Tuition Costs</em>. <a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2018/2018-04-02/us_avg_tuition.xlsx" target="_blank" rel="noopener noreferrer">https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2018/2018-04-02/us_avg_tuition.xlsx</a></p>
 <h2 id="editors-note" class="anchored">Editor’s note</h2>
 <div class="art-editorial-note"><p><em>Artometrics data report from the TidyTuesday research pipeline. Charts and aggregates are reproducible from the embedded exhibits and public source files.</em></p></div>
-<p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2018/2018-04-02" target="_blank" rel="noopener noreferrer">View TidyTuesday source on GitHub</a></p>
+<p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2018/2018-04-02" target="_blank" rel="noopener noreferrer">Source archive (GitHub)</a></p>
 
 </main>
 </div>

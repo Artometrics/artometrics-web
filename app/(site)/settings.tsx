@@ -11,6 +11,7 @@ import { apiFetch } from "@/lib/supabase/client";
 import { PLANS, type PlanTier } from "@/lib/product/plans";
 import { openExternalUrl } from "@/lib/openExternal";
 import { ensureProfileRow, getProfile, upsertProfile, normalizeHandle } from "@/lib/profile/service";
+import { getAnalyticsConsent, setAnalyticsConsent } from "@/lib/analytics/ga";
 
 function formatPlanLabel(planTier: string | null, status: string | null) {
   if (planTier) {
@@ -39,6 +40,11 @@ export default function SettingsScreen() {
   const [birthDate, setBirthDate] = useState("");
   const [birthPlace, setBirthPlace] = useState("");
   const [profileMsg, setProfileMsg] = useState<string | null>(null);
+  const [analyticsPref, setAnalyticsPref] = useState<"accepted" | "declined" | null>(null);
+
+  useEffect(() => {
+    setAnalyticsPref(getAnalyticsConsent());
+  }, []);
 
   useEffect(() => {
     if (!user) return;
@@ -167,6 +173,43 @@ export default function SettingsScreen() {
             </Pressable>
           );
         })}
+      </View>
+
+      <View className="mt-3 gap-2.5">
+        <Text className="font-serif text-[22px] font-bold text-fg">Analytics</Text>
+        <Text className="font-serif text-base leading-7 text-muted mb-2">
+          Optional Google Analytics after consent. You can also accept or decline from the site footer.
+        </Text>
+        <Pressable
+          onPress={() => {
+            setAnalyticsConsent(true);
+            setAnalyticsPref("accepted");
+          }}
+          className={[
+            "border p-3.5 flex-row justify-between items-center",
+            analyticsPref === "accepted" ? "border-accent bg-accent-soft" : "border-border",
+          ].join(" ")}
+        >
+          <Text className="font-serif text-base leading-7 text-fg">Accept analytics</Text>
+          <Text className="text-accent font-bold">
+            {analyticsPref === "accepted" ? "On" : "Enable"}
+          </Text>
+        </Pressable>
+        <Pressable
+          onPress={() => {
+            setAnalyticsConsent(false);
+            setAnalyticsPref("declined");
+          }}
+          className={[
+            "border p-3.5 flex-row justify-between items-center mt-2",
+            analyticsPref === "declined" ? "border-accent bg-accent-soft" : "border-border",
+          ].join(" ")}
+        >
+          <Text className="font-serif text-base leading-7 text-fg">Decline analytics</Text>
+          <Text className="text-accent font-bold">
+            {analyticsPref === "declined" ? "Off" : "Disable"}
+          </Text>
+        </Pressable>
       </View>
 
       <View className="mt-3 gap-2.5">

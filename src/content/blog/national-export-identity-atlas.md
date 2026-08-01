@@ -22,34 +22,26 @@ keyPoints:
   - 6 — Diagnostic country questions
   - 8 — Export families or countries highlighted
 faq:
-  - question: What does the data show about Scale and complexity?
+  - question: >-
+      How many countries and zones do Comtrade-style trade systems cover?
     answer: >-
-      Key figure: 200+ — Countries/zones covered in UN Comtrade-style trade
-      systems. Scale and complexity are different virtues. A country can be
-      large because it sells one thing in volume, or complex because it sells
-      many hard-to-make things. Those identities…
-  - question: What does the data show about Product identity?
+      200+ countries and zones in UN Comtrade-style trade systems.
+  - question: >-
+      How many products appear in OEC-style trade classifications?
     answer: >-
-      Key figure: 5,000+ — Products in OEC-style trade classifications. Scale
-      and complexity are different virtues. A country can be large because it
-      sells one thing in volume, or complex because it sells many hard-to-make
-      things. Those identities…
-  - question: What does the data show about The export frontier moved?
+      5,000+ products under OEC-style trade classifications.
+  - question: >-
+      What product code architecture underpins the trade data?
     answer: >-
-      Key figure: HS — Harmonized System product code architecture. Scale and
-      complexity are different virtues. A country can be large because it sells
-      one thing in volume, or complex because it sells many hard-to-make things.
-      Those identities…
-  - question: What does the data show about Export fingerprints?
+      Harmonized System (HS) product codes structure the classifications.
+  - question: >-
+      How many diagnostic country questions frame this atlas?
     answer: >-
-      Key figure: 6 — Diagnostic country questions. Scale and complexity are
-      different virtues. A country can be large because it sells one thing in
-      volume, or complex because it sells many hard-to-make things. Those
-      identities…
+      6 diagnostic country questions structure the atlas.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">What a nation sells abroad is one of the few identity claims that must clear a market test. Tourism slogans can invent a self-image; export ledgers record what other countries will actually pay for.</p>
+<p class="art-p art-lede">What a nation sells abroad is one of the few identity claims that must clear a market test. Tourism slogans can invent a self-image; export ledgers record what other countries will actually pay for.</p>
 <p class="art-p">Trade systems in the UN Comtrade and OEC style cover <strong>200+</strong> countries and zones and <strong>5,000+</strong> products under Harmonized System codes. The atlas below uses <strong>6</strong> diagnostic country questions and highlights <strong>8</strong> export families or countries to make identity readable without pretending the indices are final official rankings.</p>
 <p class="art-p">Scale and complexity are different virtues. A country can be large because it sells one thing in volume, or complex because it sells many hard-to-make things. Those identities behave differently under shock.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>

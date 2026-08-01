@@ -25,36 +25,26 @@ keyPoints:
   - 1970–1970 — Year span covered in the file
   - 'Wargame,World War II — Most common Category'
 faq:
-  - question: What does the data show about The Catalog’s Median Rating Sits Near 6.39?
-    answer: >-
-      Key figure: 10,532 — Records in the working dataset. The source is the
-      TidyTuesday release from 2019-03-12 (board_games.csv). After cleaning,
-      10,532 rows remain in the working frame.
   - question: >-
-      What does the data show about Designer Editions and Heavy Games Own the
-      Peak?
+      How many records are in this dataset?
     answer: >-
-      Key figure: 6.39 — Median Average rating. The source is the TidyTuesday
-      release from 2019-03-12 (board_games.csv). After cleaning, 10,532 rows
-      remain in the working frame.
+      10,532 records in the working dataset.
   - question: >-
-      What does the data show about Wargame Categories Rate Higher Than Card
-      Games?
+      What is the median Average rating?
     answer: >-
-      Key figure: 9.00 — Highest observed Average rating. The source is the
-      TidyTuesday release from 2019-03-12 (board_games.csv). After cleaning,
-      10,532 rows remain in the working frame.
+      The median Average rating is 6.39.
   - question: >-
-      What does the data show about Civil War and Napoleonic Titles Beat the
-      Median Most?
+      What is the highest observed value in this extract?
     answer: >-
-      Key figure: Small World Designer Edition — Top Name by Average rating. The
-      source is the TidyTuesday release from 2019-03-12 (board_games.csv). After
-      cleaning, 10,532 rows remain in the working frame.
+      The highest observed value in the extract is 9.00.
+  - question: >-
+      Which Name leads in this extract?
+    answer: >-
+      Small World Designer Edition leads the Name ranking in this extract.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">BoardGameGeek ratings are a public taste machine: tens of thousands of titles, each scored by the people willing to log plays. The TidyTuesday board-games extract used here holds <strong>10,532</strong> records with a median average rating of <strong>6.39</strong> and a high of <strong>9.00</strong> for Small World Designer Edition.</p>
+<p class="art-p art-lede">BoardGameGeek ratings are a public taste machine: tens of thousands of titles, each scored by the people willing to log plays. The TidyTuesday board-games extract used here holds <strong>10,532</strong> records with a median average rating of <strong>6.39</strong> and a high of <strong>9.00</strong> for Small World Designer Edition.</p>
 <p class="art-p">Wargame, World War II is the most common category label in the file. That already tilts the catalog toward conflict simulations — a hobby subculture with its own rating norms. The charts ask how ratings split by category, how leaders separate from the median, and whether crowdfunding-scale user counts track with elite scores.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>
 <p class="art-p">The numbers that set the scale for this report:</p>

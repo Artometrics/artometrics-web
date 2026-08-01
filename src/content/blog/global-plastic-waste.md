@@ -28,34 +28,26 @@ keyPoints:
     (Rate)
   - 1700–2017 — Year span covered in the file
 faq:
-  - question: How prosperity moved over time?
+  - question: >-
+      How many records are in this dataset?
     answer: >-
-      Key figure: 22,204 — Records in the working dataset. Income alone does not
-      settle the mismanagement question. Rich places can fund collection
-      systems; poorer coastal places can become leakage hotspots even at lower
-      per-person…
-  - question: Who sits at the top of income?
+      22,204 records in the working dataset.
+  - question: >-
+      What is the median GDP per capita, PPP (constant 2011 international $) (Rate)?
     answer: >-
-      Key figure: 8,447 — Median GDP per capita, PPP (constant 2011
-      international $) (Rate). Income alone does not settle the mismanagement
-      question. Rich places can fund collection systems; poorer coastal places
-      can become leakage hotspots even at lower per-person…
-  - question: How income is spread?
+      The median GDP per capita, PPP (constant 2011 international $) (Rate) is 8,447.
+  - question: >-
+      What is the highest observed value in this extract?
     answer: >-
-      Key figure: 135,319 — Highest observed GDP per capita, PPP (constant 2011
-      international $) (Rate). Income alone does not settle the mismanagement
-      question. Rich places can fund collection systems; poorer coastal places
-      can become leakage hotspots even at lower per-person…
-  - question: What does the data show about Leader trends?
+      The highest observed value in the extract is 135,319.
+  - question: >-
+      Which Entity leads in this extract?
     answer: >-
-      Key figure: Macao — Top Entity by GDP per capita, PPP (constant 2011
-      international $) (Rate). Income alone does not settle the mismanagement
-      question. Rich places can fund collection systems; poorer coastal places
-      can become leakage hotspots even at lower per-person…
+      Macao leads the Entity ranking in this extract.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">Plastic waste is usually discussed as a moral story about litter. The data make it an economic geography story: who generates waste, who mismanages it, and how those patterns sit against income.</p>
+<p class="art-p art-lede">Plastic waste is usually discussed as a moral story about litter. The data make it an economic geography story: who generates waste, who mismanages it, and how those patterns sit against income.</p>
 <p class="art-p">A TidyTuesday compilation spanning country-year records puts <strong>22,204</strong> rows on the table. Median GDP per capita in the working file is <strong>8,447</strong> (PPP, constant 2011 international dollars). The highest observed rate reaches <strong>135,319</strong>, with Macao at the top of that income ranking. The year span runs from <strong>1700</strong> to <strong>2017</strong> — long enough to watch modern prosperity and modern waste arrive together.</p>
 <p class="art-p">Income alone does not settle the mismanagement question. Rich places can fund collection systems; poorer coastal places can become leakage hotspots even at lower per-person generation. The charts below separate those layers.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>

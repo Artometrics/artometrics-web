@@ -18,34 +18,30 @@ tldr: >-
 keyPoints:
   - '1,100+ — DataSF public portal dataset scale in public summaries'
   - 7 — Identity domains scored
-  - 6 — Open questions for the next SF production pass
+  - 6 — Open questions for the next SF output pass
   - '3 — Core tradeoff signals: tech, housing, tolerance'
   - 6 — Competitor cities framed
 faq:
-  - question: What does the data show about Identity Stack?
+  - question: >-
+      What is DataSF public portal dataset scale in public summaries?
     answer: >-
-      Key figure: 1,100+ — DataSF public portal dataset scale in public
-      summaries. Start with the scale: 1,100+ — DataSF public portal dataset
-      scale in public summaries; and 7 — Identity domains scored.
-  - question: What does the data show about Tradeoff History?
+      1,100+ — DataSF public portal dataset scale in public summaries.
+  - question: >-
+      What is Identity domains scored?
     answer: >-
-      Key figure: 7 — Identity domains scored. Start with the scale: 1,100+ —
-      DataSF public portal dataset scale in public summaries; and 7 — Identity
-      domains scored.
-  - question: What does the data show about Neighborhood Pressure?
+      7 — Identity domains scored.
+  - question: >-
+      What is Open questions for the next SF output pass?
     answer: >-
-      Key figure: 6 — Open questions for the next SF production pass. Start with
-      the scale: 1,100+ — DataSF public portal dataset scale in public
-      summaries; and 7 — Identity domains scored.
-  - question: What does the data show about Competitor Set?
+      6 — Open questions for the next SF output pass.
+  - question: >-
+      What is Core tradeoff signals: tech, housing, tolerance?
     answer: >-
-      Key figure: 3 — Core tradeoff signals: tech, housing, tolerance. Start
-      with the scale: 1,100+ — DataSF public portal dataset scale in public
-      summaries; and 7 — Identity domains scored.
+      3 — Core tradeoff signals: tech, housing, tolerance.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">San Francisco is a perfect city microscope because its contradictions are measurable: a small city with enormous software output, extreme housing pressure, intense cultural mythology, and a regional economy larger than its municipal boundary.</p>
+<p class="art-p art-lede">San Francisco is a perfect city microscope because its contradictions are measurable: a small city with enormous software output, extreme housing pressure, intense cultural mythology, and a regional economy larger than its municipal boundary.</p>
 <p class="art-p">this piece does not try to finish the comparison yet. It defines the questions a serious SF data portrait has to ask.</p>
 <p class="art-p">Start with the scale: <strong>1,100+</strong> — DataSF public portal dataset scale in public summaries; and <strong>7</strong> — Identity domains scored.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>
@@ -53,7 +49,7 @@ faq:
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">1,100+</span><span class="fact-label">DataSF public portal dataset scale in public summaries</span></div>
   <div class="fact-box"><span class="fact-number">7</span><span class="fact-label">Identity domains scored</span></div>
-  <div class="fact-box"><span class="fact-number">6</span><span class="fact-label">Open questions for the next SF production pass</span></div>
+  <div class="fact-box"><span class="fact-number">6</span><span class="fact-label">Open questions for the next SF output pass</span></div>
   <div class="fact-box"><span class="fact-number">3</span><span class="fact-label">Core tradeoff signals: tech, housing, tolerance</span></div>
   <div class="fact-box"><span class="fact-number">6</span><span class="fact-label">Competitor cities framed</span></div>
   </div>

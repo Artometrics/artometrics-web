@@ -37,37 +37,26 @@ keyPoints:
     65.4% — New Jersey&#39;s share of penalized hospital-condition pairs — the
     highest-risk geography in the working dataset
 faq:
-  - question: What does the data show about The Geography of Failure?
+  - question: >-
+      What share of hospital-condition pairs exceed the CMS readmission benchmark?
     answer: >-
-      Key figure: 48.1% — of HRRP-eligible hospital-condition pairs carried an
-      excess readmission ratio above 1.0 — more readmissions than CMS models
-      predict. The FY2025 HRRP supplemental extract covers the measurement
-      window used for CMS’s published excess readmission ratios. After removing
-      suppressed rows — hospitals with fewer than…
-  - question: What does the data show about The Condition Nobody Is Solving?
+      48.1% of HRRP-eligible hospital-condition pairs carried an excess readmission ratio above 1.0 (more readmissions than CMS models predict).
+  - question: >-
+      How many conditions does HRRP track?
     answer: >-
-      Key figure: 6 — conditions tracked under HRRP — AMI, Heart Failure,
-      Pneumonia, COPD, Hip/Knee, and CABG. The FY2025 HRRP supplemental extract
-      covers the measurement window used for CMS’s published excess readmission
-      ratios. After removing suppressed rows — hospitals with fewer than…
-  - question: 'What does the data show about Ownership, Penalty, and Who Pays?'
+      6 conditions: AMI, Heart Failure, Pneumonia, COPD, Hip/Knee, and CABG.
+  - question: >-
+      What is the national average excess readmission ratio?
     answer: >-
-      Key figure: 1.0018 — average excess readmission ratio nationally — the
-      average hospital readmits slightly more patients than CMS models expect.
-      The FY2025 HRRP supplemental extract covers the measurement window used
-      for CMS’s published excess readmission ratios. After removing suppressed
-      rows — hospitals with fewer than…
-  - question: What this file cannot tell you?
+      The national average excess readmission ratio is 1.0018 — hospitals readmit slightly more patients than CMS models expect.
+  - question: >-
+      Which HRRP condition has the highest average excess readmission ratio?
     answer: >-
-      Key figure: 1.00485 — Hip/Knee average ERR — the highest of the six
-      conditions, nearly 2× the excess of the next closest track. The FY2025
-      HRRP supplemental extract covers the measurement window used for CMS’s
-      published excess readmission ratios. After removing suppressed rows —
-      hospitals with fewer than…
+      Hip/Knee averages 1.00485 — the highest of the six HRRP conditions, nearly 2× the excess of the next closest track.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">The Hospital Readmissions Reduction Program is a Medicare penalty system that has been running since 2012. The premise is simple: if your patients come back to the hospital within 30 days of discharge at a higher rate than expected given their medical profile, CMS docks your Medicare reimbursements. The penalty caps at 3% of all Medicare payments — not just payments for the specific condition being measured. A hospital with too many heart failure readmissions doesn’t just lose heart failure revenue. It loses 3% of everything.</p>
+<p class="art-p art-lede">The Hospital Readmissions Reduction Program is a Medicare penalty system that has been running since 2012. The premise is simple: if your patients come back to the hospital within 30 days of discharge at a higher rate than expected given their medical profile, CMS docks your Medicare reimbursements. The penalty caps at 3% of all Medicare payments — not just payments for the specific condition being measured. A hospital with too many heart failure readmissions doesn’t just lose heart failure revenue. It loses 3% of everything.</p>
 <p class="art-p">The core metric is the Excess Readmission Ratio, or ERR. It is a ratio of predicted readmissions to expected readmissions — where “expected” is risk-adjusted for each patient’s age, comorbidities, and discharge history. An ERR of exactly 1.0 means you readmitted exactly as many patients as a hospital of your type and patient mix should. Above 1.0 means more readmissions than expected. Below 1.0 means fewer. What this analysis found: nearly every condition’s national average ERR is above 1.0. HRRP has been running for over a decade, and the average American hospital is still readmitting more patients than CMS expects. The penalty hasn’t eliminated the problem. It has clarified it.</p>
 <h2 id="research-question" class="anchored">Research question</h2>
 <p class="art-p">Where do CMS Hospital Readmissions Reduction Program penalties still concentrate — by state, clinical condition, and hospital ownership — in the FY2025 supplemental extract, and what does that geography imply for the 742 hospitals entering CMS’s Transforming Episode Accountability Model (TEAM) on January 1, 2026?</p>

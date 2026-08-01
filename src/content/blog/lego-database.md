@@ -21,34 +21,26 @@ keyPoints:
   - World Map — Top Name by Num parts
   - 1949–2022 — Year span covered in the file
 faq:
-  - question: How part counts changed over time?
+  - question: >-
+      How many records are in this dataset?
     answer: >-
-      Key figure: 19,798 — Records in the working dataset. Quantity of pieces is
-      not the same as play value, but it is a clean industrial signal: how much
-      plastic inventory a box commits to, and how the company balances everyday
-      sets against display pieces.
-  - question: Who sits at the top?
+      19,798 records in the working dataset.
+  - question: >-
+      What is the median Num parts?
     answer: >-
-      Key figure: 34.0 — Median Num parts. Quantity of pieces is not the same as
-      play value, but it is a clean industrial signal: how much plastic
-      inventory a box commits to, and how the company balances everyday sets
-      against display pieces.
-  - question: How the field is spread?
+      The median Num parts is 34.0.
+  - question: >-
+      What is the highest observed value in this extract?
     answer: >-
-      Key figure: 11,695 — Highest observed Num parts. Quantity of pieces is not
-      the same as play value, but it is a clean industrial signal: how much
-      plastic inventory a box commits to, and how the company balances everyday
-      sets against display pieces.
-  - question: What does the data show about Leader trends?
+      The highest observed value in the extract is 11,695.
+  - question: >-
+      Which Name leads in this extract?
     answer: >-
-      Key figure: World Map — Top Name by Num parts. Quantity of pieces is not
-      the same as play value, but it is a clean industrial signal: how much
-      plastic inventory a box commits to, and how the company balances everyday
-      sets against display pieces.
+      World Map leads the Name ranking in this extract.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">LEGO sets are toys, collectibles, and increasingly architectural objects. The Rebrickable-style database that feeds this TidyTuesday release turns that catalog into something measurable: parts counts, set names, and how complexity has shifted across decades.</p>
+<p class="art-p art-lede">LEGO sets are toys, collectibles, and increasingly architectural objects. The Rebrickable-style database that feeds this TidyTuesday release turns that catalog into something measurable: parts counts, set names, and how complexity has shifted across decades.</p>
 <p class="art-p">The working file's fact markers put the median set near <strong>34</strong> parts while the extreme end reaches into five digits — <strong>World Map</strong> leads at <strong>11,695</strong> parts on the highlighted ranking, with <strong>5,792</strong> as the median among the top dozen. Across the time span in the charts, median part counts fall from roughly <strong>142</strong> in the opening period to about <strong>59.5</strong> at the close — a reminder that the typical set and the showcase set are different products.</p>
 <p class="art-p">Quantity of pieces is not the same as play value, but it is a clean industrial signal: how much plastic inventory a box commits to, and how the company balances everyday sets against display pieces.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>

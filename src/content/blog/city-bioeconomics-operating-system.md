@@ -24,33 +24,26 @@ keyPoints:
   - 6 — Diagnostic questions in the city microscope
   - 8 — System layers scored
 faq:
-  - question: What does the data show about System Layers?
+  - question: >-
+      How many subnational regions does DOSE v2.14 document?
     answer: >-
-      Key figure: 1,667 — Subnational regions in DOSE v2.14 public
-      documentation. Start with the scale: 1,667 — Subnational regions in DOSE
-      v2.14 public documentation; and 45 — Cities in World Cities Culture Forum
-      5th edition summaries.
-  - question: What does the data show about Goods and Services?
+      1,667 subnational regions in DOSE v2.14 public documentation.
+  - question: >-
+      How many cities appear in World Cities Culture Forum summaries?
     answer: >-
-      Key figure: 45 — Cities in World Cities Culture Forum 5th edition
-      summaries. Start with the scale: 1,667 — Subnational regions in DOSE v2.14
-      public documentation; and 45 — Cities in World Cities Culture Forum 5th
-      edition summaries.
-  - question: What does the data show about History Layers?
+      45 cities in World Cities Culture Forum 5th edition summaries.
+  - question: >-
+      How many datasets are in the DataSF public portal?
     answer: >-
-      Key figure: 1,100+ — Datasets in DataSF public portal summaries. Start
-      with the scale: 1,667 — Subnational regions in DOSE v2.14 public
-      documentation; and 45 — Cities in World Cities Culture Forum 5th edition
-      summaries.
-  - question: What does the data show about City Fingerprint?
+      1,100+ datasets in DataSF public portal summaries.
+  - question: >-
+      How many diagnostic questions does the city microscope use?
     answer: >-
-      Key figure: 6 — Diagnostic questions in the city microscope. Start with
-      the scale: 1,667 — Subnational regions in DOSE v2.14 public documentation;
-      and 45 — Cities in World Cities Culture Forum 5th edition summaries.
+      6 diagnostic questions in the city microscope frame.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">A city report should not start with a postcard. It should start with a system map: what the city makes, what it imports, who it serves, what it prices out, what it remembers, and what it cannot replace.</p>
+<p class="art-p art-lede">A city report should not start with a postcard. It should start with a system map: what the city makes, what it imports, who it serves, what it prices out, what it remembers, and what it cannot replace.</p>
 <p class="art-p">this piece creates the frame for the next geo-economics layer of Artometrics. Comparisons can come later; first the site needs a way to ask the right questions of a place.</p>
 <p class="art-p">Start with the scale: <strong>1,667</strong> — Subnational regions in DOSE v2.14 public documentation; and <strong>45</strong> — Cities in World Cities Culture Forum 5th edition summaries.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>
@@ -64,7 +57,7 @@ faq:
   </div>
 <h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The source stack includes BEA regional GDP, Commerce metro exports, DOSE global subnational output, Census ACS, World Cities Culture Forum, and local Socrata portals such as DataSF or NYC Open Data.</p>
-<p class="art-p">The charts use transparent editorial indices to define the report structure. A production pass should replace each index with a direct API or CSV aggregate.</p>
+<p class="art-p">The charts use transparent editorial indices to define the report structure. A output pass should replace each index with a direct API or CSV aggregate.</p>
 <h2 id="system-layers" class="anchored">System Layers</h2>
 <h3 id="system-layers-look" class="anchored">A city identity is a stack of economic and cultural systems</h3>
 <figure class="art-chart">
@@ -118,7 +111,7 @@ faq:
 
 <h2 id="editor-s-note" class="anchored">Editor’s note</h2>
 
-<div class="art-editorial-note"><p>Values are editorial indices designed to define the analysis contract. They should be replaced with direct source aggregates during city-specific production passes.</p></div>
+<div class="art-editorial-note"><p>Values are editorial indices designed to define the analysis contract. They should be replaced with direct source aggregates during city-specific output passes.</p></div>
 </main>
 </div>
 

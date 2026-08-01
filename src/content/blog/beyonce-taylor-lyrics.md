@@ -20,32 +20,18 @@ keyPoints:
   - '22,616 — Records in the working dataset'
   - Beyoncé — Most common Artist name
 faq:
-  - question: What does the data show about Landscape?
+  - question: >-
+      How many records are in this dataset?
     answer: >-
-      Key figure: 22,616 — Records in the working dataset. The source is the
-      TidyTuesday release from 2020-09-29 (R for Data Science community). The
-      working file contains 22,616 rows and 6 columns after merging available
-      tables in the week folder.
-  - question: Who sits at the top?
+      22,616 records in the working dataset.
+  - question: >-
+      What is Most common Artist name?
     answer: >-
-      Key figure: Beyoncé — Most common Artist name. The source is the
-      TidyTuesday release from 2020-09-29 (R for Data Science community). The
-      working file contains 22,616 rows and 6 columns after merging available
-      tables in the week folder.
-  - question: What does the data show about Category?
-    answer: >-
-      The source is the TidyTuesday release from 2020-09-29 (R for Data Science
-      community). The working file contains 22,616 rows and 6 columns after
-      merging available tables in the week folder.
-  - question: What does the data show about Frequency?
-    answer: >-
-      The source is the TidyTuesday release from 2020-09-29 (R for Data Science
-      community). The working file contains 22,616 rows and 6 columns after
-      merging available tables in the week folder.
+      Beyoncé — Most common Artist name.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">Two catalogs define a generation of pop authorship. Line-level lyric tables make it possible to compare them the way a critic compares albums — by recurring titles, repeated lines, and how densely each artist’s words fill the extract.</p>
+<p class="art-p art-lede">Two catalogs define a generation of pop authorship. Line-level lyric tables make it possible to compare them the way a critic compares albums — by recurring titles, repeated lines, and how densely each artist’s words fill the extract.</p>
 <p class="art-p">The working file holds <strong>22,616</strong> records. Beyoncé is the most common artist name in the rows on hand — a reminder to read every chart as a view of this extract’s balance, not as a claim that one career is larger than the other in absolute terms.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>
 <p class="art-p">The numbers that set the scale for this report:</p>

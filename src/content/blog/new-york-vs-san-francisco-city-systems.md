@@ -24,27 +24,26 @@ keyPoints:
   - 0 — Single-variable answers
   - '1 — Core contrast: command versus invention'
 faq:
-  - question: What does the data show about Command versus Lab?
+  - question: >-
+      What is Global intangible-output cities compared?
     answer: >-
-      Key figure: 2 — Global intangible-output cities compared. Start with the
-      scale: 2 — Global intangible-output cities compared; and 8 — Identity axes
-      scored.
-  - question: What does the data show about History Timing?
+      2 — Global intangible-output cities compared.
+  - question: >-
+      What is Identity axes scored?
     answer: >-
-      Key figure: 8 — Identity axes scored. Start with the scale: 2 — Global
-      intangible-output cities compared; and 8 — Identity axes scored.
-  - question: What does the data show about Output Fingerprint?
+      8 — Identity axes scored.
+  - question: >-
+      What is Shared pressure narratives tested?
     answer: >-
-      Key figure: 6 — Shared pressure narratives tested. Start with the scale: 2
-      — Global intangible-output cities compared; and 8 — Identity axes scored.
-  - question: What does the data show about Pressure Pairing?
+      6 — Shared pressure narratives tested.
+  - question: >-
+      What is Single-variable answers?
     answer: >-
-      Key figure: 0 — Single-variable answers. Start with the scale: 2 — Global
-      intangible-output cities compared; and 8 — Identity axes scored.
+      0 — Single-variable answers.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">New York and San Francisco are not peers by population or geography, but they are peers in the market for invisible power. They both export coordination, talent, symbols, and future-facing industries.</p>
+<p class="art-p art-lede">New York and San Francisco are not peers by population or geography, but they are peers in the market for invisible power. They both export coordination, talent, symbols, and future-facing industries.</p>
 <p class="art-p">The question is why they belong in the same conversation and what people miss when they compare them only by rent, taxes, or office vacancy.</p>
 <p class="art-p">Start with the scale: <strong>2</strong> — Global intangible-output cities compared; and <strong>8</strong> — Identity axes scored.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>

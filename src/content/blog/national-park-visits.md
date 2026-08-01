@@ -25,30 +25,26 @@ keyPoints:
   - 1904–2016 — Year span covered in the file
   - IM — Most common Region
 faq:
-  - question: How visits grew over time?
+  - question: >-
+      How many records are in this dataset?
     answer: >-
-      Key figure: 21,560 — Records in the working dataset. Urban gateways and
-      memorial parkways often outdraw remote iconic wilderness. The leaderboard
-      is as much about access and metropolitan adjacency as about scenic purity.
-  - question: Who sits at the top?
+      21,560 records in the working dataset.
+  - question: >-
+      What is the median Visitors?
     answer: >-
-      Key figure: 155,219 — Median Visitors. Urban gateways and memorial
-      parkways often outdraw remote iconic wilderness. The leaderboard is as
-      much about access and metropolitan adjacency as about scenic purity.
-  - question: How regions spread visits?
+      The median Visitors is 155,219.
+  - question: >-
+      What is the highest observed value in this extract?
     answer: >-
-      Key figure: 871,922,828 — Highest observed Visitors. Urban gateways and
-      memorial parkways often outdraw remote iconic wilderness. The leaderboard
-      is as much about access and metropolitan adjacency as about scenic purity.
-  - question: Who beats the median — and who trails?
+      The highest observed value in the extract is 871,922,828.
+  - question: >-
+      Which Parkname leads in this extract?
     answer: >-
-      Key figure: Golden Gate — Top Parkname by Visitors. Urban gateways and
-      memorial parkways often outdraw remote iconic wilderness. The leaderboard
-      is as much about access and metropolitan adjacency as about scenic purity.
+      Golden Gate leads the Parkname ranking in this extract.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">National parks are sold as wilderness and remembered as crowds. Visit counts make that tension measurable: which named units absorb America's outdoor attention, and how that attention has compounded since the early twentieth century.</p>
+<p class="art-p art-lede">National parks are sold as wilderness and remembered as crowds. Visit counts make that tension measurable: which named units absorb America's outdoor attention, and how that attention has compounded since the early twentieth century.</p>
 <p class="art-p">A TidyTuesday working file of <strong>21,560</strong> records spans <strong>1904–2016</strong>. Median visitors sit near <strong>155,219</strong>; the highest observed visitors figure reaches <strong>871,922,828</strong> in the extreme cell of the extract. <strong>Golden Gate</strong> leads the park-name ranking used in the fact box, and region code <strong>IM</strong> is the most common regional label.</p>
 <p class="art-p">Urban gateways and memorial parkways often outdraw remote iconic wilderness. The leaderboard is as much about access and metropolitan adjacency as about scenic purity.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>

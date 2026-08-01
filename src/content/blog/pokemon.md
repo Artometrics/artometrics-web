@@ -21,34 +21,26 @@ keyPoints:
   - 510 — Pokémon with a second type — the dual-type majority
   - Water — Most common primary type in the dataset
 faq:
-  - question: What does the data show about Stat Identity By Type?
+  - question: >-
+      What is Pokémon in the dataset with a confirmed primary type?
     answer: >-
-      Key figure: 949 — Pokémon in the dataset with a confirmed primary type.
-      The dataset is TidyTuesday Week 13, 2025 — a cleaned version of the
-      PokéAPI database covering 1,028 Pokémon entries across nine generations.
-      Each row represents a single Pokémon…
-  - question: What does the data show about Generation Creep?
+      949 — Pokémon in the dataset with a confirmed primary type.
+  - question: >-
+      What is Distinct primary types represented?
     answer: >-
-      Key figure: 18 — Distinct primary types represented. The dataset is
-      TidyTuesday Week 13, 2025 — a cleaned version of the PokéAPI database
-      covering 1,028 Pokémon entries across nine generations. Each row
-      represents a single Pokémon…
-  - question: What does the data show about Built Different?
+      18 — Distinct primary types represented.
+  - question: >-
+      What is Generation IDs in the data?
     answer: >-
-      Key figure: 8 — Generation IDs in the data — Gen 8 and 9 unclassified in
-      source. The dataset is TidyTuesday Week 13, 2025 — a cleaned version of
-      the PokéAPI database covering 1,028 Pokémon entries across nine
-      generations. Each row represents a single Pokémon…
-  - question: What this file cannot tell you?
+      8 — Generation IDs in the data.
+  - question: >-
+      What is the median base experience across all Pokémon?
     answer: >-
-      Key figure: 157 — Median base experience across all Pokémon. The dataset
-      is TidyTuesday Week 13, 2025 — a cleaned version of the PokéAPI database
-      covering 1,028 Pokémon entries across nine generations. Each row
-      represents a single Pokémon…
+      The median base experience across all Pokémon is 157.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">Pokémon is the highest-grossing media franchise in history — more than $150 billion in lifetime revenue across games, cards, merchandise, and film. That number gets cited constantly. What gets cited less is the design infrastructure underneath it: the 18-type system, the base stat framework, the generation-by-generation release cadence that has added roughly 100 new Pokémon every few years since 1996. The franchise looks like a cultural phenomenon. The data shows it&#39;s also an engineering project.</p>
+<p class="art-p art-lede">Pokémon is the highest-grossing media franchise in history — more than $150 billion in lifetime revenue across games, cards, merchandise, and film. That number gets cited constantly. What gets cited less is the design infrastructure underneath it: the 18-type system, the base stat framework, the generation-by-generation release cadence that has added roughly 100 new Pokémon every few years since 1996. The franchise looks like a cultural phenomenon. The data shows it&#39;s also an engineering project.</p>
 <p class="art-p">The TidyTuesday 2025-04-01 Pokémon dataset — sourced from PokéAPI and covering every Pokémon through Generation IX — lets three questions land cleanly. Do different types actually play differently, or is that a perception? Has Game Freak been inflating Pokémon power over time? And what does physical size reveal about how Pokémon are designed?</p>
 <h2 id="research-question" class="anchored">Research question</h2>
 <p class="art-p">Can Pokémon’s creature design be measured as a system rather than described only as franchise lore? This report asks whether primary type, generation, base experience, height, and weight reveal consistent design rules across the PokéAPI-derived TidyTuesday dataset.</p>
@@ -164,7 +156,7 @@ used honestly and at full capacity.
 <p class="art-p"><em>— Artometrics Editorial</em></p></div>
 
 <p class="art-github-wrap">
-  <a class="art-github-btn" href="https://github.com/Artometrics/pokemon" target="_blank" rel="noopener noreferrer">View source on GitHub</a>
+  <a class="art-github-btn" href="https://github.com/Artometrics/pokemon" target="_blank" rel="noopener noreferrer">Source archive (GitHub)</a>
 </p>
 </main>
 </div>

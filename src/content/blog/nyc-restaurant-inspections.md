@@ -23,30 +23,26 @@ keyPoints:
   - 1900–2018 — Year span covered in the file
   - A — Most common Grade
 faq:
-  - question: How scores moved over time?
+  - question: >-
+      How many records are in this dataset?
     answer: >-
-      Key figure: 100,000 — Records in the working dataset. Higher scores here
-      mean more violation points, not better food. That inversion is easy to
-      forget once letter grades take over the conversation.
-  - question: Who sits at the top of violation scores?
+      100,000 records in the working dataset.
+  - question: >-
+      What is the median Score?
     answer: >-
-      Key figure: 15.0 — Median Score. Higher scores here mean more violation
-      points, not better food. That inversion is easy to forget once letter
-      grades take over the conversation.
-  - question: What does the data show about Scores by grade?
+      The median Score is 15.0.
+  - question: >-
+      What is the highest observed value in this extract?
     answer: >-
-      Key figure: 156 — Highest observed Score. Higher scores here mean more
-      violation points, not better food. That inversion is easy to forget once
-      letter grades take over the conversation.
-  - question: Who beats the median — and who trails?
+      The highest observed value in the extract is 156.
+  - question: >-
+      Which Dba leads in this extract?
     answer: >-
-      Key figure: NOUS LES AMIS RESTAURANT & B — Top Dba by Score. Higher scores
-      here mean more violation points, not better food. That inversion is easy
-      to forget once letter grades take over the conversation.
+      NOUS LES AMIS RESTAURANT & B leads the Dba ranking in this extract.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">New York City restaurant inspections turn hygiene into a public grade. Behind the A/B/C stickers is a numeric score distribution that is far more skewed than the cheerful window cards suggest.</p>
+<p class="art-p art-lede">New York City restaurant inspections turn hygiene into a public grade. Behind the A/B/C stickers is a numeric score distribution that is far more skewed than the cheerful window cards suggest.</p>
 <p class="art-p">A TidyTuesday working extract of <strong>100,000</strong> records puts median score at <strong>15.0</strong> and the highest observed score at <strong>156</strong>. <strong>NOUS LES AMIS RESTAURANT &amp; B</strong> leads the DBA ranking by score in the fact box, grade <strong>A</strong> is the most common label, and the year span in the file runs from a placeholder-early <strong>1900</strong> through <strong>2018</strong> — with the dense modern inspection era carrying most of the signal.</p>
 <p class="art-p">Higher scores here mean more violation points, not better food. That inversion is easy to forget once letter grades take over the conversation.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>

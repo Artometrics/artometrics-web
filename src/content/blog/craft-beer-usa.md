@@ -23,31 +23,26 @@ keyPoints:
   - 0.13 — Highest observed Abv
   - Lee Hill Series Vol. 5 - Bel — Top Name by Abv
 faq:
-  - question: What does the data show about High-ABV Outliers Are Named Experiments?
-    answer: >-
-      Key figure: 2,410 — Records in the working dataset. The source is the
-      TidyTuesday release from 2018-07-10 (week15_beers.xlsx). After cleaning,
-      2,410 rows remain.
   - question: >-
-      What does the data show about The Top Dozen Still Doubles Everyday
-      Strength?
+      How many records are in this dataset?
     answer: >-
-      Key figure: 0.06 — Median Abv. The source is the TidyTuesday release from
-      2018-07-10 (week15_beers.xlsx). After cleaning, 2,410 rows remain.
-  - question: What does the data show about Most Beers Pile Up Near 5–6% ABV?
+      2,410 records in the working dataset.
+  - question: >-
+      What is the median Abv?
     answer: >-
-      Key figure: 0.13 — Highest observed Abv. The source is the TidyTuesday
-      release from 2018-07-10 (week15_beers.xlsx). After cleaning, 2,410 rows
-      remain.
-  - question: What does the data show about High-ABV Names Concentrate in a Short List?
+      The median Abv is 0.06.
+  - question: >-
+      What is the highest observed value in this extract?
     answer: >-
-      Key figure: Lee Hill Series Vol. 5 - Bel — Top Name by Abv. The source is
-      the TidyTuesday release from 2018-07-10 (week15_beers.xlsx). After
-      cleaning, 2,410 rows remain.
+      The highest observed value in the extract is 0.13.
+  - question: >-
+      Which Name leads in this extract?
+    answer: >-
+      Lee Hill Series Vol. 5 - Bel leads the Name ranking in this extract.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">American craft beer advertises itself with bitterness and strength — IBU and ABV on the tap list. The TidyTuesday beers extract used here holds <strong>2,410</strong> records with a median ABV of <strong>0.06</strong> (6%) and a high of <strong>0.13</strong> (13%) for Lee Hill Series Vol. 5 - Belgian Style Quadrupel Ale.</p>
+<p class="art-p art-lede">American craft beer advertises itself with bitterness and strength — IBU and ABV on the tap list. The TidyTuesday beers extract used here holds <strong>2,410</strong> records with a median ABV of <strong>0.06</strong> (6%) and a high of <strong>0.13</strong> (13%) for Lee Hill Series Vol. 5 - Belgian Style Quadrupel Ale.</p>
 <p class="art-p">Most craft beers in this file are not barrel-aged monsters. They cluster near session-to-standard strength, with a right tail of barleywines, quads, and imperial experiments.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>
 <p class="art-p">The numbers that set the scale for this report:</p>

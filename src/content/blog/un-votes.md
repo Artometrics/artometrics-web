@@ -19,39 +19,18 @@ keyPoints:
   - '100,000 — Records in the working dataset'
   - yes — Most common Vote
 faq:
-  - question: What does the data show about Yes votes dominate the sampled UN record?
-    answer: >-
-      Key figure: 100,000 — Records in the working dataset. The source is the
-      TidyTuesday release from 2021-03-23 (R for Data Science community). The
-      working file contains 100,000 rows and 4 columns after merging available
-      tables in the…
   - question: >-
-      What does the data show about Brazil appears most often among country
-      names?
+      How many records are in this dataset?
     answer: >-
-      Key figure: yes — Most common Vote. The source is the TidyTuesday release
-      from 2021-03-23 (R for Data Science community). The working file contains
-      100,000 rows and 4 columns after merging available tables in the…
+      100,000 records in the working dataset.
   - question: >-
-      What does the data show about Vote categories restate the file’s center of
-      gravity?
+      What is Most common Vote?
     answer: >-
-      The source is the TidyTuesday release from 2021-03-23 (R for Data Science
-      community). The working file contains 100,000 rows and 4 columns after
-      merging available tables in the week folder. Vote is the primary
-      categorical field; country and country code…
-  - question: >-
-      What does the data show about Country appearances follow a long-tail
-      pattern?
-    answer: >-
-      The source is the TidyTuesday release from 2021-03-23 (R for Data Science
-      community). The working file contains 100,000 rows and 4 columns after
-      merging available tables in the week folder. Vote is the primary
-      categorical field; country and country code…
+      yes — Most common Vote.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">United Nations roll-call votes are a diplomacy archive written as a contingency table. This working extract holds 100,000 records. The most common vote value is yes — not a moral claim, a frequency claim. The charts ask where that yes-mass concentrates, which countries appear most often, and how long-tailed country participation becomes.</p>
+<p class="art-p art-lede">United Nations roll-call votes are a diplomacy archive written as a contingency table. This working extract holds 100,000 records. The most common vote value is yes — not a moral claim, a frequency claim. The charts ask where that yes-mass concentrates, which countries appear most often, and how long-tailed country participation becomes.</p>
 <p class="art-p">Voting records identify resolutions that divided member states, but the first job of this file is simpler: map the landscape of yes, no, and abstain, then see which member names and country codes recur in a 100,000-row slice of UN voting history.</p>
 <h2 id="research-question" class="anchored">Research question</h2>
 <p class="art-p">What does a 100,000-row extract of United Nations roll-call votes reveal before any ideological coalition model is fitted? This report asks how vote categories are distributed, which member-state names recur most often, and whether country-code metadata confirms or complicates the entity picture.</p>
@@ -131,7 +110,7 @@ faq:
 <p>United Nations. <em>Member States</em>. <a href="https://www.un.org/en/about-us/member-states" target="_blank" rel="noopener noreferrer">https://www.un.org/en/about-us/member-states</a></p>
 <h2 id="editors-note" class="anchored">Editor’s note</h2>
 <div class="art-editorial-note"><p><em>Artometrics data report from the TidyTuesday research pipeline. Charts and aggregates are reproducible from the embedded exhibits and public source files.</em></p></div>
-<p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2021/2021-03-23" target="_blank" rel="noopener noreferrer">View TidyTuesday source on GitHub</a></p>
+<p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2021/2021-03-23" target="_blank" rel="noopener noreferrer">Source archive (GitHub)</a></p>
 
 </main>
 </div>

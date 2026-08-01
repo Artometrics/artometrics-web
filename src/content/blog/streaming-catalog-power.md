@@ -21,33 +21,22 @@ keyPoints:
   - TBD — Catalog or sample size (observed)
   - TBD — Concentration or median signal (derived — label clearly)
 faq:
-  - question: How Big Is the Library — and How Top-heavy?
+  - question: >-
+      What is Calibration statistic once the dataset is attached?
     answer: >-
-      Key figure: TBD — Calibration statistic once the dataset is attached.
-      Editors, founders, and analysts who want evidence on how streaming
-      libraries concentrate attention and inventory will find the frame here;
-      the numbers arrive when the CSV does.
-  - question: 'Concentration: Who Owns the Middle of the Shelf?'
+      TBD — Calibration statistic once the dataset is attached.
+  - question: >-
+      What is Catalog or sample size?
     answer: >-
-      Key figure: TBD — Catalog or sample size (observed). Editors, founders,
-      and analysts who want evidence on how streaming libraries concentrate
-      attention and inventory will find the frame here; the numbers arrive when
-      the CSV does.
-  - question: 'What does the data show about The Availability Gap: Hype vs What Stays Up?'
+      TBD — Catalog or sample size (observed).
+  - question: >-
+      What is Concentration or median signal?
     answer: >-
-      Key figure: TBD — Concentration or median signal (derived — label
-      clearly). Editors, founders, and analysts who want evidence on how
-      streaming libraries concentrate attention and inventory will find the
-      frame here; the numbers arrive when the CSV does.
-  - question: What this file cannot tell you?
-    answer: >-
-      Editors, founders, and analysts who want evidence on how streaming
-      libraries concentrate attention and inventory will find the frame here;
-      the numbers arrive when the CSV does.
+      TBD — Concentration or median signal (derived.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">Streaming marketing sells the hit. The library keeps the inventory. Those are different objects: one is a campaign; the other is what remains available after the campaign ends.</p>
+<p class="art-p art-lede">Streaming marketing sells the hit. The library keeps the inventory. Those are different objects: one is a campaign; the other is what remains available after the campaign ends.</p>
 <p class="art-p">Until a working catalog export is attached, every numeric cell below stays marked TBD. The questions still hold — library size, concentration, and the gap between hype and durable availability — and the charts are stubs waiting for observed rows.</p>
 <p class="art-p">Editors, founders, and analysts who want evidence on how streaming libraries concentrate attention and inventory will find the frame here; the numbers arrive when the CSV does.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>

@@ -17,32 +17,18 @@ keyPoints:
   - '1,381 — Records in the working dataset'
   - 1–30 — Year span covered in the file
 faq:
-  - question: What does the data show about Volume?
+  - question: >-
+      How many records are in this dataset?
     answer: >-
-      Key figure: 1,381 — Records in the working dataset. The source is the
-      TidyTuesday release from 2019-08-27 (R for Data Science community). This
-      working file contains 1,381 rows and 7 columns after merging all available
-      CSV/XLSX…
-  - question: Who sits at the top?
+      1,381 records in the working dataset.
+  - question: >-
+      What time period does this dataset cover?
     answer: >-
-      Key figure: 1–30 — Year span covered in the file. The source is the
-      TidyTuesday release from 2019-08-27 (R for Data Science community). This
-      working file contains 1,381 rows and 7 columns after merging all available
-      CSV/XLSX…
-  - question: What does the data show about Timeline?
-    answer: >-
-      The source is the TidyTuesday release from 2019-08-27 (R for Data Science
-      community). This working file contains 1,381 rows and 7 columns after
-      merging all available CSV/XLSX tables in the week folder.
-  - question: What does the data show about Frequency?
-    answer: >-
-      The source is the TidyTuesday release from 2019-08-27 (R for Data Science
-      community). This working file contains 1,381 rows and 7 columns after
-      merging all available CSV/XLSX tables in the week folder.
+      The file covers 1–30.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">Guest-appearance records count celebrity density across seasons.</p>
+<p class="art-p art-lede">Guest-appearance records count celebrity density across seasons.</p>
 <p class="art-p">Start with the scale: <strong>1,381</strong> — Records in the working dataset; and <strong>1–30</strong> — Year span covered in the file.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>
 <p class="art-p">The numbers that set the scale for this report:</p>

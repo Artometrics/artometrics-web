@@ -24,36 +24,26 @@ keyPoints:
   - United / Continental* — Top Airline by Avail seat km per week
   - incidents — Most common Type of event
 faq:
-  - question: What does the data show about Capacity Concentrates Among Megacarriers?
-    answer: >-
-      Key figure: 336 — Records in the working dataset. The most common event
-      type in the file is simply labeled incidents . That matters: the archive
-      mixes routine reportable events with rarer fatal outcomes, and treating
-      those…
-  - question: What does the data show about The Same Names Dominate the Leader Board?
-    answer: >-
-      Key figure: 802,908,893 — Median Avail seat km per week. The most common
-      event type in the file is simply labeled incidents . That matters: the
-      archive mixes routine reportable events with rarer fatal outcomes, and
-      treating those…
   - question: >-
-      What does the data show about Event Type Does Not Rewrite the Capacity
-      Story?
+      How many records are in this dataset?
     answer: >-
-      Key figure: 7,139,291,291 — Highest observed Avail seat km per week. The
-      most common event type in the file is simply labeled incidents . That
-      matters: the archive mixes routine reportable events with rarer fatal
-      outcomes, and treating those…
-  - question: What does the data show about Gaps to the Median Are Flat Across Labels?
+      336 records in the working dataset.
+  - question: >-
+      What is the median Avail seat km per week?
     answer: >-
-      Key figure: United / Continental* — Top Airline by Avail seat km per week.
-      The most common event type in the file is simply labeled incidents . That
-      matters: the archive mixes routine reportable events with rarer fatal
-      outcomes, and treating those…
+      The median Avail seat km per week is 802,908,893.
+  - question: >-
+      What is the highest observed value in this extract?
+    answer: >-
+      The highest observed value in the extract is 7,139,291,291.
+  - question: >-
+      Which Airline leads in this extract?
+    answer: >-
+      United / Continental* leads the Airline ranking in this extract.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">Airline safety is usually discussed one crash at a time. The TidyTuesday airline-safety extract does something different: it lines carriers up by available seat kilometers per week — a capacity metric — and then asks how incidents, fatal accidents, and fatalities sit against that scale. The working file holds <strong>336</strong> cleaned records after the week’s tables are merged.</p>
+<p class="art-p art-lede">Airline safety is usually discussed one crash at a time. The TidyTuesday airline-safety extract does something different: it lines carriers up by available seat kilometers per week — a capacity metric — and then asks how incidents, fatal accidents, and fatalities sit against that scale. The working file holds <strong>336</strong> cleaned records after the week’s tables are merged.</p>
 <p class="art-p">Capacity is not the same as risk, but it is the right denominator for a first cut. A carrier flying <strong>7.1 billion</strong> available seat kilometers per week is not in the same exposure class as one flying under <strong>2 billion</strong>. The median in this extract is <strong>802,908,893</strong> available seat kilometers per week — a calibration point for every ranking that follows.</p>
 <p class="art-p">The most common event type in the file is simply labeled <strong>incidents</strong>. That matters: the archive mixes routine reportable events with rarer fatal outcomes, and treating those categories as interchangeable would flatten the story.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>

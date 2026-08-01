@@ -25,30 +25,26 @@ keyPoints:
   - 1950–2022 — Year span covered in the file
   - Horror — Most common Primary genre
 faq:
-  - question: How the pattern changed over time?
+  - question: >-
+      How many records are in this dataset?
     answer: >-
-      Key figure: 32,540 — Records in the working dataset. The file merges TMDB
-      metadata for thousands of horror-tagged films: ratings, budgets, runtimes,
-      and genre tags from 1950 through 2022, released via TidyTuesday.
-  - question: Who sits at the top?
+      32,540 records in the working dataset.
+  - question: >-
+      What is the median Vote average?
     answer: >-
-      Key figure: 4.00 — Median Vote average. The file merges TMDB metadata for
-      thousands of horror-tagged films: ratings, budgets, runtimes, and genre
-      tags from 1950 through 2022, released via TidyTuesday.
-  - question: How the field is spread?
+      The median Vote average is 4.00.
+  - question: >-
+      What is the highest observed value in this extract?
     answer: >-
-      Key figure: 10.0 — Highest observed Vote average. The file merges TMDB
-      metadata for thousands of horror-tagged films: ratings, budgets, runtimes,
-      and genre tags from 1950 through 2022, released via TidyTuesday.
-  - question: Who beats the median — and who trails?
+      The highest observed value in the extract is 10.0.
+  - question: >-
+      Which title leads in this extract?
     answer: >-
-      Key figure: Piranha Women — Top Title by Vote average. The file merges
-      TMDB metadata for thousands of horror-tagged films: ratings, budgets,
-      runtimes, and genre tags from 1950 through 2022, released via TidyTuesday.
+      Piranha Women leads the title ranking in this extract.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">Horror catalogs grow faster than any critic can watch. The open question is whether vote averages rose with that volume — or whether more titles simply filled the shelf with middling scores.</p>
+<p class="art-p art-lede">Horror catalogs grow faster than any critic can watch. The open question is whether vote averages rose with that volume — or whether more titles simply filled the shelf with middling scores.</p>
 <p class="art-p">TMDB-style metadata for horror-tagged films yields <strong>32,540</strong> records from <strong>1950–2022</strong>. The median vote average is <strong>4.00</strong>; the highest observed average is <strong>10.0</strong>. Horror is the most common primary genre label, as expected in a horror-tagged extract.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>
 <p class="art-p">The numbers that set the scale for this report:</p>

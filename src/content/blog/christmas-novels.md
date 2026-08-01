@@ -26,35 +26,25 @@ keyPoints:
   - 'Dickens, Charles — Most common Author'
 faq:
   - question: >-
-      What does the data show about The Shelf Centers on Mid-Nineteenth-Century
-      Births?
+      How many records are in this dataset?
     answer: >-
-      Key figure: 35 — Records in the working dataset. The source is the
-      TidyTuesday release from 2025-12-30 (christmas_novels.csv). After
-      cleaning, 35 rows remain.
+      35 records in the working dataset.
   - question: >-
-      What does the data show about Later-Born Titles Mark the Edge of the
-      Canon?
+      What is the median Birthdate?
     answer: >-
-      Key figure: 1,859 — Median Birthdate. The source is the TidyTuesday
-      release from 2025-12-30 (christmas_novels.csv). After cleaning, 35 rows
-      remain.
-  - question: What does the data show about Birthdates Cluster Around the 1860s?
-    answer: >-
-      Key figure: 1,891 — Highest observed Birthdate. The source is the
-      TidyTuesday release from 2025-12-30 (christmas_novels.csv). After
-      cleaning, 35 rows remain.
+      The median Birthdate is 1,859.
   - question: >-
-      What does the data show about Dickens and Thackeray Sit Earlier Than the
-      Median?
+      What is the highest observed value in this extract?
     answer: >-
-      Key figure: The Camp Fire Girls Solve a — Top Title by Birthdate. The
-      source is the TidyTuesday release from 2025-12-30 (christmas_novels.csv).
-      After cleaning, 35 rows remain.
+      The highest observed value in the extract is 1,891.
+  - question: >-
+      Which title leads in this extract?
+    answer: >-
+      The Camp Fire Girls Solve a leads the title ranking in this extract.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">Christmas novels are a seasonal shelf with a long memory: Dickensian ghosts, children’s mysteries, parlor sentimentalism. The TidyTuesday christmas-novels extract used here is small — <strong>35</strong> records — with a median author birthdate of <strong>1,859</strong> and a latest birthdate of <strong>1,891</strong>. Charles Dickens is the most common author label in the file.</p>
+<p class="art-p art-lede">Christmas novels are a seasonal shelf with a long memory: Dickensian ghosts, children’s mysteries, parlor sentimentalism. The TidyTuesday christmas-novels extract used here is small — <strong>35</strong> records — with a median author birthdate of <strong>1,859</strong> and a latest birthdate of <strong>1,891</strong>. Charles Dickens is the most common author label in the file.</p>
 <p class="art-p">Because the sample is tiny, every chart is a map of a curated canon rather than a complete market. Birthdate becomes a proxy for which literary generations stock the holiday shelf.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>
 <p class="art-p">The numbers that set the scale for this report:</p>

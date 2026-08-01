@@ -22,33 +22,26 @@ keyPoints:
   - United States — Top COUNTRY by WASTE DIS
   - Secondary — Most common LEVEL
 faq:
-  - question: What does the data show about Discharge by country?
+  - question: >-
+      How many records are in this dataset?
     answer: >-
-      Key figure: 58,502 — Records in the working dataset. Scale without
-      treatment level is an incomplete story. A large plant with advanced
-      treatment is a different civic object from a large plant stuck at primary
-      or secondary standards.
-  - question: Who sits at the top?
+      58,502 records in the working dataset.
+  - question: >-
+      What is the median WASTE DIS?
     answer: >-
-      Key figure: 1,079 — Median WASTE DIS. Scale without treatment level is an
-      incomplete story. A large plant with advanced treatment is a different
-      civic object from a large plant stuck at primary or secondary standards.
-  - question: What does the data show about Treatment levels spread discharge?
+      The median WASTE DIS is 1,079.
+  - question: >-
+      What is the highest observed value in this extract?
     answer: >-
-      Key figure: 3,073,754 — Highest observed WASTE DIS. Scale without
-      treatment level is an incomplete story. A large plant with advanced
-      treatment is a different civic object from a large plant stuck at primary
-      or secondary standards.
-  - question: Who beats the median — and who trails?
+      The highest observed value in the extract is 3,073,754.
+  - question: >-
+      Which country leads in this extract?
     answer: >-
-      Key figure: United States — Top COUNTRY by WASTE DIS. Scale without
-      treatment level is an incomplete story. A large plant with advanced
-      treatment is a different civic object from a large plant stuck at primary
-      or secondary standards.
+      United States leads the country ranking in this extract.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">Wastewater plants are the unglamorous infrastructure of modern density. They turn the output of cities into something rivers and coasts can sometimes absorb — and the HydroWASTE-style plant register makes that system countable.</p>
+<p class="art-p art-lede">Wastewater plants are the unglamorous infrastructure of modern density. They turn the output of cities into something rivers and coasts can sometimes absorb — and the HydroWASTE-style plant register makes that system countable.</p>
 <p class="art-p">The working TidyTuesday extract holds <strong>58,502</strong> records. Median waste discharge (<strong>WASTE DIS</strong>) sits at <strong>1,079</strong>; the highest observed value exceeds <strong>3,073,754</strong>. The United States leads on aggregate discharge in the country rollup, while <strong>Secondary</strong> treatment is the most common level label in the file.</p>
 <p class="art-p">Scale without treatment level is an incomplete story. A large plant with advanced treatment is a different civic object from a large plant stuck at primary or secondary standards.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>

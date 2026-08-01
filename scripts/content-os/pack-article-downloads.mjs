@@ -77,7 +77,8 @@ for (const post of blog) {
     pdf,
     epub,
     audio,
-    github: post.draft ? null : github,
+    // Keep GitHub as metadata only when site-hosted packs exist; UI demotes it.
+    github: post.draft ? null : html || pdf || epub || dataset ? null : github,
   };
 }
 

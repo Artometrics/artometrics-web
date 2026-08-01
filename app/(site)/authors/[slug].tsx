@@ -2,6 +2,8 @@ import { Text } from "react-native";
 import { Image } from "expo-image";
 import { Link, useLocalSearchParams } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
+import { PageSeo } from "@/components/PageSeo";
+import { SeoJsonLd } from "@/components/SeoJsonLd";
 import { assetUrl } from "@/lib/assets";
 import { getAuthor, getAuthors } from "@/lib/content";
 import { paramString } from "@/lib/params";
@@ -26,8 +28,29 @@ export default function AuthorScreen() {
     );
   }
 
+  const imageAbs = author.image?.url
+    ? `https://artometrics.com${author.image.url}`
+    : undefined;
+
   return (
     <Wrapper variant="narrow" className="gap-3 py-12">
+      <PageSeo
+        title={author.name}
+        description={author.bio || `${author.name} — Artometrics author.`}
+        path={`/authors/${author.id}`}
+        image={author.image?.url}
+      />
+      <SeoJsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "Person",
+          name: author.name,
+          description: author.bio || undefined,
+          image: imageAbs,
+          jobTitle: author.role || undefined,
+          url: `https://artometrics.com/authors/${author.id}`,
+        }}
+      />
       {assetUrl(author.image?.url) ? (
         <Image
           source={{ uri: assetUrl(author.image?.url)! }}

@@ -399,16 +399,16 @@ img,
   font-size: 0.88em;
 }
 
-/* ── Blockquote as pull-quote ─────────────────────────────── */
+/* ── Blockquote as Kruger pull-quote ──────────────────────── */
 .artometrics-article-body blockquote{
-  border-left: 5px solid var(--art-highlight);
-  background: var(--art-cream);
+  border-left: 6px solid #C0392B;
+  background: #FFFFFF;
   margin: 2rem auto;
   padding: 1.2rem 1.5rem;
   font-size: 1.15rem;
   font-style: italic;
-  color: var(--art-dark);
-  border-radius: 0 4px 4px 0;
+  color: #000000;
+  border-radius: 0;
   max-width: min(920px, 100%);
 }
 
@@ -802,7 +802,7 @@ pre:has(> code.sourceCode.sql),
   max-width: min(56rem, 100%) !important;
   margin: 0 auto 2.1rem 0 !important;
   padding-bottom: 1.6rem !important;
-  border-bottom: 1px solid #E8E6E1 !important;
+  border-bottom: 1px solid #000000 !important;
 }
 .artometrics-article-body main.art-article-main > blockquote{
   max-width: min(56rem, 100%) !important;

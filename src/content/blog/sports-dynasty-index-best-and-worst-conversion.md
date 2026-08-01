@@ -26,41 +26,25 @@ keyPoints:
   - 57 — Maple Leafs active Stanley Cup drought entering 2025
 faq:
   - question: >-
-      What does the data show about A few franchises own championship memory
-      itself?
+      How many charts are audited in the Artometrics corpus?
     answer: >-
-      Key figure: 351 — Charts now audited across the Artometrics corpus. This
-      index uses five charts drawn from public reference records—and from an
-      Artometrics corpus that now holds 351 audited charts—to map championship
-      mass, Finals conversion, brand…
+      351 charts audited across the Artometrics corpus.
   - question: >-
-      What does the data show about Modern dynasties are finishers, not just
-      invitees?
+      How many major North American leagues are compared?
     answer: >-
-      Key figure: 4 — Major North American leagues compared. This index uses
-      five charts drawn from public reference records—and from an Artometrics
-      corpus that now holds 351 audited charts—to map championship mass, Finals
-      conversion, brand…
+      4 major North American leagues compared in the index.
   - question: >-
-      What does the data show about Market power and competitive power are
-      different variables?
+      How many World Series titles do the Yankees hold?
     answer: >-
-      Key figure: 27 — Yankees titles, the largest MLB archive. This index uses
-      five charts drawn from public reference records—and from an Artometrics
-      corpus that now holds 351 audited charts—to map championship mass, Finals
-      conversion, brand…
+      27 Yankees titles — the largest MLB championship archive.
   - question: >-
-      What does the data show about Each league teaches fans a different theory
-      of fairness?
+      How many Super Bowl titles has Dallas won since the 1990s dynasty?
     answer: >-
-      Key figure: 0 — Cowboys titles since the 1990s dynasty. This index uses
-      five charts drawn from public reference records—and from an Artometrics
-      corpus that now holds 351 audited charts—to map championship mass, Finals
-      conversion, brand…
+      0 Cowboys titles since the 1990s dynasty ended.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">Single-team profiles answer one fan base at a time. Cross the league borders and greatness stops looking like one ranking. Archive mass, conversion efficiency, and attention pull apart: a franchise can dominate one category and fail the broader identity test.</p>
+<p class="art-p art-lede">Single-team profiles answer one fan base at a time. Cross the league borders and greatness stops looking like one ranking. Archive mass, conversion efficiency, and attention pull apart: a franchise can dominate one category and fail the broader identity test.</p>
 <p class="art-p">The Yankees’ 27 titles remain baseball’s largest archive. The Cowboys have added 0 titles since the 1990s dynasty while remaining a brand colossus. The Maple Leafs entered 2025 with a 57-year Stanley Cup drought. Those facts do not live on the same scale until someone builds a shared vocabulary across MLB, the NBA, the NFL, and the NHL.</p>
 <p class="art-p">This index uses five charts drawn from public reference records—and from an Artometrics corpus that now holds 351 audited charts—to map championship mass, Finals conversion, brand versus recent output, league title rotation, and the strange geometry of fan pain under a bright spotlight.</p>
 

@@ -24,30 +24,26 @@ keyPoints:
   - BETTER DAYS — Top Song by Weeks on chart
   - 1958–2017 — Year span covered in the file
 faq:
-  - question: What does the data show about Seasonal Weeks Spiked in the Mid-2000s?
+  - question: >-
+      How many records are in this dataset?
     answer: >-
-      Key figure: 387 — Records in the working dataset. The source is the
-      TidyTuesday release from 2019-12-24 (christmas_songs.csv). After cleaning,
-      387 rows remain.
-  - question: What does the data show about Twenty Weeks Marks the Upper Club?
+      387 records in the working dataset.
+  - question: >-
+      What is the median Weeks on chart?
     answer: >-
-      Key figure: 8.00 — Median Weeks on chart. The source is the TidyTuesday
-      release from 2019-12-24 (christmas_songs.csv). After cleaning, 387 rows
-      remain.
-  - question: What does the data show about Most Songs Cluster at Short Chart Lives?
+      The median Weeks on chart is 8.00.
+  - question: >-
+      What is the highest observed value in this extract?
     answer: >-
-      Key figure: 20.0 — Highest observed Weeks on chart. The source is the
-      TidyTuesday release from 2019-12-24 (christmas_songs.csv). After cleaning,
-      387 rows remain.
-  - question: What does the data show about Standards Reappear Across Decades?
+      The highest observed value in the extract is 20.0.
+  - question: >-
+      How many weeks did the album spend on the Billboard chart?
     answer: >-
-      Key figure: BETTER DAYS — Top Song by Weeks on chart. The source is the
-      TidyTuesday release from 2019-12-24 (christmas_songs.csv). After cleaning,
-      387 rows remain.
+      BETTER DAYS — Top Song by Weeks on chart.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">Holiday songs have a strange chart life: they return every December, pile up weeks, then vanish until the next season. The TidyTuesday christmas-songs extract used here holds <strong>387</strong> records spanning <strong>1958–2017</strong>, with a median of <strong>8.00</strong> weeks on chart and a high of <strong>20.0</strong>.</p>
+<p class="art-p art-lede">Holiday songs have a strange chart life: they return every December, pile up weeks, then vanish until the next season. The TidyTuesday christmas-songs extract used here holds <strong>387</strong> records spanning <strong>1958–2017</strong>, with a median of <strong>8.00</strong> weeks on chart and a high of <strong>20.0</strong>.</p>
 <p class="art-p">Better Days and Believe sit among the weeks-on-chart leaders. Perennial titles — Jingle Bell Rock, All I Want for Christmas Is You, Rockin’ Around the Christmas Tree, White Christmas — define the timeline chart’s recurring cast.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>
 <p class="art-p">The numbers that set the scale for this report:</p>

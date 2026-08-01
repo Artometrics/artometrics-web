@@ -17,6 +17,7 @@ import { useAuth } from "@/lib/auth";
 import { useChrome } from "@/lib/chrome";
 import { useTheme } from "@/lib/theme";
 import { searchSite, type SearchHit } from "@/lib/search";
+import { trackEvent } from "@/lib/analytics/ga";
 
 const PLACEHOLDERS = [
   "Search reports…",
@@ -69,11 +70,13 @@ export function SiteHeader() {
       closeSearch();
       return;
     }
+    trackEvent("search", { query });
     router.push(`/search?q=${encodeURIComponent(query)}`);
     closeSearch();
   }
 
   function goHit(hit: SearchHit) {
+    trackEvent("search", { query: q.trim() || hit.title, result: hit.href });
     router.push(hit.href as `/`);
     closeSearch();
   }
@@ -275,7 +278,10 @@ export function SiteHeader() {
             </View>
 
             <Pressable
-              onPress={() => router.push(studioHref as `/`)}
+              onPress={() => {
+                trackEvent("studio_open", { source: "header" });
+                router.push(studioHref as `/`);
+              }}
               accessibilityLabel="Studio"
               accessibilityRole="button"
               hitSlop={8}

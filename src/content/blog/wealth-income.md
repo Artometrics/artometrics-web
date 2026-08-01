@@ -23,41 +23,25 @@ keyPoints:
   - 'Under $15,000 — Most common Income bracket'
 faq:
   - question: >-
-      What does the data show about The median income-distribution marker
-      drifted upward?
+      How many records are in this dataset?
     answer: >-
-      Key figure: 2,916 — Records in the working dataset. The source is the
-      TidyTuesday release from 2021-02-09 (R for Data Science community). The
-      working file contains 2,916 rows and 10 columns after merging available
-      tables in the…
+      2,916 records in the working dataset.
   - question: >-
-      What does the data show about Hispanic (Any Race) leads the charted race
-      ladder?
+      What is the median Income distribution?
     answer: >-
-      Key figure: 10.9 — Median Income distribution. The source is the
-      TidyTuesday release from 2021-02-09 (R for Data Science community). The
-      working file contains 2,916 rows and 10 columns after merging available
-      tables in the…
+      The median Income distribution is 10.9.
   - question: >-
-      What does the data show about Income brackets carve different distribution
-      bands?
+      What is the highest observed value in this extract?
     answer: >-
-      Key figure: 27.2 — Highest observed Income distribution. The source is the
-      TidyTuesday release from 2021-02-09 (R for Data Science community). The
-      working file contains 2,916 rows and 10 columns after merging available
-      tables in the…
+      The highest observed value in the extract is 27.2.
   - question: >-
-      What does the data show about Mid brackets clear the median; high brackets
-      trail in this cut?
+      Which Race leads in this extract?
     answer: >-
-      Key figure: Black Alone — Top Race by Income distribution. The source is
-      the TidyTuesday release from 2021-02-09 (R for Data Science community).
-      The working file contains 2,916 rows and 10 columns after merging
-      available tables in the…
+      Black Alone leads the Race ranking in this extract.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">Income distribution is how a society counts who sits where. This file holds 2,916 records spanning 1967–2019, with a median income-distribution value of 10.9 and a high of 27.2. Black Alone appears in the fact-box race ranking; Under $15,000 is the most common income bracket label.</p>
+<p class="art-p art-lede">Income distribution is how a society counts who sits where. This file holds 2,916 records spanning 1967–2019, with a median income-distribution value of 10.9 and a high of 27.2. Black Alone appears in the fact-box race ranking; Under $15,000 is the most common income bracket label.</p>
 <p class="art-p">The charts track how the median moved, which race categories lead, how brackets sit relative to the median, and how income distribution relates to income median. The calibration point is 10.9 — the center of the distribution field in this extract.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>
 <p class="art-p">The numbers that set the scale for this report:</p>
@@ -123,7 +107,7 @@ faq:
 <p>Data Science Learning Community. (2021). <em>TidyTuesday: Wealth and Income</em>. <a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2021/2021-02-09/income_distribution.csv" target="_blank" rel="noopener noreferrer">https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2021/2021-02-09/income_distribution.csv</a></p>
 <h2 id="editors-note" class="anchored">Editor’s note</h2>
 <div class="art-editorial-note"><p><em>Artometrics data report from the TidyTuesday research pipeline. Charts and aggregates are reproducible from the embedded exhibits and public source files.</em></p></div>
-<p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2021/2021-02-09" target="_blank" rel="noopener noreferrer">View TidyTuesday source on GitHub</a></p>
+<p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2021/2021-02-09" target="_blank" rel="noopener noreferrer">Source archive (GitHub)</a></p>
 
 </main>
 </div>

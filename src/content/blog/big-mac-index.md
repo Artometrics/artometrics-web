@@ -24,34 +24,26 @@ keyPoints:
   - Norway — Highest average dollar price over the full 20-year span
   - '20 yrs — Timespan: 2000 through 2020'
 faq:
-  - question: What does the data show about Global Price Trend?
+  - question: >-
+      What is the median dollar price across all countries and years?
     answer: >-
-      Key figure: $3.04 — Median dollar price across all countries and years.
-      Keep the calibration numbers close: the median dollar price across all
-      country-years is $3.04 , the peak observed is $8.31 , and the global
-      median rose about 83% from 2000 to 2020.
-  - question: What does the data show about Most Expensive Countries?
+      The median dollar price across all countries and years is $3.04.
+  - question: >-
+      What is Peak price?
     answer: >-
-      Key figure: $8.31 — Peak price — Switzerland at its most expensive. Keep
-      the calibration numbers close: the median dollar price across all
-      country-years is $3.04 , the peak observed is $8.31 , and the global
-      median rose about 83% from 2000 to 2020.
-  - question: How Prices Spread?
+      $8.31 — Peak price.
+  - question: >-
+      What is Price increase from 2000 to 2020 at the global median?
     answer: >-
-      Key figure: 83% — Price increase from 2000 to 2020 at the global median.
-      Keep the calibration numbers close: the median dollar price across all
-      country-years is $3.04 , the peak observed is $8.31 , and the global
-      median rose about 83% from 2000 to 2020.
-  - question: What does the data show about Tracking the Leaders?
+      83% — Price increase from 2000 to 2020 at the global median.
+  - question: >-
+      What time period does this dataset cover?
     answer: >-
-      Key figure: Norway — Highest average dollar price over the full 20-year
-      span. Keep the calibration numbers close: the median dollar price across
-      all country-years is $3.04 , the peak observed is $8.31 , and the global
-      median rose about 83% from 2000 to 2020.
+      The file covers Norway.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">A Big Mac is the same product everywhere on Earth — same bun, same patties, same sauce. That sameness is exactly what makes its price interesting. The Economist’s Big Mac Index, running since 1986, converts local burger prices into US dollars to reveal how far currencies stray from purchasing power parity. The working extract covers <strong>1,386</strong> observations spanning <strong>2000 through 2020</strong>.</p>
+<p class="art-p art-lede">A Big Mac is the same product everywhere on Earth — same bun, same patties, same sauce. That sameness is exactly what makes its price interesting. The Economist’s Big Mac Index, running since 1986, converts local burger prices into US dollars to reveal how far currencies stray from purchasing power parity. The working extract covers <strong>1,386</strong> observations spanning <strong>2000 through 2020</strong>.</p>
 <p class="art-p">The gap between the cheapest and most expensive burger in any given year is not noise. It maps onto wage structures, agricultural policy, taxes, and the raw purchasing power of local currencies. Switzerland’s peak above <strong>$8</strong> encodes a high-wage cost structure; a sub-$2 burger elsewhere tells a symmetrically different story.</p>
 <p class="art-p">Keep the calibration numbers close: the median dollar price across all country-years is <strong>$3.04</strong>, the peak observed is <strong>$8.31</strong>, and the global median rose about <strong>83%</strong> from 2000 to 2020.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>
@@ -120,6 +112,6 @@ faq:
 <h2 id="editor-s-note" class="anchored">Editor’s note</h2>
 
 <div class="art-editorial-note"><p>This analysis is part of the Artometrics TidyTuesday series. All charts are interactive (hover for values) with static PNG fallbacks. Source data is publicly available and reproducible from the GitHub link below.</p><p><em>Dollar prices reflect the raw local price converted at the prevailing exchange rate — not adjusted for inflation or PPP. All medians computed on the full annual sample for each year.</em></p></div>
-<p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2020/2020-12-22" target="_blank" rel="noopener noreferrer">View TidyTuesday source on GitHub</a></p>
+<p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2020/2020-12-22" target="_blank" rel="noopener noreferrer">Source archive (GitHub)</a></p>
 </main>
 </div>

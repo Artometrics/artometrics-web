@@ -2,6 +2,7 @@ import { Text, View, Pressable } from "react-native";
 import { Link, useLocalSearchParams } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { PageSeo } from "@/components/PageSeo";
+import { SeoJsonLd } from "@/components/SeoJsonLd";
 import { DATASET_PACKS, getDatasetPack } from "@/data/datasets";
 import { SECTION_META } from "@/data/sections";
 import { paramString } from "@/lib/params";
@@ -32,6 +33,30 @@ export default function DatasetPackScreen() {
         title={pack.title}
         description={pack.summary}
         path={`/datasets/${pack.id}`}
+      />
+      <SeoJsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "Dataset",
+          name: pack.title,
+          description: pack.summary,
+          url: `https://artometrics.com/datasets/${pack.id}`,
+          creator: {
+            "@type": "Organization",
+            name: "Artometrics",
+            url: "https://artometrics.com",
+          },
+          keywords: [SECTION_META[pack.section].title, pack.primaryKeyword].filter(Boolean),
+          distribution: pack.downloadPath
+            ? [
+                {
+                  "@type": "DataDownload",
+                  encodingFormat: "text/csv",
+                  contentUrl: `https://artometrics.com${pack.downloadPath}`,
+                },
+              ]
+            : undefined,
+        }}
       />
       <Text className="text-[10px] tracking-[1.5px] uppercase font-bold text-accent">
         {pack.status}

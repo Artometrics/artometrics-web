@@ -10,6 +10,7 @@ import {
 import { Link } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { PageSeo } from "@/components/PageSeo";
+import { trackEvent } from "@/lib/analytics/ga";
 
 const FORM_NAME = "artometrics-newsletter";
 
@@ -40,6 +41,7 @@ export default function NewsletterScreen() {
         });
         if (!res.ok) throw new Error(`Form error (${res.status})`);
       }
+      trackEvent("newsletter_submit", { source: "newsletter_page" });
       setStatus("done");
     } catch {
       setError("Could not subscribe right now. Try again shortly.");

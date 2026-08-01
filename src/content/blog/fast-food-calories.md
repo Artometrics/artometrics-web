@@ -23,34 +23,26 @@ keyPoints:
   - 20 piece Buttermilk Crispy C — Top Item by Calories
   - Taco Bell — Most common Restaurant
 faq:
-  - question: What does the data show about Calorie ceilings by item?
+  - question: >-
+      How many records are in this dataset?
     answer: >-
-      Key figure: 515 — Records in the working dataset. Taco Bell appears most
-      often in the working table, but frequency of listing is not the same as
-      caloric intensity. The story is which items and which chains sit above the
-      center of…
-  - question: Who sits at the top?
+      515 records in the working dataset.
+  - question: >-
+      What is the median Calories?
     answer: >-
-      Key figure: 490 — Median Calories. Taco Bell appears most often in the
-      working table, but frequency of listing is not the same as caloric
-      intensity. The story is which items and which chains sit above the center
-      of…
-  - question: How chains spread calories?
+      The median Calories is 490.
+  - question: >-
+      What is the highest observed value in this extract?
     answer: >-
-      Key figure: 2,430 — Highest observed Calories. Taco Bell appears most
-      often in the working table, but frequency of listing is not the same as
-      caloric intensity. The story is which items and which chains sit above the
-      center of…
-  - question: Who beats the median — and who trails?
+      The highest observed value in the extract is 2,430.
+  - question: >-
+      Which Item leads in this extract?
     answer: >-
-      Key figure: 20 piece Buttermilk Crispy C — Top Item by Calories. Taco Bell
-      appears most often in the working table, but frequency of listing is not
-      the same as caloric intensity. The story is which items and which chains
-      sit above the center of…
+      20 piece Buttermilk Crispy C leads the Item ranking in this extract.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">Fast-food menus are marketing documents dressed as nutrition tables. The calorie counts attached to each item are among the few numbers that cut through the branding — and they vary wildly across chains that sell roughly the same categories of food.</p>
+<p class="art-p art-lede">Fast-food menus are marketing documents dressed as nutrition tables. The calorie counts attached to each item are among the few numbers that cut through the branding — and they vary wildly across chains that sell roughly the same categories of food.</p>
 <p class="art-p">A TidyTuesday snapshot of major U.S. chain menus puts <strong>515</strong> item records on the same footing. The median item sits at <strong>490</strong> calories. The ceiling in the file is <strong>2,430</strong> — a twenty-piece buttermilk crispy chicken tender tray that makes the median look almost restrained.</p>
 <p class="art-p">Taco Bell appears most often in the working table, but frequency of listing is not the same as caloric intensity. The story is which items and which chains sit above the center of the menu, and how fat tracks with calories when the branding falls away.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>

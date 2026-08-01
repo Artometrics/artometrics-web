@@ -25,31 +25,25 @@ keyPoints:
   - Interim — Most common Interim coceo
 faq:
   - question: >-
-      What does the data show about Longer Max Tenures Are Rare in the Company
-      Ranking?
+      How many records are in this dataset?
     answer: >-
-      Key figure: 9,423 — Records in the working dataset. The source is the
-      TidyTuesday release from 2021-04-27 (departures.csv). After cleaning,
-      9,423 rows remain.
-  - question: What does the data show about The Top Dozen Caps Out Quickly?
+      9,423 records in the working dataset.
+  - question: >-
+      What is the median Max tenure ceodb?
     answer: >-
-      Key figure: 1.00 — Median Max tenure ceodb. The source is the TidyTuesday
-      release from 2021-04-27 (departures.csv). After cleaning, 9,423 rows
-      remain.
-  - question: What does the data show about Interim Labels Dominate the Category Mix?
+      The median Max tenure ceodb is 1.00.
+  - question: >-
+      What is the highest observed value in this extract?
     answer: >-
-      Key figure: 4.00 — Highest observed Max tenure ceodb. The source is the
-      TidyTuesday release from 2021-04-27 (departures.csv). After cleaning,
-      9,423 rows remain.
-  - question: What does the data show about Gaps to the Median Are Mostly Flat?
+      The highest observed value in the extract is 4.00.
+  - question: >-
+      Which Coname leads in this extract?
     answer: >-
-      Key figure: PHOTRONICS INC — Top Coname by Max tenure ceodb. The source is
-      the TidyTuesday release from 2021-04-27 (departures.csv). After cleaning,
-      9,423 rows remain.
+      PHOTRONICS INC leads the Coname ranking in this extract.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">CEO tenure is usually narrated as drama: a firing, a founder exit, a sudden interim. The TidyTuesday departures extract used here holds <strong>9,423</strong> records with a median max tenure (ceodb) of <strong>1.00</strong> and a high of <strong>4.00</strong>. Interim is the most common co-CEO/interim label in the file.</p>
+<p class="art-p art-lede">CEO tenure is usually narrated as drama: a firing, a founder exit, a sudden interim. The TidyTuesday departures extract used here holds <strong>9,423</strong> records with a median max tenure (ceodb) of <strong>1.00</strong> and a high of <strong>4.00</strong>. Interim is the most common co-CEO/interim label in the file.</p>
 <p class="art-p">That median of 1.00 is the calibration point: in this coding, many departure spells are short. The charts ask which company names show longer max tenures, how interim versus co-CEO labels differ, and whether tenure fields move together.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>
 <p class="art-p">The numbers that set the scale for this report:</p>

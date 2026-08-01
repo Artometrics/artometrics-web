@@ -24,34 +24,26 @@ keyPoints:
   - 2008–2021 — Year span covered in the file
   - Movie — Most common Type
 faq:
-  - question: How the pattern changed over time?
+  - question: >-
+      How many records are in this dataset?
     answer: >-
-      Key figure: 7,787 — Records in the working dataset. The source is the
-      TidyTuesday release from 2021-04-20 (R for Data Science community). The
-      working file contains 7,787 rows and 13 columns after merging available
-      tables in the week folder.
-  - question: Who sits at the top?
+      7,787 records in the working dataset.
+  - question: >-
+      What is the median Duration?
     answer: >-
-      Key figure: 88.0 — Median Duration. The source is the TidyTuesday release
-      from 2021-04-20 (R for Data Science community). The working file contains
-      7,787 rows and 13 columns after merging available tables in the week
-      folder.
-  - question: How the field is spread?
+      The median Duration is 88.0.
+  - question: >-
+      What is the highest observed value in this extract?
     answer: >-
-      Key figure: 312 — Highest observed Duration. The source is the TidyTuesday
-      release from 2021-04-20 (R for Data Science community). The working file
-      contains 7,787 rows and 13 columns after merging available tables in the
-      week folder.
-  - question: What does the data show about Concentration?
+      The highest observed value in the extract is 312.
+  - question: >-
+      Which title leads in this extract?
     answer: >-
-      Key figure: Black Mirror: Bandersnatch — Top Title by Duration. The source
-      is the TidyTuesday release from 2021-04-20 (R for Data Science community).
-      The working file contains 7,787 rows and 13 columns after merging
-      available tables in the week folder.
+      Black Mirror: Bandersnatch leads the title ranking in this extract.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">A streaming library is an inventory decision dressed as a homepage. Title-level Netflix catalog data show how the mix of movies and TV — and the duration field attached to each row — shifted between 2008 and 2021.</p>
+<p class="art-p art-lede">A streaming library is an inventory decision dressed as a homepage. Title-level Netflix catalog data show how the mix of movies and TV — and the duration field attached to each row — shifted between 2008 and 2021.</p>
 <p class="art-p">The working file holds <strong>7,787</strong> records. Median duration is <strong>88.0</strong>; the highest observed duration is <strong>312</strong>, led by Black Mirror: Bandersnatch. Movie is the most common type label.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>
 <p class="art-p">The numbers that set the scale for this report:</p>

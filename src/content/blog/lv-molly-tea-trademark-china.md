@@ -16,19 +16,16 @@ tldr: >-
   On 29 June 2026, the Suzhou Intermediate People’s Court ordered Shenzhen Molly
   Tea to pay Louis Vuitton Malletier ¥10 million in damages plus ¥300,000 in
   costs for infringing seven registered four-petal flower trademarks (case
-  (2025)苏05民初617号). Molly Tea says it will appeal. Chinese social media
-  reframed a first-to-file trademark win as cultural enclosure of Tang-era
-  motifs. Both frames use overlapping images; they answer different questions.
+  (2025)苏05民初617号). Molly Tea says it will appeal. Chinese social media reframed
+  a first-to-file trademark win as cultural enclosure of Tang-era motifs. Both
+  frames use overlapping images; they answer different questions.
 keyPoints:
-  - >-
-    ¥10.3M — First-instance award (¥10M damages + ¥300k enforcement costs)
-  - >-
-    7 — LV four-petal flower trademarks held infringed
+  - ¥10.3M — First-instance award (¥10M damages + ¥300k enforcement costs)
+  - 7 — LV four-petal flower trademarks held infringed
   - >-
     ~1,691 — LV-linked trademark infringement records in China over ~five years
     (media-cited Qichacha figures)
-  - >-
-    56 — New LV trademark filings reported in China in H1 2026
+  - 56 — New LV trademark filings reported in China in H1 2026
   - >-
     6 — Platforms ordered for corrective statements (site, Weibo, WeChat, mini
     program, Xiaohongshu, Douyin)
@@ -39,8 +36,8 @@ faq:
   - question: Did Louis Vuitton win a final judgment against Molly Tea?
     answer: >-
       No. The Suzhou Intermediate People’s Court issued a first-instance civil
-      judgment in case (2025)苏05民初617号. Molly Tea has said it will appeal,
-      so the award is not a final determination.
+      judgment in case (2025)苏05民初617号. Molly Tea has said it will appeal, so
+      the award is not a final determination.
   - question: What exactly was Molly Tea ordered to do?
     answer: >-
       Cease use of the disputed four-petal device, pay ¥10.3 million (damages
@@ -78,7 +75,7 @@ faq:
 </ul>
 </nav>
 <main class="art-article-main">
-<p class="art-p">Chinese short-form video turned a Suzhou trademark judgment into a morality play: a French luxury house “stole” a Chinese pattern, trademarked it, then sued a domestic tea chain. The court record is narrower. Louis Vuitton Malletier sued Shenzhen Molly Tea Catering Management Co., Ltd. and a franchise outlet over a four-petal floral device used as brand identity. The first-instance court found infringement of seven registered marks and awarded ¥10.3 million. Molly Tea says it will appeal.</p>
+<p class="art-p art-lede">Chinese short-form video turned a Suzhou trademark judgment into a morality play: a French luxury house “stole” a Chinese pattern, trademarked it, then sued a domestic tea chain. The court record is narrower. Louis Vuitton Malletier sued Shenzhen Molly Tea Catering Management Co., Ltd. and a franchise outlet over a four-petal floral device used as brand identity. The first-instance court found infringement of seven registered marks and awarded ¥10.3 million. Molly Tea says it will appeal.</p>
 <p class="art-p">This report separates three layers that the viral clips fuse: (1) what the judgment and CNIPA history show; (2) how the case sits inside Louis Vuitton’s wider China enforcement pattern; and (3) why a legally ordinary win became a cultural-economy event — including what resale listings can and cannot prove.</p>
 
 <h2 id="research-question" class="anchored">Research question</h2>

@@ -23,30 +23,26 @@ keyPoints:
   - 94 — Toronto drought/pain index in this editorial model
   - 43B — Approximate combined New York major-team value
 faq:
-  - question: What does the data show about Regional Title Density?
+  - question: >-
+      What is Large markets/cities compared?
     answer: >-
-      Key figure: 10 — Large markets/cities compared. Start with the scale: 10 —
-      Large markets/cities compared; and 7 — Regions grouped for title-density
-      analysis.
-  - question: What does the data show about Market Stack?
+      10 — Large markets/cities compared.
+  - question: >-
+      What is Regions grouped for title-density analysis?
     answer: >-
-      Key figure: 7 — Regions grouped for title-density analysis. Start with the
-      scale: 10 — Large markets/cities compared; and 7 — Regions grouped for
-      title-density analysis.
-  - question: What does the data show about Sport Dna?
+      7 — Regions grouped for title-density analysis.
+  - question: >-
+      What is Identity archetypes used in the map?
     answer: >-
-      Key figure: 6 — Identity archetypes used in the map. Start with the scale:
-      10 — Large markets/cities compared; and 7 — Regions grouped for
-      title-density analysis.
-  - question: What does the data show about City Pain versus Success?
+      6 — Identity archetypes used in the map.
+  - question: >-
+      What is Toronto drought/pain index in this editorial model?
     answer: >-
-      Key figure: 94 — Toronto drought/pain index in this editorial model. Start
-      with the scale: 10 — Large markets/cities compared; and 7 — Regions
-      grouped for title-density analysis.
+      94 — Toronto drought/pain index in this editorial model.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">A team is never just a team. It is attached to a region, a media market, a league structure, and a local memory system. That context changes what the same number means.</p>
+<p class="art-p art-lede">A team is never just a team. It is attached to a region, a media market, a league structure, and a local memory system. That context changes what the same number means.</p>
 <p class="art-p">this piece turns the sports canon toward geography. The goal is to show how regions become recognizable under the data microscope.</p>
 <p class="art-p">Start with the scale: <strong>10</strong> — Large markets/cities compared; and <strong>7</strong> — Regions grouped for title-density analysis.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>

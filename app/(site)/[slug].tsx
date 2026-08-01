@@ -25,6 +25,8 @@ import {
 import { SECTION_META } from "@/data/sections";
 import { SeoJsonLd } from "@/components/SeoJsonLd";
 import { paramString } from "@/lib/params";
+import { useEffect } from "react";
+import { trackEvent } from "@/lib/analytics/ga";
 
 function estimateMinutes(html: string) {
   const text = html.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
@@ -56,6 +58,12 @@ export default function ReportScreen() {
   const params = useLocalSearchParams<{ slug: string | string[] }>();
   const slug = paramString(params.slug);
   const post = getBlogPost(slug);
+
+  useEffect(() => {
+    if (!post) return;
+    trackEvent("report_view", { slug: post.slug });
+  }, [post?.slug]);
+
   if (!post) {
     return (
       <Wrapper className="gap-3 pt-10 pb-4">
@@ -80,6 +88,14 @@ export default function ReportScreen() {
   const recommended = getRecommendedPosts(post.slug, 12);
   const cardW = Math.min(240, Math.max(180, width * 0.55));
 
+  const imageAbs = post.heroImage?.startsWith("http")
+    ? post.heroImage
+    : post.heroImage
+      ? `https://artometrics.com${post.heroImage}`
+      : "https://artometrics.com/images/brand/og-default.png";
+  const dateModified =
+    (post as { updatedDate?: string }).updatedDate || post.pubDate;
+
   const jsonLd = [
     {
       "@context": "https://schema.org",
@@ -87,15 +103,44 @@ export default function ReportScreen() {
       headline: post.title,
       description: post.description,
       datePublished: post.pubDate,
-      image: hero ? [`https://artometrics.com${post.heroImage}`] : undefined,
+      dateModified,
+      image: [imageAbs],
       author: { "@type": "Person", name: authorLabel },
       publisher: {
         "@type": "Organization",
         name: "Artometrics",
         url: "https://artometrics.com",
+        logo: {
+          "@type": "ImageObject",
+          url: "https://artometrics.com/images/brand/chomsky-a.png",
+        },
       },
       mainEntityOfPage: `https://artometrics.com/${post.slug}`,
       articleSection: label ?? (section ? SECTION_META[section].title : "Articles"),
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://artometrics.com/",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Reports",
+          item: "https://artometrics.com/blog",
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: post.title,
+          item: `https://artometrics.com/${post.slug}`,
+        },
+      ],
     },
     ...(faq.length
       ? [

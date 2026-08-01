@@ -22,39 +22,25 @@ keyPoints:
   - TX — Most common ST
 faq:
   - question: >-
-      What does the data show about A flat median hides how extreme the upper
-      tail is?
+      How many records are in this dataset?
     answer: >-
-      Key figure: 27,944 — Records in the working dataset. The source is the
-      TidyTuesday release from 2019-09-24 (R for Data Science community). The
-      working file contains 27,944 rows and 15 columns after merging available
-      tables in the…
+      27,944 records in the working dataset.
   - question: >-
-      What does the data show about Butteville Union Elementary leads a steep
-      LEA ladder?
+      What is the median Multi?
     answer: >-
-      Key figure: 2.38 — Median Multi. The source is the TidyTuesday release
-      from 2019-09-24 (R for Data Science community). The working file contains
-      27,944 rows and 15 columns after merging available tables in the…
+      The median Multi is 2.38.
   - question: >-
-      What does the data show about State boxes show how Multi spreads
-      geographically?
+      What is the highest observed value in this extract?
     answer: >-
-      Key figure: 85.3 — Highest observed Multi. The source is the TidyTuesday
-      release from 2019-09-24 (R for Data Science community). The working file
-      contains 27,944 rows and 15 columns after merging available tables in the…
+      The highest observed value in the extract is 85.3.
   - question: >-
-      What does the data show about Oklahoma clears the median; New Jersey
-      trails?
+      Which LEA NAME leads in this extract?
     answer: >-
-      Key figure: butteville union elementary — Top LEA NAME by Multi. The
-      source is the TidyTuesday release from 2019-09-24 (R for Data Science
-      community). The working file contains 27,944 rows and 15 columns after
-      merging available tables in the…
+      butteville union elementary leads the LEA NAME ranking in this extract.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">School-level composition data map where student-body diversity concentrates across U.S. local education agencies. The working file holds 27,944 records. The calibration metric is Multi, with a median of 2.38 — the center of the observed diversity scores in this extract.</p>
+<p class="art-p art-lede">School-level composition data map where student-body diversity concentrates across U.S. local education agencies. The working file holds 27,944 records. The calibration metric is Multi, with a median of 2.38 — the center of the observed diversity scores in this extract.</p>
 <p class="art-p">The ceiling is stark: butteville union elementary leads at 85.3 Multi, while Texas (TX) is the most common state abbreviation in the file. High Multi at the top of the leaderboard and a modest median across the whole table are not contradictions. They are the shape of a heavily skewed education landscape.</p>
 <h2 id="research-question" class="anchored">Research question</h2>
 <p class="art-p">Where does student-body diversity concentrate when the unit of analysis is the local education agency rather than the nation as a whole? This report asks whether the Multi metric behaves like a broad national baseline or a long-tailed distribution in which a few LEAs and states sit far above the typical row.</p>
@@ -135,7 +121,7 @@ faq:
 <p>Reardon, S. F., &amp; Owens, A. (2014). 60 years after Brown: Trends and consequences of school segregation. <em>Annual Review of Sociology</em>, 40, 199–218. <a href="https://doi.org/10.1146/annurev-soc-071913-043152" target="_blank" rel="noopener noreferrer">https://doi.org/10.1146/annurev-soc-071913-043152</a></p>
 <h2 id="editors-note" class="anchored">Editor’s note</h2>
 <div class="art-editorial-note"><p><em>Artometrics data report from the TidyTuesday research pipeline. Charts and aggregates are reproducible from the embedded exhibits and public source files.</em></p></div>
-<p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2019/2019-09-24" target="_blank" rel="noopener noreferrer">View TidyTuesday source on GitHub</a></p>
+<p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2019/2019-09-24" target="_blank" rel="noopener noreferrer">Source archive (GitHub)</a></p>
 
 </main>
 </div>

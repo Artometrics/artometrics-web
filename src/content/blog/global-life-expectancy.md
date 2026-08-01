@@ -24,34 +24,26 @@ keyPoints:
   - Hong Kong — Highest average life expectancy over the full dataset
   - '472 yrs — Total span of the dataset: 1543 to 2015'
 faq:
-  - question: What does the data show about 500 years of survival?
+  - question: >-
+      What is the median life expectancy in 2015?
     answer: >-
-      Key figure: 73.3 — Median life expectancy in 2015 — the closing year of
-      the dataset. Start with the scale: 73.3 — median life expectancy in 2015,
-      the closing year of the file; and 83.8 — the highest single observation,
-      Hong Kong near peak. The span runs 472 years , from 1543 to 2015.
-  - question: Who lives longest?
+      The median life expectancy in 2015 is 73.3.
+  - question: >-
+      What is Highest single observation?
     answer: >-
-      Key figure: 83.8 — Highest single observation — Hong Kong near peak. Start
-      with the scale: 73.3 — median life expectancy in 2015, the closing year of
-      the file; and 83.8 — the highest single observation, Hong Kong near peak.
-      The span runs 472 years , from 1543 to 2015.
-  - question: What does the data show about The split world?
+      83.8 — Highest single observation.
+  - question: >-
+      What is the median lifespan: opening year to closing year?
     answer: >-
-      Key figure: 33.9→73 — Median lifespan: opening year to closing year. Start
-      with the scale: 73.3 — median life expectancy in 2015, the closing year of
-      the file; and 83.8 — the highest single observation, Hong Kong near peak.
-      The span runs 472 years , from 1543 to 2015.
-  - question: What does the data show about The frontrunners?
+      The median lifespan: opening year to closing year is 33.9→73.
+  - question: >-
+      What is Highest average life expectancy over the full dataset?
     answer: >-
-      Key figure: Hong Kong — Highest average life expectancy over the full
-      dataset. Start with the scale: 73.3 — median life expectancy in 2015, the
-      closing year of the file; and 83.8 — the highest single observation, Hong
-      Kong near peak. The span runs 472 years , from 1543 to 2015.
+      Hong Kong — Highest average life expectancy over the full dataset.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">For most of recorded history, life expectancy at birth hovered between 25 and 40 years — not because adults aged quickly, but because childhood death was common enough to pull the average down. The long arc from that world to the present is one of the few demographic stories that can be told with a single curve and still remain true.</p>
+<p class="art-p art-lede">For most of recorded history, life expectancy at birth hovered between 25 and 40 years — not because adults aged quickly, but because childhood death was common enough to pull the average down. The long arc from that world to the present is one of the few demographic stories that can be told with a single curve and still remain true.</p>
 <p class="art-p">The headline number is staggering: the global median life expectancy nearly triples over five centuries, rising from around 30 to above 73. But the aggregate trend conceals the most important story — the persistent gap between the long-lived and the short-lived. Countries leading this dataset in 2015 live more than twice as long, on average, as the laggards in the same file.</p>
 <p class="art-p">Start with the scale: <strong>73.3</strong> — median life expectancy in 2015, the closing year of the file; and <strong>83.8</strong> — the highest single observation, Hong Kong near peak. The span runs <strong>472 years</strong>, from 1543 to 2015.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>

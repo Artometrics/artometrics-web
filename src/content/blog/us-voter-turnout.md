@@ -22,41 +22,25 @@ keyPoints:
   - 1980–2014 — Year span covered in the file
 faq:
   - question: >-
-      What does the data show about Median votes rose across three decades of
-      elections?
+      How many records are in this dataset?
     answer: >-
-      Key figure: 936 — Records in the working dataset. The source is the
-      TidyTuesday release from 2018-10-09 (R for Data Science community). The
-      working file contains 936 rows and 7 columns after merging available
-      tables in the week…
+      936 records in the working dataset.
   - question: >-
-      What does the data show about The United States total dwarfs the state
-      ladder?
+      What is the median Votes?
     answer: >-
-      Key figure: 1,170,867 — Median Votes. The source is the TidyTuesday
-      release from 2018-10-09 (R for Data Science community). The working file
-      contains 936 rows and 7 columns after merging available tables in the
-      week…
+      The median Votes is 1,170,867.
   - question: >-
-      What does the data show about A right-skewed distribution with a heavy
-      upper tail?
+      What is the highest observed value in this extract?
     answer: >-
-      Key figure: 132,609,063 — Highest observed Votes. The source is the
-      TidyTuesday release from 2018-10-09 (R for Data Science community). The
-      working file contains 936 rows and 7 columns after merging available
-      tables in the week…
+      The highest observed value in the extract is 132,609,063.
   - question: >-
-      What does the data show about Leading states reshuffle across election
-      cycles?
+      Which State leads in this extract?
     answer: >-
-      Key figure: United States — Top State by Votes. The source is the
-      TidyTuesday release from 2018-10-09 (R for Data Science community). The
-      working file contains 936 rows and 7 columns after merging available
-      tables in the week…
+      United States leads the State ranking in this extract.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">Turnout is democracy’s volume knob. This file holds 936 election records spanning 1980–2014, with a median of 1,170,867 votes and a high of 132,609,063. United States appears as the top entity by votes in the fact boxes — a national aggregate sitting above the state ladder.</p>
+<p class="art-p art-lede">Turnout is democracy’s volume knob. This file holds 936 election records spanning 1980–2014, with a median of 1,170,867 votes and a high of 132,609,063. United States appears as the top entity by votes in the fact boxes — a national aggregate sitting above the state ladder.</p>
 <p class="art-p">The charts separate trend, leaders, distribution shape, leader trajectories, and the relationship between votes and eligible voters. The calibration point is that 1.17 million median: below it, smaller states; above it, larger electorates and national totals.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>
 <p class="art-p">The numbers that set the scale for this report:</p>
@@ -121,7 +105,7 @@ faq:
 <p>Data Science Learning Community. (2018). <em>TidyTuesday: US Voter Turnout</em>. <a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2018/2018-10-09/voter_turnout.csv" target="_blank" rel="noopener noreferrer">https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2018/2018-10-09/voter_turnout.csv</a></p>
 <h2 id="editors-note" class="anchored">Editor’s note</h2>
 <div class="art-editorial-note"><p><em>Artometrics data report from the TidyTuesday research pipeline. Charts and aggregates are reproducible from the embedded exhibits and public source files.</em></p></div>
-<p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2018/2018-10-09" target="_blank" rel="noopener noreferrer">View TidyTuesday source on GitHub</a></p>
+<p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2018/2018-10-09" target="_blank" rel="noopener noreferrer">Source archive (GitHub)</a></p>
 
 </main>
 </div>

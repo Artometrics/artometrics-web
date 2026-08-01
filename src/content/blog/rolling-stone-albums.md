@@ -23,31 +23,26 @@ keyPoints:
   - 1955–2019 — Year span covered in the file
   - Studio — Most common Type
 faq:
-  - question: How ranks sit across release years?
+  - question: >-
+      How many records are in this dataset?
     answer: >-
-      Key figure: 691 — Records in the working dataset. Remember the rank
-      inversion: lower numbers are greater prestige on a traditional list, while
-      some chart cuts sort the numeric field as a magnitude. The prose below
-      follows the…
-  - question: Who sits at the top of the numeric rank field?
+      691 records in the working dataset.
+  - question: >-
+      What is the median Rank 2003?
     answer: >-
-      Key figure: 250 — Median Rank 2003. Remember the rank inversion: lower
-      numbers are greater prestige on a traditional list, while some chart cuts
-      sort the numeric field as a magnitude. The prose below follows the…
-  - question: What does the data show about Ranks by album type?
+      The median Rank 2003 is 250.
+  - question: >-
+      What is the highest observed value in this extract?
     answer: >-
-      Key figure: 500 — Highest observed Rank 2003. Remember the rank inversion:
-      lower numbers are greater prestige on a traditional list, while some chart
-      cuts sort the numeric field as a magnitude. The prose below follows the…
-  - question: Who beats the median — and who trails?
+      The highest observed value in the extract is 500.
+  - question: >-
+      Which Album leads in this extract?
     answer: >-
-      Key figure: Touch — Top Album by Rank 2003. Remember the rank inversion:
-      lower numbers are greater prestige on a traditional list, while some chart
-      cuts sort the numeric field as a magnitude. The prose below follows the…
+      Touch leads the Album ranking in this extract.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">Rolling Stone's greatest-albums lists are canon factories. They convert critical memory into ranked cultural infrastructure — and the 2003 ranking spine in this TidyTuesday extract is one of the most cited versions of that factory.</p>
+<p class="art-p art-lede">Rolling Stone's greatest-albums lists are canon factories. They convert critical memory into ranked cultural infrastructure — and the 2003 ranking spine in this TidyTuesday extract is one of the most cited versions of that factory.</p>
 <p class="art-p">A working file of <strong>691</strong> records puts median 2003 rank at <strong>250</strong> and the highest observed rank number at <strong>500</strong>. <strong>Touch</strong> leads the album ranking by the 2003 rank field in the fact box, the year span of album release years runs <strong>1955–2019</strong>, and <strong>Studio</strong> is the most common type label.</p>
 <p class="art-p">Remember the rank inversion: lower numbers are greater prestige on a traditional list, while some chart cuts sort the numeric field as a magnitude. The prose below follows the file's stated leaders and medians without inventing a second scoring system.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>

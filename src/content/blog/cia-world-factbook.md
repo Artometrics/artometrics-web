@@ -22,36 +22,26 @@ keyPoints:
   - '1,355,692,576 — Highest observed Population'
   - China — Top Country by Population
 faq:
-  - question: What does the data show about A Handful of Giants Dominate Headcount?
-    answer: >-
-      Key figure: 259 — Records in the working dataset. The source is the
-      TidyTuesday release from 2024-10-22 (cia_factbook.csv). After cleaning,
-      259 rows remain.
   - question: >-
-      What does the data show about Even the Top Dozen Has a Steep Internal
-      Drop?
+      How many records are in this dataset?
     answer: >-
-      Key figure: 5,220,371 — Median Population. The source is the TidyTuesday
-      release from 2024-10-22 (cia_factbook.csv). After cleaning, 259 rows
-      remain.
+      259 records in the working dataset.
   - question: >-
-      What does the data show about Most Countries Sit in the Small-Population
-      Mass?
+      What is the median Population?
     answer: >-
-      Key figure: 1,355,692,576 — Highest observed Population. The source is the
-      TidyTuesday release from 2024-10-22 (cia_factbook.csv). After cleaning,
-      259 rows remain.
+      The median Population is 5,220,371.
   - question: >-
-      What does the data show about The Top Five Already Hold Most of the
-      People?
+      What is the highest observed value in this extract?
     answer: >-
-      Key figure: China — Top Country by Population. The source is the
-      TidyTuesday release from 2024-10-22 (cia_factbook.csv). After cleaning,
-      259 rows remain.
+      The highest observed value in the extract is 1,355,692,576.
+  - question: >-
+      Which country leads in this extract?
+    answer: >-
+      China leads the country ranking in this extract.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">Population is the blunt instrument of international comparison: China and India alone redraw every map. The TidyTuesday CIA World Factbook extract used here holds <strong>259</strong> records with a median population of <strong>5,220,371</strong> and a maximum of <strong>1,355,692,576</strong> for China.</p>
+<p class="art-p art-lede">Population is the blunt instrument of international comparison: China and India alone redraw every map. The TidyTuesday CIA World Factbook extract used here holds <strong>259</strong> records with a median population of <strong>5,220,371</strong> and a maximum of <strong>1,355,692,576</strong> for China.</p>
 <p class="art-p">Mean population in the distribution annotation (~32 million) sits far above the median — the classic right skew of a world with a few demographic giants and a long list of small states.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>
 <p class="art-p">The numbers that set the scale for this report:</p>
