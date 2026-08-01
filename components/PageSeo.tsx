@@ -16,7 +16,7 @@ export function PageSeo({
   title,
   description,
   path = "/",
-  image = "/images/brand/chomsky-a.png",
+  image = "/images/brand/og-default.png",
   type = "website",
 }: Props) {
   useEffect(() => {
@@ -47,6 +47,7 @@ export function PageSeo({
     ensure("property", "og:image", img);
     ensure("property", "og:site_name", "Artometrics");
     ensure("name", "twitter:card", "summary_large_image");
+    ensure("name", "twitter:site", "@artometrics");
     ensure("name", "twitter:title", fullTitle);
     ensure("name", "twitter:description", description ?? "");
     ensure("name", "twitter:image", img);

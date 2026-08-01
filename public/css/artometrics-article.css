@@ -16,11 +16,11 @@
   left: 240px;
   transform: translateY(-50%);
   z-index: 9998;
-  background: #F2F0EB;
-  border: 1px solid #D5D5D5;
+  background: #FFFFFF;
+  border: 1px solid #000000;
   border-left: none;
-  border-radius: 0 4px 4px 0;
-  color: #6B6B6B;
+  border-radius: 0;
+  color: #000000;
   font-size: 1rem;
   line-height: 1;
   padding: 10px 7px;

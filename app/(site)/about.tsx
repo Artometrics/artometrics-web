@@ -10,27 +10,34 @@ export default function AboutScreen() {
     <Wrapper variant="narrow" className="gap-3.5 py-12">
       <PageSeo
         title="About"
-        description="Artometrics — art for data scientists and data science for artists."
+        description="Artometrics — data-science magazine for culture. Masthead, method, and desks."
         path="/about"
       />
-      <Text className="text-xs tracking-[1.8px] uppercase font-bold text-accent">Masthead</Text>
-      <Text className="font-serif text-[34px] font-bold leading-10 text-fg">
+      <Text className="text-xs font-bold uppercase tracking-[1.8px] text-accent">Masthead</Text>
+      <Text className="font-display text-[34px] leading-10 text-fg">
         Art for data scientists. Data science for artists.
       </Text>
-      <View className="gap-3.5 mt-2">
+      <View className="mt-2 gap-3.5">
         <Text className="font-serif text-base leading-7 text-muted">
           Artometrics is an independent magazine that treats culture like data — anime catalogs,
           franchise economics, civilizational cycles, and the institutions that shape creative
           markets. Every report pairs editorial judgment with reproducible charts and public
           datasets.
         </Text>
-        <Text className="font-serif text-[22px] font-bold mt-2 text-fg">About Artometrics</Text>
+        <Text className="mt-2 font-serif text-[22px] font-bold text-fg">Bio</Text>
         <Text className="font-serif text-base leading-7 text-muted">
-          We are building a media company in public: long-form investigations, a podcast, a dataset
-          library, and membership tools. The brief is simple — ship evidence with taste. Contact us
-          for tips, corrections, or partnerships.
+          Founded and edited by Kyle McAuliffe. Desk reports are written under human editorial
+          control with named sources, dated facts, and open method notes. Studio tools (Twilda,
+          Aftercare, and related makers) hang off one shared member profile — not separate account
+          silos.
         </Text>
-        <Text className="font-serif text-[22px] font-bold mt-2 text-fg">Sections</Text>
+        <Text className="mt-2 font-serif text-[22px] font-bold text-fg">Method</Text>
+        <Text className="font-serif text-base leading-7 text-muted">
+          Prefer public datasets and the reader&apos;s own inputs. Separate observed data, derived
+          metrics, editorial indices, and context literature. Publish exports (HTML, PDF, EPUB, CSV)
+          on artometrics.com. Do not invent statistics.
+        </Text>
+        <Text className="mt-2 font-serif text-[22px] font-bold text-fg">Desks</Text>
         {SECTION_SLUGS.map((s) => (
           <Text key={s} className="font-serif text-base leading-7 text-muted">
             <Link href={`/topics/${s}` as `/topics/${string}`}>
@@ -40,18 +47,22 @@ export default function AboutScreen() {
             {SECTION_META[s].description}
           </Text>
         ))}
-        <Text className="font-serif text-[22px] font-bold mt-2 text-fg">How we work with AI</Text>
+        <Text className="mt-2 font-serif text-[22px] font-bold text-fg">How we work with AI</Text>
         <Text className="font-serif text-base leading-7 text-muted">
           Reports may be produced in directed collaboration with AI tools under human editorial
-          judgment. We document process in editor's notes. We do not invent statistics.
+          judgment. Process notes live in editor&apos;s notes. Brand and ethics pages document the
+          rules.
         </Text>
       </View>
-      <View className="flex-row flex-wrap gap-3 mt-5">
+      <View className="mt-5 flex-row flex-wrap gap-3">
         <Link href="/blog" asChild>
           <PrimaryButton label="Browse reports" />
         </Link>
         <Link href="/contact" asChild>
           <PrimaryButton label="Contact" className="bg-muted" />
+        </Link>
+        <Link href="/legal/ethics-statement" asChild>
+          <PrimaryButton label="Ethics" className="bg-muted" />
         </Link>
       </View>
     </Wrapper>

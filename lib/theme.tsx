@@ -11,6 +11,7 @@ import { Appearance, Platform } from "react-native";
 import { kv } from "@/lib/storage/kv";
 import { Uniwind } from "uniwind";
 import {
+  DEFAULT_BRAND_STYLE,
   resolveBrandFonts,
   resolveThemeColors,
   type BrandFonts,
@@ -138,7 +139,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     () => readStoredPreferenceSync() ?? "light",
   );
   const [brandStyle, setBrandStyleState] = useState<BrandStyle>(
-    () => readStoredBrandSync() ?? "swiss",
+    () => readStoredBrandSync() ?? DEFAULT_BRAND_STYLE,
   );
   const [system, setSystem] = useState<ThemeMode>(() => systemMode());
 
@@ -242,9 +243,9 @@ export function useTheme() {
     return {
       preference: "system" as Preference,
       mode: "light" as ThemeMode,
-      colors: resolveThemeColors("light", "swiss"),
-      brandStyle: "swiss" as BrandStyle,
-      fonts: resolveBrandFonts("swiss"),
+      colors: resolveThemeColors("light", DEFAULT_BRAND_STYLE),
+      brandStyle: DEFAULT_BRAND_STYLE,
+      fonts: resolveBrandFonts(DEFAULT_BRAND_STYLE),
       setPreference: () => {},
       setBrandStyle: () => {},
       toggle: () => {},

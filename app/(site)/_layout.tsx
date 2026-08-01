@@ -12,10 +12,10 @@ import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteNavOverlay } from "@/components/SiteNavOverlay";
-import { CookieBanner } from "@/components/CookieBanner";
 import { Analytics } from "@/components/Analytics";
 import { ChromeProvider, useChrome } from "@/lib/chrome";
 import { ThemeProvider, useTheme } from "@/lib/theme";
+import { trackPageView } from "@/lib/analytics/ga";
 import { getBlogPost } from "@/lib/content";
 
 function SiteChrome() {
@@ -34,6 +34,7 @@ function SiteChrome() {
       window.scrollTo(0, 0);
       document.documentElement.scrollTop = 0;
       document.body.scrollTop = 0;
+      trackPageView(pathname, typeof document !== "undefined" ? document.title : pathname);
     }
   }, [pathname, setIsArticle, setScrollY]);
 
@@ -59,7 +60,6 @@ function SiteChrome() {
           <SiteFooter />
         </ScrollView>
         <SiteNavOverlay />
-        <CookieBanner />
         <Analytics />
       </View>
     </SafeAreaView>

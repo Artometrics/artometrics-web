@@ -16,6 +16,19 @@ export default function Root({ children }: PropsWithChildren) {
           name="description"
           content="Artometrics — data reports on culture, power, and the creative economy"
         />
+        <meta property="og:site_name" content="Artometrics" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Artometrics" />
+        <meta
+          property="og:description"
+          content="Data-science magazine for the creative industries and culture."
+        />
+        <meta property="og:image" content="https://artometrics.com/images/brand/og-default.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@artometrics" />
+        <link rel="alternate" type="application/rss+xml" title="Artometrics Reports" href="/rss.xml" />
+        <link rel="alternate" type="application/rss+xml" title="Artometrics Podcast" href="/podcast.xml" />
+        <link rel="alternate" type="text/plain" title="llms.txt" href="/llms.txt" />
         {/* SVG switches fill via prefers-color-scheme */}
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link
@@ -48,7 +61,7 @@ export default function Root({ children }: PropsWithChildren) {
         />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <link rel="mask-icon" href="/favicon.svg" color="#D9251B" />
+        <link rel="mask-icon" href="/favicon.svg" color="#C0392B" />
         <link rel="manifest" href="/manifest.webmanifest" />
         <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)" />
         <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
@@ -78,7 +91,7 @@ export default function Root({ children }: PropsWithChildren) {
               body {
                 margin: 0;
                 background: #FFFFFF;
-                font-family: "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
+                font-family: Georgia, "Times New Roman", Times, serif;
                 color: #000000;
               }
               /* Prefer explicit site theme over OS preference alone */
@@ -88,29 +101,28 @@ export default function Root({ children }: PropsWithChildren) {
               html[data-theme="light"] body,
               html[data-theme="light"] #root {
                 background: #FFFFFF !important;
-                color: #171717 !important;
+                color: #000000 !important;
               }
               html[data-theme="dark"] {
                 color-scheme: dark;
               }
               html[data-theme="dark"] body,
               html[data-theme="dark"] #root {
-                background: #0A0A0A !important;
-                color: #FAFAF8 !important;
+                background: #000000 !important;
+                color: #FFFFFF !important;
               }
               @media (prefers-color-scheme: dark) {
                 html:not([data-theme]) body,
                 html:not([data-theme]) #root,
                 html[data-theme="dark"] body,
                 html[data-theme="dark"] #root {
-                  background: #0A0A0A;
-                  color: #FAFAF8;
+                  background: #000000;
+                  color: #FFFFFF;
                 }
-                /* Never let OS dark override an explicit light site theme */
                 html[data-theme="light"] body,
                 html[data-theme="light"] #root {
                   background: #FFFFFF !important;
-                  color: #171717 !important;
+                  color: #000000 !important;
                 }
               }
               a { color: inherit; text-decoration: none; }
@@ -133,8 +145,8 @@ export default function Root({ children }: PropsWithChildren) {
                       ? "dark"
                       : "light";
                   } else if (saved === "light") mode = "light";
-                  var bg = mode === "dark" ? "#0A0A0A" : "#FFFFFF";
-                  var fg = mode === "dark" ? "#FAFAF8" : "#171717";
+                  var bg = mode === "dark" ? "#000000" : "#FFFFFF";
+                  var fg = mode === "dark" ? "#FFFFFF" : "#000000";
                   var root = document.documentElement;
                   root.setAttribute("data-theme", mode);
                   root.style.setProperty("color-scheme", mode === "dark" ? "dark" : "light only");
