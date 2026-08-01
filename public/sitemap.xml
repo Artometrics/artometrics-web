@@ -76,7 +76,32 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://artometrics.com/downloads</loc>
+    
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artometrics.com/press</loc>
+    
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artometrics.com/security</loc>
+    
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artometrics.com/studio</loc>
+    
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://artometrics.com/library</loc>
+    
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artometrics.com/library/reference</loc>
     
     <priority>0.7</priority>
   </url>

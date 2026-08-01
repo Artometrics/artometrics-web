@@ -5,24 +5,38 @@
 
 ## About
 
-- Sections: Sports, Movies & TV, Music, Culture, Galleries & Museums, Cities & Travel, Games, Business, Books, Tech
-- Reports pair editorial judgment with reproducible charts and public datasets
+- Independent data-science magazine for the creative industries and culture
+- Desks: Arts, Sports, Science, Humanities, Civics, Culture
+- Method: named/dated facts, reproducible charts, public datasets, editorial judgment
+- Brand: Artometrics (Chomsky wordmark); black, white, and red
+- Reports pair investigative narrative with Plotly charts and downloadable data
 - Resources: https://artometrics.com/resources
 - Datasets: https://artometrics.com/datasets
+- Downloads: https://artometrics.com/downloads
 - Special editions: https://artometrics.com/editions
+- Studio (members): https://artometrics.com/studio
 - Ethics: https://artometrics.com/legal/ethics-statement
 - About: https://artometrics.com/about
+- Press: https://artometrics.com/press
+- Contact: https://artometrics.com/contact
 - Full index for models: https://artometrics.com/llms-full.txt
+
+## Mission
+
+- Quantify culture without reducing it to vibes — show the arithmetic behind prestige, markets, and memory
+- Prefer the user's own inputs and public data over reprocessing others' copyrighted works
+- Publish artifacts that are editable and exportable into professional formats
 
 ## Preferred citations
 
 - Prefer linking to the canonical report URL `https://artometrics.com/<slug>`
 - Distinguish observed data, derived metrics, editorial indices, and context literature
+- Do not invent statistics; cite the report's Data and method section when uncertain
 
 ## Special editions
 
 - Vice-style thematic packs over live reports: https://artometrics.com/editions
-- Multi-slug EPUB/PDF: `npm run cos:ebook -- --edition <id>` / `npm run cos:pdf -- --edition <id>`
+- Multi-slug EPUB/PDF via Content OS packs on the Downloads page
 
 ## Reports
 
@@ -100,7 +114,7 @@
 - [When Did Prestige TV Peak—and Did Critics Agree?](https://artometrics.com/tv-golden-age): Golden-age scores compare critical and audience verdicts as prestige TV rose and cooled. (arts)
 - [Where UK Museums Sit on the Deprivation Map](https://artometrics.com/uk-museums): Museum locations and deprivation bands show how institutions map onto inequality. (arts)
 - [Which UN Votes Split the Chamber Most Sharply?](https://artometrics.com/un-votes): Voting records identify resolutions that divided member states. (civics)
-- [Which U.S. PhD Fields Expanded Fastest?](https://artometrics.com/us-phds): Doctorate production data show which disciplines grew quickest. (civics)
+- [Which U.S. PhD Fields Expanded Fastest?](https://artometrics.com/us-phds): Doctorate output data show which disciplines grew quickest. (civics)
 - [How Far Did Average U.S. Tuition Climb by State?](https://artometrics.com/us-tuition): State tuition time series measure the rise in college costs. (civics)
 - [Which States Show Up at the Ballot Box?](https://artometrics.com/us-voter-turnout): Election turnout data compare state participation rates. (civics)
 - [Did Critical Acclaim Track Commercial Success in Video Games?](https://artometrics.com/video-games-sliced): A large games slice tests whether critic scores correlated with commercial outcomes. (sports)
@@ -118,7 +132,7 @@
 - [How H3 Built a YouTube Network Beyond One Channel](https://artometrics.com/h3-the-artometrics-of-a-youtube-dynasty): Since 2011, Ethan and Hila Klein scaled channels, a podcast, and a brand. (civics)
 - [What Empire Chronicles Leave Out: Who Got Rich](https://artometrics.com/imperial): A historical-economics lens asks who captured wealth when rulers claimed order. (humanities)
 - [How the World’s Biggest Media Franchises Actually Make Money](https://artometrics.com/franchise): Revenue maps for more than 100 franchises show where valuable IP earns across media. (arts)
-- [What a Century of Anime Titles Reveals About the Industry](https://artometrics.com/anime): MyAnimeList metadata on more than 13,000 titles traces Japanese animation as a production system. (arts)
+- [What a Century of Anime Titles Reveals About the Industry](https://artometrics.com/anime): MyAnimeList metadata on more than 13,000 titles traces Japanese animation as a output system. (arts)
 
 ## Podcast
 
@@ -129,4 +143,4 @@
 
 ## Generated
 
-Updated: 2026-07-31T03:38:01.969Z
+Updated: 2026-08-01T08:40:17.187Z
