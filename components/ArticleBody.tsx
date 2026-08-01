@@ -7,7 +7,8 @@ import RenderHtml, {
 import { useTheme } from "@/lib/theme";
 
 const SITE = "https://artometrics.com";
-const BODY_FONT = "Georgia";
+const BODY_FONT = "DM Sans";
+const DISPLAY_FONT = "DM Mono";
 
 /** Native can’t run Plotly — swap live chart mounts for PNG fallbacks. */
 function withChartFallbacks(html: string): string {
@@ -29,7 +30,12 @@ function withChartFallbacks(html: string): string {
   );
 }
 
-const systemFonts = [...defaultSystemFonts, BODY_FONT, "Chomsky"];
+const systemFonts = [
+  ...defaultSystemFonts,
+  BODY_FONT,
+  DISPLAY_FONT,
+  "Chomsky",
+];
 
 /**
  * Native article body — RenderHTML instead of WebView-in-ScrollView
@@ -55,24 +61,24 @@ export function ArticleBody({ html }: { html: string }) {
         fontSize: 28,
         lineHeight: 34,
         marginBottom: 12,
-        fontWeight: "600",
-        fontFamily: BODY_FONT,
+        fontWeight: "500",
+        fontFamily: DISPLAY_FONT,
         color: colors.text,
       },
       h2: {
         fontSize: 24,
         lineHeight: 30,
         marginBottom: 10,
-        fontWeight: "600",
-        fontFamily: BODY_FONT,
+        fontWeight: "500",
+        fontFamily: DISPLAY_FONT,
         color: colors.text,
       },
       h3: {
         fontSize: 20,
         lineHeight: 26,
         marginBottom: 8,
-        fontWeight: "600",
-        fontFamily: BODY_FONT,
+        fontWeight: "500",
+        fontFamily: DISPLAY_FONT,
         color: colors.text,
       },
       a: { color: colors.accent },

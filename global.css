@@ -2,7 +2,7 @@
 @import "uniwind";
 
 /*
-  Artometrics design tokens — Kruger B/W/red + Chomsky newspaper (default)
+  Artometrics design tokens — Kruger B/W/red + DM Sans/Mono magazine (default)
 */
 
 @theme {
@@ -35,11 +35,11 @@
   --color-magazine-accent: #c0392b;
   --color-magazine-accent-soft: #f9e8e6;
 
-  --font-display: Chomsky, Georgia, "Times New Roman", Times, serif;
-  --font-sans: Helvetica Neue, Helvetica, Arial, system-ui, sans-serif;
-  --font-serif: Georgia, "Times New Roman", Times, serif;
-  --font-wordmark: Chomsky, Georgia, "Times New Roman", Times, serif;
-  --font-mono: "Courier New", Courier, monospace;
+  --font-display: "DM Mono", ui-monospace, Menlo, monospace;
+  --font-sans: "DM Sans", Helvetica Neue, Helvetica, Arial, system-ui, sans-serif;
+  --font-serif: "DM Sans", Helvetica Neue, Helvetica, Arial, system-ui, sans-serif;
+  --font-wordmark: "DM Mono", ui-monospace, Menlo, monospace;
+  --font-mono: "DM Mono", ui-monospace, Menlo, monospace;
 
   --radius-btn: 0px;
 }
@@ -59,11 +59,11 @@
       --color-header: #ffffff;
       --color-overlay: #ffffff;
       --color-rule: #000000;
-      --font-display: Chomsky, Georgia, "Times New Roman", Times, serif;
-      --font-sans: Helvetica Neue, Helvetica, Arial, system-ui, sans-serif;
-      --font-serif: Georgia, "Times New Roman", Times, serif;
-      --font-wordmark: Chomsky, Georgia, "Times New Roman", Times, serif;
-      --font-mono: "Courier New", Courier, monospace;
+      --font-display: "DM Mono", ui-monospace, monospace;
+      --font-sans: "DM Sans", Helvetica Neue, Helvetica, Arial, system-ui, sans-serif;
+      --font-serif: "DM Sans", Helvetica Neue, Helvetica, Arial, system-ui, sans-serif;
+      --font-wordmark: "DM Mono", ui-monospace, monospace;
+      --font-mono: "DM Mono", ui-monospace, monospace;
     }
 
     @variant dark {
@@ -79,11 +79,11 @@
       --color-header: #000000;
       --color-overlay: #000000;
       --color-rule: #ffffff;
-      --font-display: Chomsky, Georgia, "Times New Roman", Times, serif;
-      --font-sans: Helvetica Neue, Helvetica, Arial, system-ui, sans-serif;
-      --font-serif: Georgia, "Times New Roman", Times, serif;
-      --font-wordmark: Chomsky, Georgia, "Times New Roman", Times, serif;
-      --font-mono: "Courier New", Courier, monospace;
+      --font-display: "DM Mono", ui-monospace, monospace;
+      --font-sans: "DM Sans", Helvetica Neue, Helvetica, Arial, system-ui, sans-serif;
+      --font-serif: "DM Sans", Helvetica Neue, Helvetica, Arial, system-ui, sans-serif;
+      --font-wordmark: "DM Mono", ui-monospace, monospace;
+      --font-mono: "DM Mono", ui-monospace, monospace;
     }
   }
 }

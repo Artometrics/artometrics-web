@@ -85,13 +85,41 @@ export default function Root({ children }: PropsWithChildren) {
                 font-style: normal;
                 font-display: swap;
               }
+              @font-face {
+                font-family: "DM Sans";
+                src: url("/fonts/DMSans.ttf") format("truetype");
+                font-weight: 100 900;
+                font-style: normal;
+                font-display: swap;
+              }
+              @font-face {
+                font-family: "DM Sans";
+                src: url("/fonts/DMSans-Italic.ttf") format("truetype");
+                font-weight: 100 900;
+                font-style: italic;
+                font-display: swap;
+              }
+              @font-face {
+                font-family: "DM Mono";
+                src: url("/fonts/DMMono-Regular.ttf") format("truetype");
+                font-weight: 400;
+                font-style: normal;
+                font-display: swap;
+              }
+              @font-face {
+                font-family: "DM Mono";
+                src: url("/fonts/DMMono-Medium.ttf") format("truetype");
+                font-weight: 500;
+                font-style: normal;
+                font-display: swap;
+              }
               html, body, #root {
                 min-height: 100%;
               }
               body {
                 margin: 0;
                 background: #FFFFFF;
-                font-family: Georgia, "Times New Roman", Times, serif;
+                font-family: "DM Sans", Helvetica Neue, Helvetica, Arial, system-ui, sans-serif;
                 color: #000000;
               }
               /* Prefer explicit site theme over OS preference alone */

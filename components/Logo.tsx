@@ -26,7 +26,7 @@ type Props = {
 };
 
 /**
- * Artometrics wordmark — Swiss (Anton) or Magazine (Chomsky) via brand style.
+ * Artometrics wordmark — Swiss (Anton) or Magazine (DM Mono titles) via brand style.
  */
 export function Logo({
   style,
