@@ -25,35 +25,25 @@ keyPoints:
   - Broadhurst Theatre — Most common Theatre
 faq:
   - question: >-
-      What does the data show about Concert Residencies Rewrite the Price
-      Ceiling?
+      How many records are in this dataset?
     answer: >-
-      Key figure: 47,524 — Records in the working dataset. The source is the
-      TidyTuesday release from 2020-04-28 (grosses.csv). After cleaning, 47,524
-      records remain for charting.
+      47,524 records in the working dataset.
   - question: >-
-      What does the data show about Even Among Leaders, Springsteen Is an
-      Outlier?
+      What is the median Avg ticket price?
     answer: >-
-      Key figure: 60.2 — Median Avg ticket price. The source is the TidyTuesday
-      release from 2020-04-28 (grosses.csv). After cleaning, 47,524 records
-      remain for charting.
+      The median Avg ticket price is 60.2.
   - question: >-
-      What does the data show about House Medians Cluster Near the Industry
-      Middle?
+      What is the highest observed value in this extract?
     answer: >-
-      Key figure: 512 — Highest observed Avg ticket price. The source is the
-      TidyTuesday release from 2020-04-28 (grosses.csv). After cleaning, 47,524
-      records remain for charting.
-  - question: What does the data show about Gershwin Leads the Gap Above the Median?
+      The highest observed value in the extract is 512.
+  - question: >-
+      Which Show leads in this extract?
     answer: >-
-      Key figure: Springsteen On Broadway — Top Show by Avg ticket price. The
-      source is the TidyTuesday release from 2020-04-28 (grosses.csv). After
-      cleaning, 47,524 records remain for charting.
+      Springsteen On Broadway leads the Show ranking in this extract.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">Broadway is a price and endurance market: average ticket price on one axis, performances on the other. The TidyTuesday grosses extract used here holds <strong>47,524</strong> rows with a median average ticket price of <strong>$60.2</strong> and a recorded high of <strong>$512</strong>. Springsteen On Broadway tops the show-level price ranking; Broadhurst Theatre is the most common theatre label in the file.</p>
+<p class="art-p art-lede">Broadway is a price and endurance market: average ticket price on one axis, performances on the other. The TidyTuesday grosses extract used here holds <strong>47,524</strong> rows with a median average ticket price of <strong>$60.2</strong> and a recorded high of <strong>$512</strong>. Springsteen On Broadway tops the show-level price ranking; Broadhurst Theatre is the most common theatre label in the file.</p>
 <p class="art-p">Those two facts already sketch the industry’s split: long-running musical houses with mid-range medians, and event residencies that reset what “a Broadway ticket” can mean.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>
 <p class="art-p">The numbers that set the scale for this report:</p>

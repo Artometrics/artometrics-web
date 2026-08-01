@@ -24,39 +24,25 @@ keyPoints:
   - /England/South West (English — Most common Admin area
 faq:
   - question: >-
-      What does the data show about Named museums pin the top of the deprivation
-      scale?
+      How many records are in this dataset?
     answer: >-
-      Key figure: 4,191 — Records in the working dataset. The source is the
-      TidyTuesday release from 2022-11-22 (R for Data Science community). The
-      working file contains 4,191 rows and 35 columns after merging available
-      tables in the…
-  - question: What does the data show about The leaders chart sits at the index ceiling?
-    answer: >-
-      Key figure: 5.00 — Median Area Deprivation index. The source is the
-      TidyTuesday release from 2022-11-22 (R for Data Science community). The
-      working file contains 4,191 rows and 35 columns after merging available
-      tables in the…
+      4,191 records in the working dataset.
   - question: >-
-      What does the data show about Admin areas spread museums across different
-      deprivation bands?
+      What is the median Area Deprivation index?
     answer: >-
-      Key figure: 10.0 — Highest observed Area Deprivation index. The source is
-      the TidyTuesday release from 2022-11-22 (R for Data Science community).
-      The working file contains 4,191 rows and 35 columns after merging
-      available tables in the…
+      The median Area Deprivation index is 5.00.
   - question: >-
-      What does the data show about Wiltshire clears the median; Cornwall trails
-      in the South West cut?
+      What is the highest observed value in this extract?
     answer: >-
-      Key figure: Blenheim Palace — Top Name of museum by Area Deprivation
-      index. The source is the TidyTuesday release from 2022-11-22 (R for Data
-      Science community). The working file contains 4,191 rows and 35 columns
-      after merging available tables in the…
+      The highest observed value in the extract is 10.0.
+  - question: >-
+      Which Name of museum leads in this extract?
+    answer: >-
+      Blenheim Palace leads the Name of museum ranking in this extract.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">Britain’s museum map is also a map of place. This file places 4,191 museum records against an area deprivation index whose median is 5.00 and whose observed high is 10.0. Blenheim Palace appears among the fact-box notables; the South West of England shows up in the geographic gap analysis.</p>
+<p class="art-p art-lede">Britain’s museum map is also a map of place. This file places 4,191 museum records against an area deprivation index whose median is 5.00 and whose observed high is 10.0. Blenheim Palace appears among the fact-box notables; the South West of England shows up in the geographic gap analysis.</p>
 <p class="art-p">The question is not which museum is “best.” It is how cultural institutions sit on a deprivation scale — whether collections cluster in less-deprived areas, and how far named sites and admin areas sit above or below the median index of 5.00.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>
 <p class="art-p">The numbers that set the scale for this report:</p>
@@ -121,7 +107,7 @@ faq:
 <p>Data Science Learning Community. (2022). <em>TidyTuesday: UK Museums</em>. <a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2022/2022-11-22/museums.csv" target="_blank" rel="noopener noreferrer">https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2022/2022-11-22/museums.csv</a></p>
 <h2 id="editors-note" class="anchored">Editor’s note</h2>
 <div class="art-editorial-note"><p><em>Artometrics data report from the TidyTuesday research pipeline. Charts and aggregates are reproducible from the embedded exhibits and public source files.</em></p></div>
-<p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2022/2022-11-22" target="_blank" rel="noopener noreferrer">View TidyTuesday source on GitHub</a></p>
+<p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2022/2022-11-22" target="_blank" rel="noopener noreferrer">Source archive (GitHub)</a></p>
 
 </main>
 </div>

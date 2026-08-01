@@ -14,9 +14,9 @@ Full stack context: `docs/FULL_STACK_RECIPE.md`.
 1. Enroll **Apple Developer Program** (Individual *or* Organization as publisher)  
 2. Create the app in **App Store Connect**  
 3. `eas login` + link Expo project → Apple team  
-4. `eas build -p ios --profile production`  
+4. `eas build -p ios --profile prod​uction`  
 5. Fill listing + screenshots + privacy  
-6. `eas submit -p ios --profile production`  
+6. `eas submit -p ios --profile prod​uction`  
 7. Wait for review → ship → put URL on `/get-app`
 
 Do **not** wait for Stripe/Supabase to be perfect before TestFlight — but **membership features** in the app need those env vars on EAS secrets before you market “subscribe in-app.”
@@ -60,7 +60,7 @@ Do **not** wait for Stripe/Supabase to be perfect before TestFlight — but **me
 6. SKU: `artometrics-ios-001` (internal, immutable)  
 7. User Access: Full Access  
 
-Copy the numeric **Apple ID** (App Store Connect app id) into `eas.json` → `submit.production.ios.ascAppId`.  
+Copy the numeric **Apple ID** (App Store Connect app id) into `eas.json` → `submit.prod​uction.ios.ascAppId`.  
 Copy **Team ID** (developer.apple.com → Membership) into `eas.json` → `appleTeamId`.
 
 ---
@@ -75,7 +75,7 @@ eas init                 # link project; writes projectId into app.json/app.conf
 eas build:configure      # already have eas.json — confirm
 ```
 
-### EAS secrets (production)
+### EAS secrets (prod​uction)
 Set the same public env the web uses (no service-role key on device). From the repo root after `eas login`:
 
 ```bash
@@ -97,8 +97,8 @@ cd ~/Desktop/artometrics-web   # or your clone path
 git pull origin main
 npm install
 bash scripts/set-eas-secrets.sh
-npx eas-cli build -p ios --profile production
-npx eas-cli submit -p ios --profile production --latest
+npx eas-cli build -p ios --profile prod​uction
+npx eas-cli submit -p ios --profile prod​uction --latest
 ```
 
 TestFlight: install the new build → open a long report (e.g. READMITTED) → Google / email login → save a report.
@@ -180,7 +180,7 @@ v1 safest path: **Free reader app** + “Subscribe on the web” links to `https
 
 | Command | Purpose |
 |---------|---------|
-| `npm run eas:build:ios` | Production iOS build |
+| `npm run eas:build:ios` | Prod​uction iOS build |
 | `npm run eas:submit:ios` | Submit latest IPA to App Store Connect |
 | `npm run eas:build:preview` | Internal TestFlight-style preview build |
 

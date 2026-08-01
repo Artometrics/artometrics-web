@@ -21,34 +21,26 @@ keyPoints:
   - '3 — Main memory engines: power, art, science'
   - 10 — Memory-capital cities compared
 faq:
-  - question: What does the data show about Memory domains?
+  - question: >-
+      How many biographies does Pantheon index in public summaries?
     answer: >-
-      Key figure: 85K+ — Biographies indexed by Pantheon in public-facing
-      summaries. If humanity remembers some kinds of people more than others,
-      that pattern is itself a cultural object. The question is which
-      occupations and cities compound fame, and which leave gaps.
-  - question: What does the data show about Era shift?
+      85K+ biographies indexed by Pantheon in public-facing summaries.
+  - question: >-
+      How many Wikipedia language editions does Pantheon require?
     answer: >-
-      Key figure: 15 — Minimum Wikipedia language editions used in Pantheon
-      collection logic. If humanity remembers some kinds of people more than
-      others, that pattern is itself a cultural object. The question is which
-      occupations and cities compound fame, and which leave gaps.
-  - question: What does the data show about Memory capitals?
+      At least 15 Wikipedia language editions in Pantheon collection logic.
+  - question: >-
+      When was the Pantheon 1.0 Scientific Data paper published?
     answer: >-
-      Key figure: 2016 — Scientific Data paper for Pantheon 1.0. If humanity
-      remembers some kinds of people more than others, that pattern is itself a
-      cultural object. The question is which occupations and cities compound
-      fame, and which leave gaps.
-  - question: What does the data show about Two clocks of fame?
+      The Pantheon 1.0 paper appeared in Scientific Data in 2016.
+  - question: >-
+      How many main memory engines does this report compare?
     answer: >-
-      Key figure: 3 — Main memory engines: power, art, science. If humanity
-      remembers some kinds of people more than others, that pattern is itself a
-      cultural object. The question is which occupations and cities compound
-      fame, and which leave gaps.
+      3 main memory engines compared: power, art, and science.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">Collective memory is not a neutral archive. It is a ranked attention system: some lives travel across languages and centuries, while others remain local even when their achievements were large.</p>
+<p class="art-p art-lede">Collective memory is not a neutral archive. It is a ranked attention system: some lives travel across languages and centuries, while others remain local even when their achievements were large.</p>
 <p class="art-p">Pantheon-style biography indexes — on the order of <strong>85K+</strong> lives in public-facing summaries, with a collection logic that requires presence in at least <strong>15</strong> Wikipedia language editions — make that ranking measurable. The 2016 <em>Scientific Data</em> paper for Pantheon 1.0 is the scholarly anchor. The charts below treat three main memory engines — power, art, and science — across <strong>10</strong> memory-capital cities.</p>
 <p class="art-p">If humanity remembers some kinds of people more than others, that pattern is itself a cultural object. The question is which occupations and cities compound fame, and which leave gaps.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>

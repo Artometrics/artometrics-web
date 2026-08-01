@@ -24,34 +24,26 @@ keyPoints:
   - 8 — Languages compared in the first chart
   - 10 — Authors used as anchors
 faq:
-  - question: What does the data show about Language gravity?
+  - question: >-
+      How many ebooks does Project Gutenberg hold in public summaries?
     answer: >-
-      Key figure: 75K+ — Approximate scale of Project Gutenberg ebooks in
-      public-facing summaries. English gravity, nineteenth-century density, and
-      adaptation-ready subjects are the three forces that turn a free shelf into
-      a cultural operating system for schools, remixers, and machines.
-  - question: What does the data show about The era machine?
+      75K+ ebooks in public-facing Project Gutenberg summaries.
+  - question: >-
+      How often does the Gutenberg CSV catalog update?
     answer: >-
-      Key figure: Weekly — CSV catalog update cadence noted in Gutenberg tooling
-      docs. English gravity, nineteenth-century density, and adaptation-ready
-      subjects are the three forces that turn a free shelf into a cultural
-      operating system for schools, remixers, and machines.
-  - question: What does the data show about Author memory?
+      Weekly CSV catalog updates per Gutenberg tooling documentation.
+  - question: >-
+      How often does the Gutenberg RDF catalog update?
     answer: >-
-      Key figure: Daily — RDF catalog update cadence noted by Gutenberg. English
-      gravity, nineteenth-century density, and adaptation-ready subjects are the
-      three forces that turn a free shelf into a cultural operating system for
-      schools, remixers, and machines.
-  - question: What does the data show about Adaptation power?
+      Daily RDF catalog updates noted by Gutenberg.
+  - question: >-
+      How many languages are compared in the first chart?
     answer: >-
-      Key figure: 8 — Languages compared in the first chart. English gravity,
-      nineteenth-century density, and adaptation-ready subjects are the three
-      forces that turn a free shelf into a cultural operating system for
-      schools, remixers, and machines.
+      8 languages compared in the first chart.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">Project Gutenberg is not only a library. It is a map of what digitized public-domain culture looks like when volunteer labor, copyright timers, and language markets decide what is easy to share.</p>
+<p class="art-p art-lede">Project Gutenberg is not only a library. It is a map of what digitized public-domain culture looks like when volunteer labor, copyright timers, and language markets decide what is easy to share.</p>
 <p class="art-p">Public-facing summaries place the collection on the order of <strong>75K+</strong> ebooks, with catalog feeds updating on <strong>weekly</strong> CSV and <strong>daily</strong> RDF cadences in Gutenberg tooling docs. The first chart compares <strong>8</strong> languages; later panels use <strong>10</strong> authors as anchors for availability and memory.</p>
 <p class="art-p">English gravity, nineteenth-century density, and adaptation-ready subjects are the three forces that turn a free shelf into a cultural operating system for schools, remixers, and machines.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>
@@ -64,7 +56,7 @@ faq:
   <div class="fact-box"><span class="fact-number">10</span><span class="fact-label">Authors used as anchors</span></div>
   </div>
 <h2 id="data-and-method" class="anchored">Data and method</h2>
-<p class="art-p">Project Gutenberg provides machine-readable metadata in RDF/XML, MARC, and CSV formats. Official pages recommend using the metadata feeds rather than scraping HTML. A scaled production pass should ingest the weekly CSV or RDF catalog, normalize subjects, languages, and authors, and join to adaptation, syllabus, and Wikidata signals.</p>
+<p class="art-p">Project Gutenberg provides machine-readable metadata in RDF/XML, MARC, and CSV formats. Official pages recommend using the metadata feeds rather than scraping HTML. A scaled output pass should ingest the weekly CSV or RDF catalog, normalize subjects, languages, and authors, and join to adaptation, syllabus, and Wikidata signals.</p>
 <p class="art-p">The charts here use editorial indices to define that comparative structure before a full catalog join. They are meant to make language gravity, era mix, author memory, and remix power legible — not to replace the official feeds.</p>
 <h2 id="language-gravity" class="anchored">Language gravity</h2>
 <h3 id="language-gravity-look" class="anchored">English dominates the accessible public-domain shelf</h3>

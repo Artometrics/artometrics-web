@@ -56,7 +56,7 @@ This is the "VST / sample maker" thread from your Ableton/Nina Jirachi inspirati
 - **Sample/sound generator**: record a raw sound (even on your phone) → tool generates a full sample pack, informed by your preference profile
 - **Voice-to-song pipeline**: hum/sing → tool builds a demo, chooses a vocal chain, suggests lyrics/tempo/style based on your journal, reading list, and quoted influences
 - **Cross-media generation**: give it a written report → get a magazine layout / infographic. Give it a story → get a comic book, storyboard, or animatable assets. Give it 10 nonfiction books + your theory → get a draft manuscript or documentary treatment
-- **Industry-standard asset packaging**: the tool should know the actual professional formatting/file/size standards an industry expects (e.g., what a headlining DJ needs to hand a festival's main stage production team) and output *those exact deliverables*, not a generic file
+- **Industry-standard asset packaging**: the tool should know the actual professional formatting/file/size standards an industry expects (e.g., what a headlining DJ needs to hand a festival's main stage prod​uction team) and output *those exact deliverables*, not a generic file
 - **Output format:** everything should be editable/exportable — stems into Ableton/Pro Tools, layouts into Canva/Figma, not locked-in black-box output
 - Legal grounding: these tools generate **raw original material from the user's own input** (their voice, their recording, their prompt) — not remixes of copyrighted training data. This is the deliberate distinction from Suno/Udio-style legal gray zones.
 

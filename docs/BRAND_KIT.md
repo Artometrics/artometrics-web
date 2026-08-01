@@ -26,18 +26,24 @@ See [`brand/svg/`](../brand/svg/) and [`brand/README.md`](../brand/README.md). M
 - `public/images/brand/favicon-light-*.png` / `favicon-dark-*.png`
 - `assets/fonts/Chomsky.otf` / `public/fonts/Chomsky.otf`
 
-## Color tokens
+## Color tokens (Kruger relaunch)
+
+Barbara Kruger structure: **black / white / Artometrics red**. Dark mode inverts B/W and keeps the same red.
 
 | Token | Light | Dark | Use |
 |-------|-------|------|-----|
-| Accent | `#C0392B` | `#E05C5C` | Desks, CTAs, links |
-| Text | `#171717` | `#FAFAFA` | Primary copy |
+| Accent | `#C0392B` | `#C0392B` | Desks, CTAs, pull-quotes, links |
+| Text | `#000000` | `#FFFFFF` | Primary copy |
 | Muted | `#525252` | `#A3A3A3` | Meta |
-| Surface | `#FFFFFF` | `#0A0A0A` | Page |
-| Elevated | `#FAFAF8` | `#171717` | Bands |
-| Rule | `#E5E5E5` | `#404040` | Dividers |
+| Surface | `#FFFFFF` | `#000000` | Page |
+| Elevated | `#FFFFFF` | `#111111` | Bands |
+| Rule | `#000000` / `#E5E5E5` | `#FFFFFF` / `#404040` | Hairlines |
 
-Fonts: Georgia / Times for editorial; Chomsky for brand; system sans for UI chrome.
+Fonts: **Chomsky** display (default magazine brand); **Georgia / Times** body; system sans for UI chrome.
+
+### Open Graph default
+
+- `public/images/brand/og-default.png` — Kruger-forward **1200×630** share card (black field, white ARTOMETRICS, red rule). Used by `PageSeo` / `+html` when a page has no hero.
 
 ## Do / don’t
 
@@ -48,7 +54,16 @@ Fonts: Georgia / Times for editorial; Chomsky for brand; system sans for UI chro
 
 - [x] SVG black A + white A + red A (`brand/svg/monogram-a-*.svg`)
 - [x] 1024 app icon SVG + favicon SVG
-- [x] OG mark SVG (`brand/svg/og-mark.svg`) — composite to `1200×630` PNG when needed
+- [x] OG mark SVG (`brand/svg/og-mark.svg`)
+- [x] OG default PNG `public/images/brand/og-default.png` (1200×630 Kruger)
 - [ ] Press PDF one-pager (mission + desks + contact)
 
-See also: `docs/OWNER_PLAYBOOK.md`, `constants/Colors.ts`.
+### Share graphics (sample)
+
+Kruger-style square share cards for the franchise series live at `public/images/brand/share/`:
+
+- `pay-for-october.png` — Padres series
+- `27-titles.png` — Yankees series
+
+Journalists can also grab the default OG card and SVG kit from `/press`.
+

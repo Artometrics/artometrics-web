@@ -53,7 +53,7 @@ Every city/country report should answer:
 - What does it make?
 - What does it sell to the outside world?
 - What does it import or depend on?
-- Which region or city acts as the production engine?
+- Which region or city acts as the prod​uction engine?
 - What is scarce or overpriced?
 - What is historically inherited?
 - Who are its true competitors and why?

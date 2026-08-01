@@ -1,6 +1,7 @@
 import { Pressable, Text } from "react-native";
 import { useAuth } from "@/lib/auth";
 import { useClaps } from "@/lib/platform/useClaps";
+import { trackEvent } from "@/lib/analytics/ga";
 
 export function ClapButton({
   targetKind,
@@ -16,6 +17,7 @@ export function ClapButton({
     <Pressable
       onPress={() => {
         if (!user) return;
+        trackEvent("clap", { target_kind: targetKind, target_id: targetId });
         toggle();
       }}
       className={[

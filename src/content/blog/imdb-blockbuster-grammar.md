@@ -22,32 +22,26 @@ keyPoints:
   - 162 — Avatar runtime in minutes
   - 69% — Illustrative sequel/franchise share of top hits in the 2020s
 faq:
-  - question: What does the data show about Attention versus Quality?
+  - question: >-
+      What is Core IMDb non-commercial TSV files publicly documented?
     answer: >-
-      Key figure: 7 — Core IMDb non-commercial TSV files publicly documented.
-      Seven core TSV files are publicly documented; the refresh cadence is
-      daily. Up to three genres can appear per title-basics row. Avatar’s
-      runtime sits at 162 minutes. An…
-  - question: What does the data show about Sequelization?
+      7 — Core IMDb non-commercial TSV files publicly documented.
+  - question: >-
+      What is IMDb dataset refresh cadence?
     answer: >-
-      Key figure: Daily — IMDb dataset refresh cadence. Seven core TSV files are
-      publicly documented; the refresh cadence is daily. Up to three genres can
-      appear per title-basics row. Avatar’s runtime sits at 162 minutes. An…
-  - question: What does the data show about Runtime and Event Status?
+      Daily — IMDb dataset refresh cadence.
+  - question: >-
+      What is Genres can be listed per IMDb title basics row?
     answer: >-
-      Key figure: 3 — Genres can be listed per IMDb title basics row. Seven core
-      TSV files are publicly documented; the refresh cadence is daily. Up to
-      three genres can appear per title-basics row. Avatar’s runtime sits at 162
-      minutes. An…
-  - question: What does the data show about Platforms?
+      3 — Genres can be listed per IMDb title basics row.
+  - question: >-
+      What is Avatar runtime in minutes?
     answer: >-
-      Key figure: 162 — Avatar runtime in minutes. Seven core TSV files are
-      publicly documented; the refresh cadence is daily. Up to three genres can
-      appear per title-basics row. Avatar’s runtime sits at 162 minutes. An…
+      162 — Avatar runtime in minutes.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">Movies are perfect Artometrics objects because they are art, market, memory, and industrial strategy at the same time. A title page on IMDb is where those forces leave public footprints: genres, runtimes, ratings, and vote counts.</p>
+<p class="art-p art-lede">Movies are perfect Artometrics objects because they are art, market, memory, and industrial strategy at the same time. A title page on IMDb is where those forces leave public footprints: genres, runtimes, ratings, and vote counts.</p>
 <p class="art-p">The question is what a blockbuster is mathematically — attention, rating, runtime, franchise memory, platform behavior, and studio grammar stacked into one cultural event. The pieces below treat IMDb’s non-commercial dataset architecture as a scoreboard for that grammar, with box-office and platform references for context.</p>
 <p class="art-p">Seven core TSV files are publicly documented; the refresh cadence is daily. Up to three genres can appear per title-basics row. Avatar’s runtime sits at 162 minutes. An illustrative 69% sequel/franchise share among top hits in the 2020s frames the sequelization chart; five charts carry the argument.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>
@@ -61,7 +55,7 @@ faq:
   </div>
 <h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">IMDb publishes non-commercial TSV datasets including title basics, ratings, crew, principals, episodes, and names. The fields make it possible to join titles, genres, years, runtimes, ratings, and vote counts.</p>
-<p class="art-p">Because IMDb licensing has specific terms, This piece uses IMDb as a source architecture and includes a commercial-use caution. A production version should verify licensing or swap in fully open TMDb/Wikidata/Box Office Mojo-compatible sources.</p>
+<p class="art-p">Because IMDb licensing has specific terms, This piece uses IMDb as a source architecture and includes a commercial-use caution. A output version should verify licensing or swap in fully open TMDb/Wikidata/Box Office Mojo-compatible sources.</p>
 <h2 id="attention-versus-quality" class="anchored">Attention versus Quality</h2>
 <h3 id="attention-versus-quality-look" class="anchored">Genre attention and audience rating tell different stories</h3>
 <figure class="art-chart">
@@ -115,6 +109,6 @@ faq:
 
 <h2 id="editor-s-note" class="anchored">Editor’s note</h2>
 
-<div class="art-editorial-note"><p>IMDb data is subject to non-commercial terms and required credit: Information courtesy of IMDb (https://www.imdb.com). Used with permission. Any production/commercial use should verify permission or replace IMDb-derived fields with fully open sources.</p></div>
+<div class="art-editorial-note"><p>IMDb data is subject to non-commercial terms and required credit: Information courtesy of IMDb (https://www.imdb.com). Used with permission. Any output/commercial use should verify permission or replace IMDb-derived fields with fully open sources.</p></div>
 </main>
 </div>

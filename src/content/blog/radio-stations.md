@@ -24,30 +24,26 @@ keyPoints:
   - WEUP — Top Call sign by Frequency
   - Country — Most common Format
 faq:
-  - question: What does the data show about Frequency by call sign?
+  - question: >-
+      How many records are in this dataset?
     answer: >-
-      Key figure: 17,186 — Records in the working dataset. Frequency leaders at
-      the top of the AM band are a different story from format share. The charts
-      separate the physics of the dial from the culture of the playlist.
-  - question: Who sits at the top?
+      17,186 records in the working dataset.
+  - question: >-
+      What is the median Frequency?
     answer: >-
-      Key figure: 101 — Median Frequency. Frequency leaders at the top of the AM
-      band are a different story from format share. The charts separate the
-      physics of the dial from the culture of the playlist.
-  - question: What does the data show about Frequency by format?
+      The median Frequency is 101.
+  - question: >-
+      What is the highest observed value in this extract?
     answer: >-
-      Key figure: 1,700 — Highest observed Frequency. Frequency leaders at the
-      top of the AM band are a different story from format share. The charts
-      separate the physics of the dial from the culture of the playlist.
-  - question: Who beats the median — and who trails?
+      The highest observed value in the extract is 1,700.
+  - question: >-
+      Which Call sign leads in this extract?
     answer: >-
-      Key figure: WEUP — Top Call sign by Frequency. Frequency leaders at the
-      top of the AM band are a different story from format share. The charts
-      separate the physics of the dial from the culture of the playlist.
+      WEUP leads the Call sign ranking in this extract.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">American radio still looks chaotic from the passenger seat — call letters, dial numbers, format slogans. The station license table underneath is more orderly: tens of thousands of rows that map frequency, format, and status across the dial.</p>
+<p class="art-p art-lede">American radio still looks chaotic from the passenger seat — call letters, dial numbers, format slogans. The station license table underneath is more orderly: tens of thousands of rows that map frequency, format, and status across the dial.</p>
 <p class="art-p">A TidyTuesday working file of <strong>17,186</strong> records puts median frequency at <strong>101</strong> and the highest observed frequency at <strong>1,700</strong>. <strong>WEUP</strong> leads the call-sign ranking by frequency in the fact box, and <strong>Country</strong> is the most common format label.</p>
 <p class="art-p">Frequency leaders at the top of the AM band are a different story from format share. The charts separate the physics of the dial from the culture of the playlist.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>

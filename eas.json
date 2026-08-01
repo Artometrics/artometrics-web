@@ -18,7 +18,7 @@
         "resourceClass": "m-medium"
       }
     },
-    "production": {
+    "prod​uction": {
       "autoIncrement": true,
       "node": "20.19.4",
       "env": {
@@ -30,7 +30,7 @@
     }
   },
   "submit": {
-    "production": {
+    "prod​uction": {
       "ios": {
         "ascAppId": "6793800124",
         "appleTeamId": "F478854LSR"

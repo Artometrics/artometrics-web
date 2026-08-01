@@ -42,39 +42,26 @@ keyPoints:
     led by two men Caesar had personally pardoned, appointed, and promised
     future consulships
 faq:
-  - question: What does the data show about Leadership Trait Analysis?
+  - question: >-
+      When was Julius Caesar born?
     answer: >-
-      Key figure: 100 BCE — Caesar&#39;s birth year — born into Rome&#39;s most
-      turbulent political century, to a patrician family living in the Subura
-      tenements. By 44 BCE, Caesar had crossed the Rubicon, won a civil war,
-      reformed the debt system, redistributed land to 80,000 veterans and urban
-      poor, rebuilt the calendar, and declared…
-  - question: What does the data show about The Economic Fingerprint?
+      Caesar was born in 100 BCE, to a patrician family in Rome's Subura district.
+  - question: >-
+      How long was Caesar held captive by Cilician pirates?
     answer: >-
-      Key figure: 38 days — Held captive by Cilician pirates at age 25 — he
-      laughed at their ransom demand, volunteered to pay more, then crucified
-      every one of them after his release. By 44 BCE, Caesar had crossed the
-      Rubicon, won a civil war, reformed the debt system, redistributed land to
-      80,000 veterans and urban poor, rebuilt the calendar, and declared…
-  - question: What does the data show about The Patronage Network?
+      38 days days captive at age 25 — he later crucified every pirate after his release.
+  - question: >-
+      What is Caesar's Need for Power score under Hermann LTA?
     answer: >-
-      Key figure: 0.95 — Caesar&#39;s Need for Power score under the Hermann
-      (1999) Leadership Trait Analysis framework — near the ceiling of any world
-      leader ever profiled. By 44 BCE, Caesar had crossed the Rubicon, won a
-      civil war, reformed the debt system, redistributed land to 80,000 veterans
-      and urban poor, rebuilt the calendar, and declared…
-  - question: What this file cannot tell you?
+      0.95 Need for Power under Hermann (1999) LTA — near the ceiling of any world leader profiled.
+  - question: >-
+      How many people did Caesar resettle in land colonies?
     answer: >-
-      Key figure: 80,000 — Veterans and urban poor resettled in land colonies
-      during Caesar&#39;s dictatorship — his economic reforms addressed real
-      structural problems and built his client base simultaneously. By 44 BCE,
-      Caesar had crossed the Rubicon, won a civil war, reformed the debt system,
-      redistributed land to 80,000 veterans and urban poor, rebuilt the
-      calendar, and declared…
+      80,000 veterans and urban poor resettled in land colonies during Caesar's dictatorship.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">Economics comes from the Greek oikonomia — the management of the house. Psychonomics asks the prior question: who is managing the soul of the house, and what does their inner architecture cost everyone living inside it? Julius Caesar is the founding case study. His policies were not abstract theories. They were his biography, scaled.</p>
+<p class="art-p art-lede">Economics comes from the Greek oikonomia — the management of the house. Psychonomics asks the prior question: who is managing the soul of the house, and what does their inner architecture cost everyone living inside it? Julius Caesar is the founding case study. His policies were not abstract theories. They were his biography, scaled.</p>
 <p class="art-p">Caesar was born in 100 BCE into the Subura — Rome’s roughest district — to a patrician family with a noble name and thin wallets. His father died when Caesar was fifteen, leaving him head of household with no resources and no patron. By the time he was twenty-five, Cilician pirates had captured his ship, set a ransom of twenty talents, and watched Caesar laugh, volunteer to pay fifty, spend thirty-eight days as their captive writing poetry and calling them illiterates, then return after his release with a fleet he raised himself and crucify every one of them — exactly as promised. This is not a fun anecdote. It is the earliest behavioral evidence of his core operating theory: the self is the institution. The pattern never changed. The scale did.</p>
 <p class="art-p">By 44 BCE, Caesar had crossed the Rubicon, won a civil war, reformed the debt system, redistributed land to 80,000 veterans and urban poor, rebuilt the calendar, and declared himself dictator for life. He was then stabbed twenty-three times by sixty senators — led by Brutus and Cassius, two men he had personally pardoned, appointed to the praetorship, and promised future consulships. The house he built outlasted him by five centuries. The soul that built it was load-bearing in a way no institution can survive.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>
@@ -182,7 +169,7 @@ faq:
 <p>— Artometrics Editorial</p></div>
 
 <p class="art-github-wrap">
-  <a class="art-github-btn" href="https://github.com/Artometrics/caesar" target="_blank" rel="noopener noreferrer">View source on GitHub</a>
+  <a class="art-github-btn" href="https://github.com/Artometrics/caesar" target="_blank" rel="noopener noreferrer">Source archive (GitHub)</a>
 </p>
 </main>
 </div>

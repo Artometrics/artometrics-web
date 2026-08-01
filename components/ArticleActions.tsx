@@ -5,6 +5,7 @@ import { useAuth } from "@/lib/auth";
 import { apiFetch } from "@/lib/supabase/client";
 import { assetUrl } from "@/lib/assets";
 import { openExternalUrl } from "@/lib/openExternal";
+import { trackEvent } from "@/lib/analytics/ga";
 import downloadsManifest from "@/src/generated/downloads.json";
 
 type Pack = {
@@ -115,6 +116,7 @@ export function ArticleActions({ slug, title, placement = "all" }: Props) {
 
   async function share() {
     const url = `https://artometrics.com/${slug}`;
+    trackEvent("report_share", { slug, method: Platform.OS });
     if (Platform.OS !== "web") {
       try {
         await Share.share({ message: `${title}\n${url}`, url, title });
@@ -140,23 +142,23 @@ export function ArticleActions({ slug, title, placement = "all" }: Props) {
 
   const downloads = useMemo(() => {
     const items: DownloadItem[] = [];
-    if (pack.dataset) items.push({ key: "data", label: "Dataset (CSV)", href: pack.dataset });
-    const code = pack.quarto ?? pack.github;
-    if (code) {
-      items.push({
-        key: "code",
-        label: pack.quarto ? "Quarto / source" : "Code (GitHub)",
-        href: code,
-      });
-    }
-    if (pack.html) items.push({ key: "html", label: "Article HTML", href: pack.html });
+    // Prefer site-hosted exports; GitHub is demoted to last resort.
     if (pack.pdf) items.push({ key: "pdf", label: "PDF", href: pack.pdf });
     if (pack.epub) items.push({ key: "epub", label: "Ebook (EPUB)", href: pack.epub });
+    if (pack.html) items.push({ key: "html", label: "Article HTML", href: pack.html });
+    if (pack.dataset) items.push({ key: "data", label: "Dataset (CSV)", href: pack.dataset });
     if (pack.audio) items.push({ key: "audio", label: "Narration (MP3)", href: pack.audio });
+    if (pack.quarto) {
+      items.push({ key: "code", label: "Quarto / source", href: pack.quarto });
+    } else if (pack.github && items.length === 0) {
+      items.push({ key: "code", label: "Source (GitHub)", href: pack.github });
+    }
     return items;
   }, [pack]);
 
-  const primaryDownloads = downloads.filter((d) => d.key === "data" || d.key === "code");
+  const primaryDownloads = downloads.filter(
+    (d) => d.key === "pdf" || d.key === "data" || d.key === "epub",
+  ).slice(0, 2);
   const showTop = placement === "top" || placement === "all";
   const showBottom = placement === "bottom" || placement === "all";
 
@@ -222,11 +224,20 @@ export function ArticleActions({ slug, title, placement = "all" }: Props) {
             {primaryDownloads.map((item) => (
               <Pressable
                 key={item.key}
-                onPress={() => openUrl(item.href)}
+                onPress={() => {
+                  trackEvent("report_download", { slug, format: item.key });
+                  openUrl(item.href);
+                }}
                 className="border border-border px-3.5 py-2.5"
               >
                 <Text className="text-xs font-bold tracking-[0.6px] uppercase text-fg">
-                  {item.key === "data" ? "Data" : "Code"}
+                  {item.key === "pdf"
+                    ? "PDF"
+                    : item.key === "epub"
+                      ? "EPUB"
+                      : item.key === "data"
+                        ? "Data"
+                        : item.label}
                 </Text>
               </Pressable>
             ))}

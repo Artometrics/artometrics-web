@@ -248,7 +248,7 @@ ${body}`;
   if (/editor/i.test(title)) {
     const text = stripTags(body);
     if (
-      /TidyTuesday research pipeline|production pass should ingest|reproducible from the embedded/i.test(
+      /TidyTuesday research pipeline|prod​uction pass should ingest|reproducible from the embedded/i.test(
         text,
       ) &&
       text.length < 320

@@ -26,36 +26,25 @@ keyPoints:
   - February — Most common Month
 faq:
   - question: >-
-      What does the data show about Median concurrency climbed across the
-      decade?
+      How many records are in this dataset?
     answer: >-
-      Key figure: 83,631 — Records in the working dataset. The source is the
-      TidyTuesday release from 2021-03-16 (R for Data Science community). The
-      working file contains 83,631 rows and 8 columns after merging available
-      tables in the…
-  - question: What does the data show about Dota 2 leads a top tier that drops off fast?
-    answer: >-
-      Key figure: 203 — Median Avg. The source is the TidyTuesday release from
-      2021-03-16 (R for Data Science community). The working file contains
-      83,631 rows and 8 columns after merging available tables in the…
+      83,631 records in the working dataset.
   - question: >-
-      What does the data show about Months carry different concurrency
-      distributions?
+      What is the median Avg?
     answer: >-
-      Key figure: 1,584,887 — Highest observed Avg. The source is the
-      TidyTuesday release from 2021-03-16 (R for Data Science community). The
-      working file contains 83,631 rows and 8 columns after merging available
-      tables in the…
-  - question: What does the data show about January clears the median; October trails?
+      The median Avg is 203.
+  - question: >-
+      What is the highest observed value in this extract?
     answer: >-
-      Key figure: PLAYERUNKNOWN'S BATTLEGROUND — Top Gamename by Avg. The source
-      is the TidyTuesday release from 2021-03-16 (R for Data Science community).
-      The working file contains 83,631 rows and 8 columns after merging
-      available tables in the…
+      The highest observed value in the extract is 1,584,887.
+  - question: >-
+      Which Gamename leads in this extract?
+    answer: >-
+      PLAYERUNKNOWN'S BATTLEGROUND leads the Gamename ranking in this extract.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">Steam-era concurrency is a living audience meter. This Sliced/TidyTuesday games extract holds 83,631 records spanning 2012–2021, with a median average player count (Avg) of 203 and a high of 1,584,887. PLAYERUNKNOWN'S BATTLEGROUNDS appears among the fact-box peaks; February is the most common month label in the file.</p>
+<p class="art-p art-lede">Steam-era concurrency is a living audience meter. This Sliced/TidyTuesday games extract holds 83,631 records spanning 2012–2021, with a median average player count (Avg) of 203 and a high of 1,584,887. PLAYERUNKNOWN'S BATTLEGROUNDS appears among the fact-box peaks; February is the most common month label in the file.</p>
 <p class="art-p">The charts ask how median Avg moved over time, which titles sit at the top, how months differ from the median, and whether Avg and Gain travel together. The calibration point is 203 — the typical observation in a market where a few live-service titles become cities unto themselves.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>
 <p class="art-p">The numbers that set the scale for this report:</p>
@@ -121,7 +110,7 @@ faq:
 <p>Data Science Learning Community. (2021). <em>TidyTuesday: Video Games</em>. <a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2021/2021-03-16/sliced-tidytuesday.csv" target="_blank" rel="noopener noreferrer">https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2021/2021-03-16/sliced-tidytuesday.csv</a></p>
 <h2 id="editors-note" class="anchored">Editor’s note</h2>
 <div class="art-editorial-note"><p><em>Artometrics data report from the TidyTuesday research pipeline. Charts and aggregates are reproducible from the embedded exhibits and public source files.</em></p></div>
-<p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2021/2021-03-16" target="_blank" rel="noopener noreferrer">View TidyTuesday source on GitHub</a></p>
+<p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2021/2021-03-16" target="_blank" rel="noopener noreferrer">Source archive (GitHub)</a></p>
 
 </main>
 </div>

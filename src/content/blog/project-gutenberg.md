@@ -18,30 +18,18 @@ keyPoints:
   - '100,000 — Records in the working dataset'
   - lcsh — Most common Subject type
 faq:
-  - question: What does the data show about Public-domain books cluster by subject type?
-    answer: >-
-      Key figure: 100,000 — Records in the working dataset. Reading Gutenberg as
-      a popularity contest misses the point. Reading it as a concentration map
-      of reusable canon is where the data help.
-  - question: What does the data show about A small set of subjects anchors the catalog?
-    answer: >-
-      Key figure: lcsh — Most common Subject type. Reading Gutenberg as a
-      popularity contest misses the point. Reading it as a concentration map of
-      reusable canon is where the data help.
   - question: >-
-      What does the data show about Subject families show the catalog center of
-      gravity?
+      How many records are in this dataset?
     answer: >-
-      Reading Gutenberg as a popularity contest misses the point. Reading it as
-      a concentration map of reusable canon is where the data help.
-  - question: What does the data show about Repeated subjects reveal the reusable canon?
+      100,000 records in the working dataset.
+  - question: >-
+      What is Most common Subject type?
     answer: >-
-      Reading Gutenberg as a popularity contest misses the point. Reading it as
-      a concentration map of reusable canon is where the data help.
+      lcsh — Most common Subject type.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">Project Gutenberg is the internet's oldest large-scale experiment in free literature. Its subject catalog — Library of Congress headings and related labels — is a map of which public-domain books volunteers could digitize and classify at scale.</p>
+<p class="art-p art-lede">Project Gutenberg is the internet's oldest large-scale experiment in free literature. Its subject catalog — Library of Congress headings and related labels — is a map of which public-domain books volunteers could digitize and classify at scale.</p>
 <p class="art-p">A TidyTuesday working extract of <strong>100,000</strong> records shows <strong>lcsh</strong> as the most common subject type, with tens of thousands of rows in that bucket. Subject codes such as <strong>PS</strong> recur thousands of times. The catalog is not every book ever written; it is the reusable shelf that copyright expiry, volunteer labor, and classification systems made easy to share.</p>
 <p class="art-p">Reading Gutenberg as a popularity contest misses the point. Reading it as a concentration map of reusable canon is where the data help.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>

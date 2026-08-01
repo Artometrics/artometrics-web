@@ -29,15 +29,19 @@ const episodes = existsSync(join(ROOT, "src/generated/podcast.json"))
   : [];
 
 const reportItems = posts
-  .map(
-    (p) => `    <item>
+  .map((p) => {
+    const cats = Array.isArray(p.tags)
+      ? p.tags.map((t) => `      <category>${esc(t)}</category>`).join("\n")
+      : "";
+    return `    <item>
       <title>${esc(p.title)}</title>
       <link>${SITE}/${p.slug}</link>
       <guid isPermaLink="true">${SITE}/${p.slug}</guid>
       <pubDate>${new Date(p.pubDate).toUTCString()}</pubDate>
       <description>${esc(p.description)}</description>
-    </item>`,
-  )
+${cats}
+    </item>`;
+  })
   .join("\n");
 
 const reportRss = `<?xml version="1.0" encoding="UTF-8"?>
@@ -45,8 +49,14 @@ const reportRss = `<?xml version="1.0" encoding="UTF-8"?>
   <channel>
     <title>Artometrics Reports</title>
     <link>${SITE}</link>
-    <description>Data reports on culture, power, and the creative economy</description>
+    <description>Data reports on culture, power, and the creative economy — Arts, Sports, Science, Humanities, Civics, Culture.</description>
     <language>en-us</language>
+    <category>Arts</category>
+    <category>Sports</category>
+    <category>Science</category>
+    <category>Humanities</category>
+    <category>Civics</category>
+    <category>Culture</category>
 ${reportItems}
   </channel>
 </rss>

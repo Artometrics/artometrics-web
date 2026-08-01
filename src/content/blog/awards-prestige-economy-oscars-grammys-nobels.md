@@ -28,36 +28,25 @@ keyPoints:
   - 6 — Award systems compared
 faq:
   - question: >-
-      What does the data show about Prestige and market are not the same
-      currency?
+      Through which Academy Awards cycle is the official database complete?
     answer: >-
-      Key figure: 98th — Academy Awards database complete through 2025/2026
-      cycle per official database. The Academy Awards database is complete
-      through the 98th cycle, with 1,500+ acceptance speeches on file. Nobel
-      prizes date to 1901 . Recent Grammy ceremonies run roughly 94…
-  - question: When awards invent more lanes of excellence?
-    answer: >-
-      Key figure: 1,500+ — Acceptance speeches in the Academy's speech database.
-      The Academy Awards database is complete through the 98th cycle, with
-      1,500+ acceptance speeches on file. Nobel prizes date to 1901 . Recent
-      Grammy ceremonies run roughly 94…
+      The 98th Academy Awards database is complete through the 2025/2026 cycle per the official database.
   - question: >-
-      What does the data show about Getting nominated is not the same as
-      winning?
+      How many acceptance speeches are in the Academy speech database?
     answer: >-
-      Key figure: 1901 — First Nobel Prizes awarded. The Academy Awards database
-      is complete through the 98th cycle, with 1,500+ acceptance speeches on
-      file. Nobel prizes date to 1901 . Recent Grammy ceremonies run roughly 94…
-  - question: What the public actually remembers?
+      1,500+ acceptance speeches in the Academy's speech database.
+  - question: >-
+      When were the first Nobel Prizes awarded?
     answer: >-
-      Key figure: 94 — Approximate Grammy category count in recent ceremonies.
-      The Academy Awards database is complete through the 98th cycle, with
-      1,500+ acceptance speeches on file. Nobel prizes date to 1901 . Recent
-      Grammy ceremonies run roughly 94…
+      The first Nobel Prizes were awarded in 1901.
+  - question: >-
+      How many Grammy categories appear in recent ceremonies?
+    answer: >-
+      Approximately 94 Grammy categories in recent ceremonies.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">Award shows are culture’s accounting departments. They translate messy creative fields into categories, winners, speeches, snubs, and canon — then ask the public to treat those boxes as settled judgment.</p>
+<p class="art-p art-lede">Award shows are culture’s accounting departments. They translate messy creative fields into categories, winners, speeches, snubs, and canon — then ask the public to treat those boxes as settled judgment.</p>
 <p class="art-p">Film, music, science, literature, theater, and television all run prize systems, but they do not manufacture legitimacy the same way. An Oscar night is tied to an entertainment market; a Nobel citation is tied to institutional memory. The interesting comparison is not which prize is “bigger,” but how each converts attention into a second life for the work.</p>
 <p class="art-p">The Academy Awards database is complete through the <strong>98th</strong> cycle, with <strong>1,500+</strong> acceptance speeches on file. Nobel prizes date to <strong>1901</strong>. Recent Grammy ceremonies run roughly <strong>94</strong> categories. Six award systems sit in the frame below.</p>
 <h2 id="research-question" class="anchored">Research question</h2>
@@ -92,7 +81,7 @@ faq:
 </figure>
 <p class="art-p">Award shows are taxonomies. When categories expand, culture gets more official boxes, more winners, and more arguments about who belongs.</p>
 <p class="art-p">The Grammys make the pattern clearest: genre fragmentation becomes institutional design. More lanes mean more legitimacy to distribute — and more fights over whether a win still means the same thing.</p>
-<p class="art-p">The Recording Academy’s category list is the clearest example because popular music continually splits by genre, format, language, production role, and performance context. Rap, Latin, global music, electronic music, music video, immersive audio, and songwriter categories all encode industry politics about which labor deserves a named lane. Category expansion is an archive of market change.</p>
+<p class="art-p">The Recording Academy’s category list is the clearest example because popular music continually splits by genre, format, language, output role, and performance context. Rap, Latin, global music, electronic music, music video, immersive audio, and songwriter categories all encode industry politics about which labor deserves a named lane. Category expansion is an archive of market change.</p>
 <p class="art-p">The Oscars expand more slowly, but their category debates still reveal institutional priorities: animated feature became a category at the 74th Academy Awards, international feature replaced the older foreign-language label, and the Academy has repeatedly debated stunt work, casting, and popular-film recognition. Each change decides whether a kind of labor becomes visible on the official ledger.</p>
 
 <h2 id="getting-nominated-is-not-the-same-as-winning" class="anchored">Getting nominated is not the same as winning</h2>

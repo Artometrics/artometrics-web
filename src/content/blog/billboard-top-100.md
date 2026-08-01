@@ -21,35 +21,25 @@ keyPoints:
   - Down By The River — Top Song by Week position
 faq:
   - question: >-
-      What does the data show about Song-Level Position Averages Crowd the
-      Bottom Rung?
+      How many records are in this dataset?
     answer: >-
-      Key figure: 100,000 — Records in the working dataset. The source is the
-      TidyTuesday release from 2021-09-14 (billboard.csv). After cleaning, the
-      analysis sample contains 100,000 records.
-  - question: What does the data show about Leaders by Week Position Are a Flat Elite?
-    answer: >-
-      Key figure: 50.0 — Median Week position. The source is the TidyTuesday
-      release from 2021-09-14 (billboard.csv). After cleaning, the analysis
-      sample contains 100,000 records.
+      100,000 records in the working dataset.
   - question: >-
-      What does the data show about Weekly Positions Fill the Chart Almost
-      Uniformly?
+      What is the median Week position?
     answer: >-
-      Key figure: 100 — Highest observed Week position. The source is the
-      TidyTuesday release from 2021-09-14 (billboard.csv). After cleaning, the
-      analysis sample contains 100,000 records.
+      The median Week position is 50.0.
   - question: >-
-      What does the data show about Concentration Among Songs Is Mechanical at
-      First?
+      What is the highest observed value in this extract?
     answer: >-
-      Key figure: Down By The River — Top Song by Week position. The source is
-      the TidyTuesday release from 2021-09-14 (billboard.csv). After cleaning,
-      the analysis sample contains 100,000 records.
+      The highest observed value in the extract is 100.
+  - question: >-
+      Which Song leads in this extract?
+    answer: >-
+      Down By The River leads the Song ranking in this extract.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">The Billboard Hot 100 is a weekly ranking machine: 100 positions, endlessly refreshed. The TidyTuesday billboard extract used here holds <strong>100,000</strong> song-week rows, with a median week position of <strong>50.0</strong> — exactly mid-chart — and a highest observed week position of <strong>100</strong> (the bottom rung).</p>
+<p class="art-p art-lede">The Billboard Hot 100 is a weekly ranking machine: 100 positions, endlessly refreshed. The TidyTuesday billboard extract used here holds <strong>100,000</strong> song-week rows, with a median week position of <strong>50.0</strong> — exactly mid-chart — and a highest observed week position of <strong>100</strong> (the bottom rung).</p>
 <p class="art-p">That median of 50 is almost tautological in a full 1–100 ranking, which is why the interesting questions shift to concentration, re-entries (instance), and which titles spend time at the chart’s edges. “Down By The River” appears among the fact-box leaders for week position in this working file.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>
 <p class="art-p">The numbers that set the scale for this report:</p>

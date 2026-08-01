@@ -21,34 +21,25 @@ keyPoints:
   - 2004–2022 — Year span covered in the file
 faq:
   - question: >-
-      What does the data show about Median heritage counts doubled at the
-      center?
+      How many records are in this dataset?
     answer: >-
-      Key figure: 6 — Records in the working dataset. The source is the
-      TidyTuesday release from 2024-02-06 (R for Data Science community). The
-      working file contains 6 rows and 3 columns after merging available tables
-      in the week…
-  - question: What does the data show about Sweden leads the country ladder?
-    answer: >-
-      Key figure: 9.00 — Median Value. The source is the TidyTuesday release
-      from 2024-02-06 (R for Data Science community). The working file contains
-      6 rows and 3 columns after merging available tables in the week…
-  - question: What does the data show about Leaders diverge when tracked over time?
-    answer: >-
-      Key figure: 15.0 — Highest observed Value. The source is the TidyTuesday
-      release from 2024-02-06 (R for Data Science community). The working file
-      contains 6 rows and 3 columns after merging available tables in the week…
+      6 records in the working dataset.
   - question: >-
-      What does the data show about 2004 versus 2022 makes the gains visible
-      side by side?
+      What is the median Value?
     answer: >-
-      Key figure: Sweden — Top Country by Value. The source is the TidyTuesday
-      release from 2024-02-06 (R for Data Science community). The working file
-      contains 6 rows and 3 columns after merging available tables in the week…
+      The median Value is 9.00.
+  - question: >-
+      What is the highest observed value in this extract?
+    answer: >-
+      The highest observed value in the extract is 15.0.
+  - question: >-
+      Which country leads in this extract?
+    answer: >-
+      Sweden leads the country ranking in this extract.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">UNESCO World Heritage counts turn national prestige into a time series. This Scandinavian extract holds 6 records spanning 2004–2022, with a median value of 9.00 and a high of 15.0. Sweden leads the fact-box country ranking.</p>
+<p class="art-p art-lede">UNESCO World Heritage counts turn national prestige into a time series. This Scandinavian extract holds 6 records spanning 2004–2022, with a median value of 9.00 and a high of 15.0. Sweden leads the fact-box country ranking.</p>
 <p class="art-p">Six rows are enough for a clean comparative story when the table is country-by-year counts: who led, who grew fastest, and how the median moved from 5.00 to 10.0 across the window. The calibration point is 9.00 — the center of this small but sharp heritage ledger.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>
 <p class="art-p">The numbers that set the scale for this report:</p>
@@ -113,7 +104,7 @@ faq:
 <p>Data Science Learning Community. (2024). <em>TidyTuesday: World Heritage Sites</em>. <a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2024/2024-02-06/heritage.csv" target="_blank" rel="noopener noreferrer">https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2024/2024-02-06/heritage.csv</a></p>
 <h2 id="editors-note" class="anchored">Editor’s note</h2>
 <div class="art-editorial-note"><p><em>Artometrics data report from the TidyTuesday research pipeline. Charts and aggregates are reproducible from the embedded exhibits and public source files.</em></p></div>
-<p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2024/2024-02-06" target="_blank" rel="noopener noreferrer">View TidyTuesday source on GitHub</a></p>
+<p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2024/2024-02-06" target="_blank" rel="noopener noreferrer">Source archive (GitHub)</a></p>
 
 </main>
 </div>

@@ -24,40 +24,25 @@ keyPoints:
   - Gordian — Most common Dynasty
 faq:
   - question: >-
-      What does the data show about Constantine’s thirty-one years set the
-      name-level ceiling?
+      How many records are in this dataset?
     answer: >-
-      Key figure: 68 — Records in the working dataset. Reign spans are derived
-      from start and end dates in the emperors table. Negative or zero spans are
-      excluded, so the working metric is observed tenure in years, not a modeled
-      life…
+      68 records in the working dataset.
   - question: >-
-      What does the data show about The top dozen still sits far above the
-      median emperor?
+      What is the median Reign years?
     answer: >-
-      Key figure: 6.50 — Median Reign years. Reign spans are derived from start
-      and end dates in the emperors table. Negative or zero spans are excluded,
-      so the working metric is observed tenure in years, not a modeled life…
+      The median Reign years is 6.50.
   - question: >-
-      What does the data show about Dynasty boxes show contested, not uniform,
-      tenure?
+      What is the highest observed value in this extract?
     answer: >-
-      Key figure: 31.0 — Highest observed Reign years. Reign spans are derived
-      from start and end dates in the emperors table. Negative or zero spans are
-      excluded, so the working metric is observed tenure in years, not a modeled
-      life…
+      The highest observed value in the extract is 31.0.
   - question: >-
-      What does the data show about Nerva–Antonine sits above the median;
-      Gordian trails?
+      Who ruled longest in this dataset?
     answer: >-
-      Key figure: Constantine the Great — Top Name by Reign years. Reign spans
-      are derived from start and end dates in the emperors table. Negative or
-      zero spans are excluded, so the working metric is observed tenure in
-      years, not a modeled life…
+      Constantine the Great leads at 31.0 reign years — the longest tenure in the extract.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">Sixty-eight emperors sit in this reign-length file — enough to ask a hard question about imperial power: did belonging to a dynasty buy more time on the throne, or did longevity come from something messier? The calibration point is a median reign of 6.50 years. That is not a long reign. It is the mathematical center of a political system that chewed through rulers faster than most modern institutions replace CEOs.</p>
+<p class="art-p art-lede">Sixty-eight emperors sit in this reign-length file — enough to ask a hard question about imperial power: did belonging to a dynasty buy more time on the throne, or did longevity come from something messier? The calibration point is a median reign of 6.50 years. That is not a long reign. It is the mathematical center of a political system that chewed through rulers faster than most modern institutions replace CEOs.</p>
 <p class="art-p">The ceiling in the file is Constantine the Great at 31.0 reign years. Gordian is the dynasty label that appears most often. Between those two facts lies the real story: a few men held power for decades, while entire dynastic brands recycled short, fragile tenures. The charts that follow separate name-level longevity from dynasty-level structure so the two are not confused.</p>
 <h2 id="research-question" class="anchored">Research question</h2>
 <p class="art-p">Did dynastic identity make Roman emperors more durable, or did individual political survival overwhelm house-level labels? This report asks whether reign length concentrates around a few exceptional rulers, whether dynasties show distinct tenure distributions, and how much aggregate imperial time is carried by the longest-reigning names.</p>
@@ -135,7 +120,7 @@ faq:
 <p>Ando, C. (2012). <em>Imperial Rome AD 193 to 284: The Critical Century</em>. Edinburgh University Press. <a href="https://edinburghuniversitypress.com/book-imperial-rome-ad-193-to-284.html" target="_blank" rel="noopener noreferrer">https://edinburghuniversitypress.com/book-imperial-rome-ad-193-to-284.html</a></p>
 <h2 id="editors-note" class="anchored">Editor’s note</h2>
 <div class="art-editorial-note"><p><em>Artometrics data report from the TidyTuesday research pipeline. Charts and aggregates are reproducible from the embedded exhibits and public source files.</em></p></div>
-<p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2019/2019-08-13" target="_blank" rel="noopener noreferrer">View TidyTuesday source on GitHub</a></p>
+<p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2019/2019-08-13" target="_blank" rel="noopener noreferrer">Source archive (GitHub)</a></p>
 
 </main>
 </div>

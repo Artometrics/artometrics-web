@@ -24,34 +24,27 @@ keyPoints:
   - 6 — Next comparison questions
   - 0 — Simple answers accepted
 faq:
-  - question: Why They Are Compared?
+  - question: >-
+      What is State systems compared?
     answer: >-
-      Key figure: 2 — State systems compared. A full production stack for this
-      comparison includes BEA state GDP by industry, Census ACS population and
-      migration, IRS migration summaries, BLS employment, state tax and budget…
-  - question: What does the data show about Growth Model?
+      2 — State systems compared.
+  - question: >-
+      What is Rivalry dimensions scored?
     answer: >-
-      Key figure: 7 — Rivalry dimensions scored. A full production stack for
-      this comparison includes BEA state GDP by industry, Census ACS population
-      and migration, IRS migration summaries, BLS employment, state tax and
-      budget…
-  - question: What does the data show about Export Fingerprint?
+      7 — Rivalry dimensions scored.
+  - question: >-
+      What is Export/industry families compared?
     answer: >-
-      Key figure: 7 — Export/industry families compared. A full production stack
-      for this comparison includes BEA state GDP by industry, Census ACS
-      population and migration, IRS migration summaries, BLS employment, state
-      tax and budget…
-  - question: What does the data show about Hidden Tradeoffs?
+      7 — Export/industry families compared.
+  - question: >-
+      What is Next comparison questions?
     answer: >-
-      Key figure: 6 — Next comparison questions. A full production stack for
-      this comparison includes BEA state GDP by industry, Census ACS population
-      and migration, IRS migration summaries, BLS employment, state tax and
-      budget…
+      6 — Next comparison questions.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">California and Texas are the most common American state comparison because each is large enough to stand in for a theory of the country. One is cast as the expensive knowledge-and-culture machine; the other as the growth-and-capacity machine. The framing here scores <strong>2</strong> state systems across <strong>7</strong> rivalry dimensions and <strong>7</strong> export/industry families.</p>
-<p class="art-p">The charts use editorial indices to structure the argument before a full direct-data production pass. They are designed to stop the rivalry from collapsing into a single tax talking point — and to surface the six comparison questions worth asking next.</p>
+<p class="art-p art-lede">California and Texas are the most common American state comparison because each is large enough to stand in for a theory of the country. One is cast as the expensive knowledge-and-culture machine; the other as the growth-and-capacity machine. The framing here scores <strong>2</strong> state systems across <strong>7</strong> rivalry dimensions and <strong>7</strong> export/industry families.</p>
+<p class="art-p">The charts use editorial indices to structure the argument before a full direct-data output pass. They are designed to stop the rivalry from collapsing into a single tax talking point — and to surface the six comparison questions worth asking next.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>
 <p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
@@ -62,7 +55,7 @@ faq:
   <div class="fact-box"><span class="fact-number">0</span><span class="fact-label">Simple answers accepted</span></div>
 </div>
 <h2 id="data-and-method" class="anchored">Data and method</h2>
-<p class="art-p">A full production stack for this comparison includes BEA state GDP by industry, Census ACS population and migration, IRS migration summaries, BLS employment, state tax and budget documents, OEC/ITA export tables, and climate/energy series.</p>
+<p class="art-p">A full output stack for this comparison includes BEA state GDP by industry, Census ACS population and migration, IRS migration summaries, BLS employment, state tax and budget documents, OEC/ITA export tables, and climate/energy series.</p>
 <p class="art-p">Values in the figures are editorial indices that organize the rivalry into comparable dimensions. They should be read as a structured hypothesis map, then replaced with source aggregates before formal rankings.</p>
 <h2 id="why-they-are-compared" class="anchored">Why They Are Compared</h2>
 <h3 id="why-they-are-compared-look" class="anchored">California and Texas are rival systems because both are big enough to feel like countries</h3>
@@ -121,6 +114,6 @@ faq:
 
 <h2 id="editor-s-note" class="anchored">Editor’s note</h2>
 
-<div class="art-editorial-note"><p>Values are editorial indices intended to structure a later direct-data production pass. They should be replaced with source aggregates before making formal rankings.</p></div>
+<div class="art-editorial-note"><p>Values are editorial indices intended to structure a later direct-data output pass. They should be replaced with source aggregates before making formal rankings.</p></div>
 </main>
 </div>

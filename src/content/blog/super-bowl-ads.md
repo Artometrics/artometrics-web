@@ -23,38 +23,26 @@ keyPoints:
   - 2006–2021 — Year span covered in the file
   - youtube#video — Most common Kind
 faq:
-  - question: What does the data show about Median views fell as the archive got denser?
-    answer: >-
-      Key figure: 247 — Records in the working dataset. The source is the
-      TidyTuesday release from 2021-03-02 (R for Data Science community). The
-      working file contains 247 rows and 26 columns after merging available
-      tables in the week…
-  - question: What does the data show about NFL leads the brand ladder on YouTube views?
-    answer: >-
-      Key figure: 41,379 — Median View count. The source is the TidyTuesday
-      release from 2021-03-02 (R for Data Science community). The working file
-      contains 247 rows and 26 columns after merging available tables in the
-      week…
   - question: >-
-      What does the data show about Almost everything in the file is a YouTube
-      video?
+      How many records are in this dataset?
     answer: >-
-      Key figure: 176,373,378 — Highest observed View count. The source is the
-      TidyTuesday release from 2021-03-02 (R for Data Science community). The
-      working file contains 247 rows and 26 columns after merging available
-      tables in the week…
+      247 records in the working dataset.
   - question: >-
-      What does the data show about Five brands hold eighty-seven percent of
-      aggregate views?
+      What is the median View count?
     answer: >-
-      Key figure: Doritos — Top Brand by View count. The source is the
-      TidyTuesday release from 2021-03-02 (R for Data Science community). The
-      working file contains 247 rows and 26 columns after merging available
-      tables in the week…
+      The median View count is 41,379.
+  - question: >-
+      What is the highest observed value in this extract?
+    answer: >-
+      The highest observed value in the extract is 176,373,378.
+  - question: >-
+      Which Brand leads in this extract?
+    answer: >-
+      Doritos leads the Brand ranking in this extract.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">Super Bowl ads do not end when the whistle blows. They migrate to YouTube, where view counts become a second scoreboard. This working file covers 247 ad records spanning 2006–2021, with a median view count of 41,379 and a ceiling of 176,373,378. Doritos is the top brand by view count in the fact boxes; youtube#video is the dominant media kind.</p>
+<p class="art-p art-lede">Super Bowl ads do not end when the whistle blows. They migrate to YouTube, where view counts become a second scoreboard. This working file covers 247 ad records spanning 2006–2021, with a median view count of 41,379 and a ceiling of 176,373,378. Doritos is the top brand by view count in the fact boxes; youtube#video is the dominant media kind.</p>
 <p class="art-p">The interpretive move is simple: treat post-game streaming attention as its own economy. Broadcast reach buys the first audience. YouTube decides which spots keep circulating years later. The charts track that second life — trend, leaders, kind, concentration, and the link between views and likes.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>
 <p class="art-p">The numbers that set the scale for this report:</p>
@@ -120,7 +108,7 @@ faq:
 <p>Data Science Learning Community. (2021). <em>TidyTuesday: Super Bowl Ads</em>. <a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2021/2021-03-02/youtube.csv" target="_blank" rel="noopener noreferrer">https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2021/2021-03-02/youtube.csv</a></p>
 <h2 id="editors-note" class="anchored">Editor’s note</h2>
 <div class="art-editorial-note"><p><em>Artometrics data report from the TidyTuesday research pipeline. Charts and aggregates are reproducible from the embedded exhibits and public source files.</em></p></div>
-<p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2021/2021-03-02" target="_blank" rel="noopener noreferrer">View TidyTuesday source on GitHub</a></p>
+<p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2021/2021-03-02" target="_blank" rel="noopener noreferrer">Source archive (GitHub)</a></p>
 
 </main>
 </div>

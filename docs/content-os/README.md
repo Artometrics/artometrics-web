@@ -1,6 +1,6 @@
 # Artometrics Content OS
 
-Editorial production system for Artometrics: **topic → research → analysis → package → publish → distribute**.
+Editorial prod​uction system for Artometrics: **topic → research → analysis → package → publish → distribute**.
 
 This folder is the control plane. The Expo app remains the reader surface.
 

@@ -25,34 +25,26 @@ keyPoints:
   - 2017–2018 — Year span covered in the file
   - Towards Data Science — Most common Publication
 faq:
-  - question: How reading time moved?
+  - question: >-
+      How many records are in this dataset?
     answer: >-
-      Key figure: 78,388 — Records in the working dataset. The open question is
-      whether longer posts earned more applause. Reading time and claps are
-      related enough to chart, and messy enough that a single correlation will
-      not settle the…
-  - question: Who sits at the top of length?
+      78,388 records in the working dataset.
+  - question: >-
+      What is the median Reading time?
     answer: >-
-      Key figure: 4.00 — Median Reading time. The open question is whether
-      longer posts earned more applause. Reading time and claps are related
-      enough to chart, and messy enough that a single correlation will not
-      settle the…
-  - question: How publications spread length?
+      The median Reading time is 4.00.
+  - question: >-
+      What is the highest observed value in this extract?
     answer: >-
-      Key figure: 100 — Highest observed Reading time. The open question is
-      whether longer posts earned more applause. Reading time and claps are
-      related enough to chart, and messy enough that a single correlation will
-      not settle the…
-  - question: Who beats the median — and who trails?
+      The highest observed value in the extract is 100.
+  - question: >-
+      Which title leads in this extract?
     answer: >-
-      Key figure: My month-long quest to becom — Top Title by Reading time. The
-      open question is whether longer posts earned more applause. Reading time
-      and claps are related enough to chart, and messy enough that a single
-      correlation will not settle the…
+      My month-long quest to becom leads the title ranking in this extract.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">Medium promised a writing network where attention could attach to length, craft, and niche expertise. The metadata trail — reading time, claps, publication tags — lets that promise be tested without reading every essay.</p>
+<p class="art-p art-lede">Medium promised a writing network where attention could attach to length, craft, and niche expertise. The metadata trail — reading time, claps, publication tags — lets that promise be tested without reading every essay.</p>
 <p class="art-p">A TidyTuesday extract of <strong>78,388</strong> article rows from <strong>2017–2018</strong> puts median reading time at <strong>4.00</strong> minutes. The highest observed reading time hits <strong>100</strong> minutes — a month-long chess-mastery quest that sits at the extreme of the length distribution. <strong>Towards Data Science</strong> is the most common publication label in the file.</p>
 <p class="art-p">The open question is whether longer posts earned more applause. Reading time and claps are related enough to chart, and messy enough that a single correlation will not settle the culture of the platform.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>

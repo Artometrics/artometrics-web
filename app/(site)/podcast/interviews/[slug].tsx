@@ -9,6 +9,8 @@ import {
 import { Link, useLocalSearchParams } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { ArticleBody } from "@/components/ArticleBody";
+import { PageSeo } from "@/components/PageSeo";
+import { SeoJsonLd } from "@/components/SeoJsonLd";
 import { assetUrl } from "@/lib/assets";
 import {
   formatAuthorName,
@@ -134,6 +136,35 @@ export default function PodcastEpisodeScreen() {
 
   return (
     <Wrapper variant="narrow" className="gap-3 py-10">
+      <PageSeo
+        title={episode.title}
+        description={episode.description}
+        path={`/podcast/interviews/${episode.id}`}
+        image={episode.image?.url}
+      />
+      <SeoJsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "PodcastEpisode",
+          name: episode.title,
+          description: episode.description,
+          datePublished: episode.pubDate,
+          url: `https://artometrics.com/podcast/interviews/${episode.id}`,
+          image: episode.image?.url
+            ? `https://artometrics.com${episode.image.url}`
+            : undefined,
+          duration: episode.duration || undefined,
+          author: {
+            "@type": "Person",
+            name: formatAuthorName(episode.author),
+          },
+          partOfSeries: {
+            "@type": "PodcastSeries",
+            name: "Artometrics Podcast",
+            url: "https://artometrics.com/podcast",
+          },
+        }}
+      />
       <Text className="text-[11px] tracking-[2.5px] uppercase font-semibold text-accent">
         Episode {episode.episodeNumber ?? episode.id}
       </Text>

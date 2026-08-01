@@ -25,33 +25,26 @@ keyPoints:
   - Parenthood — Top Title by Av rating
   - 1990–2018 — Year span covered in the file
 faq:
-  - question: How the pattern changed over time?
+  - question: >-
+      How many records are in this dataset?
     answer: >-
-      Key figure: 2,266 — Records in the working dataset. The source is the
-      TidyTuesday release from 2019-01-08 (R for Data Science community) — the
-      IMDb / Economist TV ratings extract. The working file contains 2,266 rows
-      and 8 columns…
-  - question: Who sits at the top?
+      2,266 records in the working dataset.
+  - question: >-
+      What is the median Av rating?
     answer: >-
-      Key figure: 8.11 — Median Av rating. The source is the TidyTuesday release
-      from 2019-01-08 (R for Data Science community) — the IMDb / Economist TV
-      ratings extract. The working file contains 2,266 rows and 8 columns…
-  - question: How the field is spread?
+      The median Av rating is 8.11.
+  - question: >-
+      What is the highest observed value in this extract?
     answer: >-
-      Key figure: 9.68 — Highest observed Av rating. The source is the
-      TidyTuesday release from 2019-01-08 (R for Data Science community) — the
-      IMDb / Economist TV ratings extract. The working file contains 2,266 rows
-      and 8 columns…
-  - question: What does the data show about Leader Trends?
+      The highest observed value in the extract is 9.68.
+  - question: >-
+      Which title leads in this extract?
     answer: >-
-      Key figure: Parenthood — Top Title by Av rating. The source is the
-      TidyTuesday release from 2019-01-08 (R for Data Science community) — the
-      IMDb / Economist TV ratings extract. The working file contains 2,266 rows
-      and 8 columns…
+      Parenthood leads the title ranking in this extract.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">Prestige television arrived with a soundtrack of superlatives. Season-level ratings ask a quieter question: when did the golden-age scores actually peak — and did the middle of the field rise with the mythology?</p>
+<p class="art-p art-lede">Prestige television arrived with a soundtrack of superlatives. Season-level ratings ask a quieter question: when did the golden-age scores actually peak — and did the middle of the field rise with the mythology?</p>
 <p class="art-p">The working file holds <strong>2,266</strong> records from <strong>1990–2018</strong>. Median average rating is <strong>8.11</strong>; the highest observed average is <strong>9.68</strong>. Parenthood leads the title ranking in the extract.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>
 <p class="art-p">The numbers that set the scale for this report:</p>

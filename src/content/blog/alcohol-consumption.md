@@ -23,36 +23,26 @@ keyPoints:
   - 376 — Highest observed Beer servings
   - Namibia — Top Country by Beer servings
 faq:
-  - question: What does the data show about Beer Consumption Has a Steep Country Ladder?
-    answer: >-
-      Key figure: 193 — Records in the working dataset. The source is the
-      TidyTuesday release from 2018-06-26 (week13_alcohol_global.csv),
-      maintained by the R for Data Science community. The working file used here
-      contains 193 rows after cleaning.
-  - question: What does the data show about The Top Dozen Has Its Own Median?
-    answer: >-
-      Key figure: 76.0 — Median Beer servings. The source is the TidyTuesday
-      release from 2018-06-26 (week13_alcohol_global.csv), maintained by the R
-      for Data Science community. The working file used here contains 193 rows
-      after cleaning.
-  - question: What does the data show about Most Countries Cluster Far Below the Peaks?
-    answer: >-
-      Key figure: 376 — Highest observed Beer servings. The source is the
-      TidyTuesday release from 2018-06-26 (week13_alcohol_global.csv),
-      maintained by the R for Data Science community. The working file used here
-      contains 193 rows after cleaning.
   - question: >-
-      What does the data show about Concentration Rises Quickly Among the
-      Leaders?
+      How many records are in this dataset?
     answer: >-
-      Key figure: Namibia — Top Country by Beer servings. The source is the
-      TidyTuesday release from 2018-06-26 (week13_alcohol_global.csv),
-      maintained by the R for Data Science community. The working file used here
-      contains 193 rows after cleaning.
+      193 records in the working dataset.
+  - question: >-
+      What is the median Beer servings?
+    answer: >-
+      The median Beer servings is 76.0.
+  - question: >-
+      What is the highest observed value in this extract?
+    answer: >-
+      The highest observed value in the extract is 376.
+  - question: >-
+      Which country leads in this extract?
+    answer: >-
+      Namibia leads the country ranking in this extract.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">Global alcohol data is often collapsed into a single “drinks per person” headline. The TidyTuesday global alcohol extract keeps the beverage split intact — beer, spirits, and wine servings — across <strong>193</strong> country-level records. Beer is the metric that leads these charts, with a median of <strong>76.0</strong> servings and a recorded high of <strong>376</strong> in Namibia.</p>
+<p class="art-p art-lede">Global alcohol data is often collapsed into a single “drinks per person” headline. The TidyTuesday global alcohol extract keeps the beverage split intact — beer, spirits, and wine servings — across <strong>193</strong> country-level records. Beer is the metric that leads these charts, with a median of <strong>76.0</strong> servings and a recorded high of <strong>376</strong> in Namibia.</p>
 <p class="art-p">That spread is the story. A median of 76 and a maximum of 376 means the top of the beer distribution is not a gentle tail; it is a different consumption regime. Country rankings on beer alone will not match rankings on spirits, and the scatter at the end makes that explicit.</p>
 <h2 id="research-question" class="anchored">Research question</h2>
 <p class="art-p">When alcohol data is separated by beverage, does a country’s apparent drinking profile still look like one national habit, or does it split into distinct beer, spirits, and wine cultures? This report uses the 2018 TidyTuesday global alcohol extract to ask where beer volume concentrates and whether the beer leaderboard can stand in for total alcohol behavior.</p>
@@ -76,7 +66,7 @@ faq:
 <p class="art-p">Namibia leads the beer ranking at <strong>376</strong> servings, followed by the Czech Republic at <strong>361</strong>, Gabon at <strong>347</strong>, and Germany at <strong>346</strong>. Lithuania and Poland tie near <strong>343</strong>. Ireland sits lower in the top dozen at <strong>313</strong>.</p>
 <p class="art-p">These are not clustered scores around the global median of 76. The leaders occupy roughly four to five times the typical country’s beer volume in this file — a reminder that beer culture is geographically concentrated, not evenly shared.</p>
 <p class="art-p">The country names matter because they point to different beverage systems. Namibia and Gabon place African markets in the same high-beer conversation as the Czech Republic, Germany, Lithuania, Poland, and Ireland — countries often associated with long-standing brewing industries, beer taxation regimes, and pub or lager cultures. A single “Europe drinks beer” shortcut would miss the African leaders; a single “income predicts beer” shortcut would miss the spread across very different economies.</p>
-<p class="art-p">The 2018 TidyTuesday file descends from World Health Organization alcohol indicators that summarize recorded servings rather than clinical outcomes. That distinction is important: a serving count can identify beverage concentration, but it does not measure binge patterns, liver disease, drunk-driving deaths, or unrecorded home production. The chart is strongest as a map of recorded beverage preference.</p>
+<p class="art-p">The 2018 TidyTuesday file descends from World Health Organization alcohol indicators that summarize recorded servings rather than clinical outcomes. That distinction is important: a serving count can identify beverage concentration, but it does not measure binge patterns, liver disease, drunk-driving deaths, or unrecorded home output. The chart is strongest as a map of recorded beverage preference.</p>
 
 <h2 id="the-top-dozen-has-its-own-median" class="anchored">The Top Dozen Has Its Own Median</h2>
 <h3 id="the-top-dozen-has-its-own-median-look" class="anchored">Namibia leads at 376 — 338 marks the median among the top dozen</h3>
@@ -119,7 +109,7 @@ faq:
 <p class="art-p">That is why the article does not collapse the file into a total-servings index. Total alcohol may be the right measure for burden-of-disease work; beverage separation is the right measure for understanding culture, taxation, retail systems, and substitution. The same country can be a beer outlier, a spirits moderate, and a wine footnote.</p>
 
 <h2 id="what-this-file-cannot-tell-you" class="anchored">What this file cannot tell you</h2>
-<p class="art-p">Country-level serving estimates inherit survey, sales, and tourism distortions. Unrecorded alcohol, home production, and cross-border purchases can bias official figures. The 2018 TidyTuesday snapshot is not a live WHO dashboard.</p>
+<p class="art-p">Country-level serving estimates inherit survey, sales, and tourism distortions. Unrecorded alcohol, home output, and cross-border purchases can bias official figures. The 2018 TidyTuesday snapshot is not a live WHO dashboard.</p>
 <p class="art-p">Rankings on beer servings alone should not be quoted as total alcohol harm rankings. Spirits and wine columns exist precisely because the beverage mix differs.</p>
 <h2 id="what-to-take-away" class="anchored">What to take away</h2>
 <p class="art-p">Beer consumption in this extract is a steep hierarchy: Namibia at 376 servings against a world median of 76. The top dozen forms its own high plateau around a median of 338.</p>

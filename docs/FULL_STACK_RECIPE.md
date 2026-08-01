@@ -40,7 +40,7 @@ Prices are approximate **2026 USD list / starter tiers**. Confirm at signup. Pre
 | # | Service | Subscribe | Hookup | Unlocks |
 |---|---------|-----------|--------|---------|
 | 1 | **GitHub** | Free (Pro $4 if private extras) | Repo already linked; optional GitHub MCP | Source of truth for Content OS + PRs |
-| 2 | **Netlify** | **Starter** (free) or **Pro** (~$20) if you want password protection / more build minutes | Site → `main` · build `npm run build` · publish `dist` · env vars · `npx netlify link` | Production site, functions (`/api/*`), forms, previews |
+| 2 | **Netlify** | **Starter** (free) or **Pro** (~$20) if you want password protection / more build minutes | Site → `main` · build `npm run build` · publish `dist` · env vars · `npx netlify link` | Prod​uction site, functions (`/api/*`), forms, previews |
 | 3 | **Cloudflare** | **Free** | DNS for `artometrics.com` → Netlify · optional proxy orange-cloud · later R2 | Fast DNS, SSL, DDoS, cache; cheap asset CDN later |
 | 4 | **Supabase** | **Free** → **Pro** ($25) only when DB/auth limits bite | Project · run `supabase/migrations/001_product.sql` · Storage bucket `media` · URL allow list · env keys | Login, signup, saves, library, subscription status, media files |
 | 5 | **Stripe** | Pay-as-you-go (~2.9%+$0.30) · no monthly | Products for 3 tiers · **Link ON** · webhook · Customer Portal · env price IDs | Paid membership, one-click Link checkout, billing portal |

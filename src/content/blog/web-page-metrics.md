@@ -24,39 +24,25 @@ keyPoints:
   - desktop — Most common Client
 faq:
   - question: >-
-      What does the data show about Median P50 fell as pages got faster at the
-      center?
+      How many records are in this dataset?
     answer: >-
-      Key figure: 238 — Records in the working dataset. HTTP Archive-style
-      page-weight metrics by client (desktop/mobile) and measure type,
-      aggregated as percentile bands. The TidyTuesday release from 2022-11-15
-      supplies the…
+      238 records in the working dataset.
   - question: >-
-      What does the data show about Desktop and mobile split the P50
-      distribution?
+      What is the median P50?
     answer: >-
-      Key figure: 5.97 — Median P50. HTTP Archive-style page-weight metrics by
-      client (desktop/mobile) and measure type, aggregated as percentile bands.
-      The TidyTuesday release from 2022-11-15 supplies the…
+      The median P50 is 5.97.
   - question: >-
-      What does the data show about P50 and P90 move together in performance
-      space?
+      What is the highest observed value in this extract?
     answer: >-
-      Key figure: 9.80 — Highest observed P50. HTTP Archive-style page-weight
-      metrics by client (desktop/mobile) and measure type, aggregated as
-      percentile bands. The TidyTuesday release from 2022-11-15 supplies the…
+      The highest observed value in the extract is 9.80.
   - question: >-
-      What does the data show about A client–year heatmap shows where speed
-      migrated?
+      Which Measure leads in this extract?
     answer: >-
-      Key figure: speedIndex — Top Measure by P50. HTTP Archive-style
-      page-weight metrics by client (desktop/mobile) and measure type,
-      aggregated as percentile bands. The TidyTuesday release from 2022-11-15
-      supplies the…
+      speedIndex leads the Measure ranking in this extract.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">The web’s performance story is a percentile story. This file holds 238 records spanning 2016–2022, with a median P50 of 5.97 and a high of 9.80. SpeedIndex leads the fact-box measure ranking; desktop is the most common client.</p>
+<p class="art-p art-lede">The web’s performance story is a percentile story. This file holds 238 records spanning 2016–2022, with a median P50 of 5.97 and a high of 9.80. SpeedIndex leads the fact-box measure ranking; desktop is the most common client.</p>
 <p class="art-p">The charts track how median P50 moved, how desktop and mobile differ, how P50 relates to P90, and how client–year heatmaps reveal drift. The calibration point is 5.97 — the center of the P50 field in this HTTP Archive-style extract.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>
 <p class="art-p">The numbers that set the scale for this report:</p>
@@ -122,7 +108,7 @@ faq:
 <p>Data Science Learning Community. (2022). <em>TidyTuesday: Web Page Metrics</em>. <a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2022/2022-11-15/speed_index.csv" target="_blank" rel="noopener noreferrer">https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2022/2022-11-15/speed_index.csv</a></p>
 <h2 id="editors-note" class="anchored">Editor’s note</h2>
 <div class="art-editorial-note"><p><em>Artometrics data report from the TidyTuesday research pipeline. Charts and aggregates are reproducible from the embedded exhibits and public source files.</em></p></div>
-<p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2022/2022-11-15" target="_blank" rel="noopener noreferrer">View TidyTuesday source on GitHub</a></p>
+<p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2022/2022-11-15" target="_blank" rel="noopener noreferrer">Source archive (GitHub)</a></p>
 
 </main>
 </div>

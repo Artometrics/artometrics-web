@@ -23,35 +23,25 @@ keyPoints:
   - Marvel — Most common Publisher
 faq:
   - question: >-
-      What does the data show about Early Characters Logged Higher Median
-      Appearances?
+      How many records are in this dataset?
     answer: >-
-      Key figure: 23,272 — Records in the working dataset. The source is the
-      TidyTuesday release from 2018-05-29 (week9_comic_characters.csv). After
-      cleaning, 23,272 rows remain.
-  - question: What does the data show about A Dozen Icons Own the Appearance Summit?
-    answer: >-
-      Key figure: 4.00 — Median Appearances. The source is the TidyTuesday
-      release from 2018-05-29 (week9_comic_characters.csv). After cleaning,
-      23,272 rows remain.
+      23,272 records in the working dataset.
   - question: >-
-      What does the data show about Marvel Has More Characters; DC’s Median
-      Appearances Run Higher?
+      What is the median Appearances?
     answer: >-
-      Key figure: 4,043 — Highest observed Appearances. The source is the
-      TidyTuesday release from 2018-05-29 (week9_comic_characters.csv). After
-      cleaning, 23,272 rows remain.
+      The median Appearances is 4.00.
   - question: >-
-      What does the data show about The Top Five Names Hold Nearly Half the
-      Leader Aggregate?
+      What is the highest observed value in this extract?
     answer: >-
-      Key figure: Spider-Man (Peter Parker) — Top Name by Appearances. The
-      source is the TidyTuesday release from 2018-05-29
-      (week9_comic_characters.csv). After cleaning, 23,272 rows remain.
+      The highest observed value in the extract is 4,043.
+  - question: >-
+      Which Name leads in this extract?
+    answer: >-
+      Spider-Man (Peter Parker) leads the Name ranking in this extract.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">Comic-book universes are attention economies with capes. The TidyTuesday comic-characters extract used here holds <strong>23,272</strong> records spanning <strong>1935–2013</strong>, with a median of <strong>4.00</strong> appearances and a high of <strong>4,043</strong> for Spider-Man (Peter Parker). Marvel is the most common publisher label.</p>
+<p class="art-p art-lede">Comic-book universes are attention economies with capes. The TidyTuesday comic-characters extract used here holds <strong>23,272</strong> records spanning <strong>1935–2013</strong>, with a median of <strong>4.00</strong> appearances and a high of <strong>4,043</strong> for Spider-Man (Peter Parker). Marvel is the most common publisher label.</p>
 <p class="art-p">That median of four appearances is the catalog’s quiet truth: most named characters are spear-carriers. The charts follow how appearance mass concentrates in a handful of franchise engines.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>
 <p class="art-p">The numbers that set the scale for this report:</p>

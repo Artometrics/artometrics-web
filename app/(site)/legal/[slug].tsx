@@ -2,6 +2,7 @@ import { Text } from "react-native";
 import { Link, useLocalSearchParams } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { ArticleBody } from "@/components/ArticleBody";
+import { PageSeo } from "@/components/PageSeo";
 import { formatDate, getLegalPage, getLegalPages } from "@/lib/content";
 import { paramString } from "@/lib/params";
 
@@ -27,6 +28,11 @@ export default function LegalScreen() {
 
   return (
     <Wrapper variant="prose" className="gap-3 py-12">
+      <PageSeo
+        title={page.page}
+        description={`${page.page} — Artometrics legal.`}
+        path={`/legal/${page.id}`}
+      />
       <Text className="text-[11px] tracking-[2.5px] uppercase font-semibold text-accent">
         Legal
       </Text>

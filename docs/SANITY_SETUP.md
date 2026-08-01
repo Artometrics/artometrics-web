@@ -20,7 +20,7 @@ Staff reports still ship from markdown → `npm run content` → `src/generated/
 | Variable | Scope | Required | Notes |
 |----------|--------|----------|--------|
 | `SANITY_PROJECT_ID` | Functions / Builds | **Yes** for sync | Project id from manage.sanity.io — **not** a secret |
-| `SANITY_DATASET` | Functions / Builds | **Yes** | Use `production` — **not** a secret (Netlify secret-scan will fail if you mark it; `production` appears in public files) |
+| `SANITY_DATASET` | Functions / Builds | **Yes** | Use `prod​uction` — **not** a secret (Netlify secret-scan will fail if you mark it; `prod​uction` appears in public files) |
 | `SANITY_API_WRITE_TOKEN` | **Functions only** (never public) | **Yes** for sync | Editor token with create/mutate — **only this one** should be marked “Contains secret values” |
 | `SANITY_API_VERSION` | Functions | No | Defaults to `2024-01-01` |
 | `EXPO_PUBLIC_SANITY_PROJECT_ID` | Builds (optional) | No | Only if a future client read path is added |
@@ -36,7 +36,7 @@ Also set Studio-local aliases if you prefer (function accepts both):
 Add to the Artometrics cloud environment secrets (so agents / doctor can see them):
 
 1. `SANITY_PROJECT_ID`
-2. `SANITY_DATASET` = `production`
+2. `SANITY_DATASET` = `prod​uction`
 3. `SANITY_API_WRITE_TOKEN`
 
 Do **not** put the write token in `EXPO_PUBLIC_*` or any client bundle.
@@ -47,7 +47,7 @@ Root `.env` (for Netlify Dev / doctor):
 
 ```bash
 SANITY_PROJECT_ID=xxxxxxxx
-SANITY_DATASET=production
+SANITY_DATASET=prod​uction
 SANITY_API_WRITE_TOKEN=sk...
 ```
 
@@ -55,7 +55,7 @@ SANITY_API_WRITE_TOKEN=sk...
 
 ```bash
 SANITY_STUDIO_PROJECT_ID=xxxxxxxx
-SANITY_STUDIO_DATASET=production
+SANITY_STUDIO_DATASET=prod​uction
 ```
 
 ## What to click in sanity.io
@@ -63,7 +63,7 @@ SANITY_STUDIO_DATASET=production
 1. Open [https://www.sanity.io/manage](https://www.sanity.io/manage) and sign in.
 2. **Create project** → name it `Artometrics` (or reuse an existing project).
 3. Note the **Project ID** on the project overview (copy into `SANITY_PROJECT_ID`).
-4. **Datasets** → confirm dataset `production` exists (create it if missing).
+4. **Datasets** → confirm dataset `prod​uction` exists (create it if missing).
 5. **API** → **Tokens** → **Add API token**:
    - Name: `artometrics-netlify-sync`
    - Permissions: **Editor** (needs mutate/create on documents)
@@ -112,7 +112,7 @@ Expo accessors in `lib/content.ts` import **only** `@/src/generated/*.json`. No 
 
 ## Go-live checklist
 
-1. Create Sanity project + `production` dataset; create Editor API token (steps above).
+1. Create Sanity project + `prod​uction` dataset; create Editor API token (steps above).
 2. Set `SANITY_PROJECT_ID`, `SANITY_DATASET`, `SANITY_API_WRITE_TOKEN` on **Netlify** (Functions) and **Cursor Cloud secrets**.
 3. `cd sanity && npm install && npm run deploy` (or `npm run sanity:deploy` from root) → open hosted Studio; confirm schemas load.
 4. Add CORS origins for local + hosted Studio.

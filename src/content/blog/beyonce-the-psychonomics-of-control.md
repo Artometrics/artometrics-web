@@ -4,9 +4,9 @@ slug: beyonce-the-psychonomics-of-control
 author: kyle-mcauliffe
 pubDate: 2026-07-28T12:00:00.000Z
 description: >-
-  A Psychonomics profile of Beyoncé — Hermann Leadership Trait Analysis, Parkwood
-  as institutionalized self, Lemonade’s canon economics, and an 8,000-line lyric
-  machine.
+  A Psychonomics profile of Beyoncé — Hermann Leadership Trait Analysis,
+  Parkwood as institutionalized self, Lemonade’s canon economics, and an
+  8,000-line lyric machine.
 heroImage: /images/content/articles/beyonce-the-psychonomics-of-control/hero.png
 draft: false
 tags:
@@ -25,16 +25,15 @@ keyPoints:
     0.91 — Expert-coded Task Orientation (T) under Hermann (1999) LTA — the
     highest spike in this profile
   - >-
-    0.88 — Belief in Ability to Control Events (B) — surprise-album and
-    Parkwood ownership signature
+    0.88 — Belief in Ability to Control Events (B) — surprise-album and Parkwood
+    ownership signature
   - >-
     #32 — Lemonade’s rank on the Rolling Stone 500 (2020 list) in the
     Artometrics album file
   - >-
     186 — Billboard weeks on chart for the 2013 self-titled album in the same
     file
-  - >-
-    8,000 — Lyric lines in the Artometrics Beyoncé extract (139 song entities)
+  - '8,000 — Lyric lines in the Artometrics Beyoncé extract (139 song entities)'
   - >-
     543 / 5 — Token counts for “love” vs “power” in that extract — affiliation
     lexicon dwarfs abstract power language
@@ -54,17 +53,18 @@ faq:
       intelligence-community assessments.
   - question: How does Beyoncé compare to the Caesar case?
     answer: >-
-      Caesar combined near-ceiling Need for Power with near-floor Distrust and
-      a patronage network with no redundancy. Beyoncé also scores high on power
+      Caesar combined near-ceiling Need for Power with near-floor Distrust and a
+      patronage network with no redundancy. Beyoncé also scores high on power
       and control, but Distrust is mid-high (0.62), affiliation is elevated, and
       the load-bearing institution is a company she owns rather than personal
       pardons of rivals.
   - question: What data does Artometrics already hold vs invent here?
     answer: >-
       Observed in-repo: lyric extract, Rolling Stone album rows, Emmy/Netflix
-      Homecoming presence. Derived for this report: LTA expert coding, qualitative
-      control network, and interpretive indices. Renaissance/Cowboy Carter eras
-      are noted as timeline context but are not yet in the RS500 extract.
+      Homecoming presence. Derived for this report: LTA expert coding,
+      qualitative control network, and interpretive indices. Renaissance/Cowboy
+      Carter eras are noted as timeline context but are not yet in the RS500
+      extract.
 ---
 <div id="quarto-content">
 <nav id="TOC" role="doc-toc">
@@ -85,7 +85,7 @@ faq:
 </ul>
 </nav>
 <main class="art-article-main">
-<p class="art-p">Economics comes from the Greek <em>oikonomia</em> — the management of the house. Psychonomics asks the prior question: who is managing the soul of the house, and what does their inner architecture cost everyone living inside it? The founding Artometrics case was Julius Caesar: a leader who treated the self as the institution, extended trust freely, and was removed by the highest-centrality nodes in his own patronage graph.</p>
+<p class="art-p art-lede">Economics comes from the Greek <em>oikonomia</em> — the management of the house. Psychonomics asks the prior question: who is managing the soul of the house, and what does their inner architecture cost everyone living inside it? The founding Artometrics case was Julius Caesar: a leader who treated the self as the institution, extended trust freely, and was removed by the highest-centrality nodes in his own patronage graph.</p>
 <p class="art-p">Beyoncé Knowles-Carter is the entertainment-industry case for the same method. Born in 1981, solo debut album year 2003 in the Artometrics Rolling Stone file, she is not a head of state. She is a head of catalog — and of Parkwood Entertainment, the firm that makes authorship itself the load-bearing wall. The psychonomic claim of this report is specific: where Caesar’s theory was <em>magnanimous personal power without redundancy</em>, Beyoncé’s theory is <em>owned control of the creative house</em>, paired with an affiliation-dense public voice and a spectacle-heavy measurable catalog.</p>
 
 <h2 id="research-question" class="anchored">Research question</h2>

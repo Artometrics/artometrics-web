@@ -20,30 +20,21 @@ keyPoints:
   - US — Most common Transfer
 faq:
   - question: >-
-      What does the data show about Transfers Concentrate Overwhelmingly in the
-      US?
+      How many records are in this dataset?
     answer: >-
-      Key figure: 2,194 — Records in the working dataset. The source is the
-      TidyTuesday release from 2018-12-18 (allCetaceanData.csv). After cleaning,
-      2,194 rows remain.
-  - question: What does the data show about Annual Volume Peaked in the Early 1970s?
+      2,194 records in the working dataset.
+  - question: >-
+      What time period does this dataset cover?
     answer: >-
-      Key figure: 1946–2017 — Year span covered in the file. The source is the
-      TidyTuesday release from 2018-12-18 (allCetaceanData.csv). After cleaning,
-      2,194 rows remain.
-  - question: What does the data show about Bottlenose Is the Archive’s Default Animal?
+      The file covers 1946–2017.
+  - question: >-
+      What is Most common Transfer?
     answer: >-
-      Key figure: US — Most common Transfer. The source is the TidyTuesday
-      release from 2018-12-18 (allCetaceanData.csv). After cleaning, 2,194 rows
-      remain.
-  - question: What does the data show about The US Bucket Is the Landscape?
-    answer: >-
-      The source is the TidyTuesday release from 2018-12-18
-      (allCetaceanData.csv). After cleaning, 2,194 rows remain.
+      US — Most common Transfer.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">Captive and transferred cetaceans leave paper trails: species names, years, and transfer geographies. The TidyTuesday cetacean extract used here holds <strong>2,194</strong> records spanning <strong>1946–2017</strong>, with the United States labeled as the dominant transfer geography.</p>
+<p class="art-p art-lede">Captive and transferred cetaceans leave paper trails: species names, years, and transfer geographies. The TidyTuesday cetacean extract used here holds <strong>2,194</strong> records spanning <strong>1946–2017</strong>, with the United States labeled as the dominant transfer geography.</p>
 <p class="art-p">Bottlenose animals dominate the name counts. That single species weight shapes every timeline and leader chart that follows — this archive is mostly a bottlenose history with rarer orcas, belugas, and white-sided dolphins in the margins.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>
 <p class="art-p">The numbers that set the scale for this report:</p>

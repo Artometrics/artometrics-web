@@ -24,34 +24,26 @@ keyPoints:
   - '67 yrs — Span of the dataset: 1958 to 2025'
   - Taylor Swift — Highest average run length among modern artists
 faq:
-  - question: What does the data show about Run Length Over the Decades?
+  - question: >-
+      What is Number-one songs in the dataset?
     answer: >-
-      Key figure: 1,177 — Number-one songs in the dataset (1958–2025). Start
-      with the scale: 1,177 number-one songs (1958–2025); 2 wks median run
-      length; The Beatles with the most appearances; Taylor Swift with the
-      highest average run length among modern artists.
-  - question: What does the data show about Longest Runs Ever?
+      1,177 — Number-one songs in the dataset (1958–2025).
+  - question: >-
+      What is the median run length?
     answer: >-
-      Key figure: 2 wks — Median run length — most #1s are fleeting. Start with
-      the scale: 1,177 number-one songs (1958–2025); 2 wks median run length;
-      The Beatles with the most appearances; Taylor Swift with the highest
-      average run length among modern artists.
-  - question: How Artists Compare?
+      The median run length is 2 wks.
+  - question: >-
+      What is Longest single run in the dataset?
     answer: >-
-      Key figure: 19 wks — Longest single run in the dataset. Start with the
-      scale: 1,177 number-one songs (1958–2025); 2 wks median run length; The
-      Beatles with the most appearances; Taylor Swift with the highest average
-      run length among modern artists.
-  - question: What does the data show about Above Or Below the Line?
+      19 wks — Longest single run in the dataset.
+  - question: >-
+      What is Most appearances in the dataset?
     answer: >-
-      Key figure: The Beatles — Most appearances in the dataset — 20 number-one
-      songs. Start with the scale: 1,177 number-one songs (1958–2025); 2 wks
-      median run length; The Beatles with the most appearances; Taylor Swift
-      with the highest average run length among modern artists.
+      The Beatles — Most appearances in the dataset.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">The Billboard Hot 100 has published a number-one song every week since August 1958. In that time it has absorbed the British Invasion, the disco era, the rise of hip-hop, the collapse of the album format, and the complete restructuring of the music industry by streaming platforms. Through all of it, the same basic question persists: how long can a song stay at the top?</p>
+<p class="art-p art-lede">The Billboard Hot 100 has published a number-one song every week since August 1958. In that time it has absorbed the British Invasion, the disco era, the rise of hip-hop, the collapse of the album format, and the complete restructuring of the music industry by streaming platforms. Through all of it, the same basic question persists: how long can a song stay at the top?</p>
 <p class="art-p">The file covers 1,177 distinct number-one entries — the full record of Hot 100 dominance through early 2025. The median run lasts just 2 weeks. The record holder, as of this dataset, is 19 weeks. Between those two facts sits the entire history of popular music.</p>
 <p class="art-p">Start with the scale: <strong>1,177</strong> number-one songs (1958–2025); <strong>2 wks</strong> median run length; The Beatles with the most appearances; Taylor Swift with the highest average run length among modern artists.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>
@@ -121,6 +113,6 @@ faq:
 <h2 id="editor-s-note" class="anchored">Editor’s note</h2>
 
 <div class="art-editorial-note"><p>This report covers all 1,177 number-one entries in the Hot 100 dataset through early 2025. Chart 3 shows the top 10–15 artists by frequency of number-one appearances; the box plots represent the spread of run lengths across each artist's career, not a single song.</p><p><em>All run-length metrics are in weeks. The global median (2 weeks) is used as the baseline in Chart 4. Streaming-era songs (post-2012) systematically outperform the historical median and are over-represented in the top-10 longest runs.</em></p></div>
-<p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2025/2025-08-26" target="_blank" rel="noopener noreferrer">View TidyTuesday source on GitHub</a></p>
+<p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2025/2025-08-26" target="_blank" rel="noopener noreferrer">Source archive (GitHub)</a></p>
 </main>
 </div>

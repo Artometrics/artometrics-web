@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Text, View } from "react-native";
-import { Link } from "expo-router";
+import { Link, router } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { PrimaryButton } from "@/components/PrimaryButton";
 import { PageSeo } from "@/components/PageSeo";
@@ -8,6 +8,7 @@ import { PLANS } from "@/lib/product/plans";
 import { apiFetch } from "@/lib/supabase/client";
 import { useAuth } from "@/lib/auth";
 import { openExternalUrl } from "@/lib/openExternal";
+import { trackEvent } from "@/lib/analytics/ga";
 
 export default function PricingScreen() {
   const { user } = useAuth();
@@ -36,6 +37,7 @@ export default function PricingScreen() {
     if (!user) return;
     setError(null);
     setBusyTier(tier);
+    trackEvent("subscribe_cta", { tier, source: "pricing" });
     try {
       const res = await apiFetch("create-checkout", {
         method: "POST",
@@ -122,9 +124,13 @@ export default function PricingScreen() {
                 onPress={() => checkout(plan.tier)}
               />
             ) : (
-              <Link href="/signup" asChild>
-                <PrimaryButton label="Start free trial" />
-              </Link>
+              <PrimaryButton
+                label="Start free trial"
+                onPress={() => {
+                  trackEvent("subscribe_cta", { tier: plan.tier, source: "pricing_signup" });
+                  router.push("/signup");
+                }}
+              />
             )}
           </View>
         ))}

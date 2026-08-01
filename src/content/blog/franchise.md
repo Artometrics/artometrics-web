@@ -37,38 +37,26 @@ keyPoints:
     ~61% — Share of all tracked revenue that comes from Merchandise, Licensing
     &amp; Retail — the dominant stream across the entire dataset
 faq:
-  - question: What does the data show about Top 20 Franchises By Revenue?
+  - question: >-
+      Which franchise has the highest lifetime revenue in the dataset?
     answer: >-
-      Key figure: $91B — Pokémon lifetime revenue — the highest-grossing media
-      franchise ever recorded, more than the MCU, Star Wars, and Harry Potter
-      put together. The TidyTuesday 2019 media franchises dataset covers 107
-      properties, each with at least $4B in estimated lifetime revenue as of
-      mid-2019. The figures are sourced from Wikipedia’s…
-  - question: What does the data show about Revenue Per Year of Existence?
+      Pokémon at $91B — the highest-grossing media franchise in the dataset — the highest-grossing media franchise ever recorded, more than the MCU, Star Wars, and Harry Potter put together.
+  - question: >-
+      How many franchises are in the dataset?
     answer: >-
-      Key figure: 107 — Unique franchises in the dataset — every one of them has
-      already cleared at least $4B in lifetime revenue. The TidyTuesday 2019
-      media franchises dataset covers 107 properties, each with at least $4B in
-      estimated lifetime revenue as of mid-2019. The figures are sourced from
-      Wikipedia’s…
-  - question: 'What does the data show about The Disney Empire, Consolidated?'
+      107 unique franchises, each with at least $4B in estimated lifetime revenue.
+  - question: >-
+      What is the minimum revenue threshold for inclusion?
     answer: >-
-      Key figure: $4B+ — Minimum threshold for inclusion — most IP that has ever
-      existed never gets close to this number. The TidyTuesday 2019 media
-      franchises dataset covers 107 properties, each with at least $4B in
-      estimated lifetime revenue as of mid-2019. The figures are sourced from
-      Wikipedia’s…
-  - question: What this file cannot tell you?
+      $4B+ minimum lifetime revenue for inclusion in the dataset.
+  - question: >-
+      How many revenue categories are tracked per franchise?
     answer: >-
-      Key figure: 8 — Revenue categories tracked: Merchandise, Video Games, Box
-      Office, Home Video, Comic/Manga, Music, TV, and Book Sales. The
-      TidyTuesday 2019 media franchises dataset covers 107 properties, each with
-      at least $4B in estimated lifetime revenue as of mid-2019. The figures are
-      sourced from Wikipedia’s…
+      8 revenue categories: Merchandise, Video Games, Box Office, Home Video, Comic/Manga, Music, TV, and Book Sales.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">The global media industry runs on intellectual property — and a surprisingly small number of franchises account for most of the money. The TidyTuesday 2019 media franchises dataset covers 107 properties, each with at least $4 billion in estimated lifetime revenue as of mid-2019. Every franchise here has already cleared a threshold that most IP never approaches. This is not a representative sample of the media industry. It is a map of its ceiling.</p>
+<p class="art-p art-lede">The global media industry runs on intellectual property — and a surprisingly small number of franchises account for most of the money. The TidyTuesday 2019 media franchises dataset covers 107 properties, each with at least $4 billion in estimated lifetime revenue as of mid-2019. Every franchise here has already cleared a threshold that most IP never approaches. This is not a representative sample of the media industry. It is a map of its ceiling.</p>
 <p class="art-p">Three charts, three angles on the same structural question: where does franchise money actually come from, which properties generate it most efficiently, and what does the ownership picture look like when subsidiaries stop looking like separate competitors? The answers are Merchandise, Pokémon, and Disney — in that order.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>
 <p class="art-p">The numbers that set the scale for this report:</p>
@@ -201,7 +189,7 @@ used honestly and at full capacity.
 <p class="art-p">— Artometrics Editorial</p></div>
 
 <p class="art-github-wrap">
-  <a class="art-github-btn" href="https://github.com/Artometrics/franchise" target="_blank" rel="noopener noreferrer">View source on GitHub</a>
+  <a class="art-github-btn" href="https://github.com/Artometrics/franchise" target="_blank" rel="noopener noreferrer">Source archive (GitHub)</a>
 </p>
 </main>
 </div>

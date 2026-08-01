@@ -44,7 +44,7 @@ Turn a topic + data into a full Vice/magazine-scale package: researched brief �
 
 ## What still needs human setup
 
-1. Netlify production deploy from `main` (should auto-build on push)
+1. Netlify prod​uction deploy from `main` (should auto-build on push)
 2. Re-auth Higgsfield MCP
 3. GA4 Measurement ID → `EXPO_PUBLIC_GA_ID`
 4. Supabase Storage `media` bucket + env keys

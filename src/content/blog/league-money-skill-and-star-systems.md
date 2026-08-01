@@ -26,38 +26,26 @@ keyPoints:
   - 92 — NBA star leverage index in this editorial model
   - 6 — Leagues compared
 faq:
-  - question: What does the data show about The NFL makes ordinary franchises expensive?
-    answer: >-
-      Key figure: $6.5B — Approximate average NFL franchise value in recent
-      Forbes-style estimates. The five charts below build a cross-league lens
-      for later Artometrics profiles: value floors, star leverage, caps versus
-      payroll spread, event scarcity, and the split between…
-  - question: What does the data show about Basketball lets one name rewrite the jersey?
-    answer: >-
-      Key figure: 17 — NFL regular-season games per team. The five charts below
-      build a cross-league lens for later Artometrics profiles: value floors,
-      star leverage, caps versus payroll spread, event scarcity, and the split
-      between…
   - question: >-
-      What does the data show about Caps and taxes decide whether money
-      separates or merely sustains?
+      What is the approximate average NFL franchise value?
     answer: >-
-      Key figure: 162 — MLB regular-season games per team. The five charts below
-      build a cross-league lens for later Artometrics profiles: value floors,
-      star leverage, caps versus payroll spread, event scarcity, and the split
-      between…
+      Approximately $6.5B average NFL franchise value in recent Forbes-style estimates.
   - question: >-
-      What does the data show about Seventeen games and 162 games are different
-      psychologies?
+      How many regular-season games does each NFL team play?
     answer: >-
-      Key figure: 92 — NBA star leverage index in this editorial model. The five
-      charts below build a cross-league lens for later Artometrics profiles:
-      value floors, star leverage, caps versus payroll spread, event scarcity,
-      and the split between…
+      17 NFL regular-season games per team.
+  - question: >-
+      How many regular-season games does each MLB team play?
+    answer: >-
+      162 MLB regular-season games per team.
+  - question: >-
+      What is the NBA star leverage index in this editorial model?
+    answer: >-
+      92 NBA star leverage index in this editorial model.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">A sports league is a measurement system before it is an entertainment product. It decides how much money can matter, how much one player can matter, how often fans get to reset emotionally, and how widely a story can travel. Compare six leagues on those axes and franchise identity stops looking interchangeable.</p>
+<p class="art-p art-lede">A sports league is a measurement system before it is an entertainment product. It decides how much money can matter, how much one player can matter, how often fans get to reset emotionally, and how widely a story can travel. Compare six leagues on those axes and franchise identity stops looking interchangeable.</p>
 <p class="art-p">The NFL’s approximate $6.5 billion average franchise value sits beside a 17-game regular season; MLB asks teams to survive 162. An editorial NBA star-leverage index of 92 in this model captures how completely basketball lets individuals rewrite team identity. Those are not trivia points. They are design choices that manufacture different kinds of belonging.</p>
 <p class="art-p">The five charts below build a cross-league lens for later Artometrics profiles: value floors, star leverage, caps versus payroll spread, event scarcity, and the split between global reach and domestic ritual.</p>
 

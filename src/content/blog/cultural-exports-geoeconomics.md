@@ -20,34 +20,26 @@ keyPoints:
   - 45 — Global cities in World Cities Culture Forum 5th edition summaries
   - 3 — Asian cultural wave paths compared
 faq:
-  - question: What does the data show about Soft Power and Trade?
+  - question: >-
+      How many cultural-export systems are highlighted?
     answer: >-
-      Key figure: 8 — Countries and cultural-export systems highlighted. The
-      source stack includes UNESCO cultural statistics, WIPO creative-industry
-      indicators, World Bank and OECD services data, MusicBrainz,
-      IMDb/TMDb-style film metadata, Wikidata,…
-  - question: What does the data show about Medium Exportability?
+      8 countries and cultural-export systems highlighted in the framing.
+  - question: >-
+      How many mediums are scored for exportability?
     answer: >-
-      Key figure: 8 — Mediums scored for exportability. The source stack
-      includes UNESCO cultural statistics, WIPO creative-industry indicators,
-      World Bank and OECD services data, MusicBrainz, IMDb/TMDb-style film
-      metadata, Wikidata,…
-  - question: What does the data show about Cultural Waves?
+      8 mediums scored for exportability across film, music, games, and related fields.
+  - question: >-
+      How many diagnostic cultural trade questions does the report use?
     answer: >-
-      Key figure: 6 — Diagnostic cultural trade questions. The source stack
-      includes UNESCO cultural statistics, WIPO creative-industry indicators,
-      World Bank and OECD services data, MusicBrainz, IMDb/TMDb-style film
-      metadata, Wikidata,…
-  - question: What does the data show about Cultural Pipeline Cities?
+      6 diagnostic cultural trade questions structure the analysis.
+  - question: >-
+      How many Asian cultural-wave paths are compared?
     answer: >-
-      Key figure: 45 — Global cities in World Cities Culture Forum 5th edition
-      summaries. The source stack includes UNESCO cultural statistics, WIPO
-      creative-industry indicators, World Bank and OECD services data,
-      MusicBrainz, IMDb/TMDb-style film metadata, Wikidata,…
+      3 Asian cultural-wave paths compared in the charts.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">Culture is an export category even when it never passes through a port. A song, show, game, cuisine, fashion house, or sports star can change what a country means in the global imagination. This framing highlights <strong>8</strong> cultural-export systems, scores <strong>8</strong> mediums for exportability, and tracks <strong>3</strong> Asian cultural-wave paths — with World Cities Culture Forum summaries covering <strong>45</strong> global cities as context.</p>
+<p class="art-p art-lede">Culture is an export category even when it never passes through a port. A song, show, game, cuisine, fashion house, or sports star can change what a country means in the global imagination. This framing highlights <strong>8</strong> cultural-export systems, scores <strong>8</strong> mediums for exportability, and tracks <strong>3</strong> Asian cultural-wave paths — with World Cities Culture Forum summaries covering <strong>45</strong> global cities as context.</p>
 <p class="art-p">The charts use editorial indices to define the cultural-trade question before deeper joins to UNESCO, WIPO, and platform data: what travels, where it is produced, who monetizes it, and how it becomes identity.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>
 <p class="art-p">The numbers that set the scale for this report:</p>
@@ -60,7 +52,7 @@ faq:
   </div>
 <h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The source stack includes UNESCO cultural statistics, WIPO creative-industry indicators, World Bank and OECD services data, MusicBrainz, IMDb/TMDb-style film metadata, Wikidata, and World Cities Culture Forum materials.</p>
-<p class="art-p">Values in the figures are editorial indices that structure the argument. A direct production pass should replace them with cultural trade, platform, awards, tourism, and city infrastructure aggregates.</p>
+<p class="art-p">Values in the figures are editorial indices that structure the argument. A direct output pass should replace them with cultural trade, platform, awards, tourism, and city infrastructure aggregates.</p>
 <h2 id="soft-power-and-trade" class="anchored">Soft Power and Trade</h2>
 <h3 id="soft-power-and-trade-look" class="anchored">Cultural exports travel alongside goods and services exports</h3>
 <figure class="art-chart">
@@ -86,12 +78,12 @@ faq:
 <p class="art-p">The comparison is mechanism, not trophy: strategic acceleration, long compounding through anime/games/design, and diaspora-plus-film scale are different clocks.</p>
 
 <h2 id="cultural-pipeline-cities" class="anchored">Cultural Pipeline Cities</h2>
-<h3 id="cultural-pipeline-cities-look" class="anchored">Cultural export cities combine production base with distribution reach</h3>
+<h3 id="cultural-pipeline-cities-look" class="anchored">Cultural export cities combine output base with distribution reach</h3>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/cultural-exports-geoeconomics/charts/chart4_city_cultural_pipeline.plotly.json" data-source="Data: UNESCO, World Bank, WIPO, MusicBrainz, IMDb/TMDb references, World Cities Culture Forum - ARTOMETRICS" role="img" aria-label="Cultural export cities combine production base with distribution reach" data-fallback="/images/content/articles/cultural-exports-geoeconomics/charts/chart4_city_cultural_pipeline.png"></div>
+  <div class="art-chart-live" data-chart="/data/articles/cultural-exports-geoeconomics/charts/chart4_city_cultural_pipeline.plotly.json" data-source="Data: UNESCO, World Bank, WIPO, MusicBrainz, IMDb/TMDb references, World Cities Culture Forum - ARTOMETRICS" role="img" aria-label="Cultural export cities combine output base with distribution reach" data-fallback="/images/content/articles/cultural-exports-geoeconomics/charts/chart4_city_cultural_pipeline.png"></div>
 </figure>
-<p class="art-p">City pipeline scores pair production base with distribution reach. The strongest joint positions sit near the top-right of the scatter (high 90s), with a descending ladder of other export cities behind them.</p>
-<p class="art-p">Los Angeles-style production-distribution machines, Seoul-style coordinated export platforms, and Tokyo-style design/games/anime engines are urban launchpads for national soft power.</p>
+<p class="art-p">City pipeline scores pair output base with distribution reach. The strongest joint positions sit near the top-right of the scatter (high 90s), with a descending ladder of other export cities behind them.</p>
+<p class="art-p">Los Angeles-style output-distribution machines, Seoul-style coordinated export platforms, and Tokyo-style design/games/anime engines are urban launchpads for national soft power.</p>
 
 <h2 id="cultural-trade-questions" class="anchored">Cultural Trade Questions</h2>
 <h3 id="cultural-trade-questions-look" class="anchored">Cultural exports ask what travels, who translates it, and what becomes identity</h3>

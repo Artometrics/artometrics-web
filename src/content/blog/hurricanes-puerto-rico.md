@@ -24,32 +24,26 @@ keyPoints:
   - Texas — Top State by Value
   - 2017–2017 — Year span covered in the file
 faq:
-  - question: What does the data show about Timeline across states?
+  - question: >-
+      How many records are in this dataset?
     answer: >-
-      Key figure: 153 — Records in the working dataset. This is not a full
-      climatology of Caribbean cyclones. It is a season-slice that lets three
-      hard-hit places be read side by side — intensity, concentration, and
-      timing included.
-  - question: Who sits at the top?
+      153 records in the working dataset.
+  - question: >-
+      What is the median Value?
     answer: >-
-      Key figure: 703 — Median Value. This is not a full climatology of
-      Caribbean cyclones. It is a season-slice that lets three hard-hit places
-      be read side by side — intensity, concentration, and timing included.
-  - question: How values are spread?
+      The median Value is 703.
+  - question: >-
+      What is the highest observed value in this extract?
     answer: >-
-      Key figure: 5,072 — Highest observed Value. This is not a full climatology
-      of Caribbean cyclones. It is a season-slice that lets three hard-hit
-      places be read side by side — intensity, concentration, and timing
-      included.
-  - question: What does the data show about Concentration of impact?
+      The highest observed value in the extract is 5,072.
+  - question: >-
+      Which State leads in this extract?
     answer: >-
-      Key figure: Texas — Top State by Value. This is not a full climatology of
-      Caribbean cyclones. It is a season-slice that lets three hard-hit places
-      be read side by side — intensity, concentration, and timing included.
+      Texas leads the State ranking in this extract.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">In late summer 2017, the Atlantic hurricane season forced a brutal comparative question into public view: which places absorbed the worst of the storm window, and how did Puerto Rico's readings sit beside Florida and Texas?</p>
+<p class="art-p art-lede">In late summer 2017, the Atlantic hurricane season forced a brutal comparative question into public view: which places absorbed the worst of the storm window, and how did Puerto Rico's readings sit beside Florida and Texas?</p>
 <p class="art-p">A compact TidyTuesday file of <strong>153</strong> records tracks values across that season's geography. The median reading is <strong>703</strong>; the highest observed value hits <strong>5,072</strong>. Texas leads the state-level totals in the working extract, but the timeline chart is where Puerto Rico's distinct peak pattern becomes visible.</p>
 <p class="art-p">This is not a full climatology of Caribbean cyclones. It is a season-slice that lets three hard-hit places be read side by side — intensity, concentration, and timing included.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>

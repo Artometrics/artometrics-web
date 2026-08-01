@@ -25,34 +25,26 @@ keyPoints:
   - 7 — Fame paths compared
   - 8 — Artists used as report anchors
 faq:
-  - question: What does the data show about Catalog and Now?
+  - question: >-
+      Under what license is the MusicBrainz core database dump?
     answer: >-
-      Key figure: CC0 — MusicBrainz core database dump license for public-domain
-      metadata. Core dumps are CC0 ; MetaBrainz publishes them about 2x/week .
-      Documentation lists 11 JSON dump entity types. The frame below compares 7
-      fame paths with 8 artist anchors across 5 charts.
-  - question: What does the data show about Format Shift?
+      The MusicBrainz core database dump is released under CC0.
+  - question: >-
+      How often does MetaBrainz publish database dumps?
     answer: >-
-      Key figure: 2x/week — MetaBrainz published dump cadence in public
-      documentation. Core dumps are CC0 ; MetaBrainz publishes them about
-      2x/week . Documentation lists 11 JSON dump entity types. The frame below
-      compares 7 fame paths with 8 artist anchors across 5 charts.
-  - question: What does the data show about Genre Travel?
+      MetaBrainz publishes dumps 2x/week according to public documentation.
+  - question: >-
+      How many JSON dump entity types does MusicBrainz document?
     answer: >-
-      Key figure: 11 — JSON dump entity types listed in MusicBrainz
-      documentation. Core dumps are CC0 ; MetaBrainz publishes them about
-      2x/week . Documentation lists 11 JSON dump entity types. The frame below
-      compares 7 fame paths with 8 artist anchors across 5 charts.
-  - question: What does the data show about Fame Paths?
+      11 JSON dump entity types listed in MusicBrainz documentation.
+  - question: >-
+      How many fame paths are compared?
     answer: >-
-      Key figure: 7 — Fame paths compared. Core dumps are CC0 ; MetaBrainz
-      publishes them about 2x/week . Documentation lists 11 JSON dump entity
-      types. The frame below compares 7 fame paths with 8 artist anchors across
-      5 charts.
+      7 fame paths compared in the report.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">Music fame looks emotional, but it leaves metadata everywhere: releases, recordings, aliases, collaborations, labels, genres, works, tours, awards, and chart traces.</p>
+<p class="art-p art-lede">Music fame looks emotional, but it leaves metadata everywhere: releases, recordings, aliases, collaborations, labels, genres, works, tours, awards, and chart traces.</p>
 <p class="art-p">MusicBrainz supplies the open-data spine for a bigger question: why do some artists become eras while others become moments? Catalog depth, format, genre travel, fame-path durability, and reinvention are five ways that question becomes countable.</p>
 <p class="art-p">Core dumps are <strong>CC0</strong>; MetaBrainz publishes them about <strong>2x/week</strong>. Documentation lists <strong>11</strong> JSON dump entity types. The frame below compares <strong>7</strong> fame paths with <strong>8</strong> artist anchors across <strong>5</strong> charts.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>

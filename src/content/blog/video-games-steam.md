@@ -25,40 +25,25 @@ keyPoints:
   - "0\_..\_20,000 — Most common Owners"
 faq:
   - question: >-
-      What does the data show about Median Metascore edged up across the store’s
-      expansion years?
+      How many records are in this dataset?
     answer: >-
-      Key figure: 26,688 — Records in the working dataset. The source is the
-      TidyTuesday release from 2019-07-30 (R for Data Science community). The
-      working file contains 26,688 rows and 11 columns after merging available
-      tables in the…
+      26,688 records in the working dataset.
   - question: >-
-      What does the data show about Little Triangle tops a tightly packed
-      critical elite?
+      What is the median Metascore?
     answer: >-
-      Key figure: 73.0 — Median Metascore. The source is the TidyTuesday release
-      from 2019-07-30 (R for Data Science community). The working file contains
-      26,688 rows and 11 columns after merging available tables in the…
+      The median Metascore is 73.0.
   - question: >-
-      What does the data show about Owner tiers carry different Metascore
-      distributions?
+      What is the highest observed value in this extract?
     answer: >-
-      Key figure: 98.0 — Highest observed Metascore. The source is the
-      TidyTuesday release from 2019-07-30 (R for Data Science community). The
-      working file contains 26,688 rows and 11 columns after merging available
-      tables in the…
+      The highest observed value in the extract is 98.0.
   - question: >-
-      What does the data show about Mid-million owner games clear the median;
-      tiny audiences trail?
+      Which Game leads in this extract?
     answer: >-
-      Key figure: DEEP SPACE WAIFU: NEKOMIMI — Top Game by Metascore. The source
-      is the TidyTuesday release from 2019-07-30 (R for Data Science community).
-      The working file contains 26,688 rows and 11 columns after merging
-      available tables in the…
+      DEEP SPACE WAIFU: NEKOMIMI leads the Game ranking in this extract.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">Steam Spy-era metadata turns the storefront into a scored catalog. This file holds 26,688 games spanning 2004–2018, with a median Metascore of 73.0 and a high of 98.0. DEEP SPACE WAIFU: NEKOMIMI appears in the fact-box extremes; the 0 .. 20,000 owners band is the most common ownership bucket.</p>
+<p class="art-p art-lede">Steam Spy-era metadata turns the storefront into a scored catalog. This file holds 26,688 games spanning 2004–2018, with a median Metascore of 73.0 and a high of 98.0. DEEP SPACE WAIFU: NEKOMIMI appears in the fact-box extremes; the 0 .. 20,000 owners band is the most common ownership bucket.</p>
 <p class="art-p">The question is how critic Metascore sits across time, titles, and owner tiers — and whether score and price move together. The calibration point is 73.0: above it, the critically strong; below it, the long shelf of ordinary releases.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>
 <p class="art-p">The numbers that set the scale for this report:</p>
@@ -124,7 +109,7 @@ faq:
 <p>Data Science Learning Community. (2019). <em>TidyTuesday: Video Games Steam Spy</em>. <a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2019/2019-07-30/video_games.csv" target="_blank" rel="noopener noreferrer">https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2019/2019-07-30/video_games.csv</a></p>
 <h2 id="editors-note" class="anchored">Editor’s note</h2>
 <div class="art-editorial-note"><p><em>Artometrics data report from the TidyTuesday research pipeline. Charts and aggregates are reproducible from the embedded exhibits and public source files.</em></p></div>
-<p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2019/2019-07-30" target="_blank" rel="noopener noreferrer">View TidyTuesday source on GitHub</a></p>
+<p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2019/2019-07-30" target="_blank" rel="noopener noreferrer">Source archive (GitHub)</a></p>
 
 </main>
 </div>

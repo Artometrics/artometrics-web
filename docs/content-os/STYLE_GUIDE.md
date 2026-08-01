@@ -147,6 +147,35 @@ Interactive embeds are **hover-only** (no scroll-zoom, drag-zoom, or mode bar). 
 
 Site chrome: **Share** sits above the article body; **Download** (Data / Code / Download all) sits below the body and pulls from `src/generated/downloads.json`.
 
+## Padres franchise report checklist
+
+Use `src/content/blog/padres-the-artometrics-of-paying-for-october.md` as the gold template for **sports franchise series** reports (Yankees, Dodgers, Cowboys, Celtics, Lakers, Patriots, Giants, Warriors, etc.).
+
+**Frontmatter**
+
+- `tldr` — one paragraph with the central paradox and a calibration number
+- `keyPoints` — 3–6 `number — label` facts (only numbers already in the article)
+- `faq` — 3–4 Q&amp;A pairs derived strictly from article facts (no auto-generated “What does the data show about…” stubs)
+- Preserve `slug`, `heroImage`, `tags`, `pubDate`; improve thin fields only from existing body content
+
+**Body scaffold**
+
+1. **Lede** — first `<p>` uses `class="art-p art-lede"`
+2. **Deck** — 1–2 follow-on `<p class="art-p">` paragraphs before the facts grid
+3. **The numbers behind the story** — `<h2 id="fast-facts">` + `<div class="facts-grid">` with `fact-box` cells from `keyPoints`
+4. **Finding sections** — thesis-style `<h2>` titles (claims, not “Background” or “Fast facts”); remove redundant `<h3>` chart subheads
+5. **Charts** — every `<figure class="art-chart">` includes `<figcaption class="art-chart-caption">`; `data-source` on the live div
+6. **Conclusion** — `<h2 id="conclusion">` with a claim title (not “What to take away”)
+7. **Data and method** — `<h2 id="dataset-context">` at the end, before references
+8. **References** — `<h2 id="references">` with named sources and related Artometrics links
+9. **Editor's note** — `<h2 id="editors-note">` + `<div class="art-editorial-note">` for measurement caveats
+
+**Do not**
+
+- Invent statistics or FAQ answers not supported by the article
+- Lead with GitHub-primary CTAs (`art-github-btn`); point readers to site Download exports instead
+- Place Data and method before the finding sections (Padres puts it after the conclusion)
+
 ## Evidence labels (ethics)
 
 Distinguish in prose:

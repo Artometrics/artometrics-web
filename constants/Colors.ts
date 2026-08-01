@@ -1,5 +1,6 @@
 /**
- * Artometrics brand tokens — Swiss Modern (default) + Magazine / Chomsky era.
+ * Artometrics brand tokens — Kruger B/W/red + Chomsky newspaper (default magazine).
+ * Swiss Modern remains available as an alternate brand style.
  */
 
 export type BrandStyle = "swiss" | "magazine";
@@ -32,13 +33,13 @@ export const Colors = {
   white: "#FFFFFF",
   black: "#000000",
   cream: "#FFFFFF",
-  chartHighlight: "#D9251B",
+  chartHighlight: "#C0392B",
   chartDark: "#000000",
   chartMid: "#525252",
 
-  /** Magazine-era paper / Atlantic cream */
-  paper: "#FAFAF8",
-  paperElevated: "#F2F0EB",
+  /** Kruger / newspaper — pure paper, hard red */
+  paper: "#FFFFFF",
+  paperElevated: "#FFFFFF",
   magazineAccent: "#C0392B",
   magazineAccentSoft: "#F9E8E6",
 } as const;
@@ -51,7 +52,7 @@ export type BrandFonts = {
   mono: string;
 };
 
-/** Swiss Modern — condensed display + system sans (current chrome). */
+/** Swiss Modern — condensed display + system sans. */
 export const SwissFonts: BrandFonts = {
   display: "Anton",
   sans: "Helvetica Neue, Helvetica, Arial, system-ui, sans-serif",
@@ -60,7 +61,7 @@ export const SwissFonts: BrandFonts = {
   mono: "'Courier New', Courier, monospace",
 };
 
-/** Magazine / Chomsky — editorial serif + Chomsky wordmark (first web style). */
+/** Magazine / Chomsky — Kruger newspaper hierarchy (default). */
 export const MagazineFonts: BrandFonts = {
   display: "Chomsky",
   sans: "Helvetica Neue, Helvetica, Arial, system-ui, sans-serif",
@@ -69,8 +70,8 @@ export const MagazineFonts: BrandFonts = {
   mono: "'Courier New', Courier, monospace",
 };
 
-/** Default export kept for static StyleSheets — Swiss. Prefer useTheme().fonts when brand-aware. */
-export const Fonts = SwissFonts;
+/** Default static StyleSheets — magazine / Chomsky. Prefer useTheme().fonts when brand-aware. */
+export const Fonts = MagazineFonts;
 
 export type ThemeMode = "light" | "dark";
 
@@ -123,40 +124,41 @@ const SwissThemes: Record<ThemeMode, ThemeColors> = {
   },
 };
 
+/** Kruger magazine: white/black/red light; inverted dark. */
 const MagazineThemes: Record<ThemeMode, ThemeColors> = {
   light: {
     mode: "light",
-    bg: Colors.paper,
+    bg: Colors.white,
     bgElevated: Colors.white,
-    text: "#171717",
+    text: Colors.black,
     textMuted: Colors.base600,
     textSubtle: Colors.base500,
-    border: Colors.base200,
+    border: Colors.black,
     accent: Colors.magazineAccent,
     accentSoft: Colors.magazineAccentSoft,
     inverse: Colors.white,
-    headerBg: Colors.paper,
-    overlayBg: Colors.paper,
-    rule: Colors.base200,
+    headerBg: Colors.white,
+    overlayBg: Colors.white,
+    rule: Colors.black,
   },
   dark: {
     mode: "dark",
-    bg: Colors.base900,
-    bgElevated: Colors.base800,
-    text: "#FAFAFA",
+    bg: Colors.black,
+    bgElevated: Colors.base900,
+    text: Colors.white,
     textMuted: Colors.base400,
     textSubtle: Colors.base500,
-    border: Colors.base700,
-    accent: "#E05C5C",
+    border: Colors.white,
+    accent: Colors.magazineAccent,
     accentSoft: Colors.accent950,
     inverse: Colors.black,
-    headerBg: Colors.base900,
-    overlayBg: Colors.base900,
-    rule: Colors.base700,
+    headerBg: Colors.black,
+    overlayBg: Colors.black,
+    rule: Colors.white,
   },
 };
 
-export const Themes = SwissThemes;
+export const Themes = MagazineThemes;
 
 export function resolveThemeColors(mode: ThemeMode, brand: BrandStyle): ThemeColors {
   return brand === "magazine" ? MagazineThemes[mode] : SwissThemes[mode];
@@ -167,6 +169,8 @@ export function resolveBrandFonts(brand: BrandStyle): BrandFonts {
 }
 
 export const BRAND_STYLE_LABELS: Record<BrandStyle, string> = {
-  swiss: "Swiss (current)",
+  swiss: "Swiss Modern",
   magazine: "Magazine (Chomsky)",
 };
+
+export const DEFAULT_BRAND_STYLE: BrandStyle = "magazine";

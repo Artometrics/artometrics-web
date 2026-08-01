@@ -25,34 +25,26 @@ keyPoints:
   - 1936–2019 — Year span covered in the file
   - Drama — Most common Genre
 faq:
-  - question: How the pattern changed over time?
+  - question: >-
+      How many records are in this dataset?
     answer: >-
-      Key figure: 3,401 — Records in the working dataset. The source is the
-      TidyTuesday release from 2018-10-23 (R for Data Science community). The
-      working file contains 3,401 rows and 9 columns after merging all available
-      CSV/XLSX tables in the week folder.
-  - question: Who sits at the top?
+      3,401 records in the working dataset.
+  - question: >-
+      What is the median Domestic gross?
     answer: >-
-      Key figure: 25,533,818 — Median Domestic gross. The source is the
-      TidyTuesday release from 2018-10-23 (R for Data Science community). The
-      working file contains 3,401 rows and 9 columns after merging all available
-      CSV/XLSX tables in the week folder.
-  - question: How the field is spread?
+      The median Domestic gross is 25,533,818.
+  - question: >-
+      What is the highest observed value in this extract?
     answer: >-
-      Key figure: 474,544,677 — Highest observed Domestic gross. The source is
-      the TidyTuesday release from 2018-10-23 (R for Data Science community).
-      The working file contains 3,401 rows and 9 columns after merging all
-      available CSV/XLSX tables in the week folder.
-  - question: Who beats the median — and who trails?
+      The highest observed value in the extract is 474,544,677.
+  - question: >-
+      Which Movie leads in this extract?
     answer: >-
-      Key figure: Star Wars Ep. I: The Phantom — Top Movie by Domestic gross.
-      The source is the TidyTuesday release from 2018-10-23 (R for Data Science
-      community). The working file contains 3,401 rows and 9 columns after
-      merging all available CSV/XLSX tables in the week folder.
+      Star Wars Ep. I: The Phantom leads the Movie ranking in this extract.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">Horror is the genre studios love to describe as cheap and scalable — until the ledger says otherwise. Budget and domestic-gross figures for thousands of titles show which films returned capital and which simply burned it.</p>
+<p class="art-p art-lede">Horror is the genre studios love to describe as cheap and scalable — until the ledger says otherwise. Budget and domestic-gross figures for thousands of titles show which films returned capital and which simply burned it.</p>
 <p class="art-p">The working file holds <strong>3,401</strong> records spanning <strong>1936–2019</strong>. Median domestic gross sits at <strong>25,533,818</strong>; the highest observed domestic gross is <strong>474,544,677</strong>. Drama is the most common genre label in the merge — a reminder that genre tags in box-office tables are rarely as clean as marketing copy.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>
 <p class="art-p">The numbers that set the scale for this report:</p>

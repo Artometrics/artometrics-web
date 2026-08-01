@@ -21,34 +21,18 @@ keyPoints:
   - '8,612 — Records in the working dataset'
   - Africa — Most common Macroarea
 faq:
-  - question: What does the data show about A geographically uneven landscape?
+  - question: >-
+      How many records are in this dataset?
     answer: >-
-      Key figure: 8,612 — Records in the working dataset. A catalog of languages
-      is also a catalog of scholarly attention. Places with denser fieldwork
-      traditions look richer in the table even when the underlying human
-      diversity story is…
-  - question: Who sits at the top of name repetition?
+      8,612 records in the working dataset.
+  - question: >-
+      What is Most common Macroarea?
     answer: >-
-      Key figure: Africa — Most common Macroarea. A catalog of languages is also
-      a catalog of scholarly attention. Places with denser fieldwork traditions
-      look richer in the table even when the underlying human diversity story
-      is…
-  - question: What does the data show about Regional concentration?
-    answer: >-
-      A catalog of languages is also a catalog of scholarly attention. Places
-      with denser fieldwork traditions look richer in the table even when the
-      underlying human diversity story is more even — or more endangered — than
-      the row counts imply.
-  - question: What does the data show about Most languages appear once?
-    answer: >-
-      A catalog of languages is also a catalog of scholarly attention. Places
-      with denser fieldwork traditions look richer in the table even when the
-      underlying human diversity story is more even — or more endangered — than
-      the row counts imply.
+      Africa — Most common Macroarea.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">Linguistic diversity is often imagined as a smooth global gradient. Glottolog-style language inventories show something lumpier: documentation clusters by macroarea, and a long tail of languages appear once while a short head of names and identifiers repeats.</p>
+<p class="art-p art-lede">Linguistic diversity is often imagined as a smooth global gradient. Glottolog-style language inventories show something lumpier: documentation clusters by macroarea, and a long tail of languages appear once while a short head of names and identifiers repeats.</p>
 <p class="art-p">The TidyTuesday working file holds <strong>8,612</strong> records. <strong>Africa</strong> is the most common macroarea label, with <strong>2,363</strong> records in that bucket alone. The question is not only how many languages exist — it is where documentation effort, and therefore visibility, concentrates.</p>
 <p class="art-p">A catalog of languages is also a catalog of scholarly attention. Places with denser fieldwork traditions look richer in the table even when the underlying human diversity story is more even — or more endangered — than the row counts imply.</p>
 <h2 id="research-question" class="anchored">Research question</h2>
@@ -89,7 +73,7 @@ faq:
 <p class="art-p">Africa is again the largest bucket with 2,363 records on the regional concentration chart. Category concentration shows where editorial and scientific attention should look first if the goal is to understand the file's center of gravity.</p>
 <p class="art-p">Mixed macroarea labels in the data — combinations such as Eurasia with Papunesia — remind readers that languages and contact zones do not always respect tidy continental borders.</p>
 <p class="art-p">The macroarea scheme is a practical database compromise. Eurasia contains Indo-European, Uralic, Turkic, Sino-Tibetan, Japonic, Koreanic, Dravidian, and many other lineages; the Americas contain hundreds of Indigenous languages with colonial-era documentation gaps; Papunesia compresses a spectacularly dense set of Papuan and Austronesian histories into one label. The labels help chart structure, but they are not theory in themselves.</p>
-<p class="art-p">Regional concentration also encodes academic history. Missionary grammars, colonial surveys, national language academies, SIL International work, university field programs, and contemporary community-led documentation all leave traces in catalogs. The chart is therefore a map of evidence production as much as a map of human speech.</p>
+<p class="art-p">Regional concentration also encodes academic history. Missionary grammars, colonial surveys, national language academies, SIL International work, university field programs, and contemporary community-led documentation all leave traces in catalogs. The chart is therefore a map of evidence output as much as a map of human speech.</p>
 <h2 id="frequency" class="anchored">Most languages appear once</h2>
 <h3 id="frequency-look" class="anchored">Most languages appear once while a small head repeats</h3>
 <figure class="art-chart">

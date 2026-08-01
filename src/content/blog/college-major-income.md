@@ -24,35 +24,25 @@ keyPoints:
   - Engineering — Most common Major category
 faq:
   - question: >-
-      What does the data show about Psychology Leads Low-Wage Job Counts by a
-      Wide Margin?
+      How many records are in this dataset?
     answer: >-
-      Key figure: 173 — Records in the working dataset. The source is the
-      TidyTuesday release from 2018-10-16 (recent-grads.csv). After cleaning,
-      173 major rows remain.
-  - question: What does the data show about The Top Dozen’s Median Is Still Enormous?
-    answer: >-
-      Key figure: 1,231 — Median Low wage jobs. The source is the TidyTuesday
-      release from 2018-10-16 (recent-grads.csv). After cleaning, 173 major rows
-      remain.
+      173 records in the working dataset.
   - question: >-
-      What does the data show about Humanities and Business Categories Sit
-      Higher Than Engineering?
+      What is the median Low wage jobs?
     answer: >-
-      Key figure: 48,207 — Highest observed Low wage jobs. The source is the
-      TidyTuesday release from 2018-10-16 (recent-grads.csv). After cleaning,
-      173 major rows remain.
+      The median Low wage jobs is 1,231.
   - question: >-
-      What does the data show about Gaps Confirm Humanities and Business Above
-      the Median?
+      What is the highest observed value in this extract?
     answer: >-
-      Key figure: PSYCHOLOGY — Top Major by Low wage jobs. The source is the
-      TidyTuesday release from 2018-10-16 (recent-grads.csv). After cleaning,
-      173 major rows remain.
+      The highest observed value in the extract is 48,207.
+  - question: >-
+      Which Major leads in this extract?
+    answer: >-
+      PSYCHOLOGY leads the Major ranking in this extract.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">College majors are sold as income stories. The TidyTuesday recent-graduates extract used here also tracks how many alumni land in low-wage jobs. Across <strong>173</strong> majors, the median low-wage-job count is <strong>1,231</strong>, with a high of <strong>48,207</strong> in Psychology. Engineering is the most common major category label in the file.</p>
+<p class="art-p art-lede">College majors are sold as income stories. The TidyTuesday recent-graduates extract used here also tracks how many alumni land in low-wage jobs. Across <strong>173</strong> majors, the median low-wage-job count is <strong>1,231</strong>, with a high of <strong>48,207</strong> in Psychology. Engineering is the most common major category label in the file.</p>
 <p class="art-p">That framing flips the usual prestige script: the chart stack leads with exposure to low-wage employment, then pairs it with unemployment rates. Pay ceilings matter; so does the size of the floor.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>
 <p class="art-p">The numbers that set the scale for this report:</p>

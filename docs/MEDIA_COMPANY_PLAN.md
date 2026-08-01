@@ -15,7 +15,7 @@
 | **Voice** | Adult, precise, non-hype; one claim per chart; limitations always present |
 | **Desks** | Culture · Atlas · History · Persona · Power |
 | **Trust stack** | Observed vs derived vs editorial index vs literature; ethics page; public sources |
-| **Platform** | Expo (web + native) on Netlify + domain; Content OS for production; Supabase for members/media |
+| **Platform** | Expo (web + native) on Netlify + domain; Content OS for prod​uction; Supabase for members/media |
 
 ### Keep vs kill (when ideas arrive)
 

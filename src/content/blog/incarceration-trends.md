@@ -23,32 +23,26 @@ keyPoints:
   - 1970–2016 — Year span covered in the file
   - South — Most common Region
 faq:
-  - question: How the pattern changed over time?
+  - question: >-
+      How many records are in this dataset?
     answer: >-
-      Key figure: 100,000 — Records in the working dataset. Population is not
-      identical to incarceration rate — but in this release it is the spine that
-      lets pretrial counts, regional gaps, and long-run change be compared
-      without…
-  - question: Who sits at the top?
+      100,000 records in the working dataset.
+  - question: >-
+      What is the median Population?
     answer: >-
-      Key figure: 3,553 — Median Population. Population is not identical to
-      incarceration rate — but in this release it is the spine that lets
-      pretrial counts, regional gaps, and long-run change be compared without…
-  - question: How regions spread?
+      The median Population is 3,553.
+  - question: >-
+      What is the highest observed value in this extract?
     answer: >-
-      Key figure: 6,801,437 — Highest observed Population. Population is not
-      identical to incarceration rate — but in this release it is the spine that
-      lets pretrial counts, regional gaps, and long-run change be compared
-      without…
-  - question: Who beats the median — and who trails?
+      The highest observed value in the extract is 6,801,437.
+  - question: >-
+      Which State leads in this extract?
     answer: >-
-      Key figure: CA — Top State by Population. Population is not identical to
-      incarceration rate — but in this release it is the spine that lets
-      pretrial counts, regional gaps, and long-run change be compared without…
+      CA leads the State ranking in this extract.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">U.S. incarceration is often narrated as a single national curve. County- and state-level population files show something more fractured: regional regimes that diverge for decades even while they share the same federal criminal-justice vocabulary.</p>
+<p class="art-p art-lede">U.S. incarceration is often narrated as a single national curve. County- and state-level population files show something more fractured: regional regimes that diverge for decades even while they share the same federal criminal-justice vocabulary.</p>
 <p class="art-p">The TidyTuesday working extract used here holds <strong>100,000</strong> records spanning <strong>1970–2016</strong>. Median population in the analytic columns sits at <strong>3,553</strong>; the highest observed population value exceeds <strong>6.8 million</strong>. California leads the state rollup by population, and the South is the most common region label in the file.</p>
 <p class="art-p">Population is not identical to incarceration rate — but in this release it is the spine that lets pretrial counts, regional gaps, and long-run change be compared without pretending every county is the same size.</p>
 <h2 id="research-question" class="anchored">Research question</h2>

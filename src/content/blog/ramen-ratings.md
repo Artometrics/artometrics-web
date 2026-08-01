@@ -22,34 +22,27 @@ keyPoints:
   - Nongshim — Top Brand by Stars
   - Japan — Most common Country
 faq:
-  - question: What does the data show about Stars by brand?
+  - question: >-
+      How many records are in this dataset?
     answer: >-
-      Key figure: 3,180 — Records in the working dataset. A ceiling of 5.00 that
-      many top brands share means the interesting story is often below the
-      perfect scores: which countries sit above the median, and how review
-      volume relates to praise.
-  - question: Who sits at the top?
+      3,180 records in the working dataset.
+  - question: >-
+      What is the median Stars?
     answer: >-
-      Key figure: 3.75 — Median Stars. A ceiling of 5.00 that many top brands
-      share means the interesting story is often below the perfect scores: which
-      countries sit above the median, and how review volume relates to praise.
-  - question: What does the data show about Stars by country?
+      The median Stars is 3.75.
+  - question: >-
+      What is the highest observed value in this extract?
     answer: >-
-      Key figure: 5.00 — Highest observed Stars. A ceiling of 5.00 that many top
-      brands share means the interesting story is often below the perfect
-      scores: which countries sit above the median, and how review volume
-      relates to praise.
-  - question: Who beats the median — and who trails?
+      The highest observed value in the extract is 5.00.
+  - question: >-
+      Which Brand leads in this extract?
     answer: >-
-      Key figure: Nongshim — Top Brand by Stars. A ceiling of 5.00 that many top
-      brands share means the interesting story is often below the perfect
-      scores: which countries sit above the median, and how review volume
-      relates to praise.
+      Nongshim leads the Brand ranking in this extract.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">Instant ramen is a global industrial food that still gets reviewed like craft beer. Star ratings compress broth, noodle texture, spice, and packaging nostalgia into a single number that traveling eaters argue about for years.</p>
-<p class="art-p">A TidyTuesday working file of <strong>3,180</strong> records puts median stars at <strong>3.75</strong> and the highest observed stars at <strong>5.00</strong>. <strong>Nongshim</strong> leads the brand ranking by stars in the fact box, and <strong>Japan</strong> is the most common country label — a reminder that production geography and rating leadership are related but not identical.</p>
+<p class="art-p art-lede">Instant ramen is a global industrial food that still gets reviewed like craft beer. Star ratings compress broth, noodle texture, spice, and packaging nostalgia into a single number that traveling eaters argue about for years.</p>
+<p class="art-p">A TidyTuesday working file of <strong>3,180</strong> records puts median stars at <strong>3.75</strong> and the highest observed stars at <strong>5.00</strong>. <strong>Nongshim</strong> leads the brand ranking by stars in the fact box, and <strong>Japan</strong> is the most common country label — a reminder that output geography and rating leadership are related but not identical.</p>
 <p class="art-p">A ceiling of 5.00 that many top brands share means the interesting story is often below the perfect scores: which countries sit above the median, and how review volume relates to praise.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>
 <p class="art-p">The numbers that set the scale for this report:</p>

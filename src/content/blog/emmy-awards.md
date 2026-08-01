@@ -22,33 +22,22 @@ keyPoints:
   - 1957–2021 — Year span covered in the file
   - Nominee — Most common Type
 faq:
-  - question: What does the data show about Landscape?
+  - question: >-
+      How many records are in this dataset?
     answer: >-
-      Key figure: 29,678 — Records in the working dataset. The source is the
-      TidyTuesday release from 2021-09-21 (R for Data Science community). The
-      working file contains 29,678 rows and 11 columns after merging available
-      tables in the week folder.
-  - question: What does the data show about Volume?
+      29,678 records in the working dataset.
+  - question: >-
+      What time period does this dataset cover?
     answer: >-
-      Key figure: 1957–2021 — Year span covered in the file. The source is the
-      TidyTuesday release from 2021-09-21 (R for Data Science community). The
-      working file contains 29,678 rows and 11 columns after merging available
-      tables in the week folder.
-  - question: Who sits at the top?
+      The file covers 1957–2021.
+  - question: >-
+      What is Most common Type?
     answer: >-
-      Key figure: Nominee — Most common Type. The source is the TidyTuesday
-      release from 2021-09-21 (R for Data Science community). The working file
-      contains 29,678 rows and 11 columns after merging available tables in the
-      week folder.
-  - question: What does the data show about Category?
-    answer: >-
-      The source is the TidyTuesday release from 2021-09-21 (R for Data Science
-      community). The working file contains 29,678 rows and 11 columns after
-      merging available tables in the week folder.
+      Nominee — Most common Type.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">Emmy season looks like a parade of equal contenders. Nomination and win records look more like a concentration map — a few names return year after year while most titles appear once and vanish.</p>
+<p class="art-p art-lede">Emmy season looks like a parade of equal contenders. Nomination and win records look more like a concentration map — a few names return year after year while most titles appear once and vanish.</p>
 <p class="art-p">The working file holds <strong>29,678</strong> records from <strong>1957–2021</strong>. Nominee is the most common type label — as expected in a nominations-heavy extract.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>
 <p class="art-p">The numbers that set the scale for this report:</p>

@@ -37,38 +37,26 @@ keyPoints:
     30–80 yrs — How far peak centralization precedes GDP peak across all six
     empires — the institutional lag
 faq:
-  - question: What does the data show about Gdp Per Capita Across Empire Cores?
+  - question: >-
+      How long did Western Europe take to recover Rome's peak GDP per capita?
     answer: >-
-      Key figure: 1,200 yrs — Time for Western Europe to recover Rome&#39;s peak
-      GDP per capita after the 476 CE collapse. The answer is not what the
-      history textbooks imply. GDP goes up. Real wages mostly don’t. The rise
-      takes centuries. The fall takes decades. And in every case, the
-      institutions…
-  - question: 'What does the data show about Rise Fast, Fall Faster?'
+      Western Europe needed 1,200 yrs to recover Rome's peak GDP per capita after the 476 CE collapse.
+  - question: >-
+      What share of global population did the British Empire govern at its 1920 peak?
     answer: >-
-      Key figure: 23% — Share of global population governed by the British
-      Empire at its 1920 territorial peak — 412 million people. The answer is
-      not what the history textbooks imply. GDP goes up. Real wages mostly
-      don’t. The rise takes centuries. The fall takes decades. And in every
-      case, the institutions…
-  - question: What does the data show about The Extraction Gap?
+      23% of global population at the British Empire's 1920 territorial peak — 412 million people.
+  - question: >-
+      How many times did Imperial China cycle through unification and fragmentation?
     answer: >-
-      Key figure: ~7× — Number of times Imperial China cycled through full
-      unification and fragmentation between 221 BCE and 1912 CE. The answer is
-      not what the history textbooks imply. GDP goes up. Real wages mostly
-      don’t. The rise takes centuries. The fall takes decades. And in every
-      case, the institutions…
-  - question: What this file cannot tell you?
+      Imperial China cycled through full unification and fragmentation ~7× between 221 BCE and 1912 CE.
+  - question: >-
+      How much silver did Habsburg Spain extract from the Americas?
     answer: >-
-      Key figure: 180,000 t — Silver extracted by Habsburg Spain from the
-      Americas between 1500 and 1800 — as Castilian real wages declined. The
-      answer is not what the history textbooks imply. GDP goes up. Real wages
-      mostly don’t. The rise takes centuries. The fall takes decades. And in
-      every case, the institutions…
+      Habsburg Spain extracted 180,000 t of silver from the Americas between 1500 and 1800 as Castilian real wages declined.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p">Every empire in history has told the same story about itself: we brought order, we built roads, we made the trains run on time. What the chronicles leave out is the spreadsheet. Who actually got richer? How long did the prosperity last? And when it ended, how fast did it go?</p>
+<p class="art-p art-lede">Every empire in history has told the same story about itself: we brought order, we built roads, we made the trains run on time. What the chronicles leave out is the spreadsheet. Who actually got richer? How long did the prosperity last? And when it ended, how fast did it go?</p>
 <p class="art-p">Those questions have answers now. The Maddison Project Database — the most comprehensive long-run economic dataset ever assembled — lets us put Rome, Britain, the Ottomans, Imperial China, the Mongols, and Habsburg Spain on the same chart and ask: what does empire actually look like as an economic system?</p>
 <p class="art-p">The answer is not what the history textbooks imply. GDP goes up. Real wages mostly don’t. The rise takes centuries. The fall takes decades. And in every case, the institutions built to extract surplus during expansion become structurally incapable of sharing it during maturation. That’s the pattern. Six empires. No exceptions.</p>
 <h2 id="research-question" class="anchored">Research question</h2>
@@ -137,7 +125,7 @@ faq:
 
 <h2 id="what-this-file-cannot-tell-you" class="anchored">What this file cannot tell you</h2>
 <p class="art-p">The Maddison Project has no Mongol Empire country code. The figures here use a population-weighted average of China (CHN, 45%), Russia (RUS, 30%), and Turkey (TUR, 25%) for 1200–1400 CE. Turkey is the closest available proxy for the Ilkhanate’s Persia-Iraq core. This captures broad regional output but understates the empire’s Central Asian footprint. SESHAT Databank remains the most rigorous replacement.</p>
-<p class="art-p">Maddison’s ancient-era GDP figures are back-extrapolations built on archaeological proxies — lead pollution records, shipwreck counts, amphora production. They carry uncertainty bands that would dwarf the point estimates if visualized. The Roman and Han Chinese figures are the best-supported; treat all others as orders of magnitude.</p>
+<p class="art-p">Maddison’s ancient-era GDP figures are back-extrapolations built on archaeological proxies — lead pollution records, shipwreck counts, amphora output. They carry uncertainty bands that would dwarf the point estimates if visualized. The Roman and Han Chinese figures are the best-supported; treat all others as orders of magnitude.</p>
 <p class="art-p">Real wage data is largely unavailable before ~1300 CE, making the extraction gap analysis in Chart 3 impossible for Rome or the early Mongol period. Pre-wage-labor tributary economies did not generate the record types from which wages can be reconstructed.</p>
 <p class="art-p">Mapping a multi-continental empire to a single modern country code (Britain = GBR, Ottoman = TUR) captures the metropolitan core but ignores the periphery. British GDP per capita for the UK does not include what was extracted from India, Africa, or the Caribbean. The chart shows what happened to the empire’s home population — not to its subjects.</p>
 <h2 id="what-to-take-away" class="anchored">What to take away</h2>
@@ -167,7 +155,7 @@ faq:
 <p><em>— Artometrics Editorial</em></p></div>
 
 <p class="art-github-wrap">
-  <a class="art-github-btn" href="https://github.com/Artometrics/imperial" target="_blank" rel="noopener noreferrer">View source on GitHub</a>
+  <a class="art-github-btn" href="https://github.com/Artometrics/imperial" target="_blank" rel="noopener noreferrer">Source archive (GitHub)</a>
 </p>
 </main>
 </div>
