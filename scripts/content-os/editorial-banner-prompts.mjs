@@ -175,7 +175,7 @@ export const BANNER_METAPHORS = {
   },
   "horror-movies": {
     metaphor:
-      "exploding catalog of VHS tapes and scream silhouettes forming a rising tide of shadows across a theater curtain",
+      "exploding catalog of VHS cassette silhouettes and abstract shadow shapes forming a rising tide across a torn theater curtain",
     palette: "midnight black blood red and grainy cream",
   },
   "imdb-blockbuster-grammar": {
