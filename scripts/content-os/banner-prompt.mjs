@@ -15,7 +15,7 @@
  *   node scripts/content-os/banner-prompt.mjs --brief docs/content-os/briefs/foo.json
  *   node scripts/content-os/banner-prompt.mjs --slug giants
  */
-import { readFileSync, existsSync } from "node:fs";
+import { readFileSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import {
