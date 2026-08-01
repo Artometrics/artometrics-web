@@ -60,7 +60,7 @@ Do **not** wait for Stripe/Supabase to be perfect before TestFlight — but **me
 6. SKU: `artometrics-ios-001` (internal, immutable)  
 7. User Access: Full Access  
 
-Copy the numeric **Apple ID** (App Store Connect app id) into `eas.json` → `submit.prod​uction.ios.ascAppId`.  
+Copy the numeric **Apple ID** (App Store Connect app id) into `eas.json` → `submit.release.ios.ascAppId`.  
 Copy **Team ID** (developer.apple.com → Membership) into `eas.json` → `appleTeamId`.
 
 ---

@@ -19,7 +19,7 @@ export function getSanityEnv(write = false): SanityEnv | null {
     process.env.SANITY_DATASET ||
     process.env.EXPO_PUBLIC_SANITY_DATASET ||
     process.env.SANITY_STUDIO_DATASET ||
-    "prod​uction";
+    "development";
   if (!projectId || projectId === "yourProjectId") return null;
   const token = write
     ? process.env.SANITY_API_WRITE_TOKEN
