@@ -62,9 +62,8 @@ export const SwissFonts: BrandFonts = {
 };
 
 /**
- * Magazine default — DM Mono titles/headers, DM Sans body paragraphs.
- * Replaces Chomsky blackletter on mastheads with a readable data-magazine face;
- * Sans matches the article theme for long-form reading.
+ * Magazine default — DM Mono titles/headers, DM Sans body.
+ * Chomsky is reserved for the Logo component only (not these tokens).
  */
 export const MagazineFonts: BrandFonts = {
   display: "DM Mono",

@@ -26,7 +26,8 @@ type Props = {
 };
 
 /**
- * Artometrics wordmark — Swiss (Anton) or Magazine (DM Mono titles) via brand style.
+ * Artometrics wordmark — Magazine keeps Chomsky on the logo only;
+ * Swiss uses Anton. Site titles/body stay on DM Sans / DM Mono.
  */
 export function Logo({
   style,
@@ -76,8 +77,12 @@ export function Logo({
           />
         ) : (
           <Text
-            className="font-wordmark text-accent"
-            style={{ fontSize: markSize, lineHeight: markSize * 1.05 }}
+            className="text-accent"
+            style={{
+              fontFamily: isMagazine ? "Chomsky" : "Anton",
+              fontSize: markSize,
+              lineHeight: markSize * 1.05,
+            }}
           >
             A.
           </Text>
@@ -101,7 +106,6 @@ export function Logo({
       {showWordmark ? (
         <Text
           className={[
-            "font-wordmark",
             markVariant === "auto" ? "text-fg" : "",
             isMagazine ? "tracking-wide" : "uppercase tracking-wider",
             isLeft ? "text-left" : "text-center",
@@ -111,6 +115,7 @@ export function Logo({
             .join(" ")}
           style={[
             {
+              fontFamily: isMagazine ? "Chomsky" : "Anton",
               fontSize: size * (isMagazine ? 0.88 : 0.92),
               color: forcedWordColor,
             },
