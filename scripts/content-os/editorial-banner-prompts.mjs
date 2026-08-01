@@ -513,7 +513,7 @@ export const BANNER_METAPHORS = {
   },
   "nuclear-explosions": {
     metaphor:
-      "atomic mushroom clouds as geologic strata of test yields across a barren instrumented desert",
+      "abstract atomic test yield strata as geometric orange and ash-gray desert layers with instrument silhouettes",
     palette: "atomic orange ash gray warning yellow and void black",
   },
   readmitted: {
