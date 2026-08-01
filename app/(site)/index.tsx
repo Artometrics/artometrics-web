@@ -81,11 +81,11 @@ export default function HomeScreen() {
       <Wrapper variant="magazine" className="pt-7 pb-2">
         <View className="flex-row flex-wrap gap-6 items-stretch">
           <View className="flex-[1.2] min-w-[260px] gap-4 justify-center">
-            <Text className="font-display text-[64px] leading-[64px] tracking-wide uppercase text-fg">
+            <Text className="font-display text-[64px] leading-[64px] font-medium tracking-wide uppercase text-fg">
               DATA{"\n"}MAGAZINE
               <Text className="text-accent">*</Text>
             </Text>
-            <Text className="font-sans text-sm leading-5 font-extrabold tracking-wide max-w-[360px] text-accent">
+            <Text className="font-sans text-sm leading-5 font-semibold tracking-wide max-w-[360px] text-accent">
               REPORTS ON CULTURE, POWER, AND THE CREATIVE ECONOMY.
             </Text>
             <Link href="/blog" asChild>

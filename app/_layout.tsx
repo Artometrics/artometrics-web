@@ -18,6 +18,10 @@ export default function RootLayout() {
   const [loaded, error] = useFonts({
     Chomsky: require("../assets/fonts/Chomsky.otf"),
     Anton: require("../assets/fonts/Anton-Regular.ttf"),
+    "DM Sans": require("../assets/fonts/DMSans.ttf"),
+    "DM Sans Italic": require("../assets/fonts/DMSans-Italic.ttf"),
+    "DM Mono": require("../assets/fonts/DMMono-Regular.ttf"),
+    "DM Mono Medium": require("../assets/fonts/DMMono-Medium.ttf"),
   });
 
   useEffect(() => {

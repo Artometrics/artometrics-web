@@ -1,5 +1,5 @@
 /**
- * Artometrics brand tokens — Kruger B/W/red + Chomsky newspaper (default magazine).
+ * Artometrics brand tokens — Kruger B/W/red + DM Sans/Mono magazine (default).
  * Swiss Modern remains available as an alternate brand style.
  */
 
@@ -61,16 +61,20 @@ export const SwissFonts: BrandFonts = {
   mono: "'Courier New', Courier, monospace",
 };
 
-/** Magazine / Chomsky — Kruger newspaper hierarchy (default). */
+/**
+ * Magazine default — DM Mono titles/headers, DM Sans body paragraphs.
+ * Replaces Chomsky blackletter on mastheads with a readable data-magazine face;
+ * Sans matches the article theme for long-form reading.
+ */
 export const MagazineFonts: BrandFonts = {
-  display: "Chomsky",
-  sans: "Helvetica Neue, Helvetica, Arial, system-ui, sans-serif",
-  serif: "Georgia, 'Times New Roman', Times, serif",
-  wordmark: "Chomsky",
-  mono: "'Courier New', Courier, monospace",
+  display: "DM Mono",
+  sans: "DM Sans",
+  serif: "DM Sans",
+  wordmark: "DM Mono",
+  mono: "DM Mono",
 };
 
-/** Default static StyleSheets — magazine / Chomsky. Prefer useTheme().fonts when brand-aware. */
+/** Default static StyleSheets — magazine / DM Sans+Mono. Prefer useTheme().fonts when brand-aware. */
 export const Fonts = MagazineFonts;
 
 export type ThemeMode = "light" | "dark";
@@ -170,7 +174,7 @@ export function resolveBrandFonts(brand: BrandStyle): BrandFonts {
 
 export const BRAND_STYLE_LABELS: Record<BrandStyle, string> = {
   swiss: "Swiss Modern",
-  magazine: "Magazine (Chomsky)",
+  magazine: "Magazine (DM Sans / Mono)",
 };
 
 export const DEFAULT_BRAND_STYLE: BrandStyle = "magazine";
