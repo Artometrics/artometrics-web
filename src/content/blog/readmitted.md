@@ -6,7 +6,7 @@ pubDate: 2026-04-21T00:00:00.000Z
 description: >-
   CMS HRRP data show where states, conditions, and ownership types exceed
   benchmarks.
-heroImage: /images/content/articles/readmitted/hero.jpg
+heroImage: /images/content/articles/readmitted/hero.png
 draft: false
 tags:
   - science
