@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.cdnfonts.com/css/chomsky">
+<script src="./image-slot.js"></script>
+<style>
+body{margin:0;background:#000;font-family:'DM Sans',sans-serif}
+a{color:#D9251B;text-decoration:none}
+a:hover{color:#fff}
+</style>
+</helmet>
+
+<div style="background:#000;color:#fff;min-height:100vh">
+
+<div style="display:flex;justify-content:space-between;align-items:center;padding:20px 48px;border-bottom:1px solid #333">
+  <div style="display:flex;align-items:center;gap:14px">
+    <div style="background:#C0392B;color:#fff;font-family:'DM Mono',monospace;font-weight:500;font-size:14px;padding:6px 10px;letter-spacing:0.1em">A T M</div>
+    <div style="font-family:'Chomsky',serif;font-size:26px">Artometrics</div>
+  </div>
+  <div style="display:flex;gap:32px;font-family:'DM Mono',monospace;font-size:12px;letter-spacing:0.06em;text-transform:uppercase">
+    <a href="#">Home</a><a href="#reports">Reports</a><a href="#data">Data</a><a href="#columns">Columns</a><a href="#">About</a>
+  </div>
+</div>
+
+<div style="text-align:center;padding:56px 24px 0">
+  <div style="display:inline-block;background:#0a0a0a;border:6px solid #1a1a1a;border-radius:4px;padding:8px 40px;box-shadow:0 0 40px rgba(217,37,27,0.15)">
+    <div style="font-family:'DM Mono',monospace;font-weight:500;font-size:44px;letter-spacing:0.15em;text-transform:uppercase;color:#fff">Newsstand</div>
+  </div>
+</div>
+
+<div style="max-width:1200px;margin:32px auto 0;padding:0 48px 56px">
+  <div style="border:3px solid #2b2b2b;border-radius:2px;padding:20px;background:linear-gradient(#0c0c0c,#080808)">
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2px">
+
+      <div style="aspect-ratio:3/4;background:#111;position:relative;overflow:hidden;border:1px solid #222">
+        <image-slot id="cov1" shape="rect" placeholder="Edition 01 cover" fit="cover" style="width:100%;height:100%"></image-slot>
+        <div style="position:absolute;top:0;left:0;right:0;background:rgba(0,0,0,0.75);padding:8px 10px"><div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.08em;color:#D9251B;text-transform:uppercase">Edition 01</div><div style="font-family:'DM Mono',monospace;font-size:13px;color:#fff;font-weight:500">The Bias Issue</div></div>
+      </div>
+
+      <div style="aspect-ratio:3/4;background:#111;position:relative;overflow:hidden;border:1px solid #222">
+        <image-slot id="cov2" shape="rect" placeholder="Edition 02 cover" fit="cover" style="width:100%;height:100%"></image-slot>
+        <div style="position:absolute;top:0;left:0;right:0;background:rgba(0,0,0,0.75);padding:8px 10px"><div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.08em;color:#D9251B;text-transform:uppercase">Edition 02</div><div style="font-family:'DM Mono',monospace;font-size:13px;color:#fff;font-weight:500">Signal vs. Noise</div></div>
+      </div>
+
+      <div style="aspect-ratio:3/4;background:#111;position:relative;overflow:hidden;border:1px solid #222">
+        <image-slot id="cov3" shape="rect" placeholder="Edition 03 cover" fit="cover" style="width:100%;height:100%"></image-slot>
+        <div style="position:absolute;top:0;left:0;right:0;background:rgba(0,0,0,0.75);padding:8px 10px"><div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.08em;color:#D9251B;text-transform:uppercase">Edition 03</div><div style="font-family:'DM Mono',monospace;font-size:13px;color:#fff;font-weight:500">The Sample Size</div></div>
+      </div>
+
+      <div style="aspect-ratio:3/4;background:#111;position:relative;overflow:hidden;border:1px solid #222">
+        <image-slot id="cov4" shape="rect" placeholder="Edition 04 cover" fit="cover" style="width:100%;height:100%"></image-slot>
+        <div style="position:absolute;top:0;left:0;right:0;background:rgba(0,0,0,0.75);padding:8px 10px"><div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.08em;color:#D9251B;text-transform:uppercase">Edition 04</div><div style="font-family:'DM Mono',monospace;font-size:13px;color:#fff;font-weight:500">Model Drift, Quantified</div></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div style="max-width:1200px;margin:0 auto;padding:0 48px 64px;display:grid;grid-template-columns:1.6fr 1fr;gap:40px">
+  <div>
+    <div style="position:relative;aspect-ratio:16/9;background:#111;overflow:hidden">
+      <image-slot id="heroimg" shape="rect" placeholder="Feature hero image" fit="cover" style="width:100%;height:100%"></image-slot>
+      <div style="position:absolute;inset:0;background:linear-gradient(transparent 40%, rgba(0,0,0,0.85))"></div>
+      <div style="position:absolute;bottom:24px;left:24px;right:24px">
+        <div style="font-family:'DM Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#D9251B;margin-bottom:8px">Edition 04 &mdash; Data</div>
+        <div style="font-family:'DM Mono',monospace;font-weight:500;font-size:36px;line-height:1.05;color:#fff;text-transform:uppercase">Every model lies. Some are useful.</div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div style="font-family:'DM Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#525252;border-bottom:1px solid #333;padding-bottom:12px;margin-bottom:4px">Latest</div>
+    <div style="display:flex;flex-direction:column">
+      <a href="#" style="display:block;padding-top:16px;color:#fff;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:500">The must-see datasets of 2026: from public transit to climate reanalysis</a>
+      <div style="font-family:'DM Mono',monospace;font-size:11px;color:#525252;padding:4px 0 16px;border-bottom:1px solid #262626">2 August 2026</div>
+      <a href="#" style="display:block;padding-top:16px;color:#fff;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:500">A guide to reading confidence intervals like a headline</a>
+      <div style="font-family:'DM Mono',monospace;font-size:11px;color:#525252;padding:4px 0 16px;border-bottom:1px solid #262626">30 July 2026</div>
+      <a href="#" style="display:block;padding-top:16px;color:#fff;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:500">Planning a re-audit? Here's what breaks first</a>
+      <div style="font-family:'DM Mono',monospace;font-size:11px;color:#525252;padding:4px 0 16px;border-bottom:1px solid #262626">27 July 2026</div>
+      <a href="#" style="display:block;padding-top:16px;color:#fff;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:500">Newsroom vs. notebook: where analysis dies in translation</a>
+      <div style="font-family:'DM Mono',monospace;font-size:11px;color:#525252;padding:4px 0 16px">22 July 2026</div>
+    </div>
+  </div>
+</div>
+
+<div id="reports" style="max-width:1200px;margin:0 auto;padding:0 48px 64px">
+  <div style="font-family:'DM Mono',monospace;font-weight:500;font-size:28px;text-transform:uppercase;letter-spacing:0.02em;border-bottom:2px solid #333;padding-bottom:16px;margin-bottom:28px">Reports</div>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px">
+    <div>
+      <div style="aspect-ratio:4/3;background:#111;margin-bottom:14px"><image-slot id="rep1" shape="rect" placeholder="Report image" fit="cover" style="width:100%;height:100%"></image-slot></div>
+      <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.06em;text-transform:uppercase;background:#C0392B;color:#fff;display:inline-block;padding:3px 8px;margin-bottom:10px">Report</div>
+      <div style="font-family:'DM Sans',sans-serif;font-weight:700;font-size:17px;line-height:1.3">Creative legacy of statistical decision-making, explored in a new dataset</div>
+    </div>
+    <div>
+      <div style="aspect-ratio:4/3;background:#111;margin-bottom:14px"><image-slot id="rep2" shape="rect" placeholder="Report image" fit="cover" style="width:100%;height:100%"></image-slot></div>
+      <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.06em;text-transform:uppercase;background:#C0392B;color:#fff;display:inline-block;padding:3px 8px;margin-bottom:10px">Interview</div>
+      <div style="font-family:'DM Sans',sans-serif;font-weight:700;font-size:17px;line-height:1.3">Q&amp;A: a statistician on why most A/B tests are underpowered</div>
+    </div>
+    <div>
+      <div style="aspect-ratio:4/3;background:#111;margin-bottom:14px"><image-slot id="rep3" shape="rect" placeholder="Report image" fit="cover" style="width:100%;height:100%"></image-slot></div>
+      <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.06em;text-transform:uppercase;background:#C0392B;color:#fff;display:inline-block;padding:3px 8px;margin-bottom:10px">Method</div>
+      <div style="font-family:'DM Sans',sans-serif;font-weight:700;font-size:17px;line-height:1.3">Why we audit every published claim twice before print</div>
+    </div>
+  </div>
+</div>
+
+<div id="data" style="max-width:1200px;margin:0 auto;padding:0 48px 64px">
+  <div style="font-family:'DM Mono',monospace;font-weight:500;font-size:28px;text-transform:uppercase;letter-spacing:0.02em;border-bottom:2px solid #333;padding-bottom:16px;margin-bottom:28px">Data</div>
+  <div style="display:grid;grid-template-columns:1.4fr 1fr;gap:28px">
+    <div style="aspect-ratio:16/9;background:#111"><image-slot id="dataimg" shape="rect" placeholder="Dataset visual" fit="cover" style="width:100%;height:100%"></image-slot></div>
+    <div style="display:flex;flex-direction:column;justify-content:space-between">
+      <div style="padding-bottom:16px;border-bottom:1px solid #262626">
+        <div style="font-family:'DM Mono',monospace;font-size:10px;color:#525252;margin-bottom:4px">12 DEC 2026</div>
+        <div style="font-family:'DM Sans',sans-serif;font-weight:700;font-size:15px">Model drift benchmark, public release</div>
+      </div>
+      <div style="padding:16px 0;border-bottom:1px solid #262626">
+        <div style="font-family:'DM Mono',monospace;font-size:10px;color:#525252;margin-bottom:4px">3 NOV 2026</div>
+        <div style="font-family:'DM Sans',sans-serif;font-weight:700;font-size:15px">City transit reliability, five-year panel</div>
+      </div>
+      <div style="padding-top:16px">
+        <div style="font-family:'DM Mono',monospace;font-size:10px;color:#525252;margin-bottom:4px">1 OCT 2026</div>
+        <div style="font-family:'DM Sans',sans-serif;font-weight:700;font-size:15px">Climate reanalysis, county-level rollup</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="columns" style="max-width:1200px;margin:0 auto;padding:0 48px 72px">
+  <div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:2px solid #333;padding-bottom:16px;margin-bottom:28px">
+    <div style="font-family:'DM Mono',monospace;font-weight:500;font-size:28px;text-transform:uppercase;letter-spacing:0.02em">Columns</div>
+    <a href="#" style="font-family:'DM Mono',monospace;font-size:12px;text-transform:uppercase;letter-spacing:0.06em">Read all &rarr;</a>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px">
+    <div><div style="aspect-ratio:1;background:#111;margin-bottom:10px"><image-slot id="col1" shape="rect" fit="cover" style="width:100%;height:100%"></image-slot></div><div style="font-family:'DM Sans',sans-serif;font-size:13px;line-height:1.4">The secretive market behind synthetic training data</div><div style="font-family:'DM Mono',monospace;font-size:9px;color:#525252;text-transform:uppercase;margin-top:6px">Column</div></div>
+    <div><div style="aspect-ratio:1;background:#111;margin-bottom:10px"><image-slot id="col2" shape="rect" fit="cover" style="width:100%;height:100%"></image-slot></div><div style="font-family:'DM Sans',sans-serif;font-size:13px;line-height:1.4">Peer review is broken. Preprints aren't the fix either</div><div style="font-family:'DM Mono',monospace;font-size:9px;color:#525252;text-transform:uppercase;margin-top:6px">Column</div></div>
+    <div><div style="aspect-ratio:1;background:#111;margin-bottom:10px"><image-slot id="col3" shape="rect" fit="cover" style="width:100%;height:100%"></image-slot></div><div style="font-family:'DM Sans',sans-serif;font-size:13px;line-height:1.4">What a null result actually costs a research team</div><div style="font-family:'DM Mono',monospace;font-size:9px;color:#525252;text-transform:uppercase;margin-top:6px">Column</div></div>
+    <div><div style="aspect-ratio:1;background:#111;margin-bottom:10px"><image-slot id="col4" shape="rect" fit="cover" style="width:100%;height:100%"></image-slot></div><div style="font-family:'DM Sans',sans-serif;font-size:13px;line-height:1.4">Dashboards remembered a decade of decisions no one made</div><div style="font-family:'DM Mono',monospace;font-size:9px;color:#525252;text-transform:uppercase;margin-top:6px">Column</div></div>
+  </div>
+</div>
+
+<div style="border-top:1px solid #333;padding:48px;display:grid;grid-template-columns:auto 1fr 1fr 1fr;gap:40px">
+  <div style="background:#C0392B;color:#fff;font-family:'DM Mono',monospace;font-weight:500;font-size:14px;padding:6px 10px;letter-spacing:0.1em;height:fit-content">A T M</div>
+  <div><div style="font-family:'DM Mono',monospace;font-size:11px;color:#525252;text-transform:uppercase;margin-bottom:12px">Sections</div><div style="display:flex;flex-direction:column;gap:8px;font-family:'DM Sans',sans-serif;font-size:13px"><a href="#">Reports</a><a href="#">Data</a><a href="#">Columns</a></div></div>
+  <div><div style="font-family:'DM Mono',monospace;font-size:11px;color:#525252;text-transform:uppercase;margin-bottom:12px">Social</div><div style="display:flex;flex-direction:column;gap:8px;font-family:'DM Sans',sans-serif;font-size:13px"><a href="#">Instagram</a><a href="#">X</a></div></div>
+  <div><div style="font-family:'DM Mono',monospace;font-size:11px;color:#525252;text-transform:uppercase;margin-bottom:12px">Contact</div><div style="font-family:'DM Sans',sans-serif;font-size:13px;color:#a3a3a3">hello@artometrics.com</div></div>
+</div>
+
+</div>
+
+</x-dc>
+</body>
+</html>

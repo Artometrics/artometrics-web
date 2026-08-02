@@ -1,0 +1,58 @@
+/* Artometrics IG Carousel — Live Content
+   Shared styles for the 6 slide files. Ported from the Claude Design
+   prototype (Artometrics IG Carousel - Live Content.dc.html) with the
+   design-tool scaffolding (x-dc, <image-slot>, dc-runtime) removed. */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500;700&family=DM+Sans:wght@400;500;700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/chomsky');
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  background: #E5E5E5;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.slide {
+  width: 1080px;
+  height: 1080px;
+  position: relative;
+  background: #000;
+  overflow: hidden;
+}
+
+.mono {
+  font-family: 'DM Mono', monospace;
+}
+
+.wordmark {
+  font-family: 'Chomsky', serif;
+  color: #fff;
+}
+
+/* Photo placeholder — stands in for <image-slot>. Grayscale/contrast
+   filter matches the design's treatment of dropped photos; swap the
+   background-image (or replace with an <img>) once real photos are
+   available and this block can be deleted. */
+.photo-slot {
+  position: absolute;
+  inset: 0;
+  background: #1a1a1a;
+  filter: grayscale(1) contrast(1.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #757575;
+  text-align: center;
+  padding: 40px;
+}
+
+.photo-slot__caption {
+  font-family: 'DM Mono', monospace;
+  font-size: 20px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border: 1px dashed #757575;
+  padding: 24px 32px;
+}
