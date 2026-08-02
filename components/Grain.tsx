@@ -1,8 +1,16 @@
+import { useEffect, useState } from "react";
 import { Platform, View } from "react-native";
 
-/** Fixed film-grain overlay — KSM zine energy (web only). */
+/** Fixed film-grain overlay — KSM zine energy (web only, post-hydration). */
 export function Grain() {
-  if (Platform.OS !== "web") return null;
+  const [ready, setReady] = useState(false);
+
+  useEffect(() => {
+    setReady(true);
+  }, []);
+
+  if (Platform.OS !== "web" || !ready) return null;
+
   return (
     <View
       pointerEvents="none"
