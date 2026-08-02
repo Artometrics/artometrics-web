@@ -74,7 +74,7 @@ export function HomeMagazine() {
       {/* Signal strip */}
       <View className="relative h-[160px] w-full overflow-hidden border-y-2 border-border bg-accent md:h-[220px]">
         <Image
-          source={{ uri: STRIP }}
+          source={{ uri: assetUrl(STRIP) || STRIP }}
           className="absolute inset-0 h-full w-full opacity-70"
           contentFit="cover"
         />
@@ -200,9 +200,9 @@ export function HomeMagazine() {
                   asChild
                 >
                   <Pressable className="flex-row items-center gap-4 border-b-2 border-border px-4 py-5 last:border-b-0">
-                    {ep.image ? (
+                    {assetUrl(ep.image?.url) ? (
                       <Image
-                        source={{ uri: assetUrl(ep.image) ?? ep.image }}
+                        source={{ uri: assetUrl(ep.image.url)! }}
                         className="h-16 w-16"
                         contentFit="cover"
                       />

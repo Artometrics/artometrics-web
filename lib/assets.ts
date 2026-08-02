@@ -11,11 +11,23 @@ function siteOrigin(): string {
   );
 }
 
+type AssetPath =
+  | string
+  | { url?: string | null }
+  | null
+  | undefined;
+
 /** Resolve site-relative asset paths for native (web can use root-relative). */
-export function assetUrl(path: string | null | undefined): string | undefined {
-  if (!path) return undefined;
-  if (/^https?:\/\//i.test(path)) return path;
-  if (Platform.OS === "web") return path;
+export function assetUrl(path: AssetPath): string | undefined {
+  const raw =
+    typeof path === "string"
+      ? path
+      : path && typeof path === "object"
+        ? path.url
+        : undefined;
+  if (!raw || typeof raw !== "string") return undefined;
+  if (/^https?:\/\//i.test(raw)) return raw;
+  if (Platform.OS === "web") return raw;
   const origin = siteOrigin().replace(/\/$/, "");
-  return `${origin}${path.startsWith("/") ? path : `/${path}`}`;
+  return `${origin}${raw.startsWith("/") ? raw : `/${raw}`}`;
 }
