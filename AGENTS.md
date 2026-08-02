@@ -144,6 +144,8 @@ Keyword briefs, style rules, draft scaffolds, and AEO live under `docs/content-o
 | `npm run cos:publish -- --slug …` | Copy draft → `src/content/blog/` + rebuild JSON + `llms.txt` |
 | `npm run cos:aeo` | Regenerate llms.txt, llms-full, sitemap, RSS |
 | `npm run cos:zine -- --slug <slug>` | Instagram zine pack (slides.html + caption) |
+| `npm run cos:carousel -- --slug <slug>` | Kruger 1:1 IG carousel pack |
+| `npm run cos:carousel -- --brand` | Newsstand brand carousel |
 | `npm run cos:pdf -- --slug <slug>` | Print PDF pack |
 | `npm run cos:ebook -- --slug <slug>` | EPUB pack |
 | `npm run cos:narrate -- --slug <slug>` | ElevenLabs narration MP3 |
