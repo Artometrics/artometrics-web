@@ -23,6 +23,8 @@ function SiteChrome() {
   const { setScrollY, setIsArticle } = useChrome();
   const { mode } = useTheme();
   const scrollRef = useRef<ScrollView>(null);
+  const bareChrome =
+    pathname === "/welcome" || pathname === "/welcome/" || pathname.startsWith("/welcome?");
 
   useEffect(() => {
     const slug = pathname.replace(/^\//, "").replace(/\/$/, "");
@@ -43,23 +45,27 @@ function SiteChrome() {
   };
 
   return (
-    <SafeAreaView className="flex-1 bg-bg" edges={["top"]}>
-      <StatusBar style={mode === "dark" ? "light" : "dark"} />
-      <View className="relative flex-1 bg-bg">
-        <SiteHeader />
+    <SafeAreaView
+      className={bareChrome ? "flex-1 bg-black" : "flex-1 bg-bg"}
+      edges={["top"]}
+      style={bareChrome ? { backgroundColor: "#000000" } : undefined}
+    >
+      <StatusBar style={bareChrome || mode === "dark" ? "light" : "dark"} />
+      <View className={bareChrome ? "relative flex-1 bg-black" : "relative flex-1 bg-bg"}>
+        {bareChrome ? null : <SiteHeader />}
         <ScrollView
           ref={scrollRef}
           className="flex-1"
-          contentContainerClassName="grow pb-6"
+          contentContainerClassName={bareChrome ? "grow" : "grow pb-6"}
           onScroll={onScroll}
           scrollEventThrottle={32}
           keyboardShouldPersistTaps="handled"
           keyboardDismissMode="on-drag"
         >
           <Slot />
-          <SiteFooter />
+          {bareChrome ? null : <SiteFooter />}
         </ScrollView>
-        <SiteNavOverlay />
+        {bareChrome ? null : <SiteNavOverlay />}
         <Analytics />
       </View>
     </SafeAreaView>
