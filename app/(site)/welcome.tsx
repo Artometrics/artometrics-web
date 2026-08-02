@@ -1,13 +1,24 @@
-import { useMemo, useState } from "react";
-import { Pressable, Text, View, useWindowDimensions } from "react-native";
+import { useMemo, useRef, useState } from "react";
+import {
+  Animated,
+  Pressable,
+  ScrollView,
+  Text,
+  View,
+  useWindowDimensions,
+} from "react-native";
 import { Image } from "expo-image";
 import { router } from "expo-router";
 import Svg, { Path, Rect } from "react-native-svg";
 import { PageSeo } from "@/components/PageSeo";
-import { Logo } from "@/components/Logo";
-import { Colors, Fonts } from "@/constants/Colors";
+import { AtmMark } from "@/components/AtmMark";
+import { Colors } from "@/constants/Colors";
 import { assetUrl } from "@/lib/assets";
-import { getBlogPosts, getPodcastEpisodes } from "@/lib/content";
+import {
+  getBlogPosts,
+  getPodcastEpisodes,
+  sectionLabel,
+} from "@/lib/content";
 import { openExternalUrl } from "@/lib/openExternal";
 import { trackEvent } from "@/lib/analytics/ga";
 
@@ -16,6 +27,7 @@ type FeedTab = "reports" | "podcast";
 type BioLink = {
   label: string;
   href: string;
+  primary?: boolean;
 };
 
 type DeskChip = {
@@ -30,20 +42,16 @@ type SocialIcon = {
 };
 
 const DESKS: DeskChip[] = [
-  { label: "@Arts", href: "/topics/arts" },
-  { label: "@Sports", href: "/topics/sports" },
-  { label: "@Science", href: "/topics/science" },
-  { label: "@Humanities", href: "/topics/humanities" },
-  { label: "@Civics", href: "/topics/civics" },
-  { label: "@Culture", href: "/topics/culture" },
-  { label: "@Studio", href: "/studio" },
-  { label: "@Podcast", href: "/podcast" },
+  { label: "Arts", href: "/topics/arts" },
+  { label: "Sports", href: "/topics/sports" },
+  { label: "Science", href: "/topics/science" },
+  { label: "Humanities", href: "/topics/humanities" },
+  { label: "Civics", href: "/topics/civics" },
+  { label: "Culture", href: "/topics/culture" },
+  { label: "Studio", href: "/studio" },
+  { label: "Podcast", href: "/podcast" },
 ];
 
-/**
- * Social row mirrors a Complex-style bio hub.
- * X + GitHub are always on; set EXPO_PUBLIC_*_URL for the rest.
- */
 const SOCIAL: SocialIcon[] = [
   {
     id: "instagram",
@@ -73,19 +81,19 @@ const SOCIAL: SocialIcon[] = [
 ].filter((s) => Boolean(s.href));
 
 const LINKS: BioLink[] = [
-  { label: "Browse the latest reports", href: "/blog" },
+  { label: "Read the latest reports →", href: "/blog", primary: true },
   {
-    label: "Read Beyoncé and the Cost of Controlling the House",
+    label: "Beyoncé and the Cost of Controlling the House",
     href: "/beyonce-the-psychonomics-of-control",
   },
   {
-    label: "Read the Padres ownership blueprint",
+    label: "Padres ownership blueprint",
     href: "/padres-world-series-ownership-blueprint",
   },
   { label: "Listen to the podcast", href: "/podcast" },
 ];
 
-function SocialGlyph({ id, size = 22 }: { id: string; size?: number }) {
+function SocialGlyph({ id, size = 20 }: { id: string; size?: number }) {
   const stroke = Colors.white;
   if (id === "instagram") {
     return (
@@ -159,14 +167,15 @@ export default function WelcomeScreen() {
   const [tab, setTab] = useState<FeedTab>("reports");
   const maxW = Math.min(width, 440);
   const pad = 20;
-  const gap = 4;
-  const col = Math.max(96, Math.floor((maxW - pad * 2 - gap * 2) / 3));
+  const coverW = Math.min(220, maxW - pad * 2 - 24);
+  const coverH = Math.round(coverW * 1.25);
+  const fade = useRef(new Animated.Value(1)).current;
 
   const reports = useMemo(
     () =>
       getBlogPosts()
         .filter((p) => Boolean(p.heroImage))
-        .slice(0, 9),
+        .slice(0, 12),
     [],
   );
   const episodes = useMemo(() => getPodcastEpisodes().slice(0, 9), []);
@@ -178,18 +187,29 @@ export default function WelcomeScreen() {
           href: `/${p.slug}`,
           image: p.heroImage as string,
           title: p.title,
+          desk: sectionLabel(p.tags) || "Report",
         }))
       : episodes.map((e) => ({
           key: e.id,
           href: `/podcast/interviews/${e.id}`,
           image: e.image?.url ?? "",
           title: e.title,
+          desk: e.episodeNumber ? `Episode ${e.episodeNumber}` : "Podcast",
         }));
+
+  function switchTab(next: FeedTab) {
+    if (next === tab) return;
+    Animated.sequence([
+      Animated.timing(fade, { toValue: 0.35, duration: 120, useNativeDriver: true }),
+      Animated.timing(fade, { toValue: 1, duration: 180, useNativeDriver: true }),
+    ]).start();
+    setTab(next);
+  }
 
   return (
     <View
       className="w-full items-center self-center"
-      style={{ backgroundColor: Colors.black, minHeight: "100%", paddingBottom: 48 }}
+      style={{ backgroundColor: Colors.black, minHeight: "100%", paddingBottom: 56 }}
     >
       <PageSeo
         title="Welcome"
@@ -197,59 +217,46 @@ export default function WelcomeScreen() {
         path="/welcome"
       />
 
-      <View style={{ width: "100%", maxWidth: maxW, paddingHorizontal: pad, paddingTop: 36 }}>
-        <View className="items-center gap-3">
-          <Logo size={72} compact={1} align="center" markVariant="light" showWordmark={false} />
+      <View style={{ width: "100%", maxWidth: maxW, paddingHorizontal: pad, paddingTop: 40 }}>
+        {/* Brand — Chomsky first, like the site CTA band */}
+        <View className="items-start gap-3">
+          <AtmMark size="md" />
           <Text
-            style={{
-              color: Colors.white,
-              fontFamily: Fonts.display,
-              fontSize: 18,
-              letterSpacing: 3.2,
-              textTransform: "uppercase",
-            }}
+            className="text-[40px] leading-[42px] text-white"
+            style={{ fontFamily: "Chomsky" }}
+            accessibilityRole="header"
           >
             Artometrics
           </Text>
+          <View style={{ height: 3, width: 72, backgroundColor: Colors.magazineAccent }} />
+          <Text className="font-mono text-[15px] font-medium uppercase leading-5 tracking-[0.04em] text-white">
+            Data reports on culture, power, and the creative economy.
+          </Text>
 
-          <View className="mt-2 w-full gap-1.5">
-            {[DESKS.slice(0, 4), DESKS.slice(4)].map((row, i) => (
-              <View
-                key={i}
-                className="flex-row flex-wrap items-center justify-center gap-x-3 gap-y-1"
+          <View className="mt-1 w-full flex-row flex-wrap gap-x-4 gap-y-2">
+            {DESKS.map((d) => (
+              <Pressable
+                key={d.href}
+                onPress={() => go(d.href)}
+                accessibilityRole="link"
+                accessibilityLabel={d.label}
               >
-                {row.map((d) => (
-                  <Pressable
-                    key={d.href}
-                    onPress={() => go(d.href)}
-                    accessibilityRole="link"
-                    accessibilityLabel={d.label}
-                  >
-                    <Text
-                      style={{
-                        color: Colors.white,
-                        fontFamily: Fonts.sans,
-                        fontSize: 12,
-                        letterSpacing: 0.2,
-                      }}
-                    >
-                      {d.label}
-                    </Text>
-                  </Pressable>
-                ))}
-              </View>
+                <Text className="font-mono text-[11px] font-medium uppercase tracking-[0.1em] text-white/70">
+                  {d.label}
+                </Text>
+              </Pressable>
             ))}
           </View>
 
           {SOCIAL.length > 0 ? (
-            <View className="mt-4 flex-row items-center justify-center gap-5">
+            <View className="mt-3 flex-row items-center gap-4">
               {SOCIAL.map((s) => (
                 <Pressable
                   key={s.id}
                   onPress={() => go(s.href)}
                   accessibilityRole="link"
                   accessibilityLabel={s.label}
-                  className="h-10 w-10 items-center justify-center"
+                  className="h-9 w-9 items-center justify-center border border-white/40"
                 >
                   <SocialGlyph id={s.id} />
                 </Pressable>
@@ -258,7 +265,8 @@ export default function WelcomeScreen() {
           ) : null}
         </View>
 
-        <View className="mt-8 gap-3.5">
+        {/* CTA stack — primary red, secondary outline */}
+        <View className="mt-8 gap-3">
           {LINKS.map((link) => (
             <Pressable
               key={link.href}
@@ -266,21 +274,20 @@ export default function WelcomeScreen() {
               accessibilityRole="link"
               accessibilityLabel={link.label}
               className="items-center justify-center px-4 py-4"
-              style={{
-                borderWidth: 1,
-                borderColor: Colors.white,
-                backgroundColor: Colors.black,
-              }}
+              style={
+                link.primary
+                  ? { backgroundColor: Colors.accent500 }
+                  : {
+                      borderWidth: 2,
+                      borderColor: Colors.white,
+                      backgroundColor: Colors.black,
+                    }
+              }
             >
               <Text
-                style={{
-                  color: Colors.white,
-                  fontFamily: Fonts.sans,
-                  fontSize: 14,
-                  fontWeight: "700",
-                  textAlign: "center",
-                  letterSpacing: 0.3,
-                }}
+                className={`text-center font-mono text-[13px] font-medium uppercase tracking-[0.04em] ${
+                  link.primary ? "text-white" : "text-white"
+                }`}
               >
                 {link.label}
               </Text>
@@ -288,85 +295,128 @@ export default function WelcomeScreen() {
           ))}
         </View>
 
-        <View
-          className="mt-10"
-          style={{ borderTopWidth: 1, borderTopColor: Colors.white, paddingTop: 18 }}
-        >
-          <View className="mb-4 flex-row">
-            {(
-              [
-                { id: "reports" as const, label: "REPORTS" },
-                { id: "podcast" as const, label: "PODCAST" },
-              ] as const
-            ).map((t) => {
-              const active = tab === t.id;
-              return (
-                <Pressable
-                  key={t.id}
-                  onPress={() => setTab(t.id)}
-                  className="mr-6 pb-2"
-                  accessibilityRole="tab"
-                  accessibilityState={{ selected: active }}
-                  style={{
-                    borderBottomWidth: active ? 3 : 1,
-                    borderBottomColor: active ? Colors.white : "rgba(255,255,255,0.35)",
-                  }}
-                >
-                  <Text
+        {/* Cover carousel */}
+        <View className="mt-10 border-t-2 border-white pt-6">
+          <View className="mb-4 flex-row items-end justify-between">
+            <View className="flex-row">
+              {(
+                [
+                  { id: "reports" as const, label: "Reports" },
+                  { id: "podcast" as const, label: "Podcast" },
+                ] as const
+              ).map((t) => {
+                const active = tab === t.id;
+                return (
+                  <Pressable
+                    key={t.id}
+                    onPress={() => switchTab(t.id)}
+                    className="mr-5 pb-2"
+                    accessibilityRole="tab"
+                    accessibilityState={{ selected: active }}
                     style={{
-                      color: active ? Colors.white : "rgba(255,255,255,0.55)",
-                      fontFamily: Fonts.sans,
-                      fontSize: 12,
-                      fontWeight: "700",
-                      letterSpacing: 1.4,
+                      borderBottomWidth: active ? 3 : 0,
+                      borderBottomColor: Colors.magazineAccent,
                     }}
                   >
-                    {t.label}
-                  </Text>
-                </Pressable>
-              );
-            })}
+                    <Text
+                      className={`font-mono text-[12px] font-medium uppercase tracking-[0.1em] ${
+                        active ? "text-white" : "text-white/45"
+                      }`}
+                    >
+                      {t.label}
+                    </Text>
+                  </Pressable>
+                );
+              })}
+            </View>
+            <Text className="font-mono text-[10px] uppercase tracking-[0.08em] text-white/40">
+              Swipe →
+            </Text>
           </View>
 
-          <View className="flex-row flex-wrap" style={{ gap }}>
-            {feedItems.map((item) => {
-              const uri = assetUrl(item.image);
-              return (
-                <Pressable
-                  key={item.key}
-                  onPress={() => go(item.href)}
-                  accessibilityRole="link"
-                  accessibilityLabel={item.title}
-                  style={{ width: col, height: col, backgroundColor: Colors.base900 }}
-                >
-                  {uri ? (
-                    <Image
-                      source={{ uri }}
-                      style={{ width: col, height: col }}
-                      contentFit="cover"
-                    />
-                  ) : (
-                    <View className="h-full w-full items-center justify-center px-1">
-                      <Text
-                        numberOfLines={3}
+          <Animated.View style={{ opacity: fade }}>
+            <ScrollView
+              horizontal
+              showsHorizontalScrollIndicator={false}
+              decelerationRate="fast"
+              snapToInterval={coverW + 12}
+              contentContainerStyle={{ gap: 12, paddingRight: 8 }}
+            >
+              {feedItems.map((item) => {
+                const uri = assetUrl(item.image);
+                return (
+                  <Pressable
+                    key={item.key}
+                    onPress={() => go(item.href)}
+                    accessibilityRole="link"
+                    accessibilityLabel={item.title}
+                    style={{ width: coverW }}
+                  >
+                    <View
+                      style={{
+                        width: coverW,
+                        height: coverH,
+                        backgroundColor: Colors.base900,
+                        borderWidth: 1,
+                        borderColor: "rgba(255,255,255,0.2)",
+                        overflow: "hidden",
+                      }}
+                    >
+                      {uri ? (
+                        <Image
+                          source={{ uri }}
+                          style={{ width: coverW, height: coverH }}
+                          contentFit="cover"
+                        />
+                      ) : null}
+                      <View
+                        pointerEvents="none"
                         style={{
-                          color: Colors.white,
-                          fontFamily: Fonts.sans,
-                          fontSize: 10,
-                          textAlign: "center",
+                          position: "absolute",
+                          left: 0,
+                          right: 0,
+                          bottom: 0,
+                          padding: 12,
+                          backgroundColor: "rgba(0,0,0,0.72)",
                         }}
                       >
-                        {item.title}
-                      </Text>
+                        <Text
+                          className="mb-1 font-mono text-[10px] font-medium uppercase tracking-[0.08em]"
+                          style={{ color: Colors.accent400 }}
+                          numberOfLines={1}
+                        >
+                          {item.desk}
+                        </Text>
+                        <Text
+                          className="font-mono text-[13px] font-medium uppercase leading-4 tracking-[0.02em] text-white"
+                          numberOfLines={3}
+                        >
+                          {item.title}
+                        </Text>
+                      </View>
                     </View>
-                  )}
-                  <View pointerEvents="none" style={{ position: "absolute", top: 6, right: 6 }}>
-                    <Logo size={14} compact={1} markVariant="light" showWordmark={false} />
-                  </View>
-                </Pressable>
-              );
-            })}
-          </View>
+                  </Pressable>
+                );
+              })}
+            </ScrollView>
+          </Animated.View>
+        </View>
+
+        <View className="mt-10 items-start gap-2 border-t border-white/25 pt-6">
+          <Text
+            className="text-[22px] text-white"
+            style={{ fontFamily: "Chomsky" }}
+          >
+            Artometrics
+          </Text>
+          <Text className="font-sans text-[13px] leading-5 text-white/55">
+            Independent data-science magazine. Evidence without hype.
+          </Text>
+          <Pressable onPress={() => go("/")} accessibilityRole="link">
+            <Text className="mt-1 font-mono text-[12px] font-medium uppercase tracking-[0.06em] text-accent">
+              artometrics.com →
+            </Text>
+          </Pressable>
         </View>
       </View>
     </View>

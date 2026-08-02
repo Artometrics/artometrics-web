@@ -1,0 +1,11 @@
+{
+  "slug": "_brand-kruger",
+  "slides": 6,
+  "canonical": "https://artometrics.com/welcome",
+  "format": "kruger-1080",
+  "files": [
+    "slides.html",
+    "shared.css",
+    "caption.txt"
+  ]
+}

@@ -3,10 +3,11 @@
   "desk": "humanities",
   "primaryKeyword": "Beyoncé psychonomics leadership profile",
   "hashtags": "#Artometrics #HumanitiesDesk #BeyoncLeadershipTraitAnalysis #ParkwoodEntertainmentcontrol #BeyoncLemonadecanonrank #Beyonclyricaffiliationlexicon #CreativeEconomy #DataJournalism",
-  "slides": 7,
+  "slides": 6,
   "canonical": "https://artometrics.com/beyonce-the-psychonomics-of-control",
   "files": [
     "slides.html",
     "caption.txt"
-  ]
+  ],
+  "designSystem": "docs/design-system"
 }

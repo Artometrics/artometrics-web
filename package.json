@@ -40,6 +40,7 @@
     "cos:aeo": "node scripts/content-os/aeo-pack.mjs",
     "cos:downloads": "node scripts/content-os/pack-article-downloads.mjs",
     "cos:zine": "node scripts/content-os/pack-ig-zine.mjs",
+    "cos:carousel": "node scripts/content-os/pack-ig-kruger.mjs",
     "cos:pdf": "node scripts/content-os/pack-pdf.mjs",
     "brand:favicons": "python3 scripts/brand/generate-favicons.py",
     "cos:ebook": "node scripts/content-os/pack-ebook.mjs",

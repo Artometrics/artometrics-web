@@ -35,6 +35,11 @@ npm run cos:publish -- --slug my-topic
 # Rebuild AEO llms.txt from published posts
 npm run cos:llms
 
+# Instagram packs
+npm run cos:zine -- --slug my-topic          # 4:5 finding zine → docs/content-os/zines/<slug>/
+npm run cos:carousel -- --slug my-topic      # 1:1 Kruger carousel → docs/content-os/zines/<slug>-kruger/
+npm run cos:carousel -- --brand              # Newsstand brand carousel → _brand-kruger/
+
 # Special edition packs (manifests in data/editions.ts)
 npm run meta:editions
 npm run cos:ebook -- --edition music
