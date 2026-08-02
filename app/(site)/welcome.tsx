@@ -97,7 +97,7 @@ function SocialGlyph({ id, size = 20 }: { id: string; size?: number }) {
   const stroke = Colors.white;
   if (id === "instagram") {
     return (
-      <Svg width={size} height={size} viewBox="0 0 24 24" accessibilityElementsHidden>
+      <Svg width={size} height={size} viewBox="0 0 24 24">
         <Rect x="3" y="3" width="18" height="18" rx="5" stroke={stroke} strokeWidth={1.5} fill="none" />
         <Path
           d="M12 8.2a3.8 3.8 0 1 0 0 7.6 3.8 3.8 0 0 0 0-7.6z"
@@ -111,7 +111,7 @@ function SocialGlyph({ id, size = 20 }: { id: string; size?: number }) {
   }
   if (id === "x") {
     return (
-      <Svg width={size} height={size} viewBox="0 0 24 24" accessibilityElementsHidden>
+      <Svg width={size} height={size} viewBox="0 0 24 24">
         <Path
           d="M4.5 4.5l15 15M19.5 4.5l-15 15"
           stroke={stroke}
@@ -123,7 +123,7 @@ function SocialGlyph({ id, size = 20 }: { id: string; size?: number }) {
   }
   if (id === "tiktok") {
     return (
-      <Svg width={size} height={size} viewBox="0 0 24 24" accessibilityElementsHidden>
+      <Svg width={size} height={size} viewBox="0 0 24 24">
         <Path
           d="M14 4v9.2a3.8 3.8 0 1 1-3.2-3.75V12a1.9 1.9 0 1 0 1.9 1.9V4h1.3c.5 2.2 2.1 3.7 4.3 4.1V9.5c-1.5-.2-2.8-.9-3.7-2V4H14z"
           fill={stroke}
@@ -133,7 +133,7 @@ function SocialGlyph({ id, size = 20 }: { id: string; size?: number }) {
   }
   if (id === "github") {
     return (
-      <Svg width={size} height={size} viewBox="0 0 24 24" accessibilityElementsHidden>
+      <Svg width={size} height={size} viewBox="0 0 24 24">
         <Path
           d="M9 19c-4 1.5-4-2-6-2m12 4v-3.4a3 3 0 0 0-.8-2.3c2.7-.3 5.5-1.3 5.5-6A4.6 4.6 0 0 0 18 5.8 4.3 4.3 0 0 0 17.9 3s-1-.3-3.3 1.2a11.4 11.4 0 0 0-6 0C6.3 2.7 5.3 3 5.3 3a4.3 4.3 0 0 0-.1 2.8A4.6 4.6 0 0 0 4 9.3c0 4.7 2.8 5.7 5.5 6a3 3 0 0 0-.8 2.2V21"
           stroke={stroke}
@@ -146,7 +146,7 @@ function SocialGlyph({ id, size = 20 }: { id: string; size?: number }) {
     );
   }
   return (
-    <Svg width={size} height={size} viewBox="0 0 24 24" accessibilityElementsHidden>
+    <Svg width={size} height={size} viewBox="0 0 24 24">
       <Rect x="2.5" y="6" width="19" height="12" rx="2.5" stroke={stroke} strokeWidth={1.5} fill="none" />
       <Path d="M10.5 9.5v5l5-2.5z" fill={stroke} />
     </Svg>
@@ -224,7 +224,6 @@ export default function WelcomeScreen() {
           <Text
             className="text-[40px] leading-[42px] text-white"
             style={{ fontFamily: "Chomsky" }}
-            accessibilityRole="header"
           >
             Artometrics
           </Text>
@@ -311,8 +310,8 @@ export default function WelcomeScreen() {
                     key={t.id}
                     onPress={() => switchTab(t.id)}
                     className="mr-5 pb-2"
-                    accessibilityRole="tab"
-                    accessibilityState={{ selected: active }}
+                    accessibilityRole="button"
+                    accessibilityLabel={`${t.label} tab`}
                     style={{
                       borderBottomWidth: active ? 3 : 0,
                       borderBottomColor: Colors.magazineAccent,
@@ -370,7 +369,6 @@ export default function WelcomeScreen() {
                         />
                       ) : null}
                       <View
-                        pointerEvents="none"
                         style={{
                           position: "absolute",
                           left: 0,
