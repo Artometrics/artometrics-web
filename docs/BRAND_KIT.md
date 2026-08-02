@@ -26,20 +26,21 @@ See [`brand/svg/`](../brand/svg/) and [`brand/README.md`](../brand/README.md). M
 - `public/images/brand/favicon-light-*.png` / `favicon-dark-*.png`
 - `assets/fonts/Chomsky.otf` / `public/fonts/Chomsky.otf`
 
-## Color tokens (Kruger relaunch)
+## Color tokens (KSM energy × Kruger)
 
-Barbara Kruger structure: **black / white / Artometrics red**. Dark mode inverts B/W and keeps the same red.
+Loud zine build from [kylesmcauliffe.com](https://kylesmcauliffe.com) on Artometrics identity. Dark-first. See `docs/KSM_ENERGY_STYLE.md`.
 
 | Token | Light | Dark | Use |
 |-------|-------|------|-----|
-| Accent | `#C0392B` | `#C0392B` | Desks, CTAs, pull-quotes, links |
+| Accent UI | `#E60000` | `#E60000` | CTAs, links, signal band |
+| Accent print | `#C0392B` | `#C0392B` | Optional covers / pull-quotes |
 | Text | `#000000` | `#FFFFFF` | Primary copy |
-| Muted | `#525252` | `#A3A3A3` | Meta |
+| Muted | `#333333` | `#C8C8C8` | Meta |
 | Surface | `#FFFFFF` | `#000000` | Page |
-| Elevated | `#FFFFFF` | `#111111` | Bands |
-| Rule | `#000000` / `#E5E5E5` | `#FFFFFF` / `#404040` | Hairlines |
+| Elevated | `#F4F4F4` | `#1A1A1A` | Bands |
+| Rule | `#000000` | `#FFFFFF` | Hairlines |
 
-Fonts: **Chomsky** for the Artometrics wordmark/mark only; **DM Mono** for display/headers/data; **DM Sans** for body/UI. See `docs/design-system/`.
+Fonts: **Chomsky** wordmark only; **Anton** display/headers; **DM Sans** body; **DM Mono** data.
 
 ### Open Graph default
 

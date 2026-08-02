@@ -39,7 +39,7 @@ These HTML files are design references — recreate in the Expo codebase (`compo
 ## Mapped into product
 
 - Tokens: `constants/Colors.ts`, `global.css`
-- Home newsstand + editorial bands: `components/Newsstand.tsx`, `components/HomeEditorial.tsx`
+- Home (KSM-energy): `components/HomeMagazine.tsx` — full-bleed hero, signal band, magazine stack, editions rail, interviews (see `docs/KSM_ENERGY_STYLE.md`)
 - Editions + VHS shelf: `app/(site)/editions/*`, `components/VhsShelf.tsx`
 - IG zine packer: `npm run cos:zine` → `scripts/content-os/pack-ig-zine.mjs`
 - OG default: `public/images/brand/og-default.png`

@@ -136,7 +136,7 @@ function applyDomTheme(mode: ThemeMode, brand: BrandStyle, colors: ThemeColors) 
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
   const [preference, setPreferenceState] = useState<Preference>(
-    () => readStoredPreferenceSync() ?? "light",
+    () => readStoredPreferenceSync() ?? "dark",
   );
   const [brandStyle, setBrandStyleState] = useState<BrandStyle>(
     () => readStoredBrandSync() ?? DEFAULT_BRAND_STYLE,

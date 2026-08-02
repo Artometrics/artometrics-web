@@ -180,13 +180,17 @@ export default function ReportScreen() {
       ) : null}
       <Wrapper variant="wide" className="pt-9 pb-2 gap-4">
         {label ? (
-          <Text className="text-xs tracking-[1.8px] uppercase font-bold text-accent">{label}</Text>
+          <Text className="font-display text-xs uppercase tracking-[2px] text-accent">
+            {label}
+          </Text>
         ) : null}
-        <Text className="font-serif text-[36px] leading-[42px] font-bold tracking-tight text-fg">
+        <Text className="font-display text-[40px] uppercase leading-[0.95] tracking-[1px] text-fg md:text-[52px]">
           {post.title}
         </Text>
-        <Text className="font-serif text-xl leading-[30px] text-muted">{post.description}</Text>
-        <Text className="font-serif text-[15px] leading-[22px] mt-1 text-fg">
+        <Text className="max-w-[640px] font-sans text-xl leading-[30px] text-muted">
+          {post.description}
+        </Text>
+        <Text className="mt-1 font-mono text-[12px] uppercase tracking-[1.2px] text-subtle">
           By {authorLabel}
           {post.pubDate ? ` · ${formatDate(post.pubDate)}` : ""}
           {` · ${minutes} min read`}

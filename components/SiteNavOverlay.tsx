@@ -1,32 +1,31 @@
-import { useEffect, useState } from "react";
-import { Platform, Pressable, ScrollView, Text, TextInput, View } from "react-native";
-import { Link, usePathname, router } from "expo-router";
-import {
-  Mail,
-  Moon,
-  Newspaper,
-  Palette,
-  PenLine,
-  Search,
-  Sun,
-  User,
-  X,
-} from "@/components/icons";
-import { useChrome } from "@/lib/chrome";
-import { useTheme } from "@/lib/theme";
-import { useAuth } from "@/lib/auth";
+import { useEffect } from "react";
+import { Platform, Pressable, Text, View } from "react-native";
+import { Link, usePathname } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
-import { SECTION_META, SECTION_SLUGS } from "@/data/sections";
+import { useChrome } from "@/lib/chrome";
+import { useAuth } from "@/lib/auth";
+
+const LINKS = [
+  { href: "/blog", label: "Reports" },
+  { href: "/editions", label: "Editions" },
+  { href: "/podcast", label: "Podcast" },
+  { href: "/datasets", label: "Data" },
+  { href: "/library", label: "Library" },
+  { href: "/about", label: "About" },
+  { href: "/pricing", label: "Membership" },
+  { href: "/studio", label: "Studio" },
+  { href: "/contact", label: "Contact" },
+] as const;
 
 const overlayPosition =
-  Platform.OS === "web" ? ({ position: "fixed" as const }) : ({ position: "absolute" as const });
+  Platform.OS === "web"
+    ? ({ position: "fixed" as const })
+    : ({ position: "absolute" as const });
 
 export function SiteNavOverlay() {
   const pathname = usePathname();
   const { menuOpen, setMenuOpen } = useChrome();
   const { user } = useAuth();
-  const { colors, toggle, mode, brandStyle, toggleBrandStyle } = useTheme();
-  const [q, setQ] = useState("");
 
   useEffect(() => {
     setMenuOpen(false);
@@ -43,151 +42,45 @@ export function SiteNavOverlay() {
 
   if (!menuOpen) return null;
 
-  function goSearch() {
-    const query = q.trim();
-    setMenuOpen(false);
-    if (query) router.push(`/search?q=${encodeURIComponent(query)}`);
-    else router.push("/search");
-  }
-
   return (
     <View
-      className="inset-0 z-[2000] bg-overlay"
+      className="inset-0 z-[2000] bg-black"
       style={overlayPosition}
       accessibilityViewIsModal
     >
-      <Wrapper className="max-w-[960px] flex-1 pt-2 pb-6">
-        <View className="flex-row items-center justify-start py-1">
-          <Pressable
-            onPress={() => setMenuOpen(false)}
-            accessibilityRole="button"
-            accessibilityLabel="Close menu"
-            className="h-11 w-11 items-center justify-center"
-            hitSlop={12}
+      <Wrapper className="gap-0 pt-20">
+        {LINKS.map((item) => (
+          <Link
+            key={item.href}
+            href={item.href as `/`}
+            asChild
           >
-            <X size={28} color={colors.text} />
-          </Pressable>
-        </View>
-
-        <View className="mt-2 flex-row items-center gap-2.5 border-b border-border pb-2.5">
-          <Search size={18} color={colors.textMuted} />
-          <TextInput
-            value={q}
-            onChangeText={setQ}
-            placeholder="Search"
-            placeholderTextColor={colors.textSubtle}
-            className="flex-1 py-1.5 text-base font-sans text-fg outline-none"
-            onSubmitEditing={goSearch}
-            returnKeyType="search"
-          />
-          <Pressable
-            onPress={goSearch}
-            className="bg-fg px-3 py-2"
-            hitSlop={8}
-          >
-            <Text className="text-xs font-bold tracking-wide text-inverse">GO</Text>
-          </Pressable>
-        </View>
-
-        <View className="gap-3.5 py-4.5">
-          <Link href="/pricing" asChild>
-            <Pressable onPress={() => setMenuOpen(false)} className="flex-row items-center gap-3">
-              <Newspaper size={18} color={colors.text} />
-              <Text className="text-[15px] font-medium text-fg">Subscribe</Text>
-            </Pressable>
-          </Link>
-          <Link href="/newsletter" asChild>
-            <Pressable onPress={() => setMenuOpen(false)} className="flex-row items-center gap-3">
-              <Mail size={18} color={colors.text} />
-              <Text className="text-[15px] font-medium text-fg">Newsletters</Text>
-            </Pressable>
-          </Link>
-          <Link href={user ? "/me" : "/login"} asChild>
-            <Pressable onPress={() => setMenuOpen(false)} className="flex-row items-center gap-3">
-              <User size={18} color={colors.text} />
-              <Text className="text-[15px] font-medium text-fg">
-                {user ? "Profile" : "Sign in"}
+            <Pressable
+              onPress={() => setMenuOpen(false)}
+              className="border-b border-white/20 py-5"
+            >
+              <Text className="font-display text-4xl uppercase tracking-[2px] text-white">
+                {item.label}
               </Text>
             </Pressable>
           </Link>
-          <Link href={user ? "/studio" : "/login?next=%2Fstudio"} asChild>
-            <Pressable onPress={() => setMenuOpen(false)} className="flex-row items-center gap-3">
-              <PenLine size={18} color={colors.text} />
-              <Text className="text-[15px] font-medium text-fg">Studio</Text>
-            </Pressable>
-          </Link>
-          <Pressable onPress={toggle} className="flex-row items-center gap-3">
-            {mode === "dark" ? (
-              <Sun size={18} color={colors.text} />
-            ) : (
-              <Moon size={18} color={colors.text} />
-            )}
-            <Text className="text-[15px] font-medium text-fg">
-              {mode === "dark" ? "Light mode" : "Dark mode"}
+        ))}
+        <Link href={user ? "/me" : "/login"} asChild>
+          <Pressable
+            onPress={() => setMenuOpen(false)}
+            className="border-b border-white/20 py-5"
+          >
+            <Text className="font-display text-4xl uppercase tracking-[2px] text-white">
+              {user ? "Profile" : "Log in"}
             </Text>
           </Pressable>
-          <Pressable onPress={toggleBrandStyle} className="flex-row items-center gap-3">
-            <Palette size={18} color={colors.text} />
-            <Text className="text-[15px] font-medium text-fg">
-              {brandStyle === "swiss" ? "Magazine style" : "Swiss style"}
-            </Text>
-          </Pressable>
-        </View>
-
-        <ScrollView className="flex-1" contentContainerClassName="pb-12" showsVerticalScrollIndicator={false}>
-          <Text className="mt-2 mb-2 text-[11px] font-bold uppercase tracking-[1.6px] text-subtle">
-            Sections
-          </Text>
-          <Link href="/" asChild>
-            <Pressable
-              onPress={() => setMenuOpen(false)}
-              className="border-b border-border py-3.5"
-            >
-              <Text className="text-[22px] leading-7 font-serif text-fg">Home</Text>
-            </Pressable>
-          </Link>
-          {SECTION_SLUGS.map((slug) => (
-            <Link key={slug} href={`/topics/${slug}` as `/topics/${string}`} asChild>
-              <Pressable
-                onPress={() => setMenuOpen(false)}
-                className="border-b border-border py-3.5"
-              >
-                <Text className="text-[22px] leading-7 font-serif text-fg">
-                  {SECTION_META[slug].title}
-                </Text>
-              </Pressable>
-            </Link>
-          ))}
-
-          <Text className="mt-7 mb-2 text-[11px] font-bold uppercase tracking-[1.6px] text-subtle">
-            More
-          </Text>
-          {[
-            { href: "/blog", label: "Latest" },
-            { href: "/editions", label: "Editions" },
-            { href: "/podcast", label: "Podcasts" },
-            { href: "/library", label: "Library" },
-            { href: "/library/reference", label: "Reference" },
-            { href: "/resources", label: "Resources" },
-            { href: "/datasets", label: "Datasets" },
-            { href: "/downloads", label: "Downloads" },
-            { href: "/press", label: "Press" },
-            { href: "/studio", label: "Studio" },
-            { href: "/following", label: "Following" },
-            { href: "/about", label: "About" },
-            { href: "/authors", label: "Authors" },
-            { href: "/contact", label: "Contact" },
-          ].map((link) => (
-            <Link key={link.href} href={link.href as `/blog`} asChild>
-              <Pressable
-                onPress={() => setMenuOpen(false)}
-                className="border-b border-border py-3.5"
-              >
-                <Text className="text-lg leading-6 font-serif text-fg">{link.label}</Text>
-              </Pressable>
-            </Link>
-          ))}
-        </ScrollView>
+        </Link>
+        <Text
+          className="mt-8 text-3xl text-accent"
+          style={{ fontFamily: "Chomsky" }}
+        >
+          Artometrics
+        </Text>
       </Wrapper>
     </View>
   );

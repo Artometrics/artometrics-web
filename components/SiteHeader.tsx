@@ -1,288 +1,105 @@
-import { useEffect, useMemo, useRef, useState } from "react";
-import {
-  Animated,
-  Platform,
-  Pressable,
-  Text,
-  TextInput,
-  View,
-  type View as RNView,
-} from "react-native";
+import { Pressable, Text, View, Platform } from "react-native";
 import { Link, router } from "expo-router";
-import { ArrowRight, CircleX, Menu, Search } from "@/components/icons";
+import { Menu, Search } from "@/components/icons";
 import { Logo } from "@/components/Logo";
 import { Wrapper } from "@/components/Wrapper";
 import { AvatarMenu } from "@/components/chrome/AvatarMenu";
 import { useAuth } from "@/lib/auth";
 import { useChrome } from "@/lib/chrome";
 import { useTheme } from "@/lib/theme";
-import { searchSite, type SearchHit } from "@/lib/search";
 import { trackEvent } from "@/lib/analytics/ga";
 
-const PLACEHOLDERS = [
-  "Search reports…",
-  "Try a desk or topic…",
-  "Find a podcast…",
-  "Look up an author…",
-];
+const NAV = [
+  { href: "/blog", label: "Reports" },
+  { href: "/editions", label: "Editions" },
+  { href: "/podcast", label: "Podcast" },
+  { href: "/about", label: "About" },
+] as const;
 
 export function SiteHeader() {
   const { user } = useAuth();
   const { setMenuOpen } = useChrome();
   const { colors } = useTheme();
-  const [q, setQ] = useState("");
-  const [searchOpen, setSearchOpen] = useState(false);
-  const [placeholderIdx, setPlaceholderIdx] = useState(0);
-  const [focused, setFocused] = useState(false);
-  const searchRootRef = useRef<RNView | null>(null);
-  const inputRef = useRef<TextInput | null>(null);
-  const expand = useRef(new Animated.Value(0)).current;
-  const closeSearchRef = useRef(() => {});
-
-  const suggestions = useMemo(() => searchSite(q, 6), [q]);
-
-  function closeSearch() {
-    setSearchOpen(false);
-    setFocused(false);
-    setQ("");
-    inputRef.current?.blur();
-  }
-  closeSearchRef.current = closeSearch;
-
-  function openSearch() {
-    setSearchOpen(true);
-  }
-
-  function submitSearch() {
-    const query = q.trim();
-    if (!query) {
-      router.push("/search");
-      closeSearch();
-      return;
-    }
-    trackEvent("search", { query });
-    router.push(`/search?q=${encodeURIComponent(query)}`);
-    closeSearch();
-  }
-
-  function goHit(hit: SearchHit) {
-    trackEvent("search", { query: q.trim() || hit.title, result: hit.href });
-    router.push(hit.href as `/`);
-    closeSearch();
-  }
-
-  useEffect(() => {
-    Animated.spring(expand, {
-      toValue: searchOpen ? 1 : 0,
-      useNativeDriver: false,
-      friction: 8,
-      tension: 80,
-    }).start();
-    if (searchOpen) {
-      const t = setTimeout(() => inputRef.current?.focus(), 40);
-      return () => clearTimeout(t);
-    }
-  }, [searchOpen, expand]);
-
-  useEffect(() => {
-    if (!searchOpen || q.trim().length > 0) return;
-    const id = setInterval(() => {
-      setPlaceholderIdx((i) => (i + 1) % PLACEHOLDERS.length);
-    }, 2800);
-    return () => clearInterval(id);
-  }, [searchOpen, q]);
-
-  useEffect(() => {
-    if (!searchOpen) return;
-    if (Platform.OS !== "web" || typeof document === "undefined") return;
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape" || e.key === "Esc") {
-        e.preventDefault();
-        closeSearchRef.current();
-      }
-    };
-    const onPointer = (e: MouseEvent) => {
-      const node = searchRootRef.current as unknown as HTMLElement | null;
-      if (node && e.target instanceof Node && !node.contains(e.target)) {
-        closeSearchRef.current();
-      }
-    };
-    document.addEventListener("keydown", onKey, true);
-    document.addEventListener("mousedown", onPointer, true);
-    return () => {
-      document.removeEventListener("keydown", onKey, true);
-      document.removeEventListener("mousedown", onPointer, true);
-    };
-  }, [searchOpen]);
-
-  const panelWidth = expand.interpolate({
-    inputRange: [0, 1],
-    outputRange: [40, Platform.OS === "web" ? 300 : 210],
-  });
-  const panelOpacity = expand.interpolate({
-    inputRange: [0, 0.4, 1],
-    outputRange: [0, 0.6, 1],
-  });
-  const showSuggestions = searchOpen && q.trim().length >= 2 && suggestions.length > 0;
   const studioHref = user ? "/studio" : "/login?next=%2Fstudio";
 
   return (
-    <View className="relative z-40 border-b-2 border-border bg-header">
-      {searchOpen ? (
-        <Pressable
-          accessibilityLabel="Dismiss search"
-          onPress={closeSearch}
-          className="absolute inset-x-0 top-0 z-[1]"
-          style={{ bottom: -4000 }}
-        />
-      ) : null}
-
-      <Wrapper variant="magazine">
-        <View className="z-[2] min-h-14 flex-row items-center justify-between gap-2 py-2.5">
-          <Pressable
-            onPress={() => setMenuOpen(true)}
-            accessibilityRole="button"
-            accessibilityLabel="Open menu"
-            className="z-[2] h-11 w-11 items-center justify-center"
-            hitSlop={12}
-            testID="site-menu-button"
-          >
-            <Menu size={26} color={colors.text} />
-          </Pressable>
-
+    <View className="z-40 border-b-2 border-border bg-header">
+      <Wrapper className="py-3">
+        <View className="flex-row items-center justify-between gap-4">
           <Link href="/" asChild>
-            <Pressable
-              className="absolute left-14 right-[200px] z-[3] items-center justify-center"
-              accessibilityLabel="Artometrics home"
-            >
-              <Logo size={32} align="center" compact={0} markVariant="auto" />
+            <Pressable accessibilityLabel="Artometrics home">
+              <Logo size={28} align="left" markVariant="auto" />
             </Pressable>
           </Link>
 
-          <View className="z-[4] ml-auto flex-row items-center justify-end gap-2">
-            <View ref={searchRootRef} className="relative z-[5]" collapsable={false}>
-              {!searchOpen ? (
-                <Pressable
-                  onPress={openSearch}
-                  accessibilityLabel="Open search"
-                  accessibilityRole="button"
-                  hitSlop={10}
-                  className="h-10 w-10 items-center justify-center rounded-btn border border-border bg-bg-elevated"
-                >
-                  <Search size={20} color={colors.text} />
-                </Pressable>
-              ) : (
-                <Animated.View
-                  className={[
-                    "overflow-hidden min-h-10 rounded-btn border-[1.5px] bg-bg-elevated",
-                    focused ? "border-accent" : "border-border",
-                  ].join(" ")}
-                  style={{
-                    width: panelWidth,
-                    opacity: panelOpacity,
-                  }}
-                >
-                  <View className="h-10 flex-row items-center gap-2 pl-2.5 pr-1.5">
-                    <Search
-                      size={18}
-                      color={focused ? colors.accent : colors.textMuted}
-                    />
-                    <TextInput
-                      ref={inputRef}
-                      value={q}
-                      onChangeText={setQ}
-                      placeholder={PLACEHOLDERS[placeholderIdx]}
-                      placeholderTextColor={colors.textSubtle}
-                      className="min-w-0 flex-1 text-sm font-sans text-fg outline-none"
-                      onSubmitEditing={submitSearch}
-                      onFocus={() => setFocused(true)}
-                      onBlur={() => setFocused(false)}
-                      onKeyPress={(e) => {
-                        if (e.nativeEvent.key === "Escape") closeSearch();
-                      }}
-                      {...(Platform.OS === "web"
-                        ? ({
-                            onKeyDown: (e: { key?: string; nativeEvent?: { key?: string } }) => {
-                              const key = e.key ?? e.nativeEvent?.key;
-                              if (key === "Escape" || key === "Esc") closeSearch();
-                            },
-                          } as object)
-                        : null)}
-                      returnKeyType="search"
-                      accessibilityLabel="Search Artometrics"
-                      autoCorrect={false}
-                      autoCapitalize="none"
-                    />
-                    {q.length > 0 ? (
-                      <Pressable
-                        onPress={() => setQ("")}
-                        hitSlop={8}
-                        accessibilityLabel="Clear search"
-                        className="p-0.5"
-                      >
-                        <CircleX size={18} color={colors.textSubtle} />
-                      </Pressable>
-                    ) : null}
-                    <Pressable
-                      onPress={submitSearch}
-                      hitSlop={8}
-                      accessibilityLabel="Submit search"
-                      className="h-7 w-7 items-center justify-center rounded-btn bg-fg"
-                    >
-                      <ArrowRight size={16} color={colors.inverse} />
-                    </Pressable>
-                  </View>
-
-                  {showSuggestions ? (
-                    <View className="border-t border-border bg-header">
-                      {suggestions.map((hit) => (
-                        <Pressable
-                          key={`${hit.type}-${hit.id}`}
-                          onPress={() => goHit(hit)}
-                          className="gap-0.5 px-3 py-2.5 active:bg-accent-soft"
-                        >
-                          <Text className="text-[10px] font-bold uppercase tracking-[1.2px] text-accent">
-                            {hit.meta ?? hit.type}
-                          </Text>
-                          <Text className="text-[15px] leading-5 font-serif text-fg" numberOfLines={1}>
-                            {hit.title}
-                          </Text>
-                        </Pressable>
-                      ))}
-                      <Pressable
-                        onPress={submitSearch}
-                        className="border-t border-border px-3 py-2.5"
-                      >
-                        <Text className="text-[13px] font-sans text-muted">
-                          View all results for “{q.trim()}”
-                        </Text>
-                      </Pressable>
-                    </View>
-                  ) : null}
-                </Animated.View>
-              )}
+          <View
+            className="flex-row items-center gap-6"
+            style={
+              Platform.OS === "web"
+                ? ({ display: undefined } as object)
+                : undefined
+            }
+          >
+            {/* Desktop nav — hidden on small screens via className */}
+            <View className="hidden flex-row items-center gap-6 lg:flex">
+              {NAV.map((item) => (
+                <Link key={item.href} href={item.href} asChild>
+                  <Pressable>
+                    <Text className="font-display text-[13px] uppercase tracking-[2px] text-fg">
+                      {item.label}
+                    </Text>
+                  </Pressable>
+                </Link>
+              ))}
+              <Pressable
+                onPress={() => {
+                  trackEvent("studio_open", { source: "header" });
+                  router.push(studioHref as `/`);
+                }}
+                className="bg-accent px-3 py-2"
+              >
+                <Text className="font-display text-[12px] uppercase tracking-[1.5px] text-white">
+                  Studio
+                </Text>
+              </Pressable>
+              <AvatarMenu />
             </View>
 
-            <Pressable
-              onPress={() => {
-                trackEvent("studio_open", { source: "header" });
-                router.push(studioHref as `/`);
-              }}
-              accessibilityLabel="Studio"
-              accessibilityRole="button"
-              hitSlop={8}
-              className="min-h-10 flex-row items-center gap-1.5 bg-accent px-3 py-2.5"
-            >
-              <Text className="text-[11px] font-extrabold uppercase tracking-[1.4px] text-white">
-                Studio
-              </Text>
-              <ArrowRight size={14} color="#FFFFFF" />
-            </Pressable>
-
-            <AvatarMenu />
+            <View className="flex-row items-center gap-2 lg:hidden">
+              <Pressable
+                onPress={() => router.push("/search")}
+                accessibilityLabel="Search"
+                className="h-10 w-10 items-center justify-center"
+              >
+                <Search size={20} color={colors.text} />
+              </Pressable>
+              <Pressable
+                onPress={() => setMenuOpen(true)}
+                accessibilityLabel="Open menu"
+                className="h-10 w-10 items-center justify-center"
+                testID="site-menu-button"
+              >
+                <Menu size={24} color={colors.text} />
+              </Pressable>
+            </View>
           </View>
         </View>
       </Wrapper>
+
+      {/* Instrument strip — KSM energy */}
+      <View className="border-t border-border bg-bg">
+        <Wrapper className="flex-row flex-wrap items-center justify-between gap-2 py-1.5">
+          <Text className="text-[10px] font-bold uppercase tracking-[1.4px] text-subtle">
+            Issue · Online
+          </Text>
+          <Text className="text-[10px] font-bold uppercase tracking-[1.4px] text-accent">
+            Strong graphic content · No fluff
+          </Text>
+          <Text className="text-[10px] font-bold uppercase tracking-[1.4px] text-subtle">
+            Reports · Editions · Signal
+          </Text>
+        </Wrapper>
+      </View>
     </View>
   );
 }

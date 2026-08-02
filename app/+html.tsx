@@ -63,9 +63,8 @@ export default function Root({ children }: PropsWithChildren) {
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="mask-icon" href="/favicon.svg" color="#C0392B" />
         <link rel="manifest" href="/manifest.webmanifest" />
-        <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)" />
-        <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
-        <meta name="color-scheme" content="light" />
+        <meta name="theme-color" content="#000000" />
+        <meta name="color-scheme" content="dark" />
         <ScrollViewStyleReset />
         <link rel="stylesheet" href="/css/artometrics-article.css" />
         <style
@@ -118,9 +117,9 @@ export default function Root({ children }: PropsWithChildren) {
               }
               body {
                 margin: 0;
-                background: #FFFFFF;
+                background: #000000;
                 font-family: "DM Sans", Helvetica Neue, Helvetica, Arial, system-ui, sans-serif;
-                color: #000000;
+                color: #FFFFFF;
               }
               /* Prefer explicit site theme over OS preference alone */
               html[data-theme="light"] {
@@ -154,6 +153,13 @@ export default function Root({ children }: PropsWithChildren) {
                 }
               }
               a { color: inherit; text-decoration: none; }
+              /* KSM-style breakpoint helpers (Uniwind may also emit these) */
+              .lg\\:flex { display: none; }
+              .lg\\:hidden { display: flex; }
+              @media (min-width: 1024px) {
+                .lg\\:flex { display: flex !important; }
+                .lg\\:hidden { display: none !important; }
+              }
             `,
           }}
         />
@@ -165,14 +171,14 @@ export default function Root({ children }: PropsWithChildren) {
                 try {
                   var key = "artometrics-theme";
                   var saved = localStorage.getItem(key);
-                  // Default light unless user saved dark/system-resolved preference.
-                  var mode = "light";
-                  if (saved === "dark") mode = "dark";
+                  // Default dark (KSM-energy magazine) unless user saved light/system.
+                  var mode = "dark";
+                  if (saved === "light") mode = "light";
                   else if (saved === "system") {
                     mode = (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches)
                       ? "dark"
                       : "light";
-                  } else if (saved === "light") mode = "light";
+                  } else if (saved === "dark") mode = "dark";
                   var bg = mode === "dark" ? "#000000" : "#FFFFFF";
                   var fg = mode === "dark" ? "#FFFFFF" : "#000000";
                   var root = document.documentElement;

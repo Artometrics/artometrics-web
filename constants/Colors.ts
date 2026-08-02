@@ -1,8 +1,8 @@
 /**
- * Artometrics brand tokens — Kruger B/W/red + DM Sans/Mono magazine (default).
- * Canonical design system: docs/design-system/ + Notion "Artometrics Design System".
- * Print accent #C0392B (magazineAccent); UI accent #D9251B (accent500).
- * Swiss Modern remains available as an alternate brand style.
+ * Artometrics brand tokens — KSM-energy zine (Anton + hot red) on Artometrics identity.
+ * Wordmark: Chomsky. Display: Anton. Body: DM Sans. Data: DM Mono.
+ * Accent UI #E60000 (KSM punch); print/editorial #C0392B kept as magazineAccent.
+ * Canonical refs: docs/design-system/, Notion Brand & design / KSM Brand Kit.
  */
 
 export type BrandStyle = "swiss" | "magazine";
@@ -12,9 +12,9 @@ export const Colors = {
   accent100: "#FFD9D6",
   accent200: "#FFB3AD",
   accent300: "#FF7A70",
-  accent400: "#F04337",
-  accent500: "#D9251B",
-  accent600: "#C41E16",
+  accent400: "#FF2E2E",
+  accent500: "#E60000",
+  accent600: "#B80000",
   accent700: "#A31812",
   accent800: "#7F120E",
   accent900: "#5C0D0A",
@@ -64,14 +64,14 @@ export const SwissFonts: BrandFonts = {
 };
 
 /**
- * Magazine default — DM Mono titles/headers, DM Sans body.
- * Chomsky is reserved for the Logo component only (not these tokens).
+ * Magazine default — Anton display (KSM energy), DM Sans body, DM Mono data.
+ * Chomsky is reserved for the Logo / wordmark only.
  */
 export const MagazineFonts: BrandFonts = {
-  display: "DM Mono",
+  display: "Anton",
   sans: "DM Sans",
   serif: "DM Sans",
-  wordmark: "DM Mono",
+  wordmark: "Chomsky",
   mono: "DM Mono",
 };
 
@@ -139,8 +139,8 @@ const MagazineThemes: Record<ThemeMode, ThemeColors> = {
     textMuted: Colors.base600,
     textSubtle: Colors.base500,
     border: Colors.black,
-    accent: Colors.magazineAccent,
-    accentSoft: Colors.magazineAccentSoft,
+    accent: Colors.accent500,
+    accentSoft: Colors.accent50,
     inverse: Colors.white,
     headerBg: Colors.white,
     overlayBg: Colors.white,
@@ -149,16 +149,16 @@ const MagazineThemes: Record<ThemeMode, ThemeColors> = {
   dark: {
     mode: "dark",
     bg: Colors.black,
-    bgElevated: Colors.base900,
+    bgElevated: Colors.base800,
     text: Colors.white,
-    textMuted: Colors.base400,
+    textMuted: "#C8C8C8",
     textSubtle: Colors.base500,
     border: Colors.white,
-    accent: Colors.magazineAccent,
+    accent: Colors.accent500,
     accentSoft: Colors.accent950,
     inverse: Colors.black,
     headerBg: Colors.black,
-    overlayBg: Colors.black,
+    overlayBg: Colors.base800,
     rule: Colors.white,
   },
 };
@@ -175,7 +175,7 @@ export function resolveBrandFonts(brand: BrandStyle): BrandFonts {
 
 export const BRAND_STYLE_LABELS: Record<BrandStyle, string> = {
   swiss: "Swiss Modern",
-  magazine: "Magazine (DM Sans / Mono)",
+  magazine: "Magazine (Anton / DM Sans)",
 };
 
 export const DEFAULT_BRAND_STYLE: BrandStyle = "magazine";

@@ -10,10 +10,10 @@ Canonical system: `docs/design-system/` + Notion **Artometrics Design System**.
 |--------|--------|
 | Wordmark | **Artometrics** (Chomsky — mark/wordmark only) |
 | Accent (print) | `#C0392B` |
-| Accent (UI) | `#D9251B` |
+| Accent (UI) | `#E60000` (KSM-energy hot red) |
 | Black / white | `#000000` / `#FFFFFF` |
-| Gray 600 / 200 / 100 | `#525252` / `#E5E5E5` / `#F5F5F5` |
-| Display / headers | DM Mono |
+| Gray / ash | `#525252` / `#1A1A1A` |
+| Display / headers | Anton |
 | Body / UI | DM Sans |
 | Chart palette | black → mid-gray → Artometrics red |
 
