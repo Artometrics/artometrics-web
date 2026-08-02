@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.cdnfonts.com/css/chomsky">
+<style>
+body{margin:0;background:#FFFFFF;color:#000000;font-family:'DM Sans',sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#C0392B}a:hover{color:#D9251B}
+::selection{background:#C0392B;color:#fff}
+</style>
+</helmet>
+
+<div style="max-width:1280px;margin:0 auto;border-left:2px solid #000;border-right:2px solid #000">
+
+<div style="padding:64px 48px 40px;border-bottom:2px solid #000">
+  <div style="font-family:'DM Mono',monospace;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:#525252;margin-bottom:16px">Design System &mdash; v1.0 &mdash; Aug 2026</div>
+  <div style="font-family:'Chomsky',serif;font-weight:400;font-size:120px;line-height:0.9">Artometrics</div>
+  <div style="font-family:'DM Sans',sans-serif;font-size:20px;color:#525252;margin-top:20px;max-width:640px">An independent data-science magazine and creative platform. Swiss/magazine hybrid, Kruger-blunt, no ornament.</div>
+</div>
+
+<div style="padding:40px 48px;border-bottom:2px solid #C0392B;display:flex;gap:24px;flex-wrap:wrap">
+  <div style="font-family:'DM Mono',monospace;font-size:12px;letter-spacing:0.06em;text-transform:uppercase;color:#525252">On this page</div>
+  <div style="display:flex;gap:20px;flex-wrap:wrap;font-family:'DM Mono',monospace;font-size:12px;letter-spacing:0.04em">
+    <a href="#colors" style="text-decoration:none;font-weight:500">Colors</a>
+    <a href="#type" style="text-decoration:none;font-weight:500">Type</a>
+    <a href="#components" style="text-decoration:none;font-weight:500">Components</a>
+    <a href="#patterns" style="text-decoration:none;font-weight:500">Patterns</a>
+    <a href="#rules" style="text-decoration:none;font-weight:500">Do / Don't</a>
+    <a href="#layouts" style="text-decoration:none;font-weight:500">Reference layouts</a>
+  </div>
+</div>
+
+<div id="colors" style="padding:56px 48px;border-bottom:2px solid #000">
+  <div style="font-family:'DM Mono',monospace;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:#C0392B;margin-bottom:24px">01 &mdash; Color</div>
+  <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:0;border:2px solid #000">
+    <div style="background:#000000;height:140px;display:flex;align-items:flex-end;padding:14px;color:#fff;border-right:2px solid #000"><div><div style="font-family:'DM Mono',monospace;font-size:11px">--color-black</div><div style="font-family:'DM Mono',monospace;font-size:11px;opacity:.6">#000000</div></div></div>
+    <div style="background:#FFFFFF;height:140px;display:flex;align-items:flex-end;padding:14px;border-right:2px solid #000"><div><div style="font-family:'DM Mono',monospace;font-size:11px">--color-white</div><div style="font-family:'DM Mono',monospace;font-size:11px;color:#525252">#FFFFFF</div></div></div>
+    <div style="background:#F5F5F5;height:140px;display:flex;align-items:flex-end;padding:14px;border-right:2px solid #000"><div><div style="font-family:'DM Mono',monospace;font-size:11px">--color-gray-100</div><div style="font-family:'DM Mono',monospace;font-size:11px;color:#525252">#F5F5F5</div></div></div>
+    <div style="background:#E5E5E5;height:140px;display:flex;align-items:flex-end;padding:14px;border-right:2px solid #000"><div><div style="font-family:'DM Mono',monospace;font-size:11px">--color-gray-200</div><div style="font-family:'DM Mono',monospace;font-size:11px;color:#525252">#E5E5E5</div></div></div>
+    <div style="background:#525252;height:140px;display:flex;align-items:flex-end;padding:14px;color:#fff;border-right:2px solid #000"><div><div style="font-family:'DM Mono',monospace;font-size:11px">--color-gray-600</div><div style="font-family:'DM Mono',monospace;font-size:11px;opacity:.6">#525252</div></div></div>
+    <div style="background:#C0392B;height:140px;display:flex;align-items:flex-end;padding:14px;color:#fff"><div><div style="font-family:'DM Mono',monospace;font-size:11px">--color-accent</div><div style="font-family:'DM Mono',monospace;font-size:11px;opacity:.8">#C0392B</div></div></div>
+  </div>
+  <div style="margin-top:14px;display:flex;gap:32px;flex-wrap:wrap">
+    <div style="font-family:'DM Sans',sans-serif;font-size:13px;color:#525252;max-width:420px"><strong style="color:#000">Print/editorial accent:</strong> #C0392B. Use for cover blocks, section dividers, pull-quote marks.</div>
+    <div style="font-family:'DM Sans',sans-serif;font-size:13px;color:#525252;max-width:420px"><strong style="color:#000">UI accent:</strong> #D9251B, slightly brighter for on-screen buttons/links &mdash; swap below.</div>
+    <div style="display:flex;align-items:center;gap:10px"><div style="width:20px;height:20px;background:#D9251B"></div><span style="font-family:'DM Mono',monospace;font-size:12px">--color-accent-ui &nbsp;#D9251B</span></div>
+  </div>
+  <div style="margin-top:20px;font-family:'DM Sans',sans-serif;font-size:13px;color:#525252">Rule: neutrals only otherwise &mdash; no purple, no cream/terracotta, no gradients, no glow, no soft multi-layer shadow.</div>
+</div>
+
+<div id="type" style="padding:56px 48px;border-bottom:2px solid #000">
+  <div style="font-family:'DM Mono',monospace;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:#C0392B;margin-bottom:24px">02 &mdash; Type</div>
+  <div style="display:grid;grid-template-columns:120px 1fr;gap:0 24px;align-items:baseline;border-top:1px solid #E5E5E5">
+    <div style="font-family:'DM Mono',monospace;font-size:11px;color:#525252;padding:20px 0;border-bottom:1px solid #E5E5E5">Display</div>
+    <div style="font-family:'DM Mono',monospace;font-weight:500;font-size:64px;line-height:0.95;letter-spacing:-0.01em;text-transform:uppercase;padding:20px 0;border-bottom:1px solid #E5E5E5">Data has a shape.</div>
+    <div style="font-family:'DM Mono',monospace;font-size:11px;color:#525252;padding:20px 0;border-bottom:1px solid #E5E5E5">H1</div>
+    <div style="font-family:'DM Mono',monospace;font-weight:500;font-size:40px;line-height:1;letter-spacing:-0.01em;padding:20px 0;border-bottom:1px solid #E5E5E5">The model is not the territory</div>
+    <div style="font-family:'DM Mono',monospace;font-size:11px;color:#525252;padding:20px 0;border-bottom:1px solid #E5E5E5">H2</div>
+    <div style="font-family:'DM Mono',monospace;font-weight:500;font-size:28px;line-height:1.1;padding:20px 0;border-bottom:1px solid #E5E5E5">Method, not magic</div>
+    <div style="font-family:'DM Mono',monospace;font-size:11px;color:#525252;padding:20px 0;border-bottom:1px solid #E5E5E5">H3</div>
+    <div style="font-family:'DM Mono',monospace;font-weight:500;font-size:20px;padding:20px 0;border-bottom:1px solid #E5E5E5">Section label / kicker</div>
+    <div style="font-family:'DM Mono',monospace;font-size:11px;color:#525252;padding:20px 0;border-bottom:1px solid #E5E5E5">Body</div>
+    <div style="font-family:'DM Sans',sans-serif;font-size:17px;line-height:1.6;max-width:600px;padding:20px 0;border-bottom:1px solid #E5E5E5">Set in DM Sans at 17&ndash;18px for long-form reading. Line length capped near 600px. No italics for emphasis &mdash; use weight or the accent rule instead.</div>
+    <div style="font-family:'DM Mono',monospace;font-size:11px;color:#525252;padding:20px 0;border-bottom:1px solid #E5E5E5">Caption</div>
+    <div style="font-family:'DM Sans',sans-serif;font-size:13px;color:#525252;padding:20px 0;border-bottom:1px solid #E5E5E5">Caption copy runs small and gray, never accent-colored.</div>
+    <div style="font-family:'DM Mono',monospace;font-size:11px;color:#525252;padding:20px 0">Data mono</div>
+    <div style="font-family:'DM Mono',monospace;font-size:13px;letter-spacing:0.02em;padding:20px 0">N = 48,204 &nbsp;&middot;&nbsp; r&sup2; = 0.71 &nbsp;&middot;&nbsp; p &lt; 0.001</div>
+  </div>
+  <div style="display:grid;grid-template-columns:120px 1fr;gap:0 24px;align-items:baseline;border-top:1px solid #E5E5E5;margin-top:8px">
+    <div style="font-family:'DM Mono',monospace;font-size:11px;color:#525252;padding:20px 0">Wordmark</div>
+    <div style="font-family:'Chomsky',serif;font-size:44px;padding:20px 0">Artometrics</div>
+  </div>
+  <div style="margin-top:20px;font-family:'DM Sans',sans-serif;font-size:13px;color:#525252">Display/headers: DM Mono (Anton as a Swiss alternate for oversize poster type). Body: DM Sans. Wordmark-only: Chomsky, for the Artometrics mark exclusively &mdash; never for body or headers.</div>
+</div>
+
+<div id="components" style="padding:56px 48px;border-bottom:2px solid #000">
+  <div style="font-family:'DM Mono',monospace;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:#C0392B;margin-bottom:24px">03 &mdash; Components</div>
+
+  <div style="font-family:'DM Mono',monospace;font-size:12px;letter-spacing:0.04em;text-transform:uppercase;color:#525252;margin-bottom:14px">Buttons</div>
+  <div style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:36px">
+    <button style="font-family:'DM Mono',monospace;font-size:14px;font-weight:500;background:#C0392B;color:#fff;border:none;padding:14px 24px;text-align:left;cursor:pointer">Primary action &rarr;</button>
+    <button style="font-family:'DM Mono',monospace;font-size:14px;font-weight:500;background:transparent;color:#000;border:2px solid #000;padding:12px 24px;text-align:left;cursor:pointer">Secondary</button>
+    <button style="font-family:'DM Mono',monospace;font-size:14px;font-weight:500;background:transparent;color:#525252;border:none;padding:14px 8px;text-align:left;cursor:pointer">Ghost</button>
+  </div>
+
+  <div style="font-family:'DM Mono',monospace;font-size:12px;letter-spacing:0.04em;text-transform:uppercase;color:#525252;margin-bottom:14px">Rules / dividers</div>
+  <div style="height:2px;background:#000;margin-bottom:12px"></div>
+  <div style="height:2px;background:#C0392B;width:120px;margin-bottom:36px"></div>
+
+  <div style="font-family:'DM Mono',monospace;font-size:12px;letter-spacing:0.04em;text-transform:uppercase;color:#525252;margin-bottom:14px">Article dek / pull quote</div>
+  <div style="max-width:640px;margin-bottom:36px">
+    <div style="font-family:'DM Sans',sans-serif;font-size:19px;color:#525252;line-height:1.5;margin-bottom:20px">A dek is one sentence, set larger than body, gray not black &mdash; states the finding before the reader commits to the piece.</div>
+    <div style="border-left:2px solid #C0392B;padding-left:20px;font-family:'DM Mono',monospace;font-size:22px;font-weight:500;line-height:1.3">"The correlation was real. The causal story we told about it was not."</div>
+  </div>
+
+  <div style="font-family:'DM Mono',monospace;font-size:12px;letter-spacing:0.04em;text-transform:uppercase;color:#525252;margin-bottom:14px">Chart frame + source footer</div>
+  <div style="border:2px solid #000;max-width:640px;margin-bottom:12px">
+    <div style="padding:20px 20px 0;font-family:'DM Mono',monospace;font-size:13px;font-weight:500;text-transform:uppercase">Fig. 01 &mdash; Model drift over time</div>
+    <div style="height:180px;margin:16px 20px;background:#F5F5F5;display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:12px;color:#525252">[ chart placeholder ]</div>
+    <div style="border-top:1px solid #E5E5E5;padding:10px 20px;font-family:'DM Mono',monospace;font-size:11px;color:#525252">Source: internal eval, n=12 models &nbsp;&middot;&nbsp; Limitation: single-domain benchmark</div>
+  </div>
+</div>
+
+<div id="patterns" style="padding:56px 48px;border-bottom:2px solid #000">
+  <div style="font-family:'DM Mono',monospace;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:#C0392B;margin-bottom:24px">04 &mdash; Format specs</div>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:2px solid #000">
+    <div style="padding:24px;border-right:2px solid #000">
+      <div style="font-family:'DM Mono',monospace;font-size:12px;letter-spacing:0.04em;text-transform:uppercase;color:#525252;margin-bottom:8px">IG zine slide</div>
+      <div style="font-family:'DM Mono',monospace;font-size:20px;font-weight:500">1080 &times; 1350</div>
+      <div style="font-family:'DM Sans',sans-serif;font-size:13px;color:#525252;margin-top:8px">4:5. One claim + one line + optional chart frame + small wordmark.</div>
+    </div>
+    <div style="padding:24px;border-right:2px solid #000">
+      <div style="font-family:'DM Mono',monospace;font-size:12px;letter-spacing:0.04em;text-transform:uppercase;color:#525252;margin-bottom:8px">OG / share card</div>
+      <div style="font-family:'DM Mono',monospace;font-size:20px;font-weight:500">1200 &times; 630</div>
+      <div style="font-family:'DM Sans',sans-serif;font-size:13px;color:#525252;margin-top:8px">Black field, white wordmark, red rule, mono title, gray dek.</div>
+    </div>
+    <div style="padding:24px">
+      <div style="font-family:'DM Mono',monospace;font-size:12px;letter-spacing:0.04em;text-transform:uppercase;color:#525252;margin-bottom:8px">Edition cover</div>
+      <div style="font-family:'DM Mono',monospace;font-size:20px;font-weight:500">Print + digital</div>
+      <div style="font-family:'DM Sans',sans-serif;font-size:13px;color:#525252;margin-top:8px">Full-bleed hero optional. Brand must read with nav removed.</div>
+    </div>
+  </div>
+</div>
+
+<div id="rules" style="padding:56px 48px;border-bottom:2px solid #000">
+  <div style="font-family:'DM Mono',monospace;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:#C0392B;margin-bottom:24px">05 &mdash; Do / Don't</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;border:2px solid #000">
+    <div style="padding:28px;border-right:2px solid #000">
+      <div style="font-family:'DM Mono',monospace;font-size:13px;font-weight:500;text-transform:uppercase;margin-bottom:16px">Do</div>
+      <div style="font-family:'DM Sans',sans-serif;font-size:14px;line-height:2;color:#000">
+      Full-bleed hero on promo surfaces<br>
+      Brand as hero-level signal<br>
+      Hard 2px rules between sections<br>
+      One claim per chart, source line always visible<br>
+      Flush-left type, sparse red
+      </div>
+    </div>
+    <div style="padding:28px">
+      <div style="font-family:'DM Mono',monospace;font-size:13px;font-weight:500;text-transform:uppercase;margin-bottom:16px;color:#C0392B">Don't</div>
+      <div style="font-family:'DM Sans',sans-serif;font-size:14px;line-height:2;color:#525252">
+      Purple gradients or cream/terracotta<br>
+      Hero badges, chips, floating stickers<br>
+      Cards as decoration (no real interaction)<br>
+      Soft multi-layer shadows or glow<br>
+      Generic Inter/SaaS dashboard first-viewport
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="layouts" style="padding:56px 48px">
+  <div style="font-family:'DM Mono',monospace;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:#C0392B;margin-bottom:24px">06 &mdash; Reference layouts</div>
+
+  <div style="font-family:'DM Mono',monospace;font-size:12px;letter-spacing:0.04em;text-transform:uppercase;color:#525252;margin-bottom:12px">Home promo strip</div>
+  <div style="background:#000;color:#fff;padding:48px;margin-bottom:36px;display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap">
+    <div>
+      <div style="font-family:'Chomsky',serif;font-size:32px;color:#fff;margin-bottom:10px">Artometrics &mdash; Edition 04</div>
+      <div style="font-family:'DM Mono',monospace;font-weight:500;font-size:44px;line-height:1;text-transform:uppercase;max-width:560px">Every model lies. Some are useful.</div>
+    </div>
+    <button style="font-family:'DM Mono',monospace;font-size:13px;font-weight:500;background:#C0392B;color:#fff;border:none;padding:12px 22px;text-align:left;flex:none">Read the report &rarr;</button>
+  </div>
+
+  <div style="font-family:'DM Mono',monospace;font-size:12px;letter-spacing:0.04em;text-transform:uppercase;color:#525252;margin-bottom:12px">Report share card (mini)</div>
+  <div style="background:#000;color:#fff;padding:32px;max-width:480px;aspect-ratio:1200/630;box-sizing:border-box;display:flex;flex-direction:column;justify-content:space-between;margin-bottom:36px">
+    <div style="font-family:'Chomsky',serif;font-size:30px;color:#fff">Artometrics</div>
+    <div style="height:2px;background:#C0392B;width:60px"></div>
+    <div>
+      <div style="font-family:'DM Mono',monospace;font-size:18px;font-weight:500;margin-bottom:6px">Model Drift, Quantified</div>
+      <div style="font-family:'DM Sans',sans-serif;font-size:12px;color:#E5E5E5">A four-month audit of [MODEL] forecasting models.</div>
+    </div>
+  </div>
+
+  <div style="font-family:'DM Mono',monospace;font-size:12px;letter-spacing:0.04em;text-transform:uppercase;color:#525252;margin-bottom:12px">IG zine slide (mini)</div>
+  <div style="background:#F5F5F5;padding:28px;max-width:340px;aspect-ratio:4/5;box-sizing:border-box;display:flex;flex-direction:column;justify-content:space-between;border:2px solid #000">
+    <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#C0392B">Finding 01</div>
+    <div style="font-family:'DM Mono',monospace;font-weight:500;font-size:26px;line-height:1.05;text-transform:uppercase">62% of models drift within 90 days</div>
+    <div style="font-family:'Chomsky',serif;font-size:16px;color:#000">Artometrics</div>
+  </div>
+</div>
+
+</div>
+
+</x-dc>
+</body>
+</html>

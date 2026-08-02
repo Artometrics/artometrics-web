@@ -1,12 +1,13 @@
 {
   "slug": "anime",
-  "desk": "culture",
-  "primaryKeyword": "culture data",
-  "hashtags": "#Artometrics #CultureDesk #CreativeEconomy #DataJournalism",
-  "slides": 7,
+  "desk": "arts",
+  "primaryKeyword": "arts data",
+  "hashtags": "#Artometrics #ArtsDesk #CreativeEconomy #DataJournalism",
+  "slides": 6,
   "canonical": "https://artometrics.com/anime",
   "files": [
     "slides.html",
     "caption.txt"
-  ]
+  ],
+  "designSystem": "docs/design-system"
 }

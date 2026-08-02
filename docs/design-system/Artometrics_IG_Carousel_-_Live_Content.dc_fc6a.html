@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500;700&family=DM+Sans:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.cdnfonts.com/css/chomsky">
+<script src="./image-slot.js"></script>
+<style>body{margin:0;background:#E5E5E5;font-family:'DM Sans',sans-serif}</style>
+</helmet>
+
+<div style="display:flex;gap:24px;flex-wrap:wrap;padding:40px;align-items:flex-start">
+
+<div style="width:1080px;height:1080px;position:relative;background:#000;flex:none;box-sizing:border-box;padding:80px;display:flex;flex-direction:column;justify-content:space-between">
+  <div style="font-family:'DM Mono',monospace;font-size:18px;letter-spacing:0.08em;text-transform:uppercase;color:#D9251B">Newsstand</div>
+  <div style="font-family:'DM Mono',monospace;font-weight:700;font-size:88px;line-height:0.98;color:#fff;text-transform:uppercase">Pick a cover. Reports on culture, power, and the creative economy.</div>
+  <div style="font-family:'Chomsky',serif;font-size:36px;color:#fff">Artometrics</div>
+</div>
+
+<div style="width:1080px;height:1080px;position:relative;background:#000;flex:none;overflow:hidden">
+  <image-slot id="live1img" shape="rect" placeholder="Padres / stadium photo" fit="cover" style="width:100%;height:100%;filter:grayscale(1) contrast(1.15)"></image-slot>
+  <div style="position:absolute;top:60px;left:60px;background:#C0392B;padding:22px 32px;max-width:900px">
+    <div style="font-family:'DM Mono',monospace;font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:#fff;margin-bottom:8px">Sports &middot; Baseball</div>
+    <div style="font-family:'DM Mono',monospace;font-weight:700;font-size:44px;line-height:1.05;color:#fff;text-transform:uppercase">The most expensive team that has never won anything</div>
+  </div>
+  <div style="position:absolute;bottom:48px;left:60px;font-family:'Chomsky',serif;font-size:28px;color:#fff">Artometrics</div>
+</div>
+
+<div style="width:1080px;height:1080px;position:relative;background:#000;flex:none;overflow:hidden">
+  <image-slot id="live2img" shape="rect" placeholder="Beyoncé / concert photo" fit="cover" style="width:100%;height:100%;filter:grayscale(1) contrast(1.15)"></image-slot>
+  <div style="position:absolute;bottom:0;left:0;right:0;background:#fff;padding:44px 60px">
+    <div style="font-family:'DM Mono',monospace;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;color:#C0392B;margin-bottom:8px">Humanities &middot; Psychology</div>
+    <div style="font-family:'DM Mono',monospace;font-weight:700;font-size:42px;line-height:1.05;color:#000;text-transform:uppercase">Beyoncé and the cost of controlling the house</div>
+  </div>
+  <div style="position:absolute;top:48px;left:60px;font-family:'Chomsky',serif;font-size:28px;color:#fff">Artometrics</div>
+</div>
+
+<div style="width:1080px;height:1080px;position:relative;background:#C0392B;flex:none;box-sizing:border-box;padding:80px;display:flex;flex-direction:column;justify-content:center">
+  <div style="font-family:'DM Mono',monospace;font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:#000;margin-bottom:20px">Humanities &middot; Sociology</div>
+  <div style="font-family:'DM Mono',monospace;font-weight:700;font-size:64px;line-height:1.05;color:#fff;text-transform:uppercase">How Oscars, Grammys, and Nobels convert attention into prestige</div>
+  <div style="position:absolute;bottom:48px;left:80px;font-family:'Chomsky',serif;font-size:28px;color:#fff">Artometrics</div>
+</div>
+
+<div style="width:1080px;height:1080px;position:relative;background:#000;flex:none;overflow:hidden">
+  <image-slot id="live3img" shape="rect" placeholder="City skyline photo" fit="cover" style="width:100%;height:100%;filter:grayscale(1) contrast(1.15)"></image-slot>
+  <div style="position:absolute;top:0;left:0;background:#fff;padding:36px 48px;max-width:75%">
+    <div style="font-family:'DM Mono',monospace;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;color:#C0392B;margin-bottom:8px">Civics &middot; Economics</div>
+    <div style="font-family:'DM Mono',monospace;font-weight:700;font-size:38px;line-height:1.1;color:#000;text-transform:uppercase">Cities as operating systems of exports, culture, and scarcity</div>
+  </div>
+  <div style="position:absolute;bottom:48px;left:60px;font-family:'Chomsky',serif;font-size:28px;color:#fff">Artometrics</div>
+</div>
+
+<div style="width:1080px;height:1080px;background:#000;flex:none;box-sizing:border-box;padding:80px;display:flex;flex-direction:column;justify-content:space-between">
+  <div style="font-family:'DM Mono',monospace;font-size:18px;letter-spacing:0.08em;text-transform:uppercase;color:#D9251B">All reports</div>
+  <div>
+    <div style="font-family:'DM Mono',monospace;font-weight:700;font-size:72px;line-height:1;color:#fff;text-transform:uppercase">Let's read something that performs.</div>
+    <div style="background:#D9251B;color:#fff;display:inline-block;font-family:'DM Mono',monospace;font-weight:500;font-size:22px;padding:18px 30px;margin-top:44px">artometrics.com/blog &rarr;</div>
+  </div>
+  <div style="font-family:'Chomsky',serif;font-size:32px;color:#fff">Artometrics</div>
+</div>
+
+</div>
+
+</x-dc>
+</body>
+</html>

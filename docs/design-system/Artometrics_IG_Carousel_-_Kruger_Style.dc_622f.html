@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500;700&family=DM+Sans:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.cdnfonts.com/css/chomsky">
+<script src="./image-slot.js"></script>
+<style>body{margin:0;background:#E5E5E5;font-family:'DM Sans',sans-serif}</style>
+</helmet>
+
+<div style="display:flex;gap:24px;flex-wrap:wrap;padding:40px;align-items:flex-start">
+
+<div style="width:1080px;height:1080px;position:relative;background:#000;flex:none;overflow:hidden">
+  <image-slot id="s1img" shape="rect" placeholder="Statue / archival photo" fit="cover" style="width:100%;height:100%;filter:grayscale(1) contrast(1.15)"></image-slot>
+  <div style="position:absolute;inset:0;background:rgba(0,0,0,0.15)"></div>
+  <div style="position:absolute;top:60px;left:60px;background:#C0392B;padding:22px 32px;max-width:640px">
+    <div style="font-family:'DM Mono',monospace;font-weight:700;font-size:52px;line-height:1;color:#fff;text-transform:uppercase">You are not the model</div>
+  </div>
+  <div style="position:absolute;bottom:48px;left:60px;font-family:'Chomsky',serif;font-size:32px;color:#fff">Artometrics</div>
+</div>
+
+<div style="width:1080px;height:1080px;position:relative;background:#000;flex:none;overflow:hidden">
+  <image-slot id="s2img" shape="rect" placeholder="Chart / data photo" fit="cover" style="width:100%;height:100%;filter:grayscale(1) contrast(1.15)"></image-slot>
+  <div style="position:absolute;bottom:0;left:0;right:0;background:#fff;padding:44px 60px">
+    <div style="font-family:'DM Mono',monospace;font-weight:700;font-size:44px;line-height:1.05;color:#000;text-transform:uppercase">62% of models drift within 90 days</div>
+    <div style="font-family:'DM Sans',sans-serif;font-size:18px;color:#525252;margin-top:12px">Across 48 [MODEL] deployments audited this quarter.</div>
+  </div>
+  <div style="position:absolute;top:48px;left:60px;font-family:'Chomsky',serif;font-size:28px;color:#fff">Artometrics</div>
+</div>
+
+<div style="width:1080px;height:1080px;position:relative;background:#C0392B;flex:none;display:flex;align-items:center;justify-content:center;padding:80px;box-sizing:border-box">
+  <div style="font-family:'DM Mono',monospace;font-weight:700;font-size:76px;line-height:1.02;color:#fff;text-transform:uppercase;text-align:center">Data doesn't argue.<br>People do.</div>
+  <div style="position:absolute;bottom:48px;left:60px;font-family:'Chomsky',serif;font-size:28px;color:#fff">Artometrics</div>
+</div>
+
+<div style="width:1080px;height:1080px;position:relative;background:#000;flex:none;overflow:hidden">
+  <image-slot id="s4img" shape="rect" placeholder="Portrait / newsroom photo" fit="cover" style="width:100%;height:100%;filter:grayscale(1) contrast(1.15)"></image-slot>
+  <div style="position:absolute;top:0;left:0;background:#fff;padding:36px 48px;max-width:70%">
+    <div style="font-family:'DM Mono',monospace;font-weight:700;font-size:38px;line-height:1.1;color:#000;text-transform:uppercase">Feature age beats model age</div>
+  </div>
+  <div style="position:absolute;bottom:48px;left:60px;font-family:'Chomsky',serif;font-size:28px;color:#fff">Artometrics</div>
+</div>
+
+<div style="width:1080px;height:1080px;position:relative;background:#000;flex:none;overflow:hidden">
+  <image-slot id="s5img" shape="rect" placeholder="Crowd / city photo" fit="cover" style="width:100%;height:100%;filter:grayscale(1) contrast(1.15)"></image-slot>
+  <div style="position:absolute;inset:0;background:rgba(0,0,0,0.1)"></div>
+  <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:#fff;padding:26px 40px;max-width:820px;text-align:center">
+    <div style="font-family:'DM Mono',monospace;font-weight:700;font-size:46px;line-height:1.05;color:#000;text-transform:uppercase">Certainty is a design choice</div>
+  </div>
+  <div style="position:absolute;bottom:48px;left:60px;font-family:'Chomsky',serif;font-size:28px;color:#fff">Artometrics</div>
+</div>
+
+<div style="width:1080px;height:1080px;background:#000;flex:none;box-sizing:border-box;padding:80px;display:flex;flex-direction:column;justify-content:space-between">
+  <div style="font-family:'DM Mono',monospace;font-size:18px;letter-spacing:0.08em;text-transform:uppercase;color:#D9251B">Get the data</div>
+  <div>
+    <div style="font-family:'DM Mono',monospace;font-weight:700;font-size:72px;line-height:1;color:#fff;text-transform:uppercase">Read the full report. Download the dataset.</div>
+    <div style="background:#D9251B;color:#fff;display:inline-block;font-family:'DM Mono',monospace;font-weight:500;font-size:22px;padding:18px 30px;margin-top:44px">artometrics.com &rarr;</div>
+  </div>
+  <div style="font-family:'Chomsky',serif;font-size:32px;color:#fff">Artometrics</div>
+</div>
+
+</div>
+
+</x-dc>
+</body>
+</html>

@@ -1,5 +1,7 @@
 /**
  * Artometrics brand tokens — Kruger B/W/red + DM Sans/Mono magazine (default).
+ * Canonical design system: docs/design-system/ + Notion "Artometrics Design System".
+ * Print accent #C0392B (magazineAccent); UI accent #D9251B (accent500).
  * Swiss Modern remains available as an alternate brand style.
  */
 

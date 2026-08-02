@@ -4,15 +4,20 @@ Use this for banners, article HTML, data presentation, and pacing. Agents and sc
 
 ## Brand
 
+Canonical system: `docs/design-system/` + Notion **Artometrics Design System**.
+
 | Token | Value |
 |--------|--------|
-| Wordmark | **Artometrics** (Chomsky) |
-| Accent | `#C0392B` |
-| Dark | `#1C1C1E` |
-| Mid | `#6B6B6B` |
-| Cream / paper | `#FAFAF8` / `#F2F0EB` |
-| Body type | Georgia / Times stack |
+| Wordmark | **Artometrics** (Chomsky — mark/wordmark only) |
+| Accent (print) | `#C0392B` |
+| Accent (UI) | `#D9251B` |
+| Black / white | `#000000` / `#FFFFFF` |
+| Gray 600 / 200 / 100 | `#525252` / `#E5E5E5` / `#F5F5F5` |
+| Display / headers | DM Mono |
+| Body / UI | DM Sans |
 | Chart palette | black → mid-gray → Artometrics red |
+
+**Don't:** purple gradients, cream/terracotta paper, soft multi-layer shadows, glow, decorative cards, Inter/SaaS first-viewport.
 
 Public copy is always Artometrics-branded — never theme-demo or generic “AI magazine” voice.
 
@@ -60,7 +65,7 @@ Professional, objective, insightful, **no fluff**. Lead with the finding, then t
 
 - Full-bleed editorial still, **16:9**, no text overlays, no logos, no fake charts drawn into the image
 - Atmosphere matches the domain (arts / sports / science / humanities / civics / culture)
-- Prompt must include: Artometrics red accent sparingly, cream/paper neutrals, documentary magazine photography, no purple gradients, no stock-photo smiles collage
+- Prompt must include: Artometrics red accent sparingly, black/white/gray neutrals, documentary magazine photography, no purple gradients, no cream/terracotta clichés, no stock-photo smiles collage
 - File lands at `/images/content/articles/<slug>/hero.png` (or `.webp`) and frontmatter `heroImage`
 
 ## Article HTML structure (required)

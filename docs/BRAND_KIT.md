@@ -39,7 +39,7 @@ Barbara Kruger structure: **black / white / Artometrics red**. Dark mode inverts
 | Elevated | `#FFFFFF` | `#111111` | Bands |
 | Rule | `#000000` / `#E5E5E5` | `#FFFFFF` / `#404040` | Hairlines |
 
-Fonts: **Chomsky** display (default magazine brand); **Georgia / Times** body; system sans for UI chrome.
+Fonts: **Chomsky** for the Artometrics wordmark/mark only; **DM Mono** for display/headers/data; **DM Sans** for body/UI. See `docs/design-system/`.
 
 ### Open Graph default
 
@@ -47,8 +47,8 @@ Fonts: **Chomsky** display (default magazine brand); **Georgia / Times** body; s
 
 ## Do / don’t
 
-**Do:** high contrast, full-bleed heroes on mobile, serif headlines, sparse red accents, reproducible charts.  
-**Don’t:** purple AI gradients, cream+terracotta clichés, card dashboards as home, inventing data, renaming `fundations`-era Astro paths.
+**Do:** high contrast, full-bleed heroes on promo surfaces, DM Mono headlines, sparse red accents, hard 2px rules, reproducible charts.  
+**Don’t:** purple AI gradients, cream+terracotta clichés, soft multi-layer shadows/glow, card dashboards as home, inventing data, renaming `fundations`-era Astro paths.
 
 ## Export checklist (owner)
 

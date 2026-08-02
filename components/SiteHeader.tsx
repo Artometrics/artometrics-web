@@ -26,16 +26,6 @@ const PLACEHOLDERS = [
   "Look up an author…",
 ];
 
-const searchPanelShadow =
-  Platform.OS === "web"
-    ? ({ boxShadow: "0 10px 28px rgba(23, 23, 23, 0.08)" } as object)
-    : {
-        shadowOffset: { width: 0, height: 8 },
-        shadowOpacity: 0.12,
-        shadowRadius: 16,
-        elevation: 6,
-      };
-
 export function SiteHeader() {
   const { user } = useAuth();
   const { setMenuOpen } = useChrome();
@@ -187,14 +177,10 @@ export function SiteHeader() {
                     "overflow-hidden min-h-10 rounded-btn border-[1.5px] bg-bg-elevated",
                     focused ? "border-accent" : "border-border",
                   ].join(" ")}
-                  style={[
-                    {
-                      width: panelWidth,
-                      opacity: panelOpacity,
-                      shadowColor: colors.text,
-                    },
-                    searchPanelShadow,
-                  ]}
+                  style={{
+                    width: panelWidth,
+                    opacity: panelOpacity,
+                  }}
                 >
                   <View className="h-10 flex-row items-center gap-2 pl-2.5 pr-1.5">
                     <Search

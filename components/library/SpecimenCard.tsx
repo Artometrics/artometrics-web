@@ -165,14 +165,14 @@ export function GenreSpecimenCard({
   return (
     <Pressable
       onPress={onPress}
-      className="bg-white rounded-md overflow-hidden border border-base-900 basis-[260px] grow max-w-[340px]"
+      className="max-w-[340px] grow basis-[260px] overflow-hidden border-2 border-white bg-white"
     >
       <View className="h-[180px] items-center justify-center p-3" style={{ backgroundColor: bg }}>
           <Text className="absolute top-2.5 left-3 text-[10px] font-bold tracking-wide text-white/85">
             DESK
           </Text>
-          <View className="w-24 h-24 rounded-full bg-black/25 items-center justify-center border border-white/35">
-            <Text className="text-white font-display text-[42px]">
+          <View className="h-24 w-24 items-center justify-center border-2 border-white/35 bg-black/25">
+            <Text className="font-display text-[42px] text-white">
               {title.slice(0, 1).toUpperCase()}
             </Text>
           </View>
