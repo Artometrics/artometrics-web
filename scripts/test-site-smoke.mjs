@@ -24,6 +24,7 @@ const paths = [
   "/resources",
   "/press",
   "/downloads",
+  "/welcome",
   "/blog",
   "/beyonce-the-psychonomics-of-control",
   "/lv-molly-tea-trademark-china",
