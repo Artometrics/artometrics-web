@@ -11,17 +11,21 @@ export function TldrBox({
   if (!tldr && !points.length) return null;
 
   return (
-    <View className="border-l-4 border-l-accent border border-border bg-accent-soft px-4 py-3.5 gap-2 mt-2 mb-2">
-      <Text className="text-[11px] font-extrabold tracking-[1.8px] uppercase font-sans text-accent">
+    <View className="gap-3 border-2 border-border bg-black px-4 py-5">
+      <Text className="font-display text-[13px] uppercase tracking-[2px] text-accent">
         TL;DR
       </Text>
-      {tldr ? <Text className="font-sans text-[15px] leading-[22px] text-fg">{tldr}</Text> : null}
+      {tldr ? (
+        <Text className="font-sans text-[15px] leading-6 text-white">{tldr}</Text>
+      ) : null}
       {points.length ? (
-        <View className="gap-2 mt-1">
+        <View className="mt-1 gap-3 border-t-2 border-white/20 pt-4">
           {points.map((point) => (
-            <View key={point} className="flex-row items-start gap-2.5">
-              <View className="w-1.5 h-1.5 rounded-full mt-[7px] bg-accent" />
-              <Text className="flex-1 font-mono text-[13px] leading-5 text-fg">{point}</Text>
+            <View key={point} className="flex-row items-start gap-3">
+              <View className="mt-2 h-2 w-2 bg-accent" />
+              <Text className="flex-1 font-mono text-[13px] leading-5 text-white/85">
+                {point}
+              </Text>
             </View>
           ))}
         </View>

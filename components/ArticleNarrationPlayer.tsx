@@ -90,25 +90,25 @@ export function ArticleNarrationPlayer({ audioSrc, title }: Props) {
 
   return (
     <View
-      className="border border-border bg-bg-elevated p-3.5 gap-3 mt-1"
+      className="mt-1 gap-3 border-2 border-border bg-black p-4"
       accessibilityLabel={title ? `Listen to ${title}` : "Listen to narration"}
     >
-      <View className="flex-row items-center flex-wrap gap-3">
+      <View className="flex-row flex-wrap items-center gap-3">
         <Pressable
           onPress={() => void toggle()}
-          className="bg-fg px-4 py-2.5 min-w-[88px] items-center"
+          className="min-w-[100px] items-center bg-accent px-5 py-3"
           accessibilityRole="button"
           accessibilityLabel={status.playing ? "Pause narration" : "Play narration"}
         >
-          <Text className="font-sans text-[13px] font-bold tracking-[0.4px] uppercase text-inverse">
+          <Text className="font-display text-[13px] uppercase tracking-[2px] text-white">
             {status.playing ? "Pause" : "Listen"}
           </Text>
         </Pressable>
-        <View className="grow gap-0.5 min-w-[100px]">
-          <Text className="font-sans text-[11px] font-bold tracking-[1.6px] uppercase text-accent">
+        <View className="min-w-[100px] grow gap-0.5">
+          <Text className="font-display text-[11px] uppercase tracking-[2px] text-accent">
             Narration
           </Text>
-          <Text className="font-mono text-xs leading-4 text-muted">
+          <Text className="font-mono text-xs leading-4 text-white/70">
             {formatTime(current)} / {formatTime(duration)}
           </Text>
         </View>
@@ -120,8 +120,8 @@ export function ArticleNarrationPlayer({ audioSrc, title }: Props) {
                 key={r}
                 onPress={() => setRate(r)}
                 className={[
-                  "border px-2 py-1.5 min-w-10 items-center",
-                  active ? "border-fg bg-fg" : "border-border bg-transparent",
+                  "min-w-10 items-center border-2 px-2 py-1.5",
+                  active ? "border-white bg-white" : "border-white/30 bg-transparent",
                 ].join(" ")}
                 accessibilityRole="button"
                 accessibilityLabel={`${r} times speed`}
@@ -129,8 +129,8 @@ export function ArticleNarrationPlayer({ audioSrc, title }: Props) {
               >
                 <Text
                   className={[
-                    "font-sans text-xs font-bold",
-                    active ? "text-inverse" : "text-fg",
+                    "font-mono text-xs font-bold",
+                    active ? "text-black" : "text-white",
                   ].join(" ")}
                 >
                   {r === 1 ? "1×" : `${r}×`}
@@ -142,7 +142,7 @@ export function ArticleNarrationPlayer({ audioSrc, title }: Props) {
       </View>
 
       <Pressable
-        className="h-1.5 w-full overflow-hidden bg-border"
+        className="h-2 w-full overflow-hidden bg-white/20"
         onLayout={(e) => setTrackWidth(e.nativeEvent.layout.width)}
         onPress={(e) => {
           if (!trackWidth) return;

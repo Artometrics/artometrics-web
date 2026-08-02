@@ -8,7 +8,7 @@ import { useTheme } from "@/lib/theme";
 
 const SITE = "https://artometrics.com";
 const BODY_FONT = "DM Sans";
-const DISPLAY_FONT = "DM Mono";
+const DISPLAY_FONT = "Anton";
 
 /** Native can’t run Plotly — swap live chart mounts for PNG fallbacks. */
 function withChartFallbacks(html: string): string {
@@ -34,6 +34,7 @@ const systemFonts = [
   ...defaultSystemFonts,
   BODY_FONT,
   DISPLAY_FONT,
+  "DM Mono",
   "Chomsky",
 ];
 
@@ -59,26 +60,32 @@ export function ArticleBody({ html }: { html: string }) {
       p: { marginTop: 0, marginBottom: 14, fontFamily: BODY_FONT },
       h1: {
         fontSize: 28,
-        lineHeight: 34,
+        lineHeight: 32,
         marginBottom: 12,
-        fontWeight: "500",
+        fontWeight: "400",
         fontFamily: DISPLAY_FONT,
+        textTransform: "uppercase",
+        letterSpacing: 1,
         color: colors.text,
       },
       h2: {
-        fontSize: 24,
-        lineHeight: 30,
+        fontSize: 22,
+        lineHeight: 26,
         marginBottom: 10,
-        fontWeight: "500",
+        fontWeight: "400",
         fontFamily: DISPLAY_FONT,
+        textTransform: "uppercase",
+        letterSpacing: 1,
         color: colors.text,
       },
       h3: {
-        fontSize: 20,
-        lineHeight: 26,
+        fontSize: 16,
+        lineHeight: 22,
         marginBottom: 8,
-        fontWeight: "500",
+        fontWeight: "400",
         fontFamily: DISPLAY_FONT,
+        textTransform: "uppercase",
+        letterSpacing: 1.5,
         color: colors.text,
       },
       a: { color: colors.accent },

@@ -1,4 +1,4 @@
-import { Text, View, useWindowDimensions } from "react-native";
+import { Pressable, Text, View, useWindowDimensions } from "react-native";
 import { Image } from "expo-image";
 import { useLocalSearchParams, Link } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
@@ -8,8 +8,7 @@ import { ArticleNarrationPlayer } from "@/components/ArticleNarrationPlayer";
 import { CommentThread } from "@/components/platform/CommentThread";
 import { ClapButton } from "@/components/platform/ClapButton";
 import { TldrBox } from "@/components/TldrBox";
-import { MagazineCard } from "@/components/MagazineCard";
-import { CarouselRail } from "@/components/CarouselRail";
+import { BlogCard } from "@/components/BlogCard";
 import { PageSeo } from "@/components/PageSeo";
 import { assetUrl } from "@/lib/assets";
 import {
@@ -54,7 +53,6 @@ export async function generateStaticParams() {
 
 export default function ReportScreen() {
   const { width } = useWindowDimensions();
-  const bleed = width < 900;
   const params = useLocalSearchParams<{ slug: string | string[] }>();
   const slug = paramString(params.slug);
   const post = getBlogPost(slug);
@@ -66,10 +64,14 @@ export default function ReportScreen() {
 
   if (!post) {
     return (
-      <Wrapper className="gap-3 pt-10 pb-4">
-        <Text className="font-serif text-[36px] font-bold text-fg">Report not found</Text>
+      <Wrapper className="gap-3 pb-4 pt-10">
+        <Text className="font-display text-4xl uppercase tracking-[1px] text-fg">
+          Report not found
+        </Text>
         <Link href="/blog">
-          <Text className="text-accent">Back to reports</Text>
+          <Text className="font-display text-[13px] uppercase tracking-[2px] text-accent">
+            Back to reports →
+          </Text>
         </Link>
       </Wrapper>
     );
@@ -85,8 +87,7 @@ export default function ReportScreen() {
   const tldr = (post as { tldr?: string | null }).tldr ?? null;
   const keyPoints = (post as { keyPoints?: string[] }).keyPoints ?? [];
   const faq = (post as { faq?: { question: string; answer: string }[] }).faq ?? [];
-  const recommended = getRecommendedPosts(post.slug, 12);
-  const cardW = Math.min(240, Math.max(180, width * 0.55));
+  const recommended = getRecommendedPosts(post.slug, 6);
 
   const imageAbs = post.heroImage?.startsWith("http")
     ? post.heroImage
@@ -167,105 +168,185 @@ export default function ReportScreen() {
         type="article"
       />
       <SeoJsonLd data={jsonLd} />
+
+      {/* Full-bleed hero — matches home cover plane */}
       {hero ? (
-        <Wrapper variant={bleed ? "bleed" : "magazine"} className="pt-0 pb-2">
+        <View className="relative w-full overflow-hidden bg-black">
           <Image
             source={{ uri: hero }}
-            className="w-full aspect-video max-h-[520px]"
+            className="w-full"
+            style={{ height: Math.min(560, Math.max(280, width * 0.52)) }}
             contentFit="cover"
-            transition={200}
+            transition={250}
             accessibilityLabel={post.title}
           />
-        </Wrapper>
-      ) : null}
-      <Wrapper variant="wide" className="pt-9 pb-2 gap-4">
-        {label ? (
-          <Text className="font-display text-xs uppercase tracking-[2px] text-accent">
-            {label}
+          <View className="absolute inset-x-0 bottom-0 h-24 bg-black/40" />
+        </View>
+      ) : (
+        <View className="h-3 w-full bg-accent" />
+      )}
+
+      {/* Masthead */}
+      <Wrapper className="gap-4 border-b-2 border-border pb-8 pt-8">
+        <View className="flex-row flex-wrap items-center gap-3">
+          <Text
+            className="text-2xl text-accent"
+            style={{ fontFamily: "Chomsky" }}
+          >
+            Artometrics
           </Text>
-        ) : null}
-        <Text className="font-display text-[40px] uppercase leading-[0.95] tracking-[1px] text-fg md:text-[52px]">
+          <Text className="font-display text-[12px] uppercase tracking-[2px] text-subtle">
+            Report
+          </Text>
+          {label ? (
+            <Text className="font-display text-[12px] uppercase tracking-[2px] text-accent">
+              {label}
+            </Text>
+          ) : null}
+        </View>
+
+        <Text className="max-w-[18ch] font-display text-5xl uppercase leading-[0.92] tracking-[1px] text-fg md:text-7xl">
           {post.title}
         </Text>
-        <Text className="max-w-[640px] font-sans text-xl leading-[30px] text-muted">
+
+        <Text className="max-w-[48ch] font-sans text-[17px] leading-7 text-muted">
           {post.description}
         </Text>
-        <Text className="mt-1 font-mono text-[12px] uppercase tracking-[1.2px] text-subtle">
-          By {authorLabel}
-          {post.pubDate ? ` · ${formatDate(post.pubDate)}` : ""}
-          {` · ${minutes} min read`}
-        </Text>
+
+        <View className="mt-1 flex-row flex-wrap items-center gap-x-3 gap-y-1 border-t-2 border-border pt-4">
+          <Text className="font-mono text-[11px] uppercase tracking-[1.4px] text-subtle">
+            By {authorLabel}
+          </Text>
+          {post.pubDate ? (
+            <Text className="font-mono text-[11px] uppercase tracking-[1.4px] text-subtle">
+              {formatDate(post.pubDate)}
+            </Text>
+          ) : null}
+          <Text className="font-mono text-[11px] uppercase tracking-[1.4px] text-accent">
+            {minutes} min read
+          </Text>
+        </View>
+      </Wrapper>
+
+      {/* Tools + signal facts */}
+      <Wrapper className="gap-4 py-6">
         <ArticleNarrationPlayer
           audioSrc={(post as { audioSrc?: string | null }).audioSrc}
           title={post.title}
         />
+        <ArticleActions slug={post.slug} title={post.title} placement="top" />
         <TldrBox
           tldr={tldr ?? post.description}
           keyPoints={withTopicKeyPoint(keyPoints, label)}
         />
-        <ArticleActions slug={post.slug} title={post.title} placement="top" />
       </Wrapper>
-      <Wrapper variant="wide" className="pt-2 pb-8">
-        <ArticleBody html={post.body} />
-      </Wrapper>
-      <Wrapper variant="wide">
+
+      {/* Body */}
+      <View className="border-t-2 border-border">
+        <Wrapper className="py-8">
+          <ArticleBody html={post.body} />
+        </Wrapper>
+      </View>
+
+      {/* End matter */}
+      <Wrapper className="gap-4 border-t-2 border-border py-8">
         <ArticleActions slug={post.slug} title={post.title} placement="bottom" />
-        <View className="mt-4">
-          <ClapButton targetKind="report" targetId={post.slug} />
-        </View>
+        <ClapButton targetKind="report" targetId={post.slug} />
         <CommentThread targetKind="report" targetId={post.slug} />
       </Wrapper>
+
       {faq.length ? (
-        <Wrapper variant="wide" className="pb-6 gap-2">
-          <Text className="font-sans text-xl font-extrabold mb-2 text-fg">
-            Frequently asked questions
-          </Text>
-          {faq.map((item) => (
-            <View key={item.question} className="py-3 border-b border-border gap-1.5">
-              <Text className="text-base font-bold leading-[22px] text-fg">{item.question}</Text>
-              <Text className="text-[15px] leading-[22px] text-muted">{item.answer}</Text>
+        <View className="border-t-2 border-border bg-black py-10">
+          <Wrapper className="gap-5">
+            <Text className="font-display text-4xl uppercase tracking-[2px] text-white">
+              FAQ
+            </Text>
+            <View className="border-2 border-white/30">
+              {faq.map((item) => (
+                <View
+                  key={item.question}
+                  className="gap-2 border-b-2 border-white/30 px-4 py-5 last:border-b-0"
+                >
+                  <Text className="font-display text-lg uppercase leading-6 tracking-[1px] text-white">
+                    {item.question}
+                  </Text>
+                  <Text className="font-sans text-[15px] leading-6 text-white/75">
+                    {item.answer}
+                  </Text>
+                </View>
+              ))}
             </View>
-          ))}
-        </Wrapper>
+          </Wrapper>
+        </View>
       ) : null}
 
       {recommended.length ? (
-        <View className="mt-2 mb-2">
-          <CarouselRail title="Recommended reads" href="/blog">
-            {recommended.map((r) => (
-              <MagazineCard key={r.slug} post={r} variant="portrait" width={cardW} />
-            ))}
-          </CarouselRail>
+        <View className="border-t-2 border-border bg-bg py-10">
+          <Wrapper className="gap-5">
+            <View className="flex-row flex-wrap items-end justify-between gap-3">
+              <Text className="font-display text-4xl uppercase tracking-[2px] text-fg">
+                Keep reading
+              </Text>
+              <Link href="/blog" asChild>
+                <Pressable>
+                  <Text className="font-display text-[12px] uppercase tracking-[2px] text-accent">
+                    All reports →
+                  </Text>
+                </Pressable>
+              </Link>
+            </View>
+            <View className="flex-row flex-wrap gap-4">
+              {recommended.slice(0, 3).map((r) => (
+                <View key={r.slug} className="min-w-[240px] flex-1">
+                  <BlogCard post={r} variant="stack" />
+                </View>
+              ))}
+            </View>
+            <View className="border-2 border-border">
+              {recommended.slice(3).map((r) => (
+                <BlogCard key={r.slug} post={r} variant="row" />
+              ))}
+            </View>
+          </Wrapper>
         </View>
       ) : null}
 
-      <Wrapper
-        variant="prose"
-        className="flex-row justify-between gap-6 py-8 border-t-2 border-fg mb-6"
-      >
-        {adjacent.previous ? (
-          <Link href={adjacent.previous.href as `/${string}`}>
-            <Text className="text-[11px] tracking-[1.5px] uppercase font-semibold mb-1.5 text-subtle">
-              Previous
-            </Text>
-            <Text className="font-serif text-[17px] leading-6 max-w-[260px] text-fg">
-              {adjacent.previous.title}
-            </Text>
-          </Link>
-        ) : (
-          <View />
-        )}
-        {adjacent.next ? (
-          <Link href={adjacent.next.href as `/${string}`}>
-            <Text className="text-[11px] tracking-[1.5px] uppercase font-semibold mb-1.5 text-subtle">
-              Next
-            </Text>
-            <Text className="font-serif text-[17px] leading-6 max-w-[260px] text-fg">
-              {adjacent.next.title}
-            </Text>
-          </Link>
-        ) : null}
-      </Wrapper>
+      <View className="border-t-2 border-border">
+        <Wrapper className="flex-row flex-wrap justify-between gap-6 py-10">
+          {adjacent.previous ? (
+            <Link href={adjacent.previous.href as `/${string}`} asChild>
+              <Pressable className="min-w-[200px] flex-1 gap-2">
+                <Text className="font-display text-[11px] uppercase tracking-[2px] text-accent">
+                  Previous
+                </Text>
+                <Text
+                  className="font-display text-2xl uppercase leading-7 tracking-[1px] text-fg"
+                  numberOfLines={3}
+                >
+                  {adjacent.previous.title}
+                </Text>
+              </Pressable>
+            </Link>
+          ) : (
+            <View className="flex-1" />
+          )}
+          {adjacent.next ? (
+            <Link href={adjacent.next.href as `/${string}`} asChild>
+              <Pressable className="min-w-[200px] flex-1 items-end gap-2">
+                <Text className="font-display text-[11px] uppercase tracking-[2px] text-accent">
+                  Next
+                </Text>
+                <Text
+                  className="text-right font-display text-2xl uppercase leading-7 tracking-[1px] text-fg"
+                  numberOfLines={3}
+                >
+                  {adjacent.next.title}
+                </Text>
+              </Pressable>
+            </Link>
+          ) : null}
+        </Wrapper>
+      </View>
     </View>
   );
 }

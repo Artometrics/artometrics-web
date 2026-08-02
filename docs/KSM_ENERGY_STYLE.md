@@ -8,7 +8,8 @@ Artometrics inherits the **loud zine build** from [kylesmcauliffe.com](https://k
 |---------|-------------|
 | Dark-first chrome | Default theme `dark`; black header |
 | Hot red `#E60000` | UI accent for CTAs / links |
-| Anton display | Section titles, nav, article H1s |
+| Anton display | Section titles, nav, article H1s / report mastheads / in-body H2s |
+| Report pages | Full-bleed hero → Chomsky+Anton masthead → black TL;DR / narration → stack “Keep reading” |
 | Instrument strip under nav | “Issue · Online / Strong graphic content / Reports · Editions · Signal” |
 | Full-bleed hero home | Brand + one headline + dek + CTAs — **not** a newsstand rack |
 | Signal band | Full-width red/texture strip |

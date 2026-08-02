@@ -165,38 +165,39 @@ export function ArticleActions({ slug, title, placement = "all" }: Props) {
   return (
     <View
       className={[
-        "border-t border-b border-border py-[18px] gap-3.5 my-3",
-        placement === "top" ? "border-b-0 mb-0 pb-3" : "",
-        placement === "bottom" ? "mt-2 pt-5" : "",
+        "gap-3.5 py-1",
+        placement === "bottom" ? "mt-1" : "",
       ]
         .filter(Boolean)
         .join(" ")}
     >
       {showTop ? (
-        <View className="flex-row flex-wrap gap-2.5 items-center">
+        <View className="flex-row flex-wrap items-center gap-3">
           <Pressable
             onPress={share}
             accessibilityRole="button"
             accessibilityLabel="Share this report"
-            className="border border-fg bg-fg px-4 py-2.5"
+            className="bg-accent px-5 py-3"
           >
-            <Text className="text-xs font-bold tracking-[0.6px] uppercase text-bg">Share</Text>
+            <Text className="font-display text-[13px] uppercase tracking-[2px] text-white">
+              Share
+            </Text>
           </Pressable>
           {user ? (
             <Pressable
               onPress={toggleSave}
               disabled={busy}
               accessibilityRole="button"
-              className="border border-border px-3.5 py-2.5"
+              className="border-2 border-border px-5 py-3"
             >
-              <Text className="text-xs font-bold tracking-[0.6px] uppercase text-fg">
+              <Text className="font-display text-[13px] uppercase tracking-[2px] text-fg">
                 {saved ? "Saved" : "Save"}
               </Text>
             </Pressable>
           ) : (
             <Link href="/login" asChild>
-              <Pressable className="border border-border px-3.5 py-2.5">
-                <Text className="text-xs font-bold tracking-[0.6px] uppercase text-muted">
+              <Pressable className="border-2 border-border px-5 py-3">
+                <Text className="font-display text-[13px] uppercase tracking-[2px] text-muted">
                   Sign in to save
                 </Text>
               </Pressable>
@@ -207,17 +208,17 @@ export function ArticleActions({ slug, title, placement = "all" }: Props) {
 
       {showBottom && downloads.length ? (
         <View className="gap-3">
-          <Text className="text-[11px] tracking-[1.6px] uppercase font-bold text-accent">
+          <Text className="font-display text-[12px] uppercase tracking-[2px] text-accent">
             Downloads
           </Text>
-          <View className="flex-row flex-wrap gap-2.5 items-center">
+          <View className="flex-row flex-wrap items-center gap-3">
             <Pressable
               onPress={() => setMenuOpen((v) => !v)}
               accessibilityRole="button"
               accessibilityState={{ expanded: menuOpen }}
-              className="border border-accent bg-accent px-4 py-2.5"
+              className="bg-accent px-5 py-3"
             >
-              <Text className="text-xs font-bold tracking-[0.6px] uppercase text-paper">
+              <Text className="font-display text-[13px] uppercase tracking-[2px] text-white">
                 {menuOpen ? "Close" : "Download"}
               </Text>
             </Pressable>
@@ -228,9 +229,9 @@ export function ArticleActions({ slug, title, placement = "all" }: Props) {
                   trackEvent("report_download", { slug, format: item.key });
                   openUrl(item.href);
                 }}
-                className="border border-border px-3.5 py-2.5"
+                className="border-2 border-border px-5 py-3"
               >
-                <Text className="text-xs font-bold tracking-[0.6px] uppercase text-fg">
+                <Text className="font-display text-[13px] uppercase tracking-[2px] text-fg">
                   {item.key === "pdf"
                     ? "PDF"
                     : item.key === "epub"
@@ -244,9 +245,9 @@ export function ArticleActions({ slug, title, placement = "all" }: Props) {
             {downloads.length > 1 ? (
               <Pressable
                 onPress={() => void downloadAll(downloads)}
-                className="border border-fg px-3.5 py-2.5"
+                className="border-2 border-fg px-5 py-3"
               >
-                <Text className="text-xs font-bold tracking-[0.6px] uppercase text-fg">
+                <Text className="font-display text-[13px] uppercase tracking-[2px] text-fg">
                   {Platform.OS === "web" ? "Download all" : "Share all links"}
                 </Text>
               </Pressable>
@@ -254,7 +255,7 @@ export function ArticleActions({ slug, title, placement = "all" }: Props) {
           </View>
 
           {menuOpen ? (
-            <View className="border border-border bg-bg py-1">
+            <View className="border-2 border-border bg-bg py-1">
               {downloads.map((item) => (
                 <Pressable
                   key={item.key}
@@ -262,9 +263,11 @@ export function ArticleActions({ slug, title, placement = "all" }: Props) {
                     openUrl(item.href);
                     setMenuOpen(false);
                   }}
-                  className="px-3.5 py-3"
+                  className="border-b border-border px-4 py-3 last:border-b-0"
                 >
-                  <Text className="font-serif text-base leading-[22px] text-fg">{item.label}</Text>
+                  <Text className="font-display text-base uppercase tracking-[1px] text-fg">
+                    {item.label}
+                  </Text>
                 </Pressable>
               ))}
               {downloads.length > 1 ? (
@@ -273,9 +276,9 @@ export function ArticleActions({ slug, title, placement = "all" }: Props) {
                     void downloadAll(downloads);
                     setMenuOpen(false);
                   }}
-                  className="px-3.5 py-3"
+                  className="px-4 py-3"
                 >
-                  <Text className="font-serif text-base leading-[22px] text-accent">
+                  <Text className="font-display text-base uppercase tracking-[1px] text-accent">
                     {Platform.OS === "web"
                       ? `Download all (${downloads.length} files)`
                       : `Share all links (${downloads.length})`}

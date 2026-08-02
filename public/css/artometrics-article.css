@@ -3,7 +3,7 @@
   position: fixed;
   top: 0; left: 0;
   height: 3px; width: 0%;
-  background: #C0392B;
+  background: #E60000;
   z-index: 9999;
   transition: width 0.08s linear;
   pointer-events: none;
@@ -266,12 +266,13 @@ html[data-theme="dark"] .artometrics-article-body{
 }
 
 .artometrics-article-body .title{
-  font-family: 'Playfair Display', serif;
-  font-weight: 900;
+  font-family: 'Anton', Impact, Haettenschweiler, sans-serif;
+  font-weight: 400;
   font-size: clamp(1.85rem, 3.6vw, 2.75rem);
-  line-height: 1.15;
+  line-height: 0.95;
   color: var(--art-white);
-  letter-spacing: -0.5px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
   margin-bottom: 0.5rem;
   max-width: min(1100px, 100%);
   margin-left: auto;
@@ -301,15 +302,16 @@ html[data-theme="dark"] .artometrics-article-body{
 
 /* ── Section Headings ─────────────────────────────────────── */
 .artometrics-article-body h2{
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
-  font-size: clamp(1.25rem, 2.2vw, 1.55rem);
+  font-family: 'Anton', Impact, Haettenschweiler, sans-serif;
+  font-weight: 400;
+  font-size: clamp(1.35rem, 2.4vw, 1.85rem);
   color: var(--art-dark);
   border-top: 3px solid var(--art-highlight);
   padding-top: 0.85rem;
   margin-top: 2.75rem;
   margin-bottom: 0.3rem;
-  letter-spacing: -0.3px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
   text-align: center;
 }
 
@@ -800,9 +802,9 @@ pre:has(> code.sourceCode.sql),
   line-height: 1.7 !important;
   font-weight: 500 !important;
   max-width: min(56rem, 100%) !important;
-  margin: 0 auto 2.1rem 0 !important;
+  margin: 0 auto 2.1rem !important;
   padding-bottom: 1.6rem !important;
-  border-bottom: 1px solid #000000 !important;
+  border-bottom: 2px solid var(--art-highlight) !important;
 }
 .artometrics-article-body main.art-article-main > blockquote{
   max-width: min(56rem, 100%) !important;
@@ -816,10 +818,10 @@ pre:has(> code.sourceCode.sql),
   margin: 0 !important;
 }
 .artometrics-article-body main.art-article-main > h2{
-  font-family: 'DM Sans', sans-serif !important;
-  font-size: 1.2rem !important;
-  font-weight: 700 !important;
-  letter-spacing: 0.16em !important;
+  font-family: 'Anton', Impact, Haettenschweiler, sans-serif !important;
+  font-size: clamp(1.45rem, 2.6vw, 2rem) !important;
+  font-weight: 400 !important;
+  letter-spacing: 1px !important;
   text-transform: uppercase !important;
   text-align: center !important;
   color: var(--art-dark) !important;
@@ -830,7 +832,7 @@ pre:has(> code.sourceCode.sql),
   flex-direction: column !important;
   align-items: center !important;
   gap: 0.7rem !important;
-  line-height: 1.35 !important;
+  line-height: 1.05 !important;
   max-width: min(48rem, 100%) !important;
 }
 .artometrics-article-body main.art-article-main > h2::before{
@@ -838,10 +840,10 @@ pre:has(> code.sourceCode.sql),
   display: block !important;
   width: 2.75rem !important;
   height: 3px !important;
-  background: #C0392B !important;
+  background: #E60000 !important;
 }
 .artometrics-article-body h2{
-  font-family: 'DM Sans', sans-serif !important;
+  font-family: 'Anton', Impact, Haettenschweiler, sans-serif !important;
 }
 .artometrics-article-body h2#toc-title{
   font-size: 0.68rem !important;
