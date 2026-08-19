@@ -106,5 +106,32 @@
     "isLocked": true,
     "body": "",
     "bodyFormat": "html"
+  },
+  {
+    "id": "5",
+    "title": "The QA gate: from evidence to publish-ready artifacts",
+    "pubDate": "2026-08-19T00:00:00.000Z",
+    "description": "David Lee on the quality checks that turn raw data, charts, and prose into exportable, reproducible artifacts — the same gates that keep Studio trustworthy.",
+    "author": "david-lee",
+    "image": {
+      "url": "/images/thumbnails/e5.png",
+      "alt": "Artometrics podcast episode 5"
+    },
+    "guestAvatar": {
+      "url": "/images/thumbnails/b.jpg",
+      "alt": "David Lee"
+    },
+    "episodeNumber": 5,
+    "duration": "41:30 mins",
+    "audioSrc": "/audios/placeholder.mp3",
+    "tags": [
+      "methodology",
+      "studio"
+    ],
+    "isRecent": true,
+    "isPopular": false,
+    "isLocked": true,
+    "body": "",
+    "bodyFormat": "html"
   }
 ]

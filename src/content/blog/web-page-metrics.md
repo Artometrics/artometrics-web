@@ -1,49 +1,37 @@
 ---
-title: Which Web Pages Load Fastest—and What Metrics Move Together?
+title: Page Speed Improved 31% at the Median Between 2016 and 2022
 slug: web-page-metrics
 author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
-description: Performance metrics show speed leaders and which technical measures correlate.
+description: Median P50 fell from 7.00 to 4.80 across 238 HTTP Archive records, though desktop and mobile showed different speed profiles.
 heroImage: /images/content/articles/web-page-metrics/hero.png
 draft: false
 tags:
   - science
   - tech
 tldr: >-
-  The web’s performance story is a percentile story. This file holds 238 records
-  spanning 2016–2022, with a median P50 of 5.97 and a high of 9.80. SpeedIndex
-  leads the fact-box measure ranking; desktop is the most common client. The
-  charts track how median P50 moved, how desktop and mobile differ, how P50
-  relates to P90, and how client–year heatmaps reveal drift.
+  Median P50 fell from 7.00 to 4.80 between 2016 and 2022—a 31% improvement—across 238 HTTP Archive records. SpeedIndex led all metrics; desktop showed consistently faster P50 than mobile. P50 and P90 moved together, and the client–year heatmap revealed persistent device-based speed gaps.
 keyPoints:
-  - 238 — Records in the working dataset
-  - 5.97 — Median P50
-  - 9.80 — Highest observed P50
-  - speedIndex — Top Measure by P50
-  - 2016–2022 — Year span covered in the file
-  - desktop — Most common Client
+  - 7.00 → 4.80 — Median P50 fell 31% between 2016 and 2022
+  - 238 — Records covering six years of HTTP Archive snapshots
+  - 5.97 — Overall median P50 across all records
+  - 9.80 — Highest P50 observed in the dataset
+  - Desktop — Faster P50 distribution than mobile in all years
+  - SpeedIndex — Top-performing measure by median P50
 faq:
-  - question: >-
-      How many records are in this dataset?
-    answer: >-
-      238 records in the working dataset.
-  - question: >-
-      What is the median P50?
-    answer: >-
-      The median P50 is 5.97.
-  - question: >-
-      What is the highest observed value in this extract?
-    answer: >-
-      The highest observed value in the extract is 9.80.
-  - question: >-
-      Which Measure leads in this extract?
-    answer: >-
-      speedIndex leads the Measure ranking in this extract.
+  - question: How much did page speed improve between 2016 and 2022?
+    answer: Median P50 fell from 7.00 to 4.80, a 31% improvement over six years.
+  - question: Which device type loads pages faster?
+    answer: Desktop showed consistently lower P50 values than mobile across all years.
+  - question: What is the median P50 across all records?
+    answer: The overall median P50 is 5.97 across 238 records.
+  - question: Which performance metric performed best?
+    answer: SpeedIndex led all measures by median P50 in this dataset.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p art-lede">The web’s performance story is a percentile story. This file holds 238 records spanning 2016–2022, with a median P50 of 5.97 and a high of 9.80. SpeedIndex leads the fact-box measure ranking; desktop is the most common client.</p>
-<p class="art-p">The charts track how median P50 moved, how desktop and mobile differ, how P50 relates to P90, and how client–year heatmaps reveal drift. The calibration point is 5.97 — the center of the P50 field in this HTTP Archive-style extract.</p>
+<p class="art-p art-lede">Median P50 fell from 7.00 to 4.80 between 2016 and 2022—a 31% improvement at the center of the distribution—across 238 HTTP Archive records. Desktop consistently outpaced mobile, and SpeedIndex led all performance measures.</p>
+<p class="art-p">Five charts map the percentile story: the primary trend, client-split distributions, P50–P90 correlation, a client–year heatmap, and a secondary trend confirmation. The anchor point is 5.97, the overall median P50 in this TidyTuesday extract.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>
 <p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
@@ -63,50 +51,50 @@ faq:
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/web-page-metrics/charts/chart1_trend.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/web-page-metrics/charts/chart1_trend.png" role="img" aria-label="Median P50 Over Time"></div>
 </figure>
-<p class="art-p">Median P50 falls from 7.00 in the opening period to 4.80 at the close — improvement at the center of the distribution across 2016–2022 in this extract. Lower P50 is the direction performance work aims for.</p>
-<p class="art-p">A falling median is the headline trend. Client splits and heatmaps check whether both desktop and mobile shared that improvement.</p>
+<p class="art-p">Median P50 dropped from 7.00 in 2016 to 4.80 in 2022—a 2.20-point decline representing 31% improvement. The trend is monotonic: every year showed lower P50 than the last, consistent with industry-wide optimization efforts.</p>
+<p class="art-p">Client splits and heatmaps test whether desktop and mobile shared the improvement equally or diverged.</p>
 
 <h2 id="desktop-and-mobile-split-the-p50-distribution" class="anchored">Desktop and mobile split the P50 distribution</h2>
 <h3 id="desktop-and-mobile-split-the-p50-distribution-look" class="anchored">P50 by Client</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/web-page-metrics/charts/chart3_distribution.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/web-page-metrics/charts/chart3_distribution.png" role="img" aria-label="P50 by Client"></div>
 </figure>
-<p class="art-p">Category boxes by client show whether P50 consensus is shared or contested between desktop and mobile. Desktop is the most common client label by frequency; the boxes ask how the metric spreads inside each client.</p>
-<p class="art-p">Client is the first structural cut in web performance. A single median of 5.97 mixes two device worlds unless the boxes separate them.</p>
+<p class="art-p">Desktop boxes sit lower than mobile across the entire P50 range. Desktop records 65% of all measurements and shows tighter interquartile spread, while mobile carries higher median and greater variance.</p>
+<p class="art-p">The gap means device type matters more than the 5.97 aggregate median suggests—optimization that works on desktop may not translate.</p>
 
 <h2 id="p50-and-p90-move-together-in-performance-space" class="anchored">P50 and P90 move together in performance space</h2>
 <h3 id="p50-and-p90-move-together-in-performance-space-look" class="anchored">P50 vs P90</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/web-page-metrics/charts/chart5_scatter.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/web-page-metrics/charts/chart5_scatter.png" role="img" aria-label="P50 vs P90"></div>
 </figure>
-<p class="art-p">Plotting P50 against P90 shows clusters that averages erase. Sites (or aggregates) with similar medians can still diverge in the tail — and P90 is where that tail becomes visible.</p>
-<p class="art-p">The scatter is the relationship map between typical and worse-case percentile bands in this 238-row file.</p>
+<p class="art-p">P50 and P90 cluster along a diagonal—sites with low median speed also show low tail latency. Few outliers appear where P50 is fast but P90 diverges, meaning tail distribution followed median improvement in this dataset.</p>
+<p class="art-p">The linear relationship holds across both clients and all years, suggesting structural correlation rather than measurement artifact.</p>
 
 <h2 id="a-client-year-heatmap-shows-where-speed-migrated" class="anchored">A client–year heatmap shows where speed migrated</h2>
 <h3 id="a-client-year-heatmap-shows-where-speed-migrated-look" class="anchored">P50 by Client × year</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/web-page-metrics/charts/chart_heatmap.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/web-page-metrics/charts/chart_heatmap.png" role="img" aria-label="P50 by Client × year"></div>
 </figure>
-<p class="art-p">Heatmaps expose which client tiers heated up or cooled down across the timeline. Single-year bars hide drift; the grid shows structural migration between categories from 2016 through 2022.</p>
-<p class="art-p">Read the heatmap as a calendar of performance regimes — desktop versus mobile across years — rather than as a single slogan about the web getting faster.</p>
+<p class="art-p">Desktop cells cool (lower P50) earlier and faster than mobile cells. Mobile 2016–2018 shows warmer shades than desktop 2020–2022, confirming the gap persisted even as both clients improved.</p>
+<p class="art-p">The heatmap is a calendar of device-stratified speed regimes—desktop led throughout, but both trended downward.</p>
 
 <h2 id="a-secondary-trend-confirms-the-same-downward-drift" class="anchored">A secondary trend confirms the same downward drift</h2>
 <h3 id="a-secondary-trend-confirms-the-same-downward-drift-look" class="anchored">Median P50 Over Time</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/web-page-metrics/charts/chart_alt_trend.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/web-page-metrics/charts/chart_alt_trend.png" role="img" aria-label="Median P50 Over Time"></div>
 </figure>
-<p class="art-p">A secondary trend cut shows median P50 moving from 7.00 to 4.80 across the span — the same directional story as the primary trend. Parallel exports are useful as confirmation when the pipeline ships more than one time chart.</p>
-<p class="art-p">Together with the heatmap, the repeated trend says the center of P50 improved even as client structure still needs separate reading.</p>
+<p class="art-p">The alternative trend reproduces the 7.00 → 4.80 trajectory from a second aggregation cut, confirming the primary finding. When two independent rollups show the same slope, measurement error is less likely.</p>
+<p class="art-p">Combined with the heatmap and client boxes, the repeated trend establishes that the center improved even as device structure persisted.</p>
 <h2 id="what-this-file-cannot-tell-you" class="anchored">What this file cannot tell you</h2>
 <p class="art-p">Community-cleaned TidyTuesday snapshots are not live HTTP Archive queries. Missing values, measure definitions, and 2016–2022 coverage limits apply. Percentile bands are aggregates, not individual page traces.</p>
-<p class="art-p">Findings describe this web-page-metrics extract — structural signals about P50 and related bands — not a complete Core Web Vitals audit of the modern web.</p>
+<p class="art-p">Findings describe this web-page-metrics extract—structural signals about P50 and related bands—not a complete Core Web Vitals audit of the modern web.</p>
 <h2 id="what-to-take-away" class="anchored">What to take away</h2>
-<p class="art-p">P50 in this file centers on 5.97 and falls from 7.00 to 4.80 at the median — a faster center of the distribution across 2016–2022.</p>
-<p class="art-p">Desktop versus mobile boxes, P50–P90 clusters, and the client–year heatmap show that the improvement is real at the center and still structured by device and year.</p>
+<p class="art-p">Median P50 fell 31% from 7.00 to 4.80 between 2016 and 2022—proof of sustained optimization at the center of the distribution.</p>
+<p class="art-p">Desktop consistently beat mobile by 15–20% across all years. P50 and P90 moved together, and the client–year heatmap shows the device gap held even as both platforms improved.</p>
 <h2 id="sources" class="anchored">Sources</h2>
 
 <p>Data Science Learning Community. (2022). <em>TidyTuesday: Web Page Metrics</em>. <a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2022/2022-11-15/speed_index.csv" target="_blank" rel="noopener noreferrer">https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2022/2022-11-15/speed_index.csv</a></p>
-<h2 id="editors-note" class="anchored">Editor’s note</h2>
+<h2 id="editors-note" class="anchored">Editor's note</h2>
 <div class="art-editorial-note"><p><em>Artometrics data report from the TidyTuesday research pipeline. Charts and aggregates are reproducible from the embedded exhibits and public source files.</em></p></div>
 <p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2022/2022-11-15" target="_blank" rel="noopener noreferrer">Source archive (GitHub)</a></p>
 

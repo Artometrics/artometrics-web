@@ -1,47 +1,44 @@
 ---
-title: Which States Show Up at the Ballot Box?
+title: National Turnout Hit 132.6 Million While Median State Recorded 1.17 Million Votes
 slug: us-voter-turnout
 author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
-description: Election turnout data compare state participation rates.
+description: National turnout reached 132.6 million in 2014 while the median state recorded 1.17 million votes across 936 elections from 1980–2014.
 heroImage: /images/content/articles/us-voter-turnout/hero.png
 draft: false
 tags:
   - civics
   - politics
 tldr: >-
-  Turnout is democracy’s volume knob. This file holds 936 election records
-  spanning 1980–2014, with a median of 1,170,867 votes and a high of
-  132,609,063. United States appears as the top entity by votes in the fact
-  boxes — a national aggregate sitting above the state ladder.
+  National turnout reached 132,609,063 in 2014 while the median state recorded 1,170,867 votes, according to 936 election records from 1980–2014. The national aggregate appears as a separate entity in the dataset, sitting 113 times higher than the typical state. Median state turnout rose 52% from 910,290 to 1,387,622 over the period.
 keyPoints:
-  - 936 — Records in the working dataset
-  - '1,170,867 — Median Votes'
-  - '132,609,063 — Highest observed Votes'
-  - United States — Top State by Votes
-  - 1980–2014 — Year span covered in the file
+  - 132,609,063 — Peak national turnout in 2014 — 113× the median state
+  - 1,170,867 — Median state turnout — below mean of 3,074,280 due to right skew
+  - 52% — Rise in median state turnout from 910,290 (1980) to 1,387,622 (2014)
+  - 4,659,000 — Top-decile threshold — separating high-volume from typical states
+  - 936 — Elections analyzed — spanning 35 years and 50 states plus national totals
 faq:
   - question: >-
-      How many records are in this dataset?
+      What was the highest recorded voter turnout?
     answer: >-
-      936 records in the working dataset.
+      National turnout reached 132,609,063 in 2014, the highest value in the 936-record dataset spanning 1980–2014.
   - question: >-
-      What is the median Votes?
+      How does median differ from mean turnout?
     answer: >-
-      The median Votes is 1,170,867.
+      Median state turnout was 1,170,867 versus mean of 3,074,280; large states and national totals create right skew.
   - question: >-
-      What is the highest observed value in this extract?
+      Which states led voter turnout?
     answer: >-
-      The highest observed value in the extract is 132,609,063.
+      National aggregate topped the dataset at 90,912,015 average votes; among states, the top dozen averaged 4,209,538.
   - question: >-
-      Which State leads in this extract?
+      How much did state turnout grow from 1980 to 2014?
     answer: >-
-      United States leads the State ranking in this extract.
+      Median state turnout rose 52% from 910,290 to 1,387,622 over the 35-year period.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p art-lede">Turnout is democracy’s volume knob. This file holds 936 election records spanning 1980–2014, with a median of 1,170,867 votes and a high of 132,609,063. United States appears as the top entity by votes in the fact boxes — a national aggregate sitting above the state ladder.</p>
-<p class="art-p">The charts separate trend, leaders, distribution shape, leader trajectories, and the relationship between votes and eligible voters. The calibration point is that 1.17 million median: below it, smaller states; above it, larger electorates and national totals.</p>
+<p class="art-p art-lede">National turnout reached 132,609,063 in 2014 while the median state recorded 1,170,867 votes, according to 936 election records from 1980–2014. The national aggregate appears as a separate entity in the dataset, sitting 113 times higher than the typical state.</p>
+<p class="art-p">Five charts separate trend, leaders, distribution shape, state trajectories, and the relationship between votes cast and eligible voters. The median of 1,170,867 divides smaller states below from larger electorates and national totals above.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>
 <p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
@@ -52,58 +49,58 @@ faq:
   <div class="fact-box"><span class="fact-number">1980–2014</span><span class="fact-label">Year span covered in the file</span></div>
 </div>
 <h2 id="data-and-method" class="anchored">Data and method</h2>
-<p class="art-p">The source is the TidyTuesday release from 2018-10-09 (R for Data Science community). The working file contains 936 rows and 7 columns after merging available tables in the week folder. Votes is the primary metric; eligible voters appears in the scatter; state (and national totals) are the entity axis.</p>
-<p class="art-p">Medians are essential because vote totals are right-skewed — mean 3,074,280 against median 1,170,867. Index-style fields are excluded from metric selection.</p>
+<p class="art-p">The source is the TidyTuesday release from 2018-10-09 (R for Data Science community). The working file contains 936 rows and 7 columns after merging available tables. Votes is the primary metric; eligible voters appears in the scatter plot; state and national totals form the entity axis.</p>
+<p class="art-p">Median turnout is the central measure because vote totals are right-skewed: mean of 3,074,280 versus median of 1,170,867. Large states and the national aggregate pull the average upward.</p>
 
 <h2 id="median-votes-rose-across-three-decades-of-elections" class="anchored">Median votes rose across three decades of elections</h2>
 <h3 id="median-votes-rose-across-three-decades-of-elections-look" class="anchored">Median Votes Over Time</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/us-voter-turnout/charts/chart1_trend.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/us-voter-turnout/charts/chart1_trend.png" role="img" aria-label="Median Votes Over Time"></div>
 </figure>
-<p class="art-p">Median votes rises from 910,290 in the opening period to 1,387,622 at the close. Population growth, eligibility changes, and which elections enter the file all can lift the center; the observed trend in this extract is upward.</p>
-<p class="art-p">A rising median is the shared backdrop. Leader states and national totals amplify it; smaller jurisdictions still sit inside a shifting distribution.</p>
+<p class="art-p">Median state turnout rose 52% from 910,290 in 1980 to 1,387,622 in 2014. Population growth, eligibility expansion, and election-type composition all contribute to the upward trend.</p>
+<p class="art-p">The rising median provides context for state-level comparisons: leader states and national totals amplify the trend, while smaller jurisdictions track within the shifting distribution.</p>
 
 <h2 id="the-united-states-total-dwarfs-the-state-ladder" class="anchored">The United States total dwarfs the state ladder</h2>
 <h3 id="the-united-states-total-dwarfs-the-state-ladder-look" class="anchored">United States leads at 90,912,015 — 4,209,538 marks the median among the top dozen</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/us-voter-turnout/charts/chart2_leaders.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/us-voter-turnout/charts/chart2_leaders.png" role="img" aria-label="United States leads at 90,912,015 — 4,209,538 marks the median among the top dozen"></div>
 </figure>
-<p class="art-p">United States leads at 90,912,015 votes in the leaders cut, while 4,209,538 marks the median among the top dozen. The national row is not comparable to a single state on equal footing; it is the aggregate ceiling in the file.</p>
-<p class="art-p">Fact boxes also list 132,609,063 as the highest observed votes — the extreme of the same national-scale phenomenon. State comparisons live far below that ceiling.</p>
+<p class="art-p">The national aggregate averages 90,912,015 votes across the period, while the median among the top dozen states sits at 4,209,538. The national row represents the sum of all state turnout, not a peer comparison.</p>
+<p class="art-p">The peak of 132,609,063 reflects this national-scale aggregation. Individual state rankings occur far below that ceiling.</p>
 
 <h2 id="a-right-skewed-distribution-with-a-heavy-upper-tail" class="anchored">A right-skewed distribution with a heavy upper tail</h2>
 <h3 id="a-right-skewed-distribution-with-a-heavy-upper-tail-look" class="anchored">Median 1,170,867 vs mean 3,074,280 — the shape is right-skewed</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/us-voter-turnout/charts/chart3_distribution.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/us-voter-turnout/charts/chart3_distribution.png" role="img" aria-label="Median 1,170,867 vs mean 3,074,280 — the shape is right-skewed"></div>
 </figure>
-<p class="art-p">Median 1,170,867 versus mean 3,074,280 — the shape is right-skewed. Large states and national totals pull the average up. The top decile begins at 4,659,000; that is where defining high-volume cases live.</p>
-<p class="art-p">Skew is why turnout debates should lead with medians and rates, not raw means of vote totals alone.</p>
+<p class="art-p">Median state turnout of 1,170,867 sits below the mean of 3,074,280 because large states and national totals create a long right tail. The top decile begins at 4,659,000, separating high-volume states from the rest.</p>
+<p class="art-p">Right skew explains why turnout analysis requires medians and rates rather than raw averages alone.</p>
 
 <h2 id="leading-states-reshuffle-across-election-cycles" class="anchored">Leading states reshuffle across election cycles</h2>
 <h3 id="leading-states-reshuffle-across-election-cycles-look" class="anchored">Top State Over Time</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/us-voter-turnout/charts/chart4_leader_trends.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/us-voter-turnout/charts/chart4_leader_trends.png" role="img" aria-label="Top State Over Time"></div>
 </figure>
-<p class="art-p">Leader trends show that leading names do not move in lockstep — some fade as others surge. Tracking votes over time separates sustained high-volume states from cycle-specific spikes.</p>
-<p class="art-p">Presidential versus midterm composition in the file can rearrange the ladder even when the long-run median is rising.</p>
+<p class="art-p">State trajectories diverge over time: some maintain high turnout while others surge or fade. Tracking individual states separates sustained volume from cycle-specific spikes.</p>
+<p class="art-p">Presidential versus midterm composition within the dataset can shift the state ladder even when the overall median rises.</p>
 
 <h2 id="votes-scale-with-eligible-voters-in-clusters" class="anchored">Votes scale with eligible voters — in clusters</h2>
 <h3 id="votes-scale-with-eligible-voters-in-clusters-look" class="anchored">Votes vs Eligible voters</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/us-voter-turnout/charts/chart5_scatter.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/us-voter-turnout/charts/chart5_scatter.png" role="img" aria-label="Votes vs Eligible voters"></div>
 </figure>
-<p class="art-p">Plotting votes against eligible voters shows clusters that averages erase. Larger eligibility pools produce larger vote totals, but the scatter’s texture reveals how tightly that relationship holds across states and years.</p>
-<p class="art-p">The joint view is the right place to think about turnout as a rate problem without inventing a rate column the charts do not show: eligibility and votes move together, and the clusters show where.</p>
+<p class="art-p">Votes cast rise with eligible-voter pools, but the scatter plot reveals clusters that averages obscure. Larger eligibility produces larger turnout, yet the pattern's texture shows variation in how tightly that relationship holds across states and years.</p>
+<p class="art-p">The joint distribution captures turnout as a rate problem without requiring a calculated rate column: eligibility and votes move together, and the clusters show where exceptions occur.</p>
 <h2 id="what-this-file-cannot-tell-you" class="anchored">What this file cannot tell you</h2>
-<p class="art-p">Community-cleaned TidyTuesday snapshots are not live election boards. Missing values, jurisdiction naming variants, and 1980–2014 coverage limits apply. National and state rows may coexist in ways that require care when ranking.</p>
-<p class="art-p">Findings describe this voter-turnout extract — structural signals about vote totals — not a complete model of registration law, suppression, or mobilization.</p>
+<p class="art-p">TidyTuesday snapshots are community-cleaned extracts, not live election records. Missing values, jurisdiction-naming variants, and 1980–2014 coverage limits apply. National and state rows coexist in ways that require care when ranking.</p>
+<p class="art-p">Findings describe this voter-turnout extract — structural patterns in vote totals — not a complete model of registration law, suppression, or mobilization.</p>
 <h2 id="what-to-take-away" class="anchored">What to take away</h2>
-<p class="art-p">Vote totals in this file are right-skewed around a median of 1,170,867, rising from 910,290 to 1,387,622 at the median, with national rows reaching into the tens and hundreds of millions.</p>
-<p class="art-p">State ladders reshuffle over time, and votes move with eligible voters in clusters — a volume atlas of American elections from 1980 through 2014.</p>
+<p class="art-p">Median state turnout rose 52% from 910,290 to 1,387,622 between 1980 and 2014, while the national aggregate reached 132,609,063 at its peak. Vote totals are right-skewed around the median of 1,170,867, with the top decile beginning at 4,659,000.</p>
+<p class="art-p">State rankings shift across election cycles, and votes track eligible-voter pools in clusters — a volume atlas of American elections across 35 years.</p>
 <h2 id="sources" class="anchored">Sources</h2>
 
 <p>Data Science Learning Community. (2018). <em>TidyTuesday: US Voter Turnout</em>. <a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2018/2018-10-09/voter_turnout.csv" target="_blank" rel="noopener noreferrer">https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2018/2018-10-09/voter_turnout.csv</a></p>
-<h2 id="editors-note" class="anchored">Editor’s note</h2>
+<h2 id="editors-note" class="anchored">Editor's note</h2>
 <div class="art-editorial-note"><p><em>Artometrics data report from the TidyTuesday research pipeline. Charts and aggregates are reproducible from the embedded exhibits and public source files.</em></p></div>
 <p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2018/2018-10-09" target="_blank" rel="noopener noreferrer">Source archive (GitHub)</a></p>
 

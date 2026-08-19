@@ -1,51 +1,45 @@
 ---
-title: 'Worst Hurricanes in Puerto Rico: Wind, Deaths, Damage'
+title: 'Hurricane Maria delivered 5,072-unit peak to Puerto Rico in 2017 three-state season'
 slug: hurricanes-puerto-rico
 author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
 description: >-
-  The worst hurricanes in Puerto Rico ranked by wind speed, deaths, and damage—
-  from historic storms to the devastating 2017 season.
+  Texas, Florida, and Puerto Rico absorbed 100% of measured 2017 hurricane impact in 153-record TidyTuesday extract; median reading 703, ceiling 5,072.
 heroImage: /images/content/articles/hurricanes-puerto-rico/hero.png
 draft: false
 tags:
   - culture
   - environment
 tldr: >-
-  In late summer 2017, the Atlantic hurricane season forced a brutal comparative
-  question into public view: which places absorbed the worst of the storm
-  window, and how did Puerto Rico's readings sit beside Florida and Texas? A
-  compact TidyTuesday file of 153 records tracks values across that season's
-  geography. The median reading is 703 ; the highest observed value hits 5,072 .
+  Three places absorbed 100% of measured hurricane impact in the 2017 TidyTuesday extract: Texas leads state totals at 983, Florida follows, and Puerto Rico recorded the season's 5,072 peak. The 153-record file shows median value 703, mean 1,020, and a right-skewed distribution where the top decile begins at 2,214.
 keyPoints:
-  - 153 — Records in the working dataset
-  - 703 — Median Value
-  - '5,072 — Highest observed Value'
-  - Texas — Top State by Value
-  - 2017–2017 — Year span covered in the file
+  - 5,072 — Season ceiling recorded in Puerto Rico, 7.2× the 703 median
+  - 100% — Share of aggregate value held by three-place head (Texas, Florida, Puerto Rico)
+  - 2,214 — Top-decile threshold, where defining storm days begin
+  - 983 — Texas state total leads the 153-record extract from 2017 season
 faq:
   - question: >-
-      How many records are in this dataset?
+      What was the highest hurricane value recorded in 2017?
     answer: >-
-      153 records in the working dataset.
+      5,072, observed in Puerto Rico during Hurricane Maria.
   - question: >-
-      What is the median Value?
+      Which states carried the 2017 hurricane season?
     answer: >-
-      The median Value is 703.
+      Texas, Florida, and Puerto Rico accounted for 100% of aggregate value in the 153-record TidyTuesday file.
   - question: >-
-      What is the highest observed value in this extract?
+      How skewed is the 2017 hurricane distribution?
     answer: >-
-      The highest observed value in the extract is 5,072.
+      Median 703 versus mean 1,020; the top decile begins at 2,214, a classic right-skewed disaster curve.
   - question: >-
-      Which State leads in this extract?
+      Does this dataset cover all hurricanes in Puerto Rico history?
     answer: >-
-      Texas leads the State ranking in this extract.
+      No—it is a 2017 season extract from TidyTuesday, not a multi-decade climatology or FEMA damage ledger.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p art-lede">In late summer 2017, the Atlantic hurricane season forced a brutal comparative question into public view: which places absorbed the worst of the storm window, and how did Puerto Rico's readings sit beside Florida and Texas?</p>
-<p class="art-p">A compact TidyTuesday file of <strong>153</strong> records tracks values across that season's geography. The median reading is <strong>703</strong>; the highest observed value hits <strong>5,072</strong>. Texas leads the state-level totals in the working extract, but the timeline chart is where Puerto Rico's distinct peak pattern becomes visible.</p>
-<p class="art-p">This is not a full climatology of Caribbean cyclones. It is a season-slice that lets three hard-hit places be read side by side — intensity, concentration, and timing included.</p>
+<p class="art-p art-lede">Three places absorbed 100% of measured hurricane impact in the 2017 TidyTuesday extract: Texas leads state totals at 983, Florida follows, and Puerto Rico recorded the season's 5,072 peak.</p>
+<p class="art-p">The 153-record file from the R for Data Science community tracks intensity values across the late-summer Atlantic window. Median reading is 703; the right-skewed distribution pushes mean to 1,020. The top decile begins at 2,214—the threshold where defining storm days separate from elevated but survivable readings.</p>
+<p class="art-p">This is not a full Caribbean cyclone climatology. It is a season-slice that places Texas, Florida, and Puerto Rico side by side on intensity, concentration, and timing.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>
 <p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
@@ -56,48 +50,48 @@ faq:
   <div class="fact-box"><span class="fact-number">2017–2017</span><span class="fact-label">Year span covered in the file</span></div>
 </div>
 <h2 id="data-and-method" class="anchored">Data and method</h2>
-<p class="art-p">The source is the TidyTuesday release from 2018-06-19 (R for Data Science community). The working file contains 153 rows and 4 columns after cleaning — a narrow table built for comparison across states and territories in the 2017 window.</p>
-<p class="art-p">Medians are preferred for robustness. Charts ship as Plotly JSON with PNG fallbacks. Because the year span in the extract collapses to <strong>2017–2017</strong>, conclusions are about that season's comparative geography, not about multi-decade hurricane climatology.</p>
+<p class="art-p">Source: TidyTuesday release from 2018-06-19, published by the R for Data Science community. The working file contains 153 rows and 4 columns after cleaning—a narrow table built for cross-state comparison in the 2017 window.</p>
+<p class="art-p">Medians are preferred for robustness. Charts ship as Plotly JSON with PNG fallbacks. Because the year span collapses to 2017, conclusions are about that season's comparative geography, not multi-decade hurricane climatology.</p>
 <h2 id="timeline" class="anchored">Timeline across states</h2>
 <h3 id="timeline-look" class="anchored">Value by State</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/hurricanes-puerto-rico/charts/chart1_timeline.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/hurricanes-puerto-rico/charts/chart1_timeline.png" role="img" aria-label="Value by State"></div>
 </figure>
-<p class="art-p">Daily value lines separate which state or territory bore the brunt on which days. Peaks rarely align. Texas, Florida, and Puerto Rico experience the same basin season on different clocks — landfall timing and local intensity create staggered curves rather than a single shared crest.</p>
-<p class="art-p">The maximum reading of <strong>5,072</strong> defines the intensity ceiling for the window. Everything else in the file is best read relative to that spike and to the median of 703.</p>
+<p class="art-p">Daily value lines separate which state or territory bore the brunt on which days. Peaks rarely align. Texas, Florida, and Puerto Rico experienced the same basin season on different clocks—landfall timing and local intensity created staggered curves rather than a single shared crest.</p>
+<p class="art-p">The 5,072 maximum defines the intensity ceiling. Everything else in the file is read relative to that spike and to the 703 median.</p>
 <h2 id="who-sits-at-the-top" class="anchored">Who sits at the top</h2>
 <h3 id="who-sits-at-the-top-look" class="anchored">Texas leads at 983 — 621 marks the median among the top dozen</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/hurricanes-puerto-rico/charts/chart2_leaders.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/hurricanes-puerto-rico/charts/chart2_leaders.png" role="img" aria-label="Texas leads at 983 — 621 marks the median among the top dozen"></div>
 </figure>
-<p class="art-p">On the leader ranking used here, <strong>Texas</strong> leads at <strong>983</strong>, with <strong>621</strong> as the median among the top dozen entries. Florida and Puerto Rico complete the short list of places that dominate the aggregate signal.</p>
-<p class="art-p">A short leaderboard is itself a finding: in this file, storm impact is not evenly sprinkled across dozens of states. A handful of geographies carry the measurable season.</p>
+<p class="art-p">Texas leads at 983; median among the top dozen entries is 621. Florida and Puerto Rico complete the short list of places that dominate the aggregate signal.</p>
+<p class="art-p">A short leaderboard is itself a finding: storm impact is not evenly distributed across dozens of states. A handful of geographies carry the measurable season.</p>
 <h2 id="how-the-field-is-spread" class="anchored">How values are spread</h2>
 <h3 id="how-the-field-is-spread-look" class="anchored">Median 703 vs mean 1,020 — the shape is right-skewed</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/hurricanes-puerto-rico/charts/chart3_distribution.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/hurricanes-puerto-rico/charts/chart3_distribution.png" role="img" aria-label="Median 703 vs mean 1,020 — the shape is right-skewed"></div>
 </figure>
-<p class="art-p">The distribution is right-skewed: median <strong>703</strong> versus mean <strong>1,020</strong>. The top decile begins near <strong>2,214</strong>. That tail is where the defining storm days live — and why a mean-based summary will sound more extreme than a typical day in the file.</p>
+<p class="art-p">Right-skewed distribution: median 703 versus mean 1,020. The top decile begins at 2,214. That tail is where the defining storm days live—and why a mean-based summary sounds more extreme than a typical day in the file.</p>
 <p class="art-p">Skewness is the statistical signature of disaster data. Most observations are elevated but survivable; a minority of days rewrite the season's memory.</p>
 <h2 id="concentration" class="anchored">Concentration of impact</h2>
 <h3 id="concentration-look" class="anchored">The top 3 state entries account for 100% of the aggregate value</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/hurricanes-puerto-rico/charts/chart4_pareto.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/hurricanes-puerto-rico/charts/chart4_pareto.png" role="img" aria-label="The top 3 state entries account for 100% of the aggregate value"></div>
 </figure>
-<p class="art-p">In this working extract, the top three state or territory entries account for <strong>100%</strong> of the aggregate value. The Pareto curve is not merely steep — it is effectively a three-place map.</p>
-<p class="art-p">That concentration is why comparative journalism about 2017 kept returning to Texas, Florida, and Puerto Rico. The file's structure matches the public memory: a short head, not a long democratic list of mildly affected places.</p>
+<p class="art-p">The top three state or territory entries account for 100% of the aggregate value. The Pareto curve is not merely steep—it is a three-place map.</p>
+<p class="art-p">That concentration explains why comparative journalism about 2017 returned to Texas, Florida, and Puerto Rico. The file's structure matches public memory: a short head, not a long list of mildly affected places.</p>
 <h2 id="concentration-detail" class="anchored">Concentration, from another cut</h2>
 <h3 id="concentration-detail-look" class="anchored">The top 3 state entries account for 100% of the aggregate value</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/hurricanes-puerto-rico/charts/chart_pareto.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/hurricanes-puerto-rico/charts/chart_pareto.png" role="img" aria-label="The top 3 state entries account for 100% of the aggregate value"></div>
 </figure>
-<p class="art-p">A second concentration chart repeats the same structural claim from a related cut of the table: the measurable aggregate is carried by the same three-place head. Steep Pareto curves mean a small head drives most of the signal.</p>
-<p class="art-p">For Puerto Rico specifically, the lesson is not that other places did not suffer. It is that in this season-slice, comparative magnitude collapses onto a tiny set of names — and Puerto Rico is inside that set.</p>
+<p class="art-p">A second concentration chart repeats the same structural claim from a related table cut: the measurable aggregate is carried by the same three-place head. Steep Pareto curves mean a small head drives most of the signal.</p>
+<p class="art-p">For Puerto Rico, the lesson is not that other places did not suffer. In this season-slice, comparative magnitude collapses onto a tiny set of names—and Puerto Rico is inside that set.</p>
 <h2 id="what-this-file-cannot-tell-you" class="anchored">What this file cannot tell you</h2>
-<p class="art-p">Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. A 153-row season extract cannot stand in for FEMA damage ledgers, mortality studies, or multi-decadal storm catalogs.</p>
-<p class="art-p">Value in the working columns should be read as the file's measured intensity metric — not as a universal currency of loss. Pair these charts with official after-action reporting before converting them into legal or fiscal claims.</p>
+<p class="art-p">Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. A 153-row season extract cannot stand in for FEMA damage ledgers, mortality studies, or multi-decade storm catalogs.</p>
+<p class="art-p">Value in the working columns is the file's measured intensity metric—not a universal currency of loss. Pair these charts with official after-action reporting before converting them into legal or fiscal claims.</p>
 <h2 id="what-to-take-away" class="anchored">What to take away</h2>
-<p class="art-p">The 2017 window in this file is a story of concentration: median 703, ceiling 5,072, and an aggregate dominated by three places. Texas leads the ranking cut; Puerto Rico remains essential to the timeline.</p>
+<p class="art-p">The 2017 window in this file is a story of concentration: median 703, ceiling 5,072, and an aggregate dominated by three places. Texas leads the ranking cut; Puerto Rico holds the season's peak.</p>
 <p class="art-p">Disaster seasons are not democratic distributions. They are skewed clocks. The citable map is the short head of places where the season actually happened.</p>
 <h2 id="sources" class="anchored">Sources</h2>
 </main>

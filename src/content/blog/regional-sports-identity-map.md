@@ -1,50 +1,42 @@
 ---
-title: How American Cities Build Distinct Sports Identities
+title: Large U.S. markets anchor six distinct sports identity patterns
 slug: regional-sports-identity-map
 author: kyle-mcauliffe
 pubDate: 2026-07-01T00:00:00.000Z
 description: >-
-  Markets, leagues, and championship droughts explain why fan cultures differ by
-  city.
+  Ten major markets split into six identity archetypes shaped by title density, league mix, and championship drought.
 heroImage: /images/content/articles/regional-sports-identity-map/hero.png
 draft: false
 tags:
   - sports
   - football
 tldr: >-
-  A team is never just a team. It is attached to a region, a media market, a
-  league structure, and a local memory system. That context changes what the
-  same number means. this piece turns the sports canon toward geography. The
-  goal is to show how regions become recognizable under the data microscope.
+  Ten large U.S. markets split into six sports identity archetypes—archive cities, star cities, football rituals, hunger cities, glamour hubs, and balanced portfolios. Title density clusters in the Northeast and Great Lakes. Toronto's drought index hits 94 in this model. New York's combined franchise value reaches $43 billion.
 keyPoints:
-  - 10 — Large markets/cities compared
-  - 7 — Regions grouped for title-density analysis
-  - 6 — Identity archetypes used in the map
-  - 94 — Toronto drought/pain index in this editorial model
-  - 43B — Approximate combined New York major-team value
+  - 10 — Large markets compared — each carries a distinct portfolio of championship memory, league presence, and cultural expectation
+  - 7 — Regional groupings analyzed for title density — Northeast and Great Lakes show unusually deep championship archives
+  - 6 — Identity archetypes mapped — archive, star, football ritual, hunger, glamour, balanced — each shaped by drought length and league mix
+  - 94 — Toronto drought/pain index under this editorial model — the highest among cities analyzed
+  - $43B — Combined major-team value in New York — reflecting deep market competition and media ecosystem scale
 faq:
-  - question: >-
-      What is Large markets/cities compared?
+  - question: Which U.S. markets have the deepest championship archives?
     answer: >-
-      10 — Large markets/cities compared.
-  - question: >-
-      What is Regions grouped for title-density analysis?
+      The Northeast and Great Lakes regions show the highest title density because their leagues, cities, and media systems matured earliest.
+  - question: How does multi-team market competition affect sports identity?
     answer: >-
-      7 — Regions grouped for title-density analysis.
-  - question: >-
-      What is Identity archetypes used in the map?
+      In New York and Los Angeles, multiple teams compete for attention and mythology, creating sports ecosystems rather than single-team identities.
+  - question: What explains regional specialization in different sports?
     answer: >-
-      6 — Identity archetypes used in the map.
-  - question: >-
-      What is Toronto drought/pain index in this editorial model?
+      Texas leans toward football ritual, California toward basketball and glamour, and the Northeast keeps baseball memory unusually alive—each shaped by league history and local culture.
+  - question: Why do some successful cities still carry famous sports wounds?
     answer: >-
-      94 — Toronto drought/pain index in this editorial model.
+      Multi-team cities distribute success unevenly; Boston can accumulate banners while a specific team or rival city experiences drought as civic identity.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p art-lede">A team is never just a team. It is attached to a region, a media market, a league structure, and a local memory system. That context changes what the same number means.</p>
-<p class="art-p">this piece turns the sports canon toward geography. The goal is to show how regions become recognizable under the data microscope.</p>
-<p class="art-p">Start with the scale: <strong>10</strong> — Large markets/cities compared; and <strong>7</strong> — Regions grouped for title-density analysis.</p>
+<p class="art-p art-lede">Ten large U.S. markets split into six sports identity archetypes, shaped by title density, league mix, and championship drought length.</p>
+<p class="art-p">A team is never just a team. It is attached to a region, a media market, a league structure, and a local memory system. That context changes what the same number means. This analysis maps how regions become recognizable under the data microscope.</p>
+<p class="art-p">The scale: 10 large markets compared, grouped into 7 regions for title-density analysis, producing 6 identity archetypes.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>
 <p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
@@ -56,7 +48,7 @@ faq:
   </div>
 <h2 id="data-and-method" class="anchored">Data and method</h2>
 <p class="art-p">The charts use public franchise histories, rounded valuation summaries, and editorial identity indices. The indices are not official statistics; they are structured prompts for comparing markets.</p>
-<p class="art-p">A cultural economist would ask how facilities, media density, migration, ownership, and league rules shape local identity. this piece is the first map layer for that conversation.</p>
+<p class="art-p">A cultural economist would ask how facilities, media density, migration, ownership, and league rules shape local identity. This piece is the first map layer for that conversation.</p>
 <h2 id="regional-title-density" class="anchored">Regional Title Density</h2>
 <h3 id="regional-title-density-look" class="anchored">Championship memory clusters by region</h3>
 <figure class="art-chart">
@@ -98,7 +90,7 @@ faq:
 <p class="art-p">This is the bridge to future city bioeconomics reports: sports data is one part of a place's cultural fingerprint.</p>
 
 <h2 id="what-to-take-away" class="anchored">What to take away</h2>
-<p class="art-p">The main finding is that sports identity is regional before it is rational. Market size, title archives, sport specialization, and drought all shape the meaning of a fan base.</p>
+<p class="art-p">Sports identity is regional before it is rational. Market size, title archives, sport specialization, and drought all shape the meaning of a fan base.</p>
 <p class="art-p">This gives the next batch a new tool: every team profile can now ask not only how good the team is, but what kind of place produced that version of good, bad, rich, cursed, or glamorous.</p>
 <h2 id="sources" class="anchored">Sources</h2>
 
@@ -107,7 +99,7 @@ faq:
 <p>U.S. Census regional framing, used only as a broad geography reference.</p>
 <p>Public attendance, championship, and market summaries from league history pages.</p>
 
-<h2 id="editor-s-note" class="anchored">Editor’s note</h2>
+<h2 id="editor-s-note" class="anchored">Editor's note</h2>
 
 <div class="art-editorial-note"><p>Regional and identity indices are editorial approximations designed to organize cross-report thinking. They should be refined as more city/team reports are added.</p></div>
 </main>

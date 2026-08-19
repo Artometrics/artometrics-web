@@ -1,51 +1,46 @@
 ---
-title: 'Cities as Operating Systems of Exports, Culture, and Scarcity'
+title: 'What does a city export? A data framework for economic identity'
 slug: city-bioeconomics-operating-system
 author: kyle-mcauliffe
 pubDate: 2026-07-01T00:00:00.000Z
 description: >-
-  A geo-economics frame treats cities as layered systems of trade, culture, and
-  infrastructure.
+  1,667 subnational regions and 1,100+ datasets define the economic signature of cities — exports, housing, transit, culture, and historical infrastructure.
 heroImage: /images/content/articles/city-bioeconomics-operating-system/hero.png
 draft: false
 tags:
   - civics
   - economics
 tldr: >-
-  A city report should not start with a postcard. It should start with a system
-  map: what the city makes, what it imports, who it serves, what it prices out,
-  what it remembers, and what it cannot replace. this piece creates the frame
-  for the next geo-economics layer of Artometrics. Comparisons can come later;
-  first the site needs a way to ask the right questions of a place.
+  Cities generate measurable economic signatures through exports, housing, transit, and cultural infrastructure. This framework establishes six diagnostic questions and eight system layers to analyze subnational economies using 1,667 regions in DOSE v2.14, 45 cities in World Cities Culture Forum summaries, and 1,100+ datasets in public portals.
 keyPoints:
-  - '1,667 — Subnational regions in DOSE v2.14 public documentation'
-  - 45 — Cities in World Cities Culture Forum 5th edition summaries
-  - '1,100+ — Datasets in DataSF public portal summaries'
-  - 6 — Diagnostic questions in the city microscope
-  - 8 — System layers scored
+  - 1,667 — Subnational regions in DOSE v2.14 provide global coverage for cross-city economic comparison
+  - 45 — Cities in World Cities Culture Forum 5th edition enable cultural infrastructure benchmarking
+  - 1,100+ — Datasets in DataSF public portal supply granular local system data
+  - 6 — Diagnostic questions separate economic identity from marketing slogans
+  - 8 — System layers reveal how ports, universities, and zoning shape current performance
 faq:
   - question: >-
-      How many subnational regions does DOSE v2.14 document?
+      How many subnational regions does DOSE v2.14 cover?
     answer: >-
       1,667 subnational regions in DOSE v2.14 public documentation.
   - question: >-
-      How many cities appear in World Cities Culture Forum summaries?
+      How many cities report cultural data through World Cities Culture Forum?
     answer: >-
       45 cities in World Cities Culture Forum 5th edition summaries.
   - question: >-
-      How many datasets are in the DataSF public portal?
+      How many public datasets does DataSF maintain?
     answer: >-
       1,100+ datasets in DataSF public portal summaries.
   - question: >-
-      How many diagnostic questions does the city microscope use?
+      What diagnostic questions define the city microscope?
     answer: >-
-      6 diagnostic questions in the city microscope frame.
+      6 questions: what the city makes, imports, lacks, competes against, prices out, and cannot replace.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p art-lede">A city report should not start with a postcard. It should start with a system map: what the city makes, what it imports, who it serves, what it prices out, what it remembers, and what it cannot replace.</p>
-<p class="art-p">this piece creates the frame for the next geo-economics layer of Artometrics. Comparisons can come later; first the site needs a way to ask the right questions of a place.</p>
-<p class="art-p">Start with the scale: <strong>1,667</strong> — Subnational regions in DOSE v2.14 public documentation; and <strong>45</strong> — Cities in World Cities Culture Forum 5th edition summaries.</p>
+<p class="art-p art-lede">1,667 subnational regions in DOSE v2.14 and 1,100+ datasets in DataSF establish a system map for cities: what they export, import, price out, and preserve through infrastructure.</p>
+<p class="art-p">This framework separates economic identity from promotional narrative by defining six diagnostic questions and eight system layers drawn from BEA regional GDP, DOSE global subnational output, World Cities Culture Forum, Census ACS, and local Socrata portals.</p>
+<p class="art-p">The approach treats cities as layered machines — firms, ports, universities, housing, cultural venues, finance, infrastructure, rules, and stories — before any city-to-city comparison.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>
 <p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
@@ -64,23 +59,23 @@ faq:
   <div class="art-chart-live" data-chart="/data/articles/city-bioeconomics-operating-system/charts/chart1_city_system_layers.plotly.json" data-source="Data: BEA, DOSE, World Cities Culture Forum, DataSF/NYC Open Data, Census ACS - ARTOMETRICS" role="img" aria-label="A city identity is a stack of economic and cultural systems" data-fallback="/images/content/articles/city-bioeconomics-operating-system/charts/chart1_city_system_layers.png"></div>
 </figure>
 <p class="art-p">A city is not one industry. It is a layered machine: firms, ports, universities, housing, cultural venues, finance, infrastructure, rules, and stories.</p>
-<p class="art-p">The first Artometrics question is not whether a city is good. It is what kind of system the city is trying to be.</p>
+<p class="art-p">The first question is not whether a city is good. It is what kind of system the city is trying to be.</p>
 
 <h2 id="goods-and-services" class="anchored">Goods and Services</h2>
 <h3 id="goods-and-services-look" class="anchored">Some cities export goods while others export coordination, code, finance, or attention</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/city-bioeconomics-operating-system/charts/chart2_services_goods_split.plotly.json" data-source="Data: BEA, DOSE, World Cities Culture Forum, DataSF/NYC Open Data, Census ACS - ARTOMETRICS" role="img" aria-label="Some cities export goods while others export coordination, code, finance, or attention" data-fallback="/images/content/articles/city-bioeconomics-operating-system/charts/chart2_services_goods_split.png"></div>
 </figure>
-<p class="art-p">Houston and Los Angeles still have obvious goods/logistics signatures. New York and San Francisco sell more invisible products: finance, software, expertise, media, and market access.</p>
-<p class="art-p">That matters because invisible exports are harder for casual viewers to see, but they often define the city's price structure.</p>
+<p class="art-p">Houston and Los Angeles still have obvious goods and logistics signatures. New York and San Francisco sell more invisible products: finance, software, expertise, media, and market access.</p>
+<p class="art-p">Invisible exports are harder to observe but often define the city's price structure.</p>
 
 <h2 id="history-layers" class="anchored">History Layers</h2>
 <h3 id="history-layers-look" class="anchored">Ports, factories, corporate headquarters, and software leave measurable shadows</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/city-bioeconomics-operating-system/charts/chart3_history_layers.plotly.json" data-source="Data: BEA, DOSE, World Cities Culture Forum, DataSF/NYC Open Data, Census ACS - ARTOMETRICS" role="img" aria-label="Ports, factories, corporate headquarters, and software leave measurable shadows" data-fallback="/images/content/articles/city-bioeconomics-operating-system/charts/chart3_history_layers.png"></div>
 </figure>
-<p class="art-p">History is not background flavor. It is infrastructure that keeps generating data: street grids, warehouses, universities, firm clusters, zoning, and habits of migration.</p>
-<p class="art-p">A city report should explain which older layer is still driving the present numbers.</p>
+<p class="art-p">History is infrastructure that keeps generating data: street grids, warehouses, universities, firm clusters, zoning, and migration patterns.</p>
+<p class="art-p">A city report should identify which older layer is still driving current performance.</p>
 
 <h2 id="city-fingerprint" class="anchored">City Fingerprint</h2>
 <h3 id="city-fingerprint-look" class="anchored">The city fingerprint appears across GDP, housing, talent, culture, and export complexity</h3>
@@ -88,7 +83,7 @@ faq:
   <div class="art-chart-live" data-chart="/data/articles/city-bioeconomics-operating-system/charts/chart4_city_identity_heatmap.plotly.json" data-source="Data: BEA, DOSE, World Cities Culture Forum, DataSF/NYC Open Data, Census ACS - ARTOMETRICS" role="img" aria-label="The city fingerprint appears across GDP, housing, talent, culture, and export complexity" data-fallback="/images/content/articles/city-bioeconomics-operating-system/charts/chart4_city_identity_heatmap.png"></div>
 </figure>
 <p class="art-p">One variable lies. A fingerprint requires a pattern. The same GDP level can mean very different things under different housing, transit, culture, and export structures.</p>
-<p class="art-p">This is why a city profile should read like a data portrait, not a fact sheet.</p>
+<p class="art-p">A city profile should read like a data portrait, not a fact sheet.</p>
 
 <h2 id="questions" class="anchored">Questions</h2>
 <h3 id="questions-look" class="anchored">The city microscope starts with what the place makes, imports, lacks, and competes against</h3>
@@ -99,8 +94,8 @@ faq:
 <p class="art-p">Those questions turn open data into an identity argument.</p>
 
 <h2 id="what-to-take-away" class="anchored">What to take away</h2>
-<p class="art-p">The central assumption is that cities have data signatures. The challenge is to separate slogan from system: what is produced, what is scarce, who competes, and what historical layer still controls the present.</p>
-<p class="art-p">This gives future city reports a repeatable spine before deeper city-to-city comparisons begin.</p>
+<p class="art-p">Cities generate data signatures. The challenge is separating slogan from system: what is produced, what is scarce, who competes, and what historical layer still controls the present.</p>
+<p class="art-p">This framework gives future city reports a repeatable structure before deeper city-to-city comparisons.</p>
 <h2 id="sources" class="anchored">Sources</h2>
 
 <p>BEA. Regional GDP by county and metropolitan area documentation/API.</p>
@@ -109,11 +104,8 @@ faq:
 <p>DataSF and NYC Open Data. Socrata/SODA portal documentation.</p>
 <p>U.S. Census ACS and International Trade Administration Metropolitan Export Series.</p>
 
-<h2 id="editor-s-note" class="anchored">Editor’s note</h2>
+<h2 id="editor-s-note" class="anchored">Editor's note</h2>
 
 <div class="art-editorial-note"><p>Values are editorial indices designed to define the analysis contract. They should be replaced with direct source aggregates during city-specific output passes.</p></div>
-</main>
-</div>
-
 </main>
 </div>

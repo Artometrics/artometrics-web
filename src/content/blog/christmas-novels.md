@@ -1,51 +1,37 @@
 ---
-title: Which Christmas Novels Anchor the Holiday Shelf?
+title: Victorian Authors Dominate the Christmas Novel Canon
 slug: christmas-novels
 author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
 description: >-
-  A Gutenberg holiday corpus shows which seasonal novels still define the
-  Christmas canon.
+  A Gutenberg holiday corpus shows a median author birthdate of 1859 and Dickens as the most common name.
 heroImage: /images/content/articles/christmas-novels/hero.png
 draft: false
 tags:
   - arts
   - language
 tldr: >-
-  Christmas novels are a seasonal shelf with a long memory: Dickensian ghosts,
-  children’s mysteries, parlor sentimentalism. The TidyTuesday christmas-novels
-  extract used here is small — 35 records — with a median author birthdate of
-  1,859 and a latest birthdate of 1,891 . Charles Dickens is the most common
-  author label in the file.
+  The TidyTuesday Christmas-novel extract holds 35 records with a median author birthdate of 1859 and a latest birthdate of 1891. Charles Dickens is the most common author label. The shelf is Victorian-centered: industrial-era childhood, Christian seasonal ritual, serialized storytelling.
 keyPoints:
-  - 35 — Records in the working dataset
-  - '1,859 — Median Birthdate'
-  - '1,891 — Highest observed Birthdate'
-  - The Camp Fire Girls Solve a — Top Title by Birthdate
-  - 1970–1970 — Year span covered in the file
-  - 'Dickens, Charles — Most common Author'
+  - 35 — Dataset size — a curated canon, not a market census
+  - 1859 — Median author birthdate — Victorian and immediately post-Victorian writers anchor the shelf
+  - 1891 — Latest observed birthdate — even the "late" edge is still nineteenth-century
+  - Dickens, Charles — Most common author — canon gravity pulls toward earlier births
+  - 1970 — Year span covered — single-year Gutenberg snapshot
 faq:
-  - question: >-
-      How many records are in this dataset?
-    answer: >-
-      35 records in the working dataset.
-  - question: >-
-      What is the median Birthdate?
-    answer: >-
-      The median Birthdate is 1,859.
-  - question: >-
-      What is the highest observed value in this extract?
-    answer: >-
-      The highest observed value in the extract is 1,891.
-  - question: >-
-      Which title leads in this extract?
-    answer: >-
-      The Camp Fire Girls Solve a leads the title ranking in this extract.
+  - question: How many records are in this dataset?
+    answer: 35 records after cleaning.
+  - question: What is the median author birthdate?
+    answer: 1859, placing the shelf's center in the Victorian era.
+  - question: Which author appears most often?
+    answer: Charles Dickens is the most common author label in the file.
+  - question: Does this dataset cover modern Christmas romances?
+    answer: No — the latest birthdate is 1891, so modern holiday romances are mostly absent.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p art-lede">Christmas novels are a seasonal shelf with a long memory: Dickensian ghosts, children’s mysteries, parlor sentimentalism. The TidyTuesday christmas-novels extract used here is small — <strong>35</strong> records — with a median author birthdate of <strong>1,859</strong> and a latest birthdate of <strong>1,891</strong>. Charles Dickens is the most common author label in the file.</p>
-<p class="art-p">Because the sample is tiny, every chart is a map of a curated canon rather than a complete market. Birthdate becomes a proxy for which literary generations stock the holiday shelf.</p>
+<p class="art-p art-lede">The median author birthdate in this 35-record Christmas-novel extract is 1859, the latest is 1891, and Charles Dickens is the most common name. The shelf is Victorian-centered: Dickensian ghosts, children's mysteries, parlor sentimentalism.</p>
+<p class="art-p">Because the sample is tiny, every chart maps a curated canon rather than a complete market. Birthdate becomes a proxy for which literary generations stock the holiday shelf.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>
 <p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
@@ -64,7 +50,7 @@ faq:
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/christmas-novels/charts/chart1_trend.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/christmas-novels/charts/chart1_trend.png" role="img" aria-label="Median Birthdate Over Time"></div>
 </figure>
-<p class="art-p">The trend summary in this build sits at a median birthdate of <strong>1859</strong> — Victorian and immediately post-Victorian authors anchoring the holiday novel list.</p>
+<p class="art-p">The median birthdate is 1859 — Victorian and immediately post-Victorian authors anchor the holiday novel list.</p>
 <p class="art-p">That center of gravity explains the tone of the canon: industrial-era childhood, Christian seasonal ritual, and serialized storytelling habits.</p>
 
 <h2 id="later-born-titles-mark-the-edge-of-the-canon" class="anchored">Later-Born Titles Mark the Edge of the Canon</h2>
@@ -72,15 +58,15 @@ faq:
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/christmas-novels/charts/chart2_leaders.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/christmas-novels/charts/chart2_leaders.png" role="img" aria-label="The Camp Fire Girls Solve a Mystery; Or, The Christmas Adventure at Carver House leads at 1,891 — 1,872 marks the median among the..."></div>
 </figure>
-<p class="art-p">The Camp Fire Girls Solve a Mystery; Or, The Christmas Adventure at Carver House leads at birthdate <strong>1891</strong>. Other later births include Uncle Noah’s Christmas Inspiration (<strong>1884</strong>) and Christmas Outside of Eden (<strong>1883</strong>). The median among the top dozen by birthdate is about <strong>1872</strong>.</p>
-<p class="art-p">Even the “late” edge of this shelf is still nineteenth-century. Modern holiday romances are mostly outside this particular extract.</p>
+<p class="art-p">The Camp Fire Girls Solve a Mystery; Or, The Christmas Adventure at Carver House leads at birthdate 1891. Other later births include Uncle Noah's Christmas Inspiration (1884) and Christmas Outside of Eden (1883). The median among the top dozen by birthdate is about 1872.</p>
+<p class="art-p">Even the "late" edge of this shelf is still nineteenth-century. Modern holiday romances are mostly outside this particular extract.</p>
 
 <h2 id="birthdates-cluster-around-the-1860s" class="anchored">Birthdates Cluster Around the 1860s</h2>
 <h3 id="birthdates-cluster-around-the-1860s-look" class="anchored">Median 1,859 vs mean 1,849 — the shape is relatively symmetric</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/christmas-novels/charts/chart3_distribution.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/christmas-novels/charts/chart3_distribution.png" role="img" aria-label="Median 1,859 vs mean 1,849 — the shape is relatively symmetric"></div>
 </figure>
-<p class="art-p">The distribution piles several authors near the early 1860s bins, with smaller counts in earlier nineteenth-century bands. Mean birthdate (~<strong>1849</strong> in the chart annotation’s neighborhood) sits close enough to the median to read as relatively symmetric for such a small n.</p>
+<p class="art-p">The distribution piles several authors near the early 1860s bins, with smaller counts in earlier nineteenth-century bands. Mean birthdate (approximately 1849) sits close to the median, producing a relatively symmetric distribution for such a small n.</p>
 <p class="art-p">With only 35 rows, bin heights are fragile — but the Victorian concentration is robust enough to cite.</p>
 
 <h2 id="dickens-and-thackeray-sit-earlier-than-the-median" class="anchored">Dickens and Thackeray Sit Earlier Than the Median</h2>
@@ -88,8 +74,8 @@ faq:
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/christmas-novels/charts/chart4_gap.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/christmas-novels/charts/chart4_gap.png" role="img" aria-label="Birthdate vs median by Author"></div>
 </figure>
-<p class="art-p">Author gaps to the median birthdate show Rupert Hughes furthest above (+<strong>13</strong>), while Dickens (−<strong>47</strong>) and Thackeray (−<strong>48</strong>) sit well earlier. Louisa May Alcott is also clearly before the median (−<strong>27</strong>).</p>
-<p class="art-p">The holiday shelf’s most famous names are often older than the shelf’s statistical middle — canon gravity pulling toward earlier births.</p>
+<p class="art-p">Author gaps to the median birthdate show Rupert Hughes furthest above (+13), while Dickens (−47) and Thackeray (−48) sit well earlier. Louisa May Alcott is also clearly before the median (−27).</p>
+<p class="art-p">The holiday shelf's most famous names are often older than the shelf's statistical middle — canon gravity pulling toward earlier births.</p>
 
 <h2 id="birth-and-death-dates-trace-finite-author-lives" class="anchored">Birth and Death Dates Trace Finite Author Lives</h2>
 <h3 id="birth-and-death-dates-trace-finite-author-lives-look" class="anchored">Birthdate vs Deathdate</h3>

@@ -9,6 +9,14 @@
     <itunes:summary>Data-science conversations for the creative industries.</itunes:summary>
     <itunes:category text="Arts" />
     <item>
+      <title>The QA gate: from evidence to publish-ready artifacts</title>
+      <link>https://artometrics.com/podcast/interviews/5</link>
+      <guid isPermaLink="true">https://artometrics.com/podcast/interviews/5</guid>
+      <pubDate>Wed, 19 Aug 2026 00:00:00 GMT</pubDate>
+      <description>David Lee on the quality checks that turn raw data, charts, and prose into exportable, reproducible artifacts — the same gates that keep Studio trustworthy.</description>
+      <enclosure url="https://artometrics.com/audios/placeholder.mp3" type="audio/mpeg" />
+    </item>
+    <item>
       <title>Why culture needs a data desk</title>
       <link>https://artometrics.com/podcast/interviews/1</link>
       <guid isPermaLink="true">https://artometrics.com/podcast/interviews/1</guid>

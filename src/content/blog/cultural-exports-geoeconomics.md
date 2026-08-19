@@ -1,44 +1,44 @@
 ---
-title: 'Cultural exports as geoeconomic goods: soft power, medium, and city in eight systems'
+title: Film and music lead cultural export scales; South Korea's soft-power index rose 70 points since 1990
 slug: cultural-exports-geoeconomics
 author: kyle-mcauliffe
 pubDate: 2026-07-01T00:00:00.000Z
-description: Film and music exports rank highest among eight cultural mediums. South Korea's cultural wave index rose from 22 to 92 between 1990 and 2025.
+description: Film scores 91 on exportability, music 88. South Korea's cultural wave index climbed from 22 in 1990 to 92 in 2025 across eight mediums and 45 cities.
 heroImage: /images/content/articles/cultural-exports-geoeconomics/hero.png
 draft: false
 tags:
   - civics
   - economics
 tldr: >-
-  Culture is a measurable export category even when it never passes through a port. Film and music scale fastest on exportability indices; South Korea, Japan, and India show distinct acceleration patterns; cities are the production and distribution launchpads for national soft power.
+  Film and music rank highest on exportability indices among eight cultural mediums. South Korea's cultural wave index rose from 22 in 1990 to 92 in 2025. Cities function as production and distribution launchpads for national soft power, with distinct acceleration patterns across Japan, South Korea, and India.
 keyPoints:
-  - 8 — Countries and cultural-export systems — framework scope
-  - 91 — Film/TV exportability score — highest among eight mediums
-  - 22 to 92 — South Korea cultural wave index, 1990 to 2025 — steep acceleration
-  - 45 — Global cities in World Cities Culture Forum 5th edition — context base
-  - 6 — Diagnostic cultural trade questions — analytical structure
+  - 91 — Film/TV exportability score — highest among eight cultural mediums tracked
+  - 70 — Point climb in South Korea's cultural wave index, 1990 to 2025 — from 22 to 92
+  - 45 — Global cities in World Cities Culture Forum 5th edition — urban soft-power base
+  - 88 — Music exportability score — second highest, behind film at 91
+  - 6 — Diagnostic cultural trade questions — what travels, who monetizes, what becomes identity
 faq:
   - question: >-
-      How many countries are highlighted in this analysis?
+      Which cultural medium scores highest for exportability?
     answer: >-
-      Eight countries and cultural-export systems are examined across the framework.
+      Film/TV scores 91, followed by music at 88 and games/anime at 84.
   - question: >-
-      Which medium scores highest for exportability?
+      How much did South Korea's cultural wave index rise between 1990 and 2025?
     answer: >-
-      Film/TV scores 91, highest among the eight mediums tracked.
+      South Korea climbed 70 points, from 22 in 1990 to 92 in 2025.
   - question: >-
-      What was South Korea's cultural wave index in 1990 versus 2025?
+      How many cities are included in the World Cities Culture Forum dataset?
     answer: >-
-      South Korea rose from 22 in 1990 to 92 in 2025 — a steep 70-point acceleration.
+      45 global cities are covered in the 5th edition summaries.
   - question: >-
-      How many cities are covered in the World Cities Culture Forum data?
+      What are the six diagnostic cultural trade questions?
     answer: >-
-      45 global cities are included in the 5th edition summaries.
+      What travels, who translates it, what city produces it, what platform scales it, who monetizes it, and what becomes identity.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p art-lede">Culture is an export category even when it never passes through a port. A song, show, game, cuisine, fashion house, or sports star can change what a country means in the global imagination. This analysis highlights <strong>8</strong> cultural-export systems, scores <strong>8</strong> mediums for exportability, and tracks <strong>3</strong> Asian cultural-wave paths — with World Cities Culture Forum summaries covering <strong>45</strong> global cities as context.</p>
-<p class="art-p">The charts use editorial indices to frame the cultural-trade question before deeper alignment with UNESCO, WIPO, and platform data: what travels, where it is produced, who monetizes it, and how it becomes identity.</p>
+<p class="art-p art-lede">Film scores 91 on exportability, music 88, and games/anime 84 across eight cultural mediums. South Korea's cultural wave index rose from 22 in 1990 to 92 in 2025, Japan compounded from 71 to 86, and India scaled from 58 to 79 over the same period. This analysis covers 8 cultural-export systems, 45 global cities in the World Cities Culture Forum dataset, and 6 diagnostic questions that convert attention into measurable trade.</p>
+<p class="art-p">The charts use editorial indices to structure the cultural-trade question before deeper alignment with UNESCO, WIPO, and platform data: what travels, where it is produced, who monetizes it, and how it becomes identity.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>
 <p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
@@ -56,7 +56,7 @@ faq:
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/cultural-exports-geoeconomics/charts/chart1_soft_power_trade.plotly.json" data-source="Data: UNESCO, World Bank, WIPO, MusicBrainz, IMDb/TMDb references, World Cities Culture Forum - ARTOMETRICS" role="img" aria-label="Cultural exports travel alongside goods and services exports" data-fallback="/images/content/articles/cultural-exports-geoeconomics/charts/chart1_soft_power_trade.png"></div>
 </figure>
-<p class="art-p">The soft-power versus goods-power scatter places eight systems along both axes, with the strongest joint positions reaching the high 80s and 90s on the editorial scales. Culture and merchandise exports often travel together — but not always in equal proportion.</p>
+<p class="art-p">The soft-power versus goods-power scatter places eight systems along both axes, with the strongest joint positions reaching the high 80s and 90s on the editorial scales. Culture and merchandise exports often move together, but not always in equal proportion.</p>
 <p class="art-p">A country can export cars, chips, oil, or software. It can also export characters, songs, films, cuisine, style, and celebrity. Attention shifts the world's willingness to engage with the rest of the economic proposition.</p>
 
 <h2 id="medium-exportability" class="anchored">Medium Exportability</h2>
@@ -64,16 +64,16 @@ faq:
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/cultural-exports-geoeconomics/charts/chart2_medium_exportability.plotly.json" data-source="Data: UNESCO, World Bank, WIPO, MusicBrainz, IMDb/TMDb references, World Cities Culture Forum - ARTOMETRICS" role="img" aria-label="Screen and song scale faster than place-bound culture" data-fallback="/images/content/articles/cultural-exports-geoeconomics/charts/chart2_medium_exportability.png"></div>
 </figure>
-<p class="art-p">Film/TV scores highest on exportability at <strong>91</strong>, with Music at <strong>88</strong> and Games/anime at <strong>84</strong>. Sports (<strong>80</strong>) and Food (<strong>77</strong>) follow; Fashion (<strong>71</strong>), Design (<strong>68</strong>), and Literature (<strong>63</strong>) trail among the eight mediums.</p>
-<p class="art-p">Screen and song scale through platforms with minimal need for physical presence. Place-bound culture travels too, but typically requires more translation, institutional support, or logistical infrastructure.</p>
+<p class="art-p">Film/TV scores 91 on exportability, music 88, and games/anime 84. Sports sits at 80, food at 77, fashion at 71, design at 68, and literature at 63 among the eight mediums.</p>
+<p class="art-p">Screen and song scale through platforms with minimal need for physical presence. Place-bound culture travels too, but typically requires translation, institutional support, or logistical infrastructure.</p>
 
 <h2 id="cultural-waves" class="anchored">Cultural Waves</h2>
 <h3 id="cultural-waves-look" class="anchored">South Korea accelerated, Japan compounded, and India scaled through different cultural clocks</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/cultural-exports-geoeconomics/charts/chart3_asian_cultural_wave.plotly.json" data-source="Data: UNESCO, World Bank, WIPO, MusicBrainz, IMDb/TMDb references, World Cities Culture Forum - ARTOMETRICS" role="img" aria-label="South Korea accelerated, Japan compounded, and India scaled through different cultural clocks" data-fallback="/images/content/articles/cultural-exports-geoeconomics/charts/chart3_asian_cultural_wave.png"></div>
 </figure>
-<p class="art-p">South Korea's editorial wave index rises from <strong>22</strong> in 1990 to <strong>92</strong> in 2025 — steep acceleration. Japan compounds from <strong>71</strong> in 1990 to <strong>86</strong> in 2025. India scales from <strong>58</strong> to <strong>79</strong> over the same markers.</p>
-<p class="art-p">The comparison documents mechanism, not ranking: strategic acceleration, long compounding through anime, games, and design, and diaspora-plus-film scaling are distinct patterns.</p>
+<p class="art-p">South Korea's editorial wave index rises from 22 in 1990 to 92 in 2025—a 70-point climb. Japan compounds from 71 in 1990 to 86 in 2025. India scales from 58 to 79 over the same markers.</p>
+<p class="art-p">The comparison documents mechanism, not ranking: strategic acceleration, long compounding through anime, games, and design, and diaspora-plus-film scaling represent distinct patterns.</p>
 
 <h2 id="cultural-pipeline-cities" class="anchored">Cultural Pipeline Cities</h2>
 <h3 id="cultural-pipeline-cities-look" class="anchored">Cultural export cities combine output base with distribution reach</h3>
@@ -81,22 +81,22 @@ faq:
   <div class="art-chart-live" data-chart="/data/articles/cultural-exports-geoeconomics/charts/chart4_city_cultural_pipeline.plotly.json" data-source="Data: UNESCO, World Bank, WIPO, MusicBrainz, IMDb/TMDb references, World Cities Culture Forum - ARTOMETRICS" role="img" aria-label="Cultural export cities combine output base with distribution reach" data-fallback="/images/content/articles/cultural-exports-geoeconomics/charts/chart4_city_cultural_pipeline.png"></div>
 </figure>
 <p class="art-p">City pipeline scores pair output base with distribution reach. The strongest joint positions sit near the top-right of the scatter (high 90s), with a descending ladder of other export cities behind them.</p>
-<p class="art-p">Los Angeles-style output-distribution hubs, Seoul-style coordinated export platforms, and Tokyo-style games, anime, and design engines are urban launchpads for national soft power.</p>
+<p class="art-p">Los Angeles-style output-distribution hubs, Seoul-style coordinated export platforms, and Tokyo-style games, anime, and design engines function as urban launchpads for national soft power.</p>
 
 <h2 id="cultural-trade-questions" class="anchored">Cultural Trade Questions</h2>
 <h3 id="cultural-trade-questions-look" class="anchored">Cultural exports ask what travels, who translates it, and what becomes identity</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/cultural-exports-geoeconomics/charts/chart5_culture_export_questions.plotly.json" data-source="Data: UNESCO, World Bank, WIPO, MusicBrainz, IMDb/TMDb references, World Cities Culture Forum - ARTOMETRICS" role="img" aria-label="Cultural exports ask what travels, who translates it, and what becomes identity" data-fallback="/images/content/articles/cultural-exports-geoeconomics/charts/chart5_culture_export_questions.png"></div>
 </figure>
-<p class="art-p">The diagnostic ranking elevates what becomes identity (<strong>96</strong>), what travels (<strong>94</strong>), what platform scales it (<strong>91</strong>), who monetizes it (<strong>89</strong>), what city produces it (<strong>86</strong>), and who translates it (<strong>82</strong>).</p>
+<p class="art-p">The diagnostic ranking elevates what becomes identity (96), what travels (94), what platform scales it (91), who monetizes it (89), what city produces it (86), and who translates it (82).</p>
 <p class="art-p">Those questions convert culture into a measurable export system without collapsing it to ticket revenue alone. Attention is the cargo; identity is the durable inventory.</p>
 
 <h2 id="what-this-file-cannot-tell-you" class="anchored">What this file cannot tell you</h2>
-<p class="art-p">Editorial indices are scaffolding for later ingestion of UNESCO, WIPO, platform, and city data — not official trade rankings. Cultural "exports" blur royalties, tourism spillovers, and platform geography in ways a single score cannot isolate.</p>
+<p class="art-p">Editorial indices are scaffolding for later ingestion of UNESCO, WIPO, platform, and city data—not official trade rankings. Cultural "exports" blur royalties, tourism spillovers, and platform geography in ways a single score cannot isolate.</p>
 <p class="art-p">Language markets, censorship regimes, and diaspora size can dominate outcomes in ways the exportability indices alone cannot capture.</p>
 <h2 id="what-to-take-away" class="anchored">What to take away</h2>
 <p class="art-p">Cultural exports belong in geoeconomics because attention moves markets: tourism, language learning, fashion, food demand, and diplomatic standing.</p>
-<p class="art-p">Screen and music travel fastest on these indices; South Korea, Japan, and India show distinct wave patterns; cities are the production and distribution launchpads. Replace the indices with direct data before treating the scores as league tables.</p>
+<p class="art-p">Screen and music travel fastest on these indices; South Korea, Japan, and India show distinct wave patterns; cities function as production and distribution launchpads. Replace the indices with direct data before treating the scores as league tables.</p>
 <h2 id="sources" class="anchored">Sources</h2>
 
 <p>UNESCO Institute for Statistics and UNESCO cultural trade references.</p>

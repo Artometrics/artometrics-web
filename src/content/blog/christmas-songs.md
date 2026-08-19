@@ -1,5 +1,5 @@
 ---
-title: 'Christmas Music Charts: Which Holiday Songs Never Leave?'
+title: 'Jingle Bell Rock spent 19 weeks on chart across six decades'
 slug: christmas-songs
 author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
@@ -11,35 +11,35 @@ tags:
   - arts
   - music
 tldr: >-
-  Holiday songs return every December, accumulate weeks, then vanish until next season. This dataset of 387 records (1958–2017) shows a median 8 weeks on chart, a maximum of 20 weeks, and perennial standards like Jingle Bell Rock and All I Want for Christmas Is You dominating the top tier.
+  Holiday songs return each December, accumulate weeks, then vanish. Analysis of 387 records (1958–2017) shows a median 8 weeks on chart, a 20-week maximum, and perennial standards like Jingle Bell Rock and All I Want for Christmas Is You dominating the top tier.
 keyPoints:
-  - 387 — Records in dataset spanning 1958–2017
-  - 8.00 — Median weeks on chart across all songs
-  - 20.0 — Maximum weeks on chart (Better Days and Believe)
-  - 17.0 — Median weeks on chart among top dozen songs
-  - 1958–2017 — Timespan covered by source data
+  - 387 — Records spanning 1958–2017, covering six decades of holiday chart data
+  - 8 — Median weeks on chart, defining typical seasonal chart life
+  - 20 — Maximum weeks on chart (Better Days and Believe), marking the upper boundary
+  - 17 — Median weeks among top dozen songs, more than double the file median
+  - 19 — Weeks charted by Jingle Bell Rock and All I Want for Christmas Is You, appearing across multiple decades
 faq:
   - question: >-
-      How many records are in this dataset?
+      How many Christmas songs are in this dataset?
     answer: >-
-      The dataset contains 387 records of Christmas songs charted between 1958 and 2017.
+      387 records spanning 1958–2017, drawn from Billboard chart data.
   - question: >-
-      What is the median weeks on chart?
+      What is the median chart life for a holiday song?
     answer: >-
-      The median weeks on chart across all 387 records is 8 weeks.
+      8 weeks across all records; the top dozen songs average 17 weeks.
   - question: >-
-      Which songs have the longest chart life?
+      Which songs have the longest chart runs?
     answer: >-
-      Better Days and Believe lead with 20 weeks each; Jingle Bell Rock and All I Want for Christmas Is You follow at 19 weeks.
+      Better Days and Believe lead at 20 weeks; Jingle Bell Rock and All I Want for Christmas Is You each logged 19 weeks.
   - question: >-
-      Do Christmas songs return to the charts each year?
+      Do Christmas standards return to the charts each year?
     answer: >-
-      Yes. Standards like Jingle Bell Rock, All I Want for Christmas Is You, and Rockin' Around the Christmas Tree show chart appearances across multiple decades.
+      Yes. Jingle Bell Rock, All I Want for Christmas Is You, and Rockin' Around the Christmas Tree chart across multiple decades.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p art-lede">Holiday songs occupy a peculiar chart niche: they return every December, accumulate weeks, then disappear until the next season. This analysis of the TidyTuesday christmas-songs dataset holds <strong>387</strong> records spanning <strong>1958–2017</strong>, with a median of <strong>8.00</strong> weeks on chart and a maximum of <strong>20.0</strong>.</p>
-<p class="art-p">Better Days and Believe reach the 20-week ceiling. Perennial titles—Jingle Bell Rock, All I Want for Christmas Is You, Rockin' Around the Christmas Tree, and White Christmas—form the recurring core of the holiday chart across six decades.</p>
+<p class="art-p art-lede">Holiday songs occupy a peculiar chart niche: they return every December, accumulate weeks, then disappear. Analysis of 387 records spanning 1958–2017 shows a median of 8 weeks on chart and a maximum of 20. Better Days and Believe reach the ceiling. Perennial titles—Jingle Bell Rock, All I Want for Christmas Is You, Rockin' Around the Christmas Tree, White Christmas—form the recurring core across six decades.</p>
+<p class="art-p">The pattern reveals a repertoire system, not a new-release market. The same recordings cycle through decades, accumulating weeks on each return.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>
 <p class="art-p">The numbers that define this analysis:</p>
 <div class="facts-grid">
@@ -57,15 +57,15 @@ faq:
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/christmas-songs/charts/chart1_trend.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/christmas-songs/charts/chart1_trend.png" role="img" aria-label="Median Weeks on chart Over Time"></div>
 </figure>
-<p class="art-p">Median weeks on chart by year reached <strong>20</strong> in 2005–2006, with other peaks in the mid-2010s (2016 at approximately 19 weeks, 2015 at approximately 18.5 weeks). Earlier years ranged between 11 and 16 weeks; a few years dropped to single digits or near 1 week.</p>
-<p class="art-p">Changes in chart methodology (from airplay to sales to streaming) and the expansion of seasonal playlists both contributed to these shifts in how many weeks holiday songs accumulated per year.</p>
+<p class="art-p">Median weeks on chart by year reached 20 in 2005–2006, with other peaks in the mid-2010s (2016 at approximately 19 weeks, 2015 at approximately 18.5 weeks). Earlier years ranged between 11 and 16 weeks; a few years dropped to single digits or near 1 week.</p>
+<p class="art-p">Changes in chart methodology (from airplay to sales to streaming) and the expansion of seasonal playlists both contributed to how many weeks holiday songs accumulated per year.</p>
 
 <h2 id="twenty-weeks-marks-the-upper-club" class="anchored">Twenty Weeks Marks the Upper Club</h2>
 <h3 id="twenty-weeks-marks-the-upper-club-look" class="anchored">Better Days and Believe lead at 20.0 weeks; top dozen songs average 17.0 weeks</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/christmas-songs/charts/chart2_leaders.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/christmas-songs/charts/chart2_leaders.png" role="img" aria-label="Better Days and Believe lead at 20.0 weeks; top dozen songs average 17.0 weeks"></div>
 </figure>
-<p class="art-p">Better Days and Believe lead at <strong>20.0</strong> weeks. Jingle Bell Rock and All I Want for Christmas Is You follow at <strong>19</strong> weeks each; Same Old Lang Syne and Rockin' Around the Christmas Tree at <strong>18</strong> weeks each. The median among the top dozen is <strong>17.0</strong> weeks.</p>
+<p class="art-p">Better Days and Believe lead at 20 weeks. Jingle Bell Rock and All I Want for Christmas Is You follow at 19 weeks each; Same Old Lang Syne and Rockin' Around the Christmas Tree at 18 weeks each. The median among the top dozen is 17 weeks.</p>
 <p class="art-p">Against a file median of 8 weeks, that elite group exceeds the typical holiday chart life by more than double.</p>
 
 <h2 id="most-songs-cluster-at-short-chart-lives" class="anchored">Most Songs Cluster at Short Chart Lives</h2>
@@ -73,7 +73,7 @@ faq:
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/christmas-songs/charts/chart3_distribution.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/christmas-songs/charts/chart3_distribution.png" role="img" aria-label="Weeks on chart Distribution"></div>
 </figure>
-<p class="art-p">The distribution shows substantial counts at both very short weeks-on-chart values and a high concentration near the upper teens (approximately <strong>84</strong> observations near the distribution's peak). Mid-range stays occupy the space between these two poles.</p>
+<p class="art-p">The distribution shows substantial counts at both very short weeks-on-chart values and a high concentration near the upper teens (approximately 84 observations near the distribution's peak). Mid-range stays occupy the space between these two poles.</p>
 <p class="art-p">Holiday songs cluster at two extremes: brief seasonal appearances and extended multi-week December occupations. Few settle in the middle.</p>
 
 <h2 id="standards-reappear-across-decades" class="anchored">Standards Reappear Across Decades</h2>
@@ -81,8 +81,8 @@ faq:
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/christmas-songs/charts/chart4_leader_trends.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/christmas-songs/charts/chart4_leader_trends.png" role="img" aria-label="Top Songs Over Time"></div>
 </figure>
-<p class="art-p">Jingle Bell Rock posts 19-week seasons in the late 1950s–early 1960s and again in 2016–2017. All I Want for Christmas Is You shows 19-week runs across multiple 2010s seasons after earlier quiet appearances. Rockin' Around the Christmas Tree similarly appears in the early 1960s and mid-2010s peaks. White Christmas charted at 13 weeks in 1958–1962.</p>
-<p class="art-p">The timeline reveals a repertoire system, not merely a new-release market. The same recordings cycle through decades, accumulating weeks on each return.</p>
+<p class="art-p">Jingle Bell Rock posted 19-week seasons in the late 1950s–early 1960s and again in 2016–2017. All I Want for Christmas Is You showed 19-week runs across multiple 2010s seasons after earlier quiet appearances. Rockin' Around the Christmas Tree similarly appeared in the early 1960s and mid-2010s peaks. White Christmas charted at 13 weeks in 1958–1962.</p>
+<p class="art-p">The timeline confirms a repertoire system, not a new-release market. The same recordings cycle through decades, accumulating weeks on each return.</p>
 
 <h2 id="more-instances-often-meet-longer-weeks" class="anchored">More Instances Often Meet Longer Weeks</h2>
 <h3 id="more-instances-often-meet-longer-weeks-look" class="anchored">Weeks on chart vs Instance</h3>

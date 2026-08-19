@@ -1,37 +1,36 @@
 ---
-title: 'Comic-Book Power Scales: Spider-Man at 4,043 Appearances, a Dozen Icons at the Summit'
+title: Spider-Man Leads 23,272 Comic Characters at 4,043 Appearances; Top Five Hold 45% of Aggregate
 slug: comic-characters
 author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
-description: Spider-Man leads 23,272 comic characters (1935–2013) with 4,043 appearances; top 5 hold 45% of aggregate.
+description: Spider-Man logged 4,043 appearances across 1935–2013; the top five characters account for 45% of cumulative appearances among 23,272 records.
 heroImage: /images/content/articles/comic-characters/hero.png
 draft: false
 tags:
   - arts
   - design
 tldr: >-
-  Comic-book universes concentrate appearance mass in a handful of franchise engines. The TidyTuesday comic-characters dataset holds 23,272 records (1935–2013) with a median of 4 appearances; Spider-Man (Peter Parker) leads at 4,043. The top five names account for 45% of aggregate appearances.
+  Spider-Man (Peter Parker) leads 23,272 comic characters (1935–2013) with 4,043 appearances. The median character appears four times. The top five names account for 45% of cumulative appearances in the ranked dataset.
 keyPoints:
-  - '23,272 — Records in the working dataset'
-  - '4 — Median appearances across all characters'
-  - '4,043 — Spider-Man (Peter Parker) appearance count'
-  - '45% — Share of aggregate appearances held by top five names'
-  - '1935–2013 — Year span of the dataset'
-  - 'Marvel vs. DC — Marvel contributes 15,280 records; DC contributes 6,541'
+  - "23,272 — Total character records spanning 1935–2013"
+  - "4 — Median appearances per character; most names appear infrequently"
+  - "4,043 — Spider-Man's appearance count, highest in the dataset"
+  - "45% — Share of cumulative appearances held by the top five characters"
+  - "15,280 — Marvel records (median 3 appearances); 6,541 DC records (median 6 appearances)"
 faq:
-  - question: How many characters are in the dataset?
-    answer: 23,272 records spanning 1935–2013.
+  - question: How many comic characters are in the dataset?
+    answer: 23,272 records spanning 1935 through 2013.
   - question: Which character has the most appearances?
     answer: Spider-Man (Peter Parker) with 4,043 appearances.
   - question: What is the median number of appearances?
-    answer: 4 appearances across all named characters.
-  - question: What share do the top five names control?
-    answer: Approximately 45% of aggregate appearances in the ranked view.
+    answer: 4 appearances across all characters.
+  - question: What share do the top five characters control?
+    answer: 45% of cumulative appearances in the ranked view.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p art-lede">Comic-book universes concentrate appearance mass in a handful of franchise engines. The TidyTuesday comic-characters extract holds <strong>23,272</strong> records spanning <strong>1935–2013</strong>, with a median of <strong>4</strong> appearances and a maximum of <strong>4,043</strong> for Spider-Man (Peter Parker). Marvel is the most common publisher label.</p>
-<p class="art-p">That median of four appearances reflects the catalog's structural truth: most named characters appear infrequently. The charts below show how appearance mass concentrates in a narrow band of franchise centers.</p>
+<p class="art-p art-lede">Spider-Man (Peter Parker) logged <strong>4,043</strong> appearances across the <strong>23,272</strong> characters in the TidyTuesday comic-characters dataset (1935–2013), while the median character appeared <strong>4</strong> times. The top five names account for <strong>45%</strong> of cumulative appearances in the ranked view, concentrating franchise mass in a narrow band of superhero infrastructure.</p>
+<p class="art-p">That four-appearance median reflects structural reality: most named characters never become franchise centers. The charts below measure how appearance volume clusters at the top.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>
 <p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
@@ -50,47 +49,47 @@ faq:
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/comic-characters/charts/chart1_trend.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/comic-characters/charts/chart1_trend.png" role="img" aria-label="Median Appearances Over Time"></div>
 </figure>
-<p class="art-p">Median appearances by first-appearance year peak in the mid-1930s (approximately <strong>125</strong> in 1935, <strong>117</strong> in 1937) and decline toward single digits in later decades as the catalog expands with short-lived characters.</p>
-<p class="art-p">Golden Age cohorts appear "busier" partly because survivors were reprinted and reintroduced more often. Later decades add characters who never become franchise centers.</p>
+<p class="art-p">Median appearances by first-appearance year peak in the mid-1930s—<strong>125</strong> in 1935, <strong>117</strong> in 1937—then decline toward single digits as the catalog expands with short-lived characters.</p>
+<p class="art-p">Golden Age cohorts logged higher medians because survivors were reprinted and reintroduced more often. Later decades added thousands of characters who never anchored ongoing series.</p>
 
 <h2 id="a-dozen-icons-own-the-appearance-summit" class="anchored">A Dozen Icons Own the Appearance Summit</h2>
 <h3 id="a-dozen-icons-own-the-appearance-summit-look" class="anchored">Spider-Man (Peter Parker) leads at 4,043 — 2,377 marks the median among the top dozen</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/comic-characters/charts/chart2_leaders.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/comic-characters/charts/chart2_leaders.png" role="img" aria-label="Spider-Man (Peter Parker) leads at 4,043 — 2,377 marks the median among the top dozen"></div>
 </figure>
-<p class="art-p">Spider-Man leads at <strong>4,043</strong> appearances, followed by Captain America (<strong>3,360</strong>), Batman (<strong>3,093</strong>), Wolverine (<strong>3,061</strong>), Iron Man (<strong>2,961</strong>), and Superman (<strong>2,496</strong>). Thor and Ben Grimm continue the elite band. The median among the top dozen is approximately <strong>2,377</strong>.</p>
-<p class="art-p">These characters are not merely popular; they are publishing infrastructure — identities that carry ongoing series, crossovers, and adaptations.</p>
+<p class="art-p">Spider-Man leads at <strong>4,043</strong> appearances, followed by Captain America (<strong>3,360</strong>), Batman (<strong>3,093</strong>), Wolverine (<strong>3,061</strong>), Iron Man (<strong>2,961</strong>), and Superman (<strong>2,496</strong>). The median among the top dozen is <strong>2,377</strong>.</p>
+<p class="art-p">These characters are publishing infrastructure—identities that anchor ongoing series, crossovers, and adaptation franchises. Popularity alone does not explain the gap between 4,043 and 4; continuous editorial use does.</p>
 
 <h2 id="marvel-has-more-characters-dc-s-median-appearances-run-highe" class="anchored">Marvel Has More Characters; DC's Median Appearances Run Higher</h2>
 <h3 id="marvel-has-more-characters-dc-s-median-appearances-run-highe-look" class="anchored">Appearances by Publisher</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/comic-characters/charts/chart3_distribution.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/comic-characters/charts/chart3_distribution.png" role="img" aria-label="Appearances by Publisher"></div>
 </figure>
-<p class="art-p">Marvel contributes approximately <strong>15,280</strong> records with a median of <strong>3</strong> appearances and a maximum of 4,043. DC contributes approximately <strong>6,541</strong> records with a higher median of <strong>6</strong> and a maximum of 3,093 (Batman).</p>
-<p class="art-p">Marvel's catalog is wider; DC's typical named character in this file has been used more often. Volume and intensity represent different publisher strategies.</p>
+<p class="art-p">Marvel contributed <strong>15,280</strong> records with a median of <strong>3</strong> appearances and a maximum of 4,043. DC contributed <strong>6,541</strong> records with a median of <strong>6</strong> and a maximum of 3,093 (Batman).</p>
+<p class="art-p">Marvel's catalog is wider; DC's typical character logged more appearances. Volume and intensity represent different editorial strategies—Marvel expanded the roster, DC concentrated use among established names.</p>
 
 <h2 id="the-top-five-names-hold-nearly-half-the-leader-aggregate" class="anchored">The Top Five Names Hold Nearly Half the Leader Aggregate</h2>
 <h3 id="the-top-five-names-hold-nearly-half-the-leader-aggregate-look" class="anchored">The top 5 name entries account for 45% of the aggregate appearances</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/comic-characters/charts/chart4_pareto.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/comic-characters/charts/chart4_pareto.png" role="img" aria-label="The top 5 name entries account for 45% of the aggregate appearances"></div>
 </figure>
-<p class="art-p">On the Pareto curve of leading names, the top five entries account for approximately <strong>45%</strong> of aggregate appearances in that ranked view. Share accumulates steeply from there toward the fifteenth name.</p>
-<p class="art-p">Franchise comics follow a power-law distribution. A short list of identities absorbs a disproportionate fraction of cumulative attention.</p>
+<p class="art-p">The top five characters account for <strong>45%</strong> of cumulative appearances among ranked leaders. The curve climbs steeply to 100% by the fifteenth name.</p>
+<p class="art-p">Franchise comics follow a power-law distribution. A short list of identities absorbs most cumulative attention; the long tail contributes little to aggregate appearance volume.</p>
 
 <h2 id="concentration-repeats-as-a-structural-fact" class="anchored">Concentration Repeats as a Structural Fact</h2>
 <h3 id="concentration-repeats-as-a-structural-fact-look" class="anchored">The top 5 name entries account for 45% of the aggregate appearances</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/comic-characters/charts/chart_pareto.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/comic-characters/charts/chart_pareto.png" role="img" aria-label="The top 5 name entries account for 45% of the aggregate appearances"></div>
 </figure>
-<p class="art-p">The second concentration chart restates the same Pareto shape: top five near 45%, with the curve climbing toward 100% by the fifteenth plotted name.</p>
-<p class="art-p">Repeating the concentration view establishes the pattern as structural, not a binning artifact. Appearance mass in superhero publishing is systematically concentrated at the top.</p>
+<p class="art-p">The second Pareto chart restates the same concentration: top five near 45%, curve approaching 100% by the fifteenth name.</p>
+<p class="art-p">Repeating the view confirms the pattern is structural, not a binning artifact. Appearance mass in superhero publishing concentrates systematically at the top of the roster.</p>
 
 <h2 id="what-this-file-cannot-tell-you" class="anchored">What this file cannot tell you</h2>
-<p class="art-p">Appearance counts depend on how databases credit cameos, alternate Earths, and reboots. Publisher field collapses imprints. The 2013 endpoint misses the full MCU/DCEU feedback loop on print appearances.</p>
-<p class="art-p">Median appearances of 4 should not be misread as "characters only show up four times then vanish" without checking how incomplete rows are handled.</p>
+<p class="art-p">Appearance counts depend on how databases credit cameos, alternate Earths, and reboots. The publisher field collapses imprints. The 2013 cutoff predates the full MCU/DCEU feedback loop on print appearances.</p>
+<p class="art-p">The four-appearance median should not be interpreted as "characters only show up four times then vanish" without verifying how incomplete rows are handled in the source.</p>
 <h2 id="what-to-take-away" class="anchored">What to take away</h2>
-<p class="art-p">Across 23,272 characters, the median appearance count is 4, while Spider-Man exceeds 4,000. The top five leaders hold approximately 45% of ranked appearance aggregate.</p>
-<p class="art-p">Marvel's wider catalog contrasts with DC's higher median when comparing publishers. The dozen icons above 2,300 appearances represent the industry's core publishing capital.</p>
+<p class="art-p">Across 23,272 characters, the median appearance count is 4 while Spider-Man logged 4,043. The top five leaders hold 45% of cumulative appearances in the ranked view.</p>
+<p class="art-p">Marvel's wider catalog contrasts with DC's higher median. The dozen icons above 2,300 appearances represent the industry's core publishing capital—characters that carry ongoing series, crossovers, and franchise adaptations.</p>
 <h2 id="sources" class="anchored">Sources</h2>
 
 <p>Data Science Learning Community. (2018). <em>TidyTuesday: Comic Book Characters</em>. <a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2018/2018-05-29/week9_comic_characters.csv" target="_blank" rel="noopener noreferrer">https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2018/2018-05-29/week9_comic_characters.csv</a></p>

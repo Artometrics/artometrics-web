@@ -1,5 +1,5 @@
 ---
-title: 'The Cowboys: Brand Value vs. Championship Conversion'
+title: Dallas Cowboys carry $10B franchise value through 29-year championship drought
 slug: cowboys-the-artometrics-of-americas-team
 author: kyle-mcauliffe
 pubDate: 2026-07-01T00:00:00.000Z
@@ -11,20 +11,20 @@ tags:
   - sports
   - football
 tldr: >-
-  The Dallas Cowboys command disproportionate national attention despite a 29-year conference championship drought. Five Super Bowl titles built the mythology; the last arrived in 1995. The modern paradox: the NFL's most valuable franchise ($10B+) has mastered demand while failing to convert playoff chances under maximum visibility.
+  The Dallas Cowboys hold the NFL's highest franchise value—above $10 billion—while posting zero NFC championship appearances since 1995. Five Super Bowl titles built the mythology; the last arrived 29 years ago. The modern paradox: brand attention scales while playoff conversion stalls.
 keyPoints:
-  - 5 — Super Bowl championships, three from the 1990s Aikman-Smith-Irvin core
-  - 1995 — Most recent Super Bowl-winning season
-  - 29 — Years since last NFC championship appearance entering 2025
-  - $10B+ — Estimated franchise value, highest in American sports
-  - 0 — Conference championship appearances since 1995
+  - 5 — Super Bowl championships — three from the 1990s Aikman-Smith-Irvin core, none since 1995
+  - $10B+ — Estimated franchise value — highest in American sports despite one playoff win since 2014
+  - 29 — Years since last NFC championship appearance — entering 2025, zero conference title games in that span
+  - 1995 — Most recent Super Bowl-winning season — marking the end of Dallas's championship era
+  - 0 — Conference championship appearances since 1995 — the longest active NFC title drought
 faq:
   - question: How many Super Bowls have the Cowboys won?
     answer: >-
       Five. Three came from the 1990s Aikman–Smith–Irvin era; the last championship season was 1995.
   - question: When did Dallas last reach an NFC championship game?
     answer: >-
-      Not since 1995—29 years entering 2025, with zero conference title appearances in that span.
+      1995—29 years entering 2025, with zero conference title appearances in that span.
   - question: What is the Cowboys' estimated franchise value?
     answer: >-
       Above $10 billion, the highest in American sports, despite one postseason win since 2014.
@@ -34,10 +34,10 @@ faq:
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p art-lede">The Dallas Cowboys command disproportionate national attention despite a 29-year conference championship drought. Every season begins with outsized coverage and outsized expectation—yet the same question remains unresolved: when does brand gravity become football gravity again?</p>
-<p class="art-p art-context">This report focuses on the Cowboys’ NFC East competitive dynamics, the revenue premium attached to the “America’s Team” brand, and the measurable gap between franchise valuation and Super Bowl conversion since 1995—the last time Dallas won it all.</p>
-<p class="art-p">Five Super Bowl titles built the mythology. The last arrived in the 1995 season. Entering 2025, the Cowboys have gone 29 years without an NFC championship appearance and zero conference title games since 1995. The franchise is now defined by a modern paradox: the most valuable brand in American sports, often cited above $10 billion, has mastered demand while failing to convert playoff chances under maximum visibility.</p>
-<p class="art-p">The charts measure that split: titles by era, franchise value against playoff wins since 1996, playoff wins by decade, regular-season winning by quarterback era, and the conference championship drought beside other frustrated franchises.</p>
+<p class="art-p art-lede">The Dallas Cowboys hold the NFL's highest franchise value—above $10 billion—while posting zero NFC championship appearances since 1995. Every season begins with outsized coverage and outsized expectation, yet the same question remains unresolved: when does brand gravity become football gravity again?</p>
+<p class="art-p art-context">This report examines the Cowboys' NFC East competitive dynamics, the revenue premium attached to the "America's Team" brand, and the measurable gap between franchise valuation and Super Bowl conversion since 1995—the last time Dallas won it all.</p>
+<p class="art-p">Five Super Bowl titles built the mythology. The last arrived in the 1995 season. Entering 2025, the Cowboys have gone 29 years without an NFC championship appearance. The franchise is now defined by a modern paradox: the most valuable brand in American sports has mastered demand while failing to convert playoff chances under maximum visibility.</p>
+<p class="art-p">The charts measure that split: titles by era, franchise value against playoff wins since 1996, playoff wins by decade, regular-season winning percentage by quarterback era, and the conference championship drought beside other frustrated franchises.</p>
 
 <h2 id="fast-facts" class="anchored">The numbers behind the story</h2>
 <div class="facts-grid">
@@ -54,8 +54,8 @@ faq:
   <div class="art-chart-live" data-chart="/data/articles/cowboys-the-artometrics-of-americas-team/charts/chart1_titles_by_era.plotly.json" data-source="Data: Pro Football Reference, NFL records, Forbes - ARTOMETRICS" role="img" aria-label="Cowboys Super Bowl wins by defining era" data-fallback="/images/content/articles/cowboys-the-artometrics-of-americas-team/charts/chart1_titles_by_era.png"></div>
   <figcaption class="art-chart-caption">Cowboys Super Bowl wins by defining era</figcaption>
 </figure>
-<p class="art-p">Dallas title history concentrates in two eras: Landry's 1970s and the Aikman–Smith–Irvin 1990s, which delivered three of five franchise Super Bowls. Since 1995, the Super Bowl column is empty.</p>
-<p class="art-p">The Cowboys did not cease being nationally important when they stopped winning titles. That disconnect is precisely the problem: brand continuity without championship renewal.</p>
+<p class="art-p">Dallas title history concentrates in two eras: Landry's 1970s dynasty and the Aikman–Smith–Irvin 1990s core, which delivered three of five franchise Super Bowls. Since 1995, the Super Bowl column is empty.</p>
+<p class="art-p">The Cowboys did not cease being nationally important when they stopped winning titles. That disconnect is the problem: brand continuity without championship renewal.</p>
 
 <h2 id="brand-outlier" class="anchored">The richest brand, a modest recent playoff archive</h2>
 <figure class="art-chart">

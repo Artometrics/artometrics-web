@@ -1,121 +1,105 @@
 ---
-title: How the World’s Biggest Media Franchises Actually Make Money
+title: Pokémon's $91B Earns More Than Marvel, Star Wars, and Harry Potter Combined
 slug: franchise
 author: kyle-mcauliffe
 pubDate: 2026-04-08T00:00:00.000Z
 description: >-
-  Revenue maps for more than 100 franchises show where valuable IP earns across
-  media.
+  Pokémon at $91B tops 107 franchises tracked. Merchandise drives 61% of all revenue. Disney owns $426B across subsidiaries.
 heroImage: /images/content/articles/franchise/hero.png
 draft: false
 tags:
   - arts
   - film
 tldr: >-
-  The global media industry runs on intellectual property — and a surprisingly
-  small number of franchises account for most of the money. The TidyTuesday 2019
-  media franchises dataset covers 107 properties, each with at least $4 billion
-  in estimated lifetime revenue as of mid-2019. Every franchise here has already
-  cleared a threshold that most IP never approaches.
+  Pokémon earns $91B lifetime, the most of any tracked franchise — more than Marvel, Star Wars, and Harry Potter combined. The TidyTuesday 2019 dataset covers 107 properties with at least $4B in revenue as of mid-2019. Merchandise accounts for 61% of all tracked earnings. When Disney's subsidiaries consolidate, the company controls $426B — nearly nine times Nintendo's $49B.
 keyPoints:
   - >-
-    $91B — Pokémon lifetime revenue — the highest-grossing media franchise ever
-    recorded, more than the MCU, Star Wars, and Harry Potter put together
+    $91B — Pokémon lifetime revenue — more than Marvel, Star Wars, and Harry Potter combined
   - >-
-    107 — Unique franchises in the dataset — every one of them has already
-    cleared at least $4B in lifetime revenue
+    61% — Share of all tracked revenue from merchandise — the dominant stream across the dataset
   - >-
-    $4B+ — Minimum threshold for inclusion — most IP that has ever existed never
-    gets close to this number
+    107 — Franchises tracked, each clearing at least $4B lifetime revenue
   - >-
-    8 — Revenue categories tracked: Merchandise, Video Games, Box Office, Home
-    Video, Comic/Manga, Music, TV, and Book Sales
+    $4B/yr — Pokémon's normalized annual rate — the highest efficiency measure in the dataset
   - >-
-    92 yrs — Span of the dataset — from Winnie the Pooh (1923) to Monster Strike
-    (2015)
+    $426B — Disney's true total when Marvel and Fox consolidate — nine times Nintendo's $49B
   - >-
-    ~61% — Share of all tracked revenue that comes from Merchandise, Licensing
-    &amp; Retail — the dominant stream across the entire dataset
+    $130B — Disney revenue from subsidiaries too small to rank individually — larger than Nintendo's lifetime output
 faq:
-  - question: >-
-      Which franchise has the highest lifetime revenue in the dataset?
+  - question: Which franchise has earned the most money ever?
     answer: >-
-      Pokémon at $91B — the highest-grossing media franchise in the dataset — the highest-grossing media franchise ever recorded, more than the MCU, Star Wars, and Harry Potter put together.
-  - question: >-
-      How many franchises are in the dataset?
+      Pokémon at $91B as of mid-2019, exceeding Marvel, Star Wars, and Harry Potter combined.
+  - question: What revenue stream dominates franchise earnings?
     answer: >-
-      107 unique franchises, each with at least $4B in estimated lifetime revenue.
-  - question: >-
-      What is the minimum revenue threshold for inclusion?
+      Merchandise accounts for 61% of all tracked franchise revenue across the dataset.
+  - question: How much does Disney control after consolidating subsidiaries?
     answer: >-
-      $4B+ minimum lifetime revenue for inclusion in the dataset.
-  - question: >-
-      How many revenue categories are tracked per franchise?
+      $426B when Marvel and Fox fold into Disney, nearly nine times Nintendo's $49B.
+  - question: What is the minimum revenue to appear in the dataset?
     answer: >-
-      8 revenue categories: Merchandise, Video Games, Box Office, Home Video, Comic/Manga, Music, TV, and Book Sales.
+      $4B lifetime revenue as of mid-2019, a threshold most IP never approaches.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p art-lede">The global media industry runs on intellectual property — and a surprisingly small number of franchises account for most of the money. The TidyTuesday 2019 media franchises dataset covers 107 properties, each with at least $4 billion in estimated lifetime revenue as of mid-2019. Every franchise here has already cleared a threshold that most IP never approaches. This is not a representative sample of the media industry. It is a map of its ceiling.</p>
-<p class="art-p">Three charts, three angles on the same structural question: where does franchise money actually come from, which properties generate it most efficiently, and what does the ownership picture look like when subsidiaries stop looking like separate competitors? The answers are Merchandise, Pokémon, and Disney — in that order.</p>
+<p class="art-p art-lede">Pokémon earns $91B lifetime — more than Marvel, Star Wars, and Harry Potter combined. The TidyTuesday 2019 dataset tracks 107 franchises, each clearing at least $4B in revenue as of mid-2019. That threshold excludes most IP ever created. What remains is not a sample of the media industry — it is the ceiling.</p>
+<p class="art-p">Three charts answer where franchise money comes from, which properties earn it most efficiently, and what the ownership picture looks like when subsidiaries stop masquerading as competitors. The answers: merchandise, Pokémon, and Disney.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>
-<p class="art-p">The numbers that set the scale for this report:</p>
+<p class="art-p">The numbers that set the scale:</p>
 <div class="facts-grid">
   <div class="fact-box">
     <span class="fact-number">$91B</span>
-    <span class="fact-label">Pokémon lifetime revenue — the highest-grossing media franchise ever recorded, more than the MCU, Star Wars, and Harry Potter put together</span>
+    <span class="fact-label">Pokémon lifetime revenue — more than Marvel, Star Wars, and Harry Potter combined</span>
   </div>
   <div class="fact-box">
     <span class="fact-number">107</span>
-    <span class="fact-label">Unique franchises in the dataset — every one of them has already cleared at least $4B in lifetime revenue</span>
+    <span class="fact-label">Franchises tracked — each clearing at least $4B lifetime revenue</span>
   </div>
   <div class="fact-box">
     <span class="fact-number">$4B+</span>
-    <span class="fact-label">Minimum threshold for inclusion — most IP that has ever existed never gets close to this number</span>
+    <span class="fact-label">Minimum threshold — most IP never approaches this number</span>
   </div>
   <div class="fact-box">
     <span class="fact-number">8</span>
-    <span class="fact-label">Revenue categories tracked: Merchandise, Video Games, Box Office, Home Video, Comic/Manga, Music, TV, and Book Sales</span>
+    <span class="fact-label">Revenue categories tracked: Merchandise, Video Games, Box Office, Home Video, Comic/Manga, Music, TV, Book Sales</span>
   </div>
   <div class="fact-box">
     <span class="fact-number">92 yrs</span>
-    <span class="fact-label">Span of the dataset — from Winnie the Pooh (1923) to Monster Strike (2015)</span>
+    <span class="fact-label">Dataset span — Winnie the Pooh (1923) to Monster Strike (2015)</span>
   </div>
   <div class="fact-box">
     <span class="fact-number">~61%</span>
-    <span class="fact-label">Share of all tracked revenue that comes from Merchandise, Licensing &amp; Retail — the dominant stream across the entire dataset</span>
+    <span class="fact-label">Revenue share from merchandise — the dominant stream across all franchises</span>
   </div>
 </div>
 <h2 id="data-and-method" class="anchored">Data and method</h2>
-<p class="art-p">The TidyTuesday 2019 media franchises dataset covers 107 properties, each with at least $4B in estimated lifetime revenue as of mid-2019. The figures are sourced from Wikipedia’s list of highest-grossing media franchises and compiled into eight revenue categories. Every franchise here has already cleared a threshold that most IP never approaches — this is not a representative sample of the media industry. It is a map of its ceiling.</p>
-<p class="art-p">The $4B minimum is not a small number. Most films, shows, games, and books that have ever existed never come close to it. Being in this dataset means a property has sustained commercial relevance across multiple revenue streams, often across multiple decades. The franchises below that line — culturally significant, critically acclaimed, beloved — simply aren’t here. What remains is the top tier: IP that didn’t just succeed but compounded.</p>
-<p class="art-p">Revenue here is a lifetime estimate, not an annual figure. A franchise created in 1923 has had a century to accumulate; one created in 2013 has had six years. That asymmetry shapes every chart. Chart 1 shows the raw totals and what they’re made of. Chart 2 corrects for age by normalizing revenue per year — a fairer fight. Chart 3 strips away the ownership labels and asks what the leaderboard actually looks like when subsidiaries are folded into their parent companies.</p>
+<p class="art-p">The TidyTuesday 2019 media franchises dataset tracks 107 properties with at least $4B in estimated lifetime revenue as of mid-2019, sourced from Wikipedia's list of highest-grossing franchises and sorted into eight categories. The $4B floor is not arbitrary — most films, shows, games, and books never reach it. Inclusion here means sustained commercial relevance across multiple revenue streams, often across decades.</p>
+<p class="art-p">Revenue figures are lifetime estimates, not annual. A franchise launched in 1923 has had a century to accumulate; one from 2013 has had six years. Chart 1 shows raw totals and composition. Chart 2 normalizes by age, dividing lifetime revenue by years of existence. Chart 3 consolidates Disney's subsidiaries into a single ownership bar.</p>
 <h2 id="top-20-franchises-by-revenue" class="anchored">Top 20 Franchises By Revenue</h2>
 <h3 id="top-20-franchises-by-revenue-look" class="anchored">Top20 Revenue</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/franchise/charts/chart1_top20_revenue.plotly.json" data-fallback="/images/content/articles/franchise/charts/chart1_top20_revenue.png" role="img" aria-label="Top20 Revenue"></div>
 </figure>
-<p class="art-p">Pokémon at $91B is not just the top of this chart — it is a different kind of number. The gap between Pokémon and second-place Hello Kitty ($80B) is itself larger than the total lifetime revenue of Batman, Spider-Man, or Dragon Ball. This is what it looks like when a franchise achieves structural escape velocity: merchandise revenue compounding over decades, driven by a product line that expands into every available category simultaneously — cards, video games, plush, clothing, themed food, and an anime that has functioned primarily as a 25-year commercial for the card game. Pokémon was not built to be a franchise. It was built to be an economy.</p>
-<p class="art-p">The color logic of this chart is the argument. Merchandise, Licensing &amp; Retail (red) dominates the fill for nearly every bar in the top 20. This is not a quirk of how Wikipedia compiles revenue — it is a structural feature of how large-scale IP actually makes money. The content — films, games, episodes — functions primarily as marketing infrastructure for the real product, which is the license. The entertainment generates demand. Merchandise captures it.</p>
-<p class="art-p">Three franchises break visibly from the red-dominant pattern. Mario is mostly dark blue — Nintendo has spent decades resisting the licensing temptation that Disney and Sanrio embraced fully, keeping the IP tightly coupled to its own hardware ecosystem. Shōnen Jump / Jump Comics is mostly purple (Comic or Manga) because its revenue structure is a publishing business — magazines and tankōbon volumes, not T-shirts. And Star Wars shows the most balanced mix: box office, merchandise, home video, and games each contributing meaningfully. Star Wars is the model of a fully diversified franchise — which is why Disney paid $4B for Lucasfilm in 2012.</p>
+<p class="art-p">Pokémon at $91B is not just first — it is a different category of number. The gap between Pokémon and second-place Hello Kitty ($80B) exceeds the lifetime revenue of Batman, Spider-Man, or Dragon Ball. This is structural escape velocity: merchandise revenue compounding across decades, driven by a product line expanding into every available category — cards, video games, plush, clothing, themed food. The anime functions primarily as a 25-year commercial for the card game. Pokémon was not built as a franchise. It was built as an economy.</p>
+<p class="art-p">Merchandise, Licensing & Retail (red) dominates nearly every bar in the top 20. This is not a reporting quirk — it is how large-scale IP makes money. Content — films, games, episodes — functions as marketing infrastructure. Merchandise captures demand.</p>
+<p class="art-p">Three franchises break the pattern. Mario is mostly dark blue — Nintendo resists licensing, keeping IP tightly coupled to its hardware ecosystem. Shōnen Jump / Jump Comics is mostly purple (Comic or Manga), a publishing business driven by magazines and tankōbon volumes. Star Wars shows the most balanced mix: box office, merchandise, home video, and games each contributing meaningfully. Star Wars is the model of a fully diversified franchise — which is why Disney paid $4B for Lucasfilm in 2012.</p>
 
 <h2 id="revenue-per-year-of-existence" class="anchored">Revenue Per Year of Existence</h2>
 <h3 id="revenue-per-year-of-existence-look" class="anchored">Revenue Per Year</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/franchise/charts/chart2_revenue_per_year.plotly.json" data-fallback="/images/content/articles/franchise/charts/chart2_revenue_per_year.png" role="img" aria-label="Revenue Per Year"></div>
 </figure>
-<p class="art-p">Total revenue rewards longevity. Revenue per year rewards efficiency. Normalizing by age puts a 1928 franchise and a 1996 franchise on comparable footing — and the resulting ranking surfaces something the raw totals hide. Pokémon’s $4B/yr is not explained by any single hit. It is explained by a system: the video games create new entry points every hardware generation; the trading card game creates perpetual demand for new product; the anime provides continuous character exposure that drives card and game sales. Each component feeds the others in a loop that doesn’t require any single cultural moment to sustain. Pokémon doesn’t just earn well — it earns continuously, from multiple directions, at the same time.</p>
-<p class="art-p">Several franchises that ranked very high on total revenue drop here when normalized by time. Hello Kitty ($80B total, second overall) falls to fourth at $1.8B/yr — because it has been generating that revenue since 1974, making 45 years the denominator that brings the rate down. Winnie the Pooh and Mickey Mouse drop further still. Their massive lifetime totals are the product of nearly a century of operation. The per-year lens is unforgiving to age: a franchise that earns $1B/yr for 90 years scores lower on this chart than one earning $2B/yr for 25.</p>
-<p class="art-p">The franchises that rise on this chart share a structural trait: they earn across multiple simultaneous streams rather than sequentially. A film franchise earns at release, then waits for the next film. A trading-card-plus-video-game-plus-anime ecosystem earns every month, every quarter, at every retail touchpoint. The per-year chart is really a chart of business model design.</p>
+<p class="art-p">Total revenue rewards longevity. Revenue per year rewards efficiency. Normalizing by age puts 1928 and 1996 franchises on comparable footing — and surfaces what raw totals hide. Pokémon's $4B/yr is not explained by a single hit. It is explained by a system: video games create new entry points every hardware generation; the trading card game creates perpetual demand for new product; the anime provides continuous character exposure that drives card and game sales. Each component feeds the others in a loop that doesn't require any single cultural moment to sustain.</p>
+<p class="art-p">Several franchises ranking high on total revenue drop when normalized by time. Hello Kitty ($80B total, second overall) falls to fourth at $1.8B/yr — because it has operated since 1974, making 45 years the denominator. Winnie the Pooh and Mickey Mouse drop further. Their massive lifetime totals are the product of nearly a century. The per-year lens penalizes age: a franchise earning $1B/yr for 90 years scores lower than one earning $2B/yr for 25.</p>
+<p class="art-p">Franchises that rise on this chart share a trait: they earn across multiple simultaneous streams rather than sequentially. A film franchise earns at release, then waits. A trading-card-plus-video-game-plus-anime ecosystem earns every month at every retail touchpoint. The per-year chart measures business model design.</p>
 
 <h2 id="the-disney-empire-consolidated" class="anchored">The Disney Empire, Consolidated</h2>
 <h3 id="the-disney-empire-consolidated-look" class="anchored">Disney Non Consolidated</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/franchise/charts/chart3a_disney_non_consolidated.plotly.json" data-fallback="/images/content/articles/franchise/charts/chart3a_disney_non_consolidated.png" role="img" aria-label="Disney Non Consolidated"></div>
 </figure>
-<p class="art-p">The raw data lists “The Walt Disney Company,” “Marvel Entertainment (The Walt Disney Company),” and “20th Century Fox (The Walt Disney Company)” as three separate owners. Technically accurate. Strategically misleading. Marvel was acquired in 2009 for $4B. Fox was acquired in 2019 for $71B. Both are now wholly owned subsidiaries. Their revenue goes to the same place. This is how corporate IP ownership actually works. You don’t buy franchises — you buy the companies that own franchises, and those companies keep operating under their own names. Marvel Studios still greenlit its own films. Fox kept its lot in Century City. But the revenue goes to Burbank.</p>
-<p class="art-p">Add them up and Disney’s true total is $426 billion. Nintendo at $49B — still second — now represents about 11 cents on Disney’s dollar. But here’s what the math actually surfaces: Marvel ($20B) plus Fox ($17B) should consolidate to $296B. The remaining $130 billion comes from Disney-owned entities too small to crack the top 14 individually — Pixar, Lucasfilm, ABC, ESPN. Subsidiaries whose franchise rows exist in the dataset but don’t rank highly enough to appear as standalone bars. Individually invisible. Collectively, they add up to more than Nintendo’s entire lifetime output.</p>
-<p class="art-p">That is the actual scale of the Disney empire. Not one dominant company. Not even three. An ecosystem of wholly-owned studios, publishers, and licensors — some famous, some not — each running their own operations, all consolidating upward to the same balance sheet. The chart makes visible something the raw data quietly obscures: in IP, ownership structure is as strategically important as the franchises themselves. Disney didn’t just build great IP. It bought the companies that owned great IP, let them keep their identities, and harvested everything upward.</p>
+<p class="art-p">The raw data lists "The Walt Disney Company," "Marvel Entertainment (The Walt Disney Company)," and "20th Century Fox (The Walt Disney Company)" as three separate owners. Technically accurate. Strategically misleading. Marvel was acquired in 2009 for $4B. Fox was acquired in 2019 for $71B. Both are wholly owned subsidiaries. Their revenue goes to the same place. You don't buy franchises — you buy the companies that own franchises, and those companies keep operating under their own names. Marvel Studios still greenlights its own films. Fox kept its lot in Century City. But the revenue goes to Burbank.</p>
+<p class="art-p">Add them up and Disney's true total is $426B. Nintendo at $49B — still second — now represents 11 cents on Disney's dollar. Marvel ($20B) plus Fox ($17B) consolidate to $296B. The remaining $130B comes from Disney-owned entities too small to crack the top 14 individually — Pixar, Lucasfilm, ABC, ESPN. Subsidiaries whose franchise rows exist in the dataset but don't rank highly enough to appear as standalone bars. Individually invisible. Collectively, they exceed Nintendo's entire lifetime output.</p>
+<p class="art-p">That is the actual scale. Not one dominant company. Not even three. An ecosystem of wholly-owned studios, publishers, and licensors — some famous, some not — each running their own operations, all consolidating upward to the same balance sheet. The chart makes visible what the raw data quietly obscures: in IP, ownership structure is as strategically important as the franchises themselves. Disney didn't just build great IP. It bought the companies that owned great IP, let them keep their identities, and harvested everything upward.</p>
 
 <h2 id="disney-consolidated-view" class="anchored">The Same Leaderboard, Consolidated</h2>
 <h3 id="disney-consolidated-view-look" class="anchored">Disney subsidiaries folded into one ownership bar</h3>
@@ -123,8 +107,8 @@ faq:
   <div class="art-chart-live" data-chart="/data/articles/franchise/charts/chart3b_disney_consolidated.plotly.json" data-source="Data: TidyTuesday media franchises (2019) — ARTOMETRICS" data-fallback="/images/content/articles/franchise/charts/chart3b_disney_consolidated.png" role="img" aria-label="Disney subsidiaries folded into one ownership bar"></div>
   <figcaption class="art-chart-caption">When Marvel and Fox roll into Disney, the ownership bar becomes a different order of magnitude from Nintendo</figcaption>
 </figure>
-<p class="art-p">Chart 3a shows Disney’s labels as the raw file stores them. Chart 4 collapses Marvel Entertainment and 20th Century Fox into The Walt Disney Company — the ownership reality after the 2009 Marvel purchase and the 2019 Fox deal. Named properties such as Star Wars (Lucasfilm), the Marvel Cinematic Universe, and Fox’s legacy film library stop looking like peer competitors and start looking like internal divisions.</p>
-<p class="art-p">That consolidation is the scientific claim: lifetime franchise revenue is not only a creative ranking. It is a map of who controls the cash flows after M&amp;A. Readers comparing “Disney” to “Nintendo” without folding subsidiaries are comparing an incomplete parent to a fully listed one.</p>
+<p class="art-p">Chart 3a shows Disney's labels as the raw file stores them. Chart 3b collapses Marvel Entertainment and 20th Century Fox into The Walt Disney Company — the ownership reality after the 2009 Marvel purchase and 2019 Fox deal. Star Wars (Lucasfilm), the Marvel Cinematic Universe, and Fox's legacy film library stop looking like peer competitors and start looking like internal divisions.</p>
+<p class="art-p">That consolidation is the claim: lifetime franchise revenue is not only a creative ranking. It is a map of who controls cash flows after M&A. Readers comparing "Disney" to "Nintendo" without folding subsidiaries are comparing an incomplete parent to a fully listed one.</p>
 
 <h2 id="where-franchises-begin" class="anchored">Where the Money Starts</h2>
 <h3 id="where-franchises-begin-look" class="anchored">Lifetime revenue by original media — top origin formats</h3>
@@ -132,17 +116,17 @@ faq:
   <div class="art-chart-live" data-chart="/data/articles/franchise/charts/chart5_original_media_revenue.plotly.json" data-source="Data: TidyTuesday media franchises (2019) — ARTOMETRICS" data-fallback="/images/content/articles/franchise/charts/chart5_original_media_revenue.png" role="img" aria-label="Lifetime revenue by original media — top origin formats"></div>
   <figcaption class="art-chart-caption">Original media still shapes the ceiling — novels and games punch above their cultural stereotype in lifetime revenue</figcaption>
 </figure>
-<p class="art-p">Stack every franchise row by <em>original_media</em> and the archive’s ceiling is not evenly shared across formats. Novel-origin and game-origin properties — think <em>A Song of Ice and Fire / Game of Thrones</em> (George R. R. Martin; Random House / WarnerMedia in the 2019 file) and Nintendo’s game-led ecosystems — still account for outsized lifetime totals relative to how casually “franchise” is equated with theatrical film alone.</p>
-<p class="art-p">That is the complementary finding to Pokémon’s merchandise dominance: the seed format matters, but the extraction layer (licensing and retail) is what turns a hit into a compounding machine. Chart 5 measures the seed. Chart 1 measured the harvest.</p>
+<p class="art-p">Stack every franchise by original media and the archive's ceiling is not evenly shared across formats. Novel-origin and game-origin properties — <em>A Song of Ice and Fire / Game of Thrones</em> (George R. R. Martin; Random House / WarnerMedia in the 2019 file) and Nintendo's game-led ecosystems — account for outsized lifetime totals relative to how casually "franchise" is equated with theatrical film.</p>
+<p class="art-p">That is the complement to Pokémon's merchandise dominance: the seed format matters, but the extraction layer (licensing and retail) turns a hit into a compounding machine. Chart 5 measures the seed. Chart 1 measures the harvest.</p>
 
 <h2 id="what-this-file-cannot-tell-you" class="anchored">What this file cannot tell you</h2>
-<p class="art-p">This dataset reflects revenue estimates compiled from Wikipedia as of mid-2019, and carries several important caveats. Revenue figures are sourced inconsistently — some represent lifetime totals through 2019, others may reflect different windows or methodologies. Franchises are only included if they surpassed an estimated $4B threshold, meaning smaller but culturally significant IP is absent entirely. The ownership and creator fields reflect the state of the industry at the time of collection and do not account for subsequent acquisitions. Revenue categories were consolidated from over 60 raw Wikipedia subcategories into 8 groups, which involves judgment calls documented in the original TidyTuesday cleaning script.</p>
-<p class="art-p">The “Merchandise, Licensing &amp; Retail” category is particularly broad and may include revenue streams that other analyses would track separately. The dominance of merchandise in Chart 1 is structurally real, but the exact percentage share depends on how individual Wikipedia editors categorized edge cases — which is not fully auditable from this dataset alone. All revenue figures should be treated as order-of-magnitude approximations rather than audited financial data.</p>
-<p class="art-p">Chart 2 divides total lifetime revenue by years of existence as of 2019. This is a simple normalization, not a modeled annual revenue figure. A franchise with uneven revenue across its lifespan — a massive recent hit, or decades of dormancy — will produce a per-year figure that doesn’t reflect any actual year’s performance. The metric rewards consistent earners and penalizes anything that earned most of its revenue in a concentrated burst.</p>
+<p class="art-p">This dataset reflects revenue estimates compiled from Wikipedia as of mid-2019 and carries several caveats. Revenue figures are sourced inconsistently — some represent lifetime totals through 2019, others may reflect different windows or methodologies. Franchises are only included if they surpassed an estimated $4B threshold, meaning smaller but culturally significant IP is absent. Ownership and creator fields reflect the state of the industry at the time of collection and do not account for subsequent acquisitions. Revenue categories were consolidated from over 60 raw Wikipedia subcategories into 8 groups, involving judgment calls documented in the original TidyTuesday cleaning script.</p>
+<p class="art-p">The "Merchandise, Licensing & Retail" category is particularly broad and may include revenue streams that other analyses would track separately. The dominance of merchandise in Chart 1 is structurally real, but the exact percentage share depends on how individual Wikipedia editors categorized edge cases — which is not fully auditable from this dataset. All revenue figures should be treated as order-of-magnitude approximations rather than audited financial data.</p>
+<p class="art-p">Chart 2 divides total lifetime revenue by years of existence as of 2019. This is simple normalization, not a modeled annual revenue figure. A franchise with uneven revenue across its lifespan — a massive recent hit, or decades of dormancy — will produce a per-year figure that doesn't reflect any actual year's performance. The metric rewards consistent earners and penalizes concentrated bursts.</p>
 <h2 id="what-to-take-away" class="anchored">What to take away</h2>
-<p class="art-p">The media franchise landscape is not flat — it is sharply skewed toward a small number of IP that have mastered merchandise and sustained it across decades. Pokémon stands alone at the top not because of box office dominance but because it turned a video game into the world’s most successful licensing machine while simultaneously running an anime, a card game, and a global trading ecosystem. The Artometrics takeaway from this dataset is a single structural insight: the most valuable thing a franchise can do is give people something to own, collect, and trade — not just something to watch.</p>
-<p class="art-p">Disney’s story is a different kind of lesson. The company didn’t just build great IP — it systematically acquired the companies that owned great IP and rolled them into a single consolidated empire. The $130B gap between Disney’s apparent total and its true total is a number that only becomes visible when you collapse the ownership structure the raw data obscures. That gap, by itself, is larger than Nintendo’s entire lifetime output. In IP, what you own is one thing. What your subsidiaries own is another. Disney understood the difference earlier and more completely than anyone.</p>
-<p class="art-p">The two insights together describe the same underlying dynamic from different angles. Merchandise is how IP extracts value from audiences. Acquisition is how corporations extract value from IP. The companies that have mastered both — Disney chief among them — are not competing in the same game as everyone else. They are operating at a different level of the stack entirely.</p>
+<p class="art-p">The media franchise landscape is sharply skewed toward a small number of IP that have mastered merchandise and sustained it across decades. Pokémon stands alone at the top not because of box office dominance but because it turned a video game into the world's most successful licensing machine while simultaneously running an anime, a card game, and a global trading ecosystem. The structural insight: the most valuable thing a franchise can do is give people something to own, collect, and trade — not just something to watch.</p>
+<p class="art-p">Disney's story is a different lesson. The company didn't just build great IP — it systematically acquired the companies that owned great IP and rolled them into a single consolidated empire. The $130B gap between Disney's apparent total and its true total is a number that only becomes visible when you collapse the ownership structure the raw data obscures. That gap, by itself, is larger than Nintendo's entire lifetime output. In IP, what you own is one thing. What your subsidiaries own is another. Disney understood the difference earlier and more completely than anyone.</p>
+<p class="art-p">The two insights describe the same underlying dynamic from different angles. Merchandise is how IP extracts value from audiences. Acquisition is how corporations extract value from IP. The companies that have mastered both — Disney chief among them — are not competing in the same game as everyone else. They operate at a different level of the stack.</p>
 <h2 id="sources" class="anchored">Sources</h2>
 
 <div class="art-references">
@@ -168,7 +152,7 @@ faq:
   </div>
 </div>
 
-<h2 id="editor-s-note" class="anchored">Editor’s note</h2>
+<h2 id="editor-s-note" class="anchored">Editor's note</h2>
 <div class="art-editorial-note"><p class="art-p">
 This report was researched, written, designed, and produced in active
 collaboration with Claude AI (Anthropic). The data pipeline, statistical

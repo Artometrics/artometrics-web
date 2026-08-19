@@ -1,37 +1,35 @@
 ---
-title: Which Subjects Dominate the Project Gutenberg Shelf?
+title: 69,027 LCSH Records Anchor Project Gutenberg's Catalog Core
 slug: project-gutenberg
 author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
-description: Public-domain metadata show which topics crowd the free-library canon.
+description: LCSH accounts for 69% of subject headings; PS (American literature) appears 4,684 times — concentration defines the reusable public-domain canon.
 heroImage: /images/content/articles/project-gutenberg/hero.png
 draft: false
 tags:
   - arts
   - language
 tldr: >-
-  Project Gutenberg is the internet's oldest large-scale experiment in free
-  literature. Its subject catalog — Library of Congress headings and related
-  labels — is a map of which public-domain books volunteers could digitize and
-  classify at scale.
+  A 100,000-record TidyTuesday extract shows Library of Congress Subject Headings (lcsh) accounting for 69,027 entries — 69% of all subjects. A small set of codes — PS at 4,684 instances — recurs thousands of times while most labels appear once, revealing which public-domain works volunteers digitized and classified at scale.
 keyPoints:
-  - '100,000 — Records in the working dataset'
-  - lcsh — Most common Subject type
+  - '69,027 — lcsh records dominate the 100,000-row dataset, defining the catalog core'
+  - '4,684 — PS (American literature) subject appearances, the most repeated label'
+  - 'Power-law distribution — most subjects appear once; a reusable canon of headings anchors repeated use'
 faq:
   - question: >-
-      How many records are in this dataset?
+      How many Project Gutenberg records use LCSH subject headings?
     answer: >-
-      100,000 records in the working dataset.
+      69,027 of 100,000 records in the TidyTuesday extract use lcsh as the subject type.
   - question: >-
-      What is Most common Subject type?
+      Which subject code appears most often in Project Gutenberg?
     answer: >-
-      lcsh — Most common Subject type.
+      PS (American literature) appears 4,684 times, more than any other subject label.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p art-lede">Project Gutenberg is the internet's oldest large-scale experiment in free literature. Its subject catalog — Library of Congress headings and related labels — is a map of which public-domain books volunteers could digitize and classify at scale.</p>
-<p class="art-p">A TidyTuesday working extract of <strong>100,000</strong> records shows <strong>lcsh</strong> as the most common subject type, with tens of thousands of rows in that bucket. Subject codes such as <strong>PS</strong> recur thousands of times. The catalog is not every book ever written; it is the reusable shelf that copyright expiry, volunteer labor, and classification systems made easy to share.</p>
-<p class="art-p">Reading Gutenberg as a popularity contest misses the point. Reading it as a concentration map of reusable canon is where the data help.</p>
+<p class="art-p art-lede">Library of Congress Subject Headings (lcsh) account for 69,027 records in a 100,000-row TidyTuesday extract of Project Gutenberg — 69% of all subject entries. The catalog is not a popularity contest; it is a map of which public-domain books volunteers could digitize and classify at scale.</p>
+<p class="art-p">Subject code <strong>PS</strong> — American literature — recurs <strong>4,684</strong> times, leading all labels. A short head of repeated classifications anchors the catalog while most subject entities appear once. The pattern is typical of library metadata: a reusable canon of headings, and a long inventory of singleton assignments.</p>
+<p class="art-p">Reading Gutenberg as a concentration map of reusable works is where the data help.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>
 <p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
@@ -46,15 +44,15 @@ faq:
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/project-gutenberg/charts/chart1_category.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/project-gutenberg/charts/chart1_category.png" role="img" aria-label="Public-domain books cluster by subject type"></div>
 </figure>
-<p class="art-p"><strong>lcsh</strong> dominates with on the order of <strong>69,027</strong> records in the highlighted cut, far ahead of thinner subject-type buckets. The main classification family carries the story; this field does not split into many equal long-tail types.</p>
+<p class="art-p"><strong>lcsh</strong> dominates with <strong>69,027</strong> records, far ahead of thinner subject-type buckets. The main classification family carries the story; this field does not split into many equal long-tail types.</p>
 <p class="art-p">That concentration means most navigational claims about what Gutenberg contains are really claims about how LCSH-style headings organize the digitized shelf.</p>
 <h2 id="who-sits-at-the-top" class="anchored">A small set of subjects anchors the catalog</h2>
 <h3 id="who-sits-at-the-top-look" class="anchored">A small set of subjects anchors the catalog</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/project-gutenberg/charts/chart2_leaders.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/project-gutenberg/charts/chart2_leaders.png" role="img" aria-label="A small set of subjects anchors the catalog"></div>
 </figure>
-<p class="art-p"><strong>PS</strong> appears about <strong>4,684</strong> times — among the most recurring subject names in the file. The top dozen account for a visible share of all 100,000 rows even though most subject entities appear only once.</p>
-<p class="art-p">American literature codes, fiction labels, and related headings form a reusable core. They are the catalog's gravitational center for teachers, scrapers, and adaptation hunters alike.</p>
+<p class="art-p"><strong>PS</strong> appears <strong>4,684</strong> times — the most recurring subject name in the file. The top dozen account for a visible share of all 100,000 rows even though most subject entities appear only once.</p>
+<p class="art-p">American literature codes, fiction labels, and related headings form a reusable core. They are the catalog's gravitational center for teachers, scrapers, and adaptation hunters.</p>
 <h2 id="category" class="anchored">Subject families show the catalog center of gravity</h2>
 <h3 id="category-look" class="anchored">Subject families show the catalog's center of gravity</h3>
 <figure class="art-chart">
@@ -67,7 +65,7 @@ faq:
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/project-gutenberg/charts/chart5_frequency.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/project-gutenberg/charts/chart5_frequency.png" role="img" aria-label="Repeated subjects reveal the reusable canon"></div>
 </figure>
-<p class="art-p">Most subject entities appear only once; a small head revisits repeatedly. That power-law shape is typical of catalog tables: a reusable canon of headings, and a long inventory of singleton classifications.</p>
+<p class="art-p">Most subject entities appear only once; a small head recurs repeatedly. That power-law shape is typical of catalog tables: a reusable canon of headings, and a long inventory of singleton classifications.</p>
 <p class="art-p">Repeated subjects are the ones most likely to support classroom packs, themed collections, and machine-learning corpora. Frequency is a reuse forecast as much as a shelf description.</p>
 <h2 id="names" class="anchored">Subject labels become the map of the shelf</h2>
 <h3 id="names-look" class="anchored">Subject labels become the map of the shelf</h3>

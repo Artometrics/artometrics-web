@@ -551,6 +551,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://artometrics.com/streaming-catalog-power</loc>
+    <lastmod>2026-07-21</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://artometrics.com/super-bowl-ads</loc>
     <lastmod>2026-06-15</lastmod>
     <priority>0.8</priority>
@@ -643,6 +648,11 @@
   <url>
     <loc>https://artometrics.com/podcast/interviews/4</loc>
     <lastmod>2025-02-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://artometrics.com/podcast/interviews/5</loc>
+    <lastmod>2026-08-19</lastmod>
     <priority>0.6</priority>
   </url>
   <url>

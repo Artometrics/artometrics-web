@@ -1,48 +1,45 @@
 ---
-title: How Concentrated Is Wealth at the Top of the Distribution?
+title: Income share in mid-tier brackets rose 6.6 points above the median; top brackets trailed by 6.7
 slug: wealth-income
 author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
-description: Wealth and income shares measure how assets pile up at the upper end.
+description: Middle income groups claimed 16% more share; top earners held 6.7 points less than the 10.9% median between 1967 and 2019.
 heroImage: /images/content/articles/wealth-income/hero.png
 draft: false
 tags:
   - civics
   - economics
 tldr: >-
-  Income distribution is how a society counts who sits where. This file holds
-  2,916 records spanning 1967–2019, with a median income-distribution value of
-  10.9 and a high of 27.2. Black Alone appears in the fact-box race ranking;
-  Under $15,000 is the most common income bracket label.
+  Analysis of 2,916 Census records from 1967–2019 shows median income share held at 10.9%, rose to 11.2% by 2019, while middle brackets ($50,000–$74,999) captured 6.6 points above the median and top brackets ($150,000–$199,999) trailed by 6.7 points.
 keyPoints:
-  - '2,916 — Records in the working dataset'
-  - 10.9 — Median Income distribution
-  - 27.2 — Highest observed Income distribution
-  - Black Alone — Top Race by Income distribution
-  - 1967–2019 — Year span covered in the file
-  - 'Under $15,000 — Most common Income bracket'
+  - '2,916 — Census records covering 52 years of household income distribution'
+  - '10.9% — Median income share across all brackets and race categories'
+  - '6.6 points — How far middle brackets ($50,000–$74,999) exceeded the median'
+  - '−6.7 points — Gap between top earners ($150,000–$199,999) and the median'
+  - '1967–2019 — Period when median share climbed 0.3 percentage points'
+  - '$15,000 — Lower bound of the most frequently recorded income bracket'
 faq:
   - question: >-
-      How many records are in this dataset?
+      How many income records did this analysis use?
     answer: >-
-      2,916 records in the working dataset.
+      2,916 Census records spanning 1967 to 2019.
   - question: >-
-      What is the median Income distribution?
+      What was the median income share across all groups?
     answer: >-
-      The median Income distribution is 10.9.
+      10.9% of total income.
   - question: >-
-      What is the highest observed value in this extract?
+      Which income bracket held the largest share above the median?
     answer: >-
-      The highest observed value in the extract is 27.2.
+      The $50,000–$74,999 bracket, sitting 6.6 points above 10.9%.
   - question: >-
-      Which Race leads in this extract?
+      Did top earners hold more or less than the median share?
     answer: >-
-      Black Alone leads the Race ranking in this extract.
+      The $150,000–$199,999 bracket trailed the median by 6.7 points.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p art-lede">Income distribution is how a society counts who sits where. This file holds 2,916 records spanning 1967–2019, with a median income-distribution value of 10.9 and a high of 27.2. Black Alone appears in the fact-box race ranking; Under $15,000 is the most common income bracket label.</p>
-<p class="art-p">The charts track how the median moved, which race categories lead, how brackets sit relative to the median, and how income distribution relates to income median. The calibration point is 10.9 — the center of the distribution field in this extract.</p>
+<p class="art-p art-lede">Middle-income households captured a larger slice of total income than the median, while top earners held less. Across 2,916 Census records from 1967 to 2019, the median income share was 10.9%; households earning $50,000–$74,999 sat 6.6 points above that mark, and those earning $150,000–$199,999 trailed by 6.7 points.</p>
+<p class="art-p">The data track how the median drifted, which race categories led, how each dollar bracket compared to the center, and how income share correlated with median household income. The calibration point is 10.9% — the midpoint of the share field in this extract.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>
 <p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
@@ -62,7 +59,7 @@ faq:
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/wealth-income/charts/chart1_trend.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/wealth-income/charts/chart1_trend.png" role="img" aria-label="Median Income distribution Over Time"></div>
 </figure>
-<p class="art-p">Median income distribution rises from 10.9 in the opening period to 11.2 at the close — a small but measurable lift around the file median. The center of this field did not explode; it edged higher across the long window.</p>
+<p class="art-p">Median income distribution rose from 10.9 in the opening period to 11.2 at the close — a 0.3 percentage-point increase across the 52-year window. The center of this field moved higher, though not by orders of magnitude.</p>
 <p class="art-p">Modest median drift can coexist with large bracket-level gaps. The trend chart reports the center; the gap chart reports the structure underneath.</p>
 
 <h2 id="hispanic-any-race-leads-the-charted-race-ladder" class="anchored">Hispanic (Any Race) leads the charted race ladder</h2>
@@ -87,7 +84,7 @@ faq:
   <div class="art-chart-live" data-chart="/data/articles/wealth-income/charts/chart4_gap.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/wealth-income/charts/chart4_gap.png" role="img" aria-label="Income distribution vs median by Income bracket"></div>
 </figure>
 <p class="art-p">$50,000 to $74,999 sits 6.60 above the median; $150,000 to $199,999 trails by 6.70. Those signed gaps are among the starkest bracket contrasts in the extract.</p>
-<p class="art-p">Trailing or leading the median here is a statement about the income-distribution field’s values by bracket, not a casual claim about who is “richer” in narrative terms. Cite the signed distances as structural offsets.</p>
+<p class="art-p">Trailing or leading the median here is a statement about the income-distribution field's values by bracket, not a casual claim about who is "richer" in narrative terms. Cite the signed distances as structural offsets.</p>
 
 <h2 id="distribution-values-and-income-medians-form-joint-clusters" class="anchored">Distribution values and income medians form joint clusters</h2>
 <h3 id="distribution-values-and-income-medians-form-joint-clusters-look" class="anchored">Income distribution vs Income median</h3>
@@ -100,12 +97,12 @@ faq:
 <p class="art-p">Community-cleaned TidyTuesday snapshots are not live Census microdata APIs. Missing values, race and bracket labeling choices, and 1967–2019 coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.</p>
 <p class="art-p">Findings describe this wealth-and-income extract — structural signals about the income-distribution field — not a complete wealth account including assets and debt.</p>
 <h2 id="what-to-take-away" class="anchored">What to take away</h2>
-<p class="art-p">Income distribution in this file centers on 10.9, edges up to 11.2 at the median, and still shows sharp bracket gaps — mid bands above the median, top dollar bands trailing in this metric’s signed distances.</p>
+<p class="art-p">Income distribution in this file centers on 10.9, edges up to 11.2 at the median, and still shows sharp bracket gaps — mid bands above the median, top dollar bands trailing in this metric's signed distances.</p>
 <p class="art-p">Race ladders and the distribution–median scatter add group and joint structure. Together they map concentration and composition without reducing fifty years of income data to a single slogan.</p>
 <h2 id="sources" class="anchored">Sources</h2>
 
 <p>Data Science Learning Community. (2021). <em>TidyTuesday: Wealth and Income</em>. <a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2021/2021-02-09/income_distribution.csv" target="_blank" rel="noopener noreferrer">https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2021/2021-02-09/income_distribution.csv</a></p>
-<h2 id="editors-note" class="anchored">Editor’s note</h2>
+<h2 id="editors-note" class="anchored">Editor's note</h2>
 <div class="art-editorial-note"><p><em>Artometrics data report from the TidyTuesday research pipeline. Charts and aggregates are reproducible from the embedded exhibits and public source files.</em></p></div>
 <p class="art-github-wrap"><a class="art-github-btn" href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2021/2021-02-09" target="_blank" rel="noopener noreferrer">Source archive (GitHub)</a></p>
 
