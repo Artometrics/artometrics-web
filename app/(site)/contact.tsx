@@ -16,7 +16,7 @@ export default function ContactScreen() {
       <Text className="text-[11px] font-semibold uppercase tracking-[2.5px] text-accent">
         Contact
       </Text>
-      <Text className="font-display text-[36px] text-fg">Get in touch</Text>
+      <Text role="heading" aria-level={1} className="font-display text-[36px] text-fg">Get in touch</Text>
       <Text className="mb-2 font-serif text-base leading-7 text-muted">
         Editorial tips, dataset corrections, press, and partnership notes go to the Artometrics
         desk.

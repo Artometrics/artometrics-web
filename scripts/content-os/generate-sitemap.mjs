@@ -44,22 +44,12 @@ const staticPaths = [
   "/about",
   "/contact",
   "/pricing",
-  "/resources",
-  "/datasets",
-  "/downloads",
-  "/press",
-  "/security",
   "/studio",
   "/library",
   "/library/reference",
   "/editions",
   ...editions.map((e) => `/editions/${e.id}`),
-  "/search",
-  "/newsletter",
   "/authors",
-  "/login",
-  "/signup",
-  "/get-app",
 ];
 
 /** Strip trailing slash from path (except root "/") for canonical URLs. */

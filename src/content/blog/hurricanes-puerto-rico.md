@@ -1,5 +1,5 @@
 ---
-title: 'The Worst Hurricanes to Hit Puerto Rico: Wind, Deaths, and Damage Compared'
+title: 'Worst Hurricanes in Puerto Rico: Wind, Deaths, Damage'
 slug: hurricanes-puerto-rico
 author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z

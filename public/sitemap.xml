@@ -66,31 +66,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://artometrics.com/resources</loc>
-    
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://artometrics.com/datasets</loc>
-    
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://artometrics.com/downloads</loc>
-    
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://artometrics.com/press</loc>
-    
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://artometrics.com/security</loc>
-    
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://artometrics.com/studio</loc>
     
     <priority>0.7</priority>
@@ -181,32 +156,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://artometrics.com/search</loc>
-    
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://artometrics.com/newsletter</loc>
-    
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://artometrics.com/authors</loc>
-    
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://artometrics.com/login</loc>
-    
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://artometrics.com/signup</loc>
-    
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://artometrics.com/get-app</loc>
     
     <priority>0.7</priority>
   </url>

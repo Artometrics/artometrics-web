@@ -1,109 +1,97 @@
 ---
-title: Which Airlines Have the Worst Safety Records?
+title: 'Airline Safety by Capacity: How Incident Counts Hide Exposure Differences'
 slug: airline-safety
 author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
 description: >-
-  Carrier-level accident and fatality data ask which airlines stand out for poor
-  safety outcomes.
+  336 airline records show capacity dominates safety rankings—United leads at
+  7.1B seat-km/week, but incident counts don't scale linearly with size.
 heroImage: /images/content/articles/airline-safety/hero.png
 draft: false
 tags:
   - culture
   - travel
 tldr: >-
-  Airline safety is usually discussed one crash at a time. The TidyTuesday
-  airline-safety extract does something different: it lines carriers up by
-  available seat kilometers per week — a capacity metric — and then asks how
-  incidents, fatal accidents, and fatalities sit against that scale. The working
-  file holds 336 cleaned records after the week’s tables are merged.
+  Raw incident counts rank airlines unfairly. The TidyTuesday airline-safety dataset includes 336 records normalized by available seat kilometers per week—a capacity metric that separates exposure from outcome. United/Continental leads at 7.1 billion seat-km weekly, but event counts don't move in lockstep with scale, showing that size and safety record are distinct questions.
 keyPoints:
   - 336 — Records in the working dataset
-  - '802,908,893 — Median Avail seat km per week'
-  - '7,139,291,291 — Highest observed Avail seat km per week'
-  - United / Continental* — Top Airline by Avail seat km per week
-  - incidents — Most common Type of event
+  - 802,908,893 — Median available seat-km per week
+  - 7,139,291,291 — Highest observed available seat-km per week
+  - United/Continental — Top airline by capacity
+  - Incidents scale independently of available seat-kilometers
 faq:
-  - question: >-
-      How many records are in this dataset?
-    answer: >-
-      336 records in the working dataset.
-  - question: >-
-      What is the median Avail seat km per week?
-    answer: >-
-      The median Avail seat km per week is 802,908,893.
-  - question: >-
-      What is the highest observed value in this extract?
-    answer: >-
-      The highest observed value in the extract is 7,139,291,291.
-  - question: >-
-      Which Airline leads in this extract?
-    answer: >-
-      United / Continental* leads the Airline ranking in this extract.
+  - question: How many airline records are in this dataset?
+    answer: 336 records after merging the TidyTuesday tables from August 7, 2018.
+  - question: What capacity metric is used?
+    answer: Available seat kilometers per week, with a median of 802.9 million across all carriers.
+  - question: Which airline operates the most seat-kilometers?
+    answer: United/Continental at 7.1 billion available seat-kilometers per week.
+  - question: Do incident counts rise with airline size?
+    answer: No. The scatter plot shows clusters where mid-size carriers report high incidents while some megacarriers sit lower relative to their capacity.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p art-lede">Airline safety is usually discussed one crash at a time. The TidyTuesday airline-safety extract does something different: it lines carriers up by available seat kilometers per week — a capacity metric — and then asks how incidents, fatal accidents, and fatalities sit against that scale. The working file holds <strong>336</strong> cleaned records after the week’s tables are merged.</p>
-<p class="art-p">Capacity is not the same as risk, but it is the right denominator for a first cut. A carrier flying <strong>7.1 billion</strong> available seat kilometers per week is not in the same exposure class as one flying under <strong>2 billion</strong>. The median in this extract is <strong>802,908,893</strong> available seat kilometers per week — a calibration point for every ranking that follows.</p>
-<p class="art-p">The most common event type in the file is simply labeled <strong>incidents</strong>. That matters: the archive mixes routine reportable events with rarer fatal outcomes, and treating those categories as interchangeable would flatten the story.</p>
+<p class="art-p art-lede">Airline safety is usually discussed one crash at a time. The TidyTuesday airline-safety dataset does something different: it aligns carriers by available seat kilometers per week—a capacity metric—and then asks how incidents, fatal accidents, and fatalities sit against that scale. The working file contains <strong>336</strong> cleaned records after merging the week's tables.</p>
+<p class="art-p">Capacity is not the same as risk, but it is the right denominator for a fair first cut. A carrier flying <strong>7.1 billion</strong> available seat kilometers per week operates in a different exposure class than one flying under <strong>2 billion</strong>. The median in this extract is <strong>802,908,893</strong> available seat kilometers per week—a baseline for interpreting every ranking that follows.</p>
+<p class="art-p">The most common event type in the file is labeled <strong>incidents</strong>. That distinction matters: the archive mixes routine reportable events with rarer fatal outcomes, and conflating those categories would obscure the real story.</p>
 <h2 id="fast-facts" class="anchored">Fast facts</h2>
 <p class="art-p">The numbers that set the scale for this report:</p>
 <div class="facts-grid">
   <div class="fact-box"><span class="fact-number">336</span><span class="fact-label">Records in the working dataset</span></div>
-  <div class="fact-box"><span class="fact-number">802,908,893</span><span class="fact-label">Median Avail seat km per week</span></div>
-  <div class="fact-box"><span class="fact-number">7,139,291,291</span><span class="fact-label">Highest observed Avail seat km per week</span></div>
-  <div class="fact-box"><span class="fact-number">United / Continental*</span><span class="fact-label">Top Airline by Avail seat km per week</span></div>
-  <div class="fact-box"><span class="fact-number">incidents</span><span class="fact-label">Most common Type of event</span></div>
+  <div class="fact-box"><span class="fact-number">802,908,893</span><span class="fact-label">Median available seat-km per week</span></div>
+  <div class="fact-box"><span class="fact-number">7,139,291,291</span><span class="fact-label">Highest observed available seat-km per week</span></div>
+  <div class="fact-box"><span class="fact-number">United / Continental*</span><span class="fact-label">Top airline by capacity</span></div>
+  <div class="fact-box"><span class="fact-number">incidents</span><span class="fact-label">Most common event type</span></div>
 </div>
 <h2 id="data-and-method" class="anchored">Data and method</h2>
-<p class="art-p">The source is the TidyTuesday release dated 2018-08-07 from the R for Data Science community. After merging the week’s CSV and XLSX tables, the working frame has 336 rows and five analysis columns used in these charts.</p>
-<p class="art-p">Medians are preferred wherever available seat kilometers skew toward megacarriers. Index-style fields are excluded from metric selection. Charts ship as Plotly JSON with PNG fallbacks so values remain inspectable on hover.</p>
+<p class="art-p">The source is the TidyTuesday release dated August 7, 2018 from the R for Data Science community. After merging the week's CSV and XLSX tables, the working dataset contains 336 rows and five analysis columns used in these charts.</p>
+<p class="art-p">Medians are preferred wherever available seat kilometers skew toward megacarriers. Index-style fields are excluded. Charts ship as Plotly JSON with PNG fallbacks so values remain inspectable on hover.</p>
 <h2 id="capacity-concentrates-among-megacarriers" class="anchored">Capacity Concentrates Among Megacarriers</h2>
-<h3 id="capacity-concentrates-among-megacarriers-look" class="anchored">Avail seat km per week by Airline</h3>
+<h3 id="capacity-concentrates-among-megacarriers-look" class="anchored">Available seat-km per week by airline</h3>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/airline-safety/charts/chart1_breakdown.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/airline-safety/charts/chart1_breakdown.png" role="img" aria-label="Avail seat km per week by Airline"></div>
+  <div class="art-chart-live" data-chart="/data/articles/airline-safety/charts/chart1_breakdown.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/airline-safety/charts/chart1_breakdown.png" role="img" aria-label="Available seat-km per week by airline"></div>
 </figure>
-<p class="art-p">United / Continental* anchors the top of the capacity ladder at <strong>7,139,291,291</strong> available seat kilometers per week. Delta / Northwest* follows at about <strong>6.53 billion</strong>, then American* at <strong>5.23 billion</strong>. The next tier — Lufthansa*, Southwest, British Airways*, Air France — sits between roughly <strong>3.0 and 3.4 billion</strong>.</p>
-<p class="art-p">That gap is structural. The top three merged U.S. brands occupy a different scale class from even large European flag carriers in this extract. When safety counts are later compared across airlines, those capacity differences are the first context any fair reading needs.</p>
+<p class="art-p">United/Continental* anchors the top at <strong>7,139,291,291</strong> available seat kilometers per week. Delta/Northwest* follows at approximately <strong>6.53 billion</strong>, then American* at <strong>5.23 billion</strong>. The next tier—Lufthansa*, Southwest, British Airways*, Air France—occupies the <strong>3.0 to 3.4 billion</strong> range.</p>
+<p class="art-p">That gap is structural. The top three merged U.S. brands operate at a different scale than even large European flag carriers in this extract. When event counts are later compared across airlines, those capacity differences provide essential context.</p>
 
 <h2 id="the-same-names-dominate-the-leader-board" class="anchored">The Same Names Dominate the Leader Board</h2>
-<h3 id="the-same-names-dominate-the-leader-board-look" class="anchored">United / Continental * leads at 7,139,291,291 — 3,091,881,806 marks the median among the top dozen</h3>
+<h3 id="the-same-names-dominate-the-leader-board-look" class="anchored">United/Continental* leads at 7,139,291,291—3,091,881,806 marks the median among the top dozen</h3>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/airline-safety/charts/chart2_leaders.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/airline-safety/charts/chart2_leaders.png" role="img" aria-label="United / Continental * leads at 7,139,291,291 — 3,091,881,806 marks the median among the top dozen"></div>
+  <div class="art-chart-live" data-chart="/data/articles/airline-safety/charts/chart2_leaders.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/airline-safety/charts/chart2_leaders.png" role="img" aria-label="United/Continental* leads at 7,139,291,291—3,091,881,806 marks the median among the top dozen"></div>
 </figure>
-<p class="art-p">The leaders chart restates the capacity hierarchy with a sharper claim: United / Continental* leads at <strong>7,139,291,291</strong>, while the median among the top dozen sits near <strong>3,091,881,806</strong>. Half the “elite” group is still less than half as large as the leader.</p>
-<p class="art-p">In other words, “large airline” is not a single club. It is a steep pyramid. Any narrative that ranks raw incident counts without that pyramid will punish the biggest networks for existing.</p>
+<p class="art-p">The leaders chart restates the capacity hierarchy with precision: United/Continental* leads at <strong>7,139,291,291</strong>, while the median among the top dozen sits near <strong>3,091,881,806</strong>. Half of the top tier still operates at less than half the leader's scale.</p>
+<p class="art-p">Large airline is not a single category. It is a steep pyramid. Any analysis that ranks raw incident counts without accounting for this pyramid will systematically penalize the largest networks.</p>
 
 <h2 id="event-type-does-not-rewrite-the-capacity-story" class="anchored">Event Type Does Not Rewrite the Capacity Story</h2>
-<h3 id="event-type-does-not-rewrite-the-capacity-story-look" class="anchored">Avail seat km per week by Type of event</h3>
+<h3 id="event-type-does-not-rewrite-the-capacity-story-look" class="anchored">Available seat-km per week by event type</h3>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/airline-safety/charts/chart3_distribution.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/airline-safety/charts/chart3_distribution.png" role="img" aria-label="Avail seat km per week by Type of event"></div>
+  <div class="art-chart-live" data-chart="/data/articles/airline-safety/charts/chart3_distribution.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/airline-safety/charts/chart3_distribution.png" role="img" aria-label="Available seat-km per week by event type"></div>
 </figure>
-<p class="art-p">Box plots split available seat kilometers by event type — incidents, fatal_accidents, and fatalities. Each group shows the same median of <strong>802,908,893</strong> and the same max of <strong>7,139,291,291</strong> across 112 observations per box in this view.</p>
-<p class="art-p">That congruence is the finding. Event labels do not sort carriers into different capacity worlds; the same megacarrier scale appears whether the row is tagged as an incident or a fatality record. The distribution is about who flies a lot, not about which label the row carries.</p>
+<p class="art-p">Box plots separate available seat kilometers by event type—incidents, fatal_accidents, and fatalities. Each group shows the same median of <strong>802,908,893</strong> and the same maximum of <strong>7,139,291,291</strong> across 112 observations per box.</p>
+<p class="art-p">That consistency is the finding. Event labels do not sort carriers into different capacity worlds; the same megacarrier scale appears whether the row is marked as an incident or a fatality record. The distribution reflects who operates the most seat-kilometers, not which label the row carries.</p>
 
 <h2 id="gaps-to-the-median-are-flat-across-labels" class="anchored">Gaps to the Median Are Flat Across Labels</h2>
-<h3 id="gaps-to-the-median-are-flat-across-labels-look" class="anchored">Avail seat km per week vs median by Type of event</h3>
+<h3 id="gaps-to-the-median-are-flat-across-labels-look" class="anchored">Available seat-km per week vs median by event type</h3>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/airline-safety/charts/chart4_gap.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/airline-safety/charts/chart4_gap.png" role="img" aria-label="Avail seat km per week vs median by Type of event"></div>
+  <div class="art-chart-live" data-chart="/data/articles/airline-safety/charts/chart4_gap.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/airline-safety/charts/chart4_gap.png" role="img" aria-label="Available seat-km per week vs median by event type"></div>
 </figure>
-<p class="art-p">When available seat kilometers are compared to the sample median by event type, incidents, fatal_accidents, and fatalities all land at essentially zero gap in this chart. That is a stability check, not a dramatic ranking.</p>
-<p class="art-p">The chart’s job is to stop a false story: that one event category is concentrated among unusually large or unusually small carriers. In this extract, the labels do not pull capacity away from the median.</p>
+<p class="art-p">When available seat kilometers are compared to the sample median by event type, incidents, fatal_accidents, and fatalities all register essentially zero gap. This is a stability check, not a ranking.</p>
+<p class="art-p">The chart's purpose is to rule out a false narrative: that one event category concentrates among unusually large or unusually small carriers. In this extract, the labels do not shift capacity away from the median.</p>
 
 <h2 id="scale-and-event-counts-do-not-move-as-one-line" class="anchored">Scale and Event Counts Do Not Move as One Line</h2>
-<h3 id="scale-and-event-counts-do-not-move-as-one-line-look" class="anchored">Avail seat km per week vs N events</h3>
+<h3 id="scale-and-event-counts-do-not-move-as-one-line-look" class="anchored">Available seat-km per week vs event count</h3>
 <figure class="art-chart">
-  <div class="art-chart-live" data-chart="/data/articles/airline-safety/charts/chart5_scatter.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/airline-safety/charts/chart5_scatter.png" role="img" aria-label="Avail seat km per week vs N events"></div>
+  <div class="art-chart-live" data-chart="/data/articles/airline-safety/charts/chart5_scatter.plotly.json" data-source="Data: TidyTuesday / R for Data Science community - ARTOMETRICS" data-fallback="/images/content/articles/airline-safety/charts/chart5_scatter.png" role="img" aria-label="Available seat-km per week vs event count"></div>
 </figure>
-<p class="art-p">Plotting available seat kilometers against the number of events reveals clusters the averages erase. Some mid-size carriers post high incident counts; some of the largest networks sit closer to moderate event totals relative to their seat-kilometer footprint.</p>
-<p class="art-p">The fatality panel is especially uneven: the highest fatality totals in the scatter are not always the absolute capacity leaders. Exposure and outcome are related, but they are not a straight diagonal — which is exactly why capacity and counts must be read together.</p>
+<p class="art-p">Plotting available seat kilometers against event count reveals clusters that aggregate statistics erase. Some mid-size carriers report high incident counts; some of the largest networks register moderate totals relative to their seat-kilometer footprint.</p>
+<p class="art-p">The fatality panel is particularly uneven: the highest fatality totals are not always concentrated at the absolute capacity leaders. Exposure and outcome are related, but not linearly—which is why capacity and counts must be read together.</p>
 
 <h2 id="what-this-file-cannot-tell-you" class="anchored">What this file cannot tell you</h2>
-<p class="art-p">This is a community-cleaned TidyTuesday snapshot, not a live regulatory feed. Missing values, spelling variants on airline names (including starred merger labels), and week-of-export coverage limits all apply. Merged tables can duplicate or fan out rows when join keys are imperfect.</p>
-<p class="art-p">Available seat kilometers measure exposure opportunity, not proven risk. The file cannot adjudicate which carriers are “safest” in a causal sense; it can only show how capacity and event tallies sit side by side in this extract.</p>
+<p class="art-p">This is a community-cleaned TidyTuesday snapshot, not a live regulatory feed. Missing values, spelling variants on airline names (including starred merger labels), and the week-of-export coverage window all apply. Merged tables may duplicate or expand rows when join keys are imperfect.</p>
+<p class="art-p">Available seat kilometers measure exposure opportunity, not proven risk. The file cannot determine which carriers are safest in a causal sense; it can only show how capacity and event tallies align in this extract.</p>
 <h2 id="what-to-take-away" class="anchored">What to take away</h2>
-<p class="art-p">The clearest signal is structural: a handful of megacarriers dominate available seat kilometers, with United / Continental* at the top and a median near <strong>803 million</strong> seat kilometers per week for the wider field.</p>
-<p class="art-p">Event-type labels do not reorder that hierarchy. The useful question is not which airline has the most rows — it is how those rows scale against who actually flies the world’s seat kilometers.</p>
+<p class="art-p">The clearest finding is structural: a handful of megacarriers dominate available seat kilometers, with United/Continental* at the apex and a median near <strong>803 million</strong> seat kilometers per week for the wider field.</p>
+<p class="art-p">Event-type labels do not reorder that hierarchy. The meaningful question is not which airline has the most recorded events—it is how those events scale against the seat-kilometers actually flown.</p>
 <h2 id="sources" class="anchored">Sources</h2>
 
 <p>Data Science Learning Community. (2018). <em>TidyTuesday: Airline Safety</em>. <a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2018/2018-08-07/week19_airline_safety.csv" target="_blank" rel="noopener noreferrer">https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2018/2018-08-07/week19_airline_safety.csv</a></p>

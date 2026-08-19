@@ -14,7 +14,7 @@ export default function AboutScreen() {
         path="/about"
       />
       <Text className="text-xs font-bold uppercase tracking-[1.8px] text-accent">Masthead</Text>
-      <Text className="font-display text-[34px] leading-10 text-fg">
+      <Text role="heading" aria-level={1} className="font-display text-[34px] leading-10 text-fg">
         Art for data scientists. Data science for artists.
       </Text>
       <View className="mt-2 gap-3.5">

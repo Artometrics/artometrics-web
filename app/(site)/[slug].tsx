@@ -1,12 +1,10 @@
+import React, { Suspense, useEffect } from "react";
 import { Pressable, Text, View, useWindowDimensions } from "react-native";
 import { Image } from "expo-image";
 import { useLocalSearchParams, Link } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { ArticleBody } from "@/components/ArticleBody";
 import { ArticleActions } from "@/components/ArticleActions";
-import { ArticleNarrationPlayer } from "@/components/ArticleNarrationPlayer";
-import { CommentThread } from "@/components/platform/CommentThread";
-import { ClapButton } from "@/components/platform/ClapButton";
 import { TldrBox } from "@/components/TldrBox";
 import { BlogCard } from "@/components/BlogCard";
 import { PageSeo } from "@/components/PageSeo";
@@ -24,8 +22,17 @@ import {
 import { SECTION_META } from "@/data/sections";
 import { SeoJsonLd } from "@/components/SeoJsonLd";
 import { paramString } from "@/lib/params";
-import { useEffect } from "react";
 import { trackEvent } from "@/lib/analytics/ga";
+
+const ArticleNarrationPlayer = React.lazy(
+  () => import("@/components/ArticleNarrationPlayer").then((m) => ({ default: m.ArticleNarrationPlayer }))
+);
+const CommentThread = React.lazy(
+  () => import("@/components/platform/CommentThread").then((m) => ({ default: m.CommentThread }))
+);
+const ClapButton = React.lazy(
+  () => import("@/components/platform/ClapButton").then((m) => ({ default: m.ClapButton }))
+);
 
 function estimateMinutes(html: string) {
   const text = html.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
@@ -205,7 +212,11 @@ export default function ReportScreen() {
           ) : null}
         </View>
 
-        <Text className="max-w-[18ch] font-display text-5xl uppercase leading-[0.92] tracking-[1px] text-fg md:text-7xl">
+        <Text
+          role="heading"
+          aria-level={1}
+          className="max-w-[18ch] font-display text-5xl uppercase leading-[0.92] tracking-[1px] text-fg md:text-7xl"
+        >
           {post.title}
         </Text>
 
@@ -230,10 +241,12 @@ export default function ReportScreen() {
 
       {/* Tools + signal facts */}
       <Wrapper className="gap-4 py-6">
-        <ArticleNarrationPlayer
-          audioSrc={(post as { audioSrc?: string | null }).audioSrc}
-          title={post.title}
-        />
+        <Suspense fallback={null}>
+          <ArticleNarrationPlayer
+            audioSrc={(post as { audioSrc?: string | null }).audioSrc}
+            title={post.title}
+          />
+        </Suspense>
         <ArticleActions slug={post.slug} title={post.title} placement="top" />
         <TldrBox
           tldr={tldr ?? post.description}
@@ -251,8 +264,12 @@ export default function ReportScreen() {
       {/* End matter */}
       <Wrapper className="gap-4 border-t-2 border-border py-8">
         <ArticleActions slug={post.slug} title={post.title} placement="bottom" />
-        <ClapButton targetKind="report" targetId={post.slug} />
-        <CommentThread targetKind="report" targetId={post.slug} />
+        <Suspense fallback={null}>
+          <ClapButton targetKind="report" targetId={post.slug} />
+        </Suspense>
+        <Suspense fallback={null}>
+          <CommentThread targetKind="report" targetId={post.slug} />
+        </Suspense>
       </Wrapper>
 
       {faq.length ? (

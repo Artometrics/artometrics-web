@@ -44,6 +44,7 @@ faq:
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p art-lede">Twenty-seven World Series titles do not merely decorate the New York Yankees. They distort the measurement system around the franchise. Winning stopped being an achievement and became an operating requirement—the standard against which every other October is judged.</p>
+<p class="art-p art-context">This report focuses specifically on the Yankees’ American League East position, payroll-to-WAR conversion efficiency, and the structural gap between a $300M roster and a franchise that has not won the World Series since 2009—sixteen seasons of expectation without resolution.</p>
 <p class="art-p">Yankee exceptionalism is not only the championship count. It is the mismatch between historical surplus and the modern difficulty of converting money into October certainty. Forty American League pennants form the deepest postseason archive in the sport; the last title arrived in 2009. Entering 2025, a fifteen-year drought felt like institutional malfunction only because Yankee time is compressed.</p>
 <p class="art-p">The charts that follow treat the Yankees as baseball’s benchmark: banner clusters by decade, the empire gap versus other historic clubs, droughts in relative context, payroll rank against postseason markers, and the conversion rate from pennants to rings across eras.</p>
 

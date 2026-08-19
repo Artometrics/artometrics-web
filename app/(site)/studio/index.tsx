@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { ActivityIndicator, Pressable, Text, View } from "react-native";
 import { Link, router, useFocusEffect } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
@@ -29,6 +29,11 @@ export default function StudioHomeScreen() {
   const { user, loading: authLoading } = useAuth();
   const [cont, setCont] = useState<StudioContinue | null>(null);
   const [loading, setLoading] = useState(true);
+  const hydrateStudio = useStudioStore((s) => s.hydrate);
+
+  useEffect(() => {
+    hydrateStudio();
+  }, [hydrateStudio]);
 
   useFocusEffect(
     useCallback(() => {

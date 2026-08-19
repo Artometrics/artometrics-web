@@ -1,5 +1,5 @@
 ---
-title: 'Life Expectancy Across Centuries: How Human Lifespans Doubled Since the 1500s'
+title: 'Life Expectancy Across Centuries: How Lifespans Doubled'
 slug: global-life-expectancy
 author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z

@@ -1,5 +1,5 @@
 ---
-title: When Louis Vuitton Beat Molly Tea in Court — and Lost the Chinese Internet
+title: 'Louis Vuitton vs Molly Tea: Trademark in China'
 slug: lv-molly-tea-trademark-china
 author: kyle-mcauliffe
 pubDate: 2026-07-28T00:00:00.000Z

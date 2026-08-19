@@ -1,5 +1,5 @@
 ---
-title: 'San Francisco Giants Dynasty: From New York Gothams to Three World Series Titles'
+title: 'San Francisco Giants Dynasty: Three World Series Titles'
 slug: giant-the-artometrics-of-a-san-francisco-dynasty
 author: kyle-mcauliffe
 pubDate: 2026-04-18T00:00:00.000Z
@@ -54,6 +54,7 @@ faq:
 <div id="quarto-content">
 <main class="art-article-main">
 <p class="art-p art-lede">The San Francisco Giants have been playing professional baseball since 1883. That is not a typo. The franchise that now calls Oracle Park home started as the New York Gothams—a club that predates the automobile, commercial electric light, and the modern World Series by twenty years.</p>
+<p class="art-p art-context">This report centers on the Giants’ 2010–2014 three-title window, the pitching-first roster construction that produced it, and the franchise’s subsequent challenge replicating a World Series model built on a rotation that no longer exists in that form.</p>
 <p class="art-p">Across 141 seasons, eight World Series titles, a continental relocation, three stadiums, and dynasties separated by decades of near-misses, no American franchise carries a longer or more complicated arc. The titles split cleanly by geography: five in New York (1905, 1921, 1922, 1933, 1954) and three in San Francisco (2010, 2012, 2014). Between them sits Candlestick’s long frustration and, after 2000, a privately financed ballpark that doubled the attendance floor and rebuilt the economic base.</p>
 <p class="art-p">The 2010–2014 dynasty then won three championships as a mid-tier-to-top spender built largely from the draft—payroll rank 9 in the first title year. Using the Lahman Baseball Database, the charts trace that arc across winning over time, the stadium’s economic break, and how a draft-built rotation converted a revenue floor into rings.</p>
 

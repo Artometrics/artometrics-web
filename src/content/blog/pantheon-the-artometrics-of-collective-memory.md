@@ -1,5 +1,5 @@
 ---
-title: 'The MIT Pantheon Dataset: Who Gets Remembered in the Global Pantheon of Fame?'
+title: 'The MIT Pantheon: Who Gets Remembered in Global Fame?'
 slug: pantheon-the-artometrics-of-collective-memory
 author: kyle-mcauliffe
 pubDate: 2026-07-01T00:00:00.000Z

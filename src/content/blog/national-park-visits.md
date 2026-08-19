@@ -1,5 +1,5 @@
 ---
-title: National Parks by Popularity — Which Ones Draw the Most Visitors?
+title: 'National Parks by Popularity: Which Draw the Most Visitors?'
 slug: national-park-visits
 author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z

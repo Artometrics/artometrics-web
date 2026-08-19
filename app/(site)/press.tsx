@@ -21,7 +21,7 @@ export default function PressScreen() {
         path="/press"
       />
       <Text className="text-xs font-bold uppercase tracking-[1.8px] text-accent">Press</Text>
-      <Text className="font-display text-[36px] text-fg">Brand & press</Text>
+      <Text role="heading" aria-level={1} className="font-display text-[36px] text-fg">Brand & press</Text>
       <Text className="font-serif text-base leading-[26px] text-muted">
         Artometrics is an independent data-science magazine for the creative industries and culture
         — art for data scientists and data science for artists. Visual system: black, white, and
