@@ -1,11 +1,11 @@
 ---
-title: 'How Oscars, Grammys, and Nobels Convert Attention Into Prestige'
+title: 'Oscars vs Grammys vs Nobels: How Award Shows Convert Attention Into Prestige'
 slug: awards-prestige-economy-oscars-grammys-nobels
 author: kyle-mcauliffe
 pubDate: 2026-07-01T00:00:00.000Z
 description: >-
-  A cross-medium look at how prizes turn visibility into legitimacy across film,
-  music, and science.
+  Oscars vs Grammys vs Nobels: a cross-medium analysis of how award ceremonies
+  turn visibility into legitimacy across film, music, and science.
 heroImage: >-
   /images/content/articles/awards-prestige-economy-oscars-grammys-nobels/hero.png
 draft: false

@@ -1,11 +1,11 @@
 ---
-title: Which Holiday Songs Never Leave the Charts?
+title: 'Christmas Music Chart History: Which Holiday Songs Never Leave the Charts?'
 slug: christmas-songs
 author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
 description: >-
-  Decades of Christmas-song chart data identify the standards that return every
-  season.
+  Decades of Christmas music chart data identify the holiday standards that
+  return every season—and the graph of their staying power.
 heroImage: /images/content/articles/christmas-songs/hero.png
 draft: false
 tags:

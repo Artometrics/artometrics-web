@@ -1,11 +1,11 @@
 ---
-title: How Population Scale Relates to Prosperity Across Countries
+title: 'CIA World Factbook Data: How Population Scale Relates to Prosperity Across Countries'
 slug: cia-world-factbook
 author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
 description: >-
-  Factbook indicators compare nations on size and wealth—where scale and
-  prosperity align or diverge.
+  CIA World Factbook data indicators compare nations on size and wealth—where
+  population scale and prosperity align or diverge.
 heroImage: /images/content/articles/cia-world-factbook/hero.png
 draft: false
 tags:

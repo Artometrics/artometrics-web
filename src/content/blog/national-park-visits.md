@@ -1,11 +1,11 @@
 ---
-title: Which National Parks Draw the Crowds?
+title: National Parks by Popularity — Which Ones Draw the Most Visitors?
 slug: national-park-visits
 author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
 description: >-
-  Visitation time series identify America’s busiest parks and how attendance has
-  trended.
+  National parks ranked by popularity: visitation data identifies America’s
+  busiest parks and how attendance has trended since 1904.
 heroImage: /images/content/articles/national-park-visits/hero.png
 draft: false
 tags:

@@ -192,10 +192,10 @@
   },
   {
     "id": "awards-prestige-economy-oscars-grammys-nobels",
-    "title": "How Oscars, Grammys, and Nobels Convert Attention Into Prestige",
+    "title": "Oscars vs Grammys vs Nobels: How Award Shows Convert Attention Into Prestige",
     "slug": "awards-prestige-economy-oscars-grammys-nobels",
     "pubDate": "2026-07-01T00:00:00.000Z",
-    "description": "A cross-medium look at how prizes turn visibility into legitimacy across film, music, and science.",
+    "description": "Oscars vs Grammys vs Nobels: a cross-medium analysis of how award ceremonies turn visibility into legitimacy across film, music, and science.",
     "heroImage": "/images/content/articles/awards-prestige-economy-oscars-grammys-nobels/hero.png",
     "tags": [
       "humanities",
@@ -901,10 +901,10 @@
   },
   {
     "id": "christmas-songs",
-    "title": "Which Holiday Songs Never Leave the Charts?",
+    "title": "Christmas Music Chart History: Which Holiday Songs Never Leave the Charts?",
     "slug": "christmas-songs",
     "pubDate": "2026-06-15T00:00:00.000Z",
-    "description": "Decades of Christmas-song chart data identify the standards that return every season.",
+    "description": "Decades of Christmas music chart data identify the holiday standards that return every season—and the graph of their staying power.",
     "heroImage": "/images/content/articles/christmas-songs/hero.png",
     "tags": [
       "arts",
@@ -949,10 +949,10 @@
   },
   {
     "id": "cia-world-factbook",
-    "title": "How Population Scale Relates to Prosperity Across Countries",
+    "title": "CIA World Factbook Data: How Population Scale Relates to Prosperity Across Countries",
     "slug": "cia-world-factbook",
     "pubDate": "2026-06-15T00:00:00.000Z",
-    "description": "Factbook indicators compare nations on size and wealth—where scale and prosperity align or diverge.",
+    "description": "CIA World Factbook data indicators compare nations on size and wealth—where population scale and prosperity align or diverge.",
     "heroImage": "/images/content/articles/cia-world-factbook/hero.png",
     "tags": [
       "civics",
@@ -1286,10 +1286,10 @@
   },
   {
     "id": "cultural-exports-geoeconomics",
-    "title": "When Films, Music, and Games Become National Exports",
+    "title": "Cultural Export and Exportation: When Films, Music, and Games Become National Exports",
     "slug": "cultural-exports-geoeconomics",
     "pubDate": "2026-07-01T00:00:00.000Z",
-    "description": "A cultural-economics frame treats soft-power industries as export goods.",
+    "description": "Cultural export and exportation analyzed through a geoeconomic frame—how films, music, and games become measurable national export goods.",
     "heroImage": "/images/content/articles/cultural-exports-geoeconomics/hero.png",
     "tags": [
       "civics",
@@ -1520,10 +1520,10 @@
   },
   {
     "id": "fast-food-calories",
-    "title": "Which Fast-Food Chains Pack the Most Calories Per Item?",
+    "title": "Highest Calorie Fast Food Items: Which Chains Pack the Most Per Item?",
     "slug": "fast-food-calories",
     "pubDate": "2026-06-15T00:00:00.000Z",
-    "description": "Menu nutrition data identify the highest-calorie items across major chains.",
+    "description": "The highest calorie fast food items ranked: menu nutrition data identifies the most calorie-dense items across America’s major chains.",
     "heroImage": "/images/content/articles/fast-food-calories/hero.png",
     "tags": [
       "culture",
@@ -1617,10 +1617,10 @@
   },
   {
     "id": "giant-the-artometrics-of-a-san-francisco-dynasty",
-    "title": "The Giants’ Arc From New York Gothams to Oracle Park",
+    "title": "San Francisco Giants Dynasty: From New York Gothams to Three World Series Titles",
     "slug": "giant-the-artometrics-of-a-san-francisco-dynasty",
     "pubDate": "2026-04-18T00:00:00.000Z",
-    "description": "A franchise history from 1883 New York origins to a modern Bay Area ballclub.",
+    "description": "The San Francisco Giants dynasty from 1883 to the modern era—franchise history, World Series titles, and the data behind the dynasty.",
     "heroImage": "/images/content/articles/giant-the-artometrics-of-a-san-francisco-dynasty/hero.png",
     "tags": [
       "sports",
@@ -1666,10 +1666,10 @@
   },
   {
     "id": "global-life-expectancy",
-    "title": "How Human Life Expectancy Doubled in Five Centuries",
+    "title": "Life Expectancy Across Centuries: How Human Lifespans Doubled Since the 1500s",
     "slug": "global-life-expectancy",
     "pubDate": "2026-06-15T00:00:00.000Z",
-    "description": "Survival data from the 1500s to 2015 map who gained years of life—and who lagged.",
+    "description": "Life expectancy across centuries: survival data from the 1500s to 2015 maps who gained years of life—and which regions lagged.",
     "heroImage": "/images/content/articles/global-life-expectancy/hero.png",
     "tags": [
       "science",
@@ -1909,10 +1909,10 @@
   },
   {
     "id": "hurricanes-puerto-rico",
-    "title": "Which Storms Hit Puerto Rico Hardest?",
+    "title": "The Worst Hurricanes to Hit Puerto Rico: Wind, Deaths, and Damage Compared",
     "slug": "hurricanes-puerto-rico",
     "pubDate": "2026-06-15T00:00:00.000Z",
-    "description": "Hurricane records compare wind, deaths, and frequency for the island’s most damaging storms.",
+    "description": "The worst hurricanes in Puerto Rico ranked by wind speed, deaths, and damage— from historic storms to the devastating 2017 season.",
     "heroImage": "/images/content/articles/hurricanes-puerto-rico/hero.png",
     "tags": [
       "culture",
@@ -2527,10 +2527,10 @@
   },
   {
     "id": "national-park-visits",
-    "title": "Which National Parks Draw the Crowds?",
+    "title": "National Parks by Popularity — Which Ones Draw the Most Visitors?",
     "slug": "national-park-visits",
     "pubDate": "2026-06-15T00:00:00.000Z",
-    "description": "Visitation time series identify America’s busiest parks and how attendance has trended.",
+    "description": "National parks ranked by popularity: visitation data identifies America’s busiest parks and how attendance has trended since 1904.",
     "heroImage": "/images/content/articles/national-park-visits/hero.png",
     "tags": [
       "culture",
@@ -2918,10 +2918,10 @@
   },
   {
     "id": "pantheon-the-artometrics-of-collective-memory",
-    "title": "Who Gets Remembered in the Global Pantheon of Fame?",
+    "title": "The MIT Pantheon Dataset: Who Gets Remembered in the Global Pantheon of Fame?",
     "slug": "pantheon-the-artometrics-of-collective-memory",
     "pubDate": "2026-07-01T00:00:00.000Z",
-    "description": "Biography-scale fame data ask where collective memory clusters.",
+    "description": "The MIT Pantheon dataset at biography scale asks where collective memory clusters—and whose lives travel across languages and centuries.",
     "heroImage": "/images/content/articles/pantheon-the-artometrics-of-collective-memory/hero.png",
     "tags": [
       "humanities",

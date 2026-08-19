@@ -1,5 +1,4 @@
-import { useEffect } from "react";
-import { Platform } from "react-native";
+import Head from "expo-router/head";
 
 type Props = {
   title: string;
@@ -11,7 +10,7 @@ type Props = {
 
 const SITE = "https://artometrics.com";
 
-/** Best-effort document head updates for Expo web static export. */
+/** Server-rendered document head tags for Expo web static export. */
 export function PageSeo({
   title,
   description,
@@ -19,47 +18,29 @@ export function PageSeo({
   image = "/images/brand/og-default.png",
   type = "website",
 }: Props) {
-  useEffect(() => {
-    if (Platform.OS !== "web" || typeof document === "undefined") return;
-    const fullTitle = title.includes("Artometrics")
-      ? title
-      : `${title} · Artometrics`;
-    document.title = fullTitle;
+  const fullTitle = title.includes("Artometrics")
+    ? title
+    : `${title} · Artometrics`;
+  const desc = description ?? title;
+  const url = `${SITE}${path.startsWith("/") ? path : `/${path}`}`;
+  const img = image.startsWith("http") ? image : `${SITE}${image}`;
 
-    const ensure = (attr: "name" | "property", key: string, content: string) => {
-      let el = document.head.querySelector(`meta[${attr}="${key}"]`);
-      if (!el) {
-        el = document.createElement("meta");
-        el.setAttribute(attr, key);
-        document.head.appendChild(el);
-      }
-      el.setAttribute("content", content);
-    };
-
-    const url = `${SITE}${path.startsWith("/") ? path : `/${path}`}`;
-    const img = image.startsWith("http") ? image : `${SITE}${image}`;
-
-    ensure("name", "description", description ?? "");
-    ensure("property", "og:title", fullTitle);
-    ensure("property", "og:description", description ?? "");
-    ensure("property", "og:url", url);
-    ensure("property", "og:type", type);
-    ensure("property", "og:image", img);
-    ensure("property", "og:site_name", "Artometrics");
-    ensure("name", "twitter:card", "summary_large_image");
-    ensure("name", "twitter:site", "@artometrics");
-    ensure("name", "twitter:title", fullTitle);
-    ensure("name", "twitter:description", description ?? "");
-    ensure("name", "twitter:image", img);
-
-    let link = document.head.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
-    if (!link) {
-      link = document.createElement("link");
-      link.rel = "canonical";
-      document.head.appendChild(link);
-    }
-    link.href = url;
-  }, [title, description, path, image, type]);
-
-  return null;
+  return (
+    <Head>
+      <title>{fullTitle}</title>
+      <meta name="description" content={desc} />
+      <link rel="canonical" href={url} />
+      <meta property="og:title" content={fullTitle} />
+      <meta property="og:description" content={desc} />
+      <meta property="og:url" content={url} />
+      <meta property="og:type" content={type} />
+      <meta property="og:image" content={img} />
+      <meta property="og:site_name" content="Artometrics" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@artometrics" />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={desc} />
+      <meta name="twitter:image" content={img} />
+    </Head>
+  );
 }

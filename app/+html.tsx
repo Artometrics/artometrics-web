@@ -12,20 +12,8 @@ export default function Root({ children }: PropsWithChildren) {
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta
-          name="description"
-          content="Artometrics — data reports on culture, power, and the creative economy"
-        />
         <meta property="og:site_name" content="Artometrics" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Artometrics" />
-        <meta
-          property="og:description"
-          content="Data-science magazine for the creative industries and culture."
-        />
         <meta property="og:image" content="https://artometrics.com/images/brand/og-default.png" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@artometrics" />
         <link rel="alternate" type="application/rss+xml" title="Artometrics Reports" href="/rss.xml" />
         <link rel="alternate" type="application/rss+xml" title="Artometrics Podcast" href="/podcast.xml" />
         <link rel="alternate" type="text/plain" title="llms.txt" href="/llms.txt" />

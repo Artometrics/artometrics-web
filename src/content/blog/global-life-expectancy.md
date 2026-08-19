@@ -1,11 +1,11 @@
 ---
-title: How Human Life Expectancy Doubled in Five Centuries
+title: 'Life Expectancy Across Centuries: How Human Lifespans Doubled Since the 1500s'
 slug: global-life-expectancy
 author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
 description: >-
-  Survival data from the 1500s to 2015 map who gained years of life—and who
-  lagged.
+  Life expectancy across centuries: survival data from the 1500s to 2015 maps
+  who gained years of life—and which regions lagged.
 heroImage: /images/content/articles/global-life-expectancy/hero.png
 draft: false
 tags:

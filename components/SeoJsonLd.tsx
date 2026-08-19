@@ -1,33 +1,23 @@
-import { Platform } from "react-native";
-import { useEffect } from "react";
+import Head from "expo-router/head";
 
 type Props = {
   data: Record<string, unknown> | Record<string, unknown>[];
 };
 
-/** Inject JSON-LD on web for AEO/SEO. No-op on native. */
+/** Server-rendered JSON-LD structured data for AEO/SEO. */
 export function SeoJsonLd({ data }: Props) {
-  useEffect(() => {
-    if (Platform.OS !== "web" || typeof document === "undefined") return;
-    const items = Array.isArray(data) ? data : [data];
-    const nodes: HTMLScriptElement[] = [];
-    items.forEach((item, i) => {
-      const id = `artometrics-jsonld-${String(item["@type"] || "Thing")}-${i}`;
-      let el = document.getElementById(id) as HTMLScriptElement | null;
-      if (!el) {
-        el = document.createElement("script");
-        el.type = "application/ld+json";
-        el.id = id;
-        document.head.appendChild(el);
-      }
-      el.text = JSON.stringify(item);
-      nodes.push(el);
-    });
-    return () => {
-      nodes.forEach((el) => el.remove());
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [JSON.stringify(data)]);
-
-  return null;
+  const items = Array.isArray(data) ? data : [data];
+  return (
+    <Head>
+      {items.map((item, i) => (
+        <script
+          key={`jsonld-${String(item["@type"] ?? "Thing")}-${i}`}
+          type="application/ld+json"
+          // react-helmet-async uses `innerHTML` (not dangerouslySetInnerHTML) for script content
+          // eslint-disable-next-line react/no-danger
+          {...{ innerHTML: JSON.stringify(item) }}
+        />
+      ))}
+    </Head>
+  );
 }

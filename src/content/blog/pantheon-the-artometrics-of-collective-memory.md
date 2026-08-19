@@ -1,9 +1,9 @@
 ---
-title: Who Gets Remembered in the Global Pantheon of Fame?
+title: 'The MIT Pantheon Dataset: Who Gets Remembered in the Global Pantheon of Fame?'
 slug: pantheon-the-artometrics-of-collective-memory
 author: kyle-mcauliffe
 pubDate: 2026-07-01T00:00:00.000Z
-description: Biography-scale fame data ask where collective memory clusters.
+description: The MIT Pantheon dataset at biography scale asks where collective memory clusters—and whose lives travel across languages and centuries.
 heroImage: >-
   /images/content/articles/pantheon-the-artometrics-of-collective-memory/hero.png
 draft: false

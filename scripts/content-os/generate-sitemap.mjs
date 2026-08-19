@@ -62,9 +62,15 @@ const staticPaths = [
   "/get-app",
 ];
 
+/** Strip trailing slash from path (except root "/") for canonical URLs. */
+function canonPath(path) {
+  return path === "/" ? "/" : path.replace(/\/$/, "");
+}
+
 function url(path, lastmod, priority = "0.6") {
+  const loc = `${SITE}${canonPath(path)}`;
   return `  <url>
-    <loc>${SITE}${path}</loc>
+    <loc>${loc}</loc>
     ${lastmod ? `<lastmod>${lastmod.slice(0, 10)}</lastmod>` : ""}
     <priority>${priority}</priority>
   </url>`;
@@ -74,7 +80,7 @@ const parts = [
   `<?xml version="1.0" encoding="UTF-8"?>`,
   `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`,
   ...staticPaths.map((p) => url(p, null, p === "/" ? "1.0" : "0.7")),
-  ...blog.map((p) => url(`/${p.slug}`, p.pubDate, "0.8")),
+  ...blog.map((p) => url(`/${p.slug.replace(/\/$/, "")}`, p.pubDate, "0.8")),
   ...podcast.map((e) => url(`/podcast/interviews/${e.id}`, e.pubDate, "0.6")),
   ...authors.map((a) => url(`/authors/${a.id}`, null, "0.4")),
   ...legal.map((l) => url(`/legal/${l.id}`, l.pubDate, "0.3")),

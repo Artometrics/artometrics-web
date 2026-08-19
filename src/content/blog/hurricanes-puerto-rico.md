@@ -1,11 +1,11 @@
 ---
-title: Which Storms Hit Puerto Rico Hardest?
+title: 'The Worst Hurricanes to Hit Puerto Rico: Wind, Deaths, and Damage Compared'
 slug: hurricanes-puerto-rico
 author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
 description: >-
-  Hurricane records compare wind, deaths, and frequency for the island’s most
-  damaging storms.
+  The worst hurricanes in Puerto Rico ranked by wind speed, deaths, and damage—
+  from historic storms to the devastating 2017 season.
 heroImage: /images/content/articles/hurricanes-puerto-rico/hero.png
 draft: false
 tags:

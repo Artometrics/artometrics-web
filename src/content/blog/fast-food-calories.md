@@ -1,9 +1,11 @@
 ---
-title: Which Fast-Food Chains Pack the Most Calories Per Item?
+title: 'Highest Calorie Fast Food Items: Which Chains Pack the Most Per Item?'
 slug: fast-food-calories
 author: kyle-mcauliffe
 pubDate: 2026-06-15T00:00:00.000Z
-description: Menu nutrition data identify the highest-calorie items across major chains.
+description: >-
+  The highest calorie fast food items ranked: menu nutrition data identifies
+  the most calorie-dense items across America’s major chains.
 heroImage: /images/content/articles/fast-food-calories/hero.png
 draft: false
 tags:

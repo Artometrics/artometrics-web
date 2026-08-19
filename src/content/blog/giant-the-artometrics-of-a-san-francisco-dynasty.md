@@ -1,9 +1,9 @@
 ---
-title: The Giants’ Arc From New York Gothams to Oracle Park
+title: 'San Francisco Giants Dynasty: From New York Gothams to Three World Series Titles'
 slug: giant-the-artometrics-of-a-san-francisco-dynasty
 author: kyle-mcauliffe
 pubDate: 2026-04-18T00:00:00.000Z
-description: A franchise history from 1883 New York origins to a modern Bay Area ballclub.
+description: The San Francisco Giants dynasty from 1883 to the modern era—franchise history, World Series titles, and the data behind the dynasty.
 heroImage: >-
   /images/content/articles/giant-the-artometrics-of-a-san-francisco-dynasty/hero.png
 draft: false
