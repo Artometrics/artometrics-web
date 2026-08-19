@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Platform, Pressable, Text, View } from "react-native";
 import { Link } from "expo-router";
-import { loadGoogleAnalytics } from "@/lib/analytics/ga";
+import { trackPageView } from "@/lib/analytics/ga";
 
 const KEY = "artometrics-cookie-pref";
 
@@ -25,9 +25,9 @@ export function CookieBanner() {
       /* ignore */
     }
     setVisible(false);
-    loadGoogleAnalytics();
     if (Platform.OS === "web" && typeof window !== "undefined") {
       window.dispatchEvent(new Event("artometrics-consent"));
+      trackPageView(window.location.pathname, document.title);
     }
   }
 
