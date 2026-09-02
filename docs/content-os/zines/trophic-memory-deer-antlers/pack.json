@@ -1,0 +1,33 @@
+{
+  "slug": "trophic-memory-deer-antlers",
+  "desk": "science",
+  "subdomain": "biology",
+  "primaryKeyword": "deer antler trophic memory",
+  "hashtags": "#deer #science #hunting #Artometrics #ScienceDesk #trophicmemory #morphogenesis #regeneration",
+  "slides": 0,
+  "canonical": "https://artometrics.com/trophic-memory-deer-antlers",
+  "status": "short-form-only",
+  "files": [
+    "tiktok-script.md",
+    "caption.txt",
+    "source-transcript.md",
+    "banner-prompt.txt"
+  ],
+  "notes": "Short-form pack from Levin talk clip. Full report + Kruger carousel pending scaffold/publish once draft HTML lands.",
+  "canva": {
+    "jobId": "4ff27f89-ff0a-4354-a09f-4c84f6b30aff",
+    "savedDesignId": "DAHSJp96s4U",
+    "editUrl": "https://www.canva.com/d/Pv74_nxfYgnTnBc",
+    "viewUrl": "https://www.canva.com/d/lqE6YVhnnCtYV61",
+    "candidates": [
+      "https://www.canva.com/d/DxvsK9gZMrgk_AG",
+      "https://www.canva.com/d/jU-MYMf_32ZCqGm",
+      "https://www.canva.com/d/-nu--6C6NolkSFb",
+      "https://www.canva.com/d/nc3ol7A001V88E-"
+    ]
+  },
+  "higgsfield": {
+    "status": "blocked",
+    "reason": "Higgsfield MCP session expired in Cloud Agent; re-auth in Cursor desktop, then run banner-prompt.txt with nano_banana_pro 16:9"
+  }
+}

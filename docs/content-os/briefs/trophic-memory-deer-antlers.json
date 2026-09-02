@@ -1,0 +1,104 @@
+{
+  "slug": "trophic-memory-deer-antlers",
+  "desk": "science",
+  "subdomain": "biology",
+  "title": "Trophic Memory: How Damage Sticks to Deer Antlers",
+  "workingTitle": "How Damage Sticks to Deer Antlers",
+  "primaryKeyword": "deer antler trophic memory",
+  "secondaryKeywords": [
+    "trophic memory deer antlers",
+    "Michael Levin morphogenesis memory",
+    "Bubenik antler regeneration",
+    "ectopic antler branch injury",
+    "pattern memory regeneration biology"
+  ],
+  "searchIntent": "informational",
+  "audience": "Readers who want regenerative biology explained with named experiments, not vibes — hunters, biologists, and anyone tracking bioelectric pattern memory.",
+  "metaDescription": "Damage a deer antler, shed the rack, and next year an ectopic branch returns at the same spot. How trophic memory forces morphogenesis beyond gene-regulatory models.",
+  "angle": "Treat the Bubenik antler series as a rare multi-year dataset on non-local pattern memory: location of injury → scalp/growth-plate storage → imprint on next year's bone decisions. Use Levin's CT-scanned inheritance of the collection as the irreproducible archive.",
+  "dataSources": [
+    {
+      "name": "Levin — Trophic memory, deer, and a truly unique scientific object",
+      "url": "https://thoughtforms.life/trophic-memory-deer-and-a-truly-unique-scientific-object/",
+      "notes": "Primary narrative source: Bubenik discovery, 13-box antler transfer (2005 era contact; George A. Bubenik, Guelph), Tufts vet-school CT scans, growth rate 1–1.5 cm/day."
+    },
+    {
+      "name": "Bubenik & Pavlansky 1965 / Bubenik 1990 (trophic memory)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3413735/",
+      "notes": "Cited in Levin morphogenetic-fields review: injury mapped to subsequent ectopic tines; memory lasts years then fades."
+    },
+    {
+      "name": "Levin — The bioelectric code (BioSystems)",
+      "url": "https://oshercenter.org/files/2020/01/Bioelectric-code-review-in-BioSystems.pdf",
+      "notes": "Frames scalp growth-plate spatial memory across months and distance; contrasts molecular-pathway arrow models with target-morphology set-points."
+    },
+    {
+      "name": "Karns & Ditchkoff — Trauma-induced malformed antler development (WSB)",
+      "url": "https://doi.org/10.1002/wsb.353",
+      "notes": "Field confirmation language: velvet injuries often 'remembered' in later sets; abnormality progressively forgotten."
+    }
+  ],
+  "sectionPlan": [
+    {
+      "id": "phenomenon",
+      "title": "THE PHENOMENON",
+      "question": "What exactly returns after the rack is shed?",
+      "keyword": "deer antler trophic memory"
+    },
+    {
+      "id": "storage",
+      "title": "WHERE CAN THE MEMORY LIVE?",
+      "question": "If the damaged bone is gone, where is the spatial address stored?",
+      "keyword": "antler growth plate pattern memory"
+    },
+    {
+      "id": "archive",
+      "title": "THE IRREPRODUCIBLE ARCHIVE",
+      "question": "Why can't this experiment be funded again at scale?",
+      "keyword": "Bubenik deer antler collection Levin"
+    },
+    {
+      "id": "models",
+      "title": "WHY STANDARD TOOLS FAIL",
+      "question": "What do gene-regulatory / local-gradient models miss that a target-morphology memory explains?",
+      "keyword": "morphogenesis pattern memory regeneration"
+    },
+    {
+      "id": "bridge",
+      "title": "FROM ANTLERS TO PLANARIA",
+      "question": "How did Levin turn trophic memory into a tractable rewrite of anatomical set-points?",
+      "keyword": "Michael Levin planaria bioelectric memory"
+    }
+  ],
+  "banner": {
+    "mood": "Documentary science still — cold natural light, bone and velvet texture, cream/black with one crimson accent rule",
+    "subjects": "Shed antler rack on a lab table or CT bay; labeled tags; no logos; no charts burned into the image",
+    "avoid": "Hunting-trophy glamour, purple gradients, collage stickers, cartoon deer, text overlays"
+  },
+  "distribution": {
+    "linkedinHook": "Injure a specific point on a deer antler. It heals. The whole rack falls off. Next year: an ectopic branch at the same address. The memory cannot live in the bone that left.",
+    "shortFact": "Adult deer regenerate antler bone, vessels, nerves, and velvet at ~1–1.5 cm/day — and can store injury location across years of shed racks (trophic memory).",
+    "youtubeTitle": "How damage 'sticks' to deer antlers year after year",
+    "buffer": true,
+    "slackNotify": true,
+    "slackChannel": "#editorial"
+  },
+  "channels": {
+    "buffer": true,
+    "slack": true,
+    "newsletter": true
+  },
+  "relatedSlugs": [
+    "how-art-made-science"
+  ],
+  "status": "brief",
+  "kind": "science-report",
+  "sourceClip": {
+    "title": "How damage 'sticks' to deer antlers year after year",
+    "speaker": "Michael Levin",
+    "hashtags": ["deer", "science", "hunting"],
+    "notes": "User-supplied talk transcript; verified against thoughtforms.life trophic-memory post (Bubenik boxes, CT scans, non-local storage argument)."
+  },
+  "createdAt": "2026-08-13",
+  "updatedAt": "2026-08-13"
+}
