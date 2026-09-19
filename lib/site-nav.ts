@@ -10,13 +10,8 @@ function norm(path: string) {
   return path.replace(/\/$/, "") || "/";
 }
 
-/** Minimal public nav — categories only (+ home). */
+/** Logo → home. No separate Home link. */
 export const SITE_PRIMARY_NAV: SiteNavItem[] = [
-  {
-    href: "/",
-    label: "Home",
-    isActive: (pathname) => norm(pathname) === "/",
-  },
   ...DOMAIN_SLUGS.map((slug) => ({
     href: `/topics/${slug}`,
     label: DOMAIN_META[slug].title.toUpperCase(),

@@ -1,7 +1,6 @@
-import { Text, View } from "react-native";
+import { Pressable, Text, View } from "react-native";
 import { Link, useLocalSearchParams } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
-import { MagazineCard } from "@/components/MagazineCard";
 import { PageSeo } from "@/components/PageSeo";
 import {
   DOMAIN_META,
@@ -43,10 +42,10 @@ export default function TopicChannelPage() {
 
   if (!meta || !mapped) {
     return (
-      <Wrapper className="gap-3 py-10">
+      <Wrapper variant="narrow" className="gap-3 py-10">
         <Text className="text-fg">Section not found</Text>
-        <Link href="/topics">
-          <Text className="text-accent">All sections</Text>
+        <Link href="/">
+          <Text className="text-muted">← Front page</Text>
         </Link>
       </Wrapper>
     );
@@ -55,24 +54,20 @@ export default function TopicChannelPage() {
   const posts = getBlogPosts().filter((p) => primarySection(p.tags) === mapped);
 
   return (
-    <Wrapper variant="magazine" className="gap-3 py-10">
+    <Wrapper variant="standard" className="gap-0 py-8 md:py-10">
       <PageSeo title={meta.title} description={meta.description} path={`/topics/${mapped}`} />
-      <Text className="text-xs font-bold tracking-[1.2px] uppercase text-subtle">View all</Text>
-      <Text className="font-sans text-[40px] font-extrabold tracking-tight text-fg">
-        {meta.title}
-      </Text>
-      <Text className="font-serif text-[17px] leading-[26px] max-w-[640px] text-muted">
-        {meta.description}
-      </Text>
-      <View className="h-px my-2 bg-border" />
       {posts.length === 0 ? (
-        <Text className="font-serif text-base text-muted">More stories coming soon.</Text>
+        <Text className="font-sans text-[15px] text-muted">More stories coming soon.</Text>
       ) : (
-        <View className="flex-row flex-wrap gap-5 mt-2">
+        <View className="gap-0 border-t border-border">
           {posts.map((post) => (
-            <View key={post.slug} className="flex-[1] min-w-[220px] max-w-[320px]">
-              <MagazineCard post={post} variant="portrait" />
-            </View>
+            <Link key={post.slug} href={`/${post.slug}` as `/`} asChild>
+              <Pressable className="border-b border-border py-4">
+                <Text className="font-serif text-[17px] leading-[1.3] text-fg">
+                  {post.title}
+                </Text>
+              </Pressable>
+            </Link>
           ))}
         </View>
       )}

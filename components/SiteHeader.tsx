@@ -47,7 +47,7 @@ export function SiteHeader() {
                     <Text
                       className={[
                         "font-sans text-[10px] font-semibold uppercase tracking-[2.2px]",
-                        active ? "text-fg" : "text-muted",
+                        active ? "text-fg underline" : "text-muted",
                       ].join(" ")}
                     >
                       {item.label}

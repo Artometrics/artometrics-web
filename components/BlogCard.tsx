@@ -47,7 +47,7 @@ export function BlogCard({
           )}
           <View className="min-w-0 flex-1 gap-1">
             {label ? (
-              <Text className="font-sans text-[10px] font-bold uppercase tracking-[1.6px] text-accent">
+              <Text className="font-sans text-[10px] font-bold uppercase tracking-[1.6px] text-muted">
                 {label}
               </Text>
             ) : null}
@@ -112,7 +112,7 @@ export function BlogCard({
           )}
           <View className="gap-2 p-3">
             {label ? (
-              <Text className="font-sans text-[10px] font-bold uppercase tracking-[1.6px] text-accent">
+              <Text className="font-sans text-[10px] font-bold uppercase tracking-[1.6px] text-muted">
                 {label}
               </Text>
             ) : null}
