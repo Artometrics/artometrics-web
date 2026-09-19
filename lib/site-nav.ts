@@ -7,10 +7,10 @@ export type SiteNavItem = {
 };
 
 function norm(path: string) {
-  const p = path.replace(/\/$/, "") || "/";
-  return p;
+  return path.replace(/\/$/, "") || "/";
 }
 
+/** Minimal public nav — categories only (+ home). */
 export const SITE_PRIMARY_NAV: SiteNavItem[] = [
   {
     href: "/",
@@ -24,26 +24,9 @@ export const SITE_PRIMARY_NAV: SiteNavItem[] = [
   })),
   {
     href: "/blog",
-    label: "Reports",
+    label: "Index",
     isActive: (pathname) => norm(pathname) === "/blog",
-  },
-  {
-    href: "/podcast",
-    label: "Podcast",
-    isActive: (pathname) => norm(pathname).startsWith("/podcast"),
-  },
-  {
-    href: "/studio",
-    label: "Studio",
-    isActive: (pathname) =>
-      norm(pathname).startsWith("/studio") || norm(pathname).startsWith("/tools"),
   },
 ];
 
-export const SITE_OVERLAY_EXTRA: { href: string; label: string }[] = [
-  { href: "/about", label: "About" },
-  { href: "/editions", label: "Editions" },
-  { href: "/pricing", label: "Membership" },
-  { href: "/settings", label: "Settings" },
-  { href: "/contact", label: "Contact" },
-];
+export const SITE_OVERLAY_EXTRA: { href: string; label: string }[] = [];

@@ -12,9 +12,7 @@ import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteNavOverlay } from "@/components/SiteNavOverlay";
-import { Grain } from "@/components/Grain";
 import { Analytics } from "@/components/Analytics";
-import { CookieBanner } from "@/components/CookieBanner";
 import { ChromeProvider, useChrome } from "@/lib/chrome";
 import { ThemeProvider, useTheme } from "@/lib/theme";
 import { trackPageView } from "@/lib/analytics/ga";
@@ -68,9 +66,7 @@ function SiteChrome() {
           {bareChrome ? null : <SiteFooter />}
         </ScrollView>
         {bareChrome ? null : <SiteNavOverlay />}
-        {bareChrome ? null : <Grain />}
         <Analytics />
-        {bareChrome ? null : <CookieBanner />}
       </View>
     </SafeAreaView>
   );
