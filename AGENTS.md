@@ -31,7 +31,7 @@ From `package.json` and `app.json`:
 | Brand tokens | `constants/Colors.ts` | Accent red + base neutrals |
 | Content (source) | `src/content/` | Markdown/MDX per collection |
 | Content (built) | `src/generated/` | JSON consumed by the app |
-| Article homes | `articles/` | Monorepo gold reports (e.g. `articles/readmitted/`) — data, Quarto, charts |
+| Article homes | `articles/<slug>/` | Rainfall-style Quarto monorepo — one folder per report (`_quarto.yml`, `.qmd`, `data/`, `charts/`); gold prototype `articles/readmitted/` |
 | Scripts | `scripts/` | Content build, GitHub article sync, READMITTED render/sync |
 | Styles (articles) | `public/css/artometrics-article.css` | Quarto/article chrome |
 | Public assets | `public/` | Images, audios, chart JSON, fonts |
@@ -107,7 +107,13 @@ Vision / phases: `docs/00_ARTOMETRICS_MASTER_VISION.md`, `docs/01_BUILD_PHASES_A
 | `npm start` | Expo CLI |
 | `npm run build` | Static web export → `dist/` |
 | `npm run sync:articles` | Sync Quarto repos → blog markdown + chart assets (legacy path) |
-| `npm run sync:readmitted` | Copy `articles/readmitted/` charts + data → `public/` |
+| `npm run materialize:articles` | Create/update all `articles/<slug>/` from blog + public assets |
+| `npm run articles:html-to-qmd` | Bulk-convert blog HTML bodies → Quarto `.qmd` (skips Tier A unless `--force`) |
+| `npm run link:article-assets` | Symlink `assets/`, copy `styles/report.css` into each article folder |
+| `npm run render:articles` | `Rscript articles/R/render_all.R` — render every `_quarto.yml` project |
+| `npm run sync:article -- --slug …` | Copy one article home → `public/` |
+| `npm run sync:readmitted` | Wrapper: `sync:article --slug readmitted` |
+| `npm run calendar:content` | Regenerate `docs/content-os/content-calendar.csv` (Friday release schedule) |
 | `npm run render:readmitted` | R export PNG + Plotly JSON for READMITTED |
 | `npm run render:readmitted:py` | Python fallback chart export (debug only) |
 | `npm run cos:pdf -- --slug …` | Article PDF → `public/exports/` |
@@ -118,7 +124,7 @@ Full stack recipe: `docs/FULL_STACK_RECIPE.md`. Backend hookup: `docs/BACKEND_HO
 
 ## Article pipeline (monorepo gold → app)
 
-**READMITTED** is the locked gold prototype. Analysis assets live under `articles/readmitted/` (bundled CSVs, Quarto, R chart outputs, hero). Render with `npm run render:readmitted`, sync with `npm run sync:readmitted`, publish body in `src/content/blog/readmitted.md`.
+**Article monorepo:** Every report has a Quarto home at `articles/<slug>/` (see [`articles/README.md`](articles/README.md)). **READMITTED** is the Tier A gold prototype (`articles/readmitted/`). Render charts with `npm run render:readmitted -- --render` or R scripts; sync assets with `npm run sync:article -- --slug …`; site body stays in `src/content/blog/<slug>.md`. Friday release order: [`docs/content-os/content-calendar.csv`](docs/content-os/content-calendar.csv).
 
 Older reports may still use singular repos under [Artometrics](https://github.com/Artometrics) and `scripts/sync-github-articles.mjs` until migrated. Run `npm run content` after syncing so the Expo app picks up new posts.
 

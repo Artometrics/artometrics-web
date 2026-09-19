@@ -1,0 +1,119 @@
+---
+title: "Beyoncé and the Cost of Controlling the House"
+description: "A Psychonomics profile of Beyoncé — Hermann Leadership Trait Analysis, Parkwood as institutionalized self, Lemonade’s canon economics, and an 8,000-line lyric machine."
+author: kyle-mcauliffe
+date: "2026-07-28"
+format:
+  html:
+    css: styles/report.css
+    toc: true
+    toc-depth: 2
+execute:
+  echo: false
+  warning: false
+---
+
+
+> **TL;DR** Economics asks how the house is managed. Psychonomics asks who is managing the soul of the house — and what that inner architecture costs. Julius Caesar was the founding case: the self as institution via patronage, felled by the men he trusted. Beyoncé is the contemporary entertainment case: the self as firm. She externalizes authorship into Parkwood, scores near-ceiling on task orientation and belief in control, and runs an affiliation-dense lyric machine while keeping governance tightly held.
+
+Economics comes from the Greek oikonomia — the management of the house. Psychonomics asks the prior question: who is managing the soul of the house, and what does their inner architecture cost everyone living inside it? The founding Artometrics case was Julius Caesar: a leader who treated the self as the institution, extended trust freely, and was removed by the highest-centrality nodes in his own patronage graph.
+
+Beyoncé Knowles-Carter is the entertainment-industry case for the same method. Born in 1981, solo debut album year 2003 in the Artometrics Rolling Stone file, she is not a head of state. She is a head of catalog — and of Parkwood Entertainment, the firm that makes authorship itself the load-bearing wall. The psychonomic claim of this report is specific: where Caesar’s theory was magnanimous personal power without redundancy, Beyoncé’s theory is owned control of the creative house, paired with an affiliation-dense public voice and a spectacle-heavy measurable catalog.
+
+## Research question {#research-question}
+
+If we score Beyoncé with the same Leadership Trait Analysis scaffold used for Caesar, and place those scores beside album-canon economics, a control network, and the Artometrics lyric extract, what theory of power does the profile encode — and what does it cost?
+
+## Fast facts {#fast-facts}
+
+The numbers that set the scale for this report:
+
+- **0.91** — Task Orientation (T) — expert-coded LTA high point
+
+  0.88Belief in Ability to Control Events (B)
+  #32Lemonade on Rolling Stone 500 (2020 list)
+  186Billboard weeks — 2013 self-titled album
+  8,000Lyric lines in Artometrics Beyoncé extract
+  543 vs 5Tokens: “love” vs “power” in that extract
+
+## Data and method {#dataset-context}
+
+This report applies Margaret Hermann’s Leadership Trait Analysis (LTA) framework — seven variables scored 0–1.0 against a world-leader reference baseline: Belief in ability to control events (B), Conceptual complexity (CC), Distrust of others (D), In-group bias (IB), Need for power (P), Need for affiliation (A), and Task orientation (T). The Caesar Psychonomics report used the same scaffold. Comparative baseline values match that file’s Hermann reference average.
+
+Beyoncé’s LTA scores are expert-coded for this series from: (1) public interviews and acceptance speeches; (2) documented firm practices around Parkwood and surprise-album strategy; (3) Homecoming-era work-process evidence in the Artometrics Netflix/Emmy rows; and (4) lyric-performance proxies from the 8,000-line extract. They are not automated NLP scores and not intelligence-community validated assessments. They are Psychonomics profiles: transparent expert coding with stated bias risk.
+
+Observed Artometrics tables: lyric extract (`beyonce-taylor-lyrics`), Rolling Stone albums file (Lemonade; self-titled), Emmy awards rows and Netflix title row for HOMECOMING: A film by Beyoncé. Derived for this report: LTA coding table, qualitative control network, lexicon and catalog-composition charts. Supporting CSVs ship under /data/articles/beyonce-the-psychonomics-of-control/.
+
+## Leadership Trait Analysis {#leadership-trait-analysis}
+
+### High control and task, mid-high distrust, elevated affiliation — not Caesar’s shape
+
+Beyoncé’s coded profile spikes on Task Orientation (T = 0.91) and Belief in Ability to Control Events (B = 0.88), with Need for Power (P = 0.86) and Conceptual Complexity (CC = 0.82) also well above the world-leader baseline. In-group bias (IB = 0.78) and Need for Affiliation (A = 0.74) sit high. Distrust of others (D = 0.62) is above baseline (0.48) — the opposite direction from Caesar’s D = 0.31.
+
+That asymmetry is the psychonomic argument. Caesar’s dangerous triangle was ceiling power + floor distrust: convert everyone, absorb the Republic into the self, die by the inner ring. Beyoncé’s triangle is ceiling task/control + mid-high distrust + high affiliation: speak in “we,” build a fandom institution, but do not outsource authorship governance to rivals you have pardoned into the center. The public voice is warm; the firm boundary is cold.
+
+Power here is not primarily the language of the lyric tokens — “power” appears only five times in the extract — it is the right to decide what the house releases, when, and under whose name. Surprise drops and visual-album framing are behavioral B and T: the schedule is an instrument of control, not a concession to the industry calendar.
+
+## The economic fingerprint {#the-economic-fingerprint}
+
+### Self-titled wins time-on-chart; Lemonade wins the canon list
+
+The Artometrics Rolling Stone albums file carries two Beyoncé studio albums on the 2020 RS500 list. The 2013 self-titled album: Billboard peak #1, 186 weeks on chart, Spotify popularity 75, RS rank #81, artist age-at-list ~32. Lemonade (2016): peak #1, 87 weeks, Spotify popularity 73, RS rank #32, age-at-list ~35. Debut album year in that file: 2003.
+
+This is the entertainment analogue of Caesar’s GDP paradox, inverted in time scale. Commercial endurance (self-titled’s years on chart) and canon elevation (Lemonade’s leap up the RS list) are not the same dependent variable. Psychonomics cares about both: one measures how long the market held the object; the other measures how the critical house re-ranked authorship after the visual-album claim. Lemonade is the album where the soul of the house became hardest to separate from the political and personal narrative it staged — and the canon file rewarded that fusion.
+
+Later reinvention eras (Renaissance, Cowboy Carter) matter for the fame-path thesis in the MusicBrainz report — artists who become eras rather than moments — but they are not yet rows in the RS500 extract. They are timeline context, labeled as such.
+
+## The control network {#the-control-network}
+
+### Parkwood is the institutionalized self
+
+Caesar’s patronage chart had every edge terminating on a person. Beyoncé’s chart has a second center of gravity: Parkwood Entertainment — the firm that converts personal authorship into an institution that can sign, stage, and film without surrendering the name. Family (JAY-Z, Blue Ivy), formative group (Destiny’s Child circle), major-label distribution, live spectacle (Coachella → Homecoming), feature peers, and the Beyhive all connect — but governance weight sits on the Parkwood edge.
+
+Artometrics’ Emmy file shows the auteur extension: Homecoming: A Film By Beyoncé carries nominee credit rows for Beyoncé Knowles-Carter across directing, writing, music direction, and executive producer / performer categories (2019), with Parkwood and Netflix in the distributor/producer fields. That is not “celebrity appears in credits.” That is the network claiming multiple authorship roles at once — B and T made bureaucratic.
+
+The failure mode, if there is one, is different from Caesar’s. It is not three pardoned senators with knives. It is concentration risk: when the firm and the person are coextensive, reputational or capacity shocks hit the whole house. Mid-high distrust (D = 0.62) is the wall that keeps rival nodes out of that core. High affiliation (A = 0.74) is how the outer ring stays emotionally enrolled while remaining structurally peripheral to governance.
+
+## The affiliation machine {#the-affiliation-machine}
+
+### The lyric extract speaks “love” and “baby,” not “power”
+
+The packaged Artometrics extract holds 8,000 lyric lines across 139 song entities (~61.8k tokens, ~3,150 types). Top content signals are relational and imperative: love 543, baby 457, boy 283, girl 239, night 104. Identity/place markers appear at lower but non-trivial rates (black 59, texas 18). Abstract power language is scarce (power 5, queen 9).
+
+This is where LTA’s Need for Affiliation becomes audible without becoming the governance story. The songs recruit; the firm rules. Repeated lines in the extract are hook/choreography loops — refrain engineering — consistent with task orientation applied to bodies in a room, not with treatise-like power vocabulary. Psychonomics reads that split as intentional architecture, not contradiction.
+
+## Spectacle density {#spectacle-density}
+
+### Features, live cuts, and remixes thicken the measurable catalog
+
+Among 139 song entities in the extract: 35 carry Ft. credits, 35 are live/awards/“Experience”-type performance documents, 19 are remixes, and 64 fall outside those flags. Top line-count entities include VMA performance text and a Destiny’s Child medley — long spectacle documents, not three-minute singles. Collaboration titles skew toward JAY-Z, with additional peers (Kanye West, Pharrell Williams, Nicki Minaj, and others) as catalog edges rather than co-governors.
+
+For Psychonomics, spectacle density is evidence of T and B under live conditions: the house is managed by someone who treats the stage as a controllable system (Homecoming’s whole point) and treats the catalog as expandable through remix and feature economies without surrendering the center.
+
+## Limitations {#limitations}
+
+LTA was built for political leaders with large spontaneous-speech corpora. Extending it to a living entertainer requires caveats: public interviews are media-trained; lyrics are aesthetic objects; artist statements are strategic. Scores may overstate Task Orientation (work ethic is part of the brand) and understate private distrust. They should be read as the signature projected and institutionally enacted — which is what Psychonomics asks for — not as a full inner life.
+
+The lyric file is an extract, not a complete discography. The published comparison article elsewhere on the site cites a larger merged Beyoncé–Taylor table; the downloadable Artometrics CSV used here is the 8,000-row Beyoncé-only pack. Rolling Stone rows cover two albums on one list year. Emmy/Netflix evidence is Homecoming-centered. The control network is qualitative, in the same methodological family as the Caesar patronage chart — documented roles, not a scraped graph. Renaissance and Cowboy Carter are narrative era markers pending richer quantitative tables.
+
+## Conclusion {#conclusion}
+
+Beyoncé’s Psychonomics profile is a high-control, high-task, affiliation-forward leadership shape with Parkwood as the institutionalized self. The economic fingerprint splits commercial longevity (self-titled’s 186 Billboard weeks) from canon elevation (Lemonade at RS #32). The lyric machine sells belonging; the firm keeps the keys. Compared with Caesar, the innovation is structural: distrust is high enough to keep knives out of the inner ring, and the house is built to be owned, not merely personally held.
+
+Economics can track streams and chart weeks. Psychonomics asks who is managing the soul of the house — and what it costs. For Beyoncé, the cost of control is vigilance and concentration; the return is authorship that still has her name on the door when the era changes.
+
+## References {#references}
+
+Hermann, M.G. (1999). Assessing Leadership Style: A Trait Analysis. Social Science Automation.
+Artometrics. (2026). Julius Caesar and the Cost of Managing Power — Psychonomics method template. artometrics.com/caesar-the-psychonomics-of-emperor-julius
+Artometrics. (2026). Beyoncé and Taylor Swift, Line by Line — lyric extract. artometrics.com/beyonce-taylor-lyrics
+Artometrics Rolling Stone albums dataset — Lemonade (2016) and Beyoncé (2013) rows.
+Artometrics Emmy awards + Netflix titles datasets — HOMECOMING: A film by Beyoncé.
+Artometrics. (2026). MusicBrainz pop fame mechanics — era-maker framing. artometrics.com/musicbrainz-pop-fame-mechanics
+Data Science Learning Community. (2020). TidyTuesday Beyoncé & Taylor Swift lyrics release (source lineage for lyric extract).
+Supporting tables: /data/articles/beyonce-the-psychonomics-of-control/ (beyonce_lta.csv, beyonce_eras.csv, beyonce_network.csv, beyonce_lyric_summary.csv).
+
+## Editor’s note {#editors-note}
+
+This is the second full Psychonomics profile in the Artometrics series (after Caesar). LTA scores were coded by the editorial desk using the Hermann rubric; they are expert judgments with disclosed corpora, not model outputs presented as measurements. AI tools assisted structuring and drafting under human review. Readers should treat the radar as an argument with numbers — and follow the limitations before treating any single trait as destiny.
+

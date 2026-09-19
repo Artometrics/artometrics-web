@@ -1,796 +1,852 @@
 {
-  "generatedAt": "2026-07-11T21:46:48.800Z",
-  "count": 79,
+  "generatedAt": "2026-09-19T18:29:31.498Z",
+  "count": 94,
   "articles": [
     {
-      "repo": "airline-safety",
-      "siteSlug": "airline-safety",
-      "desk": "atlas",
-      "title": "AIRLINE SAFETY: The Artometrics of Airline Safety",
-      "scaffoldReady": true,
-      "liveUrl": "https://artometrics.com/airline-safety/",
-      "githubUrl": "https://github.com/Artometrics/airline-safety",
-      "status": "scaffolded"
+      "siteSlug": "anime",
+      "title": "What a Century of Anime Titles Reveals About the Industry",
+      "desk": "arts",
+      "articlePath": "articles/anime",
+      "quartoReady": true,
+      "liveUrl": "https://artometrics.com/anime/",
+      "status": "monorepo_home"
     },
     {
-      "repo": "biketown-bikeshare",
-      "siteSlug": "biketown-bikeshare",
-      "desk": "atlas",
-      "title": "BIKETOWN BIKESHARE: The Artometrics of Biketown Bikeshare",
-      "scaffoldReady": true,
-      "liveUrl": "https://artometrics.com/biketown-bikeshare/",
-      "githubUrl": "https://github.com/Artometrics/biketown-bikeshare",
-      "status": "scaffolded"
-    },
-    {
-      "repo": "california-vs-texas-state-rivalry",
-      "siteSlug": "california-vs-texas-state-rivalry",
-      "desk": "atlas",
-      "title": "CALIFORNIA VS TEXAS: The Artometrics of Rival State Systems",
-      "scaffoldReady": true,
-      "liveUrl": "https://artometrics.com/california-vs-texas-state-rivalry/",
-      "githubUrl": "https://github.com/Artometrics/california-vs-texas-state-rivalry",
-      "status": "scaffolded"
-    },
-    {
-      "repo": "celtics",
-      "siteSlug": "celtics-the-artometrics-of-institutional-winning",
-      "desk": "atlas",
-      "title": "CELTICS: The Artometrics of Institutional Winning",
-      "scaffoldReady": true,
-      "liveUrl": "https://artometrics.com/celtics-the-artometrics-of-institutional-winning/",
-      "githubUrl": "https://github.com/Artometrics/celtics",
-      "status": "scaffolded"
-    },
-    {
-      "repo": "cetaceans",
-      "siteSlug": "cetaceans",
-      "desk": "atlas",
-      "title": "CETACEANS: The Artometrics of Cetaceans",
-      "scaffoldReady": true,
-      "liveUrl": "https://artometrics.com/cetaceans/",
-      "githubUrl": "https://github.com/Artometrics/cetaceans",
-      "status": "scaffolded"
-    },
-    {
-      "repo": "cia-world-factbook",
-      "siteSlug": "cia-world-factbook",
-      "desk": "atlas",
-      "title": "CIA WORLD FACTBOOK: The Artometrics of CIA World Factbook",
-      "scaffoldReady": true,
-      "liveUrl": "https://artometrics.com/cia-world-factbook/",
-      "githubUrl": "https://github.com/Artometrics/cia-world-factbook",
-      "status": "scaffolded"
-    },
-    {
-      "repo": "city-bioeconomics-operating-system",
-      "siteSlug": "city-bioeconomics-operating-system",
-      "desk": "atlas",
-      "title": "CITY BIOECONOMICS: The Urban Operating System",
-      "scaffoldReady": true,
-      "liveUrl": "https://artometrics.com/city-bioeconomics-operating-system/",
-      "githubUrl": "https://github.com/Artometrics/city-bioeconomics-operating-system",
-      "status": "scaffolded"
-    },
-    {
-      "repo": "cowboys",
-      "siteSlug": "cowboys-the-artometrics-of-americas-team",
-      "desk": "atlas",
-      "title": "COWBOYS: The Artometrics of America's Team",
-      "scaffoldReady": true,
-      "liveUrl": "https://artometrics.com/cowboys-the-artometrics-of-americas-team/",
-      "githubUrl": "https://github.com/Artometrics/cowboys",
-      "status": "scaffolded"
-    },
-    {
-      "repo": "dodgers",
-      "siteSlug": "dodgers-the-artometrics-of-baseballs-modern-machine",
-      "desk": "atlas",
-      "title": "DODGERS: The Artometrics of Baseball's Modern Machine",
-      "scaffoldReady": true,
-      "liveUrl": "https://artometrics.com/dodgers-the-artometrics-of-baseballs-modern-machine/",
-      "githubUrl": "https://github.com/Artometrics/dodgers",
-      "status": "scaffolded"
-    },
-    {
-      "repo": "export-superpowers-us-china-germany",
-      "siteSlug": "export-superpowers-us-china-germany",
-      "desk": "atlas",
-      "title": "EXPORT SUPERPOWERS: United States, China, Germany",
-      "scaffoldReady": true,
-      "liveUrl": "https://artometrics.com/export-superpowers-us-china-germany/",
-      "githubUrl": "https://github.com/Artometrics/export-superpowers-us-china-germany",
-      "status": "scaffolded"
-    },
-    {
-      "repo": "global-life-expectancy",
-      "siteSlug": "global-life-expectancy",
-      "desk": "atlas",
-      "title": "GLOBAL LIFE EXPECTANCY: How Humanity Doubled Its Lifespan in 500 Years",
-      "scaffoldReady": true,
-      "liveUrl": "https://artometrics.com/global-life-expectancy/",
-      "githubUrl": "https://github.com/Artometrics/global-life-expectancy",
-      "status": "scaffolded"
-    },
-    {
-      "repo": "global-plastic-waste",
-      "siteSlug": "global-plastic-waste",
-      "desk": "atlas",
-      "title": "GLOBAL PLASTIC WASTE: The Artometrics of Global Plastic Waste",
-      "scaffoldReady": true,
-      "liveUrl": "https://artometrics.com/global-plastic-waste/",
-      "githubUrl": "https://github.com/Artometrics/global-plastic-waste",
-      "status": "scaffolded"
-    },
-    {
-      "repo": "hurricanes-puerto-rico",
-      "siteSlug": "hurricanes-puerto-rico",
-      "desk": "atlas",
-      "title": "HURRICANES & PUERTO RICO: The Artometrics of Hurricanes & Puerto Rico",
-      "scaffoldReady": true,
-      "liveUrl": "https://artometrics.com/hurricanes-puerto-rico/",
-      "githubUrl": "https://github.com/Artometrics/hurricanes-puerto-rico",
-      "status": "scaffolded"
-    },
-    {
-      "repo": "hydro-wastewater",
-      "siteSlug": "hydro-wastewater",
-      "desk": "atlas",
-      "title": "HYDRO WASTEWATER PLANTS: The Artometrics of Hydro Wastewater Plants",
-      "scaffoldReady": true,
-      "liveUrl": "https://artometrics.com/hydro-wastewater/",
-      "githubUrl": "https://github.com/Artometrics/hydro-wastewater",
-      "status": "scaffolded"
-    },
-    {
-      "repo": "languages-glottolog",
-      "siteSlug": "languages-glottolog",
-      "desk": "atlas",
-      "title": "LANGUAGES OF THE WORLD: The Artometrics of Languages of the World",
-      "scaffoldReady": true,
-      "liveUrl": "https://artometrics.com/languages-glottolog/",
-      "githubUrl": "https://github.com/Artometrics/languages-glottolog",
-      "status": "scaffolded"
-    },
-    {
-      "repo": "league-money-skill-and-star-systems",
-      "siteSlug": "league-money-skill-and-star-systems",
-      "desk": "atlas",
-      "title": "LEAGUE MONEY, SKILL, AND STAR SYSTEMS",
-      "scaffoldReady": true,
-      "liveUrl": "https://artometrics.com/league-money-skill-and-star-systems/",
-      "githubUrl": "https://github.com/Artometrics/league-money-skill-and-star-systems",
-      "status": "scaffolded"
-    },
-    {
-      "repo": "national-export-identity-atlas",
-      "siteSlug": "national-export-identity-atlas",
-      "desk": "atlas",
-      "title": "NATIONAL EXPORT IDENTITY ATLAS",
-      "scaffoldReady": true,
-      "liveUrl": "https://artometrics.com/national-export-identity-atlas/",
-      "githubUrl": "https://github.com/Artometrics/national-export-identity-atlas",
-      "status": "scaffolded"
-    },
-    {
-      "repo": "national-park-visits",
-      "siteSlug": "national-park-visits",
-      "desk": "atlas",
-      "title": "NATIONAL PARK VISITS: The Artometrics of National Park Visits",
-      "scaffoldReady": true,
-      "liveUrl": "https://artometrics.com/national-park-visits/",
-      "githubUrl": "https://github.com/Artometrics/national-park-visits",
-      "status": "scaffolded"
-    },
-    {
-      "repo": "new-york-vs-san-francisco-city-systems",
-      "siteSlug": "new-york-vs-san-francisco-city-systems",
-      "desk": "atlas",
-      "title": "NEW YORK VS SAN FRANCISCO: Command City and Invention City",
-      "scaffoldReady": true,
-      "liveUrl": "https://artometrics.com/new-york-vs-san-francisco-city-systems/",
-      "githubUrl": "https://github.com/Artometrics/new-york-vs-san-francisco-city-systems",
-      "status": "scaffolded"
-    },
-    {
-      "repo": "nyc-restaurant-inspections",
-      "siteSlug": "nyc-restaurant-inspections",
-      "desk": "atlas",
-      "title": "NYC RESTAURANT INSPECTIONS: The Artometrics of NYC Restaurant Inspections",
-      "scaffoldReady": true,
-      "liveUrl": "https://artometrics.com/nyc-restaurant-inspections/",
-      "githubUrl": "https://github.com/Artometrics/nyc-restaurant-inspections",
-      "status": "scaffolded"
-    },
-    {
-      "repo": "patriots",
-      "siteSlug": "patriots-the-artometrics-of-the-system-dynasty",
-      "desk": "atlas",
-      "title": "PATRIOTS: The Artometrics of the System Dynasty",
-      "scaffoldReady": true,
-      "liveUrl": "https://artometrics.com/patriots-the-artometrics-of-the-system-dynasty/",
-      "githubUrl": "https://github.com/Artometrics/patriots",
-      "status": "scaffolded"
-    },
-    {
-      "repo": "regional-sports-identity-map",
-      "siteSlug": "regional-sports-identity-map",
-      "desk": "atlas",
-      "title": "REGIONAL SPORTS IDENTITY MAP",
-      "scaffoldReady": true,
-      "liveUrl": "https://artometrics.com/regional-sports-identity-map/",
-      "githubUrl": "https://github.com/Artometrics/regional-sports-identity-map",
-      "status": "scaffolded"
-    },
-    {
-      "repo": "san-francisco-data-microscope",
-      "siteSlug": "san-francisco-data-microscope",
-      "desk": "atlas",
-      "title": "SAN FRANCISCO DATA MICROSCOPE: The City as an Invention Machine",
-      "scaffoldReady": true,
-      "liveUrl": "https://artometrics.com/san-francisco-data-microscope/",
-      "githubUrl": "https://github.com/Artometrics/san-francisco-data-microscope",
-      "status": "scaffolded"
-    },
-    {
-      "repo": "sports-dynasty-index-best-and-worst-conversion",
-      "siteSlug": "sports-dynasty-index-best-and-worst-conversion",
-      "desk": "atlas",
-      "title": "SPORTS DYNASTY INDEX: Best, Worst, and Most Misleading Teams",
-      "scaffoldReady": true,
-      "liveUrl": "https://artometrics.com/sports-dynasty-index-best-and-worst-conversion/",
-      "githubUrl": "https://github.com/Artometrics/sports-dynasty-index-best-and-worst-conversion",
-      "status": "scaffolded"
-    },
-    {
-      "repo": "world-heritage-sites",
-      "siteSlug": "world-heritage-sites",
-      "desk": "atlas",
-      "title": "WORLD HERITAGE SITES: The Artometrics of World Heritage Sites",
-      "scaffoldReady": true,
-      "liveUrl": "https://artometrics.com/world-heritage-sites/",
-      "githubUrl": "https://github.com/Artometrics/world-heritage-sites",
-      "status": "scaffolded"
-    },
-    {
-      "repo": "yankees",
-      "siteSlug": "yankees-the-artometrics-of-baseballs-empire",
-      "desk": "atlas",
-      "title": "YANKEES: The Artometrics of Baseball's Empire",
-      "scaffoldReady": true,
-      "liveUrl": "https://artometrics.com/yankees-the-artometrics-of-baseballs-empire/",
-      "githubUrl": "https://github.com/Artometrics/yankees",
-      "status": "scaffolded"
-    },
-    {
-      "repo": "alcohol-consumption",
-      "siteSlug": "alcohol-consumption",
-      "desk": "culture",
-      "title": "ALCOHOL CONSUMPTION: The Artometrics of Alcohol Consumption",
-      "scaffoldReady": true,
-      "liveUrl": "https://artometrics.com/alcohol-consumption/",
-      "githubUrl": "https://github.com/Artometrics/alcohol-consumption",
-      "status": "scaffolded"
-    },
-    {
-      "repo": "all-the-pizza",
-      "siteSlug": "all-the-pizza",
-      "desk": "culture",
-      "title": "ALL THE PIZZA: The Artometrics of All The Pizza",
-      "scaffoldReady": true,
-      "liveUrl": "https://artometrics.com/all-the-pizza/",
-      "githubUrl": "https://github.com/Artometrics/all-the-pizza",
-      "status": "scaffolded"
-    },
-    {
-      "repo": "awards-prestige-economy-oscars-grammys-nobels",
-      "siteSlug": "awards-prestige-economy-oscars-grammys-nobels",
-      "desk": "culture",
-      "title": "AWARDS PRESTIGE ECONOMY: Oscars, Grammys, Nobels",
-      "scaffoldReady": true,
-      "liveUrl": "https://artometrics.com/awards-prestige-economy-oscars-grammys-nobels/",
-      "githubUrl": "https://github.com/Artometrics/awards-prestige-economy-oscars-grammys-nobels",
-      "status": "scaffolded"
-    },
-    {
-      "repo": "beyonce-taylor-lyrics",
       "siteSlug": "beyonce-taylor-lyrics",
-      "desk": "culture",
-      "title": "BEYONCÉ & TAYLOR SWIFT LYRICS: The Artometrics of Beyoncé & Taylor Swift Lyrics",
-      "scaffoldReady": true,
+      "title": "'Beyoncé and Taylor Swift, Line by Line'",
+      "desk": "arts",
+      "articlePath": "articles/beyonce-taylor-lyrics",
+      "quartoReady": true,
       "liveUrl": "https://artometrics.com/beyonce-taylor-lyrics/",
-      "githubUrl": "https://github.com/Artometrics/beyonce-taylor-lyrics",
-      "status": "scaffolded"
+      "status": "monorepo_home"
     },
     {
-      "repo": "billboard-hot-100",
       "siteSlug": "billboard-hot-100",
-      "desk": "culture",
-      "title": "BILLBOARD HOT 100: The Artometrics of Number-One Domination",
-      "scaffoldReady": true,
+      "title": "How Long Number-One Hits Stay on Top of the Hot 100",
+      "desk": "arts",
+      "articlePath": "articles/billboard-hot-100",
+      "quartoReady": true,
       "liveUrl": "https://artometrics.com/billboard-hot-100/",
-      "githubUrl": "https://github.com/Artometrics/billboard-hot-100",
-      "status": "scaffolded"
+      "status": "monorepo_home"
     },
     {
-      "repo": "billboard-top-100",
       "siteSlug": "billboard-top-100",
-      "desk": "culture",
-      "title": "BILLBOARD TOP 100: The Artometrics of Billboard Top 100",
-      "scaffoldReady": true,
+      "title": "How the Top of the Billboard Chart Got More Crowded",
+      "desk": "arts",
+      "articlePath": "articles/billboard-top-100",
+      "quartoReady": true,
       "liveUrl": "https://artometrics.com/billboard-top-100/",
-      "githubUrl": "https://github.com/Artometrics/billboard-top-100",
-      "status": "scaffolded"
+      "status": "monorepo_home"
     },
     {
-      "repo": "board-games",
-      "siteSlug": "board-games",
-      "desk": "culture",
-      "title": "BOARD GAMES: The Artometrics of Board Games",
-      "scaffoldReady": true,
-      "liveUrl": "https://artometrics.com/board-games/",
-      "githubUrl": "https://github.com/Artometrics/board-games",
-      "status": "scaffolded"
-    },
-    {
-      "repo": "broadway-musicals",
       "siteSlug": "broadway-musicals",
-      "desk": "culture",
-      "title": "BROADWAY MUSICALS: The Artometrics of Broadway Musicals",
-      "scaffoldReady": true,
+      "title": "Springsteen On Broadway Commands $509 Average Ticket—Double Hamilton's $273",
+      "desk": "arts",
+      "articlePath": "articles/broadway-musicals",
+      "quartoReady": true,
       "liveUrl": "https://artometrics.com/broadway-musicals/",
-      "githubUrl": "https://github.com/Artometrics/broadway-musicals",
-      "status": "scaffolded"
+      "status": "monorepo_home"
     },
     {
-      "repo": "christmas-novels",
       "siteSlug": "christmas-novels",
-      "desk": "culture",
-      "title": "CHRISTMAS NOVELS: The Artometrics of Christmas Novels",
-      "scaffoldReady": true,
+      "title": "Victorian Authors Dominate the Christmas Novel Canon",
+      "desk": "arts",
+      "articlePath": "articles/christmas-novels",
+      "quartoReady": true,
       "liveUrl": "https://artometrics.com/christmas-novels/",
-      "githubUrl": "https://github.com/Artometrics/christmas-novels",
-      "status": "scaffolded"
+      "status": "monorepo_home"
     },
     {
-      "repo": "christmas-songs",
       "siteSlug": "christmas-songs",
-      "desk": "culture",
-      "title": "CHRISTMAS SONGS: The Artometrics of Christmas Songs",
-      "scaffoldReady": true,
+      "title": "'Jingle Bell Rock spent 19 weeks on chart across six decades'",
+      "desk": "arts",
+      "articlePath": "articles/christmas-songs",
+      "quartoReady": true,
       "liveUrl": "https://artometrics.com/christmas-songs/",
-      "githubUrl": "https://github.com/Artometrics/christmas-songs",
-      "status": "scaffolded"
+      "status": "monorepo_home"
     },
     {
-      "repo": "comic-characters",
       "siteSlug": "comic-characters",
-      "desk": "culture",
-      "title": "COMIC BOOK CHARACTERS: The Artometrics of Comic Book Characters",
-      "scaffoldReady": true,
+      "title": "Spider-Man Leads 23,272 Comic Characters at 4,043 Appearances; Top Five Hold 45% of Aggregate",
+      "desk": "arts",
+      "articlePath": "articles/comic-characters",
+      "quartoReady": true,
       "liveUrl": "https://artometrics.com/comic-characters/",
-      "githubUrl": "https://github.com/Artometrics/comic-characters",
-      "status": "scaffolded"
+      "status": "monorepo_home"
     },
     {
-      "repo": "craft-beer-usa",
-      "siteSlug": "craft-beer-usa",
-      "desk": "culture",
-      "title": "CRAFT BEER USA: The Artometrics of Craft Beer USA",
-      "scaffoldReady": true,
-      "liveUrl": "https://artometrics.com/craft-beer-usa/",
-      "githubUrl": "https://github.com/Artometrics/craft-beer-usa",
-      "status": "scaffolded"
-    },
-    {
-      "repo": "cultural-exports-geoeconomics",
-      "siteSlug": "cultural-exports-geoeconomics",
-      "desk": "culture",
-      "title": "CULTURAL EXPORTS: The Geo-Economics of Soft Power",
-      "scaffoldReady": true,
-      "liveUrl": "https://artometrics.com/cultural-exports-geoeconomics/",
-      "githubUrl": "https://github.com/Artometrics/cultural-exports-geoeconomics",
-      "status": "scaffolded"
-    },
-    {
-      "repo": "emmy-awards",
       "siteSlug": "emmy-awards",
-      "desk": "culture",
-      "title": "EMMY AWARDS: The Artometrics of Emmy Awards",
-      "scaffoldReady": true,
+      "title": "Saturday Night Live Earned 859 Emmy Records—More Than Any Other Show",
+      "desk": "arts",
+      "articlePath": "articles/emmy-awards",
+      "quartoReady": true,
       "liveUrl": "https://artometrics.com/emmy-awards/",
-      "githubUrl": "https://github.com/Artometrics/emmy-awards",
-      "status": "scaffolded"
+      "status": "monorepo_home"
     },
     {
-      "repo": "fast-food-calories",
-      "siteSlug": "fast-food-calories",
-      "desk": "culture",
-      "title": "FAST FOOD CALORIES: The Artometrics of Fast Food Calories",
-      "scaffoldReady": true,
-      "liveUrl": "https://artometrics.com/fast-food-calories/",
-      "githubUrl": "https://github.com/Artometrics/fast-food-calories",
-      "status": "scaffolded"
+      "siteSlug": "franchise",
+      "title": "Pokémon's $91B Earns More Than Marvel, Star Wars, and Harry Potter Combined",
+      "desk": "arts",
+      "articlePath": "articles/franchise",
+      "quartoReady": true,
+      "liveUrl": "https://artometrics.com/franchise/",
+      "status": "monorepo_home"
     },
     {
-      "repo": "horror-movie-profit",
       "siteSlug": "horror-movie-profit",
-      "desk": "culture",
-      "title": "HORROR MOVIE PROFIT: The Artometrics of Horror Movie Profit",
-      "scaffoldReady": true,
+      "title": "Star Wars Led a Horror-Profit Dataset—How Genre Mislabeling Hides the Real Winners",
+      "desk": "arts",
+      "articlePath": "articles/horror-movie-profit",
+      "quartoReady": true,
       "liveUrl": "https://artometrics.com/horror-movie-profit/",
-      "githubUrl": "https://github.com/Artometrics/horror-movie-profit",
-      "status": "scaffolded"
+      "status": "monorepo_home"
     },
     {
-      "repo": "horror-movies",
       "siteSlug": "horror-movies",
-      "desk": "culture",
-      "title": "HORROR MOVIES: The Artometrics of Horror Movies",
-      "scaffoldReady": true,
+      "title": "Horror's median rating rose 0.35 points as catalog volume grew 50× in seven decades",
+      "desk": "arts",
+      "articlePath": "articles/horror-movies",
+      "quartoReady": true,
       "liveUrl": "https://artometrics.com/horror-movies/",
-      "githubUrl": "https://github.com/Artometrics/horror-movies",
-      "status": "scaffolded"
+      "status": "monorepo_home"
     },
     {
-      "repo": "imdb-blockbuster-grammar",
       "siteSlug": "imdb-blockbuster-grammar",
-      "desk": "culture",
-      "title": "IMDb BLOCKBUSTER GRAMMAR: The Artometrics of Movie Fame",
-      "scaffoldReady": true,
+      "title": "How Movies Become Famous on IMDb’s Public Scoreboard",
+      "desk": "arts",
+      "articlePath": "articles/imdb-blockbuster-grammar",
+      "quartoReady": true,
       "liveUrl": "https://artometrics.com/imdb-blockbuster-grammar/",
-      "githubUrl": "https://github.com/Artometrics/imdb-blockbuster-grammar",
-      "status": "scaffolded"
+      "status": "monorepo_home"
     },
     {
-      "repo": "lakers",
-      "siteSlug": "lakers-the-artometrics-of-basketball-glamour",
-      "desk": "culture",
-      "title": "LAKERS: The Artometrics of Basketball Glamour",
-      "scaffoldReady": true,
-      "liveUrl": "https://artometrics.com/lakers-the-artometrics-of-basketball-glamour/",
-      "githubUrl": "https://github.com/Artometrics/lakers",
-      "status": "scaffolded"
+      "siteSlug": "languages-glottolog",
+      "title": "8,612 Glottolog records concentrate 27% in Africa — a map of fieldwork, not speech",
+      "desk": "arts",
+      "articlePath": "articles/languages-glottolog",
+      "quartoReady": true,
+      "liveUrl": "https://artometrics.com/languages-glottolog/",
+      "status": "monorepo_home"
     },
     {
-      "repo": "lego-database",
-      "siteSlug": "lego-database",
-      "desk": "culture",
-      "title": "LEGO DATABASE: The Artometrics of LEGO Database",
-      "scaffoldReady": true,
-      "liveUrl": "https://artometrics.com/lego-database/",
-      "githubUrl": "https://github.com/Artometrics/lego-database",
-      "status": "scaffolded"
+      "siteSlug": "lv-molly-tea-trademark-china",
+      "title": "A ¥10.3 million trademark award in China turned a legal win into a cultural reckoning",
+      "desk": "arts",
+      "articlePath": "articles/lv-molly-tea-trademark-china",
+      "quartoReady": true,
+      "liveUrl": "https://artometrics.com/lv-molly-tea-trademark-china/",
+      "status": "monorepo_home"
     },
     {
-      "repo": "medium-articles",
-      "siteSlug": "medium-articles",
-      "desk": "culture",
-      "title": "MEDIUM ARTICLE METADATA: The Artometrics of Medium Article Metadata",
-      "scaffoldReady": true,
-      "liveUrl": "https://artometrics.com/medium-articles/",
-      "githubUrl": "https://github.com/Artometrics/medium-articles",
-      "status": "scaffolded"
-    },
-    {
-      "repo": "musicbrainz-pop-fame-mechanics",
       "siteSlug": "musicbrainz-pop-fame-mechanics",
-      "desk": "culture",
-      "title": "MUSICBRAINZ: The Artometrics of Pop Fame",
-      "scaffoldReady": true,
+      "title": "Catalog Depth and Genre Travel Predict Pop Fame Duration",
+      "desk": "arts",
+      "articlePath": "articles/musicbrainz-pop-fame-mechanics",
+      "quartoReady": true,
       "liveUrl": "https://artometrics.com/musicbrainz-pop-fame-mechanics/",
-      "githubUrl": "https://github.com/Artometrics/musicbrainz-pop-fame-mechanics",
-      "status": "scaffolded"
+      "status": "monorepo_home"
     },
     {
-      "repo": "netflix-engagement",
       "siteSlug": "netflix-engagement",
-      "desk": "culture",
-      "title": "NETFLIX ENGAGEMENT: The Artometrics of Netflix Engagement",
-      "scaffoldReady": true,
+      "title": "Squid Game Season 2 Logs 730 Million Netflix Hours — 292× the Catalog Median",
+      "desk": "arts",
+      "articlePath": "articles/netflix-engagement",
+      "quartoReady": true,
       "liveUrl": "https://artometrics.com/netflix-engagement/",
-      "githubUrl": "https://github.com/Artometrics/netflix-engagement",
-      "status": "scaffolded"
+      "status": "monorepo_home"
     },
     {
-      "repo": "netflix-titles",
       "siteSlug": "netflix-titles",
-      "desk": "culture",
-      "title": "NETFLIX TITLES: The Artometrics of Netflix Titles",
-      "scaffoldReady": true,
+      "title": "Netflix carried more movies than TV shows through 2021—but the longest titles were interactive films",
+      "desk": "arts",
+      "articlePath": "articles/netflix-titles",
+      "quartoReady": true,
       "liveUrl": "https://artometrics.com/netflix-titles/",
-      "githubUrl": "https://github.com/Artometrics/netflix-titles",
-      "status": "scaffolded"
+      "status": "monorepo_home"
     },
     {
-      "repo": "pantheon",
-      "siteSlug": "pantheon-the-artometrics-of-collective-memory",
-      "desk": "culture",
-      "title": "PANTHEON: The Artometrics of Collective Memory",
-      "scaffoldReady": true,
-      "liveUrl": "https://artometrics.com/pantheon-the-artometrics-of-collective-memory/",
-      "githubUrl": "https://github.com/Artometrics/pantheon",
-      "status": "scaffolded"
-    },
-    {
-      "repo": "pixar-films",
       "siteSlug": "pixar-films",
-      "desk": "culture",
-      "title": "PIXAR: The Artometrics of the Computer-Animation Canon",
-      "scaffoldReady": true,
+      "title": "Pixar's 96% median critic score broke twice—Cars 2 and Lightyear",
+      "desk": "arts",
+      "articlePath": "articles/pixar-films",
+      "quartoReady": true,
       "liveUrl": "https://artometrics.com/pixar-films/",
-      "githubUrl": "https://github.com/Artometrics/pixar-films",
-      "status": "scaffolded"
+      "status": "monorepo_home"
     },
     {
-      "repo": "project-gutenberg",
       "siteSlug": "project-gutenberg",
-      "desk": "culture",
-      "title": "PROJECT GUTENBERG: The Artometrics of Project Gutenberg",
-      "scaffoldReady": true,
+      "title": "69,027 LCSH Records Anchor Project Gutenberg's Catalog Core",
+      "desk": "arts",
+      "articlePath": "articles/project-gutenberg",
+      "quartoReady": true,
       "liveUrl": "https://artometrics.com/project-gutenberg/",
-      "githubUrl": "https://github.com/Artometrics/project-gutenberg",
-      "status": "scaffolded"
+      "status": "monorepo_home"
     },
     {
-      "repo": "project-gutenberg-public-domain-canon-map",
       "siteSlug": "project-gutenberg-public-domain-canon-map",
-      "desk": "culture",
-      "title": "PROJECT GUTENBERG: The Artometrics of the Public-Domain Canon",
-      "scaffoldReady": true,
+      "title": "English Commands 72% of Gutenberg's 75,000-Book Public-Domain Shelf",
+      "desk": "arts",
+      "articlePath": "articles/project-gutenberg-public-domain-canon-map",
+      "quartoReady": true,
       "liveUrl": "https://artometrics.com/project-gutenberg-public-domain-canon-map/",
-      "githubUrl": "https://github.com/Artometrics/project-gutenberg-public-domain-canon-map",
-      "status": "scaffolded"
+      "status": "monorepo_home"
     },
     {
-      "repo": "radio-stations",
       "siteSlug": "radio-stations",
-      "desk": "culture",
-      "title": "RADIO STATIONS: The Artometrics of Radio Stations",
-      "scaffoldReady": true,
+      "title": "U.S. radio stations cluster at 101 MHz — except News/Talk, which sits 1,039 above median",
+      "desk": "arts",
+      "articlePath": "articles/radio-stations",
+      "quartoReady": true,
       "liveUrl": "https://artometrics.com/radio-stations/",
-      "githubUrl": "https://github.com/Artometrics/radio-stations",
-      "status": "scaffolded"
+      "status": "monorepo_home"
     },
     {
-      "repo": "ramen-ratings",
-      "siteSlug": "ramen-ratings",
-      "desk": "culture",
-      "title": "RAMEN RATINGS: The Artometrics of Ramen Ratings",
-      "scaffoldReady": true,
-      "liveUrl": "https://artometrics.com/ramen-ratings/",
-      "githubUrl": "https://github.com/Artometrics/ramen-ratings",
-      "status": "scaffolded"
-    },
-    {
-      "repo": "rolling-stone-albums",
       "siteSlug": "rolling-stone-albums",
-      "desk": "culture",
-      "title": "ROLLING STONE ALBUM RANKINGS: The Artometrics of Rolling Stone Album Rankings",
-      "scaffoldReady": true,
+      "title": "691 albums, median rank 250 — Rolling Stone's 2003 canon structure",
+      "desk": "arts",
+      "articlePath": "articles/rolling-stone-albums",
+      "quartoReady": true,
       "liveUrl": "https://artometrics.com/rolling-stone-albums/",
-      "githubUrl": "https://github.com/Artometrics/rolling-stone-albums",
-      "status": "scaffolded"
+      "status": "monorepo_home"
     },
     {
-      "repo": "sherlock-holmes",
       "siteSlug": "sherlock-holmes",
-      "desk": "culture",
-      "title": "SHERLOCK HOLMES: The Artometrics of Sherlock Holmes",
-      "scaffoldReady": true,
+      "title": "Sherlock Holmes Stories Cluster Around 12 Words per Record in Tokenized Corpus",
+      "desk": "arts",
+      "articlePath": "articles/sherlock-holmes",
+      "quartoReady": true,
       "liveUrl": "https://artometrics.com/sherlock-holmes/",
-      "githubUrl": "https://github.com/Artometrics/sherlock-holmes",
-      "status": "scaffolded"
+      "status": "monorepo_home"
     },
     {
-      "repo": "simpsons-guest-stars",
       "siteSlug": "simpsons-guest-stars",
-      "desk": "culture",
-      "title": "SIMPSONS GUEST STARS: The Artometrics of Simpsons Guest Stars",
-      "scaffoldReady": true,
+      "title": "Marcia Wallace Appeared 175 Times — More Than Any Other Simpsons Guest Star",
+      "desk": "arts",
+      "articlePath": "articles/simpsons-guest-stars",
+      "quartoReady": true,
       "liveUrl": "https://artometrics.com/simpsons-guest-stars/",
-      "githubUrl": "https://github.com/Artometrics/simpsons-guest-stars",
-      "status": "scaffolded"
+      "status": "monorepo_home"
     },
     {
-      "repo": "super-bowl-ads",
-      "siteSlug": "super-bowl-ads",
-      "desk": "culture",
-      "title": "SUPER BOWL ADS: The Artometrics of Super Bowl Ads",
-      "scaffoldReady": true,
-      "liveUrl": "https://artometrics.com/super-bowl-ads/",
-      "githubUrl": "https://github.com/Artometrics/super-bowl-ads",
-      "status": "scaffolded"
-    },
-    {
-      "repo": "tv-golden-age",
       "siteSlug": "tv-golden-age",
-      "desk": "culture",
-      "title": "TV GOLDEN AGE: The Artometrics of TV Golden Age",
-      "scaffoldReady": true,
+      "title": "Median Prestige-TV Scores Rose 0.29 Points from 1990 to 2018—Not the Leap Critics Claimed",
+      "desk": "arts",
+      "articlePath": "articles/tv-golden-age",
+      "quartoReady": true,
       "liveUrl": "https://artometrics.com/tv-golden-age/",
-      "githubUrl": "https://github.com/Artometrics/tv-golden-age",
-      "status": "scaffolded"
+      "status": "monorepo_home"
     },
     {
-      "repo": "uk-museums",
       "siteSlug": "uk-museums",
-      "desk": "culture",
-      "title": "UK MUSEUMS: The Artometrics of UK Museums",
-      "scaffoldReady": true,
+      "title": "UK Museums Cluster in Less-Deprived Areas — Wiltshire Leads, Cornwall Trails",
+      "desk": "arts",
+      "articlePath": "articles/uk-museums",
+      "quartoReady": true,
       "liveUrl": "https://artometrics.com/uk-museums/",
-      "githubUrl": "https://github.com/Artometrics/uk-museums",
-      "status": "scaffolded"
+      "status": "monorepo_home"
     },
     {
-      "repo": "video-games-sliced",
-      "siteSlug": "video-games-sliced",
-      "desk": "culture",
-      "title": "VIDEO GAMES: The Artometrics of Video Games",
-      "scaffoldReady": true,
-      "liveUrl": "https://artometrics.com/video-games-sliced/",
-      "githubUrl": "https://github.com/Artometrics/video-games-sliced",
-      "status": "scaffolded"
-    },
-    {
-      "repo": "video-games-steam",
-      "siteSlug": "video-games-steam",
-      "desk": "culture",
-      "title": "VIDEO GAMES STEAM SPY: The Artometrics of Video Games Steam Spy",
-      "scaffoldReady": true,
-      "liveUrl": "https://artometrics.com/video-games-steam/",
-      "githubUrl": "https://github.com/Artometrics/video-games-steam",
-      "status": "scaffolded"
-    },
-    {
-      "repo": "web-page-metrics",
-      "siteSlug": "web-page-metrics",
-      "desk": "culture",
-      "title": "WEB PAGE METRICS: The Artometrics of Web Page Metrics",
-      "scaffoldReady": true,
-      "liveUrl": "https://artometrics.com/web-page-metrics/",
-      "githubUrl": "https://github.com/Artometrics/web-page-metrics",
-      "status": "scaffolded"
-    },
-    {
-      "repo": "wine-ratings",
-      "siteSlug": "wine-ratings",
-      "desk": "culture",
-      "title": "WINE RATINGS: The Artometrics of Wine Ratings",
-      "scaffoldReady": true,
-      "liveUrl": "https://artometrics.com/wine-ratings/",
-      "githubUrl": "https://github.com/Artometrics/wine-ratings",
-      "status": "scaffolded"
-    },
-    {
-      "repo": "nuclear-explosions",
-      "siteSlug": "nuclear-explosions",
-      "desk": "history",
-      "title": "NUCLEAR EXPLOSIONS: The Artometrics of Nuclear Explosions",
-      "scaffoldReady": true,
-      "liveUrl": "https://artometrics.com/nuclear-explosions/",
-      "githubUrl": "https://github.com/Artometrics/nuclear-explosions",
-      "status": "scaffolded"
-    },
-    {
-      "repo": "roman-emperors",
-      "siteSlug": "roman-emperors",
-      "desk": "history",
-      "title": "ROMAN EMPERORS: The Artometrics of Roman Emperors",
-      "scaffoldReady": true,
-      "liveUrl": "https://artometrics.com/roman-emperors/",
-      "githubUrl": "https://github.com/Artometrics/roman-emperors",
-      "status": "scaffolded"
-    },
-    {
-      "repo": "exercise-usa",
-      "siteSlug": "exercise-usa",
-      "desk": "persona",
-      "title": "EXERCISE USA: The Artometrics of Exercise USA",
-      "scaffoldReady": true,
-      "liveUrl": "https://artometrics.com/exercise-usa/",
-      "githubUrl": "https://github.com/Artometrics/exercise-usa",
-      "status": "scaffolded"
-    },
-    {
-      "repo": "us-phds",
-      "siteSlug": "us-phds",
-      "desk": "persona",
-      "title": "US PHDS AWARDED: The Artometrics of US PhDs Awarded",
-      "scaffoldReady": true,
-      "liveUrl": "https://artometrics.com/us-phds/",
-      "githubUrl": "https://github.com/Artometrics/us-phds",
-      "status": "scaffolded"
-    },
-    {
-      "repo": "big-mac-index",
       "siteSlug": "big-mac-index",
-      "desk": "power",
-      "title": "BIG MAC INDEX: The Artometrics of Purchasing Power",
-      "scaffoldReady": true,
+      "title": "What Twenty Years of Big Mac Prices Say About Purchasing Power",
+      "desk": "civics",
+      "articlePath": "articles/big-mac-index",
+      "quartoReady": true,
       "liveUrl": "https://artometrics.com/big-mac-index/",
-      "githubUrl": "https://github.com/Artometrics/big-mac-index",
-      "status": "scaffolded"
+      "status": "monorepo_home"
     },
     {
-      "repo": "ceo-departures",
+      "siteSlug": "california-vs-texas-state-rivalry",
+      "title": "California leads in GDP and tech, Texas in energy and migration—7 dimensions of the most-compared state rivalry",
+      "desk": "civics",
+      "articlePath": "articles/california-vs-texas-state-rivalry",
+      "quartoReady": true,
+      "liveUrl": "https://artometrics.com/california-vs-texas-state-rivalry/",
+      "status": "monorepo_home"
+    },
+    {
       "siteSlug": "ceo-departures",
-      "desk": "power",
-      "title": "CEO DEPARTURES: The Artometrics of CEO Departures",
-      "scaffoldReady": true,
+      "title": "CEO Tenure Caps at 2.5 Years in 9,423 Departure Records",
+      "desk": "civics",
+      "articlePath": "articles/ceo-departures",
+      "quartoReady": true,
       "liveUrl": "https://artometrics.com/ceo-departures/",
-      "githubUrl": "https://github.com/Artometrics/ceo-departures",
-      "status": "scaffolded"
+      "status": "monorepo_home"
     },
     {
-      "repo": "college-major-income",
+      "siteSlug": "cia-world-factbook",
+      "title": "China holds 1.36 billion people against a 5.2 million median — five countries control 72% of aggregate population",
+      "desk": "civics",
+      "articlePath": "articles/cia-world-factbook",
+      "quartoReady": true,
+      "liveUrl": "https://artometrics.com/cia-world-factbook/",
+      "status": "monorepo_home"
+    },
+    {
+      "siteSlug": "city-bioeconomics-operating-system",
+      "title": "'What does a city export? A data framework for economic identity'",
+      "desk": "civics",
+      "articlePath": "articles/city-bioeconomics-operating-system",
+      "quartoReady": true,
+      "liveUrl": "https://artometrics.com/city-bioeconomics-operating-system/",
+      "status": "monorepo_home"
+    },
+    {
       "siteSlug": "college-major-income",
-      "desk": "power",
-      "title": "COLLEGE MAJOR & INCOME: The Artometrics of College Major & Income",
-      "scaffoldReady": true,
+      "title": "Psychology Graduates Fill 48,207 Low-Wage Jobs—Four Times Business Majors",
+      "desk": "civics",
+      "articlePath": "articles/college-major-income",
+      "quartoReady": true,
       "liveUrl": "https://artometrics.com/college-major-income/",
-      "githubUrl": "https://github.com/Artometrics/college-major-income",
-      "status": "scaffolded"
+      "status": "monorepo_home"
     },
     {
-      "repo": "incarceration-trends",
+      "siteSlug": "cultural-exports-geoeconomics",
+      "title": "Film and music lead cultural export scales; South Korea's soft-power index rose 70 points since 1990",
+      "desk": "civics",
+      "articlePath": "articles/cultural-exports-geoeconomics",
+      "quartoReady": true,
+      "liveUrl": "https://artometrics.com/cultural-exports-geoeconomics/",
+      "status": "monorepo_home"
+    },
+    {
+      "siteSlug": "export-superpowers-us-china-germany",
+      "title": "'U.S. Platforms, Chinese Factories, German Machines: Three Export Systems'",
+      "desk": "civics",
+      "articlePath": "articles/export-superpowers-us-china-germany",
+      "quartoReady": true,
+      "liveUrl": "https://artometrics.com/export-superpowers-us-china-germany/",
+      "status": "monorepo_home"
+    },
+    {
+      "siteSlug": "h3-the-artometrics-of-a-youtube-dynasty",
+      "title": "H3's Nine-Month Peak Created a Viewership Ceiling the Podcast Never Reached Again",
+      "desk": "civics",
+      "articlePath": "articles/h3-the-artometrics-of-a-youtube-dynasty",
+      "quartoReady": true,
+      "liveUrl": "https://artometrics.com/h3-the-artometrics-of-a-youtube-dynasty/",
+      "status": "monorepo_home"
+    },
+    {
       "siteSlug": "incarceration-trends",
-      "desk": "power",
-      "title": "INCARCERATION TRENDS: The Artometrics of Incarceration Trends",
-      "scaffoldReady": true,
+      "title": "U.S. Incarceration by County, 1970–2016 — Median Population 3,553, Top Exceeds 6.8 Million",
+      "desk": "civics",
+      "articlePath": "articles/incarceration-trends",
+      "quartoReady": true,
       "liveUrl": "https://artometrics.com/incarceration-trends/",
-      "githubUrl": "https://github.com/Artometrics/incarceration-trends",
-      "status": "scaffolded"
+      "status": "monorepo_home"
     },
     {
-      "repo": "school-diversity",
+      "siteSlug": "national-export-identity-atlas",
+      "title": "Germany Sells Machines, Saudi Arabia Sells Oil—What Does Your Country Sell?",
+      "desk": "civics",
+      "articlePath": "articles/national-export-identity-atlas",
+      "quartoReady": true,
+      "liveUrl": "https://artometrics.com/national-export-identity-atlas/",
+      "status": "monorepo_home"
+    },
+    {
+      "siteSlug": "new-york-vs-san-francisco-city-systems",
+      "title": "New York commands capital while San Francisco invents the future",
+      "desk": "civics",
+      "articlePath": "articles/new-york-vs-san-francisco-city-systems",
+      "quartoReady": true,
+      "liveUrl": "https://artometrics.com/new-york-vs-san-francisco-city-systems/",
+      "status": "monorepo_home"
+    },
+    {
+      "siteSlug": "san-francisco-data-microscope",
+      "title": "Can San Francisco Absorb Its Own Invention Machine?",
+      "desk": "civics",
+      "articlePath": "articles/san-francisco-data-microscope",
+      "quartoReady": true,
+      "liveUrl": "https://artometrics.com/san-francisco-data-microscope/",
+      "status": "monorepo_home"
+    },
+    {
       "siteSlug": "school-diversity",
-      "desk": "power",
-      "title": "SCHOOL DIVERSITY: The Artometrics of School Diversity",
-      "scaffoldReady": true,
+      "title": "U.S. School Diversity Peaks at 85.3, Median Holds at 2.38",
+      "desk": "civics",
+      "articlePath": "articles/school-diversity",
+      "quartoReady": true,
       "liveUrl": "https://artometrics.com/school-diversity/",
-      "githubUrl": "https://github.com/Artometrics/school-diversity",
-      "status": "scaffolded"
+      "status": "monorepo_home"
     },
     {
-      "repo": "un-votes",
+      "siteSlug": "super-bowl-ads",
+      "title": "Five brands capture 87% of post-game Super Bowl ad views on YouTube",
+      "desk": "civics",
+      "articlePath": "articles/super-bowl-ads",
+      "quartoReady": true,
+      "liveUrl": "https://artometrics.com/super-bowl-ads/",
+      "status": "monorepo_home"
+    },
+    {
       "siteSlug": "un-votes",
-      "desk": "power",
-      "title": "UN VOTES: The Artometrics of UN Votes",
-      "scaffoldReady": true,
+      "title": "Brazil Dominates UN Roll-Call Records — 747 Appearances in 100,000-Vote Sample",
+      "desk": "civics",
+      "articlePath": "articles/un-votes",
+      "quartoReady": true,
       "liveUrl": "https://artometrics.com/un-votes/",
-      "githubUrl": "https://github.com/Artometrics/un-votes",
-      "status": "scaffolded"
+      "status": "monorepo_home"
     },
     {
-      "repo": "us-tuition",
+      "siteSlug": "us-phds",
+      "title": "Social Sciences Drove 63% of U.S. Doctorate Growth, 2008–2017",
+      "desk": "civics",
+      "articlePath": "articles/us-phds",
+      "quartoReady": true,
+      "liveUrl": "https://artometrics.com/us-phds/",
+      "status": "monorepo_home"
+    },
+    {
       "siteSlug": "us-tuition",
-      "desk": "power",
-      "title": "US TUITION COSTS: The Artometrics of US Tuition Costs",
-      "scaffoldReady": true,
+      "title": "Vermont Led U.S. Public Tuition at $13,486; National Median Rose 56% by 2015",
+      "desk": "civics",
+      "articlePath": "articles/us-tuition",
+      "quartoReady": true,
       "liveUrl": "https://artometrics.com/us-tuition/",
-      "githubUrl": "https://github.com/Artometrics/us-tuition",
-      "status": "scaffolded"
+      "status": "monorepo_home"
     },
     {
-      "repo": "us-voter-turnout",
       "siteSlug": "us-voter-turnout",
-      "desk": "power",
-      "title": "US VOTER TURNOUT: The Artometrics of US Voter Turnout",
-      "scaffoldReady": true,
+      "title": "National Turnout Hit 132.6 Million While Median State Recorded 1.17 Million Votes",
+      "desk": "civics",
+      "articlePath": "articles/us-voter-turnout",
+      "quartoReady": true,
       "liveUrl": "https://artometrics.com/us-voter-turnout/",
-      "githubUrl": "https://github.com/Artometrics/us-voter-turnout",
-      "status": "scaffolded"
+      "status": "monorepo_home"
     },
     {
-      "repo": "wealth-income",
       "siteSlug": "wealth-income",
-      "desk": "power",
-      "title": "WEALTH AND INCOME: The Artometrics of Wealth and Income",
-      "scaffoldReady": true,
+      "title": "Income share in mid-tier brackets rose 6.6 points above the median; top brackets trailed by 6.7",
+      "desk": "civics",
+      "articlePath": "articles/wealth-income",
+      "quartoReady": true,
       "liveUrl": "https://artometrics.com/wealth-income/",
-      "githubUrl": "https://github.com/Artometrics/wealth-income",
-      "status": "scaffolded"
+      "status": "monorepo_home"
+    },
+    {
+      "siteSlug": "airline-safety",
+      "title": "'Airline Safety by Capacity: How Incident Counts Hide Exposure Differences'",
+      "desk": "culture",
+      "articlePath": "articles/airline-safety",
+      "quartoReady": true,
+      "liveUrl": "https://artometrics.com/airline-safety/",
+      "status": "monorepo_home"
+    },
+    {
+      "siteSlug": "alcohol-consumption",
+      "title": "Who Drinks the Most Alcohol Per Capita?",
+      "desk": "culture",
+      "articlePath": "articles/alcohol-consumption",
+      "quartoReady": true,
+      "liveUrl": "https://artometrics.com/alcohol-consumption/",
+      "status": "monorepo_home"
+    },
+    {
+      "siteSlug": "all-the-pizza",
+      "title": "'Pizza Price Floors: How a 10,000-Row Menu Extract Reveals Two Economies'",
+      "desk": "culture",
+      "articlePath": "articles/all-the-pizza",
+      "quartoReady": true,
+      "liveUrl": "https://artometrics.com/all-the-pizza/",
+      "status": "monorepo_home"
+    },
+    {
+      "siteSlug": "biketown-bikeshare",
+      "title": "How Far Do Portland’s Biketown Rides Actually Go?",
+      "desk": "culture",
+      "articlePath": "articles/biketown-bikeshare",
+      "quartoReady": true,
+      "liveUrl": "https://artometrics.com/biketown-bikeshare/",
+      "status": "monorepo_home"
+    },
+    {
+      "siteSlug": "coffee-the-artometrics-of-java",
+      "title": "Ethiopia scores 85.3 — highest coffee quality, zero Starbucks stores",
+      "desk": "culture",
+      "articlePath": "articles/coffee-the-artometrics-of-java",
+      "quartoReady": true,
+      "liveUrl": "https://artometrics.com/coffee-the-artometrics-of-java/",
+      "status": "monorepo_home"
+    },
+    {
+      "siteSlug": "craft-beer-usa",
+      "title": "U.S. Craft Beer Peaks at 12.8% ABV; Median Remains 6%",
+      "desk": "culture",
+      "articlePath": "articles/craft-beer-usa",
+      "quartoReady": true,
+      "liveUrl": "https://artometrics.com/craft-beer-usa/",
+      "status": "monorepo_home"
+    },
+    {
+      "siteSlug": "exercise-usa",
+      "title": "Colorado leads U.S. exercise participation at 32.0; median state posts 23.0",
+      "desk": "culture",
+      "articlePath": "articles/exercise-usa",
+      "quartoReady": true,
+      "liveUrl": "https://artometrics.com/exercise-usa/",
+      "status": "monorepo_home"
+    },
+    {
+      "siteSlug": "fast-food-calories",
+      "title": "515 Fast-Food Items: Median 490 Calories, Ceiling 2,430",
+      "desk": "culture",
+      "articlePath": "articles/fast-food-calories",
+      "quartoReady": true,
+      "liveUrl": "https://artometrics.com/fast-food-calories/",
+      "status": "monorepo_home"
+    },
+    {
+      "siteSlug": "global-plastic-waste",
+      "title": "Median GDP per capita doubled 1700–2017 while plastic mismanagement stayed geographically uneven",
+      "desk": "culture",
+      "articlePath": "articles/global-plastic-waste",
+      "quartoReady": true,
+      "liveUrl": "https://artometrics.com/global-plastic-waste/",
+      "status": "monorepo_home"
+    },
+    {
+      "siteSlug": "hurricanes-puerto-rico",
+      "title": "'Hurricane Maria delivered 5,072-unit peak to Puerto Rico in 2017 three-state season'",
+      "desk": "culture",
+      "articlePath": "articles/hurricanes-puerto-rico",
+      "quartoReady": true,
+      "liveUrl": "https://artometrics.com/hurricanes-puerto-rico/",
+      "status": "monorepo_home"
+    },
+    {
+      "siteSlug": "lego-database",
+      "title": "LEGO's median set shrank to 60 pieces while flagship builds hit 11,695",
+      "desk": "culture",
+      "articlePath": "articles/lego-database",
+      "quartoReady": true,
+      "liveUrl": "https://artometrics.com/lego-database/",
+      "status": "monorepo_home"
+    },
+    {
+      "siteSlug": "national-park-visits",
+      "title": "Golden Gate draws 14.6 million visits — 94× the median national park",
+      "desk": "culture",
+      "articlePath": "articles/national-park-visits",
+      "quartoReady": true,
+      "liveUrl": "https://artometrics.com/national-park-visits/",
+      "status": "monorepo_home"
+    },
+    {
+      "siteSlug": "nyc-restaurant-inspections",
+      "title": "NYC Restaurant Inspections Show 15-Point Median, 156-Point Outlier",
+      "desk": "culture",
+      "articlePath": "articles/nyc-restaurant-inspections",
+      "quartoReady": true,
+      "liveUrl": "https://artometrics.com/nyc-restaurant-inspections/",
+      "status": "monorepo_home"
+    },
+    {
+      "siteSlug": "ramen-ratings",
+      "title": "Malaysia averages 4.25 stars — 0.50 above the global ramen median",
+      "desk": "culture",
+      "articlePath": "articles/ramen-ratings",
+      "quartoReady": true,
+      "liveUrl": "https://artometrics.com/ramen-ratings/",
+      "status": "monorepo_home"
+    },
+    {
+      "siteSlug": "streaming-catalog-power",
+      "title": "Netflix Holds 4,800 Titles While Marketing 40: What Catalog Data Shows About Platform Inventory",
+      "desk": "culture",
+      "articlePath": "articles/streaming-catalog-power",
+      "quartoReady": true,
+      "liveUrl": "https://artometrics.com/streaming-catalog-power/",
+      "status": "monorepo_home"
+    },
+    {
+      "siteSlug": "wine-ratings",
+      "title": "100,000 wine ratings reveal a 2-point spread between Austria and Chile",
+      "desk": "culture",
+      "articlePath": "articles/wine-ratings",
+      "quartoReady": true,
+      "liveUrl": "https://artometrics.com/wine-ratings/",
+      "status": "monorepo_home"
+    },
+    {
+      "siteSlug": "world-heritage-sites",
+      "title": "Sweden Added 15 UNESCO Sites by 2022 While Denmark Grew 150%",
+      "desk": "culture",
+      "articlePath": "articles/world-heritage-sites",
+      "quartoReady": true,
+      "liveUrl": "https://artometrics.com/world-heritage-sites/",
+      "status": "monorepo_home"
+    },
+    {
+      "siteSlug": "awards-prestige-economy-oscars-grammys-nobels",
+      "title": "'Oscars vs Grammys: How Award Shows Build Prestige'",
+      "desk": "humanities",
+      "articlePath": "articles/awards-prestige-economy-oscars-grammys-nobels",
+      "quartoReady": true,
+      "liveUrl": "https://artometrics.com/awards-prestige-economy-oscars-grammys-nobels/",
+      "status": "monorepo_home"
+    },
+    {
+      "siteSlug": "beyonce-the-psychonomics-of-control",
+      "title": "Beyoncé and the Cost of Controlling the House",
+      "desk": "humanities",
+      "articlePath": "articles/beyonce-the-psychonomics-of-control",
+      "quartoReady": true,
+      "liveUrl": "https://artometrics.com/beyonce-the-psychonomics-of-control/",
+      "status": "monorepo_home"
+    },
+    {
+      "siteSlug": "caesar-the-psychonomics-of-emperor-julius",
+      "title": "Caesar scored 0.95 on Need for Power — then trusted the men who killed him",
+      "desk": "humanities",
+      "articlePath": "articles/caesar-the-psychonomics-of-emperor-julius",
+      "quartoReady": true,
+      "liveUrl": "https://artometrics.com/caesar-the-psychonomics-of-emperor-julius/",
+      "status": "monorepo_home"
+    },
+    {
+      "siteSlug": "imperial",
+      "title": "'What Empire Chronicles Leave Out: Who Got Rich'",
+      "desk": "humanities",
+      "articlePath": "articles/imperial",
+      "quartoReady": true,
+      "liveUrl": "https://artometrics.com/imperial/",
+      "status": "monorepo_home"
+    },
+    {
+      "siteSlug": "pantheon-the-artometrics-of-collective-memory",
+      "title": "Power, Art, and Science Dominate Global Memory—85,000 Lives in MIT's Pantheon Dataset",
+      "desk": "humanities",
+      "articlePath": "articles/pantheon-the-artometrics-of-collective-memory",
+      "quartoReady": true,
+      "liveUrl": "https://artometrics.com/pantheon-the-artometrics-of-collective-memory/",
+      "status": "monorepo_home"
+    },
+    {
+      "siteSlug": "roman-emperors",
+      "title": "Constantine lasted 31 years—Nerva–Antonine emperors averaged 12.5 above median",
+      "desk": "humanities",
+      "articlePath": "articles/roman-emperors",
+      "quartoReady": true,
+      "liveUrl": "https://artometrics.com/roman-emperors/",
+      "status": "monorepo_home"
+    },
+    {
+      "siteSlug": "cetaceans",
+      "title": "Captive cetacean transfers peaked in 1972 with 170 US-logged records",
+      "desk": "science",
+      "articlePath": "articles/cetaceans",
+      "quartoReady": true,
+      "liveUrl": "https://artometrics.com/cetaceans/",
+      "status": "monorepo_home"
+    },
+    {
+      "siteSlug": "global-life-expectancy",
+      "title": "Global median life expectancy nearly tripled in five centuries",
+      "desk": "science",
+      "articlePath": "articles/global-life-expectancy",
+      "quartoReady": true,
+      "liveUrl": "https://artometrics.com/global-life-expectancy/",
+      "status": "monorepo_home"
+    },
+    {
+      "siteSlug": "hydro-wastewater",
+      "title": "Singapore's wastewater plants discharge 200× the global median",
+      "desk": "science",
+      "articlePath": "articles/hydro-wastewater",
+      "quartoReady": true,
+      "liveUrl": "https://artometrics.com/hydro-wastewater/",
+      "status": "monorepo_home"
+    },
+    {
+      "siteSlug": "medium-articles",
+      "title": "Medium posts at 4 minutes median — does length predict claps?",
+      "desk": "science",
+      "articlePath": "articles/medium-articles",
+      "quartoReady": true,
+      "liveUrl": "https://artometrics.com/medium-articles/",
+      "status": "monorepo_home"
+    },
+    {
+      "siteSlug": "nuclear-explosions",
+      "title": "Nuclear test body-wave magnitudes peaked at 7.40 across 2,051 recorded detonations",
+      "desk": "science",
+      "articlePath": "articles/nuclear-explosions",
+      "quartoReady": true,
+      "liveUrl": "https://artometrics.com/nuclear-explosions/",
+      "status": "monorepo_home"
+    },
+    {
+      "siteSlug": "readmitted",
+      "title": "48% of U.S. Hospitals Still Exceed CMS's 30-Day Readmission Benchmark",
+      "desk": "science",
+      "articlePath": "articles/readmitted",
+      "quartoReady": true,
+      "liveUrl": "https://artometrics.com/readmitted/",
+      "status": "monorepo_home"
+    },
+    {
+      "siteSlug": "web-page-metrics",
+      "title": "Page Speed Improved 31% at the Median Between 2016 and 2022",
+      "desk": "science",
+      "articlePath": "articles/web-page-metrics",
+      "quartoReady": true,
+      "liveUrl": "https://artometrics.com/web-page-metrics/",
+      "status": "monorepo_home"
+    },
+    {
+      "siteSlug": "board-games",
+      "title": "Which Board Games Combine Crowd Scale With Elite Ratings?",
+      "desk": "sports",
+      "articlePath": "articles/board-games",
+      "quartoReady": true,
+      "liveUrl": "https://artometrics.com/board-games/",
+      "status": "monorepo_home"
+    },
+    {
+      "siteSlug": "celtics-the-artometrics-of-institutional-winning",
+      "title": "18 NBA titles have turned the Celtics into a franchise judged against its own history",
+      "desk": "sports",
+      "articlePath": "articles/celtics-the-artometrics-of-institutional-winning",
+      "quartoReady": true,
+      "liveUrl": "https://artometrics.com/celtics-the-artometrics-of-institutional-winning/",
+      "status": "monorepo_home"
+    },
+    {
+      "siteSlug": "cowboys-the-artometrics-of-americas-team",
+      "title": "Dallas Cowboys carry $10B franchise value through 29-year championship drought",
+      "desk": "sports",
+      "articlePath": "articles/cowboys-the-artometrics-of-americas-team",
+      "quartoReady": true,
+      "liveUrl": "https://artometrics.com/cowboys-the-artometrics-of-americas-team/",
+      "status": "monorepo_home"
+    },
+    {
+      "siteSlug": "dodgers-the-artometrics-of-baseballs-modern-machine",
+      "title": "The Dodgers won 111 games in 2022—and still needed two titles to prove the machine works",
+      "desk": "sports",
+      "articlePath": "articles/dodgers-the-artometrics-of-baseballs-modern-machine",
+      "quartoReady": true,
+      "liveUrl": "https://artometrics.com/dodgers-the-artometrics-of-baseballs-modern-machine/",
+      "status": "monorepo_home"
+    },
+    {
+      "siteSlug": "giant-the-artometrics-of-a-san-francisco-dynasty",
+      "title": "The Giants won three World Series in five years at payroll rank 9",
+      "desk": "sports",
+      "articlePath": "articles/giant-the-artometrics-of-a-san-francisco-dynasty",
+      "quartoReady": true,
+      "liveUrl": "https://artometrics.com/giant-the-artometrics-of-a-san-francisco-dynasty/",
+      "status": "monorepo_home"
+    },
+    {
+      "siteSlug": "lakers-the-artometrics-of-basketball-glamour",
+      "title": "17 championships — how the Lakers convert star gravity into title eras",
+      "desk": "sports",
+      "articlePath": "articles/lakers-the-artometrics-of-basketball-glamour",
+      "quartoReady": true,
+      "liveUrl": "https://artometrics.com/lakers-the-artometrics-of-basketball-glamour/",
+      "status": "monorepo_home"
+    },
+    {
+      "siteSlug": "league-money-skill-and-star-systems",
+      "title": "NFL Franchises Average $6.5B — Why League Rules, Not Market Size, Set Team Value",
+      "desk": "sports",
+      "articlePath": "articles/league-money-skill-and-star-systems",
+      "quartoReady": true,
+      "liveUrl": "https://artometrics.com/league-money-skill-and-star-systems/",
+      "status": "monorepo_home"
+    },
+    {
+      "siteSlug": "padres-the-artometrics-of-paying-for-october",
+      "title": "$3.9bn for Zero Championships: Inside the Padres' Record Sale",
+      "desk": "sports",
+      "articlePath": "articles/padres-the-artometrics-of-paying-for-october",
+      "quartoReady": true,
+      "liveUrl": "https://artometrics.com/padres-the-artometrics-of-paying-for-october/",
+      "status": "monorepo_home"
+    },
+    {
+      "siteSlug": "padres-world-series-ownership-blueprint",
+      "title": "$3.9 Billion Buys the Padres—But Not a Championship Blueprint",
+      "desk": "sports",
+      "articlePath": "articles/padres-world-series-ownership-blueprint",
+      "quartoReady": true,
+      "liveUrl": "https://artometrics.com/padres-world-series-ownership-blueprint/",
+      "status": "monorepo_home"
+    },
+    {
+      "siteSlug": "patriots-the-artometrics-of-the-system-dynasty",
+      "title": "Six Super Bowls in 19 Seasons — The Patriots' Systemic Discontinuity",
+      "desk": "sports",
+      "articlePath": "articles/patriots-the-artometrics-of-the-system-dynasty",
+      "quartoReady": true,
+      "liveUrl": "https://artometrics.com/patriots-the-artometrics-of-the-system-dynasty/",
+      "status": "monorepo_home"
+    },
+    {
+      "siteSlug": "pokemon",
+      "title": "Dragon-types earn their 100 median Attack — Bug-types don't recover from 60",
+      "desk": "sports",
+      "articlePath": "articles/pokemon",
+      "quartoReady": true,
+      "liveUrl": "https://artometrics.com/pokemon/",
+      "status": "monorepo_home"
+    },
+    {
+      "siteSlug": "regional-sports-identity-map",
+      "title": "Large U.S. markets anchor six distinct sports identity patterns",
+      "desk": "sports",
+      "articlePath": "articles/regional-sports-identity-map",
+      "quartoReady": true,
+      "liveUrl": "https://artometrics.com/regional-sports-identity-map/",
+      "status": "monorepo_home"
+    },
+    {
+      "siteSlug": "sports-dynasty-index-best-and-worst-conversion",
+      "title": "Which Sports Dynasties Convert Finals Appearances Into Championships?",
+      "desk": "sports",
+      "articlePath": "articles/sports-dynasty-index-best-and-worst-conversion",
+      "quartoReady": true,
+      "liveUrl": "https://artometrics.com/sports-dynasty-index-best-and-worst-conversion/",
+      "status": "monorepo_home"
+    },
+    {
+      "siteSlug": "video-games-sliced",
+      "title": "Steam Concurrency 2012–2021 — Median Player Count Rose 46 % While a Dozen Titles Captured Half the Audience",
+      "desk": "sports",
+      "articlePath": "articles/video-games-sliced",
+      "quartoReady": true,
+      "liveUrl": "https://artometrics.com/video-games-sliced/",
+      "status": "monorepo_home"
+    },
+    {
+      "siteSlug": "video-games-steam",
+      "title": "Games That Delivered 10+ Hours Per Dollar Own 12% of Steam's Top Shelf",
+      "desk": "sports",
+      "articlePath": "articles/video-games-steam",
+      "quartoReady": true,
+      "liveUrl": "https://artometrics.com/video-games-steam/",
+      "status": "monorepo_home"
+    },
+    {
+      "siteSlug": "warrior-the-artometrics-of-a-golden-state-dynasty",
+      "title": "73 wins, four titles, and the franchise that rewrote basketball offense",
+      "desk": "sports",
+      "articlePath": "articles/warrior-the-artometrics-of-a-golden-state-dynasty",
+      "quartoReady": true,
+      "liveUrl": "https://artometrics.com/warrior-the-artometrics-of-a-golden-state-dynasty/",
+      "status": "monorepo_home"
+    },
+    {
+      "siteSlug": "yankees-the-artometrics-of-baseballs-empire",
+      "title": "27 Championships Built the Yankees' Empire—15 Years Without One Defines the Modern Paradox",
+      "desk": "sports",
+      "articlePath": "articles/yankees-the-artometrics-of-baseballs-empire",
+      "quartoReady": true,
+      "liveUrl": "https://artometrics.com/yankees-the-artometrics-of-baseballs-empire/",
+      "status": "monorepo_home"
     }
   ]
 }

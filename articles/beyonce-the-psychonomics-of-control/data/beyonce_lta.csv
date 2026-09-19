@@ -1,0 +1,4 @@
+subject,B,CC,D,IB,P,A,T,notes
+Beyoncé,0.88,0.82,0.62,0.78,0.86,0.74,0.91,"Expert coding from public interviews, acceptance speeches, artist statements, documented Parkwood control practices, and lyric-performance corpus proxies"
+World-leader baseline (Hermann ref.),0.55,0.58,0.48,0.56,0.61,0.55,0.59,Hermann 1999 reference average as used in Artometrics Caesar report
+Julius Caesar (Artometrics),0.92,0.78,0.31,0.44,0.95,0.58,0.85,Prior Psychonomics case for contrast

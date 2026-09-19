@@ -1,0 +1,11 @@
+source,target,relation,weight,risk_note
+Beyoncé,Parkwood Entertainment,owns / operates,1.0,Institutionalized self — load-bearing firm
+Beyoncé,JAY-Z,spouse / frequent collaborator,0.95,Highest-centrality personal + creative edge
+Beyoncé,Blue Ivy Carter,family / featured artist,0.9,Kinship + catalog node
+Beyoncé,Destiny's Child circle,formative group,0.75,Apprenticeship network
+Beyoncé,Matthew Knowles (historical),early management,0.55,Severed / superseded by Parkwood autonomy
+Beyoncé,Columbia / major-label apparatus,distribution partner,0.7,"Commercial channel, not authorship owner"
+Beyoncé,Coachella / live spectacle machine,stage institution,0.8,Homecoming documents control of the room
+Parkwood Entertainment,Homecoming (Netflix),produced,0.85,Auteur credit layer
+Beyoncé,"Featured rappers/peers (JAY-Z, Kanye, Pharrell, Nicki…)",catalog collaboration,0.65,High volume in lyric extract; not equal governance
+Beyoncé,Audience / Beyhive,affiliation mass,0.8,Need-for-affiliation externalized as fandom institution

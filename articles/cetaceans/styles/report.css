@@ -1,0 +1,54 @@
+/* Artometrics Quarto standalone report chrome */
+:root {
+  --art-cream: #f2f0eb;
+  --art-red: #c0392b;
+  --art-navy: #2c3e6b;
+  --art-ink: #1c1c1e;
+  --art-muted: #6b6b6b;
+  --art-border: #d5d5d5;
+}
+
+body {
+  font-family: "DM Sans", system-ui, sans-serif;
+  color: var(--art-ink);
+  background: #fafaf8;
+  line-height: 1.65;
+}
+
+main.content {
+  max-width: 52rem;
+}
+
+h1.title {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--art-ink);
+}
+
+h2,
+h3 {
+  font-weight: 650;
+  margin-top: 2rem;
+  color: var(--art-navy);
+}
+
+a {
+  color: var(--art-red);
+}
+
+nav.sidebar {
+  background: var(--art-cream);
+  border-right: 1px solid var(--art-border);
+}
+
+figure img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--art-border);
+  border-radius: 2px;
+}
+
+.quarto-title-meta {
+  color: var(--art-muted);
+  font-size: 0.95rem;
+}

@@ -3,6 +3,10 @@ dist/
 .expo/
 .astro/
 .cache/
+articles/*/.quarto/
+articles/*/**/_freeze/
+articles/*/*.html
+articles/*/*_files/
 .DS_Store
 __pycache__/
 .env

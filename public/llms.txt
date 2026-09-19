@@ -141,8 +141,7 @@
 - [Reading an Artometrics report from scratch](https://artometrics.com/podcast/interviews/2): David Lee walks through observed data, derived metrics, editorial indices, and outside literature — the four evidence types behind every report.
 - [Long timelines, small samples: history desk lessons](https://artometrics.com/podcast/interviews/3): Isaac Turner on working with archival gaps, imperial datasets, and the humility required when the past does not arrive in tidy rows.
 - [Franchise economics and the persona of a dynasty](https://artometrics.com/podcast/interviews/4): Jordan Wells on measuring sports and creator dynasties — wins, revenue, platform reach, and why myth needs a spreadsheet.
-- [The QA gate: from evidence to publish-ready artifacts](https://artometrics.com/podcast/interviews/5): David Lee on the quality checks that turn raw data, charts, and prose into exportable, reproducible artifacts — the same gates that keep Studio trustworthy.
 
 ## Generated
 
-Updated: 2026-08-19T20:17:17.151Z
+Updated: 2026-09-19T18:32:09.700Z

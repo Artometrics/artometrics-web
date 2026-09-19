@@ -1,0 +1,22 @@
+---
+title: "Dragon-types earn their 100 median Attack — Bug-types don't recover from 60"
+description: "Game Freak's type system encodes stat tradeoffs, power creep clusters at the tail, and Cosmoem weighs 999.9 kg at 0.1 meters."
+format:
+  html:
+    css: styles/report.css
+execute:
+  echo: false
+  warning: false
+---
+
+Game Freak's type system encodes stat tradeoffs, power creep clusters at the tail, and Cosmoem weighs 999.9 kg at 0.1 meters.
+
+## FAST FACTS
+
+## DATASET CONTEXT
+
+## CHART 1
+
+## LIMITATIONS
+
+## EDITOR'S NOTE

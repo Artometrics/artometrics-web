@@ -1,0 +1,22 @@
+---
+title: "The Giants won three World Series in five years at payroll rank 9"
+description: "San Francisco's 2010–2014 dynasty won three titles with a draft-built rotation at mid-tier payroll—then couldn't replicate the model."
+format:
+  html:
+    css: styles/report.css
+execute:
+  echo: false
+  warning: false
+---
+
+San Francisco's 2010–2014 dynasty won three titles with a draft-built rotation at mid-tier payroll—then couldn't replicate the model.
+
+## FAST FACTS
+
+## DATASET CONTEXT
+
+## CHART 1
+
+## LIMITATIONS
+
+## EDITOR'S NOTE

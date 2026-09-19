@@ -1,0 +1,22 @@
+---
+title: "Caesar scored 0.95 on Need for Power — then trusted the men who killed him"
+description: "Caesar's LTA profile shows 0.95 Need for Power and 0.31 Distrust — he built an empire on magnanimity and died when three pardoned senators proved the theory wrong."
+format:
+  html:
+    css: styles/report.css
+execute:
+  echo: false
+  warning: false
+---
+
+Caesar's LTA profile shows 0.95 Need for Power and 0.31 Distrust — he built an empire on magnanimity and died when three pardoned senators proved the theory wrong.
+
+## FAST FACTS
+
+## DATASET CONTEXT
+
+## CHART 1
+
+## LIMITATIONS
+
+## EDITOR'S NOTE

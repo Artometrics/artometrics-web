@@ -1,0 +1,22 @@
+---
+title: "Pokémon's $91B Earns More Than Marvel, Star Wars, and Harry Potter Combined"
+description: "Pokémon at $91B tops 107 franchises tracked. Merchandise drives 61% of all revenue. Disney owns $426B across subsidiaries."
+format:
+  html:
+    css: styles/report.css
+execute:
+  echo: false
+  warning: false
+---
+
+Pokémon at $91B tops 107 franchises tracked. Merchandise drives 61% of all revenue. Disney owns $426B across subsidiaries.
+
+## FAST FACTS
+
+## DATASET CONTEXT
+
+## CHART 1
+
+## LIMITATIONS
+
+## EDITOR'S NOTE

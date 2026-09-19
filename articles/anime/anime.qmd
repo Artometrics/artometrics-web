@@ -1,0 +1,22 @@
+---
+title: "What a Century of Anime Titles Reveals About the Industry"
+description: "MyAnimeList metadata on more than 13,000 titles traces Japanese animation as a output system."
+format:
+  html:
+    css: styles/report.css
+execute:
+  echo: false
+  warning: false
+---
+
+MyAnimeList metadata on more than 13,000 titles traces Japanese animation as a output system.
+
+## FAST FACTS
+
+## DATASET CONTEXT
+
+## CHART 1
+
+## LIMITATIONS
+
+## EDITOR'S NOTE

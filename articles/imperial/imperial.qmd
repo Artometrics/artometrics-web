@@ -1,0 +1,22 @@
+---
+title: "'What Empire Chronicles Leave Out: Who Got Rich'"
+description: "A historical-economics lens asks who captured wealth when rulers claimed order."
+format:
+  html:
+    css: styles/report.css
+execute:
+  echo: false
+  warning: false
+---
+
+A historical-economics lens asks who captured wealth when rulers claimed order.
+
+## FAST FACTS
+
+## DATASET CONTEXT
+
+## CHART 1
+
+## LIMITATIONS
+
+## EDITOR'S NOTE
