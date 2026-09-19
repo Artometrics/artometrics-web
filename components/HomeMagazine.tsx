@@ -5,221 +5,201 @@ import { Wrapper } from "@/components/Wrapper";
 import { BlogCard } from "@/components/BlogCard";
 import { assetUrl } from "@/lib/assets";
 import {
+  deckLine,
   formatDate,
   getBlogPosts,
   getPodcastEpisodes,
+  sectionLabel,
+  type BlogPost,
 } from "@/lib/content";
-import { EDITIONS } from "@/data/editions";
-import { SECTION_META } from "@/data/sections";
 
-const HERO_FALLBACK = "/images/brand/hero-cover.png";
-const STRIP = "/images/brand/signal-strip.png";
+function HomeLeadStory({
+  post,
+  related,
+}: {
+  post: BlogPost;
+  related: BlogPost[];
+}) {
+  const label = sectionLabel(post.tags);
+  return (
+    <View className="gap-4 md:flex-[3] md:min-w-0">
+      {label ? (
+        <Text className="font-sans text-[11px] font-bold uppercase tracking-[1.8px] text-accent">
+          {label}
+        </Text>
+      ) : null}
+      <Link href={`/${post.slug}`} asChild>
+        <Pressable>
+          <Text className="font-serif text-[28px] font-bold leading-[1.12] tracking-tight text-fg md:text-[34px]">
+            {post.title}
+          </Text>
+        </Pressable>
+      </Link>
+      <Text className="font-sans text-[15px] leading-[23px] text-muted">
+        {deckLine(post.description, 40)}
+      </Text>
+      {related.length > 0 ? (
+        <View className="mt-2 gap-3 border-t border-border pt-4">
+          {related.map((r) => (
+            <Link key={r.slug} href={`/${r.slug}`} asChild>
+              <Pressable>
+                <Text className="font-serif text-[17px] font-semibold leading-[1.25] text-fg">
+                  {r.title}
+                </Text>
+              </Pressable>
+            </Link>
+          ))}
+        </View>
+      ) : null}
+    </View>
+  );
+}
+
+function HomeFeatureStory({ post }: { post: BlogPost }) {
+  const label = sectionLabel(post.tags);
+  const hero = assetUrl(post.heroImage);
+  return (
+    <View className="gap-3 md:flex-[5] md:min-w-0">
+      <Link href={`/${post.slug}`} asChild>
+        <Pressable className="overflow-hidden">
+          {hero ? (
+            <Image
+              source={{ uri: hero }}
+              className="aspect-[16/10] w-full"
+              contentFit="cover"
+              transition={250}
+              accessibilityLabel={post.title}
+            />
+          ) : (
+            <View className="aspect-[16/10] w-full bg-border" />
+          )}
+        </Pressable>
+      </Link>
+      {label ? (
+        <Text className="font-sans text-[11px] font-bold uppercase tracking-[1.8px] text-accent">
+          {label}
+        </Text>
+      ) : null}
+      <Link href={`/${post.slug}`} asChild>
+        <Pressable>
+          <Text className="font-serif text-[26px] font-bold leading-[1.15] tracking-tight text-fg md:text-[32px]">
+            {post.title}
+          </Text>
+        </Pressable>
+      </Link>
+      <Text className="font-sans text-[14px] leading-[22px] text-muted">
+        {deckLine(post.description, 32)}
+      </Text>
+    </View>
+  );
+}
+
+function HomeEditorsPicks({ posts }: { posts: BlogPost[] }) {
+  if (!posts.length) return null;
+  return (
+    <View className="md:flex-[2] md:min-w-0 md:border-l md:border-border md:pl-6">
+      <Text className="mb-2 font-sans text-[11px] font-bold uppercase tracking-[2px] text-accent">
+        Editor&apos;s picks
+      </Text>
+      {posts.map((post) => (
+        <BlogCard key={post.slug} post={post} variant="pick" editorial />
+      ))}
+    </View>
+  );
+}
+
+function HomeTopStoriesGrid({ posts }: { posts: BlogPost[] }) {
+  if (!posts.length) return null;
+  return (
+    <View className="gap-6 border-t border-border pt-8">
+      <View className="items-center gap-3">
+        <Text className="font-sans text-[11px] font-bold uppercase tracking-[3px] text-subtle">
+          Top stories
+        </Text>
+        <View className="h-px w-full max-w-md bg-border" />
+      </View>
+      <View className="flex-row flex-wrap gap-4">
+        {posts.map((post) => (
+          <View key={post.slug} className="min-w-[140px] flex-1 basis-[45%] md:basis-[22%]">
+            <BlogCard post={post} variant="stack" editorial />
+          </View>
+        ))}
+      </View>
+    </View>
+  );
+}
 
 /**
- * KSM-energy homepage — full-bleed hero, signal band, magazine stack,
- * editions rail, interviews. Navigation-first, not a newsstand rack.
+ * FT-style front page — headline grid, no ads; Vogue nav lives in SiteHeader.
  */
 export function HomeMagazine() {
   const posts = getBlogPosts();
   const episodes = getPodcastEpisodes().slice(0, 3);
-  const cover = posts[0];
-  const rest = posts.slice(1, 4);
-  const editions = EDITIONS.slice(0, 6);
-  const heroSrc = assetUrl(cover?.heroImage) || HERO_FALLBACK;
+
+  const lead = posts[0];
+  const feature = posts[1] ?? posts[0];
+  const relatedUnderLead = posts.slice(2, 5);
+  const picks = posts.slice(5, 10);
+  const topStories = posts.slice(10, 18);
+
+  if (!lead) {
+    return (
+      <Wrapper className="py-16">
+        <Text className="font-serif text-2xl text-fg">No reports yet.</Text>
+      </Wrapper>
+    );
+  }
 
   return (
-    <>
-      {/* Full-bleed hero */}
-      <View className="relative min-h-[88vh] w-full overflow-hidden bg-black">
-        <Image
-          source={{ uri: heroSrc }}
-          className="absolute inset-0 h-full w-full"
-          contentFit="cover"
-          transition={250}
-        />
-        <View className="absolute inset-0 bg-black/50" />
-        <Wrapper className="relative z-10 min-h-[88vh] justify-end gap-4 pb-12 pt-24">
-          <Text
-            className="text-5xl text-accent md:text-6xl"
-            style={{ fontFamily: "Chomsky" }}
-          >
-            Artometrics
-          </Text>
-          <Text className="max-w-[18ch] font-display text-5xl uppercase leading-[0.92] tracking-[1px] text-white md:text-7xl">
-            {cover?.title ?? "Data has a shape."}
-          </Text>
-          <Text className="max-w-[40ch] font-sans text-[15px] leading-6 text-white/80">
-            {cover?.description ??
-              "Data reports on culture, power, and the creative economy — clear, citable, loud."}
-          </Text>
-          <View className="mt-2 flex-row flex-wrap gap-3">
-            <Link href={cover ? (`/${cover.slug}` as `/`) : "/blog"} asChild>
-              <Pressable className="bg-accent px-5 py-3">
-                <Text className="font-display text-[13px] uppercase tracking-[2px] text-white">
-                  Read the report
-                </Text>
-              </Pressable>
-            </Link>
-            <Link href="/editions" asChild>
-              <Pressable className="border-2 border-white px-5 py-3">
-                <Text className="font-display text-[13px] uppercase tracking-[2px] text-white">
-                  Browse editions
-                </Text>
-              </Pressable>
-            </Link>
-          </View>
-        </Wrapper>
-      </View>
-
-      {/* Signal strip */}
-      <View className="relative h-[160px] w-full overflow-hidden border-y-2 border-border bg-accent md:h-[220px]">
-        <Image
-          source={{ uri: assetUrl(STRIP) || STRIP }}
-          className="absolute inset-0 h-full w-full opacity-70"
-          contentFit="cover"
-        />
-        <View className="absolute inset-0 items-center justify-center px-4">
-          <Text className="text-center font-display text-4xl uppercase tracking-[6px] text-white md:text-6xl">
-            Signal
-          </Text>
-        </View>
-      </View>
-
-      {/* From the magazine */}
-      <Wrapper className="gap-6 py-10">
-        <View className="flex-row flex-wrap items-end justify-between gap-4">
-          <View>
-            <Text
-              className="text-2xl text-accent"
-              style={{ fontFamily: "Chomsky" }}
-            >
-              Issue
-            </Text>
-            <Text className="font-display text-4xl uppercase tracking-[2px] text-fg">
-              From the magazine
-            </Text>
-          </View>
-          <Link href="/blog" asChild>
-            <Pressable>
-              <Text className="font-display text-[12px] uppercase tracking-[2px] text-accent">
-                All reports →
-              </Text>
-            </Pressable>
-          </Link>
+    <View className="bg-bg">
+      <Wrapper className="gap-8 py-8 md:py-10">
+        <View className="flex-col gap-10 md:flex-row md:items-start md:gap-8">
+          <HomeLeadStory post={lead} related={relatedUnderLead} />
+          <HomeFeatureStory post={feature} />
+          <HomeEditorsPicks posts={picks} />
         </View>
 
-        {cover ? <BlogCard post={cover} variant="cover" /> : null}
+        <HomeTopStoriesGrid posts={topStories} />
 
-        <View className="flex-row flex-wrap gap-4">
-          {rest.map((post) => (
-            <View key={post.slug} className="min-w-[260px] flex-1">
-              <BlogCard post={post} variant="stack" />
-            </View>
-          ))}
-        </View>
-      </Wrapper>
-
-      {/* Editions — horizontal issue covers, not a newsstand */}
-      <View className="border-t-2 border-border bg-black py-10">
-        <Wrapper className="gap-5">
-          <View className="flex-row flex-wrap items-end justify-between gap-3">
-            <Text className="font-display text-4xl uppercase tracking-[2px] text-white">
-              Editions
-            </Text>
-            <Link href="/editions" asChild>
-              <Pressable>
-                <Text className="font-display text-[12px] uppercase tracking-[2px] text-accent">
-                  Full archive →
-                </Text>
-              </Pressable>
-            </Link>
-          </View>
-          <View className="flex-row flex-wrap gap-3">
-            {editions.map((ed, i) => {
-              const hero = assetUrl(ed.heroImage);
-              return (
-                <Link key={ed.id} href={`/editions/${ed.id}`} asChild>
-                  <Pressable className="min-w-[140px] flex-1 basis-[30%] overflow-hidden border-2 border-white/30 bg-[#111]">
-                    <View className="relative aspect-[3/4]">
-                      {hero ? (
-                        <Image
-                          source={{ uri: hero }}
-                          className="absolute inset-0 h-full w-full"
-                          contentFit="cover"
-                          transition={200}
-                        />
-                      ) : (
-                        <View className="absolute inset-0 bg-accent" />
-                      )}
-                      <View className="absolute inset-0 justify-between p-3">
-                        <Text className="font-display text-[11px] uppercase tracking-[2px] text-accent">
-                          Vol. {String(i + 1).padStart(2, "0")}
-                        </Text>
-                        <View>
-                          <Text
-                            className="font-display text-[18px] uppercase leading-5 tracking-[1px] text-white"
-                            numberOfLines={3}
-                          >
-                            {ed.title}
-                          </Text>
-                          <Text className="mt-1 text-[10px] uppercase tracking-[1.2px] text-white/60">
-                            {SECTION_META[ed.section]?.title ?? ed.section}
-                          </Text>
-                        </View>
-                      </View>
-                    </View>
-                  </Pressable>
-                </Link>
-              );
-            })}
-          </View>
-        </Wrapper>
-      </View>
-
-      {/* Interviews / podcast */}
-      {episodes.length > 0 ? (
-        <View className="border-t-2 border-border bg-bg py-10">
-          <Wrapper className="gap-4">
+        {episodes.length > 0 ? (
+          <View className="gap-4 border-t border-border pt-8">
             <View className="flex-row flex-wrap items-end justify-between gap-3">
-              <Text className="font-display text-4xl uppercase tracking-[2px] text-fg">
-                Interviews
+              <Text className="font-sans text-[11px] font-bold uppercase tracking-[2px] text-accent">
+                Podcast
               </Text>
               <Link href="/podcast" asChild>
                 <Pressable>
-                  <Text className="font-display text-[12px] uppercase tracking-[2px] text-accent">
+                  <Text className="font-sans text-[11px] font-bold uppercase tracking-[2px] text-fg">
                     All episodes →
                   </Text>
                 </Pressable>
               </Link>
             </View>
-            <View className="border-2 border-border">
+            <View className="border border-border">
               {episodes.map((ep) => (
                 <Link
                   key={ep.id}
                   href={`/podcast/interviews/${ep.id}` as `/`}
                   asChild
                 >
-                  <Pressable className="flex-row items-center gap-4 border-b-2 border-border px-4 py-5 last:border-b-0">
+                  <Pressable className="flex-row items-center gap-4 border-b border-border px-4 py-4 last:border-b-0">
                     {assetUrl(ep.image?.url) ? (
                       <Image
                         source={{ uri: assetUrl(ep.image.url)! }}
-                        className="h-16 w-16"
+                        className="h-14 w-14"
                         contentFit="cover"
                       />
                     ) : (
-                      <View className="h-16 w-16 bg-accent" />
+                      <View className="h-14 w-14 bg-border" />
                     )}
                     <View className="min-w-0 flex-1 gap-1">
-                      <Text className="font-display text-[11px] uppercase tracking-[2px] text-accent">
-                        Ep · {ep.duration || "Listen"}
-                      </Text>
                       <Text
-                        className="font-display text-xl uppercase leading-6 tracking-[1px] text-fg"
+                        className="font-serif text-[17px] font-semibold leading-[1.25] text-fg"
                         numberOfLines={2}
                       >
                         {ep.title}
                       </Text>
-                      <Text className="text-[11px] uppercase tracking-[1.2px] text-subtle">
+                      <Text className="font-sans text-[11px] uppercase tracking-[1.2px] text-subtle">
                         {formatDate(ep.pubDate)}
                       </Text>
                     </View>
@@ -227,9 +207,27 @@ export function HomeMagazine() {
                 </Link>
               ))}
             </View>
-          </Wrapper>
+          </View>
+        ) : null}
+
+        <View className="flex-row flex-wrap items-center justify-center gap-4 border-t border-border pt-6">
+          <Link href="/blog" asChild>
+            <Pressable>
+              <Text className="font-sans text-[11px] font-bold uppercase tracking-[2px] text-fg">
+                All reports
+              </Text>
+            </Pressable>
+          </Link>
+          <Text className="text-subtle">·</Text>
+          <Link href="/editions" asChild>
+            <Pressable>
+              <Text className="font-sans text-[11px] font-bold uppercase tracking-[2px] text-muted">
+                Editions
+              </Text>
+            </Pressable>
+          </Link>
         </View>
-      ) : null}
-    </>
+      </Wrapper>
+    </View>
   );
 }

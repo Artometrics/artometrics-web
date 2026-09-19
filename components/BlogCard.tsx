@@ -13,15 +13,52 @@ import {
 export function BlogCard({
   post,
   variant = "row",
+  editorial = false,
 }: {
   post: BlogPost;
-  variant?: "stack" | "row" | "cover";
+  variant?: "stack" | "row" | "cover" | "pick";
+  /** Normal-case serif-style headlines (homepage FT grid). */
+  editorial?: boolean;
 }) {
   const label = sectionLabel(post.tags);
   const hero = assetUrl(post.heroImage);
   const author = post.author
     ? formatAuthorName(String(post.author))
     : "Kyle McAuliffe";
+
+  const titleClass = editorial
+    ? "font-serif text-[22px] font-semibold leading-[1.2] tracking-tight text-fg"
+    : "font-display text-[22px] uppercase leading-6 tracking-[1px] text-fg";
+
+  if (variant === "pick") {
+    return (
+      <Link href={`/${post.slug}`} asChild>
+        <Pressable className="flex-row gap-3 border-b border-border py-3">
+          {hero ? (
+            <Image
+              source={{ uri: hero }}
+              className="h-14 w-14 shrink-0"
+              contentFit="cover"
+              transition={200}
+              accessibilityLabel={post.title}
+            />
+          ) : (
+            <View className="h-14 w-14 shrink-0 bg-border" />
+          )}
+          <View className="min-w-0 flex-1 gap-1">
+            {label ? (
+              <Text className="font-sans text-[10px] font-bold uppercase tracking-[1.6px] text-accent">
+                {label}
+              </Text>
+            ) : null}
+            <Text className={titleClass} numberOfLines={3}>
+              {post.title}
+            </Text>
+          </View>
+        </Pressable>
+      </Link>
+    );
+  }
 
   if (variant === "cover") {
     return (
@@ -55,35 +92,48 @@ export function BlogCard({
   }
 
   if (variant === "stack") {
+    const borderClass = editorial ? "border border-border" : "border-2 border-border";
+    const stackTitle = editorial
+      ? "font-serif text-[18px] font-semibold leading-[1.25] tracking-tight text-fg"
+      : "font-display text-[22px] uppercase leading-6 tracking-[1px] text-fg";
     return (
       <Link href={`/${post.slug}`} asChild>
-        <Pressable className="min-w-[260px] flex-1 gap-0 overflow-hidden border-2 border-border">
+        <Pressable className={`min-w-[140px] flex-1 gap-0 overflow-hidden ${borderClass}`}>
           {hero ? (
             <Image
               source={{ uri: hero }}
-              className="aspect-[4/5] w-full"
+              className="aspect-[4/3] w-full"
               contentFit="cover"
               transition={200}
               accessibilityLabel={post.title}
             />
           ) : (
-            <View className="aspect-[4/5] w-full bg-accent" />
+            <View className="aspect-[4/3] w-full bg-border" />
           )}
           <View className="gap-2 p-3">
             {label ? (
-              <Text className="font-display text-[11px] uppercase tracking-[2px] text-accent">
+              <Text className="font-sans text-[10px] font-bold uppercase tracking-[1.6px] text-accent">
                 {label}
               </Text>
             ) : null}
-            <Text className="font-display text-[22px] uppercase leading-6 tracking-[1px] text-fg">
+            <Text className={stackTitle} numberOfLines={4}>
               {post.title}
             </Text>
-            <Text
-              className="font-sans text-[14px] leading-[20px] text-muted"
-              numberOfLines={3}
-            >
-              {deckLine(post.description, 28)}
-            </Text>
+            {editorial ? (
+              <Text
+                className="font-sans text-[13px] leading-[18px] text-muted"
+                numberOfLines={2}
+              >
+                {deckLine(post.description, 24)}
+              </Text>
+            ) : (
+              <Text
+                className="font-sans text-[14px] leading-[20px] text-muted"
+                numberOfLines={3}
+              >
+                {deckLine(post.description, 28)}
+              </Text>
+            )}
           </View>
         </Pressable>
       </Link>
