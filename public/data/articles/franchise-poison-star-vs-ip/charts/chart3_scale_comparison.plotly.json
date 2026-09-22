@@ -1,0 +1,25 @@
+{
+  "data": [
+    {
+      "type": "bar",
+      "orientation": "h",
+      "x": [91000, 25.53, 220],
+      "y": ["Pokémon lifetime franchise revenue ($91B)", "Median single film, domestic gross ($25.53M, horror-tagged file)", "Largest single Leto-slate budget (Tron: Ares, $220M)"],
+      "marker": { "color": ["#C0392B", "#525252", "#000000"] },
+      "text": ["$91,000M", "$25.53M", "$220M"],
+      "textposition": "outside",
+      "hovertemplate": "%{y}<extra></extra>",
+      "name": "Revenue / budget scale, $M (log axis)"
+    }
+  ],
+  "layout": {
+    "title": "IP-franchise scale vs. single-title scale ($M, log axis)",
+    "xaxis": { "title": "US dollars, millions (log scale)", "type": "log" },
+    "yaxis": { "automargin": true },
+    "margin": { "l": 320, "r": 60, "t": 60, "b": 50 },
+    "showlegend": false,
+    "plot_bgcolor": "#FFFFFF",
+    "paper_bgcolor": "#FFFFFF",
+    "font": { "color": "#000000" }
+  }
+}

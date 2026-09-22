@@ -1,0 +1,27 @@
+{
+  "data": [
+    {
+      "type": "bar",
+      "orientation": "h",
+      "x": [61, 39],
+      "y": ["Merchandise, Licensing &amp; Retail", "Box Office + All Other Streams"],
+      "marker": {
+        "color": ["#C0392B", "#525252"]
+      },
+      "text": ["61%", "39%"],
+      "textposition": "outside",
+      "hovertemplate": "%{y}: %{x}%<extra></extra>",
+      "name": "Share of tracked franchise revenue"
+    }
+  ],
+  "layout": {
+    "title": "Merchandise share of revenue across 107 tracked franchises",
+    "xaxis": { "title": "Share of tracked lifetime revenue (%)", "range": [0, 70] },
+    "yaxis": { "automargin": true },
+    "margin": { "l": 220, "r": 40, "t": 60, "b": 50 },
+    "showlegend": false,
+    "plot_bgcolor": "#FFFFFF",
+    "paper_bgcolor": "#FFFFFF",
+    "font": { "color": "#000000" }
+  }
+}
