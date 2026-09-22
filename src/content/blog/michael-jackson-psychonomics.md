@@ -40,7 +40,7 @@ keyPoints:
   - >-
     1988–2020 — Years Neverland Ranch functioned publicly as an extension of
     Jackson's image before its 2020 sale
-  - '2009 — Year of Jackson's death, at age 50'
+  - "2009 — Year of Jackson's death, at age 50"
 faq:
   - question: What is Psychonomics in this series?
     answer: >-
