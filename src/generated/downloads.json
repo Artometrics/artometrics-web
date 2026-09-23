@@ -329,6 +329,16 @@
     "audio": null,
     "github": null
   },
+  "franchise-poison-star-vs-ip": {
+    "slug": "franchise-poison-star-vs-ip",
+    "dataset": null,
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "epub": null,
+    "audio": null,
+    "github": "https://github.com/Artometrics/franchise-poison-star-vs-ip"
+  },
   "franchise": {
     "slug": "franchise",
     "dataset": "/data/articles/franchise/data/media_franchises.csv",
@@ -449,6 +459,16 @@
     "audio": null,
     "github": null
   },
+  "institutional-winning-meta": {
+    "slug": "institutional-winning-meta",
+    "dataset": null,
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "epub": null,
+    "audio": null,
+    "github": "https://github.com/Artometrics/institutional-winning-meta"
+  },
   "lakers-the-artometrics-of-basketball-glamour": {
     "slug": "lakers-the-artometrics-of-basketball-glamour",
     "dataset": null,
@@ -509,6 +529,16 @@
     "audio": null,
     "github": null
   },
+  "michael-jackson-psychonomics": {
+    "slug": "michael-jackson-psychonomics",
+    "dataset": null,
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "epub": null,
+    "audio": null,
+    "github": "https://github.com/Artometrics/michael-jackson-psychonomics"
+  },
   "musicbrainz-pop-fame-mechanics": {
     "slug": "musicbrainz-pop-fame-mechanics",
     "dataset": null,
@@ -518,6 +548,16 @@
     "epub": null,
     "audio": null,
     "github": "https://github.com/Artometrics/musicbrainz-pop-fame-mechanics"
+  },
+  "narrative-economics-field-guide": {
+    "slug": "narrative-economics-field-guide",
+    "dataset": null,
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "epub": null,
+    "audio": null,
+    "github": "https://github.com/Artometrics/narrative-economics-field-guide"
   },
   "national-export-identity-atlas": {
     "slug": "national-export-identity-atlas",
@@ -639,6 +679,16 @@
     "audio": null,
     "github": null
   },
+  "playboy-after-hef": {
+    "slug": "playboy-after-hef",
+    "dataset": null,
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "epub": null,
+    "audio": null,
+    "github": "https://github.com/Artometrics/playboy-after-hef"
+  },
   "pokemon": {
     "slug": "pokemon",
     "dataset": "/data/articles/pokemon/pokemon.csv",
@@ -668,6 +718,16 @@
     "epub": null,
     "audio": null,
     "github": null
+  },
+  "protection-threshold": {
+    "slug": "protection-threshold",
+    "dataset": null,
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "epub": null,
+    "audio": null,
+    "github": "https://github.com/Artometrics/protection-threshold"
   },
   "radio-stations": {
     "slug": "radio-stations",
