@@ -40,6 +40,12 @@
 
 ## Reports
 
+- [Franchise Poison: What Star Risk Costs an IP](https://artometrics.com/franchise-poison-star-vs-ip): Pokémon's $91B and a six-film Leto slate (0.65x–2.04x) show why merchandise-driven IP is insulated from star risk that concentrated vehicles carry alone. (arts)
+- [Institutional Winning: What Transfers When a Dynasty Is a System, Not a Star](https://artometrics.com/institutional-winning-meta): Yankees, Patriots, Celtics, Cowboys: a synthesis of Artometrics' sports-dynasty reports asks what transfers when winning is a system, not a roster. (sports)
+- [Michael Jackson and the Cost of Being the Product](https://artometrics.com/michael-jackson-psychonomics): A Psychonomics profile of Michael Jackson — Thriller's 34× RIAA certification, the 2016 Sony/ATV deal, and the disputed allegations on the same ledger. (humanities)
+- [Narrative Economics: The Field Guide Culture Workers Needed](https://artometrics.com/narrative-economics-field-guide): A working framework for treating economic narratives as contagious, falsifiable objects — built from Shiller and Kuran, not a proprietary dataset. (civics)
+- [Playboy After Hef: What Happens When the Brand Outlives the House](https://artometrics.com/playboy-after-hef): Hefner died in 2017. In 2024 his son's $100M+ bid to buy back Playboy's legacy was rejected. What survives a founder who was the product? (civics)
+- [The Protection Threshold: When Flops End Hollywood's Silence](https://artometrics.com/protection-threshold): BBC's Leto exposé asks why not sooner. Six film ROIs and four institutional cases test what forward value has to do with it. (arts)
 - [$3.9bn for Zero Championships: Inside the Padres' Record Sale](https://artometrics.com/padres-the-artometrics-of-paying-for-october): San Diego sold for $3.9bn in May 2026 — a record — despite 57 seasons and zero titles. The price measures demand, not delivery. (sports)
 - [$3.9 Billion Buys the Padres—But Not a Championship Blueprint](https://artometrics.com/padres-world-series-ownership-blueprint): José E. Feliciano and Kwanza Jones paid a record $3.9bn for a club drawing 42,000 a game, ranked last in farm talent, and carrying $858m owed to five underperforming stars. (sports)
 - [Beyoncé and the Cost of Controlling the House](https://artometrics.com/beyonce-the-psychonomics-of-control): A Psychonomics profile of Beyoncé — Hermann Leadership Trait Analysis, Parkwood as institutionalized self, Lemonade’s canon economics, and an 8,000-line lyric machine. (humanities)
@@ -144,4 +150,4 @@
 
 ## Generated
 
-Updated: 2026-09-19T18:32:09.700Z
+Updated: 2026-09-22T16:52:39.314Z
