@@ -59,9 +59,16 @@ for (const post of blog) {
     `/data/articles/${slug}/article.epub`,
     `/exports/${slug}.epub`,
   ]);
-  const audio = firstExisting([
-    `/audios/${slug}.mp3`,
-    `/data/articles/${slug}/narration.mp3`,
+  const audioFromFile = firstExisting([
+    post.audioSrc ? String(post.audioSrc).replace(/^\//, "") : null,
+    `audios/${slug}.mp3`,
+    `exports/${slug}.mp3`,
+    `data/articles/${slug}/narration.mp3`,
+  ].filter(Boolean));
+  const audio = audioFromFile;
+  const transcript = firstExisting([
+    `exports/transcripts/${slug}.txt`,
+    `exports/narration/${slug}.txt`,
   ]);
   const quarto = firstExisting([
     `/data/articles/${slug}/source.qmd`,
@@ -77,6 +84,7 @@ for (const post of blog) {
     pdf,
     epub,
     audio,
+    transcript,
     // Keep GitHub as metadata only when site-hosted packs exist; UI demotes it.
     github: post.draft ? null : html || pdf || epub || dataset ? null : github,
   };

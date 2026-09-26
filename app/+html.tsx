@@ -55,6 +55,7 @@ export default function Root({ children }: PropsWithChildren) {
         <meta name="color-scheme" content="dark" />
         <ScrollViewStyleReset />
         <link rel="stylesheet" href="/css/artometrics-article.css" />
+        <link rel="stylesheet" href="/css/site-images.css" />
         <style
           dangerouslySetInnerHTML={{
             __html: `

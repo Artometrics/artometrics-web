@@ -1,5 +1,5 @@
 import { Pressable, Text, View } from "react-native";
-import { Image } from "expo-image";
+import { SiteCoverImage } from "@/components/SiteCoverImage";
 import { Link } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { PageSeo } from "@/components/PageSeo";
@@ -25,10 +25,9 @@ export default function AuthorsIndex() {
                 className="flex-basis-[200px] flex-grow border border-border p-4 gap-2 items-start bg-bg-elevated"
               >
                 {avatar ? (
-                  <Image
+                  <SiteCoverImage
                     source={{ uri: avatar }}
-                    className="w-[72px] h-[72px] rounded-full"
-                    contentFit="cover"
+                    wrapperClassName="h-[72px] w-[72px] rounded-full"
                     transition={200}
                     accessibilityLabel={author.image?.alt || author.name}
                   />

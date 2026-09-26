@@ -14,6 +14,7 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { SiteNavOverlay } from "@/components/SiteNavOverlay";
 import { Analytics } from "@/components/Analytics";
 import { ChromeProvider, useChrome } from "@/lib/chrome";
+import { LocaleProvider } from "@/lib/locale";
 import { ThemeProvider, useTheme } from "@/lib/theme";
 import { trackPageView } from "@/lib/analytics/ga";
 import { getBlogPost } from "@/lib/content";
@@ -76,9 +77,11 @@ export default function SiteLayout() {
   return (
     <SafeAreaProvider>
       <ThemeProvider>
-        <ChromeProvider>
-          <SiteChrome />
-        </ChromeProvider>
+        <LocaleProvider>
+          <ChromeProvider>
+            <SiteChrome />
+          </ChromeProvider>
+        </LocaleProvider>
       </ThemeProvider>
     </SafeAreaProvider>
   );

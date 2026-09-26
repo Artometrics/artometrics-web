@@ -9,7 +9,7 @@ export function TrendingRail({ posts }: { posts: BlogPost[] }) {
         Trending
       </Text>
       {posts.map((post, i) => {
-        const label = sectionLabel(post.tags);
+        const label = sectionLabel(post.tags, post.subject);
         const n = String(i + 1).padStart(2, "0");
         return (
           <Link key={post.slug} href={`/${post.slug}`} asChild>

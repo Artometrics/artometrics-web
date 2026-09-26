@@ -11,16 +11,16 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const BLOG = join(__dirname, "../src/content/blog");
 
 const SKIP = new Set([
-  "padres-the-artometrics-of-paying-for-october.md",
-  "padres-world-series-ownership-blueprint.md",
-  "yankees-the-artometrics-of-baseballs-empire.md",
-  "dodgers-the-artometrics-of-baseballs-modern-machine.md",
-  "cowboys-the-artometrics-of-americas-team.md",
-  "celtics-the-artometrics-of-institutional-winning.md",
-  "lakers-the-artometrics-of-basketball-glamour.md",
-  "patriots-the-artometrics-of-the-system-dynasty.md",
-  "giant-the-artometrics-of-a-san-francisco-dynasty.md",
-  "warrior-the-artometrics-of-a-golden-state-dynasty.md",
+  "padres.md",
+  "blueprint.md",
+  "yankees.md",
+  "dodgers.md",
+  "cowboys.md",
+  "celtics.md",
+  "lakers.md",
+  "patriots.md",
+  "giants.md",
+  "warriors.md",
 ]);
 
 const STUB_QUESTION_PATTERNS = [

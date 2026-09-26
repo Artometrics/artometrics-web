@@ -22,7 +22,7 @@ export const DATASET_PACKS: DatasetPack[] = [
     summary:
       "Title-level film economics and reception joins — studios, genres, ratings, box office where licensed. One schema, clear citations.",
     primaryKeyword: "movie industry data",
-    relatedReports: ["imdb-blockbuster-grammar", "franchise"],
+    relatedReports: ["blockbusters", "franchise"],
     sources: [{ name: "Arts reports", url: "/topics/arts" }],
   },
   {
@@ -31,9 +31,9 @@ export const DATASET_PACKS: DatasetPack[] = [
     section: "arts",
     status: "collecting",
     summary:
-      "Availability / library-shape tables for SVOD analysis. Powers the streaming-catalog-power brief.",
+      "Availability / library-shape tables for SVOD analysis. Powers the streaming brief.",
     primaryKeyword: "streaming catalog data",
-    relatedReports: ["streaming-catalog-power", "anime"],
+    relatedReports: ["streaming", "anime"],
     sources: [{ name: "Content OS brief", url: "/resources" }],
   },
   {
@@ -45,9 +45,9 @@ export const DATASET_PACKS: DatasetPack[] = [
       "Franchise performance, dynasties, and market gravity — packaged CSVs behind Sports section reports.",
     primaryKeyword: "sports franchise data",
     relatedReports: [
-      "yankees-the-artometrics-of-baseballs-empire",
-      "lakers-the-artometrics-of-basketball-glamour",
-      "cowboys-the-artometrics-of-americas-team",
+      "yankees",
+      "lakers",
+      "cowboys",
     ],
     sources: [{ name: "Sports reports", url: "/topics/sports" }],
   },
@@ -56,9 +56,9 @@ export const DATASET_PACKS: DatasetPack[] = [
     title: "Creative exports pack",
     section: "civics",
     status: "planned",
-    summary: "Country and city soft-power / export tables used in geo-economics reports.",
+    summary: "Country and city geopolitics / export tables used in geo-economics reports.",
     primaryKeyword: "cultural exports data",
-    relatedReports: ["cultural-exports-geoeconomics", "national-export-identity-atlas"],
+    relatedReports: ["geopolitics", "atlas"],
     sources: [{ name: "Civics reports", url: "/topics/civics" }],
   },
   {
@@ -69,10 +69,7 @@ export const DATASET_PACKS: DatasetPack[] = [
     summary:
       "Open-reference catalog of ~250 English-language classics (title, authors, subjects, Gutenberg URLs). Built from Gutendex or the official Gutenberg CSV feed.",
     primaryKeyword: "project gutenberg catalog",
-    relatedReports: [
-      "project-gutenberg",
-      "project-gutenberg-public-domain-canon-map",
-    ],
+    relatedReports: ["gutenberg", "lcsh"],
     sources: [
       { name: "Project Gutenberg", url: "https://www.gutenberg.org/" },
       { name: "Gutendex", url: "https://gutendex.com/" },

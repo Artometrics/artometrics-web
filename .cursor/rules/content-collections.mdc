@@ -9,6 +9,6 @@ alwaysApply: false
 - Collections: `blog`, `authors`, `podcast`, `legal` under `src/content/<name>/`.
 - Built by `scripts/build-content.mjs` → `src/generated/*.json` (run via `npm run content` / prestart / prebuild).
 - **Do not change frontmatter fields** without updating the content builder and every consumer in `lib/content.ts` / `app/`.
-- **`blog`:** Required: `title`, `slug`, `pubDate`, `description`, `heroImage`, `tags` (`culture|atlas|history|persona|power`). Optional: `draft`, `author`. Body is HTML.
+- **`blog`:** Required: `title`, `slug`, `pubDate`, `description`, `heroImage`, `tags` (`[domain, subdomain]`). Optional: `draft`, `author`, `subject` (1–2 word eyebrow noun, e.g. `Dynasties`, `Padres`). Body is HTML.
 - **Templates:** `src/content/blog/anime.md`, `authors/juliet-ramos.md`, `podcast/1.md`, `legal/privacy.md`.
 - Author/podcast image URLs under `/src/images/...` are rewritten to `/images/...` and copied into `public/images/` by the content builder.

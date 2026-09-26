@@ -101,7 +101,7 @@ Pieces seasoned operators and ambitious juniors *should* know — expensive insi
 | D1 | **Playboy After Hef** | *(same as B2)* | Flagship brand autopsy |
 | D2 | **Miramax → TWC → Nothing** | `miramax-twc-collapse` | Prestige indie machine’s life cycle |
 | D3 | **Thirty Seconds to Mars Dual Book** | `30stm-leto-dual-book` | Companion short to Protection Threshold |
-| D4 | **The Rolling Stone Idea** | `rolling-stone-magazine-idea` | What “early RS” meant as a product — and what replaced it |
+| D4 | **The Rolling Stone Idea** | `albums-magazine-idea` | What “early RS” meant as a product — and what replaced it |
 | D5 | **Vice’s Rise and Flattening** | `vice-media-arc` | Gonzo → debt → what Artometrics should steal/avoid |
 | D6 | **Motown as Preference Infrastructure** | `motown-preference-infrastructure` | Assembly line of taste |
 

@@ -34,4 +34,5 @@ export {
   Home,
   Library,
   Sparkles,
+  Globe,
 } from "lucide-react-native";

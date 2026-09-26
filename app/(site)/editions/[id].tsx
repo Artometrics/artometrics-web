@@ -1,5 +1,5 @@
 import { Text, View, Pressable, Linking, Platform } from "react-native";
-import { Image } from "expo-image";
+import { SiteCoverImage } from "@/components/SiteCoverImage";
 import { Link, useLocalSearchParams } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { PageSeo } from "@/components/PageSeo";
@@ -95,10 +95,10 @@ export default function EditionScreen() {
 
       {edition.heroImage ? (
         <Wrapper className="pb-8">
-          <Image
+          <SiteCoverImage
             source={{ uri: edition.heroImage }}
-            className="aspect-[16/8] w-full bg-[#111]"
-            contentFit="cover"
+            wrapperClassName="w-full bg-[#111]"
+            wrapperStyle={{ aspectRatio: 16 / 8 }}
             transition={200}
             accessibilityLabel={`${edition.title} cover`}
           />
@@ -201,10 +201,10 @@ export default function EditionScreen() {
               <Link key={slug} href={`/${slug}`} asChild>
                 <Pressable className="min-w-[200px] flex-1">
                   {post!.heroImage ? (
-                    <Image
+                    <SiteCoverImage
                       source={{ uri: post!.heroImage }}
-                      className="mb-3 aspect-[4/3] w-full bg-[#111]"
-                      contentFit="cover"
+                      wrapperClassName="mb-3 w-full bg-[#111]"
+                      wrapperStyle={{ aspectRatio: 4 / 3 }}
                       transition={200}
                     />
                   ) : (

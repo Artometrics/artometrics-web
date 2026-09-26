@@ -1,0 +1,49 @@
+horror
+
+The median vote average for horror films climbed from 5.65 to 6.00 between 1950 and 2022 — a 0.35-point rise across seven decades that added 32,540 titles to the catalog.
+
+TMDB metadata for horror-tagged films yields 32,540 records from 1950–2022. The median vote average is 4.00; the highest observed average is 10.0. Horror is the most common primary genre label, as expected in a horror-tagged extract.
+
+HOW THE PATTERN CHANGED OVER TIME
+
+MEDIAN VOTE AVERAGE OVER TIME
+
+Median vote average rises from 5.65 in the opening period to 6.00 at the close — a 0.35-point lift across decades of catalog growth. Volume exploded while the middle of the scoreboard edged up. More titles filled the shelf; the median shifted modestly upward rather than holding flat or declining.
+
+WHO SITS AT THE TOP
+
+THE HOUSE GUEST LEADS AT 10.0 — 10.0 MARKS THE MEDIAN AMONG THE TOP DOZEN
+
+The House Guest leads at 10.0, and 10.0 also marks the median among the top dozen. The head of the leaderboard is a cluster of perfect averages, not a gentle taper. In large rating tables, that pattern signals low vote counts or niche titles with small, enthusiastic rater pools. The top is a ceiling effect, not a ranked canon.
+
+HOW THE FIELD IS SPREAD
+
+VOTE AVERAGE BY PRIMARY GENRE
+
+Primary-genre boxes reveal whether vote averages converge across hybrid tags or split by outliers. Horror-tagged films carry secondary labels — crime, animation, drama — and those buckets disagree about quality. Consensus is uneven once the tag set widens.
+
+WHO BEATS THE MEDIAN — AND WHO TRAILS
+
+VOTE AVERAGE VS MEDIAN BY PRIMARY GENRE
+
+Crime sits 1.00 above the median; Animation trails by 4.00. Those gaps are relative to this file's middle, not absolute statements about every crime or animated horror title. They mark where hybrid labeling and rater pools pull averages apart.
+
+WHAT MOVES TOGETHER
+
+VOTE AVERAGE VS VOTE COUNT
+
+Vote average and vote count do not move as a simple line. Perfect scores with tiny counts sit apart from widely watched mid-range films. Popularity and perceived quality are related but not interchangeable — the scatter shows where that distinction becomes visible.
+
+WHAT THIS FILE CANNOT TELL YOU
+
+Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.
+
+Findings describe the file on hand — structural signals about horror-tagged ratings, not a complete history of the genre's artistry.
+
+WHAT TO TAKE AWAY
+
+The median vote average rose 0.35 points (5.65 to 6.00) as the catalog expanded by tens of thousands of titles. Perfect 10.0 leaders reflect sparse vote counts rather than broad acclaim.
+
+Read leaders, gaps, and the average–count scatter together before treating any title as proof of a golden age.
+
+DATA, METHODS & SOURCES

@@ -3,7 +3,7 @@
 | Step | Status |
 |------|--------|
 | Keyword brief | Done |
-| Generator | Done — `padres_ownership_blueprint()` / `--only padres-blueprint` |
+| Generator | Done — `padres_ownership_blueprint()` / `--only blueprint` |
 | Charts | Done — capital, player WAR, cost vs WAR, asset stack, ownership playbook |
 | Blog article | Done — sendable ownership memo (`draft: false`) |
 | Companion | Cross-links `padres-the-artometrics-of-paying-for-october` |

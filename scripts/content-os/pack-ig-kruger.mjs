@@ -4,7 +4,7 @@
  * Matches docs/design-handoff …/ig-carousel-live-content and design-system IG Carousel.
  *
  * Usage:
- *   node scripts/content-os/pack-ig-kruger.mjs --slug beyonce-the-psychonomics-of-control
+ *   node scripts/content-os/pack-ig-kruger.mjs --slug beyonce
  *   node scripts/content-os/pack-ig-kruger.mjs --brand   # newsstand brand pack (no slug)
  */
 import { mkdirSync, readFileSync, writeFileSync, existsSync } from "node:fs";

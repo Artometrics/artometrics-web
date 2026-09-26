@@ -84,11 +84,15 @@ const LINKS: BioLink[] = [
   { label: "Read the latest reports →", href: "/blog", primary: true },
   {
     label: "Beyoncé and the Cost of Controlling the House",
-    href: "/beyonce-the-psychonomics-of-control",
+    href: "/beyonce",
+  },
+  {
+    label: "Demo report — Project Gutenberg canon",
+    href: "/showcase",
   },
   {
     label: "Padres ownership blueprint",
-    href: "/padres-world-series-ownership-blueprint",
+    href: "/blueprint",
   },
   { label: "Listen to the podcast", href: "/podcast" },
 ];
@@ -187,7 +191,7 @@ export default function WelcomeScreen() {
           href: `/${p.slug}`,
           image: p.heroImage as string,
           title: p.title,
-          desk: sectionLabel(p.tags) || "Report",
+          desk: sectionLabel(p.tags, p.subject) || "Report",
         }))
       : episodes.map((e) => ({
           key: e.id,

@@ -1,8 +1,8 @@
 import { Pressable, Text, View } from "react-native";
-import { Image } from "expo-image";
 import { Link } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { BlogCard } from "@/components/BlogCard";
+import { SiteCoverImage } from "@/components/SiteCoverImage";
 import { assetUrl } from "@/lib/assets";
 import {
   deckLine,
@@ -11,83 +11,99 @@ import {
   type BlogPost,
 } from "@/lib/content";
 
-function HomeLeadStory({
-  post,
-  related,
-}: {
-  post: BlogPost;
-  related: BlogPost[];
-}) {
-  const label = sectionLabel(post.tags);
+function HomeHeroImage({ post }: { post: BlogPost }) {
+  const hero = assetUrl(post.heroImage);
+  if (!hero) {
+    return (
+      <View
+        className="w-full overflow-hidden bg-border"
+        style={{ aspectRatio: 16 / 10 }}
+      />
+    );
+  }
   return (
-    <View className="gap-3 md:flex-[3] md:min-w-0">
+    <SiteCoverImage
+      source={{ uri: hero }}
+      wrapperClassName="w-full"
+      wrapperStyle={{ aspectRatio: 16 / 10 }}
+      transition={250}
+      accessibilityLabel={post.title}
+    />
+  );
+}
+
+function HomeMainStory({ post }: { post: BlogPost }) {
+  const label = sectionLabel(post.tags, post.subject);
+  return (
+    <View className="gap-3">
       {label ? (
-        <Text className="font-sans text-[10px] font-semibold uppercase tracking-[1.8px] text-muted">
+        <Text className="font-sans text-[10px] font-semibold uppercase tracking-[1.8px] text-accent">
           {label}
         </Text>
       ) : null}
       <Link href={`/${post.slug}`} asChild>
-        <Pressable>
-          <Text className="font-serif text-[26px] font-bold leading-[1.12] tracking-tight text-fg md:text-[32px]">
+        <Pressable accessibilityRole="link">
+          <Text className="font-serif text-[26px] font-bold leading-[1.12] tracking-tight text-secondary md:text-[32px]">
             {post.title}
           </Text>
         </Pressable>
       </Link>
-      <Text className="font-sans text-[14px] leading-[22px] text-muted">
+      <Text className="font-sans text-[14px] leading-[22px] text-secondary">
         {deckLine(post.description, 40)}
       </Text>
-      {related.length > 0 ? (
-        <View className="mt-1 gap-3 border-t border-border pt-4">
-          {related.map((r) => (
-            <Link key={r.slug} href={`/${r.slug}`} asChild>
-              <Pressable>
-                <Text className="font-serif text-[16px] font-semibold leading-[1.25] text-fg">
-                  {r.title}
-                </Text>
-              </Pressable>
-            </Link>
-          ))}
-        </View>
-      ) : null}
+      <Link href={`/${post.slug}`} asChild>
+        <Pressable
+          accessibilityRole="link"
+          accessibilityLabel={post.title}
+          className="w-full overflow-hidden border border-border"
+        >
+          <HomeHeroImage post={post} />
+        </Pressable>
+      </Link>
+      <Link href={`/${post.slug}`} asChild>
+        <Pressable accessibilityRole="link" className="self-start">
+          <Text className="font-sans text-[12px] font-semibold uppercase tracking-[1.2px] text-secondary">
+            Read the report →
+          </Text>
+        </Pressable>
+      </Link>
     </View>
   );
 }
 
-function HomeFeatureStory({ post }: { post: BlogPost }) {
-  const label = sectionLabel(post.tags);
+function HomeSecondaryStory({ post }: { post: BlogPost }) {
+  const label = sectionLabel(post.tags, post.subject);
   const hero = assetUrl(post.heroImage);
   return (
-    <View className="gap-3 md:flex-[5] md:min-w-0">
-      <Link href={`/${post.slug}`} asChild>
-        <Pressable className="overflow-hidden border border-border">
-          {hero ? (
-            <Image
-              source={{ uri: hero }}
-              className="aspect-[16/10] w-full"
-              contentFit="cover"
-              transition={250}
-              accessibilityLabel={post.title}
-            />
-          ) : (
-            <View className="aspect-[16/10] w-full bg-border" />
-          )}
-        </Pressable>
-      </Link>
+    <View className="gap-3 border-t border-border pt-8">
       {label ? (
-        <Text className="font-sans text-[10px] font-semibold uppercase tracking-[1.8px] text-muted">
+        <Text className="font-sans text-[10px] font-semibold uppercase tracking-[1.8px] text-accent">
           {label}
         </Text>
       ) : null}
       <Link href={`/${post.slug}`} asChild>
-        <Pressable>
-          <Text className="font-serif text-[24px] font-bold leading-[1.15] tracking-tight text-fg md:text-[28px]">
-            {post.title}
-          </Text>
+        <Pressable
+          accessibilityRole="link"
+          className="flex-row gap-4"
+        >
+          {hero ? (
+            <SiteCoverImage
+              source={{ uri: hero }}
+              wrapperClassName="h-24 w-36 shrink-0 border border-border"
+              transition={200}
+              accessibilityLabel={post.title}
+            />
+          ) : null}
+          <View className="min-w-0 flex-1 gap-1">
+            <Text className="font-serif text-[20px] font-bold leading-[1.2] tracking-tight text-secondary md:text-[22px]">
+              {post.title}
+            </Text>
+            <Text className="font-sans text-[13px] leading-[20px] text-muted">
+              {deckLine(post.description, 28)}
+            </Text>
+          </View>
         </Pressable>
       </Link>
-      <Text className="font-sans text-[13px] leading-[20px] text-muted">
-        {deckLine(post.description, 32)}
-      </Text>
     </View>
   );
 }
@@ -131,10 +147,9 @@ function HomeTopStoriesGrid({ posts }: { posts: BlogPost[] }) {
 export function HomeMagazine() {
   const posts = getBlogPosts();
   const lead = posts[0];
-  const feature = posts[1] ?? posts[0];
-  const relatedUnderLead = posts.slice(2, 5);
-  const picks = posts.slice(5, 10);
-  const topStories = posts.slice(10, 18);
+  const secondary = posts[1];
+  const picks = posts.slice(2, 7);
+  const topStories = posts.slice(7, 15);
 
   if (!lead) {
     return (
@@ -148,8 +163,12 @@ export function HomeMagazine() {
     <View className="bg-bg">
       <Wrapper className="gap-8 py-8 md:py-10">
         <View className="flex-col gap-10 md:flex-row md:items-start md:gap-8">
-          <HomeLeadStory post={lead} related={relatedUnderLead} />
-          <HomeFeatureStory post={feature} />
+          <View className="gap-0 md:flex-[3] md:min-w-0">
+            <HomeMainStory post={lead} />
+            {secondary && secondary.slug !== lead.slug ? (
+              <HomeSecondaryStory post={secondary} />
+            ) : null}
+          </View>
           <HomeEditorsPicks posts={picks} />
         </View>
         <HomeTopStoriesGrid posts={topStories} />

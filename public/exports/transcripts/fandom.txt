@@ -1,0 +1,45 @@
+FANDOM: Six Sports Identity Patterns
+
+Ten large U.S. markets split into six sports identity archetypes, shaped by title density, league mix, and championship drought length.
+
+A team is never just a team. It is attached to a region, a media market, a league structure, and a local memory system. That context changes what the same number means. This analysis maps how regions become recognizable under the data microscope.
+
+The scale: 10 large markets compared, grouped into 7 regions for title-density analysis, producing 6 identity archetypes.
+
+REGIONAL TITLE DENSITY
+
+CHAMPIONSHIP MEMORY CLUSTERS BY REGION
+
+A region's sports identity is not only current fandom. It is the sediment of old championships, old rivalries, and inherited expectations. The Northeast and Great Lakes have unusually deep archives because their leagues, cities, and media systems matured early.
+
+MARKET STACK
+
+DEEP MARKETS CREATE SPORTS MEDIA ECOSYSTEMS RATHER THAN SINGLE-TEAM IDENTITIES
+
+New York and Los Angeles are not simply large markets. They are sports ecosystems where multiple teams compete for attention, mythology, and local legitimacy. That makes cross-report comparison useful: a Knicks drought and a Lakers title live in the same media bloodstream.
+
+SPORT DNA
+
+REGIONS SPECIALIZE IN DIFFERENT SPORTS IDENTITIES
+
+Texas reads as football ritual. California leans toward basketball and glamour. The Northeast keeps baseball memory unusually alive. The point is not stereotype; it is signal. Regional sports culture gives the same win-loss record a different accent.
+
+CITY PAIN VERSUS SUCCESS
+
+A CITY CAN BE SUCCESSFUL OVERALL AND STILL CARRY A FAMOUS WOUND
+
+Multi-team cities do not experience success cleanly. A Boston fan can live near constant banners while a specific rival city experiences one drought as civic identity. Pain is often team-specific, but markets distribute and amplify it.
+
+IDENTITY TYPES
+
+SPORTS CITIES ARE PORTFOLIOS OF MYTHS
+
+Some places sell archive. Some sell stars. Some sell football Sundays. Some sell hunger because they have not yet received the validating title. This is the bridge to future city bioeconomics reports: sports data is one part of a place's cultural fingerprint.
+
+WHAT TO TAKE AWAY
+
+Sports identity is regional before it is rational. Market size, title archives, sport specialization, and drought all shape the meaning of a fan base.
+
+This gives the next batch a new tool: every team profile can now ask not only how good the team is, but what kind of place produced that version of good, bad, rich, cursed, or glamorous.
+
+DATA, METHODS & SOURCES

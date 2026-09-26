@@ -1,5 +1,5 @@
 {
-  "slug": "institutional-winning-meta",
+  "slug": "institutional-institutions",
   "desk": "sports",
   "title": "Institutional Winning",
   "workingTitle": "Institutional Winning",
@@ -64,7 +64,7 @@
   "updatedAt": "2026-07-30",
   "kind": "meta",
   "sourceSlugs": [
-    "sports-dynasty-index-best-and-worst-conversion",
+    "sports-dynasties-best-and-worst-conversion",
     "patriots-the-artometrics-of-the-system-dynasty",
     "celtics-the-artometrics-of-institutional-winning"
   ]

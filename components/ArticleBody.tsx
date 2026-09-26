@@ -76,7 +76,7 @@ export function ArticleBody({ html }: { html: string }) {
         fontFamily: DISPLAY_FONT,
         textTransform: "uppercase",
         letterSpacing: 1,
-        color: colors.text,
+        color: colors.accent,
       },
       h3: {
         fontSize: 16,

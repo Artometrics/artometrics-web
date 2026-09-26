@@ -3,8 +3,8 @@
  * Publish a Content OS draft into src/content/blog and rebuild generated JSON.
  *
  * Usage:
- *   node scripts/content-os/publish-draft.mjs --slug streaming-catalog-power
- *   node scripts/content-os/publish-draft.mjs --slug streaming-catalog-power --undraft
+ *   node scripts/content-os/publish-draft.mjs --slug streaming
+ *   node scripts/content-os/publish-draft.mjs --slug streaming --undraft
  */
 import { copyFileSync, existsSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";

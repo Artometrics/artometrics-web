@@ -1,6 +1,7 @@
-import { Pressable, Text, View } from "react-native";
+import { Text, View } from "react-native";
 import { Link, useLocalSearchParams } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
+import { BlogCard } from "@/components/BlogCard";
 import { PageSeo } from "@/components/PageSeo";
 import {
   DOMAIN_META,
@@ -61,13 +62,7 @@ export default function TopicChannelPage() {
       ) : (
         <View className="gap-0 border-t border-border">
           {posts.map((post) => (
-            <Link key={post.slug} href={`/${post.slug}` as `/`} asChild>
-              <Pressable className="border-b border-border py-4">
-                <Text className="font-serif text-[17px] leading-[1.3] text-fg">
-                  {post.title}
-                </Text>
-              </Pressable>
-            </Link>
+            <BlogCard key={post.slug} post={post} variant="pick" editorial />
           ))}
         </View>
       )}

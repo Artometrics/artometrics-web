@@ -1,0 +1,22 @@
+# Horror's median rating rose 0.35 points as catalog volume grew 50× in seven decades
+
+**Desk:** arts · **Live:** https://artometrics.com/horror/
+
+32,540 horror films from 1950–2022 show median vote average climbed from 5.65 to 6.00 — modest quality gain amid explosive catalog growth.
+
+## Layout
+
+```text
+horror/
+  _quarto.yml
+  horror.qmd
+  data/
+  charts/
+  figures/
+```
+
+```bash
+cd articles/horror
+quarto render
+npm run sync:article -- --slug horror
+```

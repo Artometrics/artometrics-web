@@ -1,5 +1,5 @@
 import { Text, View, Pressable } from "react-native";
-import { Image } from "expo-image";
+import { SiteCoverImage } from "@/components/SiteCoverImage";
 import { Link } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { VhsShelf } from "@/components/VhsShelf";
@@ -41,11 +41,10 @@ export default function EditionsIndex() {
                 ].join(" ")}
               >
                 {ed.heroImage ? (
-                  <View className="relative aspect-[3/4] max-h-[420px] w-full overflow-hidden bg-[#111]">
-                    <Image
+                  <View className="relative max-h-[420px] w-full">
+                    <SiteCoverImage
                       source={{ uri: ed.heroImage }}
-                      className="h-full w-full"
-                      contentFit="cover"
+                      wrapperClassName="aspect-[3/4] w-full bg-[#111]"
                       transition={200}
                       accessibilityLabel={`${ed.title} cover`}
                     />

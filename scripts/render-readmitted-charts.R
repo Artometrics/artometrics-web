@@ -65,6 +65,14 @@ copy_to_public <- function(name) {
     file.path(public_charts, paste0(name, ".plotly.json")),
     overwrite = TRUE
   )
+  r_path <- file.path(charts_dir, paste0(name, ".r"))
+  if (file.exists(r_path)) {
+    file.copy(
+      r_path,
+      file.path(public_charts, paste0(name, ".r")),
+      overwrite = TRUE
+    )
+  }
 }
 
 # Sync working CSVs to public for downloadable FILES section

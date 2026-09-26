@@ -2,5 +2,5 @@
 
 - **Phase:** brief
 - **Kind:** meta
-- **Sources:** pantheon-the-artometrics-of-collective-memory, project-gutenberg, uk-museums
+- **Sources:** pantheon-the-artometrics-of-collective-memory, project-lcsh, uk-museums
 - **Next:** scaffold HTML when data ready

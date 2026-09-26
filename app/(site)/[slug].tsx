@@ -1,13 +1,18 @@
 import React, { useEffect } from "react";
 import { Pressable, Text, View } from "react-native";
+import { SiteCoverImage } from "@/components/SiteCoverImage";
 import { useLocalSearchParams, Link } from "expo-router";
+import { assetUrl } from "@/lib/assets";
 import { Wrapper } from "@/components/Wrapper";
 import { ArticleBody } from "@/components/ArticleBody";
+import { ArticleActions } from "@/components/ArticleActions";
+import { ReportBreadcrumb } from "@/components/ReportBreadcrumb";
+import { ReportRelatedReads } from "@/components/ReportRelatedReads";
 import { PageSeo } from "@/components/PageSeo";
 import {
+  deckLine,
   formatAuthorName,
   formatDate,
-  getAdjacentPosts,
   getBlogPost,
   getBlogPosts,
   sectionLabel,
@@ -51,8 +56,8 @@ export default function ReportScreen() {
   }
 
   const section = post.tags?.[0];
-  const label = sectionLabel(post.tags);
-  const adjacent = getAdjacentPosts(post.slug);
+  const label = sectionLabel(post.tags, post.subject);
+  const hero = assetUrl(post.heroImage);
   const minutes = estimateMinutes(post.body);
   const authorLabel = post.author ? formatAuthorName(String(post.author)) : "Kyle McAuliffe";
   const faq = (post as { faq?: { question: string; answer: string }[] }).faq ?? [];
@@ -108,90 +113,50 @@ export default function ReportScreen() {
       />
       <SeoJsonLd data={jsonLd} />
 
-      <Wrapper variant="narrow" className="gap-6 border-b border-border py-8">
+      <Wrapper variant="wide" className="gap-6 border-b border-border py-8">
+        <ReportBreadcrumb tags={post.tags} />
+        {hero ? (
+          <View className="-mx-5 px-1.5 md:px-2">
+            <SiteCoverImage
+              source={{ uri: hero }}
+              wrapperClassName="w-full"
+              wrapperStyle={{ aspectRatio: 16 / 10 }}
+              transition={200}
+              accessibilityLabel={post.title}
+            />
+          </View>
+        ) : null}
         {label ? (
-          <Text className="font-sans text-[10px] font-semibold uppercase tracking-[2.5px] text-muted">
+          <Text className="font-sans text-[10px] font-semibold uppercase tracking-[2.5px] text-accent">
             {label}
           </Text>
         ) : null}
         <Text
           role="heading"
           aria-level={1}
-          className="font-serif text-[32px] font-semibold leading-[1.15] tracking-tight text-fg md:text-[38px]"
+          className="font-serif text-[32px] font-semibold leading-[1.15] tracking-tight text-accent md:text-[38px]"
         >
           {post.title}
         </Text>
-        <Text className="font-sans text-[15px] leading-[24px] text-muted">
-          {post.description}
+        <Text className="font-serif text-xl leading-snug text-accent md:text-2xl">
+          {deckLine(post.description, 12)}
         </Text>
-        <Text className="font-sans text-[11px] uppercase tracking-[1.4px] text-subtle">
+        <Text className="font-sans text-[11px] uppercase tracking-[1.4px] text-fg">
           {authorLabel}
           {post.pubDate ? ` · ${formatDate(post.pubDate)}` : ""} · {minutes} min
         </Text>
+        <ArticleActions
+          slug={post.slug}
+          title={post.title}
+          description={post.description}
+          audioSrc={(post as { audioSrc?: string | null }).audioSrc}
+          placement="header"
+        />
       </Wrapper>
 
-      <Wrapper variant="narrow" className="py-8">
+      <Wrapper variant="bleed" className="w-full min-w-0 max-w-[1600px] self-stretch gap-8 px-3 py-8 md:px-4">
         <ArticleBody html={post.body} />
-      </Wrapper>
-
-      {faq.length ? (
-        <Wrapper variant="narrow" className="gap-4 border-t border-border py-8">
-          <Text className="font-sans text-[10px] font-bold uppercase tracking-[3px] text-fg">
-            Notes
-          </Text>
-          {faq.map((item) => (
-            <View key={item.question} className="gap-1 border-b border-border pb-4">
-              <Text className="font-serif text-[16px] font-semibold text-fg">
-                {item.question}
-              </Text>
-              <Text className="font-sans text-[14px] leading-[22px] text-muted">
-                {item.answer}
-              </Text>
-            </View>
-          ))}
-        </Wrapper>
-      ) : null}
-
-      <Wrapper variant="narrow" className="flex-row flex-wrap justify-between gap-4 border-t border-border py-8">
-        {adjacent.previous ? (
-          <Link href={adjacent.previous.href as `/${string}`} asChild>
-            <Pressable className="max-w-[45%] gap-1">
-              <Text className="font-sans text-[10px] uppercase tracking-[2px] text-muted">
-                Previous
-              </Text>
-              <Text className="font-serif text-[15px] leading-snug text-fg" numberOfLines={2}>
-                {adjacent.previous.title}
-              </Text>
-            </Pressable>
-          </Link>
-        ) : (
-          <View className="flex-1" />
-        )}
-        {adjacent.next ? (
-          <Link href={adjacent.next.href as `/${string}`} asChild>
-            <Pressable className="max-w-[45%] items-end gap-1">
-              <Text className="font-sans text-[10px] uppercase tracking-[2px] text-muted">
-                Next
-              </Text>
-              <Text
-                className="text-right font-serif text-[15px] leading-snug text-fg"
-                numberOfLines={2}
-              >
-                {adjacent.next.title}
-              </Text>
-            </Pressable>
-          </Link>
-        ) : null}
-      </Wrapper>
-
-      <Wrapper variant="narrow" className="pb-12">
-        <Link href="/" asChild>
-          <Pressable>
-            <Text className="font-sans text-[10px] font-semibold uppercase tracking-[2px] text-muted">
-              ← Contents
-            </Text>
-          </Pressable>
-        </Link>
+        <ReportRelatedReads slug={post.slug} limit={4} />
       </Wrapper>
     </View>
   );

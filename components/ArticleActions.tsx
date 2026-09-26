@@ -16,14 +16,18 @@ type Pack = {
   pdf?: string | null;
   epub?: string | null;
   audio?: string | null;
+  transcript?: string | null;
   github?: string | null;
 };
 
 type Props = {
   slug: string;
   title: string;
-  /** Top: share + save. Bottom: download menu (data / code / all). */
-  placement?: "top" | "bottom" | "all";
+  description?: string;
+  /** Frontmatter narration URL when not yet in downloads manifest */
+  audioSrc?: string | null;
+  /** Top: share + save. Header: share + EPUB/transcript/listen. Bottom: download menu. */
+  placement?: "top" | "header" | "bottom" | "all";
 };
 
 type DownloadItem = { key: string; label: string; href: string };
@@ -61,7 +65,13 @@ async function downloadAll(items: DownloadItem[]) {
   }
 }
 
-export function ArticleActions({ slug, title, placement = "all" }: Props) {
+export function ArticleActions({
+  slug,
+  title,
+  description,
+  audioSrc,
+  placement = "all",
+}: Props) {
   const { user } = useAuth();
   const [saved, setSaved] = useState(false);
   const [busy, setBusy] = useState(false);
@@ -114,52 +124,103 @@ export function ArticleActions({ slug, title, placement = "all" }: Props) {
     }
   }
 
-  async function share() {
-    const url = `https://artometrics.com/${slug}`;
-    trackEvent("report_share", { slug, method: Platform.OS });
-    if (Platform.OS !== "web") {
-      try {
-        await Share.share({ message: `${title}\n${url}`, url, title });
-      } catch {
-        openUrl(url);
-      }
-      return;
-    }
-    if (typeof navigator !== "undefined" && typeof navigator.share === "function") {
-      navigator.share({ title, url }).catch(() => openUrl(url));
-      return;
-    }
+  const reportUrl = `https://artometrics.com/${slug}`;
+  const shareText = description
+    ? `${title} — ${description}`
+    : `${title} — Artometrics`;
+
+  async function copyReportLink() {
+    trackEvent("report_share", { slug, method: "copy_link" });
     if (
       typeof navigator !== "undefined" &&
       navigator.clipboard &&
       typeof navigator.clipboard.writeText === "function"
     ) {
-      void navigator.clipboard.writeText(url).catch(() => openUrl(url));
-      return;
+      try {
+        await navigator.clipboard.writeText(reportUrl);
+        return;
+      } catch {
+        /* fall through */
+      }
     }
+    openUrl(reportUrl);
+  }
+
+  function shareOnX() {
+    trackEvent("report_share", { slug, method: "x" });
+    const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(reportUrl)}`;
     openUrl(url);
   }
+
+  function shareOnLinkedIn() {
+    trackEvent("report_share", { slug, method: "linkedin" });
+    const url = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(reportUrl)}`;
+    openUrl(url);
+  }
+
+  async function share() {
+    trackEvent("report_share", { slug, method: Platform.OS });
+    if (Platform.OS !== "web") {
+      try {
+        await Share.share({ message: `${title}\n${reportUrl}`, url: reportUrl, title });
+      } catch {
+        openUrl(reportUrl);
+      }
+      return;
+    }
+    if (typeof navigator !== "undefined" && typeof navigator.share === "function") {
+      navigator
+        .share({ title, text: shareText, url: reportUrl })
+        .catch(() => void copyReportLink());
+      return;
+    }
+    void copyReportLink();
+  }
+
+  const audioHref = pack.audio || audioSrc || null;
 
   const downloads = useMemo(() => {
     const items: DownloadItem[] = [];
     // Prefer site-hosted exports; GitHub is demoted to last resort.
     if (pack.pdf) items.push({ key: "pdf", label: "PDF", href: pack.pdf });
     if (pack.epub) items.push({ key: "epub", label: "Ebook (EPUB)", href: pack.epub });
+    if (pack.transcript) {
+      items.push({ key: "transcript", label: "Transcript (TXT)", href: pack.transcript });
+    }
     if (pack.html) items.push({ key: "html", label: "Article HTML", href: pack.html });
     if (pack.dataset) items.push({ key: "data", label: "Dataset (CSV)", href: pack.dataset });
-    if (pack.audio) items.push({ key: "audio", label: "Narration (MP3)", href: pack.audio });
+    if (audioHref) {
+      items.push({ key: "audio", label: "Narration (MP3)", href: audioHref });
+    }
     if (pack.quarto) {
       items.push({ key: "code", label: "Quarto / source", href: pack.quarto });
     } else if (pack.github && items.length === 0) {
       items.push({ key: "code", label: "Source (GitHub)", href: pack.github });
     }
     return items;
-  }, [pack]);
+  }, [pack, audioHref]);
 
-  const primaryDownloads = downloads.filter(
-    (d) => d.key === "pdf" || d.key === "data" || d.key === "epub",
-  ).slice(0, 2);
+  const chipBtn =
+    "bg-accent px-3 py-2 active:opacity-90 hover:opacity-90 md:px-4 md:py-2.5";
+  const chipBtnLg = "bg-accent px-5 py-3 active:opacity-90 hover:opacity-90";
+  const chipBtnText =
+    "font-display text-[11px] uppercase tracking-[1.6px] text-white md:text-[12px] md:tracking-[2px]";
+  const chipBtnTextLg =
+    "font-display text-[13px] uppercase tracking-[2px] text-white";
+
+  function downloadChipLabel(item: DownloadItem) {
+    if (item.key === "pdf") return "Download";
+    if (item.key === "data") return "Data";
+    if (item.key === "epub") return "EPUB";
+    if (item.key === "transcript") return "Transcript";
+    if (item.key === "audio") return "Listen";
+    if (item.key === "html") return "HTML";
+    if (item.key === "code") return "Source";
+    return item.label;
+  }
+
   const showTop = placement === "top" || placement === "all";
+  const showHeader = placement === "header" || placement === "all";
   const showBottom = placement === "bottom" || placement === "all";
 
   return (
@@ -171,35 +232,98 @@ export function ArticleActions({ slug, title, placement = "all" }: Props) {
         .filter(Boolean)
         .join(" ")}
     >
+      {showHeader ? (
+        <View className="flex-row flex-wrap items-center gap-2 md:gap-3">
+          <Pressable
+            onPress={share}
+            accessibilityRole="button"
+            accessibilityLabel="Share this report"
+            className={chipBtn}
+          >
+            <Text className={chipBtnText}>Share</Text>
+          </Pressable>
+          {Platform.OS === "web" ? (
+            <>
+              <Pressable
+                onPress={shareOnX}
+                accessibilityRole="button"
+                accessibilityLabel="Share on X"
+                className={chipBtn}
+              >
+                <Text className={chipBtnText}>X</Text>
+              </Pressable>
+              <Pressable
+                onPress={shareOnLinkedIn}
+                accessibilityRole="button"
+                accessibilityLabel="Share on LinkedIn"
+                className={chipBtn}
+              >
+                <Text className={chipBtnText}>LinkedIn</Text>
+              </Pressable>
+              <Pressable
+                onPress={() => void copyReportLink()}
+                accessibilityRole="button"
+                accessibilityLabel="Copy report link"
+                className={chipBtn}
+              >
+                <Text className={chipBtnText}>Copy link</Text>
+              </Pressable>
+            </>
+          ) : null}
+          {downloads.map((item) => (
+            <Pressable
+              key={item.key}
+              onPress={() => {
+                trackEvent("report_download", { slug, format: item.key });
+                openUrl(item.href);
+              }}
+              accessibilityRole="button"
+              accessibilityLabel={item.label}
+              className={chipBtn}
+            >
+              <Text className={chipBtnText}>{downloadChipLabel(item)}</Text>
+            </Pressable>
+          ))}
+          {downloads.length > 1 ? (
+            <Pressable
+              onPress={() => void downloadAll(downloads)}
+              accessibilityRole="button"
+              accessibilityLabel={
+                Platform.OS === "web" ? "Download all files" : "Share all download links"
+              }
+              className={chipBtn}
+            >
+              <Text className={chipBtnText}>
+                {Platform.OS === "web" ? "Download all" : "Share all"}
+              </Text>
+            </Pressable>
+          ) : null}
+        </View>
+      ) : null}
+
       {showTop ? (
         <View className="flex-row flex-wrap items-center gap-3">
           <Pressable
             onPress={share}
             accessibilityRole="button"
             accessibilityLabel="Share this report"
-            className="bg-accent px-5 py-3"
+            className={chipBtnLg}
           >
-            <Text className="font-display text-[13px] uppercase tracking-[2px] text-white">
-              Share
-            </Text>
+            <Text className={chipBtnTextLg}>Share</Text>
           </Pressable>
           {user ? (
             <Pressable
               onPress={toggleSave}
               disabled={busy}
               accessibilityRole="button"
-              className="border-2 border-border px-5 py-3"
+              className={[chipBtnLg, busy ? "opacity-50" : ""].filter(Boolean).join(" ")}
             >
-              <Text className="font-display text-[13px] uppercase tracking-[2px] text-fg">
-                {saved ? "Saved" : "Save"}
-              </Text>
+              <Text className={chipBtnTextLg}>{saved ? "Saved" : "Save"}</Text>
             </Pressable>
           ) : (
             <Link href="/login" asChild>
-              <Pressable className="border-2 border-border px-5 py-3">
-                <Text className="font-display text-[13px] uppercase tracking-[2px] text-muted">
-                  Sign in to save
-                </Text>
+              <Pressable className={chipBtnLg}>
+                <Text className={chipBtnTextLg}>Sign in to save</Text>
               </Pressable>
             </Link>
           )}
@@ -216,9 +340,9 @@ export function ArticleActions({ slug, title, placement = "all" }: Props) {
               onPress={() => setMenuOpen((v) => !v)}
               accessibilityRole="button"
               accessibilityState={{ expanded: menuOpen }}
-              className="bg-accent px-5 py-3"
+              className={chipBtnLg}
             >
-              <Text className="font-display text-[13px] uppercase tracking-[2px] text-white">
+              <Text className={chipBtnTextLg}>
                 {menuOpen ? "Close" : "Download"}
               </Text>
             </Pressable>
@@ -229,25 +353,29 @@ export function ArticleActions({ slug, title, placement = "all" }: Props) {
                   trackEvent("report_download", { slug, format: item.key });
                   openUrl(item.href);
                 }}
-                className="border-2 border-border px-5 py-3"
+                className={chipBtnLg}
               >
-                <Text className="font-display text-[13px] uppercase tracking-[2px] text-fg">
+                <Text className={chipBtnTextLg}>
                   {item.key === "pdf"
                     ? "PDF"
                     : item.key === "epub"
                       ? "EPUB"
-                      : item.key === "data"
-                        ? "Data"
-                        : item.label}
+                      : item.key === "transcript"
+                        ? "Transcript"
+                        : item.key === "audio"
+                          ? "Listen"
+                          : item.key === "data"
+                            ? "Data"
+                            : item.label}
                 </Text>
               </Pressable>
             ))}
             {downloads.length > 1 ? (
               <Pressable
                 onPress={() => void downloadAll(downloads)}
-                className="border-2 border-fg px-5 py-3"
+                className={chipBtnLg}
               >
-                <Text className="font-display text-[13px] uppercase tracking-[2px] text-fg">
+                <Text className={chipBtnTextLg}>
                   {Platform.OS === "web" ? "Download all" : "Share all links"}
                 </Text>
               </Pressable>

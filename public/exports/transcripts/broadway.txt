@@ -1,0 +1,49 @@
+broadway
+
+Springsteen On Broadway averages $509 per ticket—nearly double Hamilton's $273 and more than eight times the $60.2 industry median. This gap separates concert-style residencies from long-running musicals and reveals two parallel pricing markets operating inside the same theater district.
+
+The TidyTuesday grosses dataset holds 47,524 performance records. Broadhurst Theatre appears most frequently; Springsteen On Broadway claims the highest average ticket price. The data map a clear division: established houses run near stable mid-range prices, while event residencies reset the ceiling.
+
+CONCERT RESIDENCIES REWRITE THE PRICE CEILING
+
+AVG TICKET PRICE BY SHOW
+
+Springsteen On Broadway leads at $508.63 average ticket price—nearly double Hamilton's $273. Dave Chappelle Live, Moulin Rouge!, Mel Brooks on Broadway, Morrissey, and David Byrne's American Utopia follow in the premium band above $175. Concert-style residencies occupy the top tier. Traditional musicals, regardless of critical success, cluster far below the residency model.
+
+EVEN AMONG LEADERS, SPRINGSTEEN IS AN OUTLIER
+
+SPRINGSTEEN ON BROADWAY LEADS AT 509 — 182 MARKS THE MEDIAN AMONG THE TOP DOZEN
+
+Springsteen On Broadway stands at $509, while the median among the top dozen is $182. Hamilton is extraordinary relative to the $60.2 industry median—yet still 46 percent below the Springsteen residency. Reference $182 as the premium Broadway median; reference $509 when discussing absolute event-ticket pricing.
+
+HOUSE MEDIANS CLUSTER NEAR THE INDUSTRY MIDDLE
+
+AVG TICKET PRICE BY THEATRE
+
+Broadhurst Theatre (n=1,829) shows a median average ticket near $77; Minskoff near $77; Majestic near $60; Ambassador near $66; Imperial near $48. Peak prices within those houses still exceed $100 when hit shows run. Theatre identity matters less than show identity. The same building can host a $50 median season and a $200 event week.
+
+GERSHWIN LEADS THE GAP ABOVE THE MEDIAN
+
+AVG TICKET PRICE VS MEDIAN BY THEATRE
+
+Relative to the overall $60.2 average-ticket median, Gershwin Theatre leads at +$27.67, with Broadhurst and Minskoff also positive. Imperial sits below the median by $12. House premiums track programming: theaters hosting mega-hits and premium brands pull above the baseline.
+
+PRICE AND PERFORMANCE COUNTS ARE WEAKLY COUPLED
+
+AVG TICKET PRICE VS PERFORMANCES
+
+Average ticket price versus performances shows low-price, low-performance weeks and occasional high-price short runs. Long runs at moderate prices remain the traditional musical model. The scatter resists a simple correlation: expensive tickets do not always signal short runs, and longevity does not require discounting. Broadway monetizes both scarcity and stamina.
+
+WHAT THIS FILE CANNOT TELL YOU
+
+Grosses data include atypical weeks, previews, and dark periods sometimes coded as zeros. Average ticket price does not reflect face value for every seat. Concert residencies mix genres inside a Broadway dataset.
+
+The snapshot timing predates later reopenings and dynamic pricing expansion.
+
+WHAT TO TAKE AWAY
+
+Broadway's median average ticket in this dataset is $60.2, while event residencies reach $509. The top-dozen median of $182 defines the premium club without equating to the Springsteen outlier.
+
+Reference house medians when comparing venues; reference show leaders when comparing brands.
+
+DATA, METHODS & SOURCES

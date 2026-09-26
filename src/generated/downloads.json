@@ -1,32 +1,35 @@
 {
-  "airline-safety": {
-    "slug": "airline-safety",
-    "dataset": "/data/articles/airline-safety/dataset.csv",
+  "airlines": {
+    "slug": "airlines",
+    "dataset": "/data/articles/airlines/dataset.csv",
     "quarto": null,
     "html": null,
     "pdf": null,
     "epub": null,
     "audio": null,
+    "transcript": "/exports/transcripts/airlines.txt",
     "github": null
   },
-  "alcohol-consumption": {
-    "slug": "alcohol-consumption",
-    "dataset": "/data/articles/alcohol-consumption/dataset.csv",
+  "albums": {
+    "slug": "albums",
+    "dataset": "/data/articles/albums/dataset.csv",
     "quarto": null,
     "html": null,
     "pdf": null,
     "epub": null,
     "audio": null,
+    "transcript": "/exports/transcripts/albums.txt",
     "github": null
   },
-  "all-the-pizza": {
-    "slug": "all-the-pizza",
-    "dataset": "/data/articles/all-the-pizza/dataset.csv",
+  "alcohol": {
+    "slug": "alcohol",
+    "dataset": "/data/articles/alcohol/dataset.csv",
     "quarto": null,
     "html": null,
     "pdf": null,
     "epub": null,
     "audio": null,
+    "transcript": "/exports/transcripts/alcohol.txt",
     "github": null
   },
   "anime": {
@@ -37,136 +40,172 @@
     "pdf": "/exports/anime.pdf",
     "epub": "/exports/anime.epub",
     "audio": null,
+    "transcript": "/exports/transcripts/anime.txt",
     "github": null
   },
-  "awards-prestige-economy-oscars-grammys-nobels": {
-    "slug": "awards-prestige-economy-oscars-grammys-nobels",
-    "dataset": null,
-    "quarto": null,
-    "html": "/exports/awards-prestige-economy-oscars-grammys-nobels.html",
-    "pdf": null,
-    "epub": null,
-    "audio": null,
-    "github": null
-  },
-  "beyonce-taylor-lyrics": {
-    "slug": "beyonce-taylor-lyrics",
-    "dataset": "/data/articles/beyonce-taylor-lyrics/dataset.csv",
-    "quarto": null,
-    "html": null,
-    "pdf": null,
-    "epub": null,
-    "audio": null,
-    "github": null
-  },
-  "beyonce-the-psychonomics-of-control": {
-    "slug": "beyonce-the-psychonomics-of-control",
-    "dataset": "/data/articles/beyonce-the-psychonomics-of-control/beyonce_eras.csv",
-    "quarto": null,
-    "html": null,
-    "pdf": "/exports/beyonce-the-psychonomics-of-control.pdf",
-    "epub": "/exports/beyonce-the-psychonomics-of-control.epub",
-    "audio": null,
-    "github": null
-  },
-  "big-mac-index": {
-    "slug": "big-mac-index",
-    "dataset": "/data/articles/big-mac-index/dataset.csv",
-    "quarto": null,
-    "html": null,
-    "pdf": null,
-    "epub": null,
-    "audio": null,
-    "github": null
-  },
-  "biketown-bikeshare": {
-    "slug": "biketown-bikeshare",
-    "dataset": "/data/articles/biketown-bikeshare/dataset.csv",
-    "quarto": null,
-    "html": null,
-    "pdf": null,
-    "epub": null,
-    "audio": null,
-    "github": null
-  },
-  "billboard-hot-100": {
-    "slug": "billboard-hot-100",
-    "dataset": "/data/articles/billboard-hot-100/dataset.csv",
-    "quarto": null,
-    "html": null,
-    "pdf": "/exports/billboard-hot-100.pdf",
-    "epub": "/exports/billboard-hot-100.epub",
-    "audio": null,
-    "github": null
-  },
-  "billboard-top-100": {
-    "slug": "billboard-top-100",
-    "dataset": "/data/articles/billboard-top-100/dataset.csv",
-    "quarto": null,
-    "html": null,
-    "pdf": null,
-    "epub": null,
-    "audio": null,
-    "github": null
-  },
-  "board-games": {
-    "slug": "board-games",
-    "dataset": "/data/articles/board-games/dataset.csv",
-    "quarto": null,
-    "html": null,
-    "pdf": null,
-    "epub": null,
-    "audio": null,
-    "github": null
-  },
-  "broadway-musicals": {
-    "slug": "broadway-musicals",
-    "dataset": "/data/articles/broadway-musicals/dataset.csv",
-    "quarto": null,
-    "html": null,
-    "pdf": null,
-    "epub": null,
-    "audio": null,
-    "github": null
-  },
-  "caesar-the-psychonomics-of-emperor-julius": {
-    "slug": "caesar-the-psychonomics-of-emperor-julius",
-    "dataset": "/data/articles/caesar-the-psychonomics-of-emperor-julius/caesar_gdp.csv",
-    "quarto": null,
-    "html": null,
-    "pdf": "/exports/caesar-the-psychonomics-of-emperor-julius.pdf",
-    "epub": "/exports/caesar-the-psychonomics-of-emperor-julius.epub",
-    "audio": null,
-    "github": null
-  },
-  "california-vs-texas-state-rivalry": {
-    "slug": "california-vs-texas-state-rivalry",
+  "atlas": {
+    "slug": "atlas",
     "dataset": null,
     "quarto": null,
     "html": null,
     "pdf": null,
     "epub": null,
     "audio": null,
-    "github": "https://github.com/Artometrics/california-vs-texas-state-rivalry"
+    "transcript": "/exports/transcripts/atlas.txt",
+    "github": "https://github.com/Artometrics/atlas"
   },
-  "celtics-the-artometrics-of-institutional-winning": {
-    "slug": "celtics-the-artometrics-of-institutional-winning",
+  "beyonce": {
+    "slug": "beyonce",
+    "dataset": "/data/articles/beyonce/beyonce_eras.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "epub": null,
+    "audio": null,
+    "transcript": "/exports/transcripts/beyonce.txt",
+    "github": null
+  },
+  "bikeshare": {
+    "slug": "bikeshare",
+    "dataset": "/data/articles/bikeshare/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "epub": null,
+    "audio": null,
+    "transcript": "/exports/transcripts/bikeshare.txt",
+    "github": null
+  },
+  "billboard": {
+    "slug": "billboard",
+    "dataset": "/data/articles/billboard/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "epub": null,
+    "audio": null,
+    "transcript": "/exports/transcripts/billboard.txt",
+    "github": null
+  },
+  "bioeconomics": {
+    "slug": "bioeconomics",
     "dataset": null,
     "quarto": null,
     "html": null,
     "pdf": null,
     "epub": null,
     "audio": null,
-    "github": "https://github.com/Artometrics/celtics-the-artometrics-of-institutional-winning"
+    "transcript": "/exports/transcripts/bioeconomics.txt",
+    "github": "https://github.com/Artometrics/bioeconomics"
   },
-  "ceo-departures": {
-    "slug": "ceo-departures",
-    "dataset": "/data/articles/ceo-departures/dataset.csv",
+  "blockbusters": {
+    "slug": "blockbusters",
+    "dataset": null,
     "quarto": null,
     "html": null,
     "pdf": null,
     "epub": null,
     "audio": null,
+    "transcript": "/exports/transcripts/blockbusters.txt",
+    "github": "https://github.com/Artometrics/blockbusters"
+  },
+  "blueprint": {
+    "slug": "blueprint",
+    "dataset": null,
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "epub": null,
+    "audio": null,
+    "transcript": "/exports/transcripts/blueprint.txt",
+    "github": "https://github.com/Artometrics/blueprint"
+  },
+  "breweries": {
+    "slug": "breweries",
+    "dataset": "/data/articles/breweries/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "epub": null,
+    "audio": null,
+    "transcript": "/exports/transcripts/breweries.txt",
+    "github": null
+  },
+  "broadway": {
+    "slug": "broadway",
+    "dataset": "/data/articles/broadway/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "epub": null,
+    "audio": null,
+    "transcript": "/exports/transcripts/broadway.txt",
+    "github": null
+  },
+  "caesar": {
+    "slug": "caesar",
+    "dataset": "/data/articles/caesar/caesar_gdp.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "epub": null,
+    "audio": null,
+    "transcript": "/exports/transcripts/caesar.txt",
+    "github": null
+  },
+  "calories": {
+    "slug": "calories",
+    "dataset": "/data/articles/calories/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "epub": null,
+    "audio": null,
+    "transcript": "/exports/transcripts/calories.txt",
+    "github": null
+  },
+  "carols": {
+    "slug": "carols",
+    "dataset": "/data/articles/carols/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "epub": null,
+    "audio": null,
+    "transcript": "/exports/transcripts/carols.txt",
+    "github": null
+  },
+  "catalog": {
+    "slug": "catalog",
+    "dataset": "/data/articles/catalog/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "epub": null,
+    "audio": null,
+    "transcript": "/exports/transcripts/catalog.txt",
+    "github": null
+  },
+  "celtics": {
+    "slug": "celtics",
+    "dataset": null,
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "epub": null,
+    "audio": null,
+    "transcript": "/exports/transcripts/celtics.txt",
+    "github": "https://github.com/Artometrics/celtics"
+  },
+  "ceos": {
+    "slug": "ceos",
+    "dataset": "/data/articles/ceos/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "epub": null,
+    "audio": null,
+    "transcript": "/exports/transcripts/ceos.txt",
     "github": null
   },
   "cetaceans": {
@@ -177,167 +216,151 @@
     "pdf": null,
     "epub": null,
     "audio": null,
+    "transcript": "/exports/transcripts/cetaceans.txt",
     "github": null
   },
-  "christmas-novels": {
-    "slug": "christmas-novels",
-    "dataset": "/data/articles/christmas-novels/dataset.csv",
+  "coffee": {
+    "slug": "coffee",
+    "dataset": "/data/articles/coffee/coffee.csv",
     "quarto": null,
     "html": null,
     "pdf": null,
     "epub": null,
     "audio": null,
+    "transcript": "/exports/transcripts/coffee.txt",
     "github": null
   },
-  "christmas-songs": {
-    "slug": "christmas-songs",
-    "dataset": "/data/articles/christmas-songs/dataset.csv",
+  "comics": {
+    "slug": "comics",
+    "dataset": "/data/articles/comics/dataset.csv",
     "quarto": null,
     "html": null,
     "pdf": null,
     "epub": null,
     "audio": null,
+    "transcript": "/exports/transcripts/comics.txt",
     "github": null
   },
-  "cia-world-factbook": {
-    "slug": "cia-world-factbook",
-    "dataset": "/data/articles/cia-world-factbook/dataset.csv",
-    "quarto": null,
-    "html": null,
-    "pdf": null,
-    "epub": null,
-    "audio": null,
-    "github": null
-  },
-  "city-bioeconomics-operating-system": {
-    "slug": "city-bioeconomics-operating-system",
+  "cowboys": {
+    "slug": "cowboys",
     "dataset": null,
     "quarto": null,
     "html": null,
     "pdf": null,
     "epub": null,
     "audio": null,
-    "github": "https://github.com/Artometrics/city-bioeconomics-operating-system"
+    "transcript": "/exports/transcripts/cowboys.txt",
+    "github": "https://github.com/Artometrics/cowboys"
   },
-  "coffee-the-artometrics-of-java": {
-    "slug": "coffee-the-artometrics-of-java",
-    "dataset": "/data/articles/coffee-the-artometrics-of-java/coffee.csv",
+  "diplomacy": {
+    "slug": "diplomacy",
+    "dataset": "/data/articles/diplomacy/dataset.csv",
     "quarto": null,
     "html": null,
     "pdf": null,
     "epub": null,
     "audio": null,
+    "transcript": "/exports/transcripts/diplomacy.txt",
     "github": null
   },
-  "college-major-income": {
-    "slug": "college-major-income",
-    "dataset": "/data/articles/college-major-income/dataset.csv",
-    "quarto": null,
-    "html": null,
-    "pdf": null,
-    "epub": null,
-    "audio": null,
-    "github": null
-  },
-  "comic-characters": {
-    "slug": "comic-characters",
-    "dataset": "/data/articles/comic-characters/dataset.csv",
-    "quarto": null,
-    "html": null,
-    "pdf": null,
-    "epub": null,
-    "audio": null,
-    "github": null
-  },
-  "cowboys-the-artometrics-of-americas-team": {
-    "slug": "cowboys-the-artometrics-of-americas-team",
+  "dodgers": {
+    "slug": "dodgers",
     "dataset": null,
     "quarto": null,
     "html": null,
     "pdf": null,
     "epub": null,
     "audio": null,
-    "github": "https://github.com/Artometrics/cowboys-the-artometrics-of-americas-team"
+    "transcript": "/exports/transcripts/dodgers.txt",
+    "github": "https://github.com/Artometrics/dodgers"
   },
-  "craft-beer-usa": {
-    "slug": "craft-beer-usa",
-    "dataset": "/data/articles/craft-beer-usa/dataset.csv",
-    "quarto": null,
-    "html": null,
-    "pdf": null,
-    "epub": null,
-    "audio": null,
-    "github": null
-  },
-  "cultural-exports-geoeconomics": {
-    "slug": "cultural-exports-geoeconomics",
+  "dynasties": {
+    "slug": "dynasties",
     "dataset": null,
     "quarto": null,
     "html": null,
     "pdf": null,
     "epub": null,
     "audio": null,
-    "github": "https://github.com/Artometrics/cultural-exports-geoeconomics"
+    "transcript": "/exports/transcripts/dynasties.txt",
+    "github": "https://github.com/Artometrics/dynasties"
   },
-  "dodgers-the-artometrics-of-baseballs-modern-machine": {
-    "slug": "dodgers-the-artometrics-of-baseballs-modern-machine",
+  "emmys": {
+    "slug": "emmys",
+    "dataset": "/data/articles/emmys/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "epub": null,
+    "audio": null,
+    "transcript": "/exports/transcripts/emmys.txt",
+    "github": null
+  },
+  "emperors": {
+    "slug": "emperors",
+    "dataset": "/data/articles/emperors/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "epub": null,
+    "audio": null,
+    "transcript": "/exports/transcripts/emperors.txt",
+    "github": null
+  },
+  "exercise": {
+    "slug": "exercise",
+    "dataset": "/data/articles/exercise/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "epub": null,
+    "audio": null,
+    "transcript": "/exports/transcripts/exercise.txt",
+    "github": null
+  },
+  "exporters": {
+    "slug": "exporters",
     "dataset": null,
     "quarto": null,
     "html": null,
     "pdf": null,
     "epub": null,
     "audio": null,
-    "github": "https://github.com/Artometrics/dodgers-the-artometrics-of-baseballs-modern-machine"
+    "transcript": "/exports/transcripts/exporters.txt",
+    "github": "https://github.com/Artometrics/exporters"
   },
-  "emmy-awards": {
-    "slug": "emmy-awards",
-    "dataset": "/data/articles/emmy-awards/dataset.csv",
+  "factbook": {
+    "slug": "factbook",
+    "dataset": "/data/articles/factbook/dataset.csv",
     "quarto": null,
     "html": null,
     "pdf": null,
     "epub": null,
     "audio": null,
+    "transcript": "/exports/transcripts/factbook.txt",
     "github": null
   },
-  "exercise-usa": {
-    "slug": "exercise-usa",
-    "dataset": "/data/articles/exercise-usa/dataset.csv",
-    "quarto": null,
-    "html": null,
-    "pdf": null,
-    "epub": null,
-    "audio": null,
-    "github": null
-  },
-  "export-superpowers-us-china-germany": {
-    "slug": "export-superpowers-us-china-germany",
+  "fame": {
+    "slug": "fame",
     "dataset": null,
     "quarto": null,
     "html": null,
     "pdf": null,
     "epub": null,
     "audio": null,
-    "github": "https://github.com/Artometrics/export-superpowers-us-china-germany"
+    "transcript": "/exports/transcripts/fame.txt",
+    "github": "https://github.com/Artometrics/fame"
   },
-  "fast-food-calories": {
-    "slug": "fast-food-calories",
-    "dataset": "/data/articles/fast-food-calories/dataset.csv",
-    "quarto": null,
-    "html": null,
-    "pdf": null,
-    "epub": null,
-    "audio": null,
-    "github": null
-  },
-  "franchise-poison-star-vs-ip": {
-    "slug": "franchise-poison-star-vs-ip",
+  "fandom": {
+    "slug": "fandom",
     "dataset": null,
     "quarto": null,
     "html": null,
     "pdf": null,
     "epub": null,
     "audio": null,
-    "github": "https://github.com/Artometrics/franchise-poison-star-vs-ip"
+    "transcript": "/exports/transcripts/fandom.txt",
+    "github": "https://github.com/Artometrics/fandom"
   },
   "franchise": {
     "slug": "franchise",
@@ -347,97 +370,85 @@
     "pdf": null,
     "epub": null,
     "audio": null,
+    "transcript": "/exports/transcripts/franchise.txt",
     "github": null
   },
-  "giant-the-artometrics-of-a-san-francisco-dynasty": {
-    "slug": "giant-the-artometrics-of-a-san-francisco-dynasty",
-    "dataset": "/data/articles/giant-the-artometrics-of-a-san-francisco-dynasty/giant.csv",
+  "games": {
+    "slug": "games",
+    "dataset": "/data/articles/games/dataset.csv",
     "quarto": null,
     "html": null,
     "pdf": null,
     "epub": null,
     "audio": null,
+    "transcript": "/exports/transcripts/games.txt",
     "github": null
   },
-  "global-life-expectancy": {
-    "slug": "global-life-expectancy",
-    "dataset": "/data/articles/global-life-expectancy/dataset.csv",
-    "quarto": null,
-    "html": null,
-    "pdf": null,
-    "epub": null,
-    "audio": null,
-    "github": null
-  },
-  "global-plastic-waste": {
-    "slug": "global-plastic-waste",
-    "dataset": "/data/articles/global-plastic-waste/dataset.csv",
-    "quarto": null,
-    "html": null,
-    "pdf": null,
-    "epub": null,
-    "audio": null,
-    "github": null
-  },
-  "h3-the-artometrics-of-a-youtube-dynasty": {
-    "slug": "h3-the-artometrics-of-a-youtube-dynasty",
-    "dataset": "/data/articles/h3-the-artometrics-of-a-youtube-dynasty/data/h3_master.csv",
-    "quarto": null,
-    "html": null,
-    "pdf": null,
-    "epub": null,
-    "audio": null,
-    "github": null
-  },
-  "horror-movie-profit": {
-    "slug": "horror-movie-profit",
-    "dataset": "/data/articles/horror-movie-profit/dataset.csv",
-    "quarto": null,
-    "html": "/exports/horror-movie-profit.html",
-    "pdf": "/exports/horror-movie-profit.pdf",
-    "epub": "/exports/horror-movie-profit.epub",
-    "audio": null,
-    "github": null
-  },
-  "horror-movies": {
-    "slug": "horror-movies",
-    "dataset": "/data/articles/horror-movies/dataset.csv",
-    "quarto": null,
-    "html": "/exports/horror-movies.html",
-    "pdf": null,
-    "epub": null,
-    "audio": null,
-    "github": null
-  },
-  "hurricanes-puerto-rico": {
-    "slug": "hurricanes-puerto-rico",
-    "dataset": "/data/articles/hurricanes-puerto-rico/dataset.csv",
-    "quarto": null,
-    "html": null,
-    "pdf": null,
-    "epub": null,
-    "audio": null,
-    "github": null
-  },
-  "hydro-wastewater": {
-    "slug": "hydro-wastewater",
-    "dataset": "/data/articles/hydro-wastewater/dataset.csv",
-    "quarto": null,
-    "html": null,
-    "pdf": null,
-    "epub": null,
-    "audio": null,
-    "github": null
-  },
-  "imdb-blockbuster-grammar": {
-    "slug": "imdb-blockbuster-grammar",
+  "geopolitics": {
+    "slug": "geopolitics",
     "dataset": null,
     "quarto": null,
     "html": null,
     "pdf": null,
     "epub": null,
     "audio": null,
-    "github": "https://github.com/Artometrics/imdb-blockbuster-grammar"
+    "transcript": "/exports/transcripts/geopolitics.txt",
+    "github": "https://github.com/Artometrics/geopolitics"
+  },
+  "giants": {
+    "slug": "giants",
+    "dataset": "/data/articles/giants/giant.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "epub": null,
+    "audio": null,
+    "transcript": "/exports/transcripts/giants.txt",
+    "github": null
+  },
+  "gutenberg": {
+    "slug": "gutenberg",
+    "dataset": null,
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "epub": null,
+    "audio": null,
+    "transcript": "/exports/transcripts/gutenberg.txt",
+    "github": "https://github.com/Artometrics/gutenberg"
+  },
+  "heritage": {
+    "slug": "heritage",
+    "dataset": "/data/articles/heritage/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "epub": null,
+    "audio": null,
+    "transcript": "/exports/transcripts/heritage.txt",
+    "github": null
+  },
+  "horror": {
+    "slug": "horror",
+    "dataset": "/data/articles/horror/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "epub": null,
+    "audio": null,
+    "transcript": "/exports/transcripts/horror.txt",
+    "github": null
+  },
+  "hurricanes": {
+    "slug": "hurricanes",
+    "dataset": "/data/articles/hurricanes/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "epub": null,
+    "audio": null,
+    "transcript": "/exports/transcripts/hurricanes.txt",
+    "github": null
   },
   "imperial": {
     "slug": "imperial",
@@ -447,247 +458,349 @@
     "pdf": null,
     "epub": null,
     "audio": null,
+    "transcript": "/exports/transcripts/imperial.txt",
     "github": null
   },
-  "incarceration-trends": {
-    "slug": "incarceration-trends",
-    "dataset": "/data/articles/incarceration-trends/dataset.csv",
+  "institutions": {
+    "slug": "institutions",
+    "dataset": null,
     "quarto": null,
     "html": null,
     "pdf": null,
     "epub": null,
     "audio": null,
+    "transcript": "/exports/transcripts/institutions.txt",
+    "github": "https://github.com/Artometrics/institutions"
+  },
+  "jackson": {
+    "slug": "jackson",
+    "dataset": null,
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "epub": null,
+    "audio": null,
+    "transcript": "/exports/transcripts/jackson.txt",
+    "github": "https://github.com/Artometrics/jackson"
+  },
+  "lakers": {
+    "slug": "lakers",
+    "dataset": null,
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "epub": null,
+    "audio": null,
+    "transcript": "/exports/transcripts/lakers.txt",
+    "github": "https://github.com/Artometrics/lakers"
+  },
+  "languages": {
+    "slug": "languages",
+    "dataset": "/data/articles/languages/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "epub": null,
+    "audio": null,
+    "transcript": "/exports/transcripts/languages.txt",
     "github": null
   },
-  "institutional-winning-meta": {
-    "slug": "institutional-winning-meta",
-    "dataset": null,
+  "lcsh": {
+    "slug": "lcsh",
+    "dataset": "/data/articles/lcsh/dataset.csv",
     "quarto": null,
     "html": null,
     "pdf": null,
     "epub": null,
     "audio": null,
-    "github": "https://github.com/Artometrics/institutional-winning-meta"
-  },
-  "lakers-the-artometrics-of-basketball-glamour": {
-    "slug": "lakers-the-artometrics-of-basketball-glamour",
-    "dataset": null,
-    "quarto": null,
-    "html": null,
-    "pdf": null,
-    "epub": null,
-    "audio": null,
-    "github": "https://github.com/Artometrics/lakers-the-artometrics-of-basketball-glamour"
-  },
-  "languages-glottolog": {
-    "slug": "languages-glottolog",
-    "dataset": "/data/articles/languages-glottolog/dataset.csv",
-    "quarto": null,
-    "html": null,
-    "pdf": null,
-    "epub": null,
-    "audio": null,
+    "transcript": "/exports/transcripts/lcsh.txt",
     "github": null
   },
-  "league-money-skill-and-star-systems": {
-    "slug": "league-money-skill-and-star-systems",
+  "leagues": {
+    "slug": "leagues",
     "dataset": null,
     "quarto": null,
     "html": null,
     "pdf": null,
     "epub": null,
     "audio": null,
-    "github": "https://github.com/Artometrics/league-money-skill-and-star-systems"
+    "transcript": "/exports/transcripts/leagues.txt",
+    "github": "https://github.com/Artometrics/leagues"
   },
-  "lego-database": {
-    "slug": "lego-database",
-    "dataset": "/data/articles/lego-database/dataset.csv",
+  "legos": {
+    "slug": "legos",
+    "dataset": "/data/articles/legos/dataset.csv",
     "quarto": null,
     "html": null,
     "pdf": null,
     "epub": null,
     "audio": null,
+    "transcript": "/exports/transcripts/legos.txt",
     "github": null
   },
-  "lv-molly-tea-trademark-china": {
-    "slug": "lv-molly-tea-trademark-china",
-    "dataset": null,
+  "longevity": {
+    "slug": "longevity",
+    "dataset": "/data/articles/longevity/dataset.csv",
     "quarto": null,
     "html": null,
     "pdf": null,
     "epub": null,
     "audio": null,
-    "github": "https://github.com/Artometrics/lv-molly-tea-trademark-china"
-  },
-  "medium-articles": {
-    "slug": "medium-articles",
-    "dataset": "/data/articles/medium-articles/dataset.csv",
-    "quarto": null,
-    "html": null,
-    "pdf": null,
-    "epub": null,
-    "audio": null,
+    "transcript": "/exports/transcripts/longevity.txt",
     "github": null
   },
-  "michael-jackson-psychonomics": {
-    "slug": "michael-jackson-psychonomics",
-    "dataset": null,
+  "lyrics": {
+    "slug": "lyrics",
+    "dataset": "/data/articles/lyrics/dataset.csv",
     "quarto": null,
     "html": null,
     "pdf": null,
     "epub": null,
     "audio": null,
-    "github": "https://github.com/Artometrics/michael-jackson-psychonomics"
-  },
-  "musicbrainz-pop-fame-mechanics": {
-    "slug": "musicbrainz-pop-fame-mechanics",
-    "dataset": null,
-    "quarto": null,
-    "html": null,
-    "pdf": null,
-    "epub": null,
-    "audio": null,
-    "github": "https://github.com/Artometrics/musicbrainz-pop-fame-mechanics"
-  },
-  "narrative-economics-field-guide": {
-    "slug": "narrative-economics-field-guide",
-    "dataset": null,
-    "quarto": null,
-    "html": null,
-    "pdf": null,
-    "epub": null,
-    "audio": null,
-    "github": "https://github.com/Artometrics/narrative-economics-field-guide"
-  },
-  "national-export-identity-atlas": {
-    "slug": "national-export-identity-atlas",
-    "dataset": null,
-    "quarto": null,
-    "html": null,
-    "pdf": null,
-    "epub": null,
-    "audio": null,
-    "github": "https://github.com/Artometrics/national-export-identity-atlas"
-  },
-  "national-park-visits": {
-    "slug": "national-park-visits",
-    "dataset": "/data/articles/national-park-visits/dataset.csv",
-    "quarto": null,
-    "html": null,
-    "pdf": null,
-    "epub": null,
-    "audio": null,
+    "transcript": "/exports/transcripts/lyrics.txt",
     "github": null
   },
-  "netflix-engagement": {
-    "slug": "netflix-engagement",
-    "dataset": "/data/articles/netflix-engagement/dataset.csv",
+  "mac": {
+    "slug": "mac",
+    "dataset": "/data/articles/mac/dataset.csv",
     "quarto": null,
     "html": null,
     "pdf": null,
     "epub": null,
     "audio": null,
+    "transcript": "/exports/transcripts/mac.txt",
     "github": null
   },
-  "netflix-titles": {
-    "slug": "netflix-titles",
-    "dataset": "/data/articles/netflix-titles/dataset.csv",
+  "majors": {
+    "slug": "majors",
+    "dataset": "/data/articles/majors/dataset.csv",
     "quarto": null,
     "html": null,
     "pdf": null,
     "epub": null,
     "audio": null,
+    "transcript": "/exports/transcripts/majors.txt",
     "github": null
   },
-  "new-york-vs-san-francisco-city-systems": {
-    "slug": "new-york-vs-san-francisco-city-systems",
-    "dataset": null,
+  "margins": {
+    "slug": "margins",
+    "dataset": "/data/articles/margins/dataset.csv",
     "quarto": null,
     "html": null,
     "pdf": null,
     "epub": null,
     "audio": null,
-    "github": "https://github.com/Artometrics/new-york-vs-san-francisco-city-systems"
-  },
-  "nuclear-explosions": {
-    "slug": "nuclear-explosions",
-    "dataset": "/data/articles/nuclear-explosions/dataset.csv",
-    "quarto": null,
-    "html": null,
-    "pdf": null,
-    "epub": null,
-    "audio": null,
+    "transcript": "/exports/transcripts/margins.txt",
     "github": null
   },
-  "nyc-restaurant-inspections": {
-    "slug": "nyc-restaurant-inspections",
-    "dataset": "/data/articles/nyc-restaurant-inspections/dataset.csv",
+  "medium": {
+    "slug": "medium",
+    "dataset": "/data/articles/medium/dataset.csv",
     "quarto": null,
     "html": null,
     "pdf": null,
     "epub": null,
     "audio": null,
+    "transcript": "/exports/transcripts/medium.txt",
     "github": null
   },
-  "padres-the-artometrics-of-paying-for-october": {
-    "slug": "padres-the-artometrics-of-paying-for-october",
-    "dataset": null,
-    "quarto": null,
-    "html": null,
-    "pdf": null,
-    "epub": null,
-    "audio": "/audios/padres-the-artometrics-of-paying-for-october.mp3",
-    "github": "https://github.com/Artometrics/padres-the-artometrics-of-paying-for-october"
-  },
-  "padres-world-series-ownership-blueprint": {
-    "slug": "padres-world-series-ownership-blueprint",
-    "dataset": null,
-    "quarto": null,
-    "html": null,
-    "pdf": null,
-    "epub": null,
-    "audio": "/audios/padres-world-series-ownership-blueprint.mp3",
-    "github": "https://github.com/Artometrics/padres-world-series-ownership-blueprint"
-  },
-  "pantheon-the-artometrics-of-collective-memory": {
-    "slug": "pantheon-the-artometrics-of-collective-memory",
-    "dataset": null,
+  "metrics": {
+    "slug": "metrics",
+    "dataset": "/data/articles/metrics/dataset.csv",
     "quarto": null,
     "html": null,
     "pdf": null,
     "epub": null,
     "audio": null,
-    "github": "https://github.com/Artometrics/pantheon-the-artometrics-of-collective-memory"
-  },
-  "patriots-the-artometrics-of-the-system-dynasty": {
-    "slug": "patriots-the-artometrics-of-the-system-dynasty",
-    "dataset": null,
-    "quarto": null,
-    "html": null,
-    "pdf": null,
-    "epub": null,
-    "audio": null,
-    "github": "https://github.com/Artometrics/patriots-the-artometrics-of-the-system-dynasty"
-  },
-  "pixar-films": {
-    "slug": "pixar-films",
-    "dataset": "/data/articles/pixar-films/dataset.csv",
-    "quarto": null,
-    "html": null,
-    "pdf": null,
-    "epub": null,
-    "audio": null,
+    "transcript": "/exports/transcripts/metrics.txt",
     "github": null
   },
-  "playboy-after-hef": {
-    "slug": "playboy-after-hef",
+  "metros": {
+    "slug": "metros",
     "dataset": null,
     "quarto": null,
     "html": null,
     "pdf": null,
     "epub": null,
     "audio": null,
-    "github": "https://github.com/Artometrics/playboy-after-hef"
+    "transcript": "/exports/transcripts/metros.txt",
+    "github": "https://github.com/Artometrics/metros"
+  },
+  "museums": {
+    "slug": "museums",
+    "dataset": "/data/articles/museums/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "epub": null,
+    "audio": null,
+    "transcript": "/exports/transcripts/museums.txt",
+    "github": null
+  },
+  "narratives": {
+    "slug": "narratives",
+    "dataset": null,
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "epub": null,
+    "audio": null,
+    "transcript": "/exports/transcripts/narratives.txt",
+    "github": "https://github.com/Artometrics/narratives"
+  },
+  "netflix": {
+    "slug": "netflix",
+    "dataset": "/data/articles/netflix/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "epub": null,
+    "audio": null,
+    "transcript": "/exports/transcripts/netflix.txt",
+    "github": null
+  },
+  "novels": {
+    "slug": "novels",
+    "dataset": "/data/articles/novels/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "epub": null,
+    "audio": null,
+    "transcript": "/exports/transcripts/novels.txt",
+    "github": null
+  },
+  "nuclear": {
+    "slug": "nuclear",
+    "dataset": "/data/articles/nuclear/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "epub": null,
+    "audio": null,
+    "transcript": "/exports/transcripts/nuclear.txt",
+    "github": null
+  },
+  "oscars": {
+    "slug": "oscars",
+    "dataset": null,
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "epub": null,
+    "audio": null,
+    "transcript": "/exports/transcripts/oscars.txt",
+    "github": "https://github.com/Artometrics/oscars"
+  },
+  "padres": {
+    "slug": "padres",
+    "dataset": null,
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "epub": null,
+    "audio": null,
+    "transcript": "/exports/transcripts/padres.txt",
+    "github": "https://github.com/Artometrics/padres"
+  },
+  "pantheon": {
+    "slug": "pantheon",
+    "dataset": null,
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "epub": null,
+    "audio": null,
+    "transcript": "/exports/transcripts/pantheon.txt",
+    "github": "https://github.com/Artometrics/pantheon"
+  },
+  "parks": {
+    "slug": "parks",
+    "dataset": "/data/articles/parks/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "epub": null,
+    "audio": null,
+    "transcript": "/exports/transcripts/parks.txt",
+    "github": null
+  },
+  "patriots": {
+    "slug": "patriots",
+    "dataset": null,
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "epub": null,
+    "audio": null,
+    "transcript": "/exports/transcripts/patriots.txt",
+    "github": "https://github.com/Artometrics/patriots"
+  },
+  "phds": {
+    "slug": "phds",
+    "dataset": "/data/articles/phds/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "epub": null,
+    "audio": null,
+    "transcript": "/exports/transcripts/phds.txt",
+    "github": null
+  },
+  "pixar": {
+    "slug": "pixar",
+    "dataset": "/data/articles/pixar/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "epub": null,
+    "audio": null,
+    "transcript": "/exports/transcripts/pixar.txt",
+    "github": null
+  },
+  "pizza": {
+    "slug": "pizza",
+    "dataset": "/data/articles/pizza/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "epub": null,
+    "audio": null,
+    "transcript": "/exports/transcripts/pizza.txt",
+    "github": null
+  },
+  "plastic": {
+    "slug": "plastic",
+    "dataset": "/data/articles/plastic/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "epub": null,
+    "audio": null,
+    "transcript": "/exports/transcripts/plastic.txt",
+    "github": null
+  },
+  "playboy": {
+    "slug": "playboy",
+    "dataset": null,
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "epub": null,
+    "audio": null,
+    "transcript": "/exports/transcripts/playboy.txt",
+    "github": "https://github.com/Artometrics/playboy"
+  },
+  "poison": {
+    "slug": "poison",
+    "dataset": null,
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "epub": null,
+    "audio": null,
+    "transcript": "/exports/transcripts/poison.txt",
+    "github": "https://github.com/Artometrics/poison"
   },
   "pokemon": {
     "slug": "pokemon",
@@ -697,56 +810,62 @@
     "pdf": null,
     "epub": null,
     "audio": null,
+    "transcript": "/exports/transcripts/pokemon.txt",
     "github": null
   },
-  "project-gutenberg-public-domain-canon-map": {
-    "slug": "project-gutenberg-public-domain-canon-map",
+  "prisons": {
+    "slug": "prisons",
+    "dataset": "/data/articles/prisons/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "epub": null,
+    "audio": null,
+    "transcript": "/exports/transcripts/prisons.txt",
+    "github": null
+  },
+  "protection": {
+    "slug": "protection",
     "dataset": null,
     "quarto": null,
     "html": null,
     "pdf": null,
     "epub": null,
     "audio": null,
-    "github": "https://github.com/Artometrics/project-gutenberg-public-domain-canon-map"
+    "transcript": "/exports/transcripts/protection.txt",
+    "github": "https://github.com/Artometrics/protection"
   },
-  "project-gutenberg": {
-    "slug": "project-gutenberg",
-    "dataset": "/data/articles/project-gutenberg/dataset.csv",
+  "radio": {
+    "slug": "radio",
+    "dataset": "/data/articles/radio/dataset.csv",
     "quarto": null,
     "html": null,
     "pdf": null,
     "epub": null,
     "audio": null,
+    "transcript": "/exports/transcripts/radio.txt",
     "github": null
   },
-  "protection-threshold": {
-    "slug": "protection-threshold",
-    "dataset": null,
+  "ramen": {
+    "slug": "ramen",
+    "dataset": "/data/articles/ramen/dataset.csv",
     "quarto": null,
     "html": null,
     "pdf": null,
     "epub": null,
     "audio": null,
-    "github": "https://github.com/Artometrics/protection-threshold"
-  },
-  "radio-stations": {
-    "slug": "radio-stations",
-    "dataset": "/data/articles/radio-stations/dataset.csv",
-    "quarto": null,
-    "html": null,
-    "pdf": null,
-    "epub": null,
-    "audio": null,
+    "transcript": "/exports/transcripts/ramen.txt",
     "github": null
   },
-  "ramen-ratings": {
-    "slug": "ramen-ratings",
-    "dataset": "/data/articles/ramen-ratings/dataset.csv",
+  "rankings": {
+    "slug": "rankings",
+    "dataset": "/data/articles/rankings/dataset.csv",
     "quarto": null,
     "html": null,
     "pdf": null,
     "epub": null,
     "audio": null,
+    "transcript": "/exports/transcripts/rankings.txt",
     "github": null
   },
   "readmitted": {
@@ -757,246 +876,227 @@
     "pdf": "/exports/readmitted.pdf",
     "epub": "/exports/readmitted.epub",
     "audio": null,
+    "transcript": "/exports/transcripts/readmitted.txt",
     "github": "https://github.com/Artometrics/artometrics-web"
   },
-  "regional-sports-identity-map": {
-    "slug": "regional-sports-identity-map",
+  "restaurants": {
+    "slug": "restaurants",
+    "dataset": "/data/articles/restaurants/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "epub": null,
+    "audio": null,
+    "transcript": "/exports/transcripts/restaurants.txt",
+    "github": null
+  },
+  "rivalry": {
+    "slug": "rivalry",
     "dataset": null,
     "quarto": null,
     "html": null,
     "pdf": null,
     "epub": null,
     "audio": null,
-    "github": "https://github.com/Artometrics/regional-sports-identity-map"
+    "transcript": "/exports/transcripts/rivalry.txt",
+    "github": "https://github.com/Artometrics/rivalry"
   },
-  "rolling-stone-albums": {
-    "slug": "rolling-stone-albums",
-    "dataset": "/data/articles/rolling-stone-albums/dataset.csv",
+  "schools": {
+    "slug": "schools",
+    "dataset": "/data/articles/schools/dataset.csv",
     "quarto": null,
     "html": null,
     "pdf": null,
     "epub": null,
     "audio": null,
+    "transcript": "/exports/transcripts/schools.txt",
     "github": null
   },
-  "roman-emperors": {
-    "slug": "roman-emperors",
-    "dataset": "/data/articles/roman-emperors/dataset.csv",
-    "quarto": null,
-    "html": null,
-    "pdf": null,
-    "epub": null,
-    "audio": null,
-    "github": null
-  },
-  "san-francisco-data-microscope": {
-    "slug": "san-francisco-data-microscope",
+  "sf": {
+    "slug": "sf",
     "dataset": null,
     "quarto": null,
     "html": null,
     "pdf": null,
     "epub": null,
     "audio": null,
-    "github": "https://github.com/Artometrics/san-francisco-data-microscope"
+    "transcript": "/exports/transcripts/sf.txt",
+    "github": "https://github.com/Artometrics/sf"
   },
-  "school-diversity": {
-    "slug": "school-diversity",
-    "dataset": "/data/articles/school-diversity/dataset.csv",
+  "sherlock": {
+    "slug": "sherlock",
+    "dataset": "/data/articles/sherlock/dataset.csv",
     "quarto": null,
     "html": null,
     "pdf": null,
     "epub": null,
     "audio": null,
+    "transcript": "/exports/transcripts/sherlock.txt",
     "github": null
   },
-  "sherlock-holmes": {
-    "slug": "sherlock-holmes",
-    "dataset": "/data/articles/sherlock-holmes/dataset.csv",
+  "simpsons": {
+    "slug": "simpsons",
+    "dataset": "/data/articles/simpsons/dataset.csv",
     "quarto": null,
     "html": null,
     "pdf": null,
     "epub": null,
     "audio": null,
+    "transcript": "/exports/transcripts/simpsons.txt",
     "github": null
   },
-  "simpsons-guest-stars": {
-    "slug": "simpsons-guest-stars",
-    "dataset": "/data/articles/simpsons-guest-stars/dataset.csv",
+  "slices": {
+    "slug": "slices",
+    "dataset": "/data/articles/slices/dataset.csv",
     "quarto": null,
     "html": null,
     "pdf": null,
     "epub": null,
     "audio": null,
+    "transcript": "/exports/transcripts/slices.txt",
     "github": null
   },
-  "sports-dynasty-index-best-and-worst-conversion": {
-    "slug": "sports-dynasty-index-best-and-worst-conversion",
+  "steam": {
+    "slug": "steam",
+    "dataset": "/data/articles/steam/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "epub": null,
+    "audio": null,
+    "transcript": "/exports/transcripts/steam.txt",
+    "github": null
+  },
+  "streaming": {
+    "slug": "streaming",
     "dataset": null,
     "quarto": null,
     "html": null,
     "pdf": null,
     "epub": null,
     "audio": null,
-    "github": "https://github.com/Artometrics/sports-dynasty-index-best-and-worst-conversion"
+    "transcript": "/exports/transcripts/streaming.txt",
+    "github": "https://github.com/Artometrics/streaming"
   },
-  "streaming-catalog-power": {
-    "slug": "streaming-catalog-power",
+  "superbowl": {
+    "slug": "superbowl",
+    "dataset": "/data/articles/superbowl/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "epub": null,
+    "audio": null,
+    "transcript": "/exports/transcripts/superbowl.txt",
+    "github": null
+  },
+  "television": {
+    "slug": "television",
+    "dataset": "/data/articles/television/dataset.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "epub": null,
+    "audio": null,
+    "transcript": "/exports/transcripts/television.txt",
+    "github": null
+  },
+  "trademarks": {
+    "slug": "trademarks",
     "dataset": null,
     "quarto": null,
     "html": null,
     "pdf": null,
     "epub": null,
     "audio": null,
-    "github": "https://github.com/Artometrics/streaming-catalog-power"
+    "transcript": "/exports/transcripts/trademarks.txt",
+    "github": "https://github.com/Artometrics/trademarks"
   },
-  "super-bowl-ads": {
-    "slug": "super-bowl-ads",
-    "dataset": "/data/articles/super-bowl-ads/dataset.csv",
+  "tuition": {
+    "slug": "tuition",
+    "dataset": "/data/articles/tuition/dataset.csv",
     "quarto": null,
     "html": null,
     "pdf": null,
     "epub": null,
     "audio": null,
+    "transcript": "/exports/transcripts/tuition.txt",
     "github": null
   },
-  "tv-golden-age": {
-    "slug": "tv-golden-age",
-    "dataset": "/data/articles/tv-golden-age/dataset.csv",
-    "quarto": null,
-    "html": "/exports/tv-golden-age.html",
-    "pdf": null,
-    "epub": null,
-    "audio": null,
-    "github": null
-  },
-  "uk-museums": {
-    "slug": "uk-museums",
-    "dataset": "/data/articles/uk-museums/dataset.csv",
+  "voters": {
+    "slug": "voters",
+    "dataset": "/data/articles/voters/dataset.csv",
     "quarto": null,
     "html": null,
     "pdf": null,
     "epub": null,
     "audio": null,
+    "transcript": "/exports/transcripts/voters.txt",
     "github": null
   },
-  "un-votes": {
-    "slug": "un-votes",
-    "dataset": "/data/articles/un-votes/dataset.csv",
+  "warriors": {
+    "slug": "warriors",
+    "dataset": "/data/articles/warriors/warrior.csv",
     "quarto": null,
     "html": null,
     "pdf": null,
     "epub": null,
     "audio": null,
+    "transcript": "/exports/transcripts/warriors.txt",
     "github": null
   },
-  "us-phds": {
-    "slug": "us-phds",
-    "dataset": "/data/articles/us-phds/dataset.csv",
+  "wastewater": {
+    "slug": "wastewater",
+    "dataset": "/data/articles/wastewater/dataset.csv",
     "quarto": null,
     "html": null,
     "pdf": null,
     "epub": null,
     "audio": null,
+    "transcript": "/exports/transcripts/wastewater.txt",
     "github": null
   },
-  "us-tuition": {
-    "slug": "us-tuition",
-    "dataset": "/data/articles/us-tuition/dataset.csv",
+  "wealth": {
+    "slug": "wealth",
+    "dataset": "/data/articles/wealth/dataset.csv",
     "quarto": null,
     "html": null,
     "pdf": null,
     "epub": null,
     "audio": null,
+    "transcript": "/exports/transcripts/wealth.txt",
     "github": null
   },
-  "us-voter-turnout": {
-    "slug": "us-voter-turnout",
-    "dataset": "/data/articles/us-voter-turnout/dataset.csv",
+  "wine": {
+    "slug": "wine",
+    "dataset": "/data/articles/wine/dataset.csv",
     "quarto": null,
     "html": null,
     "pdf": null,
     "epub": null,
     "audio": null,
+    "transcript": "/exports/transcripts/wine.txt",
     "github": null
   },
-  "video-games-sliced": {
-    "slug": "video-games-sliced",
-    "dataset": "/data/articles/video-games-sliced/dataset.csv",
-    "quarto": null,
-    "html": null,
-    "pdf": null,
-    "epub": null,
-    "audio": null,
-    "github": null
-  },
-  "video-games-steam": {
-    "slug": "video-games-steam",
-    "dataset": "/data/articles/video-games-steam/dataset.csv",
-    "quarto": null,
-    "html": "/exports/video-games-steam.html",
-    "pdf": null,
-    "epub": null,
-    "audio": null,
-    "github": null
-  },
-  "warrior-the-artometrics-of-a-golden-state-dynasty": {
-    "slug": "warrior-the-artometrics-of-a-golden-state-dynasty",
-    "dataset": "/data/articles/warrior-the-artometrics-of-a-golden-state-dynasty/warrior.csv",
-    "quarto": null,
-    "html": null,
-    "pdf": null,
-    "epub": null,
-    "audio": null,
-    "github": null
-  },
-  "wealth-income": {
-    "slug": "wealth-income",
-    "dataset": "/data/articles/wealth-income/dataset.csv",
-    "quarto": null,
-    "html": null,
-    "pdf": null,
-    "epub": null,
-    "audio": null,
-    "github": null
-  },
-  "web-page-metrics": {
-    "slug": "web-page-metrics",
-    "dataset": "/data/articles/web-page-metrics/dataset.csv",
-    "quarto": null,
-    "html": null,
-    "pdf": null,
-    "epub": null,
-    "audio": null,
-    "github": null
-  },
-  "wine-ratings": {
-    "slug": "wine-ratings",
-    "dataset": "/data/articles/wine-ratings/dataset.csv",
-    "quarto": null,
-    "html": null,
-    "pdf": null,
-    "epub": null,
-    "audio": null,
-    "github": null
-  },
-  "world-heritage-sites": {
-    "slug": "world-heritage-sites",
-    "dataset": "/data/articles/world-heritage-sites/dataset.csv",
-    "quarto": null,
-    "html": null,
-    "pdf": null,
-    "epub": null,
-    "audio": null,
-    "github": null
-  },
-  "yankees-the-artometrics-of-baseballs-empire": {
-    "slug": "yankees-the-artometrics-of-baseballs-empire",
+  "yankees": {
+    "slug": "yankees",
     "dataset": null,
     "quarto": null,
     "html": null,
     "pdf": null,
     "epub": null,
     "audio": null,
-    "github": "https://github.com/Artometrics/yankees-the-artometrics-of-baseballs-empire"
+    "transcript": "/exports/transcripts/yankees.txt",
+    "github": "https://github.com/Artometrics/yankees"
+  },
+  "youtube": {
+    "slug": "youtube",
+    "dataset": "/data/articles/youtube/data/h3_master.csv",
+    "quarto": null,
+    "html": null,
+    "pdf": null,
+    "epub": null,
+    "audio": null,
+    "transcript": "/exports/transcripts/youtube.txt",
+    "github": null
   }
 }

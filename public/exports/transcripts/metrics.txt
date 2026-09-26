@@ -1,0 +1,49 @@
+metrics
+
+Median P50 fell from 7.00 to 4.80 between 2016 and 2022—a 31 percent improvement at the center of the distribution—across 238 HTTP Archive records. Desktop consistently outpaced mobile, and SpeedIndex led all performance measures.
+
+Five charts map the percentile story: the primary trend, client-split distributions, P50–P90 correlation, a client–year heatmap, and a secondary trend confirmation. The anchor point is 5.97, the overall median P50 in this TidyTuesday extract.
+
+MEDIAN P50 FELL AS PAGES GOT FASTER AT THE CENTER
+
+MEDIAN P50 OVER TIME
+
+Median P50 dropped from 7.00 in 2016 to 4.80 in 2022—a 2.20-point decline representing 31 percent improvement. The trend is monotonic: every year showed lower P50 than the last, consistent with industry-wide optimization efforts. Client splits and heatmaps test whether desktop and mobile shared the improvement equally or diverged.
+
+DESKTOP AND MOBILE SPLIT THE P50 DISTRIBUTION
+
+P50 BY CLIENT
+
+Desktop boxes sit lower than mobile across the entire P50 range. Desktop records 65 percent of all measurements and shows tighter interquartile spread, while mobile carries higher median and greater variance. The gap means device type matters more than the 5.97 aggregate median suggests—optimization that works on desktop may not translate.
+
+P50 AND P90 MOVE TOGETHER IN PERFORMANCE SPACE
+
+P50 VS P90
+
+P50 and P90 cluster along a diagonal—sites with low median speed also show low tail latency. Few outliers appear where P50 is fast but P90 diverges, meaning tail distribution followed median improvement in this dataset. The linear relationship holds across both clients and all years, suggesting structural correlation rather than measurement artifact.
+
+A CLIENT–YEAR HEATMAP SHOWS WHERE SPEED MIGRATED
+
+P50 BY CLIENT × YEAR
+
+Desktop cells cool (lower P50) earlier and faster than mobile cells. Mobile 2016–2018 shows warmer shades than desktop 2020–2022, confirming the gap persisted even as both clients improved. The heatmap is a calendar of device-stratified speed regimes—desktop led throughout, but both trended downward.
+
+A SECONDARY TREND CONFIRMS THE SAME DOWNWARD DRIFT
+
+MEDIAN P50 OVER TIME
+
+The alternative trend reproduces the 7.00 → 4.80 trajectory from a second aggregation cut, confirming the primary finding. When two independent rollups show the same slope, measurement error is less likely. Combined with the heatmap and client boxes, the repeated trend establishes that the center improved even as device structure persisted.
+
+WHAT THIS FILE CANNOT TELL YOU
+
+Community-cleaned TidyTuesday snapshots are not live HTTP Archive queries. Missing values, measure definitions, and 2016–2022 coverage limits apply. Percentile bands are aggregates, not individual page traces.
+
+Findings describe this metrics extract—structural signals about P50 and related bands—not a complete Core Web Vitals audit of the modern web.
+
+WHAT TO TAKE AWAY
+
+Median P50 fell 31 percent from 7.00 to 4.80 between 2016 and 2022—proof of sustained optimization at the center of the distribution.
+
+Desktop consistently beat mobile by 15–20 percent across all years. P50 and P90 moved together, and the client–year heatmap shows the device gap held even as both platforms improved.
+
+DATA, METHODS & SOURCES

@@ -610,7 +610,7 @@ const WIKIPEDIA_CURATED = [
 ];
 
 const notes = {
-  gutenberg: { fetch: null, fallback: null },
+  lcsh: { fetch: null, fallback: null },
   wikiart: { fetch: null, fallback: null },
   wikipedia: { fetch: null, fallback: null },
 };
@@ -854,7 +854,7 @@ async function buildGutenbergCatalog() {
   const generatedAt = new Date().toISOString();
   try {
     const items = await fetchGutendexCatalog();
-    notes.gutenberg.fetch = `gutendex.com OK (${items.length} items)`;
+    notes.lcsh.fetch = `gutendex.com OK (${items.length} items)`;
     return {
       generatedAt,
       source: "https://gutendex.com/books/?languages=en&sort=popular",
@@ -863,12 +863,12 @@ async function buildGutenbergCatalog() {
       items,
     };
   } catch (err) {
-    notes.gutenberg.fetch = `gutendex.com failed: ${err.message}`;
-    console.warn(`[gutenberg] ${notes.gutenberg.fetch}`);
+    notes.lcsh.fetch = `gutendex.com failed: ${err.message}`;
+    console.warn(`[lcsh] ${notes.lcsh.fetch}`);
     try {
       const items = await fetchGutenbergCsvCatalog();
-      notes.gutenberg.fallback = `pg_catalog.csv curated classics (${items.length} items)`;
-      console.warn(`[gutenberg] fallback → ${notes.gutenberg.fallback}`);
+      notes.lcsh.fallback = `pg_catalog.csv curated classics (${items.length} items)`;
+      console.warn(`[lcsh] fallback → ${notes.lcsh.fallback}`);
       return {
         generatedAt,
         source: "https://www.gutenberg.org/cache/epub/feeds/pg_catalog.csv",
@@ -877,7 +877,7 @@ async function buildGutenbergCatalog() {
         items,
       };
     } catch (err2) {
-      notes.gutenberg.fallback = `CSV also failed: ${err2.message}`;
+      notes.lcsh.fallback = `CSV also failed: ${err2.message}`;
       throw new Error(`Gutenberg catalog failed: ${err2.message}`);
     }
   }
@@ -990,7 +990,7 @@ async function buildWikipediaCatalog() {
   };
 }
 
-function gutenbergReadme() {
+function lcshReadme() {
   return `# Project Gutenberg reference catalog
 
 Open-reference index of English-language classics for Artometrics reports and tooling.
@@ -1081,11 +1081,11 @@ npm run catalog:open
 async function main() {
   console.log("Building open-reference catalogs…");
 
-  const gutenberg = await buildGutenbergCatalog();
-  const gutenbergDir = path.join(OUT_ROOT, "gutenberg");
-  writeJson(path.join(gutenbergDir, "catalog.json"), gutenberg);
-  writeReadme(gutenbergDir, gutenbergReadme());
-  console.log(`gutenberg: ${gutenberg.items.length} items → ${path.relative(ROOT, gutenbergDir)}`);
+  const lcsh = await buildGutenbergCatalog();
+  const lcshDir = path.join(OUT_ROOT, "lcsh");
+  writeJson(path.join(lcshDir, "catalog.json"), lcsh);
+  writeReadme(lcshDir, lcshReadme());
+  console.log(`lcsh: ${lcsh.items.length} items → ${path.relative(ROOT, lcshDir)}`);
 
   const wikiart = await buildWikiartCatalog();
   const wikiartDir = path.join(OUT_ROOT, "wikiart");

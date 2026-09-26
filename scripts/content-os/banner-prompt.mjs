@@ -38,15 +38,15 @@ const briefPath = arg("brief");
 if (slugArg) {
   // Resolve slug aliases (short franchise names → full article slugs)
   const aliases = {
-    giants: "giant-the-artometrics-of-a-san-francisco-dynasty",
-    yankees: "yankees-the-artometrics-of-baseballs-empire",
-    dodgers: "dodgers-the-artometrics-of-baseballs-modern-machine",
-    padres: "padres-the-artometrics-of-paying-for-october",
-    patriots: "patriots-the-artometrics-of-the-system-dynasty",
-    cowboys: "cowboys-the-artometrics-of-americas-team",
-    lakers: "lakers-the-artometrics-of-basketball-glamour",
-    celtics: "celtics-the-artometrics-of-institutional-winning",
-    warriors: "warrior-the-artometrics-of-a-golden-state-dynasty",
+    giants: "giants",
+    yankees: "yankees",
+    dodgers: "dodgers",
+    padres: "padres",
+    patriots: "patriots",
+    cowboys: "cowboys",
+    lakers: "lakers",
+    celtics: "celtics",
+    warriors: "warriors",
   };
   const slug = aliases[slugArg] || slugArg;
   const entry = BANNER_METAPHORS[slug];

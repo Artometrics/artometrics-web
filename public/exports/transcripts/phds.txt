@@ -1,0 +1,49 @@
+PHDS: Social Sciences Drove 63 percent of Growth
+
+Five U.S. doctorate fields produced 63 percent of all PhDs awarded between 2008 and 2017. Social sciences led at 4,944 degrees; the median field awarded 85. Psychology and social sciences ran 30.5 above the national median; engineering trailed by 21.5. Concentration is extreme: the typical program remains small while a handful of disciplines drive aggregate output.
+
+The question is which disciplines grew and which stagnated when doctorate production is measured field by field, year by year. Medians prevent outlier programs from skewing every comparison.
+
+MEDIAN DOCTORATE COUNTS EDGED UPWARD ACROSS THE DECADE
+
+MEDIAN N PHDS OVER TIME
+
+Median output rose from 80 in the opening period to 87 at the close—a modest climb around the file median of 85. The typical field-year produced slightly more doctorates by the end of the window than at the start. A rising median does not mean uniform growth. Leader fields can surge while smaller programs stall; the trend chart reports the center, not every discipline's path.
+
+SOCIAL SCIENCES LEAD THE FIELD LADDER
+
+SOCIAL SCIENCES LEADS AT 4,944 — 915 MARKS THE MEDIAN AMONG THE TOP DOZEN
+
+Social sciences led at 4,944 PhDs in the leaders cut, while 915 marked the median among the top dozen. The gap between first place and the top-dozen median shows how quickly the ladder drops even inside the upper tier. Life sciences appeared among the broad-field landmarks. The chart makes the numeric gap concrete.
+
+BROAD FIELDS DO NOT SHARE ONE OUTPUT BAND
+
+N PHDS BY BROAD FIELD
+
+Category boxes by broad field show whether doctorate counts are shared or contested across disciplinary families. Psychology and social sciences, engineering, life sciences, and others occupy different parts of the distribution. Boxes are the right tool when fields differ in scale. A single national median of 85 hides those family-level spreads.
+
+PSYCHOLOGY AND SOCIAL SCIENCES CLEAR THE MEDIAN; ENGINEERING TRAILS
+
+N PHDS VS MEDIAN BY BROAD FIELD
+
+Psychology and social sciences sat 30.5 above the median; engineering trailed by 21.5. Those signed gaps convert broad-field boxes into distance from the file center. Trailing the median is not a quality judgment. It is a statement about relative volume in this extract's n phds metric.
+
+FIVE FIELDS HOLD MOST OF THE AGGREGATE DOCTORATES
+
+CUMULATIVE N PHDS
+
+The top five field entries accounted for 63 percent of aggregate n phds. Concentration is high: a small set of fields drove most of the summed doctorate output in the file. Steep Pareto curves mean capacity and attention cluster. The long tail of smaller fields still matters for the ecosystem, but it does not dominate the total.
+
+WHAT THIS FILE CANNOT TELL YOU
+
+Community-cleaned TidyTuesday snapshots are not live NSF Survey of Earned Doctorates APIs. Missing values, field-name variants, and 2008–2017 coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.
+
+Findings describe this U.S. PhDs extract—structural signals about doctorate counts by field—not a full labor-market forecast or ranking of program quality.
+
+WHAT TO TAKE AWAY
+
+Doctorate output in this file centered on a median of 85, edged up from 80 to 87 over the window, and concentrated heavily: five fields held 63 percent of aggregate n phds.
+
+Social sciences led the upper ladder, psychology and social sciences sat well above the median, and engineering trailed it—a volume map of disciplines, not a prestige contest.
+
+DATA, METHODS & SOURCES

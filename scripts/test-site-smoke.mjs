@@ -26,10 +26,10 @@ const paths = [
   "/downloads",
   "/welcome",
   "/blog",
-  "/beyonce-the-psychonomics-of-control",
-  "/lv-molly-tea-trademark-china",
-  "/beyonce-taylor-lyrics",
-  "/caesar-the-psychonomics-of-emperor-julius",
+  "/beyonce",
+  "/trademarks",
+  "/lyrics",
+  "/caesar",
 ];
 
 let failed = 0;

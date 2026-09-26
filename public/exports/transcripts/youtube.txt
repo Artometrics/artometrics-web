@@ -1,0 +1,41 @@
+YOUTUBE: H3's Peak Became a Ceiling
+
+The Frenemies co-host era tripled H3 Podcast monthly viewership in nine months and created a commercial ceiling the show has never approached since. Ethan Klein and Trisha Paytas co-hosted from September 2020 to June 2021, generating peak engagement visible in every chart in this report. When the partnership ended mid-episode on camera in June 2021, views dropped to baseline within a month. The show that remained runs 220+ minutes per episode — five times the 2017 median — for an audience 70 percent smaller than the Frenemies peak. This analysis covers 1,638 videos across four H3 channels, 680 podcast episodes, and three years of Reddit post data from the fan and critic communities that formed around the brand.
+
+This is a data report. The numbers are what they are.
+
+THE ERA TIMELINE
+
+ERA TIMELINE
+
+From 2017 to mid-2020, the H3 Podcast built a reliable baseline — a few million views per month, loyal audience, consistent output. Trisha Paytas joined as co-host in September 2020 and monthly views tripled within weeks. The peak months of the Frenemies Era outperformed the entire preceding three years, condensed into nine months. When Frenemies ended mid-episode in June 2021, views dropped to baseline within a month. Leftovers launched in September 2021 and brought Hasan Piker's political audience, generating a secondary bump visible in the 2022 data. It never approached Frenemies numbers. After Leftovers ended in October 2023, the chart enters its current phase: a slow decline with no structural catalyst. Even at post-2023 lows, the H3 Podcast pulls millions of monthly views. The brand contracted to its core rather than collapsed. The audience that remains watches longer episodes with more commitment than the casual Frenemies-era viewer. The cliff looks dramatic because Frenemies was genuinely anomalous. The current numbers reflect what a major podcast looks like without a viral co-host dynamic driving weekly drama.
+
+THE DURATION DRIFT
+
+DURATION DRIFT
+
+The median H3 Podcast episode ran 42 minutes in 2017. By 2024, the median crossed 220 minutes — longer than most feature films. This was not a sudden format change. The chart shows continuous upward drift compounded year over year until a new normal was established. No single episode caused it. The show kept going longer, and the audience kept watching. The clearest structural break is a floor shift. Before 2022, monthly medians regularly dipped below 120 minutes. After 2022, they never did. The show locked into 3-hour-plus territory and stayed there. Leftovers normalized the extended format in 2021; by the time it ended in 2023, the audience expected marathon sessions as default. That conditioning did not reverse when Leftovers ended. In 2024, H3 published far fewer episodes than in prior years, but duration hit its all-time high, with months regularly clearing 220–240 minutes. The show published less but asked more from the audience that stayed. Each episode became a larger commitment. The fans who remained watch for 4 hours at a time. Whether that is sustainable is a different question. The data shows it happened.
+
+THE FAN VS. CRITIC DIVIDE
+
+REDDIT ACTIVITY
+
+The indexed chart removes raw scale differences and asks when each community spiked relative to its own normal. The answer is almost never at the same time. When the iDubbbz Content Cop dropped on April 16, 2025 — the first Content Cop in years, explicitly targeting H3 — r/h3snark hit its all-time peak at more than 3.5× its own average. The fan sub barely registered the same event. The two communities were watching completely different shows. The cliff in snark data after May 2025 is not controversy dying down — it is a subreddit going dark. After Klein issued copyright claims against r/h3snark moderators and threatened legal action, the sub announced an indefinite hiatus. The index collapsed to near zero within weeks. The fan sub continued its slow decline — below its own average but still functional. The snark community did not fade. It was shut down. One line represents organic audience erosion, the other represents legal intervention. The fan sub never spikes the way snark does — no single event moves it dramatically above baseline. But the trend is unmistakably downward. The community is not in crisis; it is in slow erosion. Fewer new things to discuss, fewer viral moments to dissect, fewer reasons to post. The legal drama — the Content Cop, the streamer lawsuits — barely registered. Whatever drives fan engagement on r/h3h3productions, it is not courtroom news.
+
+WHAT THIS FILE CANNOT TELL YOU
+
+The YouTube data captures view counts as of the April 2026 pull — not at time of publication. Older videos have had years to accumulate views through algorithmic recommendations and search, which means early h3h3productions videos are systematically over-represented in lifetime view totals relative to their original performance. The era-based analysis on the H3 Podcast channel is less affected because the comparison is within-channel across time.
+
+The Arctic Shift Reddit archive is comprehensive but not guaranteed complete. Deleted posts, removed comments, and accounts banned before archival are absent from the dataset. The r/h3snark data begins in April 2023 — the sub's founding — so pre-2023 critical community activity is unrepresented. Any conclusions about the fan-vs-critic dynamic are bounded by that window.
+
+Episode duration data from Podchaser is self-reported by the show and may include inconsistencies for older episodes, live streams published as podcast episodes, and bonus or clip content. Episodes with missing duration values were excluded from Chart 2 analysis. Chart 3 indexes each subreddit to its own average across the April 2023–March 2026 window. A subreddit with low activity in early months will show inflated index values in later high-activity periods — the r/h3snark baseline is built on its full available history, which starts at launch and may slightly inflate peak readings relative to a steadier baseline.
+
+WHAT TO TAKE AWAY
+
+The H3 data documents what happens when a creator brand builds its peak moment around someone else. The Frenemies Era was genuinely anomalous — nine months of co-host-driven drama that tripled the podcast's monthly viewership and created a ceiling the show has never approached since. The chart is unambiguous. The current audience is not a collapse; it is a correction back to what the brand can sustain on its own terms.
+
+The duration data adds a different dimension. The show that emerged from the Frenemies aftermath is structurally different from the one that preceded it — longer, less frequent, more demanding. Whether that format is a creative choice or a symptom of a contracting audience is a question the data cannot answer. Both explanations fit the numbers.
+
+The Reddit chart documents not just audience behavior but audience management: a creator using legal tools to suppress a critic community. The snark subreddit's cliff is not organic. It is the result of deliberate intervention. The fan sub's slower decline runs in parallel and suggests the underlying engagement problem would exist regardless. Two different communities, two different trajectories, one brand caught between them.
+
+DATA, METHODS & SOURCES

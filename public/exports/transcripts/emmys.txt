@@ -1,0 +1,49 @@
+EMMYS: SNL's 859 Records Beat Every Show
+
+Saturday Night Live appears 859 times across 29,678 Emmy records from 1957–2021—three times more than the next-closest show and a sign that Emmy concentration tilts toward programs that return year after year rather than one-night sweeps.
+
+The working file holds 29,678 records spanning 1957–2021. Nominee is the most common label, accounting for 23,739 rows—wins and other designations occupy a thinner slice, which means any leaderboard drawn from this extract ranks recurrence more than victory.
+
+LANDSCAPE
+
+NOMINEE DOMINATES WITH 23,739 RECORDS
+
+Nominee dominates with 23,739 records. The file is built around nomination rows; wins and other type labels sit in a thinner slice. That imbalance is structural—any leaderboard drawn from this extract ranks how often names enter the nominee column, not how often they win.
+
+VOLUME
+
+RECORDS BY PERIOD
+
+Activity peaks in 2019 with 2,613 records—the densest year in the span. Period-level counts show when Emmy paperwork thickened: more categories, more programs, more named credits. Volume is the first signal that awards seasons are not equally crowded across decades.
+
+WHO SITS AT THE TOP
+
+SATURDAY NIGHT LIVE APPEARS 859 TIMES — THE MOST RECURRING NAME IN THE FILE
+
+Saturday Night Live appears 859 times—the most recurring name in the file. The top dozen account for a visible share of all 29,678 rows. Long-running variety and franchise programs accumulate nominations the way long careers accumulate credits. Dominance here is recurrence, not a single sweep night.
+
+CATEGORY
+
+NOMINEE IS THE LARGEST BUCKET WITH 23,739 RECORDS
+
+Nominee is the largest bucket with 23,739 records. Category concentration shows where editorial attention should focus when reading the table. If the question is "who swept," separate win rows carefully. If the question is "who kept getting invited," this nominee-heavy landscape is the right map.
+
+TIMELINE
+
+LEADERS OVER TIME
+
+Leading names do not move in lockstep—some fade as others surge. Tracking counts over time separates sustained presence from one-off spikes. A show that dominates a single ceremony is a different data shape from a name that returns for decades.
+
+WHAT THIS FILE CANNOT TELL YOU
+
+Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.
+
+Findings describe the file on hand—structural signals about Emmy nomination volume and recurrence through 2021, not a complete history of television quality.
+
+WHAT TO TAKE AWAY
+
+Emmy concentration shows up as recurrence: Saturday Night Live at 859 appearances, a nominee column that holds 23,739 of 29,678 rows, and a 2019 peak of 2,613 records. Leaders, volume, and timelines each answer a different question about how lopsided the season became.
+
+Use the charts to separate invitation from victory—then check the type field before treating any name as a sweep.
+
+DATA, METHODS & SOURCES

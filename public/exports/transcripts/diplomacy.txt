@@ -1,0 +1,55 @@
+diplomacy
+
+In a 100,000-record extract of United Nations roll-call votes, 79,663 positions (80 percent) are affirmative, Brazil appears 747 times as the most recurring member state, and most country entities appear only once. The dataset is categorical — no numeric scores — making it a recurrence and frequency archive rather than a win-rate leaderboard.
+
+The first job of this file is structural: map the distribution of yes, no, and abstain, identify which member names recur, and confirm whether country-code metadata aligns with entity labels across the sample.
+
+RESEARCH QUESTION
+
+What does a 100,000-row extract of United Nations roll-call votes reveal before any ideological coalition model is fitted? This report asks how vote categories are distributed, which member-state names recur most often, and whether country-code metadata confirms or complicates the entity picture.
+
+The question is descriptive. A yes-heavy table does not mean the General Assembly lacks conflict; it means this sample's recorded positions concentrate in one category. The analysis starts with vote mass and country recurrence before moving toward interpretive claims about alignment.
+
+YES VOTES DOMINATE THE SAMPLED UN RECORD
+
+YES VOTES DOMINATE THE SAMPLED UN RECORD
+
+Yes dominates with 79,663 records. In a 100,000-row extract, that is the center of gravity: 80 percent of recorded positions in this slice are affirmative. Abstain and no exist, but they do not match yes for volume. Dominance here is a frequency fact, not proof that the General Assembly always agrees. It shows where the mass of the table sits before any conflict analysis begins. The United Nations General Assembly often votes on resolutions that have already passed through committees, negotiations, amendments, and diplomatic bargaining. A large yes category can therefore reflect agenda-setting and consensus-building before the roll call, not an absence of disagreement in world politics. The public vote is the final visible record of a process that began earlier. UN voting scholars usually move beyond raw categories into ideal-point models, affinity scores, or issue-area subsets because the meaning of a yes vote depends on the resolution. A yes on decolonization, a yes on nuclear disarmament, and a yes on a budgetary item are all affirmative votes, but they do not carry the same geopolitical signal.
+
+BRAZIL APPEARS MOST OFTEN AMONG COUNTRY NAMES
+
+BRAZIL APPEARS MOST OFTEN IN THIS EXTRACT
+
+Brazil appears 747 times — the most recurring country name in the file. The top dozen countries account for a visible share of all 100,000 rows, which is what a recurring-member chart shows: who is densely present in the extract. High appearance counts can reflect coverage, membership longevity, or how the sample was built. They are presence metrics, not win rates. Brazil has been a United Nations member since 1945 and is a frequent actor in General Assembly voting records. The country's foreign-policy tradition includes visible positions on development, non-intervention, South-South cooperation, and Security Council reform. But the 747 appearances shown here are a row-count fact, not a claim that Brazil is uniquely influential in every issue area. Country recurrence is also shaped by institutional continuity. Newer UN members, dissolved states, renamed states, and countries with interrupted or transformed membership histories appear differently from long-standing members. The Soviet Union/Russia, Yugoslavia/successor states, Czechoslovakia/Czechia and Slovakia, and country-name standardization issues are why entity handling matters in UN vote data.
+
+VOTE CATEGORIES RESTATE THE FILE'S CENTER OF GRAVITY
+
+VOTE CATEGORIES REVEAL THE FILE'S CENTER OF GRAVITY
+
+Yes is again the largest bucket with 79,663 records when vote categories are plotted as a bar landscape. Repeating the category cut confirms that the headline frequency is not an artifact of a single chart type. Category concentration shows where editorial attention should start — with the yes majority — while still leaving room to inspect the smaller no and abstain bands. Abstentions deserve caution because they can mean several things: neutrality, strategic ambiguity, alliance pressure, domestic constraint, protest against wording, or unwillingness to oppose a popular resolution directly. In Cold War voting studies, abstention is often treated as analytically distinct from both yes and no because it can carry diplomatic information without joining either pole. No votes are smaller in this extract, but they are often more diagnostic. A rare no can identify a strongly contested resolution, a bloc split, or a state protecting a core interest. The category chart gives the denominator; substantive research still needs resolution identifiers and issue tags to interpret the minority categories.
+
+COUNTRY APPEARANCES FOLLOW A LONG-TAIL PATTERN
+
+COUNTRY APPEARANCES FOLLOW A LONG-TAIL PATTERN
+
+Most country entities appear only once in the frequency view; a small head recurs repeatedly. That power-law shape is typical of catalog-style international tables: a few members are densely observed, many are sparse. Long tails warn against over-reading rare countries as if they had the same sample depth as Brazil-scale recurrence. The long tail can reflect countries that entered the United Nations later, states that changed names, country labels split across historical entities, or sample construction that does not preserve every roll call for every member equally. Tuvalu, South Sudan, Czechia, and North Macedonia do not have the same historical runway as Brazil, India, France, or the United States. For comparative work, this means country-level rates need exposure denominators. A country observed 747 times can sustain a more stable voting-profile estimate than a country observed only a handful of times. Presence depth is a statistical precondition for diplomatic interpretation.
+
+COUNTRY CODES ADD A SECOND IDENTITY LAYER
+
+COUNTRY CODES ADD METADATA RATHER THAN A NEW THESIS
+
+BR is the most repeated country code in the extract — the code-level echo of Brazil's name-level lead. Secondary dimensions like codes add join keys and metadata when the primary table has no numeric score column. Codes are infrastructure for linking, not a rival thesis to the vote-share story. They confirm entity identity across the 100,000-row sample. Country codes matter because names are historically unstable. "Congo," "Democratic Republic of the Congo," "Congo, Democratic Republic," "Russia," "Russian Federation," and former state names can fracture a table if the join key is text alone. Codes make it possible to connect UN votes to region, income group, alliance, population, or trade data without hand-cleaning every label. The BR code leading alongside Brazil's name indicates that the entity layer is internally coherent for the top case. That does not guarantee the whole file is perfectly standardized, but it shows why the extra chart exists: metadata fields are the connective tissue that allow UN voting records to become analyzable political data.
+
+WHAT THIS FILE CANNOT TELL YOU
+
+Community-cleaned TidyTuesday snapshots are not the full UN voting API. Missing values, country-name variants, and week-of-export coverage limits apply. A 100,000-row extract may be a sample or a capped export rather than every roll call ever taken.
+
+Findings describe this UN votes file — structural signals about vote categories and country recurrence — not a complete theory of international coalitions.
+
+WHAT TO TAKE AWAY
+
+In this extract, yes is the majority language of recorded votes (79,663 of 100,000), Brazil is the most recurring country name (747 appearances), and BR leads among country codes.
+
+The long tail of country appearances means presence is uneven. Start with the yes majority and the dense head of member recurrence; treat sparse countries as thin evidence until coverage is checked.
+
+DATA, METHODS & SOURCES

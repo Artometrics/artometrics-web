@@ -20,15 +20,6 @@ Captive cetacean transfer records from 1946–2017 concentrate overwhelmingly in
 
 Every timeline and species comparison inherits this bottlenose bias. The archive is a US-centric captivity ledger, not a balanced global survey.
 
-## Fast facts {#fast-facts}
-
-The numbers that set the scale for this report:
-
-- **2,194** — Records in the working dataset
-
-  1946–2017Year span covered in the file
-  USMost common Transfer
-
 ## Data and method {#data-and-method}
 
 The source is the TidyTuesday release from 2018-12-18 (allCetaceanData.csv). After cleaning, 2,194 rows remain.

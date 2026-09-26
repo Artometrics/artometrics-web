@@ -1,0 +1,126 @@
+{
+  "data": [
+    {
+      "x": [61, 39],
+      "y": ["Merchandise, Licensing & Retail", "Box Office + All Other Streams"],
+      "orientation": "h",
+      "marker": {
+        "color": ["#C0392B", "#1B4F8A"],
+        "line": {
+          "color": "rgba(31,119,180,1)",
+          "width": 0
+        }
+      },
+      "text": ["61%", "39%"],
+      "textposition": ["outside", "outside"],
+      "hovertemplate": ["<b>%{y}<\/b><br>%{x}% of tracked revenue<extra><\/extra>", "<b>%{y}<\/b><br>%{x}% of tracked revenue<extra><\/extra>"],
+      "type": "bar",
+      "error_y": {
+        "color": "rgba(31,119,180,1)"
+      },
+      "error_x": {
+        "color": "rgba(31,119,180,1)"
+      },
+      "xaxis": "x",
+      "yaxis": "y",
+      "frame": null
+    }
+  ],
+  "layout": {
+    "margin": {
+      "b": 90,
+      "l": 240,
+      "t": 110,
+      "r": 50
+    },
+    "title": {
+      "text": "<b>Merchandise share of revenue across 107 tracked franchises<\/b><br><span style='font-size:12px;color:#6B6B6B'>Share of tracked lifetime revenue by stream<\/span>",
+      "x": 0,
+      "xanchor": "left"
+    },
+    "paper_bgcolor": "#FFFFFF",
+    "plot_bgcolor": "#FFFFFF",
+    "font": {
+      "family": "Helvetica",
+      "color": "#1C1C1E",
+      "size": 12
+    },
+    "xaxis": {
+      "domain": [0, 1],
+      "automargin": true,
+      "gridcolor": "#E5E5E5",
+      "linecolor": "#D5D5D5",
+      "zerolinecolor": "#D5D5D5",
+      "title": "Share of tracked lifetime revenue (%)",
+      "range": [0, 72]
+    },
+    "yaxis": {
+      "domain": [0, 1],
+      "automargin": true,
+      "gridcolor": "#E5E5E5",
+      "linecolor": "#D5D5D5",
+      "zerolinecolor": "#D5D5D5",
+      "title": "",
+      "categoryorder": "array",
+      "categoryarray": ["Box Office + All Other Streams", "Merchandise, Licensing & Retail"],
+      "type": "category"
+    },
+    "annotations": [
+      {
+        "x": 0,
+        "y": 1.14,
+        "xref": "paper",
+        "yref": "paper",
+        "text": "<b>Merchandise and licensing — not box office — carry most franchise revenue<\/b>",
+        "showarrow": false,
+        "xanchor": "left",
+        "align": "left",
+        "font": {
+          "size": 11,
+          "color": "#FFFFFF"
+        },
+        "bgcolor": "#C0392B",
+        "borderpad": 6
+      },
+      {
+        "x": 0,
+        "y": -0.22,
+        "xref": "paper",
+        "yref": "paper",
+        "text": "Data: TidyTuesday / Box Office Mojo — ARTOMETRICS  ·  Artometrics",
+        "showarrow": false,
+        "xanchor": "left",
+        "font": {
+          "size": 9,
+          "color": "#6B6B6B"
+        }
+      },
+      {
+        "x": 0.99,
+        "y": -0.22,
+        "xref": "paper",
+        "yref": "paper",
+        "text": "Artometrics",
+        "showarrow": false,
+        "xanchor": "right",
+        "font": {
+          "size": 12,
+          "color": "#1C1C1E",
+          "family": "Chomsky"
+        }
+      }
+    ],
+    "showlegend": false,
+    "hovermode": "closest"
+  },
+  "config": {
+    "displayModeBar": false,
+    "displaylogo": false,
+    "responsive": true,
+    "scrollZoom": false,
+    "doubleClick": false,
+    "staticPlot": false,
+    "editable": false,
+    "showTips": false
+  }
+}

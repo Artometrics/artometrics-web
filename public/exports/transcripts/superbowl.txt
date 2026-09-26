@@ -1,0 +1,49 @@
+SUPERBOWL: Five Brands Capture 87 percent of Ad Views
+
+Five brands capture 87 percent of all post-game Super Bowl ad views on YouTube, according to 247 uploads spanning 2006–2021. Median views fell from 111,814 to 33,766 as the archive expanded, but the ceiling reached 176,373,378—proof that a handful of commercials become folklore while most settle into inventory. NFL leads the top-twelve brand median at 403,641 views; Doritos ranks first in the full-file aggregation.
+
+Post-game streaming attention operates as its own economy. Broadcast buys the first audience; YouTube decides which spots circulate for years. The dataset tracks that second life through trend, brand leaders, format distribution, concentration, and the relationship between views and likes.
+
+MEDIAN VIEWS FELL AS THE ARCHIVE GOT DENSER
+
+MEDIAN VIEW COUNT OVER TIME
+
+Median view count fell from 111,814 in the earliest period to 33,766 at the end of the span. That decline does not signal deteriorating ad quality—it reflects the archive filling out with more ordinary uploads, pulling the center down while the ceiling remained stratospheric at 176,373,378. The falling median and the fixed ceiling coexist because attention is power-law distributed: most ads cluster near the median, a few explode into viral territory.
+
+NFL LEADS THE BRAND LADDER ON YOUTUBE VIEWS
+
+NFL LEADS AT 403,641 — 46,661 MARKS THE MEDIAN AMONG THE TOP DOZEN
+
+NFL leads the top-twelve brands at 403,641 views; the median within that group sits at 46,661. Doritos remains the top brand in the full-file aggregation; the chart isolates the highest performers in this particular cut. The gap between #1 and the top-dozen median shows how quickly the ladder drops. A few brands own the conversation; most of the competitive set operates closer to tens of thousands than hundreds of thousands.
+
+ALMOST EVERYTHING IN THE FILE IS A YOUTUBE VIDEO
+
+VIEW COUNT BY KIND
+
+Splitting view count by format produces a near-monoculture: youtube#video is the dominant kind. The distribution confirms the archive's platform identity rather than revealing contested formats. This matters for scope. The dataset tracks post-game internet lives of Super Bowl ads on YouTube, not a complete census of every commercial that aired during the broadcast.
+
+FIVE BRANDS HOLD EIGHTY-SEVEN PERCENT OF AGGREGATE VIEWS
+
+CUMULATIVE VIEW COUNT
+
+The top five brands account for 87 percent of aggregate views—a steep Pareto curve. Post-game attention is not distributed evenly; a small group drives the bulk of summed engagement. Concentration at this level explains why brand strategy obsesses over a handful of breakthrough spots. The long tail exists but does not move the aggregate the way the head does.
+
+VIEWS AND LIKES TRAVEL TOGETHER — WITH CLUSTERS
+
+VIEW COUNT VS LIKE COUNT
+
+Plotting view count against like count reveals clusters that a single correlation coefficient would obscure. Some ads convert attention into likes efficiently; others accumulate views without the same approval signal. The scatter maps how the two engagement measures co-move in this 247-row extract, not a quality ranking.
+
+WHAT THIS FILE CANNOT TELL YOU
+
+TidyTuesday snapshots are community-cleaned archives, not live YouTube APIs. View and like counts are frozen at export; missing values, brand spelling variants, and coverage gaps apply. Merged tables may duplicate or fan out rows when join keys are imperfect.
+
+Findings describe this Super Bowl ads extract and its structural signals, not a comprehensive history of every commercial creative or every platform where ads circulated.
+
+WHAT TO TAKE AWAY
+
+Post-game Super Bowl attention is concentrated: median views sit at 41,379, the ceiling reaches 176,373,378, and five brands capture 87 percent of aggregate views.
+
+The falling median from 111,814 to 33,766 reflects archive expansion, not declining ad quality. NFL and Doritos-scale leaders anchor the archive's memory. Views and likes move together in clusters, which is how engagement looks when a few spots become folklore and most settle into inventory.
+
+DATA, METHODS & SOURCES

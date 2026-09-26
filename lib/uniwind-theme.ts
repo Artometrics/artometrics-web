@@ -26,6 +26,7 @@ export function themeColorsToCssVars(
     "--color-border": colors.border,
     "--color-accent": colors.accent,
     "--color-accent-soft": colors.accentSoft,
+    "--color-secondary": colors.secondary,
     "--color-inverse": colors.inverse,
     "--color-header": colors.headerBg,
     "--color-overlay": colors.overlayBg,

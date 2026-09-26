@@ -113,6 +113,11 @@
   "config": {
     "displayModeBar": false,
     "displaylogo": false,
-    "responsive": true
+    "responsive": true,
+    "scrollZoom": false,
+    "doubleClick": false,
+    "staticPlot": false,
+    "editable": false,
+    "showTips": false
   }
 }

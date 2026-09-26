@@ -38,7 +38,7 @@ function inferSection(slug, title, tags = []) {
     [/\b(music|grammy|spotify|album|song|billboard|beyonce|taylor|christmas.?songs|radio|rolling.?stone|musicbrainz)\b/, "music"],
     [/\b(museum|heritage|gallery|uk.?museums|world.?heritage)\b/, "galleries"],
     [/\b(game|games|steam|lego|pokemon|board.?games|video.?game)\b/, "games"],
-    [/\b(gutenberg|sherlock|christmas.?novels|novel|book)\b/, "books"],
+    [/\b(lcsh|sherlock|christmas.?novels|novel|book)\b/, "books"],
     [/\b(web.?page|medium.?article|tech|software)\b/, "tech"],
     [/\b(city|cities|urban|metro|san.?francisco|new.?york|california|texas|travel|wine|coffee|airport|airline|biketown|national.?park|hurricane|hydro|nyc.?restaurant)\b/, "cities-travel"],
     [/\b(ceo|tuition|phd|voter|incarceration|wealth|export|plastic|factbook|college|school|readmit|big.?mac|un.?votes|super.?bowl.?ads)\b/, "business"],

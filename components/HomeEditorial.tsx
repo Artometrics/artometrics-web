@@ -1,5 +1,5 @@
 import { Pressable, Text, View } from "react-native";
-import { Image } from "expo-image";
+import { SiteCoverImage } from "@/components/SiteCoverImage";
 import { Link } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { assetUrl } from "@/lib/assets";
@@ -61,7 +61,7 @@ export function HomeEditorial({ posts }: { posts: BlogPost[] }) {
   if (!feature) return null;
 
   const featureHero = assetUrl(feature.heroImage);
-  const featureLabel = sectionLabel(feature.tags);
+  const featureLabel = sectionLabel(feature.tags, feature.subject);
 
   return (
     <View className="w-full bg-black pb-16">
@@ -76,10 +76,9 @@ export function HomeEditorial({ posts }: { posts: BlogPost[] }) {
               className="relative aspect-[16/9] overflow-hidden bg-[#111]"
             >
               {featureHero ? (
-                <Image
+                <SiteCoverImage
                   source={{ uri: featureHero }}
-                  className="absolute inset-0 h-full w-full"
-                  contentFit="cover"
+                  wrapperClassName="absolute inset-0"
                   transition={200}
                 />
               ) : null}
@@ -122,20 +121,23 @@ export function HomeEditorial({ posts }: { posts: BlogPost[] }) {
         <View className="flex-row flex-wrap gap-7">
           {reports.map((post) => {
             const hero = assetUrl(post.heroImage);
-            const label = sectionLabel(post.tags) ?? "Report";
+            const label = sectionLabel(post.tags, post.subject) ?? "Report";
             return (
               <Link key={post.slug} href={`/${post.slug}`} asChild>
                 <Pressable className="min-w-[240px] flex-1 gap-0">
-                  <View className="mb-3.5 aspect-[4/3] overflow-hidden bg-[#111]">
-                    {hero ? (
-                      <Image
-                        source={{ uri: hero }}
-                        className="h-full w-full"
-                        contentFit="cover"
-                        transition={200}
-                      />
-                    ) : null}
-                  </View>
+                  {hero ? (
+                    <SiteCoverImage
+                      source={{ uri: hero }}
+                      wrapperClassName="mb-3.5 w-full bg-[#111]"
+                      wrapperStyle={{ aspectRatio: 4 / 3 }}
+                      transition={200}
+                    />
+                  ) : (
+                    <View
+                      className="mb-3.5 w-full bg-[#111]"
+                      style={{ aspectRatio: 4 / 3 }}
+                    />
+                  )}
                   <RedTag label={label} />
                   <Text className="font-sans text-[17px] font-bold leading-[1.3] text-white">
                     {post.title}
@@ -151,16 +153,19 @@ export function HomeEditorial({ posts }: { posts: BlogPost[] }) {
       <Wrapper variant="bleed" className="mx-auto w-full max-w-[1200px] px-5 pb-16 md:px-12">
         <SectionTitle title="Data" href="/datasets" linkLabel="Datasets →" />
         <View className="flex-row flex-wrap gap-7">
-          <View className="min-w-[260px] flex-[1.4] aspect-[16/9] overflow-hidden bg-[#111]">
-            {assetUrl(dataList[0]?.heroImage) ? (
-              <Image
-                source={{ uri: assetUrl(dataList[0].heroImage)! }}
-                className="h-full w-full"
-                contentFit="cover"
-                transition={200}
-              />
-            ) : null}
-          </View>
+          {assetUrl(dataList[0]?.heroImage) ? (
+            <SiteCoverImage
+              source={{ uri: assetUrl(dataList[0].heroImage)! }}
+              wrapperClassName="min-w-[260px] flex-[1.4] bg-[#111]"
+              wrapperStyle={{ aspectRatio: 16 / 9 }}
+              transition={200}
+            />
+          ) : (
+            <View
+              className="min-w-[260px] flex-[1.4] bg-[#111]"
+              style={{ aspectRatio: 16 / 9 }}
+            />
+          )}
           <View className="min-w-[220px] flex-1 justify-between">
             {dataList.map((post, i) => (
               <Link key={post.slug} href={`/${post.slug}`} asChild>
@@ -193,16 +198,19 @@ export function HomeEditorial({ posts }: { posts: BlogPost[] }) {
               return (
                 <Link key={post.slug} href={`/${post.slug}`} asChild>
                   <Pressable className="min-w-[140px] flex-1 basis-[22%]">
-                    <View className="mb-2.5 aspect-square overflow-hidden bg-[#111]">
-                      {hero ? (
-                        <Image
-                          source={{ uri: hero }}
-                          className="h-full w-full"
-                          contentFit="cover"
-                          transition={200}
-                        />
-                      ) : null}
-                    </View>
+                    {hero ? (
+                      <SiteCoverImage
+                        source={{ uri: hero }}
+                        wrapperClassName="mb-2.5 w-full bg-[#111]"
+                        wrapperStyle={{ aspectRatio: 1 }}
+                        transition={200}
+                      />
+                    ) : (
+                      <View
+                        className="mb-2.5 w-full bg-[#111]"
+                        style={{ aspectRatio: 1 }}
+                      />
+                    )}
                     <Text className="font-sans text-[13px] leading-[1.4] text-white">
                       {post.title}
                     </Text>

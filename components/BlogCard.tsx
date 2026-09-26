@@ -1,9 +1,9 @@
 import { Pressable, Text, View } from "react-native";
-import { Image } from "expo-image";
 import { Link } from "expo-router";
+import { SiteCoverImage } from "@/components/SiteCoverImage";
 import { assetUrl } from "@/lib/assets";
 import {
-  deckLine,
+  cardDeckLine,
   formatAuthorName,
   formatDate,
   sectionLabel,
@@ -20,25 +20,24 @@ export function BlogCard({
   /** Normal-case serif-style headlines (homepage FT grid). */
   editorial?: boolean;
 }) {
-  const label = sectionLabel(post.tags);
+  const label = sectionLabel(post.tags, post.subject);
   const hero = assetUrl(post.heroImage);
   const author = post.author
     ? formatAuthorName(String(post.author))
     : "Kyle McAuliffe";
 
   const titleClass = editorial
-    ? "font-serif text-[22px] font-semibold leading-[1.2] tracking-tight text-fg"
-    : "font-display text-[22px] uppercase leading-6 tracking-[1px] text-fg";
+    ? "font-serif text-[22px] font-semibold leading-[1.2] tracking-tight text-accent"
+    : "font-display text-[22px] uppercase leading-6 tracking-[1px] text-accent";
 
   if (variant === "pick") {
     return (
       <Link href={`/${post.slug}`} asChild>
         <Pressable className="flex-row gap-3 border-b border-border py-3">
           {hero ? (
-            <Image
+            <SiteCoverImage
               source={{ uri: hero }}
-              className="h-14 w-14 shrink-0"
-              contentFit="cover"
+              wrapperClassName="h-14 w-14 shrink-0 bg-border"
               transition={200}
               accessibilityLabel={post.title}
             />
@@ -47,7 +46,7 @@ export function BlogCard({
           )}
           <View className="min-w-0 flex-1 gap-1">
             {label ? (
-              <Text className="font-sans text-[10px] font-bold uppercase tracking-[1.6px] text-muted">
+              <Text className="font-sans text-[10px] font-bold uppercase tracking-[1.6px] text-accent">
                 {label}
               </Text>
             ) : null}
@@ -65,10 +64,9 @@ export function BlogCard({
       <Link href={`/${post.slug}`} asChild>
         <Pressable className="relative min-h-[420px] w-full overflow-hidden border-2 border-border bg-black">
           {hero ? (
-            <Image
+            <SiteCoverImage
               source={{ uri: hero }}
-              className="absolute inset-0 h-full w-full"
-              contentFit="cover"
+              wrapperClassName="absolute inset-0"
               transition={200}
             />
           ) : null}
@@ -92,27 +90,27 @@ export function BlogCard({
   }
 
   if (variant === "stack") {
-    const borderClass = editorial ? "border border-border" : "border-2 border-border";
+    const borderClass = editorial ? "border border-accent" : "border-2 border-accent";
     const stackTitle = editorial
-      ? "font-serif text-[18px] font-semibold leading-[1.25] tracking-tight text-fg"
-      : "font-display text-[22px] uppercase leading-6 tracking-[1px] text-fg";
+      ? "font-serif text-[18px] font-semibold leading-[1.25] tracking-tight text-accent"
+      : "font-display text-[22px] uppercase leading-6 tracking-[1px] text-accent";
     return (
       <Link href={`/${post.slug}`} asChild>
         <Pressable className={`min-w-[140px] flex-1 gap-0 overflow-hidden ${borderClass}`}>
           {hero ? (
-            <Image
+            <SiteCoverImage
               source={{ uri: hero }}
-              className="aspect-[4/3] w-full"
-              contentFit="cover"
+              wrapperClassName="w-full"
+              wrapperStyle={{ aspectRatio: 1 }}
               transition={200}
               accessibilityLabel={post.title}
             />
           ) : (
-            <View className="aspect-[4/3] w-full bg-border" />
+            <View className="w-full overflow-hidden bg-border" style={{ aspectRatio: 1 }} />
           )}
           <View className="gap-2 p-3">
             {label ? (
-              <Text className="font-sans text-[10px] font-bold uppercase tracking-[1.6px] text-muted">
+              <Text className="font-sans text-[10px] font-bold uppercase tracking-[1.6px] text-accent">
                 {label}
               </Text>
             ) : null}
@@ -121,17 +119,17 @@ export function BlogCard({
             </Text>
             {editorial ? (
               <Text
-                className="font-sans text-[13px] leading-[18px] text-muted"
+                className="font-sans text-[13px] leading-[18px] text-fg"
                 numberOfLines={2}
               >
-                {deckLine(post.description, 24)}
+                {cardDeckLine(post.description)}
               </Text>
             ) : (
               <Text
-                className="font-sans text-[14px] leading-[20px] text-muted"
+                className="font-sans text-[14px] leading-[20px] text-fg"
                 numberOfLines={3}
               >
-                {deckLine(post.description, 28)}
+                {cardDeckLine(post.description)}
               </Text>
             )}
           </View>
@@ -149,24 +147,23 @@ export function BlogCard({
               {label}
             </Text>
           ) : null}
-          <Text className="font-display text-2xl uppercase leading-7 tracking-[1px] text-fg">
+          <Text className="font-display text-2xl uppercase leading-7 tracking-[1px] text-accent">
             {post.title}
           </Text>
           <Text
-            className="font-sans text-[14px] leading-[20px] text-muted"
+            className="font-sans text-[14px] leading-[20px] text-fg"
             numberOfLines={2}
           >
-            {deckLine(post.description, 22)}
+            {cardDeckLine(post.description)}
           </Text>
           <Text className="mt-1 text-[11px] uppercase tracking-[1.2px] text-subtle">
             {formatDate(post.pubDate)}
           </Text>
         </View>
         {hero ? (
-          <Image
+          <SiteCoverImage
             source={{ uri: hero }}
-            className="h-[120px] w-[100px]"
-            contentFit="cover"
+            wrapperClassName="h-[120px] w-[100px] shrink-0"
             transition={200}
             accessibilityLabel={post.title}
           />

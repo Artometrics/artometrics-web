@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Text, View, Pressable } from "react-native";
-import { Image } from "expo-image";
+import { SiteCoverImage } from "@/components/SiteCoverImage";
 import {
   setAudioModeAsync,
   useAudioPlayer,
@@ -177,10 +177,10 @@ export default function PodcastEpisodeScreen() {
       </Text>
       <Text className="text-[17px] leading-7 text-muted">{episode.description}</Text>
       {assetUrl(episode.image?.url) ? (
-        <Image
+        <SiteCoverImage
           source={{ uri: assetUrl(episode.image?.url)! }}
-          className="w-full aspect-video border border-border my-2"
-          contentFit="cover"
+          wrapperClassName="my-2 w-full border border-border"
+          wrapperStyle={{ aspectRatio: 16 / 9 }}
           transition={200}
           accessibilityLabel={episode.image?.alt || episode.title}
         />

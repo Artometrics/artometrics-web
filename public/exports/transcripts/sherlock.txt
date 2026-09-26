@@ -1,0 +1,49 @@
+SHERLOCK: Twelve Words per Tokenized Record
+
+The tokenized Sherlock Holmes corpus from TidyTuesday contains 65,958 records with a median word count of 12.0 and a mean of 10.9—evidence of a nearly symmetric distribution. The top-ranked title, The Yellow Face, reaches 13.0 words per record, just one word above the file-wide median, while the top five books together account for 34 percent of aggregate word count.
+
+The Adventure of the Beryl Coronet appears as the top-ranked book by word count in the fact box; The Yellow Face leads the charted breakdown at 13.0. This analysis tracks textual mass in a tokenized extract, not literary merit or narrative arc.
+
+STORY-LEVEL MEDIANS SIT IN A NARROW BAND
+
+WORD COUNT BY BOOK
+
+The Yellow Face leads at 13.0 words per record; A Case of Identity anchors the low end at 12.0. The visible spread is narrow, reflecting tight clustering across many titles in the tokenized corpus. Grouping by book exposes length variation across the catalog without requiring plot summaries. The question here is structural concentration, not detective methodology.
+
+EVEN THE LEADERS BARELY CLEAR THE FILE MEDIAN
+
+THE YELLOW FACE LEADS AT 13.0 — 12.0 MARKS THE MEDIAN AMONG THE TOP DOZEN
+
+The Yellow Face leads at 13.0, while the median among the top twelve is 12.0—identical to the file-wide median. Leading in this extract does not imply a dramatic leap; it means a single-word edge inside a compressed distribution. That compression is the finding. Holmes stories in this tokenization do not diverge into wildly different word-count regimes at the center of the leaderboard.
+
+MEDIAN 12.0, MEAN 10.9 — A MOSTLY SYMMETRIC SHAPE
+
+WORD COUNT DISTRIBUTION
+
+The full-sample distribution shows median 12.0 and mean 10.9—near symmetry rather than heavy right skew. The top decile begins at 14.0; that upper slice contains the longer textual segments in this metric. Symmetry matters for citation. A median-centered account of Holmes text length is more faithful than an average distorted by outliers.
+
+FIVE BOOKS ACCOUNT FOR A THIRD OF AGGREGATE WORD COUNT
+
+CUMULATIVE WORD COUNT
+
+The top five book entries account for 34 percent of aggregate word count. Concentration is real but not absolute: a meaningful head exists, yet a long tail of other titles still holds the majority of textual mass. This concentration curve means editorial attention can begin with a small set of books without ignoring the rest of the canon.
+
+A SECOND CONCENTRATION CUT CONFIRMS THE SAME HEAD
+
+CUMULATIVE WORD COUNT
+
+A second cumulative chart repeats the concentration view: the top five book entries again account for 34 percent of aggregate word count. Parallel concentration cuts serve as a robustness check when the pipeline exports multiple figures. The takeaway holds. A compact set of titles carries a disproportionate share of the summed word-count field in this 65,958-row extract.
+
+WHAT THIS FILE CANNOT TELL YOU
+
+TidyTuesday snapshots are community-cleaned teaching datasets, not live literary APIs. Tokenization choices, spelling variants in titles, and week-of-export coverage limits apply. Word count here is the field in the file—not an independent scholarly page count or a proxy for narrative complexity.
+
+Findings describe this extract. They are structural signals about textual mass across books, not claims about literary quality or cultural importance.
+
+WHAT TO TAKE AWAY
+
+The tokenized Holmes corpus centers tightly: median word count 12.0, mean 10.9, top decile from 14.0, and leaders such as The Yellow Face only one word above the median.
+
+Concentration is modest—the top five books hold 34 percent of aggregate word count—but no single title dominates. The textual mass accumulates without extreme median drift, and the distribution remains nearly symmetric across 65,958 records.
+
+DATA, METHODS & SOURCES

@@ -1,0 +1,35 @@
+warriors
+
+Golden State won 73 games in 2015–16—the most in NBA history—and by that season were attempting 14.9 more threes per game than the league average. Within a decade, every franchise copied the strategy.
+
+The Warriors began as the Philadelphia Warriors in 1946. For 35 consecutive seasons between 1975 and 2012, they hovered below or near .500, briefly competitive but rarely relevant. Then Stephen Curry learned to shoot from 30 feet, Steve Kerr committed to small lineups, and the franchise became the most analytically influential in modern basketball.
+
+Seven championships across three cities, a 73-win regular season that still stands alone, and 3,747 career threes by Curry through 2024 mark the discontinuity. What follows quantifies how dominant the dynasty windows were, how the three-point revolution unfolded in real numbers, and what it means to win 73 games in a league where almost nobody else has even approached that ceiling.
+
+TWO DYNASTY WINDOWS, AND A DESERT BETWEEN THEM
+
+The Warriors have had exactly two dynasty windows in 78 years. The Philadelphia era—anchored by the 1947 and 1956 championships—produced the first sustained run, though several seasons hovered in the 40–45 percent win range even then. The 1975 title was a one-season outlier: a Rick Barry-led peak at .720, then a collapse back into irrelevance. What follows is 35 consecutive seasons below or hovering at .500, interrupted only by the We Believe playoff run in 2007 and a few Mullin–Hardaway winning years in the early 1990s. The Curry era is categorically different. From 2015 through 2019, the Warriors never won fewer than 57 games in a non-strike-shortened season—five consecutive years above .695, unmatched in the modern NBA. The 2015–16 spike to .890 is the visual anchor. The 2019–20 collapse—from .707 to .232, a 47-point drop after Klay Thompson's ACL tear and a COVID-shortened season—is the steepest single-season fall in franchise history. The 2022 championship rebound, from .232 to .671 in two seasons without a lottery pick or blockbuster trade, is the fastest recovery in the dataset.
+
+HOW ONE FRANCHISE FORCED THE LEAGUE TO RELEARN OFFENSE
+
+From 1980 through 2012, Golden State shot about as many threes as everyone else. The lines run almost on top of each other for three decades—not because the Warriors were average in talent, but because no team yet treated the three-point line as basketball's central structural advantage. A shot worth 50 percent more than a two did not need a mathematician; it needed Curry. Divergence starts in 2013 and accelerates immediately. By 2015–16—the 73-win season—the Warriors launched 41.6 threes per game while the league averaged 26.7, a 14.9-attempt gap. They were attempting more threes per game than the entire NBA would average five years later. The 2017–2019 dip in volume is Kevin Durant, not retreat: easier scoring closer to the rim let Steve Kerr pull volume without sacrificing efficiency. After 2019, the league does not retreat when the dynasty wobbles—it accelerates. By 2022 the NBA average hit 35 attempts per game and Golden State's advantage had evaporated. Competitive diffusion: one franchise proves a thesis, wins four titles doing it, and within a decade the sport reorganizes around the same idea.
+
+SIX TEAMS REACHED 68 WINS. ONLY ONE OWNS 73.
+
+Only six teams in NBA history have won 68 or more regular-season games. The cluster at 68 and 69 is the ordinary ceiling of greatness. The 1995–96 Bulls sat alone at 72 for nearly two decades. Then Golden State broke the mark by one. Winning 73 games did not produce a championship. The 2015–16 Warriors lost the Finals to LeBron James and Cleveland in seven games—the first Finals team to blow a 3–1 lead. Of the six seasons on this chart, only the Warriors and the 1971–72 Bucks failed to win the title in their record year. The 73-win season is simultaneously the greatest regular season in NBA history and the most famous failure to close. The dynasty is correctly measured by four titles—2015, 2017, 2018, 2022—not by any single win total. The record year shows the Death Lineup ceiling. The legacy rests on what they built around Curry, Thompson, and Draymond Green after Durant left, after injuries piled up, after the window was supposed to be closed.
+
+WHAT THE CHARTS LEAVE OPEN
+
+Chart 1's win percentages come from a manually verified Basketball Reference tibble rather than a live multi-season API pull; values match the published record, but replication is safest via nbastatR with single-season calls to avoid scraper rate limits. Chart 2 cannot show pre-1979 shooting philosophy because the three-point line did not exist; the "revolution" claim is bounded to that 44-year window. Pre-Curry Warriors volume (1980–2012) tracks the league more by coincidence than design.
+
+Chart 3 isolates seasons with 68 or more wins for legibility. Seasons at 67—including the 1996–97 Jazz and the shortened 2011–12 Spurs—sit just below the cutoff. COVID-shortened 2019–20 and 2020–21 seasons are excluded from that historic ceiling comparison because 72- and 65-game totals are not directly comparable to an 82-game baseline.
+
+VERY FEW FRANCHISES CHANGE WHAT BASKETBALL LOOKS LIKE
+
+The Warriors are one of the stranger longitudinal stories in American sports—not because the dynasty was unexpected, but because the decades before it were erased by what followed. A team that wandered below .500 for 35 years became the most analytically influential franchise in the sport in about four seasons. That kind of discontinuity traces to one player whose abilities force a structural rethink. Curry is that player.
+
+The three-point revolution was not accidental. It was a front office that drafted Curry seventh when most teams saw ankle risk, a Kerr staff that committed to positionless offense before the league had vocabulary for it, and a core that bought into small lineups and distances that looked unserious until they won four championships. The inefficiency was not only the three—it was the belief that the three could be the foundation of a championship defense.
+
+League convergence to Warriors three-point volume by 2020 is often read as the dynasty ending. That misses the point. The NBA reorganizing its offense around what Golden State proved is the dynasty's most lasting achievement. Franchises win titles. Very few change what basketball looks like. The Warriors did both.
+
+DATA, METHODS & SOURCES

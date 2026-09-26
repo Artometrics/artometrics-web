@@ -1,0 +1,161 @@
+{
+  "data": [
+    {
+      "x": ["Morbius (2022)", "House of Gucci (2021)", "The Little Things (2021)", "Haunted Mansion (2023)", "Masters of the Universe (2026)", "Tron: Ares (2025)"],
+      "y": [2.02, 2.04, 1.03, 0.79, 0.66, 0.65],
+      "type": "bar",
+      "marker": {
+        "color": ["#1B4F8A", "#1B4F8A", "#1B4F8A", "#C0392B", "#C0392B", "#C0392B"],
+        "line": {
+          "color": "rgba(31,119,180,1)",
+          "width": 0
+        }
+      },
+      "text": ["2.02x", "2.04x", "1.03x", "0.79x", "0.66x", "0.65x"],
+      "textposition": ["outside", "outside", "outside", "outside", "outside", "outside"],
+      "hovertemplate": ["<b>%{x}<\/b><br>%{y}x gross ÷ budget<extra><\/extra>", "<b>%{x}<\/b><br>%{y}x gross ÷ budget<extra><\/extra>", "<b>%{x}<\/b><br>%{y}x gross ÷ budget<extra><\/extra>", "<b>%{x}<\/b><br>%{y}x gross ÷ budget<extra><\/extra>", "<b>%{x}<\/b><br>%{y}x gross ÷ budget<extra><\/extra>", "<b>%{x}<\/b><br>%{y}x gross ÷ budget<extra><\/extra>"],
+      "name": "Gross ÷ budget",
+      "error_y": {
+        "color": "rgba(31,119,180,1)"
+      },
+      "error_x": {
+        "color": "rgba(31,119,180,1)"
+      },
+      "xaxis": "x",
+      "yaxis": "y",
+      "frame": null
+    },
+    {
+      "x": ["Morbius (2022)", "House of Gucci (2021)", "The Little Things (2021)", "Haunted Mansion (2023)", "Masters of the Universe (2026)", "Tron: Ares (2025)"],
+      "y": [1, 1, 1, 1, 1, 1],
+      "type": "scatter",
+      "mode": "lines",
+      "line": {
+        "color": "#000000",
+        "width": 1.5,
+        "dash": "dash"
+      },
+      "hoverinfo": ["skip", "skip", "skip", "skip", "skip", "skip"],
+      "name": "Breakeven (1.0x)",
+      "showlegend": true,
+      "marker": {
+        "color": "rgba(255,127,14,1)",
+        "line": {
+          "color": "rgba(255,127,14,1)"
+        }
+      },
+      "error_y": {
+        "color": "rgba(255,127,14,1)"
+      },
+      "error_x": {
+        "color": "rgba(255,127,14,1)"
+      },
+      "xaxis": "x",
+      "yaxis": "y",
+      "frame": null
+    }
+  ],
+  "layout": {
+    "margin": {
+      "b": 120,
+      "l": 60,
+      "t": 110,
+      "r": 30
+    },
+    "title": {
+      "text": "<b>Six-film Jared Leto slate: worldwide gross ÷ reported budget<\/b><br><span style='font-size:12px;color:#6B6B6B'>Case-study slate — trade-reported budgets<\/span>",
+      "x": 0,
+      "xanchor": "left"
+    },
+    "paper_bgcolor": "#FFFFFF",
+    "plot_bgcolor": "#FFFFFF",
+    "font": {
+      "family": "Helvetica",
+      "color": "#1C1C1E",
+      "size": 12
+    },
+    "xaxis": {
+      "domain": [0, 1],
+      "automargin": true,
+      "gridcolor": "#E5E5E5",
+      "linecolor": "#D5D5D5",
+      "zerolinecolor": "#D5D5D5",
+      "title": "",
+      "tickangle": -35,
+      "type": "category",
+      "categoryorder": "array",
+      "categoryarray": ["Tron: Ares (2025)", "Masters of the Universe (2026)", "Haunted Mansion (2023)", "The Little Things (2021)", "Morbius (2022)", "House of Gucci (2021)"]
+    },
+    "yaxis": {
+      "domain": [0, 1],
+      "automargin": true,
+      "gridcolor": "#E5E5E5",
+      "linecolor": "#D5D5D5",
+      "zerolinecolor": "#D5D5D5",
+      "title": "Gross ÷ budget multiple",
+      "range": [0, 2.4]
+    },
+    "annotations": [
+      {
+        "x": 0,
+        "y": 1.14,
+        "xref": "paper",
+        "yref": "paper",
+        "text": "<b>Half this slate lands at or below 1.0x — concentrated theatrical exposure<\/b>",
+        "showarrow": false,
+        "xanchor": "left",
+        "align": "left",
+        "font": {
+          "size": 11,
+          "color": "#FFFFFF"
+        },
+        "bgcolor": "#C0392B",
+        "borderpad": 6
+      },
+      {
+        "x": 0,
+        "y": -0.22,
+        "xref": "paper",
+        "yref": "paper",
+        "text": "Data: Box Office Mojo trade-reported budgets — ARTOMETRICS  ·  Artometrics",
+        "showarrow": false,
+        "xanchor": "left",
+        "font": {
+          "size": 9,
+          "color": "#6B6B6B"
+        }
+      },
+      {
+        "x": 0.99,
+        "y": -0.22,
+        "xref": "paper",
+        "yref": "paper",
+        "text": "Artometrics",
+        "showarrow": false,
+        "xanchor": "right",
+        "font": {
+          "size": 12,
+          "color": "#1C1C1E",
+          "family": "Chomsky"
+        }
+      }
+    ],
+    "legend": {
+      "orientation": "h",
+      "y": -0.35,
+      "x": 0
+    },
+    "hovermode": "closest",
+    "showlegend": true
+  },
+  "config": {
+    "displayModeBar": false,
+    "displaylogo": false,
+    "responsive": true,
+    "scrollZoom": false,
+    "doubleClick": false,
+    "staticPlot": false,
+    "editable": false,
+    "showTips": false
+  }
+}

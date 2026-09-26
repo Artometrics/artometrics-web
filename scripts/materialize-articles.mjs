@@ -26,13 +26,13 @@ const TIER_A_SLUGS = new Set([
   "readmitted",
   "anime",
   "pokemon",
-  "coffee-the-artometrics-of-java",
+  "coffee",
   "franchise",
   "imperial",
-  "giant-the-artometrics-of-a-san-francisco-dynasty",
-  "h3-the-artometrics-of-a-youtube-dynasty",
-  "warrior-the-artometrics-of-a-golden-state-dynasty",
-  "caesar-the-psychonomics-of-emperor-julius",
+  "giants",
+  "youtube",
+  "warriors",
+  "caesar",
 ]);
 
 function parseArgs(argv) {

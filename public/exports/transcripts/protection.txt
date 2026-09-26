@@ -1,0 +1,19 @@
+PROTECTION: When Flops End Hollywood's Silence
+
+IN THIS REPORT
+
+BBC News and the July 2026 documentary Jared Leto: Hollywood's Dark Secret reported criminal sexual conduct allegations from multiple women against the actor; Leto denies the allegations. The public question that follows a belated exposé is almost always the same one: why not sooner? Artometrics asks a colder, answerable version of it instead: what was he still worth?
+
+This report does not adjudicate the allegations, and it draws no conclusion about their truth. It tests a narrower, economic hypothesis against public box-office data and the record of four earlier cases in which an institution eventually stopped protecting a person it had shielded: Harvey Weinstein, Bryan Singer, Jimmy Savile, and Russell Brand. In each case, allegations against a living or deceased public figure are described using allegation-and-denial language, except where a criminal conviction or an official public inquiry has already settled the record. Both cases sit outside the "declining studio asset" logic that fits Weinstein reasonably well. Savile was never dropped at all — the institution's failure was total and only corrected after death and an official inquiry. Brand's case shows how the model breaks down further once the "institution" is no longer a single employer with a P&L to protect.
+
+LIMITATIONS
+
+Allegations are not convictions. Except for Weinstein's 2020 and 2022 convictions and the findings of the BBC-commissioned 2016 Smith Review on Savile, every other claim in this report about Leto, Singer, and Brand is an allegation that the named person denies, and none has produced a criminal conviction as of this report's drafting. This report reaches no conclusion about the truth of any denied allegation.
+
+There is a clear selection bias: this report can only study cases that were eventually exposed, which is not a random sample of institutional protection generally. Flops may precede, follow, or have no relationship at all to when an exposé runs; journalists, sources, and legal processes move on their own timelines that this report does not observe directly. The gross-and-budget ratios in leto-film-book.csv are trade-reported bands from outlets such as Box Office Mojo, Deadline, and SlashFilm rather than audited studio accounting, and are labeled here as derived figures, not confirmed net financials. The "protection threshold" framework itself is an editorial hypothesis map built from four cases; it is not a statistically fitted model and should not be read as one.
+
+CONCLUSION
+
+The honest version of this report's finding is modest. Jared Leto's 2020s film slate had already softened — three straight titles below break-even on trade-reported figures — by the time the BBC's July 2026 documentary reported allegations against him. That fact alone proves nothing about timing or motive. What the four comparison cases add is a sharper question rather than an answer: institutional protection appears to track forward commercial value more legibly when the institution is a studio pricing a bankable asset (Weinstein) than when it is a broadcaster selling trust (Savile), and a single hit film is not proof that protection has resumed (Singer). Where Leto's case falls on that map is, for now, an open question this report is built to keep asking rather than to close.
+
+DATA, METHODS & SOURCES

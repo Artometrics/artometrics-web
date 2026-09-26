@@ -1,0 +1,174 @@
+{
+  "data": [
+    {
+      "x": ["Self-titled<br />(2013)", "Lemonade<br />(2016)"],
+      "y": [186, 87],
+      "type": "bar",
+      "name": "Billboard weeks",
+      "marker": {
+        "color": ["#C0392B", "#000000"],
+        "line": {
+          "color": "rgba(31,119,180,1)",
+          "width": 0
+        }
+      },
+      "text": [186, 87],
+      "textposition": ["outside", "outside"],
+      "hovertemplate": ["<b>%{x}<\/b><br>Weeks on Billboard: %{y}<extra><\/extra>", "<b>%{x}<\/b><br>Weeks on Billboard: %{y}<extra><\/extra>"],
+      "error_y": {
+        "color": "rgba(31,119,180,1)"
+      },
+      "error_x": {
+        "color": "rgba(31,119,180,1)"
+      },
+      "xaxis": "x",
+      "yaxis": "y",
+      "frame": null
+    },
+    {
+      "x": ["Self-titled<br />(2013)", "Lemonade<br />(2016)"],
+      "y": [81, 32],
+      "type": "scatter",
+      "mode": "lines+markers+text",
+      "name": "RS 500 rank",
+      "yaxis": "y2",
+      "line": {
+        "color": "#1B4F8A",
+        "width": 2.5
+      },
+      "marker": {
+        "color": "#1B4F8A",
+        "size": 10,
+        "line": {
+          "color": "rgba(255,127,14,1)"
+        }
+      },
+      "text": ["#81", "#32"],
+      "textposition": ["top center", "top center"],
+      "textfont": {
+        "color": "#1B4F8A",
+        "size": 11
+      },
+      "hovertemplate": ["<b>%{x}<\/b><br>RS 500 rank: #%{y}<extra><\/extra>", "<b>%{x}<\/b><br>RS 500 rank: #%{y}<extra><\/extra>"],
+      "error_y": {
+        "color": "rgba(255,127,14,1)"
+      },
+      "error_x": {
+        "color": "rgba(255,127,14,1)"
+      },
+      "xaxis": "x",
+      "frame": null
+    }
+  ],
+  "layout": {
+    "margin": {
+      "b": 90,
+      "l": 70,
+      "t": 110,
+      "r": 70
+    },
+    "title": {
+      "text": "<b>The economic fingerprint<\/b><br><span style='font-size:12px;color:#6B6B6B'>Billboard weeks versus Rolling Stone 500 rank — Beyoncé albums in the Artometrics RS extract<\/span>",
+      "x": 0,
+      "xanchor": "left"
+    },
+    "paper_bgcolor": "#FFFFFF",
+    "plot_bgcolor": "#FFFFFF",
+    "font": {
+      "family": "Helvetica",
+      "color": "#1C1C1E",
+      "size": 12
+    },
+    "annotations": [
+      {
+        "x": 0,
+        "y": 1.14,
+        "xref": "paper",
+        "yref": "paper",
+        "text": "<b>Self-titled ran 186 weeks on Billboard; Lemonade ranks #32 on the RS 500 list<\/b>",
+        "showarrow": false,
+        "xanchor": "left",
+        "align": "left",
+        "font": {
+          "size": 11,
+          "color": "#FFFFFF"
+        },
+        "bgcolor": "#C0392B",
+        "borderpad": 6
+      },
+      {
+        "x": 0,
+        "y": -0.22,
+        "xref": "paper",
+        "yref": "paper",
+        "text": "Data: Billboard Hot 200 chart history; Rolling Stone 500 Greatest Albums (2020 edition) — ARTOMETRICS  ·  Artometrics",
+        "showarrow": false,
+        "xanchor": "left",
+        "font": {
+          "size": 9,
+          "color": "#6B6B6B"
+        }
+      },
+      {
+        "x": 0.99,
+        "y": -0.22,
+        "xref": "paper",
+        "yref": "paper",
+        "text": "Artometrics",
+        "showarrow": false,
+        "xanchor": "right",
+        "font": {
+          "size": 12,
+          "color": "#1C1C1E",
+          "family": "Chomsky"
+        }
+      }
+    ],
+    "xaxis": {
+      "domain": [0, 1],
+      "automargin": true,
+      "title": "",
+      "type": "category",
+      "categoryorder": "array",
+      "categoryarray": ["Self-titled<br />(2013)", "Lemonade<br />(2016)"]
+    },
+    "yaxis": {
+      "domain": [0, 1],
+      "automargin": true,
+      "title": "Weeks on Billboard Hot 200",
+      "gridcolor": "#E8E8E8",
+      "zeroline": false
+    },
+    "yaxis2": {
+      "title": "Rolling Stone 500 rank (2020)",
+      "overlaying": "y",
+      "side": "right",
+      "autorange": "reversed",
+      "gridcolor": null,
+      "zeroline": false,
+      "titlefont": {
+        "color": "#1B4F8A"
+      },
+      "tickfont": {
+        "color": "#1B4F8A"
+      }
+    },
+    "showlegend": true,
+    "legend": {
+      "orientation": "h",
+      "x": 0,
+      "y": -0.08
+    },
+    "hovermode": "closest"
+  },
+  "config": {
+    "displayModeBar": false,
+    "displaylogo": false,
+    "responsive": true,
+    "scrollZoom": false,
+    "doubleClick": false,
+    "staticPlot": false,
+    "editable": false,
+    "showTips": false
+  }
+}

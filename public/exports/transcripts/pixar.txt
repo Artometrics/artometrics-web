@@ -1,0 +1,51 @@
+pixar
+
+Pixar holds a 96 percent median Rotten Tomatoes score across 24 rated theatrical releases, but two films broke the streak: Cars 2 at 40 percent and Lightyear. The studio stretched runtimes by 17 minutes between early and recent eras while CinemaScore grades held at A+—audiences stayed loyal even when critics split.
+
+This analysis joins TidyTuesday 2025-03-11 Pixar films data with public_response scores: 27 theatrical features, 24 with critic and audience metrics attached. Five charts trace runtime creep, critic floors, audience-critic gaps, rating mix, and the relationship between length and reception.
+
+Calibration points: a 96 percent median Rotten Tomatoes score; Cars 2 at 40 percent; +17 minutes added to median runtime from early to recent eras; CinemaScore grades clustering at A+; a longest runtime of 155 minutes; Toy Story's 81-minute floor; and zero PG-13 ratings in the theatrical set.
+
+RUNTIME CREEP
+
+RUNTIME OVER TIME
+
+Pixar's theatrical releases did not stay the compact 81-minute package of Toy Story. Median runtime climbed from 98 minutes (through 2006) to 116 minutes for films since 2017—a structural shift in what a Pixar feature is allowed to be. The longest entry runs 155 minutes. Early films clustered around 98 minutes; recent releases expanded by 17 minutes at the median. The change is not noise—it is embedded in the studio's evolving production model.
+
+CRITIC SCORES
+
+ROTTEN TOMATOES RANKING
+
+The median Rotten Tomatoes score across rated films is 96 percent—elite by any studio standard. Pixar built a reputation on consistency, not occasional brilliance. Cars 2 sits at 40 percent, the critic floor. Toy Story and several sequels hit 100 percent. The spread is narrow by Hollywood standards, but the low end clusters around mid-2000s franchise experiments and later IP-forward releases.
+
+AUDIENCE VS CRITICS
+
+CRITICS VS CINEMASCORE
+
+CinemaScore grades cluster at A and A+ across the board. Audiences who showed up opening weekend were rarely disappointed—or at least rarely admitted it on exit polls. Critics were the discriminating layer. Films that earned A+ crowd grades still span a 74–100 percent Rotten Tomatoes range. Pixar optimized for mass affection first, prestige second.
+
+RATING MIX
+
+MPAA RATING MIX
+
+Thirteen films carry a G rating; ten are PG. The brand's family positioning is embedded in the rating structure—zero titles in this file carry PG-13. Pixar expanded runtime and thematic weight without abandoning the all-ages lane in the theatrical set on hand.
+
+RUNTIME VS RECEPTION
+
+RUNTIME VS ROTTEN TOMATOES
+
+Longer films do not automatically score worse—Up, Wall-E, and Inside Out combine runtimes above 95 minutes with scores above 95 percent. The outliers sit in the lower-right and upper-left: Cars 2 (shorter, weaker Rotten Tomatoes) versus epics that tested patience and still won. Bubble size tracks Metacritic where available—the reception stack is consistent across review systems.
+
+WHAT THIS FILE CANNOT TELL YOU
+
+Reception scores are snapshots from Wikipedia-curated tables, not live API pulls. Rotten Tomatoes percentages can shift as reviews are added. CinemaScore is ordinal, not interval—treat cross-film comparisons as directional.
+
+The dataset ends with the films included in the March 2025 TidyTuesday release. It does not include Disney+ exclusives or shorts. Runtime and rating analysis covers theatrical features only.
+
+WHAT TO TAKE AWAY
+
+Pixar's measurable story is stability with drift: critics stayed harsh at the margins (Cars 2 at 40 percent), audiences stayed generous (A+ CinemaScores), and runtimes marched upward (+17 minutes at the median between eras). The brand did not break—it stretched.
+
+The myth is magic; the data is a studio learning it could ask for more minutes, more sequels, and still keep the crowd on its side.
+
+DATA, METHODS & SOURCES

@@ -1,0 +1,49 @@
+catalog
+
+Median duration in Netflix's catalog rose from 41 minutes in 2008 to 98 minutes by 2021—a 139 percent climb driven by longer films, multi-season TV encodings, and interactive outliers like Black Mirror: Bandersnatch, which clocked 312 minutes.
+
+The working file holds 7,787 records. Median duration is 88.0; the highest observed duration is 312, led by Black Mirror: Bandersnatch. Movie is the most common type label.
+
+HOW THE PATTERN CHANGED OVER TIME
+
+MEDIAN DURATION OVER TIME
+
+Median duration rises from 41.0 in the opening period to 98.0 at the close—a catalog whose typical row lengthens as the library ages. That climb reflects more feature-length films, longer TV season encodings, or both. The trend is a mix signal, not a single format story.
+
+WHO SITS AT THE TOP
+
+BLACK MIRROR: BANDERSNATCH LEADS AT 312 — 226 MARKS THE MEDIAN AMONG THE TOP DOZEN
+
+Black Mirror: Bandersnatch leads at 312; 226 marks the median among the top dozen. Interactive and long-form outliers define the ceiling. Most of the library lives nowhere near those peaks—which is why the median of 88.0 remains the better everyday calibration.
+
+HOW THE FIELD IS SPREAD
+
+DURATION BY TYPE
+
+Duration by type separates movies from TV rows in the catalog encoding. The boxes show whether each type shares a tight middle or stretches into long tails. Movie dominance in count does not guarantee movie dominance in duration shape. The distribution is where that distinction becomes visible.
+
+CONCENTRATION
+
+THE TOP 5 TITLE ENTRIES ACCOUNT FOR 38 PERCENT OF THE AGGREGATE DURATION
+
+The top 5 title entries account for 38 percent of the aggregate duration—a steep head for a library that otherwise looks vast on the homepage. Steep Pareto curves mean a small set of rows drives most of the summed duration signal. The long tail is real inventory; it is not where the aggregate concentrates.
+
+CONCENTRATION
+
+THE TOP 5 TITLE ENTRIES ACCOUNT FOR 38 PERCENT OF THE AGGREGATE DURATION
+
+A second Pareto view of the same 38 percent concentration confirms the head–tail split under an alternate chart export. When two exhibits agree on the same share, the claim is about structure in the file—not a rendering choice.
+
+WHAT THIS FILE CANNOT TELL YOU
+
+Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.
+
+Findings describe the file on hand—structural signals about Netflix title rows through 2021, not today's live catalog in every territory.
+
+WHAT TO TAKE AWAY
+
+Median duration climbed from 41.0 to 98.0 while Movie remained the most common type. A handful of long outliers—Bandersnatch at 312 among them—and a 38 percent duration concentration in the top five rows show how uneven a "library" can be once you stop counting titles and start summing length.
+
+Use the charts to separate mix, length, and concentration before treating any homepage as a flat shelf.
+
+DATA, METHODS & SOURCES

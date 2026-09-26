@@ -1,0 +1,49 @@
+voters
+
+National turnout reached 132,609,063 in 2014 while the median state recorded 1,170,867 votes, according to 936 election records from 1980–2014. The national aggregate appears as a separate entity in the dataset, sitting 113 times higher than the typical state.
+
+Five charts separate trend, leaders, distribution shape, state trajectories, and the relationship between votes cast and eligible voters. The median of 1,170,867 divides smaller states below from larger electorates and national totals above.
+
+MEDIAN VOTES ROSE ACROSS THREE DECADES OF ELECTIONS
+
+MEDIAN VOTES OVER TIME
+
+Median state turnout rose 52 percent from 910,290 in 1980 to 1,387,622 in 2014. Population growth, eligibility expansion, and election-type composition all contribute to the upward trend. The rising median provides context for state-level comparisons: leader states and national totals amplify the trend, while smaller jurisdictions track within the shifting distribution.
+
+THE UNITED STATES TOTAL DWARFS THE STATE LADDER
+
+UNITED STATES LEADS AT 90,912,015 — 4,209,538 MARKS THE MEDIAN AMONG THE TOP DOZEN
+
+The national aggregate averages 90,912,015 votes across the period, while the median among the top dozen states sits at 4,209,538. The national row represents the sum of all state turnout, not a peer comparison. The peak of 132,609,063 reflects this national-scale aggregation. Individual state rankings occur far below that ceiling.
+
+A RIGHT-SKEWED DISTRIBUTION WITH A HEAVY UPPER TAIL
+
+MEDIAN 1,170,867 VS MEAN 3,074,280 — THE SHAPE IS RIGHT-SKEWED
+
+Median state turnout of 1,170,867 sits below the mean of 3,074,280 because large states and national totals create a long right tail. The top decile begins at 4,659,000, separating high-volume states from the rest. Right skew explains why turnout analysis requires medians and rates rather than raw averages alone.
+
+LEADING STATES RESHUFFLE ACROSS ELECTION CYCLES
+
+TOP STATE OVER TIME
+
+State trajectories diverge over time: some maintain high turnout while others surge or fade. Tracking individual states separates sustained volume from cycle-specific spikes. Presidential versus midterm composition within the dataset can shift the state ladder even when the overall median rises.
+
+VOTES SCALE WITH ELIGIBLE VOTERS — IN CLUSTERS
+
+VOTES VS ELIGIBLE VOTERS
+
+Votes cast rise with eligible-voter pools, but the scatter plot reveals clusters that averages obscure. Larger eligibility produces larger turnout, yet the pattern's texture shows variation in how tightly that relationship holds across states and years. The joint distribution captures turnout as a rate problem without requiring a calculated rate column: eligibility and votes move together, and the clusters show where exceptions occur.
+
+WHAT THIS FILE CANNOT TELL YOU
+
+TidyTuesday snapshots are community-cleaned extracts, not live election records. Missing values, jurisdiction-naming variants, and 1980–2014 coverage limits apply. National and state rows coexist in ways that require care when ranking.
+
+Findings describe this voter-turnout extract — structural patterns in vote totals — not a complete model of registration law, suppression, or mobilization.
+
+WHAT TO TAKE AWAY
+
+Median state turnout rose 52 percent from 910,290 to 1,387,622 between 1980 and 2014, while the national aggregate reached 132,609,063 at its peak. Vote totals are right-skewed around the median of 1,170,867, with the top decile beginning at 4,659,000.
+
+State rankings shift across election cycles, and votes track eligible-voter pools in clusters — a volume atlas of American elections across 35 years.
+
+DATA, METHODS & SOURCES

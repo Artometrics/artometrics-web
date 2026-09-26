@@ -51,11 +51,38 @@ Every brief must define:
 1. **Primary keyword** — the phrase the report should own
 2. **Secondary keywords** — 3–8 related phrases used naturally in H2s and prose
 3. **Search intent** — informational / commercial / comparative
-4. **Title pattern** — specific, citable, NYT-style question or claim (no “The Artometrics of …”)
-5. **Meta description** — ≤160 chars, concrete numbers when possible
-6. **Slug** — kebab-case, stable, no dates
+4. **Display title** (`title` in frontmatter → site H1, RSS, SEO) — `PREFIX: Subtitle` (see [Report display titles](#report-display-titles)); keep SEO keywords in `description`, not the H1 rail
+5. **Meta description** — ≤160 chars, concrete numbers when possible. The report header deck (`app/(site)/[slug].tsx`) shows the first sentence trimmed to ~12 words via `deckLine` — write one punchy opening sentence readers see under the red H1; put extra SEO detail in body/`tldr`, not a second sentence in `description`.
+6. **Slug** — kebab-case, stable, no dates (URL only; do not encode the subtitle in the slug)
 
 Internal links: cite methodology/ethics, related section reports, and primary data sources with `rel="noopener noreferrer"` on external links.
+
+## Report display titles
+
+Every published report uses one **display title** in frontmatter `title:` (rendered as the page H1 in `app/(site)/[slug].tsx` and in `PageSeo`). URLs stay on `slug` only.
+
+**Pattern:** `PREFIX: Subtitle`
+
+| Part | Rule | Examples |
+|------|------|----------|
+| **PREFIX** | ALL CAPS short name, usually the slug as one token (`warriors` → `WARRIORS`, `superbowl` → `SUPERBOWL`). Hyphenated slugs become spaced words (`star-wars` → `STAR WARS`). Use established acronyms when the slug is one (`lcsh` → `LCSH`, `sf` → `SF`, `ceos` → `CEOs`, `phds` → `PHDS`). |
+| **Subtitle** | Magazine hook or deck line (~5 words when possible; tighter is better). Derive from `description`, `tldr`, or lede — sharp and citable, not keyword stuffing. Title case (capitalize major words). |
+
+**Examples**
+
+```yaml
+title: "GUTENBERG: English Holds 72% of the Shelf"
+title: "WARRIORS: Seventy-Three Wins Rewrote Basketball Offense"
+title: "POISON: What Star Risk Costs an IP"
+title: "READMITTED: Half of Hospitals Beat CMS's Benchmark"
+title: "BLUEPRINT: Record Sale, No Championship Formula"
+```
+
+**Don't:** long stat headlines as the only title, “The Artometrics of …”, or changing `slug` when retitling. **Do:** keep numbers and primary keywords in `description` / body for search; the PREFIX is the brand rail readers scan on `/blog` and article headers.
+
+**Card deck vs report deck:** Frontmatter `description` is the full SEO/meta sentence — leave it long. On report pages, `deckLine()` shows a longer lede under the H1. On `BlogCard` / grid tiles, `cardDeckLine()` truncates to ~5–8 words at display time (`text-fg`); no need to shorten every markdown `description` for cards.
+
+Bulk retitle map (one-off): `scripts/apply-report-display-titles.mjs`.
 
 ## Voice
 
@@ -81,13 +108,16 @@ Reports are HTML bodies (not Markdown prose) inside frontmatter MD files:
   <main class="art-article-main">
     <!-- deck paragraphs -->
     <h2 id="research-question" class="anchored">RESEARCH QUESTION</h2>
-    <h2 id="fast-facts" class="anchored">FAST FACTS</h2>
-    <div class="facts-grid">…</div>
-    <h2 id="dataset-context" class="anchored">DATA AND METHOD</h2>
-    <!-- finding sections with charts (target: 5) -->
+    <!-- finding sections with charts (target: 5); calibration numbers live in lede/deck/keyPoints, not a facts grid -->
     <h2 id="limitations" class="anchored">LIMITATIONS</h2>
     <h2 id="conclusion" class="anchored">CONCLUSION</h2>
-    <h2 id="references" class="anchored">REFERENCES</h2>
+    <section class="art-back-matter">
+      <h2 id="data-methods-and-sources" class="anchored">Data, methods &amp; sources</h2>
+      <h3 id="data-and-method" class="anchored art-back-matter__subhead">Data and method</h3>
+      <!-- rows, joins, observed vs derived -->
+      <h3 id="sources" class="anchored art-back-matter__subhead">Sources</h3>
+      <!-- named sources, DOIs, dataset URLs -->
+    </section>
     <h2 id="editors-note" class="anchored">EDITOR'S NOTE</h2>
   </main>
 </div>
@@ -117,15 +147,13 @@ If a section is a **framework or hypothesis map** rather than measured evidence,
 
 ### Section progression
 
-1. **Deck** — 1–2 paragraphs: what the archive is, the interpretive move, the calibration number
+1. **Deck** — 1–2 paragraphs: what the archive is, the interpretive move, the calibration number (use `keyPoints` in frontmatter for pull quotes, not an in-body facts grid)
 2. **RESEARCH QUESTION** — the question the five charts are designed to answer
-3. **FAST FACTS** — 3–6 `fact-box` cells (number + label)
-4. **DATA AND METHOD** — source, rows, cleaning, observed vs derived vs editorial index
-5. **Findings** — each H2 answers one question; **five charts** teach five claims
-6. **LIMITATIONS** — coverage, bias, non-claims
-7. **CONCLUSION** — modest; sharpen the question, don’t oversell
-8. **REFERENCES** — citable sources with URLs (named authors, years, DOIs when available)
-9. **EDITOR'S NOTE** — Artometrics reproducibility note
+3. **Findings** — each H2 answers one question; **five charts** teach five claims
+4. **LIMITATIONS** — coverage, bias, non-claims
+5. **CONCLUSION** — modest; sharpen the question, don’t oversell
+6. **Data, methods & sources** — one back-matter block at the end (`art-back-matter`): **Data and method** (rows, cleaning, observed vs derived) then **Sources** (named citations, DOIs, dataset URLs)
+7. **EDITOR'S NOTE** — Artometrics reproducibility note (after back matter when present)
 
 Target depth: **named actors, dated facts, and mechanism** — not abstract “trends.” Prefer ~1,200–3,500 words of dense report prose once five charts are in place.
 
@@ -165,21 +193,19 @@ Use `src/content/blog/padres-the-artometrics-of-paying-for-october.md` as the go
 
 **Body scaffold**
 
-1. **Lede** — first `<p>` uses `class="art-p art-lede"`
-2. **Deck** — 1–2 follow-on `<p class="art-p">` paragraphs before the facts grid
-3. **The numbers behind the story** — `<h2 id="fast-facts">` + `<div class="facts-grid">` with `fact-box` cells from `keyPoints`
-4. **Finding sections** — thesis-style `<h2>` titles (claims, not “Background” or “Fast facts”); remove redundant `<h3>` chart subheads
-5. **Charts** — every `<figure class="art-chart">` includes `<figcaption class="art-chart-caption">`; `data-source` on the live div
-6. **Conclusion** — `<h2 id="conclusion">` with a claim title (not “What to take away”)
-7. **Data and method** — `<h2 id="dataset-context">` at the end, before references
-8. **References** — `<h2 id="references">` with named sources and related Artometrics links
-9. **Editor's note** — `<h2 id="editors-note">` + `<div class="art-editorial-note">` for measurement caveats
+1. **Opening** — first `<p class="art-p">` (no `art-lede` box class; deck lives in frontmatter `description`)
+2. **Deck** — 1–2 follow-on `<p class="art-p">` paragraphs; weave `keyPoints` numbers into prose (no `fast-facts` / `facts-grid` block)
+3. **Finding sections** — thesis-style `<h2>` titles (claims, not “Background”); remove redundant `<h3>` chart subheads
+4. **Charts** — every `<figure class="art-chart">` includes `<figcaption class="art-chart-caption">`; `data-source` on the live div
+5. **Conclusion** — `<h2 id="conclusion">` with a claim title (not “What to take away”)
+6. **Data, methods & sources** — `<section class="art-back-matter">` after the conclusion: merged `<h2 id="data-methods-and-sources">` with `<h3>` subheads for method and sources (not mid-narrative)
+7. **Editor's note** — `<h2 id="editors-note">` + `<div class="art-editorial-note">` for measurement caveats
 
 **Do not**
 
 - Invent statistics or FAQ answers not supported by the article
 - Lead with GitHub-primary CTAs (`art-github-btn`); point readers to site Download exports instead
-- Place Data and method before the finding sections (Padres puts it after the conclusion)
+- Place Data and method before the finding sections or split sources into a separate top-level H2 after the merge
 
 ## Evidence labels (ethics)
 

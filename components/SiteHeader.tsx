@@ -1,14 +1,16 @@
 import { Pressable, Text, View } from "react-native";
 import { Link, usePathname } from "expo-router";
-import { Menu } from "@/components/icons";
+import { Globe, Menu, Search } from "@/components/icons";
 import { Logo } from "@/components/Logo";
 import { Wrapper } from "@/components/Wrapper";
 import { useChrome } from "@/lib/chrome";
+import { useLocale } from "@/lib/locale";
 import { useTheme } from "@/lib/theme";
 import { SITE_PRIMARY_NAV } from "@/lib/site-nav";
 
 export function SiteHeader() {
   const { setMenuOpen } = useChrome();
+  const { toggleLocale } = useLocale();
   const { colors } = useTheme();
   const pathname = usePathname();
 
@@ -16,23 +18,40 @@ export function SiteHeader() {
     <View className="z-40 border-b border-border bg-header">
       <Wrapper className="py-4">
         <View className="flex-row items-center justify-between">
-          <Pressable
-            onPress={() => setMenuOpen(true)}
-            accessibilityLabel="Open menu"
-            className="h-10 w-10 items-center justify-center lg:hidden"
-            testID="site-menu-button"
-          >
-            <Menu size={22} color={colors.text} />
-          </Pressable>
-          <View className="hidden w-10 lg:block" />
+          <View className="h-10 w-10 items-center justify-center">
+            <Pressable
+              onPress={() => setMenuOpen(true)}
+              accessibilityLabel="Open menu"
+              className="h-10 w-10 items-center justify-center lg:hidden"
+              testID="site-menu-button"
+            >
+              <Menu size={22} color={colors.secondary} />
+            </Pressable>
+            <Pressable
+              onPress={toggleLocale}
+              accessibilityLabel="Change language"
+              accessibilityRole="button"
+              className="hidden h-10 w-10 items-center justify-center lg:flex"
+            >
+              <Globe size={20} color={colors.secondary} strokeWidth={1.75} />
+            </Pressable>
+          </View>
 
           <Link href="/" asChild>
             <Pressable accessibilityLabel="Artometrics home">
-              <Logo size={32} align="center" markVariant="dark" />
+              <Logo size={42} align="center" className="text-secondary" />
             </Pressable>
           </Link>
 
-          <View className="w-10" />
+          <Link href="/search" asChild>
+            <Pressable
+              accessibilityLabel="Search reports"
+              accessibilityRole="link"
+              className="h-10 w-10 items-center justify-center"
+            >
+              <Search size={20} color={colors.secondary} strokeWidth={1.75} />
+            </Pressable>
+          </Link>
         </View>
       </Wrapper>
 
@@ -46,8 +65,8 @@ export function SiteHeader() {
                   <Pressable className="px-0.5">
                     <Text
                       className={[
-                        "font-sans text-[10px] font-semibold uppercase tracking-[2.2px]",
-                        active ? "text-fg underline" : "text-muted",
+                        "font-sans text-[10px] font-semibold uppercase tracking-[2.2px] text-accent",
+                        active ? "underline" : "",
                       ].join(" ")}
                     >
                       {item.label}

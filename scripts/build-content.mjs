@@ -4,6 +4,7 @@
  * Also copies author/thumbnail images from src/images → public/images.
  */
 import { mkdirSync, readdirSync, readFileSync, writeFileSync, cpSync, existsSync } from "node:fs";
+import { BLOG_SUBJECT_BY_SLUG } from "./blog-subjects.mjs";
 import { join, dirname, extname, basename } from "node:path";
 import { fileURLToPath } from "node:url";
 import matter from "gray-matter";
@@ -191,7 +192,7 @@ function resolveTaxonomy(slug, title, rawTags = []) {
       [/\b(anime|film|movie|oscar|emmy|horror|franchise|netflix|pixar|streaming|imdb|tv)\b/, "arts", "film"],
       [/\b(broadway|musical|theater)\b/, "arts", "theater"],
       [/\b(music|grammy|album|song|billboard|radio|musicbrainz)\b/, "arts", "music"],
-      [/\b(gutenberg|sherlock|novel|book|language|glottolog)\b/, "arts", "language"],
+      [/\b(lcsh|sherlock|novel|book|language|glottolog)\b/, "arts", "language"],
       [/\b(museum|heritage|architecture)\b/, "arts", "architecture"],
       [/\b(readmit|hospital|life.?expect|medicine)\b/, "science", "medicine"],
       [/\b(web.?page|medium|tech)\b/, "science", "tech"],
@@ -227,6 +228,10 @@ const blog = listFiles(join(CONTENT, "blog")).map((file) => {
   const slug = data.slug ?? id;
   const rawTags = Array.isArray(data.tags) ? data.tags : [];
   const { domain, subdomain, tags } = resolveTaxonomy(slug, data.title ?? "", rawTags);
+  const subjectRaw =
+    typeof data.subject === "string" && data.subject.trim()
+      ? data.subject.trim()
+      : BLOG_SUBJECT_BY_SLUG[slug] ?? null;
   const keyPoints = Array.isArray(data.keyPoints)
     ? data.keyPoints.map(String).filter(Boolean)
     : [];
@@ -246,6 +251,7 @@ const blog = listFiles(join(CONTENT, "blog")).map((file) => {
     description: data.description ?? "",
     heroImage: rewriteAssetUrl(data.heroImage ?? ""),
     tags,
+    subject: subjectRaw,
     section: domain,
     subdomain,
     channels: [domain],

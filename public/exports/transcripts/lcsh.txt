@@ -1,0 +1,51 @@
+LCSH: 69,027 Headings Anchor Gutenberg's Core
+
+Library of Congress Subject Headings (lcsh) account for 69,027 records in a 100,000-row TidyTuesday extract of Project Gutenberg — 69 percent of all subject entries. The catalog is not a popularity contest; it is a map of which public-domain books volunteers could digitize and classify at scale.
+
+Subject code PS — American literature — recurs 4,684 times, leading all labels. A short head of repeated classifications anchors the catalog while most subject entities appear once. The pattern is typical of library metadata: a reusable canon of headings, and a long inventory of singleton assignments.
+
+Reading Gutenberg as a concentration map of reusable works is where the data help.
+
+PUBLIC-DOMAIN BOOKS CLUSTER BY SUBJECT TYPE
+
+PUBLIC-DOMAIN BOOKS CLUSTER BY SUBJECT TYPE
+
+lcsh dominates with 69,027 records, far ahead of thinner subject-type buckets. The main classification family carries the story; this field does not split into many equal long-tail types. That concentration means most navigational claims about what Gutenberg contains are really claims about how LCSH-style headings organize the digitized shelf.
+
+A SMALL SET OF SUBJECTS ANCHORS THE CATALOG
+
+A SMALL SET OF SUBJECTS ANCHORS THE CATALOG
+
+PS appears 4,684 times — the most recurring subject name in the file. The top dozen account for a visible share of all 100,000 rows even though most subject entities appear only once. American literature codes, fiction labels, and related headings form a reusable core. They are the catalog's gravitational center for teachers, scrapers, and adaptation hunters.
+
+SUBJECT FAMILIES SHOW THE CATALOG CENTER OF GRAVITY
+
+SUBJECT FAMILIES SHOW THE CATALOG'S CENTER OF GRAVITY
+
+lcsh is again the largest bucket on the category chart. Subject families show where editorial attention should focus first if the goal is to understand the shelf's center of gravity rather than its exotic edges. The edges still matter for discovery. They do not define the statistical middle of a 100,000-row extract.
+
+REPEATED SUBJECTS REVEAL THE REUSABLE CANON
+
+REPEATED SUBJECTS REVEAL THE REUSABLE CANON
+
+Most subject entities appear only once; a small head recurs repeatedly. That power-law shape is typical of catalog tables: a reusable canon of headings, and a long inventory of singleton classifications. Repeated subjects are the ones most likely to support classroom packs, themed collections, and machine-learning corpora. Frequency is a reuse forecast as much as a shelf description.
+
+SUBJECT LABELS BECOME THE MAP OF THE SHELF
+
+SUBJECT LABELS BECOME THE MAP OF THE SHELF
+
+PS and related labels become the map of the shelf when numeric scores are sparse. Frequency leaders reveal franchise depth in literature the way studio logos reveal franchise depth in film. The practical claim for cultural analytics is simple: if you can only afford to study a slice of Gutenberg, the repeated subject head is where coverage of the reusable public-domain canon begins.
+
+WHAT THIS FILE CANNOT TELL YOU
+
+Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and sampling limits apply. Subject headings are not sales, downloads, or reading-time proof.
+
+Findings describe structural signals about Project Gutenberg subject metadata — not a complete history of world literature, and not a ranking of artistic merit.
+
+WHAT TO TAKE AWAY
+
+Gutenberg's subject catalog is concentrated: lcsh dominates subject type, a short head of codes such as PS recurs thousands of times, and most labels appear once.
+
+The citable lesson is about reusable canon. Public-domain literature becomes infrastructure when classification and digitization make the same subjects easy to find again and again.
+
+DATA, METHODS & SOURCES

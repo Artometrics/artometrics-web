@@ -206,6 +206,1432 @@
   to = "/topics/culture"
   status = 301
 
+
+# Blog slug migrations (301)
+[[redirects]]
+  from = "/airline-safety"
+  to = "/airlines"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/airline-safety/*"
+  to = "/airlines/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/alcohol-consumption"
+  to = "/alcohol"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/alcohol-consumption/*"
+  to = "/alcohol/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/all-the-pizza"
+  to = "/pizza"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/all-the-pizza/*"
+  to = "/pizza/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/awards-prestige-economy-oscars-grammys-nobels"
+  to = "/oscars"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/awards-prestige-economy-oscars-grammys-nobels/*"
+  to = "/oscars/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/beyonce-taylor-lyrics"
+  to = "/lyrics"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/beyonce-taylor-lyrics/*"
+  to = "/lyrics/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/beyonce-the-psychonomics-of-control"
+  to = "/beyonce"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/beyonce-the-psychonomics-of-control/*"
+  to = "/beyonce/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/mac-index"
+  to = "/mac"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/mac-index/*"
+  to = "/mac/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/biketown-bikeshare"
+  to = "/bikeshare"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/biketown-bikeshare/*"
+  to = "/bikeshare/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/billboard-hot-100"
+  to = "/billboard"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/billboard-hot-100/*"
+  to = "/billboard/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/rankings-100"
+  to = "/rankings"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/rankings-100/*"
+  to = "/rankings/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/broadway-musicals"
+  to = "/broadway"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/broadway-musicals/*"
+  to = "/broadway/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/caesar-the-psychonomics-of-emperor-julius"
+  to = "/caesar"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/caesar-the-psychonomics-of-emperor-julius/*"
+  to = "/caesar/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/california-vs-texas-state-rivalry"
+  to = "/rivalry"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/california-vs-texas-state-rivalry/*"
+  to = "/rivalry/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/celtics-the-artometrics-of-institutional-winning"
+  to = "/celtics"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/celtics-the-artometrics-of-institutional-winning/*"
+  to = "/celtics/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ceo-departures"
+  to = "/ceos"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ceo-departures/*"
+  to = "/ceos/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/christmas-novels"
+  to = "/novels"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/christmas-novels/*"
+  to = "/novels/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/cia-world-factbook"
+  to = "/factbook"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/cia-world-factbook/*"
+  to = "/factbook/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/city-bioeconomics-operating-system"
+  to = "/bioeconomics"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/city-bioeconomics-operating-system/*"
+  to = "/bioeconomics/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/coffee-the-artometrics-of-java"
+  to = "/coffee"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/coffee-the-artometrics-of-java/*"
+  to = "/coffee/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/college-major-income"
+  to = "/majors"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/college-major-income/*"
+  to = "/majors/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/comic-characters"
+  to = "/comics"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/comic-characters/*"
+  to = "/comics/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/cowboys-the-artometrics-of-americas-team"
+  to = "/cowboys"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/cowboys-the-artometrics-of-americas-team/*"
+  to = "/cowboys/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/breweries-usa"
+  to = "/breweries"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/breweries-usa/*"
+  to = "/breweries/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/cultural-exports-geoeconomics"
+  to = "/geopolitics"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/cultural-exports-geoeconomics/*"
+  to = "/geopolitics/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/dodgers-the-artometrics-of-baseballs-modern-machine"
+  to = "/dodgers"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/dodgers-the-artometrics-of-baseballs-modern-machine/*"
+  to = "/dodgers/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/emmy-awards"
+  to = "/emmys"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/emmy-awards/*"
+  to = "/emmys/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/exercise-usa"
+  to = "/exercise"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/exercise-usa/*"
+  to = "/exercise/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/export-superpowers-us-china-germany"
+  to = "/exporters"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/export-superpowers-us-china-germany/*"
+  to = "/exporters/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/calories-calories"
+  to = "/calories"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/calories-calories/*"
+  to = "/calories/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/franchise-poison-star-vs-ip"
+  to = "/poison"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/franchise-poison-star-vs-ip/*"
+  to = "/poison/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/giant-the-artometrics-of-a-sf-dynasty"
+  to = "/giants"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/giant-the-artometrics-of-a-sf-dynasty/*"
+  to = "/giants/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/global-life-expectancy"
+  to = "/longevity"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/global-life-expectancy/*"
+  to = "/longevity/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/global-plastic-waste"
+  to = "/plastic"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/global-plastic-waste/*"
+  to = "/plastic/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/h3-the-artometrics-of-a-youtube-dynasty"
+  to = "/youtube"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/h3-the-artometrics-of-a-youtube-dynasty/*"
+  to = "/youtube/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/horror-movie-profit"
+  to = "/margins"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/horror-movie-profit/*"
+  to = "/margins/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/horror-movies"
+  to = "/horror"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/horror-movies/*"
+  to = "/horror/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/hurricanes-puerto-rico"
+  to = "/hurricanes"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/hurricanes-puerto-rico/*"
+  to = "/hurricanes/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/hydro-wastewater"
+  to = "/wastewater"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/hydro-wastewater/*"
+  to = "/wastewater/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/imdb-blockbuster-grammar"
+  to = "/blockbusters"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/imdb-blockbuster-grammar/*"
+  to = "/blockbusters/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/incarceration-trends"
+  to = "/prisons"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/incarceration-trends/*"
+  to = "/prisons/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/institutional-institutions"
+  to = "/institutions"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/institutional-institutions/*"
+  to = "/institutions/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/lakers-the-artometrics-of-basketball-glamour"
+  to = "/lakers"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/lakers-the-artometrics-of-basketball-glamour/*"
+  to = "/lakers/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/languages-glottolog"
+  to = "/languages"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/languages-glottolog/*"
+  to = "/languages/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/league-money-skill-and-star-systems"
+  to = "/leagues"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/league-money-skill-and-star-systems/*"
+  to = "/leagues/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/lego-database"
+  to = "/legos"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/lego-database/*"
+  to = "/legos/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/lv-molly-tea-trademark-china"
+  to = "/trademarks"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/lv-molly-tea-trademark-china/*"
+  to = "/trademarks/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/medium-articles"
+  to = "/medium"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/medium-articles/*"
+  to = "/medium/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/michael-jackson-psychonomics"
+  to = "/jackson"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/michael-jackson-psychonomics/*"
+  to = "/jackson/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/musicbrainz-pop-fame-mechanics"
+  to = "/fame"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/musicbrainz-pop-fame-mechanics/*"
+  to = "/fame/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/narrative-economics-field-guide"
+  to = "/narratives"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/narrative-economics-field-guide/*"
+  to = "/narratives/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/national-export-identity-atlas"
+  to = "/atlas"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/national-export-identity-atlas/*"
+  to = "/atlas/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/national-park-visits"
+  to = "/parks"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/national-park-visits/*"
+  to = "/parks/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/netflix-engagement"
+  to = "/netflix"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/netflix-engagement/*"
+  to = "/netflix/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/new-york-vs-sf-city-systems"
+  to = "/metros"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/new-york-vs-sf-city-systems/*"
+  to = "/metros/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/nuclear-explosions"
+  to = "/nuclear"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/nuclear-explosions/*"
+  to = "/nuclear/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/nyc-restaurant-inspections"
+  to = "/restaurants"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/nyc-restaurant-inspections/*"
+  to = "/restaurants/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/padres-the-artometrics-of-paying-for-october"
+  to = "/padres"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/padres-the-artometrics-of-paying-for-october/*"
+  to = "/padres/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/padres-world-series-ownership-blueprint"
+  to = "/blueprint"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/padres-world-series-ownership-blueprint/*"
+  to = "/blueprint/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/pantheon-the-artometrics-of-collective-memory"
+  to = "/pantheon"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/pantheon-the-artometrics-of-collective-memory/*"
+  to = "/pantheon/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/patriots-the-artometrics-of-the-system-dynasty"
+  to = "/patriots"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/patriots-the-artometrics-of-the-system-dynasty/*"
+  to = "/patriots/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/pixar-films"
+  to = "/pixar"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/pixar-films/*"
+  to = "/pixar/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/playboy-after-hef"
+  to = "/playboy"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/playboy-after-hef/*"
+  to = "/playboy/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/project-lcsh"
+  to = "/lcsh"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/project-lcsh/*"
+  to = "/lcsh/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/project-lcsh-public-domain-canon-map"
+  to = "/lcsh"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/project-lcsh-public-domain-canon-map/*"
+  to = "/lcsh/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/protection-threshold"
+  to = "/protection"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/protection-threshold/*"
+  to = "/protection/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/radio-stations"
+  to = "/radio"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/radio-stations/*"
+  to = "/radio/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ramen-ratings"
+  to = "/ramen"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ramen-ratings/*"
+  to = "/ramen/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/regional-sports-identity-map"
+  to = "/fandom"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/regional-sports-identity-map/*"
+  to = "/fandom/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/albums-albums"
+  to = "/albums"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/albums-albums/*"
+  to = "/albums/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/roman-emperors"
+  to = "/emperors"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/roman-emperors/*"
+  to = "/emperors/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sf-data-microscope"
+  to = "/sf"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sf-data-microscope/*"
+  to = "/sf/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/school-diversity"
+  to = "/schools"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/school-diversity/*"
+  to = "/schools/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/simpsons-guest-stars"
+  to = "/simpsons"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/simpsons-guest-stars/*"
+  to = "/simpsons/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sports-dynasties-best-and-worst-conversion"
+  to = "/dynasties"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sports-dynasties-best-and-worst-conversion/*"
+  to = "/dynasties/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/streaming-catalog-power"
+  to = "/streaming"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/streaming-catalog-power/*"
+  to = "/streaming/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/superbowl-ads"
+  to = "/superbowl"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/superbowl-ads/*"
+  to = "/superbowl/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/tv-golden-age"
+  to = "/television"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/tv-golden-age/*"
+  to = "/television/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/uk-museums"
+  to = "/museums"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/uk-museums/*"
+  to = "/museums/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/us-phds"
+  to = "/phds"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/us-phds/*"
+  to = "/phds/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/us-tuition"
+  to = "/tuition"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/us-tuition/*"
+  to = "/tuition/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/us-voter-turnout"
+  to = "/voters"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/us-voter-turnout/*"
+  to = "/voters/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/video-games-sliced"
+  to = "/slices"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/video-games-sliced/*"
+  to = "/slices/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/video-games-steam"
+  to = "/steam"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/video-games-steam/*"
+  to = "/steam/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/warrior-the-artometrics-of-a-golden-state-dynasty"
+  to = "/warriors"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/warrior-the-artometrics-of-a-golden-state-dynasty/*"
+  to = "/warriors/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/wealth-income"
+  to = "/wealth"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/wealth-income/*"
+  to = "/wealth/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/web-page-metrics"
+  to = "/metrics"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/web-page-metrics/*"
+  to = "/metrics/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/wine-ratings"
+  to = "/wine"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/wine-ratings/*"
+  to = "/wine/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/world-heritage-sites"
+  to = "/heritage"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/world-heritage-sites/*"
+  to = "/heritage/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/yankees-the-artometrics-of-baseballs-empire"
+  to = "/yankees"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/yankees-the-artometrics-of-baseballs-empire/*"
+  to = "/yankees/:splat"
+  status = 301
+  force = true
+
+
+# Single-word slug migrations (301)
+[[redirects]]
+  from = "/showcase"
+  to = "/gutenberg"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/gutenberg"
+  to = "/lcsh"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/gutenberg/*"
+  to = "/lcsh/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/gutenberg-canon"
+  to = "/gutenberg"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/gutenberg-canon/*"
+  to = "/gutenberg/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/beyonce-lyrics"
+  to = "/lyrics"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/beyonce-lyrics/*"
+  to = "/lyrics/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/big-mac"
+  to = "/mac"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/big-mac/*"
+  to = "/mac/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/billboard-top"
+  to = "/rankings"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/billboard-top/*"
+  to = "/rankings/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/board-games"
+  to = "/games"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/board-games/*"
+  to = "/games/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/california-texas"
+  to = "/rivalry"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/california-texas/*"
+  to = "/rivalry/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/christmas-books"
+  to = "/novels"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/christmas-books/*"
+  to = "/novels/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/christmas-songs"
+  to = "/carols"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/christmas-songs/*"
+  to = "/carols/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/craft-beer"
+  to = "/breweries"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/craft-beer/*"
+  to = "/breweries/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/dynasty-index"
+  to = "/dynasties"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/dynasty-index/*"
+  to = "/dynasties/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/export-atlas"
+  to = "/atlas"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/export-atlas/*"
+  to = "/atlas/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/export-powers"
+  to = "/exporters"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/export-powers/*"
+  to = "/exporters/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/fast-food"
+  to = "/calories"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/fast-food/*"
+  to = "/calories/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/game-slices"
+  to = "/slices"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/game-slices/*"
+  to = "/slices/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/horror-profit"
+  to = "/margins"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/horror-profit/*"
+  to = "/margins/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/netflix-titles"
+  to = "/catalog"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/netflix-titles/*"
+  to = "/catalog/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/nyc-sf"
+  to = "/metros"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/nyc-sf/*"
+  to = "/metros/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/padres-blueprint"
+  to = "/blueprint"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/padres-blueprint/*"
+  to = "/blueprint/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/pop-music"
+  to = "/fame"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/pop-music/*"
+  to = "/fame/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/rolling-stone"
+  to = "/albums"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/rolling-stone/*"
+  to = "/albums/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/san-francisco"
+  to = "/sf"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/san-francisco/*"
+  to = "/sf/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sherlock-holmes"
+  to = "/sherlock"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sherlock-holmes/*"
+  to = "/sherlock/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/soft-power"
+  to = "/geopolitics"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/soft-power/*"
+  to = "/geopolitics/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/star-risk"
+  to = "/poison"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/star-risk/*"
+  to = "/poison/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/super-bowl"
+  to = "/superbowl"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/super-bowl/*"
+  to = "/superbowl/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/un-votes"
+  to = "/diplomacy"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/un-votes/*"
+  to = "/diplomacy/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/web-metrics"
+  to = "/metrics"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/web-metrics/*"
+  to = "/metrics/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/winning-meta"
+  to = "/institutions"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/winning-meta/*"
+  to = "/institutions/:splat"
+  status = 301
+  force = true
+
 # Expo Router static export SPA fallback (keep after API + legacy redirects)
 [[redirects]]
   from = "/*"

@@ -20,13 +20,13 @@ const PILOT = path.join(ROOT, "pilot-drafts");
 const REPO_MAP = {
   readmitted: "readmitted",
   anime: "anime",
-  coffee: "coffee-the-artometrics-of-java",
+  coffee: "coffee",
   franchise: "franchise",
   imperial: "imperial",
-  giant: "giant-the-artometrics-of-a-san-francisco-dynasty",
-  h3: "h3-the-artometrics-of-a-youtube-dynasty",
-  warrior: "warrior-the-artometrics-of-a-golden-state-dynasty",
-  caesar: "caesar-the-psychonomics-of-emperor-julius",
+  giant: "giants",
+  h3: "youtube",
+  warrior: "warriors",
+  caesar: "caesar",
   pokemon: "pokemon",
 };
 

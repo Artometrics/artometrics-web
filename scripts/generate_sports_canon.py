@@ -360,7 +360,7 @@ def feature(
 
 
 def yankees():
-    slug = "yankees-the-artometrics-of-baseballs-empire"
+    slug = "yankees"
     decades = ["1920s", "1930s", "1940s", "1950s", "1960s", "1970s", "1980s", "1990s", "2000s", "2010s", "2020s"]
     titles = [3, 5, 4, 6, 2, 2, 0, 3, 2, 0, 0]
     write_chart(slug, "chart1_banner_clusters", {"data": [bar_v(decades, titles, [ART_RED if v >= 3 else ART_BLUE for v in titles])], "layout": layout("The Yankees did not win evenly", "THE EMPIRE ARRIVED IN CLUSTERS", x_title="Decade", y_title="World Series titles")})
@@ -418,7 +418,7 @@ def yankees():
 
 
 def lakers():
-    slug = "lakers-the-artometrics-of-basketball-glamour"
+    slug = "lakers"
     decades = ["1940s", "1950s", "1960s", "1970s", "1980s", "1990s", "2000s", "2010s", "2020s"]
     titles = [1, 5, 0, 1, 5, 0, 4, 1, 1]
     write_chart(slug, "chart1_titles_by_decade", {"data": [bar_v(decades, titles, [ART_RED if v >= 4 else ART_BLUE for v in titles])], "layout": layout("Laker history moves in star cycles", "BANNERS ARRIVE WHEN ERAS ALIGN", x_title="Decade", y_title="NBA titles")})
@@ -464,7 +464,7 @@ def lakers():
 
 
 def cowboys():
-    slug = "cowboys-the-artometrics-of-americas-team"
+    slug = "cowboys"
     eras = ["Landry 1970s", "Aikman 1990s", "Post-1995"]
     super_bowls = [2, 3, 0]
     write_chart(slug, "chart1_titles_by_era", {"data": [bar_h(eras, super_bowls, [ART_BLUE, ART_RED, ART_GREY])], "layout": layout("America's Team stopped winning titles in 1995", "THE BRAND KEPT COMPOUNDING ANYWAY", x_title="Super Bowl wins")})
@@ -511,7 +511,7 @@ def cowboys():
 
 
 def celtics():
-    slug = "celtics-the-artometrics-of-institutional-winning"
+    slug = "celtics"
     decades = ["1950s", "1960s", "1970s", "1980s", "1990s", "2000s", "2010s", "2020s"]
     titles = [3, 9, 2, 3, 0, 1, 0, 1]
     write_chart(slug, "chart1_banner_density", {"data": [bar_v(decades, titles, [ART_RED if v >= 3 else ART_BLUE for v in titles])], "layout": layout("Boston built the NBA's first title factory", "THE 1960s STILL DISTORT THE SCALE", x_title="Decade", y_title="NBA titles")})
@@ -562,7 +562,7 @@ def celtics():
 
 
 def dodgers():
-    slug = "dodgers-the-artometrics-of-baseballs-modern-machine"
+    slug = "dodgers"
     decades = ["1950s", "1960s", "1970s", "1980s", "1990s", "2000s", "2010s", "2020s"]
     pennants = [5, 4, 3, 2, 0, 0, 2, 2]
     write_chart(slug, "chart1_pennant_machine", {"data": [bar_v(decades, pennants, [ART_RED if v >= 3 else ART_BLUE for v in pennants])], "layout": layout("The Dodgers specialize in access", "PENNANTS ARRIVE MORE OFTEN THAN RINGS", x_title="Decade", y_title="NL pennants")})
@@ -611,7 +611,7 @@ def dodgers():
 
 def padres():
     """Long-form feature: the record sale and the unconverted franchise behind it."""
-    slug = "padres-the-artometrics-of-paying-for-october"
+    slug = "padres"
 
     decades = ["1970s", "1980s", "1990s", "2000s", "2010s", "2020s"]
     playoff_apps = [0, 1, 2, 2, 0, 4]
@@ -838,7 +838,7 @@ def padres():
             "Forbes. <em>Baseball’s Most Valuable Teams 2026</em>, March 2026.",
             "Sports Business Journal. <em>Padres have 70,000 DTC subscribers in record-breaking year</em>, October 2025.",
             "FanGraphs and Baseball America farm-system rankings, July 2026; Spotrac payroll tables.",
-            'Related Artometrics reports: <a href="/padres-world-series-ownership-blueprint">The Padres Cost $3.9 Billion. Winning Will Cost More.</a> · <a href="/dodgers-the-artometrics-of-baseballs-modern-machine">Dodgers</a> · <a href="/giant-the-artometrics-of-a-san-francisco-dynasty">Giants</a> · <a href="/yankees-the-artometrics-of-baseballs-empire">Yankees</a>.',
+            'Related Artometrics reports: <a href="/padres-blueprint">The Padres Cost $3.9 Billion. Winning Will Cost More.</a> · <a href="/dodgers">Dodgers</a> · <a href="/giants">Giants</a> · <a href="/yankees">Yankees</a>.',
         ],
         note="Payroll figures are tax payrolls rather than Opening Day totals; the two series differ by tens of millions of dollars in some seasons. Records and player value figures are current through July 29th 2026, and the 2026 season is unfinished. The sale remains subject to approval by 22 of the other 29 club owners.",
         source_credit="Data: Baseball Reference, Spotrac, Forbes, FanGraphs - ARTOMETRICS",
@@ -874,7 +874,7 @@ def padres():
 
 def padres_ownership_blueprint():
     """Long-form buyer's memo: what $3.9bn buys in San Diego, and what to fix first."""
-    slug = "padres-world-series-ownership-blueprint"
+    slug = "padres-blueprint"
 
     marks = [
         "2012 purchase price",
@@ -1136,7 +1136,7 @@ def padres_ownership_blueprint():
             "Sports Business Journal. <em>Feliciano group submits final documentation for Padres sale</em>, July 2026.",
             "San Diego Union-Tribune. <em>Padres have minor-league pieces to entice teams at trade deadline</em>, July 2026.",
             "Baseball America. <em>MLB Farm System Midseason Talent Rankings</em>, July 2026; FanGraphs RosterResource; Spotrac contract tables.",
-            'Related Artometrics reports: <a href="/padres-the-artometrics-of-paying-for-october">The Most Expensive Team That Has Never Won Anything</a> · <a href="/dodgers-the-artometrics-of-baseballs-modern-machine">Dodgers</a> · <a href="/sports-dynasty-index-best-and-worst-conversion">Sports Dynasty Index</a>.',
+            'Related Artometrics reports: <a href="/padres">The Most Expensive Team That Has Never Won Anything</a> · <a href="/dodgers">Dodgers</a> · <a href="/dynasty-index">Sports Dynasty Index</a>.',
         ],
         note="This report is editorial analysis, not investment advice, and Artometrics has no relationship with any party to the transaction. Valuations, revenue and media-rights figures are third-party estimates. Player value figures are current through July 29th 2026 and the season is unfinished. The championship-asset and urgency indices are editorial constructs, clearly labelled as such.",
         source_credit="Data: Baseball Reference, Forbes, Spotrac, FanGraphs, Baseball America - ARTOMETRICS",
@@ -1171,7 +1171,7 @@ def padres_ownership_blueprint():
 
 
 def patriots():
-    slug = "patriots-the-artometrics-of-the-system-dynasty"
+    slug = "patriots"
     periods = ["1960-1992", "Parcells/Bledsoe", "Brady/Belichick", "Post-Brady"]
     playoff_wins = [3, 3, 30, 0]
     write_chart(slug, "chart1_system_shock", {"data": [bar_h(periods, playoff_wins, [ART_GREY, ART_BLUE, ART_RED, ART_GREY])], "layout": layout("New England's history has one giant discontinuity", "THE BRADY/BELICHICK ERA BROKE THE FRANCHISE SCALE", x_title="Approximate playoff wins")})
@@ -1220,7 +1220,7 @@ def patriots():
 
 
 def cross_sport_dynasty_index():
-    slug = "sports-dynasty-index-best-and-worst-conversion"
+    slug = "dynasty-index"
     source = "Data: Baseball Reference, Basketball Reference, Pro Football Reference, Hockey Reference, Forbes - ARTOMETRICS"
 
     teams = ["Yankees", "Celtics", "Lakers", "Patriots", "Steelers", "Canadiens", "Dodgers", "Cowboys", "Warriors", "Maple Leafs"]
@@ -1281,7 +1281,7 @@ def cross_sport_dynasty_index():
 
 
 def league_money_and_skill_report():
-    slug = "league-money-skill-and-star-systems"
+    slug = "leagues"
     source = "Data: Forbes, Spotrac, Basketball Reference, Baseball Reference, Pro Football Reference, Hockey Reference - ARTOMETRICS"
 
     leagues = ["NFL", "NBA", "MLB", "NHL", "Premier League", "MLS"]
@@ -1338,7 +1338,7 @@ def league_money_and_skill_report():
 
 
 def regional_sports_identity_map():
-    slug = "regional-sports-identity-map"
+    slug = "fandom"
     source = "Data: Reference franchise histories, Census regional framing, Forbes, public attendance and championship records - ARTOMETRICS"
 
     regions = ["Northeast", "California", "Texas", "Great Lakes", "Florida", "Pacific NW", "Mid-South"]
@@ -1410,37 +1410,37 @@ def write_plan():
 
         ## First canon batch
 
-        1. `yankees-the-artometrics-of-baseballs-empire`
+        1. `yankees`
            - Theme: empire, expectation, payroll conversion.
            - Sources: Baseball Reference, Lahman, Retrosheet/Baseball Almanac, Forbes.
-        2. `lakers-the-artometrics-of-basketball-glamour`
+        2. `lakers`
            - Theme: star cycles, glamour, recurring Finals access.
            - Sources: Basketball Reference, NBA history, Sports Reference.
-        3. `cowboys-the-artometrics-of-americas-team`
+        3. `cowboys`
            - Theme: brand value versus postseason conversion.
            - Sources: Pro Football Reference, NFL records, Forbes.
 
         ## Next canon batch
 
-        4. `celtics-the-artometrics-of-institutional-winning`
+        4. `celtics`
            - Theme: inherited expectation, title density, modern access.
            - Sources: Basketball Reference, NBA history, Sports Reference.
-        5. `dodgers-the-artometrics-of-baseballs-modern-machine`
+        5. `dodgers`
            - Theme: high-floor contention, spending infrastructure, October conversion.
            - Sources: Baseball Reference, Lahman, payroll-rank summaries, Retrosheet/Baseball Almanac.
-        6. `patriots-the-artometrics-of-the-system-dynasty`
+        6. `patriots`
            - Theme: system shock, Brady/Belichick discontinuity, brand after dynasty.
            - Sources: Pro Football Reference, NFL records, Forbes.
 
         ## Cross-report analysis batch
 
-        7. `sports-dynasty-index-best-and-worst-conversion`
+        7. `dynasty-index`
            - Theme: championship mass, conversion, brand/output gaps, fan pain.
            - Sources: Baseball/Basketball/Football/Hockey Reference, Forbes.
-        8. `league-money-skill-and-star-systems`
+        8. `leagues`
            - Theme: league economics, salary rules, star leverage, event scarcity.
            - Sources: Forbes, Spotrac, major reference databases.
-        9. `regional-sports-identity-map`
+        9. `fandom`
            - Theme: region-locked sports identity, market depth, drought and civic memory.
            - Sources: franchise histories, valuation summaries, public regional framing.
 
@@ -1457,11 +1457,11 @@ def write_plan():
         ## Scale-up order
 
         ### Batch 2b - NL West companion
-        5b. `padres-the-artometrics-of-paying-for-october`
+        5b. `padres`
            - Theme: star payroll without ring conversion; expansion scarcity; pennant drought.
            - Sources: Baseball Reference, Lahman, payroll-rank summaries, Retrosheet/Baseball Almanac.
            - Cross-refs: Dodgers machine, Giants arc, sports dynasty index.
-        5c. `padres-world-series-ownership-blueprint`
+        5c. `padres-blueprint`
            - Theme: buyer memo — franchise capital, player assets, peer gaps, first-title operating plan.
            - Sources: Forbes valuations, Baseball Reference WAR, payroll markers, farm context.
            - Cross-refs: Padres paying-for-October, Dodgers machine, dynasty index, league money.

@@ -1,0 +1,22 @@
+/**
+ * Site chrome — expo-image heroes/thumbs (not article chart PNGs).
+ * Loaded after artometrics-article.css so cover rules win on marketing UI.
+ */
+.site-cover-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.site-cover-image > div,
+.site-cover-image .cross-dissolve-container {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.site-cover-image img {
+  object-fit: cover !important;
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  max-width: none !important;
+}

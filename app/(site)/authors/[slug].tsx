@@ -1,5 +1,5 @@
 import { Text } from "react-native";
-import { Image } from "expo-image";
+import { SiteCoverImage } from "@/components/SiteCoverImage";
 import { Link, useLocalSearchParams } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { PageSeo } from "@/components/PageSeo";
@@ -52,10 +52,9 @@ export default function AuthorScreen() {
         }}
       />
       {assetUrl(author.image?.url) ? (
-        <Image
+        <SiteCoverImage
           source={{ uri: assetUrl(author.image?.url)! }}
-          className="w-24 h-24 rounded-full mb-2 bg-bg-elevated"
-          contentFit="cover"
+          wrapperClassName="mb-2 h-24 w-24 rounded-full bg-bg-elevated"
           transition={200}
           accessibilityLabel={author.image?.alt || author.name}
         />

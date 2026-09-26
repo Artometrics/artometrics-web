@@ -1,0 +1,49 @@
+exercise
+
+Colorado leads U.S. exercise participation at 32.0, while the median across 52 jurisdictions stands at 23.0. Mountain West and New England states occupy eight of the top twelve positions, and the top five account for 36 percent of aggregate participation.
+
+The data, from TidyTuesday's 2018 exercise extract, shows geographic concentration rather than even distribution. The charts document the spread, the gap between leaders and the median, and the relationship between adult and male participation rates.
+
+WESTERN AND NEW ENGLAND STATES LEAD ADULT EXERCISE
+
+ADULTS BY STATE
+
+Colorado leads at 32.0, followed by Idaho at 31, New Hampshire and D.C. at 30, and Massachusetts and Vermont at 29. Utah and Washington round out the upper band at 28. Eight of the top twelve are Mountain West or New England states. The cluster reflects outdoor access, income, and age structures that support higher activity levels.
+
+THE TOP DOZEN SITS WELL ABOVE THE NATIONAL MEDIAN
+
+COLORADO AT 32.0 — MEDIAN AMONG TOP DOZEN IS 28.5
+
+Colorado remains first at 32.0, while the median among the top dozen stands at 28.5—5.5 points above the overall median of 23.0. The gap documents geographic clustering: high-exercise participation concentrates in specific regions rather than distributing evenly across all 52 jurisdictions.
+
+MOST STATES CLUSTER NEAR THE LOW-20S
+
+MEDIAN 23.0 AND MEAN 22.6 INDICATE A RELATIVELY SYMMETRIC DISTRIBUTION
+
+The tallest bin centers near 23.5 with approximately 15 states. Smaller counts appear in both the mid-teens and the high-20s/30s. The mean of 22.6 sits close to the median, indicating symmetry at the state level. Symmetry does not eliminate the elite tier: Colorado's 32 remains a clear outlier at the right edge.
+
+TOP STATES HOLD A DISPROPORTIONATE SHARE OF THE AGGREGATE
+
+THE TOP FIVE STATE ENTRIES ACCOUNT FOR 36 PERCENT OF THE AGGREGATE ADULTS
+
+The top five jurisdictions account for 36 percent of the aggregate adults measure. Cumulative share approaches 100 percent by the fifteenth entry. In a 52-row dataset, concentration among top performers remains pronounced.
+
+ADULT AND MALE RATES MOVE IN THE SAME DIRECTION
+
+ADULTS VS MEN
+
+Adults and Men track together across 52 jurisdictions: states with higher adult participation rates also post higher male rates. Leaders reach the low-to-mid 30s on the adults axis and the 30s–40s range on the men's axis. The pattern confirms the same state hierarchy across gender categories.
+
+WHAT THIS FILE CANNOT TELL YOU
+
+Self-reported exercise measures vary by survey methodology and year. State averages mask within-state variation by urban/rural location and race. D.C. is included but is not a state.
+
+The 2018 TidyTuesday snapshot does not represent current CDC data; use these rankings as structural for this extract only.
+
+WHAT TO TAKE AWAY
+
+Adult exercise rates center at 23.0 across 52 jurisdictions, while Colorado reaches 32.0 and the top-dozen median stands at 28.5.
+
+Reference the Mountain West and New England cluster when explaining geographic patterns, and the 36 percent top-five share when discussing concentration of activity.
+
+DATA, METHODS & SOURCES

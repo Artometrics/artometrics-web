@@ -1,137 +1,76 @@
 ---
-title: 48% of U.S. Hospitals Still Exceed CMS's 30-Day Readmission Benchmark
+title: 'READMITTED: Half of Hospitals Beat CMS''s Benchmark'
 slug: readmitted
 author: kyle-mcauliffe
 pubDate: 2026-04-21T00:00:00.000Z
-description: >-
-  48.1% of hospital-condition pairs exceed CMS's expected readmission rate; Hip/Knee leads at 1.00485 ERR—nearly twice the excess of the next track.
+description: 48.1% of hospital-condition pairs exceed CMS's expected readmission rate; Hip/Knee leads at 1.00485 ERR—nearly twice the excess of the next track.
 heroImage: /images/content/articles/readmitted/hero.png
 draft: false
 tags:
   - science
   - medicine
-tldr: >-
-  48.1% of hospital-condition pairs in CMS's FY2025 HRRP extract exceed the expected readmission rate. Hip/Knee replacement patients return at 1.00485 ERR—the highest of six tracked conditions. New Jersey leads states at 65.4% of pairs penalized. For-profit hospitals carry 39.5% of pairs in the high-penalty tier versus 32% for non-profits.
+subject: Hospitals
+tldr: 48.1% of hospital-condition pairs in CMS's FY2025 HRRP extract exceed the expected readmission rate. Hip/Knee replacement patients return at 1.00485 ERR—the highest of six tracked conditions. New Jersey leads states at 65.4% of pairs penalized. For-profit hospitals carry 39.5% of pairs in the high-penalty tier versus 32% for non-profits.
 keyPoints:
-  - >-
-    48.1% — of hospital-condition pairs exceed CMS's expected readmission rate, triggering penalty calculations under HRRP
-  - >-
-    1.00485 — Hip/Knee average excess readmission ratio, the highest of six HRRP conditions and nearly twice the next track
-  - >-
-    65.4% — New Jersey's share of penalized hospital-condition pairs, the highest among U.S. states
-  - >-
-    39.5% — of for-profit hospital-condition pairs fall in the high-penalty tier, versus 32.1% for non-profits
-  - >-
-    742 — hospitals entering CMS's mandatory TEAM bundled-payment model on January 1, 2026, where readmissions shift to episode-level accountability
-  - >-
-    1.0018 — national average excess readmission ratio; hospitals readmit 0.18% more patients than CMS models predict
+  - '48.1% — of hospital-condition pairs exceed CMS''s expected readmission rate, triggering penalty calculations under HRRP'
+  - '1.00485 — Hip/Knee average excess readmission ratio, the highest of six HRRP conditions and nearly twice the next track'
+  - '65.4% — New Jersey''s share of penalized hospital-condition pairs, the highest among U.S. states'
+  - '39.5% — of for-profit hospital-condition pairs fall in the high-penalty tier, versus 32.1% for non-profits'
+  - '742 — hospitals entering CMS''s mandatory TEAM bundled-payment model on January 1, 2026, where readmissions shift to episode-level accountability'
+  - 1.0018 — national average excess readmission ratio; hospitals readmit 0.18% more patients than CMS models predict
 faq:
-  - question: >-
-      What share of hospital-condition pairs exceed the CMS readmission benchmark?
-    answer: >-
-      48.1% of HRRP-eligible pairs carry an excess readmission ratio above 1.0, meaning more readmissions than CMS models predict.
-  - question: >-
-      Which condition has the highest excess readmission ratio?
-    answer: >-
-      Hip/Knee replacement averages 1.00485—the highest of six HRRP conditions and nearly twice the excess of the next closest track.
-  - question: >-
-      Which state has the highest share of penalized hospital-condition pairs?
-    answer: >-
-      New Jersey leads at 65.4%, followed by Massachusetts (62.5%) and Mississippi (61.1%).
-  - question: >-
-      Do for-profit hospitals carry more penalty exposure than non-profits?
-    answer: >-
-      Yes. 39.5% of for-profit pairs fall in the high-penalty tier versus 32.1% for non-profits and 32.0% for government facilities.
+  - question: What share of hospital-condition pairs exceed the CMS readmission benchmark?
+    answer: '48.1% of HRRP-eligible pairs carry an excess readmission ratio above 1.0, meaning more readmissions than CMS models predict.'
+  - question: Which condition has the highest excess readmission ratio?
+    answer: Hip/Knee replacement averages 1.00485—the highest of six HRRP conditions and nearly twice the excess of the next closest track.
+  - question: Which state has the highest share of penalized hospital-condition pairs?
+    answer: 'New Jersey leads at 65.4%, followed by Massachusetts (62.5%) and Mississippi (61.1%).'
+  - question: Do for-profit hospitals carry more penalty exposure than non-profits?
+    answer: Yes. 39.5% of for-profit pairs fall in the high-penalty tier versus 32.1% for non-profits and 32.0% for government facilities.
 ---
 <div id="quarto-content">
 <main class="art-article-main">
-<p class="art-p art-lede">48.1% of hospital-condition pairs in CMS's FY2025 Hospital Readmissions Reduction Program extract exceed the 1.0 excess readmission ratio—the threshold where actual readmissions outnumber what CMS models predict for a facility's patient mix. After more than a decade of Medicare penalties capped at 3% of total reimbursements, nearly half of measured pairs still fail the benchmark.</p>
+<p class="art-p">48.1% of hospital-condition pairs in CMS's FY2025 Hospital Readmissions Reduction Program extract exceed the 1.0 excess readmission ratio—the threshold where actual readmissions outnumber what CMS models predict for a facility's patient mix. After more than a decade of Medicare penalties capped at 3% of total reimbursements, nearly half of measured pairs still fail the benchmark.</p>
 <p class="art-p">The core metric is the Excess Readmission Ratio, or ERR. It divides predicted readmissions by expected readmissions, where "expected" adjusts for age, comorbidities, and discharge history. An ERR of 1.0 means a hospital readmitted exactly as many patients as its risk profile suggests. Above 1.0 triggers a penalty calculation. Below 1.0 earns no reward. The national average ERR is 1.0018—hospitals readmit 0.18% more patients than CMS expects. The penalty has not eliminated excess readmissions. It has measured them.</p>
 <h2 id="research-question" class="anchored">Research question</h2>
 <p class="art-p">Where do CMS Hospital Readmissions Reduction Program penalties still concentrate—by state, clinical condition, and hospital ownership—in the FY2025 supplemental extract, and what does that geography imply for the 742 hospitals entering CMS's Transforming Episode Accountability Model (TEAM) on January 1, 2026?</p>
 <p class="art-p">This is an observational audit of published CMS ratios, not a causal trial. We do not estimate a formal null hypothesis. We ask which named markets (New Jersey, Massachusetts, Mississippi), conditions (Hip/Knee arthroplasty), and ownership types (for-profit systems such as HCA and Tenet) still sit farthest above CMS's expected readmission line after more than a decade of HRRP.</p>
-<h2 id="fast-facts" class="anchored">Fast facts</h2>
-<p class="art-p">The numbers that set the scale for this report:</p>
-<div class="facts-grid">
-  <div class="fact-box">
-    <span class="fact-number">48.1%</span>
-    <span class="fact-label">of hospital-condition pairs exceed CMS's expected readmission rate, triggering penalty calculations under HRRP</span>
-  </div>
-  <div class="fact-box">
-    <span class="fact-number">1.00485</span>
-    <span class="fact-label">Hip/Knee average excess readmission ratio, the highest of six HRRP conditions and nearly twice the next track</span>
-  </div>
-  <div class="fact-box">
-    <span class="fact-number">65.4%</span>
-    <span class="fact-label">New Jersey's share of penalized hospital-condition pairs, the highest among U.S. states</span>
-  </div>
-  <div class="fact-box">
-    <span class="fact-number">39.5%</span>
-    <span class="fact-label">of for-profit hospital-condition pairs fall in the high-penalty tier, versus 32.1% for non-profits</span>
-  </div>
-  <div class="fact-box">
-    <span class="fact-number">742</span>
-    <span class="fact-label">hospitals entering CMS's mandatory TEAM bundled-payment model on January 1, 2026, where readmissions shift to episode-level accountability</span>
-  </div>
-  <div class="fact-box">
-    <span class="fact-number">1.0018</span>
-    <span class="fact-label">national average excess readmission ratio; hospitals readmit 0.18% more patients than CMS models predict</span>
-  </div>
-</div>
-<h2 id="data-and-method" class="anchored">Data and method</h2>
-<p class="art-p">The FY2025 HRRP supplemental extract covers the measurement window used for CMS's published excess readmission ratios. After removing suppressed rows—hospitals with fewer than 25 discharges for a given condition, which CMS redacts to protect patient privacy—the working dataset contains 11,720 hospital-condition pairs across roughly 2,700 hospitals and six conditions: Acute Myocardial Infarction (AMI), Heart Failure, Pneumonia, Chronic Obstructive Pulmonary Disease (COPD), Hip & Knee Arthroplasty, and Coronary Artery Bypass Graft (CABG). A hospital can perform well on five tracks and still take a hit on one.</p>
-<p class="art-p">The suppressed rows matter. Small rural hospitals disproportionately fall below the 25-discharge threshold and disappear from the analysis. The hospitals in this dataset skew toward larger, busier facilities. That is not a flaw in the extract—it is a feature of how CMS designed the program—but it shapes every finding below.</p>
-<p class="art-p">An ERR above 1.0 feeds a penalty calculation; the tier depends on how far above 1.0 a hospital sits relative to peers. For this piece, pairs are grouped into four tiers: No Penalty (ERR ≤ 1.0), Low, Medium, and High. Charts are rendered in R from the working CSVs in this monorepo (articles/readmitted/data/), with PNG and interactive Plotly JSON exported side by side. Ownership labels for Chart 3 were joined from CMS Hospital General Information (dataset xubh-q36u) and stored offline so the analysis does not depend on a live CMS download at render time.</p>
+
 <h2 id="the-geography-of-failure" class="anchored">The Geography of Failure</h2>
 <h3 id="the-geography-of-failure-look" class="anchored">States above the national average for penalized hospital-condition pairs—New Jersey leads at 65.4%</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/readmitted/charts/chart1_states_penalized.plotly.json" data-source="Data: CMS HRRP FY2025 supplemental (9n3s-kdb3) — ARTOMETRICS" data-fallback="/images/content/articles/readmitted/charts/chart1_states_penalized.png" role="img" aria-label="States above the national average for penalized hospital-condition pairs — New Jersey leads at 65.4%"></div>
   <figcaption class="art-chart-caption">Above the 48.1% national line, New Jersey leads at 65.4%—high-resource markets sit beside high-poverty ones</figcaption>
 </figure>
-<p class="art-p">New Jersey leads the country at 65.4%—nearly two of every three hospital-condition pairs in the state perform worse than CMS models expect. Massachusetts (62.5%) and Mississippi (61.1%) follow. New Jersey hosts high-revenue systems such as Hackensack Meridian and RWJBarnabas; Massachusetts concentrates academic medical power around Mass General Brigham; Mississippi is rural, high-poverty, and chronically under-served. Different systems, different patient mixes, same penalty outcome.</p>
-<p class="art-p">Georgia, Kentucky, West Virginia, Alabama, and Louisiana cluster high—which fits the familiar population-health narrative. So do Illinois, California, New York, and Pennsylvania. This is not a rural-poverty map with a clean boundary. High-resource markets do not immunize a system.</p>
-<p class="art-p">Chart 1 shows only states above the national average—the cohort pulling the 48.1% mean up. Even below-average states are not clean. "Below average" means a smaller share of pairs exceed ERR 1.0, not zero penalties.</p>
-
+<p class="art-p">New Jersey leads the country at 65.4%—nearly two of every three hospital-condition pairs in the state perform worse than CMS models expect. Massachusetts (62.5%) and Mississippi (61.1%) follow. New Jersey hosts high-revenue systems such as Hackensack Meridian and RWJBarnabas; Massachusetts concentrates academic medical power around Mass General Brigham; Mississippi is rural, high-poverty, and chronically under-served. Different systems, different patient mixes, same penalty outcome. Georgia, Kentucky, West Virginia, Alabama, and Louisiana cluster high—which fits the familiar population-health narrative. So do Illinois, California, New York, and Pennsylvania. This is not a rural-poverty map with a clean boundary. High-resource markets do not immunize a system. Chart 1 shows only states above the national average—the cohort pulling the 48.1% mean up. Even below-average states are not clean. "Below average" means a smaller share of pairs exceed ERR 1.0, not zero penalties.</p>
 <h2 id="the-condition-nobody-is-solving" class="anchored">The Condition Nobody Is Solving</h2>
 <h3 id="the-condition-nobody-is-solving-look" class="anchored">Average excess readmission ratio by HRRP condition—Hip/Knee leads at 1.00485</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/readmitted/charts/chart2_err_by_condition.plotly.json" data-source="Data: CMS HRRP FY2025 supplemental (9n3s-kdb3) — ARTOMETRICS" data-fallback="/images/content/articles/readmitted/charts/chart2_err_by_condition.png" role="img" aria-label="Average excess readmission ratio by HRRP condition — Hip/Knee leads at 1.00485"></div>
   <figcaption class="art-chart-caption">All six conditions average above ERR 1.0; Hip/Knee sits at 1.00485—nearly twice the excess of the next track</figcaption>
 </figure>
-<p class="art-p">Hip and knee replacement patients are readmitted at nearly twice the excess rate of the next closest condition. Hip/Knee's average ERR of 1.00485 sits above COPD (1.00271), Heart Failure (1.00254), AMI (1.00212), Pneumonia (1.00198), and CABG (1.00187). The gaps live in the fourth decimal place—and still matter when multiplied across roughly 1.3 million U.S. joint replacements a year.</p>
-<p class="art-p">All six conditions tracked under HRRP carry an average excess readmission ratio above 1.0. The national mean ERR is 1.0018. Readmission rates have declined since 2012, but the program has not eliminated excess returns—it has measured them.</p>
-<p class="art-p">COPD sits near the bottom of this chart, but that is not a success story. COPD patients return at high rates in absolute terms. The lower ERR means CMS's risk model expects a sicker baseline. The bar is lower because the patients are harder—not because outcomes are better.</p>
-
+<p class="art-p">Hip and knee replacement patients are readmitted at nearly twice the excess rate of the next closest condition. Hip/Knee's average ERR of 1.00485 sits above COPD (1.00271), Heart Failure (1.00254), AMI (1.00212), Pneumonia (1.00198), and CABG (1.00187). The gaps live in the fourth decimal place—and still matter when multiplied across roughly 1.3 million U.S. joint replacements a year. All six conditions tracked under HRRP carry an average excess readmission ratio above 1.0. The national mean ERR is 1.0018. Readmission rates have declined since 2012, but the program has not eliminated excess returns—it has measured them. COPD sits near the bottom of this chart, but that is not a success story. COPD patients return at high rates in absolute terms. The lower ERR means CMS's risk model expects a sicker baseline. The bar is lower because the patients are harder—not because outcomes are better.</p>
 <h2 id="ownership-penalty-and-who-pays" class="anchored">Ownership, Penalty, and Who Pays</h2>
 <h3 id="ownership-penalty-and-who-pays-look" class="anchored">Penalty tier distribution by hospital ownership—for-profits carry more high-tier weight</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/readmitted/charts/chart3_penalty_by_ownership.plotly.json" data-source="Data: CMS HRRP + Hospital General Information (xubh-q36u) — ARTOMETRICS" data-fallback="/images/content/articles/readmitted/charts/chart3_penalty_by_ownership.png" role="img" aria-label="Penalty tier distribution by hospital ownership — for-profits carry more high-tier weight"></div>
   <figcaption class="art-chart-caption">For-profit hospitals carry more medium and high penalty weight; every ownership type still has a majority in the no-penalty band</figcaption>
 </figure>
-<p class="art-p">For-profit hospitals carry a higher share of medium and high penalty tiers than either non-profits or government hospitals. Every ownership type has roughly half or more of its hospital-condition pairs at or below the CMS expected readmission rate. HRRP is often described as a blanket stick. The data says the stick is concentrated—closer to an audit sampling than a universal fine.</p>
-<p class="art-p">Systems such as HCA, Tenet, and Steward sit in the for-profit column; that does not mean every for-profit campus is High-tier. The gap is real—on the order of 8 to 10 percentage points more penalized pairs than non-profits—but it is a difference of degree, not kind. All three ownership types are playing the same game. For-profits lose it slightly more often.</p>
-<p class="art-p">Government-owned facilities land between non-profit and for-profit. Neither the safety-net excuse nor the public-accountability story fits cleanly. County systems operate under political oversight that can slow discharge innovation; middle-of-pack performance is its own finding.</p>
-
+<p class="art-p">For-profit hospitals carry a higher share of medium and high penalty tiers than either non-profits or government hospitals. Every ownership type has roughly half or more of its hospital-condition pairs at or below the CMS expected readmission rate. HRRP is often described as a blanket stick. The data says the stick is concentrated—closer to an audit sampling than a universal fine. Systems such as HCA, Tenet, and Steward sit in the for-profit column; that does not mean every for-profit campus is High-tier. The gap is real—on the order of 8 to 10 percentage points more penalized pairs than non-profits—but it is a difference of degree, not kind. All three ownership types are playing the same game. For-profits lose it slightly more often. Government-owned facilities land between non-profit and for-profit. Neither the safety-net excuse nor the public-accountability story fits cleanly. County systems operate under political oversight that can slow discharge innovation; middle-of-pack performance is its own finding.</p>
 <h2 id="intensity-not-just-share" class="anchored">Intensity, Not Just Share</h2>
 <h3 id="intensity-not-just-share-look" class="anchored">Average excess readmission ratio by state—Massachusetts leads the top 15</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/readmitted/charts/chart4_state_avg_err.plotly.json" data-source="Data: CMS HRRP FY2025 supplemental (9n3s-kdb3) — ARTOMETRICS" data-fallback="/images/content/articles/readmitted/charts/chart4_state_avg_err.png" role="img" aria-label="Average excess readmission ratio by state — Massachusetts leads the top 15"></div>
   <figcaption class="art-chart-caption">Penalty share and average ERR are related but not identical—Massachusetts leads on intensity even where New Jersey leads on breadth</figcaption>
 </figure>
-<p class="art-p">Chart 1 measured how widely penalties spread across hospital–condition pairs. Chart 4 measures how far above the CMS expected line those pairs sit on average. Massachusetts posts the highest average ERR in the working extract at 1.0344, ahead of New Jersey's breadth-first pattern at 65.4% of pairs penalized.</p>
-<p class="art-p">That distinction matters for systems such as Mass General Brigham, Beth Israel Deaconess Medical Center, and the Boston academic corridor: a market can look merely "above average" on share and still run hotter on intensity. Mississippi, Illinois, and several Mid-Atlantic states also appear in the top-15 intensity list—the same mixed geography of high-resource and high-poverty markets seen in Chart 1.</p>
-<p class="art-p">The dotted reference at ERR = 1.0 is the CMS expected line. Every state in this top-15 panel sits above it. The national mean ERR of 1.0018 looks small in isolation; stacked across thousands of pairs and roughly 1.3 million U.S. joint replacements a year, fourth-decimal gaps become budget lines.</p>
-
+<p class="art-p">Chart 1 measured how widely penalties spread across hospital–condition pairs. Chart 4 measures how far above the CMS expected line those pairs sit on average. Massachusetts posts the highest average ERR in the working extract at 1.0344, ahead of New Jersey's breadth-first pattern at 65.4% of pairs penalized. That distinction matters for systems such as Mass General Brigham, Beth Israel Deaconess Medical Center, and the Boston academic corridor: a market can look merely "above average" on share and still run hotter on intensity. Mississippi, Illinois, and several Mid-Atlantic states also appear in the top-15 intensity list—the same mixed geography of high-resource and high-poverty markets seen in Chart 1. The dotted reference at ERR = 1.0 is the CMS expected line. Every state in this top-15 panel sits above it. The national mean ERR of 1.0018 looks small in isolation; stacked across thousands of pairs and roughly 1.3 million U.S. joint replacements a year, fourth-decimal gaps become budget lines.</p>
 <h2 id="high-tier-concentration" class="anchored">Where the High Tier Concentrates</h2>
 <h3 id="high-tier-concentration-look" class="anchored">High-tier penalty share by ownership—for-profits at 39.5%</h3>
 <figure class="art-chart">
   <div class="art-chart-live" data-chart="/data/articles/readmitted/charts/chart5_high_penalty_by_ownership.plotly.json" data-source="Data: CMS HRRP + Hospital General Information (xubh-q36u) — ARTOMETRICS" data-fallback="/images/content/articles/readmitted/charts/chart5_high_penalty_by_ownership.png" role="img" aria-label="High-tier penalty share by ownership — for-profits at 39.5%"></div>
   <figcaption class="art-chart-caption">For-profit hospitals place 39.5% of pairs in the High penalty tier, versus about 32% for non-profit and government peers</figcaption>
 </figure>
-<p class="art-p">Chart 3 showed the full tier mix. Chart 5 isolates the High tier—the pairs farthest above CMS's expected readmission rate. For-profit ownership places 39.5% of hospital–condition pairs in High, compared with 32.1% for non-profits and 32.0% for government facilities.</p>
-<p class="art-p">Named for-profit operators in the CMS Hospital General Information join—including campuses associated with HCA Healthcare, Tenet Healthcare, and historically Steward Health Care—sit inside that column. The chart does not prove that for-profit status causes excess readmissions. It shows that when CMS's published ratios are stacked by ownership, the High-tier mass sits heavier on the for-profit side.</p>
-<p class="art-p">For TEAM's 742 mandatory hospitals in 2026, that concentration is the practical signal: episode-level accountability will land hardest where High-tier HRRP exposure already clusters, not where the "no penalty" majority still holds.</p>
-
+<p class="art-p">Chart 3 showed the full tier mix. Chart 5 isolates the High tier—the pairs farthest above CMS's expected readmission rate. For-profit ownership places 39.5% of hospital–condition pairs in High, compared with 32.1% for non-profits and 32.0% for government facilities. Named for-profit operators in the CMS Hospital General Information join—including campuses associated with HCA Healthcare, Tenet Healthcare, and historically Steward Health Care—sit inside that column. The chart does not prove that for-profit status causes excess readmissions. It shows that when CMS's published ratios are stacked by ownership, the High-tier mass sits heavier on the for-profit side. For TEAM's 742 mandatory hospitals in 2026, that concentration is the practical signal: episode-level accountability will land hardest where High-tier HRRP exposure already clusters, not where the "no penalty" majority still holds.</p>
 <h2 id="what-this-file-cannot-tell-you" class="anchored">What this file cannot tell you</h2>
 <p class="art-p">CMS suppresses readmission data for hospitals that fall below 25 discharges per condition per measurement period. That threshold protects statistical reliability, but the effect is systematic—small rural hospitals disappear from this analysis. The hospitals remaining skew toward larger, busier facilities.</p>
 <p class="art-p">Ownership classification for Chart 3 comes from CMS Hospital General Information, which uses inconsistent labeling across hospital types. Physician-owned facilities, tribal hospitals, and church-affiliated systems do not always map cleanly into three buckets. The Government, Non-Profit, and For-Profit groupings are reasonable approximations—not clean legal categories.</p>
@@ -140,8 +79,14 @@ faq:
 <p class="art-p">48.1% of hospital-condition pairs still exceed CMS's expected readmission rate—but the distribution is uneven. The highest-penalty states cut across market type and regional demographics. Hip/Knee replacement sits nearly 2× above the next closest condition on excess readmissions. For-profit hospitals carry modestly more penalty exposure than non-profits, though all three ownership types remain majority no-penalty.</p>
 <p class="art-p">HRRP has been in effect since 2012. That 48.1% of pairs still clear the 1.0 ERR threshold more than a decade later says something about the limits of financial penalties as a behavior-change mechanism. Hospitals have responded—rates have declined—but the program has defined the problem more than it has solved it.</p>
 <p class="art-p">CMS's TEAM model, mandatory for 742 hospitals starting January 1, 2026, goes further by tying entire episodes of care to reimbursement. The hospitals that struggled under HRRP are the ones most likely to feel TEAM. This report describes the problem TEAM is designed to address. Whether bundled payments succeed where readmission penalties have not is the next question.</p>
-<h2 id="sources" class="anchored">Sources</h2>
 
+<section class="art-back-matter">
+<h2 id="data-methods-and-sources" class="anchored">Data, methods &amp; sources</h2>
+<h3 id="data-and-method" class="anchored art-back-matter__subhead">Data and method</h3>
+<p class="art-p">The FY2025 HRRP supplemental extract covers the measurement window used for CMS's published excess readmission ratios. After removing suppressed rows—hospitals with fewer than 25 discharges for a given condition, which CMS redacts to protect patient privacy—the working dataset contains 11,720 hospital-condition pairs across roughly 2,700 hospitals and six conditions: Acute Myocardial Infarction (AMI), Heart Failure, Pneumonia, Chronic Obstructive Pulmonary Disease (COPD), Hip & Knee Arthroplasty, and Coronary Artery Bypass Graft (CABG). A hospital can perform well on five tracks and still take a hit on one.</p>
+<p class="art-p">The suppressed rows matter. Small rural hospitals disproportionately fall below the 25-discharge threshold and disappear from the analysis. The hospitals in this dataset skew toward larger, busier facilities. That is not a flaw in the extract—it is a feature of how CMS designed the program—but it shapes every finding below.</p>
+<p class="art-p">An ERR above 1.0 feeds a penalty calculation; the tier depends on how far above 1.0 a hospital sits relative to peers. For this piece, pairs are grouped into four tiers: No Penalty (ERR ≤ 1.0), Low, Medium, and High. Charts are rendered in R from the working CSVs in this monorepo (articles/readmitted/data/), with PNG and interactive Plotly JSON exported side by side. Ownership labels for Chart 3 were joined from CMS Hospital General Information (dataset xubh-q36u) and stored offline so the analysis does not depend on a live CMS download at render time.</p>
+<h3 id="sources" class="anchored art-back-matter__subhead">Sources</h3>
 <p class="art-p">
 Joynt, K.E., & Jha, A.K. (2013). Characteristics of hospitals receiving penalties under the Hospital Readmissions Reduction Program. <em>JAMA</em>, 309(4), 342–343. Context on which hospitals were first exposed to HRRP penalties.
 </p>
@@ -163,7 +108,7 @@ Zuckerman, R.B., Sheingold, S.H., Orav, E.J., Ruhter, J., & Epstein, A.M. (2016)
 <p class="art-p">
 Krumholz, H.M., et al. (2017). Relationship between hospital readmission and mortality rates for patients hospitalized with acute myocardial infarction, heart failure, or pneumonia. <em>JAMA</em>, 318(3), 270–278. Background on readmission–mortality tradeoffs under quality measurement.
 </p>
-
+</section>
 <h2 id="files" class="anchored">Files</h2>
 
 <p class="art-p">Download the working datasets and chart exports used in this report. All files are hosted on this site—no external repo required.</p>
@@ -189,16 +134,12 @@ Krumholz, H.M., et al. (2017). Relationship between hospital readmission and mor
     <li><a class="art-files__link" download href="/data/articles/readmitted/charts/chart3_penalty_by_ownership.plotly.json">chart3_penalty_by_ownership.plotly.json</a></li>
     <li><a class="art-files__link" download href="/data/articles/readmitted/charts/chart4_state_avg_err.plotly.json">chart4_state_avg_err.plotly.json</a></li>
     <li><a class="art-files__link" download href="/data/articles/readmitted/charts/chart5_high_penalty_by_ownership.plotly.json">chart5_high_penalty_by_ownership.plotly.json</a></li>
-  </ul>
-</div>
-
-<h2 id="editor-s-note" class="anchored">Editor's note</h2>
+  </ul><h2 id="editor-s-note" class="anchored">Editor's note</h2>
 <div class="art-editorial-note"><p class="art-p">
 <em>This report was researched, written, designed, and produced in active collaboration with Claude AI (Anthropic). The data pipeline, statistical analysis, chart design, written analysis, narrative structure, and visual styling were all developed through a directed partnership between human editorial judgment and AI execution. Charts are exported from R in this monorepo (<code>articles/readmitted/</code>). Artometrics was built on the premise that rigorous analysis and honest process are not in conflict. The research questions, editorial instincts, interpretive framing, and brand vision are ours. We document this not as a disclaimer but as a description of how we actually work.</em>
 </p>
 <p class="art-p">
 <em>— Artometrics Editorial</em>
-</p></div>
-
+</p>
 </main>
 </div>

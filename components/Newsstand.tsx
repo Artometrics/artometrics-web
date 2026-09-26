@@ -1,5 +1,5 @@
 import { Pressable, Text, View, useWindowDimensions } from "react-native";
-import { Image } from "expo-image";
+import { SiteCoverImage } from "@/components/SiteCoverImage";
 import { Link } from "expo-router";
 import { Wrapper } from "@/components/Wrapper";
 import { assetUrl } from "@/lib/assets";
@@ -31,7 +31,7 @@ function MagazineCover({
   index: number;
 }) {
   const hero = assetUrl(post.heroImage);
-  const label = sectionLabel(post.tags);
+  const label = sectionLabel(post.tags, post.subject);
   const coverH = Math.round(coverW * (4 / 3));
   const editionNo = String(index + 1).padStart(2, "0");
 
@@ -44,10 +44,10 @@ function MagazineCover({
         className="relative overflow-hidden border border-[#222] bg-[#111]"
       >
         {hero ? (
-          <Image
+          <SiteCoverImage
             source={{ uri: hero }}
-            style={{ width: coverW, height: coverH, position: "absolute" }}
-            contentFit="cover"
+            wrapperClassName="absolute inset-0"
+            wrapperStyle={{ width: coverW, height: coverH }}
             transition={200}
           />
         ) : (

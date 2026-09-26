@@ -3,7 +3,7 @@
  * Scaffold an Artometrics article GitHub repo layout locally.
  *
  * Usage:
- *   node scripts/scaffold-article-repo.mjs --repo lego --slug lego-database --desk culture --title "LEGO Database"
+ *   node scripts/scaffold-article-repo.mjs --repo lego --slug legos --desk culture --title "LEGO Database"
  *   node scripts/scaffold-article-repo.mjs --batch-from-site
  */
 

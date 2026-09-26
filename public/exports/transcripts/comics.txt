@@ -1,0 +1,49 @@
+comics
+
+Spider-Man (Peter Parker) logged 4,043 appearances across the 23,272 characters in the TidyTuesday comics dataset (1935–2013), while the median character appeared 4 times. The top five names account for 45 percent of cumulative appearances in the ranked view, concentrating franchise mass in a narrow band of superhero infrastructure.
+
+That four-appearance median reflects structural reality: most named characters never become franchise centers. The charts below measure how appearance volume clusters at the top.
+
+EARLY CHARACTERS LOGGED HIGHER MEDIAN APPEARANCES
+
+MEDIAN APPEARANCES OVER TIME
+
+Median appearances by first-appearance year peak in the mid-1930s—125 in 1935, 117 in 1937—then decline toward single digits as the catalog expands with short-lived characters. Golden Age cohorts logged higher medians because survivors were reprinted and reintroduced more often. Later decades added thousands of characters who never anchored ongoing series.
+
+A DOZEN ICONS OWN THE APPEARANCE SUMMIT
+
+SPIDER-MAN (PETER PARKER) LEADS AT 4,043 — 2,377 MARKS THE MEDIAN AMONG THE TOP DOZEN
+
+Spider-Man leads at 4,043 appearances, followed by Captain America (3,360), Batman (3,093), Wolverine (3,061), Iron Man (2,961), and Superman (2,496). The median among the top dozen is 2,377. These characters are publishing infrastructure—identities that anchor ongoing series, crossovers, and adaptation franchises. Popularity alone does not explain the gap between 4,043 and 4; continuous editorial use does.
+
+MARVEL HAS MORE CHARACTERS; DC'S MEDIAN APPEARANCES RUN HIGHER
+
+APPEARANCES BY PUBLISHER
+
+Marvel contributed 15,280 records with a median of 3 appearances and a maximum of 4,043. DC contributed 6,541 records with a median of 6 and a maximum of 3,093 (Batman). Marvel's catalog is wider; DC's typical character logged more appearances. Volume and intensity represent different editorial strategies—Marvel expanded the roster, DC concentrated use among established names.
+
+THE TOP FIVE NAMES HOLD NEARLY HALF THE LEADER AGGREGATE
+
+THE TOP 5 NAME ENTRIES ACCOUNT FOR 45 PERCENT OF THE AGGREGATE APPEARANCES
+
+The top five characters account for 45 percent of cumulative appearances among ranked leaders. The curve climbs steeply to 100 percent by the fifteenth name. Franchise comics follow a power-law distribution. A short list of identities absorbs most cumulative attention; the long tail contributes little to aggregate appearance volume.
+
+CONCENTRATION REPEATS AS A STRUCTURAL FACT
+
+THE TOP 5 NAME ENTRIES ACCOUNT FOR 45 PERCENT OF THE AGGREGATE APPEARANCES
+
+The second Pareto chart restates the same concentration: top five near 45 percent, curve approaching 100 percent by the fifteenth name. Repeating the view confirms the pattern is structural, not a binning artifact. Appearance mass in superhero publishing concentrates systematically at the top of the roster.
+
+WHAT THIS FILE CANNOT TELL YOU
+
+Appearance counts depend on how databases credit cameos, alternate Earths, and reboots. The publisher field collapses imprints. The 2013 cutoff predates the full MCU/DCEU feedback loop on print appearances.
+
+The four-appearance median should not be interpreted as "characters only show up four times then vanish" without verifying how incomplete rows are handled in the source.
+
+WHAT TO TAKE AWAY
+
+Across 23,272 characters, the median appearance count is 4 while Spider-Man logged 4,043. The top five leaders hold 45 percent of cumulative appearances in the ranked view.
+
+Marvel's wider catalog contrasts with DC's higher median. The dozen icons above 2,300 appearances represent the industry's core publishing capital—characters that carry ongoing series, crossovers, and franchise adaptations.
+
+DATA, METHODS & SOURCES

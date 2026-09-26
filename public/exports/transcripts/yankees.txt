@@ -1,0 +1,41 @@
+yankees
+
+On opening day in the Bronx, twenty-seven World Series rings are the baseline and fifteen years without one is a crisis. The Yankees won more championships than any franchise in baseball — the St. Louis Cardinals, their nearest peer, sit at eleven — and forty American League pennants form the deepest October archive in the sport. Winning stopped reading as achievement decades ago; it reads as payroll, expectation, and conversion.
+
+The last title arrived in 2009. The Core Four era (1996–2009) produced five rings and set a modern efficiency benchmark the franchise has not matched since — even as Forbes payroll rankings still place New York among baseball's biggest spenders. Fifteen years is historically short for most clubs; in Yankee time it feels like institutional malfunction because the franchise's unit of account is rings, not wild-card berths.
+
+RESEARCH QUESTION
+
+Did the Yankees' twentieth-century banner clusters create a measurement system no payroll can satisfy — and has postseason conversion collapsed even while capital spending stayed elite?
+
+Championship and pennant totals follow Baseball Reference franchise pages and Lahman/Retrosheet postseason summaries cited in the method section. Payroll markers in Chart 4 use Forbes and Spotrac competitive-balance-tax series as order-of-magnitude context, not audited club books.
+
+The charts below treat the Yankees as baseball's benchmark: clustering patterns that built the empire, the scale gap versus other clubs, drought context, payroll-to-October conversion, and pennant finishing rates across franchise eras.
+
+THE EMPIRE ARRIVED IN BURSTS, NOT AS A PERMANENT CLIMATE
+
+The Yankees are remembered as a permanent empire, but the banners arrived in clusters. The 1930s, 1940s, and 1950s compounded after the 1923 Ruth ignition. Later decades managed the expectation that surplus created. Franchise identity here is not merely winning—it's clustering so dense that ordinary contention reads as decline.
+
+NEW YORK DOES NOT LEAD BASEBALL—IT DEFINES THE RANKING
+
+The Yankees do not lead baseball by a normal margin. They occupy a separate category—not the best team in a ranking, but the institution that defines it. The real question is whether the Yankees are still a peer competitor or a standard of measurement other clubs are scored against.
+
+FIFTEEN YEARS ONLY FEELS ENDLESS IN YANKEE TIME
+
+Fifteen years is not historically large—it only feels enormous because Yankee time is compressed. Other franchises waited lifetimes; New York experiences a decade and a half as institutional malfunction. Expectation changes the meaning of the same number. Drought length is absolute; drought pain is relative to the archive.
+
+CAPITAL REMAINS ELITE; CONVERSION NO LONGER IS
+
+The post-1990s Yankees still spend like an empire. What changed is conversion. Payroll rank remains elite; championship output does not. The Core Four's five titles from 1996 to 2009 set the modern efficiency standard the franchise hasn't refreshed. Capital is necessary but no longer rare enough to guarantee separation. That is the modern front-office problem in pinstripes.
+
+THE OLD YANKEES FINISHED; LATER ERAS PRESERVED THE MYTH
+
+The old Yankees converted pennants into titles with terrifying efficiency. The later story is messier: enough appearances to preserve mythology, not enough rings to refresh it. The dynasty was not just talent—it was conversion under pressure, the ability to turn October access into flags before variance intervened.
+
+THE MONOPOLY ON CONVERSION IS GONE
+
+The Yankees are still rich, still relevant, and still structurally advantaged. The data does not say the empire is dead—it says the monopoly on conversion is gone.
+
+That is the modern Yankee paradox: the franchise remains baseball's reference point even when it is no longer baseball's final boss. Benchmarks outlast champions—until the next cluster of banners resets the scale.
+
+DATA, METHODS & SOURCES

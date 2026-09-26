@@ -1,0 +1,49 @@
+wealth
+
+Middle-income households captured a larger slice of total income than the median, while top earners held less. Across 2,916 Census records from 1967 to 2019, the median income share was 10.9 percent; households earning $50,000–$74,999 sat 6.6 points above that mark, and those earning $150,000–$199,999 trailed by 6.7 points.
+
+The data track how the median drifted, which race categories led, how each dollar bracket compared to the center, and how income share correlated with median household income. The calibration point is 10.9 percent — the midpoint of the share field in this extract.
+
+THE MEDIAN INCOME-DISTRIBUTION MARKER DRIFTED UPWARD
+
+MEDIAN INCOME DISTRIBUTION OVER TIME
+
+Median income distribution rose from 10.9 in the opening period to 11.2 at the close — a 0.3 percentage-point increase across the 52-year window. The center of this field moved higher, though not by orders of magnitude. Modest median drift can coexist with large bracket-level gaps. The trend chart reports the center; the gap chart reports the structure underneath.
+
+HISPANIC (ANY RACE) LEADS THE CHARTED RACE LADDER
+
+HISPANIC (ANY RACE) LEADS AT 12.0 — 10.7 MARKS THE MEDIAN AMONG THE TOP DOZEN
+
+Hispanic (Any Race) leads at 12.0, while 10.7 marks the median among the top dozen race categories in this cut. Black Alone remains a fact-box landmark for the ranking rule used there; the leaders chart makes the numeric top of this aggregation explicit. The ladder is tight near the center of the file — leaders sit close to the overall median of 10.9 rather than in a different statistical universe.
+
+INCOME BRACKETS CARVE DIFFERENT DISTRIBUTION BANDS
+
+INCOME DISTRIBUTION BY INCOME BRACKET
+
+Category boxes by income bracket show whether the income-distribution field is shared or contested across dollar bands. Under $15,000 is the most common bracket label by frequency; the boxes ask how the metric spreads inside each band. Bracket structure is the skeleton of inequality analysis in this file. A single median of 10.9 hides those band-level differences.
+
+MID BRACKETS CLEAR THE MEDIAN; HIGH BRACKETS TRAIL IN THIS CUT
+
+INCOME DISTRIBUTION VS MEDIAN BY INCOME BRACKET
+
+$50,000 to $74,999 sits 6.60 above the median; $150,000 to $199,999 trails by 6.70. Those signed gaps are among the starkest bracket contrasts in the extract. Trailing or leading the median here is a statement about the income-distribution field's values by bracket, not a casual claim about who is "richer" in narrative terms. Cite the signed distances as structural offsets.
+
+DISTRIBUTION VALUES AND INCOME MEDIANS FORM JOINT CLUSTERS
+
+INCOME DISTRIBUTION VS INCOME MEDIAN
+
+Plotting income distribution against income median shows clusters that averages erase. Race-year points co-locate in patterns that a single summary cannot hold. The scatter is relational: it shows how the two income fields move together across the 1967–2019 extract.
+
+WHAT THIS FILE CANNOT TELL YOU
+
+Community-cleaned TidyTuesday snapshots are not live Census microdata APIs. Missing values, race and bracket labeling choices, and 1967–2019 coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.
+
+Findings describe this wealth-and-income extract — structural signals about the income-distribution field — not a complete wealth account including assets and debt.
+
+WHAT TO TAKE AWAY
+
+Income distribution in this file centers on 10.9, edges up to 11.2 at the median, and still shows sharp bracket gaps — mid bands above the median, top dollar bands trailing in this metric's signed distances.
+
+Race ladders and the distribution–median scatter add group and joint structure. Together they map concentration and composition without reducing fifty years of income data to a single slogan.
+
+DATA, METHODS & SOURCES

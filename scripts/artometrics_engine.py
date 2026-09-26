@@ -38,7 +38,7 @@ PREMIUM_SLUGS = {
     "anime",
     "franchise",
     "coffee-the-artometrics-of-java",
-    "caesar-the-psychonomics-of-emperor-julius",
+    "caesar",
     "imperial",
     "readmitted",
     "giant-the-artometrics-of-a-san-francisco-dynasty",

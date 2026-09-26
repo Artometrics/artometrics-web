@@ -1,50 +1,6 @@
 import { createElement, useEffect, useRef } from "react";
-import { Colors } from "@/constants/Colors";
-
-type ChartViewMode = "print" | "interactive";
-
-type PlotlyLike = {
-  newPlot: (
-    el: HTMLElement,
-    data: unknown[],
-    layout?: Record<string, unknown>,
-    config?: Record<string, unknown>,
-  ) => Promise<unknown> | unknown;
-  purge?: (el: HTMLElement) => void;
-  Plots?: { resize?: (el: HTMLElement) => void };
-};
-
-declare global {
-  interface Window {
-    Plotly?: PlotlyLike;
-  }
-}
-
-function loadPlotlyFromCdn(): Promise<PlotlyLike | null> {
-  if (typeof window === "undefined") return Promise.resolve(null);
-  if (window.Plotly) return Promise.resolve(window.Plotly);
-
-  return new Promise((resolve) => {
-    const existing = document.querySelector<HTMLScriptElement>(
-      'script[data-artometrics-plotly="1"]',
-    );
-    if (existing) {
-      existing.addEventListener("load", () => resolve(window.Plotly ?? null), {
-        once: true,
-      });
-      existing.addEventListener("error", () => resolve(null), { once: true });
-      return;
-    }
-
-    const script = document.createElement("script");
-    script.src = "https://cdn.plot.ly/plotly-2.35.2.min.js";
-    script.async = true;
-    script.dataset.artometricsPlotly = "1";
-    script.onload = () => resolve(window.Plotly ?? null);
-    script.onerror = () => resolve(null);
-    document.head.appendChild(script);
-  });
-}
+import { hydrateReferences } from "@/lib/hydrateReferences.web";
+import { initArtChartChrome } from "@/lib/artChartChrome.web";
 
 function showFallback(live: HTMLElement, fallback: string, label: string | null) {
   live.innerHTML = "";
@@ -55,358 +11,37 @@ function showFallback(live: HTMLElement, fallback: string, label: string | null)
   // Eager: lazy + SPA re-renders left charts as empty gray boxes below the fold.
   img.loading = "eager";
   img.decoding = "async";
-  img.style.width = "100%";
-  img.style.height = "auto";
   live.appendChild(img);
+  live.style.height = "";
+  live.style.minHeight = "";
+  live.style.paddingTop = "";
   live.classList.add("art-chart-live--static", "art-chart-live--ready");
   live.classList.remove("art-chart-live--loading");
 }
 
-function hideFallback(live: HTMLElement) {
-  live.querySelectorAll(".art-chart-fallback").forEach((node) => node.remove());
-  live.classList.remove("art-chart-live--static");
-}
-
-function markReady(live: HTMLElement, isStatic: boolean) {
+function markReady(live: HTMLElement) {
   live.classList.add("art-chart-live--ready");
   live.classList.remove("art-chart-live--loading");
-  live.classList.toggle("art-chart-live--static", isStatic);
+  live.classList.add("art-chart-live--static");
   live.dataset.hydrated = "1";
 }
 
-function updateChartModeTabs(figure: HTMLElement, mode: ChartViewMode) {
-  figure.querySelectorAll<HTMLButtonElement>(".art-chart-mode-switch__btn").forEach((btn) => {
-    const active = btn.dataset.mode === mode;
-    btn.classList.toggle("is-active", active);
-    btn.setAttribute("aria-selected", String(active));
-  });
-  figure.classList.toggle("art-chart--print", mode === "print");
-  figure.classList.toggle("art-chart--interactive", mode === "interactive");
-}
-
-function initChartModeSwitch(
-  figure: HTMLElement,
-  live: HTMLElement,
-  setMode: (mode: ChartViewMode) => void,
-) {
-  if (figure.querySelector(".art-chart-mode-switch")) return;
-
-  const switcher = document.createElement("div");
-  switcher.className = "art-chart-mode-switch";
-  switcher.setAttribute("role", "tablist");
-  switcher.setAttribute("aria-label", "Chart view mode");
-
-  (
-    [
-      {
-        mode: "print" as const,
-        label: "Print",
-        hint: "Static R export — best for reading and sharing",
-      },
-      {
-        mode: "interactive" as const,
-        label: "Interactive",
-        hint: "HTML chart — hover for values and explore",
-      },
-    ] as const
-  ).forEach(({ mode, label, hint }) => {
-    const btn = document.createElement("button");
-    btn.type = "button";
-    btn.className = "art-chart-mode-switch__btn";
-    btn.dataset.mode = mode;
-    btn.setAttribute("role", "tab");
-    btn.setAttribute("aria-selected", mode === "print" ? "true" : "false");
-    btn.title = hint;
-    btn.textContent = label;
-    if (mode === "print") btn.classList.add("is-active");
-    btn.addEventListener("click", () => {
-      if (live.dataset.chartMode === mode) return;
-      setMode(mode);
-    });
-    switcher.appendChild(btn);
-  });
-
-  figure.prepend(switcher);
-  figure.classList.add("art-chart--has-mode", "art-chart--print");
-}
-
-async function renderInteractive(live: HTMLElement, Plotly: PlotlyLike) {
-  const chartUrl = live.getAttribute("data-chart");
-  if (!chartUrl) throw new Error("missing data-chart");
-
-  live.classList.add("art-chart-live--loading");
-  hideFallback(live);
-
-  const res = await fetch(chartUrl);
-  if (!res.ok) throw new Error(`HTTP ${res.status}`);
-  const payload = (await res.json()) as {
-    data?: unknown[];
-    layout?: Record<string, unknown> & {
-      margin?: { l?: number; r?: number; t?: number; b?: number };
-    };
-    config?: Record<string, unknown>;
-  };
-  const dark =
-    typeof document !== "undefined" &&
-    document.documentElement.dataset.theme === "dark";
-  const margin = payload.layout?.margin ?? {};
-  const rawLayout = { ...(payload.layout ?? {}) } as Record<string, unknown>;
-  const rawTitle = rawLayout.title;
-  // Cap oversized Plotly titles that blow out magazine column width.
-  if (rawTitle && typeof rawTitle === "object") {
-    const titleObj = { ...(rawTitle as Record<string, unknown>) };
-    const font = {
-      ...((titleObj.font as Record<string, unknown> | undefined) ?? {}),
-      size: Math.min(Number((titleObj.font as { size?: number } | undefined)?.size ?? 15), 15),
-      family: "Georgia, 'Times New Roman', serif",
-      color: dark ? "#FAFAFA" : Colors.chartDark,
-    };
-    titleObj.font = font;
-    rawLayout.title = titleObj;
-  }
-
-  // Clear prior plot nodes but keep mode switch outside the live node.
-  live.innerHTML = "";
-
-  const hostWidth = Math.max(live.clientWidth || live.parentElement?.clientWidth || 640, 280);
-  const hostHeight = Math.min(Math.max(Math.round(hostWidth * 0.58), 300), 460);
-
-  const axisLocks: Record<string, unknown> = {};
-  for (const [key, value] of Object.entries(rawLayout)) {
-    if (!/^xaxis|^yaxis/.test(key)) continue;
-    const axis = (value && typeof value === "object" ? value : {}) as Record<string, unknown>;
-    axisLocks[key] = {
-      ...axis,
-      fixedrange: true,
-      showgrid: axis.showgrid ?? true,
-      gridcolor: axis.gridcolor ?? (dark ? "#2A2A2A" : "#E8E6E1"),
-      zeroline: axis.zeroline ?? false,
-      automargin: true,
-    };
-  }
-  if (!axisLocks.xaxis) {
-    axisLocks.xaxis = {
-      fixedrange: true,
-      showgrid: true,
-      gridcolor: dark ? "#2A2A2A" : "#E8E6E1",
-      zeroline: false,
-      automargin: true,
-    };
-  }
-  if (!axisLocks.yaxis) {
-    axisLocks.yaxis = {
-      fixedrange: true,
-      showgrid: true,
-      gridcolor: dark ? "#2A2A2A" : "#E8E6E1",
-      zeroline: false,
-      automargin: true,
-    };
-  }
-
-  await Plotly.newPlot(
-    live,
-    payload.data ?? [],
-    {
-      ...rawLayout,
-      ...axisLocks,
-      paper_bgcolor: dark ? "#171717" : Colors.cream,
-      plot_bgcolor: dark ? "#171717" : Colors.cream,
-      font: {
-        family: "Georgia, 'Times New Roman', serif",
-        size: 12,
-        color: dark ? "#FAFAFA" : Colors.chartDark,
-      },
-      colorway: [
-        Colors.chartHighlight,
-        dark ? "#E5E5E5" : Colors.chartDark,
-        Colors.chartMid,
-        "#8B3228",
-        "#6B6B6B",
-      ],
-      autosize: true,
-      height: hostHeight,
-      dragmode: false,
-      hovermode: "closest",
-      clickmode: "event",
-      spikedistance: -1,
-      hoverlabel: {
-        bgcolor: dark ? "#1C1C1E" : "#FAFAF8",
-        bordercolor: Colors.chartHighlight,
-        font: {
-          family: "Georgia, 'Times New Roman', serif",
-          size: 12,
-          color: dark ? "#FAFAFA" : Colors.chartDark,
-        },
-      },
-      margin: {
-        ...margin,
-        l: Math.min(Math.max(Number(margin.l ?? 56), 44), 96),
-        r: Math.min(Math.max(Number(margin.r ?? 28), 16), 48),
-        t: Math.min(Math.max(Number(margin.t ?? 56), 36), 88),
-        b: Math.min(Math.max(Number(margin.b ?? 52), 40), 84),
-      },
-    },
-    {
-      ...(payload.config ?? {}),
-      responsive: true,
-      displayModeBar: false,
-      displaylogo: false,
-      scrollZoom: false,
-      doubleClick: false,
-      showTips: false,
-      staticPlot: false,
-      editable: false,
-      toImageButtonOptions: undefined,
-    },
-  );
-
-  markReady(live, false);
-  // Mobile orientation / late layout: nudge Plotly once more after paint.
-  requestAnimationFrame(() => {
-    try {
-      Plotly.Plots?.resize?.(live);
-    } catch {
-      /* ignore */
-    }
-  });
-}
-
-async function setChartViewMode(
-  live: HTMLElement,
-  mode: ChartViewMode,
-  Plotly: PlotlyLike | null,
-) {
-  const figure = live.closest<HTMLElement>("figure.art-chart");
-  const fallback = live.getAttribute("data-fallback");
-  const chartUrl = live.getAttribute("data-chart");
-  const label = live.getAttribute("aria-label");
-  if (!figure) return;
-
-  live.dataset.chartMode = mode;
-  updateChartModeTabs(figure, mode);
-
-  if (mode === "print") {
-    if (fallback) {
-      if (Plotly?.purge && live.querySelector(".js-plotly-plot, .plotly")) {
-        try {
-          Plotly.purge(live);
-        } catch {
-          /* ignore */
-        }
-      }
-      showFallback(live, fallback, label);
-      markReady(live, true);
-      return;
-    }
-    // No PNG — stay interactive if possible.
-    if (Plotly && chartUrl) {
-      try {
-        await renderInteractive(live, Plotly);
-        return;
-      } catch {
-        /* fall through */
-      }
-    }
-    return;
-  }
-
-  if (!Plotly || !chartUrl) {
-    if (fallback) {
-      showFallback(live, fallback, label);
-      markReady(live, true);
-    }
-    return;
-  }
-
-  try {
-    await renderInteractive(live, Plotly);
-  } catch {
-    if (fallback) {
-      showFallback(live, fallback, label);
-      markReady(live, true);
-      live.dataset.chartMode = "print";
-      updateChartModeTabs(figure, "print");
-    }
-  }
-}
-
-async function hydrateCharts(root: HTMLElement) {
-  const nodes = root.querySelectorAll<HTMLElement>(".art-chart-live[data-chart]");
-  if (!nodes.length) return;
-
-  const dualMode: HTMLElement[] = [];
-  const interactiveOnly: HTMLElement[] = [];
-
+function hydrateCharts(root: HTMLElement) {
+  const nodes = root.querySelectorAll<HTMLElement>(".art-chart-live[data-fallback]");
   for (const live of Array.from(nodes)) {
     if (live.dataset.hydrated === "1") continue;
-    const figure = live.closest<HTMLElement>("figure.art-chart");
     const fallback = live.getAttribute("data-fallback");
-    const chartUrl = live.getAttribute("data-chart");
-
-    if (fallback && chartUrl && figure) {
-      live.dataset.chartMode = "print";
-      showFallback(live, fallback, live.getAttribute("aria-label"));
-      markReady(live, true);
-      initChartModeSwitch(figure, live, (mode) => {
-        void loadPlotlyFromCdn().then((Plotly) => setChartViewMode(live, mode, Plotly));
-      });
-      dualMode.push(live);
-      continue;
-    }
-
-    if (fallback) {
-      showFallback(live, fallback, live.getAttribute("aria-label"));
-      markReady(live, true);
-      continue;
-    }
-
-    if (chartUrl) interactiveOnly.push(live);
+    if (!fallback) continue;
+    showFallback(live, fallback, live.getAttribute("aria-label"));
+    markReady(live);
   }
-
-  if (!interactiveOnly.length && !dualMode.length) return;
-
-  // Prefetch Plotly when any interactive path may be used.
-  const Plotly = await loadPlotlyFromCdn();
-
-  if (interactiveOnly.length) {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          if (!entry.isIntersecting) continue;
-          const live = entry.target as HTMLElement;
-          observer.unobserve(live);
-          void setChartViewMode(live, "interactive", Plotly);
-        }
-      },
-      { threshold: 0, rootMargin: "120px 0px 80px 0px" },
-    );
-    interactiveOnly.forEach((node) => observer.observe(node));
-  }
-
-  // Resize interactive plots on viewport changes (mobile rotate / desktop resize).
-  const onResize = () => {
-    if (!Plotly?.Plots?.resize) return;
-    root.querySelectorAll<HTMLElement>(".art-chart-live.js-plotly-plot").forEach((el) => {
-      try {
-        Plotly.Plots?.resize?.(el);
-      } catch {
-        /* ignore */
-      }
-    });
-  };
-  window.addEventListener("resize", onResize, { passive: true });
-  // Store cleanup hook on root for effect teardown.
-  (root as HTMLElement & { __artChartCleanup?: () => void }).__artChartCleanup = () => {
-    window.removeEventListener("resize", onResize);
-  };
 }
 
 /**
- * Crawlable HTML in the static export (AEO), charts enhanced client-side.
- * Dual-mode charts default to Print (static R PNG) with an Interactive HTML toggle.
+ * Crawlable HTML in the static export (AEO), charts enhanced client-side with static PNG exports.
  *
  * Parent theme toggles re-render this component and can reset dangerouslySetInnerHTML
- * without changing `html`, wiping JS-injected mode switches. We therefore re-hydrate
+ * without changing `html`, wiping hydrated chart images. We therefore re-hydrate
  * whenever unhydrated chart nodes appear.
  */
 export function ArticleBody({ html }: { html: string }) {
@@ -421,9 +56,11 @@ export function ArticleBody({ html }: { html: string }) {
     const run = () => {
       if (cancelled) return;
       const needs = node.querySelector(
-        '.art-chart-live[data-chart]:not([data-hydrated="1"])',
+        '.art-chart-live[data-fallback]:not([data-hydrated="1"])',
       );
-      if (needs) void hydrateCharts(node);
+      if (needs) hydrateCharts(node);
+      hydrateReferences(node);
+      initArtChartChrome(node);
     };
     const schedule = () => {
       cancelAnimationFrame(raf);
@@ -435,43 +72,18 @@ export function ArticleBody({ html }: { html: string }) {
     const mo = new MutationObserver(schedule);
     mo.observe(node, { childList: true, subtree: true });
 
-    // Re-paint interactive plots when the document theme flips.
-    const onTheme = () => {
-      const hosts = node.querySelectorAll<HTMLElement>(
-        '.art-chart-live[data-chart-mode="interactive"]',
-      );
-      if (!hosts.length) return;
-      void loadPlotlyFromCdn().then((Plotly) => {
-        if (!Plotly) return;
-        hosts.forEach((live) => {
-          void renderInteractive(live, Plotly);
-        });
-      });
-    };
-    const themeMo = new MutationObserver(onTheme);
-    if (typeof document !== "undefined") {
-      themeMo.observe(document.documentElement, {
-        attributes: true,
-        attributeFilter: ["data-theme"],
-      });
-    }
-
     return () => {
       cancelled = true;
       cancelAnimationFrame(raf);
       mo.disconnect();
-      themeMo.disconnect();
-      const cleanup = (node as HTMLElement & { __artChartCleanup?: () => void })
-        .__artChartCleanup;
-      cleanup?.();
     };
   }, [html]);
 
   return createElement("div", {
     ref,
-    className: "artometrics-article-body",
+    className: "artometrics-article-body w-full min-w-0 flex-1 shrink",
     dangerouslySetInnerHTML: { __html: html },
     suppressHydrationWarning: true,
-    style: { width: "100%" },
+    style: { width: "100%", minWidth: 0, alignSelf: "stretch" },
   });
 }

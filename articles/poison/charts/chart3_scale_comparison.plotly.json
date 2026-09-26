@@ -1,0 +1,127 @@
+{
+  "data": [
+    {
+      "x": [91000, 25.53, 220],
+      "y": ["Pokémon lifetime franchise revenue ($91B)", "Median single film, domestic gross ($25.53M, horror-tagged file)", "Largest single Leto-slate budget (Tron: Ares, $220M)"],
+      "orientation": "h",
+      "marker": {
+        "color": ["#C0392B", "#1B4F8A", "#000000"],
+        "line": {
+          "color": "rgba(31,119,180,1)",
+          "width": 0
+        }
+      },
+      "text": ["$91,000M", "$25.53M", "$220M"],
+      "textposition": ["outside", "outside", "outside"],
+      "hovertemplate": ["<b>%{y}<\/b><extra><\/extra>", "<b>%{y}<\/b><extra><\/extra>", "<b>%{y}<\/b><extra><\/extra>"],
+      "name": "Scale ($M, log axis)",
+      "type": "bar",
+      "error_y": {
+        "color": "rgba(31,119,180,1)"
+      },
+      "error_x": {
+        "color": "rgba(31,119,180,1)"
+      },
+      "xaxis": "x",
+      "yaxis": "y",
+      "frame": null
+    }
+  ],
+  "layout": {
+    "margin": {
+      "b": 90,
+      "l": 320,
+      "t": 110,
+      "r": 70
+    },
+    "title": {
+      "text": "<b>IP-franchise scale vs. single-title scale ($M, log axis)<\/b><br><span style='font-size:12px;color:#6B6B6B'>Pokémon lifetime revenue vs median film vs largest case-study budget<\/span>",
+      "x": 0,
+      "xanchor": "left"
+    },
+    "paper_bgcolor": "#FFFFFF",
+    "plot_bgcolor": "#FFFFFF",
+    "font": {
+      "family": "Helvetica",
+      "color": "#1C1C1E",
+      "size": 12
+    },
+    "xaxis": {
+      "domain": [0, 1],
+      "automargin": true,
+      "gridcolor": "#E5E5E5",
+      "linecolor": "#D5D5D5",
+      "zerolinecolor": "#D5D5D5",
+      "title": "US dollars, millions (log scale)",
+      "type": "log"
+    },
+    "yaxis": {
+      "domain": [0, 1],
+      "automargin": true,
+      "gridcolor": "#E5E5E5",
+      "linecolor": "#D5D5D5",
+      "zerolinecolor": "#D5D5D5",
+      "title": "",
+      "categoryorder": "array",
+      "categoryarray": ["Pokémon lifetime franchise revenue ($91B)", "Median single film, domestic gross ($25.53M, horror-tagged file)", "Largest single Leto-slate budget (Tron: Ares, $220M)"],
+      "type": "category"
+    },
+    "annotations": [
+      {
+        "x": 0,
+        "y": 1.14,
+        "xref": "paper",
+        "yref": "paper",
+        "text": "<b>Pokémon's $91B lifetime total dwarfs a median film or a single blockbuster budget<\/b>",
+        "showarrow": false,
+        "xanchor": "left",
+        "align": "left",
+        "font": {
+          "size": 11,
+          "color": "#FFFFFF"
+        },
+        "bgcolor": "#C0392B",
+        "borderpad": 6
+      },
+      {
+        "x": 0,
+        "y": -0.22,
+        "xref": "paper",
+        "yref": "paper",
+        "text": "Data: Artometrics franchise + horror-tagged box-office reports — ARTOMETRICS  ·  Artometrics",
+        "showarrow": false,
+        "xanchor": "left",
+        "font": {
+          "size": 9,
+          "color": "#6B6B6B"
+        }
+      },
+      {
+        "x": 0.99,
+        "y": -0.22,
+        "xref": "paper",
+        "yref": "paper",
+        "text": "Artometrics",
+        "showarrow": false,
+        "xanchor": "right",
+        "font": {
+          "size": 12,
+          "color": "#1C1C1E",
+          "family": "Chomsky"
+        }
+      }
+    ],
+    "showlegend": false,
+    "hovermode": "closest"
+  },
+  "config": {
+    "displayModeBar": false,
+    "displaylogo": false,
+    "responsive": true,
+    "scrollZoom": false,
+    "doubleClick": false,
+    "staticPlot": false,
+    "editable": false,
+    "showTips": false
+  }
+}

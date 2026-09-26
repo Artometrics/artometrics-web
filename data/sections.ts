@@ -61,10 +61,17 @@ export type SubdomainSlug =
 
 export const DOMAIN_META: Record<
   DomainSlug,
-  { title: string; description: string; subdomains: SubdomainSlug[] }
+  {
+    title: string;
+    description: string;
+    /** Short nav subtitle — one line, sentence or question. */
+    navDescriptor: string;
+    subdomains: SubdomainSlug[];
+  }
 > = {
   arts: {
     title: "Arts",
+    navDescriptor: "What do film, music, and design reveal?",
     description: "Design, music, film, theater, architecture, fashion, and language.",
     subdomains: [
       "design",
@@ -78,6 +85,7 @@ export const DOMAIN_META: Record<
   },
   sports: {
     title: "Sports",
+    navDescriptor: "What do leagues and fandom reward?",
     description: "Football, basketball, baseball, soccer, and the wider field of play.",
     subdomains: [
       "football",
@@ -94,6 +102,7 @@ export const DOMAIN_META: Record<
   },
   science: {
     title: "Science",
+    navDescriptor: "What does the evidence show?",
     description: "Chemistry through tech — the measurable world.",
     subdomains: [
       "chemistry",
@@ -109,6 +118,7 @@ export const DOMAIN_META: Record<
   },
   humanities: {
     title: "Humanities",
+    navDescriptor: "How do history and ideas shape us?",
     description: "History, philosophy, religion, and the study of people.",
     subdomains: [
       "history",
@@ -121,6 +131,7 @@ export const DOMAIN_META: Record<
   },
   civics: {
     title: "Civics",
+    navDescriptor: "Who sets the rules—and who pays?",
     description: "Economics, business, politics, law, education, and communication.",
     subdomains: [
       "economics",
@@ -133,6 +144,7 @@ export const DOMAIN_META: Record<
   },
   culture: {
     title: "Culture",
+    navDescriptor: "How do we travel, eat, and live?",
     description: "Travel, food, leisure, environment, and wellness.",
     subdomains: ["travel", "food", "leisure", "environment", "wellness"],
   },
@@ -301,7 +313,7 @@ export function inferTaxonomy(
     [/\b(anime|film|movie|oscar|emmy|horror|franchise|disney|cinema|netflix|pixar|simpsons|streaming|imdb|tv)\b/, "arts", "film"],
     [/\b(broadway|musical|theater|theatre)\b/, "arts", "theater"],
     [/\b(music|grammy|spotify|album|song|billboard|radio|rolling.?stone|musicbrainz|beyonce|taylor)\b/, "arts", "music"],
-    [/\b(gutenberg|sherlock|novel|book|holmes|language|glottolog)\b/, "arts", "language"],
+    [/\b(lcsh|sherlock|novel|book|holmes|language|glottolog)\b/, "arts", "language"],
     [/\b(museum|heritage|gallery|architecture)\b/, "arts", "architecture"],
     [/\b(comic|design)\b/, "arts", "design"],
     [/\b(readmit|hospital|life.?expect|medicine|phd)\b/, "science", "medicine"],

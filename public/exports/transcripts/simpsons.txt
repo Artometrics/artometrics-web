@@ -1,0 +1,49 @@
+SIMPSONS: Marcia Wallace, 175 Guest Appearances
+
+Marcia Wallace logged 175 guest appearances across 30 Simpsons seasons—2.7× more than the second-place performer and the highest count in the TidyTuesday dataset released August 27, 2019.
+
+The snapshot captures 1,381 guest records spanning Seasons 1–30. Season 24 recorded the highest guest density with 65 appearances, while most guests appeared only once.
+
+VOLUME
+
+RECORDS BY PERIOD
+
+Activity peaks in Season 24 with 65 records. Period-level counts reveal when guest-appearance frequency intensified.
+
+WHO SITS AT THE TOP
+
+TOP GUEST STAR
+
+Marcia Wallace appears 175 times—the most recurring name in the file. The top dozen account for a visible share of all 1,381 rows.
+
+TIMELINE
+
+LEADERS OVER TIME
+
+The leading names do not move in lockstep—some fade as others surge. Tracking counts over time separates sustained presence from one-season spikes.
+
+FREQUENCY
+
+MOST GUEST STAR ENTITIES APPEAR ONLY ONCE; A SMALL HEAD REVISITS REPEATEDLY
+
+Most guest stars appear only once; a small cluster revisits repeatedly. This power-law shape is typical of guest lists, credits, and catalog-style tables.
+
+MIX
+
+24 IS THE MOST REPEATED SEASON IN THE EXTRACT
+
+Season 24 is the most repeated season in the extract. Secondary dimensions add context when the primary table has no numeric score column.
+
+WHAT THIS FILE CANNOT TELL YOU
+
+Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.
+
+Findings describe the file on hand—treat them as structural signals about Simpsons guest appearances, not exhaustive truth about the full domain.
+
+WHAT TO TAKE AWAY
+
+Read as a teaching map, this dataset shows why one metric is rarely enough: leaders, tails, trends, and relationships each answer a different question about guest-appearance patterns.
+
+The best reading is modest: use the chart to sharpen the question, then check the source and limits before turning it into a claim.
+
+DATA, METHODS & SOURCES

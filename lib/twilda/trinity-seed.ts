@@ -199,7 +199,7 @@ Season 2 climax: Cole's firm frames an innocent low-level Meridian employee for 
 Sells prevention to the highest bidder using the same data-modeling instincts Kane uses for free. The firm's public collapse in Season 3 ends the surface war — not Kane's doubt.`,
   },
   {
-    id: "san-francisco",
+    id: "sf",
     type: "location",
     name: "San Francisco / Bay Area",
     initials: "SF",

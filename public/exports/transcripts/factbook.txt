@@ -1,0 +1,49 @@
+factbook
+
+China's 1,355,692,576 people sit against a global median of 5,220,371 in the CIA World Factbook extract — a 260-fold gap that drives every concentration metric. The top five countries hold 72 percent of aggregate population; most nations operate at a scale closer to the median than to the summit.
+
+Mean population (~32 million) sits far above the median because a handful of giants pull the average upward. The distribution is right-skewed: 218 of 259 entries fall into the smallest bin.
+
+A HANDFUL OF GIANTS DOMINATE HEADCOUNT
+
+POPULATION BY COUNTRY
+
+China leads at 1.36 billion, India at 1.24 billion, the European Union aggregate near 511 million, the United States near 319 million, Indonesia near 254 million, and Brazil near 203 million. These six operate in a different scale class than the median country at 5.2 million. They are not outliers; they are the architectural beams of every global concentration statistic.
+
+EVEN THE TOP DOZEN HAS A STEEP INTERNAL DROP
+
+CHINA LEADS AT 1,355,692,576 — 199,415,584 MARKS THE MEDIAN AMONG THE TOP DOZEN
+
+Within the top twelve, the median is 199,415,584 — less than one-sixth of China's total. The drop from first to sixth is steeper than the drop from sixth to twelfth. "Large country" is a pyramid, not a plateau. Second-tier giants are already far smaller than the demographic summit.
+
+MOST COUNTRIES SIT IN THE SMALL-POPULATION MASS
+
+MEDIAN 5,220,371 VS MEAN 32,294,361 — THE SHAPE IS RIGHT-SKEWED
+
+The first bin holds 218 of 259 entries. Only a handful of observations reach the billionaire tier or approach it. The median (5.2 million) describes the typical country; the mean (~32 million) is pulled upward by the giants. Use the median when the question is "most countries" and the top five when the question is "most people."
+
+THE TOP FIVE ALREADY HOLD MOST OF THE PEOPLE
+
+THE TOP 5 COUNTRY ENTRIES ACCOUNT FOR 72 PERCENT OF THE AGGREGATE POPULATION
+
+The Pareto curve shows the top five countries accounting for 72 percent of aggregate population. By fifteen entries the curve approaches the full plotted total. Global population is not evenly distributed across flags. It is concentrated in a short list of demographic powers.
+
+HIGH BIRTH RATES CLUSTER AMONG SMALLER POPULATIONS
+
+POPULATION VS BIRTH RATE
+
+Birth rates above 40 per 1,000 cluster among countries well below the mega-population tier. Several large countries sit at lower birth rates. Demographic giants are not fertility leaders. Scale and birth rate are independent stories in the Factbook.
+
+WHAT THIS FILE CANNOT TELL YOU
+
+Factbook figures are estimates with uneven vintage and methodology across entities. Including the European Union alongside countries double-counts if users sum naively. Small territories and disputed entities add definitional noise.
+
+Population totals are not prosperity scores. Pairing with birth rate is descriptive, not a development ranking.
+
+WHAT TO TAKE AWAY
+
+In 259 Factbook rows, the median country has 5.2 million people while China exceeds 1.35 billion. The top five entries hold 72 percent of the aggregate in the concentration view.
+
+Cite the median for a typical state; cite China, India, and the Pareto share when the question is planetary concentration.
+
+DATA, METHODS & SOURCES

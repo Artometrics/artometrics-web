@@ -1,0 +1,49 @@
+rivalry
+
+California scores 96 on GDP scale, 94 on tech role, and 91 on cultural output. Texas scores 96 on energy, 91 on migration attention, and 86 on GDP. The rivalry persists because each state represents a distinct governance model, export system, and labor market—not because they are interchangeable.
+
+The charts score 2 state systems across 7 rivalry dimensions and 7 export families. They are designed to stop the comparison from collapsing into a single tax talking point and to surface the six questions worth asking next.
+
+WHY THEY ARE COMPARED
+
+CALIFORNIA AND TEXAS ARE RIVAL SYSTEMS BECAUSE BOTH ARE BIG ENOUGH TO FEEL LIKE COUNTRIES
+
+California scores 96 on GDP scale, 94 on population, 94 on tech role, and 91 on cultural output, with a tax-burden debate score of 88 and an energy-role score of 46. Texas scores 96 on energy, 91 on migration attention, 88 on population, and 86 on GDP scale, while cultural output sits at 68. They are competing governance models, labor markets, export systems, and migration symbols—not interchangeable states with different logos.
+
+GROWTH MODEL
+
+CALIFORNIA COMPOUNDS KNOWLEDGE WHILE TEXAS COMPOUNDS GROWTH CAPACITY
+
+California's knowledge/IP model index remains high across the timeline—from the low 90s in 2000–2010 to a peak near 98 in 2020. Texas's growth/energy model climbs from 61 in 2000 to 90 by 2025. One compounds intellectual property, entertainment, venture networks, and universities. The other compounds energy, land, logistics, and relocation capacity. The rivalry persists because the models are not substitutes.
+
+EXPORT FINGERPRINT
+
+THE STATES OVERLAP IN SCALE BUT DIVERGE IN WHAT THEY EXPORT TO THE WORLD
+
+The export fingerprint contrasts software/IP, entertainment, and related strengths on the California side with energy and logistics weight on the Texas side. Agriculture, aerospace, and other families overlap in more complicated ways than slogan versions admit. Same-scale GDP conversations hide different machinery. What each state sells to the world is the cleanest way to keep the comparison honest.
+
+HIDDEN TRADEOFFS
+
+THE RIVALRY IS ABOUT COST, CLIMATE, WAGES, CULTURE, AND RISK, NOT TAXES ALONE
+
+Cost, climate risk, wages, culture, and business formation do not move as a single tax variable. The tradeoff scatter keeps multiple dimensions in view at once—high-cost magnetism on one side, capacity and exposure on the other. California's wage ceiling and cultural pull are real; Texas's formation and logistics advantages are real; energy and climate risk are real. A serious comparison refuses to delete any of those axes.
+
+WHAT TO ASK NEXT
+
+THE USEFUL CALIFORNIA-TEXAS QUESTIONS ARE ABOUT IRREPLACEABLE EXPORTS, TALENT, CLIMATE, AND WHO BENEFITS
+
+The ranked questions elevate talent compounding (95), irreplaceable exports (93), climate handling (91), who benefits from growth (88), whether migration is tax-driven (86), and what each state must import (79). The useful prompt is not "which state is better?" It is which capabilities each system cannot copy from the other—the starting point for migration, housing, export, and culture follow-ups.
+
+WHAT THIS FILE CANNOT TELL YOU
+
+Editorial indices are scaffolding, not BEA or Census tabulations. They must be replaced with source aggregates before anyone treats the scores as official rankings.
+
+State borders hide metro heterogeneity: coastal California is not inland California; Houston is not the Rio Grande Valley. Intra-state variance can exceed the interstate gap on many metrics.
+
+WHAT TO TAKE AWAY
+
+California and Texas remain comparable because they are two large answers to how America organizes scale, talent, land, energy, and culture.
+
+Taxes are the entry point; export identity, climate risk, talent compounding, and cultural magnetism are where the comparison becomes specific enough to measure.
+
+DATA, METHODS & SOURCES

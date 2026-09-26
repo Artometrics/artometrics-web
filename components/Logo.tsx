@@ -106,7 +106,7 @@ export function Logo({
       {showWordmark ? (
         <Text
           className={[
-            markVariant === "auto" ? "text-fg" : "",
+            markVariant === "auto" ? "text-secondary" : "",
             isMagazine ? "tracking-wide" : "uppercase tracking-wider",
             isLeft ? "text-left" : "text-center",
             className,

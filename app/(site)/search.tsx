@@ -50,7 +50,7 @@ export default function SearchScreen() {
               <Text className="text-[11px] tracking-[1.5px] uppercase font-bold text-accent">
                 {hit.meta}
               </Text>
-              <Text className="font-serif text-[22px] leading-7 text-fg">{hit.title}</Text>
+              <Text className="font-serif text-[22px] leading-7 text-accent">{hit.title}</Text>
               <Text className="font-serif text-[15px] leading-[22px] text-muted" numberOfLines={2}>
                 {hit.description}
               </Text>

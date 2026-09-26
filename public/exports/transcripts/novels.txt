@@ -1,0 +1,49 @@
+NOVELS: Victorian Authors Own the Christmas Canon
+
+The median author birthdate in this 35-record Christmas-novel extract is 1859, the latest is 1891, and Charles Dickens is the most common name. The shelf is Victorian-centered: Dickensian ghosts, children's mysteries, parlor sentimentalism.
+
+Because the sample is tiny, every chart maps a curated canon rather than a complete market. Birthdate becomes a proxy for which literary generations stock the holiday shelf.
+
+THE SHELF CENTERS ON MID-NINETEENTH-CENTURY BIRTHS
+
+MEDIAN BIRTHDATE OVER TIME
+
+The median birthdate is 1859 — Victorian and immediately post-Victorian authors anchor the holiday novel list. That center of gravity explains the tone of the canon: industrial-era childhood, Christian seasonal ritual, and serialized storytelling habits.
+
+LATER-BORN TITLES MARK THE EDGE OF THE CANON
+
+THE CAMP FIRE GIRLS SOLVE A MYSTERY; OR, THE CHRISTMAS ADVENTURE AT CARVER HOUSE LEADS AT 1,891 — 1,872 MARKS THE MEDIAN AMONG THE...
+
+The Camp Fire Girls Solve a Mystery; Or, The Christmas Adventure at Carver House leads at birthdate 1891. Other later births include Uncle Noah's Christmas Inspiration (1884) and Christmas Outside of Eden (1883). The median among the top dozen by birthdate is about 1872. Even the "late" edge of this shelf is still nineteenth-century. Modern holiday romances are mostly outside this particular extract.
+
+BIRTHDATES CLUSTER AROUND THE 1860S
+
+MEDIAN 1,859 VS MEAN 1,849 — THE SHAPE IS RELATIVELY SYMMETRIC
+
+The distribution piles several authors near the early 1860s bins, with smaller counts in earlier nineteenth-century bands. Mean birthdate (approximately 1849) sits close to the median, producing a relatively symmetric distribution for such a small n. With only 35 rows, bin heights are fragile — but the Victorian concentration is robust enough to cite.
+
+DICKENS AND THACKERAY SIT EARLIER THAN THE MEDIAN
+
+BIRTHDATE VS MEDIAN BY AUTHOR
+
+Author gaps to the median birthdate show Rupert Hughes furthest above (+13), while Dickens (−47) and Thackeray (−48) sit well earlier. Louisa May Alcott is also clearly before the median (−27). The holiday shelf's most famous names are often older than the shelf's statistical middle — canon gravity pulling toward earlier births.
+
+BIRTH AND DEATH DATES TRACE FINITE AUTHOR LIVES
+
+BIRTHDATE VS DEATHDATE
+
+Birthdate versus deathdate for 32 plotted authors follows the expected upward diagonal: later-born authors die later, with points stretching from early-nineteenth-century pairs into mid-twentieth-century deaths. The scatter is a mortality timeline for a seasonal literature, not a sales chart — useful for placing which generations could still be writing when Christmas publishing industrialized.
+
+WHAT THIS FILE CANNOT TELL YOU
+
+n=35 is a teaching canon, not a market census. Missing modern titles and non-English traditions are structural absences. Birthdate as a ranking metric is biographical, not a measure of holiday popularity.
+
+Author name authority control may still split or merge identities in a small file.
+
+WHAT TO TAKE AWAY
+
+This Christmas-novel shelf is a Victorian-centered canon: median birthdate 1859, latest 1891, with Dickens as the recurring name.
+
+Cite the small n alongside any ranking. The value is literary geography — which generations stock the holiday imagination — not a bestseller index.
+
+DATA, METHODS & SOURCES

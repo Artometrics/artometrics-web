@@ -7,16 +7,16 @@
     "status": "collecting",
     "heroImage": "/images/editions/music.jpg",
     "articleSlugs": [
-      "billboard-hot-100",
-      "billboard-top-100",
-      "musicbrainz-pop-fame-mechanics",
-      "rolling-stone-albums",
-      "beyonce-the-psychonomics-of-control",
-      "beyonce-taylor-lyrics",
-      "broadway-musicals",
-      "christmas-songs",
-      "radio-stations",
-      "h3-the-artometrics-of-a-youtube-dynasty"
+      "billboard",
+      "rankings",
+      "fame",
+      "albums",
+      "beyonce",
+      "lyrics",
+      "broadway",
+      "carols",
+      "radio",
+      "youtube"
     ],
     "glueSlugs": [
       "narrative-economics-of-hits",
@@ -24,7 +24,7 @@
     ],
     "podcastIds": [],
     "datasetIds": [
-      "gutenberg-reference"
+      "lcsh-reference"
     ]
   },
   {
@@ -35,22 +35,22 @@
     "status": "collecting",
     "heroImage": "/images/editions/movies.jpg",
     "articleSlugs": [
-      "horror-movie-profit",
-      "horror-movies",
-      "pixar-films",
+      "margins",
+      "horror",
+      "pixar",
       "franchise",
-      "imdb-blockbuster-grammar",
-      "streaming-catalog-power",
-      "netflix-engagement",
-      "netflix-titles",
-      "emmy-awards",
-      "awards-prestige-economy-oscars-grammys-nobels",
-      "simpsons-guest-stars",
-      "tv-golden-age"
+      "blockbusters",
+      "streaming",
+      "netflix",
+      "catalog",
+      "emmys",
+      "oscars",
+      "simpsons",
+      "television"
     ],
     "glueSlugs": [
-      "franchise-poison-star-vs-ip",
-      "protection-threshold"
+      "poison",
+      "protection"
     ],
     "podcastIds": [],
     "datasetIds": []
@@ -63,13 +63,13 @@
     "status": "collecting",
     "heroImage": "/images/editions/games.jpg",
     "articleSlugs": [
-      "video-games-steam",
-      "video-games-sliced",
+      "steam",
+      "slices",
       "pokemon",
-      "board-games",
+      "games",
       "anime",
-      "lego-database",
-      "comic-characters"
+      "legos",
+      "comics"
     ],
     "glueSlugs": [
       "preference-infrastructure-fandom"
@@ -85,14 +85,14 @@
     "status": "collecting",
     "heroImage": "/images/editions/food.jpg",
     "articleSlugs": [
-      "coffee-the-artometrics-of-java",
-      "craft-beer-usa",
-      "wine-ratings",
-      "all-the-pizza",
-      "ramen-ratings",
-      "alcohol-consumption",
-      "fast-food-calories",
-      "nyc-restaurant-inspections"
+      "coffee",
+      "breweries",
+      "wine",
+      "pizza",
+      "ramen",
+      "alcohol",
+      "calories",
+      "restaurants"
     ],
     "glueSlugs": [
       "culinary-prestige-economics"
@@ -108,21 +108,21 @@
     "status": "collecting",
     "heroImage": "/images/editions/sports.jpg",
     "articleSlugs": [
-      "sports-dynasty-index-best-and-worst-conversion",
-      "yankees-the-artometrics-of-baseballs-empire",
-      "dodgers-the-artometrics-of-baseballs-modern-machine",
-      "celtics-the-artometrics-of-institutional-winning",
-      "lakers-the-artometrics-of-basketball-glamour",
-      "patriots-the-artometrics-of-the-system-dynasty",
-      "warrior-the-artometrics-of-a-golden-state-dynasty",
-      "cowboys-the-artometrics-of-americas-team",
-      "giant-the-artometrics-of-a-san-francisco-dynasty",
-      "super-bowl-ads",
-      "league-money-skill-and-star-systems",
-      "regional-sports-identity-map"
+      "dynasties",
+      "yankees",
+      "dodgers",
+      "celtics",
+      "lakers",
+      "patriots",
+      "warriors",
+      "cowboys",
+      "giants",
+      "superbowl",
+      "leagues",
+      "fandom"
     ],
     "glueSlugs": [
-      "institutional-winning-meta"
+      "institutions"
     ],
     "podcastIds": [],
     "datasetIds": [
@@ -137,18 +137,18 @@
     "status": "collecting",
     "heroImage": "/images/editions/power.jpg",
     "articleSlugs": [
-      "caesar-the-psychonomics-of-emperor-julius",
-      "beyonce-the-psychonomics-of-control",
-      "ceo-departures",
-      "wealth-income",
-      "lv-molly-tea-trademark-china",
-      "incarceration-trends",
-      "us-voter-turnout",
-      "roman-emperors"
+      "caesar",
+      "beyonce",
+      "ceos",
+      "wealth",
+      "trademarks",
+      "prisons",
+      "voters",
+      "emperors"
     ],
     "glueSlugs": [
-      "protection-threshold",
-      "playboy-after-hef",
+      "protection",
+      "playboy",
       "preference-falsification-explained",
       "silence-cascades",
       "access-mythologies"
@@ -164,20 +164,20 @@
     "status": "collecting",
     "heroImage": "/images/editions/science-art.jpg",
     "articleSlugs": [
-      "pantheon-the-artometrics-of-collective-memory",
-      "uk-museums",
-      "world-heritage-sites",
-      "project-gutenberg",
-      "project-gutenberg-public-domain-canon-map",
-      "languages-glottolog",
-      "us-phds"
+      "pantheon",
+      "museums",
+      "heritage",
+      "lcsh",
+      "lcsh",
+      "languages",
+      "phds"
     ],
     "glueSlugs": [
       "how-art-made-science"
     ],
     "podcastIds": [],
     "datasetIds": [
-      "gutenberg-reference"
+      "lcsh-reference"
     ]
   },
   {
@@ -188,13 +188,13 @@
     "status": "collecting",
     "heroImage": "/images/editions/canon.jpg",
     "articleSlugs": [
-      "project-gutenberg",
-      "project-gutenberg-public-domain-canon-map",
-      "pantheon-the-artometrics-of-collective-memory",
-      "rolling-stone-albums",
-      "sherlock-holmes",
-      "christmas-novels",
-      "medium-articles"
+      "lcsh",
+      "lcsh",
+      "pantheon",
+      "albums",
+      "sherlock",
+      "novels",
+      "medium"
     ],
     "glueSlugs": [
       "canon-formation-mechanics"
@@ -210,14 +210,14 @@
     "status": "collecting",
     "heroImage": "/images/editions/geo.jpg",
     "articleSlugs": [
-      "cultural-exports-geoeconomics",
-      "export-superpowers-us-china-germany",
-      "national-export-identity-atlas",
-      "new-york-vs-san-francisco-city-systems",
-      "california-vs-texas-state-rivalry",
-      "city-bioeconomics-operating-system",
-      "national-park-visits",
-      "san-francisco-data-microscope"
+      "geopolitics",
+      "exporters",
+      "atlas",
+      "metros",
+      "rivalry",
+      "bioeconomics",
+      "parks",
+      "sf"
     ],
     "glueSlugs": [],
     "podcastIds": [],
@@ -233,13 +233,13 @@
     "status": "collecting",
     "heroImage": "/images/editions/platforms.jpg",
     "articleSlugs": [
-      "netflix-engagement",
-      "netflix-titles",
-      "video-games-steam",
-      "h3-the-artometrics-of-a-youtube-dynasty",
-      "streaming-catalog-power",
-      "web-page-metrics",
-      "medium-articles"
+      "netflix",
+      "catalog",
+      "steam",
+      "youtube",
+      "streaming",
+      "metrics",
+      "medium"
     ],
     "glueSlugs": [
       "attention-as-factor-market"
@@ -257,11 +257,11 @@
     "status": "collecting",
     "heroImage": "/images/editions/identity.jpg",
     "articleSlugs": [
-      "school-diversity",
-      "languages-glottolog",
-      "regional-sports-identity-map",
-      "cia-world-factbook",
-      "un-votes"
+      "schools",
+      "languages",
+      "fandom",
+      "factbook",
+      "diplomacy"
     ],
     "glueSlugs": [],
     "podcastIds": [],
@@ -275,13 +275,13 @@
     "status": "collecting",
     "heroImage": "/images/editions/money.jpg",
     "articleSlugs": [
-      "wealth-income",
-      "college-major-income",
-      "us-tuition",
-      "us-phds",
-      "big-mac-index",
-      "ceo-departures",
-      "league-money-skill-and-star-systems"
+      "wealth",
+      "majors",
+      "tuition",
+      "phds",
+      "mac",
+      "ceos",
+      "leagues"
     ],
     "glueSlugs": [],
     "podcastIds": [],
@@ -295,14 +295,14 @@
     "status": "collecting",
     "heroImage": "/images/editions/risk.jpg",
     "articleSlugs": [
-      "airline-safety",
-      "hurricanes-puerto-rico",
-      "nuclear-explosions",
-      "global-plastic-waste",
-      "hydro-wastewater",
+      "airlines",
+      "hurricanes",
+      "nuclear",
+      "plastic",
+      "wastewater",
       "readmitted",
-      "global-life-expectancy",
-      "exercise-usa"
+      "longevity",
+      "exercise"
     ],
     "glueSlugs": [],
     "podcastIds": [],
@@ -316,15 +316,15 @@
     "status": "collecting",
     "heroImage": "/images/editions/psychonomics.jpg",
     "articleSlugs": [
-      "caesar-the-psychonomics-of-emperor-julius",
-      "beyonce-the-psychonomics-of-control",
-      "roman-emperors",
-      "ceo-departures"
+      "caesar",
+      "beyonce",
+      "emperors",
+      "ceos"
     ],
     "glueSlugs": [
       "comparative-psychonomics-panel",
-      "michael-jackson-psychonomics",
-      "protection-threshold"
+      "jackson",
+      "protection"
     ],
     "podcastIds": [],
     "datasetIds": []

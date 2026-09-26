@@ -1,0 +1,45 @@
+BIOECONOMICS: A Data Framework for Economic Identity
+
+1,667 subnational regions in DOSE v2.14 and 1,100+ datasets in DataSF establish a system map for cities: what they export, import, price out, and preserve through infrastructure.
+
+This framework separates economic identity from promotional narrative by defining six diagnostic questions and eight system layers drawn from BEA regional GDP, DOSE global subnational output, World Cities Culture Forum, Census ACS, and local Socrata portals.
+
+The approach treats cities as layered machines — firms, ports, universities, housing, cultural venues, finance, infrastructure, rules, and stories — before any city-to-city comparison.
+
+SYSTEM LAYERS
+
+A CITY IDENTITY IS A STACK OF ECONOMIC AND CULTURAL SYSTEMS
+
+A city is not one industry. It is a layered machine: firms, ports, universities, housing, cultural venues, finance, infrastructure, rules, and stories. The first question is not whether a city is good. It is what kind of system the city is trying to be.
+
+GOODS AND SERVICES
+
+SOME CITIES EXPORT GOODS WHILE OTHERS EXPORT COORDINATION, CODE, FINANCE, OR ATTENTION
+
+Houston and Los Angeles still have obvious goods and logistics signatures. New York and San Francisco sell more invisible products: finance, software, expertise, media, and market access. Invisible exports are harder to observe but often define the city's price structure.
+
+HISTORY LAYERS
+
+PORTS, FACTORIES, CORPORATE HEADQUARTERS, AND SOFTWARE LEAVE MEASURABLE SHADOWS
+
+History is infrastructure that keeps generating data: street grids, warehouses, universities, firm clusters, zoning, and migration patterns. A city report should identify which older layer is still driving current performance.
+
+CITY FINGERPRINT
+
+THE CITY FINGERPRINT APPEARS ACROSS GDP, HOUSING, TALENT, CULTURE, AND EXPORT COMPLEXITY
+
+One variable lies. A fingerprint requires a pattern. The same GDP level can mean very different things under different housing, transit, culture, and export structures. A city profile should read like a data portrait, not a fact sheet.
+
+QUESTIONS
+
+THE CITY MICROSCOPE STARTS WITH WHAT THE PLACE MAKES, IMPORTS, LACKS, AND COMPETES AGAINST
+
+Before building comparisons, the local report needs its diagnostic questions. What does the place make? What does it import? What is scarce? Which cities are its real competitors? Those questions turn open data into an identity argument.
+
+WHAT TO TAKE AWAY
+
+Cities generate data signatures. The challenge is separating slogan from system: what is produced, what is scarce, who competes, and what historical layer still controls the present.
+
+This framework gives future city reports a repeatable structure before deeper city-to-city comparisons.
+
+DATA, METHODS & SOURCES

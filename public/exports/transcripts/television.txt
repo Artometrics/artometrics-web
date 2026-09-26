@@ -1,0 +1,49 @@
+television
+
+Median season ratings rose 0.29 points—from 7.86 to 8.15—between 1990 and 2018, raising the typical show's score without the sharp elite-vs-mediocrity split that golden-age rhetoric promised.
+
+The working file holds 2,266 records from 1990–2018. Median average rating is 8.11; the highest observed average is 9.68. Parenthood leads the title ranking in the extract.
+
+HOW THE PATTERN CHANGED OVER TIME
+
+MEDIAN AV RATING OVER TIME
+
+Median average rating rises from 7.86 in the opening period to 8.15 at the close—a 0.29-point climb that describes the typical row, not the headline cases. The middle of the scoreboard edged upward while prestige TV became a cultural brand. That is not the same shape as an explosion of elite outliers.
+
+WHO SITS AT THE TOP
+
+TOUCHED BY AN ANGEL LEADS AT 9.60 — 9.24 MARKS THE MEDIAN AMONG THE TOP DOZEN
+
+Touched by an Angel leads at 9.60; 9.24 marks the median among the top dozen. The head of the board is densely packed at the high end. High averages can reflect passionate rater pools as much as critical consensus. Read the leaders as the file's ceiling, then compare them to the 8.11 median that describes the typical row.
+
+HOW THE FIELD IS SPREAD
+
+AV RATING DISTRIBUTION
+
+Median 8.11 versus mean 8.06—the shape is nearly symmetric. The top decile begins at 8.79; that tail is where defining cases live. A symmetric prestige-TV scoreboard contradicts the thin-elite-versus-wide-mediocrity story. The distribution is tighter than golden-age rhetoric suggests.
+
+LEADER TRENDS
+
+TOP TITLE OVER TIME
+
+Leading names do not move in lockstep—some fade as others surge. Tracking medians over time separates sustained dominance from one-off spikes. A peak season is not the same data shape as a long plateau above 8.
+
+WHAT MOVES TOGETHER
+
+AV RATING VS SEASONNUMBER
+
+Average rating and season number show clusters that a single summary would erase—early-season highs, late-season drift, and shows that hold the middle across many seasons. Longevity and quality are related but not identical. The scatter is where that distinction becomes visible.
+
+WHAT THIS FILE CANNOT TELL YOU
+
+Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and week-of-export coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect.
+
+Findings describe the file on hand—structural signals about prestige-TV ratings through 2018, not a complete canon of the streaming era that followed.
+
+WHAT TO TAKE AWAY
+
+The median climbed 0.29 points—from 7.86 to 8.15—while the overall middle stayed near 8.11. A raised floor, not a sudden leap. Leaders near 9.6 and a top decile from 8.79 show how much room remains above the typical row.
+
+Read trends, distribution, and season scatter together before treating any single title as proof that critics and audiences agreed.
+
+DATA, METHODS & SOURCES

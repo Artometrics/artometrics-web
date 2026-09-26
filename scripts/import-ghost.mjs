@@ -19,13 +19,13 @@ const TAG_MAP = {
   anime: ["culture"],
   franchise: ["culture", "history", "power"],
   pokemon: ["culture", "power"],
-  "coffee-the-artometrics-of-java": ["culture", "atlas"],
-  "h3-the-artometrics-of-a-youtube-dynasty": ["culture", "persona"],
-  "giant-the-artometrics-of-a-san-francisco-dynasty": ["atlas"],
-  "warrior-the-artometrics-of-a-golden-state-dynasty": ["atlas"],
+  "coffee": ["culture", "atlas"],
+  "youtube": ["culture", "persona"],
+  "giants": ["atlas"],
+  "warriors": ["atlas"],
   readmitted: ["power", "atlas"],
   imperial: ["history", "power"],
-  "caesar-the-psychonomics-of-emperor-julius": ["history", "persona"],
+  "caesar": ["history", "persona"],
 };
 
 const ghostPath = process.argv[2] || DEFAULT_GHOST_PATH;
@@ -261,7 +261,7 @@ Generated from Ghost export. Download each Ghost URL and save to the correspondi
 These remain as remote embeds in article HTML:
 
 - Tableau dashboards (embedded in \`franchise\`, \`imperial\`)
-- YouTube embed (embedded in \`h3-the-artometrics-of-a-youtube-dynasty\`)
+- YouTube embed (embedded in \`youtube\`)
 
 ---
 

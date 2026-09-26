@@ -1,0 +1,53 @@
+gutenberg
+
+A high-school teacher assigns Pride and Prejudice because the file is free, searchable, and already on every reading list in the department. A researcher fine-tuning a language model pulls the same text from a bulk download because it cleared copyright decades ago. Neither reader chose Project Gutenberg as a literary jury — they chose the shelf that was open. English titles score 72 on Artometrics' indexed availability scale across eight languages in this report, not because English holds 72 percent of world literature, but because U.S. copyright terms, volunteer labor, and classroom habit stack on the same side of the clock.
+
+Public-facing Gutenberg summaries now describe on the order of 75,000 ebooks, with catalog feeds updating on a weekly CSV cadence and a daily RDF cadence in official tooling docs. Michael Hart's original 1971 digitization of the Declaration of Independence — documented on Project Gutenberg's about page — was an experiment in frictionless copying; fifty years later that experiment became infrastructure for classrooms, remix culture, and training corpora whenever a work is old enough to share.
+
+The through-line of this report is simple: copyright turns calendar years into availability, availability turns into memory, and memory turns into adaptation economics. The charts use editorial indices to show comparative structure before a full catalog join; the method section separates measured feeds from framed indices.
+
+RESEARCH QUESTION
+
+If we treat Project Gutenberg as a meso canon — not every book ever written, but every book cheap to reactivate — what combination of copyright age, language market, and subject grammar predicts which titles become curriculum, which become remix engines, and which remain shelf noise?
+
+The numbers that set the scale for this report:
+
+ENGLISH DOMINATES THE ACCESSIBLE PUBLIC-DOMAIN SHELF
+
+English scores 72 on the indexed availability scale across eight languages — French and German lag at 22 and 18, while Finnish, Dutch, Portuguese, Italian, and Spanish cluster between 8 and 14. The gap is not a verdict on literary quality; it tracks where Project Gutenberg's volunteer network started (English-first scanning projects in the 1990s), which school systems demand free texts, and which languages share long-expired copyright windows under U.S. law (17 U.S.C. Chapter 1). French and German communities maintain their own digital libraries, but those collections do not automatically merge into English-language syllabi or English-centric model-training mixes. Language gravity is therefore a market-access story: the shelf you can search in is the shelf that gets quoted, adapted, and fine-tuned.
+
+THE ERA MACHINE
+
+THE 19TH CENTURY BECOMES THE PUBLIC-DOMAIN LITERARY CORE
+
+Copyright law turns time into a cultural filter. Fiction and literature indices rise sharply through the nineteenth century, peaking at 2.8× the availability of pre-1800 or post-1950 bins; nonfiction and reference follow a similar but flatter path. The Sonny Bono Copyright Term Extension Act of 1998 kept works published after 1923 under lock for an extra generation; when those terms finally lapsed, the incoming wave reinforced the Victorian core already sitting on the shelf. Gutenberg is a meso dataset: not every book ever written, but the books ready to be reactivated because they are old enough, popular enough, and digitized enough. Baldwin's history of copyright politics (The Copyright Wars, Princeton University Press, 2014) frames the same pattern from the publisher side — term extensions preserve revenue for rights holders while delaying the public's reuse window.
+
+AUTHOR MEMORY
+
+DIGITAL AVAILABILITY AND CULTURAL MEMORY REINFORCE EACH OTHER
+
+Authors become infrastructure when their works saturate classrooms, editions, audiobooks, adaptations, quote databases, and training corpora. MIT's Pantheon project — which maps historical notability from Wikipedia and other memory proxies — shows how a handful of names absorb disproportionate attention; Gutenberg availability feeds that same winner-take-most loop for pre-1928 literature. Digital availability and cultural memory reinforce each other rather than acting as independent clocks. That feedback loop is why public-domain policy now intersects AI governance debates: what is easy to load is what models and people alike can learn from, regardless of whether the author would have consented.
+
+ADAPTATION POWER
+
+ADVENTURE, CHILDHOOD, AND GOTHIC SUBJECTS ADAPT ESPECIALLY WELL
+
+Adventure, manners, gothic, science, war, travel, religion, and children's subjects do not adapt equally. Adventure, childhood, and gothic titles convert into film, brand memory, and genre grammar at 3× the rate of war or religion themes. Henry Jenkins's account of transmedia storytelling (Convergence Culture, NYU Press, 2006) describes why serial characters and premise-rich worlds travel across formats without losing audience recognition — the economics Chart 4 summarizes in index form. War and religion texts may be historically vital and still under-represented in adaptation indices because spectacle markets favor portable characters over contested doctrine. The public-domain shelf is reusable cultural material with uneven conversion rates into new media, not a graveyard of forgotten merit.
+
+CANON AND REMIX
+
+SOME BOOKS BECOME CURRICULUM WHILE OTHERS BECOME REMIX ENGINES
+
+Some titles become classroom canon; others become remix engines. Pride and Prejudice is both — assigned and adapted in equal measure. Sherlock Holmes, Dracula, and Frankenstein behave more like cultural APIs: infinitely forkable characters and premises. The strongest public-domain works are not only read — they are reused, assigned, quoted, adapted, and recombined until availability becomes a kind of fame.
+
+LIMITATIONS
+
+Editorial indices in Charts 1–5 are comparative scaffolding until joined to the live pg_catalog.csv feed. They should not be read as official Gutenberg language rankings or adaptation revenue. Cross-language comparisons ignore national digital-library efforts outside Project Gutenberg.
+
+WHAT TO TAKE AWAY
+
+The public-domain canon is shaped by language markets, copyright age, volunteer digitization, educational reuse, and adaptation economics — not neutral literary merit. English at 72 on the index, the nineteenth-century peak at 2.8×, and the 3× adaptation gap for adventure and gothic subjects are three views of the same mechanism: law and labor decide what becomes cheap to reuse, and reuse decides what feels like "the classics."
+
+Gutenberg is a bridge dataset connecting literature, AI training culture, education, film adaptation, and historical memory through one shelf of reusable texts. The next measurement step is to ingest the weekly CSV, publish observed counts, and retire the editorial indices chart by chart.
+
+DATA, METHODS & SOURCES

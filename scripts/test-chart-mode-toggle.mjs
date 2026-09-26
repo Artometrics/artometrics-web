@@ -8,23 +8,21 @@ const page = await browser.newPage();
 try {
   await page.goto(`${base}/readmitted/`, { waitUntil: "networkidle" });
 
-  const switchers = page.locator(".art-chart-mode-switch");
-  const count = await switchers.count();
+  const figures = page.locator("figure.art-chart");
+  const count = await figures.count();
   if (count !== 5) {
-    throw new Error(`Expected 5 chart mode switchers on readmitted, found ${count}`);
+    throw new Error(`Expected 5 charts on readmitted, found ${count}`);
   }
 
-  const firstChart = page.locator("figure.art-chart").first();
+  const switchers = await page.locator(".art-chart-mode-switch").count();
+  if (switchers !== 0) {
+    throw new Error(`Expected no mode switchers, found ${switchers}`);
+  }
+
+  const firstChart = figures.first();
   await firstChart.scrollIntoViewIfNeeded();
-  const printBtn = firstChart.locator('[data-mode="print"]');
   const firstLive = firstChart.locator(".art-chart-live");
   const firstFallback = firstLive.locator(".art-chart-fallback");
-
-  await printBtn.waitFor({ state: "visible" });
-  const printSelected = await printBtn.getAttribute("aria-selected");
-  if (printSelected !== "true") {
-    throw new Error("Print mode should be selected by default");
-  }
 
   await firstFallback.waitFor({ state: "visible", timeout: 15000 });
   await page.waitForFunction(() => {
@@ -32,40 +30,18 @@ try {
     return !!img && img.complete && img.naturalWidth > 0;
   }, { timeout: 15000 });
   if (!(await firstFallback.isVisible())) {
-    throw new Error("Static PNG fallback should be visible in print mode");
+    throw new Error("Static PNG fallback should be visible");
   }
 
-  await firstChart.locator('[data-mode="interactive"]').click();
-
-  await page.waitForFunction(() => {
-    const live = document.querySelector("figure.art-chart .art-chart-live");
-    return (
-      live?.dataset.chartMode === "interactive" &&
-      live?.classList.contains("art-chart-live--ready") &&
-      !live?.classList.contains("art-chart-live--static") &&
-      (live?.classList.contains("js-plotly-plot") || !!live?.querySelector(".plotly"))
-    );
-  }, { timeout: 20000 });
-
-  const plotReady = await firstLive.evaluate((live) =>
-    Boolean(live.classList.contains("js-plotly-plot") || live.querySelector(".plotly"))
+  const plotly = await firstLive.evaluate(
+    (live) =>
+      live.classList.contains("js-plotly-plot") || !!live.querySelector(".plotly"),
   );
-  if (!plotReady) {
-    throw new Error("Plotly chart should render after switching to interactive");
+  if (plotly) {
+    throw new Error("Charts should not load interactive Plotly");
   }
 
-  const fallbackHidden = (await firstFallback.count()) === 0 || !(await firstFallback.isVisible());
-  if (!fallbackHidden) {
-    throw new Error("PNG fallback should hide in interactive mode");
-  }
-
-  await firstChart.locator('[data-mode="print"]').click();
-  await firstFallback.waitFor({ state: "visible", timeout: 5000 });
-  if (!(await firstFallback.isVisible())) {
-    throw new Error("PNG fallback should return after switching back to print");
-  }
-
-  console.log("PASS: readmitted chart Print/Interactive toggle works");
+  console.log("PASS: readmitted charts render static PNG only");
 } finally {
   await browser.close();
 }

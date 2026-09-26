@@ -1,0 +1,49 @@
+slices
+
+Median average concurrent players on Steam rose from 212 to 309 between 2012 and 2021, a 46 percent climb that still leaves the typical title-month at 203 in an 83,631-row extract. Dota 2 leads at 475,924 Avg — 7.4 times the top-twelve median — and the file's single highest observation reaches 1,584,887. January runs 36.9 above the median; October trails by 23.3.
+
+The file is the TidyTuesday 2021-03-16 video-games release, merged from community-cleaned Steam player-count snapshots. Charts trace the median's climb, rank the leaders by Avg, map month offsets, and plot Avg against Gain to show how level and change co-occur in a long-tailed market.
+
+MEDIAN CONCURRENCY CLIMBED ACROSS THE DECADE
+
+MEDIAN AVG OVER TIME
+
+Median Avg rises from 212 at the series open to 309 at the close, crossing above the file median of 203 midway through the period. The 46 percent gain reflects either platform growth, survivor bias among tracked titles, or both. The chart reports the center's path. Individual titles distribute around that median in ways the trend line does not capture.
+
+DOTA 2 LEADS A TOP TIER THAT DROPS OFF FAST
+
+DOTA 2 LEADS AT 475,924 — 64,656 MARKS THE MEDIAN AMONG THE TOP DOZEN
+
+Dota 2 leads at 475,924 Avg, 7.4 times the top-twelve median of 64,656. The gap from first to the elite-tier median defines the live-service economy: a few titles sustain city-scale populations; the rest of the top dozen are large but operate in a different order of magnitude. The file's highest single Avg — 1,584,887, appearing in the PLAYERUNKNOWN'S BATTLEGROUNDS record set — sits above even the charted leaders, marking the extreme ceiling of the distribution.
+
+MONTHS CARRY DIFFERENT CONCURRENCY DISTRIBUTIONS
+
+AVG BY MONTH
+
+Box plots by month reveal whether Avg spreads uniformly or clusters around distinct medians across the calendar. Seasonal launches, holidays, and school schedules can shift who is online. February's frequency in the file is a coverage fact, not a player-count claim; the boxes measure dispersion within each month, not record volume.
+
+JANUARY CLEARS THE MEDIAN; OCTOBER TRAILS
+
+AVG VS MEDIAN BY MONTH
+
+January sits 36.9 above the file median; October trails by 23.3. Those signed offsets convert the calendar into a comparable scale against the center, revealing structural month effects in this extract. The offsets are not proof of a universal gaming season — coverage dates, launch windows, and sample composition all shape the pattern — but they are concrete enough to cite when asking when concurrency runs hot or cold in this snapshot.
+
+AVG AND GAIN FORM A JOINT CLOUD OF WINNERS AND CHURN
+
+AVG VS GAIN
+
+Plotting Avg against Gain reveals clusters that medians erase: high average with stable gain is a different audience story from high average with volatile gain, and low average with positive gain signals a trajectory invisible in rank tables. The scatter maps how level and change co-occur across the 83,631 title-months, showing the joint distribution that single-metric summaries cannot capture.
+
+WHAT THIS FILE CANNOT TELL YOU
+
+Community-cleaned TidyTuesday snapshots are not live SteamCharts APIs. Missing values, title variants, and 2012–2021 coverage limits apply. Merged tables may fan out or duplicate rows when join keys are imperfect, inflating counts.
+
+Avg and Gain are the metrics as defined in the source tables. Findings describe concurrency structure in this extract, not complete commercial P&L for every title or the full Steam catalog.
+
+WHAT TO TAKE AWAY
+
+The file median of 203 Avg anchors an 83,631-row distribution that rose from 212 to 309 at the median between 2012 and 2021, a 46 percent climb. Dota 2 leads at 475,924, 7.4 times the top-twelve median, and the single highest observation reaches 1,584,887.
+
+January sits 36.9 above the median; October trails by 23.3. Avg–Gain scatter plots show how level and momentum travel together in a long-tailed live-service market where a few titles capture city-scale audiences and the typical game serves hundreds.
+
+DATA, METHODS & SOURCES

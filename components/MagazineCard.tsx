@@ -1,10 +1,11 @@
 import { Pressable, Text, View } from "react-native";
 import { Image } from "expo-image";
+import { SiteCoverImage } from "@/components/SiteCoverImage";
 import { Link } from "expo-router";
 import { useTheme } from "@/lib/theme";
 import { assetUrl } from "@/lib/assets";
 import {
-  deckLine,
+  cardDeckLine,
   formatAuthorName,
   formatDate,
   sectionLabel,
@@ -23,7 +24,7 @@ export function MagazineCard({
   width?: number;
 }) {
   const { mode } = useTheme();
-  const label = sectionLabel(post.tags);
+  const label = sectionLabel(post.tags, post.subject);
   const hero = assetUrl(post.heroImage);
   const author = post.author ? formatAuthorName(String(post.author)) : "Kyle McAuliffe";
   const aspect = variant === "portrait" ? 4 / 5 : 16 / 10;
@@ -44,11 +45,10 @@ export function MagazineCard({
         style={width ? { width } : undefined}
       >
         {hero ? (
-          <Image
+          <SiteCoverImage
             source={{ uri: hero }}
-            className="w-full bg-base-200"
-            style={{ aspectRatio: aspect }}
-            contentFit="cover"
+            wrapperClassName="w-full bg-base-200"
+            wrapperStyle={{ aspectRatio: aspect }}
             transition={200}
             accessibilityLabel={post.title}
           />
@@ -83,8 +83,8 @@ export function MagazineCard({
             {post.title}
           </Text>
           {variant !== "compact" ? (
-            <Text className="font-sans text-[13px] leading-[18px] text-muted" numberOfLines={2}>
-              {deckLine(post.description, 18)}
+            <Text className="font-sans text-[13px] leading-[18px] text-fg" numberOfLines={2}>
+              {cardDeckLine(post.description)}
             </Text>
           ) : null}
           <Text className="text-[10px] mt-0.5 tracking-[0.6px] uppercase font-semibold text-subtle">

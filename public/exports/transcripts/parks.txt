@@ -1,0 +1,49 @@
+parks
+
+Golden Gate National Recreation Area recorded 14,554,750 annual visits at its dataset peak — 94 times the system median of 155,219 — because proximity to San Francisco matters more than wilderness purity in the visitation ledger.
+
+A TidyTuesday working file of 21,560 park-year records spans 1904–2016. Median visits sit at 155,219; the highest single observation reaches 871,922,828. Golden Gate leads the park-name ranking, and region code IM (Intermountain) appears most frequently in the data.
+
+Urban gateways and memorial parkways often outdraw remote wilderness. The leaderboard reflects access and metropolitan adjacency as much as scenic reputation.
+
+HOW VISITS GREW OVER TIME
+
+MEDIAN VISITORS OVER TIME
+
+Median visitors rose from 2,200 in the opening period to 198,478 by 2016 — a 90-fold increase driven by automobile access, population growth, system expansion, and the conversion of outdoor recreation into a middle-class norm. The median's climb is the system story; the leaders are the celebrity story.
+
+WHO SITS AT THE TOP
+
+GOLDEN GATE LEADS AT 14,554,750 — 5,151,270 MARKS THE MEDIAN AMONG THE TOP DOZEN
+
+Golden Gate leads at 14,554,750 annual visits, with 5,151,270 as the median among the top dozen. Other high-traffic units include urban memorials and parkways — Vietnam Veterans Memorial, World War II Memorial, Lake Mead, Natchez Trace, Cape Cod — where recreation, commuting, and civic pilgrimage overlap. Wilderness icons still matter culturally. They do not win the raw visit count contest against metropolitan National Park Service units that function as public squares with transit access.
+
+HOW REGIONS SPREAD VISITS
+
+VISITORS BY REGION
+
+Regional box plots show whether visitor consensus is shared or contested across NPS regions. Some regions host many modest units; others host a few magnets that dominate the regional total. Spread within a region can exceed differences between region medians. A single gateway park can outdraw an entire cluster of remote units.
+
+WHO BEATS THE MEDIAN — AND WHO TRAILS
+
+VISITORS VS MEDIAN BY REGION
+
+Region NT (National Capital) sits 12,634,481 above the median; AK (Alaska) trails by 142,104. Those gaps encode access and population gravity — Alaska's vast parklands are not built for weekend volume. The gap is a map of visitation pressure, not beauty.
+
+CONCENTRATION OF VISITS
+
+THE TOP 5 PARKNAME ENTRIES ACCOUNT FOR 52 PERCENT OF THE AGGREGATE VISITORS
+
+The top five park-name entries account for 52 percent of aggregate visitors in the working file. Infrastructure stress, concession economics, and reservation politics concentrate in a short list of places — even while the agency's mission names a much longer list.
+
+WHAT THIS FILE CANNOT TELL YOU
+
+Community-cleaned TidyTuesday snapshots are not live APIs. Missing values, spelling variants, and century-scale definition changes apply. Visitor counts are not unique individuals and are not measures of ecological impact.
+
+Findings describe structural signals about National Park Service visitation patterns in the file — not a conservation audit or a ranking of which landscapes matter most.
+
+WHAT TO TAKE AWAY
+
+Median park traffic rose 90-fold from 1904 to 2016, while the top five units absorbed 52 percent of all visits. The citable tension is access versus myth: America's most visited park units are often the ones closest to cities and memorials, not the ones on the wilderness postcard.
+
+DATA, METHODS & SOURCES

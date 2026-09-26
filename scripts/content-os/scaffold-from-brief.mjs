@@ -2,6 +2,8 @@
 /**
  * Scaffold a draft Artometrics HTML report from a keyword brief.
  * Does not invent data — placeholders are explicit until analysis is attached.
+ * (No Fast facts section — calibration lives in description / keyPoints frontmatter.
+ *  Do not use art-lede on body paragraphs; opening prose uses plain art-p only.)
  *
  * Usage:
  *   node scripts/content-os/scaffold-from-brief.mjs --brief docs/content-os/briefs/foo.json
@@ -55,12 +57,10 @@ const sections = brief.sectionPlan?.length
     ];
 
 const tocItems = [
-  ["fast-facts", "FAST FACTS"],
-  ["dataset-context", "DATASET CONTEXT"],
   ...sections.map((s) => [s.id, s.title]),
   ["limitations", "LIMITATIONS"],
   ["conclusion", "CONCLUSION"],
-  ["references", "REFERENCES"],
+  ["data-methods-and-sources", "DATA, METHODS & SOURCES"],
   ["editors-note", "EDITOR'S NOTE"],
 ];
 
@@ -106,23 +106,19 @@ ${tocHtml}
 <p class="art-p">${esc(brief.angle || "Interpretive move pending.")} Primary keyword: <strong>${esc(brief.primaryKeyword)}</strong>.</p>
 <p class="art-p">${esc(brief.audience || "")}</p>
 <p class="art-p"><strong>How to read this report:</strong> start with the chart caption, then ask what the metric actually means, what a non-expert should notice first, and what an expert would challenge in the source.</p>
-<h2 id="fast-facts" class="anchored">FAST FACTS</h2>
-<div class="facts-grid">
-  <div class="fact-box"><span class="fact-number">TBD</span><span class="fact-label">Calibration statistic once the dataset is attached</span></div>
-  <div class="fact-box"><span class="fact-number">TBD</span><span class="fact-label">Catalog or sample size (observed)</span></div>
-  <div class="fact-box"><span class="fact-number">TBD</span><span class="fact-label">Concentration or median signal (derived — label clearly)</span></div>
-</div>
-<h2 id="dataset-context" class="anchored">DATASET CONTEXT</h2>
-<p class="art-p">This scaffold was generated from Content OS brief <code>${esc(slug)}</code>. Replace placeholders with observed data, derived metrics, and cited sources per the Artometrics style guide.</p>
-${sources || "<p class=\"art-p\">No dataSources listed in the brief yet.</p>"}
 ${findingHtml}
 <h2 id="limitations" class="anchored">LIMITATIONS</h2>
 <p class="art-p">Until the working file is attached, treat every number above as a placeholder. Missing values, licensing limits, and non-representative samples must be disclosed before publication.</p>
 <h2 id="conclusion" class="anchored">CONCLUSION</h2>
 <p class="art-p">The best reading is modest: use the charts to sharpen the question about <strong>${esc(brief.primaryKeyword)}</strong>, then check the source and limits before turning it into a claim.</p>
-<h2 id="references" class="anchored">REFERENCES</h2>
-${sources || "<p class=\"art-p\">Add citable sources before publish.</p>"}
+<section class="art-back-matter">
+<h2 id="data-methods-and-sources" class="anchored">Data, methods &amp; sources</h2>
+<h3 id="data-and-method" class="anchored art-back-matter__subhead">Data and method</h3>
+<p class="art-p">This scaffold was generated from Content OS brief <code>${esc(slug)}</code>. Replace placeholders with observed data, derived metrics, and explicit labels for derived vs observed metrics per the Artometrics style guide.</p>
+<h3 id="sources" class="anchored art-back-matter__subhead">Sources</h3>
+${sources || "<p class=\"art-p\">No dataSources listed in the brief yet.</p>"}
 ${related ? `<p class="art-p">Related Artometrics reports: ${related}</p>` : ""}
+</section>
 <h2 id="editors-note" class="anchored">EDITOR'S NOTE</h2>
 <div class="art-editorial-note"><p><em>Artometrics Content OS scaffold. Charts and aggregates become reproducible once exhibits and public source files are attached.</em></p></div>
 </main>

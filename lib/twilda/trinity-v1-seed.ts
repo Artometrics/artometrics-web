@@ -108,7 +108,7 @@ Trinity's vampire senses read him as predator — but Trinity is also a predator
 Cat-and-mouse: Trinity must expose the man's crimes without exposing his own nature.`,
   },
   {
-    id: "san-francisco",
+    id: "sf",
     type: "location",
     name: "San Francisco",
     initials: "SF",
