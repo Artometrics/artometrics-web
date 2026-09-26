@@ -1,8 +1,9 @@
 import LottieView from "lottie-react-native";
+import type { AnimationObject } from "lottie-react-native";
 import type { StyleProp, ViewStyle } from "react-native";
 
 type Props = {
-  source?: object | number;
+  source?: string | AnimationObject | { uri: string };
   style?: StyleProp<ViewStyle>;
   autoPlay?: boolean;
   loop?: boolean;
@@ -10,7 +11,8 @@ type Props = {
 
 /**
  * Lottie wrapper for Studio empty states / brand motion.
- * Pass a local `require("./x.json")` when assets are added.
+ * Pass a local animation JSON object (e.g. `require("./x.json")` imported
+ * as JSON, not the raw require() asset id) when assets are added.
  */
 export function MotionMark({
   source,

@@ -53,8 +53,9 @@ async function getOrCreateCardArt(
     }
     const mimeType = imagePart.inlineData.mimeType || "image/png";
     const bytes = Buffer.from(imagePart.inlineData.data, "base64");
+    const blob = new Blob([bytes], { type: mimeType });
     const blobKey = `card/${cardId}.png`;
-    await store.set(blobKey, bytes, {
+    await store.set(blobKey, blob, {
       metadata: { contentType: mimeType, cardName: name },
     });
 
